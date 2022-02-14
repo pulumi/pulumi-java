@@ -4,6 +4,7 @@ package examples
 
 import (
 	"path/filepath"
+	"strings"
 	"testing"
 
 	"github.com/pulumi/pulumi/pkg/v3/engine"
@@ -56,6 +57,30 @@ func TestJavaRandomProvider(t *testing.T) {
 		})
 
 	integration.ProgramTest(t, &test)
+}
+
+func TestCloudExamples(t *testing.T) {
+	t.Run("azure-java-static-website", func(t *testing.T) {
+		// Skipping as the example uses 340+s; in addition it
+		// may require additional CI setup to access an Azure
+		// account.
+		t.Skip("Too slow")
+		test := getJvmBase(t, "azure-java-static-website").
+			With(integration.ProgramTestOptions{
+				Config: map[string]string{
+					"azure-native:location": "westus",
+				},
+				Quick: true,
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					cdnEndpoint := o["cdnEndpoint"].(string)
+					staticEndpoint := o["staticEndpoint"].(string)
+					assert.True(t, strings.HasPrefix(cdnEndpoint, "https"))
+					assert.True(t, strings.HasPrefix(staticEndpoint, "https"))
+				},
+			})
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {
