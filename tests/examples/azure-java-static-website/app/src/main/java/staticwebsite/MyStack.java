@@ -62,6 +62,7 @@ public final class MyStack extends Stack {
                                  BlobArgs.builder()
                                  .setAccountName(storageAccount.getName().toInput())
                                  .setResourceGroupName(resourceGroup.getName().toInput())
+                                 .setContainerName(staticWebsite.getContainerName().toInput())
                                  .setSource(new Asset.FileAsset("./wwwroot/index.html"))
                                  .setContentType("text/html")
                                  .build(),
@@ -97,7 +98,7 @@ public final class MyStack extends Stack {
         var endpoint = new Endpoint("endpoint",
                                     EndpointArgs.builder()
                                     .setIsHttpAllowed(false)
-                                    .setIsHttpsAllowed(false)
+                                    .setIsHttpsAllowed(true)
                                     .setOriginHostHeader(endpointOrigin.toInput())
                                     .setOrigins(List.of(DeepCreatedOriginArgs.builder()
                                                         .setHostName(endpointOrigin.toInput())
@@ -114,6 +115,6 @@ public final class MyStack extends Stack {
         // CDN endpoint to the website.
         // Allow it some time after the deployment to get ready.
         this.cdnEndpoint = endpoint.getHostName()
-            .applyValue(hostName -> String.format("https://%1", hostName));
+            .applyValue(hostName -> String.format("https://%s", hostName));
     }
 }
