@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AvailabilityInformationResponse {
+    /**
+     * Current availability stage of the product. Availability stage
+     * 
+     */
     private final String availabilityStage;
+    /**
+     * Reason why the product is disabled.
+     * 
+     */
     private final String disabledReason;
+    /**
+     * Message for why the product is disabled.
+     * 
+     */
     private final String disabledReasonMessage;
 
     @OutputCustomType.Constructor({"availabilityStage","disabledReason","disabledReasonMessage"})
@@ -23,12 +35,24 @@ public final class AvailabilityInformationResponse {
         this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
     }
 
+    /**
+     * Current availability stage of the product. Availability stage
+     * 
+     */
     public String getAvailabilityStage() {
         return this.availabilityStage;
     }
+    /**
+     * Reason why the product is disabled.
+     * 
+     */
     public String getDisabledReason() {
         return this.disabledReason;
     }
+    /**
+     * Message for why the product is disabled.
+     * 
+     */
     public String getDisabledReasonMessage() {
         return this.disabledReasonMessage;
     }

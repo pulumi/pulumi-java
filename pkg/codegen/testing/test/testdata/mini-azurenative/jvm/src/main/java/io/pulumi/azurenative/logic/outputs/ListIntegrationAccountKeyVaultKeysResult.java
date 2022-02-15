@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListIntegrationAccountKeyVaultKeysResult {
+    /**
+     * The skip token.
+     * 
+     */
     private final @Nullable String skipToken;
 
     @OutputCustomType.Constructor({"skipToken"})
@@ -18,6 +22,10 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
         this.skipToken = skipToken;
     }
 
+    /**
+     * The skip token.
+     * 
+     */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);
     }

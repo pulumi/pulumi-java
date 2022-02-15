@@ -17,10 +17,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Configuration object.
+ * 
+ */
 public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationResponse Empty = new ConfigurationResponse();
 
+    /**
+     * Availability information of the product system.
+     * 
+     */
     @InputImport(name="availabilityInformation", required=true)
     private final AvailabilityInformationResponse availabilityInformation;
 
@@ -28,6 +36,10 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.availabilityInformation;
     }
 
+    /**
+     * Cost information for the product system.
+     * 
+     */
     @InputImport(name="costInformation", required=true)
     private final CostInformationResponse costInformation;
 
@@ -35,6 +47,10 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.costInformation;
     }
 
+    /**
+     * Description related to the product system.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final DescriptionResponse description;
 
@@ -42,6 +58,10 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.description;
     }
 
+    /**
+     * Dimensions of the configuration
+     * 
+     */
     @InputImport(name="dimensions", required=true)
     private final DimensionsResponse dimensions;
 
@@ -49,6 +69,10 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.dimensions;
     }
 
+    /**
+     * Display Name for the product system.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -56,6 +80,10 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.displayName;
     }
 
+    /**
+     * list of filters supported for a product
+     * 
+     */
     @InputImport(name="filterableProperties", required=true)
     private final List<FilterablePropertyResponse> filterableProperties;
 
@@ -63,6 +91,10 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.filterableProperties;
     }
 
+    /**
+     * Hierarchy information of a product.
+     * 
+     */
     @InputImport(name="hierarchyInformation", required=true)
     private final HierarchyInformationResponse hierarchyInformation;
 
@@ -70,6 +102,10 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.hierarchyInformation;
     }
 
+    /**
+     * Image information for the product system.
+     * 
+     */
     @InputImport(name="imageInformation", required=true)
     private final List<ImageInformationResponse> imageInformation;
 
@@ -77,6 +113,10 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.imageInformation;
     }
 
+    /**
+     * Specifications of the configuration
+     * 
+     */
     @InputImport(name="specifications", required=true)
     private final List<SpecificationResponse> specifications;
 

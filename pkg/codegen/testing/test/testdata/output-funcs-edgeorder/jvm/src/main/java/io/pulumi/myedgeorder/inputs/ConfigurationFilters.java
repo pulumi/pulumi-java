@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration filters
+ * 
+ */
 public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationFilters Empty = new ConfigurationFilters();
 
+    /**
+     * Filters specific to product
+     * 
+     */
     @InputImport(name="filterableProperty")
     private final @Nullable List<FilterableProperty> filterableProperty;
 
@@ -23,6 +31,10 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
         return this.filterableProperty == null ? List.of() : this.filterableProperty;
     }
 
+    /**
+     * Product hierarchy information
+     * 
+     */
     @InputImport(name="hierarchyInformation", required=true)
     private final HierarchyInformation hierarchyInformation;
 

@@ -435,8 +435,6 @@ func typeInitializer(ctx *classFileContext, t schema.Type, nested string, nested
 	}
 }
 
-// TODO: documentation comments
-
 type plainType struct {
 	mod                   *modContext
 	res                   *schema.Resource
@@ -489,7 +487,20 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 
 	indent := strings.Repeat("    ", 1)
 
-	// TODO: add docs comment
+	if prop.Comment != "" || prop.DeprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "%s/**\n", indent)
+		if prop.Comment != "" {
+			_, _ = fmt.Fprintln(w, formatBlockComment(prop.Comment, indent))
+		}
+
+		if prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s * @deprecated\n", indent)
+			_, _ = fmt.Fprintln(w, formatBlockComment(prop.DeprecationMessage, indent))
+
+		}
+		_, _ = fmt.Fprintf(w, "%s */\n", indent)
+	}
+
 	_, _ = fmt.Fprintf(w, "%s@%s(name=\"%s\"%s)\n", indent, ctx.ref(names.InputImport), wireName, attributeArgs)
 	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
@@ -506,7 +517,6 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		false,               // inputless overload
 	)
 
-	// TODO: add docs comment
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	returnStatement := fmt.Sprintf("this.%s", propertyName)
 	if opt, ok := prop.Type.(*schema.OptionalType); ok {
@@ -550,7 +560,12 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Open the class.
-	// TODO: add docs comment
+	if pt.comment != "" {
+		_, _ = fmt.Fprintf(w, "/**\n")
+		_, _ = fmt.Fprintln(w, formatBlockComment(pt.comment, ""))
+		_, _ = fmt.Fprintf(w, " */\n")
+	}
+
 	_, _ = fmt.Fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
 	_, _ = fmt.Fprintf(w, "\n")
 	_, _ = fmt.Fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
@@ -759,7 +774,19 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
-		// TODO: add docs comment
+		if prop.Comment != "" || prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s    /**\n", indent)
+			if prop.Comment != "" {
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.Comment, indent+"    "))
+			}
+			if prop.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "%s     * @deprecated\n", indent)
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.DeprecationMessage, indent+"    "))
+
+			}
+			_, _ = fmt.Fprintf(w, "%s     */\n", indent)
+		}
+
 		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType.ToCode(ctx.imports), fieldName)
 	}
 	if len(pt.properties) > 0 {
@@ -834,6 +861,19 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 	// Generate getters
 	for _, prop := range pt.properties {
+		if prop.Comment != "" || prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s    /**\n", indent)
+			if prop.Comment != "" {
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.Comment, indent+"    "))
+			}
+
+			if prop.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "%s     * @deprecated\n", indent)
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.DeprecationMessage, indent+"    "))
+
+			}
+			_, _ = fmt.Fprintf(w, "%s     */\n", indent)
+		}
 		paramName := names.Ident(prop.Name)
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
 		getterType := pt.mod.typeString(
@@ -857,7 +897,6 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 
-		// TODO: add docs comment
 		returnStatement := fmt.Sprintf("this.%s", paramName)
 
 		switch propType := prop.Type.(type) {
@@ -1066,7 +1105,19 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	// Create a resource module file into which all of this resource's types will go.
 	name := resourceName(r)
 
-	// TODO: add docs comment
+	if r.Comment != "" || r.DeprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "/**\n")
+		if r.Comment != "" {
+			_, _ = fmt.Fprintln(w, formatBlockComment(r.Comment, ""))
+		}
+
+		if r.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, " * @deprecated\n")
+			_, _ = fmt.Fprintln(w, formatBlockComment(r.DeprecationMessage, ""))
+
+		}
+		_, _ = fmt.Fprintf(w, " */\n")
+	}
 
 	// Open the class.
 	className := name
@@ -1110,7 +1161,20 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			secretProps = append(secretProps, prop.Name)
 		}
 
-		// TODO: add docs comment
+		if prop.Comment != "" || prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "    /**\n")
+			if prop.Comment != "" {
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.Comment, "    "))
+			}
+
+			if prop.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "     * @deprecated\n")
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.DeprecationMessage, "    "))
+
+			}
+			_, _ = fmt.Fprintf(w, "     */\n")
+		}
+
 		outputExportParameters := strings.Join(
 			propertyType.ParameterTypesTransformed(func(ts TypeShape) string {
 				return ts.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
@@ -1135,6 +1199,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fmt.Fprintf(w,
 			"    private %s<%s> %s;\n", ctx.imports.Ref(names.Output), outputParameterType, propertyName)
 		fmt.Fprintf(w, "\n")
+
+		if prop.Comment != "" {
+			_, _ = fmt.Fprintf(w, "    /**\n")
+			_, _ = fmt.Fprintln(w, formatBlockComment("@return "+prop.Comment, "    "))
+			_, _ = fmt.Fprintf(w, "     */\n")
+		}
 
 		// Add getter
 		getterType := outputParameterType
@@ -1173,7 +1243,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		argsOverride = "makeArgs(args)"
 	}
 
-	// TODO: add docs comment
+	_, _ = fmt.Fprintf(w, "    /**\n")
+	_, _ = fmt.Fprintf(w, "     *\n")
+	_, _ = fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
+	_, _ = fmt.Fprintf(w, "     * @param args The arguments to use to populate this resource's properties.\n")
+	_, _ = fmt.Fprintf(w, "     * @param options A bag of options that control this resource's behavior.\n")
+	_, _ = fmt.Fprintf(w, "     */\n")
 
 	fmt.Fprintf(w,
 		"    public %s(String name, %s args, @%s %s options) {\n",
@@ -1270,12 +1345,19 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	if !r.IsProvider && !r.IsComponent {
 		stateParam, stateRef := "", ""
 
-		// TODO: add docs comments
+		_, _ = fmt.Fprintf(w, "    /**\n")
+		_, _ = fmt.Fprintf(w, "     * Get an existing Host resource's state with the given name, ID, and optional extra\n")
+		_, _ = fmt.Fprintf(w, "     * properties used to qualify the lookup.\n")
+		_, _ = fmt.Fprintf(w, "     *\n")
+		_, _ = fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
+		_, _ = fmt.Fprintf(w, "     * @param id The _unique_ provider ID of the resource to lookup.\n")
 		if r.StateInputs != nil {
 			stateParam = fmt.Sprintf("@%s %s state, ", ctx.ref(names.Nullable), ctx.ref(stateFQN))
 			stateRef = "state, "
-			// TODO: add docs param
+			_, _ = fmt.Fprintf(w, "     * @param state\n")
 		}
+		_, _ = fmt.Fprintf(w, "     * @param options Optional settings to control the behavior of the CustomResource.\n")
+		_, _ = fmt.Fprintf(w, "     */\n")
 
 		_, _ = fmt.Fprintf(w, "    public static %s get(String name, %s<String> id, %s@%s %s options) {\n",
 			className, ctx.ref(names.Input), stateParam, ctx.ref(names.Nullable), optionsType)
@@ -1323,7 +1405,23 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	// Open the class we'll use for datasources.
 	_, _ = fmt.Fprintf(w, "public class %s {\n", className)
 
-	// TODO: add docs comment
+	if fun.Comment != "" || fun.DeprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "/**\n")
+		_, _ = fmt.Fprintln(w, formatBlockComment(fun.Comment, ""))
+		if fun.Inputs != nil && fun.Inputs.Comment != "" {
+			_, _ = fmt.Fprintf(w, " *\n")
+			_, _ = fmt.Fprintln(w, formatBlockComment(fun.Inputs.Comment, ""))
+		}
+		if fun.Outputs != nil && fun.Outputs.Comment != "" {
+			_, _ = fmt.Fprintf(w, " *\n")
+			_, _ = fmt.Fprintln(w, formatBlockComment(fun.Outputs.Comment, ""))
+		}
+		if fun.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, " * @deprecated\n")
+			_, _ = fmt.Fprintln(w, formatBlockComment(fun.DeprecationMessage, ""))
+		}
+		_, _ = fmt.Fprintf(w, " */\n")
+	}
 
 	// Emit the datasource method.
 	_, _ = fmt.Fprintf(w, "    public static %s<%s> invokeAsync(%s@%s %s options) {\n",
@@ -1367,7 +1465,11 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 		e.Name = safeName
 	}
 
-	// TODO: add docs comment
+	if enum.Comment != "" {
+		_, _ = fmt.Fprintf(w, "%s/**\n", indent)
+		_, _ = fmt.Fprintln(w, formatBlockComment(enum.Comment, indent))
+		_, _ = fmt.Fprintf(w, "%s */\n", indent)
+	}
 
 	underlyingType := mod.typeString(
 		ctx,
@@ -1388,7 +1490,18 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 
 		// Enum values
 		for i, e := range enum.Elements {
-			// TODO: add docs comment
+			if e.Comment != "" || e.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "%s/**\n", indent)
+				if e.Comment != "" {
+					_, _ = fmt.Fprintln(w, formatBlockComment(e.Comment, indent))
+				}
+
+				if e.DeprecationMessage != "" {
+					_, _ = fmt.Fprintf(w, "%s * @deprecated\n", indent)
+					_, _ = fmt.Fprintf(w, "%s * %s\n", indent, e.DeprecationMessage)
+				}
+				_, _ = fmt.Fprintf(w, "%s */\n", indent)
+			}
 			printObsoleteAttribute(ctx, e.DeprecationMessage, indent)
 			var separator string
 			if i == len(enum.Elements)-1 { // last element
@@ -1586,7 +1699,12 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 				defaultValueInitializer)
 		}
 
-		// TODO: printComment(w, p.Comment, "        ")
+		if p.Comment != "" {
+			_, _ = fmt.Fprintf(w, "/**\n")
+			_, _ = fmt.Fprintln(w, formatBlockComment(p.Comment, ""))
+			_, _ = fmt.Fprintf(w, " */\n")
+		}
+
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
 			GetterType:      propertyType.ToCode(ctx.imports),

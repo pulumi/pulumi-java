@@ -21,6 +21,12 @@ public class BarResource extends io.pulumi.resources.ComponentResource {
         return this.foo;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BarResource(String name, @Nullable BarResourceArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
         super("bar::BarResource", name, args == null ? BarResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()), true);
     }
