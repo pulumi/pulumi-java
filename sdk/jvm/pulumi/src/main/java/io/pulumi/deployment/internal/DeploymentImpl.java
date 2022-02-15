@@ -1731,30 +1731,33 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 }
             };
 
-            // Keep looping as long as there are outstanding tasks that are still running.
-            while (inFlightTasks.size() > 0) {
-                standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
+            Supplier<CompletableFuture<Integer>> loopUntilDone = () -> {
+                // Keep looping as long as there are outstanding tasks that are still running.
+                while (inFlightTasks.size() > 0) {
+                    standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
 
-                // Grab all the tasks we currently have running.
-                for (var task : inFlightTasks.keySet()) {
-                    try {
-                        if (task.isDone()) {
-                            // at this point the future is guaranteed to be solved
-                            // so there won't be any blocking here
-                            handleCompletion.accept(task); // will remove from inFlightTasks
-                        } else {
-                            standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
-                            // will attempt again in the next iteration
+                    // Grab all the tasks we currently have running.
+                    for (var task : inFlightTasks.keySet()) {
+                        try {
+                            if (task.isDone()) {
+                                // at this point the future is guaranteed to be solved
+                                // so there won't be any blocking here
+                                handleCompletion.accept(task); // will remove from inFlightTasks
+                            } else {
+                                standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
+                                // will attempt again in the next iteration
+                            }
+                        } catch (Exception e) {
+                            return handleExceptionAsync(e);
                         }
-                    } catch (Exception e) {
-                        return handleExceptionAsync(e);
                     }
                 }
-            }
 
-            // There were no more tasks we were waiting on.
-            // Quit out, reporting if we had any errors or not.
-            return CompletableFuture.completedFuture(exitCode.get());
+                // There were no more tasks we were waiting on.
+                // Quit out, reporting if we had any errors or not.
+                return CompletableFuture.completedFuture(exitCode.get());
+            };
+            return CompletableFuture.supplyAsync(loopUntilDone).thenCompose(f -> f);
         }
 
         private CompletableFuture<Integer> handleExceptionAsync(Exception exception) {
