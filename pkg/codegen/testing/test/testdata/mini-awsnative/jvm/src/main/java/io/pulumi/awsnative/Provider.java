@@ -11,6 +11,12 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="pulumi:providers:aws-native")
 public class Provider extends io.pulumi.resources.ProviderResource {
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Provider(String name, @Nullable ProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }

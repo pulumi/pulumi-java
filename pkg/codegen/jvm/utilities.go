@@ -3,6 +3,9 @@
 package jvm
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
@@ -49,4 +52,12 @@ func VisitPlainTypeClosure(properties []*schema.Property, visitor func(t schema.
 	for _, p := range properties {
 		visitPlainTypeClosure(p.Type, visitor, seen)
 	}
+}
+
+func formatBlockComment(comment string, indent string) string {
+	prefix := fmt.Sprintf("%s * ", indent)
+	comment = strings.ReplaceAll(comment, "*/", "*{@literal /}")
+	comment = codegen.FilterExamples(comment, "java")
+	comment = strings.Join(strings.Split(comment, "\n"), "\n"+prefix)
+	return prefix + comment
 }

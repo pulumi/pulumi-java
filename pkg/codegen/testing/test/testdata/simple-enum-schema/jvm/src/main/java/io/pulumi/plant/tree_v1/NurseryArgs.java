@@ -18,6 +18,10 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NurseryArgs Empty = new NurseryArgs();
 
+    /**
+     * The sizes of trees available
+     * 
+     */
     @InputImport(name="sizes")
     private final @Nullable Input<Map<String,TreeSize>> sizes;
 
@@ -25,6 +29,10 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
         return this.sizes == null ? Input.empty() : this.sizes;
     }
 
+    /**
+     * The varieties available
+     * 
+     */
     @InputImport(name="varieties", required=true)
     private final Input<List<RubberTreeVariety>> varieties;
 

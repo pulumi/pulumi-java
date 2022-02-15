@@ -15,6 +15,10 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
 
     public static final ListIntegrationAccountKeyVaultKeysArgs Empty = new ListIntegrationAccountKeyVaultKeysArgs();
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -22,6 +26,10 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
         return this.integrationAccountName;
     }
 
+    /**
+     * The key vault reference.
+     * 
+     */
     @InputImport(name="keyVault", required=true)
     private final KeyVaultReference keyVault;
 
@@ -29,6 +37,10 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
         return this.keyVault;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The skip token.
+     * 
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 

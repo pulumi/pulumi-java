@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * plant container colors
+     * 
+     */
     @EnumType
     public enum ContainerColor {
         Red("red"),
