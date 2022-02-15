@@ -20,48 +20,48 @@ import java.util.Objects;
 public final class ConfigurationResponse {
     /**
      * Availability information of the product system.
-
- */
+     * 
+     */
     private final AvailabilityInformationResponse availabilityInformation;
     /**
      * Cost information for the product system.
-
- */
+     * 
+     */
     private final CostInformationResponse costInformation;
     /**
      * Description related to the product system.
-
- */
+     * 
+     */
     private final DescriptionResponse description;
     /**
      * Dimensions of the configuration
-
- */
+     * 
+     */
     private final DimensionsResponse dimensions;
     /**
      * Display Name for the product system.
-
- */
+     * 
+     */
     private final String displayName;
     /**
      * list of filters supported for a product
-
- */
+     * 
+     */
     private final List<FilterablePropertyResponse> filterableProperties;
     /**
      * Hierarchy information of a product.
-
- */
+     * 
+     */
     private final HierarchyInformationResponse hierarchyInformation;
     /**
      * Image information for the product system.
-
- */
+     * 
+     */
     private final List<ImageInformationResponse> imageInformation;
     /**
      * Specifications of the configuration
-
- */
+     * 
+     */
     private final List<SpecificationResponse> specifications;
 
     @OutputCustomType.Constructor({"availabilityInformation","costInformation","description","dimensions","displayName","filterableProperties","hierarchyInformation","imageInformation","specifications"})
@@ -88,63 +88,63 @@ public final class ConfigurationResponse {
 
     /**
      * Availability information of the product system.
-
+     * 
      */
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * Cost information for the product system.
-
+     * 
      */
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
-
+     * 
      */
     public DescriptionResponse getDescription() {
         return this.description;
     }
     /**
      * Dimensions of the configuration
-
+     * 
      */
     public DimensionsResponse getDimensions() {
         return this.dimensions;
     }
     /**
      * Display Name for the product system.
-
+     * 
      */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
-
+     * 
      */
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
-
+     * 
      */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
-
+     * 
      */
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
     }
     /**
      * Specifications of the configuration
-
+     * 
      */
     public List<SpecificationResponse> getSpecifications() {
         return this.specifications;

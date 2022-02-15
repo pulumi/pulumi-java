@@ -12,34 +12,34 @@ import java.util.Objects;
 public final class PurchaseMeterDetailsResponse {
     /**
      * Represents billing type.
-Expected value is 'Purchase'.
-
- */
+     * Expected value is 'Purchase'.
+     * 
+     */
     private final String billingType;
     /**
      * Charging type.
-
- */
+     * 
+     */
     private final String chargingType;
     /**
      * Billing unit applicable for Pav2 billing
-
- */
+     * 
+     */
     private final Double multiplier;
     /**
      * Product Id
-
- */
+     * 
+     */
     private final String productId;
     /**
      * Sku Id
-
- */
+     * 
+     */
     private final String skuId;
     /**
      * Term Id
-
- */
+     * 
+     */
     private final String termId;
 
     @OutputCustomType.Constructor({"billingType","chargingType","multiplier","productId","skuId","termId"})
@@ -60,43 +60,43 @@ Expected value is 'Purchase'.
 
     /**
      * Represents billing type.
-Expected value is 'Purchase'.
-
+     * Expected value is 'Purchase'.
+     * 
      */
     public String getBillingType() {
         return this.billingType;
     }
     /**
      * Charging type.
-
+     * 
      */
     public String getChargingType() {
         return this.chargingType;
     }
     /**
      * Billing unit applicable for Pav2 billing
-
+     * 
      */
     public Double getMultiplier() {
         return this.multiplier;
     }
     /**
      * Product Id
-
+     * 
      */
     public String getProductId() {
         return this.productId;
     }
     /**
      * Sku Id
-
+     * 
      */
     public String getSkuId() {
         return this.skuId;
     }
     /**
      * Term Id
-
+     * 
      */
     public String getTermId() {
         return this.termId;

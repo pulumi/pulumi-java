@@ -11,13 +11,13 @@ import java.util.Objects;
 public final class LinkResponse {
     /**
      * Type of link
-
- */
+     * 
+     */
     private final String linkType;
     /**
      * Url of the link
-
- */
+     * 
+     */
     private final String linkUrl;
 
     @OutputCustomType.Constructor({"linkType","linkUrl"})
@@ -30,14 +30,14 @@ public final class LinkResponse {
 
     /**
      * Type of link
-
+     * 
      */
     public String getLinkType() {
         return this.linkType;
     }
     /**
      * Url of the link
-
+     * 
      */
     public String getLinkUrl() {
         return this.linkUrl;

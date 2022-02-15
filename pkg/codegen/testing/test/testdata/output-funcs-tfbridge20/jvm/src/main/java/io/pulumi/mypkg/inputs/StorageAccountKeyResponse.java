@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  * An access key for the storage account.
-
+ * 
  */
 public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +18,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Creation time of the key, in round trip date format.
-
+     * 
      */
     @InputImport(name="creationTime", required=true)
     private final String creationTime;
@@ -29,7 +29,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Name of the key.
-
+     * 
      */
     @InputImport(name="keyName", required=true)
     private final String keyName;
@@ -40,7 +40,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Permissions for the key -- read-only or full permissions.
-
+     * 
      */
     @InputImport(name="permissions", required=true)
     private final String permissions;
@@ -51,7 +51,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Base 64-encoded value of the key.
-
+     * 
      */
     @InputImport(name="value", required=true)
     private final String value;

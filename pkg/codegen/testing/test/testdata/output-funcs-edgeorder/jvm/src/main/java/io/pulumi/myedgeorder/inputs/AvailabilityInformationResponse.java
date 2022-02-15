@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  * Availability information of a product system.
-
+ * 
  */
 public final class AvailabilityInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +18,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
 
     /**
      * Current availability stage of the product. Availability stage
-
+     * 
      */
     @InputImport(name="availabilityStage", required=true)
     private final String availabilityStage;
@@ -29,7 +29,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
 
     /**
      * Reason why the product is disabled.
-
+     * 
      */
     @InputImport(name="disabledReason", required=true)
     private final String disabledReason;
@@ -40,7 +40,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
 
     /**
      * Message for why the product is disabled.
-
+     * 
      */
     @InputImport(name="disabledReasonMessage", required=true)
     private final String disabledReasonMessage;

@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ListStorageAccountKeysResult {
     /**
      * Gets the list of storage account keys and their properties for the specified storage account.
-
- */
+     * 
+     */
     private final List<StorageAccountKeyResponse> keys;
 
     @OutputCustomType.Constructor({"keys"})
@@ -23,7 +23,7 @@ public final class ListStorageAccountKeysResult {
 
     /**
      * Gets the list of storage account keys and their properties for the specified storage account.
-
+     * 
      */
     public List<StorageAccountKeyResponse> getKeys() {
         return this.keys;

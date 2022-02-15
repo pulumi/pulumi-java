@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 
 /**
  * An Azure Cosmos DB container.
-API Version: 2021-03-15.
-
-## Example Usage
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:documentdb:SqlResourceSqlContainer containerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName 
-```
-
+ * API Version: 2021-03-15.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:documentdb:SqlResourceSqlContainer containerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName 
+ * ```
+ * 
  */
 @ResourceType(type="azure-native:documentdb:SqlResourceSqlContainer")
 public class SqlResourceSqlContainer extends io.pulumi.resources.CustomResource {

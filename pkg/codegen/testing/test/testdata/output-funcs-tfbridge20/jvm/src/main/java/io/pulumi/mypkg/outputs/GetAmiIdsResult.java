@@ -18,8 +18,8 @@ public final class GetAmiIdsResult {
     private final @Nullable List<GetAmiIdsFilter> filters;
     /**
      * The provider-assigned unique ID for this managed resource.
-
- */
+     * 
+     */
     private final String id;
     private final List<String> ids;
     private final @Nullable String nameRegex;
@@ -52,7 +52,7 @@ public final class GetAmiIdsResult {
     }
     /**
      * The provider-assigned unique ID for this managed resource.
-
+     * 
      */
     public String getId() {
         return this.id;

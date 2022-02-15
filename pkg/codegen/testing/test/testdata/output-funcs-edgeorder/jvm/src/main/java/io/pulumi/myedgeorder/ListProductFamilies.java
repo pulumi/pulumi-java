@@ -15,11 +15,11 @@ import javax.annotation.Nullable;
 public class ListProductFamilies {
 /**
  * The list of product families.
-API Version: 2020-12-01-preview.
-
+ * API Version: 2020-12-01-preview.
+ * 
  *
  * The list of product families.
-
+ * 
  */
     public static CompletableFuture<ListProductFamiliesResult> invokeAsync(ListProductFamiliesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args == null ? ListProductFamiliesArgs.Empty : args, Utilities.withVersion(options));

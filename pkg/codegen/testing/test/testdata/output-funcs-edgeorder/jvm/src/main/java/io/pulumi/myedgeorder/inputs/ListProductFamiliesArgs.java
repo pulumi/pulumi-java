@@ -20,7 +20,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
-
+     * 
      */
     @InputImport(name="customerSubscriptionDetails")
     private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
@@ -31,7 +31,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * $expand is supported on configurations parameter for product, which provides details on the configurations for the product.
-
+     * 
      */
     @InputImport(name="expand")
     private final @Nullable String expand;
@@ -42,7 +42,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Dictionary of filterable properties on product family.
-
+     * 
      */
     @InputImport(name="filterableProperties", required=true)
     private final Map<String,List<FilterableProperty>> filterableProperties;
@@ -53,7 +53,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * $skipToken is supported on list of product families, which provides the next page in the list of product families.
-
+     * 
      */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;

@@ -15,11 +15,11 @@ import javax.annotation.Nullable;
 public class ListConfigurations {
 /**
  * The list of configurations.
-API Version: 2020-12-01-preview.
-
+ * API Version: 2020-12-01-preview.
+ * 
  *
  * The list of configurations.
-
+ * 
  */
     public static CompletableFuture<ListConfigurationsResult> invokeAsync(ListConfigurationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args == null ? ListConfigurationsArgs.Empty : args, Utilities.withVersion(options));

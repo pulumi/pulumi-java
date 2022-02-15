@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 /**
  * Batch inference settings per deployment.
-
+ * 
  */
 public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +24,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Description of the endpoint deployment.
-
+     * 
      */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
@@ -35,7 +35,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
-
+     * 
      */
     @InputImport(name="environmentId")
     private final @Nullable Input<String> environmentId;
@@ -46,7 +46,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Environment variables configuration for the deployment.
-
+     * 
      */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<Map<String,String>> environmentVariables;
@@ -57,11 +57,11 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Error threshold, if the error count for the entire input goes above this value,
-the batch inference will be aborted. Range is [-1, int.MaxValue].
-For FileDataset, this value is the count of file failures.
-For TabularDataset, this value is the count of record failures.
-If set to -1 (the lower bound), all failures during batch inference will be ignored.
-
+     * the batch inference will be aborted. Range is [-1, int.MaxValue].
+     * For FileDataset, this value is the count of file failures.
+     * For TabularDataset, this value is the count of record failures.
+     * If set to -1 (the lower bound), all failures during batch inference will be ignored.
+     * 
      */
     @InputImport(name="errorThreshold")
     private final @Nullable Input<Integer> errorThreshold;
@@ -72,9 +72,9 @@ If set to -1 (the lower bound), all failures during batch inference will be igno
 
     /**
      * Size of the mini-batch passed to each batch invocation.
-For FileDataset, this is the number of files per mini-batch.
-For TabularDataset, this is the size of the records in bytes, per mini-batch.
-
+     * For FileDataset, this is the number of files per mini-batch.
+     * For TabularDataset, this is the size of the records in bytes, per mini-batch.
+     * 
      */
     @InputImport(name="miniBatchSize")
     private final @Nullable Input<Double> miniBatchSize;
@@ -85,7 +85,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 
     /**
      * Partition keys list used for Named partitioning.
-
+     * 
      */
     @InputImport(name="partitionKeys")
     private final @Nullable Input<List<String>> partitionKeys;
@@ -96,7 +96,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-
+     * 
      */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;

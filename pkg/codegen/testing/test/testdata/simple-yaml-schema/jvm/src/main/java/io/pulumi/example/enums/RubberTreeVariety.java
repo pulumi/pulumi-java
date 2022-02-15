@@ -10,23 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * types of rubber trees
-
+     * 
      */
     @EnumType
     public enum RubberTreeVariety {
         /**
          * A burgundy rubber tree.
-
+         * 
          */
         Burgundy("Burgundy"),
         /**
          * A ruby rubber tree.
-
+         * 
          */
         Ruby("Ruby"),
         /**
          * A tineke rubber tree.
-
+         * 
          */
         Tineke("Tineke");
 

@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  * Image for the product
-
+ * 
  */
 public final class ImageInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +18,7 @@ public final class ImageInformationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of the image
-
+     * 
      */
     @InputImport(name="imageType", required=true)
     private final String imageType;
@@ -29,7 +29,7 @@ public final class ImageInformationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Url of the image
-
+     * 
      */
     @InputImport(name="imageUrl", required=true)
     private final String imageUrl;

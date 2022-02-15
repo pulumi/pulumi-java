@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  * Dimensions of a configuration.
-
+ * 
  */
 public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +19,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Depth of the device.
-
+     * 
      */
     @InputImport(name="depth", required=true)
     private final Double depth;
@@ -30,7 +30,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Height of the device.
-
+     * 
      */
     @InputImport(name="height", required=true)
     private final Double height;
@@ -41,7 +41,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Length of the device.
-
+     * 
      */
     @InputImport(name="length", required=true)
     private final Double length;
@@ -52,7 +52,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unit for the dimensions of length, height and width.
-
+     * 
      */
     @InputImport(name="lengthHeightUnit", required=true)
     private final String lengthHeightUnit;
@@ -63,7 +63,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Weight of the device.
-
+     * 
      */
     @InputImport(name="weight", required=true)
     private final Double weight;
@@ -74,7 +74,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unit for the dimensions of weight.
-
+     * 
      */
     @InputImport(name="weightUnit", required=true)
     private final String weightUnit;
@@ -85,7 +85,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Width of the device.
-
+     * 
      */
     @InputImport(name="width", required=true)
     private final Double width;

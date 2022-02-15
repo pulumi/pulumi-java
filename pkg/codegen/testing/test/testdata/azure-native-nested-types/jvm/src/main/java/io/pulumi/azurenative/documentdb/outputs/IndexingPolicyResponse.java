@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class IndexingPolicyResponse {
     /**
      * List of composite path list
-
- */
+     * 
+     */
     private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
     @OutputCustomType.Constructor({"compositeIndexes"})
@@ -24,7 +24,7 @@ public final class IndexingPolicyResponse {
 
     /**
      * List of composite path list
-
+     * 
      */
     public List<List<CompositePathResponse>> getCompositeIndexes() {
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
