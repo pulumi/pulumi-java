@@ -12,6 +12,7 @@ import javax.annotation.Nullable;
 
 /**
  * Action rule with action group configuration
+
  */
 public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,6 +20,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Action group to trigger if action rule matches
+
      */
     @InputImport(name="actionGroupId", required=true)
     private final String actionGroupId;
@@ -29,6 +31,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Creation time of action rule. Date-Time in ISO-8601 format.
+
      */
     @InputImport(name="createdAt", required=true)
     private final String createdAt;
@@ -39,6 +42,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Created by user name.
+
      */
     @InputImport(name="createdBy", required=true)
     private final String createdBy;
@@ -49,6 +53,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Description of action rule
+
      */
     @InputImport(name="description")
     private final @Nullable String description;
@@ -59,6 +64,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Last updated time of action rule. Date-Time in ISO-8601 format.
+
      */
     @InputImport(name="lastModifiedAt", required=true)
     private final String lastModifiedAt;
@@ -69,6 +75,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Last modified by user name.
+
      */
     @InputImport(name="lastModifiedBy", required=true)
     private final String lastModifiedBy;
@@ -79,6 +86,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates if the given action rule is enabled or disabled
+
      */
     @InputImport(name="status")
     private final @Nullable String status;
@@ -90,6 +98,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Indicates type of action rule
 Expected value is 'ActionGroup'.
+
      */
     @InputImport(name="type", required=true)
     private final String type;

@@ -16,8 +16,10 @@ public class GetActionRuleByName {
 /**
  * Action rule object containing target scope, conditions and suppression logic
 API Version: 2019-05-05-preview.
+
  *
  * Action rule object containing target scope, conditions and suppression logic
+
  */
     public static CompletableFuture<GetActionRuleByNameResult> invokeAsync(GetActionRuleByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args == null ? GetActionRuleByNameArgs.Empty : args, Utilities.withVersion(options));

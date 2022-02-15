@@ -12,6 +12,7 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration of an App Service app.
+
  */
 public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,6 +20,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * .NET Framework version.
+
      */
     @InputImport(name="netFrameworkVersion")
     private final @Nullable String netFrameworkVersion;

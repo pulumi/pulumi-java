@@ -16,8 +16,10 @@ public class ListStorageAccountKeys {
 /**
  * The response from the ListKeys operation.
 API Version: 2021-02-01.
+
  *
  * The response from the ListKeys operation.
+
  */
     public static CompletableFuture<ListStorageAccountKeysResult> invokeAsync(ListStorageAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args == null ? ListStorageAccountKeysArgs.Empty : args, Utilities.withVersion(options));

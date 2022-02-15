@@ -21,168 +21,196 @@ import javax.annotation.Nullable;
 public class WebTest extends io.pulumi.resources.CustomResource {
     /**
      * Purpose/user defined descriptive test for this WebTest.
+
      */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Purpose/user defined descriptive test for this WebTest.
+
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Is the test actively being monitored.
+
      */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Is the test actively being monitored.
+
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Interval in seconds between test runs for this WebTest. Default value is 300.
+
      */
     @OutputExport(name="frequency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> frequency;
 
     /**
      * @return Interval in seconds between test runs for this WebTest. Default value is 300.
+
      */
     public Output</* @Nullable */ Integer> getFrequency() {
         return this.frequency;
     }
     /**
      * The kind of web test that this web test watches. Choices are ping and multistep.
+
      */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The kind of web test that this web test watches. Choices are ping and multistep.
+
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource location
+
      */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
+
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
+
      */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
+
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+
      */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Allow for retries should this WebTest fail.
+
      */
     @OutputExport(name="retryEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> retryEnabled;
 
     /**
      * @return Allow for retries should this WebTest fail.
+
      */
     public Output</* @Nullable */ Boolean> getRetryEnabled() {
         return this.retryEnabled;
     }
     /**
      * Unique ID of this WebTest. This is typically the same value as the Name field.
+
      */
     @OutputExport(name="syntheticMonitorId", type=String.class, parameters={})
     private Output<String> syntheticMonitorId;
 
     /**
      * @return Unique ID of this WebTest. This is typically the same value as the Name field.
+
      */
     public Output<String> getSyntheticMonitorId() {
         return this.syntheticMonitorId;
     }
     /**
      * Resource tags
+
      */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
+
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Seconds until this WebTest will timeout and fail. Default value is 30.
+
      */
     @OutputExport(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
      * @return Seconds until this WebTest will timeout and fail. Default value is 30.
+
      */
     public Output</* @Nullable */ Integer> getTimeout() {
         return this.timeout;
     }
     /**
      * Azure resource type
+
      */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
+
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The kind of web test this is, valid choices are ping and multistep.
+
      */
     @OutputExport(name="webTestKind", type=String.class, parameters={})
     private Output<String> webTestKind;
 
     /**
      * @return The kind of web test this is, valid choices are ping and multistep.
+
      */
     public Output<String> getWebTestKind() {
         return this.webTestKind;
     }
     /**
      * User defined name if this WebTest.
+
      */
     @OutputExport(name="webTestName", type=String.class, parameters={})
     private Output<String> webTestName;
 
     /**
      * @return User defined name if this WebTest.
+
      */
     public Output<String> getWebTestName() {
         return this.webTestName;

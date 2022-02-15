@@ -54,5 +54,6 @@ func VisitPlainTypeClosure(properties []*schema.Property, visitor func(t schema.
 }
 
 func escapeBlockComment(comment string) string {
-	return strings.ReplaceAll(comment, "*/", "*{@literal /}")
+	javaComment := codegen.FilterExamples(comment, "java")
+	return strings.ReplaceAll(javaComment, "*/", "*{@literal /}")
 }

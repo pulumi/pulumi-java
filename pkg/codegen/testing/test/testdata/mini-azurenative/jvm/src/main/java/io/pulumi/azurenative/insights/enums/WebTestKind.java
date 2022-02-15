@@ -10,6 +10,7 @@ import java.util.StringJoiner;
 
     /**
      * The kind of web test this is, valid choices are ping and multistep.
+
      */
     @EnumType
     public enum WebTestKind {

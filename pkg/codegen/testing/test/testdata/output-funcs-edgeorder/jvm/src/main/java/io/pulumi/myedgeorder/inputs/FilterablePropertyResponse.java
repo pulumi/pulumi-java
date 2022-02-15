@@ -11,6 +11,7 @@ import java.util.Objects;
 
 /**
  * Different types of filters supported and its values.
+
  */
 public final class FilterablePropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,6 +19,7 @@ public final class FilterablePropertyResponse extends io.pulumi.resources.Invoke
 
     /**
      * Values to be filtered.
+
      */
     @InputImport(name="supportedValues", required=true)
     private final List<String> supportedValues;
@@ -28,6 +30,7 @@ public final class FilterablePropertyResponse extends io.pulumi.resources.Invoke
 
     /**
      * Type of product filter.
+
      */
     @InputImport(name="type", required=true)
     private final String type;

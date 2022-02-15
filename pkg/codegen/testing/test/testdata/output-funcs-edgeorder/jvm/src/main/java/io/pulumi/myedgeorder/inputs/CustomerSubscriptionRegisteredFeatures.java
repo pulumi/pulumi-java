@@ -12,6 +12,7 @@ import javax.annotation.Nullable;
 
 /**
  * Represents subscription registered features
+
  */
 public final class CustomerSubscriptionRegisteredFeatures extends io.pulumi.resources.InvokeArgs {
 
@@ -19,6 +20,7 @@ public final class CustomerSubscriptionRegisteredFeatures extends io.pulumi.reso
 
     /**
      * Name of subscription registered feature
+
      */
     @InputImport(name="name")
     private final @Nullable String name;
@@ -29,6 +31,7 @@ public final class CustomerSubscriptionRegisteredFeatures extends io.pulumi.reso
 
     /**
      * State of subscription registered feature
+
      */
     @InputImport(name="state")
     private final @Nullable String state;

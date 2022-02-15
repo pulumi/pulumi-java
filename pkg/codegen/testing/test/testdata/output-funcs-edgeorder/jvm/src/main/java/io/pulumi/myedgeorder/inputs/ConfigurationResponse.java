@@ -19,6 +19,7 @@ import java.util.Objects;
 
 /**
  * Configuration object.
+
  */
 public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,6 +27,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Availability information of the product system.
+
      */
     @InputImport(name="availabilityInformation", required=true)
     private final AvailabilityInformationResponse availabilityInformation;
@@ -36,6 +38,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Cost information for the product system.
+
      */
     @InputImport(name="costInformation", required=true)
     private final CostInformationResponse costInformation;
@@ -46,6 +49,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Description related to the product system.
+
      */
     @InputImport(name="description", required=true)
     private final DescriptionResponse description;
@@ -56,6 +60,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Dimensions of the configuration
+
      */
     @InputImport(name="dimensions", required=true)
     private final DimensionsResponse dimensions;
@@ -66,6 +71,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Display Name for the product system.
+
      */
     @InputImport(name="displayName", required=true)
     private final String displayName;
@@ -76,6 +82,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * list of filters supported for a product
+
      */
     @InputImport(name="filterableProperties", required=true)
     private final List<FilterablePropertyResponse> filterableProperties;
@@ -86,6 +93,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Hierarchy information of a product.
+
      */
     @InputImport(name="hierarchyInformation", required=true)
     private final HierarchyInformationResponse hierarchyInformation;
@@ -96,6 +104,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Image information for the product system.
+
      */
     @InputImport(name="imageInformation", required=true)
     private final List<ImageInformationResponse> imageInformation;
@@ -106,6 +115,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifications of the configuration
+
      */
     @InputImport(name="specifications", required=true)
     private final List<SpecificationResponse> specifications;

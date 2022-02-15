@@ -20,6 +20,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Purpose/user defined descriptive test for this WebTest.
+
      */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
@@ -30,6 +31,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Is the test actively being monitored.
+
      */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
@@ -40,6 +42,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Interval in seconds between test runs for this WebTest. Default value is 300.
+
      */
     @InputImport(name="frequency")
     private final @Nullable Input<Integer> frequency;
@@ -50,6 +53,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of web test that this web test watches. Choices are ping and multistep.
+
      */
     @InputImport(name="kind")
     private final @Nullable Input<WebTestKind> kind;
@@ -60,6 +64,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
+
      */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
@@ -70,6 +75,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
+
      */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
@@ -80,6 +86,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allow for retries should this WebTest fail.
+
      */
     @InputImport(name="retryEnabled")
     private final @Nullable Input<Boolean> retryEnabled;
@@ -90,6 +97,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique ID of this WebTest. This is typically the same value as the Name field.
+
      */
     @InputImport(name="syntheticMonitorId", required=true)
     private final Input<String> syntheticMonitorId;
@@ -100,6 +108,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
+
      */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
@@ -110,6 +119,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Seconds until this WebTest will timeout and fail. Default value is 30.
+
      */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
@@ -120,6 +130,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of web test this is, valid choices are ping and multistep.
+
      */
     @InputImport(name="webTestKind", required=true)
     private final Input<WebTestKind> webTestKind;
@@ -130,6 +141,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User defined name if this WebTest.
+
      */
     @InputImport(name="webTestName")
     private final @Nullable Input<String> webTestName;

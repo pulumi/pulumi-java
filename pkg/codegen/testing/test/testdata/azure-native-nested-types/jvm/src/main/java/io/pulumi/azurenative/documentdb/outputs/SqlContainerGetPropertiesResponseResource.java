@@ -13,6 +13,7 @@ import javax.annotation.Nullable;
 public final class SqlContainerGetPropertiesResponseResource {
     /**
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
+
  */
     private final @Nullable IndexingPolicyResponse indexingPolicy;
 
@@ -23,6 +24,7 @@ public final class SqlContainerGetPropertiesResponseResource {
 
     /**
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
+
      */
     public Optional<IndexingPolicyResponse> getIndexingPolicy() {
         return Optional.ofNullable(this.indexingPolicy);

@@ -13,6 +13,7 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration with resource tag settings to ignore across all resources handled by this provider (except any individual service tag resources such as `ec2.Tag`) for situations where external systems are managing certain resource tags.
+
  */
 public final class IgnoreTags extends io.pulumi.resources.InvokeArgs {
 
@@ -20,6 +21,7 @@ public final class IgnoreTags extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+
      */
     @InputImport(name="keyPrefixes")
     private final @Nullable List<String> keyPrefixes;
@@ -30,6 +32,7 @@ public final class IgnoreTags extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning any tag key matching the prefixes in any `tags` attributes and displaying any configuration difference for those tag values. If any resource configuration still has a tag matching one of the prefixes configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+
      */
     @InputImport(name="keys")
     private final @Nullable List<String> keys;

@@ -10,15 +10,18 @@ import java.util.StringJoiner;
 
     /**
      * Type of product filter.
+
      */
     @EnumType
     public enum SupportedFilterTypes {
         /**
          * Ship to country
+
          */
         ShipToCountries("ShipToCountries"),
         /**
          * Double encryption status
+
          */
         DoubleEncryptionStatus("DoubleEncryptionStatus");
 

@@ -17,6 +17,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The identifier for the Batch inference deployment.
+
      */
     @InputImport(name="deploymentName")
     private final @Nullable Input<String> deploymentName;
@@ -27,6 +28,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Inference endpoint name
+
      */
     @InputImport(name="endpointName", required=true)
     private final Input<String> endpointName;
@@ -37,6 +39,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+
      */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
@@ -47,6 +50,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The geo-location where the resource lives
+
      */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
@@ -57,6 +61,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Additional attributes of the entity.
+
      */
     @InputImport(name="properties", required=true)
     private final Input<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
@@ -67,6 +72,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
+
      */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
@@ -77,6 +83,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags.
+
      */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
@@ -87,6 +94,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of Azure Machine Learning workspace.
+
      */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;

@@ -11,10 +11,12 @@ import java.util.Objects;
 public final class ImageInformationResponse {
     /**
      * Type of the image
+
  */
     private final String imageType;
     /**
      * Url of the image
+
  */
     private final String imageUrl;
 
@@ -28,12 +30,14 @@ public final class ImageInformationResponse {
 
     /**
      * Type of the image
+
      */
     public String getImageType() {
         return this.imageType;
     }
     /**
      * Url of the image
+
      */
     public String getImageUrl() {
         return this.imageUrl;

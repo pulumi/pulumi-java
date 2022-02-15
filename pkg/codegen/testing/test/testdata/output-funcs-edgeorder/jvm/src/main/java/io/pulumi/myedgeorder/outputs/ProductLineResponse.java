@@ -19,34 +19,42 @@ import java.util.Objects;
 public final class ProductLineResponse {
     /**
      * Availability information of the product system.
+
  */
     private final AvailabilityInformationResponse availabilityInformation;
     /**
      * Cost information for the product system.
+
  */
     private final CostInformationResponse costInformation;
     /**
      * Description related to the product system.
+
  */
     private final DescriptionResponse description;
     /**
      * Display Name for the product system.
+
  */
     private final String displayName;
     /**
      * list of filters supported for a product
+
  */
     private final List<FilterablePropertyResponse> filterableProperties;
     /**
      * Hierarchy information of a product.
+
  */
     private final HierarchyInformationResponse hierarchyInformation;
     /**
      * Image information for the product system.
+
  */
     private final List<ImageInformationResponse> imageInformation;
     /**
      * List of products in the product line
+
  */
     private final List<ProductResponse> products;
 
@@ -72,48 +80,56 @@ public final class ProductLineResponse {
 
     /**
      * Availability information of the product system.
+
      */
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * Cost information for the product system.
+
      */
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
+
      */
     public DescriptionResponse getDescription() {
         return this.description;
     }
     /**
      * Display Name for the product system.
+
      */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
+
      */
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
+
      */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
+
      */
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
     }
     /**
      * List of products in the product line
+
      */
     public List<ProductResponse> getProducts() {
         return this.products;
