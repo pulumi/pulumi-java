@@ -21,6 +21,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.throughputMibps == null ? Input.empty() : this.throughputMibps;
     }
 
+    /**
+     * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+     * 
+     */
     @InputImport(name="usageThreshold", required=true)
     private final Input<Double> usageThreshold;
 

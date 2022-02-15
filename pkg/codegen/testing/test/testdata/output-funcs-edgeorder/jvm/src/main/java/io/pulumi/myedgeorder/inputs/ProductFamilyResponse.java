@@ -16,10 +16,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Product Family
+ * 
+ */
 public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProductFamilyResponse Empty = new ProductFamilyResponse();
 
+    /**
+     * Availability information of the product system.
+     * 
+     */
     @InputImport(name="availabilityInformation", required=true)
     private final AvailabilityInformationResponse availabilityInformation;
 
@@ -27,6 +35,10 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
         return this.availabilityInformation;
     }
 
+    /**
+     * Cost information for the product system.
+     * 
+     */
     @InputImport(name="costInformation", required=true)
     private final CostInformationResponse costInformation;
 
@@ -34,6 +46,10 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
         return this.costInformation;
     }
 
+    /**
+     * Description related to the product system.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final DescriptionResponse description;
 
@@ -41,6 +57,10 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
         return this.description;
     }
 
+    /**
+     * Display Name for the product system.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -48,6 +68,10 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
         return this.displayName;
     }
 
+    /**
+     * list of filters supported for a product
+     * 
+     */
     @InputImport(name="filterableProperties", required=true)
     private final List<FilterablePropertyResponse> filterableProperties;
 
@@ -55,6 +79,10 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
         return this.filterableProperties;
     }
 
+    /**
+     * Hierarchy information of a product.
+     * 
+     */
     @InputImport(name="hierarchyInformation", required=true)
     private final HierarchyInformationResponse hierarchyInformation;
 
@@ -62,6 +90,10 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
         return this.hierarchyInformation;
     }
 
+    /**
+     * Image information for the product system.
+     * 
+     */
     @InputImport(name="imageInformation", required=true)
     private final List<ImageInformationResponse> imageInformation;
 
@@ -69,6 +101,10 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
         return this.imageInformation;
     }
 
+    /**
+     * List of product lines supported in the product family
+     * 
+     */
     @InputImport(name="productLines", required=true)
     private final List<ProductLineResponse> productLines;
 

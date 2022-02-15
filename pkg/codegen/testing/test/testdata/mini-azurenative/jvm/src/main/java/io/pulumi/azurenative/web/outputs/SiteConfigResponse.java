@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SiteConfigResponse {
+    /**
+     * .NET Framework version.
+     * 
+     */
     private final @Nullable String netFrameworkVersion;
 
     @OutputCustomType.Constructor({"netFrameworkVersion"})
@@ -18,6 +22,10 @@ public final class SiteConfigResponse {
         this.netFrameworkVersion = netFrameworkVersion;
     }
 
+    /**
+     * .NET Framework version.
+     * 
+     */
     public Optional<String> getNetFrameworkVersion() {
         return Optional.ofNullable(this.netFrameworkVersion);
     }

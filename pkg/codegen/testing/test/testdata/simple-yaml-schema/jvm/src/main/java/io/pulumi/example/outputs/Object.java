@@ -19,7 +19,15 @@ public final class Object {
     private final @Nullable String bar;
     private final @Nullable List<ConfigMap> configs;
     private final @Nullable Resource foo;
+    /**
+     * List of lists of other objects
+     * 
+     */
     private final @Nullable List<List<SomeOtherObject>> others;
+    /**
+     * Mapping from string to list of some other object
+     * 
+     */
     private final @Nullable Map<String,List<SomeOtherObject>> stillOthers;
 
     @OutputCustomType.Constructor({"bar","configs","foo","others","stillOthers"})
@@ -45,9 +53,17 @@ public final class Object {
     public Optional<Resource> getFoo() {
         return Optional.ofNullable(this.foo);
     }
+    /**
+     * List of lists of other objects
+     * 
+     */
     public List<List<SomeOtherObject>> getOthers() {
         return this.others == null ? List.of() : this.others;
     }
+    /**
+     * Mapping from string to list of some other object
+     * 
+     */
     public Map<String,List<SomeOtherObject>> getStillOthers() {
         return this.stillOthers == null ? Map.of() : this.stillOthers;
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration of an App Service app.
+ * 
+ */
 public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SiteConfigResponse Empty = new SiteConfigResponse();
 
+    /**
+     * .NET Framework version.
+     * 
+     */
     @InputImport(name="netFrameworkVersion")
     private final @Nullable String netFrameworkVersion;
 
