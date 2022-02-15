@@ -122,19 +122,18 @@ public class DeploymentTest {
         runTaskOne.join();
     }
 
-    // FIXME
-    @Disabled
     @Test
     void testRunWaitsForOrphanedOutput() {
         final var result = new AtomicInteger(0);
         var cf = new CompletableFuture<Integer>();
         var runTaskOne = mock.getRunner().runAsyncFuture(() -> {
             //noinspection unused
-            Output<Integer> orphaned = Output.of(cf).applyValue(result::getAndSet);
-            return CompletableFuture.completedFuture(Map.of());
+            Output<Integer> orphaned = Output.of(cf).applyValue(result::getAndSet); // the orphaned output
+            return CompletableFuture.completedFuture(Map.of()); // empty outputs
         }, null);
 
-        cf.complete(42);
+        var triggered = cf.complete(42);
+        assertThat(triggered).isTrue();
         runTaskOne.join();
 
         assertThat(result.get()).isEqualTo(42);
