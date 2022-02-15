@@ -14,6 +14,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
 
     public static final InstanceProfileState Empty = new InstanceProfileState();
 
+    /**
+     * Name of the role to add to the profile.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

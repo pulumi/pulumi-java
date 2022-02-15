@@ -14,6 +14,10 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final InstanceProfileArgs Empty = new InstanceProfileArgs();
 
+    /**
+     * Name of the role to add to the profile.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 
