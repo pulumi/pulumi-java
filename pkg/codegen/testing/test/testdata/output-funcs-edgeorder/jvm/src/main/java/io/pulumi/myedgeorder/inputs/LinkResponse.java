@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Returns link related to the product
+ */
 public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkResponse Empty = new LinkResponse();
 
+    /**
+     * Type of link
+     */
     @InputImport(name="linkType", required=true)
     private final String linkType;
 
@@ -19,6 +25,9 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.linkType;
     }
 
+    /**
+     * Url of the link
+     */
     @InputImport(name="linkUrl", required=true)
     private final String linkUrl;
 

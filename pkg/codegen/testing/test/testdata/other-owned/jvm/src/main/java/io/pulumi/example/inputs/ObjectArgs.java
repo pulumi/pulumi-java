@@ -40,6 +40,9 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.foo == null ? Input.empty() : this.foo;
     }
 
+    /**
+     * List of lists of other objects
+     */
     @InputImport(name="others")
     private final @Nullable Input<List<List<SomeOtherObjectArgs>>> others;
 
@@ -47,6 +50,9 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.others == null ? Input.empty() : this.others;
     }
 
+    /**
+     * Mapping from string to list of some other object
+     */
     @InputImport(name="stillOthers")
     private final @Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 

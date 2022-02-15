@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWebAppSlotResult {
+    /**
+     * Configuration of the app.
+ */
     private final @Nullable SiteConfigResponse siteConfig;
 
     @OutputCustomType.Constructor({"siteConfig"})
@@ -18,6 +21,9 @@ public final class GetWebAppSlotResult {
         this.siteConfig = siteConfig;
     }
 
+    /**
+     * Configuration of the app.
+     */
     public Optional<SiteConfigResponse> getSiteConfig() {
         return Optional.ofNullable(this.siteConfig);
     }

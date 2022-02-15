@@ -14,6 +14,17 @@ import javax.annotation.Nullable;
 
 @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
 public class GetAmiIds {
+/**
+ * Taken from pulumi-AWS to regress an issue
+ *
+ * A collection of arguments for invoking getAmiIds.
+
+ *
+ * A collection of values returned by getAmiIds.
+
+ * @deprecated
+ * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
+ */
     public static CompletableFuture<GetAmiIdsResult> invokeAsync(GetAmiIdsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args == null ? GetAmiIdsArgs.Empty : args, Utilities.withVersion(options));
     }

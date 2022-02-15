@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Holds details about product hierarchy information
+ */
 public final class HierarchyInformation extends io.pulumi.resources.InvokeArgs {
 
     public static final HierarchyInformation Empty = new HierarchyInformation();
 
+    /**
+     * Represents configuration name that uniquely identifies configuration
+     */
     @InputImport(name="configurationName")
     private final @Nullable String configurationName;
 
@@ -21,6 +27,9 @@ public final class HierarchyInformation extends io.pulumi.resources.InvokeArgs {
         return this.configurationName == null ? Optional.empty() : Optional.ofNullable(this.configurationName);
     }
 
+    /**
+     * Represents product family name that uniquely identifies product family
+     */
     @InputImport(name="productFamilyName")
     private final @Nullable String productFamilyName;
 
@@ -28,6 +37,9 @@ public final class HierarchyInformation extends io.pulumi.resources.InvokeArgs {
         return this.productFamilyName == null ? Optional.empty() : Optional.ofNullable(this.productFamilyName);
     }
 
+    /**
+     * Represents product line name that uniquely identifies product line
+     */
     @InputImport(name="productLineName")
     private final @Nullable String productLineName;
 
@@ -35,6 +47,9 @@ public final class HierarchyInformation extends io.pulumi.resources.InvokeArgs {
         return this.productLineName == null ? Optional.empty() : Optional.ofNullable(this.productLineName);
     }
 
+    /**
+     * Represents product name that uniquely identifies product
+     */
     @InputImport(name="productName")
     private final @Nullable String productName;
 

@@ -479,15 +479,19 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 
 	indent := strings.Repeat("    ", 1)
 
-	_, _ = fmt.Fprintf(w, "%s/**\n", indent)
-	_, _ = fmt.Fprintf(w, "%s * %s\n", indent, escapeBlockComment(prop.Comment))
+	if prop.Comment != "" || prop.DeprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "%s/**\n", indent)
+		if prop.Comment != "" {
+			_, _ = fmt.Fprintf(w, "%s * %s\n", indent, escapeBlockComment(prop.Comment))
+		}
 
-	if prop.DeprecationMessage != "" {
-		_, _ = fmt.Fprintf(w, "%s * @deprecated\n", indent)
-		_, _ = fmt.Fprintf(w, "%s * %s\n", indent, escapeBlockComment(prop.DeprecationMessage))
+		if prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s * @deprecated\n", indent)
+			_, _ = fmt.Fprintf(w, "%s * %s\n", indent, escapeBlockComment(prop.DeprecationMessage))
 
+		}
+		_, _ = fmt.Fprintf(w, "%s */\n", indent)
 	}
-	_, _ = fmt.Fprintf(w, "%s */\n", indent)
 
 	_, _ = fmt.Fprintf(w, "%s@%s(name=\"%s\"%s)\n", indent, ctx.ref(names.InputImport), wireName, attributeArgs)
 	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
@@ -548,9 +552,11 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Open the class.
-	_, _ = fmt.Fprintf(w, "/**\n")
-	_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(pt.comment))
-	_, _ = fmt.Fprintf(w, " */\n")
+	if pt.comment != "" {
+		_, _ = fmt.Fprintf(w, "/**\n")
+		_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(pt.comment))
+		_, _ = fmt.Fprintf(w, " */\n")
+	}
 
 	_, _ = fmt.Fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
 	_, _ = fmt.Fprintf(w, "\n")
@@ -758,15 +764,18 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
-		_, _ = fmt.Fprintf(w, "/**\n")
-		_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(prop.Comment))
+		if prop.Comment != "" || prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s    /**\n", indent)
+			if prop.Comment != "" {
+				_, _ = fmt.Fprintf(w, "%s     * %s\n", indent, escapeBlockComment(prop.Comment))
+			}
+			if prop.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "%s     * @deprecated\n", indent)
+				_, _ = fmt.Fprintf(w, "%s     * %s\n", indent, escapeBlockComment(prop.DeprecationMessage))
 
-		if prop.DeprecationMessage != "" {
-			_, _ = fmt.Fprintf(w, " * @deprecated\n")
-			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(prop.DeprecationMessage))
-
+			}
+			_, _ = fmt.Fprintf(w, "%s */\n", indent)
 		}
-		_, _ = fmt.Fprintf(w, " */\n")
 
 		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType.ToCode(ctx.imports), fieldName)
 	}
@@ -842,15 +851,19 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 	// Generate getters
 	for _, prop := range pt.properties {
-		_, _ = fmt.Fprintf(w, "/**\n")
-		_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(prop.Comment))
+		if prop.Comment != "" || prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s    /**\n", indent)
+			if prop.Comment != "" {
+				_, _ = fmt.Fprintf(w, "%s     * %s\n", indent, escapeBlockComment(prop.Comment))
+			}
 
-		if prop.DeprecationMessage != "" {
-			_, _ = fmt.Fprintf(w, " * @deprecated\n")
-			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(prop.DeprecationMessage))
+			if prop.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "%s     * @deprecated\n", indent)
+				_, _ = fmt.Fprintf(w, "%s     * %s\n", indent, escapeBlockComment(prop.DeprecationMessage))
 
+			}
+			_, _ = fmt.Fprintf(w, "%s     */\n", indent)
 		}
-		_, _ = fmt.Fprintf(w, " */\n")
 		paramName := names.Ident(prop.Name)
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
 		getterType := pt.mod.typeString(
@@ -1082,15 +1095,19 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	// Create a resource module file into which all of this resource's types will go.
 	name := resourceName(r)
 
-	_, _ = fmt.Fprintf(w, "/**\n")
-	_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(r.Comment))
+	if r.Comment != "" || r.DeprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "/**\n")
+		if r.Comment != "" {
+			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(r.Comment))
+		}
 
-	if r.DeprecationMessage != "" {
-		_, _ = fmt.Fprintf(w, " * @deprecated\n")
-		_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(r.DeprecationMessage))
+		if r.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, " * @deprecated\n")
+			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(r.DeprecationMessage))
 
+		}
+		_, _ = fmt.Fprintf(w, " */\n")
 	}
-	_, _ = fmt.Fprintf(w, " */\n")
 
 	// Open the class.
 	className := name
@@ -1134,15 +1151,20 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			secretProps = append(secretProps, prop.Name)
 		}
 
-		_, _ = fmt.Fprintf(w, "    /**\n")
-		_, _ = fmt.Fprintf(w, "     * %s\n", escapeBlockComment(prop.Comment))
+		if prop.Comment != "" || prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "    /**\n")
+			if prop.Comment != "" {
+				_, _ = fmt.Fprintf(w, "     * %s\n", escapeBlockComment(prop.Comment))
+			}
 
-		if prop.DeprecationMessage != "" {
-			_, _ = fmt.Fprintf(w, "     * @deprecated\n")
-			_, _ = fmt.Fprintf(w, "     * %s\n", escapeBlockComment(prop.DeprecationMessage))
+			if prop.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "     * @deprecated\n")
+				_, _ = fmt.Fprintf(w, "     * %s\n", escapeBlockComment(prop.DeprecationMessage))
 
+			}
+			_, _ = fmt.Fprintf(w, "     */\n")
 		}
-		_, _ = fmt.Fprintf(w, "     */\n")
+
 		outputExportParameters := strings.Join(
 			propertyType.ParameterTypesTransformed(func(ts TypeShape) string {
 				return ts.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
@@ -1373,17 +1395,23 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	// Open the class we'll use for datasources.
 	_, _ = fmt.Fprintf(w, "public class %s {\n", className)
 
-	_, _ = fmt.Fprintf(w, "/**\n")
-	_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(fun.Comment))
-	if fun.Inputs != nil && fun.Inputs.Comment != "" {
-		_, _ = fmt.Fprintf(w, " *\n")
-		_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(fun.Inputs.Comment))
+	if fun.Comment != "" || fun.DeprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "/**\n")
+		_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(fun.Comment))
+		if fun.Inputs != nil && fun.Inputs.Comment != "" {
+			_, _ = fmt.Fprintf(w, " *\n")
+			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(fun.Inputs.Comment))
+		}
+		if fun.Outputs != nil && fun.Outputs.Comment != "" {
+			_, _ = fmt.Fprintf(w, " *\n")
+			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(fun.Outputs.Comment))
+		}
+		if fun.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, " * @deprecated\n")
+			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(fun.DeprecationMessage))
+		}
+		_, _ = fmt.Fprintf(w, " */\n")
 	}
-	if fun.Outputs != nil && fun.Outputs.Comment != "" {
-		_, _ = fmt.Fprintf(w, " *\n")
-		_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(fun.Outputs.Comment))
-	}
-	_, _ = fmt.Fprintf(w, " */\n")
 
 	// Emit the datasource method.
 	_, _ = fmt.Fprintf(w, "    public static %s<%s> invokeAsync(%s@%s %s options) {\n",
@@ -1427,9 +1455,11 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 		e.Name = safeName
 	}
 
-	_, _ = fmt.Fprintf(w, "/**\n")
-	_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(enum.Comment))
-	_, _ = fmt.Fprintf(w, " */\n")
+	if enum.Comment != "" {
+		_, _ = fmt.Fprintf(w, "%s/**\n", indent)
+		_, _ = fmt.Fprintf(w, "%s * %s\n", indent, escapeBlockComment(enum.Comment))
+		_, _ = fmt.Fprintf(w, "%s */\n", indent)
+	}
 
 	underlyingType := mod.typeString(
 		ctx,
@@ -1450,14 +1480,18 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 
 		// Enum values
 		for i, e := range enum.Elements {
-			_, _ = fmt.Fprintf(w, "/**\n")
-			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(e.Comment))
+			if e.Comment != "" || e.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "%s/**\n", indent)
+				if e.Comment != "" {
+					_, _ = fmt.Fprintf(w, "%s * %s\n", indent, escapeBlockComment(e.Comment))
+				}
 
-			if e.DeprecationMessage != "" {
-				_, _ = fmt.Fprintf(w, " * @deprecated\n")
-				_, _ = fmt.Fprintf(w, " * %s\n", e.DeprecationMessage)
+				if e.DeprecationMessage != "" {
+					_, _ = fmt.Fprintf(w, "%s * @deprecated\n", indent)
+					_, _ = fmt.Fprintf(w, "%s * %s\n", indent, e.DeprecationMessage)
+				}
+				_, _ = fmt.Fprintf(w, "%s */\n", indent)
 			}
-			_, _ = fmt.Fprintf(w, " */\n")
 			printObsoleteAttribute(ctx, e.DeprecationMessage, indent)
 			var separator string
 			if i == len(enum.Elements)-1 { // last element
@@ -1655,9 +1689,12 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 				defaultValueInitializer)
 		}
 
-		_, _ = fmt.Fprintf(w, "/**\n")
-		_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(p.Comment))
-		_, _ = fmt.Fprintf(w, " */\n")
+		if p.Comment != "" {
+			_, _ = fmt.Fprintf(w, "/**\n")
+			_, _ = fmt.Fprintf(w, " * %s\n", escapeBlockComment(p.Comment))
+			_, _ = fmt.Fprintf(w, " */\n")
+		}
+
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
 			GetterType:      propertyType.ToCode(ctx.imports),

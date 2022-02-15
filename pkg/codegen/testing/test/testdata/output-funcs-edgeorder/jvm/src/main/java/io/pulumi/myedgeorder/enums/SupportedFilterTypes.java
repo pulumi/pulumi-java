@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of product filter.
+     */
     @EnumType
     public enum SupportedFilterTypes {
+        /**
+         * Ship to country
+         */
         ShipToCountries("ShipToCountries"),
+        /**
+         * Double encryption status
+         */
         DoubleEncryptionStatus("DoubleEncryptionStatus");
 
         private final String value;

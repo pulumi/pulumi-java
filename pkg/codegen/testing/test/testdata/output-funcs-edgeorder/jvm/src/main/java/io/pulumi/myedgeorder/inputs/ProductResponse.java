@@ -16,10 +16,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * List of Products
+ */
 public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProductResponse Empty = new ProductResponse();
 
+    /**
+     * Availability information of the product system.
+     */
     @InputImport(name="availabilityInformation", required=true)
     private final AvailabilityInformationResponse availabilityInformation;
 
@@ -27,6 +33,9 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.availabilityInformation;
     }
 
+    /**
+     * List of configurations for the product
+     */
     @InputImport(name="configurations", required=true)
     private final List<ConfigurationResponse> configurations;
 
@@ -34,6 +43,9 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.configurations;
     }
 
+    /**
+     * Cost information for the product system.
+     */
     @InputImport(name="costInformation", required=true)
     private final CostInformationResponse costInformation;
 
@@ -41,6 +53,9 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.costInformation;
     }
 
+    /**
+     * Description related to the product system.
+     */
     @InputImport(name="description", required=true)
     private final DescriptionResponse description;
 
@@ -48,6 +63,9 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
+    /**
+     * Display Name for the product system.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -55,6 +73,9 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName;
     }
 
+    /**
+     * list of filters supported for a product
+     */
     @InputImport(name="filterableProperties", required=true)
     private final List<FilterablePropertyResponse> filterableProperties;
 
@@ -62,6 +83,9 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.filterableProperties;
     }
 
+    /**
+     * Hierarchy information of a product.
+     */
     @InputImport(name="hierarchyInformation", required=true)
     private final HierarchyInformationResponse hierarchyInformation;
 
@@ -69,6 +93,9 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.hierarchyInformation;
     }
 
+    /**
+     * Image information for the product system.
+     */
     @InputImport(name="imageInformation", required=true)
     private final List<ImageInformationResponse> imageInformation;
 

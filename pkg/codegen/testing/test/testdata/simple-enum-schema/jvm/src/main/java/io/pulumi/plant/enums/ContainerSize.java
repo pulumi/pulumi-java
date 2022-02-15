@@ -7,10 +7,17 @@ import io.pulumi.core.internal.annotations.EnumType;
 import java.lang.Integer;
 import java.util.StringJoiner;
 
+    /**
+     * plant container sizes
+     */
     @EnumType
     public enum ContainerSize {
         FourInch(4),
         SixInch(6),
+        /**
+         * @deprecated
+         * Eight inch pots are no longer supported.
+         */
         @Deprecated /* Eight inch pots are no longer supported. */
         EightInch(8);
 

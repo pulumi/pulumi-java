@@ -17,6 +17,11 @@ public final class GetAmiIdsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAmiIdsArgs Empty = new GetAmiIdsArgs();
 
+    /**
+     * Limit search to users with *explicit* launch
+permission on  the image. Valid items are the numeric account ID or `self`.
+
+     */
     @InputImport(name="executableUsers")
     private final @Nullable List<String> executableUsers;
 
@@ -24,6 +29,12 @@ public final class GetAmiIdsArgs extends io.pulumi.resources.InvokeArgs {
         return this.executableUsers == null ? List.of() : this.executableUsers;
     }
 
+    /**
+     * One or more name/value pairs to filter off of. There
+are several valid keys, for a full reference, check out
+[describe-images in the AWS CLI reference][1].
+
+     */
     @InputImport(name="filters")
     private final @Nullable List<GetAmiIdsFilter> filters;
 
@@ -31,6 +42,14 @@ public final class GetAmiIdsArgs extends io.pulumi.resources.InvokeArgs {
         return this.filters == null ? List.of() : this.filters;
     }
 
+    /**
+     * A regex string to apply to the AMI list returned
+by AWS. This allows more advanced filtering not supported from the AWS API.
+This filtering is done locally on what AWS returns, and could have a performance
+impact if the result is large. It is recommended to combine this with other
+options to narrow down the list AWS returns.
+
+     */
     @InputImport(name="nameRegex")
     private final @Nullable String nameRegex;
 
@@ -38,6 +57,10 @@ public final class GetAmiIdsArgs extends io.pulumi.resources.InvokeArgs {
         return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
     }
 
+    /**
+     * List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
+
+     */
     @InputImport(name="owners", required=true)
     private final List<String> owners;
 
@@ -45,6 +68,10 @@ public final class GetAmiIdsArgs extends io.pulumi.resources.InvokeArgs {
         return this.owners;
     }
 
+    /**
+     * Used to sort AMIs by creation time.
+
+     */
     @InputImport(name="sortAscending")
     private final @Nullable Boolean sortAscending;
 
