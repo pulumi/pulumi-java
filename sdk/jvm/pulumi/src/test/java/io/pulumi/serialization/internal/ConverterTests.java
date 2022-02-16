@@ -9,6 +9,7 @@ import com.google.protobuf.ListValue;
 import com.google.protobuf.NullValue;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
+import io.pulumi.Log;
 import io.pulumi.core.Input;
 import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
@@ -43,6 +44,8 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class ConverterTests {
 
+    private final static Log log = DeploymentTests.mockLog();
+
     private static Value createSecretValue(Value value) {
         return Value.newBuilder().setStructValue(
                 Struct.newBuilder()
@@ -59,7 +62,7 @@ class ConverterTests {
 
     @CheckReturnValue
     public static CompletableFuture<Value> serializeToValueAsync(@Nullable Object value, boolean keepResources) {
-        var serializer = new Serializer(false);
+        var serializer = new Serializer(log);
         return serializer.serializeAsync("ConverterTest", value, keepResources)
                 .thenApply(Serializer::createValue);
     }

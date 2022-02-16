@@ -5,10 +5,7 @@ import io.pulumi.resources.Resource;
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
-public interface EngineLogger {
-    int getErrorCount();
-
-    boolean hasLoggedErrors();
+public interface EngineLogger extends CountingLogger {
 
     /**
      * Logs a debug-level message that is generally hidden from end-users.

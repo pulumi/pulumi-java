@@ -11,7 +11,6 @@ import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.deployment.MockCallArgs;
-import io.pulumi.deployment.MockMonitor;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -28,7 +27,6 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
-import static io.pulumi.deployment.internal.DeploymentTests.printErrorCount;
 import static io.pulumi.serialization.internal.ConverterTests.deserializeFromValue;
 import static io.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -42,17 +40,12 @@ class ResourceRefPropertyTest {
         cleanupDeploymentMocks();
     }
 
-    @AfterEach
-    public void printInternalErrorCount() {
-        printErrorCount(mock.logger);
-    }
-
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeCustomResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
-                .setMonitor(new MockMonitor(new MyMocks(isPreview)))
+                .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
@@ -76,7 +69,7 @@ class ResourceRefPropertyTest {
     void testSerializeCustomResourceDownlevel(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
-                .setMonitor(new MockMonitor(new MyMocks(isPreview)))
+                .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
@@ -98,7 +91,7 @@ class ResourceRefPropertyTest {
     void testDeserializeCustomResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
-                .setMonitor(new MockMonitor(new MyMocks(isPreview)))
+                .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(DeserializeCustomResourceStack.class).join();
@@ -120,7 +113,7 @@ class ResourceRefPropertyTest {
     void testDeserializeMissingCustomResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
-                .setMonitor(new MockMonitor(new MyMocks(isPreview)))
+                .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(DeserializeMissingCustomResourceStack.class).join();
@@ -141,7 +134,7 @@ class ResourceRefPropertyTest {
     void testSerializeComponentResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
-                .setMonitor(new MockMonitor(new MyMocks(isPreview)))
+                .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
@@ -163,7 +156,7 @@ class ResourceRefPropertyTest {
     void testSerializeComponentResourceDownlevel(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
-                .setMonitor(new MockMonitor(new MyMocks(isPreview)))
+                .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
@@ -185,7 +178,7 @@ class ResourceRefPropertyTest {
     void testDeserializeComponentResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
-                .setMonitor(new MockMonitor(new MyMocks(isPreview)))
+                .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(DeserializeComponentResourceStack.class).join();
@@ -206,7 +199,7 @@ class ResourceRefPropertyTest {
     void testDeserializeMissingComponentResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
-                .setMonitor(new MockMonitor(new MyMocks(isPreview)))
+                .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(DeserializeMissingComponentResourceStack.class).join();
