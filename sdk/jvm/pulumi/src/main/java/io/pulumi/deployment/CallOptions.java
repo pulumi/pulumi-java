@@ -1,7 +1,7 @@
 package io.pulumi.deployment;
 
+import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.Reflection;
-import io.pulumi.core.internal.Visitor;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.ProviderResource;
@@ -9,7 +9,6 @@ import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Objects;
 import java.util.Optional;
 
 /**
@@ -26,6 +25,9 @@ public final class CallOptions {
     private final ProviderResource provider;
     @Nullable
     private final String version;
+
+    @Field
+    public final Internal internal = new Internal();
 
     public CallOptions() {
         this(null, null, null);
@@ -62,27 +64,15 @@ public final class CallOptions {
     }
 
     @InternalUse
-    public <T> T accept(Visitor<T, CallOptions> visitor) {
-        return visitor.visit(this);
-    }
+    public final class Internal {
 
-    @InternalUse
-    public static class NestedProviderVisitor implements Visitor<Optional<ProviderResource>, CallOptions> {
-
-        private final String token;
-
-        private NestedProviderVisitor(String token) {
-            this.token = Objects.requireNonNull(token);
+        private Internal() {
+            /* Empty */
         }
 
-        public static NestedProviderVisitor of(String token) {
-            return new NestedProviderVisitor(token);
-        }
-
-        @Override
-        public Optional<ProviderResource> visit(CallOptions options) {
-            return options.getProvider().or(
-                    () -> options.getParent().map(p -> Resource.internalGetProvider(p, token))
+        public Optional<ProviderResource> getNestedProvider(String token) {
+            return CallOptions.this.getProvider().or(
+                    () -> CallOptions.this.getParent().map(p -> Resource.internalGetProvider(p, token))
             );
         }
     }
