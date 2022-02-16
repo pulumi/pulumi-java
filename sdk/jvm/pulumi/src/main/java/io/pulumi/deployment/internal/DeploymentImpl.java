@@ -500,7 +500,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             log.debug(String.format("Invoking function: token='%s' asynchronously", token));
 
             // Wait for all values to be available, and then perform the RPC.
-            var serializedFuture = args.internalToOptionalMapAsync(this.log)
+            var serializedFuture = Internal.from(args).toOptionalMapAsync(this.log)
                     .thenCompose(argsDict ->
                             this.featureSupport.monitorSupportsResourceReferences()
                                     .thenCompose(keepResources ->
@@ -545,7 +545,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private static Optional<ProviderResource> getProviderFrom(String token, InvokeOptions options) {
-            return options.accept(InvokeOptions.NestedProviderVisitor.of(token));
+            return Internal.from(options).getNestedProvider(token);
         }
     }
 
@@ -645,7 +645,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             log.debug(String.format("Calling function: token='%s' asynchronously", token));
 
             // Wait for all values to be available, and then perform the RPC.
-            var serializedFuture = args.internalToOptionalMapAsync(this.log)
+            var serializedFuture = Internal.from(args).toOptionalMapAsync(this.log)
                     .thenApply(argsDict -> self == null
                             ? argsDict
                             : ImmutableMap.<String, Optional<Object>>builder()
@@ -733,7 +733,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private static Optional<ProviderResource> getProviderFrom(String token, CallOptions options) {
-            return options.accept(CallOptions.NestedProviderVisitor.of(token));
+            return Internal.from(options).getNestedProvider(token);
         }
     }
 
@@ -774,7 +774,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         // Serialize out all our props to their final values. In doing so, we'll also collect all
                         // the Resources pointed to by any Dependency objects we encounter, adding them to 'propertyDependencies'.
                         log.excessive("Serializing properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
-                        return args.internalToOptionalMapAsync(this.log).thenCompose(
+                        return Internal.from(args).toOptionalMapAsync(this.log).thenCompose(
                                 map -> this.featureSupport.monitorSupportsResourceReferences().thenCompose(
                                         supportsResourceReferences -> serialization.serializeResourcePropertiesAsync(label, map, supportsResourceReferences).thenCompose(
                                                 serializationResult -> {
