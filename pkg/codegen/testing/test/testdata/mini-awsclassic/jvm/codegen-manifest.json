@@ -3,6 +3,7 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
+    "src/main/java/io/pulumi/aws/Config.java",
     "src/main/java/io/pulumi/aws/Provider.java",
     "src/main/java/io/pulumi/aws/ProviderArgs.java",
     "src/main/java/io/pulumi/aws/Utilities.java",
