@@ -16,7 +16,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static com.google.common.collect.ImmutableList.toImmutableList;
+import static io.pulumi.core.internal.PulumiCollectors.toSingleton;
 import static java.util.stream.Collectors.joining;
 
 public class Reflection {
@@ -131,31 +131,23 @@ public class Reflection {
         }
 
         public <A extends Annotation> Constructor<?> getAnnotatedConstructor(Class<A> constructorAnnotation) {
-            var constructors = Arrays.stream(this.type.getDeclaredConstructors())
+            return Arrays.stream(this.type.getDeclaredConstructors())
                     .filter(c -> c.isAnnotationPresent(constructorAnnotation))
                     .peek(c -> c.setAccessible(true))
-                    .collect(toImmutableList());
-            if (constructors.size() != 1) {
-                throw new IllegalArgumentException(String.format(
-                        "Expected target type '%s' to have exactly one constructor annotated with @%s, got: %d",
-                        getTypeName(), constructorAnnotation.getSimpleName(), constructors.size()
-                ));
-            }
-            return constructors.get(0);
+                    .collect(toSingleton(cause -> new IllegalArgumentException(String.format(
+                            "Expected target type '%s' to have exactly one constructor annotated with @%s, got: %s",
+                            getTypeName(), constructorAnnotation.getSimpleName(), cause
+                    ))));
         }
 
         public <A extends Annotation> Method getAnnotatedMethod(Class<A> methodAnnotation) {
-            var methods = Arrays.stream(this.getType().getDeclaredMethods())
+            return Arrays.stream(this.getType().getDeclaredMethods())
                     .filter(m -> m.isAnnotationPresent(methodAnnotation))
                     .peek(c -> c.setAccessible(true))
-                    .collect(toImmutableList());
-            if (methods.size() != 1) {
-                throw new IllegalArgumentException(String.format(
-                        "Expected target type '%s' to have exactly one method annotated with @%s, got: %d",
-                        getTypeName(), methodAnnotation.getSimpleName(), methods.size()
-                ));
-            }
-            return methods.get(0);
+                    .collect(toSingleton(cause -> new IllegalArgumentException(String.format(
+                            "Expected target type '%s' to have exactly one method annotated with @%s, got: %s",
+                            getTypeName(), methodAnnotation.getSimpleName(), cause
+                    ))));
         }
 
         public String asString() {
