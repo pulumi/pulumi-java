@@ -4,10 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
+import io.pulumi.Log;
 import io.pulumi.example.inputs.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.Mockito.mock;
 
 class InputTests {
 
@@ -15,7 +17,7 @@ class InputTests {
     void testInputsFooArgs_nullValues() {
         assertThatThrownBy(() -> {
             var args = FooArgs.Empty;
-            var map = args.internalToOptionalMapAsync().join();
+            var map = args.internalToOptionalMapAsync(mock(Log.class)).join();
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -30,7 +32,7 @@ class InputTests {
                 .setF("test2")
                 .build();
 
-        var map = args.internalToOptionalMapAsync().join();
+        var map = args.internalToOptionalMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("a");
         assertThat(map).containsKey("b");
