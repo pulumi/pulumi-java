@@ -1,0 +1,48 @@
+{
+  "version": "0.0.1",
+  "name": "aws",
+  "resources": {
+    "aws:iam/instanceProfile:InstanceProfile": {
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Name of the role to add to the profile.\n"
+        }
+      },
+      "inputProperties": {
+        "role": {
+          "type": "string",
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string",
+              "$ref": "#/types/aws:iam/role:Role"
+            }
+          ],
+          "description": "Name of the role to add to the profile.\n"
+        }
+      },
+      "stateInputs": {
+        "description": "Input properties used for looking up and filtering InstanceProfile resources.\n",
+        "properties": {
+          "role": {
+            "type": "string",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "$ref": "#/types/aws:iam/role:Role"
+              }
+            ],
+            "description": "Name of the role to add to the profile.\n"
+          }
+        },
+        "type": "object"
+      }
+    }
+  }
+}

@@ -160,6 +160,14 @@ func (mod *modContext) typeStringRecHelper(
 			elem = codegen.PlainType(t.ElementType)
 		}
 		inner := mod.typeStringRecHelper(ctx, elem, qualifier, true, state, requireInitializers, true)
+
+		// Simplify Input<Input<T>> to Input<T> here. This is
+		// safe to do since:
+		//
+		//     serialize(Input<Input<T>> x) == serialize(Input<T> x)
+		if inner.Type.Equal(names.Input) {
+			return inner
+		}
 		return TypeShape{
 			Type:       names.Input,
 			Parameters: []TypeShape{inner},
@@ -713,13 +721,15 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Input), propertyName)
 			}
 
-			// add overloaded setter
-			builderSetters = append(builderSetters, builderSetterTemplateContext{
-				SetterName:   setterName,
-				PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
-				PropertyName: propertyName.String(),
-				Assignment:   assignmentUnwrapped(propertyName),
-			})
+			if !propertyTypeUnwrapped.Equal(propertyType) {
+				// add overloaded setter
+				builderSetters = append(builderSetters, builderSetterTemplateContext{
+					SetterName:   setterName,
+					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
+					PropertyName: propertyName.String(),
+					Assignment:   assignmentUnwrapped(propertyName),
+				})
+			}
 		}
 	}
 

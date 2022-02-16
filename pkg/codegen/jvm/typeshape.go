@@ -28,6 +28,29 @@ type TypeShapeStringOptions struct {
 	AppendClassArrayLiteral bool
 }
 
+func (ts TypeShape) Equal(other TypeShape) bool {
+	if !ts.Type.Equal(other.Type) {
+		return false
+	}
+	if len(ts.Parameters) != len(other.Parameters) {
+		return false
+	}
+	for i := range ts.Parameters {
+		if !ts.Parameters[i].Equal(other.Parameters[i]) {
+			return false
+		}
+	}
+	if len(ts.Annotations) != len(other.Annotations) {
+		return false
+	}
+	for i := range ts.Annotations {
+		if ts.Annotations[i] != other.Annotations[i] {
+			return false
+		}
+	}
+	return true
+}
+
 // Converts to Java code, may add imports to use short names.
 func (ts TypeShape) ToCode(imports *names.Imports) string {
 	return ts.ToCodeWithOptions(imports, TypeShapeStringOptions{})
