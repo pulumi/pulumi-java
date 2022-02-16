@@ -45,10 +45,11 @@ public abstract class InputOutputMetadata<A extends Annotation> {
         try {
             return Optional.ofNullable(this.field.get(extractionObject));
         } catch (IllegalArgumentException | IllegalAccessException e) {
-            throw new IllegalStateException("Can't get the value of an annotated field " + e.getMessage(), e);
+            throw new IllegalStateException("Can't get the value of an annotated field, error: " + e.getMessage(), e);
         }
     }
 
+    @SuppressWarnings("rawtypes")
     public <IO extends InputOutput> void setFieldValue(Object extractionObject, IO output) {
         try {
             this.field.set(extractionObject, output);
