@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
+import io.pulumi.Log;
 import io.pulumi.core.Input;
 import io.pulumi.core.Either;
 import io.pulumi.plant.inputs.*;
@@ -14,6 +15,7 @@ import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.TypedInputOutput;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
 
 class InputTests {
 
@@ -24,7 +26,7 @@ class InputTests {
     @Test
     void testContainerArgs_nullValues() {
         var args = ContainerArgs.Empty;
-        var map = args.internalToOptionalMapAsync().join();
+        var map = args.internalToOptionalMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("brightness");
         assertThat(map).containsKey("color");
@@ -46,7 +48,7 @@ class InputTests {
                 .setSize(ContainerSize.FourInch)
                 .build();
 
-        var map = args.internalToOptionalMapAsync().join();
+        var map = args.internalToOptionalMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("brightness");
         assertThat(map).containsKey("color");
