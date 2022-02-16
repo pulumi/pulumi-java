@@ -130,8 +130,56 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         return ofNullable(this.resources, this.value, this.known, isSecret);
     }
 
+    // TODO replace apply with this once empty values are eliminated.
+    public <U> InputOutputData<U> map(Function<? super T,? extends U> mapper) {
+        U value = null;
+        if (this.value != null) {
+            value = mapper.apply(this.value);
+        }
+        return ofNullable(this.resources, value, this.known, this.secret);
+    }
+
     public <U> InputOutputData<U> apply(Function</* @Nullable */ T, U> function) {
         return ofNullable(this.resources, function.apply(this.value), this.known, this.secret);
+    }
+
+    public <U,V> InputOutputData<V> combine(InputOutputData<? extends U> other,
+                                            BiFunction<? super T,? super U,? extends V> fn) {
+        V value = null;
+        if (this.value != null && other.value != null) {
+            value = fn.apply(this.value, other.value);
+        }
+        var resources = ImmutableSet.<Resource>builder()
+                .addAll(this.resources)
+                .addAll(other.resources)
+                .build();
+        return ofNullable(
+                resources,
+                value,
+                this.isKnown() || other.isKnown(),
+                this.isSecret() || other.isSecret());
+    }
+
+    // TODO known and empty should not be a allowed.
+    public <V> CompletableFuture<InputOutputData<V>> traverseFuture(Function<T, CompletableFuture<V>> fn) {
+        if (isKnown()) {
+            return fn.apply(value).thenApply(x -> map($ -> x));
+        } else {
+            return CompletableFuture.completedFuture(asUnknown());
+        }
+    }
+
+    public static <T> InputOutputData<T> join(InputOutputData<InputOutputData<T>> rr) {
+        if (rr.isKnown()) {
+            var r = rr.value;
+            return r.combine(rr, (rv, $) -> rv);
+        } else {
+            return rr.asUnknown();
+        }
+    }
+
+    public <U> InputOutputData<U> asUnknown() {
+        return new InputOutputData<>(resources, false, isSecret());
     }
 
     public ImmutableSet<Resource> getResources() {
