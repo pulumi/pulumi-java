@@ -44,5 +44,23 @@
         "type": "object"
       }
     }
+  },
+  "config": {
+    "variables": {
+      "region": {
+        "type": "string",
+        "$ref": "#/types/aws:index/region:Region",
+        "description": "The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.\n",
+        "defaultInfo": {
+          "environment": [
+            "AWS_REGION",
+            "AWS_DEFAULT_REGION"
+          ]
+        }
+      }
+    },
+    "defaults": [
+      "region"
+    ]
   }
 }

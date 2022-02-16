@@ -35,4 +35,8 @@ public class Optionals {
         }
         return b;
     }
+
+    public static <T> T combine(Optional<T> a, T b) {
+        return a.orElse(b);
+    }
 }
