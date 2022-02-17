@@ -660,8 +660,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
 
             // Determine the provider and version to use.
-            var provider = self == null ? getProviderFrom(token, options) : self.internalGetProvider();
-            var version = self == null ? options.getVersion() : self.internalGetVersion();
+            var provider = self == null ? getProviderFrom(token, options) : Internal.from(self).getProvider();
+            var version = self == null ? options.getVersion() : Internal.from(self).getVersion();
 
             CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
                     () -> provider.map(p -> p.accept(ProviderResource.registrationIdVisitor()))
@@ -854,7 +854,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                     // the former has been processed in the Resource constructor prior to calling
                                                                                                     // 'registerResource' - both adding new inherited aliases and simplifying aliases down to URNs.
                                                                                                     var aliasesFuture = CompletableFutures.allOf(
-                                                                                                            res.internalGetAliases().stream()
+                                                                                                            Internal.from(res).getAliases().stream()
                                                                                                                     .map(alias -> TypedInputOutput.cast(alias).view(v -> v.getValueOrDefault("")))
                                                                                                                     .collect(toSet()))
                                                                                                             .thenApply(completed -> completed.stream()
@@ -923,7 +923,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             return true;
                         }
                         if (resource instanceof ComponentResource) {
-                            return resource.internalGetRemote();
+                            return Internal.from(resource).getRemote();
                         }
                         return false; // Unreachable
                     })

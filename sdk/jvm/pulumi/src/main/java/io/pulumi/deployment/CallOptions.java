@@ -72,7 +72,8 @@ public final class CallOptions {
 
         public Optional<ProviderResource> getNestedProvider(String token) {
             return CallOptions.this.getProvider().or(
-                    () -> CallOptions.this.getParent().map(p -> Resource.internalGetProvider(p, token))
+                    () -> CallOptions.this.getParent().flatMap(p ->
+                            io.pulumi.core.internal.Internal.from(p).getProvider(token))
             );
         }
     }

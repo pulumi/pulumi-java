@@ -8,6 +8,7 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.Urn;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.OutputExport;
@@ -16,6 +17,7 @@ import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.ResourceException;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.*;
 
 import static io.pulumi.core.internal.Objects.exceptionSupplier;
@@ -26,6 +28,7 @@ import static java.util.Objects.requireNonNull;
 /**
  * Resource represents a class whose CRUD operations are implemented by a provider plugin.
  */
+@ParametersAreNonnullByDefault
 public abstract class Resource {
 
     @OutputExport(name = Constants.UrnPropertyName, type = String.class)
@@ -53,6 +56,10 @@ public abstract class Resource {
 
     @Nullable
     private final String version;
+
+    @SuppressWarnings("unused")
+    @Field
+    private final Internal internal = new Internal();
 
     /**
      * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
@@ -174,7 +181,6 @@ public abstract class Resource {
             // Make a copy of the aliases array, and add to it any implicit aliases inherited from its parent
             options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
             for (var parentAlias : options.parent.aliases) {
-                //noinspection ConstantConditions
                 options.aliases.add(
                         Urn.internalInheritedChildAlias(this.name, options.parent.getResourceName(), parentAlias, this.type).toInput()
                 );
@@ -189,13 +195,11 @@ public abstract class Resource {
             if (provider == null) {
                 if (options.parent != null) {
                     // If no provider was given, but we have a parent, then inherit the provider from our parent.
-                    //noinspection ConstantConditions
-                    options.provider = internalGetProvider(options.parent, this.type);
+                    options.provider = InternalStatic.getProvider(options.parent, this.type);
                 }
             } else {
                 // If a provider was specified, add it to the providers map under this type's package so that
                 // any children of this resource inherit its provider.
-                //noinspection ConstantConditions
                 var typeComponents = this.type.split(":");
                 if (typeComponents.length == 3) {
                     var pkg = typeComponents[0];
@@ -233,53 +237,6 @@ public abstract class Resource {
 
         // Finish initialisation with reflection
         DeploymentInternal.getInstance().readOrRegisterResource(this, remote, DependencyResource::new, args, options);
-    }
-
-    /**
-     * Fetches the provider for the given module member, if any.
-     *
-     * @param moduleMember the module member to look for
-     * @return the @see {@link ProviderResource} or empty if not found
-     */
-    @Nullable
-    @InternalUse
-    static public ProviderResource internalGetProvider(Resource resource, String moduleMember) {
-        var memComponents = moduleMember.split(":");
-        if (memComponents.length != 3) {
-            // TODO: why do we silently ignore invalid type?
-            return null;
-        }
-
-        return resource.providers.getOrDefault(memComponents[0], null);
-    }
-
-    /**
-     * A list of aliases applied to this resource.
-     */
-    @InternalUse
-    public List<Input<String>> internalGetAliases() {
-        return this.aliases;
-    }
-
-    @InternalUse
-    public boolean internalGetRemote() {
-        return this.remote;
-    }
-
-    /**
-     * The specified provider or provider determined from the parent for custom resources.
-     */
-    @InternalUse
-    public Optional<ProviderResource> internalGetProvider() {
-        return Optional.ofNullable(this.provider);
-    }
-
-    /**
-     * The specified provider version.
-     */
-    @InternalUse
-    public Optional<String> internalGetVersion() {
-        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -398,5 +355,71 @@ public abstract class Resource {
             return new ParentInfo(null, null);
 
         return new ParentInfo(defaultParent, null);
+    }
+
+    @InternalUse
+    @ParametersAreNonnullByDefault
+    public final class Internal {
+
+        private Internal() {
+            /* Empty */
+        }
+
+        /**
+         * A list of aliases applied to this resource.
+         */
+        @InternalUse
+        public List<Input<String>> getAliases() {
+            return Resource.this.aliases;
+        }
+
+        @InternalUse
+        public boolean getRemote() {
+            return Resource.this.remote;
+        }
+
+        /**
+         * The specified provider or provider determined from the parent for custom resources.
+         */
+        @InternalUse
+        public Optional<ProviderResource> getProvider() {
+            return Optional.ofNullable(Resource.this.provider);
+        }
+
+        /**
+         * Fetches the provider for the given module member, if any.
+         */
+        @InternalUse
+        public Optional<ProviderResource> getProvider(String moduleMember) {
+            return Optional.ofNullable(InternalStatic.getProvider(Resource.this, moduleMember));
+        }
+
+        /**
+         * The specified provider version.
+         */
+        @InternalUse
+        public Optional<String> getVersion() {
+            return Optional.ofNullable(Resource.this.version);
+        }
+    }
+
+    private static final class InternalStatic {
+        /**
+         * Fetches the provider for the given module member, if any.
+         *
+         * @param moduleMember the module member to look for
+         * @return the @see {@link ProviderResource} or empty if not found
+         */
+        @Nullable
+        @InternalUse
+        static public ProviderResource getProvider(Resource resource, String moduleMember) {
+            var memComponents = moduleMember.split(":");
+            if (memComponents.length != 3) {
+                // TODO: why do we silently ignore invalid type?
+                return null;
+            }
+
+            return resource.providers.getOrDefault(memComponents[0], null);
+        }
     }
 }
