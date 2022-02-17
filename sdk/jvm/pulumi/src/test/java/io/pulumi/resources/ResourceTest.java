@@ -9,7 +9,7 @@ import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
 import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.test.internal.TestOptions;
+import io.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
