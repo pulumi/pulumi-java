@@ -81,7 +81,7 @@ public class Reflection {
         return Either.errorOf(ex);
     }
 
-    @SuppressWarnings("UnstableApiUsage")
+    // TODO: Move TypeShape to non-internal package
     public final static class TypeShape<T> {
 
         public static final TypeShape<Void> Empty = TypeShape.of(Void.class);
@@ -148,6 +148,29 @@ public class Reflection {
                             "Expected target type '%s' to have exactly one method annotated with @%s, got: %s",
                             getTypeName(), methodAnnotation.getSimpleName(), cause
                     ))));
+        }
+
+        /**
+         * Returns true if the type and all of the parameters are assignable from the given other shape.
+         * @see Class#isAssignableFrom(Class)
+         */
+        @SuppressWarnings("BooleanMethodIsAlwaysInverted")
+        public <U> boolean isAssignableFrom(TypeShape<U> other) {
+            if (!this.type.isAssignableFrom(other.type)) {
+                return false;
+            }
+            if (this.getParameterCount() != other.getParameterCount()) {
+                return false;
+            }
+            ImmutableList<TypeShape<?>> typeShapes = this.getParameters();
+            for (int i = 0; i < this.getParameters().size(); i++) {
+                TypeShape<?> thisParam = this.getParameters().get(i);
+                TypeShape<?> otherParam = other.getParameters().get(i);
+                if (!thisParam.isAssignableFrom(otherParam)) {
+                    return false;
+                }
+            }
+            return true;
         }
 
         public String asString() {

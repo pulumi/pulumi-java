@@ -4,8 +4,8 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.Reflection.TypeShape;
-import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.InputImport;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -57,7 +57,7 @@ public class DeploymentInvokeTest {
             assertThat(r).hasSize(1);
         });
 
-        TypedInputOutput.cast(out).internalGetDataAsync().join();
+        Internal.of(out).getDataAsync().join();
     }
 
     static class CustomInvokes {

@@ -250,7 +250,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
             return CompletableFuture.completedFuture(InputOutputData.empty());
         }
         //noinspection unchecked,rawtypes,rawtypes
-        return ((InputOutputImpl) obj).internalGetDataAsync().copy();
+        return ((InputOutputInternal) obj).getDataAsync().copy();
     }
 
     public static <T1, T2, T3, T4, T5, T6, T7, T8> CompletableFuture<InputOutputData<Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>> tuple(
@@ -258,14 +258,14 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
             Input<T5> input5, Input<T6> input6, Input<T7> input7, Input<T8> input8
     ) {
         return internalTupleHelperAsync(
-                (TypedInputOutput.cast(input1)).internalGetDataAsync(),
-                (TypedInputOutput.cast(input2)).internalGetDataAsync(),
-                (TypedInputOutput.cast(input3)).internalGetDataAsync(),
-                (TypedInputOutput.cast(input4)).internalGetDataAsync(),
-                (TypedInputOutput.cast(input5)).internalGetDataAsync(),
-                (TypedInputOutput.cast(input6)).internalGetDataAsync(),
-                (TypedInputOutput.cast(input7)).internalGetDataAsync(),
-                (TypedInputOutput.cast(input8)).internalGetDataAsync()
+                (Internal.of(input1)).getDataAsync(),
+                (Internal.of(input2)).getDataAsync(),
+                (Internal.of(input3)).getDataAsync(),
+                (Internal.of(input4)).getDataAsync(),
+                (Internal.of(input5)).getDataAsync(),
+                (Internal.of(input6)).getDataAsync(),
+                (Internal.of(input7)).getDataAsync(),
+                (Internal.of(input8)).getDataAsync()
         );
     }
 
@@ -274,14 +274,14 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
             Output<T5> output5, Output<T6> output6, Output<T7> output7, Output<T8> output8
     ) {
         return internalTupleHelperAsync(
-                (TypedInputOutput.cast(output1)).internalGetDataAsync(),
-                (TypedInputOutput.cast(output2)).internalGetDataAsync(),
-                (TypedInputOutput.cast(output3)).internalGetDataAsync(),
-                (TypedInputOutput.cast(output4)).internalGetDataAsync(),
-                (TypedInputOutput.cast(output5)).internalGetDataAsync(),
-                (TypedInputOutput.cast(output6)).internalGetDataAsync(),
-                (TypedInputOutput.cast(output7)).internalGetDataAsync(),
-                (TypedInputOutput.cast(output8)).internalGetDataAsync()
+                (Internal.of(output1)).getDataAsync(),
+                (Internal.of(output2)).getDataAsync(),
+                (Internal.of(output3)).getDataAsync(),
+                (Internal.of(output4)).getDataAsync(),
+                (Internal.of(output5)).getDataAsync(),
+                (Internal.of(output6)).getDataAsync(),
+                (Internal.of(output7)).getDataAsync(),
+                (Internal.of(output8)).getDataAsync()
         );
     }
 

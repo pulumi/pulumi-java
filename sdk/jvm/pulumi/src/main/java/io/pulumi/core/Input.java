@@ -10,7 +10,7 @@ import com.google.gson.JsonNull;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Copyable;
 import io.pulumi.core.internal.InputOutputData;
-import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.Internal;
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -21,7 +21,7 @@ import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
-import static io.pulumi.core.internal.InputOutputImpl.TupleZeroIn;
+import static io.pulumi.core.internal.InputOutputInternal.TupleZeroIn;
 
 public interface Input<T> extends InputOutput<T, Input<T>> {
 
@@ -167,7 +167,7 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
      * @see #ofLeft(Object)
      */
     static <L, R> Input<Either<L, R>> ofLeft(Output<L> value) {
-        return new InputDefault<>(TypedInputOutput.cast(value).internalGetDataAsync()
+        return new InputDefault<>(Internal.of(value).getDataAsync()
                 .thenApply(ioData -> ioData.apply(Either::<L, R>ofLeft)));
     }
 
@@ -175,7 +175,7 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
      * @see #ofLeft(Object)
      */
     static <L, R> Input<Either<L, R>> ofRight(Output<R> value) {
-        return new InputDefault<>(TypedInputOutput.cast(value).internalGetDataAsync()
+        return new InputDefault<>(Internal.of(value).getDataAsync()
                 .thenApply(ioData -> ioData.apply(Either::ofRight)));
     }
 
@@ -199,7 +199,7 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
      * @see #ofJson(JsonElement)
      */
     static Input<JsonElement> ofJson(Output<JsonElement> json) {
-        return new InputDefault<>(TypedInputOutput.cast(json).internalGetDataAsync());
+        return new InputDefault<>(Internal.of(json).getDataAsync());
     }
 
     /**
@@ -245,10 +245,10 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
     }
 
     private static <E> Input<List<E>> concatListInternal(Input</* @Nullable */ List<E>> left, Input</* @Nullable */List<E>> right) {
-        return Input.of(TypedInputOutput.cast(left).view(InputOutputData::isEmpty).thenCompose(
-                leftIsEmpty -> TypedInputOutput.cast(right).view(InputOutputData::isEmpty).thenCompose(
-                        rightIsEmpty -> TypedInputOutput.cast(left).view(InputOutputData::getValueNullable).thenCompose(
-                                l -> TypedInputOutput.cast(right).view(InputOutputData::getValueNullable).thenApply(
+        return Input.of(Internal.of(left).isEmpty().thenCompose(
+                leftIsEmpty -> Internal.of(right).isEmpty().thenCompose(
+                        rightIsEmpty -> Internal.of(left).getValueNullable().thenCompose(
+                                l -> Internal.of(right).getValueNullable().thenApply(
                                         r -> {
                                             if (leftIsEmpty && rightIsEmpty) {
                                                 return null;
@@ -387,7 +387,7 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
         @CanIgnoreReturnValue
         public <IO extends InputOutput<E, IO> & Copyable<IO>> ListBuilder<E> add(InputOutput<E, IO> value) {
             this.builder.accumulate(
-                    TypedInputOutput.cast(value).internalGetDataAsync(),
+                    Internal.of(value).getDataAsync(),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::add)
             );
             return this;
@@ -466,10 +466,10 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
     }
 
     private static <V> Input<Map<String, V>> concatMapInternal(Input<Map<String, V>> left, Input<Map<String, V>> right) {
-        return Input.of(TypedInputOutput.cast(left).view(InputOutputData::isEmpty).thenCompose(
-                leftIsEmpty -> TypedInputOutput.cast(right).view(InputOutputData::isEmpty).thenCompose(
-                        rightIsEmpty -> TypedInputOutput.cast(left).view(InputOutputData::getValueNullable).thenCompose(
-                                l -> TypedInputOutput.cast(right).view(InputOutputData::getValueNullable).thenApply(
+        return Input.of(Internal.of(left).isEmpty().thenCompose(
+                leftIsEmpty -> Internal.of(right).isEmpty().thenCompose(
+                        rightIsEmpty -> Internal.of(left).getValueNullable().thenCompose(
+                                l -> Internal.of(right).getValueNullable().thenApply(
                                         r -> {
                                             if (leftIsEmpty && rightIsEmpty) {
                                                 return null;
@@ -601,7 +601,7 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
         @CanIgnoreReturnValue
         public <IO extends InputOutput<V, IO> & Copyable<IO>> MapBuilder<V> put(String key, InputOutput<V, IO> value) {
             this.builder.accumulate(
-                    TypedInputOutput.cast(value).internalGetDataAsync(),
+                    Internal.of(value).getDataAsync(),
                     (dataBuilder, data) -> dataBuilder.accumulate(data,
                             (mapBuilder, v) -> mapBuilder.put(key, v))
             );
