@@ -3,7 +3,7 @@ package io.pulumi.core;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.test.internal.TestOptions;
+import io.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

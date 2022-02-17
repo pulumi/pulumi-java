@@ -12,7 +12,6 @@ import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
-import io.pulumi.test.internal.TestOptions;
 
 import javax.annotation.Nullable;
 import java.util.Map;

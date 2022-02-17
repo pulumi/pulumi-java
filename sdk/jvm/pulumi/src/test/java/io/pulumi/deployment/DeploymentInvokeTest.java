@@ -9,8 +9,8 @@ import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.InputImport;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import io.pulumi.deployment.internal.DeploymentTests;
+import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.InvokeArgs;
-import io.pulumi.test.internal.TestOptions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
