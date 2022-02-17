@@ -1827,7 +1827,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 return LogSeverity.ERROR;
             }
 
-            return LogSeverity.DEBUG; // arbitrary default
+            throw new IllegalArgumentException("Invalid level: " + level.getName());
         }
 
         @Override
