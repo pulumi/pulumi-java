@@ -4,12 +4,19 @@
 package io.pulumi.aws;
 
 import io.pulumi.aws.Utilities;
+import io.pulumi.aws.config_endpoints.inputs.Endpoints;
 import io.pulumi.core.internal.Optionals;
+import io.pulumi.core.internal.Reflection.TypeShape;
 import java.lang.String;
+import java.util.List;
+import java.util.Optional;
 
 public final class Config {
 
     private static final io.pulumi.Config config = io.pulumi.Config.of("aws");
+    public Optional<List<Endpoints>> endpoints() {
+        return config.getObject("endpoints",TypeShape.<List<Endpoints>>builder(List.class).addParameter(Endpoints.class).build());
+    }
 /**
  * The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
  * 
