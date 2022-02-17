@@ -5,6 +5,7 @@ import io.pulumi.core.AssetOrArchive;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.resources.InputArgs;
+import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.Resource;
 
 import java.lang.annotation.ElementType;
@@ -34,6 +35,10 @@ public class Internal {
 
     public static Stack.Internal from(Stack s) {
         return from(s, Stack.Internal.class);
+    }
+
+    public static ProviderResource.Internal from(ProviderResource r) {
+        return from(r, ProviderResource.Internal.class);
     }
 
     public static Resource.Internal from(Resource r) {
