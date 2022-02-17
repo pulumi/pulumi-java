@@ -339,12 +339,13 @@ public class Serializer {
             throw new UnsupportedOperationException("Cannot serialize invalid archive");
         }
 
-        var propName = assetOrArchive.getPropName();
-        return serializeAsync(ctx + "." + propName, assetOrArchive.getValue(), keepResources).thenApply(
+        var internalAssetOrArchive = Internal.from(assetOrArchive);
+        var propName = internalAssetOrArchive.getPropName();
+        return serializeAsync(ctx + "." + propName, internalAssetOrArchive.getValue(), keepResources).thenApply(
                 /* @Nullable */ value -> {
                     var result = new HashMap<String, /* @Nullable */ Object>();
-                    result.put(Constants.SpecialSigKey, assetOrArchive.getSigKey());
-                    result.put(assetOrArchive.getPropName(), value);
+                    result.put(Constants.SpecialSigKey, internalAssetOrArchive.getSigKey());
+                    result.put(internalAssetOrArchive.getPropName(), value);
                     return result;
                 }
         );

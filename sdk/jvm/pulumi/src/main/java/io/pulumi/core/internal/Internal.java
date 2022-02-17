@@ -1,6 +1,7 @@
 package io.pulumi.core.internal;
 
 import io.pulumi.Stack;
+import io.pulumi.core.AssetOrArchive;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.resources.InputArgs;
@@ -37,6 +38,10 @@ public class Internal {
 
     public static Resource.Internal from(Resource r) {
         return from(r, Resource.Internal.class);
+    }
+
+    public static AssetOrArchive.Internal from(AssetOrArchive a) {
+        return from(a, AssetOrArchive.Internal.class);
     }
 
     public static <T, I> I from(T value, Class<I> internalType) {
