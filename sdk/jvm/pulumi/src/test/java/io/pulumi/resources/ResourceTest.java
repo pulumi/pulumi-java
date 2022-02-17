@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.Stack;
 import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Tuples;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
@@ -49,11 +50,11 @@ public class ResourceTest {
         assertThat(resource).isNotNull();
 
         var urn = InputOutputTests.waitFor(resource.getUrn()).getValueNullable();
-        var provider = CustomResource.internalGetProvider(resource, resource.getResourceType());
+        var provider = Internal.from(resource).getProvider(resource.getResourceType());
 
-        assertThat(provider).isNotNull();
-        assertThat(provider.getResourceName()).isEqualTo("testProvider");
-        assertThat(provider.getResourceType()).isEqualTo("pulumi:providers:test");
+        assertThat(provider).isPresent();
+        assertThat(provider.get().getResourceName()).isEqualTo("testProvider");
+        assertThat(provider.get().getResourceType()).isEqualTo("pulumi:providers:test");
     }
 
     public static class MyStack extends Stack {
