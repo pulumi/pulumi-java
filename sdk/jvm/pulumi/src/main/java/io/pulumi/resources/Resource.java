@@ -112,7 +112,7 @@ public abstract class Resource {
 
         // Before anything else - if there are transformations registered, invoke them in order
         // to transform the properties and options assigned to this resource.
-        var parent = Objects.equals(type, Stack.InternalRootPulumiStackTypeName)
+        var parent = Objects.equals(type, Stack.InternalStatic.RootPulumiStackTypeName)
                 ? null
                 : (options.parent == null ? DeploymentInternal.getInstance().getStack() : options.parent);
 

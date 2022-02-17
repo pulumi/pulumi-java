@@ -1445,7 +1445,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         CompletableFuture<Optional<String>> getRootResourceAsync(String type) {
             // If we're calling this while creating the stack itself. No way to know its urn at this point.
-            if (Stack.InternalRootPulumiStackTypeName.equals(type)) {
+            if (Stack.InternalStatic.RootPulumiStackTypeName.equals(type)) {
                 return CompletableFuture.completedFuture(Optional.empty());
             }
 
@@ -1590,10 +1590,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
             try {
                 var stack = stackFactory.get();
+                var stackInternal = Internal.from(stack);
                 // Stack doesn't call RegisterOutputs, so we register them on its behalf.
-                stack.internalRegisterPropertyOutputs();
+                stackInternal.registerPropertyOutputs();
                 registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        TypedInputOutput.cast(stack.internalGetOutputs()).internalGetDataAsync());
+                        TypedInputOutput.cast(stackInternal.getOutputs()).internalGetDataAsync());
             } catch (Exception ex) {
                 return handleExceptionAsync(ex);
             }
@@ -1608,9 +1609,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @Override
         public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
-            var stack = new Stack(callback, options);
+            var stack = Stack.InternalStatic.of(callback, options);
             registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                    TypedInputOutput.cast(stack.internalGetOutputs()).internalGetDataAsync());
+                    TypedInputOutput.cast(Internal.from(stack).getOutputs()).internalGetDataAsync());
             return whileRunningAsync();
         }
 

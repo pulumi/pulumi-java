@@ -4,6 +4,7 @@ import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
@@ -104,7 +105,7 @@ class StackTest {
                 .setSpyGlobalInstance();
 
         var stack = factory.get();
-        stack.internalRegisterPropertyOutputs();
+        Internal.from(stack).registerPropertyOutputs();
 
         //noinspection unchecked
         ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
