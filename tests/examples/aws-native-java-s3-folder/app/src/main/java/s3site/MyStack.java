@@ -1,5 +1,5 @@
 // from https://github.com/pulumi/examples/blob/8cc8b1a4384c8b33f70ba65c701e19daecfa6399/aws-ts-s3-folder/index.ts
-package staticwebsite;
+package s3site;
 
 import java.io.IOException;
 import java.nio.file.Files;

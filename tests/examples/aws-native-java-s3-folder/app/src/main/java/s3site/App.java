@@ -1,4 +1,4 @@
-package staticwebsite;
+package s3site;
 
 import io.pulumi.deployment.Deployment;
 

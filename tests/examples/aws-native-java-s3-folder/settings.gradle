@@ -1,2 +1,2 @@
-rootProject.name = 'azure-java-static-website'
+rootProject.name = 'aws-native-java-s3-folder'
 include('app')

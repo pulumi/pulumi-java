@@ -1,13 +1,3 @@
-name: aws-native-java-s3-folder
-description: A Google Kubernetes Engine (GKE) + Kubernetes Hello World example
-runtime:
-  name: jvm
-template:
-  config:
-    gcp:project:
-      description: The Google Cloud project to deploy into
-    gcp:zone:
-      description: The Google Cloud zone
-    gcp:credentials:
-      description: Your GCP Service Account key contents for GKE Administration
-      secret: true
+name: aws-java-s3-folder
+runtime: jvm
+description: A static website hosted on AWS S3

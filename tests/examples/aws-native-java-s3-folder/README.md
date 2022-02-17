@@ -14,12 +14,6 @@ available in AWS's Cloud Control API.
 Note: some values in this example will be different from run to run.  These values are indicated
 with `***`.
 
-1.  Create a new stack:
-
-    ```bash
-    $ pulumi stack init dev
-    ```
-
 1.  Set the AWS region:
 
     Either using an environment variable
@@ -33,60 +27,87 @@ with `***`.
     $ pulumi config set aws-native:region us-west-2
     ```
 
-1.  Restore NPM modules via `npm install` or `yarn install`.
-
 1.  Run `pulumi up` to preview and deploy changes.  After the preview is shown you will be
     prompted if you want to continue or not.
 
     ```bash
     $ pulumi up
     Previewing update (dev)
-    ...
+    
+    View Live: https://app.pulumi.com/***/aws-java-s3-folder/dev/previews/e251093a-d128-4ed3-a230-4e98888aed84
+    
+         Type                     Name                    Plan       Info
+     +   pulumi:pulumi:Stack      aws-java-s3-folder-dev  create     6 messages
+     +   ├─ aws-native:s3:Bucket  s3-website-bucket       create     
+     +   ├─ aws:s3:BucketPolicy   bucketPolicy            create     
+     +   ├─ aws:s3:BucketObject   index.html              create     
+     +   └─ aws:s3:BucketObject   favicon.ico             create     
+     
+    Diagnostics:
+      pulumi:pulumi:Stack (aws-java-s3-folder-dev):
+        > Task :app:compileJava UP-TO-DATE
+        > Task :app:processResources NO-SOURCE
+        > Task :app:classes UP-TO-DATE
+        > Task :app:run
+        BUILD SUCCESSFUL in 3s
+        2 actionable tasks: 1 executed, 1 up-to-date
+     
     
     Updating (dev)
-
-    View Live: https://app.pulumi.com/***/aws-native-ts-s3-folder/dev/updates/1
-
-         Type                     Name                         Status
-    +   pulumi:pulumi:Stack      aws-native-ts-s3-folder-dev  created
-    +   ├─ aws-native:s3:Bucket  s3-website-bucket            created
-    +   ├─ aws:s3:BucketPolicy   bucketPolicy                 created
-    +   ├─ aws:s3:BucketObject   index.html                   created
-    +   └─ aws:s3:BucketObject   favicon.png                  created
-
+    
+    View Live: https://app.pulumi.com/***/aws-java-s3-folder/dev/updates/1
+    
+         Type                     Name                    Status      Info
+     +   pulumi:pulumi:Stack      aws-java-s3-folder-dev  created     6 messages
+     +   ├─ aws-native:s3:Bucket  s3-website-bucket       created     
+     +   ├─ aws:s3:BucketPolicy   bucketPolicy            created     
+     +   ├─ aws:s3:BucketObject   index.html              created     
+     +   └─ aws:s3:BucketObject   favicon.ico             created     
+     
+    Diagnostics:
+      pulumi:pulumi:Stack (aws-java-s3-folder-dev):
+        > Task :app:compileJava UP-TO-DATE
+        > Task :app:processResources NO-SOURCE
+        > Task :app:classes UP-TO-DATE
+        > Task :app:run
+        BUILD SUCCESSFUL in 1m 5s
+        2 actionable tasks: 1 executed, 1 up-to-date
+     
     Outputs:
-    bucketName: "***"
-    websiteUrl: "http://***.s3-website-us-west-2.amazonaws.com"
-
+        bucketName: "s3-website-bucket-***"
+        urn       : "***"
+        websiteUrl: "http://s3-website-bucket-***.s3-website-us-west-2.amazonaws.com"
+    
     Resources:
-    + 5 created
-
-    Duration: ***
+        + 5 created
+    
+    Duration: 1m6s
     ```
 
 1.  To see the resources that were created, run `pulumi stack output`:
 
     ```bash
     $ pulumi stack output
-    Current stack outputs (2):
-    OUTPUT      VALUE
-    bucketName  ***
-    websiteUrl  http://***.s3-website-us-west-2.amazonaws.com
+    Current stack outputs (3):
+        OUTPUT      VALUE
+        bucketName  s3-website-bucket-***
+        urn         urn:pulumi:dev::aws-java-s3-folder::pulumi:pulumi:Stack::aws-java-s3-folder-dev
+        websiteUrl  http://s3-website-bucket-***.s3-website-us-west-2.amazonaws.com
     ```
 
 1.  To see that the S3 objects exist, you can either use the AWS Console or the AWS CLI:
 
     ```bash
     $ aws s3 ls $(pulumi stack output bucketName)
-    2021-09-30 15:27:58      13731 favicon.png
-    2021-09-30 15:27:58        198 index.html    
+    2022-02-17 14:11:54      13731 favicon.ico
+    2022-02-17 14:11:54        198 index.html
     ```
 
 1.  Open the site URL in a browser to see both the rendered HTML and the favicon:
 
     ```bash
     $ pulumi stack output websiteUrl
-    ***.s3-website-us-west-2.amazonaws.com
+    http://s3-website-bucket-***.s3-website-us-west-2.amazonaws.com
     ```
 
     ![Hello S3 example](https://user-images.githubusercontent.com/274700/116912066-9384e300-abfc-11eb-8130-dbcff512a9de.png)
