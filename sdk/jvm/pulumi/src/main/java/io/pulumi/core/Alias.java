@@ -69,6 +69,7 @@ public class Alias {
         this.noParent = noParent;
     }
 
+    // No parent can indicate a root resource
     public static Alias noParent() {
         return new Alias(
                 null, // TODO what about all those values???

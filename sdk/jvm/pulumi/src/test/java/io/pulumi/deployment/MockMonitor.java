@@ -111,7 +111,7 @@ public class MockMonitor implements Monitor {
     public CompletableFuture<RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
         this.resources.add(resource);
 
-        if (Stack.InternalRootPulumiStackTypeName.equals(request.getType())) {
+        if (Stack.InternalStatic.RootPulumiStackTypeName.equals(request.getType())) {
             return CompletableFuture.completedFuture(
                     RegisterResourceResponse.newBuilder()
                             .setUrn(Urn.create(request.getParent(), request.getType(), request.getName()))
