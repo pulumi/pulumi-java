@@ -50,10 +50,10 @@ public class Urn {
         } else {
             var stackName = stack == null ? Input.of(Deployment.getInstance().getStackName()) : stack;
             var projectName = project == null ? Input.of(Deployment.getInstance().getProjectName()) : project;
-            parentPrefix = OutputDefault.format("urn:pulumi:%s::%s::", stackName, projectName);
+            parentPrefix = Output.format("urn:pulumi:%s::%s::", stackName, projectName);
         }
 
-        return OutputDefault.format("%s%s::%s", parentPrefix, type, name);
+        return Output.format("%s%s::%s", parentPrefix, type, name);
     }
 
     public static String create(@Nullable String parent, String type, String name) {

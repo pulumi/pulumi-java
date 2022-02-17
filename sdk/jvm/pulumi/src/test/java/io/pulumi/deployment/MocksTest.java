@@ -7,7 +7,7 @@ import io.pulumi.core.Input;
 import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
-import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.annotations.InputImport;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import io.pulumi.core.internal.annotations.OutputExport;
@@ -176,7 +176,7 @@ public class MocksTest {
                 .findFirst();
         assertThat(stack).isPresent();
 
-        var ipFuture = TypedInputOutput.cast(stack.get().publicIp).internalGetDataAsync();
+        var ipFuture = Internal.of(stack.get().publicIp).getDataAsync();
         assertThat(ipFuture).isCompletedExceptionally();
     }
 

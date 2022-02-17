@@ -13,7 +13,6 @@ import io.pulumi.plant.enums.*;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.TypedInputOutput;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -21,7 +20,7 @@ import static org.mockito.Mockito.mock;
 class InputTests {
 
     static <T, IO extends InputOutput<T, IO>> InputOutputData<T> waitFor(IO io) {
-        return TypedInputOutput.cast(io).mutate(CompletableFuture::join);
+        return Internal.of(io).getDataAsync().join();
     }
 
     @Test
