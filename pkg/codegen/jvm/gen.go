@@ -501,6 +501,9 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		_, _ = fmt.Fprintf(w, "%s */\n", indent)
 	}
 
+	if prop.DeprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "%s@Deprecated\n", indent)
+	}
 	_, _ = fmt.Fprintf(w, "%s@%s(name=\"%s\"%s)\n", indent, ctx.ref(names.InputImport), wireName, attributeArgs)
 	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
@@ -799,7 +802,9 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			}
 			_, _ = fmt.Fprintf(w, "%s     */\n", indent)
 		}
-
+		if prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s    @Deprecated\n", indent)
+		}
 		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType.ToCode(ctx.imports), fieldName)
 	}
 	if len(props) > 0 {
@@ -930,6 +935,9 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			}
 		}
 
+		if prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s    @Deprecated\n", indent)
+		}
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
 			GetterType:      getterType.ToCode(ctx.imports),
@@ -1206,6 +1214,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		outputParameterType := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
 		})
+		if prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "    @Deprecated\n")
+		}
 		fmt.Fprintf(w,
 			"    @%s(name=\"%s\", type=%s, parameters={%s})\n",
 			ctx.ref(names.OutputExport), wireName, outputExportType, outputExportParameters)
@@ -1437,6 +1448,9 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	}
 
 	// Emit the datasource method.
+	if fun.DeprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "    @Deprecated\n")
+	}
 	_, _ = fmt.Fprintf(w, "    public static %s<%s> invokeAsync(%s@%s %s options) {\n",
 		ctx.ref(names.CompletableFuture), typeParameter, argsParamDef, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
 	_, _ = fmt.Fprintf(w,
