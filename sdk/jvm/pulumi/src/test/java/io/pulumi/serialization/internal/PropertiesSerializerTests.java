@@ -5,6 +5,7 @@ import com.google.protobuf.Struct;
 import com.google.protobuf.util.JsonFormat;
 import io.pulumi.Log;
 import io.pulumi.core.Input;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.annotations.InputImport;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import io.pulumi.deployment.internal.EngineLogger;
@@ -42,7 +43,7 @@ public class PropertiesSerializerTests {
 
     private static String showStruct(ResourceArgs resourceArgs) {
         var log = new Log(EngineLogger.ignore());
-        var args = resourceArgs.internalToOptionalMapAsync(log).join();
+        var args = Internal.from(resourceArgs).toOptionalMapAsync(log).join();
         var s = new PropertiesSerializer(log);
         var label = "LABEL";
         var keepResources = true;

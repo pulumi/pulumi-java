@@ -1,6 +1,7 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.InternalUse;
 
@@ -19,6 +20,10 @@ public class ProviderResource extends CustomResource {
     private static final String ProviderResourceTypePrefix = "pulumi:providers:";
     private final String aPackage;
     private final CompletableFuture<String> registrationId;
+
+    @SuppressWarnings("unused")
+    @Field
+    private final Internal internal = new Internal();
 
     /**
      * Creates and registers a new provider resource for a particular package.
@@ -55,7 +60,6 @@ public class ProviderResource extends CustomResource {
     /**
      * Fields urn and id can be set late, with reflection, so we need lazy init here
      */
-    @InternalUse
     private CompletableFuture<String> registrationIdAsync() {
         var providerUrn = TypedInputOutput.cast(this.getUrn())
                 .view(data -> data.getValueOrDefault(""));
@@ -69,38 +73,21 @@ public class ProviderResource extends CustomResource {
     }
 
     @InternalUse
-    public <T> T accept(ProviderResource.Visitor<T> visitor) {
-        return visitor.visit(this);
-    }
+    @ParametersAreNonnullByDefault
+    public final class Internal {
 
-    @InternalUse
-    public interface Visitor<T> {
-        T visit(ProviderResource providerResource);
-    }
-
-    @InternalUse
-    public static RegistrationIdVisitor registrationIdVisitor() {
-        return new RegistrationIdVisitor();
-    }
-
-    @InternalUse
-    public static PackageVisitor packageVisitor() {
-        return new PackageVisitor();
-    }
-
-    @InternalUse
-    public static class RegistrationIdVisitor implements Visitor<CompletableFuture<String>> {
-        @Override
-        public CompletableFuture<String> visit(ProviderResource providerResource) {
-            return providerResource.registrationId;
+        private Internal() {
+            /* Empty */
         }
-    }
 
-    @InternalUse
-    public static class PackageVisitor implements Visitor<String> {
-        @Override
-        public String visit(ProviderResource providerResource) {
-            return providerResource.aPackage;
+        @InternalUse
+        public CompletableFuture<String> getRegistrationId() {
+            return ProviderResource.this.registrationId;
+        }
+
+        @InternalUse
+        public String getPackage() {
+            return ProviderResource.this.aPackage;
         }
     }
 }

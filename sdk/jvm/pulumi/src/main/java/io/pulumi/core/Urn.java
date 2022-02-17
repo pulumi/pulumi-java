@@ -1,7 +1,6 @@
 package io.pulumi.core;
 
 import com.google.common.base.Strings;
-import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 
@@ -72,45 +71,5 @@ public class Urn {
         return "urn:pulumi:" + String.join("::",
                 Deployment.getInstance().getStackName(), Deployment.getInstance().getProjectName(), type, name
         );
-    }
-
-    /**
-     * Computes the alias that should be applied to a child
-     * based on an alias applied to it's parent. This may involve changing the name of the
-     * resource in cases where the resource has a named derived from the name of the parent,
-     * and the parent name changed.
-     */
-    @InternalUse
-    public static Output<Alias> internalInheritedChildAlias(
-            String childName, String parentName, Input<String> parentAlias, String childType
-    ) {
-        Objects.requireNonNull(childName);
-        Objects.requireNonNull(parentName);
-        Objects.requireNonNull(parentAlias);
-        Objects.requireNonNull(childType);
-
-        // If the child name has the parent name as a prefix, then we make the assumption that
-        // it was constructed from the convention of using '{name}-details' as the name of the
-        // child resource.  To ensure this is aliased correctly, we must then also replace the
-        // parent aliases name in the prefix of the child resource name.
-        //
-        // For example:
-        // * name: "newapp-function"
-        // * options.parent.__name: "newapp"
-        // * parentAlias: "urn:pulumi:stackname::projectname::awsx:ec2:Vpc::app"
-        // * parentAliasName: "app"
-        // * aliasName: "app-function"
-        // * childAlias: "urn:pulumi:stackname::projectname::aws:s3/bucket:Bucket::app-function"
-        var aliasName = Output.of(childName);
-        if (childName.startsWith(parentName)) {
-            aliasName = parentAlias.toOutput().applyValue(
-                    (String parentAliasUrn) -> parentAliasUrn.substring(
-                            parentAliasUrn.lastIndexOf("::") + 2) + childName.substring(parentName.length()));
-        }
-
-        var urn = create(
-                aliasName.toInput(), Input.of(childType), null, parentAlias, null, null);
-
-        return urn.applyValue(Alias::withUrn);
     }
 }

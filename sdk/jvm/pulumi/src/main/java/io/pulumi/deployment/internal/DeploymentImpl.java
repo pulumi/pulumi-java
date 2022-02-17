@@ -510,7 +510,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     );
 
             CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
-                    () -> getProviderFrom(token, options).map(p -> p.accept(ProviderResource.registrationIdVisitor()))
+                    () -> {
+                        var provider = Internal.from(options).getNestedProvider(token);
+                        return provider.map(p -> Internal.from(p).getRegistrationId());
+                    }
             );
 
             return CompletableFuture.allOf(serializedFuture, providerFuture)
@@ -542,10 +545,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             return new PropertiesSerializer.SerializationResult(response.getReturn(), serialized.propertyToDependentResources);
                         });
                     });
-        }
-
-        private static Optional<ProviderResource> getProviderFrom(String token, InvokeOptions options) {
-            return Internal.from(options).getNestedProvider(token);
         }
     }
 
@@ -660,11 +659,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
 
             // Determine the provider and version to use.
-            var provider = self == null ? getProviderFrom(token, options) : Internal.from(self).getProvider();
+            var provider = self == null ? Internal.from(options).getNestedProvider(token) : Internal.from(self).getProvider();
             var version = self == null ? options.getVersion() : Internal.from(self).getVersion();
 
             CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
-                    () -> provider.map(p -> p.accept(ProviderResource.registrationIdVisitor()))
+                    () -> provider.map(p -> Internal.from(p).getRegistrationId())
             );
 
             return CompletableFuture.allOf(serializedFuture, providerFuture)
@@ -731,10 +730,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 this.dependencies = Objects.requireNonNull(dependencies);
             }
         }
-
-        private static Optional<ProviderResource> getProviderFrom(String token, CallOptions options) {
-            return Internal.from(options).getNestedProvider(token);
-        }
     }
 
     private static class CallException extends RuntimeException {
@@ -793,7 +788,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                             (Optional<String> pUrn) -> {
                                                                 log.excessive("Got parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
                                                                 var providerRef = custom
-                                                                        ? CompletableFutures.flipOptional(options.getProvider().map(p -> p.accept(ProviderResource.registrationIdVisitor())))
+                                                                        ? CompletableFutures.flipOptional(options.getProvider().map(p -> Internal.from(p).getRegistrationId()))
                                                                         : CompletableFuture.completedFuture(Optional.<String>empty());
 
                                                                 return providerRef.thenCompose(
@@ -809,9 +804,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                                                                 providerFutures = CompletableFutures.allOf(
                                                                                         componentOpts.getProviders().stream()
+                                                                                                .map(Internal::from)
                                                                                                 .collect(toMap(
-                                                                                                        p -> p.accept(ProviderResource.packageVisitor()),
-                                                                                                        p -> p.accept(ProviderResource.registrationIdVisitor())
+                                                                                                        ProviderResource.Internal::getPackage,
+                                                                                                        ProviderResource.Internal::getRegistrationId
                                                                                                 )))
                                                                                         .thenApply(ImmutableMap::copyOf);
                                                                             } else {
