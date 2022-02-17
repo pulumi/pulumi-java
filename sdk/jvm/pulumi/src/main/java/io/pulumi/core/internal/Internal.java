@@ -1,5 +1,6 @@
 package io.pulumi.core.internal;
 
+import io.pulumi.Stack;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.resources.InputArgs;
@@ -27,6 +28,10 @@ public class Internal {
 
     public static InputArgs.Internal from(InputArgs a) {
         return from(a, InputArgs.Internal.class);
+    }
+
+    public static Stack.Internal from(Stack s) {
+        return from(s, Stack.Internal.class);
     }
 
     public static <T, I> I from(T value, Class<I> internalType) {
