@@ -68,7 +68,6 @@ public final class PropertiesSerializer {
 
         return CompletableFutures.flatAllOf(resultFutures)
                 .thenApply(results -> results.entrySet().stream()
-                        .filter(ignoreNullMapValues())
                         .collect(toTupleOfMaps2(
                                 Map.Entry::getKey,
                                 Map.Entry::getKey,
