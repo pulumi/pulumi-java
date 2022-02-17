@@ -2,8 +2,7 @@ package io.pulumi.deployment;
 
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.InputOutputData;
-import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
@@ -48,8 +47,8 @@ public class DeploymentRunnerTest {
         assertThat(result.resources).isNotEmpty();
         assertThat(result.resources).hasSize(1);
         var stack = (TerminatesEarlyOnExceptionStack) result.resources.get(0);
-        assertThat(TypedInputOutput.cast(stack.slowOutput).internalGetDataAsync()).isNotCompleted();
-        assertThat(TypedInputOutput.cast(stack.slowOutput).view(InputOutputData::getValueNullable)).isNotCompleted();
+        assertThat(Internal.of(stack.slowOutput).getDataAsync()).isNotCompleted();
+        assertThat(Internal.of(stack.slowOutput).getValueNullable()).isNotCompleted();
     }
 
     public static class TerminatesEarlyOnExceptionStack extends Stack {

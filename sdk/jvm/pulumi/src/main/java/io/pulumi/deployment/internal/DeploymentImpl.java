@@ -25,7 +25,10 @@ import io.pulumi.exceptions.LogException;
 import io.pulumi.exceptions.ResourceException;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.*;
-import io.pulumi.serialization.internal.*;
+import io.pulumi.serialization.internal.Converter;
+import io.pulumi.serialization.internal.JsonFormatter;
+import io.pulumi.serialization.internal.PropertiesSerializer;
+import io.pulumi.serialization.internal.Structs;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
@@ -785,7 +788,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                     log.excessive("Getting parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
 
                                                     var parentUrn = options.getParent().isPresent()
-                                                            ? TypedInputOutput.cast(options.getParent().get().getUrn()).view(InputOutputData::getValueOptional)
+                                                            ? Internal.of(options.getParent().get().getUrn()).getValueOptional()
                                                             : this.rootResource.getRootResourceAsync(type);
                                                     return parentUrn.thenCompose(
                                                             (Optional<String> pUrn) -> {
@@ -854,7 +857,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                     // 'registerResource' - both adding new inherited aliases and simplifying aliases down to URNs.
                                                                                                     var aliasesFuture = CompletableFutures.allOf(
                                                                                                             Internal.from(res).getAliases().stream()
-                                                                                                                    .map(alias -> TypedInputOutput.cast(alias).view(v -> v.getValueOrDefault("")))
+                                                                                                                    .map(alias -> Internal.of(alias).getValueOrDefault(""))
                                                                                                                     .collect(toSet()))
                                                                                                             .thenApply(completed -> completed.stream()
                                                                                                                     .filter(Strings::isNonEmptyOrNull)
@@ -883,7 +886,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(Input<List<Resource>> resources) {
-            return TypedInputOutput.cast(resources).view(d -> d.getValueOrDefault(List.of()));
+            return Internal.of(resources).getValueOrDefault(List.of());
         }
 
         private CompletableFuture<ImmutableSet<String>> getAllTransitivelyReferencedResourceUrnsAsync(
@@ -926,7 +929,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         }
                         return false; // Unreachable
                     })
-                    .map(resource -> TypedInputOutput.cast(resource.getUrn()).view(d -> d.getValueOrDefault("")))
+                    .map(resource -> Internal.of(resource.getUrn()).getValueOrDefault(""))
                     .collect(toImmutableSet());
             return CompletableFutures.allOf(transitivelyReachableCustomResources)
                     .thenApply(ts -> ts.stream()
@@ -1030,7 +1033,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // the `@OutputExport(...) Output<T>` properties. We need those properties assigned by the
             // time the base 'Resource' constructor finishes so that both derived classes and
             // external consumers can use the Output properties of `resource`.
-            var completionSources = OutputCompletionSource.initializeOutputs(resource);
+            var completionSources = OutputCompletionSource.from(resource);
 
             this.runner.registerTask(
                     String.format("readOrRegisterResource: %s-%s", resource.getResourceType(), resource.getResourceName()),
@@ -1069,8 +1072,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     // object.  Allow the output field to deserialize the response.
                                     for (var entry : completionSources.entrySet()) {
                                         var fieldName = entry.getKey();
-                                        //noinspection rawtypes
-                                        OutputCompletionSource completionSource = entry.getValue();
+                                        OutputCompletionSource<?> completionSource = entry.getValue();
                                         if (Constants.UrnPropertyName.equals(fieldName) || Constants.IdPropertyName.equals(fieldName)) {
                                             // Already handled specially above.
                                             continue;
@@ -1083,13 +1085,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                         if (value.isPresent()) {
                                             var contextInfo = String.format("%s.%s", resource.getClass().getTypeName(), fieldName);
                                             var depsOrEmpty = Maps.tryGetValue(dependencies, fieldName).orElse(ImmutableSet.of());
-                                            //noinspection unchecked
-                                            completionSource.setValue(Converter.convertValue(
+                                            completionSource.setValue(
                                                     contextInfo,
                                                     value.get(),
-                                                    completionSource.getTypeShape(),
                                                     depsOrEmpty
-                                            ));
+                                            );
                                         }
                                     }
                                 } catch (Exception e) {
@@ -1136,8 +1136,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             }
 
             if (options.getId().isPresent()) {
-                return TypedInputOutput.cast(options.getId().get())
-                        .view(d -> d.getValueOrDefault(""))
+                return Internal.of(options.getId().get())
+                        .getValueOrDefault("")
                         .thenCompose(id -> {
                             if (isNonEmptyOrNull(id)) {
                                 if (!(resource instanceof CustomResource)) {
@@ -1387,10 +1387,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         ) {
             var opLabel = "monitor.registerResourceOutputs(...)";
 
-            var urnFuture = TypedInputOutput.cast(resource.getUrn())
-                    .view(d -> d.getValueOrDefault(""));
-            var propsFuture = TypedInputOutput.cast(outputs)
-                    .view(d -> d.getValueOrDefault(Map.of()));
+            var urnFuture = Internal.of(resource.getUrn())
+                    .getValueOrDefault("");
+            var propsFuture = Internal.of(outputs)
+                    .getValueOrDefault(Map.of());
 
             BiFunction<String, Struct, CompletableFuture<Void>> registerResourceOutputsAsync = (urn, serialized) -> {
                 if (Strings.isEmptyOrNull(urn)) {
@@ -1463,8 +1463,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private CompletableFuture<Optional<String>> setRootResourceWorkerAsync(Stack stack) {
-            return TypedInputOutput.cast(stack.getUrn())
-                    .view(InputOutputData::getValueNullable)
+            return Internal.of(stack.getUrn())
+                    .getValueNullable()
                     .thenCompose(
                             resUrn -> this.engine.setRootResourceAsync(
                                     EngineOuterClass.SetRootResourceRequest.newBuilder()
@@ -1593,7 +1593,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 // Stack doesn't call RegisterOutputs, so we register them on its behalf.
                 stackInternal.registerPropertyOutputs();
                 registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        TypedInputOutput.cast(stackInternal.getOutputs()).internalGetDataAsync());
+                        Internal.of(stackInternal.getOutputs()).getDataAsync());
             } catch (Exception ex) {
                 return handleExceptionAsync(ex);
             }
@@ -1610,7 +1610,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
             var stack = Stack.InternalStatic.of(callback, options);
             registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                    TypedInputOutput.cast(Internal.from(stack).getOutputs()).internalGetDataAsync());
+                    Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
             return whileRunningAsync();
         }
 
@@ -1929,7 +1929,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private static CompletableFuture<String> tryGetResourceUrnAsync(@Nullable Resource resource) {
             if (resource != null) {
                 try {
-                    return TypedInputOutput.cast(resource.getUrn()).view(v -> v.getValueOrDefault(""));
+                    return Internal.of(resource.getUrn()).getValueOrDefault("");
                 } catch (Throwable ignore) {
                     // getting the urn for a resource may itself fail, in that case we don't want to
                     // fail to send an logging message. we'll just send the logging message unassociated

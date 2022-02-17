@@ -1,7 +1,6 @@
 package io.pulumi.core;
 
-import io.pulumi.core.internal.InputOutputData;
-import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
@@ -38,7 +37,7 @@ class UrnTest {
                 null
         );
 
-        var value = TypedInputOutput.cast(urn).view(InputOutputData::getValueNullable).join();
+        var value = Internal.of(urn).getValueNullable().join();
         assertThat(value).isEqualTo("urn:pulumi:stack::project::type::name");
     }
 
@@ -53,8 +52,7 @@ class UrnTest {
                 null
         );
 
-        var value = TypedInputOutput.cast(urn).view(InputOutputData::getValueNullable).join();
+        var value = Internal.of(urn).getValueNullable().join();
         assertThat(value).isEqualTo("urn:pulumi:stack::project::type::name");
     }
-
 }
