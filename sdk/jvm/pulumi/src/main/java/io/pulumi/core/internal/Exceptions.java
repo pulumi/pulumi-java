@@ -1,11 +1,11 @@
 package io.pulumi.core.internal;
 
-import io.grpc.Internal;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-@Internal
+@InternalUse
 public class Exceptions {
 
     private Exceptions() {

@@ -1,10 +1,10 @@
 package io.pulumi.core.internal;
 
-import io.grpc.Internal;
 import io.pulumi.core.Input;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.internal.DeploymentInternal;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -12,13 +12,13 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 @ParametersAreNonnullByDefault
-@Internal
+@InternalUse
 public abstract class InputOutputImpl<T, IO extends InputOutput<T, IO> & Copyable<IO>>
         extends TypedInputOutput<T, IO> implements InputOutput<T, IO> {
 
-    @Internal
+    @InternalUse
     public static final Input<Tuples.Tuple0> TupleZeroIn = Input.of(Tuples.Tuple0.Empty);
-    @Internal
+    @InternalUse
     public static final Output<Tuples.Tuple0> TupleZeroOut = Output.of(Tuples.Tuple0.Empty);
 
     protected final CompletableFuture<InputOutputData<T>> dataFuture;
@@ -64,7 +64,7 @@ public abstract class InputOutputImpl<T, IO extends InputOutput<T, IO> & Copyabl
     }
 
     // TODO: replace with mutator
-    @Internal
+    @InternalUse
     public IO internalWithIsSecret(CompletableFuture<Boolean> isSecretFuture) {
         return newInstance(
                 isSecretFuture.thenCompose(
@@ -76,19 +76,19 @@ public abstract class InputOutputImpl<T, IO extends InputOutput<T, IO> & Copyabl
     }
 
     // TODO: replace with mutator/viewer
-    @Internal
+    @InternalUse
     public CompletableFuture<InputOutputData<T>> internalGetDataAsync() {
         return this.dataFuture;
     }
 
     @Override
-    @Internal
+    @InternalUse
     public <U> U mutate(Mutator<T, U> mutator) {
         return mutator.mutate(this.dataFuture);
     }
 
     @Override
-    @Internal
+    @InternalUse
     public <U> CompletableFuture<U> view(Viewer<T, U> viewer) {
         return this.dataFuture.thenApply(viewer::view);
     }

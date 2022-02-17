@@ -1,9 +1,9 @@
 package io.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
-import io.grpc.Internal;
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.DeploymentInstance;
 import io.pulumi.resources.Resource;
@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-@Internal
+@InternalUse
 public interface DeploymentInternal extends Deployment {
 
     Optional<String> getConfig(String fullKey);
@@ -35,19 +35,19 @@ public interface DeploymentInternal extends Deployment {
 
     void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs);
 
-    @Internal
+    @InternalUse
     static DeploymentInternal getInstance() {
         return DeploymentInternal.cast(Deployment.getInstance()).getInternal();
     }
 
-    @Internal
+    @InternalUse
     static Optional<DeploymentInternal> getInstanceOptional() {
         return DeploymentInstanceHolder.getInstanceOptional()
                 .map(DeploymentInternal::cast)
                 .map(DeploymentInstanceInternal::getInternal);
     }
 
-    @Internal
+    @InternalUse
     private static DeploymentInstanceInternal cast(DeploymentInstance instance) {
         Objects.requireNonNull(instance);
         if (instance instanceof DeploymentInstanceInternal) {
@@ -61,7 +61,7 @@ public interface DeploymentInternal extends Deployment {
         }
     }
 
-    @Internal
+    @InternalUse
     static Supplier<DeploymentInternal> deploymentFactory() {
         return DeploymentImpl::new;
     }
@@ -70,7 +70,7 @@ public interface DeploymentInternal extends Deployment {
     // in order to protect the scope of the Deployment#instance we cannot elide the task (return it early)
     // if the task is returned early and not awaited, than it is possible for any code that runs before the eventual await
     // to be executed synchronously and thus have multiple calls to one of the run methods affecting each others Deployment#instance
-    @Internal
+    @InternalUse
     @VisibleForTesting
     static CompletableFuture<Integer> createRunnerAndRunAsync(
             Supplier<DeploymentInternal> deploymentFactory,

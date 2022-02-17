@@ -2,10 +2,10 @@ package io.pulumi.core;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
-import io.grpc.Internal;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.InputOutputImpl;
 import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 import static io.pulumi.core.internal.InputOutputData.internalAllHelperAsync;
 
-@Internal
+@InternalUse
 @ParametersAreNonnullByDefault
 public final class OutputDefault<T> extends InputOutputImpl<T, Output<T>> implements Output<T> {
 
@@ -58,14 +58,14 @@ public final class OutputDefault<T> extends InputOutputImpl<T, Output<T>> implem
 
     // Static section -----
 
-    @Internal
+    @InternalUse
     public static <T> Output<T> of(Set<Resource> resources, T value) {
         Objects.requireNonNull(value);
         return new OutputDefault<>(CompletableFuture.completedFuture(
                 InputOutputData.of(ImmutableSet.copyOf(resources), value)));
     }
 
-    @Internal
+    @InternalUse
     public static <T> Output<T> of(CompletableFuture<InputOutputData<T>> dataFuture) {
         return new OutputDefault<>(dataFuture);
     }

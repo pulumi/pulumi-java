@@ -1,8 +1,8 @@
 package io.pulumi.deployment.internal;
 
-import io.grpc.Internal;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.DeploymentInstance;
 import io.pulumi.deployment.InvokeOptions;
@@ -25,7 +25,7 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
         this.deployment = deployment;
     }
 
-    @Internal
+    @InternalUse
     public DeploymentInternal getInternal() {
         return deployment;
     }

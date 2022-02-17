@@ -1,7 +1,7 @@
 package io.pulumi.core;
 
-import io.grpc.Internal;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Map;
 
@@ -46,7 +46,7 @@ public abstract class Archive extends AssetOrArchive {
         }
     }
 
-    @Internal
+    @InternalUse
     public static final class InvalidArchive extends Archive {
         public InvalidArchive() {
             super(Constants.ArchiveAssetsName, Map.<String, AssetOrArchive>of());

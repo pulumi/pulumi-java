@@ -5,11 +5,11 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.grpc.Internal;
 import io.pulumi.core.Input;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples.*;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 
@@ -26,7 +26,7 @@ import java.util.function.Predicate;
  * Immutable internal type
  */
 @ParametersAreNonnullByDefault
-@Internal
+@InternalUse
 public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     private static final InputOutputData<?> Empty = new InputOutputData<>(ImmutableSet.of(), true, false);
     private static final InputOutputData<?> Unknown = new InputOutputData<>(ImmutableSet.of(), false, false);
@@ -39,7 +39,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     private final boolean known;
     private final boolean secret;
 
-    @Internal
+    @InternalUse
     private InputOutputData(ImmutableSet<Resource> resources, boolean isKnown, boolean isSecret) {
         this.resources = Objects.requireNonNull(resources);
         this.value = null;
@@ -228,7 +228,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }).thenCompose(Function.identity()); // TODO: this looks ugly, what am I doing wrong?
     }
 
-    @Internal
+    @InternalUse
     public static <T> CompletableFuture<InputOutputData<List<T>>> internalAllHelperAsync(
             List<CompletableFuture<InputOutputData<T>>> values) {
         return CompletableFutures.allOf(values)
@@ -244,7 +244,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
                 );
     }
 
-    @Internal
+    @InternalUse
     public static CompletableFuture<InputOutputData<Object>> internalCopyInputOutputData(@SuppressWarnings("rawtypes") @Nullable InputOutput obj) {
         if (obj == null) {
             return CompletableFuture.completedFuture(InputOutputData.empty());
@@ -285,7 +285,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         );
     }
 
-    @Internal
+    @InternalUse
     private static <T1, T2, T3, T4, T5, T6, T7, T8> CompletableFuture<InputOutputData<Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>> internalTupleHelperAsync(
             CompletableFuture<InputOutputData<T1>> data1, CompletableFuture<InputOutputData<T2>> data2,
             CompletableFuture<InputOutputData<T3>> data3, CompletableFuture<InputOutputData<T4>> data4,
@@ -305,12 +305,12 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
                         .build());
     }
 
-    @Internal
+    @InternalUse
     public static <T> Builder<T> builder(T start) {
         return new Builder<>(start);
     }
 
-    @Internal
+    @InternalUse
     public static final class Builder<T> {
         private ImmutableSet.Builder<Resource> resources;
         private T value;

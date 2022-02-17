@@ -1,7 +1,7 @@
 package io.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
-import io.grpc.Internal;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.DeploymentInstance;
 
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public abstract class DeploymentInstanceHolder {
         return instance.get();
     }
 
-    @Internal
+    @InternalUse
     @VisibleForTesting
     public static Optional<DeploymentInstance> getInstanceOptional() { // FIXME remove public
         return Optional.ofNullable(instance.get());
@@ -34,7 +34,7 @@ public abstract class DeploymentInstanceHolder {
     /**
      * @throws IllegalStateException if called more than once (the instance already set)
      */
-    @Internal
+    @InternalUse
     static void setInstance(@Nullable DeploymentInstance newInstance) {
         if (instance.get() != null) {
             throw new IllegalStateException("Deployment#instance should only be set once at the beginning of a 'run' call.");
@@ -42,7 +42,7 @@ public abstract class DeploymentInstanceHolder {
         instance.set(newInstance);
     }
 
-    @Internal
+    @InternalUse
     @VisibleForTesting
     static void internalUnsafeDestroyInstance() {
         instance.set(null);

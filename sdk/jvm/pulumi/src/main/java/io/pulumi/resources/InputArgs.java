@@ -2,11 +2,11 @@ package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.grpc.Internal;
 import io.pulumi.Log;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.annotations.InputImport;
 import io.pulumi.core.internal.annotations.InputMetadata;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.serialization.internal.JsonFormatter;
 import io.pulumi.serialization.internal.Serializer;
 
@@ -44,7 +44,7 @@ public abstract class InputArgs {
                 );
     }
 
-    @Internal
+    @InternalUse
     public CompletableFuture<Map<String, Optional<Object>>> internalToOptionalMapAsync(Log log) {
         BiFunction<String, Object, CompletableFuture<Optional<Object>>> convertToJson = (context, input) -> {
             Objects.requireNonNull(context);

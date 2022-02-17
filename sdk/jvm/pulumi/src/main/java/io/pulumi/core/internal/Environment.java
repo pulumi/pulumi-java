@@ -1,7 +1,7 @@
 package io.pulumi.core.internal;
 
-import io.grpc.Internal;
 import io.pulumi.core.Either;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import static io.pulumi.core.internal.Arrays.concat;
 import static io.pulumi.core.internal.Arrays.contains;
 
-@Internal
+@InternalUse
 public class Environment {
     private static final Logger logger = Logger.getLogger(Environment.class.getName());
 
@@ -64,7 +64,7 @@ public class Environment {
                         return Either.valueOf(Integer.parseInt(s));
                     } catch (NumberFormatException ex) {
                         return Either.errorOf(new IllegalArgumentException(String.format(
-                            "can't parse environment variable '%s' as an integer: %s", name, ex.getMessage()
+                                "can't parse environment variable '%s' as an integer: %s", name, ex.getMessage()
                         ), ex));
                     }
                 });

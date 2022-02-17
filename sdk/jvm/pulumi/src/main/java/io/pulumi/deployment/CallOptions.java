@@ -1,8 +1,8 @@
 package io.pulumi.deployment;
 
-import io.grpc.Internal;
 import io.pulumi.core.internal.Reflection;
 import io.pulumi.core.internal.Visitor;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.Resource;
@@ -61,12 +61,12 @@ public final class CallOptions {
         return Optional.ofNullable(version);
     }
 
-    @Internal
+    @InternalUse
     public <T> T accept(Visitor<T, CallOptions> visitor) {
         return visitor.visit(this);
     }
 
-    @Internal
+    @InternalUse
     public static class NestedProviderVisitor implements Visitor<Optional<ProviderResource>, CallOptions> {
 
         private final String token;

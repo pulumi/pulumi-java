@@ -1,7 +1,7 @@
 package io.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableMap;
-import io.grpc.Internal;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Map;
 import java.util.Objects;
@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Internal
+@InternalUse
 public class Maps {
 
     private Maps() {
