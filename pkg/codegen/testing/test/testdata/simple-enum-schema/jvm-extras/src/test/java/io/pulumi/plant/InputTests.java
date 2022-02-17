@@ -12,6 +12,7 @@ import io.pulumi.plant.inputs.*;
 import io.pulumi.plant.enums.*;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.TypedInputOutput;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,7 +27,7 @@ class InputTests {
     @Test
     void testContainerArgs_nullValues() {
         var args = ContainerArgs.Empty;
-        var map = args.internalToOptionalMapAsync(mock(Log.class)).join();
+        var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("brightness");
         assertThat(map).containsKey("color");
@@ -48,7 +49,7 @@ class InputTests {
                 .setSize(ContainerSize.FourInch)
                 .build();
 
-        var map = args.internalToOptionalMapAsync(mock(Log.class)).join();
+        var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("brightness");
         assertThat(map).containsKey("color");

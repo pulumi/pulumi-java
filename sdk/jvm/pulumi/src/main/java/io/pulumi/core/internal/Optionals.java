@@ -1,6 +1,5 @@
 package io.pulumi.core.internal;
 
-
 import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -29,6 +28,8 @@ public class Optionals {
         return Optional.of(value);
     }
 
+    // used in codegen
+    @SuppressWarnings({"unused", "OptionalUsedAsFieldOrParameterType"})
     public static <T> Optional<T> combine(Optional<T> a, Optional<T> b) {
         if (a.isPresent()) {
             return a;
@@ -36,6 +37,8 @@ public class Optionals {
         return b;
     }
 
+    // used in codegen
+    @SuppressWarnings({"unused", "OptionalUsedAsFieldOrParameterType"})
     public static <T> T combine(Optional<T> a, T b) {
         return a.orElse(b);
     }
