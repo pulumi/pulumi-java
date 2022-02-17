@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import io.pulumi.Log;
 import io.pulumi.example.inputs.*;
+import io.pulumi.core.internal.Internal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -17,7 +18,7 @@ class InputTests {
     void testInputsFooArgs_nullValues() {
         assertThatThrownBy(() -> {
             var args = FooArgs.Empty;
-            var map = args.internalToOptionalMapAsync(mock(Log.class)).join();
+            var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -32,7 +33,7 @@ class InputTests {
                 .setF("test2")
                 .build();
 
-        var map = args.internalToOptionalMapAsync(mock(Log.class)).join();
+        var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("a");
         assertThat(map).containsKey("b");
