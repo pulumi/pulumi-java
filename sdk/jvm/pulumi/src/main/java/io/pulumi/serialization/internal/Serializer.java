@@ -5,7 +5,6 @@ import com.google.protobuf.ListValue;
 import com.google.protobuf.NullValue;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import io.grpc.Internal;
 import io.pulumi.Log;
 import io.pulumi.core.Archive.InvalidArchive;
 import io.pulumi.core.Asset.InvalidAsset;
@@ -18,6 +17,7 @@ import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.EnumType;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.ComponentResource;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.InputArgs;
@@ -151,6 +151,7 @@ public class Serializer {
         }
 
         if (prop instanceof InputOutput) {
+            //noinspection unchecked
             var inputOutput = (InputOutput<Object, ?>) prop;
             log.excessive(String.format("Serialize property[%s]: Recursion into InputOutput", ctx));
 
@@ -373,7 +374,7 @@ public class Serializer {
         // ArrayList will preserve the null's
         return CompletableFutures.flatAllOf(resultFutures).thenApply(
                 completed -> completed.stream()
-                        .map(f -> f.join())
+                        .map(CompletableFuture::join)
                         .collect(Collectors.toCollection(ArrayList::new))
         );
     }
@@ -403,7 +404,7 @@ public class Serializer {
      * Given a @see {@link Map} produced by @see #serializeAsync
      * produces the equivalent @see {@link Struct} that can be passed to the Pulumi engine.
      */
-    @Internal
+    @InternalUse
     public static Struct createStruct(Map<String, Object> serializedMap) {
         var result = Struct.newBuilder();
         for (var key : serializedMap.keySet()) { // TODO: C# had '.OrderBy(k => k)' here, what does it do?
@@ -415,7 +416,7 @@ public class Serializer {
     /**
      * Internal use only. Creates a gRPC Protobuf Value.
      */
-    @Internal
+    @InternalUse
     public static Value createValue(@Nullable Object value) {
         var builder = Value.newBuilder();
         if (value == null) {

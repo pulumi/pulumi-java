@@ -4,8 +4,8 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.reflect.TypeToken;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.grpc.Internal;
 import io.pulumi.core.Either;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.CheckReturnValue;
 import java.lang.annotation.Annotation;
@@ -184,7 +184,7 @@ public class Reflection {
             return builder.build();
         }
 
-        @Internal
+        @InternalUse
         public com.google.gson.reflect.TypeToken<?> toGSON() {
             var paramTokens = this.parameters.stream()
                     .map(ts -> ts.toGSON().getType())

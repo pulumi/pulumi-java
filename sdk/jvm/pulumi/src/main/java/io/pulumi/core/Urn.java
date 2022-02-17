@@ -1,7 +1,7 @@
 package io.pulumi.core;
 
 import com.google.common.base.Strings;
-import io.grpc.Internal;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 
@@ -80,7 +80,7 @@ public class Urn {
      * resource in cases where the resource has a named derived from the name of the parent,
      * and the parent name changed.
      */
-    @Internal
+    @InternalUse
     public static Output<Alias> internalInheritedChildAlias(
             String childName, String parentName, Input<String> parentAlias, String childType
     ) {

@@ -3,9 +3,9 @@ package io.pulumi.core.internal;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.grpc.Internal;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.Resource;
 import io.pulumi.serialization.internal.OutputCompletionSource;
 
@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
  * Internal interface to allow our code to operate on inputs/outputs in a typed manner.
  */
 @ParametersAreNonnullByDefault
-@Internal
+@InternalUse
 public abstract class TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO>> {
 
     protected abstract IO newInstance(CompletableFuture<InputOutputData<T>> dataFuture);
@@ -83,6 +83,7 @@ public abstract class TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyab
         @Override
         public Void mutate(CompletableFuture<InputOutputData<T>> data) {
             this.mutableData = Objects.requireNonNull(data);
+            //noinspection RedundantCast
             return (Void) null;
         }
 
@@ -100,6 +101,7 @@ public abstract class TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyab
 
         @Override
         public void setStringValue(String value, boolean isKnown) {
+            //noinspection unchecked
             mutableData.complete(InputOutputData.ofNullable(
                     this.resources,
                     (T) value,

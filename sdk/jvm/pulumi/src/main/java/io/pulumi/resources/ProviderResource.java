@@ -1,8 +1,8 @@
 package io.pulumi.resources;
 
-import io.grpc.Internal;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -55,7 +55,7 @@ public class ProviderResource extends CustomResource {
     /**
      * Fields urn and id can be set late, with reflection, so we need lazy init here
      */
-    @Internal
+    @InternalUse
     private CompletableFuture<String> registrationIdAsync() {
         var providerUrn = TypedInputOutput.cast(this.getUrn())
                 .view(data -> data.getValueOrDefault(""));
@@ -68,27 +68,27 @@ public class ProviderResource extends CustomResource {
                 ));
     }
 
-    @Internal
+    @InternalUse
     public <T> T accept(ProviderResource.Visitor<T> visitor) {
         return visitor.visit(this);
     }
 
-    @Internal
+    @InternalUse
     public interface Visitor<T> {
         T visit(ProviderResource providerResource);
     }
 
-    @Internal
+    @InternalUse
     public static RegistrationIdVisitor registrationIdVisitor() {
         return new RegistrationIdVisitor();
     }
 
-    @Internal
+    @InternalUse
     public static PackageVisitor packageVisitor() {
         return new PackageVisitor();
     }
 
-    @Internal
+    @InternalUse
     public static class RegistrationIdVisitor implements Visitor<CompletableFuture<String>> {
         @Override
         public CompletableFuture<String> visit(ProviderResource providerResource) {
@@ -96,7 +96,7 @@ public class ProviderResource extends CustomResource {
         }
     }
 
-    @Internal
+    @InternalUse
     public static class PackageVisitor implements Visitor<String> {
         @Override
         public String visit(ProviderResource providerResource) {

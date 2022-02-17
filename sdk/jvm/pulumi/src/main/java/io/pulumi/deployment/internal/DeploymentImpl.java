@@ -6,7 +6,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import io.grpc.Internal;
 import io.pulumi.Log;
 import io.pulumi.Stack;
 import io.pulumi.core.Input;
@@ -18,6 +17,7 @@ import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
@@ -81,7 +81,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     // TODO private Deployment(InlineDeploymentSettings settings)
 
-    @Internal
+    @InternalUse
     @VisibleForTesting
     DeploymentImpl(
             DeploymentState state
@@ -157,7 +157,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return this.state.isDryRun;
     }
 
-    @Internal
+    @InternalUse
     public Runner getRunner() {
         return this.state.runner;
     }
@@ -173,7 +173,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Nullable
     private Stack stack; // TODO: get rid of mutability, somehow
 
-    @Internal
+    @InternalUse
     public Stack getStack() {
         if (this.stack == null) {
             throw new IllegalStateException("Trying to acquire Deployment#getStack before 'run' was called.");
@@ -181,7 +181,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return this.stack;
     }
 
-    @Internal
+    @InternalUse
     public void setStack(Stack stack) {
         Objects.requireNonNull(stack);
         this.stack = stack;
@@ -197,7 +197,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.featureSupport = Collections.synchronizedMap(new HashMap<>());
         }
 
-        @Internal
+        @InternalUse
         private CompletableFuture<Boolean> monitorSupportsFeature(String feature) {
             if (!this.featureSupport.containsKey(feature)) {
                 var request = SupportsFeatureRequest.newBuilder().setId(feature).build();
@@ -211,14 +211,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return CompletableFuture.completedFuture(this.featureSupport.get(feature));
         }
 
-        @Internal
+        @InternalUse
         CompletableFuture<Boolean> monitorSupportsResourceReferences() {
             return monitorSupportsFeature("resourceReferences");
         }
     }
 
     @ParametersAreNonnullByDefault
-    @Internal
+    @InternalUse
     @VisibleForTesting
     static class Config {
 
@@ -249,7 +249,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         /**
          * Returns a copy of the full config map.
          */
-        @Internal
+        @InternalUse
         private ImmutableMap<String, String> getAllConfig() {
             return allConfig;
         }
@@ -257,7 +257,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         /**
          * Returns a copy of the config secret keys.
          */
-        @Internal
+        @InternalUse
         private ImmutableSet<String> configSecretKeys() {
             return configSecretKeys;
         }
@@ -265,7 +265,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         /**
          * Sets a configuration variable.
          */
-        @Internal
+        @InternalUse
         @VisibleForTesting
         void setConfig(String key, String value) { // TODO: can the setter be avoided?
             this.allConfig = new ImmutableMap.Builder<String, String>()
@@ -277,7 +277,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         /**
          * Appends all provided configuration.
          */
-        @Internal
+        @InternalUse
         @VisibleForTesting
         void setAllConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) { // TODO: can the setter be avoided?
             this.allConfig = new ImmutableMap.Builder<String, String>()
@@ -308,7 +308,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return ImmutableMap.of();
         }
 
-        @Internal
+        @InternalUse
         @VisibleForTesting
         static ImmutableMap<String, String> parseConfig(String envConfigJson) {
             var parsedConfig = ImmutableMap.<String, String>builder();
@@ -331,7 +331,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return ImmutableSet.of();
         }
 
-        @Internal
+        @InternalUse
         @VisibleForTesting
         static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
             var parsedConfigSecretKeys = ImmutableSet.<String>builder();
@@ -1063,13 +1063,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                     if (resource instanceof CustomResource) {
                                         completionSources.get(Constants.IdPropertyName)
-                                                .setStringValue(id == null ? "" : id, isNonEmptyOrNull(id));
+                                                .setStringValue(id, isNonEmptyOrNull(id));
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response
                                     // object.  Allow the output field to deserialize the response.
                                     for (var entry : completionSources.entrySet()) {
                                         var fieldName = entry.getKey();
+                                        //noinspection rawtypes
                                         OutputCompletionSource completionSource = entry.getValue();
                                         if (Constants.UrnPropertyName.equals(fieldName) || Constants.IdPropertyName.equals(fieldName)) {
                                             // Already handled specially above.
@@ -1083,6 +1084,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                         if (value.isPresent()) {
                                             var contextInfo = String.format("%s.%s", resource.getClass().getTypeName(), fieldName);
                                             var depsOrEmpty = Maps.tryGetValue(dependencies, fieldName).orElse(ImmutableSet.of());
+                                            //noinspection unchecked
                                             completionSource.setValue(Converter.convertValue(
                                                     contextInfo,
                                                     value.get(),
@@ -1479,7 +1481,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @ParametersAreNonnullByDefault
-    @Internal
+    @InternalUse
     @VisibleForTesting
     static class DeploymentState {
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
@@ -1496,7 +1498,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private final Logger standardLogger;
 
-        @Internal
+        @InternalUse
         @VisibleForTesting
         DeploymentState(
                 DeploymentImpl.Config config,
@@ -1520,7 +1522,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @ParametersAreNonnullByDefault
-    @Internal
+    @InternalUse
     @VisibleForTesting
     static class DefaultRunner implements Runner {
         private static final int ProcessExitedSuccessfully = 0;
@@ -1769,7 +1771,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @ParametersAreNonnullByDefault
-    @Internal
+    @InternalUse
     @VisibleForTesting
     static class DefaultEngineLogger implements EngineLogger {
         private final Supplier<Runner> runner;

@@ -5,7 +5,6 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.ClassPath;
-import io.grpc.Internal;
 import io.pulumi.core.Input;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
@@ -13,6 +12,7 @@ import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.Optionals;
 import io.pulumi.core.internal.Reflection;
 import io.pulumi.core.internal.SemanticVersion;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.resources.*;
 import pulumirpc.EngineGrpc;
@@ -135,7 +135,7 @@ public class ResourcePackages {
         }
     }
 
-    @Internal
+    @InternalUse
     static Optional<Resource> tryConstruct(String type, String version, String urn) {
         var resourceType = tryGetResourceType(type, version);
         if (resourceType.isEmpty()) {
@@ -180,7 +180,7 @@ public class ResourcePackages {
         throw new IllegalStateException(String.format("Unexpected resource type: '%s'", resourceType.getTypeName()));
     }
 
-    @Internal
+    @InternalUse
     static Optional<Class<Resource>> tryGetResourceType(String name, @Nullable String version) {
         Objects.requireNonNull(name);
 
