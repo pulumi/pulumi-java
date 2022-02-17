@@ -4,6 +4,7 @@ import io.pulumi.Stack;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.resources.InputArgs;
+import io.pulumi.resources.Resource;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -32,6 +33,10 @@ public class Internal {
 
     public static Stack.Internal from(Stack s) {
         return from(s, Stack.Internal.class);
+    }
+
+    public static Resource.Internal from(Resource r) {
+        return from(r, Resource.Internal.class);
     }
 
     public static <T, I> I from(T value, Class<I> internalType) {
