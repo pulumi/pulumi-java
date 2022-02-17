@@ -1,7 +1,7 @@
 package io.pulumi.core;
 
-import io.grpc.Internal;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 /**
  * Asset represents a single blob of text or data that is managed as a first class entity.
@@ -41,7 +41,7 @@ public abstract class Asset extends AssetOrArchive {
         }
     }
 
-    @Internal
+    @InternalUse
     public static final class InvalidAsset extends Asset {
         public InvalidAsset() {
             super(Constants.AssetTextName, "");

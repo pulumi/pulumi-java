@@ -1,8 +1,8 @@
 package io.pulumi.core.internal;
 
-import io.grpc.Internal;
+import io.pulumi.core.internal.annotations.InternalUse;
 
-@Internal
+@InternalUse
 public interface Visitor<T, V> {
     T visit(V value);
 }

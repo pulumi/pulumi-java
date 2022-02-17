@@ -1,7 +1,7 @@
 package io.pulumi;
 
-import io.grpc.Internal;
 import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.deployment.Deployment;
@@ -40,7 +40,7 @@ public class Stack extends ComponentResource {
      * may look a bit confusing and may incorrectly look like something that could be removed
      * without changing semantics.
      */
-    @Internal
+    @InternalUse
     @Nullable
     public static final Resource InternalRoot = null;
 
@@ -49,7 +49,7 @@ public class Stack extends ComponentResource {
      * allocated by a deployment. This must be kept up to date with
      * "github.com/pulumi/pulumi/sdk/v3/go/common/resource/stack.RootStackType".
      */
-    @Internal
+    @InternalUse
     public static final String InternalRootPulumiStackTypeName = "pulumi:pulumi:Stack";
 
     /**
@@ -85,7 +85,7 @@ public class Stack extends ComponentResource {
      * An instance of this will be automatically created when
      * any @see {@link Deployment#runAsync(Supplier)} overload is called.
      */
-    @Internal
+    @InternalUse
     public Stack(Supplier<CompletableFuture<Map<String, Optional<Object>>>> init, @Nullable StackOptions options) {
         this(options);
         try {
@@ -95,7 +95,7 @@ public class Stack extends ComponentResource {
         }
     }
 
-    @Internal
+    @InternalUse
     public Output<Map<String, Optional<Object>>> internalGetOutputs() {
         return outputs;
     }
@@ -104,7 +104,7 @@ public class Stack extends ComponentResource {
      * Inspect all public properties of the stack to find outputs.
      * Validate the values and register them as stack outputs.
      */
-    @Internal
+    @InternalUse
     public void internalRegisterPropertyOutputs() {
         var infos = OutputMetadata.of(this.getClass());
 

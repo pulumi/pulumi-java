@@ -1,6 +1,6 @@
 package io.pulumi.core;
 
-import io.grpc.Internal;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Objects;
 
@@ -18,17 +18,17 @@ public abstract class AssetOrArchive {
         this.value = Objects.requireNonNull(value);
     }
 
-    @Internal
+    @InternalUse
     public String getSigKey() {
         return sigKey;
     }
 
-    @Internal
+    @InternalUse
     public Object getValue() {
         return value;
     }
 
-    @Internal
+    @InternalUse
     public String getPropName() {
         return propName;
     }

@@ -3,9 +3,9 @@ package io.pulumi;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
-import io.grpc.Internal;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.RunException;
@@ -260,7 +260,7 @@ public class Config {
      * ConfigMissingException is used when a configuration value is completely missing.
      */
     @ParametersAreNonnullByDefault
-    @Internal
+    @InternalUse
     @VisibleForTesting
     public static class ConfigMissingException extends RunException {
         public ConfigMissingException(String key) {

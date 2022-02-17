@@ -2,7 +2,6 @@ package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.grpc.Internal;
 import io.pulumi.Stack;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -10,6 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.Urn;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Strings;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
@@ -242,7 +242,7 @@ public abstract class Resource {
      * @return the @see {@link ProviderResource} or empty if not found
      */
     @Nullable
-    @Internal
+    @InternalUse
     static public ProviderResource internalGetProvider(Resource resource, String moduleMember) {
         var memComponents = moduleMember.split(":");
         if (memComponents.length != 3) {
@@ -256,12 +256,12 @@ public abstract class Resource {
     /**
      * A list of aliases applied to this resource.
      */
-    @Internal
+    @InternalUse
     public List<Input<String>> internalGetAliases() {
         return this.aliases;
     }
 
-    @Internal
+    @InternalUse
     public boolean internalGetRemote() {
         return this.remote;
     }
@@ -269,15 +269,15 @@ public abstract class Resource {
     /**
      * The specified provider or provider determined from the parent for custom resources.
      */
-    @Internal
+    @InternalUse
     public Optional<ProviderResource> internalGetProvider() {
         return Optional.ofNullable(this.provider);
-    };
+    }
 
     /**
      * The specified provider version.
      */
-    @Internal
+    @InternalUse
     public Optional<String> internalGetVersion() {
         return Optional.ofNullable(this.version);
     }

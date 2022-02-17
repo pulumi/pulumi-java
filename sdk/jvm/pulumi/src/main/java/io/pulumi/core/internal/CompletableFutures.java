@@ -1,7 +1,7 @@
 package io.pulumi.core.internal;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.grpc.Internal;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Objects;
 import java.util.*;
@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toMap;
 
-@Internal
+@InternalUse
 public class CompletableFutures {
 
     private CompletableFutures() {

@@ -1,16 +1,16 @@
 package io.pulumi.core;
 
-import io.grpc.Internal;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.InputOutputImpl;
 import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 @ParametersAreNonnullByDefault
-@Internal
+@InternalUse
 public final class InputDefault<T> extends InputOutputImpl<T, Input<T>> implements Input<T> {
 
     InputDefault(T value) {

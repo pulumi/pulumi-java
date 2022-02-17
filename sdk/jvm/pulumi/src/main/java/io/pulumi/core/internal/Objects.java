@@ -1,14 +1,14 @@
 package io.pulumi.core.internal;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.grpc.Internal;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-@Internal
+@InternalUse
 public class Objects {
 
     private Objects() {
@@ -92,8 +92,8 @@ public class Objects {
         java.util.Objects.requireNonNull(withMessageSupplier);
 
         return (@Nullable String message) ->
-                message  == null
-                    ? noMessageSupplier.get()
-                    : withMessageSupplier.apply(message);
+                message == null
+                        ? noMessageSupplier.get()
+                        : withMessageSupplier.apply(message);
     }
 }

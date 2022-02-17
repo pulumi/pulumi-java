@@ -3,12 +3,12 @@ package io.pulumi.resources;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.grpc.Internal;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.TypedInputOutput;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.exceptions.RunException;
 
@@ -174,7 +174,7 @@ public class StackReference extends CustomResource {
      * ConfigMissingException is used when a configuration value is completely missing.
      */
     @ParametersAreNonnullByDefault
-    @Internal
+    @InternalUse
     @VisibleForTesting
     public static class KeyMissingException extends RunException {
         public KeyMissingException(String key, String stack) {

@@ -1,6 +1,5 @@
 package io.pulumi.deployment;
 
-
 import com.google.common.collect.ImmutableMap;
 import io.grpc.Status;
 import io.pulumi.Stack;
