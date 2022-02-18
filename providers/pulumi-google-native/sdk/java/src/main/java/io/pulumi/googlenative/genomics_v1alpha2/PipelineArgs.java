@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.genomics_v1alpha2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.DockerExecutorArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineParameterArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineResourcesArgs;

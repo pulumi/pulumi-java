@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1beta1.enums.GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod;
 import io.pulumi.googlenative.billingbudgets_v1beta1.enums.GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs;

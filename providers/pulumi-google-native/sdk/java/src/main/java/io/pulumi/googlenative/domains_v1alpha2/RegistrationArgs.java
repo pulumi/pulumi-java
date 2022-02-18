@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1alpha2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1alpha2.enums.RegistrationContactNoticesItem;
 import io.pulumi.googlenative.domains_v1alpha2.enums.RegistrationDomainNoticesItem;
 import io.pulumi.googlenative.domains_v1alpha2.inputs.ContactSettingsArgs;

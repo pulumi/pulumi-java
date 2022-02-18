@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.AnthosClusterArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.ExecutionConfigArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.GkeClusterArgs;

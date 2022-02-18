@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.ExecutionConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.PeripheralsConfigResponse;
 import java.util.Objects;

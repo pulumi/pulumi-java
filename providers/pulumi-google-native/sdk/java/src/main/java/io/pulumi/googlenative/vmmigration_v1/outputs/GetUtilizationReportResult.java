@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.StatusResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.VmUtilizationInfoResponse;
 import java.lang.Integer;

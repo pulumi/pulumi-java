@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.OAuthTokenResponse;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.OidcTokenResponse;
 import java.lang.String;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionQueryTermArgs;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionTimeRangeArgs;
 import java.util.List;

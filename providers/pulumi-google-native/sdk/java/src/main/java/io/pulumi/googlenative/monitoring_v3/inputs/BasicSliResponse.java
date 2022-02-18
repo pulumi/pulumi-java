@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.AvailabilityCriteriaResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.LatencyCriteriaResponse;
 import java.lang.String;

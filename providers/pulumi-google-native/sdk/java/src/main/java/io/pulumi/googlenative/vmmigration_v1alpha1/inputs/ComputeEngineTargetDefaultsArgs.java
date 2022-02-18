@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsDiskType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsLicenseType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.ComputeSchedulingArgs;

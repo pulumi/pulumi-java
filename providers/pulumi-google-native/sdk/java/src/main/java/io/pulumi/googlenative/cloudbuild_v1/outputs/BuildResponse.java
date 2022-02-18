@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ArtifactsResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BuildApprovalResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BuildOptionsResponse;

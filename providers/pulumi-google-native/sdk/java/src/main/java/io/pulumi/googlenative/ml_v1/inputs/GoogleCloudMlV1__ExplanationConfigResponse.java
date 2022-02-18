@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__IntegratedGradientsAttributionResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__SampledShapleyAttributionResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__XraiAttributionResponse;

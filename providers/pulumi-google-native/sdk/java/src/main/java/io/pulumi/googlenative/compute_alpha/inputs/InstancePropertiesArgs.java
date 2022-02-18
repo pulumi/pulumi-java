@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.InstancePropertiesKeyRevocationActionType;
 import io.pulumi.googlenative.compute_alpha.enums.InstancePropertiesPostKeyRevocationActionType;
 import io.pulumi.googlenative.compute_alpha.enums.InstancePropertiesPrivateIpv6GoogleAccess;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1EduDataResponse;
 import java.lang.Boolean;
 import java.lang.String;

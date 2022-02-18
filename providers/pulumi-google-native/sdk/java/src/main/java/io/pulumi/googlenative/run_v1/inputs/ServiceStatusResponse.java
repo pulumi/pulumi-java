@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.AddressableResponse;
 import io.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionResponse;
 import io.pulumi.googlenative.run_v1.inputs.TrafficTargetResponse;

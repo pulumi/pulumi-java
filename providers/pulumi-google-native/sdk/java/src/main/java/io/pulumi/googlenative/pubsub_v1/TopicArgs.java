@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1.inputs.MessageStoragePolicyArgs;
 import io.pulumi.googlenative.pubsub_v1.inputs.SchemaSettingsArgs;
 import java.lang.Boolean;

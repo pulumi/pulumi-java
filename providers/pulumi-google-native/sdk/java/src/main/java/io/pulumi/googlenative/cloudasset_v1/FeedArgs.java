@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.enums.FeedContentType;
 import io.pulumi.googlenative.cloudasset_v1.inputs.ExprArgs;
 import io.pulumi.googlenative.cloudasset_v1.inputs.FeedOutputConfigArgs;

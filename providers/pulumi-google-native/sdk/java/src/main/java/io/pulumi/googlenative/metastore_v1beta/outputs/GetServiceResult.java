@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1beta.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.metastore_v1beta.outputs.HiveMetastoreConfigResponse;
 import io.pulumi.googlenative.metastore_v1beta.outputs.MaintenanceWindowResponse;

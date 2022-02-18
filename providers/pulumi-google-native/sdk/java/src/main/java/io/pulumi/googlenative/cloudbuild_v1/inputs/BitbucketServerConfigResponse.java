@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerRepositoryIdResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerSecretsResponse;
 import java.lang.String;

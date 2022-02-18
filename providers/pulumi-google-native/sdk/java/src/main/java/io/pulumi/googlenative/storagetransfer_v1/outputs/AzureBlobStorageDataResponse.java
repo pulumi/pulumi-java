@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AzureCredentialsResponse;
 import java.lang.String;
 import java.util.Objects;

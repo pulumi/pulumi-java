@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringMirroredResourceInfoInstanceInfoResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringMirroredResourceInfoSubnetInfoResponse;
 import java.lang.String;

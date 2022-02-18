@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.speech_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.speech_v1.outputs.PhraseResponse;
 import java.lang.Double;
 import java.lang.String;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.Objects;

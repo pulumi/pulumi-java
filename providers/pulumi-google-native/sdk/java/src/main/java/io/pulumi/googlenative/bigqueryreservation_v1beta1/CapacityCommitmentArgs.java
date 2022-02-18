@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryreservation_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.enums.CapacityCommitmentPlan;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.enums.CapacityCommitmentRenewalPlan;
 import java.lang.String;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.ForwardSshTunnelConnectivityResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.GcsProfileResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlProfileResponse;

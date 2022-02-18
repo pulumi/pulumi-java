@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.DomainMappingSpecArgs;
 import io.pulumi.googlenative.run_v1.inputs.DomainMappingStatusArgs;
 import io.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;

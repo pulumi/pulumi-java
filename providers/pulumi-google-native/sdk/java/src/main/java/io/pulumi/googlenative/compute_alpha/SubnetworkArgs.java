@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.SubnetworkAggregationInterval;
 import io.pulumi.googlenative.compute_alpha.enums.SubnetworkIpv6AccessType;
 import io.pulumi.googlenative.compute_alpha.enums.SubnetworkMetadata;

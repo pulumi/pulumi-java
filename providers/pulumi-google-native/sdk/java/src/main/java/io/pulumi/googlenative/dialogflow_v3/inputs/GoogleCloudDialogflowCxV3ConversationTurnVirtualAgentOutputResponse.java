@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentResponse;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3PageResponse;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageTextResponse;

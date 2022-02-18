@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.inputs.SegmentResponse;
 import java.util.List;
 import java.util.Objects;

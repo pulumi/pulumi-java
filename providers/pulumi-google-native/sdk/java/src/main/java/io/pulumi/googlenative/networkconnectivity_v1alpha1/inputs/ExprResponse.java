@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

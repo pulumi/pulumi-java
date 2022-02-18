@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.AndroidAttributesResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.EndpointVerificationSpecificAttributesResponse;
 import java.lang.Boolean;

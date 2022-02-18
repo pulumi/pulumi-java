@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.RuntimeMetadataResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.StatusResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.TemplateMetadataResponse;

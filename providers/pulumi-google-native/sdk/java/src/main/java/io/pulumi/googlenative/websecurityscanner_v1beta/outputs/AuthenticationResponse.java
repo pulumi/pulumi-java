@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.CustomAccountResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.GoogleAccountResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.IapCredentialResponse;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayAuditConfigArgs;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBindingArgs;
 import java.lang.Integer;

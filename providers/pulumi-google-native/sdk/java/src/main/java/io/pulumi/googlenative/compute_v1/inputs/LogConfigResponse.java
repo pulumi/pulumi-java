@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.LogConfigCloudAuditOptionsResponse;
 import io.pulumi.googlenative.compute_v1.inputs.LogConfigCounterOptionsResponse;
 import io.pulumi.googlenative.compute_v1.inputs.LogConfigDataAccessOptionsResponse;

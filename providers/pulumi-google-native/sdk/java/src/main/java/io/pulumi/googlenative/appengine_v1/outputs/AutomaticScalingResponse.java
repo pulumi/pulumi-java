@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.CpuUtilizationResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.DiskUtilizationResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.NetworkUtilizationResponse;

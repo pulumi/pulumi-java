@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.Boolean;

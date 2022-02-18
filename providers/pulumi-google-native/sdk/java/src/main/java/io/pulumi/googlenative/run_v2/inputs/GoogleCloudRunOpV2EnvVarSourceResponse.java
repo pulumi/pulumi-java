@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretKeySelectorResponse;
 import java.util.Objects;
 

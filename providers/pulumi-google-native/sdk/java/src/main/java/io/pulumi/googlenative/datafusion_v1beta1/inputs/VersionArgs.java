@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datafusion_v1beta1.enums.VersionType;
 import java.lang.Boolean;
 import java.lang.String;

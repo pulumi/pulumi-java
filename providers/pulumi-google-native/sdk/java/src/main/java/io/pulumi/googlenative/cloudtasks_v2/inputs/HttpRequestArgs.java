@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2.enums.HttpRequestHttpMethod;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.OAuthTokenArgs;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.OidcTokenArgs;

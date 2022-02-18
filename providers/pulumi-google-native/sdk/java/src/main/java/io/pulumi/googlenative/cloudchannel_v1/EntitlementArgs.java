@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1AssociationInfoArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1CommitmentSettingsArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ParameterArgs;

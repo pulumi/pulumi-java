@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1beta1a;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1beta1a.inputs.PushConfigArgs;
 import java.lang.Integer;
 import java.lang.String;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1.enums.ConnectionProfileProvider;
 import io.pulumi.googlenative.datamigration_v1.enums.ConnectionProfileState;
 import io.pulumi.googlenative.datamigration_v1.inputs.CloudSqlConnectionProfileArgs;

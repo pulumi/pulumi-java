@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.JwtArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SignatureArgs;
 import java.lang.String;

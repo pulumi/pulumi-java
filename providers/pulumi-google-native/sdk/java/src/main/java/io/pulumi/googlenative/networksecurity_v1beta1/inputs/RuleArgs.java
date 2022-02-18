@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.DestinationArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.SourceArgs;
 import java.util.List;

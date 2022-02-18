@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyGroupPlacementPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicySnapshotSchedulePolicyArgs;

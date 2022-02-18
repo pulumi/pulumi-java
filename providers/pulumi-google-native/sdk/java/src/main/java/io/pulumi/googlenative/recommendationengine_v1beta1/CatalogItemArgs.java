@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1FeatureMapArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs;

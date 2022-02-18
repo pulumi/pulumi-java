@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaIntervalResponse;
 import java.lang.String;
 import java.util.List;

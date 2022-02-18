@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.BigQueryDestinationResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ConsumptionMeteringConfigResponse;
 import java.lang.Boolean;

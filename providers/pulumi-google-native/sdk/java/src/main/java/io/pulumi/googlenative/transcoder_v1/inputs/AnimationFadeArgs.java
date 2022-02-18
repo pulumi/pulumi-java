@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.enums.AnimationFadeFadeType;
 import io.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.String;

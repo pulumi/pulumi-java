@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaseml_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.ModelStateArgs;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.TfLiteModelArgs;
 import java.lang.String;

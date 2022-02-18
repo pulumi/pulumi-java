@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.InlineSecretResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.SecretManagerSecretResponse;
 import java.util.List;

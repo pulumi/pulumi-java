@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.inputs.CpuUtilizationArgs;
 import io.pulumi.googlenative.appengine_v1beta.inputs.CustomMetricArgs;
 import io.pulumi.googlenative.appengine_v1beta.inputs.DiskUtilizationArgs;

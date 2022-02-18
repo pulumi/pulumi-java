@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.EntityKeyArgs;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.MembershipRoleArgs;
 import java.lang.String;

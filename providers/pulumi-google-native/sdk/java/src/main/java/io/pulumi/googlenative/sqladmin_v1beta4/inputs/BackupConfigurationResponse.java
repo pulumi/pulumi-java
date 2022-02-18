@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.inputs.BackupRetentionSettingsResponse;
 import java.lang.Boolean;
 import java.lang.Integer;

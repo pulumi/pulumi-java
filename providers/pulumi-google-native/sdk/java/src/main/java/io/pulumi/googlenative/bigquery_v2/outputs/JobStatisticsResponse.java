@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics2Response;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics3Response;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics4Response;

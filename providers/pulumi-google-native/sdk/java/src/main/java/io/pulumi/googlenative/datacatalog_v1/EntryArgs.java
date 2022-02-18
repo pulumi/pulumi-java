@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.enums.EntryType;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryTableSpecArgs;

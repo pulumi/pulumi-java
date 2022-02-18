@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AudioResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.ColorResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.CropResponse;

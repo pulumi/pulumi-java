@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtrace_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtrace_v2beta1.outputs.OutputConfigResponse;
 import java.lang.String;
 import java.util.Objects;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.securitycenter_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.securitycenter_v1.outputs.StreamingConfigResponse;
 import java.lang.String;
 import java.util.Objects;

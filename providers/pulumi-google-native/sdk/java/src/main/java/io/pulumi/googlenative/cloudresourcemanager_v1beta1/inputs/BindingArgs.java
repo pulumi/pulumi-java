@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs.ExprArgs;
 import java.lang.String;
 import java.util.List;

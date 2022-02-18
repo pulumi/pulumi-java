@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.KeyOperationAttestationResponse;
 import io.pulumi.googlenative.cloudkms_v1.outputs.WrappingPublicKeyResponse;
 import java.lang.String;

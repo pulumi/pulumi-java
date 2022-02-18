@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.enums.DevicePolicyAllowedDeviceManagementLevelsItem;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.enums.DevicePolicyAllowedEncryptionStatusesItem;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.OsConstraintArgs;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyDailyCycleResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyHourlyCycleResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyWeeklyCycleResponse;

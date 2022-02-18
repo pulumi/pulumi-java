@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.file_v1beta1.enums.InstanceTier;
 import io.pulumi.googlenative.file_v1beta1.inputs.FileShareConfigArgs;
 import io.pulumi.googlenative.file_v1beta1.inputs.NetworkConfigArgs;

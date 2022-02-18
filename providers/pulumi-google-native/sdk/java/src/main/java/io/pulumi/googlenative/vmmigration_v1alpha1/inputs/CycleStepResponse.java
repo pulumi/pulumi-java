@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.InitializingReplicationStepResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.PostProcessingStepResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.ReplicatingStepResponse;

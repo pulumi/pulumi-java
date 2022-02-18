@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.JobTriggerStatus;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectJobConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TriggerArgs;

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.policysimulator_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.policysimulator_v1beta1.ReplayArgs;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse;

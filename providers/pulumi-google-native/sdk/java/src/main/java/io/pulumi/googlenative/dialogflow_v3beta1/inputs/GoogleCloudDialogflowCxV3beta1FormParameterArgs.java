@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs;
 import java.lang.Boolean;
 import java.lang.Object;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datafusion_v1beta1.enums.InstanceType;
 import io.pulumi.googlenative.datafusion_v1beta1.inputs.AcceleratorArgs;
 import io.pulumi.googlenative.datafusion_v1beta1.inputs.CryptoKeyConfigArgs;

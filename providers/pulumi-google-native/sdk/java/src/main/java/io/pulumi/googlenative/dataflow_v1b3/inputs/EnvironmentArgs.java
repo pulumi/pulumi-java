@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.EnvironmentFlexResourceSchedulingGoal;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DebugOptionsArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.WorkerPoolArgs;

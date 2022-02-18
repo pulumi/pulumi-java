@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.enums.ServiceIngress;
 import io.pulumi.googlenative.run_v2.enums.ServiceLaunchStage;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2BinaryAuthorizationArgs;

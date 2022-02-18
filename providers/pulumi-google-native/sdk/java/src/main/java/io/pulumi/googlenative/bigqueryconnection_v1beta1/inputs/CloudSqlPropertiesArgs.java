@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.enums.CloudSqlPropertiesType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.CloudSqlCredentialArgs;
 import java.lang.String;

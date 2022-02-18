@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.HttpHeaderMatchResponse;
 import io.pulumi.googlenative.compute_beta.outputs.HttpQueryParameterMatchResponse;
 import io.pulumi.googlenative.compute_beta.outputs.MetadataFilterResponse;

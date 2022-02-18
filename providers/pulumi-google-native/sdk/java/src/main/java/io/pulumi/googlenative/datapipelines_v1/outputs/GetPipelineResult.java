@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1ScheduleSpecResponse;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1WorkloadResponse;
 import java.lang.Integer;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.DatabaseTypeResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.ReverseSshConnectivityResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.StaticIpConnectivityResponse;

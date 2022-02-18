@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleTypeExprResponse;
 import java.lang.Boolean;

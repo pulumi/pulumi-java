@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectCircuitInfoResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectMacsecResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectOutageNotificationResponse;

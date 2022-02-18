@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;

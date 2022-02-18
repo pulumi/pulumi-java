@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudsupport_v2beta.outputs.ActorResponse;
 import io.pulumi.googlenative.cloudsupport_v2beta.outputs.CaseClassificationResponse;
 import java.lang.Boolean;

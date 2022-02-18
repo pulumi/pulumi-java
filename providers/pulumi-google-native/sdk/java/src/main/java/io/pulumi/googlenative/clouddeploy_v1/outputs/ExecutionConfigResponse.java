@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.DefaultPoolResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.PrivatePoolResponse;
 import java.lang.String;

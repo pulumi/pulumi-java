@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.VersionFramework;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AcceleratorConfigArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AutoScalingArgs;

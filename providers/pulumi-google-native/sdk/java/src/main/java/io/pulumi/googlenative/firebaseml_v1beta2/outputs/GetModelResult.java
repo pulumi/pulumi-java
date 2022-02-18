@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.ModelStateResponse;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.OperationResponse;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.TfLiteModelResponse;

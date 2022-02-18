@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1CertificateProviderArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.ValidationCAArgs;
 import java.lang.String;

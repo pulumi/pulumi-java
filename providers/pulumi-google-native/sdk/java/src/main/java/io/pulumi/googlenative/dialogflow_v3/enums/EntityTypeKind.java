@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.enums;
 
-import io.pulumi.core.internal.annotations.EnumType;
+import io.pulumi.core.annotations.EnumType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceExecResourceExecInterpreter;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;

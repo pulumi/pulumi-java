@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.FirewallPolicyRuleDirection;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleMatcherArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleSecureTagArgs;

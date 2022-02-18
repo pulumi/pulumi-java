@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryreservation_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

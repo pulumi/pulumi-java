@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

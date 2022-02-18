@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.JwtClaimsResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.SecretResponse;
 import java.util.Objects;

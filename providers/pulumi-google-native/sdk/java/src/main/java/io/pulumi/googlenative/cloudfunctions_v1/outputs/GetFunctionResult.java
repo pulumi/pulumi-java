@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.EventTriggerResponse;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.HttpsTriggerResponse;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.SecretEnvVarResponse;

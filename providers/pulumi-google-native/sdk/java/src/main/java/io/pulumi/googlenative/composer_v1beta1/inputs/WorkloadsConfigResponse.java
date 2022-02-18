@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1beta1.inputs.SchedulerResourceResponse;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WebServerResourceResponse;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WorkerResourceResponse;

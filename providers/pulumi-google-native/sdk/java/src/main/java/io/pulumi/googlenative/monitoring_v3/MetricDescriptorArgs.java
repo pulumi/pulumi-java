@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.MetricDescriptorLaunchStage;
 import io.pulumi.googlenative.monitoring_v3.enums.MetricDescriptorMetricKind;
 import io.pulumi.googlenative.monitoring_v3.enums.MetricDescriptorValueType;

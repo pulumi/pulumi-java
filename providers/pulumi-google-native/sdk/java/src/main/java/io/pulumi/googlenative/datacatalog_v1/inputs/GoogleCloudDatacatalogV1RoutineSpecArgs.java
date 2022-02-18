@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1RoutineSpecRoutineType;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1RoutineSpecArgumentArgs;

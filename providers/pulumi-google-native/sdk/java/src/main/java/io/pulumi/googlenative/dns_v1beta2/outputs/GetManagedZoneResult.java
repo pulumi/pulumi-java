@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZoneCloudLoggingConfigResponse;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZoneDnsSecConfigResponse;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZoneForwardingConfigResponse;

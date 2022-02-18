@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse;
 import java.lang.Boolean;
 import java.util.List;

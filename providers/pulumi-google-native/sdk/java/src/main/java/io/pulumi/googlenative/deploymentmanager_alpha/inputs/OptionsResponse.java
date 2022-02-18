@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.AsyncOptionsResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.InputMappingResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.ValidationOptionsResponse;

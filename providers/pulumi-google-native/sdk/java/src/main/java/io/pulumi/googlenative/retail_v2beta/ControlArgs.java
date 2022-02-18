@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.enums.ControlSolutionTypesItem;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleArgs;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaSearchRequestFacetSpecArgs;

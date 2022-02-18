@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleHttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleRateLimitOptionsResponse;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1beta1.enums.EnvironmentState;
 import io.pulumi.googlenative.composer_v1beta1.inputs.EnvironmentConfigArgs;
 import java.lang.String;

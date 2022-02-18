@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.AppEngineHttpRequestResponse;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.AttemptResponse;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.HttpRequestResponse;

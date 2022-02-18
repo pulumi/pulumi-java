@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2beta3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2beta3.enums.QueueType;
 import io.pulumi.googlenative.cloudtasks_v2beta3.inputs.AppEngineHttpQueueArgs;
 import io.pulumi.googlenative.cloudtasks_v2beta3.inputs.RateLimitsArgs;

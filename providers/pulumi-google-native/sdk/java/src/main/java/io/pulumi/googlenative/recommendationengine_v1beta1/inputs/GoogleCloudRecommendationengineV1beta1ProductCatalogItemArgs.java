@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.recommendationengine_v1beta1.enums.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ImageArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs;

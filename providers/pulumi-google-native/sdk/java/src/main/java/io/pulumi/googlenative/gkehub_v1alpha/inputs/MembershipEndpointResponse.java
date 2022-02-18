@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.EdgeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.GkeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.KubernetesMetadataResponse;

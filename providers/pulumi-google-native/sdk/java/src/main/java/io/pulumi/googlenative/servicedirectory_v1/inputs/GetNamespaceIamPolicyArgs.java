@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicedirectory_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

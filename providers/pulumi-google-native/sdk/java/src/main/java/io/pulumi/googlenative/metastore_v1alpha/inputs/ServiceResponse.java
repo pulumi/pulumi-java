@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.HiveMetastoreConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.MaintenanceWindowResponse;
