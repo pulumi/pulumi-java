@@ -4,7 +4,7 @@
 package io.pulumi.mypkg;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.mypkg.ProviderArgs;
 import io.pulumi.mypkg.Utilities;
 import javax.annotation.Nullable;

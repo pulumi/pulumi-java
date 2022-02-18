@@ -8,8 +8,8 @@ import io.pulumi.azurenative.documentdb.SqlResourceSqlContainerArgs;
 import io.pulumi.azurenative.documentdb.outputs.SqlContainerGetPropertiesResponseResource;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 /**

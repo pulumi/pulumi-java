@@ -4,7 +4,7 @@
 package io.pulumi.myedgeorder.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.myedgeorder.inputs.Pav2MeterDetailsResponse;
 import io.pulumi.myedgeorder.inputs.PurchaseMeterDetailsResponse;
 import java.lang.String;

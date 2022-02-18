@@ -4,7 +4,7 @@
 package io.pulumi.foobar;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foobar.ModuleResourceArgs;
 import io.pulumi.foobar.Utilities;
 import javax.annotation.Nullable;

@@ -4,7 +4,7 @@
 package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.plant.Utilities;
 import io.pulumi.plant.tree_v1.NurseryArgs;
 import javax.annotation.Nullable;

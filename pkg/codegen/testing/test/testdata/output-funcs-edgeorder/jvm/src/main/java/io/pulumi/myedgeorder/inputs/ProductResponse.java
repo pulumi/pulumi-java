@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.myedgeorder.inputs.AvailabilityInformationResponse;
 import io.pulumi.myedgeorder.inputs.ConfigurationResponse;
 import io.pulumi.myedgeorder.inputs.CostInformationResponse;

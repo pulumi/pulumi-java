@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.enums.RubberTreeVariety;
 import io.pulumi.example.inputs.ObjectArgs;
 import io.pulumi.example.inputs.ObjectWithNodeOptionalInputsArgs;

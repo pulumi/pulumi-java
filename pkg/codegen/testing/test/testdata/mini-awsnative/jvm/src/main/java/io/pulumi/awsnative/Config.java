@@ -4,7 +4,7 @@
 package io.pulumi.awsnative;
 
 import io.pulumi.awsnative.config.inputs.IgnoreTags;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import java.lang.String;
 import java.util.Optional;
 
