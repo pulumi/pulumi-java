@@ -4,7 +4,7 @@
 package io.pulumi.myedgeorder.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.Pav2MeterDetailsResponse;
 import io.pulumi.myedgeorder.outputs.PurchaseMeterDetailsResponse;
 import java.lang.String;

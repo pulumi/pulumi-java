@@ -6,7 +6,7 @@ package io.pulumi.awsnative;
 import io.pulumi.awsnative.ProviderArgs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 @ResourceType(type="pulumi:providers:aws-native")

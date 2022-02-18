@@ -3,7 +3,7 @@
 
 package io.pulumi.plant.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.plant.enums.ContainerBrightness;
 import io.pulumi.plant.enums.ContainerSize;
 import java.lang.String;

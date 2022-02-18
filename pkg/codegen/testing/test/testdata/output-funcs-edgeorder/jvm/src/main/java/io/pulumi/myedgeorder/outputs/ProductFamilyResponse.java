@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.AvailabilityInformationResponse;
 import io.pulumi.myedgeorder.outputs.CostInformationResponse;
 import io.pulumi.myedgeorder.outputs.DescriptionResponse;

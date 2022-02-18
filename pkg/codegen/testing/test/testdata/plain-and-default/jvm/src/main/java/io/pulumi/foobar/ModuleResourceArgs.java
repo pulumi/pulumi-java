@@ -4,7 +4,7 @@
 package io.pulumi.foobar;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.foobar.enums.EnumThing;
 import java.lang.Boolean;
 import java.lang.Double;

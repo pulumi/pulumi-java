@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.inputs.Foo;
 import io.pulumi.example.inputs.FooArgs;
 import java.lang.Boolean;

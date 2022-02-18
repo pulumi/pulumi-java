@@ -3,7 +3,7 @@
 
 package io.pulumi.example.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.Resource;
 import java.util.Objects;
 import java.util.Optional;
