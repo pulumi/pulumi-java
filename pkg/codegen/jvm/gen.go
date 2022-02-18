@@ -474,10 +474,11 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		attributeArgs = ", required=true"
 	}
 	if pt.res != nil && pt.res.IsProvider {
+		pType := codegen.UnwrapType(prop.Type)
 		json := true
-		if prop.Type == schema.StringType {
+		if pType == schema.StringType {
 			json = false
-		} else if t, ok := prop.Type.(*schema.TokenType); ok && t.UnderlyingType == schema.StringType {
+		} else if t, ok := pType.(*schema.TokenType); ok && t.UnderlyingType == schema.StringType {
 			json = false
 		}
 		if json {
