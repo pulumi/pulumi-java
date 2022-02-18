@@ -20,7 +20,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * If present, the name of the kubeconfig cluster to use.
      * 
      */
-    @InputImport(name="cluster", json=true)
+    @InputImport(name="cluster")
     private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
@@ -31,7 +31,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * If present, the name of the kubeconfig context to use.
      * 
      */
-    @InputImport(name="context", json=true)
+    @InputImport(name="context")
     private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
@@ -53,7 +53,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The contents of a kubeconfig file or the path to a kubeconfig file.
      * 
      */
-    @InputImport(name="kubeconfig", json=true)
+    @InputImport(name="kubeconfig")
     private final @Nullable Input<String> kubeconfig;
 
     public Input<String> getKubeconfig() {
