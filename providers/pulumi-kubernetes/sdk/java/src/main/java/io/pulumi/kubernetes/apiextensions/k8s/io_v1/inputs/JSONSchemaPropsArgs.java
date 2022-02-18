@@ -6,7 +6,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 import com.google.gson.JsonElement;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.ExternalDocumentationArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.ValidationRuleArgs;
 import java.lang.Boolean;

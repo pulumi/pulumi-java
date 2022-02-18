@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.apps_v1;
 
 import com.google.gson.JsonElement;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Integer;
 import java.lang.String;

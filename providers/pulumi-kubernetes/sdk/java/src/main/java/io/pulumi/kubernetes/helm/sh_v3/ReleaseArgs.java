@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.helm.sh_v3;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.helm.sh_v3.inputs.RepositoryOptsArgs;
 import java.lang.Boolean;
 import java.lang.Integer;

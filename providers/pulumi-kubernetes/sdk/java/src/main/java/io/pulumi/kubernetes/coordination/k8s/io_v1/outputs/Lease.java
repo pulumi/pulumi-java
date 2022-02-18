@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.coordination.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.coordination.k8s.io_v1.outputs.LeaseSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;

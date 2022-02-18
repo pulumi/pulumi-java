@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.RuleWithOperationsArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;

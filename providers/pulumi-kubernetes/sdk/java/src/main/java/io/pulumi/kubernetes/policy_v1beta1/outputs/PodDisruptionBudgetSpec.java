@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.Integer;
 import java.lang.String;

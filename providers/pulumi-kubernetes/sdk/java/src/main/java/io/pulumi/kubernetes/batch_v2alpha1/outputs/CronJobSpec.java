@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v2alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v2alpha1.outputs.JobTemplateSpec;
 import java.lang.Boolean;
 import java.lang.Integer;

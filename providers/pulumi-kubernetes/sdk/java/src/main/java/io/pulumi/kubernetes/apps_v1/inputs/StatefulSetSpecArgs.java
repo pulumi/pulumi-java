@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1.inputs.StatefulSetPersistentVolumeClaimRetentionPolicyArgs;
 import io.pulumi.kubernetes.apps_v1.inputs.StatefulSetUpdateStrategyArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimArgs;

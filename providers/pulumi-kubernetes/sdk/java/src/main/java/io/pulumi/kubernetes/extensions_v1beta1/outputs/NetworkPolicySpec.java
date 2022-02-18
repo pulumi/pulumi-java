@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.NetworkPolicyEgressRule;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.NetworkPolicyIngressRule;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
