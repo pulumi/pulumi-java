@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterStatusEgressPolicy;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterStatusIngressPolicy;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterStatusVpcAccessibleServices;

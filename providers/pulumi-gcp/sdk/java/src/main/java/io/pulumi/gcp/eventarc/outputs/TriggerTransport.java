@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.eventarc.outputs.TriggerTransportPubsub;
 import java.util.List;
 import java.util.Objects;

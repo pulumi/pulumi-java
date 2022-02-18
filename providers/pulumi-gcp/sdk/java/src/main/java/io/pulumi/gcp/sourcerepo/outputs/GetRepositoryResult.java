@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sourcerepo.outputs.GetRepositoryPubsubConfig;
 import java.lang.Integer;
 import java.lang.String;

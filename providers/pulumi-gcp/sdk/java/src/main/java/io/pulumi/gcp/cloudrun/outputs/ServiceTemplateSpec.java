@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainer;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecVolume;
 import java.lang.Integer;

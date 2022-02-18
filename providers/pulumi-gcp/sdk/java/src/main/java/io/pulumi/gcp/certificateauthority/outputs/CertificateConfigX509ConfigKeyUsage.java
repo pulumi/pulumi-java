@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigKeyUsageBaseKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigKeyUsageExtendedKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage;

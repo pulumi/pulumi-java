@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingResourceLimitArgs;
 import java.lang.Boolean;

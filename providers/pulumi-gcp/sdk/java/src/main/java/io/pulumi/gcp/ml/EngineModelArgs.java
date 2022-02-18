@@ -4,7 +4,7 @@
 package io.pulumi.gcp.ml;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.ml.inputs.EngineModelDefaultVersionArgs;
 import java.lang.Boolean;
 import java.lang.String;

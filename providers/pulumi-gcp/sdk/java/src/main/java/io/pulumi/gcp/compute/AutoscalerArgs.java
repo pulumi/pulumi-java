@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyArgs;
 import java.lang.String;
 import java.util.Objects;

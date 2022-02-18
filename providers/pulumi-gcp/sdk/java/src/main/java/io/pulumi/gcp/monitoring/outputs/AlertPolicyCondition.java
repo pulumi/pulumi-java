@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionAbsent;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionMatchedLog;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionMonitoringQueryLanguage;

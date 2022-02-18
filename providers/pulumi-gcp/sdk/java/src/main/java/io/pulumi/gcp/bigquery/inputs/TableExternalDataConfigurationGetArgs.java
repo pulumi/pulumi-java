@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationCsvOptionsGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGoogleSheetsOptionsGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationHivePartitioningOptionsGetArgs;

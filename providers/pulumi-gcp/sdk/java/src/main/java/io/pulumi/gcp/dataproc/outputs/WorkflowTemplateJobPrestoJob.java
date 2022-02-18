@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPrestoJobLoggingConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPrestoJobQueryList;
 import java.lang.Boolean;

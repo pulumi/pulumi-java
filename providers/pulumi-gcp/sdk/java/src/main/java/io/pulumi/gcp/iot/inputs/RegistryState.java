@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iot.inputs.RegistryCredentialGetArgs;
 import io.pulumi.gcp.iot.inputs.RegistryEventNotificationConfigItemGetArgs;
 import java.lang.Object;

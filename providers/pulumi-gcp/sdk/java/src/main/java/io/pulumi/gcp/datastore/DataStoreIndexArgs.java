@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datastore;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datastore.inputs.DataStoreIndexPropertyArgs;
 import java.lang.String;
 import java.util.List;

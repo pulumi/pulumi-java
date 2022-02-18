@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterAddonsConfigArgs;
 import io.pulumi.gcp.container.inputs.ClusterAuthenticatorGroupsConfigArgs;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingArgs;

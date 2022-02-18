@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretReplicationUserManagedReplicaCustomerManagedEncryption;
 import java.lang.String;
 import java.util.List;

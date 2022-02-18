@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dns.outputs.ManagedZoneServiceDirectoryConfigNamespace;
 import java.util.Objects;
 

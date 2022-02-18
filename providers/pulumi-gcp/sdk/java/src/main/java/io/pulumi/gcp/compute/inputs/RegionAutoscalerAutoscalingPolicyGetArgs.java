@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyMetricGetArgs;

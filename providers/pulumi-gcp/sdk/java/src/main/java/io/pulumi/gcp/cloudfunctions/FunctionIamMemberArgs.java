@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;

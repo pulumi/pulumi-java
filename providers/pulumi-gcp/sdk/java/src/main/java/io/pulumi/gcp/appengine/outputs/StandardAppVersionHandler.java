@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionHandlerScript;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionHandlerStaticFiles;
 import java.lang.String;

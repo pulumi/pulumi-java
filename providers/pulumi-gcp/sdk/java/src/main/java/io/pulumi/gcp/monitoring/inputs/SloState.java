@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloBasicSliGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGetArgs;

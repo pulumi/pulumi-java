@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable;
 import java.lang.String;
 import java.util.Objects;

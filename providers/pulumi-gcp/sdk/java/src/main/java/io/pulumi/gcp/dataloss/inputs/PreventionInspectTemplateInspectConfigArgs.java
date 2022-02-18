@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsArgs;

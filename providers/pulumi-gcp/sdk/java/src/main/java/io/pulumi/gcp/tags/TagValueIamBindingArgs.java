@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.tags.inputs.TagValueIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;

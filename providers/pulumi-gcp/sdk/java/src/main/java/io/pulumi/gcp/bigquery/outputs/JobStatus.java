@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobStatusError;
 import io.pulumi.gcp.bigquery.outputs.JobStatusErrorResult;
 import java.lang.String;
