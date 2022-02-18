@@ -5,7 +5,7 @@ package io.pulumi.plant.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.plant.enums.ContainerBrightness;
 import io.pulumi.plant.enums.ContainerColor;
 import io.pulumi.plant.enums.ContainerSize;

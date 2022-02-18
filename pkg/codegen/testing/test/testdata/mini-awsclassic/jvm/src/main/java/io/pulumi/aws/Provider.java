@@ -6,7 +6,7 @@ package io.pulumi.aws;
 import io.pulumi.aws.ProviderArgs;
 import io.pulumi.aws.Utilities;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 @ResourceType(type="pulumi:providers:aws")
