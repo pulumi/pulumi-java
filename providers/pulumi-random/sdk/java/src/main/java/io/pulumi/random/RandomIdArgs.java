@@ -17,6 +17,10 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomIdArgs Empty = new RandomIdArgs();
 
+    /**
+     * The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+     * 
+     */
     @InputImport(name="byteLength", required=true)
     private final Input<Integer> byteLength;
 
@@ -24,6 +28,10 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
         return this.byteLength;
     }
 
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -31,6 +39,10 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
+    /**
+     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 

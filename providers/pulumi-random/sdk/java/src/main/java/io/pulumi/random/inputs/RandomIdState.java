@@ -17,6 +17,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomIdState Empty = new RandomIdState();
 
+    /**
+     * The generated id presented in base64 without additional transformations.
+     * 
+     */
     @InputImport(name="b64Std")
     private final @Nullable Input<String> b64Std;
 
@@ -24,6 +28,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
         return this.b64Std == null ? Input.empty() : this.b64Std;
     }
 
+    /**
+     * The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+     * 
+     */
     @InputImport(name="b64Url")
     private final @Nullable Input<String> b64Url;
 
@@ -31,6 +39,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
         return this.b64Url == null ? Input.empty() : this.b64Url;
     }
 
+    /**
+     * The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+     * 
+     */
     @InputImport(name="byteLength")
     private final @Nullable Input<Integer> byteLength;
 
@@ -38,6 +50,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
         return this.byteLength == null ? Input.empty() : this.byteLength;
     }
 
+    /**
+     * The generated id presented in non-padded decimal digits.
+     * 
+     */
     @InputImport(name="dec")
     private final @Nullable Input<String> dec;
 
@@ -45,6 +61,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
         return this.dec == null ? Input.empty() : this.dec;
     }
 
+    /**
+     * The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+     * 
+     */
     @InputImport(name="hex")
     private final @Nullable Input<String> hex;
 
@@ -52,6 +72,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
         return this.hex == null ? Input.empty() : this.hex;
     }
 
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -59,6 +83,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
+    /**
+     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
