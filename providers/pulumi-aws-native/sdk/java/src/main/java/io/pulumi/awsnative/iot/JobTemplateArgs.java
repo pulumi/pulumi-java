@@ -21,6 +21,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobTemplateArgs Empty = new JobTemplateArgs();
 
+    /**
+     * The criteria that determine when and how a job abort takes place.
+     * 
+     */
     @InputImport(name="abortConfig")
     private final @Nullable Input<AbortConfigPropertiesArgs> abortConfig;
 
@@ -28,6 +32,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.abortConfig == null ? Input.empty() : this.abortConfig;
     }
 
+    /**
+     * A description of the Job Template.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final Input<String> description;
 
@@ -35,6 +43,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.description;
     }
 
+    /**
+     * The job document. Required if you don't specify a value for documentSource.
+     * 
+     */
     @InputImport(name="document")
     private final @Nullable Input<String> document;
 
@@ -42,6 +54,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.document == null ? Input.empty() : this.document;
     }
 
+    /**
+     * An S3 link to the job document to use in the template. Required if you don't specify a value for document.
+     * 
+     */
     @InputImport(name="documentSource")
     private final @Nullable Input<String> documentSource;
 
@@ -49,6 +65,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.documentSource == null ? Input.empty() : this.documentSource;
     }
 
+    /**
+     * Optional for copying a JobTemplate from a pre-existing Job configuration.
+     * 
+     */
     @InputImport(name="jobArn")
     private final @Nullable Input<String> jobArn;
 
@@ -63,6 +83,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobExecutionsRetryConfig == null ? Input.empty() : this.jobExecutionsRetryConfig;
     }
 
+    /**
+     * Allows you to create a staged rollout of a job.
+     * 
+     */
     @InputImport(name="jobExecutionsRolloutConfig")
     private final @Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
 
@@ -77,6 +101,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobTemplateId;
     }
 
+    /**
+     * Configuration for pre-signed S3 URLs.
+     * 
+     */
     @InputImport(name="presignedUrlConfig")
     private final @Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
 
@@ -84,6 +112,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.presignedUrlConfig == null ? Input.empty() : this.presignedUrlConfig;
     }
 
+    /**
+     * Metadata that can be used to manage the JobTemplate.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<JobTemplateTagArgs>> tags;
 
@@ -91,6 +123,10 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Specifies the amount of time each device has to finish its execution of the job.
+     * 
+     */
     @InputImport(name="timeoutConfig")
     private final @Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig;
 

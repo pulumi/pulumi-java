@@ -12,6 +12,10 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetQueryPackArgs Empty = new GetQueryPackArgs();
 
+    /**
+     * The name of the Log Analytics QueryPack resource.
+     * 
+     */
     @InputImport(name="queryPackName", required=true)
     private final String queryPackName;
 
@@ -19,6 +23,10 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
         return this.queryPackName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

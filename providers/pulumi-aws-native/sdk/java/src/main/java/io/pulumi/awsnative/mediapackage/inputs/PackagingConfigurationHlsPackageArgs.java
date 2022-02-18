@@ -14,6 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An HTTP Live Streaming (HLS) packaging configuration.
+ * 
+ */
 public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackagingConfigurationHlsPackageArgs Empty = new PackagingConfigurationHlsPackageArgs();
@@ -25,6 +29,10 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * A list of HLS manifest configurations.
+     * 
+     */
     @InputImport(name="hlsManifests", required=true)
     private final Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
@@ -39,6 +47,10 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
     }
 
+    /**
+     * When enabled, audio streams will be placed in rendition groups in the output.
+     * 
+     */
     @InputImport(name="useAudioRenditionGroup")
     private final @Nullable Input<Boolean> useAudioRenditionGroup;
 

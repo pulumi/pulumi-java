@@ -15,6 +15,10 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
 
     public static final ClusterResourceUsageExportConfigArgs Empty = new ClusterResourceUsageExportConfigArgs();
 
+    /**
+     * Parameters for using BigQuery as the destination of resource usage export.
+     * 
+     */
     @InputImport(name="bigqueryDestination", required=true)
     private final Input<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
 
@@ -22,6 +26,11 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
         return this.bigqueryDestination;
     }
 
+    /**
+     * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+     * in the cluster to meter network egress traffic.
+     * 
+     */
     @InputImport(name="enableNetworkEgressMetering")
     private final @Nullable Input<Boolean> enableNetworkEgressMetering;
 
@@ -29,6 +38,14 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
         return this.enableNetworkEgressMetering == null ? Input.empty() : this.enableNetworkEgressMetering;
     }
 
+    /**
+     * Whether to enable resource
+     * consumption metering on this cluster. When enabled, a table will be created in
+     * the resource export BigQuery dataset to store resource consumption data. The
+     * resulting table can be joined with the resource usage table or with BigQuery
+     * billing export. Defaults to `true`.
+     * 
+     */
     @InputImport(name="enableResourceConsumptionMetering")
     private final @Nullable Input<Boolean> enableResourceConsumptionMetering;
 

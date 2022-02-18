@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
+     * 
+     */
     @EnumType
     public enum EncryptionScopeState {
         Enabled("Enabled"),

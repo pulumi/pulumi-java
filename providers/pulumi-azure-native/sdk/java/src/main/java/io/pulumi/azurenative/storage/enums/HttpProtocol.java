@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The protocol permitted for a request made with the account SAS.
+     * 
+     */
     @EnumType
     public enum HttpProtocol {
         Https_http("https,http"),

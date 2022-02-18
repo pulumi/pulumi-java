@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The issuing policy for a CertificateAuthority. Certificates will not be successfully issued from this CertificateAuthority if they violate the policy.
+ * 
+ */
 public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateAuthorityPolicyArgs Empty = new CertificateAuthorityPolicyArgs();
 
+    /**
+     * Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
+     * 
+     */
     @InputImport(name="allowedCommonNames")
     private final @Nullable Input<List<String>> allowedCommonNames;
 
@@ -27,6 +35,10 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
         return this.allowedCommonNames == null ? Input.empty() : this.allowedCommonNames;
     }
 
+    /**
+     * Optional. All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper in the list.
+     * 
+     */
     @InputImport(name="allowedConfigList")
     private final @Nullable Input<AllowedConfigListArgs> allowedConfigList;
 
@@ -34,6 +46,10 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
         return this.allowedConfigList == null ? Input.empty() : this.allowedConfigList;
     }
 
+    /**
+     * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
+     * 
+     */
     @InputImport(name="allowedIssuanceModes")
     private final @Nullable Input<IssuanceModesArgs> allowedIssuanceModes;
 
@@ -41,6 +57,10 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
         return this.allowedIssuanceModes == null ? Input.empty() : this.allowedIssuanceModes;
     }
 
+    /**
+     * Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
+     * 
+     */
     @InputImport(name="allowedLocationsAndOrganizations")
     private final @Nullable Input<List<SubjectArgs>> allowedLocationsAndOrganizations;
 
@@ -48,6 +68,10 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
         return this.allowedLocationsAndOrganizations == null ? Input.empty() : this.allowedLocationsAndOrganizations;
     }
 
+    /**
+     * Optional. If a AllowedSubjectAltNames is specified here, then all Certificates issued by the CertificateAuthority must match AllowedSubjectAltNames. If no value or an empty value is specified, any value will be allowed for the SubjectAltNames field.
+     * 
+     */
     @InputImport(name="allowedSans")
     private final @Nullable Input<AllowedSubjectAltNamesArgs> allowedSans;
 
@@ -55,6 +79,10 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
         return this.allowedSans == null ? Input.empty() : this.allowedSans;
     }
 
+    /**
+     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+     * 
+     */
     @InputImport(name="maximumLifetime")
     private final @Nullable Input<String> maximumLifetime;
 
@@ -62,6 +90,10 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
         return this.maximumLifetime == null ? Input.empty() : this.maximumLifetime;
     }
 
+    /**
+     * Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.
+     * 
+     */
     @InputImport(name="overwriteConfigValues")
     private final @Nullable Input<ReusableConfigWrapperArgs> overwriteConfigValues;
 

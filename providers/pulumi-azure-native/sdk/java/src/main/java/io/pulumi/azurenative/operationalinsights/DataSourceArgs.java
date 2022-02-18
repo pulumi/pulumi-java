@@ -18,6 +18,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
+    /**
+     * The name of the datasource resource.
+     * 
+     */
     @InputImport(name="dataSourceName")
     private final @Nullable Input<String> dataSourceName;
 
@@ -25,6 +29,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSourceName == null ? Input.empty() : this.dataSourceName;
     }
 
+    /**
+     * The kind of the DataSource.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,DataSourceKind>> kind;
 
@@ -32,6 +40,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * The data source properties in raw json format, each kind of data source have it's own schema.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<Object> properties;
 
@@ -39,6 +51,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -46,6 +62,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -53,6 +73,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

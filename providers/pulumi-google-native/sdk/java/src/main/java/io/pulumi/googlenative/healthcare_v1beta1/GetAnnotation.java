@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnnotation {
+/**
+ * Gets an Annotation.
+ * 
+ */
     public static CompletableFuture<GetAnnotationResult> invokeAsync(GetAnnotationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getAnnotation", TypeShape.of(GetAnnotationResult.class), args == null ? GetAnnotationArgs.Empty : args, Utilities.withVersion(options));
     }

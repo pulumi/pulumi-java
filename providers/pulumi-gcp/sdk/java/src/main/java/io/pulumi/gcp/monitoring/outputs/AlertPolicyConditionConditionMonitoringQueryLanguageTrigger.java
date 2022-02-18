@@ -12,7 +12,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
+    /**
+     * The absolute number of time series
+     * that must fail the predicate for the
+     * condition to be triggered.
+     * 
+     */
     private final @Nullable Integer count;
+    /**
+     * The percentage of time series that
+     * must fail the predicate for the
+     * condition to be triggered.
+     * 
+     */
     private final @Nullable Double percent;
 
     @OutputCustomType.Constructor({"count","percent"})
@@ -23,9 +35,21 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
         this.percent = percent;
     }
 
+    /**
+     * The absolute number of time series
+     * that must fail the predicate for the
+     * condition to be triggered.
+     * 
+     */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
+    /**
+     * The percentage of time series that
+     * must fail the predicate for the
+     * condition to be triggered.
+     * 
+     */
     public Optional<Double> getPercent() {
         return Optional.ofNullable(this.percent);
     }

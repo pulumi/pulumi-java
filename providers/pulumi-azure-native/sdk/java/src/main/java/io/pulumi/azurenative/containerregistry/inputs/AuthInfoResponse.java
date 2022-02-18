@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The authorization properties for accessing the source code repository.
+ * 
+ */
 public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthInfoResponse Empty = new AuthInfoResponse();
 
+    /**
+     * Time in seconds that the token remains valid
+     * 
+     */
     @InputImport(name="expiresIn")
     private final @Nullable Integer expiresIn;
 
@@ -22,6 +30,10 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.expiresIn == null ? Optional.empty() : Optional.ofNullable(this.expiresIn);
     }
 
+    /**
+     * The refresh token used to refresh the access token.
+     * 
+     */
     @InputImport(name="refreshToken")
     private final @Nullable String refreshToken;
 
@@ -29,6 +41,10 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
     }
 
+    /**
+     * The scope of the access token.
+     * 
+     */
     @InputImport(name="scope")
     private final @Nullable String scope;
 
@@ -36,6 +52,10 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
+    /**
+     * The access token used to access the source control provider.
+     * 
+     */
     @InputImport(name="token", required=true)
     private final String token;
 
@@ -43,6 +63,10 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.token;
     }
 
+    /**
+     * The type of Auth token.
+     * 
+     */
     @InputImport(name="tokenType", required=true)
     private final String tokenType;
 

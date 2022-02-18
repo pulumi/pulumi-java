@@ -17,6 +17,10 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
 
     public static final OrganizationPolicyListPolicyGetArgs Empty = new OrganizationPolicyListPolicyGetArgs();
 
+    /**
+     * or `deny` - (Optional) One or the other must be set.
+     * 
+     */
     @InputImport(name="allow")
     private final @Nullable Input<OrganizationPolicyListPolicyAllowGetArgs> allow;
 
@@ -31,6 +35,11 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
         return this.deny == null ? Input.empty() : this.deny;
     }
 
+    /**
+     * If set to true, the values from the effective Policy of the parent resource
+     * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+     * 
+     */
     @InputImport(name="inheritFromParent")
     private final @Nullable Input<Boolean> inheritFromParent;
 
@@ -38,6 +47,10 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
         return this.inheritFromParent == null ? Input.empty() : this.inheritFromParent;
     }
 
+    /**
+     * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+     * 
+     */
     @InputImport(name="suggestedValue")
     private final @Nullable Input<String> suggestedValue;
 

@@ -16,6 +16,10 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubnetGroupArgs Empty = new SubnetGroupArgs();
 
+    /**
+     * An optional description of the subnet group.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
+     * 
+     */
     @InputImport(name="subnetGroupName")
     private final @Nullable Input<String> subnetGroupName;
 
@@ -30,6 +38,10 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
     }
 
+    /**
+     * A list of VPC subnet IDs for the subnet group.
+     * 
+     */
     @InputImport(name="subnetIds", required=true)
     private final Input<List<String>> subnetIds;
 
@@ -37,6 +49,10 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetIds;
     }
 
+    /**
+     * An array of key-value pairs to apply to this subnet group.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<SubnetGroupTagArgs>> tags;
 

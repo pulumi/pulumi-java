@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceAutoSnapshotAddOn {
+    /**
+     * The daily time when an automatic snapshot will be created.
+     * 
+     */
     private final @Nullable String snapshotTimeOfDay;
 
     @OutputCustomType.Constructor({"snapshotTimeOfDay"})
@@ -18,6 +22,10 @@ public final class InstanceAutoSnapshotAddOn {
         this.snapshotTimeOfDay = snapshotTimeOfDay;
     }
 
+    /**
+     * The daily time when an automatic snapshot will be created.
+     * 
+     */
     public Optional<String> getSnapshotTimeOfDay() {
         return Optional.ofNullable(this.snapshotTimeOfDay);
     }

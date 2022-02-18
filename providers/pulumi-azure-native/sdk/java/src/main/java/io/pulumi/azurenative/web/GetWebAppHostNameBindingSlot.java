@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppHostNameBindingSlot {
+/**
+ * A hostname binding object.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * A hostname binding object.
+ * 
+ */
     public static CompletableFuture<GetWebAppHostNameBindingSlotResult> invokeAsync(GetWebAppHostNameBindingSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHostNameBindingSlot", TypeShape.of(GetWebAppHostNameBindingSlotResult.class), args == null ? GetWebAppHostNameBindingSlotArgs.Empty : args, Utilities.withVersion(options));
     }

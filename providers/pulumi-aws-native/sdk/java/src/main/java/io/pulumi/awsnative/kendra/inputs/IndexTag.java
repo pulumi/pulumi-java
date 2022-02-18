@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A label for tagging Kendra resources
+ * 
+ */
 public final class IndexTag extends io.pulumi.resources.InvokeArgs {
 
     public static final IndexTag Empty = new IndexTag();
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +27,10 @@ public final class IndexTag extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

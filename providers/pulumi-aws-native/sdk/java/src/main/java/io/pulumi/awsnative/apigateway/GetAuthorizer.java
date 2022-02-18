@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizer {
+/**
+ * Represents an authorization layer for methods. If enabled on a method, API Gateway will activate the authorizer when a client calls the method.
+ * 
+ */
     public static CompletableFuture<GetAuthorizerResult> invokeAsync(GetAuthorizerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getAuthorizer", TypeShape.of(GetAuthorizerResult.class), args == null ? GetAuthorizerArgs.Empty : args, Utilities.withVersion(options));
     }

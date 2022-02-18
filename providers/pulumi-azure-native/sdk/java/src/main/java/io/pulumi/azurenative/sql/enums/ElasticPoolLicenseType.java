@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The license type to apply for this elastic pool.
+     * 
+     */
     @EnumType
     public enum ElasticPoolLicenseType {
         LicenseIncluded("LicenseIncluded"),

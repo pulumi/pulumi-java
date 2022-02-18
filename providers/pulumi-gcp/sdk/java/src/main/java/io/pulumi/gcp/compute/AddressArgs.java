@@ -16,6 +16,13 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddressArgs Empty = new AddressArgs();
 
+    /**
+     * The static external IP address represented by this resource. Only
+     * IPv4 is supported. An address may only be specified for INTERNAL
+     * address types. The IP address must be inside the specified subnetwork,
+     * if any.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -23,6 +30,12 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * The type of address to reserve.
+     * Default value is `EXTERNAL`.
+     * Possible values are `INTERNAL` and `EXTERNAL`.
+     * 
+     */
     @InputImport(name="addressType")
     private final @Nullable Input<String> addressType;
 
@@ -30,6 +43,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressType == null ? Input.empty() : this.addressType;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +54,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Labels to apply to this address.  A list of key->value pairs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -44,6 +65,15 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?`
+     * which means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +81,12 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The URL of the network in which to reserve the address. This field
+     * can only be used with INTERNAL type with the VPC_PEERING and
+     * IPSEC_INTERCONNECT purposes.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -58,6 +94,12 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The networking tier used for configuring this address. If this field is not
+     * specified, it is assumed to be PREMIUM.
+     * Possible values are `PREMIUM` and `STANDARD`.
+     * 
+     */
     @InputImport(name="networkTier")
     private final @Nullable Input<String> networkTier;
 
@@ -65,6 +107,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkTier == null ? Input.empty() : this.networkTier;
     }
 
+    /**
+     * The prefix length if the resource represents an IP range.
+     * 
+     */
     @InputImport(name="prefixLength")
     private final @Nullable Input<Integer> prefixLength;
 
@@ -72,6 +118,11 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefixLength == null ? Input.empty() : this.prefixLength;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -79,6 +130,22 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The purpose of this resource, which can be one of the following values:
+     * * GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+     *   ranges, internal load balancers, and similar resources.
+     * * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+     *   internal load balancers.
+     * * VPC_PEERING for addresses that are reserved for VPC peer networks.
+     * * IPSEC_INTERCONNECT for addresses created from a private IP range
+     *   that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+     *   Interconnect configuration. These addresses are regional resources.
+     * * PRIVATE_SERVICE_CONNECT for a private network address that is used
+     *   to configure Private Service Connect. Only global internal addresses
+     *   can use this purpose.
+     *   This should only be set when using an Internal address.
+     * 
+     */
     @InputImport(name="purpose")
     private final @Nullable Input<String> purpose;
 
@@ -86,6 +153,11 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.purpose == null ? Input.empty() : this.purpose;
     }
 
+    /**
+     * The Region in which the created address should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -93,6 +165,13 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The URL of the subnetwork in which to reserve the address. If an IP
+     * address is specified, it must be within the subnetwork's IP range.
+     * This field can only be used with INTERNAL type with
+     * GCE_ENDPOINT/DNS_RESOLVER purposes.
+     * 
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 

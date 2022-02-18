@@ -13,10 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AccessLevelsAccessLevel {
+    /**
+     * A set of predefined conditions for the access level and a combining function.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable AccessLevelsAccessLevelBasic basic;
+    /**
+     * Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+     * See CEL spec at: https://github.com/google/cel-spec.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable AccessLevelsAccessLevelCustom custom;
+    /**
+     * Description of the expression
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Resource name for the Access Level. The short_name component must begin
+     * with a letter and only include alphanumeric and '_'.
+     * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+     * 
+     */
     private final String name;
+    /**
+     * Title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     private final String title;
 
     @OutputCustomType.Constructor({"basic","custom","description","name","title"})
@@ -33,18 +58,43 @@ public final class AccessLevelsAccessLevel {
         this.title = Objects.requireNonNull(title);
     }
 
+    /**
+     * A set of predefined conditions for the access level and a combining function.
+     * Structure is documented below.
+     * 
+     */
     public Optional<AccessLevelsAccessLevelBasic> getBasic() {
         return Optional.ofNullable(this.basic);
     }
+    /**
+     * Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+     * See CEL spec at: https://github.com/google/cel-spec.
+     * Structure is documented below.
+     * 
+     */
     public Optional<AccessLevelsAccessLevelCustom> getCustom() {
         return Optional.ofNullable(this.custom);
     }
+    /**
+     * Description of the expression
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Resource name for the Access Level. The short_name component must begin
+     * with a letter and only include alphanumeric and '_'.
+     * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     public String getTitle() {
         return this.title;
     }

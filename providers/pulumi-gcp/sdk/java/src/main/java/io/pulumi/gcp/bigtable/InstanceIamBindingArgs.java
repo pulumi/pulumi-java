@@ -23,6 +23,10 @@ public final class InstanceIamBindingArgs extends io.pulumi.resources.ResourceAr
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The name or relative resource id of the instance to manage IAM policies for.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -37,6 +41,11 @@ public final class InstanceIamBindingArgs extends io.pulumi.resources.ResourceAr
         return this.members;
     }
 
+    /**
+     * The project in which the instance belongs. If it
+     * is not provided, a default will be supplied.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +53,12 @@ public final class InstanceIamBindingArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.bigtable.InstanceIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

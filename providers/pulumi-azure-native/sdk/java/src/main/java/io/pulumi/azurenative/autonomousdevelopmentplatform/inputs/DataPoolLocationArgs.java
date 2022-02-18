@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Location of a Data Pool
+ * 
+ */
 public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataPoolLocationArgs Empty = new DataPoolLocationArgs();
 
+    /**
+     * Encryption properties of a Data Pool location
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<DataPoolEncryptionArgs> encryption;
 
@@ -22,6 +30,10 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * The location name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -15,11 +15,27 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class DetectorEntityType {
     private final @Nullable String arn;
+    /**
+     * The time when the entity type was created.
+     * 
+     */
     private final @Nullable String createdTime;
+    /**
+     * The description.
+     * 
+     */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
+    /**
+     * The time when the entity type was last updated.
+     * 
+     */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
+    /**
+     * Tags associated with this entity type.
+     * 
+     */
     private final @Nullable List<DetectorTag> tags;
 
     @OutputCustomType.Constructor({"arn","createdTime","description","inline","lastUpdatedTime","name","tags"})
@@ -43,21 +59,37 @@ public final class DetectorEntityType {
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The time when the entity type was created.
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+    /**
+     * The description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     public Optional<Boolean> getInline() {
         return Optional.ofNullable(this.inline);
     }
+    /**
+     * The time when the entity type was last updated.
+     * 
+     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Tags associated with this entity type.
+     * 
+     */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

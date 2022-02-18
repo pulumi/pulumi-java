@@ -20,6 +20,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     public static final NetworkInterfaceArgs Empty = new NetworkInterfaceArgs();
 
+    /**
+     * A description for the network interface.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -27,6 +31,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A list of security group IDs associated with this network interface.
+     * 
+     */
     @InputImport(name="groupSet")
     private final @Nullable Input<List<String>> groupSet;
 
@@ -34,6 +42,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.groupSet == null ? Input.empty() : this.groupSet;
     }
 
+    /**
+     * Indicates the type of network interface.
+     * 
+     */
     @InputImport(name="interfaceType")
     private final @Nullable Input<String> interfaceType;
 
@@ -41,6 +53,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.interfaceType == null ? Input.empty() : this.interfaceType;
     }
 
+    /**
+     * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don't specify this property.
+     * 
+     */
     @InputImport(name="ipv6AddressCount")
     private final @Nullable Input<Integer> ipv6AddressCount;
 
@@ -48,6 +64,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.ipv6AddressCount == null ? Input.empty() : this.ipv6AddressCount;
     }
 
+    /**
+     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you're specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don't specify this property.
+     * 
+     */
     @InputImport(name="ipv6Addresses")
     private final @Nullable Input<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses;
 
@@ -55,6 +75,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
     }
 
+    /**
+     * Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property.
+     * 
+     */
     @InputImport(name="privateIpAddress")
     private final @Nullable Input<String> privateIpAddress;
 
@@ -62,6 +86,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
     }
 
+    /**
+     * Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
+     * 
+     */
     @InputImport(name="privateIpAddresses")
     private final @Nullable Input<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses;
 
@@ -69,6 +97,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.privateIpAddresses == null ? Input.empty() : this.privateIpAddresses;
     }
 
+    /**
+     * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range. You can't specify this option and specify more than one private IP address using privateIpAddresses
+     * 
+     */
     @InputImport(name="secondaryPrivateIpAddressCount")
     private final @Nullable Input<Integer> secondaryPrivateIpAddressCount;
 
@@ -76,6 +108,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.secondaryPrivateIpAddressCount == null ? Input.empty() : this.secondaryPrivateIpAddressCount;
     }
 
+    /**
+     * Indicates whether traffic to or from the instance is validated.
+     * 
+     */
     @InputImport(name="sourceDestCheck")
     private final @Nullable Input<Boolean> sourceDestCheck;
 
@@ -83,6 +119,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.sourceDestCheck == null ? Input.empty() : this.sourceDestCheck;
     }
 
+    /**
+     * The ID of the subnet to associate with the network interface.
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 
@@ -90,6 +130,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.subnetId;
     }
 
+    /**
+     * An arbitrary set of tags (key-value pairs) for this network interface.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<NetworkInterfaceTagArgs>> tags;
 

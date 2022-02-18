@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * the operator used to compare the data and the threshold.
+     * 
+     */
     @EnumType
     public enum ConditionOperator {
         GreaterThan("GreaterThan"),

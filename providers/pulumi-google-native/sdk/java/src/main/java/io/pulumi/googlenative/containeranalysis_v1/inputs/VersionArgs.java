@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Version contains structured information about the version of a package.
+ * 
+ */
 public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 
+    /**
+     * Used to correct mistakes in the version numbering scheme.
+     * 
+     */
     @InputImport(name="epoch")
     private final @Nullable Input<Integer> epoch;
 
@@ -24,6 +32,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.epoch == null ? Input.empty() : this.epoch;
     }
 
+    /**
+     * Human readable version string. This string is of the form :- and is only set when kind is NORMAL.
+     * 
+     */
     @InputImport(name="fullName")
     private final @Nullable Input<String> fullName;
 
@@ -31,6 +43,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.fullName == null ? Input.empty() : this.fullName;
     }
 
+    /**
+     * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
+     * 
+     */
     @InputImport(name="inclusive")
     private final @Nullable Input<Boolean> inclusive;
 
@@ -38,6 +54,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.inclusive == null ? Input.empty() : this.inclusive;
     }
 
+    /**
+     * Distinguishes between sentinel MIN/MAX versions and normal versions.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<VersionKind> kind;
 
@@ -45,6 +65,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Required only when version kind is NORMAL. The main part of the version name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +76,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The iteration of the package build from the above version.
+     * 
+     */
     @InputImport(name="revision")
     private final @Nullable Input<String> revision;
 

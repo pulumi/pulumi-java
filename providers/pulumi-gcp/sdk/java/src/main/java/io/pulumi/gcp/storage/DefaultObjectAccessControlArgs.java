@@ -14,6 +14,10 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
 
     public static final DefaultObjectAccessControlArgs Empty = new DefaultObjectAccessControlArgs();
 
+    /**
+     * The name of the bucket.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -21,6 +25,18 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
         return this.bucket;
     }
 
+    /**
+     * The entity holding the permission, in one of the following forms:
+     * * user-{{userId}}
+     * * user-{{email}} (such as "user-liz@example.com")
+     * * group-{{groupId}}
+     * * group-{{email}} (such as "group-example@googlegroups.com")
+     * * domain-{{domain}} (such as "domain-example.com")
+     * * project-team-{{projectId}}
+     * * allUsers
+     * * allAuthenticatedUsers
+     * 
+     */
     @InputImport(name="entity", required=true)
     private final Input<String> entity;
 
@@ -28,6 +44,10 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
         return this.entity;
     }
 
+    /**
+     * The name of the object, if applied to an object.
+     * 
+     */
     @InputImport(name="object")
     private final @Nullable Input<String> object;
 
@@ -35,6 +55,11 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
         return this.object == null ? Input.empty() : this.object;
     }
 
+    /**
+     * The access permission for the entity.
+     * Possible values are `OWNER` and `READER`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

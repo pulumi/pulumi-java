@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricBucketOptionsExponentialBuckets {
+    /**
+     * Must be greater than 1.
+     * 
+     */
     private final @Nullable Double growthFactor;
+    /**
+     * Must be greater than 0.
+     * 
+     */
     private final @Nullable Integer numFiniteBuckets;
+    /**
+     * Must be greater than 0.
+     * 
+     */
     private final @Nullable Double scale;
 
     @OutputCustomType.Constructor({"growthFactor","numFiniteBuckets","scale"})
@@ -26,12 +38,24 @@ public final class MetricBucketOptionsExponentialBuckets {
         this.scale = scale;
     }
 
+    /**
+     * Must be greater than 1.
+     * 
+     */
     public Optional<Double> getGrowthFactor() {
         return Optional.ofNullable(this.growthFactor);
     }
+    /**
+     * Must be greater than 0.
+     * 
+     */
     public Optional<Integer> getNumFiniteBuckets() {
         return Optional.ofNullable(this.numFiniteBuckets);
     }
+    /**
+     * Must be greater than 0.
+     * 
+     */
     public Optional<Double> getScale() {
         return Optional.ofNullable(this.scale);
     }

@@ -12,6 +12,10 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDocumentArgs Empty = new GetDocumentArgs();
 
+    /**
+     * A name for the Systems Manager document.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

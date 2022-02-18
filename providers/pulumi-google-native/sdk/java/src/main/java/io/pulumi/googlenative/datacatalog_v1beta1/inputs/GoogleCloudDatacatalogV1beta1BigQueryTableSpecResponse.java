@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a BigQuery table.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse Empty = new GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse();
 
+    /**
+     * The table source type.
+     * 
+     */
     @InputImport(name="tableSourceType", required=true)
     private final String tableSourceType;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse extend
         return this.tableSourceType;
     }
 
+    /**
+     * Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.
+     * 
+     */
     @InputImport(name="tableSpec", required=true)
     private final GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse extend
         return this.tableSpec;
     }
 
+    /**
+     * Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.
+     * 
+     */
     @InputImport(name="viewSpec", required=true)
     private final GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec;
 

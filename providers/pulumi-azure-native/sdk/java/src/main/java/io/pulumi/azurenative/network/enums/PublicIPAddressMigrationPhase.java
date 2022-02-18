@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Migration phase of Public IP Address.
+     * 
+     */
     @EnumType
     public enum PublicIPAddressMigrationPhase {
         None("None"),

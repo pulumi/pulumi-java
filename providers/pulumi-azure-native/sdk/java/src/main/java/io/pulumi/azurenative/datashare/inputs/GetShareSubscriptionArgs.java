@@ -12,6 +12,10 @@ public final class GetShareSubscriptionArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetShareSubscriptionArgs Empty = new GetShareSubscriptionArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetShareSubscriptionArgs extends io.pulumi.resources.InvokeAr
         return this.accountName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetShareSubscriptionArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the shareSubscription.
+     * 
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final String shareSubscriptionName;
 

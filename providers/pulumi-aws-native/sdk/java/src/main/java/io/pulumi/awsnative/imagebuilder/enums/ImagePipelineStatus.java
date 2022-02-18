@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of the image pipeline.
+     * 
+     */
     @EnumType
     public enum ImagePipelineStatus {
         Disabled("DISABLED"),

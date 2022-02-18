@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information that is specific to TfLite models.
+ * 
+ */
 public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TfLiteModelArgs Empty = new TfLiteModelArgs();
 
+    /**
+     * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
+     * 
+     */
     @InputImport(name="automlModel")
     private final @Nullable Input<String> automlModel;
 
@@ -21,6 +29,10 @@ public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.automlModel == null ? Input.empty() : this.automlModel;
     }
 
+    /**
+     * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
+     * 
+     */
     @InputImport(name="gcsTfliteUri")
     private final @Nullable Input<String> gcsTfliteUri;
 

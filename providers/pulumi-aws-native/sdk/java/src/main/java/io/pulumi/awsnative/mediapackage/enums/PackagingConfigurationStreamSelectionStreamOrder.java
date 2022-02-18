@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A directive that determines the order of streams in the output.
+     * 
+     */
     @EnumType
     public enum PackagingConfigurationStreamSelectionStreamOrder {
         Original("ORIGINAL"),

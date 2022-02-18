@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Route Filter Rule Resource.
+ * 
+ */
 public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RouteFilterRuleResponse Empty = new RouteFilterRuleResponse();
 
+    /**
+     * The access type of the rule.
+     * 
+     */
     @InputImport(name="access", required=true)
     private final String access;
 
@@ -22,6 +30,10 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
         return this.access;
     }
 
+    /**
+     * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     * 
+     */
     @InputImport(name="communities", required=true)
     private final List<String> communities;
 
@@ -29,6 +41,10 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
         return this.communities;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -36,6 +52,10 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -43,6 +63,10 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -50,6 +74,10 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -57,6 +85,10 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the route filter rule resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -64,6 +96,10 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
         return this.provisioningState;
     }
 
+    /**
+     * The rule type of the rule.
+     * 
+     */
     @InputImport(name="routeFilterRuleType", required=true)
     private final String routeFilterRuleType;
 

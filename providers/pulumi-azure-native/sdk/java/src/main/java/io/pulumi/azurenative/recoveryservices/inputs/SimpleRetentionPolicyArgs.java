@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Simple policy retention.
+ * 
+ */
 public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SimpleRetentionPolicyArgs Empty = new SimpleRetentionPolicyArgs();
 
+    /**
+     * Retention duration of the protection policy.
+     * 
+     */
     @InputImport(name="retentionDuration")
     private final @Nullable Input<RetentionDurationArgs> retentionDuration;
 
@@ -22,6 +30,11 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
         return this.retentionDuration == null ? Input.empty() : this.retentionDuration;
     }
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is 'SimpleRetentionPolicy'.
+     * 
+     */
     @InputImport(name="retentionPolicyType", required=true)
     private final Input<String> retentionPolicyType;
 

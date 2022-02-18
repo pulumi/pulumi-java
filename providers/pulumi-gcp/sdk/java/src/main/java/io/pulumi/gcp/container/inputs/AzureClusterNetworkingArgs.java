@@ -14,6 +14,10 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
 
     public static final AzureClusterNetworkingArgs Empty = new AzureClusterNetworkingArgs();
 
+    /**
+     * Required. The IP address range of the pods in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All pods in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * 
+     */
     @InputImport(name="podAddressCidrBlocks", required=true)
     private final Input<List<String>> podAddressCidrBlocks;
 
@@ -21,6 +25,10 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
         return this.podAddressCidrBlocks;
     }
 
+    /**
+     * Required. The IP address range for services in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All services in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creating a cluster.
+     * 
+     */
     @InputImport(name="serviceAddressCidrBlocks", required=true)
     private final Input<List<String>> serviceAddressCidrBlocks;
 
@@ -28,6 +36,10 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
         return this.serviceAddressCidrBlocks;
     }
 
+    /**
+     * Required. The Azure Resource Manager (ARM) ID of the VNet associated with your cluster. All components in the cluster (i.e. control plane and node pools) run on a single VNet. Example: `/subscriptions/*{@literal /}resourceGroups/*{@literal /}providers/Microsoft.Network/virtualNetworks/*` This field cannot be changed after creation.
+     * 
+     */
     @InputImport(name="virtualNetworkId", required=true)
     private final Input<String> virtualNetworkId;
 

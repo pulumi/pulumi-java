@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Load balancing settings for a backend pool
+ * 
+ */
 public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancingSettingsModelArgs Empty = new LoadBalancingSettingsModelArgs();
 
+    /**
+     * The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * 
+     */
     @InputImport(name="additionalLatencyMilliseconds")
     private final @Nullable Input<Integer> additionalLatencyMilliseconds;
 
@@ -22,6 +30,10 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
         return this.additionalLatencyMilliseconds == null ? Input.empty() : this.additionalLatencyMilliseconds;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -29,6 +41,10 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +52,10 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The number of samples to consider for load balancing decisions
+     * 
+     */
     @InputImport(name="sampleSize")
     private final @Nullable Input<Integer> sampleSize;
 
@@ -43,6 +63,10 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
         return this.sampleSize == null ? Input.empty() : this.sampleSize;
     }
 
+    /**
+     * The number of samples within the sample period that must succeed
+     * 
+     */
     @InputImport(name="successfulSamplesRequired")
     private final @Nullable Input<Integer> successfulSamplesRequired;
 

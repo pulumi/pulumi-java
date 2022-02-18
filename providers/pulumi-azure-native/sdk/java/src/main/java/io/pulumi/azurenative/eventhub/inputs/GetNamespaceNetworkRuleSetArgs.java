@@ -12,6 +12,10 @@ public final class GetNamespaceNetworkRuleSetArgs extends io.pulumi.resources.In
 
     public static final GetNamespaceNetworkRuleSetArgs Empty = new GetNamespaceNetworkRuleSetArgs();
 
+    /**
+     * The Namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -19,6 +23,10 @@ public final class GetNamespaceNetworkRuleSetArgs extends io.pulumi.resources.In
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

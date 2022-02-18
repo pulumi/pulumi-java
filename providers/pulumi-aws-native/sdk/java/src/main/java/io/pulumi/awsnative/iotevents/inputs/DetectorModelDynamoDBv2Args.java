@@ -11,6 +11,12 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines an action to write to the Amazon DynamoDB table that you created. The default action payload contains all attribute-value pairs that have the information about the detector model instance and the event that triggered the action. You can also customize the [payload](https://docs.aws.amazon.com/iotevents/latest/apireference/API_Payload.html). A separate column of the DynamoDB table receives one attribute-value pair in the payload that you specify.
+ * 
+ * You can use expressions for parameters that are strings. For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*.
+ * 
+ */
 public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelDynamoDBv2Args Empty = new DetectorModelDynamoDBv2Args();
@@ -22,6 +28,10 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
         return this.payload == null ? Input.empty() : this.payload;
     }
 
+    /**
+     * The name of the DynamoDB table.
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final Input<String> tableName;
 

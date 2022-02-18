@@ -12,6 +12,10 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel extends io.p
 
     public static final GetGlobalForwardingRuleMetadataFilterFilterLabel Empty = new GetGlobalForwardingRuleMetadataFilterFilterLabel();
 
+    /**
+     * The name of the global forwarding rule.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

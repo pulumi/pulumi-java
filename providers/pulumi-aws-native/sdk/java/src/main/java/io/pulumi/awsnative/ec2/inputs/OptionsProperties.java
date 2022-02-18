@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The options for the transit gateway vpc attachment.
+ * 
+ */
 public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final OptionsProperties Empty = new OptionsProperties();
 
+    /**
+     * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
+     * 
+     */
     @InputImport(name="applianceModeSupport")
     private final @Nullable String applianceModeSupport;
 
@@ -21,6 +29,10 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
         return this.applianceModeSupport == null ? Optional.empty() : Optional.ofNullable(this.applianceModeSupport);
     }
 
+    /**
+     * Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
+     * 
+     */
     @InputImport(name="dnsSupport")
     private final @Nullable String dnsSupport;
 
@@ -28,6 +40,10 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
         return this.dnsSupport == null ? Optional.empty() : Optional.ofNullable(this.dnsSupport);
     }
 
+    /**
+     * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
+     * 
+     */
     @InputImport(name="ipv6Support")
     private final @Nullable String ipv6Support;
 

@@ -20,6 +20,10 @@ public final class GetApplicationResult {
     private final @Nullable String nlbName;
     private final @Nullable String proxyUrl;
     private final @Nullable String stageName;
+    /**
+     * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     private final @Nullable List<ApplicationTag> tags;
     private final @Nullable String vpcLinkId;
 
@@ -66,6 +70,10 @@ public final class GetApplicationResult {
     public Optional<String> getStageName() {
         return Optional.ofNullable(this.stageName);
     }
+    /**
+     * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     public List<ApplicationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

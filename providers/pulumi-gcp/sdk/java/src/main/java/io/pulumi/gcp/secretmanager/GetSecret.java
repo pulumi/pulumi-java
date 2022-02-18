@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecret {
+/**
+ * Use this data source to get information about a Secret Manager Secret
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getSecret.
+ * 
+ *
+ * A collection of values returned by getSecret.
+ * 
+ */
     public static CompletableFuture<GetSecretResult> invokeAsync(GetSecretArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:secretmanager/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args == null ? GetSecretArgs.Empty : args, Utilities.withVersion(options));
     }

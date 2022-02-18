@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Provision states for FluidRelay RP
+     * 
+     */
     @EnumType
     public enum ProvisioningState {
         Succeeded("Succeeded"),

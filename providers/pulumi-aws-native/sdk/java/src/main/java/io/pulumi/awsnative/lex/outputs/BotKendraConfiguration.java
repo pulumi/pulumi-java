@@ -14,6 +14,10 @@ import javax.annotation.Nullable;
 public final class BotKendraConfiguration {
     private final String kendraIndex;
     private final @Nullable String queryFilterString;
+    /**
+     * Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
+     * 
+     */
     private final @Nullable Boolean queryFilterStringEnabled;
 
     @OutputCustomType.Constructor({"kendraIndex","queryFilterString","queryFilterStringEnabled"})
@@ -32,6 +36,10 @@ public final class BotKendraConfiguration {
     public Optional<String> getQueryFilterString() {
         return Optional.ofNullable(this.queryFilterString);
     }
+    /**
+     * Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
+     * 
+     */
     public Optional<Boolean> getQueryFilterStringEnabled() {
         return Optional.ofNullable(this.queryFilterStringEnabled);
     }

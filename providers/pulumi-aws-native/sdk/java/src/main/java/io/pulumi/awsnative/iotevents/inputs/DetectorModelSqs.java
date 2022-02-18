@@ -23,6 +23,10 @@ public final class DetectorModelSqs extends io.pulumi.resources.InvokeArgs {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
     }
 
+    /**
+     * The URL of the SQS queue where the data is written.
+     * 
+     */
     @InputImport(name="queueUrl", required=true)
     private final String queueUrl;
 
@@ -30,6 +34,10 @@ public final class DetectorModelSqs extends io.pulumi.resources.InvokeArgs {
         return this.queueUrl;
     }
 
+    /**
+     * Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
+     * 
+     */
     @InputImport(name="useBase64")
     private final @Nullable Boolean useBase64;
 

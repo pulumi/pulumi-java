@@ -12,6 +12,10 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSuppressionArgs Empty = new GetSuppressionArgs();
 
+    /**
+     * The name of the suppression.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The recommendation ID.
+     * 
+     */
     @InputImport(name="recommendationId", required=true)
     private final String recommendationId;
 
@@ -26,6 +34,10 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
         return this.recommendationId;
     }
 
+    /**
+     * The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

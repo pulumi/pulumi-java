@@ -17,6 +17,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
 
     public static final RepositoryAssociationArgs Empty = new RepositoryAssociationArgs();
 
+    /**
+     * The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
+     * 
+     */
     @InputImport(name="bucketName")
     private final @Nullable Input<String> bucketName;
 
@@ -24,6 +28,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
+     * 
+     */
     @InputImport(name="connectionArn")
     private final @Nullable Input<String> connectionArn;
 
@@ -31,6 +39,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
         return this.connectionArn == null ? Input.empty() : this.connectionArn;
     }
 
+    /**
+     * Name of the repository to be associated.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
+     * 
+     */
     @InputImport(name="owner")
     private final @Nullable Input<String> owner;
 
@@ -45,6 +61,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
         return this.owner == null ? Input.empty() : this.owner;
     }
 
+    /**
+     * The tags associated with a repository association.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RepositoryAssociationTagArgs>> tags;
 
@@ -52,6 +72,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of repository to be associated.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<RepositoryAssociationType> type;
 

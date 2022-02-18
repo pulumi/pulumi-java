@@ -21,105 +21,254 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The application resource.
+ * API Version: 2020-03-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:servicefabric:Application myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:servicefabric:Application")
 public class Application extends io.pulumi.resources.CustomResource {
+    /**
+     * Azure resource etag.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Azure resource etag.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Describes the managed identities for an Azure resource.
+     * 
+     */
     @OutputExport(name="identity", type=ManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityResponse> identity;
 
+    /**
+     * @return Describes the managed identities for an Azure resource.
+     * 
+     */
     public Output</* @Nullable */ ManagedIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * It will be deprecated in New API, resource location depends on the parent resource.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return It will be deprecated in New API, resource location depends on the parent resource.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * List of user assigned identities for the application, each mapped to a friendly name.
+     * 
+     */
     @OutputExport(name="managedIdentities", type=List.class, parameters={ApplicationUserAssignedIdentityResponse.class})
     private Output</* @Nullable */ List<ApplicationUserAssignedIdentityResponse>> managedIdentities;
 
+    /**
+     * @return List of user assigned identities for the application, each mapped to a friendly name.
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationUserAssignedIdentityResponse>> getManagedIdentities() {
         return this.managedIdentities;
     }
+    /**
+     * The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
+     * 
+     */
     @OutputExport(name="maximumNodes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maximumNodes;
 
+    /**
+     * @return The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
+     * 
+     */
     public Output</* @Nullable */ Double> getMaximumNodes() {
         return this.maximumNodes;
     }
+    /**
+     * List of application capacity metric description.
+     * 
+     */
     @OutputExport(name="metrics", type=List.class, parameters={ApplicationMetricDescriptionResponse.class})
     private Output</* @Nullable */ List<ApplicationMetricDescriptionResponse>> metrics;
 
+    /**
+     * @return List of application capacity metric description.
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationMetricDescriptionResponse>> getMetrics() {
         return this.metrics;
     }
+    /**
+     * The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
+     * 
+     */
     @OutputExport(name="minimumNodes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minimumNodes;
 
+    /**
+     * @return The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
+     * 
+     */
     public Output</* @Nullable */ Double> getMinimumNodes() {
         return this.minimumNodes;
     }
+    /**
+     * Azure resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of application parameters with overridden values from their default values specified in the application manifest.
+     * 
+     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
+    /**
+     * @return List of application parameters with overridden values from their default values specified in the application manifest.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getParameters() {
         return this.parameters;
     }
+    /**
+     * The current deployment or provisioning state, which only appears in the response
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The current deployment or provisioning state, which only appears in the response
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Remove the current application capacity settings.
+     * 
+     */
     @OutputExport(name="removeApplicationCapacity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> removeApplicationCapacity;
 
+    /**
+     * @return Remove the current application capacity settings.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getRemoveApplicationCapacity() {
         return this.removeApplicationCapacity;
     }
+    /**
+     * Azure resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Azure resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Azure resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The application type name as defined in the application manifest.
+     * 
+     */
     @OutputExport(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
+    /**
+     * @return The application type name as defined in the application manifest.
+     * 
+     */
     public Output</* @Nullable */ String> getTypeName() {
         return this.typeName;
     }
+    /**
+     * The version of the application type as defined in the application manifest.
+     * 
+     */
     @OutputExport(name="typeVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeVersion;
 
+    /**
+     * @return The version of the application type as defined in the application manifest.
+     * 
+     */
     public Output</* @Nullable */ String> getTypeVersion() {
         return this.typeVersion;
     }
+    /**
+     * Describes the policy for a monitored application upgrade.
+     * 
+     */
     @OutputExport(name="upgradePolicy", type=ApplicationUpgradePolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationUpgradePolicyResponse> upgradePolicy;
 
+    /**
+     * @return Describes the policy for a monitored application upgrade.
+     * 
+     */
     public Output</* @Nullable */ ApplicationUpgradePolicyResponse> getUpgradePolicy() {
         return this.upgradePolicy;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicefabric:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -145,6 +294,14 @@ public class Application extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Application get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Application(name, id, options);
     }

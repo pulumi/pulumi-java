@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RecommendedMachineConfigurationResponse {
+    /**
+     * Describes the resource range.
+     * 
+     */
     private final @Nullable ResourceRangeResponse memory;
+    /**
+     * Describes the resource range.
+     * 
+     */
     private final @Nullable ResourceRangeResponse vCPUs;
 
     @OutputCustomType.Constructor({"memory","vCPUs"})
@@ -22,9 +30,17 @@ public final class RecommendedMachineConfigurationResponse {
         this.vCPUs = vCPUs;
     }
 
+    /**
+     * Describes the resource range.
+     * 
+     */
     public Optional<ResourceRangeResponse> getMemory() {
         return Optional.ofNullable(this.memory);
     }
+    /**
+     * Describes the resource range.
+     * 
+     */
     public Optional<ResourceRangeResponse> getVCPUs() {
         return Optional.ofNullable(this.vCPUs);
     }

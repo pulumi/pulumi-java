@@ -16,6 +16,11 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetAccessState Empty = new DatasetAccessState();
 
+    /**
+     * If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+     * stored in state as a different member type
+     * 
+     */
     @InputImport(name="apiUpdatedMember")
     private final @Nullable Input<Boolean> apiUpdatedMember;
 
@@ -23,6 +28,10 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.apiUpdatedMember == null ? Input.empty() : this.apiUpdatedMember;
     }
 
+    /**
+     * The ID of the dataset containing this table.
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -30,6 +39,11 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * A domain to grant access to. Any users signed in with the
+     * domain specified will be granted the specified access
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -37,6 +51,10 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * An email address of a Google Group to grant access to.
+     * 
+     */
     @InputImport(name="groupByEmail")
     private final @Nullable Input<String> groupByEmail;
 
@@ -44,6 +62,11 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.groupByEmail == null ? Input.empty() : this.groupByEmail;
     }
 
+    /**
+     * Some other type of member that appears in the IAM Policy but isn't a user,
+     * group, domain, or special group. For example: `allUsers`
+     * 
+     */
     @InputImport(name="iamMember")
     private final @Nullable Input<String> iamMember;
 
@@ -51,6 +74,11 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.iamMember == null ? Input.empty() : this.iamMember;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +86,15 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Describes the rights granted to the user specified by the other
+     * member of the access object. Basic, predefined, and custom roles are
+     * supported. Predefined roles that have equivalent basic roles are
+     * swapped by the API to their basic counterparts, and will show a diff
+     * post-create. See
+     * [official docs](https://cloud.google.com/bigquery/docs/access-control).
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 
@@ -65,6 +102,10 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.role == null ? Input.empty() : this.role;
     }
 
+    /**
+     * A special group to grant access to. Possible values include:
+     * 
+     */
     @InputImport(name="specialGroup")
     private final @Nullable Input<String> specialGroup;
 
@@ -72,6 +113,11 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.specialGroup == null ? Input.empty() : this.specialGroup;
     }
 
+    /**
+     * An email address of a user to grant access to. For example:
+     * fred@example.com
+     * 
+     */
     @InputImport(name="userByEmail")
     private final @Nullable Input<String> userByEmail;
 
@@ -79,6 +125,15 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
         return this.userByEmail == null ? Input.empty() : this.userByEmail;
     }
 
+    /**
+     * A view from a different dataset to grant access to. Queries
+     * executed against that view will have read access to tables in
+     * this dataset. The role field is not required when this field is
+     * set. If that view is updated by any user, access to the view
+     * needs to be granted again via an update operation.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable Input<DatasetAccessViewGetArgs> view;
 

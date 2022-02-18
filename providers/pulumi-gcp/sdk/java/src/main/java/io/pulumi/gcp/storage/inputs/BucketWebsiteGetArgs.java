@@ -14,6 +14,11 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
 
     public static final BucketWebsiteGetArgs Empty = new BucketWebsiteGetArgs();
 
+    /**
+     * Behaves as the bucket's directory index where
+     * missing objects are treated as potential directories.
+     * 
+     */
     @InputImport(name="mainPageSuffix")
     private final @Nullable Input<String> mainPageSuffix;
 
@@ -21,6 +26,11 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
         return this.mainPageSuffix == null ? Input.empty() : this.mainPageSuffix;
     }
 
+    /**
+     * The custom object to return when a requested
+     * resource is not found.
+     * 
+     */
     @InputImport(name="notFoundPage")
     private final @Nullable Input<String> notFoundPage;
 

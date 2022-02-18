@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrimaryTaskSet {
+/**
+ * A pseudo-resource that manages which of your ECS task sets is primary.
+ * 
+ */
     public static CompletableFuture<GetPrimaryTaskSetResult> invokeAsync(GetPrimaryTaskSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getPrimaryTaskSet", TypeShape.of(GetPrimaryTaskSetResult.class), args == null ? GetPrimaryTaskSetArgs.Empty : args, Utilities.withVersion(options));
     }

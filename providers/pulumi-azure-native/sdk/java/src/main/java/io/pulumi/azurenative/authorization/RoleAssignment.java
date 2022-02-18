@@ -14,93 +14,226 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Role Assignments
+ * API Version: 2020-08-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:authorization:RoleAssignment 05c5a614-a7d6-4502-b150-c2fb455033ff /subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleAssignments/05c5a614-a7d6-4502-b150-c2fb455033ff 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:authorization:RoleAssignment")
 public class RoleAssignment extends io.pulumi.resources.CustomResource {
+    /**
+     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+     * 
+     */
     @OutputExport(name="condition", type=String.class, parameters={})
     private Output</* @Nullable */ String> condition;
 
+    /**
+     * @return The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+     * 
+     */
     public Output</* @Nullable */ String> getCondition() {
         return this.condition;
     }
+    /**
+     * Version of the condition. Currently accepted value is '2.0'
+     * 
+     */
     @OutputExport(name="conditionVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> conditionVersion;
 
+    /**
+     * @return Version of the condition. Currently accepted value is '2.0'
+     * 
+     */
     public Output</* @Nullable */ String> getConditionVersion() {
         return this.conditionVersion;
     }
+    /**
+     * Id of the user who created the assignment
+     * 
+     */
     @OutputExport(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
+    /**
+     * @return Id of the user who created the assignment
+     * 
+     */
     public Output<String> getCreatedBy() {
         return this.createdBy;
     }
+    /**
+     * Time it was created
+     * 
+     */
     @OutputExport(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
+    /**
+     * @return Time it was created
+     * 
+     */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
+    /**
+     * Id of the delegated managed identity resource
+     * 
+     */
     @OutputExport(name="delegatedManagedIdentityResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> delegatedManagedIdentityResourceId;
 
+    /**
+     * @return Id of the delegated managed identity resource
+     * 
+     */
     public Output</* @Nullable */ String> getDelegatedManagedIdentityResourceId() {
         return this.delegatedManagedIdentityResourceId;
     }
+    /**
+     * Description of role assignment
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of role assignment
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The role assignment name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The role assignment name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The principal ID.
+     * 
+     */
     @OutputExport(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
+    /**
+     * @return The principal ID.
+     * 
+     */
     public Output<String> getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The principal type of the assigned principal ID.
+     * 
+     */
     @OutputExport(name="principalType", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalType;
 
+    /**
+     * @return The principal type of the assigned principal ID.
+     * 
+     */
     public Output</* @Nullable */ String> getPrincipalType() {
         return this.principalType;
     }
+    /**
+     * The role definition ID.
+     * 
+     */
     @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
     private Output<String> roleDefinitionId;
 
+    /**
+     * @return The role definition ID.
+     * 
+     */
     public Output<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
+    /**
+     * The role assignment scope.
+     * 
+     */
     @OutputExport(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
+    /**
+     * @return The role assignment scope.
+     * 
+     */
     public Output<String> getScope() {
         return this.scope;
     }
+    /**
+     * The role assignment type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The role assignment type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Id of the user who updated the assignment
+     * 
+     */
     @OutputExport(name="updatedBy", type=String.class, parameters={})
     private Output<String> updatedBy;
 
+    /**
+     * @return Id of the user who updated the assignment
+     * 
+     */
     public Output<String> getUpdatedBy() {
         return this.updatedBy;
     }
+    /**
+     * Time it was updated
+     * 
+     */
     @OutputExport(name="updatedOn", type=String.class, parameters={})
     private Output<String> updatedOn;
 
+    /**
+     * @return Time it was updated
+     * 
+     */
     public Output<String> getUpdatedOn() {
         return this.updatedOn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RoleAssignment(String name, RoleAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:RoleAssignment", name, args == null ? RoleAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -126,6 +259,14 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RoleAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RoleAssignment(name, id, options);
     }

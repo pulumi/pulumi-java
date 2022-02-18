@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the Service Fabric Type Backend.
+ * 
+ */
 public final class BackendServiceFabricClusterPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendServiceFabricClusterPropertiesResponse Empty = new BackendServiceFabricClusterPropertiesResponse();
 
+    /**
+     * The client certificate id for the management endpoint.
+     * 
+     */
     @InputImport(name="clientCertificateId")
     private final @Nullable String clientCertificateId;
 
@@ -24,6 +32,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
         return this.clientCertificateId == null ? Optional.empty() : Optional.ofNullable(this.clientCertificateId);
     }
 
+    /**
+     * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
+     * 
+     */
     @InputImport(name="clientCertificatethumbprint")
     private final @Nullable String clientCertificatethumbprint;
 
@@ -31,6 +43,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
         return this.clientCertificatethumbprint == null ? Optional.empty() : Optional.ofNullable(this.clientCertificatethumbprint);
     }
 
+    /**
+     * The cluster management endpoint.
+     * 
+     */
     @InputImport(name="managementEndpoints", required=true)
     private final List<String> managementEndpoints;
 
@@ -38,6 +54,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
         return this.managementEndpoints;
     }
 
+    /**
+     * Maximum number of retries while attempting resolve the partition.
+     * 
+     */
     @InputImport(name="maxPartitionResolutionRetries")
     private final @Nullable Integer maxPartitionResolutionRetries;
 
@@ -45,6 +65,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
         return this.maxPartitionResolutionRetries == null ? Optional.empty() : Optional.ofNullable(this.maxPartitionResolutionRetries);
     }
 
+    /**
+     * Thumbprints of certificates cluster management service uses for tls communication
+     * 
+     */
     @InputImport(name="serverCertificateThumbprints")
     private final @Nullable List<String> serverCertificateThumbprints;
 
@@ -52,6 +76,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
         return this.serverCertificateThumbprints == null ? List.of() : this.serverCertificateThumbprints;
     }
 
+    /**
+     * Server X509 Certificate Names Collection
+     * 
+     */
     @InputImport(name="serverX509Names")
     private final @Nullable List<X509CertificateNameResponse> serverX509Names;
 

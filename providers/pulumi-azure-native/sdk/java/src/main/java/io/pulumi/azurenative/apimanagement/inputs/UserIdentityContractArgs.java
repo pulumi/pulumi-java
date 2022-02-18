@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * User identity details.
+ * 
+ */
 public final class UserIdentityContractArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserIdentityContractArgs Empty = new UserIdentityContractArgs();
 
+    /**
+     * Identifier value within provider.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -21,6 +29,10 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Identity provider name.
+     * 
+     */
     @InputImport(name="provider")
     private final @Nullable Input<String> provider;
 

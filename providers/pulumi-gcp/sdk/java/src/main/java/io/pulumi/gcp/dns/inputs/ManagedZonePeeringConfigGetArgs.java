@@ -13,6 +13,11 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
 
     public static final ManagedZonePeeringConfigGetArgs Empty = new ManagedZonePeeringConfigGetArgs();
 
+    /**
+     * The network with which to peer.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="targetNetwork", required=true)
     private final Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
 

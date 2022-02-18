@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse {
+    /**
+     * The name of the rollout step;
+     * 
+     */
     private final String displayName;
+    /**
+     * The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+     * 
+     */
     private final String minDuration;
+    /**
+     * The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+     * 
+     */
     private final Integer trafficPercent;
 
     @OutputCustomType.Constructor({"displayName","minDuration","trafficPercent"})
@@ -24,12 +36,24 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
         this.trafficPercent = Objects.requireNonNull(trafficPercent);
     }
 
+    /**
+     * The name of the rollout step;
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+     * 
+     */
     public String getMinDuration() {
         return this.minDuration;
     }
+    /**
+     * The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+     * 
+     */
     public Integer getTrafficPercent() {
         return this.trafficPercent;
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IpAddressResponse {
+    /**
+     * The address.
+     * 
+     */
     private final @Nullable String address;
 
     @OutputCustomType.Constructor({"address"})
@@ -18,6 +22,10 @@ public final class IpAddressResponse {
         this.address = address;
     }
 
+    /**
+     * The address.
+     * 
+     */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }

@@ -14,6 +14,10 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageArgs extends io
 
     public static final CxFlowTransitionRouteTriggerFulfillmentMessageArgs Empty = new CxFlowTransitionRouteTriggerFulfillmentMessageArgs();
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text;
 

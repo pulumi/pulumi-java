@@ -10,6 +10,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Structure that contains X.509 AccessDescription information.
+ * 
+ */
 public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateAuthorityAccessDescriptionArgs Empty = new CertificateAuthorityAccessDescriptionArgs();

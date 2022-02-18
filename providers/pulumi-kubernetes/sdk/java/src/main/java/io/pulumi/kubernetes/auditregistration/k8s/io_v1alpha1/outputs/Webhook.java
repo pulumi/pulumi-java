@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Webhook {
+    /**
+     * ClientConfig holds the connection parameters for the webhook required
+     * 
+     */
     private final WebhookClientConfig clientConfig;
+    /**
+     * Throttle holds the options for throttling the webhook
+     * 
+     */
     private final @Nullable WebhookThrottleConfig throttle;
 
     @OutputCustomType.Constructor({"clientConfig","throttle"})
@@ -23,9 +31,17 @@ public final class Webhook {
         this.throttle = throttle;
     }
 
+    /**
+     * ClientConfig holds the connection parameters for the webhook required
+     * 
+     */
     public WebhookClientConfig getClientConfig() {
         return this.clientConfig;
     }
+    /**
+     * Throttle holds the options for throttling the webhook
+     * 
+     */
     public Optional<WebhookThrottleConfig> getThrottle() {
         return Optional.ofNullable(this.throttle);
     }

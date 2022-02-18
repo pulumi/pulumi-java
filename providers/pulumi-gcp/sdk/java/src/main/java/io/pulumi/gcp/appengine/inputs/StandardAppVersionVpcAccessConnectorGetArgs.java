@@ -13,6 +13,10 @@ public final class StandardAppVersionVpcAccessConnectorGetArgs extends io.pulumi
 
     public static final StandardAppVersionVpcAccessConnectorGetArgs Empty = new StandardAppVersionVpcAccessConnectorGetArgs();
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

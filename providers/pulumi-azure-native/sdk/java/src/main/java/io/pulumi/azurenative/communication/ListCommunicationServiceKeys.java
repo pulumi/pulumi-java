@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListCommunicationServiceKeys {
+/**
+ * A class representing the access keys of a CommunicationService.
+ * API Version: 2020-08-20.
+ * 
+ *
+ * A class representing the access keys of a CommunicationService.
+ * 
+ */
     public static CompletableFuture<ListCommunicationServiceKeysResult> invokeAsync(ListCommunicationServiceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:communication:listCommunicationServiceKeys", TypeShape.of(ListCommunicationServiceKeysResult.class), args == null ? ListCommunicationServiceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

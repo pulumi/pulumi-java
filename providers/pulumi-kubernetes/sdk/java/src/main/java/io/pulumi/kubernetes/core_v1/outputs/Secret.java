@@ -14,12 +14,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Secret {
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     private final @Nullable String apiVersion;
+    /**
+     * Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
+     * 
+     */
     private final @Nullable Map<String,String> data;
+    /**
+     * Immutable, if set to true, ensures that data stored in the Secret cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.
+     * 
+     */
     private final @Nullable Boolean immutable;
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     private final @Nullable ObjectMeta metadata;
+    /**
+     * stringData allows specifying non-binary secret data in string form. It is provided as a write-only input field for convenience. All keys and values are merged into the data field on write, overwriting any existing values. The stringData field is never output when reading from the API.
+     * 
+     */
     private final @Nullable Map<String,String> stringData;
+    /**
+     * Used to facilitate programmatic handling of secret data. More info: https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"apiVersion","data","immutable","kind","metadata","stringData","type"})
@@ -40,24 +68,52 @@ public final class Secret {
         this.type = type;
     }
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
+    /**
+     * Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
+     * 
+     */
     public Map<String,String> getData() {
         return this.data == null ? Map.of() : this.data;
     }
+    /**
+     * Immutable, if set to true, ensures that data stored in the Secret cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.
+     * 
+     */
     public Optional<Boolean> getImmutable() {
         return Optional.ofNullable(this.immutable);
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * stringData allows specifying non-binary secret data in string form. It is provided as a write-only input field for convenience. All keys and values are merged into the data field on write, overwriting any existing values. The stringData field is never output when reading from the API.
+     * 
+     */
     public Map<String,String> getStringData() {
         return this.stringData == null ? Map.of() : this.stringData;
     }
+    /**
+     * Used to facilitate programmatic handling of secret data. More info: https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

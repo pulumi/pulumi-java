@@ -18,6 +18,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerArgs Empty = new LoadBalancerArgs();
 
+    /**
+     * The names of the instances attached to the load balancer.
+     * 
+     */
     @InputImport(name="attachedInstances")
     private final @Nullable Input<List<String>> attachedInstances;
 
@@ -25,6 +29,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.attachedInstances == null ? Input.empty() : this.attachedInstances;
     }
 
+    /**
+     * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
+     * 
+     */
     @InputImport(name="healthCheckPath")
     private final @Nullable Input<String> healthCheckPath;
 
@@ -32,6 +40,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthCheckPath == null ? Input.empty() : this.healthCheckPath;
     }
 
+    /**
+     * The instance port where you're creating your load balancer.
+     * 
+     */
     @InputImport(name="instancePort", required=true)
     private final Input<Integer> instancePort;
 
@@ -39,6 +51,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.instancePort;
     }
 
+    /**
+     * The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
+     * 
+     */
     @InputImport(name="ipAddressType")
     private final @Nullable Input<String> ipAddressType;
 
@@ -46,6 +62,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddressType == null ? Input.empty() : this.ipAddressType;
     }
 
+    /**
+     * The name of your load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerName")
     private final @Nullable Input<String> loadBalancerName;
 
@@ -53,6 +73,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
     }
 
+    /**
+     * Configuration option to enable session stickiness.
+     * 
+     */
     @InputImport(name="sessionStickinessEnabled")
     private final @Nullable Input<Boolean> sessionStickinessEnabled;
 
@@ -60,6 +84,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sessionStickinessEnabled == null ? Input.empty() : this.sessionStickinessEnabled;
     }
 
+    /**
+     * Configuration option to adjust session stickiness cookie duration parameter.
+     * 
+     */
     @InputImport(name="sessionStickinessLBCookieDurationSeconds")
     private final @Nullable Input<String> sessionStickinessLBCookieDurationSeconds;
 
@@ -67,6 +95,10 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sessionStickinessLBCookieDurationSeconds == null ? Input.empty() : this.sessionStickinessLBCookieDurationSeconds;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LoadBalancerTagArgs>> tags;
 

@@ -72,7 +72,11 @@ public abstract class InputArgs {
 
             CompletableFuture<Optional<Object>> valueFuture;
             if (info.getAnnotation().json()) {
-                valueFuture = convertToJson.apply(fullName, value);
+                if (value.isPresent()) {
+                    valueFuture = convertToJson.apply(fullName, value.get());
+                } else {
+                    valueFuture = CompletableFuture.completedFuture(Optional.empty());
+                }
             } else {
                 valueFuture = CompletableFuture.completedFuture(value);
             }

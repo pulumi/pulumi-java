@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
+     * 
+     */
     @EnumType
     public enum GoogleCloudMlV1__ParameterSpecScaleType {
+        /**
+         * By default, no scaling is applied.
+         * 
+         */
         None("NONE"),
+        /**
+         * Scales the feasible space to (0, 1) linearly.
+         * 
+         */
         UnitLinearScale("UNIT_LINEAR_SCALE"),
+        /**
+         * Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.
+         * 
+         */
         UnitLogScale("UNIT_LOG_SCALE"),
+        /**
+         * Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.
+         * 
+         */
         UnitReverseLogScale("UNIT_REVERSE_LOG_SCALE");
 
         private final String value;

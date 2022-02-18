@@ -13,8 +13,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTemplateSpecContainerEnvFrom {
+    /**
+     * The ConfigMap to select from.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServiceTemplateSpecContainerEnvFromConfigMapRef configMapRef;
+    /**
+     * An optional identifier to prepend to each key in the ConfigMap.
+     * 
+     */
     private final @Nullable String prefix;
+    /**
+     * The Secret to select from.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServiceTemplateSpecContainerEnvFromSecretRef secretRef;
 
     @OutputCustomType.Constructor({"configMapRef","prefix","secretRef"})
@@ -27,12 +41,26 @@ public final class ServiceTemplateSpecContainerEnvFrom {
         this.secretRef = secretRef;
     }
 
+    /**
+     * The ConfigMap to select from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServiceTemplateSpecContainerEnvFromConfigMapRef> getConfigMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
+    /**
+     * An optional identifier to prepend to each key in the ConfigMap.
+     * 
+     */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
+    /**
+     * The Secret to select from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServiceTemplateSpecContainerEnvFromSecretRef> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobQueryDefaultDataset {
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     private final String datasetId;
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     private final @Nullable String projectId;
 
     @OutputCustomType.Constructor({"datasetId","projectId"})
@@ -22,9 +30,17 @@ public final class JobQueryDefaultDataset {
         this.projectId = projectId;
     }
 
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     public String getDatasetId() {
         return this.datasetId;
     }
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }

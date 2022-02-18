@@ -14,6 +14,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
 
     public static final ResourceModelWithAllowedPropertySetResponsePlan Empty = new ResourceModelWithAllowedPropertySetResponsePlan();
 
+    /**
+     * A user defined name of the 3rd Party Artifact that is being procured.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
         return this.name;
     }
 
+    /**
+     * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+     * 
+     */
     @InputImport(name="product", required=true)
     private final String product;
 
@@ -28,6 +36,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
         return this.product;
     }
 
+    /**
+     * A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+     * 
+     */
     @InputImport(name="promotionCode")
     private final @Nullable String promotionCode;
 
@@ -35,6 +47,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
     }
 
+    /**
+     * The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+     * 
+     */
     @InputImport(name="publisher", required=true)
     private final String publisher;
 
@@ -42,6 +58,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
         return this.publisher;
     }
 
+    /**
+     * The version of the desired product/artifact.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

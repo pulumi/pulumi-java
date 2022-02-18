@@ -117,6 +117,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotOptions == null ? Input.empty() : this.snapshotOptions;
     }
 
+    /**
+     * An arbitrary set of tags (key-value pairs) for this Domain.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DomainTagArgs>> tags;
 

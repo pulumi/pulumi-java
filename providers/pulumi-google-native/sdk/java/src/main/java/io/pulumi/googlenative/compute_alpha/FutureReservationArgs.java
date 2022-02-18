@@ -17,6 +17,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
 
     public static final FutureReservationArgs Empty = new FutureReservationArgs();
 
+    /**
+     * An optional description of this resource. Provide this property when you create the future reservation.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +35,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +46,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
+     * 
+     */
     @InputImport(name="namePrefix")
     private final @Nullable Input<String> namePrefix;
 
@@ -59,6 +71,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * List of Projects/Folders to share with.
+     * 
+     */
     @InputImport(name="shareSettings")
     private final @Nullable Input<ShareSettingsArgs> shareSettings;
 
@@ -66,6 +82,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
         return this.shareSettings == null ? Input.empty() : this.shareSettings;
     }
 
+    /**
+     * Future Reservation configuration to indicate instance properties and total count.
+     * 
+     */
     @InputImport(name="specificSkuProperties")
     private final @Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
 
@@ -73,6 +93,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
         return this.specificSkuProperties == null ? Input.empty() : this.specificSkuProperties;
     }
 
+    /**
+     * Time window for this Future Reservation.
+     * 
+     */
     @InputImport(name="timeWindow")
     private final @Nullable Input<FutureReservationTimeWindowArgs> timeWindow;
 

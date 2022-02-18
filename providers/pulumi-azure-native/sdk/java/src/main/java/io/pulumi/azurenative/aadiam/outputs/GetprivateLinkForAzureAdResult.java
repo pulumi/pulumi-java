@@ -14,15 +14,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetprivateLinkForAzureAdResult {
+    /**
+     * Flag indicating whether all tenants are allowed
+     * 
+     */
     private final @Nullable Boolean allTenants;
+    /**
+     * String Id used to locate any resource on Azure.
+     * 
+     */
     private final String id;
+    /**
+     * Name of this resource.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Guid of the owner tenant
+     * 
+     */
     private final @Nullable String ownerTenantId;
+    /**
+     * Name of the resource group
+     * 
+     */
     private final @Nullable String resourceGroup;
+    /**
+     * Name of the private link policy resource
+     * 
+     */
     private final @Nullable String resourceName;
+    /**
+     * Subscription Identifier
+     * 
+     */
     private final @Nullable String subscriptionId;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The list of tenantIds.
+     * 
+     */
     private final @Nullable List<String> tenants;
+    /**
+     * Type of this resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"allTenants","id","name","ownerTenantId","resourceGroup","resourceName","subscriptionId","tags","tenants","type"})
@@ -49,33 +89,73 @@ public final class GetprivateLinkForAzureAdResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Flag indicating whether all tenants are allowed
+     * 
+     */
     public Optional<Boolean> getAllTenants() {
         return Optional.ofNullable(this.allTenants);
     }
+    /**
+     * String Id used to locate any resource on Azure.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Name of this resource.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Guid of the owner tenant
+     * 
+     */
     public Optional<String> getOwnerTenantId() {
         return Optional.ofNullable(this.ownerTenantId);
     }
+    /**
+     * Name of the resource group
+     * 
+     */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
+    /**
+     * Name of the private link policy resource
+     * 
+     */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
+    /**
+     * Subscription Identifier
+     * 
+     */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The list of tenantIds.
+     * 
+     */
     public List<String> getTenants() {
         return this.tenants == null ? List.of() : this.tenants;
     }
+    /**
+     * Type of this resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

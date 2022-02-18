@@ -12,6 +12,10 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRoutingIntentArgs Empty = new GetRoutingIntentArgs();
 
+    /**
+     * The resource group name of the RoutingIntent.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the RoutingIntent.
+     * 
+     */
     @InputImport(name="routingIntentName", required=true)
     private final String routingIntentName;
 
@@ -26,6 +34,10 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
         return this.routingIntentName;
     }
 
+    /**
+     * The name of the VirtualHub.
+     * 
+     */
     @InputImport(name="virtualHubName", required=true)
     private final String virtualHubName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The tier of the SKU.
+     * 
+     */
     @EnumType
     public enum ExpressRouteCircuitSkuTier {
         Standard("Standard"),

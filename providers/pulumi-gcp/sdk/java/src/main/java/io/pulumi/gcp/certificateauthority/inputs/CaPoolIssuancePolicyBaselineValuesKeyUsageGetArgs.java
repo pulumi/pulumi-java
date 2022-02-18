@@ -17,6 +17,11 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
 
     public static final CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs Empty = new CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs();
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="baseKeyUsage", required=true)
     private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
@@ -24,6 +29,11 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
         return this.baseKeyUsage;
     }
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="extendedKeyUsage", required=true)
     private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
@@ -31,6 +41,11 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
         return this.extendedKeyUsage;
     }
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="unknownExtendedKeyUsages")
     private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Reprotect agent details.
+ * 
+ */
 public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReprotectAgentDetailsResponse Empty = new ReprotectAgentDetailsResponse();
 
+    /**
+     * The health of the reprotect agent.
+     * 
+     */
     @InputImport(name="health", required=true)
     private final String health;
 
@@ -21,6 +29,10 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
         return this.health;
     }
 
+    /**
+     * The health errors.
+     * 
+     */
     @InputImport(name="healthErrors", required=true)
     private final List<HealthErrorResponse> healthErrors;
 
@@ -28,6 +40,10 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
         return this.healthErrors;
     }
 
+    /**
+     * The reprotect agent Id.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -35,6 +51,10 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
         return this.id;
     }
 
+    /**
+     * The last heartbeat received from the reprotect agent.
+     * 
+     */
     @InputImport(name="lastHeartbeatUtc", required=true)
     private final String lastHeartbeatUtc;
 
@@ -42,6 +62,10 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
         return this.lastHeartbeatUtc;
     }
 
+    /**
+     * The reprotect agent name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -49,6 +73,10 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * The version.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

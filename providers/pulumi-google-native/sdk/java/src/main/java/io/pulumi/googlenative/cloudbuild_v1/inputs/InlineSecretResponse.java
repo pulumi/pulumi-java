@@ -9,10 +9,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Pairs a set of secret environment variables mapped to encrypted values with the Cloud KMS key to use to decrypt the value.
+ * 
+ */
 public final class InlineSecretResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InlineSecretResponse Empty = new InlineSecretResponse();
 
+    /**
+     * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.
+     * 
+     */
     @InputImport(name="envMap", required=true)
     private final Map<String,String> envMap;
 
@@ -20,6 +28,10 @@ public final class InlineSecretResponse extends io.pulumi.resources.InvokeArgs {
         return this.envMap;
     }
 
+    /**
+     * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final String kmsKeyName;
 

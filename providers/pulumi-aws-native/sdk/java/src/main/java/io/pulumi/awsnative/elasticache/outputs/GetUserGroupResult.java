@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetUserGroupResult {
+    /**
+     * The Amazon Resource Name (ARN) of the user account.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Indicates user group status. Can be "creating", "active", "modifying", "deleting".
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * List of users associated to this user group.
+     * 
+     */
     private final @Nullable List<String> userIds;
 
     @OutputCustomType.Constructor({"arn","status","userIds"})
@@ -26,12 +38,24 @@ public final class GetUserGroupResult {
         this.userIds = userIds;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the user account.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Indicates user group status. Can be "creating", "active", "modifying", "deleting".
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * List of users associated to this user group.
+     * 
+     */
     public List<String> getUserIds() {
         return this.userIds == null ? List.of() : this.userIds;
     }

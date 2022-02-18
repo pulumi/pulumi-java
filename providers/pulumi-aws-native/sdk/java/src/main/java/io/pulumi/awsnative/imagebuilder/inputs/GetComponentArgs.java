@@ -12,6 +12,10 @@ public final class GetComponentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetComponentArgs Empty = new GetComponentArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the component.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

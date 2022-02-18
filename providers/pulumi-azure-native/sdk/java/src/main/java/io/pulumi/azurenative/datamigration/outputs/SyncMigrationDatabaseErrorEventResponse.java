@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SyncMigrationDatabaseErrorEventResponse {
+    /**
+     * Event text.
+     * 
+     */
     private final String eventText;
+    /**
+     * Event type.
+     * 
+     */
     private final String eventTypeString;
+    /**
+     * String value of timestamp.
+     * 
+     */
     private final String timestampString;
 
     @OutputCustomType.Constructor({"eventText","eventTypeString","timestampString"})
@@ -23,12 +35,24 @@ public final class SyncMigrationDatabaseErrorEventResponse {
         this.timestampString = Objects.requireNonNull(timestampString);
     }
 
+    /**
+     * Event text.
+     * 
+     */
     public String getEventText() {
         return this.eventText;
     }
+    /**
+     * Event type.
+     * 
+     */
     public String getEventTypeString() {
         return this.eventTypeString;
     }
+    /**
+     * String value of timestamp.
+     * 
+     */
     public String getTimestampString() {
         return this.timestampString;
     }

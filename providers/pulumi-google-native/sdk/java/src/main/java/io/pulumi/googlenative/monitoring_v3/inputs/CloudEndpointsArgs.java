@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cloud Endpoints service. Learn more at https://cloud.google.com/endpoints.
+ * 
+ */
 public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudEndpointsArgs Empty = new CloudEndpointsArgs();
 
+    /**
+     * The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

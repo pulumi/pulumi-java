@@ -17,6 +17,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceArgs Empty = new DeviceArgs();
 
+    /**
+     * The description of the device.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The ID of the global network.
+     * 
+     */
     @InputImport(name="globalNetworkId", required=true)
     private final Input<String> globalNetworkId;
 
@@ -31,6 +39,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.globalNetworkId;
     }
 
+    /**
+     * The site location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<DeviceLocationArgs> location;
 
@@ -38,6 +50,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The device model
+     * 
+     */
     @InputImport(name="model")
     private final @Nullable Input<String> model;
 
@@ -45,6 +61,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.model == null ? Input.empty() : this.model;
     }
 
+    /**
+     * The device serial number.
+     * 
+     */
     @InputImport(name="serialNumber")
     private final @Nullable Input<String> serialNumber;
 
@@ -52,6 +72,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serialNumber == null ? Input.empty() : this.serialNumber;
     }
 
+    /**
+     * The site ID.
+     * 
+     */
     @InputImport(name="siteId")
     private final @Nullable Input<String> siteId;
 
@@ -59,6 +83,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.siteId == null ? Input.empty() : this.siteId;
     }
 
+    /**
+     * The tags for the device.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DeviceTagArgs>> tags;
 
@@ -66,6 +94,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The device type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -73,6 +105,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The device vendor.
+     * 
+     */
     @InputImport(name="vendor")
     private final @Nullable Input<String> vendor;
 

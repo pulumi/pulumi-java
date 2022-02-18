@@ -19,6 +19,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
+ * 
+ */
 @ResourceType(type="aws-native:nimblestudio:StudioComponent")
 public class StudioComponent extends io.pulumi.resources.CustomResource {
     @OutputExport(name="configuration", type=StudioComponentConfiguration.class, parameters={})
@@ -27,33 +31,73 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ StudioComponentConfiguration> getConfiguration() {
         return this.configuration;
     }
+    /**
+     * <p>The description.</p>
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return <p>The description.</p>
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * <p>The EC2 security groups that control access to the studio component.</p>
+     * 
+     */
     @OutputExport(name="ec2SecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ec2SecurityGroupIds;
 
+    /**
+     * @return <p>The EC2 security groups that control access to the studio component.</p>
+     * 
+     */
     public Output</* @Nullable */ List<String>> getEc2SecurityGroupIds() {
         return this.ec2SecurityGroupIds;
     }
+    /**
+     * <p>Initialization scripts for studio components.</p>
+     * 
+     */
     @OutputExport(name="initializationScripts", type=List.class, parameters={StudioComponentInitializationScript.class})
     private Output</* @Nullable */ List<StudioComponentInitializationScript>> initializationScripts;
 
+    /**
+     * @return <p>Initialization scripts for studio components.</p>
+     * 
+     */
     public Output</* @Nullable */ List<StudioComponentInitializationScript>> getInitializationScripts() {
         return this.initializationScripts;
     }
+    /**
+     * <p>The name for the studio component.</p>
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return <p>The name for the studio component.</p>
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * <p>Parameters for the studio component scripts.</p>
+     * 
+     */
     @OutputExport(name="scriptParameters", type=List.class, parameters={StudioComponentScriptParameterKeyValue.class})
     private Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> scriptParameters;
 
+    /**
+     * @return <p>Parameters for the studio component scripts.</p>
+     * 
+     */
     public Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> getScriptParameters() {
         return this.scriptParameters;
     }
@@ -63,9 +107,17 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
     public Output<String> getStudioComponentId() {
         return this.studioComponentId;
     }
+    /**
+     * <p>The studioId. </p>
+     * 
+     */
     @OutputExport(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
+    /**
+     * @return <p>The studioId. </p>
+     * 
+     */
     public Output<String> getStudioId() {
         return this.studioId;
     }
@@ -88,6 +140,12 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StudioComponent(String name, StudioComponentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:nimblestudio:StudioComponent", name, args == null ? StudioComponentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -103,6 +161,14 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StudioComponent get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StudioComponent(name, id, options);
     }

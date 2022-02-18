@@ -23,6 +23,10 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="consentStoreId")
     private final @Nullable Input<String> consentStoreId;
 
@@ -30,6 +34,12 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
         return this.consentStoreId == null ? Input.empty() : this.consentStoreId;
     }
 
+    /**
+     * Identifies the dataset addressed by this request. Must be in the format
+     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="dataset")
     private final @Nullable Input<String> dataset;
 
@@ -37,6 +47,10 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
+    /**
+     * (Computed) The etag of the IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -51,6 +65,12 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.healthcare.ConsentStoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

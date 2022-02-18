@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for the Monetization add-on.
+ * 
+ */
 public final class GoogleCloudApigeeV1MonetizationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1MonetizationConfigArgs Empty = new GoogleCloudApigeeV1MonetizationConfigArgs();
 
+    /**
+     * Flag that specifies whether the Monetization add-on is enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

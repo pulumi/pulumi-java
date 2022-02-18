@@ -15,39 +15,93 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
+ * 
+ */
 @ResourceType(type="aws-native:route53recoveryreadiness:ResourceSet")
 public class ResourceSet extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the resource set.
+     * 
+     */
     @OutputExport(name="resourceSetArn", type=String.class, parameters={})
     private Output<String> resourceSetArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the resource set.
+     * 
+     */
     public Output<String> getResourceSetArn() {
         return this.resourceSetArn;
     }
+    /**
+     * The name of the resource set to create.
+     * 
+     */
     @OutputExport(name="resourceSetName", type=String.class, parameters={})
     private Output<String> resourceSetName;
 
+    /**
+     * @return The name of the resource set to create.
+     * 
+     */
     public Output<String> getResourceSetName() {
         return this.resourceSetName;
     }
+    /**
+     * The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * 
+     * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * 
+     */
     @OutputExport(name="resourceSetType", type=String.class, parameters={})
     private Output<String> resourceSetType;
 
+    /**
+     * @return The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * 
+     * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * 
+     */
     public Output<String> getResourceSetType() {
         return this.resourceSetType;
     }
+    /**
+     * A list of resource objects in the resource set.
+     * 
+     */
     @OutputExport(name="resources", type=List.class, parameters={ResourceSetResource.class})
     private Output<List<ResourceSetResource>> resources;
 
+    /**
+     * @return A list of resource objects in the resource set.
+     * 
+     */
     public Output<List<ResourceSetResource>> getResources() {
         return this.resources;
     }
+    /**
+     * A tag to associate with the parameters for a resource set.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ResourceSetTag.class})
     private Output</* @Nullable */ List<ResourceSetTag>> tags;
 
+    /**
+     * @return A tag to associate with the parameters for a resource set.
+     * 
+     */
     public Output</* @Nullable */ List<ResourceSetTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ResourceSet(String name, ResourceSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53recoveryreadiness:ResourceSet", name, args == null ? ResourceSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +117,14 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ResourceSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceSet(name, id, options);
     }

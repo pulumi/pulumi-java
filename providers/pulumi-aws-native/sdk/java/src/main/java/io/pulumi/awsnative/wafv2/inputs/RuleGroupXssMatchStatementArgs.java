@@ -11,6 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Xss Match Statement.
+ * 
+ */
 public final class RuleGroupXssMatchStatementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupXssMatchStatementArgs Empty = new RuleGroupXssMatchStatementArgs();

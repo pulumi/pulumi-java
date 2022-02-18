@@ -8,8 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Sampling type.
+     * 
+     */
     @EnumType
     public enum SamplingType {
+        /**
+         * Fixed-rate sampling.
+         * 
+         */
         Fixed("fixed");
 
         private final String value;

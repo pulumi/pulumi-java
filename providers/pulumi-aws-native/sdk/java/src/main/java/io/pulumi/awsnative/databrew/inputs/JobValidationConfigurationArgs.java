@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration to attach Rulesets to the job
+ * 
+ */
 public final class JobValidationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobValidationConfigurationArgs Empty = new JobValidationConfigurationArgs();
 
+    /**
+     * Arn of the Ruleset
+     * 
+     */
     @InputImport(name="rulesetArn", required=true)
     private final Input<String> rulesetArn;
 

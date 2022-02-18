@@ -11,11 +11,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeResponse {
+    /**
+     * Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
+     * 
+     */
     private final String host;
+    /**
+     * Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
+     * 
+     */
     private final String nodeId;
+    /**
+     * User defined parameters currently applied to the node.
+     * 
+     */
     private final MemcacheParametersResponse parameters;
+    /**
+     * The port number of the Memcached server on this node.
+     * 
+     */
     private final Integer port;
+    /**
+     * Current state of the Memcached node.
+     * 
+     */
     private final String state;
+    /**
+     * Location (GCP Zone) for the Memcached node.
+     * 
+     */
     private final String zone;
 
     @OutputCustomType.Constructor({"host","nodeId","parameters","port","state","zone"})
@@ -34,21 +58,45 @@ public final class NodeResponse {
         this.zone = Objects.requireNonNull(zone);
     }
 
+    /**
+     * Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
+     * 
+     */
     public String getHost() {
         return this.host;
     }
+    /**
+     * Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
+     * 
+     */
     public String getNodeId() {
         return this.nodeId;
     }
+    /**
+     * User defined parameters currently applied to the node.
+     * 
+     */
     public MemcacheParametersResponse getParameters() {
         return this.parameters;
     }
+    /**
+     * The port number of the Memcached server on this node.
+     * 
+     */
     public Integer getPort() {
         return this.port;
     }
+    /**
+     * Current state of the Memcached node.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * Location (GCP Zone) for the Memcached node.
+     * 
+     */
     public String getZone() {
         return this.zone;
     }

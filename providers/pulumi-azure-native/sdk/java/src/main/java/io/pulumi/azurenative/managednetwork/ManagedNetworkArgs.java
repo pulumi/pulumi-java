@@ -16,6 +16,10 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedNetworkArgs Empty = new ManagedNetworkArgs();
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +27,10 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the Managed Network.
+     * 
+     */
     @InputImport(name="managedNetworkName")
     private final @Nullable Input<String> managedNetworkName;
 
@@ -30,6 +38,10 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedNetworkName == null ? Input.empty() : this.managedNetworkName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
+     * 
+     */
     @InputImport(name="scope")
     private final @Nullable Input<ScopeArgs> scope;
 
@@ -44,6 +60,10 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

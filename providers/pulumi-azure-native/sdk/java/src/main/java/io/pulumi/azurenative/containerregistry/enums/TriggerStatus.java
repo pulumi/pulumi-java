@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The current status of trigger.
+     * 
+     */
     @EnumType
     public enum TriggerStatus {
         Disabled("Disabled"),

@@ -12,6 +12,10 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
 
     public static final GetDeviceSecurityGroupArgs Empty = new GetDeviceSecurityGroupArgs();
 
+    /**
+     * The name of the device security group. Note that the name of the device security group is case insensitive.
+     * 
+     */
     @InputImport(name="deviceSecurityGroupName", required=true)
     private final String deviceSecurityGroupName;
 
@@ -19,6 +23,10 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
         return this.deviceSecurityGroupName;
     }
 
+    /**
+     * The identifier of the resource.
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

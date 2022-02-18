@@ -12,6 +12,10 @@ public final class PipelineSourceTriggerPropertiesResponse extends io.pulumi.res
 
     public static final PipelineSourceTriggerPropertiesResponse Empty = new PipelineSourceTriggerPropertiesResponse();
 
+    /**
+     * The current status of the source trigger.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

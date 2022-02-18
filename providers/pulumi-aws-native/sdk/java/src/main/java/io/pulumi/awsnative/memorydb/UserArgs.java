@@ -17,6 +17,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserArgs Empty = new UserArgs();
 
+    /**
+     * Access permissions string used for this user account.
+     * 
+     */
     @InputImport(name="accessString", required=true)
     private final Input<String> accessString;
 
@@ -31,6 +35,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticationMode;
     }
 
+    /**
+     * An array of key-value pairs to apply to this user.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<UserTagArgs>> tags;
 
@@ -38,6 +46,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the user.
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

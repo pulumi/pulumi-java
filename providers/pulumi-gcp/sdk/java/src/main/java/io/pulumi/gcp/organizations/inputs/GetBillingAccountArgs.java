@@ -15,6 +15,10 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetBillingAccountArgs Empty = new GetBillingAccountArgs();
 
+    /**
+     * The name of the billing account in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+     * 
+     */
     @InputImport(name="billingAccount")
     private final @Nullable String billingAccount;
 
@@ -22,6 +26,10 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
         return this.billingAccount == null ? Optional.empty() : Optional.ofNullable(this.billingAccount);
     }
 
+    /**
+     * The display name of the billing account.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -29,6 +37,10 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * `true` if the billing account is open, `false` if the billing account is closed.
+     * 
+     */
     @InputImport(name="open")
     private final @Nullable Boolean open;
 

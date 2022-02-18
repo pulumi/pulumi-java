@@ -27,6 +27,13 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
 
     public static final ClusterClusterConfigArgs Empty = new ClusterClusterConfigArgs();
 
+    /**
+     * The autoscaling policy config associated with the cluster.
+     * Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+     * only be removed by setting `policy_uri = ""`, rather than removing the whole block.
+     * Structure defined below.
+     * 
+     */
     @InputImport(name="autoscalingConfig")
     private final @Nullable Input<ClusterClusterConfigAutoscalingConfigArgs> autoscalingConfig;
 
@@ -41,6 +48,11 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
+    /**
+     * The Customer managed encryption keys settings for the cluster.
+     * Structure defined below.
+     * 
+     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<ClusterClusterConfigEncryptionConfigArgs> encryptionConfig;
 
@@ -48,6 +60,11 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
+    /**
+     * The config settings for port access on the cluster.
+     * Structure defined below.
+     * 
+     */
     @InputImport(name="endpointConfig")
     private final @Nullable Input<ClusterClusterConfigEndpointConfigArgs> endpointConfig;
 
@@ -55,6 +72,11 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.endpointConfig == null ? Input.empty() : this.endpointConfig;
     }
 
+    /**
+     * Common config settings for resources of Google Compute Engine cluster
+     * instances, applicable to all instances in the cluster. Structure defined below.
+     * 
+     */
     @InputImport(name="gceClusterConfig")
     private final @Nullable Input<ClusterClusterConfigGceClusterConfigArgs> gceClusterConfig;
 
@@ -62,6 +84,11 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.gceClusterConfig == null ? Input.empty() : this.gceClusterConfig;
     }
 
+    /**
+     * Commands to execute on each node after config is completed.
+     * You can specify multiple versions of these. Structure defined below.
+     * 
+     */
     @InputImport(name="initializationActions")
     private final @Nullable Input<List<ClusterClusterConfigInitializationActionArgs>> initializationActions;
 
@@ -69,6 +96,11 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.initializationActions == null ? Input.empty() : this.initializationActions;
     }
 
+    /**
+     * The settings for auto deletion cluster schedule.
+     * Structure defined below.
+     * 
+     */
     @InputImport(name="lifecycleConfig")
     private final @Nullable Input<ClusterClusterConfigLifecycleConfigArgs> lifecycleConfig;
 
@@ -76,6 +108,11 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.lifecycleConfig == null ? Input.empty() : this.lifecycleConfig;
     }
 
+    /**
+     * The Google Compute Engine config settings for the master instances
+     * in a cluster. Structure defined below.
+     * 
+     */
     @InputImport(name="masterConfig")
     private final @Nullable Input<ClusterClusterConfigMasterConfigArgs> masterConfig;
 
@@ -83,6 +120,12 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.masterConfig == null ? Input.empty() : this.masterConfig;
     }
 
+    /**
+     * The config setting for metastore service with the cluster.
+     * Structure defined below.
+     * ***
+     * 
+     */
     @InputImport(name="metastoreConfig")
     private final @Nullable Input<ClusterClusterConfigMetastoreConfigArgs> metastoreConfig;
 
@@ -90,6 +133,14 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.metastoreConfig == null ? Input.empty() : this.metastoreConfig;
     }
 
+    /**
+     * The Google Compute Engine config settings for the additional
+     * instances in a cluster. Structure defined below.
+     * * **NOTE** : `preemptible_worker_config` is
+     *   an alias for the api's [secondaryWorkerConfig](https://cloud.google.com/dataproc/docs/reference/rest/v1/ClusterConfig#InstanceGroupConfig). The name doesn't necessarily mean it is preemptible and is named as
+     *   such for legacy/compatibility reasons.
+     * 
+     */
     @InputImport(name="preemptibleWorkerConfig")
     private final @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigArgs> preemptibleWorkerConfig;
 
@@ -97,6 +148,10 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.preemptibleWorkerConfig == null ? Input.empty() : this.preemptibleWorkerConfig;
     }
 
+    /**
+     * Security related configuration. Structure defined below.
+     * 
+     */
     @InputImport(name="securityConfig")
     private final @Nullable Input<ClusterClusterConfigSecurityConfigArgs> securityConfig;
 
@@ -104,6 +159,11 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.securityConfig == null ? Input.empty() : this.securityConfig;
     }
 
+    /**
+     * The config settings for software inside the cluster.
+     * Structure defined below.
+     * 
+     */
     @InputImport(name="softwareConfig")
     private final @Nullable Input<ClusterClusterConfigSoftwareConfigArgs> softwareConfig;
 
@@ -111,6 +171,16 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
     }
 
+    /**
+     * The Cloud Storage staging bucket used to stage files,
+     * such as Hadoop jars, between client machines and the cluster.
+     * Note: If you don't explicitly specify a `staging_bucket`
+     * then GCP will auto create / assign one for you. However, you are not guaranteed
+     * an auto generated bucket which is solely dedicated to your cluster; it may be shared
+     * with other clusters in the same region/zone also choosing to use the auto generation
+     * option.
+     * 
+     */
     @InputImport(name="stagingBucket")
     private final @Nullable Input<String> stagingBucket;
 
@@ -118,6 +188,12 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.stagingBucket == null ? Input.empty() : this.stagingBucket;
     }
 
+    /**
+     * The Cloud Storage temp bucket used to store ephemeral cluster
+     * and jobs data, such as Spark and MapReduce history files.
+     * Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+     * 
+     */
     @InputImport(name="tempBucket")
     private final @Nullable Input<String> tempBucket;
 
@@ -125,6 +201,11 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
         return this.tempBucket == null ? Input.empty() : this.tempBucket;
     }
 
+    /**
+     * The Google Compute Engine config settings for the worker instances
+     * in a cluster. Structure defined below.
+     * 
+     */
     @InputImport(name="workerConfig")
     private final @Nullable Input<ClusterClusterConfigWorkerConfigArgs> workerConfig;
 

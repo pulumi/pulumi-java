@@ -16,18 +16,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetJitRequestResult {
+    /**
+     * The parent application id.
+     * 
+     */
     private final String applicationResourceId;
+    /**
+     * The client entity that created the JIT request.
+     * 
+     */
     private final ApplicationClientDetailsResponse createdBy;
+    /**
+     * Resource ID
+     * 
+     */
     private final String id;
+    /**
+     * The JIT authorization policies.
+     * 
+     */
     private final List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies;
+    /**
+     * The JIT request state.
+     * 
+     */
     private final String jitRequestState;
+    /**
+     * The JIT request properties.
+     * 
+     */
     private final JitSchedulingPolicyResponse jitSchedulingPolicy;
+    /**
+     * Resource location
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
+    /**
+     * The JIT request provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The publisher tenant id.
+     * 
+     */
     private final String publisherTenantId;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
+    /**
+     * The client entity that last updated the JIT request.
+     * 
+     */
     private final ApplicationClientDetailsResponse updatedBy;
 
     @OutputCustomType.Constructor({"applicationResourceId","createdBy","id","jitAuthorizationPolicies","jitRequestState","jitSchedulingPolicy","location","name","provisioningState","publisherTenantId","tags","type","updatedBy"})
@@ -60,42 +112,94 @@ public final class GetJitRequestResult {
         this.updatedBy = Objects.requireNonNull(updatedBy);
     }
 
+    /**
+     * The parent application id.
+     * 
+     */
     public String getApplicationResourceId() {
         return this.applicationResourceId;
     }
+    /**
+     * The client entity that created the JIT request.
+     * 
+     */
     public ApplicationClientDetailsResponse getCreatedBy() {
         return this.createdBy;
     }
+    /**
+     * Resource ID
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The JIT authorization policies.
+     * 
+     */
     public List<JitAuthorizationPoliciesResponse> getJitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
+    /**
+     * The JIT request state.
+     * 
+     */
     public String getJitRequestState() {
         return this.jitRequestState;
     }
+    /**
+     * The JIT request properties.
+     * 
+     */
     public JitSchedulingPolicyResponse getJitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
+    /**
+     * Resource location
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The JIT request provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The publisher tenant id.
+     * 
+     */
     public String getPublisherTenantId() {
         return this.publisherTenantId;
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The client entity that last updated the JIT request.
+     * 
+     */
     public ApplicationClientDetailsResponse getUpdatedBy() {
         return this.updatedBy;
     }

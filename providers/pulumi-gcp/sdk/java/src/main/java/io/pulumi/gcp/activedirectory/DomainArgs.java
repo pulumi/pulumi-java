@@ -16,6 +16,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
+    /**
+     * The name of delegated administrator account used to perform Active Directory operations.
+     * If not specified, setupadmin will be used.
+     * 
+     */
     @InputImport(name="admin")
     private final @Nullable Input<String> admin;
 
@@ -23,6 +28,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.admin == null ? Input.empty() : this.admin;
     }
 
+    /**
+     * The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
+     * If CIDR subnets overlap between networks, domain creation will fail.
+     * 
+     */
     @InputImport(name="authorizedNetworks")
     private final @Nullable Input<List<String>> authorizedNetworks;
 
@@ -30,6 +40,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
     }
 
+    /**
+     * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
+     * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
+     * 
+     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -37,6 +52,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName;
     }
 
+    /**
+     * Resource labels that can contain user-provided metadata
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -44,6 +63,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
+     * e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
+     * 
+     */
     @InputImport(name="locations", required=true)
     private final Input<List<String>> locations;
 
@@ -51,6 +75,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.locations;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +87,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
+     * Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
+     * 
+     */
     @InputImport(name="reservedIpRange", required=true)
     private final Input<String> reservedIpRange;
 

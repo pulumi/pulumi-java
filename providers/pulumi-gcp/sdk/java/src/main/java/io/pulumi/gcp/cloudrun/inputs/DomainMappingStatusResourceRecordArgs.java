@@ -14,6 +14,10 @@ public final class DomainMappingStatusResourceRecordArgs extends io.pulumi.resou
 
     public static final DomainMappingStatusResourceRecordArgs Empty = new DomainMappingStatusResourceRecordArgs();
 
+    /**
+     * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

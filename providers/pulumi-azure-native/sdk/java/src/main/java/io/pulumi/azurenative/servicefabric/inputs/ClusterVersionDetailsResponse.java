@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The detail of the Service Fabric runtime version result
+ * 
+ */
 public final class ClusterVersionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterVersionDetailsResponse Empty = new ClusterVersionDetailsResponse();
 
+    /**
+     * The Service Fabric runtime version of the cluster.
+     * 
+     */
     @InputImport(name="codeVersion")
     private final @Nullable String codeVersion;
 
@@ -21,6 +29,10 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
         return this.codeVersion == null ? Optional.empty() : Optional.ofNullable(this.codeVersion);
     }
 
+    /**
+     * Indicates if this version is for Windows or Linux operating system.
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable String environment;
 
@@ -28,6 +40,10 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
         return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
     }
 
+    /**
+     * The date of expiry of support of the version.
+     * 
+     */
     @InputImport(name="supportExpiryUtc")
     private final @Nullable String supportExpiryUtc;
 

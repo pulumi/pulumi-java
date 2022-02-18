@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Reference to an asset via its ARM resource ID.
+ * 
+ */
 public final class IdAssetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdAssetReferenceResponse Empty = new IdAssetReferenceResponse();
 
+    /**
+     * ARM resource ID of the asset.
+     * 
+     */
     @InputImport(name="assetId", required=true)
     private final String assetId;
 
@@ -19,6 +27,11 @@ public final class IdAssetReferenceResponse extends io.pulumi.resources.InvokeAr
         return this.assetId;
     }
 
+    /**
+     * Enum to determine which reference method to use for an asset.
+     * Expected value is 'Id'.
+     * 
+     */
     @InputImport(name="referenceType", required=true)
     private final String referenceType;
 

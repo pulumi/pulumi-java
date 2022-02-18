@@ -16,45 +16,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The management group details.
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:management:ManagementGroup ChildGroup /providers/Microsoft.Management/managementGroups/ChildGroup 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:management:ManagementGroup")
 public class ManagementGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * The list of children.
+     * 
+     */
     @OutputExport(name="children", type=List.class, parameters={ManagementGroupChildInfoResponse.class})
     private Output</* @Nullable */ List<ManagementGroupChildInfoResponse>> children;
 
+    /**
+     * @return The list of children.
+     * 
+     */
     public Output</* @Nullable */ List<ManagementGroupChildInfoResponse>> getChildren() {
         return this.children;
     }
+    /**
+     * The details of a management group.
+     * 
+     */
     @OutputExport(name="details", type=ManagementGroupDetailsResponse.class, parameters={})
     private Output</* @Nullable */ ManagementGroupDetailsResponse> details;
 
+    /**
+     * @return The details of a management group.
+     * 
+     */
     public Output</* @Nullable */ ManagementGroupDetailsResponse> getDetails() {
         return this.details;
     }
+    /**
+     * The friendly name of the management group.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return The friendly name of the management group.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the management group. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
+    /**
+     * @return The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The type of the resource.  For example, Microsoft.Management/managementGroups
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.  For example, Microsoft.Management/managementGroups
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ManagementGroup(String name, @Nullable ManagementGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:management:ManagementGroup", name, args == null ? ManagementGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -80,6 +149,14 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ManagementGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagementGroup(name, id, options);
     }

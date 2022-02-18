@@ -18,23 +18,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An object representing an Amazon EKS cluster.
+ * 
+ */
 @ResourceType(type="aws-native:eks:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {
+    /**
+     * The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The certificate-authority-data for your cluster.
+     * 
+     */
     @OutputExport(name="certificateAuthorityData", type=String.class, parameters={})
     private Output<String> certificateAuthorityData;
 
+    /**
+     * @return The certificate-authority-data for your cluster.
+     * 
+     */
     public Output<String> getCertificateAuthorityData() {
         return this.certificateAuthorityData;
     }
+    /**
+     * The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control plane to data plane communication.
+     * 
+     */
     @OutputExport(name="clusterSecurityGroupId", type=String.class, parameters={})
     private Output<String> clusterSecurityGroupId;
 
+    /**
+     * @return The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control plane to data plane communication.
+     * 
+     */
     public Output<String> getClusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
     }
@@ -44,15 +72,31 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<ClusterEncryptionConfig>> getEncryptionConfig() {
         return this.encryptionConfig;
     }
+    /**
+     * Amazon Resource Name (ARN) or alias of the customer master key (CMK).
+     * 
+     */
     @OutputExport(name="encryptionConfigKeyArn", type=String.class, parameters={})
     private Output<String> encryptionConfigKeyArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) or alias of the customer master key (CMK).
+     * 
+     */
     public Output<String> getEncryptionConfigKeyArn() {
         return this.encryptionConfigKeyArn;
     }
+    /**
+     * The endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com.
+     * 
+     */
     @OutputExport(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
+    /**
+     * @return The endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com.
+     * 
+     */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
@@ -68,15 +112,31 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ClusterLogging> getLogging() {
         return this.logging;
     }
+    /**
+     * The unique name to give to your cluster.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The unique name to give to your cluster.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The issuer URL for the cluster's OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
+     * 
+     */
     @OutputExport(name="openIdConnectIssuerUrl", type=String.class, parameters={})
     private Output<String> openIdConnectIssuerUrl;
 
+    /**
+     * @return The issuer URL for the cluster's OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
+     * 
+     */
     public Output<String> getOpenIdConnectIssuerUrl() {
         return this.openIdConnectIssuerUrl;
     }
@@ -86,25 +146,55 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output<ClusterResourcesVpcConfig> getResourcesVpcConfig() {
         return this.resourcesVpcConfig;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
+     * 
+     */
     @OutputExport(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
+     * 
+     */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ClusterTag.class})
     private Output</* @Nullable */ List<ClusterTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<ClusterTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
+    /**
+     * @return The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * 
+     */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:eks:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -120,6 +210,14 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Cluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Cluster(name, id, options);
     }

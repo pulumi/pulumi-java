@@ -14,6 +14,10 @@ public final class AzureNodePoolConfigRootVolumeGetArgs extends io.pulumi.resour
 
     public static final AzureNodePoolConfigRootVolumeGetArgs Empty = new AzureNodePoolConfigRootVolumeGetArgs();
 
+    /**
+     * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * 
+     */
     @InputImport(name="sizeGib")
     private final @Nullable Input<Integer> sizeGib;
 

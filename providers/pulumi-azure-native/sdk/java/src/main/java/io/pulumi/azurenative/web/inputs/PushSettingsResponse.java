@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Push settings for the App.
+ * 
+ */
 public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PushSettingsResponse Empty = new PushSettingsResponse();
 
+    /**
+     * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+     * 
+     */
     @InputImport(name="dynamicTagsJson")
     private final @Nullable String dynamicTagsJson;
 
@@ -22,6 +30,10 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.dynamicTagsJson == null ? Optional.empty() : Optional.ofNullable(this.dynamicTagsJson);
     }
 
+    /**
+     * Resource Id.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,6 +41,10 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Gets or sets a flag indicating whether the Push endpoint is enabled.
+     * 
+     */
     @InputImport(name="isPushEnabled", required=true)
     private final Boolean isPushEnabled;
 
@@ -36,6 +52,10 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.isPushEnabled;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -43,6 +63,10 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Resource Name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -50,6 +74,10 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+     * 
+     */
     @InputImport(name="tagWhitelistJson")
     private final @Nullable String tagWhitelistJson;
 
@@ -57,6 +85,13 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tagWhitelistJson == null ? Optional.empty() : Optional.ofNullable(this.tagWhitelistJson);
     }
 
+    /**
+     * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+     * Tags can consist of alphanumeric characters and the following:
+     * '_', '@', '#', '.', ':', '-'.
+     * Validation should be performed at the PushRequestHandler.
+     * 
+     */
     @InputImport(name="tagsRequiringAuth")
     private final @Nullable String tagsRequiringAuth;
 
@@ -64,6 +99,10 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tagsRequiringAuth == null ? Optional.empty() : Optional.ofNullable(this.tagsRequiringAuth);
     }
 
+    /**
+     * Resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

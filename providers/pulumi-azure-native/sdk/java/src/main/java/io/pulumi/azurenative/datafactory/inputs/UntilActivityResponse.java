@@ -52,10 +52,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * This activity executes inner activities until the specified boolean expression results to true or timeout is reached, whichever is earlier.
+ * 
+ */
 public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UntilActivityResponse Empty = new UntilActivityResponse();
 
+    /**
+     * List of activities to execute.
+     * 
+     */
     @InputImport(name="activities", required=true)
     private final List<Object> activities;
 
@@ -63,6 +71,10 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
         return this.activities;
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -70,6 +82,10 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -77,6 +93,10 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
+     * 
+     */
     @InputImport(name="expression", required=true)
     private final ExpressionResponse expression;
 
@@ -84,6 +104,10 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
         return this.expression;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -91,6 +115,10 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Object timeout;
 
@@ -98,6 +126,11 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'Until'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -105,6 +138,10 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

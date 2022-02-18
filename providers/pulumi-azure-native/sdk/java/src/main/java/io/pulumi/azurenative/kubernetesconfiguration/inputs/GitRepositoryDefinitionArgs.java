@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters to reconcile to the GitRepository source kind type.
+ * 
+ */
 public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitRepositoryDefinitionArgs Empty = new GitRepositoryDefinitionArgs();
 
+    /**
+     * Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
+     * 
+     */
     @InputImport(name="httpsCAFile")
     private final @Nullable Input<String> httpsCAFile;
 
@@ -23,6 +31,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
         return this.httpsCAFile == null ? Input.empty() : this.httpsCAFile;
     }
 
+    /**
+     * Base64-encoded HTTPS username used to access private git repositories over HTTPS
+     * 
+     */
     @InputImport(name="httpsUser")
     private final @Nullable Input<String> httpsUser;
 
@@ -30,6 +42,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
         return this.httpsUser == null ? Input.empty() : this.httpsUser;
     }
 
+    /**
+     * Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
+     * 
+     */
     @InputImport(name="localAuthRef")
     private final @Nullable Input<String> localAuthRef;
 
@@ -37,6 +53,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
         return this.localAuthRef == null ? Input.empty() : this.localAuthRef;
     }
 
+    /**
+     * The source reference for the GitRepository object.
+     * 
+     */
     @InputImport(name="repositoryRef")
     private final @Nullable Input<RepositoryRefDefinitionArgs> repositoryRef;
 
@@ -44,6 +64,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
         return this.repositoryRef == null ? Input.empty() : this.repositoryRef;
     }
 
+    /**
+     * Base64-encoded known_hosts value containing public SSH keys required to access private git repositories over SSH
+     * 
+     */
     @InputImport(name="sshKnownHosts")
     private final @Nullable Input<String> sshKnownHosts;
 
@@ -51,6 +75,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
         return this.sshKnownHosts == null ? Input.empty() : this.sshKnownHosts;
     }
 
+    /**
+     * The interval at which to re-reconcile the cluster git repository source with the remote.
+     * 
+     */
     @InputImport(name="syncIntervalInSeconds")
     private final @Nullable Input<Double> syncIntervalInSeconds;
 
@@ -58,6 +86,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
         return this.syncIntervalInSeconds == null ? Input.empty() : this.syncIntervalInSeconds;
     }
 
+    /**
+     * The maximum time to attempt to reconcile the cluster git repository source with the remote.
+     * 
+     */
     @InputImport(name="timeoutInSeconds")
     private final @Nullable Input<Double> timeoutInSeconds;
 
@@ -65,6 +97,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
     }
 
+    /**
+     * The URL to sync for the flux configuration git repository.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

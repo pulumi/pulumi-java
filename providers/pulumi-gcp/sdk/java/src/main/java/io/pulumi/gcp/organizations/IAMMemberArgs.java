@@ -29,6 +29,10 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.member;
     }
 
+    /**
+     * The numeric ID of the organization in which you want to manage the audit logging config.
+     * 
+     */
     @InputImport(name="orgId", required=true)
     private final Input<String> orgId;
 

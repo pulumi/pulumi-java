@@ -12,9 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DockerBuildResponse {
+    /**
+     * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
+     * The path is relative to the asset path which must contain a single Blob URI value.
+     * <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
+     * 
+     */
     private final @Nullable String context;
+    /**
+     * Enum to determine docker specification type. Must be either Build or Image.
+     * Expected value is 'Build'.
+     * 
+     */
     private final String dockerSpecificationType;
+    /**
+     * Docker command line instructions to assemble an image.
+     * <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
+     * 
+     */
     private final String dockerfile;
+    /**
+     * The platform information of the docker image.
+     * 
+     */
     private final @Nullable DockerImagePlatformResponse platform;
 
     @OutputCustomType.Constructor({"context","dockerSpecificationType","dockerfile","platform"})
@@ -29,15 +49,35 @@ public final class DockerBuildResponse {
         this.platform = platform;
     }
 
+    /**
+     * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
+     * The path is relative to the asset path which must contain a single Blob URI value.
+     * <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
+     * 
+     */
     public Optional<String> getContext() {
         return Optional.ofNullable(this.context);
     }
+    /**
+     * Enum to determine docker specification type. Must be either Build or Image.
+     * Expected value is 'Build'.
+     * 
+     */
     public String getDockerSpecificationType() {
         return this.dockerSpecificationType;
     }
+    /**
+     * Docker command line instructions to assemble an image.
+     * <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
+     * 
+     */
     public String getDockerfile() {
         return this.dockerfile;
     }
+    /**
+     * The platform information of the docker image.
+     * 
+     */
     public Optional<DockerImagePlatformResponse> getPlatform() {
         return Optional.ofNullable(this.platform);
     }

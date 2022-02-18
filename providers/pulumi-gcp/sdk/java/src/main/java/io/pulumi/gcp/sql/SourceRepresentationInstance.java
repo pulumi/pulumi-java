@@ -14,45 +14,133 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A source representation instance is a Cloud SQL instance that represents
+ * the source database server to the Cloud SQL replica. It is visible in the
+ * Cloud Console and appears the same as a regular Cloud SQL instance, but it
+ * contains no data, requires no configuration or maintenance, and does not
+ * affect billing. You cannot update the source representation instance.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * SourceRepresentationInstance can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default projects/{{project}}/instances/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance")
 public class SourceRepresentationInstance extends io.pulumi.resources.CustomResource {
+    /**
+     * The MySQL version running on your source database server.
+     * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+     * 
+     */
     @OutputExport(name="databaseVersion", type=String.class, parameters={})
     private Output<String> databaseVersion;
 
+    /**
+     * @return The MySQL version running on your source database server.
+     * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+     * 
+     */
     public Output<String> getDatabaseVersion() {
         return this.databaseVersion;
     }
+    /**
+     * The externally accessible IPv4 address for the source database server.
+     * 
+     */
     @OutputExport(name="host", type=String.class, parameters={})
     private Output<String> host;
 
+    /**
+     * @return The externally accessible IPv4 address for the source database server.
+     * 
+     */
     public Output<String> getHost() {
         return this.host;
     }
+    /**
+     * The name of the source representation instance. Use any valid Cloud SQL instance name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the source representation instance. Use any valid Cloud SQL instance name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The externally accessible port for the source database server.
+     * Defaults to 3306.
+     * 
+     */
     @OutputExport(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
+    /**
+     * @return The externally accessible port for the source database server.
+     * Defaults to 3306.
+     * 
+     */
     public Output</* @Nullable */ Integer> getPort() {
         return this.port;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The Region in which the created instance should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return The Region in which the created instance should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SourceRepresentationInstance(String name, SourceRepresentationInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance", name, args == null ? SourceRepresentationInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +156,15 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SourceRepresentationInstance get(String name, Input<String> id, @Nullable SourceRepresentationInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SourceRepresentationInstance(name, id, state, options);
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSession {
+/**
+ * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
+ * 
+ */
     public static CompletableFuture<GetSessionResult> invokeAsync(GetSessionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getSession", TypeShape.of(GetSessionResult.class), args == null ? GetSessionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PolicySpecRuleValues {
+    /**
+     * List of values allowed at this resource.
+     * 
+     */
     private final @Nullable List<String> allowedValues;
+    /**
+     * List of values denied at this resource.
+     * 
+     */
     private final @Nullable List<String> deniedValues;
 
     @OutputCustomType.Constructor({"allowedValues","deniedValues"})
@@ -22,9 +30,17 @@ public final class PolicySpecRuleValues {
         this.deniedValues = deniedValues;
     }
 
+    /**
+     * List of values allowed at this resource.
+     * 
+     */
     public List<String> getAllowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
+    /**
+     * List of values denied at this resource.
+     * 
+     */
     public List<String> getDeniedValues() {
         return this.deniedValues == null ? List.of() : this.deniedValues;
     }

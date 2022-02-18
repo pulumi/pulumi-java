@@ -12,6 +12,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class AnalyzerArchiveRule {
     private final List<AnalyzerFilter> filter;
+    /**
+     * The archive rule name
+     * 
+     */
     private final String ruleName;
 
     @OutputCustomType.Constructor({"filter","ruleName"})
@@ -25,6 +29,10 @@ public final class AnalyzerArchiveRule {
     public List<AnalyzerFilter> getFilter() {
         return this.filter;
     }
+    /**
+     * The archive rule name
+     * 
+     */
     public String getRuleName() {
         return this.ruleName;
     }

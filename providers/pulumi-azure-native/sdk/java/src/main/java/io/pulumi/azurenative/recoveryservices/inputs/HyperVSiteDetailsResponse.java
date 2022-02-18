@@ -8,10 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * HyperVSite fabric specific details.
+ * 
+ */
 public final class HyperVSiteDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HyperVSiteDetailsResponse Empty = new HyperVSiteDetailsResponse();
 
+    /**
+     * Gets the class type. Overridden in derived classes.
+     * Expected value is 'HyperVSite'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 

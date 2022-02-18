@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The log type to be used.
+     * 
+     */
     @EnumType
     public enum LogAnalyticsLogType {
         ContainerInsights("ContainerInsights"),

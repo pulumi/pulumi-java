@@ -18,75 +18,184 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An Azure Video Analyzer for Media account.
+ * API Version: 2021-10-18-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:videoindexer:Account contosto-videoanalyzer /subscriptions/586d4f48-8f08-4a4e-96b7-e1892d6dba9e/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.VideoIndexer/accounts/contosto-videoanalyzer 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:videoindexer:Account")
 public class Account extends io.pulumi.resources.CustomResource {
+    /**
+     * The account's data-plane ID
+     * 
+     */
     @OutputExport(name="accountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> accountId;
 
+    /**
+     * @return The account's data-plane ID
+     * 
+     */
     public Output</* @Nullable */ String> getAccountId() {
         return this.accountId;
     }
+    /**
+     * The account's name
+     * 
+     */
     @OutputExport(name="accountName", type=String.class, parameters={})
     private Output<String> accountName;
 
+    /**
+     * @return The account's name
+     * 
+     */
     public Output<String> getAccountName() {
         return this.accountName;
     }
+    /**
+     * Managed service identity (system assigned and/or user assigned identities)
+     * 
+     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
+    /**
+     * @return Managed service identity (system assigned and/or user assigned identities)
+     * 
+     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The media services details
+     * 
+     */
     @OutputExport(name="mediaServices", type=MediaServicesForPutRequestResponse.class, parameters={})
     private Output</* @Nullable */ MediaServicesForPutRequestResponse> mediaServices;
 
+    /**
+     * @return The media services details
+     * 
+     */
     public Output</* @Nullable */ MediaServicesForPutRequestResponse> getMediaServices() {
         return this.mediaServices;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Gets the status of the account at the time the operation was called.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Gets the status of the account at the time the operation was called.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The system meta data relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system meta data relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The account's tenant id
+     * 
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
+    /**
+     * @return The account's tenant id
+     * 
+     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:videoindexer:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +216,14 @@ public class Account extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Account get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Account(name, id, options);
     }

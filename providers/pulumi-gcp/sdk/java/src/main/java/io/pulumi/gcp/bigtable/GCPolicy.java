@@ -16,51 +16,125 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a Google Cloud Bigtable GC Policy inside a family. For more information see
+ * [the official documentation](https://cloud.google.com/bigtable/) and
+ * [API](https://cloud.google.com/bigtable/docs/go/reference).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * This resource does not support import.
+ * 
+ */
 @ResourceType(type="gcp:bigtable/gCPolicy:GCPolicy")
 public class GCPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the column family.
+     * 
+     */
     @OutputExport(name="columnFamily", type=String.class, parameters={})
     private Output<String> columnFamily;
 
+    /**
+     * @return The name of the column family.
+     * 
+     */
     public Output<String> getColumnFamily() {
         return this.columnFamily;
     }
+    /**
+     * The name of the Bigtable instance.
+     * 
+     */
     @OutputExport(name="instanceName", type=String.class, parameters={})
     private Output<String> instanceName;
 
+    /**
+     * @return The name of the Bigtable instance.
+     * 
+     */
     public Output<String> getInstanceName() {
         return this.instanceName;
     }
+    /**
+     * GC policy that applies to all cells older than the given age.
+     * 
+     */
     @OutputExport(name="maxAge", type=GCPolicyMaxAge.class, parameters={})
     private Output</* @Nullable */ GCPolicyMaxAge> maxAge;
 
+    /**
+     * @return GC policy that applies to all cells older than the given age.
+     * 
+     */
     public Output</* @Nullable */ GCPolicyMaxAge> getMaxAge() {
         return this.maxAge;
     }
+    /**
+     * GC policy that applies to all versions of a cell except for the most recent.
+     * 
+     */
     @OutputExport(name="maxVersions", type=List.class, parameters={GCPolicyMaxVersion.class})
     private Output</* @Nullable */ List<GCPolicyMaxVersion>> maxVersions;
 
+    /**
+     * @return GC policy that applies to all versions of a cell except for the most recent.
+     * 
+     */
     public Output</* @Nullable */ List<GCPolicyMaxVersion>> getMaxVersions() {
         return this.maxVersions;
     }
+    /**
+     * If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
+     * 
+     */
     @OutputExport(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
+    /**
+     * @return If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
+     * 
+     */
     public Output</* @Nullable */ String> getMode() {
         return this.mode;
     }
+    /**
+     * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The name of the table.
+     * 
+     */
     @OutputExport(name="table", type=String.class, parameters={})
     private Output<String> table;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public Output<String> getTable() {
         return this.table;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GCPolicy(String name, GCPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:bigtable/gCPolicy:GCPolicy", name, args == null ? GCPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +150,15 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GCPolicy get(String name, Input<String> id, @Nullable GCPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GCPolicy(name, id, state, options);
     }

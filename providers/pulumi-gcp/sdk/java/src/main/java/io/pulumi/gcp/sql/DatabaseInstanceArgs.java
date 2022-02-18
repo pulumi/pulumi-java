@@ -19,6 +19,12 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DatabaseInstanceArgs Empty = new DatabaseInstanceArgs();
 
+    /**
+     * The context needed to create this instance as a clone of another instance. When this field is set during
+     * resource creation, this provider will attempt to clone another instance as indicated in the context. The
+     * configuration is detailed below.
+     * 
+     */
     @InputImport(name="clone")
     private final @Nullable Input<DatabaseInstanceCloneArgs> clone;
 
@@ -26,6 +32,18 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.clone == null ? Input.empty() : this.clone;
     }
 
+    /**
+     * The MySQL, PostgreSQL or
+     * SQL Server version to use. Supported values include `MYSQL_5_6`,
+     * `MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+     * `POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
+     * `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
+     * `SQLSERVER_2019_STANDARD`, `SQLSERVER_2019_ENTERPRISE`, `SQLSERVER_2019_EXPRESS`,
+     * `SQLSERVER_2019_WEB`.
+     * [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
+     * includes an up-to-date reference of supported versions.
+     * 
+     */
     @InputImport(name="databaseVersion", required=true)
     private final Input<String> databaseVersion;
 
@@ -33,6 +51,11 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.databaseVersion;
     }
 
+    /**
+     * Whether or not to allow he provider to destroy the instance. Unless this field is set to false
+     * in state, a `destroy` or `update` command that deletes the instance will fail.
+     * 
+     */
     @InputImport(name="deletionProtection")
     private final @Nullable Input<Boolean> deletionProtection;
 
@@ -40,6 +63,17 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
     }
 
+    /**
+     * The full path to the encryption key used for the CMEK disk encryption.  Setting
+     * up disk encryption currently requires manual steps outside of this provider.
+     * The provided key must be in the same region as the SQL instance.  In order
+     * to use this feature, a special kind of service account must be created and
+     * granted permission on this key.  This step can currently only be done
+     * manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
+     * That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
+     * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
+     * 
+     */
     @InputImport(name="encryptionKeyName")
     private final @Nullable Input<String> encryptionKeyName;
 
@@ -47,6 +81,12 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.encryptionKeyName == null ? Input.empty() : this.encryptionKeyName;
     }
 
+    /**
+     * The name of the existing instance that will
+     * act as the master in the replication setup. Note, this requires the master to
+     * have `binary_log_enabled` set, as well as existing backups.
+     * 
+     */
     @InputImport(name="masterInstanceName")
     private final @Nullable Input<String> masterInstanceName;
 
@@ -54,6 +94,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.masterInstanceName == null ? Input.empty() : this.masterInstanceName;
     }
 
+    /**
+     * A name for this whitelist entry.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +105,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The full project ID of the source instance.`
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -68,6 +116,15 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region the instance will sit in. Note, Cloud SQL is not
+     * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
+     * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
+     * the provider region will be used instead, but this will be an apply-time error for instances if the provider
+     * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
+     * make sure you understand this.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -75,6 +132,11 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The configuration for replication. The
+     * configuration is detailed below. Valid only for MySQL instances.
+     * 
+     */
     @InputImport(name="replicaConfiguration")
     private final @Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
 
@@ -82,6 +144,13 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.replicaConfiguration == null ? Input.empty() : this.replicaConfiguration;
     }
 
+    /**
+     * The context needed to restore the database to a backup run. This field will
+     * cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
+     * **NOTE:** Restoring from a backup is an imperative action and not recommended via this provider. Adding or modifying this
+     * block during resource creation/update will trigger the restore action after the resource is created/updated.
+     * 
+     */
     @InputImport(name="restoreBackupContext")
     private final @Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
 
@@ -89,6 +158,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.restoreBackupContext == null ? Input.empty() : this.restoreBackupContext;
     }
 
+    /**
+     * Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
+     * 
+     */
     @InputImport(name="rootPassword")
     private final @Nullable Input<String> rootPassword;
 
@@ -96,6 +169,11 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
         return this.rootPassword == null ? Input.empty() : this.rootPassword;
     }
 
+    /**
+     * The settings to use for the database. The
+     * configuration is detailed below. Required if `clone` is not set.
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Input<DatabaseInstanceSettingsArgs> settings;
 

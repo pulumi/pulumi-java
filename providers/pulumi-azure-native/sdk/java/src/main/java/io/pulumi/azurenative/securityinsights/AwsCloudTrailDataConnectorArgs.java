@@ -15,6 +15,10 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
 
     public static final AwsCloudTrailDataConnectorArgs Empty = new AwsCloudTrailDataConnectorArgs();
 
+    /**
+     * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
+     * 
+     */
     @InputImport(name="awsRoleArn")
     private final @Nullable Input<String> awsRoleArn;
 
@@ -22,6 +26,10 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
         return this.awsRoleArn == null ? Input.empty() : this.awsRoleArn;
     }
 
+    /**
+     * Connector ID
+     * 
+     */
     @InputImport(name="dataConnectorId")
     private final @Nullable Input<String> dataConnectorId;
 
@@ -29,6 +37,10 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
         return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
     }
 
+    /**
+     * The available data types for the connector.
+     * 
+     */
     @InputImport(name="dataTypes")
     private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
 
@@ -36,6 +48,11 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
         return this.dataTypes == null ? Input.empty() : this.dataTypes;
     }
 
+    /**
+     * The kind of the data connector
+     * Expected value is 'AmazonWebServicesCloudTrail'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -43,6 +60,10 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
         return this.kind;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +71,10 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

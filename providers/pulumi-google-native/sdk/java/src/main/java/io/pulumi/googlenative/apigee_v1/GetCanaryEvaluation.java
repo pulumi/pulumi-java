@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCanaryEvaluation {
+/**
+ * Gets a CanaryEvaluation for an organization.
+ * 
+ */
     public static CompletableFuture<GetCanaryEvaluationResult> invokeAsync(GetCanaryEvaluationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getCanaryEvaluation", TypeShape.of(GetCanaryEvaluationResult.class), args == null ? GetCanaryEvaluationArgs.Empty : args, Utilities.withVersion(options));
     }

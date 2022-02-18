@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for a R environment.
+ * 
+ */
 public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelEnvironmentDefinitionRArgs Empty = new ModelEnvironmentDefinitionRArgs();
 
+    /**
+     * The packages from Bioconductor.
+     * 
+     */
     @InputImport(name="bioConductorPackages")
     private final @Nullable Input<List<String>> bioConductorPackages;
 
@@ -25,6 +33,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
         return this.bioConductorPackages == null ? Input.empty() : this.bioConductorPackages;
     }
 
+    /**
+     * The CRAN packages to use.
+     * 
+     */
     @InputImport(name="cranPackages")
     private final @Nullable Input<List<RCranPackageArgs>> cranPackages;
 
@@ -32,6 +44,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
         return this.cranPackages == null ? Input.empty() : this.cranPackages;
     }
 
+    /**
+     * The packages from custom urls.
+     * 
+     */
     @InputImport(name="customUrlPackages")
     private final @Nullable Input<List<String>> customUrlPackages;
 
@@ -39,6 +55,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
         return this.customUrlPackages == null ? Input.empty() : this.customUrlPackages;
     }
 
+    /**
+     * The packages directly from GitHub.
+     * 
+     */
     @InputImport(name="gitHubPackages")
     private final @Nullable Input<List<RGitHubPackageArgs>> gitHubPackages;
 
@@ -46,6 +66,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
         return this.gitHubPackages == null ? Input.empty() : this.gitHubPackages;
     }
 
+    /**
+     * The version of R to be installed
+     * 
+     */
     @InputImport(name="rVersion")
     private final @Nullable Input<String> rVersion;
 
@@ -53,6 +77,11 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
         return this.rVersion == null ? Input.empty() : this.rVersion;
     }
 
+    /**
+     * The Rscript path to use if an environment build is not required.
+     * The path specified gets used to call the user script.
+     * 
+     */
     @InputImport(name="rscriptPath")
     private final @Nullable Input<String> rscriptPath;
 
@@ -60,6 +89,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
         return this.rscriptPath == null ? Input.empty() : this.rscriptPath;
     }
 
+    /**
+     * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+     * 
+     */
     @InputImport(name="snapshotDate")
     private final @Nullable Input<String> snapshotDate;
 
@@ -67,6 +100,10 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
         return this.snapshotDate == null ? Input.empty() : this.snapshotDate;
     }
 
+    /**
+     * Indicates whether the environment is managed by user or by AzureML.
+     * 
+     */
     @InputImport(name="userManaged")
     private final @Nullable Input<Boolean> userManaged;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration to suppress records whose suppression conditions evaluate to true.
+ * 
+ */
 public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2RecordSuppressionArgs Empty = new GooglePrivacyDlpV2RecordSuppressionArgs();
 
+    /**
+     * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition;
 

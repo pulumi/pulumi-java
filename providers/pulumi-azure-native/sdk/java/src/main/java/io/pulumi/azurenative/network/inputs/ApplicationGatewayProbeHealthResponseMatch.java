@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application gateway probe health response match.
+ * 
+ */
 public final class ApplicationGatewayProbeHealthResponseMatch extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayProbeHealthResponseMatch Empty = new ApplicationGatewayProbeHealthResponseMatch();
 
+    /**
+     * Body that must be contained in the health response. Default value is empty.
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable String body;
 
@@ -22,6 +30,10 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends io.pulumi.
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
+    /**
+     * Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+     * 
+     */
     @InputImport(name="statusCodes")
     private final @Nullable List<String> statusCodes;
 

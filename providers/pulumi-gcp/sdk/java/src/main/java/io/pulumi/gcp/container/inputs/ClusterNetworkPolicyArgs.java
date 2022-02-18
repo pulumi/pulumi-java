@@ -15,6 +15,11 @@ public final class ClusterNetworkPolicyArgs extends io.pulumi.resources.Resource
 
     public static final ClusterNetworkPolicyArgs Empty = new ClusterNetworkPolicyArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -22,6 +27,10 @@ public final class ClusterNetworkPolicyArgs extends io.pulumi.resources.Resource
         return this.enabled;
     }
 
+    /**
+     * The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
+     * 
+     */
     @InputImport(name="provider")
     private final @Nullable Input<String> provider;
 

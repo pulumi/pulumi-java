@@ -17,6 +17,15 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
 
     public static final GetInstanceTemplateNetworkInterface Empty = new GetInstanceTemplateNetworkInterface();
 
+    /**
+     * Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Omit to ensure that the instance
+     * is not accessible from the Internet (this means that ssh provisioners will
+     * not work unless you are running the prvovider can send traffic to the instance's
+     * network (e.g. via tunnel or because it is running on another cloud instance
+     * on that network). This block can be repeated multiple times. Structure documented below.
+     * 
+     */
     @InputImport(name="accessConfigs", required=true)
     private final List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
 
@@ -24,6 +33,12 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
         return this.accessConfigs;
     }
 
+    /**
+     * An
+     * array of alias IP ranges for this network interface. Can only be specified for network
+     * interfaces on subnet-mode networks. Structure documented below.
+     * 
+     */
     @InputImport(name="aliasIpRanges", required=true)
     private final List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
 
@@ -45,6 +60,10 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
         return this.ipv6AccessType;
     }
 
+    /**
+     * The name of the instance template. One of `name` or `filter` must be provided.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -52,6 +71,12 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
         return this.name;
     }
 
+    /**
+     * The name or self_link of the network to attach this interface to.
+     * Use `network` attribute for Legacy or Auto subnetted networks and
+     * `subnetwork` for custom subnetted networks.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -59,6 +84,11 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
         return this.network;
     }
 
+    /**
+     * The private IP address to assign to the instance. If
+     * empty, the address will be automatically assigned.
+     * 
+     */
     @InputImport(name="networkIp", required=true)
     private final String networkIp;
 
@@ -87,6 +117,12 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
         return this.stackType;
     }
 
+    /**
+     * the name of the subnetwork to attach this interface
+     * to. The subnetwork must exist in the same `region` this instance will be
+     * created in. Either `network` or `subnetwork` must be provided.
+     * 
+     */
     @InputImport(name="subnetwork", required=true)
     private final String subnetwork;
 
@@ -94,6 +130,11 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
         return this.subnetwork;
     }
 
+    /**
+     * The ID of the project in which the subnetwork belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="subnetworkProject", required=true)
     private final String subnetworkProject;
 

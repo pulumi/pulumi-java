@@ -12,6 +12,10 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
 
     public static final GetFirewallPolicyRuleCollectionGroupArgs Empty = new GetFirewallPolicyRuleCollectionGroupArgs();
 
+    /**
+     * The name of the Firewall Policy.
+     * 
+     */
     @InputImport(name="firewallPolicyName", required=true)
     private final String firewallPolicyName;
 
@@ -19,6 +23,10 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
         return this.firewallPolicyName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the FirewallPolicyRuleCollectionGroup.
+     * 
+     */
     @InputImport(name="ruleCollectionGroupName", required=true)
     private final String ruleCollectionGroupName;
 

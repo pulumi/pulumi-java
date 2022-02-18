@@ -14,6 +14,10 @@ public final class DatabaseInstanceCloneGetArgs extends io.pulumi.resources.Reso
 
     public static final DatabaseInstanceCloneGetArgs Empty = new DatabaseInstanceCloneGetArgs();
 
+    /**
+     * The timestamp of the point in time that should be restored.
+     * 
+     */
     @InputImport(name="pointInTime")
     private final @Nullable Input<String> pointInTime;
 
@@ -21,6 +25,10 @@ public final class DatabaseInstanceCloneGetArgs extends io.pulumi.resources.Reso
         return this.pointInTime == null ? Input.empty() : this.pointInTime;
     }
 
+    /**
+     * Name of the source instance which will be cloned.
+     * 
+     */
     @InputImport(name="sourceInstanceName", required=true)
     private final Input<String> sourceInstanceName;
 

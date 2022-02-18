@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An indication that the compliance checks in the associated ComplianceNote were not satisfied for particular resources or a specified reason.
+ * 
+ */
 public final class ComplianceOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComplianceOccurrenceResponse Empty = new ComplianceOccurrenceResponse();
 
+    /**
+     * The reason for non compliance of these files.
+     * 
+     */
     @InputImport(name="nonComplianceReason", required=true)
     private final String nonComplianceReason;
 
@@ -21,6 +29,10 @@ public final class ComplianceOccurrenceResponse extends io.pulumi.resources.Invo
         return this.nonComplianceReason;
     }
 
+    /**
+     * A list of files which are violating compliance checks.
+     * 
+     */
     @InputImport(name="nonCompliantFiles", required=true)
     private final List<NonCompliantFileResponse> nonCompliantFiles;
 

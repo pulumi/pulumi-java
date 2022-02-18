@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Spark parameters.</p>
+ * 
+ */
 public final class DataSourceSparkParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceSparkParametersArgs Empty = new DataSourceSparkParametersArgs();
 
+    /**
+     * <p>Host.</p>
+     * 
+     */
     @InputImport(name="host", required=true)
     private final Input<String> host;
 
@@ -21,6 +29,10 @@ public final class DataSourceSparkParametersArgs extends io.pulumi.resources.Res
         return this.host;
     }
 
+    /**
+     * <p>Port.</p>
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Double> port;
 

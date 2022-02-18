@@ -14,8 +14,20 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class DataQualityJobDefinitionEndpointInput {
     private final String endpointName;
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     private final String localPath;
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     private final @Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType;
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     private final @Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode;
 
     @OutputCustomType.Constructor({"endpointName","localPath","s3DataDistributionType","s3InputMode"})
@@ -33,12 +45,24 @@ public final class DataQualityJobDefinitionEndpointInput {
     public String getEndpointName() {
         return this.endpointName;
     }
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     public String getLocalPath() {
         return this.localPath;
     }
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     public Optional<DataQualityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     public Optional<DataQualityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }

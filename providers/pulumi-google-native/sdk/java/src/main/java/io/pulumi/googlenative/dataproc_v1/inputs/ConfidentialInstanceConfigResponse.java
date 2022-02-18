@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs)
+ * 
+ */
 public final class ConfidentialInstanceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfidentialInstanceConfigResponse Empty = new ConfidentialInstanceConfigResponse();
 
+    /**
+     * Optional. Defines whether the instance should have confidential compute enabled.
+     * 
+     */
     @InputImport(name="enableConfidentialCompute", required=true)
     private final Boolean enableConfidentialCompute;
 

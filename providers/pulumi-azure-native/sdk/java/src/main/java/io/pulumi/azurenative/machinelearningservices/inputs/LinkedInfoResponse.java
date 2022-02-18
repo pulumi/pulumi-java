@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Info about origin if it is linked.
+ * 
+ */
 public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkedInfoResponse Empty = new LinkedInfoResponse();
 
+    /**
+     * LinkedId id.
+     * 
+     */
     @InputImport(name="linkedId")
     private final @Nullable String linkedId;
 
@@ -21,6 +29,10 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.linkedId == null ? Optional.empty() : Optional.ofNullable(this.linkedId);
     }
 
+    /**
+     * Linked resource name.
+     * 
+     */
     @InputImport(name="linkedResourceName")
     private final @Nullable String linkedResourceName;
 
@@ -28,6 +40,10 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.linkedResourceName == null ? Optional.empty() : Optional.ofNullable(this.linkedResourceName);
     }
 
+    /**
+     * Datastore origin
+     * 
+     */
     @InputImport(name="origin")
     private final @Nullable String origin;
 

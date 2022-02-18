@@ -15,10 +15,20 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * StorageClass describes the parameters for a class of storage for which PersistentVolumes can be dynamically provisioned.
+ * 
+ * StorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.
+ * 
+ */
 public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageClassArgs Empty = new StorageClassArgs();
 
+    /**
+     * AllowVolumeExpansion shows whether the storage class allow volume expand
+     * 
+     */
     @InputImport(name="allowVolumeExpansion")
     private final @Nullable Input<Boolean> allowVolumeExpansion;
 
@@ -26,6 +36,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowVolumeExpansion == null ? Input.empty() : this.allowVolumeExpansion;
     }
 
+    /**
+     * Restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature.
+     * 
+     */
     @InputImport(name="allowedTopologies")
     private final @Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies;
 
@@ -33,6 +47,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedTopologies == null ? Input.empty() : this.allowedTopologies;
     }
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -40,6 +58,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -47,6 +69,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -54,6 +80,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
+     * 
+     */
     @InputImport(name="mountOptions")
     private final @Nullable Input<List<String>> mountOptions;
 
@@ -61,6 +91,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
     }
 
+    /**
+     * Parameters holds the parameters for the provisioner that should create volumes of this storage class.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,String>> parameters;
 
@@ -68,6 +102,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Provisioner indicates the type of the provisioner.
+     * 
+     */
     @InputImport(name="provisioner", required=true)
     private final Input<String> provisioner;
 
@@ -75,6 +113,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioner;
     }
 
+    /**
+     * Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.
+     * 
+     */
     @InputImport(name="reclaimPolicy")
     private final @Nullable Input<String> reclaimPolicy;
 
@@ -82,6 +124,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.reclaimPolicy == null ? Input.empty() : this.reclaimPolicy;
     }
 
+    /**
+     * VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
+     * 
+     */
     @InputImport(name="volumeBindingMode")
     private final @Nullable Input<String> volumeBindingMode;
 

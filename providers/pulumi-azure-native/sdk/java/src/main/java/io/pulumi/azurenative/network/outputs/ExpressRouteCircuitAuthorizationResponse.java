@@ -11,12 +11,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExpressRouteCircuitAuthorizationResponse {
+    /**
+     * The authorization key.
+     * 
+     */
     private final @Nullable String authorizationKey;
+    /**
+     * The authorization use status.
+     * 
+     */
     private final @Nullable String authorizationUseStatus;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The provisioning state of the authorization resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Type of the resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"authorizationKey","authorizationUseStatus","etag","id","name","provisioningState","type"})
@@ -37,24 +65,52 @@ public final class ExpressRouteCircuitAuthorizationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The authorization key.
+     * 
+     */
     public Optional<String> getAuthorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
+    /**
+     * The authorization use status.
+     * 
+     */
     public Optional<String> getAuthorizationUseStatus() {
         return Optional.ofNullable(this.authorizationUseStatus);
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The provisioning state of the authorization resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

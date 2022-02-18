@@ -9,10 +9,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReverseShippingDetailsResponse {
+    /**
+     * Carrier Name for display purpose. Not to be used for any processing.
+     * 
+     */
     private final String carrierDisplayName;
+    /**
+     * Name of the carrier.
+     * 
+     */
     private final String carrierName;
+    /**
+     * SAS key to download the reverse shipment label of the package.
+     * 
+     */
     private final String sasKeyForLabel;
+    /**
+     * TrackingId of the package
+     * 
+     */
     private final String trackingId;
+    /**
+     * TrackingUrl of the package.
+     * 
+     */
     private final String trackingUrl;
 
     @OutputCustomType.Constructor({"carrierDisplayName","carrierName","sasKeyForLabel","trackingId","trackingUrl"})
@@ -29,18 +49,38 @@ public final class ReverseShippingDetailsResponse {
         this.trackingUrl = Objects.requireNonNull(trackingUrl);
     }
 
+    /**
+     * Carrier Name for display purpose. Not to be used for any processing.
+     * 
+     */
     public String getCarrierDisplayName() {
         return this.carrierDisplayName;
     }
+    /**
+     * Name of the carrier.
+     * 
+     */
     public String getCarrierName() {
         return this.carrierName;
     }
+    /**
+     * SAS key to download the reverse shipment label of the package.
+     * 
+     */
     public String getSasKeyForLabel() {
         return this.sasKeyForLabel;
     }
+    /**
+     * TrackingId of the package
+     * 
+     */
     public String getTrackingId() {
         return this.trackingId;
     }
+    /**
+     * TrackingUrl of the package.
+     * 
+     */
     public String getTrackingUrl() {
         return this.trackingUrl;
     }

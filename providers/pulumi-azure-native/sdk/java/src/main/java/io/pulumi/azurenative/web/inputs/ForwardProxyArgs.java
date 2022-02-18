@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of a forward proxy used to make the requests.
+ * 
+ */
 public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ForwardProxyArgs Empty = new ForwardProxyArgs();
 
+    /**
+     * The convention used to determine the url of the request made.
+     * 
+     */
     @InputImport(name="convention")
     private final @Nullable Input<ForwardProxyConvention> convention;
 
@@ -22,6 +30,10 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.convention == null ? Input.empty() : this.convention;
     }
 
+    /**
+     * The name of the header containing the host of the request.
+     * 
+     */
     @InputImport(name="customHostHeaderName")
     private final @Nullable Input<String> customHostHeaderName;
 
@@ -29,6 +41,10 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.customHostHeaderName == null ? Input.empty() : this.customHostHeaderName;
     }
 
+    /**
+     * The name of the header containing the scheme of the request.
+     * 
+     */
     @InputImport(name="customProtoHeaderName")
     private final @Nullable Input<String> customProtoHeaderName;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorScaleOutPolicy {
+    /**
+     * Specifies the CPU utilization percentage threshold at which connector scale out should trigger.
+     * 
+     */
     private final Integer cpuUtilizationPercentage;
 
     @OutputCustomType.Constructor({"cpuUtilizationPercentage"})
@@ -16,6 +20,10 @@ public final class ConnectorScaleOutPolicy {
         this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
     }
 
+    /**
+     * Specifies the CPU utilization percentage threshold at which connector scale out should trigger.
+     * 
+     */
     public Integer getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }

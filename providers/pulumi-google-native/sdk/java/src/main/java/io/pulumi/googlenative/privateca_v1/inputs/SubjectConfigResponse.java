@@ -9,10 +9,18 @@ import io.pulumi.googlenative.privateca_v1.inputs.SubjectResponse;
 import java.util.Objects;
 
 
+/**
+ * These values are used to create the distinguished name and subject alternative name fields in an X.509 certificate.
+ * 
+ */
 public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubjectConfigResponse Empty = new SubjectConfigResponse();
 
+    /**
+     * Contains distinguished name fields such as the common name, location and organization.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final SubjectResponse subject;
 
@@ -20,6 +28,10 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.subject;
     }
 
+    /**
+     * Optional. The subject alternative name fields.
+     * 
+     */
     @InputImport(name="subjectAltName", required=true)
     private final SubjectAltNamesResponse subjectAltName;
 

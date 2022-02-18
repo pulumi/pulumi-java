@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * The start time or end time for an hours of operation.
+ * 
+ */
 public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HoursOfOperationTimeSliceArgs Empty = new HoursOfOperationTimeSliceArgs();
 
+    /**
+     * The hours.
+     * 
+     */
     @InputImport(name="hours", required=true)
     private final Input<Integer> hours;
 
@@ -20,6 +28,10 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
         return this.hours;
     }
 
+    /**
+     * The minutes.
+     * 
+     */
     @InputImport(name="minutes", required=true)
     private final Input<Integer> minutes;
 

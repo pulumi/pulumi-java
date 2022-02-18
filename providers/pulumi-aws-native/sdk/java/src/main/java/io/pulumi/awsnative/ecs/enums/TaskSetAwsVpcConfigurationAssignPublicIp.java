@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Whether the task's elastic network interface receives a public IP address. The default value is DISABLED.
+     * 
+     */
     @EnumType
     public enum TaskSetAwsVpcConfigurationAssignPublicIp {
         Disabled("DISABLED"),

@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPublicTypeVersionResult {
+    /**
+     * The Amazon Resource Number (ARN) assigned to the public extension upon publication
+     * 
+     */
     private final @Nullable String publicTypeArn;
+    /**
+     * The publisher id assigned by CloudFormation for publishing in this region.
+     * 
+     */
     private final @Nullable String publisherId;
+    /**
+     * The Amazon Resource Number (ARN) of the extension with the versionId.
+     * 
+     */
     private final @Nullable String typeVersionArn;
 
     @OutputCustomType.Constructor({"publicTypeArn","publisherId","typeVersionArn"})
@@ -25,12 +37,24 @@ public final class GetPublicTypeVersionResult {
         this.typeVersionArn = typeVersionArn;
     }
 
+    /**
+     * The Amazon Resource Number (ARN) assigned to the public extension upon publication
+     * 
+     */
     public Optional<String> getPublicTypeArn() {
         return Optional.ofNullable(this.publicTypeArn);
     }
+    /**
+     * The publisher id assigned by CloudFormation for publishing in this region.
+     * 
+     */
     public Optional<String> getPublisherId() {
         return Optional.ofNullable(this.publisherId);
     }
+    /**
+     * The Amazon Resource Number (ARN) of the extension with the versionId.
+     * 
+     */
     public Optional<String> getTypeVersionArn() {
         return Optional.ofNullable(this.typeVersionArn);
     }

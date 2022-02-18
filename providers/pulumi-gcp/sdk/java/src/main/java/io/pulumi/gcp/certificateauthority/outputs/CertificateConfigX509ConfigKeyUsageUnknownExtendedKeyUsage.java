@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage {
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     private final List<Integer> objectIdPaths;
 
     @OutputCustomType.Constructor({"objectIdPaths"})
@@ -17,6 +21,10 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage {
         this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
     }
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     public List<Integer> getObjectIdPaths() {
         return this.objectIdPaths;
     }

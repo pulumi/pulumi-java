@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+ * 
+ */
 public final class DatasetFolderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetFolderArgs Empty = new DatasetFolderArgs();
 
+    /**
+     * The name of the folder that this Dataset is in.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

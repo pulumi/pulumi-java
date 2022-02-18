@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Document Database Collection sink.
+ * 
+ */
 public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DocumentDbCollectionSinkResponse Empty = new DocumentDbCollectionSinkResponse();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -22,6 +30,10 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -29,6 +41,10 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Nested properties separator. Default is . (dot). Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="nestingSeparator")
     private final @Nullable Object nestingSeparator;
 
@@ -36,6 +52,10 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
         return this.nestingSeparator == null ? Optional.empty() : Optional.ofNullable(this.nestingSeparator);
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Object sinkRetryCount;
 
@@ -43,6 +63,10 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Object sinkRetryWait;
 
@@ -50,6 +74,11 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
+    /**
+     * Copy sink type.
+     * Expected value is 'DocumentDbCollectionSink'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -57,6 +86,10 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Object writeBatchSize;
 
@@ -64,6 +97,10 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Object writeBatchTimeout;
 
@@ -71,6 +108,10 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 
+    /**
+     * Describes how to write data to Azure Cosmos DB. Type: string (or Expression with resultType string). Allowed values: insert and upsert.
+     * 
+     */
     @InputImport(name="writeBehavior")
     private final @Nullable Object writeBehavior;
 

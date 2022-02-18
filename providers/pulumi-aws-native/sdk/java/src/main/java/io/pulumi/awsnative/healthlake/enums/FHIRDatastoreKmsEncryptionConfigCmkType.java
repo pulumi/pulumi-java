@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
+     * 
+     */
     @EnumType
     public enum FHIRDatastoreKmsEncryptionConfigCmkType {
         CustomerManagedKmsKey("CUSTOMER_MANAGED_KMS_KEY"),

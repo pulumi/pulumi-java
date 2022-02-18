@@ -12,6 +12,10 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetFluidRelayServerArgs Empty = new GetFluidRelayServerArgs();
 
+    /**
+     * The resource name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * The resource group containing the resource.
+     * 
+     */
     @InputImport(name="resourceGroup", required=true)
     private final String resourceGroup;
 

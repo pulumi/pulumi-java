@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssistantAssociation {
+/**
+ * Definition of AWS::Wisdom::AssistantAssociation Resource Type
+ * 
+ */
     public static CompletableFuture<GetAssistantAssociationResult> invokeAsync(GetAssistantAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getAssistantAssociation", TypeShape.of(GetAssistantAssociationResult.class), args == null ? GetAssistantAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

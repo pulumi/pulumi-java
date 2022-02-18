@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PriorityLevelConfigurationReference {
+    /**
+     * `name` is the name of the priority level configuration being referenced Required.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class PriorityLevelConfigurationReference {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * `name` is the name of the priority level configuration being referenced Required.
+     * 
+     */
     public String getName() {
         return this.name;
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMembership {
+/**
+ * Gets the details of a Membership.
+ * 
+ */
     public static CompletableFuture<GetMembershipResult> invokeAsync(GetMembershipArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1:getMembership", TypeShape.of(GetMembershipResult.class), args == null ? GetMembershipArgs.Empty : args, Utilities.withVersion(options));
     }

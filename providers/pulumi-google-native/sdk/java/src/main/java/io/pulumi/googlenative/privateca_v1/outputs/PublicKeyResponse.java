@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PublicKeyResponse {
+    /**
+     * The format of the public key.
+     * 
+     */
     private final String format;
+    /**
+     * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+     * 
+     */
     private final String key;
 
     @OutputCustomType.Constructor({"format","key"})
@@ -20,9 +28,17 @@ public final class PublicKeyResponse {
         this.key = Objects.requireNonNull(key);
     }
 
+    /**
+     * The format of the public key.
+     * 
+     */
     public String getFormat() {
         return this.format;
     }
+    /**
+     * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+     * 
+     */
     public String getKey() {
         return this.key;
     }

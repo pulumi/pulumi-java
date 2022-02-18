@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of encryption in transit to the Kafka cluster.
+     * 
+     */
     @EnumType
     public enum ConnectorKafkaClusterEncryptionInTransitType {
         Plaintext("PLAINTEXT"),

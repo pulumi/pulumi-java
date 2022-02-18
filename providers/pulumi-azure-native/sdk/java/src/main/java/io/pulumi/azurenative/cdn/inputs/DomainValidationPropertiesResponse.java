@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The JSON object that contains the properties to validate a domain.
+ * 
+ */
 public final class DomainValidationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainValidationPropertiesResponse Empty = new DomainValidationPropertiesResponse();
 
+    /**
+     * The date time that the token expires
+     * 
+     */
     @InputImport(name="expirationDate", required=true)
     private final String expirationDate;
 
@@ -19,6 +27,10 @@ public final class DomainValidationPropertiesResponse extends io.pulumi.resource
         return this.expirationDate;
     }
 
+    /**
+     * Challenge used for DNS TXT record or file based validation
+     * 
+     */
     @InputImport(name="validationToken", required=true)
     private final String validationToken;
 

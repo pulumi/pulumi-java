@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure SKU definition.
+ * 
+ */
 public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureSkuArgs Empty = new AzureSkuArgs();
 
+    /**
+     * The number of instances of the cluster.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -25,6 +33,10 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * SKU name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,AzureSkuName>> name;
 
@@ -32,6 +44,10 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * SKU tier.
+     * 
+     */
     @InputImport(name="tier", required=true)
     private final Input<Either<String,AzureSkuTier>> tier;
 

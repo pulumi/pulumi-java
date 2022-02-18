@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Azure Active Directory Application
+ * 
+ */
 public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureActiveDirectoryAppResponse Empty = new AzureActiveDirectoryAppResponse();
 
+    /**
+     * Key used to authenticate to the Azure Active Directory Application
+     * 
+     */
     @InputImport(name="appKey", required=true)
     private final String appKey;
 
@@ -19,6 +27,10 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
         return this.appKey;
     }
 
+    /**
+     * Application ID of the Azure Active Directory Application
+     * 
+     */
     @InputImport(name="applicationId", required=true)
     private final String applicationId;
 
@@ -26,6 +38,10 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
         return this.applicationId;
     }
 
+    /**
+     * Tenant id of the customer
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 

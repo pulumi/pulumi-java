@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The appliance package support URLs.
+ * 
+ */
 public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationPackageSupportUrlsResponse Empty = new ApplicationPackageSupportUrlsResponse();
 
+    /**
+     * The government cloud support URL.
+     * 
+     */
     @InputImport(name="governmentCloud")
     private final @Nullable String governmentCloud;
 
@@ -21,6 +29,10 @@ public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resou
         return this.governmentCloud == null ? Optional.empty() : Optional.ofNullable(this.governmentCloud);
     }
 
+    /**
+     * The public azure support URL.
+     * 
+     */
     @InputImport(name="publicAzure")
     private final @Nullable String publicAzure;
 

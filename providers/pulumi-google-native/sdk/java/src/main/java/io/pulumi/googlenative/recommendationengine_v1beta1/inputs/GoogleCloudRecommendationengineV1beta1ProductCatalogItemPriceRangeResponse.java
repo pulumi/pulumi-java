@@ -8,10 +8,18 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * Product price range when there are a range of prices for different variations of the same product.
+ * 
+ */
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse Empty = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse();
 
+    /**
+     * The maximum product price.
+     * 
+     */
     @InputImport(name="max", required=true)
     private final Double max;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
         return this.max;
     }
 
+    /**
+     * The minimum product price.
+     * 
+     */
     @InputImport(name="min", required=true)
     private final Double min;
 

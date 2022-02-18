@@ -14,6 +14,11 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
 
     public static final EnvGroupAttachmentState Empty = new EnvGroupAttachmentState();
 
+    /**
+     * The Apigee environment group associated with the Apigee environment,
+     * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
+     * 
+     */
     @InputImport(name="envgroupId")
     private final @Nullable Input<String> envgroupId;
 
@@ -21,6 +26,10 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
         return this.envgroupId == null ? Input.empty() : this.envgroupId;
     }
 
+    /**
+     * The resource ID of the environment.
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<String> environment;
 
@@ -28,6 +37,10 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The name of the newly created attachment (output parameter).
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

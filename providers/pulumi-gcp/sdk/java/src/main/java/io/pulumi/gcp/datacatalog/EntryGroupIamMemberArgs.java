@@ -22,6 +22,10 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="entryGroup", required=true)
     private final Input<String> entryGroup;
 
@@ -36,6 +40,11 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
         return this.member;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,6 +59,12 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.datacatalog.EntryGroupIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

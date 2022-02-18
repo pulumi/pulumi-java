@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of the monitoring job.
+     * 
+     */
     @EnumType
     public enum MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus {
         Pending("Pending"),

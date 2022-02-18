@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The status of the storage insight.
+ * 
+ */
 public final class StorageInsightStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageInsightStatusResponse Empty = new StorageInsightStatusResponse();
 
+    /**
+     * Description of the state of the storage insight.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -21,6 +29,10 @@ public final class StorageInsightStatusResponse extends io.pulumi.resources.Invo
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The state of the storage insight connection to the workspace
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

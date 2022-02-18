@@ -13,63 +13,172 @@ import io.pulumi.gcp.firestore.inputs.DocumentState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * In Cloud Firestore, the unit of storage is the document. A document is a lightweight record
+ * that contains fields, which map to values. Each document is identified by a name.
+ * 
+ * To get more information about Document, see:
+ * 
+ * * [API documentation](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/firestore/docs/manage-data/add-data)
+ * 
+ * > **Warning:** This resource creates a Firestore Document on a project that already has
+ * Firestore enabled. If you haven't already enabled it, you can create a
+ * `gcp.appengine.Application` resource with `database_type` set to
+ * `"CLOUD_FIRESTORE"` to do so. Your Firestore location will be the same as
+ * the App Engine location specified.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Document can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:firestore/document:Document default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:firestore/document:Document")
 public class Document extends io.pulumi.resources.CustomResource {
+    /**
+     * The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
+     * 
+     */
     @OutputExport(name="collection", type=String.class, parameters={})
     private Output<String> collection;
 
+    /**
+     * @return The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
+     * 
+     */
     public Output<String> getCollection() {
         return this.collection;
     }
+    /**
+     * Creation timestamp in RFC3339 format.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Creation timestamp in RFC3339 format.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The Firestore database id. Defaults to `"(default)"`.
+     * 
+     */
     @OutputExport(name="database", type=String.class, parameters={})
     private Output</* @Nullable */ String> database;
 
+    /**
+     * @return The Firestore database id. Defaults to `"(default)"`.
+     * 
+     */
     public Output</* @Nullable */ String> getDatabase() {
         return this.database;
     }
+    /**
+     * The client-assigned document ID to use for this document during creation.
+     * 
+     */
     @OutputExport(name="documentId", type=String.class, parameters={})
     private Output<String> documentId;
 
+    /**
+     * @return The client-assigned document ID to use for this document during creation.
+     * 
+     */
     public Output<String> getDocumentId() {
         return this.documentId;
     }
+    /**
+     * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+     * 
+     */
     @OutputExport(name="fields", type=String.class, parameters={})
     private Output<String> fields;
 
+    /**
+     * @return The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+     * 
+     */
     public Output<String> getFields() {
         return this.fields;
     }
+    /**
+     * A server defined name for this index. Format:
+     * 'projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}'
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return A server defined name for this index. Format:
+     * 'projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}'
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A relative path to the collection this document exists within
+     * 
+     */
     @OutputExport(name="path", type=String.class, parameters={})
     private Output<String> path;
 
+    /**
+     * @return A relative path to the collection this document exists within
+     * 
+     */
     public Output<String> getPath() {
         return this.path;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Last update timestamp in RFC3339 format.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Last update timestamp in RFC3339 format.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Document(String name, DocumentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:firestore/document:Document", name, args == null ? DocumentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -85,6 +194,15 @@ public class Document extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Document get(String name, Input<String> id, @Nullable DocumentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Document(name, id, state, options);
     }

@@ -14,6 +14,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
 
     public static final SslCertState Empty = new SslCertState();
 
+    /**
+     * The actual certificate data for this client certificate.
+     * 
+     */
     @InputImport(name="cert")
     private final @Nullable Input<String> cert;
 
@@ -21,6 +25,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.cert == null ? Input.empty() : this.cert;
     }
 
+    /**
+     * The serial number extracted from the certificate data.
+     * 
+     */
     @InputImport(name="certSerialNumber")
     private final @Nullable Input<String> certSerialNumber;
 
@@ -28,6 +36,11 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.certSerialNumber == null ? Input.empty() : this.certSerialNumber;
     }
 
+    /**
+     * The common name to be used in the certificate to identify the
+     * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="commonName")
     private final @Nullable Input<String> commonName;
 
@@ -35,6 +48,11 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.commonName == null ? Input.empty() : this.commonName;
     }
 
+    /**
+     * The time when the certificate was created in RFC 3339 format,
+     * for example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -42,6 +60,11 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The time when the certificate expires in RFC 3339 format,
+     * for example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -49,6 +72,11 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * The name of the Cloud SQL instance. Changing this
+     * forces a new resource to be created.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -56,6 +84,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
+    /**
+     * The private key associated with the client certificate.
+     * 
+     */
     @InputImport(name="privateKey")
     private final @Nullable Input<String> privateKey;
 
@@ -63,6 +95,11 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.privateKey == null ? Input.empty() : this.privateKey;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -70,6 +107,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The CA cert of the server this client cert was generated from.
+     * 
+     */
     @InputImport(name="serverCaCert")
     private final @Nullable Input<String> serverCaCert;
 
@@ -77,6 +118,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
         return this.serverCaCert == null ? Input.empty() : this.serverCaCert;
     }
 
+    /**
+     * The SHA1 Fingerprint of the certificate.
+     * 
+     */
     @InputImport(name="sha1Fingerprint")
     private final @Nullable Input<String> sha1Fingerprint;
 

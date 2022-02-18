@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates the type of index.
+     * 
+     */
     @EnumType
     public enum IndexKind {
         Hash("Hash"),

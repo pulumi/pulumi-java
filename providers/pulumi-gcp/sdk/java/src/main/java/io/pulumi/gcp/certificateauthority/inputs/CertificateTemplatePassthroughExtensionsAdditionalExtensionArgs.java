@@ -14,6 +14,10 @@ public final class CertificateTemplatePassthroughExtensionsAdditionalExtensionAr
 
     public static final CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs Empty = new CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs();
 
+    /**
+     * Required. The parts of an OID path. The most significant parts of the path come first.
+     * 
+     */
     @InputImport(name="objectIdPaths", required=true)
     private final Input<List<Integer>> objectIdPaths;
 

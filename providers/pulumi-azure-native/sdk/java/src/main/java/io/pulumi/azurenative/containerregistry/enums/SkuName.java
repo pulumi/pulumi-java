@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The SKU name of the container registry. Required for registry creation.
+     * 
+     */
     @EnumType
     public enum SkuName {
         Classic("Classic"),

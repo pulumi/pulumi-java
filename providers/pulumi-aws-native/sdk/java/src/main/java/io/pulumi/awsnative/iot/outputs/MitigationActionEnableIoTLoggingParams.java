@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MitigationActionEnableIoTLoggingParams {
+    /**
+     *  Specifies which types of information are logged.
+     * 
+     */
     private final MitigationActionEnableIoTLoggingParamsLogLevel logLevel;
+    /**
+     *  The ARN of the IAM role used for logging.
+     * 
+     */
     private final String roleArnForLogging;
 
     @OutputCustomType.Constructor({"logLevel","roleArnForLogging"})
@@ -21,9 +29,17 @@ public final class MitigationActionEnableIoTLoggingParams {
         this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging);
     }
 
+    /**
+     *  Specifies which types of information are logged.
+     * 
+     */
     public MitigationActionEnableIoTLoggingParamsLogLevel getLogLevel() {
         return this.logLevel;
     }
+    /**
+     *  The ARN of the IAM role used for logging.
+     * 
+     */
     public String getRoleArnForLogging() {
         return this.roleArnForLogging;
     }

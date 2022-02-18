@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExplainQueryStepResponse {
+    /**
+     * Machine-readable operation type.
+     * 
+     */
     private final String kind;
+    /**
+     * Human-readable stage descriptions.
+     * 
+     */
     private final List<String> substeps;
 
     @OutputCustomType.Constructor({"kind","substeps"})
@@ -21,9 +29,17 @@ public final class ExplainQueryStepResponse {
         this.substeps = Objects.requireNonNull(substeps);
     }
 
+    /**
+     * Machine-readable operation type.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Human-readable stage descriptions.
+     * 
+     */
     public List<String> getSubsteps() {
         return this.substeps;
     }

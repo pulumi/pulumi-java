@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the storage settings for the HANA instance disks.
+ * 
+ */
 public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 
+    /**
+     * Specifies information related to SAP system IDs for the hana instance.
+     * 
+     */
     @InputImport(name="hanaSids")
     private final @Nullable Input<List<SAPSystemIDArgs>> hanaSids;
 
@@ -23,6 +31,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.hanaSids == null ? Input.empty() : this.hanaSids;
     }
 
+    /**
+     * Specifies information about the operating system disk used by the hana instance.
+     * 
+     */
     @InputImport(name="osDisks")
     private final @Nullable Input<List<DiskArgs>> osDisks;
 

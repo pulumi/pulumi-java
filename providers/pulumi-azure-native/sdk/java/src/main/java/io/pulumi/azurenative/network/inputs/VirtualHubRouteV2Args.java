@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VirtualHubRouteTableV2 route.
+ * 
+ */
 public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualHubRouteV2Args Empty = new VirtualHubRouteV2Args();
 
+    /**
+     * The type of destinations.
+     * 
+     */
     @InputImport(name="destinationType")
     private final @Nullable Input<String> destinationType;
 
@@ -22,6 +30,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
         return this.destinationType == null ? Input.empty() : this.destinationType;
     }
 
+    /**
+     * List of all destinations.
+     * 
+     */
     @InputImport(name="destinations")
     private final @Nullable Input<List<String>> destinations;
 
@@ -29,6 +41,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
         return this.destinations == null ? Input.empty() : this.destinations;
     }
 
+    /**
+     * The type of next hops.
+     * 
+     */
     @InputImport(name="nextHopType")
     private final @Nullable Input<String> nextHopType;
 
@@ -36,6 +52,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
         return this.nextHopType == null ? Input.empty() : this.nextHopType;
     }
 
+    /**
+     * NextHops ip address.
+     * 
+     */
     @InputImport(name="nextHops")
     private final @Nullable Input<List<String>> nextHops;
 

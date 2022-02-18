@@ -11,9 +11,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PSCredentialExecutionParameterResponse {
+    /**
+     * The parameter name
+     * 
+     */
     private final String name;
+    /**
+     * password for login
+     * 
+     */
     private final @Nullable String password;
+    /**
+     * The type of execution parameter
+     * Expected value is 'Credential'.
+     * 
+     */
     private final String type;
+    /**
+     * username for login
+     * 
+     */
     private final @Nullable String username;
 
     @OutputCustomType.Constructor({"name","password","type","username"})
@@ -28,15 +45,32 @@ public final class PSCredentialExecutionParameterResponse {
         this.username = username;
     }
 
+    /**
+     * The parameter name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * password for login
+     * 
+     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * The type of execution parameter
+     * Expected value is 'Credential'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * username for login
+     * 
+     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

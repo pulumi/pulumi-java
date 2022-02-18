@@ -16,6 +16,15 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
 
     public static final BudgetBudgetFilterGetArgs Empty = new BudgetBudgetFilterGetArgs();
 
+    /**
+     * A set of subaccounts of the form billingAccounts/{account_id},
+     * specifying that usage from only this set of subaccounts should
+     * be included in the budget. If a subaccount is set to the name of
+     * the parent account, usage from the parent account will be included.
+     * If the field is omitted, the report will include usage from the parent
+     * account and all subaccounts, if they exist.
+     * 
+     */
     @InputImport(name="creditTypes")
     private final @Nullable Input<List<String>> creditTypes;
 
@@ -23,6 +32,13 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
         return this.creditTypes == null ? Input.empty() : this.creditTypes;
     }
 
+    /**
+     * Specifies how credits should be treated when determining spend
+     * for threshold calculations.
+     * Default value is `INCLUDE_ALL_CREDITS`.
+     * Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
+     * 
+     */
     @InputImport(name="creditTypesTreatment")
     private final @Nullable Input<String> creditTypesTreatment;
 
@@ -30,6 +46,11 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
         return this.creditTypesTreatment == null ? Input.empty() : this.creditTypesTreatment;
     }
 
+    /**
+     * A single label and value pair specifying that usage from only
+     * this set of labeled resources should be included in the budget.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -37,6 +58,14 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * A set of projects of the form projects/{project_number},
+     * specifying that usage from only this set of projects should be
+     * included in the budget. If omitted, the report will include
+     * all usage for the billing account, regardless of which project
+     * the usage occurred on.
+     * 
+     */
     @InputImport(name="projects")
     private final @Nullable Input<List<String>> projects;
 
@@ -44,6 +73,15 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
         return this.projects == null ? Input.empty() : this.projects;
     }
 
+    /**
+     * A set of services of the form services/{service_id},
+     * specifying that usage from only this set of services should be
+     * included in the budget. If omitted, the report will include
+     * usage for all the services. The service names are available
+     * through the Catalog API:
+     * https://cloud.google.com/billing/v1/how-tos/catalog-api.
+     * 
+     */
     @InputImport(name="services")
     private final @Nullable Input<List<String>> services;
 
@@ -51,6 +89,15 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
         return this.services == null ? Input.empty() : this.services;
     }
 
+    /**
+     * A set of subaccounts of the form billingAccounts/{account_id},
+     * specifying that usage from only this set of subaccounts should
+     * be included in the budget. If a subaccount is set to the name of
+     * the parent account, usage from the parent account will be included.
+     * If the field is omitted, the report will include usage from the parent
+     * account and all subaccounts, if they exist.
+     * 
+     */
     @InputImport(name="subaccounts")
     private final @Nullable Input<List<String>> subaccounts;
 

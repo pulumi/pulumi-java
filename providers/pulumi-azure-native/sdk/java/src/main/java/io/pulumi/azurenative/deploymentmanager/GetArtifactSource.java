@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArtifactSource {
+/**
+ * The resource that defines the source location where the artifacts are located.
+ * API Version: 2019-11-01-preview.
+ * 
+ *
+ * The resource that defines the source location where the artifacts are located.
+ * 
+ */
     public static CompletableFuture<GetArtifactSourceResult> invokeAsync(GetArtifactSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getArtifactSource", TypeShape.of(GetArtifactSourceResult.class), args == null ? GetArtifactSourceArgs.Empty : args, Utilities.withVersion(options));
     }

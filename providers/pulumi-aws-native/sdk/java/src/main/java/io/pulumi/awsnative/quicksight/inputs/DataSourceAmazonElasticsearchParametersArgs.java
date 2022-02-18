@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Amazon Elasticsearch Service parameters.</p>
+ * 
+ */
 public final class DataSourceAmazonElasticsearchParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceAmazonElasticsearchParametersArgs Empty = new DataSourceAmazonElasticsearchParametersArgs();
 
+    /**
+     * <p>The Amazon Elasticsearch Service domain.</p>
+     * 
+     */
     @InputImport(name="domain", required=true)
     private final Input<String> domain;
 

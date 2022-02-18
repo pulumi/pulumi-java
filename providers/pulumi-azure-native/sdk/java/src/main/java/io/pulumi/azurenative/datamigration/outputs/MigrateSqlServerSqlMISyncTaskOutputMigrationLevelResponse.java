@@ -10,18 +10,71 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
+    /**
+     * Count of databases
+     * 
+     */
     private final Integer databaseCount;
+    /**
+     * Number of database level errors
+     * 
+     */
     private final Integer databaseErrorCount;
+    /**
+     * Migration end time
+     * 
+     */
     private final String endedOn;
+    /**
+     * Result identifier
+     * 
+     */
     private final String id;
+    /**
+     * Result type
+     * Expected value is 'MigrationLevelOutput'.
+     * 
+     */
     private final String resultType;
+    /**
+     * Source server brand version
+     * 
+     */
     private final String sourceServerBrandVersion;
+    /**
+     * Source server name
+     * 
+     */
     private final String sourceServerName;
+    /**
+     * Source server version
+     * 
+     */
     private final String sourceServerVersion;
+    /**
+     * Migration start time
+     * 
+     */
     private final String startedOn;
+    /**
+     * Current state of migration
+     * 
+     */
     private final String state;
+    /**
+     * Target server brand version
+     * 
+     */
     private final String targetServerBrandVersion;
+    /**
+     * Target server name
+     * 
+     */
     private final String targetServerName;
+    /**
+     * Target server version
+     * 
+     */
     private final String targetServerVersion;
 
     @OutputCustomType.Constructor({"databaseCount","databaseErrorCount","endedOn","id","resultType","sourceServerBrandVersion","sourceServerName","sourceServerVersion","startedOn","state","targetServerBrandVersion","targetServerName","targetServerVersion"})
@@ -54,42 +107,95 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
         this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
     }
 
+    /**
+     * Count of databases
+     * 
+     */
     public Integer getDatabaseCount() {
         return this.databaseCount;
     }
+    /**
+     * Number of database level errors
+     * 
+     */
     public Integer getDatabaseErrorCount() {
         return this.databaseErrorCount;
     }
+    /**
+     * Migration end time
+     * 
+     */
     public String getEndedOn() {
         return this.endedOn;
     }
+    /**
+     * Result identifier
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Result type
+     * Expected value is 'MigrationLevelOutput'.
+     * 
+     */
     public String getResultType() {
         return this.resultType;
     }
+    /**
+     * Source server brand version
+     * 
+     */
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
+    /**
+     * Source server name
+     * 
+     */
     public String getSourceServerName() {
         return this.sourceServerName;
     }
+    /**
+     * Source server version
+     * 
+     */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
+    /**
+     * Migration start time
+     * 
+     */
     public String getStartedOn() {
         return this.startedOn;
     }
+    /**
+     * Current state of migration
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * Target server brand version
+     * 
+     */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
+    /**
+     * Target server name
+     * 
+     */
     public String getTargetServerName() {
         return this.targetServerName;
     }
+    /**
+     * Target server version
+     * 
+     */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }

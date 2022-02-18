@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>VPC connection properties.</p>
+ * 
+ */
 public final class DataSourceVpcConnectionProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceVpcConnectionProperties Empty = new DataSourceVpcConnectionProperties();
 
+    /**
+     * <p>The Amazon Resource Name (ARN) for the VPC connection.</p>
+     * 
+     */
     @InputImport(name="vpcConnectionArn", required=true)
     private final String vpcConnectionArn;
 

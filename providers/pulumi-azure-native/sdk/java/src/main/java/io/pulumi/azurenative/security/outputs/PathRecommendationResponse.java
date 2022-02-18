@@ -15,12 +15,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PathRecommendationResponse {
+    /**
+     * The recommendation action of the machine or rule
+     * 
+     */
     private final @Nullable String action;
+    /**
+     * Whether the application is commonly run on the machine
+     * 
+     */
     private final @Nullable Boolean common;
+    /**
+     * The configuration status of the machines group or machine or rule
+     * 
+     */
     private final @Nullable String configurationStatus;
+    /**
+     * The type of the file (for Linux files - Executable is used)
+     * 
+     */
     private final @Nullable String fileType;
+    /**
+     * The full path of the file, or an identifier of the application
+     * 
+     */
     private final @Nullable String path;
+    /**
+     * Represents the publisher information of a process/rule
+     * 
+     */
     private final @Nullable PublisherInfoResponse publisherInfo;
+    /**
+     * The type of the rule to be allowed
+     * 
+     */
     private final @Nullable String type;
     private final @Nullable List<String> userSids;
     private final @Nullable List<UserRecommendationResponse> usernames;
@@ -47,24 +75,52 @@ public final class PathRecommendationResponse {
         this.usernames = usernames;
     }
 
+    /**
+     * The recommendation action of the machine or rule
+     * 
+     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
+    /**
+     * Whether the application is commonly run on the machine
+     * 
+     */
     public Optional<Boolean> getCommon() {
         return Optional.ofNullable(this.common);
     }
+    /**
+     * The configuration status of the machines group or machine or rule
+     * 
+     */
     public Optional<String> getConfigurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
+    /**
+     * The type of the file (for Linux files - Executable is used)
+     * 
+     */
     public Optional<String> getFileType() {
         return Optional.ofNullable(this.fileType);
     }
+    /**
+     * The full path of the file, or an identifier of the application
+     * 
+     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+    /**
+     * Represents the publisher information of a process/rule
+     * 
+     */
     public Optional<PublisherInfoResponse> getPublisherInfo() {
         return Optional.ofNullable(this.publisherInfo);
     }
+    /**
+     * The type of the rule to be allowed
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

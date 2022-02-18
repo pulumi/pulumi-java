@@ -12,6 +12,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecretArgs Empty = new GetSecretArgs();
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -19,6 +23,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the Secret under the profile.
+     * 
+     */
     @InputImport(name="secretName", required=true)
     private final String secretName;
 

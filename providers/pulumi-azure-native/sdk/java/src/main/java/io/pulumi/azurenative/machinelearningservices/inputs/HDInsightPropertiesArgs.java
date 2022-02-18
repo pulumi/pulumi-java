@@ -16,6 +16,10 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
 
     public static final HDInsightPropertiesArgs Empty = new HDInsightPropertiesArgs();
 
+    /**
+     * Public IP address of the master node of the cluster.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -23,6 +27,10 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * Admin credentials for master node of the cluster
+     * 
+     */
     @InputImport(name="administratorAccount")
     private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
 
@@ -30,6 +38,10 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.administratorAccount == null ? Input.empty() : this.administratorAccount;
     }
 
+    /**
+     * Port open for ssh connections on the master node of the cluster.
+     * 
+     */
     @InputImport(name="sshPort")
     private final @Nullable Input<Integer> sshPort;
 

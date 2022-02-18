@@ -16,6 +16,11 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
 
     public static final InstanceBootDiskGetArgs Empty = new InstanceBootDiskGetArgs();
 
+    /**
+     * Whether the disk will be auto-deleted when the instance
+     * is deleted. Defaults to true.
+     * 
+     */
     @InputImport(name="autoDelete")
     private final @Nullable Input<Boolean> autoDelete;
 
@@ -23,6 +28,11 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
     }
 
+    /**
+     * Name with which the attached disk will be accessible
+     * under `/dev/disk/by-id/google-*`
+     * 
+     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -30,6 +40,13 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
+    /**
+     * A 256-bit [customer-supplied encryption key]
+     * (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+     * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
+     * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
+     * 
+     */
     @InputImport(name="diskEncryptionKeyRaw")
     private final @Nullable Input<String> diskEncryptionKeyRaw;
 
@@ -44,6 +61,12 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
         return this.diskEncryptionKeySha256 == null ? Input.empty() : this.diskEncryptionKeySha256;
     }
 
+    /**
+     * Parameters for a new disk that will be created
+     * alongside the new instance. Either `initialize_params` or `source` must be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="initializeParams")
     private final @Nullable Input<InstanceBootDiskInitializeParamsGetArgs> initializeParams;
 
@@ -51,6 +74,12 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
         return this.initializeParams == null ? Input.empty() : this.initializeParams;
     }
 
+    /**
+     * The self_link of the encryption key that is
+     * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
+     * and `disk_encryption_key_raw` may be set.
+     * 
+     */
     @InputImport(name="kmsKeySelfLink")
     private final @Nullable Input<String> kmsKeySelfLink;
 
@@ -58,6 +87,13 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
     }
 
+    /**
+     * Either "READ_ONLY" or "READ_WRITE", defaults to "READ_WRITE"
+     * If you have a persistent disk with data that you want to share
+     * between multiple instances, detach it from any read-write instances and
+     * attach it to one or more instances in read-only mode.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -65,6 +101,10 @@ public final class InstanceBootDiskGetArgs extends io.pulumi.resources.ResourceA
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The name or self_link of the disk to attach to this instance.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 

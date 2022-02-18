@@ -16,6 +16,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
 
     public static final MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse Empty = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse();
 
+    /**
+     * Error message
+     * 
+     */
     @InputImport(name="errorMessage")
     private final @Nullable String errorMessage;
 
@@ -23,6 +27,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
+    /**
+     * List of error events.
+     * 
+     */
     @InputImport(name="events")
     private final @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
 
@@ -30,6 +38,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
         return this.events == null ? List.of() : this.events;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -37,6 +49,11 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
         return this.id;
     }
 
+    /**
+     * Result type
+     * Expected value is 'DatabaseLevelErrorOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 

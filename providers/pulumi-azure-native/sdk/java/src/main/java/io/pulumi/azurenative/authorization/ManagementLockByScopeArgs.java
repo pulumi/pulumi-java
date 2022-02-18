@@ -18,6 +18,10 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
 
     public static final ManagementLockByScopeArgs Empty = new ManagementLockByScopeArgs();
 
+    /**
+     * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
+     * 
+     */
     @InputImport(name="level", required=true)
     private final Input<Either<String,LockLevel>> level;
 
@@ -25,6 +29,10 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
         return this.level;
     }
 
+    /**
+     * The name of lock.
+     * 
+     */
     @InputImport(name="lockName")
     private final @Nullable Input<String> lockName;
 
@@ -32,6 +40,10 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
         return this.lockName == null ? Input.empty() : this.lockName;
     }
 
+    /**
+     * Notes about the lock. Maximum of 512 characters.
+     * 
+     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -39,6 +51,10 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
         return this.notes == null ? Input.empty() : this.notes;
     }
 
+    /**
+     * The owners of the lock.
+     * 
+     */
     @InputImport(name="owners")
     private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
 
@@ -46,6 +62,10 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
         return this.owners == null ? Input.empty() : this.owners;
     }
 
+    /**
+     * The scope for the lock. When providing a scope for the assignment, use '/subscriptions/{subscriptionId}' for subscriptions, '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}' for resource groups, and '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePathIfPresent}/{resourceType}/{resourceName}' for resources.
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

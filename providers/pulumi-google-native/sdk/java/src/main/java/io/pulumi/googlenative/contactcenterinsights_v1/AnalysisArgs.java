@@ -28,6 +28,10 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

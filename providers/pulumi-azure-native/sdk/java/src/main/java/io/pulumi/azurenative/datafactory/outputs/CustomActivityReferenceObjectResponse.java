@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomActivityReferenceObjectResponse {
+    /**
+     * Dataset references.
+     * 
+     */
     private final @Nullable List<DatasetReferenceResponse> datasets;
+    /**
+     * Linked service references.
+     * 
+     */
     private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
     @OutputCustomType.Constructor({"datasets","linkedServices"})
@@ -23,9 +31,17 @@ public final class CustomActivityReferenceObjectResponse {
         this.linkedServices = linkedServices;
     }
 
+    /**
+     * Dataset references.
+     * 
+     */
     public List<DatasetReferenceResponse> getDatasets() {
         return this.datasets == null ? List.of() : this.datasets;
     }
+    /**
+     * Linked service references.
+     * 
+     */
     public List<LinkedServiceReferenceResponse> getLinkedServices() {
         return this.linkedServices == null ? List.of() : this.linkedServices;
     }

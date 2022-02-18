@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * FSGroupStrategyOptions defines the strategy type and options used to create the strategy.
+ * 
+ */
 public final class FSGroupStrategyOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FSGroupStrategyOptionsArgs Empty = new FSGroupStrategyOptionsArgs();
 
+    /**
+     * ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
+     * 
+     */
     @InputImport(name="ranges")
     private final @Nullable Input<List<IDRangeArgs>> ranges;
 
@@ -23,6 +31,10 @@ public final class FSGroupStrategyOptionsArgs extends io.pulumi.resources.Resour
         return this.ranges == null ? Input.empty() : this.ranges;
     }
 
+    /**
+     * rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
+     * 
+     */
     @InputImport(name="rule")
     private final @Nullable Input<String> rule;
 

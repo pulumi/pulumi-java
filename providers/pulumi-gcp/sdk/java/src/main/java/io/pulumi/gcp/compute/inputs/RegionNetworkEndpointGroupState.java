@@ -17,6 +17,12 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
 
     public static final RegionNetworkEndpointGroupState Empty = new RegionNetworkEndpointGroupState();
 
+    /**
+     * Only valid when networkEndpointType is "SERVERLESS".
+     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="appEngine")
     private final @Nullable Input<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
 
@@ -24,6 +30,12 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
         return this.appEngine == null ? Input.empty() : this.appEngine;
     }
 
+    /**
+     * Only valid when networkEndpointType is "SERVERLESS".
+     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudFunction")
     private final @Nullable Input<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
 
@@ -31,6 +43,12 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
     }
 
+    /**
+     * Only valid when networkEndpointType is "SERVERLESS".
+     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudRun")
     private final @Nullable Input<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
 
@@ -38,6 +56,11 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
         return this.cloudRun == null ? Input.empty() : this.cloudRun;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -45,6 +68,16 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +85,12 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
+     * Default value is `SERVERLESS`.
+     * Possible values are `SERVERLESS`.
+     * 
+     */
     @InputImport(name="networkEndpointType")
     private final @Nullable Input<String> networkEndpointType;
 
@@ -59,6 +98,11 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
         return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -66,6 +110,10 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A reference to the region where the Serverless NEGs Reside.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -73,6 +121,10 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 

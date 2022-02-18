@@ -21,135 +21,324 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The streaming endpoint.
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:media:StreamingEndpoint myStreamingEndpoint1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/streamingendpoints/myStreamingEndpoint1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:media:StreamingEndpoint")
 public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
+    /**
+     * The access control definition of the streaming endpoint.
+     * 
+     */
     @OutputExport(name="accessControl", type=StreamingEndpointAccessControlResponse.class, parameters={})
     private Output</* @Nullable */ StreamingEndpointAccessControlResponse> accessControl;
 
+    /**
+     * @return The access control definition of the streaming endpoint.
+     * 
+     */
     public Output</* @Nullable */ StreamingEndpointAccessControlResponse> getAccessControl() {
         return this.accessControl;
     }
+    /**
+     * This feature is deprecated, do not set a value for this property.
+     * 
+     */
     @OutputExport(name="availabilitySetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilitySetName;
 
+    /**
+     * @return This feature is deprecated, do not set a value for this property.
+     * 
+     */
     public Output</* @Nullable */ String> getAvailabilitySetName() {
         return this.availabilitySetName;
     }
+    /**
+     * The CDN enabled flag.
+     * 
+     */
     @OutputExport(name="cdnEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cdnEnabled;
 
+    /**
+     * @return The CDN enabled flag.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getCdnEnabled() {
         return this.cdnEnabled;
     }
+    /**
+     * The CDN profile name.
+     * 
+     */
     @OutputExport(name="cdnProfile", type=String.class, parameters={})
     private Output</* @Nullable */ String> cdnProfile;
 
+    /**
+     * @return The CDN profile name.
+     * 
+     */
     public Output</* @Nullable */ String> getCdnProfile() {
         return this.cdnProfile;
     }
+    /**
+     * The CDN provider name.
+     * 
+     */
     @OutputExport(name="cdnProvider", type=String.class, parameters={})
     private Output</* @Nullable */ String> cdnProvider;
 
+    /**
+     * @return The CDN provider name.
+     * 
+     */
     public Output</* @Nullable */ String> getCdnProvider() {
         return this.cdnProvider;
     }
+    /**
+     * The exact time the streaming endpoint was created.
+     * 
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
+    /**
+     * @return The exact time the streaming endpoint was created.
+     * 
+     */
     public Output<String> getCreated() {
         return this.created;
     }
+    /**
+     * The streaming endpoint access policies.
+     * 
+     */
     @OutputExport(name="crossSiteAccessPolicies", type=CrossSiteAccessPoliciesResponse.class, parameters={})
     private Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies;
 
+    /**
+     * @return The streaming endpoint access policies.
+     * 
+     */
     public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> getCrossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies;
     }
+    /**
+     * The custom host names of the streaming endpoint
+     * 
+     */
     @OutputExport(name="customHostNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customHostNames;
 
+    /**
+     * @return The custom host names of the streaming endpoint
+     * 
+     */
     public Output</* @Nullable */ List<String>> getCustomHostNames() {
         return this.customHostNames;
     }
+    /**
+     * The streaming endpoint description.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The streaming endpoint description.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The free trial expiration time.
+     * 
+     */
     @OutputExport(name="freeTrialEndTime", type=String.class, parameters={})
     private Output<String> freeTrialEndTime;
 
+    /**
+     * @return The free trial expiration time.
+     * 
+     */
     public Output<String> getFreeTrialEndTime() {
         return this.freeTrialEndTime;
     }
+    /**
+     * The streaming endpoint host name.
+     * 
+     */
     @OutputExport(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
+    /**
+     * @return The streaming endpoint host name.
+     * 
+     */
     public Output<String> getHostName() {
         return this.hostName;
     }
+    /**
+     * The exact time the streaming endpoint was last modified.
+     * 
+     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
+    /**
+     * @return The exact time the streaming endpoint was last modified.
+     * 
+     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Max cache age
+     * 
+     */
     @OutputExport(name="maxCacheAge", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxCacheAge;
 
+    /**
+     * @return Max cache age
+     * 
+     */
     public Output</* @Nullable */ Double> getMaxCacheAge() {
         return this.maxCacheAge;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the streaming endpoint.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the streaming endpoint.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource state of the streaming endpoint.
+     * 
+     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
+    /**
+     * @return The resource state of the streaming endpoint.
+     * 
+     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
+    /**
+     * The number of scale units. Use the Scale operation to adjust this value.
+     * 
+     */
     @OutputExport(name="scaleUnits", type=Integer.class, parameters={})
     private Output<Integer> scaleUnits;
 
+    /**
+     * @return The number of scale units. Use the Scale operation to adjust this value.
+     * 
+     */
     public Output<Integer> getScaleUnits() {
         return this.scaleUnits;
     }
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StreamingEndpoint(String name, StreamingEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:StreamingEndpoint", name, args == null ? StreamingEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -173,6 +362,14 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StreamingEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StreamingEndpoint(name, id, options);
     }

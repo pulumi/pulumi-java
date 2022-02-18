@@ -14,6 +14,11 @@ public final class ClusterIdentityServiceConfigArgs extends io.pulumi.resources.
 
     public static final ClusterIdentityServiceConfigArgs Empty = new ClusterIdentityServiceConfigArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2LDiversityResultResponse {
+    /**
+     * Histogram of l-diversity equivalence class sensitive value frequencies.
+     * 
+     */
     private final List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
 
     @OutputCustomType.Constructor({"sensitiveValueFrequencyHistogramBuckets"})
@@ -17,6 +21,10 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse {
         this.sensitiveValueFrequencyHistogramBuckets = Objects.requireNonNull(sensitiveValueFrequencyHistogramBuckets);
     }
 
+    /**
+     * Histogram of l-diversity equivalence class sensitive value frequencies.
+     * 
+     */
     public List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> getSensitiveValueFrequencyHistogramBuckets() {
         return this.sensitiveValueFrequencyHistogramBuckets;
     }

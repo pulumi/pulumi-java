@@ -15,6 +15,11 @@ public final class ResourcePolicyGroupPlacementPolicyGetArgs extends io.pulumi.r
 
     public static final ResourcePolicyGroupPlacementPolicyGetArgs Empty = new ResourcePolicyGroupPlacementPolicyGetArgs();
 
+    /**
+     * The number of availability domains instances will be spread across. If two instances are in different
+     * availability domain, they will not be put in the same low latency network
+     * 
+     */
     @InputImport(name="availabilityDomainCount")
     private final @Nullable Input<Integer> availabilityDomainCount;
 
@@ -22,6 +27,14 @@ public final class ResourcePolicyGroupPlacementPolicyGetArgs extends io.pulumi.r
         return this.availabilityDomainCount == null ? Input.empty() : this.availabilityDomainCount;
     }
 
+    /**
+     * Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+     * Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+     * with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+     * attached.
+     * Possible values are `COLLOCATED`.
+     * 
+     */
     @InputImport(name="collocation")
     private final @Nullable Input<String> collocation;
 
@@ -29,6 +42,10 @@ public final class ResourcePolicyGroupPlacementPolicyGetArgs extends io.pulumi.r
         return this.collocation == null ? Input.empty() : this.collocation;
     }
 
+    /**
+     * Number of vms in this placement group.
+     * 
+     */
     @InputImport(name="vmCount")
     private final @Nullable Input<Integer> vmCount;
 

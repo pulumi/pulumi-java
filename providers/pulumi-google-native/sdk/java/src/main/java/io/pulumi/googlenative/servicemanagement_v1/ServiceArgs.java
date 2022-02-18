@@ -14,6 +14,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * ID of the project that produces and owns this service.
+     * 
+     */
     @InputImport(name="producerProjectId")
     private final @Nullable Input<String> producerProjectId;
 
@@ -21,6 +25,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.producerProjectId == null ? Input.empty() : this.producerProjectId;
     }
 
+    /**
+     * The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connection status
+ * 
+ */
 public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionStatusDefinitionArgs Empty = new ConnectionStatusDefinitionArgs();
 
+    /**
+     * Connection error
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable Input<ConnectionErrorArgs> error;
 
@@ -22,6 +30,10 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
         return this.error == null ? Input.empty() : this.error;
     }
 
+    /**
+     * The gateway status
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -29,6 +41,10 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * Target of the error
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 

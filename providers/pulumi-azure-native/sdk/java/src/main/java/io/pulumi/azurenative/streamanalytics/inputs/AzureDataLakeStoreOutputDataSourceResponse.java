@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes an Azure Data Lake Store output data source.
+ * 
+ */
 public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDataLakeStoreOutputDataSourceResponse Empty = new AzureDataLakeStoreOutputDataSourceResponse();
 
+    /**
+     * The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="accountName")
     private final @Nullable String accountName;
 
@@ -21,6 +29,10 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
+    /**
+     * The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
+     * 
+     */
     @InputImport(name="dateFormat")
     private final @Nullable String dateFormat;
 
@@ -28,6 +40,10 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
         return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
     }
 
+    /**
+     * The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="filePathPrefix")
     private final @Nullable String filePathPrefix;
 
@@ -35,6 +51,10 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
         return this.filePathPrefix == null ? Optional.empty() : Optional.ofNullable(this.filePathPrefix);
     }
 
+    /**
+     * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="refreshToken")
     private final @Nullable String refreshToken;
 
@@ -42,6 +62,10 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
         return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
     }
 
+    /**
+     * The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 
@@ -49,6 +73,10 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
+    /**
+     * The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
+     * 
+     */
     @InputImport(name="timeFormat")
     private final @Nullable String timeFormat;
 
@@ -56,6 +84,10 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
         return this.timeFormat == null ? Optional.empty() : Optional.ofNullable(this.timeFormat);
     }
 
+    /**
+     * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * 
+     */
     @InputImport(name="tokenUserDisplayName")
     private final @Nullable String tokenUserDisplayName;
 
@@ -63,6 +95,10 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
         return this.tokenUserDisplayName == null ? Optional.empty() : Optional.ofNullable(this.tokenUserDisplayName);
     }
 
+    /**
+     * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * 
+     */
     @InputImport(name="tokenUserPrincipalName")
     private final @Nullable String tokenUserPrincipalName;
 
@@ -70,6 +106,11 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
         return this.tokenUserPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.tokenUserPrincipalName);
     }
 
+    /**
+     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is 'Microsoft.DataLake/Accounts'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

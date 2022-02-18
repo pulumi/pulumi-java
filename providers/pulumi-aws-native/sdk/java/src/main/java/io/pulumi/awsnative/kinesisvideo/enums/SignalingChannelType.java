@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
+     * 
+     */
     @EnumType
     public enum SignalingChannelType {
         SingleMaster("SINGLE_MASTER");

@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProjectSample {
+    /**
+     * Sample size
+     * 
+     */
     private final @Nullable Integer size;
+    /**
+     * Sample type
+     * 
+     */
     private final ProjectSampleType type;
 
     @OutputCustomType.Constructor({"size","type"})
@@ -23,9 +31,17 @@ public final class ProjectSample {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Sample size
+     * 
+     */
     public Optional<Integer> getSize() {
         return Optional.ofNullable(this.size);
     }
+    /**
+     * Sample type
+     * 
+     */
     public ProjectSampleType getType() {
         return this.type;
     }

@@ -18,6 +18,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventSourceArgs Empty = new EventSourceArgs();
 
+    /**
+     * The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     @InputImport(name="environmentName", required=true)
     private final Input<String> environmentName;
 
@@ -25,6 +29,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentName;
     }
 
+    /**
+     * Name of the event source.
+     * 
+     */
     @InputImport(name="eventSourceName")
     private final @Nullable Input<String> eventSourceName;
 
@@ -32,6 +40,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventSourceName == null ? Input.empty() : this.eventSourceName;
     }
 
+    /**
+     * The kind of the event source.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,EventSourceKind>> kind;
 
@@ -39,6 +51,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * 
+     */
     @InputImport(name="localTimestamp")
     private final @Nullable Input<LocalTimestampArgs> localTimestamp;
 
@@ -46,6 +62,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.localTimestamp == null ? Input.empty() : this.localTimestamp;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,6 +73,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +84,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Key-value pairs of additional properties for the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

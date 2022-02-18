@@ -12,11 +12,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectivityTestSource {
+    /**
+     * A Compute Engine instance URI.
+     * 
+     */
     private final @Nullable String instance;
+    /**
+     * The IP address of the endpoint, which can be an external or
+     * internal IP. An IPv6 address is only allowed when the test's
+     * destination is a global load balancer VIP.
+     * 
+     */
     private final @Nullable String ipAddress;
+    /**
+     * A Compute Engine network URI.
+     * 
+     */
     private final @Nullable String network;
+    /**
+     * Type of the network where the endpoint is located.
+     * Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
+     * 
+     */
     private final @Nullable String networkType;
+    /**
+     * The IP protocol port of the endpoint. Only applicable when
+     * protocol is TCP or UDP.
+     * 
+     */
     private final @Nullable Integer port;
+    /**
+     * Project ID where the endpoint is located. The Project ID can be
+     * derived from the URI if you provide a VM instance or network URI.
+     * The following are two cases where you must provide the project ID:
+     * 1. Only the IP address is specified, and the IP address is within
+     *    a GCP project. 2. When you are using Shared VPC and the IP address
+     *    that you provide is from the service project. In this case, the
+     *    network that the IP address resides in is defined in the host
+     *    project.
+     * 
+     */
     private final @Nullable String projectId;
 
     @OutputCustomType.Constructor({"instance","ipAddress","network","networkType","port","projectId"})
@@ -35,21 +70,56 @@ public final class ConnectivityTestSource {
         this.projectId = projectId;
     }
 
+    /**
+     * A Compute Engine instance URI.
+     * 
+     */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
+    /**
+     * The IP address of the endpoint, which can be an external or
+     * internal IP. An IPv6 address is only allowed when the test's
+     * destination is a global load balancer VIP.
+     * 
+     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
+    /**
+     * A Compute Engine network URI.
+     * 
+     */
     public Optional<String> getNetwork() {
         return Optional.ofNullable(this.network);
     }
+    /**
+     * Type of the network where the endpoint is located.
+     * Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
+     * 
+     */
     public Optional<String> getNetworkType() {
         return Optional.ofNullable(this.networkType);
     }
+    /**
+     * The IP protocol port of the endpoint. Only applicable when
+     * protocol is TCP or UDP.
+     * 
+     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
+    /**
+     * Project ID where the endpoint is located. The Project ID can be
+     * derived from the URI if you provide a VM instance or network URI.
+     * The following are two cases where you must provide the project ID:
+     * 1. Only the IP address is specified, and the IP address is within
+     *    a GCP project. 2. When you are using Shared VPC and the IP address
+     *    that you provide is from the service project. In this case, the
+     *    network that the IP address resides in is defined in the host
+     *    project.
+     * 
+     */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }

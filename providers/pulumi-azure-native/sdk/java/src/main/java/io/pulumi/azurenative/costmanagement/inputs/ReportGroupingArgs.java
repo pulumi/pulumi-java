@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The group by expression to be used in the report.
+ * 
+ */
 public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportGroupingArgs Empty = new ReportGroupingArgs();
 
+    /**
+     * The name of the column to group.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -22,6 +30,10 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Has type of the column to group.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ReportColumnType>> type;
 

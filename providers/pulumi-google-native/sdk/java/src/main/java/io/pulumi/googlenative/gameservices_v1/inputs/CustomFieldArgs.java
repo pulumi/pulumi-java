@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom fields. These can be used to create a counter with arbitrary field/value pairs. See: go/rpcsp-custom-fields.
+ * 
+ */
 public final class CustomFieldArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomFieldArgs Empty = new CustomFieldArgs();
 
+    /**
+     * Name is the field name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class CustomFieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

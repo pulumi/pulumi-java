@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Cosmos DB Gremlin database resource object
+ * 
+ */
 public final class GremlinDatabaseResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GremlinDatabaseResourceArgs Empty = new GremlinDatabaseResourceArgs();
 
+    /**
+     * Name of the Cosmos DB Gremlin database
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

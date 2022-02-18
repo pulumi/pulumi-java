@@ -12,6 +12,10 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLoadBalancerArgs Empty = new GetLoadBalancerArgs();
 
+    /**
+     * The name of your load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerName", required=true)
     private final String loadBalancerName;
 

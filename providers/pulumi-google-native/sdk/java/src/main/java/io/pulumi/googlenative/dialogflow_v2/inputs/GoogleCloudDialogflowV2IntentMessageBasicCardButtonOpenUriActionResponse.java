@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Opens the given URI.
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse Empty = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse();
 
+    /**
+     * The HTTP or HTTPS scheme URI.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

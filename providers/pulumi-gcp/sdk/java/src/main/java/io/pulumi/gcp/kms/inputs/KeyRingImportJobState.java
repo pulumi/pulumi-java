@@ -17,6 +17,12 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
 
     public static final KeyRingImportJobState Empty = new KeyRingImportJobState();
 
+    /**
+     * Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
+     * statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
+     * ImportMethod is one with a protection level of HSM.
+     * 
+     */
     @InputImport(name="attestations")
     private final @Nullable Input<List<KeyRingImportJobAttestationGetArgs>> attestations;
 
@@ -24,6 +30,10 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
         return this.attestations == null ? Input.empty() : this.attestations;
     }
 
+    /**
+     * The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
+     * 
+     */
     @InputImport(name="expireTime")
     private final @Nullable Input<String> expireTime;
 
@@ -31,6 +41,10 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
+    /**
+     * It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
+     * 
+     */
     @InputImport(name="importJobId")
     private final @Nullable Input<String> importJobId;
 
@@ -38,6 +52,11 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
         return this.importJobId == null ? Input.empty() : this.importJobId;
     }
 
+    /**
+     * The wrapping method to be used for incoming key material.
+     * Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
+     * 
+     */
     @InputImport(name="importMethod")
     private final @Nullable Input<String> importMethod;
 
@@ -45,6 +64,11 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
         return this.importMethod == null ? Input.empty() : this.importMethod;
     }
 
+    /**
+     * The KeyRing that this import job belongs to.
+     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * 
+     */
     @InputImport(name="keyRing")
     private final @Nullable Input<String> keyRing;
 
@@ -52,6 +76,10 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
         return this.keyRing == null ? Input.empty() : this.keyRing;
     }
 
+    /**
+     * The resource name for this ImportJob in the format projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +87,12 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The protection level of the ImportJob. This must match the protectionLevel of the
+     * versionTemplate on the CryptoKey you attempt to import into.
+     * Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
+     * 
+     */
     @InputImport(name="protectionLevel")
     private final @Nullable Input<String> protectionLevel;
 
@@ -66,6 +100,10 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
         return this.protectionLevel == null ? Input.empty() : this.protectionLevel;
     }
 
+    /**
+     * The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
+     * 
+     */
     @InputImport(name="publicKeys")
     private final @Nullable Input<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys;
 
@@ -73,6 +111,10 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
         return this.publicKeys == null ? Input.empty() : this.publicKeys;
     }
 
+    /**
+     * The current state of the ImportJob, indicating if it can be used.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 

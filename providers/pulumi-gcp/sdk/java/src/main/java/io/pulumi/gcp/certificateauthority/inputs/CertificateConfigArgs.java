@@ -15,6 +15,11 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
 
     public static final CertificateConfigArgs Empty = new CertificateConfigArgs();
 
+    /**
+     * A PublicKey describes a public key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="publicKey", required=true)
     private final Input<CertificateConfigPublicKeyArgs> publicKey;
 
@@ -22,6 +27,11 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
         return this.publicKey;
     }
 
+    /**
+     * Specifies some of the values in a certificate that are related to the subject.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subjectConfig", required=true)
     private final Input<CertificateConfigSubjectConfigArgs> subjectConfig;
 
@@ -29,6 +39,11 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
         return this.subjectConfig;
     }
 
+    /**
+     * Describes how some of the technical X.509 fields in a certificate should be populated.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="x509Config", required=true)
     private final Input<CertificateConfigX509ConfigArgs> x509Config;
 

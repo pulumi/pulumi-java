@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Azure resource type.
+     * 
+     */
     @EnumType
     public enum AzureResourceType {
         Website("Website"),

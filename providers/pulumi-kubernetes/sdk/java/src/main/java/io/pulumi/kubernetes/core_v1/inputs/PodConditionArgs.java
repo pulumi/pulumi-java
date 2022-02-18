@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PodCondition contains details for the current condition of this pod.
+ * 
+ */
 public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodConditionArgs Empty = new PodConditionArgs();
 
+    /**
+     * Last time we probed the condition.
+     * 
+     */
     @InputImport(name="lastProbeTime")
     private final @Nullable Input<String> lastProbeTime;
 
@@ -21,6 +29,10 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastProbeTime == null ? Input.empty() : this.lastProbeTime;
     }
 
+    /**
+     * Last time the condition transitioned from one status to another.
+     * 
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -28,6 +40,10 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * Human-readable message indicating details about last transition.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -35,6 +51,10 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * Unique, one-word, CamelCase reason for the condition's last transition.
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -42,6 +62,10 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -49,6 +73,16 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.status;
     }
 
+    /**
+     * Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+     * 
+     * Possible enum values:
+     *  - `"ContainersReady"` indicates whether all containers in the pod are ready.
+     *  - `"Initialized"` means that all init containers in the pod have started successfully.
+     *  - `"PodScheduled"` represents status of the scheduling process for this pod.
+     *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

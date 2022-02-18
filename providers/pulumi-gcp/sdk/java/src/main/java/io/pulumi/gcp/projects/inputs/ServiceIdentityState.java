@@ -14,6 +14,10 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
 
     public static final ServiceIdentityState Empty = new ServiceIdentityState();
 
+    /**
+     * The email address of the Google managed service account.
+     * 
+     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -21,6 +25,11 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
         return this.email == null ? Input.empty() : this.email;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -28,6 +37,10 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The service to generate identity for.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

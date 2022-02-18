@@ -16,6 +16,11 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final FlexTemplateJobArgs Empty = new FlexTemplateJobArgs();
 
+    /**
+     * The GCS path to the Dataflow job Flex
+     * Template.
+     * 
+     */
     @InputImport(name="containerSpecGcsPath", required=true)
     private final Input<String> containerSpecGcsPath;
 
@@ -23,6 +28,20 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
         return this.containerSpecGcsPath;
     }
 
+    /**
+     * User labels to be specified for the job. Keys and values
+     * should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions)
+     * page. **Note**: This field is marked as deprecated as the API does not currently
+     * support adding labels.
+     * **NOTE**: Google-provided Dataflow templates often provide default labels
+     * that begin with `goog-dataflow-provided`. Unless explicitly set in config, these
+     * labels will be ignored to prevent diffs on re-apply.
+     * 
+     * @deprecated
+     * Deprecated until the API supports this field
+     * 
+     */
+    @Deprecated /* Deprecated until the API supports this field */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,Object>> labels;
 
@@ -31,6 +50,10 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * A unique name for the resource, required by Dataflow.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +61,11 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * One of "drain" or "cancel". Specifies behavior of
+     * deletion during `pulumi destroy`.  See above note.
+     * 
+     */
     @InputImport(name="onDelete")
     private final @Nullable Input<String> onDelete;
 
@@ -45,6 +73,12 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
         return this.onDelete == null ? Input.empty() : this.onDelete;
     }
 
+    /**
+     * Key/Value pairs to be passed to the Dataflow job (as
+     * used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+     * such as `serviceAccount`, `workerMachineType`, etc can be specified here.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,Object>> parameters;
 
@@ -52,6 +86,11 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The project in which the resource belongs. If it is not
+     * provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,6 +98,10 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region in which the created job should run.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

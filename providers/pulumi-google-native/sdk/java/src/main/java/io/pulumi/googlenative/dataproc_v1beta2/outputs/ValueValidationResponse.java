@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ValueValidationResponse {
+    /**
+     * List of allowed values for the parameter.
+     * 
+     */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"values"})
@@ -17,6 +21,10 @@ public final class ValueValidationResponse {
         this.values = Objects.requireNonNull(values);
     }
 
+    /**
+     * List of allowed values for the parameter.
+     * 
+     */
     public List<String> getValues() {
         return this.values;
     }

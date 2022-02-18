@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomerSubscription {
+/**
+ * Customer subscription.
+ * API Version: 2017-06-01.
+ * 
+ *
+ * Customer subscription.
+ * 
+ */
     public static CompletableFuture<GetCustomerSubscriptionResult> invokeAsync(GetCustomerSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestack:getCustomerSubscription", TypeShape.of(GetCustomerSubscriptionResult.class), args == null ? GetCustomerSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

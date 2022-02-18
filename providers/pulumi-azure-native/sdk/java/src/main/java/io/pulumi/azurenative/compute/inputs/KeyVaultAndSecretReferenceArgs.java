@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Key Vault Secret Url and vault id of the encryption key
+ * 
+ */
 public final class KeyVaultAndSecretReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyVaultAndSecretReferenceArgs Empty = new KeyVaultAndSecretReferenceArgs();
 
+    /**
+     * Url pointing to a key or secret in KeyVault
+     * 
+     */
     @InputImport(name="secretUrl", required=true)
     private final Input<String> secretUrl;
 
@@ -21,6 +29,10 @@ public final class KeyVaultAndSecretReferenceArgs extends io.pulumi.resources.Re
         return this.secretUrl;
     }
 
+    /**
+     * Resource id of the KeyVault containing the key or secret
+     * 
+     */
     @InputImport(name="sourceVault", required=true)
     private final Input<SourceVaultArgs> sourceVault;
 

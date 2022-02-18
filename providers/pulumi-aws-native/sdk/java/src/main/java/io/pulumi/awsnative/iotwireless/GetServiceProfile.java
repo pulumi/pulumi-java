@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceProfile {
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
     public static CompletableFuture<GetServiceProfileResult> invokeAsync(GetServiceProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getServiceProfile", TypeShape.of(GetServiceProfileResult.class), args == null ? GetServiceProfileArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CxPageTransitionRouteTriggerFulfillmentMessage {
+    /**
+     * A collection of text responses.
+     * 
+     */
     private final @Nullable CxPageTransitionRouteTriggerFulfillmentMessageText text;
 
     @OutputCustomType.Constructor({"text"})
@@ -18,6 +22,10 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessage {
         this.text = text;
     }
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     public Optional<CxPageTransitionRouteTriggerFulfillmentMessageText> getText() {
         return Optional.ofNullable(this.text);
     }

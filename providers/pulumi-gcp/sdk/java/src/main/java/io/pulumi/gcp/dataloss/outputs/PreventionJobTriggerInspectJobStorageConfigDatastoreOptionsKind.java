@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind {
+    /**
+     * The name of the Datastore kind.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The name of the Datastore kind.
+     * 
+     */
     public String getName() {
         return this.name;
     }

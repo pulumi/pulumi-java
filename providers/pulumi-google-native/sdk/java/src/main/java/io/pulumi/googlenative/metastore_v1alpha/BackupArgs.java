@@ -21,6 +21,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupId;
     }
 
+    /**
+     * The description of the backup.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +39,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

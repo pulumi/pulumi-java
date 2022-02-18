@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerDnsAlias {
+/**
+ * A server DNS alias.
+ * API Version: 2020-11-01-preview.
+ * 
+ *
+ * A server DNS alias.
+ * 
+ */
     public static CompletableFuture<GetServerDnsAliasResult> invokeAsync(GetServerDnsAliasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerDnsAlias", TypeShape.of(GetServerDnsAliasResult.class), args == null ? GetServerDnsAliasArgs.Empty : args, Utilities.withVersion(options));
     }

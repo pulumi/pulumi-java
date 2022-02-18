@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAgent {
+/**
+ * Resource schema for AWS::DataSync::Agent.
+ * 
+ */
     public static CompletableFuture<GetAgentResult> invokeAsync(GetAgentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getAgent", TypeShape.of(GetAgentResult.class), args == null ? GetAgentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSecretValue {
+/**
+ * This type represents the unencrypted value of the secret.
+ * API Version: 2018-09-01-preview.
+ * 
+ *
+ * This type represents the unencrypted value of the secret.
+ * 
+ */
     public static CompletableFuture<ListSecretValueResult> invokeAsync(ListSecretValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:listSecretValue", TypeShape.of(ListSecretValueResult.class), args == null ? ListSecretValueArgs.Empty : args, Utilities.withVersion(options));
     }

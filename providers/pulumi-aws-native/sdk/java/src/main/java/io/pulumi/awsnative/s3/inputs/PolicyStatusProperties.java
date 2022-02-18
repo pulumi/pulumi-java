@@ -8,10 +8,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The Policy Status associated with this Multi Region Access Point
+ * 
+ */
 public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyStatusProperties Empty = new PolicyStatusProperties();
 
+    /**
+     * Specifies whether the policy is public or not.
+     * 
+     */
     @InputImport(name="isPublic", required=true)
     private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
 

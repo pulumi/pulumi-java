@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Multiplexing settings for output stream.
+ * 
+ */
 public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MuxStreamResponse Empty = new MuxStreamResponse();
 
+    /**
+     * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+     * 
+     */
     @InputImport(name="container", required=true)
     private final String container;
 
@@ -21,6 +29,10 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
         return this.container;
     }
 
+    /**
+     * List of `ElementaryStream.key`s multiplexed in this stream.
+     * 
+     */
     @InputImport(name="elementaryStreams", required=true)
     private final List<String> elementaryStreams;
 
@@ -28,6 +40,10 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
         return this.elementaryStreams;
     }
 
+    /**
+     * The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+     * 
+     */
     @InputImport(name="fileName", required=true)
     private final String fileName;
 
@@ -35,6 +51,10 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
         return this.fileName;
     }
 
+    /**
+     * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -42,6 +62,10 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * Segment settings for `ts`, `fmp4` and `vtt`.
+     * 
+     */
     @InputImport(name="segmentSettings", required=true)
     private final SegmentSettingsResponse segmentSettings;
 

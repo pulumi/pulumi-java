@@ -17,81 +17,187 @@ import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::ImageBuilder::ImagePipeline
+ * 
+ */
 @ResourceType(type="aws-native:imagebuilder:ImagePipeline")
 public class ImagePipeline extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the image pipeline.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the image pipeline.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * 
+     */
     @OutputExport(name="containerRecipeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerRecipeArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * 
+     */
     public Output</* @Nullable */ String> getContainerRecipeArn() {
         return this.containerRecipeArn;
     }
+    /**
+     * The description of the image pipeline.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the image pipeline.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
+     * 
+     */
     @OutputExport(name="distributionConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> distributionConfigurationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
+     * 
+     */
     public Output</* @Nullable */ String> getDistributionConfigurationArn() {
         return this.distributionConfigurationArn;
     }
+    /**
+     * Collects additional information about the image being created, including the operating system (OS) version and package list.
+     * 
+     */
     @OutputExport(name="enhancedImageMetadataEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled;
 
+    /**
+     * @return Collects additional information about the image being created, including the operating system (OS) version and package list.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * 
+     */
     @OutputExport(name="imageRecipeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageRecipeArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * 
+     */
     public Output</* @Nullable */ String> getImageRecipeArn() {
         return this.imageRecipeArn;
     }
+    /**
+     * The image tests configuration of the image pipeline.
+     * 
+     */
     @OutputExport(name="imageTestsConfiguration", type=ImagePipelineImageTestsConfiguration.class, parameters={})
     private Output</* @Nullable */ ImagePipelineImageTestsConfiguration> imageTestsConfiguration;
 
+    /**
+     * @return The image tests configuration of the image pipeline.
+     * 
+     */
     public Output</* @Nullable */ ImagePipelineImageTestsConfiguration> getImageTestsConfiguration() {
         return this.imageTestsConfiguration;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
+     * 
+     */
     @OutputExport(name="infrastructureConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> infrastructureConfigurationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
+     * 
+     */
     public Output</* @Nullable */ String> getInfrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
+    /**
+     * The name of the image pipeline.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the image pipeline.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The schedule of the image pipeline.
+     * 
+     */
     @OutputExport(name="schedule", type=ImagePipelineSchedule.class, parameters={})
     private Output</* @Nullable */ ImagePipelineSchedule> schedule;
 
+    /**
+     * @return The schedule of the image pipeline.
+     * 
+     */
     public Output</* @Nullable */ ImagePipelineSchedule> getSchedule() {
         return this.schedule;
     }
+    /**
+     * The status of the image pipeline.
+     * 
+     */
     @OutputExport(name="status", type=ImagePipelineStatus.class, parameters={})
     private Output</* @Nullable */ ImagePipelineStatus> status;
 
+    /**
+     * @return The status of the image pipeline.
+     * 
+     */
     public Output</* @Nullable */ ImagePipelineStatus> getStatus() {
         return this.status;
     }
+    /**
+     * The tags of this image pipeline.
+     * 
+     */
     @OutputExport(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
+    /**
+     * @return The tags of this image pipeline.
+     * 
+     */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ImagePipeline(String name, @Nullable ImagePipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:imagebuilder:ImagePipeline", name, args == null ? ImagePipelineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +213,14 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ImagePipeline get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ImagePipeline(name, id, options);
     }

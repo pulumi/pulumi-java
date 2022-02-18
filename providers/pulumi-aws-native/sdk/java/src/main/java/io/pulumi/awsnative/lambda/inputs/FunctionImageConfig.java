@@ -15,6 +15,10 @@ public final class FunctionImageConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final FunctionImageConfig Empty = new FunctionImageConfig();
 
+    /**
+     * Command.
+     * 
+     */
     @InputImport(name="command")
     private final @Nullable List<String> command;
 
@@ -22,6 +26,10 @@ public final class FunctionImageConfig extends io.pulumi.resources.InvokeArgs {
         return this.command == null ? List.of() : this.command;
     }
 
+    /**
+     * EntryPoint.
+     * 
+     */
     @InputImport(name="entryPoint")
     private final @Nullable List<String> entryPoint;
 
@@ -29,6 +37,10 @@ public final class FunctionImageConfig extends io.pulumi.resources.InvokeArgs {
         return this.entryPoint == null ? List.of() : this.entryPoint;
     }
 
+    /**
+     * WorkingDirectory.
+     * 
+     */
     @InputImport(name="workingDirectory")
     private final @Nullable String workingDirectory;
 

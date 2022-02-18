@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration.
+ * 
+ */
 public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketCorsRuleArgs Empty = new BucketCorsRuleArgs();
 
+    /**
+     * Headers that are specified in the Access-Control-Request-Headers header.
+     * 
+     */
     @InputImport(name="allowedHeaders")
     private final @Nullable Input<List<String>> allowedHeaders;
 
@@ -24,6 +32,10 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedHeaders == null ? Input.empty() : this.allowedHeaders;
     }
 
+    /**
+     * An HTTP method that you allow the origin to execute.
+     * 
+     */
     @InputImport(name="allowedMethods", required=true)
     private final Input<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods;
 
@@ -31,6 +43,10 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedMethods;
     }
 
+    /**
+     * One or more origins you want customers to be able to access the bucket from.
+     * 
+     */
     @InputImport(name="allowedOrigins", required=true)
     private final Input<List<String>> allowedOrigins;
 
@@ -38,6 +54,10 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedOrigins;
     }
 
+    /**
+     * One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+     * 
+     */
     @InputImport(name="exposedHeaders")
     private final @Nullable Input<List<String>> exposedHeaders;
 
@@ -45,6 +65,10 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.exposedHeaders == null ? Input.empty() : this.exposedHeaders;
     }
 
+    /**
+     * A unique identifier for this rule.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -52,6 +76,10 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The time in seconds that your browser is to cache the preflight response for the specified resource.
+     * 
+     */
     @InputImport(name="maxAge")
     private final @Nullable Input<Integer> maxAge;
 

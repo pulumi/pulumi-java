@@ -15,16 +15,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDedicatedHsmResult {
+    /**
+     * The Azure Resource Manager resource ID for the dedicated HSM.
+     * 
+     */
     private final String id;
+    /**
+     * The supported Azure location where the dedicated HSM should be created.
+     * 
+     */
     private final String location;
+    /**
+     * The name of the dedicated HSM.
+     * 
+     */
     private final String name;
+    /**
+     * Specifies the network interfaces of the dedicated hsm.
+     * 
+     */
     private final @Nullable NetworkProfileResponse networkProfile;
+    /**
+     * Provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * SKU details
+     * 
+     */
     private final SkuResponse sku;
+    /**
+     * This field will be used when RP does not support Availability zones.
+     * 
+     */
     private final @Nullable String stampId;
+    /**
+     * Resource Status Message.
+     * 
+     */
     private final String statusMessage;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The resource type of the dedicated HSM.
+     * 
+     */
     private final String type;
+    /**
+     * The Dedicated Hsm zones.
+     * 
+     */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"id","location","name","networkProfile","provisioningState","sku","stampId","statusMessage","tags","type","zones"})
@@ -53,36 +97,80 @@ public final class GetDedicatedHsmResult {
         this.zones = zones;
     }
 
+    /**
+     * The Azure Resource Manager resource ID for the dedicated HSM.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The supported Azure location where the dedicated HSM should be created.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The name of the dedicated HSM.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Specifies the network interfaces of the dedicated hsm.
+     * 
+     */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
+    /**
+     * Provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * SKU details
+     * 
+     */
     public SkuResponse getSku() {
         return this.sku;
     }
+    /**
+     * This field will be used when RP does not support Availability zones.
+     * 
+     */
     public Optional<String> getStampId() {
         return Optional.ofNullable(this.stampId);
     }
+    /**
+     * Resource Status Message.
+     * 
+     */
     public String getStatusMessage() {
         return this.statusMessage;
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The resource type of the dedicated HSM.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The Dedicated Hsm zones.
+     * 
+     */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

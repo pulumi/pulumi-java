@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * API key payload which is exposed in the request/response of the resource provider.
+ * 
+ */
 public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiKeyResponse Empty = new ApiKeyResponse();
 
+    /**
+     * Gets or sets the API key name.
+     * 
+     */
     @InputImport(name="keyName")
     private final @Nullable String keyName;
 
@@ -21,6 +29,10 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
+    /**
+     * Gets or sets the API key value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

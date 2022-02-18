@@ -24,6 +24,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * First level statement that contains conditions, such as ByteMatch, SizeConstraint, etc
+ * 
+ */
 public final class WebACLStatement extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLStatement Empty = new WebACLStatement();

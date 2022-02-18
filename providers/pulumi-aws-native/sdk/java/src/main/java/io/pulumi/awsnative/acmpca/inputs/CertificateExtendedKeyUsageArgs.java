@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Structure that contains X.509 ExtendedKeyUsage information.
+ * 
+ */
 public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateExtendedKeyUsageArgs Empty = new CertificateExtendedKeyUsageArgs();

@@ -14,6 +14,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
 
     public static final WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs();
 
+    /**
+     * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+     * 
+     */
     @InputImport(name="gcePdKmsKeyName")
     private final @Nullable Input<String> gcePdKmsKeyName;
 

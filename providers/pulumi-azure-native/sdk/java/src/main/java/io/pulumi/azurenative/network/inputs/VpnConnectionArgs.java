@@ -20,10 +20,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VpnConnection Resource.
+ * 
+ */
 public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnConnectionArgs Empty = new VpnConnectionArgs();
 
+    /**
+     * Expected bandwidth in MBPS.
+     * 
+     */
     @InputImport(name="connectionBandwidth")
     private final @Nullable Input<Integer> connectionBandwidth;
 
@@ -31,6 +39,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionBandwidth == null ? Input.empty() : this.connectionBandwidth;
     }
 
+    /**
+     * DPD timeout in seconds for vpn connection.
+     * 
+     */
     @InputImport(name="dpdTimeoutSeconds")
     private final @Nullable Input<Integer> dpdTimeoutSeconds;
 
@@ -38,6 +50,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dpdTimeoutSeconds == null ? Input.empty() : this.dpdTimeoutSeconds;
     }
 
+    /**
+     * EnableBgp flag.
+     * 
+     */
     @InputImport(name="enableBgp")
     private final @Nullable Input<Boolean> enableBgp;
 
@@ -45,6 +61,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableBgp == null ? Input.empty() : this.enableBgp;
     }
 
+    /**
+     * Enable internet security.
+     * 
+     */
     @InputImport(name="enableInternetSecurity")
     private final @Nullable Input<Boolean> enableInternetSecurity;
 
@@ -52,6 +72,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableInternetSecurity == null ? Input.empty() : this.enableInternetSecurity;
     }
 
+    /**
+     * EnableBgp flag.
+     * 
+     */
     @InputImport(name="enableRateLimiting")
     private final @Nullable Input<Boolean> enableRateLimiting;
 
@@ -59,6 +83,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableRateLimiting == null ? Input.empty() : this.enableRateLimiting;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -66,6 +94,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The IPSec Policies to be considered by this connection.
+     * 
+     */
     @InputImport(name="ipsecPolicies")
     private final @Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies;
 
@@ -73,6 +105,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipsecPolicies == null ? Input.empty() : this.ipsecPolicies;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -80,6 +116,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Id of the connected vpn site.
+     * 
+     */
     @InputImport(name="remoteVpnSite")
     private final @Nullable Input<SubResourceArgs> remoteVpnSite;
 
@@ -87,6 +127,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.remoteVpnSite == null ? Input.empty() : this.remoteVpnSite;
     }
 
+    /**
+     * The Routing Configuration indicating the associated and propagated route tables on this connection.
+     * 
+     */
     @InputImport(name="routingConfiguration")
     private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
 
@@ -94,6 +138,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.routingConfiguration == null ? Input.empty() : this.routingConfiguration;
     }
 
+    /**
+     * Routing weight for vpn connection.
+     * 
+     */
     @InputImport(name="routingWeight")
     private final @Nullable Input<Integer> routingWeight;
 
@@ -101,6 +149,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.routingWeight == null ? Input.empty() : this.routingWeight;
     }
 
+    /**
+     * SharedKey for the vpn connection.
+     * 
+     */
     @InputImport(name="sharedKey")
     private final @Nullable Input<String> sharedKey;
 
@@ -108,6 +160,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sharedKey == null ? Input.empty() : this.sharedKey;
     }
 
+    /**
+     * The Traffic Selector Policies to be considered by this connection.
+     * 
+     */
     @InputImport(name="trafficSelectorPolicies")
     private final @Nullable Input<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
 
@@ -115,6 +171,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.trafficSelectorPolicies == null ? Input.empty() : this.trafficSelectorPolicies;
     }
 
+    /**
+     * Use local azure ip to initiate connection.
+     * 
+     */
     @InputImport(name="useLocalAzureIpAddress")
     private final @Nullable Input<Boolean> useLocalAzureIpAddress;
 
@@ -122,6 +182,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.useLocalAzureIpAddress == null ? Input.empty() : this.useLocalAzureIpAddress;
     }
 
+    /**
+     * Enable policy-based traffic selectors.
+     * 
+     */
     @InputImport(name="usePolicyBasedTrafficSelectors")
     private final @Nullable Input<Boolean> usePolicyBasedTrafficSelectors;
 
@@ -129,6 +193,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.usePolicyBasedTrafficSelectors == null ? Input.empty() : this.usePolicyBasedTrafficSelectors;
     }
 
+    /**
+     * Connection protocol used for this connection.
+     * 
+     */
     @InputImport(name="vpnConnectionProtocolType")
     private final @Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
 
@@ -136,6 +204,10 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.vpnConnectionProtocolType == null ? Input.empty() : this.vpnConnectionProtocolType;
     }
 
+    /**
+     * List of all vpn site link connections to the gateway.
+     * 
+     */
     @InputImport(name="vpnLinkConnections")
     private final @Nullable Input<List<VpnSiteLinkConnectionArgs>> vpnLinkConnections;
 

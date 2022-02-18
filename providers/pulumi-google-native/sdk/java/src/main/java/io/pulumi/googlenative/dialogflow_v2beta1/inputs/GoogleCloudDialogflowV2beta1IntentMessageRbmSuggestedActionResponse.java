@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Rich Business Messaging (RBM) suggested client-side action that the user can choose from the card.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse();
 
+    /**
+     * Suggested client side action: Dial a phone number
+     * 
+     */
     @InputImport(name="dial", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
         return this.dial;
     }
 
+    /**
+     * Suggested client side action: Open a URI on device
+     * 
+     */
     @InputImport(name="openUrl", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl;
 
@@ -29,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
         return this.openUrl;
     }
 
+    /**
+     * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
+     * 
+     */
     @InputImport(name="postbackData", required=true)
     private final String postbackData;
 
@@ -36,6 +52,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
         return this.postbackData;
     }
 
+    /**
+     * Suggested client side action: Share user location
+     * 
+     */
     @InputImport(name="shareLocation", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation;
 
@@ -43,6 +63,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
         return this.shareLocation;
     }
 
+    /**
+     * Text to display alongside the action.
+     * 
+     */
     @InputImport(name="text", required=true)
     private final String text;
 

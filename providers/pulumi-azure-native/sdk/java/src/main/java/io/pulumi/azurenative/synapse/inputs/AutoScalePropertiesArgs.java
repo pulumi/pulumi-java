@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Auto-scaling properties of a Big Data pool powered by Apache Spark
+ * 
+ */
 public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoScalePropertiesArgs Empty = new AutoScalePropertiesArgs();
 
+    /**
+     * Whether automatic scaling is enabled for the Big Data pool.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +30,10 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The maximum number of nodes the Big Data pool can support.
+     * 
+     */
     @InputImport(name="maxNodeCount")
     private final @Nullable Input<Integer> maxNodeCount;
 
@@ -29,6 +41,10 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
         return this.maxNodeCount == null ? Input.empty() : this.maxNodeCount;
     }
 
+    /**
+     * The minimum number of nodes the Big Data pool can support.
+     * 
+     */
     @InputImport(name="minNodeCount")
     private final @Nullable Input<Integer> minNodeCount;
 

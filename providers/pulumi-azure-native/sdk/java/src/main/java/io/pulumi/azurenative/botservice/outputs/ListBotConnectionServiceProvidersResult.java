@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListBotConnectionServiceProvidersResult {
+    /**
+     * The link used to get the next page of bot service providers.
+     * 
+     */
     private final @Nullable String nextLink;
+    /**
+     * Gets the list of bot service providers and their properties.
+     * 
+     */
     private final List<ServiceProviderResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -24,9 +32,17 @@ public final class ListBotConnectionServiceProvidersResult {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The link used to get the next page of bot service providers.
+     * 
+     */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
+    /**
+     * Gets the list of bot service providers and their properties.
+     * 
+     */
     public List<ServiceProviderResponse> getValue() {
         return this.value;
     }

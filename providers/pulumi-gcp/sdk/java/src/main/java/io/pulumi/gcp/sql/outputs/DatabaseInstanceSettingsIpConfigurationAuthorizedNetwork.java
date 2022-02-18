@@ -11,8 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
+    /**
+     * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+     * formatted date time string indicating when this whitelist expires.
+     * 
+     */
     private final @Nullable String expirationTime;
+    /**
+     * A name for this whitelist entry.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * A CIDR notation IPv4 or IPv6 address that is allowed to
+     * access this instance. Must be set even if other two attributes are not for
+     * the whitelist to become active.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"expirationTime","name","value"})
@@ -25,12 +40,27 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+     * formatted date time string indicating when this whitelist expires.
+     * 
+     */
     public Optional<String> getExpirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
+    /**
+     * A name for this whitelist entry.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * A CIDR notation IPv4 or IPv6 address that is allowed to
+     * access this instance. Must be set even if other two attributes are not for
+     * the whitelist to become active.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

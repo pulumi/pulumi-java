@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An occurrence describing an attestation on a resource
+ * 
+ */
 public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DSSEAttestationOccurrenceArgs Empty = new DSSEAttestationOccurrenceArgs();
 
+    /**
+     * If doing something security critical, make sure to verify the signatures in this metadata.
+     * 
+     */
     @InputImport(name="envelope")
     private final @Nullable Input<EnvelopeArgs> envelope;
 

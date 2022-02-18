@@ -13,6 +13,10 @@ public final class ClusterClusterConfigSecurityConfigArgs extends io.pulumi.reso
 
     public static final ClusterClusterConfigSecurityConfigArgs Empty = new ClusterClusterConfigSecurityConfigArgs();
 
+    /**
+     * Kerberos Configuration
+     * 
+     */
     @InputImport(name="kerberosConfig", required=true)
     private final Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 

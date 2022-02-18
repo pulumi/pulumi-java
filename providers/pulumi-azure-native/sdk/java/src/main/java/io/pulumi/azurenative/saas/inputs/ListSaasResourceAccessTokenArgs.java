@@ -12,6 +12,10 @@ public final class ListSaasResourceAccessTokenArgs extends io.pulumi.resources.I
 
     public static final ListSaasResourceAccessTokenArgs Empty = new ListSaasResourceAccessTokenArgs();
 
+    /**
+     * The Saas resource ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

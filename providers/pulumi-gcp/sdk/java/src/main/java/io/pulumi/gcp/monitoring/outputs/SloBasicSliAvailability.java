@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SloBasicSliAvailability {
+    /**
+     * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+     * 
+     */
     private final @Nullable Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -18,6 +22,10 @@ public final class SloBasicSliAvailability {
         this.enabled = enabled;
     }
 
+    /**
+     * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

@@ -13,6 +13,11 @@ public final class UptimeCheckConfigHttpCheckAuthInfoGetArgs extends io.pulumi.r
 
     public static final UptimeCheckConfigHttpCheckAuthInfoGetArgs Empty = new UptimeCheckConfigHttpCheckAuthInfoGetArgs();
 
+    /**
+     * The password to authenticate.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -20,6 +25,10 @@ public final class UptimeCheckConfigHttpCheckAuthInfoGetArgs extends io.pulumi.r
         return this.password;
     }
 
+    /**
+     * The username to authenticate.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFeed {
+/**
+ * Gets details about an asset feed.
+ * 
+ */
     public static CompletableFuture<GetFeedResult> invokeAsync(GetFeedArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getFeed", TypeShape.of(GetFeedResult.class), args == null ? GetFeedArgs.Empty : args, Utilities.withVersion(options));
     }

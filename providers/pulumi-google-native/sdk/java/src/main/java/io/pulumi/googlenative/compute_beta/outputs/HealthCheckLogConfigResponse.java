@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HealthCheckLogConfigResponse {
+    /**
+     * Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
+     * 
+     */
     private final Boolean enable;
 
     @OutputCustomType.Constructor({"enable"})
@@ -16,6 +20,10 @@ public final class HealthCheckLogConfigResponse {
         this.enable = Objects.requireNonNull(enable);
     }
 
+    /**
+     * Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
+     * 
+     */
     public Boolean getEnable() {
         return this.enable;
     }

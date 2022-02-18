@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNodeTemplate {
+/**
+ * Returns the specified node template. Gets a list of available node templates by making a list() request.
+ * 
+ */
     public static CompletableFuture<GetNodeTemplateResult> invokeAsync(GetNodeTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNodeTemplate", TypeShape.of(GetNodeTemplateResult.class), args == null ? GetNodeTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

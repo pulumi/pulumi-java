@@ -12,6 +12,10 @@ public final class GetWorkspaceAadAdminArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetWorkspaceAadAdminArgs Empty = new GetWorkspaceAadAdminArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetWorkspaceAadAdminArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

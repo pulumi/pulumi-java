@@ -13,11 +13,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TypeResponse {
+    /**
+     * The list of fields.
+     * 
+     */
     private final List<FieldResponse> fields;
+    /**
+     * The fully qualified message name.
+     * 
+     */
     private final String name;
+    /**
+     * The list of types appearing in `oneof` definitions in this type.
+     * 
+     */
     private final List<String> oneofs;
+    /**
+     * The protocol buffer options.
+     * 
+     */
     private final List<OptionResponse> options;
+    /**
+     * The source context.
+     * 
+     */
     private final SourceContextResponse sourceContext;
+    /**
+     * The source syntax.
+     * 
+     */
     private final String syntax;
 
     @OutputCustomType.Constructor({"fields","name","oneofs","options","sourceContext","syntax"})
@@ -36,21 +60,45 @@ public final class TypeResponse {
         this.syntax = Objects.requireNonNull(syntax);
     }
 
+    /**
+     * The list of fields.
+     * 
+     */
     public List<FieldResponse> getFields() {
         return this.fields;
     }
+    /**
+     * The fully qualified message name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The list of types appearing in `oneof` definitions in this type.
+     * 
+     */
     public List<String> getOneofs() {
         return this.oneofs;
     }
+    /**
+     * The protocol buffer options.
+     * 
+     */
     public List<OptionResponse> getOptions() {
         return this.options;
     }
+    /**
+     * The source context.
+     * 
+     */
     public SourceContextResponse getSourceContext() {
         return this.sourceContext;
     }
+    /**
+     * The source syntax.
+     * 
+     */
     public String getSyntax() {
         return this.syntax;
     }

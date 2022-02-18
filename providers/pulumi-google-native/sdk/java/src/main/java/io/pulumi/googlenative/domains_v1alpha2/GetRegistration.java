@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistration {
+/**
+ * Gets the details of a `Registration` resource.
+ * 
+ */
     public static CompletableFuture<GetRegistrationResult> invokeAsync(GetRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:domains/v1alpha2:getRegistration", TypeShape.of(GetRegistrationResult.class), args == null ? GetRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

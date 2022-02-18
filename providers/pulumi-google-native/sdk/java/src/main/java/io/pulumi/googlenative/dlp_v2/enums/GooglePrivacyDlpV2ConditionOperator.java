@@ -8,15 +8,51 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. Operator used to compare the field or infoType to the value.
+     * 
+     */
     @EnumType
     public enum GooglePrivacyDlpV2ConditionOperator {
+        /**
+         * Unused
+         * 
+         */
         RelationalOperatorUnspecified("RELATIONAL_OPERATOR_UNSPECIFIED"),
+        /**
+         * Equal. Attempts to match even with incompatible types.
+         * 
+         */
         EqualTo("EQUAL_TO"),
+        /**
+         * Not equal to. Attempts to match even with incompatible types.
+         * 
+         */
         NotEqualTo("NOT_EQUAL_TO"),
+        /**
+         * Greater than.
+         * 
+         */
         GreaterThan("GREATER_THAN"),
+        /**
+         * Less than.
+         * 
+         */
         LessThan("LESS_THAN"),
+        /**
+         * Greater than or equals.
+         * 
+         */
         GreaterThanOrEquals("GREATER_THAN_OR_EQUALS"),
+        /**
+         * Less than or equals.
+         * 
+         */
         LessThanOrEquals("LESS_THAN_OR_EQUALS"),
+        /**
+         * Exists
+         * 
+         */
         Exists("EXISTS");
 
         private final String value;

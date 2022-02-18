@@ -22,6 +22,13 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceState Empty = new InstanceState();
 
+    /**
+     * Only applicable to STANDARD_HA tier which protects the instance
+     * against zonal failures by provisioning it across two zones.
+     * If provided, it must be a different zone from the one provided in
+     * [locationId].
+     * 
+     */
     @InputImport(name="alternativeLocationId")
     private final @Nullable Input<String> alternativeLocationId;
 
@@ -29,6 +36,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.alternativeLocationId == null ? Input.empty() : this.alternativeLocationId;
     }
 
+    /**
+     * Optional. Indicates whether OSS Redis AUTH is enabled for the
+     * instance. If set to "true" AUTH is enabled on the instance.
+     * Default value is "false" meaning AUTH is disabled.
+     * 
+     */
     @InputImport(name="authEnabled")
     private final @Nullable Input<Boolean> authEnabled;
 
@@ -36,6 +49,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.authEnabled == null ? Input.empty() : this.authEnabled;
     }
 
+    /**
+     * AUTH String set on the instance. This field will only be populated if auth_enabled is true.
+     * 
+     */
     @InputImport(name="authString")
     private final @Nullable Input<String> authString;
 
@@ -43,6 +60,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.authString == null ? Input.empty() : this.authString;
     }
 
+    /**
+     * The full name of the Google Compute Engine network to which the
+     * instance is connected. If left unspecified, the default network
+     * will be used.
+     * 
+     */
     @InputImport(name="authorizedNetwork")
     private final @Nullable Input<String> authorizedNetwork;
 
@@ -50,6 +73,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
     }
 
+    /**
+     * The connection mode of the Redis instance.
+     * Default value is `DIRECT_PEERING`.
+     * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+     * 
+     */
     @InputImport(name="connectMode")
     private final @Nullable Input<String> connectMode;
 
@@ -57,6 +86,13 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.connectMode == null ? Input.empty() : this.connectMode;
     }
 
+    /**
+     * - 
+     * Output only. The time when the policy was created.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -64,6 +100,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
+     * [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
+     * [alternativeLocationId] and can change after a failover event.
+     * 
+     */
     @InputImport(name="currentLocationId")
     private final @Nullable Input<String> currentLocationId;
 
@@ -71,6 +113,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.currentLocationId == null ? Input.empty() : this.currentLocationId;
     }
 
+    /**
+     * An arbitrary and optional user-provided name for the instance.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -78,6 +124,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -85,6 +135,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * Resource labels to represent user provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -92,6 +146,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The zone where the instance will be provisioned. If not provided,
+     * the service will choose a zone for the instance. For STANDARD_HA tier,
+     * instances will be created across two zones for protection against
+     * zonal failures. If [alternativeLocationId] is also provided, it must
+     * be different from [locationId].
+     * 
+     */
     @InputImport(name="locationId")
     private final @Nullable Input<String> locationId;
 
@@ -99,6 +161,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.locationId == null ? Input.empty() : this.locationId;
     }
 
+    /**
+     * Maintenance policy for an instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="maintenancePolicy")
     private final @Nullable Input<InstanceMaintenancePolicyGetArgs> maintenancePolicy;
 
@@ -106,6 +173,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
     }
 
+    /**
+     * Upcoming maintenance schedule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="maintenanceSchedule")
     private final @Nullable Input<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule;
 
@@ -113,6 +185,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.maintenanceSchedule == null ? Input.empty() : this.maintenanceSchedule;
     }
 
+    /**
+     * Redis memory size in GiB.
+     * 
+     */
     @InputImport(name="memorySizeGb")
     private final @Nullable Input<Integer> memorySizeGb;
 
@@ -120,6 +196,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.memorySizeGb == null ? Input.empty() : this.memorySizeGb;
     }
 
+    /**
+     * The ID of the instance or a fully qualified identifier for the instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -127,6 +207,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Output only. Info per node.
+     * 
+     */
     @InputImport(name="nodes")
     private final @Nullable Input<List<InstanceNodeGetArgs>> nodes;
 
@@ -134,6 +218,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.nodes == null ? Input.empty() : this.nodes;
     }
 
+    /**
+     * Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+     * "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+     * operation.
+     * 
+     */
     @InputImport(name="persistenceIamIdentity")
     private final @Nullable Input<String> persistenceIamIdentity;
 
@@ -141,6 +231,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.persistenceIamIdentity == null ? Input.empty() : this.persistenceIamIdentity;
     }
 
+    /**
+     * The port number of the exposed Redis endpoint.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -148,6 +242,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -155,6 +254,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Output only. Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy
+     * replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write
+     * requests must target 'host'.
+     * 
+     */
     @InputImport(name="readEndpoint")
     private final @Nullable Input<String> readEndpoint;
 
@@ -162,6 +267,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.readEndpoint == null ? Input.empty() : this.readEndpoint;
     }
 
+    /**
+     * Output only. The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target
+     * 'port'.
+     * 
+     */
     @InputImport(name="readEndpointPort")
     private final @Nullable Input<Integer> readEndpointPort;
 
@@ -169,6 +279,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.readEndpointPort == null ? Input.empty() : this.readEndpointPort;
     }
 
+    /**
+     * Optional. Read replica mode. Can only be specified when trying to create the instance. If not set, Memorystore Redis
+     * backend will default to READ_REPLICAS_DISABLED. - READ_REPLICAS_DISABLED: If disabled, read endpoint will not be
+     * provided and the instance cannot scale up or down the number of replicas. - READ_REPLICAS_ENABLED: If enabled, read
+     * endpoint will be provided and the instance can scale up and down the number of replicas. Default value:
+     * "READ_REPLICAS_DISABLED" Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
+     * 
+     */
     @InputImport(name="readReplicasMode")
     private final @Nullable Input<String> readReplicasMode;
 
@@ -176,6 +294,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.readReplicasMode == null ? Input.empty() : this.readReplicasMode;
     }
 
+    /**
+     * Redis configuration parameters, according to http://redis.io/topics/config.
+     * Please check Memorystore documentation for the list of supported parameters:
+     * https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
+     * 
+     */
     @InputImport(name="redisConfigs")
     private final @Nullable Input<Map<String,String>> redisConfigs;
 
@@ -183,6 +307,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.redisConfigs == null ? Input.empty() : this.redisConfigs;
     }
 
+    /**
+     * The version of Redis software. If not provided, latest supported
+     * version will be used. Please check the API documentation linked
+     * at the top for the latest valid values.
+     * 
+     */
     @InputImport(name="redisVersion")
     private final @Nullable Input<String> redisVersion;
 
@@ -190,6 +320,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.redisVersion == null ? Input.empty() : this.redisVersion;
     }
 
+    /**
+     * The name of the Redis region of the instance.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -197,6 +331,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Optional. The number of replica nodes. The valid range for the Standard Tier with read replicas enabled is [1-5] and
+     * defaults to 2. If read replicas are not enabled for a Standard Tier instance, the only valid value is 1 and the default
+     * is 1. The valid value for basic tier is 0 and the default is also 0.
+     * 
+     */
     @InputImport(name="replicaCount")
     private final @Nullable Input<Integer> replicaCount;
 
@@ -204,6 +344,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
     }
 
+    /**
+     * The CIDR range of internal addresses that are reserved for this
+     * instance. If not provided, the service will choose an unused /29
+     * block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+     * unique and non-overlapping with existing subnets in an authorized
+     * network.
+     * 
+     */
     @InputImport(name="reservedIpRange")
     private final @Nullable Input<String> reservedIpRange;
 
@@ -211,6 +359,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
     }
 
+    /**
+     * List of server CA certificates for the instance.
+     * 
+     */
     @InputImport(name="serverCaCerts")
     private final @Nullable Input<List<InstanceServerCaCertGetArgs>> serverCaCerts;
 
@@ -218,6 +370,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.serverCaCerts == null ? Input.empty() : this.serverCaCerts;
     }
 
+    /**
+     * The service tier of the instance. Must be one of these values:
+     * - BASIC: standalone instance
+     * - STANDARD_HA: highly available primary/replica instances
+     *   Default value is `BASIC`.
+     *   Possible values are `BASIC` and `STANDARD_HA`.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 
@@ -225,6 +385,13 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.tier == null ? Input.empty() : this.tier;
     }
 
+    /**
+     * The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+     * - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication
+     *   Default value is `DISABLED`.
+     *   Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
+     * 
+     */
     @InputImport(name="transitEncryptionMode")
     private final @Nullable Input<String> transitEncryptionMode;
 

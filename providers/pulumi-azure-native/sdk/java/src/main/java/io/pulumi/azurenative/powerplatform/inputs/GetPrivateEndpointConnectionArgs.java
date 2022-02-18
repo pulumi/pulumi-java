@@ -12,6 +12,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
+    /**
+     * EnterprisePolicy for the Microsoft Azure subscription.
+     * 
+     */
     @InputImport(name="enterprisePolicyName", required=true)
     private final String enterprisePolicyName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.enterprisePolicyName;
     }
 
+    /**
+     * The name of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -26,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

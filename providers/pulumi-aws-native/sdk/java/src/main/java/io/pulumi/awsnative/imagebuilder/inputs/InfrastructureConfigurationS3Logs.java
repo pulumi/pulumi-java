@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The S3 path in which to store the logs.
+ * 
+ */
 public final class InfrastructureConfigurationS3Logs extends io.pulumi.resources.InvokeArgs {
 
     public static final InfrastructureConfigurationS3Logs Empty = new InfrastructureConfigurationS3Logs();
 
+    /**
+     * S3BucketName
+     * 
+     */
     @InputImport(name="s3BucketName")
     private final @Nullable String s3BucketName;
 
@@ -21,6 +29,10 @@ public final class InfrastructureConfigurationS3Logs extends io.pulumi.resources
         return this.s3BucketName == null ? Optional.empty() : Optional.ofNullable(this.s3BucketName);
     }
 
+    /**
+     * S3KeyPrefix
+     * 
+     */
     @InputImport(name="s3KeyPrefix")
     private final @Nullable String s3KeyPrefix;
 

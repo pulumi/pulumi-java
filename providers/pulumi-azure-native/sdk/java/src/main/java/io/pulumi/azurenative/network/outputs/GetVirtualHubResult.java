@@ -18,29 +18,125 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualHubResult {
+    /**
+     * Address-prefix for this VirtualHub.
+     * 
+     */
     private final @Nullable String addressPrefix;
+    /**
+     * Flag to control transit for VirtualRouter hub.
+     * 
+     */
     private final @Nullable Boolean allowBranchToBranchTraffic;
+    /**
+     * The azureFirewall associated with this VirtualHub.
+     * 
+     */
     private final @Nullable SubResourceResponse azureFirewall;
+    /**
+     * List of references to Bgp Connections.
+     * 
+     */
     private final List<SubResourceResponse> bgpConnections;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * The expressRouteGateway associated with this VirtualHub.
+     * 
+     */
     private final @Nullable SubResourceResponse expressRouteGateway;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * List of references to IpConfigurations.
+     * 
+     */
     private final List<SubResourceResponse> ipConfigurations;
+    /**
+     * Resource location.
+     * 
+     */
     private final String location;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The P2SVpnGateway associated with this VirtualHub.
+     * 
+     */
     private final @Nullable SubResourceResponse p2SVpnGateway;
+    /**
+     * The provisioning state of the virtual hub resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The routeTable associated with this virtual hub.
+     * 
+     */
     private final @Nullable VirtualHubRouteTableResponse routeTable;
+    /**
+     * The routing state.
+     * 
+     */
     private final String routingState;
+    /**
+     * The securityPartnerProvider associated with this VirtualHub.
+     * 
+     */
     private final @Nullable SubResourceResponse securityPartnerProvider;
+    /**
+     * The Security Provider name.
+     * 
+     */
     private final @Nullable String securityProviderName;
+    /**
+     * The sku of this VirtualHub.
+     * 
+     */
     private final @Nullable String sku;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
+    /**
+     * List of all virtual hub route table v2s associated with this VirtualHub.
+     * 
+     */
     private final @Nullable List<VirtualHubRouteTableV2Response> virtualHubRouteTableV2s;
+    /**
+     * VirtualRouter ASN.
+     * 
+     */
     private final @Nullable Double virtualRouterAsn;
+    /**
+     * VirtualRouter IPs.
+     * 
+     */
     private final @Nullable List<String> virtualRouterIps;
+    /**
+     * The VirtualWAN to which the VirtualHub belongs.
+     * 
+     */
     private final @Nullable SubResourceResponse virtualWan;
+    /**
+     * The VpnGateway associated with this VirtualHub.
+     * 
+     */
     private final @Nullable SubResourceResponse vpnGateway;
 
     @OutputCustomType.Constructor({"addressPrefix","allowBranchToBranchTraffic","azureFirewall","bgpConnections","etag","expressRouteGateway","id","ipConfigurations","location","name","p2SVpnGateway","provisioningState","routeTable","routingState","securityPartnerProvider","securityProviderName","sku","tags","type","virtualHubRouteTableV2s","virtualRouterAsn","virtualRouterIps","virtualWan","vpnGateway"})
@@ -95,75 +191,171 @@ public final class GetVirtualHubResult {
         this.vpnGateway = vpnGateway;
     }
 
+    /**
+     * Address-prefix for this VirtualHub.
+     * 
+     */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
+    /**
+     * Flag to control transit for VirtualRouter hub.
+     * 
+     */
     public Optional<Boolean> getAllowBranchToBranchTraffic() {
         return Optional.ofNullable(this.allowBranchToBranchTraffic);
     }
+    /**
+     * The azureFirewall associated with this VirtualHub.
+     * 
+     */
     public Optional<SubResourceResponse> getAzureFirewall() {
         return Optional.ofNullable(this.azureFirewall);
     }
+    /**
+     * List of references to Bgp Connections.
+     * 
+     */
     public List<SubResourceResponse> getBgpConnections() {
         return this.bgpConnections;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * The expressRouteGateway associated with this VirtualHub.
+     * 
+     */
     public Optional<SubResourceResponse> getExpressRouteGateway() {
         return Optional.ofNullable(this.expressRouteGateway);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * List of references to IpConfigurations.
+     * 
+     */
     public List<SubResourceResponse> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * Resource location.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The P2SVpnGateway associated with this VirtualHub.
+     * 
+     */
     public Optional<SubResourceResponse> getP2SVpnGateway() {
         return Optional.ofNullable(this.p2SVpnGateway);
     }
+    /**
+     * The provisioning state of the virtual hub resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The routeTable associated with this virtual hub.
+     * 
+     */
     public Optional<VirtualHubRouteTableResponse> getRouteTable() {
         return Optional.ofNullable(this.routeTable);
     }
+    /**
+     * The routing state.
+     * 
+     */
     public String getRoutingState() {
         return this.routingState;
     }
+    /**
+     * The securityPartnerProvider associated with this VirtualHub.
+     * 
+     */
     public Optional<SubResourceResponse> getSecurityPartnerProvider() {
         return Optional.ofNullable(this.securityPartnerProvider);
     }
+    /**
+     * The Security Provider name.
+     * 
+     */
     public Optional<String> getSecurityProviderName() {
         return Optional.ofNullable(this.securityProviderName);
     }
+    /**
+     * The sku of this VirtualHub.
+     * 
+     */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * List of all virtual hub route table v2s associated with this VirtualHub.
+     * 
+     */
     public List<VirtualHubRouteTableV2Response> getVirtualHubRouteTableV2s() {
         return this.virtualHubRouteTableV2s == null ? List.of() : this.virtualHubRouteTableV2s;
     }
+    /**
+     * VirtualRouter ASN.
+     * 
+     */
     public Optional<Double> getVirtualRouterAsn() {
         return Optional.ofNullable(this.virtualRouterAsn);
     }
+    /**
+     * VirtualRouter IPs.
+     * 
+     */
     public List<String> getVirtualRouterIps() {
         return this.virtualRouterIps == null ? List.of() : this.virtualRouterIps;
     }
+    /**
+     * The VirtualWAN to which the VirtualHub belongs.
+     * 
+     */
     public Optional<SubResourceResponse> getVirtualWan() {
         return Optional.ofNullable(this.virtualWan);
     }
+    /**
+     * The VpnGateway associated with this VirtualHub.
+     * 
+     */
     public Optional<SubResourceResponse> getVpnGateway() {
         return Optional.ofNullable(this.vpnGateway);
     }

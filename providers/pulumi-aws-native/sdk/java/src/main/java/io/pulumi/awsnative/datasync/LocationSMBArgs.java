@@ -17,6 +17,10 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationSMBArgs Empty = new LocationSMBArgs();
 
+    /**
+     * The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
+     * 
+     */
     @InputImport(name="agentArns", required=true)
     private final Input<List<String>> agentArns;
 
@@ -24,6 +28,10 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentArns;
     }
 
+    /**
+     * The name of the Windows domain that the SMB server belongs to.
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -38,6 +46,10 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
     }
 
+    /**
+     * The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -45,6 +57,10 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
         return this.password;
     }
 
+    /**
+     * The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
+     * 
+     */
     @InputImport(name="serverHostname", required=true)
     private final Input<String> serverHostname;
 
@@ -52,6 +68,10 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverHostname;
     }
 
+    /**
+     * The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
+     * 
+     */
     @InputImport(name="subdirectory", required=true)
     private final Input<String> subdirectory;
 
@@ -59,6 +79,10 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
         return this.subdirectory;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LocationSMBTagArgs>> tags;
 
@@ -66,6 +90,10 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The user who can mount the share, has the permissions to access files and folders in the SMB share.
+     * 
+     */
     @InputImport(name="user", required=true)
     private final Input<String> user;
 

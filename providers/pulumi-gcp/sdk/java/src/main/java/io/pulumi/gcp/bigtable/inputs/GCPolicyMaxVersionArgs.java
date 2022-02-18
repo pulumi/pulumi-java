@@ -13,6 +13,10 @@ public final class GCPolicyMaxVersionArgs extends io.pulumi.resources.ResourceAr
 
     public static final GCPolicyMaxVersionArgs Empty = new GCPolicyMaxVersionArgs();
 
+    /**
+     * Number of version before applying the GC policy.
+     * 
+     */
     @InputImport(name="number", required=true)
     private final Input<Integer> number;
 

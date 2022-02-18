@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OrganizationPolicyBooleanPolicy {
+    /**
+     * If true, then the Policy is enforced. If false, then any configuration is acceptable.
+     * 
+     */
     private final Boolean enforced;
 
     @OutputCustomType.Constructor({"enforced"})
@@ -16,6 +20,10 @@ public final class OrganizationPolicyBooleanPolicy {
         this.enforced = Objects.requireNonNull(enforced);
     }
 
+    /**
+     * If true, then the Policy is enforced. If false, then any configuration is acceptable.
+     * 
+     */
     public Boolean getEnforced() {
         return this.enforced;
     }

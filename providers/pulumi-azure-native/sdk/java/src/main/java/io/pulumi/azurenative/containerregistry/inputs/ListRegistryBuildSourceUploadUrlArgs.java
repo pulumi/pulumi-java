@@ -12,6 +12,10 @@ public final class ListRegistryBuildSourceUploadUrlArgs extends io.pulumi.resour
 
     public static final ListRegistryBuildSourceUploadUrlArgs Empty = new ListRegistryBuildSourceUploadUrlArgs();
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -19,6 +23,10 @@ public final class ListRegistryBuildSourceUploadUrlArgs extends io.pulumi.resour
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

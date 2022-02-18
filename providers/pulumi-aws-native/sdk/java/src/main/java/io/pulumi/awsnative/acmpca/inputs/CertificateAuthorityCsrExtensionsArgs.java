@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Structure that contains CSR pass though extensions information.
+ * 
+ */
 public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateAuthorityCsrExtensionsArgs Empty = new CertificateAuthorityCsrExtensionsArgs();

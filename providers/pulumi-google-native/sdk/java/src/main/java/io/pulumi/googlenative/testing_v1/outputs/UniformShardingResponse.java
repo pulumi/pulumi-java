@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UniformShardingResponse {
+    /**
+     * Total number of shards. When any physical devices are selected, the number must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
+     * 
+     */
     private final Integer numShards;
 
     @OutputCustomType.Constructor({"numShards"})
@@ -16,6 +20,10 @@ public final class UniformShardingResponse {
         this.numShards = Objects.requireNonNull(numShards);
     }
 
+    /**
+     * Total number of shards. When any physical devices are selected, the number must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
+     * 
+     */
     public Integer getNumShards() {
         return this.numShards;
     }

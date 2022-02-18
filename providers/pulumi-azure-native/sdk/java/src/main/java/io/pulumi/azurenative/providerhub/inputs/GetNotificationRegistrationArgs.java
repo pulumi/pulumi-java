@@ -12,6 +12,10 @@ public final class GetNotificationRegistrationArgs extends io.pulumi.resources.I
 
     public static final GetNotificationRegistrationArgs Empty = new GetNotificationRegistrationArgs();
 
+    /**
+     * The notification registration.
+     * 
+     */
     @InputImport(name="notificationRegistrationName", required=true)
     private final String notificationRegistrationName;
 
@@ -19,6 +23,10 @@ public final class GetNotificationRegistrationArgs extends io.pulumi.resources.I
         return this.notificationRegistrationName;
     }
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     @InputImport(name="providerNamespace", required=true)
     private final String providerNamespace;
 

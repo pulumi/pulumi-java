@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OSPolicyResourceExecResourceExecResponse {
+    /**
+     * Optional arguments to pass to the source during execution.
+     * 
+     */
     private final List<String> args;
+    /**
+     * A remote or local file.
+     * 
+     */
     private final OSPolicyResourceFileResponse file;
+    /**
+     * The script interpreter to use.
+     * 
+     */
     private final String interpreter;
+    /**
+     * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+     * 
+     */
     private final String outputFilePath;
+    /**
+     * An inline script. The size of the script is limited to 1024 characters.
+     * 
+     */
     private final String script;
 
     @OutputCustomType.Constructor({"args","file","interpreter","outputFilePath","script"})
@@ -31,18 +51,38 @@ public final class OSPolicyResourceExecResourceExecResponse {
         this.script = Objects.requireNonNull(script);
     }
 
+    /**
+     * Optional arguments to pass to the source during execution.
+     * 
+     */
     public List<String> getArgs() {
         return this.args;
     }
+    /**
+     * A remote or local file.
+     * 
+     */
     public OSPolicyResourceFileResponse getFile() {
         return this.file;
     }
+    /**
+     * The script interpreter to use.
+     * 
+     */
     public String getInterpreter() {
         return this.interpreter;
     }
+    /**
+     * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+     * 
+     */
     public String getOutputFilePath() {
         return this.outputFilePath;
     }
+    /**
+     * An inline script. The size of the script is limited to 1024 characters.
+     * 
+     */
     public String getScript() {
         return this.script;
     }

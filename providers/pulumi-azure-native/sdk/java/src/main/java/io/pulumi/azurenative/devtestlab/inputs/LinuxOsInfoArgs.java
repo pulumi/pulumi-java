@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a Linux OS.
+ * 
+ */
 public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinuxOsInfoArgs Empty = new LinuxOsInfoArgs();
 
+    /**
+     * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+     * 
+     */
     @InputImport(name="linuxOsState")
     private final @Nullable Input<Either<String,LinuxOsState>> linuxOsState;
 

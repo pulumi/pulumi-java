@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A flag that indicates whether instances in the game server group are protected from early termination.
+     * 
+     */
     @EnumType
     public enum GameServerGroupGameServerProtectionPolicy {
         NoProtection("NO_PROTECTION"),

@@ -16,6 +16,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
 
     public static final BucketLifecycleRuleConditionGetArgs Empty = new BucketLifecycleRuleConditionGetArgs();
 
+    /**
+     * Minimum age of an object in days to satisfy this condition.
+     * 
+     */
     @InputImport(name="age")
     private final @Nullable Input<Integer> age;
 
@@ -23,6 +27,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
         return this.age == null ? Input.empty() : this.age;
     }
 
+    /**
+     * A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
+     * 
+     */
     @InputImport(name="createdBefore")
     private final @Nullable Input<String> createdBefore;
 
@@ -30,6 +38,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
         return this.createdBefore == null ? Input.empty() : this.createdBefore;
     }
 
+    /**
+     * A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
+     * 
+     */
     @InputImport(name="customTimeBefore")
     private final @Nullable Input<String> customTimeBefore;
 
@@ -37,6 +49,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
         return this.customTimeBefore == null ? Input.empty() : this.customTimeBefore;
     }
 
+    /**
+     * Days since the date set in the `customTime` metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the `customTime`.
+     * 
+     */
     @InputImport(name="daysSinceCustomTime")
     private final @Nullable Input<Integer> daysSinceCustomTime;
 
@@ -44,6 +60,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
         return this.daysSinceCustomTime == null ? Input.empty() : this.daysSinceCustomTime;
     }
 
+    /**
+     * Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
+     * 
+     */
     @InputImport(name="daysSinceNoncurrentTime")
     private final @Nullable Input<Integer> daysSinceNoncurrentTime;
 
@@ -51,6 +71,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
         return this.daysSinceNoncurrentTime == null ? Input.empty() : this.daysSinceNoncurrentTime;
     }
 
+    /**
+     * [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `DURABLE_REDUCED_AVAILABILITY`.
+     * 
+     */
     @InputImport(name="matchesStorageClasses")
     private final @Nullable Input<List<String>> matchesStorageClasses;
 
@@ -58,6 +82,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
         return this.matchesStorageClasses == null ? Input.empty() : this.matchesStorageClasses;
     }
 
+    /**
+     * Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
+     * 
+     */
     @InputImport(name="noncurrentTimeBefore")
     private final @Nullable Input<String> noncurrentTimeBefore;
 
@@ -65,6 +93,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
         return this.noncurrentTimeBefore == null ? Input.empty() : this.noncurrentTimeBefore;
     }
 
+    /**
+     * Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
+     * 
+     */
     @InputImport(name="numNewerVersions")
     private final @Nullable Input<Integer> numNewerVersions;
 
@@ -72,6 +104,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
         return this.numNewerVersions == null ? Input.empty() : this.numNewerVersions;
     }
 
+    /**
+     * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
+     * 
+     */
     @InputImport(name="withState")
     private final @Nullable Input<String> withState;
 

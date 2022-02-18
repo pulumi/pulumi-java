@@ -16,6 +16,10 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
 
     public static final TransferJobState Empty = new TransferJobState();
 
+    /**
+     * When the Transfer Job was created.
+     * 
+     */
     @InputImport(name="creationTime")
     private final @Nullable Input<String> creationTime;
 
@@ -23,6 +27,10 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
         return this.creationTime == null ? Input.empty() : this.creationTime;
     }
 
+    /**
+     * When the Transfer Job was deleted.
+     * 
+     */
     @InputImport(name="deletionTime")
     private final @Nullable Input<String> deletionTime;
 
@@ -30,6 +38,10 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
         return this.deletionTime == null ? Input.empty() : this.deletionTime;
     }
 
+    /**
+     * Unique description to identify the Transfer Job.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +49,10 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * When the Transfer Job was last modified.
+     * 
+     */
     @InputImport(name="lastModificationTime")
     private final @Nullable Input<String> lastModificationTime;
 
@@ -44,6 +60,10 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
         return this.lastModificationTime == null ? Input.empty() : this.lastModificationTime;
     }
 
+    /**
+     * The name of the Transfer Job.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +71,11 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +83,10 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<TransferJobScheduleGetArgs> schedule;
 
@@ -65,6 +94,10 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -72,6 +105,10 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * Transfer specification. Structure documented below.
+     * 
+     */
     @InputImport(name="transferSpec")
     private final @Nullable Input<TransferJobTransferSpecGetArgs> transferSpec;
 

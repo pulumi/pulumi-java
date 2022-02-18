@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudHealthcareV1ConsentPolicyResponse {
+    /**
+     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).
+     * 
+     */
     private final ExprResponse authorizationRule;
+    /**
+     * The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+     * 
+     */
     private final List<AttributeResponse> resourceAttributes;
 
     @OutputCustomType.Constructor({"authorizationRule","resourceAttributes"})
@@ -22,9 +30,17 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse {
         this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
     }
 
+    /**
+     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).
+     * 
+     */
     public ExprResponse getAuthorizationRule() {
         return this.authorizationRule;
     }
+    /**
+     * The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+     * 
+     */
     public List<AttributeResponse> getResourceAttributes() {
         return this.resourceAttributes;
     }

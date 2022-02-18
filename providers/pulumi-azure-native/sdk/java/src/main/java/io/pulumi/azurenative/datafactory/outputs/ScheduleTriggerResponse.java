@@ -15,11 +15,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScheduleTriggerResponse {
+    /**
+     * List of tags that can be used for describing the trigger.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * Trigger description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Pipelines that need to be started.
+     * 
+     */
     private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
+    /**
+     * Recurrence schedule configuration.
+     * 
+     */
     private final ScheduleTriggerRecurrenceResponse recurrence;
+    /**
+     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * 
+     */
     private final String runtimeState;
+    /**
+     * Trigger type.
+     * Expected value is 'ScheduleTrigger'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"annotations","description","pipelines","recurrence","runtimeState","type"})
@@ -38,21 +63,46 @@ public final class ScheduleTriggerResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * List of tags that can be used for describing the trigger.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * Trigger description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Pipelines that need to be started.
+     * 
+     */
     public List<TriggerPipelineReferenceResponse> getPipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
+    /**
+     * Recurrence schedule configuration.
+     * 
+     */
     public ScheduleTriggerRecurrenceResponse getRecurrence() {
         return this.recurrence;
     }
+    /**
+     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * 
+     */
     public String getRuntimeState() {
         return this.runtimeState;
     }
+    /**
+     * Trigger type.
+     * Expected value is 'ScheduleTrigger'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

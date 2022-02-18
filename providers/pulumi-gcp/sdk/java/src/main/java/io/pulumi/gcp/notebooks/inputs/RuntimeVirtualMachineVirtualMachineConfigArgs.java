@@ -22,6 +22,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
 
     public static final RuntimeVirtualMachineVirtualMachineConfigArgs Empty = new RuntimeVirtualMachineVirtualMachineConfigArgs();
 
+    /**
+     * The Compute Engine accelerator configuration for this runtime.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="acceleratorConfig")
     private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig;
 
@@ -29,6 +34,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
     }
 
+    /**
+     * Use a list of container images to start the notebook instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="containerImages")
     private final @Nullable Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages;
 
@@ -36,6 +46,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.containerImages == null ? Input.empty() : this.containerImages;
     }
 
+    /**
+     * Data disk option configuration settings.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="dataDisk", required=true)
     private final Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk;
 
@@ -43,6 +58,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.dataDisk;
     }
 
+    /**
+     * Encryption settings for virtual machine data disk.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig;
 
@@ -50,6 +70,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
+    /**
+     * - 
+     * The Compute Engine guest attributes. (see [Project and instance
+     * guest attributes](https://cloud.google.com/compute/docs/
+     * storing-retrieving-metadata#guest_attributes)).
+     * 
+     */
     @InputImport(name="guestAttributes")
     private final @Nullable Input<Map<String,String>> guestAttributes;
 
@@ -57,6 +84,15 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.guestAttributes == null ? Input.empty() : this.guestAttributes;
     }
 
+    /**
+     * If true, runtime will only have internal IP addresses. By default,
+     * runtimes are not restricted to internal IP addresses, and will
+     * have ephemeral external IP addresses assigned to each vm. This
+     * `internal_ip_only` restriction can only be enabled for subnetwork
+     * enabled networks, and all dependencies must be configured to be
+     * accessible without external IP addresses.
+     * 
+     */
     @InputImport(name="internalIpOnly")
     private final @Nullable Input<Boolean> internalIpOnly;
 
@@ -64,6 +100,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
     }
 
+    /**
+     * Labels to apply to this disk. These can be later modified
+     * by the disks.setLabels method. This field is only
+     * applicable for persistent disks.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -71,6 +113,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The Compute Engine machine type used for runtimes.
+     * 
+     */
     @InputImport(name="machineType", required=true)
     private final Input<String> machineType;
 
@@ -78,6 +124,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.machineType;
     }
 
+    /**
+     * The Compute Engine metadata entries to add to virtual machine.
+     * (see [Project and instance metadata](https://cloud.google.com
+     * /compute/docs/storing-retrieving-metadata#project_and_instance
+     * _metadata)).
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -85,6 +138,23 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The Compute Engine network to be used for machine communications.
+     * Cannot be specified with subnetwork. If neither `network` nor
+     * `subnet` is specified, the "default" network of the project is
+     * used, if it exists. A full URL or partial URI. Examples:
+     * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+     *   regions/global/default`
+     * * `projects/[project_id]/regions/global/default`
+     *   Runtimes are managed resources inside Google Infrastructure.
+     *   Runtimes support the following network configurations:
+     * * Google Managed Network (Network & subnet are empty)
+     * * Consumer Project VPC (network & subnet are required). Requires
+     *   configuring Private Service Access.
+     * * Shared VPC (network & subnet are required). Requires
+     *   configuring Private Service Access.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -92,6 +162,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The type of vNIC to be used on this interface. This may be gVNIC
+     * or VirtioNet.
+     * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
+     * 
+     */
     @InputImport(name="nicType")
     private final @Nullable Input<String> nicType;
 
@@ -99,6 +175,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.nicType == null ? Input.empty() : this.nicType;
     }
 
+    /**
+     * Shielded VM Instance configuration settings.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
@@ -106,6 +187,15 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * The Compute Engine subnetwork to be used for machine
+     * communications. Cannot be specified with network. A full URL or
+     * partial URI are valid. Examples:
+     * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+     *   regions/us-east1/subnetworks/sub0`
+     * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<String> subnet;
 
@@ -113,6 +203,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * The Compute Engine tags to add to runtime (see [Tagging instances]
+     * (https://cloud.google.com/compute/docs/
+     * label-or-tag-resources#tags)).
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -120,6 +216,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * - 
+     * The zone where the virtual machine is located.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

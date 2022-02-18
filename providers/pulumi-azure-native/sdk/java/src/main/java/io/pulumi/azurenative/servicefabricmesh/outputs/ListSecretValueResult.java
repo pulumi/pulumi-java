@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListSecretValueResult {
+    /**
+     * The actual value of the secret.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +22,10 @@ public final class ListSecretValueResult {
         this.value = value;
     }
 
+    /**
+     * The actual value of the secret.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

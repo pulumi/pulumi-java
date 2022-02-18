@@ -14,6 +14,11 @@ public final class TriggerBuildAvailableSecretsArgs extends io.pulumi.resources.
 
     public static final TriggerBuildAvailableSecretsArgs Empty = new TriggerBuildAvailableSecretsArgs();
 
+    /**
+     * Pairs a secret environment variable with a SecretVersion in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secretManagers", required=true)
     private final Input<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers;
 

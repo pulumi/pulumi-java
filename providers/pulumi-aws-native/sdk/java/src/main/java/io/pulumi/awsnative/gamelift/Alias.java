@@ -13,33 +13,77 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:gamelift:Alias")
 public class Alias extends io.pulumi.resources.CustomResource {
+    /**
+     * Unique alias ID
+     * 
+     */
     @OutputExport(name="aliasId", type=String.class, parameters={})
     private Output<String> aliasId;
 
+    /**
+     * @return Unique alias ID
+     * 
+     */
     public Output<String> getAliasId() {
         return this.aliasId;
     }
+    /**
+     * A human-readable description of the alias.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A human-readable description of the alias.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * A descriptive label that is associated with an alias. Alias names do not need to be unique.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return A descriptive label that is associated with an alias. Alias names do not need to be unique.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+     * 
+     */
     @OutputExport(name="routingStrategy", type=AliasRoutingStrategy.class, parameters={})
     private Output<AliasRoutingStrategy> routingStrategy;
 
+    /**
+     * @return A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+     * 
+     */
     public Output<AliasRoutingStrategy> getRoutingStrategy() {
         return this.routingStrategy;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Alias(String name, AliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:gamelift:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -55,6 +99,14 @@ public class Alias extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Alias get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Alias(name, id, options);
     }

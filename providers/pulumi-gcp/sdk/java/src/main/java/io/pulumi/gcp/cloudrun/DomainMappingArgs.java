@@ -16,6 +16,10 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
+    /**
+     * The location of the cloud run instance. eg us-central1
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -23,6 +27,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * Metadata associated with this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="metadata", required=true)
     private final Input<DomainMappingMetadataArgs> metadata;
 
@@ -30,6 +39,10 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata;
     }
 
+    /**
+     * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +50,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +62,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The spec for this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="spec", required=true)
     private final Input<DomainMappingSpecArgs> spec;
 

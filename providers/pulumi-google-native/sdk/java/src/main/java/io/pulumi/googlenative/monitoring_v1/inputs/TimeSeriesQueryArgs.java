@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * TimeSeriesQuery collects the set of supported methods for querying time series data from the Stackdriver metrics API.
+ * 
+ */
 public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TimeSeriesQueryArgs Empty = new TimeSeriesQueryArgs();
 
+    /**
+     * Filter parameters to fetch time series.
+     * 
+     */
     @InputImport(name="timeSeriesFilter")
     private final @Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter;
 
@@ -23,6 +31,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
         return this.timeSeriesFilter == null ? Input.empty() : this.timeSeriesFilter;
     }
 
+    /**
+     * Parameters to fetch a ratio between two time series filters.
+     * 
+     */
     @InputImport(name="timeSeriesFilterRatio")
     private final @Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
 
@@ -30,6 +42,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
         return this.timeSeriesFilterRatio == null ? Input.empty() : this.timeSeriesFilterRatio;
     }
 
+    /**
+     * A query used to fetch time series.
+     * 
+     */
     @InputImport(name="timeSeriesQueryLanguage")
     private final @Nullable Input<String> timeSeriesQueryLanguage;
 
@@ -37,6 +53,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
         return this.timeSeriesQueryLanguage == null ? Input.empty() : this.timeSeriesQueryLanguage;
     }
 
+    /**
+     * The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
+     * 
+     */
     @InputImport(name="unitOverride")
     private final @Nullable Input<String> unitOverride;
 

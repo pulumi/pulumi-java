@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A notification event receivers.
+ * 
+ */
 public final class NotificationEventReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationEventReceiverArgs Empty = new NotificationEventReceiverArgs();
 
+    /**
+     * The type of the notification event receiver.
+     * 
+     */
     @InputImport(name="receiverType")
     private final @Nullable Input<String> receiverType;
 
@@ -22,6 +30,10 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
         return this.receiverType == null ? Input.empty() : this.receiverType;
     }
 
+    /**
+     * The notification event receiver value.
+     * 
+     */
     @InputImport(name="receiverValue")
     private final @Nullable Input<NotificationReceiverValueArgs> receiverValue;
 

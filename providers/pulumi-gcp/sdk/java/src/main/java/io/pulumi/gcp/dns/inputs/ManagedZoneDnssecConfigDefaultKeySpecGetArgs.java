@@ -15,6 +15,11 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
 
     public static final ManagedZoneDnssecConfigDefaultKeySpecGetArgs Empty = new ManagedZoneDnssecConfigDefaultKeySpecGetArgs();
 
+    /**
+     * String mnemonic specifying the DNSSEC algorithm of this key
+     * Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
+     * 
+     */
     @InputImport(name="algorithm")
     private final @Nullable Input<String> algorithm;
 
@@ -22,6 +27,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
         return this.algorithm == null ? Input.empty() : this.algorithm;
     }
 
+    /**
+     * Length of the keys in bits
+     * 
+     */
     @InputImport(name="keyLength")
     private final @Nullable Input<Integer> keyLength;
 
@@ -29,6 +38,16 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
         return this.keyLength == null ? Input.empty() : this.keyLength;
     }
 
+    /**
+     * Specifies whether this is a key signing key (KSK) or a zone
+     * signing key (ZSK). Key signing keys have the Secure Entry
+     * Point flag set and, when active, will only be used to sign
+     * resource record sets of type DNSKEY. Zone signing keys do
+     * not have the Secure Entry Point flag set and will be used
+     * to sign all other types of resource record sets.
+     * Possible values are `keySigning` and `zoneSigning`.
+     * 
+     */
     @InputImport(name="keyType")
     private final @Nullable Input<String> keyType;
 
@@ -36,6 +55,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
         return this.keyType == null ? Input.empty() : this.keyType;
     }
 
+    /**
+     * Identifies what kind of resource this is
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 

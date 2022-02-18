@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
+ * 
+ */
 public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlarmsPropertiesArgs Empty = new AlarmsPropertiesArgs();
 
+    /**
+     * The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
+     * 
+     */
     @InputImport(name="alarmRoleArn")
     private final @Nullable Input<String> alarmRoleArn;
 
@@ -21,6 +29,10 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.alarmRoleArn == null ? Input.empty() : this.alarmRoleArn;
     }
 
+    /**
+     * The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
+     * 
+     */
     @InputImport(name="notificationLambdaArn")
     private final @Nullable Input<String> notificationLambdaArn;
 

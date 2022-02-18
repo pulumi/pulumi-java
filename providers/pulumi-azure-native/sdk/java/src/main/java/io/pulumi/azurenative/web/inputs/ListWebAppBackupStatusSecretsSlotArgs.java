@@ -18,6 +18,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     public static final ListWebAppBackupStatusSecretsSlotArgs Empty = new ListWebAppBackupStatusSecretsSlotArgs();
 
+    /**
+     * ID of backup.
+     * 
+     */
     @InputImport(name="backupId", required=true)
     private final String backupId;
 
@@ -25,6 +29,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.backupId;
     }
 
+    /**
+     * Name of the backup.
+     * 
+     */
     @InputImport(name="backupName")
     private final @Nullable String backupName;
 
@@ -32,6 +40,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.backupName == null ? Optional.empty() : Optional.ofNullable(this.backupName);
     }
 
+    /**
+     * Schedule for the backup if it is executed periodically.
+     * 
+     */
     @InputImport(name="backupSchedule")
     private final @Nullable BackupSchedule backupSchedule;
 
@@ -39,6 +51,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.backupSchedule == null ? Optional.empty() : Optional.ofNullable(this.backupSchedule);
     }
 
+    /**
+     * Databases included in the backup.
+     * 
+     */
     @InputImport(name="databases")
     private final @Nullable List<DatabaseBackupSetting> databases;
 
@@ -46,6 +62,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.databases == null ? List.of() : this.databases;
     }
 
+    /**
+     * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -53,6 +73,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -60,6 +84,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Name of web app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -67,6 +95,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -74,6 +106,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of web app slot. If not specified then will default to production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 
@@ -81,6 +117,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
         return this.slot;
     }
 
+    /**
+     * SAS URL to the container.
+     * 
+     */
     @InputImport(name="storageAccountUrl", required=true)
     private final String storageAccountUrl;
 

@@ -8,8 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of a snapshot. The default is NodePool.
+     * 
+     */
     @EnumType
     public enum SnapshotType {
+        /**
+         * The snapshot is a snapshot of a node pool.
+         * 
+         */
         NodePool("NodePool");
 
         private final String value;

@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes all the properties for encoding a video with the H.264 codec.
+ * 
+ */
 public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final H264VideoArgs Empty = new H264VideoArgs();
 
+    /**
+     * Tells the encoder how to choose its encoding settings. The default value is Balanced.
+     * 
+     */
     @InputImport(name="complexity")
     private final @Nullable Input<Either<String,H264Complexity>> complexity;
 
@@ -28,6 +36,10 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.complexity == null ? Input.empty() : this.complexity;
     }
 
+    /**
+     * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+     * 
+     */
     @InputImport(name="keyFrameInterval")
     private final @Nullable Input<String> keyFrameInterval;
 
@@ -35,6 +47,10 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
     }
 
+    /**
+     * An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -42,6 +58,10 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * The collection of output H.264 layers to be produced by the encoder.
+     * 
+     */
     @InputImport(name="layers")
     private final @Nullable Input<List<H264LayerArgs>> layers;
 
@@ -49,6 +69,11 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.layers == null ? Input.empty() : this.layers;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.H264Video'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -56,6 +81,10 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.odataType;
     }
 
+    /**
+     * Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
+     * 
+     */
     @InputImport(name="sceneChangeDetection")
     private final @Nullable Input<Boolean> sceneChangeDetection;
 
@@ -63,6 +92,10 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.sceneChangeDetection == null ? Input.empty() : this.sceneChangeDetection;
     }
 
+    /**
+     * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+     * 
+     */
     @InputImport(name="stretchMode")
     private final @Nullable Input<Either<String,StretchMode>> stretchMode;
 
@@ -70,6 +103,10 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.stretchMode == null ? Input.empty() : this.stretchMode;
     }
 
+    /**
+     * The Video Sync Mode
+     * 
+     */
     @InputImport(name="syncMode")
     private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
 

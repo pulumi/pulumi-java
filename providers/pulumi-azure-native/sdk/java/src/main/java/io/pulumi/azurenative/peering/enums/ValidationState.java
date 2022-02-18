@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The validation state of the ASN associated with the peer.
+     * 
+     */
     @EnumType
     public enum ValidationState {
         None("None"),

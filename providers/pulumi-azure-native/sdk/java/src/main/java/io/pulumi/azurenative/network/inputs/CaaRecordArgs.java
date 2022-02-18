@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A CAA record.
+ * 
+ */
 public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CaaRecordArgs Empty = new CaaRecordArgs();
 
+    /**
+     * The flags for this CAA record as an integer between 0 and 255.
+     * 
+     */
     @InputImport(name="flags")
     private final @Nullable Input<Integer> flags;
 
@@ -22,6 +30,10 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.flags == null ? Input.empty() : this.flags;
     }
 
+    /**
+     * The tag for this CAA record.
+     * 
+     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 
@@ -29,6 +41,10 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.tag == null ? Input.empty() : this.tag;
     }
 
+    /**
+     * The value for this CAA record.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -24,10 +24,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of cluster.
+ * 
+ */
 public final class ClusterGetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterGetPropertiesResponse Empty = new ClusterGetPropertiesResponse();
 
+    /**
+     * The cluster definition.
+     * 
+     */
     @InputImport(name="clusterDefinition", required=true)
     private final ClusterDefinitionResponse clusterDefinition;
 
@@ -35,6 +43,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.clusterDefinition;
     }
 
+    /**
+     * The hdp version of the cluster.
+     * 
+     */
     @InputImport(name="clusterHdpVersion")
     private final @Nullable String clusterHdpVersion;
 
@@ -42,6 +54,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.clusterHdpVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterHdpVersion);
     }
 
+    /**
+     * The cluster id.
+     * 
+     */
     @InputImport(name="clusterId")
     private final @Nullable String clusterId;
 
@@ -49,6 +65,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
     }
 
+    /**
+     * The state of the cluster.
+     * 
+     */
     @InputImport(name="clusterState")
     private final @Nullable String clusterState;
 
@@ -56,6 +76,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.clusterState == null ? Optional.empty() : Optional.ofNullable(this.clusterState);
     }
 
+    /**
+     * The version of the cluster.
+     * 
+     */
     @InputImport(name="clusterVersion")
     private final @Nullable String clusterVersion;
 
@@ -63,6 +87,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.clusterVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterVersion);
     }
 
+    /**
+     * The compute isolation properties.
+     * 
+     */
     @InputImport(name="computeIsolationProperties")
     private final @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
 
@@ -70,6 +98,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.computeIsolationProperties == null ? Optional.empty() : Optional.ofNullable(this.computeIsolationProperties);
     }
 
+    /**
+     * The compute profile.
+     * 
+     */
     @InputImport(name="computeProfile")
     private final @Nullable ComputeProfileResponse computeProfile;
 
@@ -77,6 +109,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.computeProfile == null ? Optional.empty() : Optional.ofNullable(this.computeProfile);
     }
 
+    /**
+     * The list of connectivity endpoints.
+     * 
+     */
     @InputImport(name="connectivityEndpoints")
     private final @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
 
@@ -84,6 +120,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.connectivityEndpoints == null ? List.of() : this.connectivityEndpoints;
     }
 
+    /**
+     * The date on which the cluster was created.
+     * 
+     */
     @InputImport(name="createdDate")
     private final @Nullable String createdDate;
 
@@ -91,6 +131,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.createdDate == null ? Optional.empty() : Optional.ofNullable(this.createdDate);
     }
 
+    /**
+     * The disk encryption properties.
+     * 
+     */
     @InputImport(name="diskEncryptionProperties")
     private final @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
 
@@ -98,6 +142,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.diskEncryptionProperties == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionProperties);
     }
 
+    /**
+     * The encryption-in-transit properties.
+     * 
+     */
     @InputImport(name="encryptionInTransitProperties")
     private final @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
 
@@ -105,6 +153,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.encryptionInTransitProperties == null ? Optional.empty() : Optional.ofNullable(this.encryptionInTransitProperties);
     }
 
+    /**
+     * The list of errors.
+     * 
+     */
     @InputImport(name="errors")
     private final @Nullable List<ErrorsResponse> errors;
 
@@ -112,6 +164,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.errors == null ? List.of() : this.errors;
     }
 
+    /**
+     * The excluded services config.
+     * 
+     */
     @InputImport(name="excludedServicesConfig")
     private final @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
 
@@ -119,6 +175,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.excludedServicesConfig == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesConfig);
     }
 
+    /**
+     * The cluster kafka rest proxy configuration.
+     * 
+     */
     @InputImport(name="kafkaRestProperties")
     private final @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
 
@@ -126,6 +186,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.kafkaRestProperties == null ? Optional.empty() : Optional.ofNullable(this.kafkaRestProperties);
     }
 
+    /**
+     * The minimal supported tls version.
+     * 
+     */
     @InputImport(name="minSupportedTlsVersion")
     private final @Nullable String minSupportedTlsVersion;
 
@@ -133,6 +197,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.minSupportedTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minSupportedTlsVersion);
     }
 
+    /**
+     * The network properties.
+     * 
+     */
     @InputImport(name="networkProperties")
     private final @Nullable NetworkPropertiesResponse networkProperties;
 
@@ -140,6 +208,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.networkProperties == null ? Optional.empty() : Optional.ofNullable(this.networkProperties);
     }
 
+    /**
+     * The type of operating system.
+     * 
+     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -147,6 +219,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -154,6 +230,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
+    /**
+     * The quota information.
+     * 
+     */
     @InputImport(name="quotaInfo")
     private final @Nullable QuotaInfoResponse quotaInfo;
 
@@ -161,6 +241,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.quotaInfo == null ? Optional.empty() : Optional.ofNullable(this.quotaInfo);
     }
 
+    /**
+     * The security profile.
+     * 
+     */
     @InputImport(name="securityProfile")
     private final @Nullable SecurityProfileResponse securityProfile;
 
@@ -168,6 +252,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.securityProfile == null ? Optional.empty() : Optional.ofNullable(this.securityProfile);
     }
 
+    /**
+     * The storage profile.
+     * 
+     */
     @InputImport(name="storageProfile")
     private final @Nullable StorageProfileResponse storageProfile;
 
@@ -175,6 +263,10 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
         return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
     }
 
+    /**
+     * The cluster tier.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

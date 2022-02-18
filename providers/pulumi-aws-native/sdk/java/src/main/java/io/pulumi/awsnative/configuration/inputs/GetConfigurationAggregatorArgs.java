@@ -12,6 +12,10 @@ public final class GetConfigurationAggregatorArgs extends io.pulumi.resources.In
 
     public static final GetConfigurationAggregatorArgs Empty = new GetConfigurationAggregatorArgs();
 
+    /**
+     * The name of the aggregator.
+     * 
+     */
     @InputImport(name="configurationAggregatorName", required=true)
     private final String configurationAggregatorName;
 

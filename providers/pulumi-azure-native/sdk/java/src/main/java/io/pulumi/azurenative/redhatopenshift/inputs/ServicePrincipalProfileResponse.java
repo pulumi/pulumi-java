@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * ServicePrincipalProfile represents a service principal profile.
+ * 
+ */
 public final class ServicePrincipalProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServicePrincipalProfileResponse Empty = new ServicePrincipalProfileResponse();
 
+    /**
+     * The client ID used for the cluster (immutable).
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -21,6 +29,10 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * The client secret used for the cluster (immutable).
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable String clientSecret;
 

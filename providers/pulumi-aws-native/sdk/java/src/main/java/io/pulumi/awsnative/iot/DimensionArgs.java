@@ -17,6 +17,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DimensionArgs Empty = new DimensionArgs();
 
+    /**
+     * A unique identifier for the dimension.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -24,6 +28,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specifies the value or list of values for the dimension.
+     * 
+     */
     @InputImport(name="stringValues", required=true)
     private final Input<List<String>> stringValues;
 
@@ -31,6 +39,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.stringValues;
     }
 
+    /**
+     * Metadata that can be used to manage the dimension.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DimensionTagArgs>> tags;
 
@@ -38,6 +50,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Specifies the type of the dimension.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<DimensionType> type;
 

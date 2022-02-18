@@ -12,6 +12,10 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
 
     public static final GetPrivateDnsZoneGroupArgs Empty = new GetPrivateDnsZoneGroupArgs();
 
+    /**
+     * The name of the private dns zone group.
+     * 
+     */
     @InputImport(name="privateDnsZoneGroupName", required=true)
     private final String privateDnsZoneGroupName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
         return this.privateDnsZoneGroupName;
     }
 
+    /**
+     * The name of the private endpoint.
+     * 
+     */
     @InputImport(name="privateEndpointName", required=true)
     private final String privateEndpointName;
 
@@ -26,6 +34,10 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
         return this.privateEndpointName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

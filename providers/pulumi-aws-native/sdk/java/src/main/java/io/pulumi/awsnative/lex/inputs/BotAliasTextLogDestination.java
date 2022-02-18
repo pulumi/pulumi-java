@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the Amazon CloudWatch Logs destination log group for conversation text logs.
+ * 
+ */
 public final class BotAliasTextLogDestination extends io.pulumi.resources.InvokeArgs {
 
     public static final BotAliasTextLogDestination Empty = new BotAliasTextLogDestination();

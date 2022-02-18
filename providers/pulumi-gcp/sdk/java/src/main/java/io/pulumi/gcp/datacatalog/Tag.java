@@ -15,45 +15,143 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Tags are used to attach custom metadata to Data Catalog resources. Tags conform to the specifications within their tag template.
+ * 
+ * See [Data Catalog IAM](https://cloud.google.com/data-catalog/docs/concepts/iam) for information on the permissions needed to create or view tags.
+ * 
+ * To get more information about Tag, see:
+ * 
+ * * [API documentation](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.tags)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Tag can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:datacatalog/tag:Tag default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:datacatalog/tag:Tag")
 public class Tag extends io.pulumi.resources.CustomResource {
+    /**
+     * Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
+     * individual column based on that schema.
+     * For attaching a tag to a nested column, use `.` to separate the column names. Example:
+     * `outer_column.inner_column`
+     * 
+     */
     @OutputExport(name="column", type=String.class, parameters={})
     private Output</* @Nullable */ String> column;
 
+    /**
+     * @return Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
+     * individual column based on that schema.
+     * For attaching a tag to a nested column, use `.` to separate the column names. Example:
+     * `outer_column.inner_column`
+     * 
+     */
     public Output</* @Nullable */ String> getColumn() {
         return this.column;
     }
+    /**
+     * This maps the ID of a tag field to the value of and additional information about that field.
+     * Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="fields", type=List.class, parameters={TagField.class})
     private Output<List<TagField>> fields;
 
+    /**
+     * @return This maps the ID of a tag field to the value of and additional information about that field.
+     * Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<TagField>> getFields() {
         return this.fields;
     }
+    /**
+     * The resource name of the tag in URL format. Example:
+     * projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
+     * projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
+     * identifier. Note that this Tag may not actually be stored in the location in this name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the tag in URL format. Example:
+     * projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
+     * projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
+     * identifier. Note that this Tag may not actually be stored in the location in this name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
+     * all entries in that group.
+     * 
+     */
     @OutputExport(name="parent", type=String.class, parameters={})
     private Output</* @Nullable */ String> parent;
 
+    /**
+     * @return The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
+     * all entries in that group.
+     * 
+     */
     public Output</* @Nullable */ String> getParent() {
         return this.parent;
     }
+    /**
+     * The resource name of the tag template that this tag uses. Example:
+     * projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
+     * This field cannot be modified after creation.
+     * 
+     */
     @OutputExport(name="template", type=String.class, parameters={})
     private Output<String> template;
 
+    /**
+     * @return The resource name of the tag template that this tag uses. Example:
+     * projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
+     * This field cannot be modified after creation.
+     * 
+     */
     public Output<String> getTemplate() {
         return this.template;
     }
+    /**
+     * The display name of the tag template.
+     * 
+     */
     @OutputExport(name="templateDisplayname", type=String.class, parameters={})
     private Output<String> templateDisplayname;
 
+    /**
+     * @return The display name of the tag template.
+     * 
+     */
     public Output<String> getTemplateDisplayname() {
         return this.templateDisplayname;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Tag(String name, TagArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:datacatalog/tag:Tag", name, args == null ? TagArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +167,15 @@ public class Tag extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Tag get(String name, Input<String> id, @Nullable TagState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Tag(name, id, state, options);
     }

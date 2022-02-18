@@ -15,6 +15,10 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
 
     public static final ConnectivityTestSourceArgs Empty = new ConnectivityTestSourceArgs();
 
+    /**
+     * A Compute Engine instance URI.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -22,6 +26,12 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
         return this.instance == null ? Input.empty() : this.instance;
     }
 
+    /**
+     * The IP address of the endpoint, which can be an external or
+     * internal IP. An IPv6 address is only allowed when the test's
+     * destination is a global load balancer VIP.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -29,6 +39,10 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * A Compute Engine network URI.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -36,6 +50,11 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Type of the network where the endpoint is located.
+     * Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
+     * 
+     */
     @InputImport(name="networkType")
     private final @Nullable Input<String> networkType;
 
@@ -43,6 +62,11 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
         return this.networkType == null ? Input.empty() : this.networkType;
     }
 
+    /**
+     * The IP protocol port of the endpoint. Only applicable when
+     * protocol is TCP or UDP.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -50,6 +74,17 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * Project ID where the endpoint is located. The Project ID can be
+     * derived from the URI if you provide a VM instance or network URI.
+     * The following are two cases where you must provide the project ID:
+     * 1. Only the IP address is specified, and the IP address is within
+     *    a GCP project. 2. When you are using Shared VPC and the IP address
+     *    that you provide is from the service project. In this case, the
+     *    network that the IP address resides in is defined in the host
+     *    project.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Input<String> projectId;
 

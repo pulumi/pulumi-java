@@ -12,8 +12,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OrganizationSecurityPolicyRuleMatch {
+    /**
+     * The configuration options for matching the rule.
+     * Structure is documented below.
+     * 
+     */
     private final OrganizationSecurityPolicyRuleMatchConfig config;
+    /**
+     * A description of the rule.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Preconfigured versioned expression. For organization security policy rules,
+     * the only supported type is "FIREWALL".
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     private final @Nullable String versionedExpr;
 
     @OutputCustomType.Constructor({"config","description","versionedExpr"})
@@ -26,12 +42,28 @@ public final class OrganizationSecurityPolicyRuleMatch {
         this.versionedExpr = versionedExpr;
     }
 
+    /**
+     * The configuration options for matching the rule.
+     * Structure is documented below.
+     * 
+     */
     public OrganizationSecurityPolicyRuleMatchConfig getConfig() {
         return this.config;
     }
+    /**
+     * A description of the rule.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Preconfigured versioned expression. For organization security policy rules,
+     * the only supported type is "FIREWALL".
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     public Optional<String> getVersionedExpr() {
         return Optional.ofNullable(this.versionedExpr);
     }

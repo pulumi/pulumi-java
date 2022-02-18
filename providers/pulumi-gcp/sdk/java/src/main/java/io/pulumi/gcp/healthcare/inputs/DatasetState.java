@@ -14,6 +14,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetState Empty = new DatasetState();
 
+    /**
+     * The location for the Dataset.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -21,6 +25,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name for the Dataset.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +36,11 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -35,6 +48,10 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The fully qualified name of this dataset
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -42,6 +59,12 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+     * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+     * (e.g., HL7 messages) where no explicit timezone is specified.
+     * 
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

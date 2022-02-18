@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LoggingFilterProperties {
+    /**
+     * Default handling for logs that don't match any of the specified filtering conditions.
+     * 
+     */
     private final LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior;
+    /**
+     * The filters that you want to apply to the logs.
+     * 
+     */
     private final List<LoggingConfigurationFilter> filters;
 
     @OutputCustomType.Constructor({"defaultBehavior","filters"})
@@ -22,9 +30,17 @@ public final class LoggingFilterProperties {
         this.filters = Objects.requireNonNull(filters);
     }
 
+    /**
+     * Default handling for logs that don't match any of the specified filtering conditions.
+     * 
+     */
     public LoggingConfigurationLoggingFilterPropertiesDefaultBehavior getDefaultBehavior() {
         return this.defaultBehavior;
     }
+    /**
+     * The filters that you want to apply to the logs.
+     * 
+     */
     public List<LoggingConfigurationFilter> getFilters() {
         return this.filters;
     }

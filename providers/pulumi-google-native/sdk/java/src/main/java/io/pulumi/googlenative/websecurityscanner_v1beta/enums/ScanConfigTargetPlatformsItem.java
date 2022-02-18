@@ -10,8 +10,20 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum ScanConfigTargetPlatformsItem {
+        /**
+         * The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.
+         * 
+         */
         TargetPlatformUnspecified("TARGET_PLATFORM_UNSPECIFIED"),
+        /**
+         * Google App Engine service.
+         * 
+         */
         AppEngine("APP_ENGINE"),
+        /**
+         * Google Compute Engine service.
+         * 
+         */
         Compute("COMPUTE");
 
         private final String value;

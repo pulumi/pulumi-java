@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings that determine how to filter recent conversation context when generating suggestions.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs Empty = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs();
 
+    /**
+     * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
+     * 
+     */
     @InputImport(name="dropHandoffMessages")
     private final @Nullable Input<Boolean> dropHandoffMessages;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.dropHandoffMessages == null ? Input.empty() : this.dropHandoffMessages;
     }
 
+    /**
+     * If set to true, all messages from ivr stage are dropped.
+     * 
+     */
     @InputImport(name="dropIvrMessages")
     private final @Nullable Input<Boolean> dropIvrMessages;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.dropIvrMessages == null ? Input.empty() : this.dropIvrMessages;
     }
 
+    /**
+     * If set to true, all messages from virtual agent are dropped.
+     * 
+     */
     @InputImport(name="dropVirtualAgentMessages")
     private final @Nullable Input<Boolean> dropVirtualAgentMessages;
 

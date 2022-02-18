@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Dashboard publish options.</p>
+ * 
+ */
 public final class DashboardPublishOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardPublishOptionsArgs Empty = new DashboardPublishOptionsArgs();

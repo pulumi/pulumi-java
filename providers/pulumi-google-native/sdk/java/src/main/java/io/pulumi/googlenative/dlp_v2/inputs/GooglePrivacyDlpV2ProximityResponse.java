@@ -8,10 +8,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Message for specifying a window around a finding to apply a detection rule.
+ * 
+ */
 public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ProximityResponse Empty = new GooglePrivacyDlpV2ProximityResponse();
 
+    /**
+     * Number of characters after the finding to consider.
+     * 
+     */
     @InputImport(name="windowAfter", required=true)
     private final Integer windowAfter;
 
@@ -19,6 +27,10 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
         return this.windowAfter;
     }
 
+    /**
+     * Number of characters before the finding to consider.
+     * 
+     */
     @InputImport(name="windowBefore", required=true)
     private final Integer windowBefore;
 

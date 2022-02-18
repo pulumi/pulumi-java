@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Defines how the dimensionValues of a dimension are interpreted.
+     * 
+     */
     @EnumType
     public enum SecurityProfileMetricDimensionOperator {
         In("IN"),

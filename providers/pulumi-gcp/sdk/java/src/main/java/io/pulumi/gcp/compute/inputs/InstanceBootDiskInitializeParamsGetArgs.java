@@ -17,6 +17,18 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
 
     public static final InstanceBootDiskInitializeParamsGetArgs Empty = new InstanceBootDiskInitializeParamsGetArgs();
 
+    /**
+     * The image from which to initialize this disk. This can be
+     * one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
+     * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+     * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+     * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
+     * images names must include the family name. If they don't, use the
+     * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
+     * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
+     * These images can be referred by family name here.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -24,6 +36,10 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * A map of key/value label pairs to assign to the instance.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,Object>> labels;
 
@@ -31,6 +47,11 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The size of the image in gigabytes. If not specified, it
+     * will inherit the size of its base image.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<Integer> size;
 
@@ -38,6 +59,10 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * The type of reservation from which this instance can consume resources.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

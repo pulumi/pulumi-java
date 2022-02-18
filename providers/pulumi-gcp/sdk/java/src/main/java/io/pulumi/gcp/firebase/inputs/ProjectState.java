@@ -14,6 +14,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectState Empty = new ProjectState();
 
+    /**
+     * The GCP project display name
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -21,6 +25,11 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -28,6 +37,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The number of the google project that firebase is enabled on.
+     * 
+     */
     @InputImport(name="projectNumber")
     private final @Nullable Input<String> projectNumber;
 

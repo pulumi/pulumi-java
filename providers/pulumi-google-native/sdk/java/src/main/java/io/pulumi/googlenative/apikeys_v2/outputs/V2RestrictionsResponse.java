@@ -14,10 +14,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class V2RestrictionsResponse {
+    /**
+     * The Android apps that are allowed to use the key.
+     * 
+     */
     private final V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
+    /**
+     * A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
+     * 
+     */
     private final List<V2ApiTargetResponse> apiTargets;
+    /**
+     * The HTTP referrers (websites) that are allowed to use the key.
+     * 
+     */
     private final V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
+    /**
+     * The iOS apps that are allowed to use the key.
+     * 
+     */
     private final V2IosKeyRestrictionsResponse iosKeyRestrictions;
+    /**
+     * The IP addresses of callers that are allowed to use the key.
+     * 
+     */
     private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;
 
     @OutputCustomType.Constructor({"androidKeyRestrictions","apiTargets","browserKeyRestrictions","iosKeyRestrictions","serverKeyRestrictions"})
@@ -34,18 +54,38 @@ public final class V2RestrictionsResponse {
         this.serverKeyRestrictions = Objects.requireNonNull(serverKeyRestrictions);
     }
 
+    /**
+     * The Android apps that are allowed to use the key.
+     * 
+     */
     public V2AndroidKeyRestrictionsResponse getAndroidKeyRestrictions() {
         return this.androidKeyRestrictions;
     }
+    /**
+     * A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
+     * 
+     */
     public List<V2ApiTargetResponse> getApiTargets() {
         return this.apiTargets;
     }
+    /**
+     * The HTTP referrers (websites) that are allowed to use the key.
+     * 
+     */
     public V2BrowserKeyRestrictionsResponse getBrowserKeyRestrictions() {
         return this.browserKeyRestrictions;
     }
+    /**
+     * The iOS apps that are allowed to use the key.
+     * 
+     */
     public V2IosKeyRestrictionsResponse getIosKeyRestrictions() {
         return this.iosKeyRestrictions;
     }
+    /**
+     * The IP addresses of callers that are allowed to use the key.
+     * 
+     */
     public V2ServerKeyRestrictionsResponse getServerKeyRestrictions() {
         return this.serverKeyRestrictions;
     }

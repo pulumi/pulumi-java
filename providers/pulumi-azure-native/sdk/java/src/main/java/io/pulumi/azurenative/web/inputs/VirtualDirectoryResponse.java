@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Directory for virtual application.
+ * 
+ */
 public final class VirtualDirectoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualDirectoryResponse Empty = new VirtualDirectoryResponse();
 
+    /**
+     * Physical path.
+     * 
+     */
     @InputImport(name="physicalPath")
     private final @Nullable String physicalPath;
 
@@ -21,6 +29,10 @@ public final class VirtualDirectoryResponse extends io.pulumi.resources.InvokeAr
         return this.physicalPath == null ? Optional.empty() : Optional.ofNullable(this.physicalPath);
     }
 
+    /**
+     * Path to virtual application.
+     * 
+     */
     @InputImport(name="virtualPath")
     private final @Nullable String virtualPath;
 

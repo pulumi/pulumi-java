@@ -15,9 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSignalingChannelResult {
+    /**
+     * The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The period of time a signaling channel retains undelivered messages before they are discarded.
+     * 
+     */
     private final @Nullable Integer messageTtlSeconds;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<SignalingChannelTag> tags;
+    /**
+     * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
+     * 
+     */
     private final @Nullable SignalingChannelType type;
 
     @OutputCustomType.Constructor({"arn","messageTtlSeconds","tags","type"})
@@ -32,15 +48,31 @@ public final class GetSignalingChannelResult {
         this.type = type;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The period of time a signaling channel retains undelivered messages before they are discarded.
+     * 
+     */
     public Optional<Integer> getMessageTtlSeconds() {
         return Optional.ofNullable(this.messageTtlSeconds);
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<SignalingChannelTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
+    /**
+     * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
+     * 
+     */
     public Optional<SignalingChannelType> getType() {
         return Optional.ofNullable(this.type);
     }

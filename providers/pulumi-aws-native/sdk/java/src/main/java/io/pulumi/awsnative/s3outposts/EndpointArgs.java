@@ -15,6 +15,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointArgs Empty = new EndpointArgs();
 
+    /**
+     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
+     * 
+     */
     @InputImport(name="accessType")
     private final @Nullable Input<EndpointAccessType> accessType;
 
@@ -22,6 +26,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessType == null ? Input.empty() : this.accessType;
     }
 
+    /**
+     * The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
+     * 
+     */
     @InputImport(name="customerOwnedIpv4Pool")
     private final @Nullable Input<String> customerOwnedIpv4Pool;
 
@@ -29,6 +37,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
     }
 
+    /**
+     * The id of the customer outpost on which the bucket resides.
+     * 
+     */
     @InputImport(name="outpostId", required=true)
     private final Input<String> outpostId;
 
@@ -36,6 +48,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.outpostId;
     }
 
+    /**
+     * The ID of the security group to use with the endpoint.
+     * 
+     */
     @InputImport(name="securityGroupId", required=true)
     private final Input<String> securityGroupId;
 
@@ -43,6 +59,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityGroupId;
     }
 
+    /**
+     * The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 

@@ -11,7 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GameServerConfigFleetConfig {
+    /**
+     * The fleet spec, which is sent to Agones to configure fleet.
+     * The spec can be passed as inline json but it is recommended to use a file reference
+     * instead. File references can contain the json or yaml format of the fleet spec. Eg:
+     * * fleet_spec = jsonencode(yamldecode(file("fleet_configs.yaml")))
+     * * fleet_spec = file("fleet_configs.json")
+     *   The format of the spec can be found :
+     *   `https://agones.dev/site/docs/reference/fleet/`.
+     * 
+     */
     private final String fleetSpec;
+    /**
+     * The name of the ScalingConfig
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"fleetSpec","name"})
@@ -22,9 +36,23 @@ public final class GameServerConfigFleetConfig {
         this.name = name;
     }
 
+    /**
+     * The fleet spec, which is sent to Agones to configure fleet.
+     * The spec can be passed as inline json but it is recommended to use a file reference
+     * instead. File references can contain the json or yaml format of the fleet spec. Eg:
+     * * fleet_spec = jsonencode(yamldecode(file("fleet_configs.yaml")))
+     * * fleet_spec = file("fleet_configs.json")
+     *   The format of the spec can be found :
+     *   `https://agones.dev/site/docs/reference/fleet/`.
+     * 
+     */
     public String getFleetSpec() {
         return this.fleetSpec;
     }
+    /**
+     * The name of the ScalingConfig
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

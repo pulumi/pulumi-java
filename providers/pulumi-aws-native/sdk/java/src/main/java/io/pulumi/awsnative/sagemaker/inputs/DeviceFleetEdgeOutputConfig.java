@@ -14,6 +14,10 @@ public final class DeviceFleetEdgeOutputConfig extends io.pulumi.resources.Invok
 
     public static final DeviceFleetEdgeOutputConfig Empty = new DeviceFleetEdgeOutputConfig();
 
+    /**
+     * The KMS key id used for encryption on the S3 bucket
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable String kmsKeyId;
 
@@ -21,6 +25,10 @@ public final class DeviceFleetEdgeOutputConfig extends io.pulumi.resources.Invok
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
     }
 
+    /**
+     * The Amazon Simple Storage (S3) bucket URI
+     * 
+     */
     @InputImport(name="s3OutputLocation", required=true)
     private final String s3OutputLocation;
 

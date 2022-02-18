@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlPoolWorkloadClassifier {
+/**
+ * Workload classifier operations for a data warehouse
+ * API Version: 2021-03-01.
+ * 
+ *
+ * Workload classifier operations for a data warehouse
+ * 
+ */
     public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> invokeAsync(GetSqlPoolWorkloadClassifierArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolWorkloadClassifier", TypeShape.of(GetSqlPoolWorkloadClassifierResult.class), args == null ? GetSqlPoolWorkloadClassifierArgs.Empty : args, Utilities.withVersion(options));
     }

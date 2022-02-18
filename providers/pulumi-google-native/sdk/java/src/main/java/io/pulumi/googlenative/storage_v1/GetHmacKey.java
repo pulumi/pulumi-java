@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHmacKey {
+/**
+ * Retrieves an HMAC key's metadata
+ * 
+ */
     public static CompletableFuture<GetHmacKeyResult> invokeAsync(GetHmacKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getHmacKey", TypeShape.of(GetHmacKeyResult.class), args == null ? GetHmacKeyArgs.Empty : args, Utilities.withVersion(options));
     }

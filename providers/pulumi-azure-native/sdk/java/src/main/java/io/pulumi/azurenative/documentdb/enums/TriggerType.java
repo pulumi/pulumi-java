@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of the Trigger
+     * 
+     */
     @EnumType
     public enum TriggerType {
         Pre("Pre"),

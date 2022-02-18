@@ -15,6 +15,10 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
 
     public static final PolicyClusterAdmissionRuleGetArgs Empty = new PolicyClusterAdmissionRuleGetArgs();
 
+    /**
+     * The identifier for this object. Format specified above.
+     * 
+     */
     @InputImport(name="cluster", required=true)
     private final Input<String> cluster;
 
@@ -22,6 +26,11 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
         return this.cluster;
     }
 
+    /**
+     * The action when a pod creation is denied by the admission rule.
+     * Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
+     * 
+     */
     @InputImport(name="enforcementMode", required=true)
     private final Input<String> enforcementMode;
 
@@ -29,6 +38,11 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
         return this.enforcementMode;
     }
 
+    /**
+     * How this admission rule will be evaluated.
+     * Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
+     * 
+     */
     @InputImport(name="evaluationMode", required=true)
     private final Input<String> evaluationMode;
 
@@ -36,6 +50,17 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
         return this.evaluationMode;
     }
 
+    /**
+     * The resource names of the attestors that must attest to a
+     * container image. If the attestor is in a different project from the
+     * policy, it should be specified in the format `projects/*{@literal /}attestors/*`.
+     * Each attestor must exist before a policy can reference it. To add an
+     * attestor to a policy the principal issuing the policy change
+     * request must be able to read the attestor resource.
+     * Note: this field must be non-empty when the evaluation_mode field
+     * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+     * 
+     */
     @InputImport(name="requireAttestationsBies")
     private final @Nullable Input<List<String>> requireAttestationsBies;
 

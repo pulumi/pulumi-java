@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse {
+    /**
+     * The status of a reload attempt or the initial load.
+     * 
+     */
     private final GoogleRpcStatusResponse status;
+    /**
+     * The time of a reload attempt. This reload may have been triggered automatically or manually and may not have succeeded.
+     * 
+     */
     private final String time;
 
     @OutputCustomType.Constructor({"status","time"})
@@ -21,9 +29,17 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse {
         this.time = Objects.requireNonNull(time);
     }
 
+    /**
+     * The status of a reload attempt or the initial load.
+     * 
+     */
     public GoogleRpcStatusResponse getStatus() {
         return this.status;
     }
+    /**
+     * The time of a reload attempt. This reload may have been triggered automatically or manually and may not have succeeded.
+     * 
+     */
     public String getTime() {
         return this.time;
     }

@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FacebookResponse {
+    /**
+     * <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * 
+     */
     private final @Nullable Boolean enabled;
+    /**
+     * The version of the Facebook api to be used while logging in.
+     * 
+     */
     private final @Nullable String graphApiVersion;
+    /**
+     * The configuration settings of the login flow.
+     * 
+     */
     private final @Nullable LoginScopesResponse login;
+    /**
+     * The configuration settings of the app registration for the Facebook provider.
+     * 
+     */
     private final @Nullable AppRegistrationResponse registration;
 
     @OutputCustomType.Constructor({"enabled","graphApiVersion","login","registration"})
@@ -31,15 +47,31 @@ public final class FacebookResponse {
         this.registration = registration;
     }
 
+    /**
+     * <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * The version of the Facebook api to be used while logging in.
+     * 
+     */
     public Optional<String> getGraphApiVersion() {
         return Optional.ofNullable(this.graphApiVersion);
     }
+    /**
+     * The configuration settings of the login flow.
+     * 
+     */
     public Optional<LoginScopesResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
+    /**
+     * The configuration settings of the app registration for the Facebook provider.
+     * 
+     */
     public Optional<AppRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }

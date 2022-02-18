@@ -3,9 +3,11 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
+    "src/main/java/io/pulumi/aws/Config.java",
     "src/main/java/io/pulumi/aws/Provider.java",
     "src/main/java/io/pulumi/aws/ProviderArgs.java",
     "src/main/java/io/pulumi/aws/Utilities.java",
+    "src/main/java/io/pulumi/aws/config_endpoints/inputs/Endpoints.java",
     "src/main/java/io/pulumi/aws/iam_instanceProfile/InstanceProfile.java",
     "src/main/java/io/pulumi/aws/iam_instanceProfile/InstanceProfileArgs.java",
     "src/main/java/io/pulumi/aws/iam_instanceProfile/inputs/InstanceProfileState.java"

@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class DetectorModelSns {
     private final @Nullable DetectorModelPayload payload;
+    /**
+     * The ARN of the Amazon SNS target where the message is sent.
+     * 
+     */
     private final String targetArn;
 
     @OutputCustomType.Constructor({"payload","targetArn"})
@@ -26,6 +30,10 @@ public final class DetectorModelSns {
     public Optional<DetectorModelPayload> getPayload() {
         return Optional.ofNullable(this.payload);
     }
+    /**
+     * The ARN of the Amazon SNS target where the message is sent.
+     * 
+     */
     public String getTargetArn() {
         return this.targetArn;
     }

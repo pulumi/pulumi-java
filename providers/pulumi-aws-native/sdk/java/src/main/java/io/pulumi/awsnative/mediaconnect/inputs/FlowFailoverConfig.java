@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings for source failover
+ * 
+ */
 public final class FlowFailoverConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowFailoverConfig Empty = new FlowFailoverConfig();
 
+    /**
+     * Search window time to look for dash-7 packets
+     * 
+     */
     @InputImport(name="recoveryWindow")
     private final @Nullable Integer recoveryWindow;
 

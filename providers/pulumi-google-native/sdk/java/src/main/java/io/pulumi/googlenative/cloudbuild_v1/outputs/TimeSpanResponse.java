@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TimeSpanResponse {
+    /**
+     * End of time span.
+     * 
+     */
     private final String endTime;
+    /**
+     * Start of time span.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"endTime","startTime"})
@@ -20,9 +28,17 @@ public final class TimeSpanResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+    /**
+     * End of time span.
+     * 
+     */
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * Start of time span.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

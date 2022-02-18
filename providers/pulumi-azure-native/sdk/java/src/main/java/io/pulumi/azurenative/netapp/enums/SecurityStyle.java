@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
+     * 
+     */
     @EnumType
     public enum SecurityStyle {
         Ntfs("ntfs"),

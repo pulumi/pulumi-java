@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ReplicaSetCondition describes the state of a replica set at a certain point.
+ * 
+ */
 public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicaSetConditionArgs Empty = new ReplicaSetConditionArgs();
 
+    /**
+     * The last time the condition transitioned from one status to another.
+     * 
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -21,6 +29,10 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * A human readable message indicating details about the transition.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -28,6 +40,10 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * The reason for the condition's last transition.
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -35,6 +51,10 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -42,6 +62,10 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
         return this.status;
     }
 
+    /**
+     * Type of replica set condition.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

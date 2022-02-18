@@ -27,6 +27,10 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
         return this.arn == null ? Input.empty() : this.arn;
     }
 
+    /**
+     * The time when the event type was created.
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable Input<String> createdTime;
 
@@ -55,6 +59,10 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
+    /**
+     * The description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -69,6 +77,10 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
         return this.inline == null ? Input.empty() : this.inline;
     }
 
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable Input<String> lastUpdatedTime;
 
@@ -83,6 +95,10 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<EventTypeTagArgs>> tags;
 

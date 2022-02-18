@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a private endpoint connection
+ * 
+ */
 public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionPropertiesResponse Empty = new PrivateEndpointConnectionPropertiesResponse();
 
+    /**
+     * Private endpoint
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointResponse privateEndpoint;
 
@@ -23,6 +31,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
+    /**
+     * Private endpoint connection state
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -30,6 +42,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
         return this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * Provisioning state of the private endpoint connection.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse {
+    /**
+     * The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
+     * 
+     */
     private final GoogleCloudRetailV2betaIntervalResponse originalPrice;
+    /**
+     * The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
+     * 
+     */
     private final GoogleCloudRetailV2betaIntervalResponse price;
 
     @OutputCustomType.Constructor({"originalPrice","price"})
@@ -20,9 +28,17 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse {
         this.price = Objects.requireNonNull(price);
     }
 
+    /**
+     * The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
+     * 
+     */
     public GoogleCloudRetailV2betaIntervalResponse getOriginalPrice() {
         return this.originalPrice;
     }
+    /**
+     * The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
+     * 
+     */
     public GoogleCloudRetailV2betaIntervalResponse getPrice() {
         return this.price;
     }

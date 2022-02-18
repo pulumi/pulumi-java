@@ -40,6 +40,10 @@ public final class GetDomainResult {
     private final @Nullable DomainNodeToNodeEncryptionOptions nodeToNodeEncryptionOptions;
     private final @Nullable DomainServiceSoftwareOptions serviceSoftwareOptions;
     private final @Nullable DomainSnapshotOptions snapshotOptions;
+    /**
+     * An arbitrary set of tags (key-value pairs) for this Domain.
+     * 
+     */
     private final @Nullable List<DomainTag> tags;
     private final @Nullable DomainVPCOptions vPCOptions;
 
@@ -136,6 +140,10 @@ public final class GetDomainResult {
     public Optional<DomainSnapshotOptions> getSnapshotOptions() {
         return Optional.ofNullable(this.snapshotOptions);
     }
+    /**
+     * An arbitrary set of tags (key-value pairs) for this Domain.
+     * 
+     */
     public List<DomainTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

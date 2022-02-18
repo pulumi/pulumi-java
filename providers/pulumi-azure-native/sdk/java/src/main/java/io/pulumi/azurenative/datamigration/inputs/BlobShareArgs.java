@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Blob container storage information.
+ * 
+ */
 public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobShareArgs Empty = new BlobShareArgs();
 
+    /**
+     * SAS URI of Azure Storage Account Container.
+     * 
+     */
     @InputImport(name="sasUri", required=true)
     private final Input<String> sasUri;
 

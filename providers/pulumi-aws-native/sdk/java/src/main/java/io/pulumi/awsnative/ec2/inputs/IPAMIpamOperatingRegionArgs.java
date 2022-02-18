@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
+ * 
+ */
 public final class IPAMIpamOperatingRegionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPAMIpamOperatingRegionArgs Empty = new IPAMIpamOperatingRegionArgs();
 
+    /**
+     * The name of the region.
+     * 
+     */
     @InputImport(name="regionName", required=true)
     private final Input<String> regionName;
 

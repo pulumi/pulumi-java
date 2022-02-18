@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The GPU resource.
+ * 
+ */
 public final class GpuResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GpuResourceResponse Empty = new GpuResourceResponse();
 
+    /**
+     * The count of the GPU resource.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -20,6 +28,10 @@ public final class GpuResourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.count;
     }
 
+    /**
+     * The SKU of the GPU resource.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final String sku;
 

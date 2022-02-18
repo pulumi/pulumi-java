@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTemplateSpecContainerPort {
+    /**
+     * Port number.
+     * 
+     */
     private final Integer containerPort;
+    /**
+     * Volume's name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Protocol used on port. Defaults to TCP.
+     * 
+     */
     private final @Nullable String protocol;
 
     @OutputCustomType.Constructor({"containerPort","name","protocol"})
@@ -26,12 +38,24 @@ public final class ServiceTemplateSpecContainerPort {
         this.protocol = protocol;
     }
 
+    /**
+     * Port number.
+     * 
+     */
     public Integer getContainerPort() {
         return this.containerPort;
     }
+    /**
+     * Volume's name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Protocol used on port. Defaults to TCP.
+     * 
+     */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }

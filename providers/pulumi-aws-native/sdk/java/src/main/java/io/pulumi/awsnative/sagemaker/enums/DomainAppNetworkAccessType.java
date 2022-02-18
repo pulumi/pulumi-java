@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
+     * 
+     */
     @EnumType
     public enum DomainAppNetworkAccessType {
         PublicInternetOnly("PublicInternetOnly"),

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a user's secret store.
+ * 
+ */
 public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserSecretStoreArgs Empty = new UserSecretStoreArgs();
 
+    /**
+     * The ID of the user's Key vault.
+     * 
+     */
     @InputImport(name="keyVaultId")
     private final @Nullable Input<String> keyVaultId;
 
@@ -21,6 +29,10 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
     }
 
+    /**
+     * The URI of the user's Key vault.
+     * 
+     */
     @InputImport(name="keyVaultUri")
     private final @Nullable Input<String> keyVaultUri;
 

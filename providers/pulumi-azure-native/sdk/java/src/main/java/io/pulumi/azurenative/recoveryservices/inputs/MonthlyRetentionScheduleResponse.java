@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Monthly retention schedule.
+ * 
+ */
 public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonthlyRetentionScheduleResponse Empty = new MonthlyRetentionScheduleResponse();
 
+    /**
+     * Retention duration of retention Policy.
+     * 
+     */
     @InputImport(name="retentionDuration")
     private final @Nullable RetentionDurationResponse retentionDuration;
 
@@ -25,6 +33,10 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
         return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
     }
 
+    /**
+     * Daily retention format for monthly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleDaily")
     private final @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
 
@@ -32,6 +44,10 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
         return this.retentionScheduleDaily == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleDaily);
     }
 
+    /**
+     * Retention schedule format type for monthly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleFormatType")
     private final @Nullable String retentionScheduleFormatType;
 
@@ -39,6 +55,10 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
         return this.retentionScheduleFormatType == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleFormatType);
     }
 
+    /**
+     * Weekly retention format for monthly retention policy.
+     * 
+     */
     @InputImport(name="retentionScheduleWeekly")
     private final @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
 
@@ -46,6 +66,10 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
         return this.retentionScheduleWeekly == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleWeekly);
     }
 
+    /**
+     * Retention times of retention policy.
+     * 
+     */
     @InputImport(name="retentionTimes")
     private final @Nullable List<String> retentionTimes;
 

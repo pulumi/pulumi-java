@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectorProfile {
+/**
+ * Resource Type definition for AWS::AppFlow::ConnectorProfile
+ * 
+ */
     public static CompletableFuture<GetConnectorProfileResult> invokeAsync(GetConnectorProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appflow:getConnectorProfile", TypeShape.of(GetConnectorProfileResult.class), args == null ? GetConnectorProfileArgs.Empty : args, Utilities.withVersion(options));
     }

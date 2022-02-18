@@ -20,10 +20,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
+ * 
+ */
 public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityProvidersArgs Empty = new IdentityProvidersArgs();
 
+    /**
+     * The configuration settings of the Apple provider.
+     * 
+     */
     @InputImport(name="apple")
     private final @Nullable Input<AppleArgs> apple;
 
@@ -31,6 +39,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
         return this.apple == null ? Input.empty() : this.apple;
     }
 
+    /**
+     * The configuration settings of the Azure Active directory provider.
+     * 
+     */
     @InputImport(name="azureActiveDirectory")
     private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
 
@@ -38,6 +50,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
         return this.azureActiveDirectory == null ? Input.empty() : this.azureActiveDirectory;
     }
 
+    /**
+     * The configuration settings of the Azure Static Web Apps provider.
+     * 
+     */
     @InputImport(name="azureStaticWebApps")
     private final @Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps;
 
@@ -45,6 +61,11 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
         return this.azureStaticWebApps == null ? Input.empty() : this.azureStaticWebApps;
     }
 
+    /**
+     * The map of the name of the alias of each custom Open ID Connect provider to the
+     * configuration settings of the custom Open ID Connect provider.
+     * 
+     */
     @InputImport(name="customOpenIdConnectProviders")
     private final @Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
 
@@ -52,6 +73,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
         return this.customOpenIdConnectProviders == null ? Input.empty() : this.customOpenIdConnectProviders;
     }
 
+    /**
+     * The configuration settings of the Facebook provider.
+     * 
+     */
     @InputImport(name="facebook")
     private final @Nullable Input<FacebookArgs> facebook;
 
@@ -59,6 +84,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
         return this.facebook == null ? Input.empty() : this.facebook;
     }
 
+    /**
+     * The configuration settings of the GitHub provider.
+     * 
+     */
     @InputImport(name="gitHub")
     private final @Nullable Input<GitHubArgs> gitHub;
 
@@ -66,6 +95,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
         return this.gitHub == null ? Input.empty() : this.gitHub;
     }
 
+    /**
+     * The configuration settings of the Google provider.
+     * 
+     */
     @InputImport(name="google")
     private final @Nullable Input<GoogleArgs> google;
 
@@ -73,6 +106,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
         return this.google == null ? Input.empty() : this.google;
     }
 
+    /**
+     * The configuration settings of the legacy Microsoft Account provider.
+     * 
+     */
     @InputImport(name="legacyMicrosoftAccount")
     private final @Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
 
@@ -80,6 +117,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
         return this.legacyMicrosoftAccount == null ? Input.empty() : this.legacyMicrosoftAccount;
     }
 
+    /**
+     * The configuration settings of the Twitter provider.
+     * 
+     */
     @InputImport(name="twitter")
     private final @Nullable Input<TwitterArgs> twitter;
 

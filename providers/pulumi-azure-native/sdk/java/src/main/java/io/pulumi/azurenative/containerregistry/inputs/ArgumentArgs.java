@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a run argument.
+ * 
+ */
 public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArgumentArgs Empty = new ArgumentArgs();
 
+    /**
+     * Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+     * 
+     */
     @InputImport(name="isSecret")
     private final @Nullable Input<Boolean> isSecret;
 
@@ -22,6 +30,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.isSecret == null ? Input.empty() : this.isSecret;
     }
 
+    /**
+     * The name of the argument.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,6 +41,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The value of the argument.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

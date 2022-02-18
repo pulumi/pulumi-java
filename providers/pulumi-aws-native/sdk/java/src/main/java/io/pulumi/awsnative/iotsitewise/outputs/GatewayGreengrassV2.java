@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GatewayGreengrassV2 {
+    /**
+     * The name of the CoreDevice in GreenGrass V2.
+     * 
+     */
     private final String coreDeviceThingName;
 
     @OutputCustomType.Constructor({"coreDeviceThingName"})
@@ -16,6 +20,10 @@ public final class GatewayGreengrassV2 {
         this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName);
     }
 
+    /**
+     * The name of the CoreDevice in GreenGrass V2.
+     * 
+     */
     public String getCoreDeviceThingName() {
         return this.coreDeviceThingName;
     }

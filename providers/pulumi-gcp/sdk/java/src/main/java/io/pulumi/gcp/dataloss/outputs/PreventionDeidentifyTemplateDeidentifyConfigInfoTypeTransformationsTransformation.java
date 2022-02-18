@@ -12,7 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation {
+    /**
+     * InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
+     * all findings that correspond to infoTypes that were requested in InspectConfig.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType> infoTypes;
+    /**
+     * Primitive transformation to apply to the infoType.
+     * Structure is documented below.
+     * 
+     */
     private final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation primitiveTransformation;
 
     @OutputCustomType.Constructor({"infoTypes","primitiveTransformation"})
@@ -23,9 +34,20 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
     }
 
+    /**
+     * InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
+     * all findings that correspond to infoTypes that were requested in InspectConfig.
+     * Structure is documented below.
+     * 
+     */
     public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType> getInfoTypes() {
         return this.infoTypes == null ? List.of() : this.infoTypes;
     }
+    /**
+     * Primitive transformation to apply to the infoType.
+     * Structure is documented below.
+     * 
+     */
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation getPrimitiveTransformation() {
         return this.primitiveTransformation;
     }

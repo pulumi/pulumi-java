@@ -16,6 +16,10 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CellArgs Empty = new CellArgs();
 
+    /**
+     * The name of the cell to create.
+     * 
+     */
     @InputImport(name="cellName")
     private final @Nullable Input<String> cellName;
 
@@ -23,6 +27,10 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
         return this.cellName == null ? Input.empty() : this.cellName;
     }
 
+    /**
+     * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
+     * 
+     */
     @InputImport(name="cells")
     private final @Nullable Input<List<String>> cells;
 
@@ -30,6 +38,10 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
         return this.cells == null ? Input.empty() : this.cells;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<CellTagArgs>> tags;
 

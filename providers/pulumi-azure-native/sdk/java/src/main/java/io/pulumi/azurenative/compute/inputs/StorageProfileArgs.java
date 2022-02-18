@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the storage settings for the virtual machine disks.
+ * 
+ */
 public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 
+    /**
+     * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * 
+     */
     @InputImport(name="dataDisks")
     private final @Nullable Input<List<DataDiskArgs>> dataDisks;
 
@@ -24,6 +32,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
     }
 
+    /**
+     * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+     * 
+     */
     @InputImport(name="imageReference")
     private final @Nullable Input<ImageReferenceArgs> imageReference;
 
@@ -31,6 +43,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageReference == null ? Input.empty() : this.imageReference;
     }
 
+    /**
+     * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * 
+     */
     @InputImport(name="osDisk")
     private final @Nullable Input<OSDiskArgs> osDisk;
 

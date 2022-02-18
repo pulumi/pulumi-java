@@ -15,22 +15,90 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetNodeResult {
+    /**
+     * The type of hardware accelerators associated with this node.
+     * 
+     */
     private final String acceleratorType;
+    /**
+     * The API version that created this Node.
+     * 
+     */
     private final String apiVersion;
+    /**
+     * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
+     * 
+     */
     private final String cidrBlock;
+    /**
+     * The time when the node was created.
+     * 
+     */
     private final String createTime;
+    /**
+     * The user-supplied description of the TPU. Maximum of 512 characters.
+     * 
+     */
     private final String description;
+    /**
+     * The health status of the TPU node.
+     * 
+     */
     private final String health;
+    /**
+     * If this field is populated, it contains a description of why the TPU Node is unhealthy.
+     * 
+     */
     private final String healthDescription;
+    /**
+     * Resource labels to represent user-provided metadata.
+     * 
+     */
     private final Map<String,String> labels;
+    /**
+     * Immutable. The name of the TPU
+     * 
+     */
     private final String name;
+    /**
+     * The name of a network they wish to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on which this API has been activated. If none is provided, "default" will be used.
+     * 
+     */
     private final String network;
+    /**
+     * The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the node reach out to the 0th entry in this map first.
+     * 
+     */
     private final List<NetworkEndpointResponse> networkEndpoints;
+    /**
+     * The scheduling options for this node.
+     * 
+     */
     private final SchedulingConfigResponse schedulingConfig;
+    /**
+     * The service account used to run the tensor flow services within the node. To share resources, including Google Cloud Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
+     * 
+     */
     private final String serviceAccount;
+    /**
+     * The current state for the TPU Node.
+     * 
+     */
     private final String state;
+    /**
+     * The Symptoms that have occurred to the TPU Node.
+     * 
+     */
     private final List<SymptomResponse> symptoms;
+    /**
+     * The version of Tensorflow running in the Node.
+     * 
+     */
     private final String tensorflowVersion;
+    /**
+     * Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering should be set up before provisioning the node. If this field is set, cidr_block field should not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC networks, the node must be created with this this field enabled.
+     * 
+     */
     private final Boolean useServiceNetworking;
 
     @OutputCustomType.Constructor({"acceleratorType","apiVersion","cidrBlock","createTime","description","health","healthDescription","labels","name","network","networkEndpoints","schedulingConfig","serviceAccount","state","symptoms","tensorflowVersion","useServiceNetworking"})
@@ -71,54 +139,122 @@ public final class GetNodeResult {
         this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
     }
 
+    /**
+     * The type of hardware accelerators associated with this node.
+     * 
+     */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
+    /**
+     * The API version that created this Node.
+     * 
+     */
     public String getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
+     * 
+     */
     public String getCidrBlock() {
         return this.cidrBlock;
     }
+    /**
+     * The time when the node was created.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The user-supplied description of the TPU. Maximum of 512 characters.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The health status of the TPU node.
+     * 
+     */
     public String getHealth() {
         return this.health;
     }
+    /**
+     * If this field is populated, it contains a description of why the TPU Node is unhealthy.
+     * 
+     */
     public String getHealthDescription() {
         return this.healthDescription;
     }
+    /**
+     * Resource labels to represent user-provided metadata.
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * Immutable. The name of the TPU
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The name of a network they wish to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on which this API has been activated. If none is provided, "default" will be used.
+     * 
+     */
     public String getNetwork() {
         return this.network;
     }
+    /**
+     * The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the node reach out to the 0th entry in this map first.
+     * 
+     */
     public List<NetworkEndpointResponse> getNetworkEndpoints() {
         return this.networkEndpoints;
     }
+    /**
+     * The scheduling options for this node.
+     * 
+     */
     public SchedulingConfigResponse getSchedulingConfig() {
         return this.schedulingConfig;
     }
+    /**
+     * The service account used to run the tensor flow services within the node. To share resources, including Google Cloud Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
+     * 
+     */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
+    /**
+     * The current state for the TPU Node.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The Symptoms that have occurred to the TPU Node.
+     * 
+     */
     public List<SymptomResponse> getSymptoms() {
         return this.symptoms;
     }
+    /**
+     * The version of Tensorflow running in the Node.
+     * 
+     */
     public String getTensorflowVersion() {
         return this.tensorflowVersion;
     }
+    /**
+     * Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering should be set up before provisioning the node. If this field is set, cidr_block field should not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC networks, the node must be created with this this field enabled.
+     * 
+     */
     public Boolean getUseServiceNetworking() {
         return this.useServiceNetworking;
     }

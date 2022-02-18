@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * A CMAF encryption configuration.
+ * 
+ */
 public final class PackagingConfigurationCmafEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackagingConfigurationCmafEncryptionArgs Empty = new PackagingConfigurationCmafEncryptionArgs();

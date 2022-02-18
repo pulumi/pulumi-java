@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Constraints applied to pods.
+ * 
+ */
 public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MaxPodsConstraintArgs Empty = new MaxPodsConstraintArgs();
 
+    /**
+     * Constraint enforced on the max num of pods per node.
+     * 
+     */
     @InputImport(name="maxPodsPerNode")
     private final @Nullable Input<String> maxPodsPerNode;
 

@@ -20,6 +20,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
 
     public static final PackagingConfigurationArgs Empty = new PackagingConfigurationArgs();
 
+    /**
+     * A CMAF packaging configuration.
+     * 
+     */
     @InputImport(name="cmafPackage")
     private final @Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage;
 
@@ -27,6 +31,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
         return this.cmafPackage == null ? Input.empty() : this.cmafPackage;
     }
 
+    /**
+     * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+     * 
+     */
     @InputImport(name="dashPackage")
     private final @Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage;
 
@@ -34,6 +42,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
         return this.dashPackage == null ? Input.empty() : this.dashPackage;
     }
 
+    /**
+     * An HTTP Live Streaming (HLS) packaging configuration.
+     * 
+     */
     @InputImport(name="hlsPackage")
     private final @Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage;
 
@@ -41,6 +53,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
         return this.hlsPackage == null ? Input.empty() : this.hlsPackage;
     }
 
+    /**
+     * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
+     * 
+     */
     @InputImport(name="mssPackage")
     private final @Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage;
 
@@ -48,6 +64,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
         return this.mssPackage == null ? Input.empty() : this.mssPackage;
     }
 
+    /**
+     * The ID of a PackagingGroup.
+     * 
+     */
     @InputImport(name="packagingGroupId", required=true)
     private final Input<String> packagingGroupId;
 
@@ -55,6 +75,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
         return this.packagingGroupId;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<PackagingConfigurationTagArgs>> tags;
 

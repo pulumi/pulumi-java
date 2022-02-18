@@ -15,6 +15,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VariableArgs Empty = new VariableArgs();
 
+    /**
+     * The name of the automation account.
+     * 
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -22,6 +26,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * Gets or sets the description of the variable.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Gets or sets the encrypted flag of the variable.
+     * 
+     */
     @InputImport(name="isEncrypted")
     private final @Nullable Input<Boolean> isEncrypted;
 
@@ -36,6 +48,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.isEncrypted == null ? Input.empty() : this.isEncrypted;
     }
 
+    /**
+     * Gets or sets the name of the variable.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -43,6 +59,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the value of the variable.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 
@@ -57,6 +81,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.value == null ? Input.empty() : this.value;
     }
 
+    /**
+     * The variable name.
+     * 
+     */
     @InputImport(name="variableName")
     private final @Nullable Input<String> variableName;
 

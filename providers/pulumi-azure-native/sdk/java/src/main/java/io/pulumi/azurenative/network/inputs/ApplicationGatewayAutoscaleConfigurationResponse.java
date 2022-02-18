@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application Gateway autoscale configuration.
+ * 
+ */
 public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayAutoscaleConfigurationResponse Empty = new ApplicationGatewayAutoscaleConfigurationResponse();
 
+    /**
+     * Upper bound on number of Application Gateway capacity.
+     * 
+     */
     @InputImport(name="maxCapacity")
     private final @Nullable Integer maxCapacity;
 
@@ -21,6 +29,10 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
         return this.maxCapacity == null ? Optional.empty() : Optional.ofNullable(this.maxCapacity);
     }
 
+    /**
+     * Lower bound on number of Application Gateway capacity.
+     * 
+     */
     @InputImport(name="minCapacity", required=true)
     private final Integer minCapacity;
 

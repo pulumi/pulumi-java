@@ -14,6 +14,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
 
     public static final ClientCertAuthenticationArgs Empty = new ClientCertAuthenticationArgs();
 
+    /**
+     * Gets or sets the certificate expiration date.
+     * 
+     */
     @InputImport(name="certificateExpirationDate")
     private final @Nullable Input<String> certificateExpirationDate;
 
@@ -21,6 +25,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
         return this.certificateExpirationDate == null ? Input.empty() : this.certificateExpirationDate;
     }
 
+    /**
+     * Gets or sets the certificate subject name.
+     * 
+     */
     @InputImport(name="certificateSubjectName")
     private final @Nullable Input<String> certificateSubjectName;
 
@@ -28,6 +36,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
         return this.certificateSubjectName == null ? Input.empty() : this.certificateSubjectName;
     }
 
+    /**
+     * Gets or sets the certificate thumbprint.
+     * 
+     */
     @InputImport(name="certificateThumbprint")
     private final @Nullable Input<String> certificateThumbprint;
 
@@ -35,6 +47,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
         return this.certificateThumbprint == null ? Input.empty() : this.certificateThumbprint;
     }
 
+    /**
+     * Gets or sets the certificate password, return value will always be empty.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -42,6 +58,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
+     * 
+     */
     @InputImport(name="pfx")
     private final @Nullable Input<String> pfx;
 
@@ -49,6 +69,11 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
         return this.pfx == null ? Input.empty() : this.pfx;
     }
 
+    /**
+     * Gets or sets the HTTP authentication type.
+     * Expected value is 'ClientCertificate'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

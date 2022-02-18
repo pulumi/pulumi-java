@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransformationResponse {
+    /**
+     * Dataset reference.
+     * 
+     */
     private final @Nullable DatasetReferenceResponse dataset;
+    /**
+     * Transformation description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Flowlet Reference
+     * 
+     */
     private final @Nullable DataFlowReferenceResponse flowlet;
+    /**
+     * Linked service reference.
+     * 
+     */
     private final @Nullable LinkedServiceReferenceResponse linkedService;
+    /**
+     * Transformation name.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"dataset","description","flowlet","linkedService","name"})
@@ -34,18 +54,38 @@ public final class TransformationResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Dataset reference.
+     * 
+     */
     public Optional<DatasetReferenceResponse> getDataset() {
         return Optional.ofNullable(this.dataset);
     }
+    /**
+     * Transformation description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Flowlet Reference
+     * 
+     */
     public Optional<DataFlowReferenceResponse> getFlowlet() {
         return Optional.ofNullable(this.flowlet);
     }
+    /**
+     * Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return Optional.ofNullable(this.linkedService);
     }
+    /**
+     * Transformation name.
+     * 
+     */
     public String getName() {
         return this.name;
     }

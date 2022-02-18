@@ -10,10 +10,21 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the Azure Active Directory app registration.
+ * 
+ */
 public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureActiveDirectoryRegistrationArgs Empty = new AzureActiveDirectoryRegistrationArgs();
 
+    /**
+     * The Client ID of this relying party application, known as the client_id.
+     * This setting is required for enabling OpenID Connection authentication with Azure Active Directory or
+     * other 3rd party OpenID Connect providers.
+     * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -21,6 +32,11 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+     * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
+     * 
+     */
     @InputImport(name="clientSecretCertificateIssuer")
     private final @Nullable Input<String> clientSecretCertificateIssuer;
 
@@ -28,6 +44,11 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
         return this.clientSecretCertificateIssuer == null ? Input.empty() : this.clientSecretCertificateIssuer;
     }
 
+    /**
+     * An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+     * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
+     * 
+     */
     @InputImport(name="clientSecretCertificateSubjectAlternativeName")
     private final @Nullable Input<String> clientSecretCertificateSubjectAlternativeName;
 
@@ -35,6 +56,11 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
         return this.clientSecretCertificateSubjectAlternativeName == null ? Input.empty() : this.clientSecretCertificateSubjectAlternativeName;
     }
 
+    /**
+     * An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
+     * a replacement for the Client Secret. It is also optional.
+     * 
+     */
     @InputImport(name="clientSecretCertificateThumbprint")
     private final @Nullable Input<String> clientSecretCertificateThumbprint;
 
@@ -42,6 +68,10 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
         return this.clientSecretCertificateThumbprint == null ? Input.empty() : this.clientSecretCertificateThumbprint;
     }
 
+    /**
+     * The app setting name that contains the client secret of the relying party application.
+     * 
+     */
     @InputImport(name="clientSecretSettingName")
     private final @Nullable Input<String> clientSecretSettingName;
 
@@ -49,6 +79,13 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
         return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
     }
 
+    /**
+     * The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
+     * When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/.
+     * This URI is a case-sensitive identifier for the token issuer.
+     * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
+     * 
+     */
     @InputImport(name="openIdIssuer")
     private final @Nullable Input<String> openIdIssuer;
 

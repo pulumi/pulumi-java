@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TemplateColumnGroupColumnSchema {
+    /**
+     * <p>The name of the column group's column schema.</p>
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +22,10 @@ public final class TemplateColumnGroupColumnSchema {
         this.name = name;
     }
 
+    /**
+     * <p>The name of the column group's column schema.</p>
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

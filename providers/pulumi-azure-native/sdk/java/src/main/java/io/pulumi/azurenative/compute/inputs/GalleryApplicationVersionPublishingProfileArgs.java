@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The publishing profile of a gallery image version.
+ * 
+ */
 public final class GalleryApplicationVersionPublishingProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryApplicationVersionPublishingProfileArgs Empty = new GalleryApplicationVersionPublishingProfileArgs();
 
+    /**
+     * Optional. Whether or not this application reports health.
+     * 
+     */
     @InputImport(name="enableHealthCheck")
     private final @Nullable Input<Boolean> enableHealthCheck;
 
@@ -29,6 +37,10 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
         return this.enableHealthCheck == null ? Input.empty() : this.enableHealthCheck;
     }
 
+    /**
+     * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
+     * 
+     */
     @InputImport(name="endOfLifeDate")
     private final @Nullable Input<String> endOfLifeDate;
 
@@ -36,6 +48,10 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
         return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
     }
 
+    /**
+     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
+     * 
+     */
     @InputImport(name="excludeFromLatest")
     private final @Nullable Input<Boolean> excludeFromLatest;
 
@@ -50,6 +66,10 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
         return this.manageActions == null ? Input.empty() : this.manageActions;
     }
 
+    /**
+     * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
+     * 
+     */
     @InputImport(name="replicaCount")
     private final @Nullable Input<Integer> replicaCount;
 
@@ -57,6 +77,10 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
     }
 
+    /**
+     * The source image from which the Image Version is going to be created.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<UserArtifactSourceArgs> source;
 
@@ -64,6 +88,10 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
         return this.source;
     }
 
+    /**
+     * Specifies the storage account type to be used to store the image. This property is not updatable.
+     * 
+     */
     @InputImport(name="storageAccountType")
     private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
 
@@ -71,6 +99,10 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
     }
 
+    /**
+     * The target regions where the Image Version is going to be replicated to. This property is updatable.
+     * 
+     */
     @InputImport(name="targetRegions")
     private final @Nullable Input<List<TargetRegionArgs>> targetRegions;
 

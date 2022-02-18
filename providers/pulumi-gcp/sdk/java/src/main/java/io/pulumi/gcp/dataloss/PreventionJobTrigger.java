@@ -16,57 +16,161 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A job trigger configuration.
+ * 
+ * To get more information about JobTrigger, see:
+ * 
+ * * [API documentation](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.jobTriggers)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-job-triggers)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * JobTrigger can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dataloss/preventionJobTrigger:PreventionJobTrigger default {{parent}}/jobTriggers/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dataloss/preventionJobTrigger:PreventionJobTrigger default {{parent}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:dataloss/preventionJobTrigger:PreventionJobTrigger")
 public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
+    /**
+     * A description of the job trigger.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description of the job trigger.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * User set display name of the job trigger.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return User set display name of the job trigger.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Controls what and how to inspect for findings.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="inspectJob", type=PreventionJobTriggerInspectJob.class, parameters={})
     private Output</* @Nullable */ PreventionJobTriggerInspectJob> inspectJob;
 
+    /**
+     * @return Controls what and how to inspect for findings.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ PreventionJobTriggerInspectJob> getInspectJob() {
         return this.inspectJob;
     }
+    /**
+     * The timestamp of the last time this trigger executed.
+     * 
+     */
     @OutputExport(name="lastRunTime", type=String.class, parameters={})
     private Output<String> lastRunTime;
 
+    /**
+     * @return The timestamp of the last time this trigger executed.
+     * 
+     */
     public Output<String> getLastRunTime() {
         return this.lastRunTime;
     }
+    /**
+     * The name of the Datastore kind.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the Datastore kind.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The parent of the trigger, either in the format `projects/{{project}}`
+     * or `projects/{{project}}/locations/{{location}}`
+     * 
+     */
     @OutputExport(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
+    /**
+     * @return The parent of the trigger, either in the format `projects/{{project}}`
+     * or `projects/{{project}}/locations/{{location}}`
+     * 
+     */
     public Output<String> getParent() {
         return this.parent;
     }
+    /**
+     * Whether the trigger is currently active.
+     * Default value is `HEALTHY`.
+     * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
+    /**
+     * @return Whether the trigger is currently active.
+     * Default value is `HEALTHY`.
+     * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
+     * 
+     */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
+    /**
+     * What event needs to occur for a new job to be started.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="triggers", type=List.class, parameters={PreventionJobTriggerTrigger.class})
     private Output<List<PreventionJobTriggerTrigger>> triggers;
 
+    /**
+     * @return What event needs to occur for a new job to be started.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<PreventionJobTriggerTrigger>> getTriggers() {
         return this.triggers;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PreventionJobTrigger(String name, PreventionJobTriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataloss/preventionJobTrigger:PreventionJobTrigger", name, args == null ? PreventionJobTriggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +186,15 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PreventionJobTrigger get(String name, Input<String> id, @Nullable PreventionJobTriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PreventionJobTrigger(name, id, state, options);
     }

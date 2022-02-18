@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Daily retention schedule.
+ * 
+ */
 public final class DailyRetentionScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DailyRetentionScheduleResponse Empty = new DailyRetentionScheduleResponse();
 
+    /**
+     * Retention duration of retention Policy.
+     * 
+     */
     @InputImport(name="retentionDuration")
     private final @Nullable RetentionDurationResponse retentionDuration;
 
@@ -23,6 +31,10 @@ public final class DailyRetentionScheduleResponse extends io.pulumi.resources.In
         return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
     }
 
+    /**
+     * Retention times of retention policy.
+     * 
+     */
     @InputImport(name="retentionTimes")
     private final @Nullable List<String> retentionTimes;
 

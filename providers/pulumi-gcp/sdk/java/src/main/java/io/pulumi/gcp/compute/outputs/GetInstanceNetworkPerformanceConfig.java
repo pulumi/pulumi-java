@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceNetworkPerformanceConfig {
+    /**
+     * The egress bandwidth tier for the instance.
+     * 
+     */
     private final String totalEgressBandwidthTier;
 
     @OutputCustomType.Constructor({"totalEgressBandwidthTier"})
@@ -16,6 +20,10 @@ public final class GetInstanceNetworkPerformanceConfig {
         this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
     }
 
+    /**
+     * The egress bandwidth tier for the instance.
+     * 
+     */
     public String getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }

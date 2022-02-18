@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Default action when no other rule matches
+     * 
+     */
     @EnumType
     public enum ACLAction {
         Allow("Allow"),

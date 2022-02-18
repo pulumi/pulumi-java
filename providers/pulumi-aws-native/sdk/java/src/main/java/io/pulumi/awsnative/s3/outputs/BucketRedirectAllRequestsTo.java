@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketRedirectAllRequestsTo {
+    /**
+     * Name of the host where requests are redirected.
+     * 
+     */
     private final String hostName;
+    /**
+     * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+     * 
+     */
     private final @Nullable BucketRedirectAllRequestsToProtocol protocol;
 
     @OutputCustomType.Constructor({"hostName","protocol"})
@@ -23,9 +31,17 @@ public final class BucketRedirectAllRequestsTo {
         this.protocol = protocol;
     }
 
+    /**
+     * Name of the host where requests are redirected.
+     * 
+     */
     public String getHostName() {
         return this.hostName;
     }
+    /**
+     * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+     * 
+     */
     public Optional<BucketRedirectAllRequestsToProtocol> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }

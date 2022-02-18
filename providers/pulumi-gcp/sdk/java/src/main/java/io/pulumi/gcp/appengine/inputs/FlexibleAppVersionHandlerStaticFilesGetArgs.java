@@ -16,6 +16,12 @@ public final class FlexibleAppVersionHandlerStaticFilesGetArgs extends io.pulumi
 
     public static final FlexibleAppVersionHandlerStaticFilesGetArgs Empty = new FlexibleAppVersionHandlerStaticFilesGetArgs();
 
+    /**
+     * Whether files should also be uploaded as code data. By default, files declared in static file handlers are
+     * uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
+     * uploads are charged against both your code and static data storage resource quotas.
+     * 
+     */
     @InputImport(name="applicationReadable")
     private final @Nullable Input<Boolean> applicationReadable;
 
@@ -23,6 +29,12 @@ public final class FlexibleAppVersionHandlerStaticFilesGetArgs extends io.pulumi
         return this.applicationReadable == null ? Input.empty() : this.applicationReadable;
     }
 
+    /**
+     * Time a static file served by this handler should be cached by web proxies and browsers.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+     * Default is '0s'
+     * 
+     */
     @InputImport(name="expiration")
     private final @Nullable Input<String> expiration;
 
@@ -30,6 +42,11 @@ public final class FlexibleAppVersionHandlerStaticFilesGetArgs extends io.pulumi
         return this.expiration == null ? Input.empty() : this.expiration;
     }
 
+    /**
+     * HTTP headers to use for all responses from these URLs.
+     * An object containing a list of "key:value" value pairs.".
+     * 
+     */
     @InputImport(name="httpHeaders")
     private final @Nullable Input<Map<String,String>> httpHeaders;
 
@@ -37,6 +54,11 @@ public final class FlexibleAppVersionHandlerStaticFilesGetArgs extends io.pulumi
         return this.httpHeaders == null ? Input.empty() : this.httpHeaders;
     }
 
+    /**
+     * MIME type used to serve all files served by this handler.
+     * Defaults to file-specific MIME types, which are derived from each file's filename extension.
+     * 
+     */
     @InputImport(name="mimeType")
     private final @Nullable Input<String> mimeType;
 
@@ -44,6 +66,11 @@ public final class FlexibleAppVersionHandlerStaticFilesGetArgs extends io.pulumi
         return this.mimeType == null ? Input.empty() : this.mimeType;
     }
 
+    /**
+     * Path to the static files matched by the URL pattern, from the application root directory.
+     * The path can refer to text matched in groupings in the URL pattern.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -51,6 +78,10 @@ public final class FlexibleAppVersionHandlerStaticFilesGetArgs extends io.pulumi
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Whether this handler should match the request if the file referenced by the handler does not exist.
+     * 
+     */
     @InputImport(name="requireMatchingFile")
     private final @Nullable Input<Boolean> requireMatchingFile;
 
@@ -58,6 +89,10 @@ public final class FlexibleAppVersionHandlerStaticFilesGetArgs extends io.pulumi
         return this.requireMatchingFile == null ? Input.empty() : this.requireMatchingFile;
     }
 
+    /**
+     * Regular expression that matches the file paths for all files that should be referenced by this handler.
+     * 
+     */
     @InputImport(name="uploadPathRegex")
     private final @Nullable Input<String> uploadPathRegex;
 

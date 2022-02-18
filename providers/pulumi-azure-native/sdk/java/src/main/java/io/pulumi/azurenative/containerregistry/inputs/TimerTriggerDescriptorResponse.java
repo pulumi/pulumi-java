@@ -14,6 +14,10 @@ public final class TimerTriggerDescriptorResponse extends io.pulumi.resources.In
 
     public static final TimerTriggerDescriptorResponse Empty = new TimerTriggerDescriptorResponse();
 
+    /**
+     * The occurrence that triggered the run.
+     * 
+     */
     @InputImport(name="scheduleOccurrence")
     private final @Nullable String scheduleOccurrence;
 
@@ -21,6 +25,10 @@ public final class TimerTriggerDescriptorResponse extends io.pulumi.resources.In
         return this.scheduleOccurrence == null ? Optional.empty() : Optional.ofNullable(this.scheduleOccurrence);
     }
 
+    /**
+     * The timer trigger name that caused the run.
+     * 
+     */
     @InputImport(name="timerTriggerName")
     private final @Nullable String timerTriggerName;
 

@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConfigurationServiceResourceRequestsResponse {
+    /**
+     * Cpu allocated to each Application Configuration Service instance
+     * 
+     */
     private final String cpu;
+    /**
+     * Instance count of the Application Configuration Service
+     * 
+     */
     private final Integer instanceCount;
+    /**
+     * Memory allocated to each Application Configuration Service instance
+     * 
+     */
     private final String memory;
 
     @OutputCustomType.Constructor({"cpu","instanceCount","memory"})
@@ -24,12 +36,24 @@ public final class ConfigurationServiceResourceRequestsResponse {
         this.memory = Objects.requireNonNull(memory);
     }
 
+    /**
+     * Cpu allocated to each Application Configuration Service instance
+     * 
+     */
     public String getCpu() {
         return this.cpu;
     }
+    /**
+     * Instance count of the Application Configuration Service
+     * 
+     */
     public Integer getInstanceCount() {
         return this.instanceCount;
     }
+    /**
+     * Memory allocated to each Application Configuration Service instance
+     * 
+     */
     public String getMemory() {
         return this.memory;
     }

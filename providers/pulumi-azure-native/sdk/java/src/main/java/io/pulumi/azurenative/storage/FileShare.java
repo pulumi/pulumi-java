@@ -18,111 +18,268 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Properties of the file share, including Id, resource name, resource type, Etag.
+ * API Version: 2021-02-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:storage:FileShare share1235 /subscriptions/{subscription-id}/resourceGroups/res346/providers/Microsoft.Storage/storageAccounts/sto666/fileServices/default/shares/share1235 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:storage:FileShare")
 public class FileShare extends io.pulumi.resources.CustomResource {
+    /**
+     * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+     * 
+     */
     @OutputExport(name="accessTier", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessTier;
 
+    /**
+     * @return Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+     * 
+     */
     public Output</* @Nullable */ String> getAccessTier() {
         return this.accessTier;
     }
+    /**
+     * Indicates the last modification time for share access tier.
+     * 
+     */
     @OutputExport(name="accessTierChangeTime", type=String.class, parameters={})
     private Output<String> accessTierChangeTime;
 
+    /**
+     * @return Indicates the last modification time for share access tier.
+     * 
+     */
     public Output<String> getAccessTierChangeTime() {
         return this.accessTierChangeTime;
     }
+    /**
+     * Indicates if there is a pending transition for access tier.
+     * 
+     */
     @OutputExport(name="accessTierStatus", type=String.class, parameters={})
     private Output<String> accessTierStatus;
 
+    /**
+     * @return Indicates if there is a pending transition for access tier.
+     * 
+     */
     public Output<String> getAccessTierStatus() {
         return this.accessTierStatus;
     }
+    /**
+     * Indicates whether the share was deleted.
+     * 
+     */
     @OutputExport(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
+    /**
+     * @return Indicates whether the share was deleted.
+     * 
+     */
     public Output<Boolean> getDeleted() {
         return this.deleted;
     }
+    /**
+     * The deleted time if the share was deleted.
+     * 
+     */
     @OutputExport(name="deletedTime", type=String.class, parameters={})
     private Output<String> deletedTime;
 
+    /**
+     * @return The deleted time if the share was deleted.
+     * 
+     */
     public Output<String> getDeletedTime() {
         return this.deletedTime;
     }
+    /**
+     * The authentication protocol that is used for the file share. Can only be specified when creating a share.
+     * 
+     */
     @OutputExport(name="enabledProtocols", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledProtocols;
 
+    /**
+     * @return The authentication protocol that is used for the file share. Can only be specified when creating a share.
+     * 
+     */
     public Output</* @Nullable */ String> getEnabledProtocols() {
         return this.enabledProtocols;
     }
+    /**
+     * Resource Etag.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Resource Etag.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Returns the date and time the share was last modified.
+     * 
+     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
+    /**
+     * @return Returns the date and time the share was last modified.
+     * 
+     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * A name-value pair to associate with the share as metadata.
+     * 
+     */
     @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
+    /**
+     * @return A name-value pair to associate with the share as metadata.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getMetadata() {
         return this.metadata;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Remaining retention days for share that was soft deleted.
+     * 
+     */
     @OutputExport(name="remainingRetentionDays", type=Integer.class, parameters={})
     private Output<Integer> remainingRetentionDays;
 
+    /**
+     * @return Remaining retention days for share that was soft deleted.
+     * 
+     */
     public Output<Integer> getRemainingRetentionDays() {
         return this.remainingRetentionDays;
     }
+    /**
+     * The property is for NFS share only. The default is NoRootSquash.
+     * 
+     */
     @OutputExport(name="rootSquash", type=String.class, parameters={})
     private Output</* @Nullable */ String> rootSquash;
 
+    /**
+     * @return The property is for NFS share only. The default is NoRootSquash.
+     * 
+     */
     public Output</* @Nullable */ String> getRootSquash() {
         return this.rootSquash;
     }
+    /**
+     * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
+     * 
+     */
     @OutputExport(name="shareQuota", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> shareQuota;
 
+    /**
+     * @return The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
+     * 
+     */
     public Output</* @Nullable */ Integer> getShareQuota() {
         return this.shareQuota;
     }
+    /**
+     * The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
+     * 
+     */
     @OutputExport(name="shareUsageBytes", type=Double.class, parameters={})
     private Output<Double> shareUsageBytes;
 
+    /**
+     * @return The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
+     * 
+     */
     public Output<Double> getShareUsageBytes() {
         return this.shareUsageBytes;
     }
+    /**
+     * Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
+     * 
+     */
     @OutputExport(name="snapshotTime", type=String.class, parameters={})
     private Output<String> snapshotTime;
 
+    /**
+     * @return Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
+     * 
+     */
     public Output<String> getSnapshotTime() {
         return this.snapshotTime;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The version of the share.
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output<String> version;
 
+    /**
+     * @return The version of the share.
+     * 
+     */
     public Output<String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FileShare(String name, FileShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:FileShare", name, args == null ? FileShareArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -148,6 +305,14 @@ public class FileShare extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FileShare get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FileShare(name, id, options);
     }

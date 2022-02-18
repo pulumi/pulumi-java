@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information specifying a GKE Cluster.
+ * 
+ */
 public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GkeClusterArgs Empty = new GkeClusterArgs();
 
+    /**
+     * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+     * 
+     */
     @InputImport(name="cluster")
     private final @Nullable Input<String> cluster;
 

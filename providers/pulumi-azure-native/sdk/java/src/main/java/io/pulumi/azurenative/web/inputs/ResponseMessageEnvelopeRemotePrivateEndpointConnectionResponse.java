@@ -17,10 +17,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Message envelope that contains the common Azure resource manager properties and the resource provider specific content.
+ * 
+ */
 public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse Empty = new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse();
 
+    /**
+     * Azure-AsyncOperation Error info.
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable ErrorEntityResponse error;
 
@@ -28,6 +36,12 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
+    /**
+     * Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+     * value for GET requests only.
+     * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -35,6 +49,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * MSI resource
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable ManagedServiceIdentityResponse identity;
 
@@ -42,6 +60,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
+    /**
+     * Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -49,6 +71,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Name of resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -56,6 +82,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Azure resource manager plan.
+     * 
+     */
     @InputImport(name="plan")
     private final @Nullable ArmPlanResponse plan;
 
@@ -63,6 +93,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
     }
 
+    /**
+     * Resource specific properties.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable RemotePrivateEndpointConnectionResponse properties;
 
@@ -70,6 +104,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * SKU description of the resource.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable SkuDescriptionResponse sku;
 
@@ -77,6 +115,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
+    /**
+     * Azure-AsyncOperation Status info.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -84,6 +126,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * Tags associated with resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -91,6 +137,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * Type of resource e.g "Microsoft.Web/sites".
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -98,6 +148,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * Logical Availability Zones the service is hosted in
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable List<String> zones;
 

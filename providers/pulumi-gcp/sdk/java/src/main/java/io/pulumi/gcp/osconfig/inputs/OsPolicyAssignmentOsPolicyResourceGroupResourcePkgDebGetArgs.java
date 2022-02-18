@@ -15,6 +15,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs 
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs();
 
+    /**
+     * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * 
+     */
     @InputImport(name="pullDeps")
     private final @Nullable Input<Boolean> pullDeps;
 
@@ -22,6 +26,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs 
         return this.pullDeps == null ? Input.empty() : this.pullDeps;
     }
 
+    /**
+     * Required. An rpm package.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source;
 

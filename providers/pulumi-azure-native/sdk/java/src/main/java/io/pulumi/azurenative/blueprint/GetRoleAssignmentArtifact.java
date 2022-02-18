@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoleAssignmentArtifact {
+/**
+ * Blueprint artifact that applies a Role assignment.
+ * API Version: 2018-11-01-preview.
+ * 
+ *
+ * Blueprint artifact that applies a Role assignment.
+ * 
+ */
     public static CompletableFuture<GetRoleAssignmentArtifactResult> invokeAsync(GetRoleAssignmentArtifactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getRoleAssignmentArtifact", TypeShape.of(GetRoleAssignmentArtifactResult.class), args == null ? GetRoleAssignmentArtifactArgs.Empty : args, Utilities.withVersion(options));
     }

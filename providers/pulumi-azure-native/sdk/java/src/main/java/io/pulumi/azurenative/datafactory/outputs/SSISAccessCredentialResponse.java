@@ -12,8 +12,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SSISAccessCredentialResponse {
+    /**
+     * Domain for windows authentication.
+     * 
+     */
     private final Object domain;
+    /**
+     * Password for windows authentication.
+     * 
+     */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    /**
+     * UseName for windows authentication.
+     * 
+     */
     private final Object userName;
 
     @OutputCustomType.Constructor({"domain","password","userName"})
@@ -26,12 +38,24 @@ public final class SSISAccessCredentialResponse {
         this.userName = Objects.requireNonNull(userName);
     }
 
+    /**
+     * Domain for windows authentication.
+     * 
+     */
     public Object getDomain() {
         return this.domain;
     }
+    /**
+     * Password for windows authentication.
+     * 
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
     }
+    /**
+     * UseName for windows authentication.
+     * 
+     */
     public Object getUserName() {
         return this.userName;
     }

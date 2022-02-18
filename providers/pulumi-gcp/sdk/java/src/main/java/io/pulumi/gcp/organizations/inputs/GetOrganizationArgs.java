@@ -14,6 +14,10 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOrganizationArgs Empty = new GetOrganizationArgs();
 
+    /**
+     * The domain name of the Organization.
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable String domain;
 
@@ -21,6 +25,10 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
     }
 
+    /**
+     * The Organization's numeric ID, including an optional `organizations/` prefix.
+     * 
+     */
     @InputImport(name="organization")
     private final @Nullable String organization;
 

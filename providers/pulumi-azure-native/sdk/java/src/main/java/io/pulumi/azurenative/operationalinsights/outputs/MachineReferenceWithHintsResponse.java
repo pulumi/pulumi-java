@@ -9,11 +9,36 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MachineReferenceWithHintsResponse {
+    /**
+     * Last known display name.
+     * 
+     */
     private final String displayNameHint;
+    /**
+     * Resource URI.
+     * 
+     */
     private final String id;
+    /**
+     * Specifies the sub-class of the reference.
+     * Expected value is 'ref:machinewithhints'.
+     * 
+     */
     private final String kind;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Last known operating system family.
+     * 
+     */
     private final String osFamilyHint;
+    /**
+     * Resource type qualifier.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"displayNameHint","id","kind","name","osFamilyHint","type"})
@@ -32,21 +57,46 @@ public final class MachineReferenceWithHintsResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Last known display name.
+     * 
+     */
     public String getDisplayNameHint() {
         return this.displayNameHint;
     }
+    /**
+     * Resource URI.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Specifies the sub-class of the reference.
+     * Expected value is 'ref:machinewithhints'.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Last known operating system family.
+     * 
+     */
     public String getOsFamilyHint() {
         return this.osFamilyHint;
     }
+    /**
+     * Resource type qualifier.
+     * 
+     */
     public String getType() {
         return this.type;
     }

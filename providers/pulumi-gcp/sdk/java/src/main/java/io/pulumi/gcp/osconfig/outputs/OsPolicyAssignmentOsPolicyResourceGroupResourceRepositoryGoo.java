@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo {
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     private final String name;
+    /**
+     * Required. The url of the repository.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"name","url"})
@@ -20,9 +28,17 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo 
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Required. The url of the repository.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

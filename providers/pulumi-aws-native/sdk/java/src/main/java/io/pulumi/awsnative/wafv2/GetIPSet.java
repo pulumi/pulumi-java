@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIPSet {
+/**
+ * Contains a list of IP addresses. This can be either IPV4 or IPV6. The list will be mutually
+ * 
+ */
     public static CompletableFuture<GetIPSetResult> invokeAsync(GetIPSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getIPSet", TypeShape.of(GetIPSetResult.class), args == null ? GetIPSetArgs.Empty : args, Utilities.withVersion(options));
     }

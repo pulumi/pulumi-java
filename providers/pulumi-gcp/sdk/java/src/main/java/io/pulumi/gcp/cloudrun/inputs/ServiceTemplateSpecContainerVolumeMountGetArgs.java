@@ -13,6 +13,11 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends io.pul
 
     public static final ServiceTemplateSpecContainerVolumeMountGetArgs Empty = new ServiceTemplateSpecContainerVolumeMountGetArgs();
 
+    /**
+     * Path within the container at which the volume should be mounted.  Must
+     * not contain ':'.
+     * 
+     */
     @InputImport(name="mountPath", required=true)
     private final Input<String> mountPath;
 
@@ -20,6 +25,10 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends io.pul
         return this.mountPath;
     }
 
+    /**
+     * Volume's name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

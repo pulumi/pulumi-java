@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Managed application locking policy.
+ * 
+ */
 public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationPackageLockingPolicyDefinitionResponse Empty = new ApplicationPackageLockingPolicyDefinitionResponse();
 
+    /**
+     * The deny assignment excluded actions.
+     * 
+     */
     @InputImport(name="allowedActions")
     private final @Nullable List<String> allowedActions;
 
@@ -22,6 +30,10 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
 
+    /**
+     * The deny assignment excluded data actions.
+     * 
+     */
     @InputImport(name="allowedDataActions")
     private final @Nullable List<String> allowedDataActions;
 

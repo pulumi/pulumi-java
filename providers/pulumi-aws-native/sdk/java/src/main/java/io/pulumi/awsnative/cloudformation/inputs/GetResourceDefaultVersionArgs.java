@@ -12,6 +12,10 @@ public final class GetResourceDefaultVersionArgs extends io.pulumi.resources.Inv
 
     public static final GetResourceDefaultVersionArgs Empty = new GetResourceDefaultVersionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

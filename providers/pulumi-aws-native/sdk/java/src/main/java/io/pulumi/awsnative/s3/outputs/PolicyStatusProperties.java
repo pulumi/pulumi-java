@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PolicyStatusProperties {
+    /**
+     * Specifies whether the policy is public or not.
+     * 
+     */
     private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
 
     @OutputCustomType.Constructor({"isPublic"})
@@ -16,6 +20,10 @@ public final class PolicyStatusProperties {
         this.isPublic = Objects.requireNonNull(isPublic);
     }
 
+    /**
+     * Specifies whether the policy is public or not.
+     * 
+     */
     public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic getIsPublic() {
         return this.isPublic;
     }

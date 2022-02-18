@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MUST match https://github.com/secure-systems-lab/dsse/blob/master/envelope.proto. An authenticated message of arbitrary type.
+ * 
+ */
 public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvelopeArgs Empty = new EnvelopeArgs();

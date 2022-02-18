@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The multi cloud resource's cloud name.
+     * 
+     */
     @EnumType
     public enum CloudName {
         Azure("Azure"),

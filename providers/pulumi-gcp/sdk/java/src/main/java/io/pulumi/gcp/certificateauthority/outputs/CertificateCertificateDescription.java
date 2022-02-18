@@ -22,6 +22,11 @@ public final class CertificateCertificateDescription {
     private final @Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints;
     private final @Nullable List<CertificateCertificateDescriptionConfigValue> configValues;
     private final @Nullable List<String> crlDistributionPoints;
+    /**
+     * A PublicKey describes a public key.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys;
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions;
     private final @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds;
@@ -61,6 +66,11 @@ public final class CertificateCertificateDescription {
     public List<String> getCrlDistributionPoints() {
         return this.crlDistributionPoints == null ? List.of() : this.crlDistributionPoints;
     }
+    /**
+     * A PublicKey describes a public key.
+     * Structure is documented below.
+     * 
+     */
     public List<CertificateCertificateDescriptionPublicKey> getPublicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }

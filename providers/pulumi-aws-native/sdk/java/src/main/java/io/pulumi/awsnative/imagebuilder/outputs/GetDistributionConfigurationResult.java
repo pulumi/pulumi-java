@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDistributionConfigurationResult {
+    /**
+     * The Amazon Resource Name (ARN) of the distribution configuration.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The description of the distribution configuration.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The distributions of the distribution configuration.
+     * 
+     */
     private final @Nullable List<DistributionConfigurationDistribution> distributions;
+    /**
+     * The tags associated with the component.
+     * 
+     */
     private final @Nullable Object tags;
 
     @OutputCustomType.Constructor({"arn","description","distributions","tags"})
@@ -31,15 +47,31 @@ public final class GetDistributionConfigurationResult {
         this.tags = tags;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the distribution configuration.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The description of the distribution configuration.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The distributions of the distribution configuration.
+     * 
+     */
     public List<DistributionConfigurationDistribution> getDistributions() {
         return this.distributions == null ? List.of() : this.distributions;
     }
+    /**
+     * The tags associated with the component.
+     * 
+     */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }

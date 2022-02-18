@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of the Data Store. Possible statuses are 'CREATING', 'ACTIVE', 'DELETING', or 'DELETED'.
+     * 
+     */
     @EnumType
     public enum FHIRDatastoreDatastoreStatus {
         Creating("CREATING"),

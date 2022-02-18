@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMissionProfile {
+/**
+ * AWS Ground Station Mission Profile resource type for CloudFormation.
+ * 
+ */
     public static CompletableFuture<GetMissionProfileResult> invokeAsync(GetMissionProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:groundstation:getMissionProfile", TypeShape.of(GetMissionProfileResult.class), args == null ? GetMissionProfileArgs.Empty : args, Utilities.withVersion(options));
     }

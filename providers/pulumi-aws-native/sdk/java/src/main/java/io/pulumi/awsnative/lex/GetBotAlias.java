@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBotAlias {
+/**
+ * A Bot Alias enables you to change the version of a bot without updating applications that use the bot
+ * 
+ */
     public static CompletableFuture<GetBotAliasResult> invokeAsync(GetBotAliasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getBotAlias", TypeShape.of(GetBotAliasResult.class), args == null ? GetBotAliasArgs.Empty : args, Utilities.withVersion(options));
     }

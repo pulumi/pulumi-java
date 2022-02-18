@@ -15,6 +15,10 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final QueryDefinitionArgs Empty = new QueryDefinitionArgs();
 
+    /**
+     * Optionally define specific log groups as part of your query definition
+     * 
+     */
     @InputImport(name="logGroupNames")
     private final @Nullable Input<List<String>> logGroupNames;
 
@@ -22,6 +26,10 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
         return this.logGroupNames == null ? Input.empty() : this.logGroupNames;
     }
 
+    /**
+     * A name for the saved query definition
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,10 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The query string to use for this definition
+     * 
+     */
     @InputImport(name="queryString", required=true)
     private final Input<String> queryString;
 

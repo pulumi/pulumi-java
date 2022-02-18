@@ -15,6 +15,11 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs ex
 
     public static final ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs Empty = new ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs();
 
+    /**
+     * Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="egressFrom")
     private final @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs> egressFrom;
 
@@ -22,6 +27,12 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs ex
         return this.egressFrom == null ? Input.empty() : this.egressFrom;
     }
 
+    /**
+     * Defines the conditions on the `ApiOperation` and destination resources that
+     * cause this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="egressTo")
     private final @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo;
 

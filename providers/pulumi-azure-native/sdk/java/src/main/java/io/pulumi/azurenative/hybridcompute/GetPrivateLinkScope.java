@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateLinkScope {
+/**
+ * An Azure Arc PrivateLinkScope definition.
+ * API Version: 2021-03-25-preview.
+ * 
+ *
+ * An Azure Arc PrivateLinkScope definition.
+ * 
+ */
     public static CompletableFuture<GetPrivateLinkScopeResult> invokeAsync(GetPrivateLinkScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getPrivateLinkScope", TypeShape.of(GetPrivateLinkScopeResult.class), args == null ? GetPrivateLinkScopeArgs.Empty : args, Utilities.withVersion(options));
     }

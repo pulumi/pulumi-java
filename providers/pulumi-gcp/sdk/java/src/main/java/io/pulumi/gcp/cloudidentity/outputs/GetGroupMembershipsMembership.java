@@ -14,10 +14,22 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetGroupMembershipsMembership {
     private final String createTime;
+    /**
+     * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+     * 
+     */
     private final String group;
     private final List<GetGroupMembershipsMembershipMemberKey> memberKeys;
+    /**
+     * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * 
+     */
     private final String name;
     private final List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys;
+    /**
+     * The MembershipRoles that apply to the Membership. Structure is documented below.
+     * 
+     */
     private final List<GetGroupMembershipsMembershipRole> roles;
     private final String type;
     private final String updateTime;
@@ -45,18 +57,30 @@ public final class GetGroupMembershipsMembership {
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+     * 
+     */
     public String getGroup() {
         return this.group;
     }
     public List<GetGroupMembershipsMembershipMemberKey> getMemberKeys() {
         return this.memberKeys;
     }
+    /**
+     * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * 
+     */
     public String getName() {
         return this.name;
     }
     public List<GetGroupMembershipsMembershipPreferredMemberKey> getPreferredMemberKeys() {
         return this.preferredMemberKeys;
     }
+    /**
+     * The MembershipRoles that apply to the Membership. Structure is documented below.
+     * 
+     */
     public List<GetGroupMembershipsMembershipRole> getRoles() {
         return this.roles;
     }

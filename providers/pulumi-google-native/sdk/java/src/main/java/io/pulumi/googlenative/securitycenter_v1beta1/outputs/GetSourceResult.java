@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSourceResult {
+    /**
+     * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
+     * 
+     */
     private final String description;
+    /**
+     * The source's display name. A source's display name must be unique amongst its siblings, for example, two sources with the same parent can't share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
+     * 
+     */
     private final String displayName;
+    /**
+     * The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}"
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"description","displayName","name"})
@@ -23,12 +35,24 @@ public final class GetSourceResult {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The source's display name. A source's display name must be unique amongst its siblings, for example, two sources with the same parent can't share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}"
+     * 
+     */
     public String getName() {
         return this.name;
     }

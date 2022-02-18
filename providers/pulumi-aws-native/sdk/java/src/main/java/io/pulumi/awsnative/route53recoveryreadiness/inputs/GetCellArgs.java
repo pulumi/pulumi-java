@@ -12,6 +12,10 @@ public final class GetCellArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCellArgs Empty = new GetCellArgs();
 
+    /**
+     * The name of the cell to create.
+     * 
+     */
     @InputImport(name="cellName", required=true)
     private final String cellName;
 

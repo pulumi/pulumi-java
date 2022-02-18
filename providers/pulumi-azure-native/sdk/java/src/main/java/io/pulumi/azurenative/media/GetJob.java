@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJob {
+/**
+ * A Job resource type. The progress and state can be obtained by polling a Job or subscribing to events using EventGrid.
+ * API Version: 2020-05-01.
+ * 
+ *
+ * A Job resource type. The progress and state can be obtained by polling a Job or subscribing to events using EventGrid.
+ * 
+ */
     public static CompletableFuture<GetJobResult> invokeAsync(GetJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getJob", TypeShape.of(GetJobResult.class), args == null ? GetJobArgs.Empty : args, Utilities.withVersion(options));
     }

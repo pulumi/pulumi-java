@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The key vault reference.
+ * 
+ */
 public final class KeyVaultKeyReferenceKeyVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyVaultKeyReferenceKeyVaultArgs Empty = new KeyVaultKeyReferenceKeyVaultArgs();
 
+    /**
+     * The resource id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

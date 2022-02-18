@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OpenAuthenticationPolicyClaimResponse {
+    /**
+     * The name of the claim.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The value of the claim.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -22,9 +30,17 @@ public final class OpenAuthenticationPolicyClaimResponse {
         this.value = value;
     }
 
+    /**
+     * The name of the claim.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The value of the claim.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

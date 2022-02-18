@@ -14,6 +14,10 @@ public final class GuestPoliciesAssignmentGroupLabelGetArgs extends io.pulumi.re
 
     public static final GuestPoliciesAssignmentGroupLabelGetArgs Empty = new GuestPoliciesAssignmentGroupLabelGetArgs();
 
+    /**
+     * Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+     * 
+     */
     @InputImport(name="labels", required=true)
     private final Input<Map<String,String>> labels;
 

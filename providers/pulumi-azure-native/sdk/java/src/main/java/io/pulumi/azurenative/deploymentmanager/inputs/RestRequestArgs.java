@@ -13,10 +13,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The properties that make up a REST request
+ * 
+ */
 public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestRequestArgs Empty = new RestRequestArgs();
 
+    /**
+     * The authentication information required in the request to the health provider.
+     * 
+     */
     @InputImport(name="authentication", required=true)
     private final Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
 
@@ -24,6 +32,10 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.authentication;
     }
 
+    /**
+     * The HTTP method to use for the request.
+     * 
+     */
     @InputImport(name="method", required=true)
     private final Input<RestRequestMethod> method;
 
@@ -31,6 +43,10 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.method;
     }
 
+    /**
+     * The HTTP URI to use for the request.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

@@ -14,6 +14,10 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmUptimeArgs Empty = new VmUptimeArgs();
 
+    /**
+     * Number of days in a month for VM uptime.
+     * 
+     */
     @InputImport(name="daysPerMonth")
     private final @Nullable Input<Double> daysPerMonth;
 
@@ -21,6 +25,10 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
         return this.daysPerMonth == null ? Input.empty() : this.daysPerMonth;
     }
 
+    /**
+     * Number of hours per day for VM uptime.
+     * 
+     */
     @InputImport(name="hoursPerDay")
     private final @Nullable Input<Double> hoursPerDay;
 

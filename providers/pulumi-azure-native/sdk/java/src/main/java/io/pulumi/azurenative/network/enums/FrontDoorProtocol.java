@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Accepted protocol schemes.
+     * 
+     */
     @EnumType
     public enum FrontDoorProtocol {
         Http("Http"),

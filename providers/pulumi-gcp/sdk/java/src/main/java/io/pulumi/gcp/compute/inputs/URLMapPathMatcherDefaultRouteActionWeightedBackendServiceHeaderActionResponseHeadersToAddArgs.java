@@ -15,6 +15,10 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
 
     public static final URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs Empty = new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs();
 
+    /**
+     * The name of the header to add.
+     * 
+     */
     @InputImport(name="headerName")
     private final @Nullable Input<String> headerName;
 
@@ -22,6 +26,10 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
         return this.headerName == null ? Input.empty() : this.headerName;
     }
 
+    /**
+     * The value of the header to add.
+     * 
+     */
     @InputImport(name="headerValue")
     private final @Nullable Input<String> headerValue;
 
@@ -29,6 +37,11 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
         return this.headerValue == null ? Input.empty() : this.headerValue;
     }
 
+    /**
+     * If false, headerValue is appended to any values that already exist for the header.
+     * If true, headerValue is set for the header, discarding any values that were set for that header.
+     * 
+     */
     @InputImport(name="replace")
     private final @Nullable Input<Boolean> replace;
 

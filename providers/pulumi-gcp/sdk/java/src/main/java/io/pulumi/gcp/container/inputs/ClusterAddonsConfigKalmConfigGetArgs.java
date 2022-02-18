@@ -13,6 +13,11 @@ public final class ClusterAddonsConfigKalmConfigGetArgs extends io.pulumi.resour
 
     public static final ClusterAddonsConfigKalmConfigGetArgs Empty = new ClusterAddonsConfigKalmConfigGetArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

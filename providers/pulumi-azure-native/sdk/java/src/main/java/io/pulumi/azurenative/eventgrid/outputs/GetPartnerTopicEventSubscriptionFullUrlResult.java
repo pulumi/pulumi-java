@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPartnerTopicEventSubscriptionFullUrlResult {
+    /**
+     * The URL that represents the endpoint of the destination of an event subscription.
+     * 
+     */
     private final @Nullable String endpointUrl;
 
     @OutputCustomType.Constructor({"endpointUrl"})
@@ -18,6 +22,10 @@ public final class GetPartnerTopicEventSubscriptionFullUrlResult {
         this.endpointUrl = endpointUrl;
     }
 
+    /**
+     * The URL that represents the endpoint of the destination of an event subscription.
+     * 
+     */
     public Optional<String> getEndpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }

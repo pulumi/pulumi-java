@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Workload item type of the item for which intent is to be set
+     * 
+     */
     @EnumType
     public enum WorkloadItemType {
         Invalid("Invalid"),

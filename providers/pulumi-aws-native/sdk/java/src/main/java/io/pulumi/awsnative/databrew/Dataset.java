@@ -18,35 +18,81 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::DataBrew::Dataset.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:databrew:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {
+    /**
+     * Dataset format
+     * 
+     */
     @OutputExport(name="format", type=DatasetFormat.class, parameters={})
     private Output</* @Nullable */ DatasetFormat> format;
 
+    /**
+     * @return Dataset format
+     * 
+     */
     public Output</* @Nullable */ DatasetFormat> getFormat() {
         return this.format;
     }
+    /**
+     * Format options for dataset
+     * 
+     */
     @OutputExport(name="formatOptions", type=DatasetFormatOptions.class, parameters={})
     private Output</* @Nullable */ DatasetFormatOptions> formatOptions;
 
+    /**
+     * @return Format options for dataset
+     * 
+     */
     public Output</* @Nullable */ DatasetFormatOptions> getFormatOptions() {
         return this.formatOptions;
     }
+    /**
+     * Input
+     * 
+     */
     @OutputExport(name="input", type=DatasetInput.class, parameters={})
     private Output<DatasetInput> input;
 
+    /**
+     * @return Input
+     * 
+     */
     public Output<DatasetInput> getInput() {
         return this.input;
     }
+    /**
+     * Dataset name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Dataset name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * PathOptions
+     * 
+     */
     @OutputExport(name="pathOptions", type=DatasetPathOptions.class, parameters={})
     private Output</* @Nullable */ DatasetPathOptions> pathOptions;
 
+    /**
+     * @return PathOptions
+     * 
+     */
     public Output</* @Nullable */ DatasetPathOptions> getPathOptions() {
         return this.pathOptions;
     }
@@ -57,6 +103,12 @@ public class Dataset extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Dataset(String name, DatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:databrew:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -72,6 +124,14 @@ public class Dataset extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Dataset get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Dataset(name, id, options);
     }

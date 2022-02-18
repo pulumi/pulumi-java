@@ -12,6 +12,13 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class InstanceServerCaCert {
     private final @Nullable String cert;
+    /**
+     * - 
+     * Output only. The time when the policy was created.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     private final @Nullable String createTime;
     private final @Nullable String expireTime;
     private final @Nullable String serialNumber;
@@ -34,6 +41,13 @@ public final class InstanceServerCaCert {
     public Optional<String> getCert() {
         return Optional.ofNullable(this.cert);
     }
+    /**
+     * - 
+     * Output only. The time when the policy was created.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     public Optional<String> getCreateTime() {
         return Optional.ofNullable(this.createTime);
     }

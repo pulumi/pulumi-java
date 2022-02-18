@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Validation result for Sql Server to Azure Sql DB migration.
+ * 
+ */
 public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlDbTaskOutputValidationResultResponse Empty = new MigrateSqlServerSqlDbTaskOutputValidationResultResponse();
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -23,6 +31,10 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
         return this.id;
     }
 
+    /**
+     * Migration Identifier
+     * 
+     */
     @InputImport(name="migrationId", required=true)
     private final String migrationId;
 
@@ -30,6 +42,11 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
         return this.migrationId;
     }
 
+    /**
+     * Result type
+     * Expected value is 'MigrationValidationOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -37,6 +54,10 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
         return this.resultType;
     }
 
+    /**
+     * Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -44,6 +65,10 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
         return this.status;
     }
 
+    /**
+     * Validation summary results for each database
+     * 
+     */
     @InputImport(name="summaryResults")
     private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 

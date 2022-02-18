@@ -16,6 +16,10 @@ public final class EnterpriseKeyAndroidSettingsGetArgs extends io.pulumi.resourc
 
     public static final EnterpriseKeyAndroidSettingsGetArgs Empty = new EnterpriseKeyAndroidSettingsGetArgs();
 
+    /**
+     * If set to true, it means allowed_package_names will not be enforced.
+     * 
+     */
     @InputImport(name="allowAllPackageNames")
     private final @Nullable Input<Boolean> allowAllPackageNames;
 
@@ -23,6 +27,10 @@ public final class EnterpriseKeyAndroidSettingsGetArgs extends io.pulumi.resourc
         return this.allowAllPackageNames == null ? Input.empty() : this.allowAllPackageNames;
     }
 
+    /**
+     * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
+     * 
+     */
     @InputImport(name="allowedPackageNames")
     private final @Nullable Input<List<String>> allowedPackageNames;
 

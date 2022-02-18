@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The principal type of the assigned principal ID.
+     * 
+     */
     @EnumType
     public enum PrincipalType {
         User("User"),

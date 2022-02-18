@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetControlPanel {
+/**
+ * AWS Route53 Recovery Control Control Panel resource schema .
+ * 
+ */
     public static CompletableFuture<GetControlPanelResult> invokeAsync(GetControlPanelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoverycontrol:getControlPanel", TypeShape.of(GetControlPanelResult.class), args == null ? GetControlPanelArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -21,10 +21,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSIS properties for managed integration runtime.
+ * 
+ */
 public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IntegrationRuntimeSsisPropertiesResponse Empty = new IntegrationRuntimeSsisPropertiesResponse();
 
+    /**
+     * Catalog information for managed dedicated integration runtime.
+     * 
+     */
     @InputImport(name="catalogInfo")
     private final @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo;
 
@@ -32,6 +40,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
         return this.catalogInfo == null ? Optional.empty() : Optional.ofNullable(this.catalogInfo);
     }
 
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -39,6 +51,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
+    /**
+     * Custom setup script properties for a managed dedicated integration runtime.
+     * 
+     */
     @InputImport(name="customSetupScriptProperties")
     private final @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties;
 
@@ -46,6 +62,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
         return this.customSetupScriptProperties == null ? Optional.empty() : Optional.ofNullable(this.customSetupScriptProperties);
     }
 
+    /**
+     * Data proxy properties for a managed dedicated integration runtime.
+     * 
+     */
     @InputImport(name="dataProxyProperties")
     private final @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties;
 
@@ -53,6 +73,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
         return this.dataProxyProperties == null ? Optional.empty() : Optional.ofNullable(this.dataProxyProperties);
     }
 
+    /**
+     * The edition for the SSIS Integration Runtime
+     * 
+     */
     @InputImport(name="edition")
     private final @Nullable String edition;
 
@@ -60,6 +84,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
         return this.edition == null ? Optional.empty() : Optional.ofNullable(this.edition);
     }
 
+    /**
+     * Custom setup without script properties for a SSIS integration runtime.
+     * 
+     */
     @InputImport(name="expressCustomSetupProperties")
     private final @Nullable List<Object> expressCustomSetupProperties;
 
@@ -67,6 +95,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
         return this.expressCustomSetupProperties == null ? List.of() : this.expressCustomSetupProperties;
     }
 
+    /**
+     * License type for bringing your own license scenario.
+     * 
+     */
     @InputImport(name="licenseType")
     private final @Nullable String licenseType;
 
@@ -74,6 +106,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
+    /**
+     * Package stores for the SSIS Integration Runtime.
+     * 
+     */
     @InputImport(name="packageStores")
     private final @Nullable List<PackageStoreResponse> packageStores;
 

@@ -17,6 +17,10 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
 
     public static final JobRecurrenceScheduleResponse Empty = new JobRecurrenceScheduleResponse();
 
+    /**
+     * Gets or sets the hours of the day that the job should execute at.
+     * 
+     */
     @InputImport(name="hours")
     private final @Nullable List<Integer> hours;
 
@@ -24,6 +28,10 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
         return this.hours == null ? List.of() : this.hours;
     }
 
+    /**
+     * Gets or sets the minutes of the hour that the job should execute at.
+     * 
+     */
     @InputImport(name="minutes")
     private final @Nullable List<Integer> minutes;
 
@@ -31,6 +39,10 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
         return this.minutes == null ? List.of() : this.minutes;
     }
 
+    /**
+     * Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
+     * 
+     */
     @InputImport(name="monthDays")
     private final @Nullable List<Integer> monthDays;
 
@@ -38,6 +50,10 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
         return this.monthDays == null ? List.of() : this.monthDays;
     }
 
+    /**
+     * Gets or sets the occurrences of days within a month.
+     * 
+     */
     @InputImport(name="monthlyOccurrences")
     private final @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
@@ -45,6 +61,10 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
 
+    /**
+     * Gets or sets the days of the week that the job should execute on.
+     * 
+     */
     @InputImport(name="weekDays")
     private final @Nullable List<String> weekDays;
 

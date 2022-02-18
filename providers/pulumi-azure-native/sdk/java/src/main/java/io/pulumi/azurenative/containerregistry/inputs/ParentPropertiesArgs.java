@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the connected registry parent.
+ * 
+ */
 public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParentPropertiesArgs Empty = new ParentPropertiesArgs();
 
+    /**
+     * The resource ID of the parent to which the connected registry will be associated.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +30,10 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The sync properties of the connected registry with its parent.
+     * 
+     */
     @InputImport(name="syncProperties", required=true)
     private final Input<SyncPropertiesArgs> syncProperties;
 

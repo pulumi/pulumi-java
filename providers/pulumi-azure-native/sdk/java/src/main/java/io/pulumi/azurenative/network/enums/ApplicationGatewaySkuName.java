@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Name of an application gateway SKU.
+     * 
+     */
     @EnumType
     public enum ApplicationGatewaySkuName {
         Standard_Small("Standard_Small"),

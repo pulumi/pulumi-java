@@ -11,13 +11,46 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
+    /**
+     * Result identifier
+     * 
+     */
     private final String id;
+    /**
+     * The state of the original AgentJob.
+     * 
+     */
     private final Boolean isEnabled;
+    /**
+     * The type of AgentJob.
+     * 
+     */
     private final String jobCategory;
+    /**
+     * The owner of the AgentJob
+     * 
+     */
     private final String jobOwner;
+    /**
+     * UTC Date and time when the AgentJob was last executed.
+     * 
+     */
     private final String lastExecutedOn;
+    /**
+     * Information about eligibility of agent job for migration.
+     * 
+     */
     private final MigrationEligibilityInfoResponse migrationEligibility;
+    /**
+     * AgentJob name
+     * 
+     */
     private final String name;
+    /**
+     * Type of result - database level or task level
+     * Expected value is 'AgentJobLevelOutput'.
+     * 
+     */
     private final String resultType;
 
     @OutputCustomType.Constructor({"id","isEnabled","jobCategory","jobOwner","lastExecutedOn","migrationEligibility","name","resultType"})
@@ -40,27 +73,60 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
         this.resultType = Objects.requireNonNull(resultType);
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The state of the original AgentJob.
+     * 
+     */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
+    /**
+     * The type of AgentJob.
+     * 
+     */
     public String getJobCategory() {
         return this.jobCategory;
     }
+    /**
+     * The owner of the AgentJob
+     * 
+     */
     public String getJobOwner() {
         return this.jobOwner;
     }
+    /**
+     * UTC Date and time when the AgentJob was last executed.
+     * 
+     */
     public String getLastExecutedOn() {
         return this.lastExecutedOn;
     }
+    /**
+     * Information about eligibility of agent job for migration.
+     * 
+     */
     public MigrationEligibilityInfoResponse getMigrationEligibility() {
         return this.migrationEligibility;
     }
+    /**
+     * AgentJob name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Type of result - database level or task level
+     * Expected value is 'AgentJobLevelOutput'.
+     * 
+     */
     public String getResultType() {
         return this.resultType;
     }

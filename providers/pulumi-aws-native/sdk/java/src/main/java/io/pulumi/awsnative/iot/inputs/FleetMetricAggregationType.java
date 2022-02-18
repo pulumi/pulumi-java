@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Aggregation types supported by Fleet Indexing
+ * 
+ */
 public final class FleetMetricAggregationType extends io.pulumi.resources.InvokeArgs {
 
     public static final FleetMetricAggregationType Empty = new FleetMetricAggregationType();
 
+    /**
+     * Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +28,10 @@ public final class FleetMetricAggregationType extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Fleet Indexing aggregation type values
+     * 
+     */
     @InputImport(name="values", required=true)
     private final List<String> values;
 

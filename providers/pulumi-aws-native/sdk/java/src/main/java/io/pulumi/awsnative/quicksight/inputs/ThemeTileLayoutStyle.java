@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The display options for the layout of tiles on a sheet.</p>
+ * 
+ */
 public final class ThemeTileLayoutStyle extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeTileLayoutStyle Empty = new ThemeTileLayoutStyle();

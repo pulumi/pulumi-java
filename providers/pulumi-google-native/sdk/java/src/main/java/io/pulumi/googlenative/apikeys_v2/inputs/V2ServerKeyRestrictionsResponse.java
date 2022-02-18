@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The IP addresses of callers that are allowed to use the key.
+ * 
+ */
 public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final V2ServerKeyRestrictionsResponse Empty = new V2ServerKeyRestrictionsResponse();
 
+    /**
+     * A list of the caller IP addresses that are allowed to make API calls with this key.
+     * 
+     */
     @InputImport(name="allowedIps", required=true)
     private final List<String> allowedIps;
 

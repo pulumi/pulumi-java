@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type for the IpAllocation.
+     * 
+     */
     @EnumType
     public enum IpAllocationType {
         Undefined("Undefined"),

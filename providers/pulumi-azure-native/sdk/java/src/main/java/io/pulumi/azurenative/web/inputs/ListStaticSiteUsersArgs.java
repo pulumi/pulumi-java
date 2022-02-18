@@ -12,6 +12,10 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
 
     public static final ListStaticSiteUsersArgs Empty = new ListStaticSiteUsersArgs();
 
+    /**
+     * The auth provider for the users.
+     * 
+     */
     @InputImport(name="authprovider", required=true)
     private final String authprovider;
 
@@ -19,6 +23,10 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
         return this.authprovider;
     }
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

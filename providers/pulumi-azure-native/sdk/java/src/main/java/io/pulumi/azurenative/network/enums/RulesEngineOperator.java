@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Describes operator to apply to the match condition.
+     * 
+     */
     @EnumType
     public enum RulesEngineOperator {
         Any("Any"),

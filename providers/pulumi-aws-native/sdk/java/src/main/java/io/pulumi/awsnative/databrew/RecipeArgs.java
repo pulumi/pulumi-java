@@ -17,6 +17,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecipeArgs Empty = new RecipeArgs();
 
+    /**
+     * Description of the recipe
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Recipe name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

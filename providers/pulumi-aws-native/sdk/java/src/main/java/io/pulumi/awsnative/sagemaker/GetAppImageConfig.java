@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppImageConfig {
+/**
+ * Resource Type definition for AWS::SageMaker::AppImageConfig
+ * 
+ */
     public static CompletableFuture<GetAppImageConfigResult> invokeAsync(GetAppImageConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getAppImageConfig", TypeShape.of(GetAppImageConfigResult.class), args == null ? GetAppImageConfigArgs.Empty : args, Utilities.withVersion(options));
     }

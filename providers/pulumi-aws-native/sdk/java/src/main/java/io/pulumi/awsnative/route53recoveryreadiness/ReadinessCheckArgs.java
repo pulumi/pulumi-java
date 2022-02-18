@@ -16,6 +16,10 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReadinessCheckArgs Empty = new ReadinessCheckArgs();
 
+    /**
+     * Name of the ReadinessCheck to create.
+     * 
+     */
     @InputImport(name="readinessCheckName")
     private final @Nullable Input<String> readinessCheckName;
 
@@ -23,6 +27,10 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.readinessCheckName == null ? Input.empty() : this.readinessCheckName;
     }
 
+    /**
+     * The name of the resource set to check.
+     * 
+     */
     @InputImport(name="resourceSetName")
     private final @Nullable Input<String> resourceSetName;
 
@@ -30,6 +38,10 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceSetName == null ? Input.empty() : this.resourceSetName;
     }
 
+    /**
+     * A collection of tags associated with a resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ReadinessCheckTagArgs>> tags;
 

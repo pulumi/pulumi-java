@@ -21,6 +21,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorArgs Empty = new DetectorArgs();
 
+    /**
+     * The models to associate with this detector.
+     * 
+     */
     @InputImport(name="associatedModels")
     private final @Nullable Input<List<DetectorModelArgs>> associatedModels;
 
@@ -28,6 +32,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.associatedModels == null ? Input.empty() : this.associatedModels;
     }
 
+    /**
+     * The description of the detector.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +43,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The ID of the detector
+     * 
+     */
     @InputImport(name="detectorId", required=true)
     private final Input<String> detectorId;
 
@@ -42,6 +54,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.detectorId;
     }
 
+    /**
+     * The desired detector version status for the detector
+     * 
+     */
     @InputImport(name="detectorVersionStatus")
     private final @Nullable Input<DetectorVersionStatus> detectorVersionStatus;
 
@@ -49,6 +65,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.detectorVersionStatus == null ? Input.empty() : this.detectorVersionStatus;
     }
 
+    /**
+     * The event type to associate this detector with.
+     * 
+     */
     @InputImport(name="eventType", required=true)
     private final Input<DetectorEventTypeArgs> eventType;
 
@@ -70,6 +90,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.rules;
     }
 
+    /**
+     * Tags associated with this detector.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DetectorTagArgs>> tags;
 

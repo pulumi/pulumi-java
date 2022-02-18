@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EtcdInfoResponse {
+    /**
+     * Etcd type
+     * 
+     */
     private final String type;
+    /**
+     * Etcd version
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"type","version"})
@@ -20,9 +28,17 @@ public final class EtcdInfoResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * Etcd type
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Etcd version
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

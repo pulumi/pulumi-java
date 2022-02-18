@@ -18,6 +18,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
 
     public static final ListFirewallPolicyIdpsSignatureArgs Empty = new ListFirewallPolicyIdpsSignatureArgs();
 
+    /**
+     * Contain all filters names and values
+     * 
+     */
     @InputImport(name="filters")
     private final @Nullable List<FilterItems> filters;
 
@@ -25,6 +29,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
         return this.filters == null ? List.of() : this.filters;
     }
 
+    /**
+     * The name of the Firewall Policy.
+     * 
+     */
     @InputImport(name="firewallPolicyName", required=true)
     private final String firewallPolicyName;
 
@@ -32,6 +40,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
         return this.firewallPolicyName;
     }
 
+    /**
+     * Column to sort response by
+     * 
+     */
     @InputImport(name="orderBy")
     private final @Nullable OrderBy orderBy;
 
@@ -39,6 +51,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
         return this.orderBy == null ? Optional.empty() : Optional.ofNullable(this.orderBy);
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -46,6 +62,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The number of the results to return in each page
+     * 
+     */
     @InputImport(name="resultsPerPage")
     private final @Nullable Integer resultsPerPage;
 
@@ -53,6 +73,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
         return this.resultsPerPage == null ? Optional.empty() : Optional.ofNullable(this.resultsPerPage);
     }
 
+    /**
+     * Search term in all columns
+     * 
+     */
     @InputImport(name="search")
     private final @Nullable String search;
 
@@ -60,6 +84,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
         return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
     }
 
+    /**
+     * The number of records matching the filter to skip
+     * 
+     */
     @InputImport(name="skip")
     private final @Nullable Integer skip;
 

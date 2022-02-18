@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Data types sent to workspace.
+     * 
+     */
     @EnumType
     public enum AdditionalWorkspaceDataType {
         Alerts("Alerts"),

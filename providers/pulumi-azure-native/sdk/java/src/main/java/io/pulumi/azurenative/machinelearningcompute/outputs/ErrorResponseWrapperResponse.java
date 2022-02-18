@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ErrorResponseWrapperResponse {
+    /**
+     * The error response.
+     * 
+     */
     private final @Nullable ErrorResponseResponse error;
 
     @OutputCustomType.Constructor({"error"})
@@ -18,6 +22,10 @@ public final class ErrorResponseWrapperResponse {
         this.error = error;
     }
 
+    /**
+     * The error response.
+     * 
+     */
     public Optional<ErrorResponseResponse> getError() {
         return Optional.ofNullable(this.error);
     }

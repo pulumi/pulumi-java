@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CommitmentPlanResponse {
+    /**
+     * Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
+     * 
+     */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +20,10 @@ public final class CommitmentPlanResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+    /**
+     * Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
+     * 
+     */
     public String getId() {
         return this.id;
     }

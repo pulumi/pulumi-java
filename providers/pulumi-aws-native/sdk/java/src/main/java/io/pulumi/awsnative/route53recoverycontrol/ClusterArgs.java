@@ -16,6 +16,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * Name of a Cluster. You can use any non-white space character in the name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +27,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ClusterTagArgs>> tags;
 

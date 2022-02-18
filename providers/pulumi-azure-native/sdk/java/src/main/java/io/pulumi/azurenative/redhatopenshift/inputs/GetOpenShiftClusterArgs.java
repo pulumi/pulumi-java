@@ -12,6 +12,10 @@ public final class GetOpenShiftClusterArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetOpenShiftClusterArgs Empty = new GetOpenShiftClusterArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetOpenShiftClusterArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the OpenShift cluster resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

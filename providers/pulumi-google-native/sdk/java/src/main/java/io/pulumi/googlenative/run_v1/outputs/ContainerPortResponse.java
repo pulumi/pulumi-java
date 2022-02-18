@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContainerPortResponse {
+    /**
+     * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
+     * 
+     */
     private final Integer containerPort;
+    /**
+     * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
+     * 
+     */
     private final String name;
+    /**
+     * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
+     * 
+     */
     private final String protocol;
 
     @OutputCustomType.Constructor({"containerPort","name","protocol"})
@@ -24,12 +36,24 @@ public final class ContainerPortResponse {
         this.protocol = Objects.requireNonNull(protocol);
     }
 
+    /**
+     * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
+     * 
+     */
     public Integer getContainerPort() {
         return this.containerPort;
     }
+    /**
+     * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
+     * 
+     */
     public String getProtocol() {
         return this.protocol;
     }

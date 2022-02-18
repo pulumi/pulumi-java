@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoPausePropertiesResponse {
+    /**
+     * Number of minutes of idle time before the Big Data pool is automatically paused.
+     * 
+     */
     private final @Nullable Integer delayInMinutes;
+    /**
+     * Whether auto-pausing is enabled for the Big Data pool.
+     * 
+     */
     private final @Nullable Boolean enabled;
 
     @OutputCustomType.Constructor({"delayInMinutes","enabled"})
@@ -23,9 +31,17 @@ public final class AutoPausePropertiesResponse {
         this.enabled = enabled;
     }
 
+    /**
+     * Number of minutes of idle time before the Big Data pool is automatically paused.
+     * 
+     */
     public Optional<Integer> getDelayInMinutes() {
         return Optional.ofNullable(this.delayInMinutes);
     }
+    /**
+     * Whether auto-pausing is enabled for the Big Data pool.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

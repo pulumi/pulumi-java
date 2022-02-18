@@ -18,6 +18,10 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
 
     public static final ManagedZoneDnsSecConfigArgs Empty = new ManagedZoneDnsSecConfigArgs();
 
+    /**
+     * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+     * 
+     */
     @InputImport(name="defaultKeySpecs")
     private final @Nullable Input<List<DnsKeySpecArgs>> defaultKeySpecs;
 
@@ -32,6 +36,10 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
+     * 
+     */
     @InputImport(name="nonExistence")
     private final @Nullable Input<ManagedZoneDnsSecConfigNonExistence> nonExistence;
 
@@ -39,6 +47,10 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
         return this.nonExistence == null ? Input.empty() : this.nonExistence;
     }
 
+    /**
+     * Specifies whether DNSSEC is enabled, and what mode it is in.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<ManagedZoneDnsSecConfigState> state;
 

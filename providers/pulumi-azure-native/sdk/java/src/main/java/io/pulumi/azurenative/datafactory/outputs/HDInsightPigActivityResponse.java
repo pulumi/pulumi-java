@@ -18,18 +18,71 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HDInsightPigActivityResponse {
+    /**
+     * User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
+     * 
+     */
     private final @Nullable Object arguments;
+    /**
+     * Allows user to specify defines for Pig job request.
+     * 
+     */
     private final @Nullable Map<String,Object> defines;
+    /**
+     * Activity depends on condition.
+     * 
+     */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    /**
+     * Activity description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Debug info option.
+     * 
+     */
     private final @Nullable String getDebugInfo;
+    /**
+     * Linked service reference.
+     * 
+     */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    /**
+     * Activity name.
+     * 
+     */
     private final String name;
+    /**
+     * Activity policy.
+     * 
+     */
     private final @Nullable ActivityPolicyResponse policy;
+    /**
+     * Script linked service reference.
+     * 
+     */
     private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
+    /**
+     * Script path. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object scriptPath;
+    /**
+     * Storage linked service references.
+     * 
+     */
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
+    /**
+     * Type of activity.
+     * Expected value is 'HDInsightPig'.
+     * 
+     */
     private final String type;
+    /**
+     * Activity user properties.
+     * 
+     */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"arguments","defines","dependsOn","description","getDebugInfo","linkedServiceName","name","policy","scriptLinkedService","scriptPath","storageLinkedServices","type","userProperties"})
@@ -62,42 +115,95 @@ public final class HDInsightPigActivityResponse {
         this.userProperties = userProperties;
     }
 
+    /**
+     * User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
+     * 
+     */
     public Optional<Object> getArguments() {
         return Optional.ofNullable(this.arguments);
     }
+    /**
+     * Allows user to specify defines for Pig job request.
+     * 
+     */
     public Map<String,Object> getDefines() {
         return this.defines == null ? Map.of() : this.defines;
     }
+    /**
+     * Activity depends on condition.
+     * 
+     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
+    /**
+     * Activity description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Debug info option.
+     * 
+     */
     public Optional<String> getGetDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
+    /**
+     * Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
+    /**
+     * Activity name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
+    /**
+     * Script linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> getScriptLinkedService() {
         return Optional.ofNullable(this.scriptLinkedService);
     }
+    /**
+     * Script path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getScriptPath() {
         return Optional.ofNullable(this.scriptPath);
     }
+    /**
+     * Storage linked service references.
+     * 
+     */
     public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
+    /**
+     * Type of activity.
+     * Expected value is 'HDInsightPig'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Activity user properties.
+     * 
+     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

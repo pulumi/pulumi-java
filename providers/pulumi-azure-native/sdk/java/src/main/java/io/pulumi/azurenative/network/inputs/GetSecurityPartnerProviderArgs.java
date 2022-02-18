@@ -12,6 +12,10 @@ public final class GetSecurityPartnerProviderArgs extends io.pulumi.resources.In
 
     public static final GetSecurityPartnerProviderArgs Empty = new GetSecurityPartnerProviderArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetSecurityPartnerProviderArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Security Partner Provider.
+     * 
+     */
     @InputImport(name="securityPartnerProviderName", required=true)
     private final String securityPartnerProviderName;
 

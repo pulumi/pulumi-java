@@ -17,6 +17,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
 
     public static final CertificateTemplatePredefinedValuesKeyUsageArgs Empty = new CertificateTemplatePredefinedValuesKeyUsageArgs();
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * 
+     */
     @InputImport(name="baseKeyUsage")
     private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
 
@@ -24,6 +28,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
         return this.baseKeyUsage == null ? Input.empty() : this.baseKeyUsage;
     }
 
+    /**
+     * Detailed scenarios in which a key may be used.
+     * 
+     */
     @InputImport(name="extendedKeyUsage")
     private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
 
@@ -31,6 +39,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
         return this.extendedKeyUsage == null ? Input.empty() : this.extendedKeyUsage;
     }
 
+    /**
+     * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+     * 
+     */
     @InputImport(name="unknownExtendedKeyUsages")
     private final @Nullable Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
 

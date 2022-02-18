@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A component for DNS/routing control readiness checks.
+ * 
+ */
 public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSetDNSTargetResourceArgs Empty = new ResourceSetDNSTargetResourceArgs();
 
+    /**
+     * The domain name that acts as an ingress point to a portion of the customer application.
+     * 
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -22,6 +30,10 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
+     * 
+     */
     @InputImport(name="hostedZoneArn")
     private final @Nullable Input<String> hostedZoneArn;
 
@@ -29,6 +41,10 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
         return this.hostedZoneArn == null ? Input.empty() : this.hostedZoneArn;
     }
 
+    /**
+     * The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
+     * 
+     */
     @InputImport(name="recordSetId")
     private final @Nullable Input<String> recordSetId;
 
@@ -36,6 +52,10 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
         return this.recordSetId == null ? Input.empty() : this.recordSetId;
     }
 
+    /**
+     * The type of DNS record of the target resource.
+     * 
+     */
     @InputImport(name="recordType")
     private final @Nullable Input<String> recordType;
 

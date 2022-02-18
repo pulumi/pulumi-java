@@ -8,10 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>The key or keys of the key-value pairs for the resource tag or tags assigned to the
+ *             resource.</p>
+ * 
+ */
 public final class TemplateTag extends io.pulumi.resources.InvokeArgs {
 
     public static final TemplateTag Empty = new TemplateTag();
 
+    /**
+     * <p>Tag key.</p>
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +28,10 @@ public final class TemplateTag extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * <p>Tag value.</p>
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

@@ -16,6 +16,10 @@ public final class PreventionStoredInfoTypeRegexArgs extends io.pulumi.resources
 
     public static final PreventionStoredInfoTypeRegexArgs Empty = new PreventionStoredInfoTypeRegexArgs();
 
+    /**
+     * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+     * 
+     */
     @InputImport(name="groupIndexes")
     private final @Nullable Input<List<Integer>> groupIndexes;
 
@@ -23,6 +27,11 @@ public final class PreventionStoredInfoTypeRegexArgs extends io.pulumi.resources
         return this.groupIndexes == null ? Input.empty() : this.groupIndexes;
     }
 
+    /**
+     * Pattern defining the regular expression.
+     * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+     * 
+     */
     @InputImport(name="pattern", required=true)
     private final Input<String> pattern;
 

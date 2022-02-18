@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ServicePrincipalProfile represents a service principal profile.
+ * 
+ */
 public final class ServicePrincipalProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServicePrincipalProfileArgs Empty = new ServicePrincipalProfileArgs();
 
+    /**
+     * The client ID used for the cluster (immutable).
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -21,6 +29,10 @@ public final class ServicePrincipalProfileArgs extends io.pulumi.resources.Resou
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * The client secret used for the cluster (immutable).
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 

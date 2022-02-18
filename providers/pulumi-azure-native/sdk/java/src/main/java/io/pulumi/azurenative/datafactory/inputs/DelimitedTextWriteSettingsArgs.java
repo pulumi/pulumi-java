@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Delimited text write settings.
+ * 
+ */
 public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DelimitedTextWriteSettingsArgs Empty = new DelimitedTextWriteSettingsArgs();
 
+    /**
+     * The file extension used to create the files. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileExtension", required=true)
     private final Input<Object> fileExtension;
 
@@ -22,6 +30,10 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
         return this.fileExtension;
     }
 
+    /**
+     * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileNamePrefix")
     private final @Nullable Input<Object> fileNamePrefix;
 
@@ -29,6 +41,10 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
         return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
     }
 
+    /**
+     * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxRowsPerFile")
     private final @Nullable Input<Object> maxRowsPerFile;
 
@@ -36,6 +52,10 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
         return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
     }
 
+    /**
+     * Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="quoteAllText")
     private final @Nullable Input<Object> quoteAllText;
 
@@ -43,6 +63,11 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
         return this.quoteAllText == null ? Input.empty() : this.quoteAllText;
     }
 
+    /**
+     * The write setting type.
+     * Expected value is 'DelimitedTextWriteSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

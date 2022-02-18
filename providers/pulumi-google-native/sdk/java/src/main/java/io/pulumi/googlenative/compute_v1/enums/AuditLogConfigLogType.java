@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The log type that this config enables.
+     * 
+     */
     @EnumType
     public enum AuditLogConfigLogType {
+        /**
+         * Admin reads. Example: CloudIAM getIamPolicy
+         * 
+         */
         AdminRead("ADMIN_READ"),
+        /**
+         * Data reads. Example: CloudSQL Users list
+         * 
+         */
         DataRead("DATA_READ"),
+        /**
+         * Data writes. Example: CloudSQL Users create
+         * 
+         */
         DataWrite("DATA_WRITE"),
+        /**
+         * Default case. Should never be this.
+         * 
+         */
         LogTypeUnspecified("LOG_TYPE_UNSPECIFIED");
 
         private final String value;

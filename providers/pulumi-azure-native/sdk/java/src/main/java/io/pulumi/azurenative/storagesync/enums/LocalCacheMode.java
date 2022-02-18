@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
+     * 
+     */
     @EnumType
     public enum LocalCacheMode {
         DownloadNewAndModifiedFiles("DownloadNewAndModifiedFiles"),

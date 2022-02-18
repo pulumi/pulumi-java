@@ -14,11 +14,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3QueryInputResponse {
+    /**
+     * The natural language speech audio to be processed.
+     * 
+     */
     private final GoogleCloudDialogflowCxV3AudioInputResponse audio;
+    /**
+     * The DTMF event to be handled.
+     * 
+     */
     private final GoogleCloudDialogflowCxV3DtmfInputResponse dtmf;
+    /**
+     * The event to be triggered.
+     * 
+     */
     private final GoogleCloudDialogflowCxV3EventInputResponse event;
+    /**
+     * The intent to be triggered.
+     * 
+     */
     private final GoogleCloudDialogflowCxV3IntentInputResponse intent;
+    /**
+     * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+     * 
+     */
     private final String languageCode;
+    /**
+     * The natural language text to be processed.
+     * 
+     */
     private final GoogleCloudDialogflowCxV3TextInputResponse text;
 
     @OutputCustomType.Constructor({"audio","dtmf","event","intent","languageCode","text"})
@@ -37,21 +61,45 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse {
         this.text = Objects.requireNonNull(text);
     }
 
+    /**
+     * The natural language speech audio to be processed.
+     * 
+     */
     public GoogleCloudDialogflowCxV3AudioInputResponse getAudio() {
         return this.audio;
     }
+    /**
+     * The DTMF event to be handled.
+     * 
+     */
     public GoogleCloudDialogflowCxV3DtmfInputResponse getDtmf() {
         return this.dtmf;
     }
+    /**
+     * The event to be triggered.
+     * 
+     */
     public GoogleCloudDialogflowCxV3EventInputResponse getEvent() {
         return this.event;
     }
+    /**
+     * The intent to be triggered.
+     * 
+     */
     public GoogleCloudDialogflowCxV3IntentInputResponse getIntent() {
         return this.intent;
     }
+    /**
+     * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+     * 
+     */
     public String getLanguageCode() {
         return this.languageCode;
     }
+    /**
+     * The natural language text to be processed.
+     * 
+     */
     public GoogleCloudDialogflowCxV3TextInputResponse getText() {
         return this.text;
     }

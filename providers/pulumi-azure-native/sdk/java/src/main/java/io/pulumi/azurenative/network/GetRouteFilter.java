@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteFilter {
+/**
+ * Route Filter Resource.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * Route Filter Resource.
+ * 
+ */
     public static CompletableFuture<GetRouteFilterResult> invokeAsync(GetRouteFilterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRouteFilter", TypeShape.of(GetRouteFilterResult.class), args == null ? GetRouteFilterArgs.Empty : args, Utilities.withVersion(options));
     }

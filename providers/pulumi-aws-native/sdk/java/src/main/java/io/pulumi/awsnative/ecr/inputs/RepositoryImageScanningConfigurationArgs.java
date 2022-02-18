@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The image scanning configuration for the repository. This setting determines whether images are scanned for known vulnerabilities after being pushed to the repository.
+ * 
+ */
 public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryImageScanningConfigurationArgs Empty = new RepositoryImageScanningConfigurationArgs();

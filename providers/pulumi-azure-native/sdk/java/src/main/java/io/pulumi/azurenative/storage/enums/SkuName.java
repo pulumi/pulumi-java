@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
+     * 
+     */
     @EnumType
     public enum SkuName {
         Standard_LRS("Standard_LRS"),

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The eligibility result of failover set, for failover.
+ * 
+ */
 public final class FailoverSetEligibilityResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FailoverSetEligibilityResultResponse Empty = new FailoverSetEligibilityResultResponse();
 
+    /**
+     * The error message, if the failover set is not eligible for failover.
+     * 
+     */
     @InputImport(name="errorMessage")
     private final @Nullable String errorMessage;
 
@@ -22,6 +30,10 @@ public final class FailoverSetEligibilityResultResponse extends io.pulumi.resour
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
+    /**
+     * Represents if this failover set is eligible for failover or not.
+     * 
+     */
     @InputImport(name="isEligibleForFailover")
     private final @Nullable Boolean isEligibleForFailover;
 

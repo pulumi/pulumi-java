@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * License information: https://spdx.github.io/spdx-spec/3-package-information/#315-declared-license
+ * 
+ */
 public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LicenseArgs Empty = new LicenseArgs();
 
+    /**
+     * Comments
+     * 
+     */
     @InputImport(name="comments")
     private final @Nullable Input<String> comments;
 
@@ -21,6 +29,10 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.comments == null ? Input.empty() : this.comments;
     }
 
+    /**
+     * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+     * 
+     */
     @InputImport(name="expression")
     private final @Nullable Input<String> expression;
 

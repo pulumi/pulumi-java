@@ -18,10 +18,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * DEPRECATED: Please use compute#instanceProperties instead. New properties will not be added to this field.
+ * 
+ */
 public final class SourceInstancePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceInstancePropertiesResponse Empty = new SourceInstancePropertiesResponse();
 
+    /**
+     * Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+     * 
+     */
     @InputImport(name="canIpForward", required=true)
     private final Boolean canIpForward;
 
@@ -29,6 +37,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.canIpForward;
     }
 
+    /**
+     * Whether the instance created from this machine image should be protected against deletion.
+     * 
+     */
     @InputImport(name="deletionProtection", required=true)
     private final Boolean deletionProtection;
 
@@ -36,6 +48,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.deletionProtection;
     }
 
+    /**
+     * An optional text description for the instances that are created from this machine image.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -43,6 +59,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.description;
     }
 
+    /**
+     * An array of disks that are associated with the instances that are created from this machine image.
+     * 
+     */
     @InputImport(name="disks", required=true)
     private final List<SavedAttachedDiskResponse> disks;
 
@@ -50,6 +70,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.disks;
     }
 
+    /**
+     * A list of guest accelerator cards' type and count to use for instances created from this machine image.
+     * 
+     */
     @InputImport(name="guestAccelerators", required=true)
     private final List<AcceleratorConfigResponse> guestAccelerators;
 
@@ -57,6 +81,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.guestAccelerators;
     }
 
+    /**
+     * Labels to apply to instances that are created from this machine image.
+     * 
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 
@@ -64,6 +92,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.labels;
     }
 
+    /**
+     * The machine type to use for instances that are created from this machine image.
+     * 
+     */
     @InputImport(name="machineType", required=true)
     private final String machineType;
 
@@ -71,6 +103,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.machineType;
     }
 
+    /**
+     * The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+     * 
+     */
     @InputImport(name="metadata", required=true)
     private final MetadataResponse metadata;
 
@@ -78,6 +114,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.metadata;
     }
 
+    /**
+     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
+     * 
+     */
     @InputImport(name="minCpuPlatform", required=true)
     private final String minCpuPlatform;
 
@@ -85,6 +125,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.minCpuPlatform;
     }
 
+    /**
+     * An array of network access configurations for this interface.
+     * 
+     */
     @InputImport(name="networkInterfaces", required=true)
     private final List<NetworkInterfaceResponse> networkInterfaces;
 
@@ -92,6 +136,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.networkInterfaces;
     }
 
+    /**
+     * PostKeyRevocationActionType of the instance.
+     * 
+     */
     @InputImport(name="postKeyRevocationActionType", required=true)
     private final String postKeyRevocationActionType;
 
@@ -99,6 +147,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.postKeyRevocationActionType;
     }
 
+    /**
+     * Specifies the scheduling options for the instances that are created from this machine image.
+     * 
+     */
     @InputImport(name="scheduling", required=true)
     private final SchedulingResponse scheduling;
 
@@ -106,6 +158,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.scheduling;
     }
 
+    /**
+     * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
+     * 
+     */
     @InputImport(name="serviceAccounts", required=true)
     private final List<ServiceAccountResponse> serviceAccounts;
 
@@ -113,6 +169,10 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
         return this.serviceAccounts;
     }
 
+    /**
+     * A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+     * 
+     */
     @InputImport(name="tags", required=true)
     private final TagsResponse tags;
 

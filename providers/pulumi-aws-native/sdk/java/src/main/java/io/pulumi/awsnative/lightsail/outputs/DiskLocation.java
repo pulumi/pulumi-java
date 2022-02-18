@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiskLocation {
+    /**
+     * The Availability Zone in which to create your disk. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     private final @Nullable String availabilityZone;
+    /**
+     * The Region Name in which to create your disk.
+     * 
+     */
     private final @Nullable String regionName;
 
     @OutputCustomType.Constructor({"availabilityZone","regionName"})
@@ -22,9 +30,17 @@ public final class DiskLocation {
         this.regionName = regionName;
     }
 
+    /**
+     * The Availability Zone in which to create your disk. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
+    /**
+     * The Region Name in which to create your disk.
+     * 
+     */
     public Optional<String> getRegionName() {
         return Optional.ofNullable(this.regionName);
     }

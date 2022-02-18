@@ -12,6 +12,10 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetRouteFilterRuleArgs Empty = new GetRouteFilterRuleArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the route filter.
+     * 
+     */
     @InputImport(name="routeFilterName", required=true)
     private final String routeFilterName;
 
@@ -26,6 +34,10 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
         return this.routeFilterName;
     }
 
+    /**
+     * The name of the rule.
+     * 
+     */
     @InputImport(name="ruleName", required=true)
     private final String ruleName;
 

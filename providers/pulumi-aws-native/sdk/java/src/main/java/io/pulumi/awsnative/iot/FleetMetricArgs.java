@@ -18,6 +18,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FleetMetricArgs Empty = new FleetMetricArgs();
 
+    /**
+     * The aggregation field to perform aggregation and metric emission
+     * 
+     */
     @InputImport(name="aggregationField")
     private final @Nullable Input<String> aggregationField;
 
@@ -32,6 +36,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.aggregationType == null ? Input.empty() : this.aggregationType;
     }
 
+    /**
+     * The description of a fleet metric
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +47,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The index name of a fleet metric
+     * 
+     */
     @InputImport(name="indexName")
     private final @Nullable Input<String> indexName;
 
@@ -46,6 +58,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.indexName == null ? Input.empty() : this.indexName;
     }
 
+    /**
+     * The name of the fleet metric
+     * 
+     */
     @InputImport(name="metricName", required=true)
     private final Input<String> metricName;
 
@@ -53,6 +69,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.metricName;
     }
 
+    /**
+     * The period of metric emission in seconds
+     * 
+     */
     @InputImport(name="period")
     private final @Nullable Input<Integer> period;
 
@@ -60,6 +80,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.period == null ? Input.empty() : this.period;
     }
 
+    /**
+     * The Fleet Indexing query used by a fleet metric
+     * 
+     */
     @InputImport(name="queryString")
     private final @Nullable Input<String> queryString;
 
@@ -67,6 +91,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryString == null ? Input.empty() : this.queryString;
     }
 
+    /**
+     * The version of a Fleet Indexing query used by a fleet metric
+     * 
+     */
     @InputImport(name="queryVersion")
     private final @Nullable Input<String> queryVersion;
 
@@ -74,6 +102,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryVersion == null ? Input.empty() : this.queryVersion;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FleetMetricTagArgs>> tags;
 
@@ -81,6 +113,10 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The unit of data points emitted by a fleet metric
+     * 
+     */
     @InputImport(name="unit")
     private final @Nullable Input<String> unit;
 

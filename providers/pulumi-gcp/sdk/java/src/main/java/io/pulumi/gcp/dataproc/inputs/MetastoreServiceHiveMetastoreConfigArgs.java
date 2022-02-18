@@ -16,6 +16,11 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
 
     public static final MetastoreServiceHiveMetastoreConfigArgs Empty = new MetastoreServiceHiveMetastoreConfigArgs();
 
+    /**
+     * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
+     * The mappings override system defaults (some keys cannot be overridden)
+     * 
+     */
     @InputImport(name="configOverrides")
     private final @Nullable Input<Map<String,String>> configOverrides;
 
@@ -23,6 +28,11 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
         return this.configOverrides == null ? Input.empty() : this.configOverrides;
     }
 
+    /**
+     * Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="kerberosConfig")
     private final @Nullable Input<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
 
@@ -30,6 +40,10 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
         return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
     }
 
+    /**
+     * The Hive metastore schema version.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

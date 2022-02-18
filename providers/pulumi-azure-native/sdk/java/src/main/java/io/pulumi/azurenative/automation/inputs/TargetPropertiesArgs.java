@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Group specific to the update configuration.
+ * 
+ */
 public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetPropertiesArgs Empty = new TargetPropertiesArgs();
 
+    /**
+     * List of Azure queries in the software update configuration.
+     * 
+     */
     @InputImport(name="azureQueries")
     private final @Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries;
 
@@ -23,6 +31,10 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.azureQueries == null ? Input.empty() : this.azureQueries;
     }
 
+    /**
+     * List of non Azure queries in the software update configuration.
+     * 
+     */
     @InputImport(name="nonAzureQueries")
     private final @Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
 

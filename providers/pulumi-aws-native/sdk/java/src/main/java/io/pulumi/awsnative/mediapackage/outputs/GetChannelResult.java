@@ -13,10 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetChannelResult {
+    /**
+     * The Amazon Resource Name (ARN) assigned to the Channel.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * A short text description of the Channel.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The configuration parameters for egress access logging.
+     * 
+     */
     private final @Nullable ChannelLogConfiguration egressAccessLogs;
+    /**
+     * A short text description of the Channel.
+     * 
+     */
     private final @Nullable ChannelHlsIngest hlsIngest;
+    /**
+     * The configuration parameters for egress access logging.
+     * 
+     */
     private final @Nullable ChannelLogConfiguration ingressAccessLogs;
 
     @OutputCustomType.Constructor({"arn","description","egressAccessLogs","hlsIngest","ingressAccessLogs"})
@@ -33,18 +53,38 @@ public final class GetChannelResult {
         this.ingressAccessLogs = ingressAccessLogs;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) assigned to the Channel.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * A short text description of the Channel.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The configuration parameters for egress access logging.
+     * 
+     */
     public Optional<ChannelLogConfiguration> getEgressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);
     }
+    /**
+     * A short text description of the Channel.
+     * 
+     */
     public Optional<ChannelHlsIngest> getHlsIngest() {
         return Optional.ofNullable(this.hlsIngest);
     }
+    /**
+     * The configuration parameters for egress access logging.
+     * 
+     */
     public Optional<ChannelLogConfiguration> getIngressAccessLogs() {
         return Optional.ofNullable(this.ingressAccessLogs);
     }

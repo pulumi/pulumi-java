@@ -19,6 +19,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * Copies a table.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="copy")
     private final @Nullable Input<JobCopyArgs> copy;
 
@@ -26,6 +31,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.copy == null ? Input.empty() : this.copy;
     }
 
+    /**
+     * Configures an extract job.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="extract")
     private final @Nullable Input<JobExtractArgs> extract;
 
@@ -33,6 +43,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.extract == null ? Input.empty() : this.extract;
     }
 
+    /**
+     * The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     * 
+     */
     @InputImport(name="jobId", required=true)
     private final Input<String> jobId;
 
@@ -40,6 +54,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobId;
     }
 
+    /**
+     * Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+     * 
+     */
     @InputImport(name="jobTimeoutMs")
     private final @Nullable Input<String> jobTimeoutMs;
 
@@ -47,6 +65,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobTimeoutMs == null ? Input.empty() : this.jobTimeoutMs;
     }
 
+    /**
+     * The labels associated with this job. You can use these to organize and group your jobs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -54,6 +76,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Configures a load job.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="load")
     private final @Nullable Input<JobLoadArgs> load;
 
@@ -61,6 +88,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.load == null ? Input.empty() : this.load;
     }
 
+    /**
+     * The geographic location of the job. The default value is US.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -68,6 +99,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +111,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Configures a query job.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="query")
     private final @Nullable Input<JobQueryArgs> query;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Dynamics CRM sink.
+ * 
+ */
 public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DynamicsCrmSinkArgs Empty = new DynamicsCrmSinkArgs();
 
+    /**
+     * The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="alternateKeyName")
     private final @Nullable Input<Object> alternateKeyName;
 
@@ -24,6 +32,10 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.alternateKeyName == null ? Input.empty() : this.alternateKeyName;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -31,6 +43,10 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="ignoreNullValues")
     private final @Nullable Input<Object> ignoreNullValues;
 
@@ -38,6 +54,10 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.ignoreNullValues == null ? Input.empty() : this.ignoreNullValues;
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -45,6 +65,10 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -52,6 +76,10 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -59,6 +87,11 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
+    /**
+     * Copy sink type.
+     * Expected value is 'DynamicsCrmSink'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -66,6 +99,10 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -73,6 +110,10 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 
@@ -80,6 +121,10 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
     }
 
+    /**
+     * The write behavior for the operation.
+     * 
+     */
     @InputImport(name="writeBehavior", required=true)
     private final Input<Either<String,DynamicsSinkWriteBehavior>> writeBehavior;
 

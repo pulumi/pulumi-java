@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration of dataset in the report.
+ * 
+ */
 public final class ReportConfigDatasetConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportConfigDatasetConfigurationResponse Empty = new ReportConfigDatasetConfigurationResponse();
 
+    /**
+     * Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+     * 
+     */
     @InputImport(name="columns")
     private final @Nullable List<String> columns;
 

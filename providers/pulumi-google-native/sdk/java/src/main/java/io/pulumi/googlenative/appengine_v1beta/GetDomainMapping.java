@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainMapping {
+/**
+ * Gets the specified domain mapping.
+ * 
+ */
     public static CompletableFuture<GetDomainMappingResult> invokeAsync(GetDomainMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args == null ? GetDomainMappingArgs.Empty : args, Utilities.withVersion(options));
     }

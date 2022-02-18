@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The kafka rest proxy configuration which contains AAD security group information.
+ * 
+ */
 public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KafkaRestPropertiesArgs Empty = new KafkaRestPropertiesArgs();
 
+    /**
+     * The information of AAD security group.
+     * 
+     */
     @InputImport(name="clientGroupInfo")
     private final @Nullable Input<ClientGroupInfoArgs> clientGroupInfo;
 
@@ -23,6 +31,10 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.clientGroupInfo == null ? Input.empty() : this.clientGroupInfo;
     }
 
+    /**
+     * The configurations that need to be overriden.
+     * 
+     */
     @InputImport(name="configurationOverride")
     private final @Nullable Input<Map<String,String>> configurationOverride;
 

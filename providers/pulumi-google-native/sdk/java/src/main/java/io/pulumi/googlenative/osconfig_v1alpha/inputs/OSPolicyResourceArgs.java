@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An OS policy resource is used to define the desired state configuration and provides a specific functionality like installing/removing packages, executing a script etc. The system ensures that resources are always in their desired state by taking necessary actions if they have drifted from their desired state.
+ * 
+ */
 public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourceArgs Empty = new OSPolicyResourceArgs();
 
+    /**
+     * Exec resource
+     * 
+     */
     @InputImport(name="exec")
     private final @Nullable Input<OSPolicyResourceExecResourceArgs> exec;
 
@@ -25,6 +33,10 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
         return this.exec == null ? Input.empty() : this.exec;
     }
 
+    /**
+     * File resource
+     * 
+     */
     @InputImport(name="file")
     private final @Nullable Input<OSPolicyResourceFileResourceArgs> file;
 
@@ -32,6 +44,10 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
         return this.file == null ? Input.empty() : this.file;
     }
 
+    /**
+     * The id of the resource with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the OS policy.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -39,6 +55,10 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
         return this.id;
     }
 
+    /**
+     * Package resource
+     * 
+     */
     @InputImport(name="pkg")
     private final @Nullable Input<OSPolicyResourcePackageResourceArgs> pkg;
 
@@ -46,6 +66,10 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
         return this.pkg == null ? Input.empty() : this.pkg;
     }
 
+    /**
+     * Package repository resource
+     * 
+     */
     @InputImport(name="repository")
     private final @Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository;
 

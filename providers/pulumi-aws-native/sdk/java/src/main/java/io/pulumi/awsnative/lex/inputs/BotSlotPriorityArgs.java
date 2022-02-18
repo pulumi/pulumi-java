@@ -10,6 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The priority that Amazon Lex should use when eliciting slot values from a user.
+ * 
+ */
 public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSlotPriorityArgs Empty = new BotSlotPriorityArgs();
@@ -21,6 +25,10 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
         return this.priority;
     }
 
+    /**
+     * The name of the slot.
+     * 
+     */
     @InputImport(name="slotName", required=true)
     private final Input<String> slotName;
 

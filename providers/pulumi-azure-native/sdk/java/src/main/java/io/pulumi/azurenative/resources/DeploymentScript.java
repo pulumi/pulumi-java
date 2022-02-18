@@ -17,52 +17,132 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Deployment script object.
+ * API Version: 2020-10-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:resources:DeploymentScript myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentScripts/{scriptName} 
+ * ```
+ * 
+ * @deprecated
+ * Please use one of the variants: AzureCliScript, AzurePowerShellScript.
+ * 
+ */
 @Deprecated /* Please use one of the variants: AzureCliScript, AzurePowerShellScript. */
 @ResourceType(type="azure-native:resources:DeploymentScript")
 public class DeploymentScript extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+     * 
+     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
+    /**
+     * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+     * 
+     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * Type of the script.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Type of the script.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The location of the ACI and the storage account for the deployment script.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location of the ACI and the storage account for the deployment script.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Name of this resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of this resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The system metadata related to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata related to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Type of this resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of this resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DeploymentScript(String name, DeploymentScriptArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:DeploymentScript", name, args == null ? DeploymentScriptArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +162,14 @@ public class DeploymentScript extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DeploymentScript get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeploymentScript(name, id, options);
     }

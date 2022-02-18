@@ -15,6 +15,10 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
 
     public static final ServiceTemplateSpecContainerPortArgs Empty = new ServiceTemplateSpecContainerPortArgs();
 
+    /**
+     * Port number.
+     * 
+     */
     @InputImport(name="containerPort", required=true)
     private final Input<Integer> containerPort;
 
@@ -22,6 +26,10 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
         return this.containerPort;
     }
 
+    /**
+     * Volume's name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,10 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Protocol used on port. Defaults to TCP.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<String> protocol;
 

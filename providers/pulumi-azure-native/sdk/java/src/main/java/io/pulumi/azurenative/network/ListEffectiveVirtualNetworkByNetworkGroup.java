@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListEffectiveVirtualNetworkByNetworkGroup {
+/**
+ * Result of the request to list Effective Virtual Network. It contains a list of groups and a URL link to get the next set of results.
+ * API Version: 2021-02-01-preview.
+ * 
+ *
+ * Result of the request to list Effective Virtual Network. It contains a list of groups and a URL link to get the next set of results.
+ * 
+ */
     public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkGroupResult> invokeAsync(ListEffectiveVirtualNetworkByNetworkGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listEffectiveVirtualNetworkByNetworkGroup", TypeShape.of(ListEffectiveVirtualNetworkByNetworkGroupResult.class), args == null ? ListEffectiveVirtualNetworkByNetworkGroupArgs.Empty : args, Utilities.withVersion(options));
     }

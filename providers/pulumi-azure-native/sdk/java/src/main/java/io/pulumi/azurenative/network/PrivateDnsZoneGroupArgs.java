@@ -16,6 +16,10 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
 
     public static final PrivateDnsZoneGroupArgs Empty = new PrivateDnsZoneGroupArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -23,6 +27,10 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A collection of private dns zone configurations of the private dns zone group.
+     * 
+     */
     @InputImport(name="privateDnsZoneConfigs")
     private final @Nullable Input<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs;
 
@@ -37,6 +49,10 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
         return this.privateDnsZoneConfigs == null ? Input.empty() : this.privateDnsZoneConfigs;
     }
 
+    /**
+     * The name of the private dns zone group.
+     * 
+     */
     @InputImport(name="privateDnsZoneGroupName")
     private final @Nullable Input<String> privateDnsZoneGroupName;
 
@@ -44,6 +60,10 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
         return this.privateDnsZoneGroupName == null ? Input.empty() : this.privateDnsZoneGroupName;
     }
 
+    /**
+     * The name of the private endpoint.
+     * 
+     */
     @InputImport(name="privateEndpointName", required=true)
     private final Input<String> privateEndpointName;
 
@@ -51,6 +71,10 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
         return this.privateEndpointName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

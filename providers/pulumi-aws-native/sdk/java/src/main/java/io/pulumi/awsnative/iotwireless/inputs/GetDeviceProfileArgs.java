@@ -12,6 +12,10 @@ public final class GetDeviceProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceProfileArgs Empty = new GetDeviceProfileArgs();
 
+    /**
+     * Service profile Id. Returned after successful create.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

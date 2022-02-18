@@ -14,6 +14,10 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagKeyArgs Empty = new TagKeyArgs();
 
+    /**
+     * User-assigned description of the TagKey. Must not exceed 256 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id}.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -28,6 +36,11 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
+    /**
+     * Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace.
+     * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="shortName", required=true)
     private final Input<String> shortName;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StandardAppVersionVpcAccessConnector {
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class StandardAppVersionVpcAccessConnector {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public String getName() {
         return this.name;
     }

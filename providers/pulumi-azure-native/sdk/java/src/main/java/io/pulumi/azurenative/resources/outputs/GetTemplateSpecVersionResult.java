@@ -16,16 +16,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetTemplateSpecVersionResult {
+    /**
+     * Template Spec version description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * String Id used to locate any resource on Azure.
+     * 
+     */
     private final String id;
+    /**
+     * An array of linked template artifacts.
+     * 
+     */
     private final @Nullable List<LinkedTemplateArtifactResponse> linkedTemplates;
+    /**
+     * The location of the Template Spec Version. It must match the location of the parent Template Spec.
+     * 
+     */
     private final String location;
+    /**
+     * The main Azure Resource Manager template content.
+     * 
+     */
     private final @Nullable Object mainTemplate;
+    /**
+     * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+     * 
+     */
     private final @Nullable Object metadata;
+    /**
+     * Name of this resource.
+     * 
+     */
     private final String name;
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Type of this resource.
+     * 
+     */
     private final String type;
+    /**
+     * The Azure Resource Manager template UI definition content.
+     * 
+     */
     private final @Nullable Object uiFormDefinition;
 
     @OutputCustomType.Constructor({"description","id","linkedTemplates","location","mainTemplate","metadata","name","systemData","tags","type","uiFormDefinition"})
@@ -54,36 +98,80 @@ public final class GetTemplateSpecVersionResult {
         this.uiFormDefinition = uiFormDefinition;
     }
 
+    /**
+     * Template Spec version description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * String Id used to locate any resource on Azure.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * An array of linked template artifacts.
+     * 
+     */
     public List<LinkedTemplateArtifactResponse> getLinkedTemplates() {
         return this.linkedTemplates == null ? List.of() : this.linkedTemplates;
     }
+    /**
+     * The location of the Template Spec Version. It must match the location of the parent Template Spec.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The main Azure Resource Manager template content.
+     * 
+     */
     public Optional<Object> getMainTemplate() {
         return Optional.ofNullable(this.mainTemplate);
     }
+    /**
+     * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+     * 
+     */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * Name of this resource.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Type of this resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The Azure Resource Manager template UI definition content.
+     * 
+     */
     public Optional<Object> getUiFormDefinition() {
         return Optional.ofNullable(this.uiFormDefinition);
     }

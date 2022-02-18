@@ -18,6 +18,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs e
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs();
 
+    /**
+     * Describes a header to add.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="requestHeaderToAdds")
     private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs>> requestHeaderToAdds;
 
@@ -25,6 +30,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs e
         return this.requestHeaderToAdds == null ? Input.empty() : this.requestHeaderToAdds;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="requestHeaderToRemoves")
     private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs>> requestHeaderToRemoves;
 
@@ -32,6 +42,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs e
         return this.requestHeaderToRemoves == null ? Input.empty() : this.requestHeaderToRemoves;
     }
 
+    /**
+     * Headers to add to the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="responseHeaderToAdds")
     private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs>> responseHeaderToAdds;
 
@@ -39,6 +55,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs e
         return this.responseHeaderToAdds == null ? Input.empty() : this.responseHeaderToAdds;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="responseHeaderToRemoves")
     private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveArgs>> responseHeaderToRemoves;
 

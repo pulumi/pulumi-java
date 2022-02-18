@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata for a Pub/Sub connector used by the job.
+ * 
+ */
 public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PubSubIODetailsArgs Empty = new PubSubIODetailsArgs();
 
+    /**
+     * Subscription used in the connection.
+     * 
+     */
     @InputImport(name="subscription")
     private final @Nullable Input<String> subscription;
 
@@ -21,6 +29,10 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.subscription == null ? Input.empty() : this.subscription;
     }
 
+    /**
+     * Topic accessed in the connection.
+     * 
+     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 

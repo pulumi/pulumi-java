@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * ARM id for a resource.
+ * 
+ */
 public final class ResourceIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceIdResponse Empty = new ResourceIdResponse();

@@ -17,6 +17,11 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
 
     public static final CertificateCertificateDescriptionConfigValueKeyUsageGetArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageGetArgs();
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="baseKeyUsages")
     private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages;
 
@@ -24,6 +29,11 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
         return this.baseKeyUsages == null ? Input.empty() : this.baseKeyUsages;
     }
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="extendedKeyUsages")
     private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages;
 
@@ -31,6 +41,11 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
         return this.extendedKeyUsages == null ? Input.empty() : this.extendedKeyUsages;
     }
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="unknownExtendedKeyUsages")
     private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 

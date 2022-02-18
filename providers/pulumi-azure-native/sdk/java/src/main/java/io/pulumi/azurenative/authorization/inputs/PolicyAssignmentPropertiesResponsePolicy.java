@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the policy
+ * 
+ */
 public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyAssignmentPropertiesResponsePolicy Empty = new PolicyAssignmentPropertiesResponsePolicy();
 
+    /**
+     * Id of the policy
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -22,6 +30,10 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the entity last modified it
+     * 
+     */
     @InputImport(name="lastModifiedBy", required=true)
     private final PrincipalResponse lastModifiedBy;
 
@@ -29,6 +41,10 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
         return this.lastModifiedBy;
     }
 
+    /**
+     * The last modified date time.
+     * 
+     */
     @InputImport(name="lastModifiedDateTime")
     private final @Nullable String lastModifiedDateTime;
 

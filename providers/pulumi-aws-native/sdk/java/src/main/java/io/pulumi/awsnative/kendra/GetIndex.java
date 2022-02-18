@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIndex {
+/**
+ * A Kendra index
+ * 
+ */
     public static CompletableFuture<GetIndexResult> invokeAsync(GetIndexArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kendra:getIndex", TypeShape.of(GetIndexResult.class), args == null ? GetIndexArgs.Empty : args, Utilities.withVersion(options));
     }

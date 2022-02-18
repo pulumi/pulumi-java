@@ -12,6 +12,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
+    /**
+     * Name of the cluster in the private cloud
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterName;
     }
 
+    /**
+     * Name of the private cloud
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -26,6 +34,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

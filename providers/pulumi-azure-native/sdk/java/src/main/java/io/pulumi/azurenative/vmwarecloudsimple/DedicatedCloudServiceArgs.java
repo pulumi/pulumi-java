@@ -15,6 +15,10 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
 
     public static final DedicatedCloudServiceArgs Empty = new DedicatedCloudServiceArgs();
 
+    /**
+     * dedicated cloud Service name
+     * 
+     */
     @InputImport(name="dedicatedCloudServiceName")
     private final @Nullable Input<String> dedicatedCloudServiceName;
 
@@ -22,6 +26,10 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
         return this.dedicatedCloudServiceName == null ? Input.empty() : this.dedicatedCloudServiceName;
     }
 
+    /**
+     * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
+     * 
+     */
     @InputImport(name="gatewaySubnet", required=true)
     private final Input<String> gatewaySubnet;
 
@@ -29,6 +37,10 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
         return this.gatewaySubnet;
     }
 
+    /**
+     * Azure region
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +48,10 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The list of tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

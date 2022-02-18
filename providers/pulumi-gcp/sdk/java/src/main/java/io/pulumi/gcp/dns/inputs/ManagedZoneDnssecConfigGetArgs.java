@@ -16,6 +16,14 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
 
     public static final ManagedZoneDnssecConfigGetArgs Empty = new ManagedZoneDnssecConfigGetArgs();
 
+    /**
+     * Specifies parameters that will be used for generating initial DnsKeys
+     * for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
+     * you must also provide one for the other.
+     * default_key_specs can only be updated when the state is `off`.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="defaultKeySpecs")
     private final @Nullable Input<List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs>> defaultKeySpecs;
 
@@ -23,6 +31,10 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
         return this.defaultKeySpecs == null ? Input.empty() : this.defaultKeySpecs;
     }
 
+    /**
+     * Identifies what kind of resource this is
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -30,6 +42,12 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Specifies the mechanism used to provide authenticated denial-of-existence responses.
+     * non_existence can only be updated when the state is `off`.
+     * Possible values are `nsec` and `nsec3`.
+     * 
+     */
     @InputImport(name="nonExistence")
     private final @Nullable Input<String> nonExistence;
 
@@ -37,6 +55,11 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
         return this.nonExistence == null ? Input.empty() : this.nonExistence;
     }
 
+    /**
+     * Specifies whether DNSSEC is enabled, and what mode it is in
+     * Possible values are `off`, `on`, and `transfer`.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 

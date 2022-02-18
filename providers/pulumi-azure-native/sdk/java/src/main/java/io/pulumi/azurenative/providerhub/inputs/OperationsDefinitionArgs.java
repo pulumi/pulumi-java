@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of an Operation.
+ * 
+ */
 public final class OperationsDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OperationsDefinitionArgs Empty = new OperationsDefinitionArgs();
@@ -24,6 +28,10 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
         return this.actionType == null ? Input.empty() : this.actionType;
     }
 
+    /**
+     * Display information of the operation.
+     * 
+     */
     @InputImport(name="display", required=true)
     private final Input<OperationsDefinitionDisplayArgs> display;
 
@@ -31,6 +39,10 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
         return this.display;
     }
 
+    /**
+     * Indicates whether the operation applies to data-plane.
+     * 
+     */
     @InputImport(name="isDataAction")
     private final @Nullable Input<Boolean> isDataAction;
 
@@ -38,6 +50,10 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
         return this.isDataAction == null ? Input.empty() : this.isDataAction;
     }
 
+    /**
+     * Name of the operation.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

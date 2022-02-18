@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * System data for notebook resource
+ * 
+ */
 public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotebookResourceSystemDataArgs Empty = new NotebookResourceSystemDataArgs();

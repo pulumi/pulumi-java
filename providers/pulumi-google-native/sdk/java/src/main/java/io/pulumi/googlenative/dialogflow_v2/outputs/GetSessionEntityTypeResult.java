@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSessionEntityTypeResult {
+    /**
+     * The collection of entities associated with this session entity type.
+     * 
+     */
     private final List<GoogleCloudDialogflowV2EntityTypeEntityResponse> entities;
+    /**
+     * Indicates whether the additional data should override or supplement the custom entity type definition.
+     * 
+     */
     private final String entityOverrideMode;
+    /**
+     * The unique identifier of this session entity type. Format: `projects//agent/sessions//entityTypes/`, or `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"entities","entityOverrideMode","name"})
@@ -25,12 +37,24 @@ public final class GetSessionEntityTypeResult {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The collection of entities associated with this session entity type.
+     * 
+     */
     public List<GoogleCloudDialogflowV2EntityTypeEntityResponse> getEntities() {
         return this.entities;
     }
+    /**
+     * Indicates whether the additional data should override or supplement the custom entity type definition.
+     * 
+     */
     public String getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
+    /**
+     * The unique identifier of this session entity type. Format: `projects//agent/sessions//entityTypes/`, or `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
+     * 
+     */
     public String getName() {
         return this.name;
     }

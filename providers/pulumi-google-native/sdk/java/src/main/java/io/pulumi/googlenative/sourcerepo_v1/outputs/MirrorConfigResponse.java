@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MirrorConfigResponse {
+    /**
+     * ID of the SSH deploy key at the other hosting service. Removing this key from the other service would deauthorize Google Cloud Source Repositories from mirroring.
+     * 
+     */
     private final String deployKeyId;
+    /**
+     * URL of the main repository at the other hosting service.
+     * 
+     */
     private final String url;
+    /**
+     * ID of the webhook listening to updates to trigger mirroring. Removing this webhook from the other hosting service will stop Google Cloud Source Repositories from receiving notifications, and thereby disabling mirroring.
+     * 
+     */
     private final String webhookId;
 
     @OutputCustomType.Constructor({"deployKeyId","url","webhookId"})
@@ -23,12 +35,24 @@ public final class MirrorConfigResponse {
         this.webhookId = Objects.requireNonNull(webhookId);
     }
 
+    /**
+     * ID of the SSH deploy key at the other hosting service. Removing this key from the other service would deauthorize Google Cloud Source Repositories from mirroring.
+     * 
+     */
     public String getDeployKeyId() {
         return this.deployKeyId;
     }
+    /**
+     * URL of the main repository at the other hosting service.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }
+    /**
+     * ID of the webhook listening to updates to trigger mirroring. Removing this webhook from the other hosting service will stop Google Cloud Source Repositories from receiving notifications, and thereby disabling mirroring.
+     * 
+     */
     public String getWebhookId() {
         return this.webhookId;
     }

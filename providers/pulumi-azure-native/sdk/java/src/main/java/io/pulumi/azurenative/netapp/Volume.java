@@ -20,143 +20,342 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Volume resource
+ * API Version: 2020-12-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:netapp:Volume account1/pool1/volume1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:netapp:Volume")
 public class Volume extends io.pulumi.resources.CustomResource {
+    /**
+     * UUID v4 or resource identifier used to identify the Backup.
+     * 
+     */
     @OutputExport(name="backupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupId;
 
+    /**
+     * @return UUID v4 or resource identifier used to identify the Backup.
+     * 
+     */
     public Output</* @Nullable */ String> getBackupId() {
         return this.backupId;
     }
+    /**
+     * Unique Baremetal Tenant Identifier.
+     * 
+     */
     @OutputExport(name="baremetalTenantId", type=String.class, parameters={})
     private Output<String> baremetalTenantId;
 
+    /**
+     * @return Unique Baremetal Tenant Identifier.
+     * 
+     */
     public Output<String> getBaremetalTenantId() {
         return this.baremetalTenantId;
     }
+    /**
+     * A unique file path for the volume. Used when creating mount targets
+     * 
+     */
     @OutputExport(name="creationToken", type=String.class, parameters={})
     private Output<String> creationToken;
 
+    /**
+     * @return A unique file path for the volume. Used when creating mount targets
+     * 
+     */
     public Output<String> getCreationToken() {
         return this.creationToken;
     }
+    /**
+     * DataProtection type volumes include an object containing details of the replication
+     * 
+     */
     @OutputExport(name="dataProtection", type=VolumePropertiesResponseDataProtection.class, parameters={})
     private Output</* @Nullable */ VolumePropertiesResponseDataProtection> dataProtection;
 
+    /**
+     * @return DataProtection type volumes include an object containing details of the replication
+     * 
+     */
     public Output</* @Nullable */ VolumePropertiesResponseDataProtection> getDataProtection() {
         return this.dataProtection;
     }
+    /**
+     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'
+     * 
+     */
     @OutputExport(name="encryptionKeySource", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeySource;
 
+    /**
+     * @return Encryption Key Source. Possible values are: 'Microsoft.NetApp'
+     * 
+     */
     public Output</* @Nullable */ String> getEncryptionKeySource() {
         return this.encryptionKeySource;
     }
+    /**
+     * Set of export policy rules
+     * 
+     */
     @OutputExport(name="exportPolicy", type=VolumePropertiesResponseExportPolicy.class, parameters={})
     private Output</* @Nullable */ VolumePropertiesResponseExportPolicy> exportPolicy;
 
+    /**
+     * @return Set of export policy rules
+     * 
+     */
     public Output</* @Nullable */ VolumePropertiesResponseExportPolicy> getExportPolicy() {
         return this.exportPolicy;
     }
+    /**
+     * Unique FileSystem Identifier.
+     * 
+     */
     @OutputExport(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
+    /**
+     * @return Unique FileSystem Identifier.
+     * 
+     */
     public Output<String> getFileSystemId() {
         return this.fileSystemId;
     }
+    /**
+     * Restoring
+     * 
+     */
     @OutputExport(name="isRestoring", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isRestoring;
 
+    /**
+     * @return Restoring
+     * 
+     */
     public Output</* @Nullable */ Boolean> getIsRestoring() {
         return this.isRestoring;
     }
+    /**
+     * Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
+     * 
+     */
     @OutputExport(name="kerberosEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> kerberosEnabled;
 
+    /**
+     * @return Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
+     * 
+     */
     public Output</* @Nullable */ Boolean> getKerberosEnabled() {
         return this.kerberosEnabled;
     }
+    /**
+     * Specifies whether LDAP is enabled or not for a given NFS volume.
+     * 
+     */
     @OutputExport(name="ldapEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ldapEnabled;
 
+    /**
+     * @return Specifies whether LDAP is enabled or not for a given NFS volume.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getLdapEnabled() {
         return this.ldapEnabled;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * List of mount targets
+     * 
+     */
     @OutputExport(name="mountTargets", type=List.class, parameters={MountTargetPropertiesResponse.class})
     private Output<List<MountTargetPropertiesResponse>> mountTargets;
 
+    /**
+     * @return List of mount targets
+     * 
+     */
     public Output<List<MountTargetPropertiesResponse>> getMountTargets() {
         return this.mountTargets;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Set of protocol types, default NFSv3, CIFS for SMB protocol
+     * 
+     */
     @OutputExport(name="protocolTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> protocolTypes;
 
+    /**
+     * @return Set of protocol types, default NFSv3, CIFS for SMB protocol
+     * 
+     */
     public Output</* @Nullable */ List<String>> getProtocolTypes() {
         return this.protocolTypes;
     }
+    /**
+     * Azure lifecycle management
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Azure lifecycle management
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
+     * 
+     */
     @OutputExport(name="securityStyle", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityStyle;
 
+    /**
+     * @return The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
+     * 
+     */
     public Output</* @Nullable */ String> getSecurityStyle() {
         return this.securityStyle;
     }
+    /**
+     * The service level of the file system
+     * 
+     */
     @OutputExport(name="serviceLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceLevel;
 
+    /**
+     * @return The service level of the file system
+     * 
+     */
     public Output</* @Nullable */ String> getServiceLevel() {
         return this.serviceLevel;
     }
+    /**
+     * Enables continuously available share property for smb volume. Only applicable for SMB volume
+     * 
+     */
     @OutputExport(name="smbContinuouslyAvailable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> smbContinuouslyAvailable;
 
+    /**
+     * @return Enables continuously available share property for smb volume. Only applicable for SMB volume
+     * 
+     */
     public Output</* @Nullable */ Boolean> getSmbContinuouslyAvailable() {
         return this.smbContinuouslyAvailable;
     }
+    /**
+     * Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
+     * 
+     */
     @OutputExport(name="smbEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> smbEncryption;
 
+    /**
+     * @return Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
+     * 
+     */
     public Output</* @Nullable */ Boolean> getSmbEncryption() {
         return this.smbEncryption;
     }
+    /**
+     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
+     * 
+     */
     @OutputExport(name="snapshotDirectoryVisible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> snapshotDirectoryVisible;
 
+    /**
+     * @return If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
+     * 
+     */
     public Output</* @Nullable */ Boolean> getSnapshotDirectoryVisible() {
         return this.snapshotDirectoryVisible;
     }
+    /**
+     * UUID v4 or resource identifier used to identify the Snapshot.
+     * 
+     */
     @OutputExport(name="snapshotId", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotId;
 
+    /**
+     * @return UUID v4 or resource identifier used to identify the Snapshot.
+     * 
+     */
     public Output</* @Nullable */ String> getSnapshotId() {
         return this.snapshotId;
     }
+    /**
+     * The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
+     * 
+     */
     @OutputExport(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
+    /**
+     * @return The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
+     * 
+     */
     public Output<String> getSubnetId() {
         return this.subnetId;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
@@ -166,25 +365,55 @@ public class Volume extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Double> getThroughputMibps() {
         return this.throughputMibps;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+     * 
+     */
     @OutputExport(name="usageThreshold", type=Double.class, parameters={})
     private Output<Double> usageThreshold;
 
+    /**
+     * @return Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+     * 
+     */
     public Output<Double> getUsageThreshold() {
         return this.usageThreshold;
     }
+    /**
+     * What type of volume is this
+     * 
+     */
     @OutputExport(name="volumeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> volumeType;
 
+    /**
+     * @return What type of volume is this
+     * 
+     */
     public Output</* @Nullable */ String> getVolumeType() {
         return this.volumeType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Volume(String name, VolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:netapp:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -223,6 +452,14 @@ public class Volume extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Volume get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Volume(name, id, options);
     }

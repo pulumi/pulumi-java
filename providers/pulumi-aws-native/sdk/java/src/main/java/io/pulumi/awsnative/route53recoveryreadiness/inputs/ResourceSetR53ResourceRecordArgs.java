@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Route 53 resource that a DNS target resource record points to.
+ * 
+ */
 public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSetR53ResourceRecordArgs Empty = new ResourceSetR53ResourceRecordArgs();
 
+    /**
+     * The DNS target domain name.
+     * 
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -21,6 +29,10 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * The Resource Record set id.
+     * 
+     */
     @InputImport(name="recordSetId")
     private final @Nullable Input<String> recordSetId;
 

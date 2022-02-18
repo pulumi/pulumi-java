@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that define a Step group in a rollout.
+ * 
+ */
 public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StepGroupResponse Empty = new StepGroupResponse();
 
+    /**
+     * The list of step group names on which this step group depends on.
+     * 
+     */
     @InputImport(name="dependsOnStepGroups")
     private final @Nullable List<String> dependsOnStepGroups;
 
@@ -23,6 +31,10 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.dependsOnStepGroups == null ? List.of() : this.dependsOnStepGroups;
     }
 
+    /**
+     * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
+     * 
+     */
     @InputImport(name="deploymentTargetId", required=true)
     private final String deploymentTargetId;
 
@@ -30,6 +42,10 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.deploymentTargetId;
     }
 
+    /**
+     * The name of the step group.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,6 +53,10 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The list of steps to be run after deploying the target.
+     * 
+     */
     @InputImport(name="postDeploymentSteps")
     private final @Nullable List<PrePostStepResponse> postDeploymentSteps;
 
@@ -44,6 +64,10 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.postDeploymentSteps == null ? List.of() : this.postDeploymentSteps;
     }
 
+    /**
+     * The list of steps to be run before deploying the target.
+     * 
+     */
     @InputImport(name="preDeploymentSteps")
     private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
 

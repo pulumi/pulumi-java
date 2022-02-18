@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP address for the container group.
+ * 
+ */
 public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IpAddressResponse Empty = new IpAddressResponse();
 
+    /**
+     * The Dns name label for the IP.
+     * 
+     */
     @InputImport(name="dnsNameLabel")
     private final @Nullable String dnsNameLabel;
 
@@ -23,6 +31,10 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.dnsNameLabel == null ? Optional.empty() : Optional.ofNullable(this.dnsNameLabel);
     }
 
+    /**
+     * The FQDN for the IP.
+     * 
+     */
     @InputImport(name="fqdn", required=true)
     private final String fqdn;
 
@@ -30,6 +42,10 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.fqdn;
     }
 
+    /**
+     * The IP exposed to the public internet.
+     * 
+     */
     @InputImport(name="ip")
     private final @Nullable String ip;
 
@@ -37,6 +53,10 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 
+    /**
+     * The list of ports exposed on the container group.
+     * 
+     */
     @InputImport(name="ports", required=true)
     private final List<PortResponse> ports;
 
@@ -44,6 +64,10 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
         return this.ports;
     }
 
+    /**
+     * Specifies if the IP is exposed to the public internet or private VNET.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

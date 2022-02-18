@@ -15,6 +15,10 @@ public final class PolicySpecRuleValuesArgs extends io.pulumi.resources.Resource
 
     public static final PolicySpecRuleValuesArgs Empty = new PolicySpecRuleValuesArgs();
 
+    /**
+     * List of values allowed at this resource.
+     * 
+     */
     @InputImport(name="allowedValues")
     private final @Nullable Input<List<String>> allowedValues;
 
@@ -22,6 +26,10 @@ public final class PolicySpecRuleValuesArgs extends io.pulumi.resources.Resource
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
     }
 
+    /**
+     * List of values denied at this resource.
+     * 
+     */
     @InputImport(name="deniedValues")
     private final @Nullable Input<List<String>> deniedValues;
 

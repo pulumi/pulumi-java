@@ -14,7 +14,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BranchResponse {
+    /**
+     * List of actions.
+     * 
+     */
     private final List<Object> actions;
+    /**
+     * String of the branch name.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"actions","name"})
@@ -25,9 +33,17 @@ public final class BranchResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * List of actions.
+     * 
+     */
     public List<Object> getActions() {
         return this.actions;
     }
+    /**
+     * String of the branch name.
+     * 
+     */
     public String getName() {
         return this.name;
     }

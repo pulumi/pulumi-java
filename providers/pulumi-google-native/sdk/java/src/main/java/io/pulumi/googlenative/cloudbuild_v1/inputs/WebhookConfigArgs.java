@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL.
+ * 
+ */
 public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebhookConfigArgs Empty = new WebhookConfigArgs();
 
+    /**
+     * Resource name for the secret required as a URL parameter.
+     * 
+     */
     @InputImport(name="secret", required=true)
     private final Input<String> secret;
 
@@ -22,6 +30,10 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.secret;
     }
 
+    /**
+     * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<WebhookConfigState> state;
 

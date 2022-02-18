@@ -14,6 +14,12 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
 
     public static final RegionNetworkEndpointGroupCloudFunctionGetArgs Empty = new RegionNetworkEndpointGroupCloudFunctionGetArgs();
 
+    /**
+     * A user-defined name of the Cloud Function.
+     * The function name is case-sensitive and must be 1-63 characters long.
+     * Example value: "func1".
+     * 
+     */
     @InputImport(name="function")
     private final @Nullable Input<String> function;
 
@@ -21,6 +27,15 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
         return this.function == null ? Input.empty() : this.function;
     }
 
+    /**
+     * A template to parse function field from a request URL. URL mask allows
+     * for routing to multiple Cloud Functions without having to create
+     * multiple Network Endpoint Groups and backend services.
+     * For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
+     * can be backed by the same Serverless NEG with URL mask "/". The URL mask
+     * will parse them to { function = "function1" } and { function = "function2" } respectively.
+     * 
+     */
     @InputImport(name="urlMask")
     private final @Nullable Input<String> urlMask;
 

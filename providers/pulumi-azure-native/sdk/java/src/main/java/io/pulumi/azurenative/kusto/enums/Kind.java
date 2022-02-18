@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Kind of the database
+     * 
+     */
     @EnumType
     public enum Kind {
         ReadWrite("ReadWrite"),

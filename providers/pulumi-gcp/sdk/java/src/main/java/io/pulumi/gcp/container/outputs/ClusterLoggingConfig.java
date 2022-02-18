@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterLoggingConfig {
+    /**
+     * The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+     * 
+     */
     private final List<String> enableComponents;
 
     @OutputCustomType.Constructor({"enableComponents"})
@@ -17,6 +21,10 @@ public final class ClusterLoggingConfig {
         this.enableComponents = Objects.requireNonNull(enableComponents);
     }
 
+    /**
+     * The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+     * 
+     */
     public List<String> getEnableComponents() {
         return this.enableComponents;
     }

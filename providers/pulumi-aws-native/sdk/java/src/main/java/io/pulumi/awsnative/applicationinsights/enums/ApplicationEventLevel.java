@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The level of event to log.
+     * 
+     */
     @EnumType
     public enum ApplicationEventLevel {
         Information("INFORMATION"),

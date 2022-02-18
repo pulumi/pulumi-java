@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceDefaultVersion {
+/**
+ * The default version of a resource that has been registered in the CloudFormation Registry.
+ * 
+ */
     public static CompletableFuture<GetResourceDefaultVersionResult> invokeAsync(GetResourceDefaultVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getResourceDefaultVersion", TypeShape.of(GetResourceDefaultVersionResult.class), args == null ? GetResourceDefaultVersionArgs.Empty : args, Utilities.withVersion(options));
     }

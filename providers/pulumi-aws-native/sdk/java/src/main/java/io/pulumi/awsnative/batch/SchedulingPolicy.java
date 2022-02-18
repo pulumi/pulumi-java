@@ -14,6 +14,10 @@ import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type schema for AWS::Batch::SchedulingPolicy
+ * 
+ */
 @ResourceType(type="aws-native:batch:SchedulingPolicy")
 public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -28,19 +32,41 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ SchedulingPolicyFairsharePolicy> getFairsharePolicy() {
         return this.fairsharePolicy;
     }
+    /**
+     * Name of Scheduling Policy.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Name of Scheduling Policy.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * A key-value pair to associate with a resource.
+     * 
+     */
     @OutputExport(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
+    /**
+     * @return A key-value pair to associate with a resource.
+     * 
+     */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SchedulingPolicy(String name, @Nullable SchedulingPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:batch:SchedulingPolicy", name, args == null ? SchedulingPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +82,14 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SchedulingPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SchedulingPolicy(name, id, options);
     }

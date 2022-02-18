@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of code repository.
+     * 
+     */
     @EnumType
     public enum CodeRepositoryType {
         GitHub("gitHub"),

@@ -16,6 +16,16 @@ public final class AccessLevelBasicArgs extends io.pulumi.resources.ResourceArgs
 
     public static final AccessLevelBasicArgs Empty = new AccessLevelBasicArgs();
 
+    /**
+     * How the conditions list should be combined to determine if a request
+     * is granted this AccessLevel. If AND is used, each Condition in
+     * conditions must be satisfied for the AccessLevel to be applied. If
+     * OR is used, at least one Condition in conditions must be satisfied
+     * for the AccessLevel to be applied.
+     * Default value is `AND`.
+     * Possible values are `AND` and `OR`.
+     * 
+     */
     @InputImport(name="combiningFunction")
     private final @Nullable Input<String> combiningFunction;
 
@@ -23,6 +33,11 @@ public final class AccessLevelBasicArgs extends io.pulumi.resources.ResourceArgs
         return this.combiningFunction == null ? Input.empty() : this.combiningFunction;
     }
 
+    /**
+     * A set of requirements for the AccessLevel to be granted.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="conditions", required=true)
     private final Input<List<AccessLevelBasicConditionArgs>> conditions;
 

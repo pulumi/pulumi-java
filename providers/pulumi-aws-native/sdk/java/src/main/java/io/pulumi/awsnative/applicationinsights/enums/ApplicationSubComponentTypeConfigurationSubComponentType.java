@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The sub component type.
+     * 
+     */
     @EnumType
     public enum ApplicationSubComponentTypeConfigurationSubComponentType {
         AWSEC2Instance("AWS::EC2::Instance"),

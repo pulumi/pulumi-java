@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure ML Batch Execution activity.
+ * 
+ */
 public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureMLBatchExecutionActivityArgs Empty = new AzureMLBatchExecutionActivityArgs();
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -29,6 +37,10 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +48,10 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
+     * 
+     */
     @InputImport(name="globalParameters")
     private final @Nullable Input<Map<String,Object>> globalParameters;
 
@@ -43,6 +59,10 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.globalParameters == null ? Input.empty() : this.globalParameters;
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -50,6 +70,10 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -57,6 +81,10 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -64,6 +92,11 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'AzureMLBatchExecution'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -71,6 +104,10 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
@@ -78,6 +115,10 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.userProperties == null ? Input.empty() : this.userProperties;
     }
 
+    /**
+     * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
+     * 
+     */
     @InputImport(name="webServiceInputs")
     private final @Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs;
 
@@ -85,6 +126,10 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
         return this.webServiceInputs == null ? Input.empty() : this.webServiceInputs;
     }
 
+    /**
+     * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
+     * 
+     */
     @InputImport(name="webServiceOutputs")
     private final @Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs;
 

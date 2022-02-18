@@ -12,6 +12,10 @@ public final class GetMonitoringScheduleArgs extends io.pulumi.resources.InvokeA
 
     public static final GetMonitoringScheduleArgs Empty = new GetMonitoringScheduleArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the monitoring schedule.
+     * 
+     */
     @InputImport(name="monitoringScheduleArn", required=true)
     private final String monitoringScheduleArn;
 

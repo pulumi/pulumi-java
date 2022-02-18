@@ -9,10 +9,18 @@ import io.pulumi.googlenative.run_v1.inputs.SecretKeySelectorResponse;
 import java.util.Objects;
 
 
+/**
+ * EnvVarSource represents a source for the value of an EnvVar.
+ * 
+ */
 public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvVarSourceResponse Empty = new EnvVarSourceResponse();
 
+    /**
+     * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+     * 
+     */
     @InputImport(name="configMapKeyRef", required=true)
     private final ConfigMapKeySelectorResponse configMapKeyRef;
 
@@ -20,6 +28,10 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.configMapKeyRef;
     }
 
+    /**
+     * (Optional) Selects a key (version) of a secret in Secret Manager.
+     * 
+     */
     @InputImport(name="secretKeyRef", required=true)
     private final SecretKeySelectorResponse secretKeyRef;
 

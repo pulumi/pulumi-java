@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CxPageEntryFulfillmentMessage {
+    /**
+     * A collection of text responses.
+     * 
+     */
     private final @Nullable CxPageEntryFulfillmentMessageText text;
 
     @OutputCustomType.Constructor({"text"})
@@ -18,6 +22,10 @@ public final class CxPageEntryFulfillmentMessage {
         this.text = text;
     }
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     public Optional<CxPageEntryFulfillmentMessageText> getText() {
         return Optional.ofNullable(this.text);
     }

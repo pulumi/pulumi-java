@@ -21,99 +21,240 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Instance of an Azure ML Operationalization Cluster resource.
+ * API Version: 2017-08-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:machinelearningcompute:OperationalizationCluster MyCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningCompute/operationalizationClusters/MyCluster 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:machinelearningcompute:OperationalizationCluster")
 public class OperationalizationCluster extends io.pulumi.resources.CustomResource {
+    /**
+     * AppInsights configuration.
+     * 
+     */
     @OutputExport(name="appInsights", type=AppInsightsPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AppInsightsPropertiesResponse> appInsights;
 
+    /**
+     * @return AppInsights configuration.
+     * 
+     */
     public Output</* @Nullable */ AppInsightsPropertiesResponse> getAppInsights() {
         return this.appInsights;
     }
+    /**
+     * The cluster type.
+     * 
+     */
     @OutputExport(name="clusterType", type=String.class, parameters={})
     private Output<String> clusterType;
 
+    /**
+     * @return The cluster type.
+     * 
+     */
     public Output<String> getClusterType() {
         return this.clusterType;
     }
+    /**
+     * Container Registry properties.
+     * 
+     */
     @OutputExport(name="containerRegistry", type=ContainerRegistryPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ContainerRegistryPropertiesResponse> containerRegistry;
 
+    /**
+     * @return Container Registry properties.
+     * 
+     */
     public Output</* @Nullable */ ContainerRegistryPropertiesResponse> getContainerRegistry() {
         return this.containerRegistry;
     }
+    /**
+     * Parameters for the Azure Container Service cluster.
+     * 
+     */
     @OutputExport(name="containerService", type=AcsClusterPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AcsClusterPropertiesResponse> containerService;
 
+    /**
+     * @return Parameters for the Azure Container Service cluster.
+     * 
+     */
     public Output</* @Nullable */ AcsClusterPropertiesResponse> getContainerService() {
         return this.containerService;
     }
+    /**
+     * The date and time when the cluster was created.
+     * 
+     */
     @OutputExport(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
+    /**
+     * @return The date and time when the cluster was created.
+     * 
+     */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
+    /**
+     * The description of the cluster.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the cluster.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Contains global configuration for the web services in the cluster.
+     * 
+     */
     @OutputExport(name="globalServiceConfiguration", type=GlobalServiceConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ GlobalServiceConfigurationResponse> globalServiceConfiguration;
 
+    /**
+     * @return Contains global configuration for the web services in the cluster.
+     * 
+     */
     public Output</* @Nullable */ GlobalServiceConfigurationResponse> getGlobalServiceConfiguration() {
         return this.globalServiceConfiguration;
     }
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The date and time when the cluster was last modified.
+     * 
+     */
     @OutputExport(name="modifiedOn", type=String.class, parameters={})
     private Output<String> modifiedOn;
 
+    /**
+     * @return The date and time when the cluster was last modified.
+     * 
+     */
     public Output<String> getModifiedOn() {
         return this.modifiedOn;
     }
+    /**
+     * Specifies the name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Specifies the name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of provisioning errors reported by the resource provider.
+     * 
+     */
     @OutputExport(name="provisioningErrors", type=List.class, parameters={ErrorResponseWrapperResponse.class})
     private Output<List<ErrorResponseWrapperResponse>> provisioningErrors;
 
+    /**
+     * @return List of provisioning errors reported by the resource provider.
+     * 
+     */
     public Output<List<ErrorResponseWrapperResponse>> getProvisioningErrors() {
         return this.provisioningErrors;
     }
+    /**
+     * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Storage Account properties.
+     * 
+     */
     @OutputExport(name="storageAccount", type=StorageAccountPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount;
 
+    /**
+     * @return Storage Account properties.
+     * 
+     */
     public Output</* @Nullable */ StorageAccountPropertiesResponse> getStorageAccount() {
         return this.storageAccount;
     }
+    /**
+     * Contains resource tags defined as key/value pairs.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public OperationalizationCluster(String name, OperationalizationClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningcompute:OperationalizationCluster", name, args == null ? OperationalizationClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -133,6 +274,14 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static OperationalizationCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OperationalizationCluster(name, id, options);
     }

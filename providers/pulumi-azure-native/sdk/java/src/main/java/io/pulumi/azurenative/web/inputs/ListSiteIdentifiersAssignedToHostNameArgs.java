@@ -14,6 +14,10 @@ public final class ListSiteIdentifiersAssignedToHostNameArgs extends io.pulumi.r
 
     public static final ListSiteIdentifiersAssignedToHostNameArgs Empty = new ListSiteIdentifiersAssignedToHostNameArgs();
 
+    /**
+     * Name of the object.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

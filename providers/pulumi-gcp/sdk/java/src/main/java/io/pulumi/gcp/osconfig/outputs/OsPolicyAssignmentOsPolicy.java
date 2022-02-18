@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OsPolicyAssignmentOsPolicy {
+    /**
+     * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+     * 
+     */
     private final @Nullable Boolean allowNoResourceGroupMatch;
+    /**
+     * OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * 
+     */
     private final String id;
+    /**
+     * Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT
+     * 
+     */
     private final String mode;
+    /**
+     * Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+     * 
+     */
     private final List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups;
 
     @OutputCustomType.Constructor({"allowNoResourceGroupMatch","description","id","mode","resourceGroups"})
@@ -34,18 +54,38 @@ public final class OsPolicyAssignmentOsPolicy {
         this.resourceGroups = Objects.requireNonNull(resourceGroups);
     }
 
+    /**
+     * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+     * 
+     */
     public Optional<Boolean> getAllowNoResourceGroupMatch() {
         return Optional.ofNullable(this.allowNoResourceGroupMatch);
     }
+    /**
+     * OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT
+     * 
+     */
     public String getMode() {
         return this.mode;
     }
+    /**
+     * Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+     * 
+     */
     public List<OsPolicyAssignmentOsPolicyResourceGroup> getResourceGroups() {
         return this.resourceGroups;
     }

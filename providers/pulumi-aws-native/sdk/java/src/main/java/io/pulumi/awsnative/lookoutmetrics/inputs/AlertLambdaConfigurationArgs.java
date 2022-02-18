@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration options for a Lambda alert action.
+ * 
+ */
 public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertLambdaConfigurationArgs Empty = new AlertLambdaConfigurationArgs();
 
+    /**
+     * ARN of a Lambda to send alert notifications to.
+     * 
+     */
     @InputImport(name="lambdaArn", required=true)
     private final Input<String> lambdaArn;
 
@@ -20,6 +28,10 @@ public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.Reso
         return this.lambdaArn;
     }
 
+    /**
+     * ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 

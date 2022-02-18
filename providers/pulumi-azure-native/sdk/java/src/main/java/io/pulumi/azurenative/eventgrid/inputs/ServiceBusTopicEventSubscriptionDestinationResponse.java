@@ -10,10 +10,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the service bus topic destination for an event subscription.
+ * 
+ */
 public final class ServiceBusTopicEventSubscriptionDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceBusTopicEventSubscriptionDestinationResponse Empty = new ServiceBusTopicEventSubscriptionDestinationResponse();
 
+    /**
+     * Type of the endpoint for the event subscription destination.
+     * Expected value is 'ServiceBusTopic'.
+     * 
+     */
     @InputImport(name="endpointType", required=true)
     private final String endpointType;
 
@@ -21,6 +30,10 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse extends i
         return this.endpointType;
     }
 
+    /**
+     * The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

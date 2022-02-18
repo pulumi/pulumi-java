@@ -16,45 +16,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Properties that define a ProactiveDetection configuration.
+ * API Version: 2015-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:insights:ProactiveDetectionConfiguration myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/ProactiveDetectionConfigs/{ConfigurationId} 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:insights:ProactiveDetectionConfiguration")
 public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomResource {
+    /**
+     * Custom email addresses for this rule notifications
+     * 
+     */
     @OutputExport(name="customEmails", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customEmails;
 
+    /**
+     * @return Custom email addresses for this rule notifications
+     * 
+     */
     public Output</* @Nullable */ List<String>> getCustomEmails() {
         return this.customEmails;
     }
+    /**
+     * A flag that indicates whether this rule is enabled by the user
+     * 
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
+    /**
+     * @return A flag that indicates whether this rule is enabled by the user
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * The last time this rule was updated
+     * 
+     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUpdatedTime;
 
+    /**
+     * @return The last time this rule was updated
+     * 
+     */
     public Output</* @Nullable */ String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
+    /**
+     * The rule name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The rule name
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Static definitions of the ProactiveDetection configuration rule (same values for all components).
+     * 
+     */
     @OutputExport(name="ruleDefinitions", type=ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions.class, parameters={})
     private Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> ruleDefinitions;
 
+    /**
+     * @return Static definitions of the ProactiveDetection configuration rule (same values for all components).
+     * 
+     */
     public Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> getRuleDefinitions() {
         return this.ruleDefinitions;
     }
+    /**
+     * A flag that indicated whether notifications on this rule should be sent to subscription owners
+     * 
+     */
     @OutputExport(name="sendEmailsToSubscriptionOwners", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sendEmailsToSubscriptionOwners;
 
+    /**
+     * @return A flag that indicated whether notifications on this rule should be sent to subscription owners
+     * 
+     */
     public Output</* @Nullable */ Boolean> getSendEmailsToSubscriptionOwners() {
         return this.sendEmailsToSubscriptionOwners;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ProactiveDetectionConfiguration(String name, ProactiveDetectionConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:ProactiveDetectionConfiguration", name, args == null ? ProactiveDetectionConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +143,14 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ProactiveDetectionConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProactiveDetectionConfiguration(name, id, options);
     }

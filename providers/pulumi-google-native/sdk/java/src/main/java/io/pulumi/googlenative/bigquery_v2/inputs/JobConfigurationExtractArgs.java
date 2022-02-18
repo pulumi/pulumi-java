@@ -18,6 +18,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
 
     public static final JobConfigurationExtractArgs Empty = new JobConfigurationExtractArgs();
 
+    /**
+     * [Optional] The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro. Not applicable when extracting models.
+     * 
+     */
     @InputImport(name="compression")
     private final @Nullable Input<String> compression;
 
@@ -25,6 +29,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
         return this.compression == null ? Input.empty() : this.compression;
     }
 
+    /**
+     * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON, PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default value for models is ML_TF_SAVED_MODEL.
+     * 
+     */
     @InputImport(name="destinationFormat")
     private final @Nullable Input<String> destinationFormat;
 
@@ -32,6 +40,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
         return this.destinationFormat == null ? Input.empty() : this.destinationFormat;
     }
 
+    /**
+     * [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as necessary. The fully-qualified Google Cloud Storage URI where the extracted table should be written.
+     * 
+     */
     @InputImport(name="destinationUri")
     private final @Nullable Input<String> destinationUri;
 
@@ -39,6 +51,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
         return this.destinationUri == null ? Input.empty() : this.destinationUri;
     }
 
+    /**
+     * [Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
+     * 
+     */
     @InputImport(name="destinationUris")
     private final @Nullable Input<List<String>> destinationUris;
 
@@ -46,6 +62,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
         return this.destinationUris == null ? Input.empty() : this.destinationUris;
     }
 
+    /**
+     * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable when extracting models.
+     * 
+     */
     @InputImport(name="fieldDelimiter")
     private final @Nullable Input<String> fieldDelimiter;
 
@@ -53,6 +73,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
     }
 
+    /**
+     * [Optional] Whether to print out a header row in the results. Default is true. Not applicable when extracting models.
+     * 
+     */
     @InputImport(name="printHeader")
     private final @Nullable Input<Boolean> printHeader;
 
@@ -60,6 +84,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
         return this.printHeader == null ? Input.empty() : this.printHeader;
     }
 
+    /**
+     * A reference to the model being exported.
+     * 
+     */
     @InputImport(name="sourceModel")
     private final @Nullable Input<ModelReferenceArgs> sourceModel;
 
@@ -67,6 +95,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
         return this.sourceModel == null ? Input.empty() : this.sourceModel;
     }
 
+    /**
+     * A reference to the table being exported.
+     * 
+     */
     @InputImport(name="sourceTable")
     private final @Nullable Input<TableReferenceArgs> sourceTable;
 
@@ -74,6 +106,10 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
         return this.sourceTable == null ? Input.empty() : this.sourceTable;
     }
 
+    /**
+     * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
+     * 
+     */
     @InputImport(name="useAvroLogicalTypes")
     private final @Nullable Input<Boolean> useAvroLogicalTypes;
 

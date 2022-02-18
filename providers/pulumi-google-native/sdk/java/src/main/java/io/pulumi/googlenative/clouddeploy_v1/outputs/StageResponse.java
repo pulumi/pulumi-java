@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StageResponse {
+    /**
+     * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+     * 
+     */
     private final List<String> profiles;
+    /**
+     * The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
+     * 
+     */
     private final String targetId;
 
     @OutputCustomType.Constructor({"profiles","targetId"})
@@ -21,9 +29,17 @@ public final class StageResponse {
         this.targetId = Objects.requireNonNull(targetId);
     }
 
+    /**
+     * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+     * 
+     */
     public List<String> getProfiles() {
         return this.profiles;
     }
+    /**
+     * The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
+     * 
+     */
     public String getTargetId() {
         return this.targetId;
     }

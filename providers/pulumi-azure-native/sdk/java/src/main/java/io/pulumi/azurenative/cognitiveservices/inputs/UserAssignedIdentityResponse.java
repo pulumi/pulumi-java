@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * User-assigned managed identity.
+ * 
+ */
 public final class UserAssignedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserAssignedIdentityResponse Empty = new UserAssignedIdentityResponse();
 
+    /**
+     * Client App Id associated with this identity.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -21,6 +29,10 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * Azure Active Directory principal ID associated with this Identity.
+     * 
+     */
     @InputImport(name="principalId")
     private final @Nullable String principalId;
 

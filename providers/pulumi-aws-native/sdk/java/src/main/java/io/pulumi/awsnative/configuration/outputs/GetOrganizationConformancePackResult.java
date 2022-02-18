@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetOrganizationConformancePackResult {
+    /**
+     * A list of ConformancePackInputParameter objects.
+     * 
+     */
     private final @Nullable List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters;
+    /**
+     * AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     private final @Nullable String deliveryS3Bucket;
+    /**
+     * The prefix for the delivery S3 bucket.
+     * 
+     */
     private final @Nullable String deliveryS3KeyPrefix;
+    /**
+     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * 
+     */
     private final @Nullable List<String> excludedAccounts;
 
     @OutputCustomType.Constructor({"conformancePackInputParameters","deliveryS3Bucket","deliveryS3KeyPrefix","excludedAccounts"})
@@ -30,15 +46,31 @@ public final class GetOrganizationConformancePackResult {
         this.excludedAccounts = excludedAccounts;
     }
 
+    /**
+     * A list of ConformancePackInputParameter objects.
+     * 
+     */
     public List<OrganizationConformancePackConformancePackInputParameter> getConformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? List.of() : this.conformancePackInputParameters;
     }
+    /**
+     * AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     public Optional<String> getDeliveryS3Bucket() {
         return Optional.ofNullable(this.deliveryS3Bucket);
     }
+    /**
+     * The prefix for the delivery S3 bucket.
+     * 
+     */
     public Optional<String> getDeliveryS3KeyPrefix() {
         return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }
+    /**
+     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * 
+     */
     public List<String> getExcludedAccounts() {
         return this.excludedAccounts == null ? List.of() : this.excludedAccounts;
     }

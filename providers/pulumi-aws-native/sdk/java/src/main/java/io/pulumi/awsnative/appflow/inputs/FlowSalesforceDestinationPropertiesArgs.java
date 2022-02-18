@@ -24,6 +24,10 @@ public final class FlowSalesforceDestinationPropertiesArgs extends io.pulumi.res
         return this.errorHandlingConfig == null ? Input.empty() : this.errorHandlingConfig;
     }
 
+    /**
+     * List of fields used as ID when performing a write operation.
+     * 
+     */
     @InputImport(name="idFieldNames")
     private final @Nullable Input<List<String>> idFieldNames;
 

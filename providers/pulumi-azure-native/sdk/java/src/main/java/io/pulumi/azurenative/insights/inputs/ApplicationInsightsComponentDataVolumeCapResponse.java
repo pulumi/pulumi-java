@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An Application Insights component daily data volume cap
+ * 
+ */
 public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationInsightsComponentDataVolumeCapResponse Empty = new ApplicationInsightsComponentDataVolumeCapResponse();
 
+    /**
+     * Daily data volume cap in GB.
+     * 
+     */
     @InputImport(name="cap")
     private final @Nullable Double cap;
 
@@ -23,6 +31,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
         return this.cap == null ? Optional.empty() : Optional.ofNullable(this.cap);
     }
 
+    /**
+     * Maximum daily data volume cap that the user can set for this component.
+     * 
+     */
     @InputImport(name="maxHistoryCap", required=true)
     private final Double maxHistoryCap;
 
@@ -30,6 +42,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
         return this.maxHistoryCap;
     }
 
+    /**
+     * Daily data volume cap UTC reset hour.
+     * 
+     */
     @InputImport(name="resetTime", required=true)
     private final Integer resetTime;
 
@@ -37,6 +53,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
         return this.resetTime;
     }
 
+    /**
+     * Do not send a notification email when the daily data volume cap is met.
+     * 
+     */
     @InputImport(name="stopSendNotificationWhenHitCap")
     private final @Nullable Boolean stopSendNotificationWhenHitCap;
 
@@ -44,6 +64,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
         return this.stopSendNotificationWhenHitCap == null ? Optional.empty() : Optional.ofNullable(this.stopSendNotificationWhenHitCap);
     }
 
+    /**
+     * Reserved, not used for now.
+     * 
+     */
     @InputImport(name="stopSendNotificationWhenHitThreshold")
     private final @Nullable Boolean stopSendNotificationWhenHitThreshold;
 
@@ -51,6 +75,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
         return this.stopSendNotificationWhenHitThreshold == null ? Optional.empty() : Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
     }
 
+    /**
+     * Reserved, not used for now.
+     * 
+     */
     @InputImport(name="warningThreshold")
     private final @Nullable Integer warningThreshold;
 

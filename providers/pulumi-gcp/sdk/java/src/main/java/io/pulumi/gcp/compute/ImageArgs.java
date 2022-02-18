@@ -19,6 +19,11 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageArgs Empty = new ImageArgs();
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +31,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Size of the image when restored onto a persistent disk (in GB).
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<Integer> diskSizeGb;
 
@@ -33,6 +42,14 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * The name of the image family to which this image belongs. You can
+     * create disks by specifying an image family instead of a specific
+     * image name. The image family always returns its latest image that is
+     * not deprecated. The name of the image family must comply with
+     * RFC1035.
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -40,6 +57,12 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
+    /**
+     * A list of features to enable on the guest operating system.
+     * Applicable only for bootable images.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="guestOsFeatures")
     private final @Nullable Input<List<ImageGuestOsFeatureArgs>> guestOsFeatures;
 
@@ -47,6 +70,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
     }
 
+    /**
+     * Labels to apply to this Image.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -54,6 +81,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Any applicable license URI.
+     * 
+     */
     @InputImport(name="licenses")
     private final @Nullable Input<List<String>> licenses;
 
@@ -61,6 +92,16 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.licenses == null ? Input.empty() : this.licenses;
     }
 
+    /**
+     * Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the
+     * last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +109,11 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +121,11 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The parameters of the raw disk image.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="rawDisk")
     private final @Nullable Input<ImageRawDiskArgs> rawDisk;
 
@@ -82,6 +133,12 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.rawDisk == null ? Input.empty() : this.rawDisk;
     }
 
+    /**
+     * The source disk to create this image based on.
+     * You must provide either this property or the
+     * rawDisk.source property but not both to create an image.
+     * 
+     */
     @InputImport(name="sourceDisk")
     private final @Nullable Input<String> sourceDisk;
 
@@ -89,6 +146,15 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
     }
 
+    /**
+     * URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+     * URL of one of the following:
+     * * The selfLink URL
+     * * This property
+     * * The rawDisk.source URL
+     * * The sourceDisk URL
+     * 
+     */
     @InputImport(name="sourceImage")
     private final @Nullable Input<String> sourceImage;
 
@@ -96,6 +162,16 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceImage == null ? Input.empty() : this.sourceImage;
     }
 
+    /**
+     * URL of the source snapshot used to create this image.
+     * In order to create an image, you must provide the full or partial URL of one of the following:
+     * * The selfLink URL
+     * * This property
+     * * The sourceImage URL
+     * * The rawDisk.source URL
+     * * The sourceDisk URL
+     * 
+     */
     @InputImport(name="sourceSnapshot")
     private final @Nullable Input<String> sourceSnapshot;
 

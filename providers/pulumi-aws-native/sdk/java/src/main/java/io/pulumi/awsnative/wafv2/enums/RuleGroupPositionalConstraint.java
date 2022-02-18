@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Position of the evaluation in the FieldToMatch of request.
+     * 
+     */
     @EnumType
     public enum RuleGroupPositionalConstraint {
         Exactly("EXACTLY"),

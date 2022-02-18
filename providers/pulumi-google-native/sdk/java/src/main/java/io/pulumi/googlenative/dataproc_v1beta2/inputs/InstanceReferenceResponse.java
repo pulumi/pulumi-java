@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A reference to a Compute Engine instance.
+ * 
+ */
 public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceReferenceResponse Empty = new InstanceReferenceResponse();
 
+    /**
+     * The unique identifier of the Compute Engine instance.
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -19,6 +27,10 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
         return this.instanceId;
     }
 
+    /**
+     * The user-friendly name of the Compute Engine instance.
+     * 
+     */
     @InputImport(name="instanceName", required=true)
     private final String instanceName;
 
@@ -26,6 +38,10 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
         return this.instanceName;
     }
 
+    /**
+     * The public key used for sharing data with this instance.
+     * 
+     */
     @InputImport(name="publicKey", required=true)
     private final String publicKey;
 

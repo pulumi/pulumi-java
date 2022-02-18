@@ -13,7 +13,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperation {
+    /**
+     * API methods or permissions to allow. Method or permission must belong
+     * to the service specified by `serviceName` field. A single MethodSelector
+     * entry with `*` specified for the `method` field will allow all methods
+     * AND permissions for the service specified in `serviceName`.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationMethodSelector> methodSelectors;
+    /**
+     * The name of the API whose methods or permissions the `IngressPolicy` or
+     * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
+     * field set to `*` will allow all methods AND permissions for all services.
+     * 
+     */
     private final @Nullable String serviceName;
 
     @OutputCustomType.Constructor({"methodSelectors","serviceName"})
@@ -24,9 +38,23 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOp
         this.serviceName = serviceName;
     }
 
+    /**
+     * API methods or permissions to allow. Method or permission must belong
+     * to the service specified by `serviceName` field. A single MethodSelector
+     * entry with `*` specified for the `method` field will allow all methods
+     * AND permissions for the service specified in `serviceName`.
+     * Structure is documented below.
+     * 
+     */
     public List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationMethodSelector> getMethodSelectors() {
         return this.methodSelectors == null ? List.of() : this.methodSelectors;
     }
+    /**
+     * The name of the API whose methods or permissions the `IngressPolicy` or
+     * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
+     * field set to `*` will allow all methods AND permissions for all services.
+     * 
+     */
     public Optional<String> getServiceName() {
         return Optional.ofNullable(this.serviceName);
     }

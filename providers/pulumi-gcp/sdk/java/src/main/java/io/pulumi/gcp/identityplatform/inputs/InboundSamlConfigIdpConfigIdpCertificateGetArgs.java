@@ -14,6 +14,11 @@ public final class InboundSamlConfigIdpConfigIdpCertificateGetArgs extends io.pu
 
     public static final InboundSamlConfigIdpConfigIdpCertificateGetArgs Empty = new InboundSamlConfigIdpConfigIdpCertificateGetArgs();
 
+    /**
+     * - 
+     * The x509 certificate
+     * 
+     */
     @InputImport(name="x509Certificate")
     private final @Nullable Input<String> x509Certificate;
 

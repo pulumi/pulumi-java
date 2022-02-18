@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the contact channel that SSM Incident Manager uses to engage the contact.
+ * 
+ */
 public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactChannelTargetInfoArgs Empty = new ContactChannelTargetInfoArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the contact channel.
+     * 
+     */
     @InputImport(name="channelId", required=true)
     private final Input<String> channelId;
 
@@ -21,6 +29,10 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
         return this.channelId;
     }
 
+    /**
+     * The number of minutes to wait to retry sending engagement in the case the engagement initially fails.
+     * 
+     */
     @InputImport(name="retryIntervalInMinutes", required=true)
     private final Input<Integer> retryIntervalInMinutes;
 

@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse {
+    /**
+     * Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+     * 
+     */
     private final List<Double> values;
 
     @OutputCustomType.Constructor({"values"})
@@ -17,6 +21,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
         this.values = Objects.requireNonNull(values);
     }
 
+    /**
+     * Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+     * 
+     */
     public List<Double> getValues() {
         return this.values;
     }

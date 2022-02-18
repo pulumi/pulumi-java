@@ -16,6 +16,12 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
 
     public static final URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs Empty = new URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs();
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches
+     * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+     * must be set.
+     * 
+     */
     @InputImport(name="exactMatch")
     private final @Nullable Input<String> exactMatch;
 
@@ -23,6 +29,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
     }
 
+    /**
+     * The name of the header to add.
+     * 
+     */
     @InputImport(name="headerName", required=true)
     private final Input<String> headerName;
 
@@ -30,6 +40,12 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
         return this.headerName;
     }
 
+    /**
+     * If set to false, the headerMatch is considered a match if the match criteria
+     * above are met. If set to true, the headerMatch is considered a match if the
+     * match criteria above are NOT met. Defaults to false.
+     * 
+     */
     @InputImport(name="invertMatch")
     private final @Nullable Input<Boolean> invertMatch;
 
@@ -37,6 +53,12 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
         return this.invertMatch == null ? Input.empty() : this.invertMatch;
     }
 
+    /**
+     * The value of the header must start with the contents of prefixMatch. Only one of
+     * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+     * must be set.
+     * 
+     */
     @InputImport(name="prefixMatch")
     private final @Nullable Input<String> prefixMatch;
 
@@ -44,6 +66,12 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
     }
 
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query
+     * parameter, irrespective of whether the parameter has a value or not. Only one of
+     * presentMatch, exactMatch and regexMatch must be set.
+     * 
+     */
     @InputImport(name="presentMatch")
     private final @Nullable Input<Boolean> presentMatch;
 
@@ -51,6 +79,16 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
     }
 
+    /**
+     * The header value must be an integer and its value must be in the range specified
+     * in rangeMatch. If the header does not contain an integer, number or is empty,
+     * the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
+     * not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
+     * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+     * must be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="rangeMatch")
     private final @Nullable Input<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs> rangeMatch;
 
@@ -58,6 +96,13 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
         return this.rangeMatch == null ? Input.empty() : this.rangeMatch;
     }
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter matches the
+     * regular expression specified by regexMatch. For the regular expression grammar,
+     * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+     * exactMatch and regexMatch must be set.
+     * 
+     */
     @InputImport(name="regexMatch")
     private final @Nullable Input<String> regexMatch;
 
@@ -65,6 +110,12 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
         return this.regexMatch == null ? Input.empty() : this.regexMatch;
     }
 
+    /**
+     * The value of the header must end with the contents of suffixMatch. Only one of
+     * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+     * must be set.
+     * 
+     */
     @InputImport(name="suffixMatch")
     private final @Nullable Input<String> suffixMatch;
 

@@ -14,11 +14,25 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Events::Connection.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:events:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {
+    /**
+     * The arn of the connection resource.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The arn of the connection resource.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
@@ -34,25 +48,55 @@ public class Connection extends io.pulumi.resources.CustomResource {
     public Output<ConnectionAuthorizationType> getAuthorizationType() {
         return this.authorizationType;
     }
+    /**
+     * Description of the connection.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the connection.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Name of the connection.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Name of the connection.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The arn of the secrets manager secret created in the customer account.
+     * 
+     */
     @OutputExport(name="secretArn", type=String.class, parameters={})
     private Output<String> secretArn;
 
+    /**
+     * @return The arn of the secrets manager secret created in the customer account.
+     * 
+     */
     public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Connection(String name, ConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:events:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +112,14 @@ public class Connection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Connection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Connection(name, id, options);
     }

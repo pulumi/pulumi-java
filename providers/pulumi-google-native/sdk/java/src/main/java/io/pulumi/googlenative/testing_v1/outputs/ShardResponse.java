@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ShardResponse {
+    /**
+     * The total number of shards.
+     * 
+     */
     private final Integer numShards;
+    /**
+     * The index of the shard among all the shards.
+     * 
+     */
     private final Integer shardIndex;
+    /**
+     * Test targets for each shard.
+     * 
+     */
     private final TestTargetsForShardResponse testTargetsForShard;
 
     @OutputCustomType.Constructor({"numShards","shardIndex","testTargetsForShard"})
@@ -24,12 +36,24 @@ public final class ShardResponse {
         this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
     }
 
+    /**
+     * The total number of shards.
+     * 
+     */
     public Integer getNumShards() {
         return this.numShards;
     }
+    /**
+     * The index of the shard among all the shards.
+     * 
+     */
     public Integer getShardIndex() {
         return this.shardIndex;
     }
+    /**
+     * Test targets for each shard.
+     * 
+     */
     public TestTargetsForShardResponse getTestTargetsForShard() {
         return this.testTargetsForShard;
     }

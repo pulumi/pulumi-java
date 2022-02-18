@@ -12,6 +12,10 @@ public final class GetPartnerNamespaceArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetPartnerNamespaceArgs Empty = new GetPartnerNamespaceArgs();
 
+    /**
+     * Name of the partner namespace.
+     * 
+     */
     @InputImport(name="partnerNamespaceName", required=true)
     private final String partnerNamespaceName;
 
@@ -19,6 +23,10 @@ public final class GetPartnerNamespaceArgs extends io.pulumi.resources.InvokeArg
         return this.partnerNamespaceName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Additional parameters to identify Federation mode
+ * 
+ */
 public final class EnvironmentFederationParameters extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentFederationParameters Empty = new EnvironmentFederationParameters();
 
+    /**
+     * SAML metadata URL to link with the Environment
+     * 
+     */
     @InputImport(name="applicationCallBackURL")
     private final @Nullable String applicationCallBackURL;
 
@@ -22,6 +30,10 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
         return this.applicationCallBackURL == null ? Optional.empty() : Optional.ofNullable(this.applicationCallBackURL);
     }
 
+    /**
+     * Attribute map for SAML configuration
+     * 
+     */
     @InputImport(name="attributeMap")
     private final @Nullable Object attributeMap;
 
@@ -29,6 +41,10 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
         return this.attributeMap == null ? Optional.empty() : Optional.ofNullable(this.attributeMap);
     }
 
+    /**
+     * Federation provider name to link with the Environment
+     * 
+     */
     @InputImport(name="federationProviderName")
     private final @Nullable String federationProviderName;
 
@@ -36,6 +52,10 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
         return this.federationProviderName == null ? Optional.empty() : Optional.ofNullable(this.federationProviderName);
     }
 
+    /**
+     * SAML metadata URL to link with the Environment
+     * 
+     */
     @InputImport(name="federationURN")
     private final @Nullable String federationURN;
 
@@ -43,6 +63,10 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
         return this.federationURN == null ? Optional.empty() : Optional.ofNullable(this.federationURN);
     }
 
+    /**
+     * SAML metadata document to link the federation provider to the Environment
+     * 
+     */
     @InputImport(name="samlMetadataDocument")
     private final @Nullable String samlMetadataDocument;
 
@@ -50,6 +74,10 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
         return this.samlMetadataDocument == null ? Optional.empty() : Optional.ofNullable(this.samlMetadataDocument);
     }
 
+    /**
+     * SAML metadata URL to link with the Environment
+     * 
+     */
     @InputImport(name="samlMetadataURL")
     private final @Nullable String samlMetadataURL;
 

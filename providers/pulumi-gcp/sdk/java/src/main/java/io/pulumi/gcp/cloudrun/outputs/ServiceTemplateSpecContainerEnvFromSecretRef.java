@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTemplateSpecContainerEnvFromSecretRef {
+    /**
+     * The Secret to select from.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference localObjectReference;
+    /**
+     * Specify whether the Secret must be defined
+     * 
+     */
     private final @Nullable Boolean optional;
 
     @OutputCustomType.Constructor({"localObjectReference","optional"})
@@ -23,9 +32,18 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRef {
         this.optional = optional;
     }
 
+    /**
+     * The Secret to select from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> getLocalObjectReference() {
         return Optional.ofNullable(this.localObjectReference);
     }
+    /**
+     * Specify whether the Secret must be defined
+     * 
+     */
     public Optional<Boolean> getOptional() {
         return Optional.ofNullable(this.optional);
     }

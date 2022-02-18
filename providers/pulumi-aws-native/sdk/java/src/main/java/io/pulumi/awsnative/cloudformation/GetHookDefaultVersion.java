@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHookDefaultVersion {
+/**
+ * Set a version as default version for a hook in CloudFormation Registry.
+ * 
+ */
     public static CompletableFuture<GetHookDefaultVersionResult> invokeAsync(GetHookDefaultVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookDefaultVersion", TypeShape.of(GetHookDefaultVersionResult.class), args == null ? GetHookDefaultVersionArgs.Empty : args, Utilities.withVersion(options));
     }

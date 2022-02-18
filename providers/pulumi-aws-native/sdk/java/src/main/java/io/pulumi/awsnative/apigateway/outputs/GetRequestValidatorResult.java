@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRequestValidatorResult {
+    /**
+     * ID of the request validator.
+     * 
+     */
     private final @Nullable String requestValidatorId;
+    /**
+     * Indicates whether to validate the request body according to the configured schema for the targeted API and method.
+     * 
+     */
     private final @Nullable Boolean validateRequestBody;
+    /**
+     * Indicates whether to validate request parameters.
+     * 
+     */
     private final @Nullable Boolean validateRequestParameters;
 
     @OutputCustomType.Constructor({"requestValidatorId","validateRequestBody","validateRequestParameters"})
@@ -26,12 +38,24 @@ public final class GetRequestValidatorResult {
         this.validateRequestParameters = validateRequestParameters;
     }
 
+    /**
+     * ID of the request validator.
+     * 
+     */
     public Optional<String> getRequestValidatorId() {
         return Optional.ofNullable(this.requestValidatorId);
     }
+    /**
+     * Indicates whether to validate the request body according to the configured schema for the targeted API and method.
+     * 
+     */
     public Optional<Boolean> getValidateRequestBody() {
         return Optional.ofNullable(this.validateRequestBody);
     }
+    /**
+     * Indicates whether to validate request parameters.
+     * 
+     */
     public Optional<Boolean> getValidateRequestParameters() {
         return Optional.ofNullable(this.validateRequestParameters);
     }

@@ -12,6 +12,10 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
 
     public static final GetApplicationTypeVersionArgs Empty = new GetApplicationTypeVersionArgs();
 
+    /**
+     * The name of the application type name resource.
+     * 
+     */
     @InputImport(name="applicationTypeName", required=true)
     private final String applicationTypeName;
 
@@ -19,6 +23,10 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
         return this.applicationTypeName;
     }
 
+    /**
+     * The name of the cluster resource.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -26,6 +34,10 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
+    /**
+     * The application type version.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

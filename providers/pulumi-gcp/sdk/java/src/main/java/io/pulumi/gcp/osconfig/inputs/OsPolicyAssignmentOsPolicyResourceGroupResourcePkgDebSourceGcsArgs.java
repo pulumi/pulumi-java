@@ -15,6 +15,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs();
 
+    /**
+     * Required. Bucket of the Cloud Storage object.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -22,6 +26,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
         return this.bucket;
     }
 
+    /**
+     * Generation number of the Cloud Storage object.
+     * 
+     */
     @InputImport(name="generation")
     private final @Nullable Input<Integer> generation;
 
@@ -29,6 +37,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
         return this.generation == null ? Input.empty() : this.generation;
     }
 
+    /**
+     * Required. Name of the Cloud Storage object.
+     * 
+     */
     @InputImport(name="object", required=true)
     private final Input<String> object;
 

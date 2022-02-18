@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMongoDBResourceMongoDBDatabase {
+/**
+ * An Azure Cosmos DB MongoDB database.
+ * API Version: 2021-03-15.
+ * 
+ *
+ * An Azure Cosmos DB MongoDB database.
+ * 
+ */
     public static CompletableFuture<GetMongoDBResourceMongoDBDatabaseResult> invokeAsync(GetMongoDBResourceMongoDBDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoDBDatabase", TypeShape.of(GetMongoDBResourceMongoDBDatabaseResult.class), args == null ? GetMongoDBResourceMongoDBDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

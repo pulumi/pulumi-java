@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies how to handle request payload content type conversions.
+     * 
+     */
     @EnumType
     public enum MethodIntegrationResponseContentHandling {
         ConvertToBinary("CONVERT_TO_BINARY"),

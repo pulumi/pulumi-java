@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
+ * 
+ */
 public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CephFSPersistentVolumeSourceArgs Empty = new CephFSPersistentVolumeSourceArgs();
 
+    /**
+     * Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     @InputImport(name="monitors", required=true)
     private final Input<List<String>> monitors;
 
@@ -24,6 +32,10 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
         return this.monitors;
     }
 
+    /**
+     * Optional: Used as the mounted root, rather than the full Ceph tree, default is /
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -31,6 +43,10 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -38,6 +54,10 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
+    /**
+     * Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     @InputImport(name="secretFile")
     private final @Nullable Input<String> secretFile;
 
@@ -45,6 +65,10 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
         return this.secretFile == null ? Input.empty() : this.secretFile;
     }
 
+    /**
+     * Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     @InputImport(name="secretRef")
     private final @Nullable Input<SecretReferenceArgs> secretRef;
 
@@ -52,6 +76,10 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
         return this.secretRef == null ? Input.empty() : this.secretRef;
     }
 
+    /**
+     * Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     @InputImport(name="user")
     private final @Nullable Input<String> user;
 

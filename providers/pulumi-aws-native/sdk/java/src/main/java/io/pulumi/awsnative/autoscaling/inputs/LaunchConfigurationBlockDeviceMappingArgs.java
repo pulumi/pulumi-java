@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * BlockDeviceMapping is a property of AWS::AutoScaling::LaunchConfiguration that describes a block device mapping for an Auto Scaling group.
+ * 
+ */
 public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LaunchConfigurationBlockDeviceMappingArgs Empty = new LaunchConfigurationBlockDeviceMappingArgs();
 
+    /**
+     * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -23,6 +31,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
         return this.deviceName;
     }
 
+    /**
+     * Parameters used to automatically set up EBS volumes when an instance is launched.
+     * 
+     */
     @InputImport(name="ebs")
     private final @Nullable Input<LaunchConfigurationBlockDeviceArgs> ebs;
 
@@ -30,6 +42,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
         return this.ebs == null ? Input.empty() : this.ebs;
     }
 
+    /**
+     * Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
+     * 
+     */
     @InputImport(name="noDevice")
     private final @Nullable Input<Boolean> noDevice;
 
@@ -37,6 +53,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
         return this.noDevice == null ? Input.empty() : this.noDevice;
     }
 
+    /**
+     * The name of the virtual device.
+     * 
+     */
     @InputImport(name="virtualName")
     private final @Nullable Input<String> virtualName;
 

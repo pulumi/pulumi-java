@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The endpoint for a monitoring job.
+ * 
+ */
 public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelExplainabilityJobDefinitionEndpointInputArgs Empty = new ModelExplainabilityJobDefinitionEndpointInputArgs();
@@ -23,6 +27,10 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
         return this.endpointName;
     }
 
+    /**
+     * JSONpath to locate features in JSONlines dataset
+     * 
+     */
     @InputImport(name="featuresAttribute")
     private final @Nullable Input<String> featuresAttribute;
 
@@ -30,6 +38,10 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
         return this.featuresAttribute == null ? Input.empty() : this.featuresAttribute;
     }
 
+    /**
+     * Index or JSONpath to locate predicted label(s)
+     * 
+     */
     @InputImport(name="inferenceAttribute")
     private final @Nullable Input<String> inferenceAttribute;
 
@@ -37,6 +49,10 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
         return this.inferenceAttribute == null ? Input.empty() : this.inferenceAttribute;
     }
 
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     @InputImport(name="localPath", required=true)
     private final Input<String> localPath;
 
@@ -44,6 +60,10 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
         return this.localPath;
     }
 
+    /**
+     * Index or JSONpath to locate probabilities
+     * 
+     */
     @InputImport(name="probabilityAttribute")
     private final @Nullable Input<String> probabilityAttribute;
 
@@ -51,6 +71,10 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
         return this.probabilityAttribute == null ? Input.empty() : this.probabilityAttribute;
     }
 
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     @InputImport(name="s3DataDistributionType")
     private final @Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
@@ -58,6 +82,10 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
         return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
     }
 
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     @InputImport(name="s3InputMode")
     private final @Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode;
 

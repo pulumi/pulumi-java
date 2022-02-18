@@ -16,6 +16,11 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionState Empty = new ConnectionState();
 
+    /**
+     * Cloud SQL properties.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudSql")
     private final @Nullable Input<ConnectionCloudSqlGetArgs> cloudSql;
 
@@ -23,6 +28,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
         return this.cloudSql == null ? Input.empty() : this.cloudSql;
     }
 
+    /**
+     * Optional connection id that should be assigned to the created connection.
+     * 
+     */
     @InputImport(name="connectionId")
     private final @Nullable Input<String> connectionId;
 
@@ -30,6 +39,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
         return this.connectionId == null ? Input.empty() : this.connectionId;
     }
 
+    /**
+     * A descriptive description for the connection
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +50,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A descriptive name for the connection
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -44,6 +61,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * True if the connection has credential assigned.
+     * 
+     */
     @InputImport(name="hasCredential")
     private final @Nullable Input<Boolean> hasCredential;
 
@@ -51,6 +72,13 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
         return this.hasCredential == null ? Input.empty() : this.hasCredential;
     }
 
+    /**
+     * The geographic location where the connection should reside.
+     * Cloud SQL instance must be in the same location as the connection
+     * with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+     * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -58,6 +86,11 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the connection in the form of:
+     * "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -65,6 +98,11 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

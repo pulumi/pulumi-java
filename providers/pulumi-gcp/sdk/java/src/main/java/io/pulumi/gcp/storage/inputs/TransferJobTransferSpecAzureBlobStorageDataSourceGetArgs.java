@@ -15,6 +15,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
 
     public static final TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs Empty = new TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs();
 
+    /**
+     * Credentials used to authenticate API requests to Azure block.
+     * 
+     */
     @InputImport(name="azureCredentials", required=true)
     private final Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
 
@@ -22,6 +26,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
         return this.azureCredentials;
     }
 
+    /**
+     * The container to transfer from the Azure Storage account.`
+     * 
+     */
     @InputImport(name="container", required=true)
     private final Input<String> container;
 
@@ -29,6 +37,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
         return this.container;
     }
 
+    /**
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -36,6 +48,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * The name of the Azure Storage account.
+     * 
+     */
     @InputImport(name="storageAccount", required=true)
     private final Input<String> storageAccount;
 

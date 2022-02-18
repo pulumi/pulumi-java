@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse {
+    /**
+     * The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+     * 
+     */
     private final String ssml;
+    /**
+     * The raw text to be synthesized.
+     * 
+     */
     private final String text;
 
     @OutputCustomType.Constructor({"ssml","text"})
@@ -20,9 +28,17 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
         this.text = Objects.requireNonNull(text);
     }
 
+    /**
+     * The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+     * 
+     */
     public String getSsml() {
         return this.ssml;
     }
+    /**
+     * The raw text to be synthesized.
+     * 
+     */
     public String getText() {
         return this.text;
     }

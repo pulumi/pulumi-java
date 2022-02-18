@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BastionShareableLinkResponse {
+    /**
+     * The unique Bastion Shareable Link to the virtual machine.
+     * 
+     */
     private final String bsl;
+    /**
+     * The time when the link was created.
+     * 
+     */
     private final String createdAt;
+    /**
+     * Optional field indicating the warning or error message related to the vm in case of partial failure.
+     * 
+     */
     private final String message;
+    /**
+     * Reference of the virtual machine resource.
+     * 
+     */
     private final VMResponse vm;
 
     @OutputCustomType.Constructor({"bsl","createdAt","message","vm"})
@@ -27,15 +43,31 @@ public final class BastionShareableLinkResponse {
         this.vm = Objects.requireNonNull(vm);
     }
 
+    /**
+     * The unique Bastion Shareable Link to the virtual machine.
+     * 
+     */
     public String getBsl() {
         return this.bsl;
     }
+    /**
+     * The time when the link was created.
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * Optional field indicating the warning or error message related to the vm in case of partial failure.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * Reference of the virtual machine resource.
+     * 
+     */
     public VMResponse getVm() {
         return this.vm;
     }

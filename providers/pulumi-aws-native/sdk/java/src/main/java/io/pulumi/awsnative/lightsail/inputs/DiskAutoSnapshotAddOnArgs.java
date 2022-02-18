@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object that represents additional parameters when enabling or modifying the automatic snapshot add-on
+ * 
+ */
 public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskAutoSnapshotAddOnArgs Empty = new DiskAutoSnapshotAddOnArgs();
 
+    /**
+     * The daily time when an automatic snapshot will be created.
+     * 
+     */
     @InputImport(name="snapshotTimeOfDay")
     private final @Nullable Input<String> snapshotTimeOfDay;
 

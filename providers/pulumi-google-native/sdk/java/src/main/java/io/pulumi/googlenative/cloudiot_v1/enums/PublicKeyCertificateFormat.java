@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The certificate format.
+     * 
+     */
     @EnumType
     public enum PublicKeyCertificateFormat {
+        /**
+         * The format has not been specified. This is an invalid default value and must not be used.
+         * 
+         */
         UnspecifiedPublicKeyCertificateFormat("UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT"),
+        /**
+         * An X.509v3 certificate ([RFC5280](https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.
+         * 
+         */
         X509CertificatePem("X509_CERTIFICATE_PEM");
 
         private final String value;

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Tags to be applied to Input.
+ * 
+ */
 public final class DetectorModelTag extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelTag Empty = new DetectorModelTag();
 
+    /**
+     * Key of the Tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +27,10 @@ public final class DetectorModelTag extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * Value of the Tag.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

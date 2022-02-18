@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity for the managed cluster.
+ * 
+ */
 public final class ConfigurationIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationIdentityArgs Empty = new ConfigurationIdentityArgs();
 
+    /**
+     * The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 

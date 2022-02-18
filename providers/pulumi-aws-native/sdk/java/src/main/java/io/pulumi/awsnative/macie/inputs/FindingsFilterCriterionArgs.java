@@ -6,6 +6,10 @@ package io.pulumi.awsnative.macie.inputs;
 import java.util.Objects;
 
 
+/**
+ * Map of filter criteria.
+ * 
+ */
 public final class FindingsFilterCriterionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FindingsFilterCriterionArgs Empty = new FindingsFilterCriterionArgs();

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * POSIX Group definition to represent a group in a POSIX compliant system.
+ * 
+ */
 public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PosixGroupArgs Empty = new PosixGroupArgs();
 
+    /**
+     * GID of the POSIX group.
+     * 
+     */
     @InputImport(name="gid")
     private final @Nullable Input<String> gid;
 
@@ -21,6 +29,10 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.gid == null ? Input.empty() : this.gid;
     }
 
+    /**
+     * Name of the POSIX group.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +40,10 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * System identifier for which group name and gid apply to. If not specified it will default to empty value.
+     * 
+     */
     @InputImport(name="systemId")
     private final @Nullable Input<String> systemId;
 

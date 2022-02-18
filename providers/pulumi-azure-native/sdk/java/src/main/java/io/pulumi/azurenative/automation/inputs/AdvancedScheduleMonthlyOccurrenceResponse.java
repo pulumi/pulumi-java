@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the create advanced schedule monthly occurrence.
+ * 
+ */
 public final class AdvancedScheduleMonthlyOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdvancedScheduleMonthlyOccurrenceResponse Empty = new AdvancedScheduleMonthlyOccurrenceResponse();
 
+    /**
+     * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+     * 
+     */
     @InputImport(name="day")
     private final @Nullable String day;
 
@@ -22,6 +30,10 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends io.pulumi.r
         return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
     }
 
+    /**
+     * Occurrence of the week within the month. Must be between 1 and 5
+     * 
+     */
     @InputImport(name="occurrence")
     private final @Nullable Integer occurrence;
 

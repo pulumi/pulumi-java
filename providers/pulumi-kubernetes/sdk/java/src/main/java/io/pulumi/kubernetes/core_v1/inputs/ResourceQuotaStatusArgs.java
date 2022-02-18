@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ResourceQuotaStatus defines the enforced hard limits and observed use.
+ * 
+ */
 public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceQuotaStatusArgs Empty = new ResourceQuotaStatusArgs();
 
+    /**
+     * Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
+     * 
+     */
     @InputImport(name="hard")
     private final @Nullable Input<Map<String,String>> hard;
 
@@ -22,6 +30,10 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
         return this.hard == null ? Input.empty() : this.hard;
     }
 
+    /**
+     * Used is the current observed total usage of the resource in the namespace.
+     * 
+     */
     @InputImport(name="used")
     private final @Nullable Input<Map<String,String>> used;
 

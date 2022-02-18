@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * License type for bringing your own license scenario.
+     * 
+     */
     @EnumType
     public enum IntegrationRuntimeLicenseType {
         BasePrice("BasePrice"),

@@ -18,6 +18,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserArgs Empty = new UserArgs();
 
+    /**
+     * The identifier of the user account in the directory used for identity management.
+     * 
+     */
     @InputImport(name="directoryUserId")
     private final @Nullable Input<String> directoryUserId;
 
@@ -25,6 +29,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.directoryUserId == null ? Input.empty() : this.directoryUserId;
     }
 
+    /**
+     * The identifier of the hierarchy group for the user.
+     * 
+     */
     @InputImport(name="hierarchyGroupArn")
     private final @Nullable Input<String> hierarchyGroupArn;
 
@@ -32,6 +40,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.hierarchyGroupArn == null ? Input.empty() : this.hierarchyGroupArn;
     }
 
+    /**
+     * The information about the identity of the user.
+     * 
+     */
     @InputImport(name="identityInfo")
     private final @Nullable Input<UserIdentityInfoArgs> identityInfo;
 
@@ -39,6 +51,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.identityInfo == null ? Input.empty() : this.identityInfo;
     }
 
+    /**
+     * The identifier of the Amazon Connect instance.
+     * 
+     */
     @InputImport(name="instanceArn", required=true)
     private final Input<String> instanceArn;
 
@@ -46,6 +62,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceArn;
     }
 
+    /**
+     * The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -53,6 +73,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The phone settings for the user.
+     * 
+     */
     @InputImport(name="phoneConfig", required=true)
     private final Input<UserPhoneConfigArgs> phoneConfig;
 
@@ -60,6 +84,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.phoneConfig;
     }
 
+    /**
+     * The identifier of the routing profile for the user.
+     * 
+     */
     @InputImport(name="routingProfileArn", required=true)
     private final Input<String> routingProfileArn;
 
@@ -67,6 +95,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.routingProfileArn;
     }
 
+    /**
+     * One or more security profile arns for the user
+     * 
+     */
     @InputImport(name="securityProfileArns", required=true)
     private final Input<List<String>> securityProfileArns;
 
@@ -74,6 +106,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityProfileArns;
     }
 
+    /**
+     * One or more tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<UserTagArgs>> tags;
 
@@ -81,6 +117,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The user name for the account.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

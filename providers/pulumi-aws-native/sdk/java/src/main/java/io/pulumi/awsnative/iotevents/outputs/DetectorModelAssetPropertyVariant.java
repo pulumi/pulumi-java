@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorModelAssetPropertyVariant {
+    /**
+     * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
+     * 
+     */
     private final @Nullable String booleanValue;
+    /**
+     * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
+     * 
+     */
     private final @Nullable String doubleValue;
+    /**
+     * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
+     * 
+     */
     private final @Nullable String integerValue;
+    /**
+     * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
+     * 
+     */
     private final @Nullable String stringValue;
 
     @OutputCustomType.Constructor({"booleanValue","doubleValue","integerValue","stringValue"})
@@ -28,15 +44,31 @@ public final class DetectorModelAssetPropertyVariant {
         this.stringValue = stringValue;
     }
 
+    /**
+     * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
+     * 
+     */
     public Optional<String> getBooleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
+    /**
+     * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
+     * 
+     */
     public Optional<String> getDoubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
+    /**
+     * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
+     * 
+     */
     public Optional<String> getIntegerValue() {
         return Optional.ofNullable(this.integerValue);
     }
+    /**
+     * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
+     * 
+     */
     public Optional<String> getStringValue() {
         return Optional.ofNullable(this.stringValue);
     }

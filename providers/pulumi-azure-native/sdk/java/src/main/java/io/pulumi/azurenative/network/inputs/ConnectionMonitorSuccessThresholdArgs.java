@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the threshold for declaring a test successful.
+ * 
+ */
 public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorSuccessThresholdArgs Empty = new ConnectionMonitorSuccessThresholdArgs();
 
+    /**
+     * The maximum percentage of failed checks permitted for a test to evaluate as successful.
+     * 
+     */
     @InputImport(name="checksFailedPercent")
     private final @Nullable Input<Integer> checksFailedPercent;
 
@@ -22,6 +30,10 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
         return this.checksFailedPercent == null ? Input.empty() : this.checksFailedPercent;
     }
 
+    /**
+     * The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
+     * 
+     */
     @InputImport(name="roundTripTimeMs")
     private final @Nullable Input<Double> roundTripTimeMs;
 

@@ -13,6 +13,10 @@ public final class ConnectorProfileInforNexusConnectorProfilePropertiesArgs exte
 
     public static final ConnectorProfileInforNexusConnectorProfilePropertiesArgs Empty = new ConnectorProfileInforNexusConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the InforNexus resource
+     * 
+     */
     @InputImport(name="instanceUrl", required=true)
     private final Input<String> instanceUrl;
 

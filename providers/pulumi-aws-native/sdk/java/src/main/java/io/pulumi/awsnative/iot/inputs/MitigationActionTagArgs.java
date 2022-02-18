@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class MitigationActionTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MitigationActionTagArgs Empty = new MitigationActionTagArgs();
 
+    /**
+     * The tag's key.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class MitigationActionTagArgs extends io.pulumi.resources.ResourceA
         return this.key;
     }
 
+    /**
+     * The tag's value.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

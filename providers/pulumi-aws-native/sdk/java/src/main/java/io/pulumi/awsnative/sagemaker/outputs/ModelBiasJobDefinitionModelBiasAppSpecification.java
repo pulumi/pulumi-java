@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ModelBiasJobDefinitionModelBiasAppSpecification {
+    /**
+     * The S3 URI to an analysis configuration file
+     * 
+     */
     private final String configUri;
+    /**
+     * Sets the environment variables in the Docker container
+     * 
+     */
     private final @Nullable Object environment;
+    /**
+     * The container image to be run by the monitoring job.
+     * 
+     */
     private final String imageUri;
 
     @OutputCustomType.Constructor({"configUri","environment","imageUri"})
@@ -26,12 +38,24 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecification {
         this.imageUri = Objects.requireNonNull(imageUri);
     }
 
+    /**
+     * The S3 URI to an analysis configuration file
+     * 
+     */
     public String getConfigUri() {
         return this.configUri;
     }
+    /**
+     * Sets the environment variables in the Docker container
+     * 
+     */
     public Optional<Object> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
+    /**
+     * The container image to be run by the monitoring job.
+     * 
+     */
     public String getImageUri() {
         return this.imageUri;
     }

@@ -14,6 +14,11 @@ public final class ServiceAttachmentConsumerAcceptListArgs extends io.pulumi.res
 
     public static final ServiceAttachmentConsumerAcceptListArgs Empty = new ServiceAttachmentConsumerAcceptListArgs();
 
+    /**
+     * The number of consumer forwarding rules the consumer project can
+     * create.
+     * 
+     */
     @InputImport(name="connectionLimit", required=true)
     private final Input<Integer> connectionLimit;
 
@@ -21,6 +26,10 @@ public final class ServiceAttachmentConsumerAcceptListArgs extends io.pulumi.res
         return this.connectionLimit;
     }
 
+    /**
+     * A project that is allowed to connect to this service attachment.
+     * 
+     */
     @InputImport(name="projectIdOrNum", required=true)
     private final Input<String> projectIdOrNum;
 

@@ -13,33 +13,104 @@ import io.pulumi.gcp.compute.inputs.DiskResourcePolicyAttachmentState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Adds existing resource policies to a disk. You can only add one policy
+ * which will be applied to this disk for scheduling snapshot creation.
+ * 
+ * > **Note:** This resource does not support regional disks (`gcp.compute.RegionDisk`). For regional disks, please refer to the `gcp.compute.RegionDiskResourcePolicyAttachment` resource.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * DiskResourcePolicyAttachment can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment default projects/{{project}}/zones/{{zone}}/disks/{{disk}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment default {{project}}/{{zone}}/{{disk}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment default {{zone}}/{{disk}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment default {{disk}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment")
 public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the disk in which the resource policies are attached to.
+     * 
+     */
     @OutputExport(name="disk", type=String.class, parameters={})
     private Output<String> disk;
 
+    /**
+     * @return The name of the disk in which the resource policies are attached to.
+     * 
+     */
     public Output<String> getDisk() {
         return this.disk;
     }
+    /**
+     * The resource policy to be attached to the disk for scheduling snapshot
+     * creation. Do not specify the self link.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource policy to be attached to the disk for scheduling snapshot
+     * creation. Do not specify the self link.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * A reference to the zone where the disk resides.
+     * 
+     */
     @OutputExport(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
+    /**
+     * @return A reference to the zone where the disk resides.
+     * 
+     */
     public Output<String> getZone() {
         return this.zone;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DiskResourcePolicyAttachment(String name, DiskResourcePolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment", name, args == null ? DiskResourcePolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -55,6 +126,15 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DiskResourcePolicyAttachment get(String name, Input<String> id, @Nullable DiskResourcePolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DiskResourcePolicyAttachment(name, id, state, options);
     }

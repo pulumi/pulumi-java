@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnet {
+/**
+ * Resource Type definition for AWS::EC2::Subnet
+ * 
+ */
     public static CompletableFuture<GetSubnetResult> invokeAsync(GetSubnetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getSubnet", TypeShape.of(GetSubnetResult.class), args == null ? GetSubnetArgs.Empty : args, Utilities.withVersion(options));
     }

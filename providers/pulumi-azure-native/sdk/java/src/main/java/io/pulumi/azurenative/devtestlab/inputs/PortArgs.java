@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a network port.
+ * 
+ */
 public final class PortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PortArgs Empty = new PortArgs();
 
+    /**
+     * Backend port of the target virtual machine.
+     * 
+     */
     @InputImport(name="backendPort")
     private final @Nullable Input<Integer> backendPort;
 
@@ -24,6 +32,10 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendPort == null ? Input.empty() : this.backendPort;
     }
 
+    /**
+     * Protocol type of the port.
+     * 
+     */
     @InputImport(name="transportProtocol")
     private final @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
 

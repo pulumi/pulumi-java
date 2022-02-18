@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
+    /**
+     * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+     * 
+     */
     private final @Nullable Integer maxInstances;
+    /**
+     * Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+     * 
+     */
     private final @Nullable Integer minInstances;
+    /**
+     * Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * 
+     */
     private final @Nullable Double targetCpuUtilization;
+    /**
+     * Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * 
+     */
     private final @Nullable Double targetThroughputUtilization;
 
     @OutputCustomType.Constructor({"maxInstances","minInstances","targetCpuUtilization","targetThroughputUtilization"})
@@ -29,15 +45,31 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
         this.targetThroughputUtilization = targetThroughputUtilization;
     }
 
+    /**
+     * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+     * 
+     */
     public Optional<Integer> getMaxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
+    /**
+     * Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+     * 
+     */
     public Optional<Integer> getMinInstances() {
         return Optional.ofNullable(this.minInstances);
     }
+    /**
+     * Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * 
+     */
     public Optional<Double> getTargetCpuUtilization() {
         return Optional.ofNullable(this.targetCpuUtilization);
     }
+    /**
+     * Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * 
+     */
     public Optional<Double> getTargetThroughputUtilization() {
         return Optional.ofNullable(this.targetThroughputUtilization);
     }

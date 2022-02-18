@@ -14,6 +14,10 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
+    /**
+     * (Computed) The etag of the project's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -21,6 +25,12 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The `gcp.organizations.getIAMPolicy` data source that represents
+     * the IAM policy that will be applied to the project. The policy will be
+     * merged with any existing policy applied to the project.
+     * 
+     */
     @InputImport(name="policyData")
     private final @Nullable Input<String> policyData;
 
@@ -28,6 +38,11 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
         return this.policyData == null ? Input.empty() : this.policyData;
     }
 
+    /**
+     * The project id of the target project. This is not
+     * inferred from the provider.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

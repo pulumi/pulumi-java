@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * ILB route behavior when ILB is deemed unhealthy based on user specified threshold on the Backend Service of the internal load balancing.
+     * 
+     */
     @EnumType
     public enum RouteIlbRouteBehaviorOnUnhealthy {
+        /**
+         * Do not Withdraw route if the ILB is deemed unhealthy based on user specified threshold on the Backend Service of the ILB. This is default behavior for ilb as next hop route without IlbRouteBehavior.
+         * 
+         */
         DoNotWithdrawRouteIfIlbUnhealthy("DO_NOT_WITHDRAW_ROUTE_IF_ILB_UNHEALTHY"),
+        /**
+         * Withdraw route if the ILB is deemed unhealthy based on user specified threshold on the Backend Service of the internal load balancing. Currently the withdrawn route will be reinserted when the backends are restored to healthy. If you wish to prevent the re-insertion of the route and trigger the fall-back at your discretion, override the health result from the backends to signal as healthy only when ready to fallback.
+         * 
+         */
         WithdrawRouteIfIlbUnhealthy("WITHDRAW_ROUTE_IF_ILB_UNHEALTHY");
 
         private final String value;

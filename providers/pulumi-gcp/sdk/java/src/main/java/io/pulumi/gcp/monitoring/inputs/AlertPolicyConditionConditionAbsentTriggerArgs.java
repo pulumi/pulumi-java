@@ -15,6 +15,12 @@ public final class AlertPolicyConditionConditionAbsentTriggerArgs extends io.pul
 
     public static final AlertPolicyConditionConditionAbsentTriggerArgs Empty = new AlertPolicyConditionConditionAbsentTriggerArgs();
 
+    /**
+     * The absolute number of time series
+     * that must fail the predicate for the
+     * condition to be triggered.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -22,6 +28,12 @@ public final class AlertPolicyConditionConditionAbsentTriggerArgs extends io.pul
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * The percentage of time series that
+     * must fail the predicate for the
+     * condition to be triggered.
+     * 
+     */
     @InputImport(name="percent")
     private final @Nullable Input<Double> percent;
 

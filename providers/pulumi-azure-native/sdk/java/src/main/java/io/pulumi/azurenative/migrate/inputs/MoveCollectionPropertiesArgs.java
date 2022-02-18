@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the move collection properties.
+ * 
+ */
 public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MoveCollectionPropertiesArgs Empty = new MoveCollectionPropertiesArgs();
 
+    /**
+     * Gets or sets the source region.
+     * 
+     */
     @InputImport(name="sourceRegion", required=true)
     private final Input<String> sourceRegion;
 
@@ -20,6 +28,10 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
         return this.sourceRegion;
     }
 
+    /**
+     * Gets or sets the target region.
+     * 
+     */
     @InputImport(name="targetRegion", required=true)
     private final Input<String> targetRegion;
 

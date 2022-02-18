@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of a Docker container.
+ * 
+ */
 public final class ModelEnvironmentDefinitionResponseResponseDocker extends io.pulumi.resources.InvokeArgs {
 
     public static final ModelEnvironmentDefinitionResponseResponseDocker Empty = new ModelEnvironmentDefinitionResponseResponseDocker();
 
+    /**
+     * Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+     * 
+     */
     @InputImport(name="baseDockerfile")
     private final @Nullable String baseDockerfile;
 
@@ -22,6 +30,10 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends io.p
         return this.baseDockerfile == null ? Optional.empty() : Optional.ofNullable(this.baseDockerfile);
     }
 
+    /**
+     * Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+     * 
+     */
     @InputImport(name="baseImage")
     private final @Nullable String baseImage;
 
@@ -29,6 +41,10 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends io.p
         return this.baseImage == null ? Optional.empty() : Optional.ofNullable(this.baseImage);
     }
 
+    /**
+     * Image registry that contains the base image.
+     * 
+     */
     @InputImport(name="baseImageRegistry")
     private final @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
 

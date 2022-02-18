@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Baseline configuration used to validate that the data conforms to the specified constraints and statistics.
+ * 
+ */
 public final class MonitoringScheduleBaselineConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringScheduleBaselineConfig Empty = new MonitoringScheduleBaselineConfig();

@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageAccountInternetEndpointsResponse {
+    /**
+     * Gets the blob endpoint.
+     * 
+     */
     private final String blob;
+    /**
+     * Gets the dfs endpoint.
+     * 
+     */
     private final String dfs;
+    /**
+     * Gets the file endpoint.
+     * 
+     */
     private final String file;
+    /**
+     * Gets the web endpoint.
+     * 
+     */
     private final String web;
 
     @OutputCustomType.Constructor({"blob","dfs","file","web"})
@@ -26,15 +42,31 @@ public final class StorageAccountInternetEndpointsResponse {
         this.web = Objects.requireNonNull(web);
     }
 
+    /**
+     * Gets the blob endpoint.
+     * 
+     */
     public String getBlob() {
         return this.blob;
     }
+    /**
+     * Gets the dfs endpoint.
+     * 
+     */
     public String getDfs() {
         return this.dfs;
     }
+    /**
+     * Gets the file endpoint.
+     * 
+     */
     public String getFile() {
         return this.file;
     }
+    /**
+     * Gets the web endpoint.
+     * 
+     */
     public String getWeb() {
         return this.web;
     }

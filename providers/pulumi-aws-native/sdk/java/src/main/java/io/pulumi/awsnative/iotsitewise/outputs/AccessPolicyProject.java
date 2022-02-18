@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AccessPolicyProject {
+    /**
+     * The ID of the project.
+     * 
+     */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +22,10 @@ public final class AccessPolicyProject {
         this.id = id;
     }
 
+    /**
+     * The ID of the project.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

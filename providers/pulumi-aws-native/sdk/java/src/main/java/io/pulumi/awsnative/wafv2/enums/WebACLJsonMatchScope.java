@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The parts of the JSON to match against using the MatchPattern.
+     * 
+     */
     @EnumType
     public enum WebACLJsonMatchScope {
         All("ALL"),

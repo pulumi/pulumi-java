@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCell {
+/**
+ * The API Schema for AWS Route53 Recovery Readiness Cells.
+ * 
+ */
     public static CompletableFuture<GetCellResult> invokeAsync(GetCellArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getCell", TypeShape.of(GetCellResult.class), args == null ? GetCellArgs.Empty : args, Utilities.withVersion(options));
     }

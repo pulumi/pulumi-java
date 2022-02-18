@@ -14,6 +14,13 @@ public final class ManagedZoneForwardingConfigTargetNameServerArgs extends io.pu
 
     public static final ManagedZoneForwardingConfigTargetNameServerArgs Empty = new ManagedZoneForwardingConfigTargetNameServerArgs();
 
+    /**
+     * Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
+     * decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
+     * to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
+     * Possible values are `default` and `private`.
+     * 
+     */
     @InputImport(name="forwardingPath")
     private final @Nullable Input<String> forwardingPath;
 
@@ -21,6 +28,10 @@ public final class ManagedZoneForwardingConfigTargetNameServerArgs extends io.pu
         return this.forwardingPath == null ? Input.empty() : this.forwardingPath;
     }
 
+    /**
+     * IPv4 address of a target name server.
+     * 
+     */
     @InputImport(name="ipv4Address", required=true)
     private final Input<String> ipv4Address;
 

@@ -13,6 +13,10 @@ public final class GetInstanceTemplateSchedulingNodeAffinity extends io.pulumi.r
 
     public static final GetInstanceTemplateSchedulingNodeAffinity Empty = new GetInstanceTemplateSchedulingNodeAffinity();
 
+    /**
+     * The key for the node affinity label.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -20,6 +24,11 @@ public final class GetInstanceTemplateSchedulingNodeAffinity extends io.pulumi.r
         return this.key;
     }
 
+    /**
+     * The operator. Can be `IN` for node-affinities
+     * or `NOT_IN` for anti-affinities.
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final String operator;
 

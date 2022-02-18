@@ -12,6 +12,10 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
 
     public static final GetMaintenanceConfigurationArgs Empty = new GetMaintenanceConfigurationArgs();
 
+    /**
+     * The name of the maintenance configuration.
+     * 
+     */
     @InputImport(name="configName", required=true)
     private final String configName;
 
@@ -19,6 +23,10 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
         return this.configName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the managed cluster resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessReviewScheduleDefinitionById {
+/**
+ * Access Review Schedule Definition.
+ * API Version: 2021-03-01-preview.
+ * 
+ *
+ * Access Review Schedule Definition.
+ * 
+ */
     public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> invokeAsync(GetAccessReviewScheduleDefinitionByIdArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getAccessReviewScheduleDefinitionById", TypeShape.of(GetAccessReviewScheduleDefinitionByIdResult.class), args == null ? GetAccessReviewScheduleDefinitionByIdArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Filters events based on exact matches on the CloudEvents attributes.
+ * 
+ */
 public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventFilterResponse Empty = new EventFilterResponse();
 
+    /**
+     * The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+     * 
+     */
     @InputImport(name="attribute", required=true)
     private final String attribute;
 
@@ -19,6 +27,10 @@ public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
         return this.attribute;
     }
 
+    /**
+     * The value for the attribute.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

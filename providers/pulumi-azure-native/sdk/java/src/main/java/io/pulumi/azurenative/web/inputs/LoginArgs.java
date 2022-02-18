@@ -16,10 +16,20 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the login flow of users using App Service Authentication/Authorization.
+ * 
+ */
 public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoginArgs Empty = new LoginArgs();
 
+    /**
+     * External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
+     * This is an advanced setting typically only needed by Windows Store application backends.
+     * Note that URLs within the current domain are always implicitly allowed.
+     * 
+     */
     @InputImport(name="allowedExternalRedirectUrls")
     private final @Nullable Input<List<String>> allowedExternalRedirectUrls;
 
@@ -27,6 +37,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedExternalRedirectUrls == null ? Input.empty() : this.allowedExternalRedirectUrls;
     }
 
+    /**
+     * The configuration settings of the session cookie's expiration.
+     * 
+     */
     @InputImport(name="cookieExpiration")
     private final @Nullable Input<CookieExpirationArgs> cookieExpiration;
 
@@ -34,6 +48,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
         return this.cookieExpiration == null ? Input.empty() : this.cookieExpiration;
     }
 
+    /**
+     * The configuration settings of the nonce used in the login flow.
+     * 
+     */
     @InputImport(name="nonce")
     private final @Nullable Input<NonceArgs> nonce;
 
@@ -41,6 +59,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
         return this.nonce == null ? Input.empty() : this.nonce;
     }
 
+    /**
+     * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
+     * 
+     */
     @InputImport(name="preserveUrlFragmentsForLogins")
     private final @Nullable Input<Boolean> preserveUrlFragmentsForLogins;
 
@@ -48,6 +70,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
         return this.preserveUrlFragmentsForLogins == null ? Input.empty() : this.preserveUrlFragmentsForLogins;
     }
 
+    /**
+     * The routes that specify the endpoints used for login and logout requests.
+     * 
+     */
     @InputImport(name="routes")
     private final @Nullable Input<LoginRoutesArgs> routes;
 
@@ -55,6 +81,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
         return this.routes == null ? Input.empty() : this.routes;
     }
 
+    /**
+     * The configuration settings of the token store.
+     * 
+     */
     @InputImport(name="tokenStore")
     private final @Nullable Input<TokenStoreArgs> tokenStore;
 

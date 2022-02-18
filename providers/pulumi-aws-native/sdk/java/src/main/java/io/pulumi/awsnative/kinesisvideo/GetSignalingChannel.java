@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSignalingChannel {
+/**
+ * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
+ * 
+ */
     public static CompletableFuture<GetSignalingChannelResult> invokeAsync(GetSignalingChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getSignalingChannel", TypeShape.of(GetSignalingChannelResult.class), args == null ? GetSignalingChannelArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A test of an Android Application with a Test Loop. The intent \ will be implicitly added, since Games is the only user of this api, for the time being.
+ * 
+ */
 public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidTestLoopArgs Empty = new AndroidTestLoopArgs();
 
+    /**
+     * The APK for the application under test.
+     * 
+     */
     @InputImport(name="appApk")
     private final @Nullable Input<FileReferenceArgs> appApk;
 
@@ -25,6 +33,10 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
         return this.appApk == null ? Input.empty() : this.appApk;
     }
 
+    /**
+     * A multi-apk app bundle for the application under test.
+     * 
+     */
     @InputImport(name="appBundle")
     private final @Nullable Input<AppBundleArgs> appBundle;
 
@@ -32,6 +44,10 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
         return this.appBundle == null ? Input.empty() : this.appBundle;
     }
 
+    /**
+     * The java package for the application under test. The default is determined by examining the application's manifest.
+     * 
+     */
     @InputImport(name="appPackageId")
     private final @Nullable Input<String> appPackageId;
 
@@ -39,6 +55,10 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
         return this.appPackageId == null ? Input.empty() : this.appPackageId;
     }
 
+    /**
+     * The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application's manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
+     * 
+     */
     @InputImport(name="scenarioLabels")
     private final @Nullable Input<List<String>> scenarioLabels;
 
@@ -46,6 +66,10 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
         return this.scenarioLabels == null ? Input.empty() : this.scenarioLabels;
     }
 
+    /**
+     * The list of scenarios that should be run during the test. The default is all test loops, derived from the application's manifest.
+     * 
+     */
     @InputImport(name="scenarios")
     private final @Nullable Input<List<Integer>> scenarios;
 

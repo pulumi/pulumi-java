@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatastoreIODetailsResponse {
+    /**
+     * Namespace used in the connection.
+     * 
+     */
     private final String namespace;
+    /**
+     * ProjectId accessed in the connection.
+     * 
+     */
     private final String project;
 
     @OutputCustomType.Constructor({"namespace","project"})
@@ -20,9 +28,17 @@ public final class DatastoreIODetailsResponse {
         this.project = Objects.requireNonNull(project);
     }
 
+    /**
+     * Namespace used in the connection.
+     * 
+     */
     public String getNamespace() {
         return this.namespace;
     }
+    /**
+     * ProjectId accessed in the connection.
+     * 
+     */
     public String getProject() {
         return this.project;
     }

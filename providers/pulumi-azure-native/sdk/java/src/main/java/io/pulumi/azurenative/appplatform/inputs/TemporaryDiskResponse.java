@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Temporary disk payload
+ * 
+ */
 public final class TemporaryDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TemporaryDiskResponse Empty = new TemporaryDiskResponse();
 
+    /**
+     * Mount path of the temporary disk
+     * 
+     */
     @InputImport(name="mountPath")
     private final @Nullable String mountPath;
 
@@ -22,6 +30,10 @@ public final class TemporaryDiskResponse extends io.pulumi.resources.InvokeArgs 
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
     }
 
+    /**
+     * Size of the temporary disk in GB
+     * 
+     */
     @InputImport(name="sizeInGB")
     private final @Nullable Integer sizeInGB;
 

@@ -16,6 +16,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadGroupArgs Empty = new WorkloadGroupArgs();
 
+    /**
+     * The name of the database.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -23,6 +27,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName;
     }
 
+    /**
+     * The workload group importance level.
+     * 
+     */
     @InputImport(name="importance")
     private final @Nullable Input<String> importance;
 
@@ -30,6 +38,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.importance == null ? Input.empty() : this.importance;
     }
 
+    /**
+     * The workload group cap percentage resource.
+     * 
+     */
     @InputImport(name="maxResourcePercent", required=true)
     private final Input<Integer> maxResourcePercent;
 
@@ -37,6 +49,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxResourcePercent;
     }
 
+    /**
+     * The workload group request maximum grant percentage.
+     * 
+     */
     @InputImport(name="maxResourcePercentPerRequest")
     private final @Nullable Input<Double> maxResourcePercentPerRequest;
 
@@ -44,6 +60,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxResourcePercentPerRequest == null ? Input.empty() : this.maxResourcePercentPerRequest;
     }
 
+    /**
+     * The workload group minimum percentage resource.
+     * 
+     */
     @InputImport(name="minResourcePercent", required=true)
     private final Input<Integer> minResourcePercent;
 
@@ -51,6 +71,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.minResourcePercent;
     }
 
+    /**
+     * The workload group request minimum grant percentage.
+     * 
+     */
     @InputImport(name="minResourcePercentPerRequest", required=true)
     private final Input<Double> minResourcePercentPerRequest;
 
@@ -58,6 +82,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.minResourcePercentPerRequest;
     }
 
+    /**
+     * The workload group query execution timeout.
+     * 
+     */
     @InputImport(name="queryExecutionTimeout")
     private final @Nullable Input<Integer> queryExecutionTimeout;
 
@@ -65,6 +93,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryExecutionTimeout == null ? Input.empty() : this.queryExecutionTimeout;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -72,6 +104,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -79,6 +115,10 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * The name of the workload group.
+     * 
+     */
     @InputImport(name="workloadGroupName")
     private final @Nullable Input<String> workloadGroupName;
 

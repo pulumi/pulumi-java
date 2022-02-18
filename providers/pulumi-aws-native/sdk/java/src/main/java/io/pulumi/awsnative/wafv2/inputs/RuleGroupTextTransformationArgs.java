@@ -10,6 +10,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Text Transformation on the Search String before match.
+ * 
+ */
 public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupTextTransformationArgs Empty = new RuleGroupTextTransformationArgs();

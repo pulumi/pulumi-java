@@ -13,69 +13,182 @@ import io.pulumi.googlenative.storage_v1.outputs.BucketAccessControlProjectTeamR
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new ACL entry on the specified bucket.
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:storage/v1:BucketAccessControl")
 public class BucketAccessControl extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the bucket.
+     * 
+     */
     @OutputExport(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public Output<String> getBucket() {
         return this.bucket;
     }
+    /**
+     * The domain associated with the entity, if any.
+     * 
+     */
     @OutputExport(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
+    /**
+     * @return The domain associated with the entity, if any.
+     * 
+     */
     public Output<String> getDomain() {
         return this.domain;
     }
+    /**
+     * The email address associated with the entity, if any.
+     * 
+     */
     @OutputExport(name="email", type=String.class, parameters={})
     private Output<String> email;
 
+    /**
+     * @return The email address associated with the entity, if any.
+     * 
+     */
     public Output<String> getEmail() {
         return this.email;
     }
+    /**
+     * The entity holding the permission, in one of the following forms:
+     * - user-userId
+     * - user-email
+     * - group-groupId
+     * - group-email
+     * - domain-domain
+     * - project-team-projectId
+     * - allUsers
+     * - allAuthenticatedUsers Examples:
+     * - The user liz@example.com would be user-liz@example.com.
+     * - The group example@googlegroups.com would be group-example@googlegroups.com.
+     * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+     * 
+     */
     @OutputExport(name="entity", type=String.class, parameters={})
     private Output<String> entity;
 
+    /**
+     * @return The entity holding the permission, in one of the following forms:
+     * - user-userId
+     * - user-email
+     * - group-groupId
+     * - group-email
+     * - domain-domain
+     * - project-team-projectId
+     * - allUsers
+     * - allAuthenticatedUsers Examples:
+     * - The user liz@example.com would be user-liz@example.com.
+     * - The group example@googlegroups.com would be group-example@googlegroups.com.
+     * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+     * 
+     */
     public Output<String> getEntity() {
         return this.entity;
     }
+    /**
+     * The ID for the entity, if any.
+     * 
+     */
     @OutputExport(name="entityId", type=String.class, parameters={})
     private Output<String> entityId;
 
+    /**
+     * @return The ID for the entity, if any.
+     * 
+     */
     public Output<String> getEntityId() {
         return this.entityId;
     }
+    /**
+     * HTTP 1.1 Entity tag for the access-control entry.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return HTTP 1.1 Entity tag for the access-control entry.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The project team associated with the entity, if any.
+     * 
+     */
     @OutputExport(name="projectTeam", type=BucketAccessControlProjectTeamResponse.class, parameters={})
     private Output<BucketAccessControlProjectTeamResponse> projectTeam;
 
+    /**
+     * @return The project team associated with the entity, if any.
+     * 
+     */
     public Output<BucketAccessControlProjectTeamResponse> getProjectTeam() {
         return this.projectTeam;
     }
+    /**
+     * The access permission for the entity.
+     * 
+     */
     @OutputExport(name="role", type=String.class, parameters={})
     private Output<String> role;
 
+    /**
+     * @return The access permission for the entity.
+     * 
+     */
     public Output<String> getRole() {
         return this.role;
     }
+    /**
+     * The link to this access-control entry.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The link to this access-control entry.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BucketAccessControl(String name, BucketAccessControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:storage/v1:BucketAccessControl", name, args == null ? BucketAccessControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -91,6 +204,14 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BucketAccessControl get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BucketAccessControl(name, id, options);
     }

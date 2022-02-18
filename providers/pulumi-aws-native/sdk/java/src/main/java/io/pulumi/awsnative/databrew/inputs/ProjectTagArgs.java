@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class ProjectTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectTagArgs Empty = new ProjectTagArgs();

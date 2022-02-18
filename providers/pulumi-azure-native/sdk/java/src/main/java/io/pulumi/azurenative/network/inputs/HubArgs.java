@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hub Item.
+ * 
+ */
 public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HubArgs Empty = new HubArgs();
 
+    /**
+     * Resource Id.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -21,6 +29,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
+    /**
+     * Resource Type.
+     * 
+     */
     @InputImport(name="resourceType")
     private final @Nullable Input<String> resourceType;
 

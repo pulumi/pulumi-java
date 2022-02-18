@@ -16,6 +16,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
 
     public static final AutoscalerAutoscalingPolicyScalingScheduleGetArgs Empty = new AutoscalerAutoscalingPolicyScalingScheduleGetArgs();
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -30,6 +38,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+     * 
+     */
     @InputImport(name="durationSec", required=true)
     private final Input<Integer> durationSec;
 
@@ -37,6 +49,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
         return this.durationSec;
     }
 
+    /**
+     * Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+     * 
+     */
     @InputImport(name="minRequiredReplicas", required=true)
     private final Input<Integer> minRequiredReplicas;
 
@@ -44,6 +60,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
         return this.minRequiredReplicas;
     }
 
+    /**
+     * The identifier for this object. Format specified above.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -51,6 +71,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
         return this.name;
     }
 
+    /**
+     * The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+     * 
+     */
     @InputImport(name="schedule", required=true)
     private final Input<String> schedule;
 
@@ -58,6 +82,10 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
         return this.schedule;
     }
 
+    /**
+     * The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * 
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

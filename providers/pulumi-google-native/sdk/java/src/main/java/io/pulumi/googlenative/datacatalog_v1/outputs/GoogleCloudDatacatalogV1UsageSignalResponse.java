@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1UsageSignalResponse {
+    /**
+     * The end timestamp of the duration of usage statistics.
+     * 
+     */
     private final String updateTime;
+    /**
+     * Usage statistics over each of the predefined time ranges. Supported time ranges are `{"24H", "7D", "30D"}`.
+     * 
+     */
     private final Map<String,String> usageWithinTimeRange;
 
     @OutputCustomType.Constructor({"updateTime","usageWithinTimeRange"})
@@ -21,9 +29,17 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
         this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
     }
 
+    /**
+     * The end timestamp of the duration of usage statistics.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Usage statistics over each of the predefined time ranges. Supported time ranges are `{"24H", "7D", "30D"}`.
+     * 
+     */
     public Map<String,String> getUsageWithinTimeRange() {
         return this.usageWithinTimeRange;
     }

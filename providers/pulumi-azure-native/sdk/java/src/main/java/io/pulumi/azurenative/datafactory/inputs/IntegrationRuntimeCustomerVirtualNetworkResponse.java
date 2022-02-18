@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition and properties of virtual network to which Azure-SSIS integration runtime will join.
+ * 
+ */
 public final class IntegrationRuntimeCustomerVirtualNetworkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IntegrationRuntimeCustomerVirtualNetworkResponse Empty = new IntegrationRuntimeCustomerVirtualNetworkResponse();
 
+    /**
+     * The ID of subnet to which Azure-SSIS integration runtime will join.
+     * 
+     */
     @InputImport(name="subnetId")
     private final @Nullable String subnetId;
 

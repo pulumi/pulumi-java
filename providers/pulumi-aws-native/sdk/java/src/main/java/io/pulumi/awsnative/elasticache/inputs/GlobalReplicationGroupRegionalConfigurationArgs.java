@@ -16,6 +16,10 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
 
     public static final GlobalReplicationGroupRegionalConfigurationArgs Empty = new GlobalReplicationGroupRegionalConfigurationArgs();
 
+    /**
+     * The replication group id of the Global Datastore member.
+     * 
+     */
     @InputImport(name="replicationGroupId")
     private final @Nullable Input<String> replicationGroupId;
 
@@ -23,6 +27,10 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
         return this.replicationGroupId == null ? Input.empty() : this.replicationGroupId;
     }
 
+    /**
+     * The AWS region of the Global Datastore member.
+     * 
+     */
     @InputImport(name="replicationGroupRegion")
     private final @Nullable Input<String> replicationGroupRegion;
 
@@ -30,6 +38,10 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
         return this.replicationGroupRegion == null ? Input.empty() : this.replicationGroupRegion;
     }
 
+    /**
+     * A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
+     * 
+     */
     @InputImport(name="reshardingConfigurations")
     private final @Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
 

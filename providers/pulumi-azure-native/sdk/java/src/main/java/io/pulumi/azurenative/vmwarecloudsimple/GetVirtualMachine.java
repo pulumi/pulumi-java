@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachine {
+/**
+ * Virtual machine model
+ * API Version: 2019-04-01.
+ * 
+ *
+ * Virtual machine model
+ * 
+ */
     public static CompletableFuture<GetVirtualMachineResult> invokeAsync(GetVirtualMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:vmwarecloudsimple:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args == null ? GetVirtualMachineArgs.Empty : args, Utilities.withVersion(options));
     }

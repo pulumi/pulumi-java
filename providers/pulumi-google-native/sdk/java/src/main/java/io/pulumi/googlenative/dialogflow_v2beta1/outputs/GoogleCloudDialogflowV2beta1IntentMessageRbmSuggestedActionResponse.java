@@ -12,10 +12,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse {
+    /**
+     * Suggested client side action: Dial a phone number
+     * 
+     */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial;
+    /**
+     * Suggested client side action: Open a URI on device
+     * 
+     */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl;
+    /**
+     * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
+     * 
+     */
     private final String postbackData;
+    /**
+     * Suggested client side action: Share user location
+     * 
+     */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation;
+    /**
+     * Text to display alongside the action.
+     * 
+     */
     private final String text;
 
     @OutputCustomType.Constructor({"dial","openUrl","postbackData","shareLocation","text"})
@@ -32,18 +52,38 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
         this.text = Objects.requireNonNull(text);
     }
 
+    /**
+     * Suggested client side action: Dial a phone number
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse getDial() {
         return this.dial;
     }
+    /**
+     * Suggested client side action: Open a URI on device
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse getOpenUrl() {
         return this.openUrl;
     }
+    /**
+     * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
+     * 
+     */
     public String getPostbackData() {
         return this.postbackData;
     }
+    /**
+     * Suggested client side action: Share user location
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse getShareLocation() {
         return this.shareLocation;
     }
+    /**
+     * Text to display alongside the action.
+     * 
+     */
     public String getText() {
         return this.text;
     }

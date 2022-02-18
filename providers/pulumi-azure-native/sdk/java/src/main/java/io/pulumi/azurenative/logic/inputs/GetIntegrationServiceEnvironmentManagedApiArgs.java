@@ -12,6 +12,10 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
 
     public static final GetIntegrationServiceEnvironmentManagedApiArgs Empty = new GetIntegrationServiceEnvironmentManagedApiArgs();
 
+    /**
+     * The api name.
+     * 
+     */
     @InputImport(name="apiName", required=true)
     private final String apiName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
         return this.apiName;
     }
 
+    /**
+     * The integration service environment name.
+     * 
+     */
     @InputImport(name="integrationServiceEnvironmentName", required=true)
     private final String integrationServiceEnvironmentName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
         return this.integrationServiceEnvironmentName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroup", required=true)
     private final String resourceGroup;
 

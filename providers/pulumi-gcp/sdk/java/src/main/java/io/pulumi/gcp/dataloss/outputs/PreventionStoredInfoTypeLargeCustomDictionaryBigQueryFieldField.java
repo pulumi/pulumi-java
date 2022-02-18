@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField {
+    /**
+     * Name describing the field.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFie
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Name describing the field.
+     * 
+     */
     public String getName() {
         return this.name;
     }

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class URLMapDefaultRouteActionRequestMirrorPolicy {
+    /**
+     * The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     private final String backendService;
 
     @OutputCustomType.Constructor({"backendService"})
@@ -16,6 +20,10 @@ public final class URLMapDefaultRouteActionRequestMirrorPolicy {
         this.backendService = Objects.requireNonNull(backendService);
     }
 
+    /**
+     * The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     public String getBackendService() {
         return this.backendService;
     }

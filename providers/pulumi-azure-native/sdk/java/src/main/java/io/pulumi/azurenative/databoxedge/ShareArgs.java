@@ -24,6 +24,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ShareArgs Empty = new ShareArgs();
 
+    /**
+     * Access protocol to be used by the share.
+     * 
+     */
     @InputImport(name="accessProtocol", required=true)
     private final Input<Either<String,ShareAccessProtocol>> accessProtocol;
 
@@ -31,6 +35,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessProtocol;
     }
 
+    /**
+     * Azure container mapping for the share.
+     * 
+     */
     @InputImport(name="azureContainerInfo")
     private final @Nullable Input<AzureContainerInfoArgs> azureContainerInfo;
 
@@ -38,6 +46,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureContainerInfo == null ? Input.empty() : this.azureContainerInfo;
     }
 
+    /**
+     * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+     * 
+     */
     @InputImport(name="clientAccessRights")
     private final @Nullable Input<List<ClientAccessRightArgs>> clientAccessRights;
 
@@ -45,6 +57,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientAccessRights == null ? Input.empty() : this.clientAccessRights;
     }
 
+    /**
+     * Data policy of the share.
+     * 
+     */
     @InputImport(name="dataPolicy")
     private final @Nullable Input<Either<String,DataPolicy>> dataPolicy;
 
@@ -52,6 +68,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataPolicy == null ? Input.empty() : this.dataPolicy;
     }
 
+    /**
+     * Description for the share.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -59,6 +79,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -66,6 +90,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
+    /**
+     * Current monitoring status of the share.
+     * 
+     */
     @InputImport(name="monitoringStatus", required=true)
     private final Input<Either<String,MonitoringStatus>> monitoringStatus;
 
@@ -73,6 +101,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitoringStatus;
     }
 
+    /**
+     * The share name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -80,6 +112,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Details of the refresh job on this share.
+     * 
+     */
     @InputImport(name="refreshDetails")
     private final @Nullable Input<RefreshDetailsArgs> refreshDetails;
 
@@ -87,6 +123,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.refreshDetails == null ? Input.empty() : this.refreshDetails;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -94,6 +134,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Current status of the share.
+     * 
+     */
     @InputImport(name="shareStatus", required=true)
     private final Input<Either<String,ShareStatus>> shareStatus;
 
@@ -101,6 +145,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareStatus;
     }
 
+    /**
+     * Mapping of users and corresponding access rights on the share (required for SMB protocol).
+     * 
+     */
     @InputImport(name="userAccessRights")
     private final @Nullable Input<List<UserAccessRightArgs>> userAccessRights;
 

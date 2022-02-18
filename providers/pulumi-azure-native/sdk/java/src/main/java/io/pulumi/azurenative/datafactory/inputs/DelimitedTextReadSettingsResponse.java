@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Delimited text read settings.
+ * 
+ */
 public final class DelimitedTextReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DelimitedTextReadSettingsResponse Empty = new DelimitedTextReadSettingsResponse();
 
+    /**
+     * Compression settings.
+     * 
+     */
     @InputImport(name="compressionProperties")
     private final @Nullable Object compressionProperties;
 
@@ -25,6 +33,10 @@ public final class DelimitedTextReadSettingsResponse extends io.pulumi.resources
         return this.compressionProperties == null ? null : this.compressionProperties;
     }
 
+    /**
+     * Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="skipLineCount")
     private final @Nullable Object skipLineCount;
 
@@ -32,6 +44,11 @@ public final class DelimitedTextReadSettingsResponse extends io.pulumi.resources
         return this.skipLineCount == null ? Optional.empty() : Optional.ofNullable(this.skipLineCount);
     }
 
+    /**
+     * The read setting type.
+     * Expected value is 'DelimitedTextReadSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

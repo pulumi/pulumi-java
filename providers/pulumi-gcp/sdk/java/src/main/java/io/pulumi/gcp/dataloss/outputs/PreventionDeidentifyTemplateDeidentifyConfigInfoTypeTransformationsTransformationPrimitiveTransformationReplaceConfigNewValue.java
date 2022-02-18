@@ -16,13 +16,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue {
+    /**
+     * A boolean value.
+     * 
+     */
     private final @Nullable Boolean booleanValue;
+    /**
+     * Represents a whole or partial calendar date.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue;
+    /**
+     * Represents a day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     private final @Nullable String dayOfWeekValue;
+    /**
+     * A float value.
+     * 
+     */
     private final @Nullable Double floatValue;
+    /**
+     * An integer value.
+     * 
+     */
     private final @Nullable Integer integerValue;
+    /**
+     * A string value.
+     * 
+     */
     private final @Nullable String stringValue;
+    /**
+     * Represents a time of day.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue;
+    /**
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
+     * Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String timestampValue;
 
     @OutputCustomType.Constructor({"booleanValue","dateValue","dayOfWeekValue","floatValue","integerValue","stringValue","timeValue","timestampValue"})
@@ -45,27 +81,63 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.timestampValue = timestampValue;
     }
 
+    /**
+     * A boolean value.
+     * 
+     */
     public Optional<Boolean> getBooleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
+    /**
+     * Represents a whole or partial calendar date.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue> getDateValue() {
         return Optional.ofNullable(this.dateValue);
     }
+    /**
+     * Represents a day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     public Optional<String> getDayOfWeekValue() {
         return Optional.ofNullable(this.dayOfWeekValue);
     }
+    /**
+     * A float value.
+     * 
+     */
     public Optional<Double> getFloatValue() {
         return Optional.ofNullable(this.floatValue);
     }
+    /**
+     * An integer value.
+     * 
+     */
     public Optional<Integer> getIntegerValue() {
         return Optional.ofNullable(this.integerValue);
     }
+    /**
+     * A string value.
+     * 
+     */
     public Optional<String> getStringValue() {
         return Optional.ofNullable(this.stringValue);
     }
+    /**
+     * Represents a time of day.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue> getTimeValue() {
         return Optional.ofNullable(this.timeValue);
     }
+    /**
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
+     * Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getTimestampValue() {
         return Optional.ofNullable(this.timestampValue);
     }

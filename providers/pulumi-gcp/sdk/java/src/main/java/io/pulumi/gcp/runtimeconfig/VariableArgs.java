@@ -14,6 +14,11 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VariableArgs Empty = new VariableArgs();
 
+    /**
+     * The name of the variable to manage. Note that variable
+     * names can be hierarchical using slashes (e.g. "prod-variables/hostname").
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +26,11 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the RuntimeConfig resource containing this
+     * variable.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -28,6 +38,11 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -35,6 +50,13 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * or `value` - (Required) The content to associate with the variable.
+     * Exactly one of `text` or `variable` must be specified. If `text` is specified,
+     * it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
+     * is specified, it must be base64 encoded and less than 4096 bytes in length.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<String> text;
 

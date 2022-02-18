@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IncidentAdditionalDataResponse {
+    /**
+     * List of product names of alerts in the incident
+     * 
+     */
     private final List<String> alertProductNames;
+    /**
+     * The number of alerts in the incident
+     * 
+     */
     private final Integer alertsCount;
+    /**
+     * The number of bookmarks in the incident
+     * 
+     */
     private final Integer bookmarksCount;
+    /**
+     * The number of comments in the incident
+     * 
+     */
     private final Integer commentsCount;
+    /**
+     * The tactics associated with incident
+     * 
+     */
     private final List<String> tactics;
 
     @OutputCustomType.Constructor({"alertProductNames","alertsCount","bookmarksCount","commentsCount","tactics"})
@@ -31,18 +51,38 @@ public final class IncidentAdditionalDataResponse {
         this.tactics = Objects.requireNonNull(tactics);
     }
 
+    /**
+     * List of product names of alerts in the incident
+     * 
+     */
     public List<String> getAlertProductNames() {
         return this.alertProductNames;
     }
+    /**
+     * The number of alerts in the incident
+     * 
+     */
     public Integer getAlertsCount() {
         return this.alertsCount;
     }
+    /**
+     * The number of bookmarks in the incident
+     * 
+     */
     public Integer getBookmarksCount() {
         return this.bookmarksCount;
     }
+    /**
+     * The number of comments in the incident
+     * 
+     */
     public Integer getCommentsCount() {
         return this.commentsCount;
     }
+    /**
+     * The tactics associated with incident
+     * 
+     */
     public List<String> getTactics() {
         return this.tactics;
     }

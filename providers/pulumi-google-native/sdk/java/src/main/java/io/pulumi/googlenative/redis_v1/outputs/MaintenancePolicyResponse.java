@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MaintenancePolicyResponse {
+    /**
+     * The time when the policy was created.
+     * 
+     */
     private final String createTime;
+    /**
+     * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
+     * 
+     */
     private final String description;
+    /**
+     * The time when the policy was last updated.
+     * 
+     */
     private final String updateTime;
+    /**
+     * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+     * 
+     */
     private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
 
     @OutputCustomType.Constructor({"createTime","description","updateTime","weeklyMaintenanceWindow"})
@@ -28,15 +44,31 @@ public final class MaintenancePolicyResponse {
         this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
     }
 
+    /**
+     * The time when the policy was created.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The time when the policy was last updated.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+     * 
+     */
     public List<WeeklyMaintenanceWindowResponse> getWeeklyMaintenanceWindow() {
         return this.weeklyMaintenanceWindow;
     }

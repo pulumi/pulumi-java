@@ -14,6 +14,11 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ConnectorSubnetArgs Empty = new ConnectorSubnetArgs();
 
+    /**
+     * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+     * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +26,10 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+     * 
+     */
     @InputImport(name="projectId")
     private final @Nullable Input<String> projectId;
 

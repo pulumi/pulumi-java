@@ -14,6 +14,10 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiPolicyArgs Empty = new GetApiPolicyArgs();
 
+    /**
+     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -21,6 +25,10 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiId;
     }
 
+    /**
+     * Policy Export Format.
+     * 
+     */
     @InputImport(name="format")
     private final @Nullable String format;
 
@@ -28,6 +36,10 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
+    /**
+     * The identifier of the Policy.
+     * 
+     */
     @InputImport(name="policyId", required=true)
     private final String policyId;
 
@@ -35,6 +47,10 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.policyId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

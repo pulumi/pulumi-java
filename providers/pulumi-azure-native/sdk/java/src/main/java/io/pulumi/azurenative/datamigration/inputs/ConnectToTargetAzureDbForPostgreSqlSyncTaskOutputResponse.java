@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Output for the task that validates connection to Azure Database for PostgreSQL and target server requirements
+ * 
+ */
 public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse Empty = new ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse();
 
+    /**
+     * List of databases on target server
+     * 
+     */
     @InputImport(name="databases", required=true)
     private final List<String> databases;
 
@@ -21,6 +29,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
         return this.databases;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,6 +40,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
         return this.id;
     }
 
+    /**
+     * Target server brand version
+     * 
+     */
     @InputImport(name="targetServerBrandVersion", required=true)
     private final String targetServerBrandVersion;
 
@@ -35,6 +51,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
         return this.targetServerBrandVersion;
     }
 
+    /**
+     * Version of the target server
+     * 
+     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 
@@ -42,6 +62,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
         return this.targetServerVersion;
     }
 
+    /**
+     * Validation errors associated with the task
+     * 
+     */
     @InputImport(name="validationErrors", required=true)
     private final List<ReportableExceptionResponse> validationErrors;
 

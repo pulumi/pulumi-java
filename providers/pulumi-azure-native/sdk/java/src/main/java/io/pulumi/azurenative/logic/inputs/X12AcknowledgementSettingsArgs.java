@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The X12 agreement acknowledgement settings.
+ * 
+ */
 public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final X12AcknowledgementSettingsArgs Empty = new X12AcknowledgementSettingsArgs();
 
+    /**
+     * The acknowledgement control number lower bound.
+     * 
+     */
     @InputImport(name="acknowledgementControlNumberLowerBound", required=true)
     private final Input<Integer> acknowledgementControlNumberLowerBound;
 
@@ -23,6 +31,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.acknowledgementControlNumberLowerBound;
     }
 
+    /**
+     * The acknowledgement control number prefix.
+     * 
+     */
     @InputImport(name="acknowledgementControlNumberPrefix")
     private final @Nullable Input<String> acknowledgementControlNumberPrefix;
 
@@ -30,6 +42,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.acknowledgementControlNumberPrefix == null ? Input.empty() : this.acknowledgementControlNumberPrefix;
     }
 
+    /**
+     * The acknowledgement control number suffix.
+     * 
+     */
     @InputImport(name="acknowledgementControlNumberSuffix")
     private final @Nullable Input<String> acknowledgementControlNumberSuffix;
 
@@ -37,6 +53,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.acknowledgementControlNumberSuffix == null ? Input.empty() : this.acknowledgementControlNumberSuffix;
     }
 
+    /**
+     * The acknowledgement control number upper bound.
+     * 
+     */
     @InputImport(name="acknowledgementControlNumberUpperBound", required=true)
     private final Input<Integer> acknowledgementControlNumberUpperBound;
 
@@ -44,6 +64,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.acknowledgementControlNumberUpperBound;
     }
 
+    /**
+     * The value indicating whether to batch functional acknowledgements.
+     * 
+     */
     @InputImport(name="batchFunctionalAcknowledgements", required=true)
     private final Input<Boolean> batchFunctionalAcknowledgements;
 
@@ -51,6 +75,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.batchFunctionalAcknowledgements;
     }
 
+    /**
+     * The value indicating whether to batch implementation acknowledgements.
+     * 
+     */
     @InputImport(name="batchImplementationAcknowledgements", required=true)
     private final Input<Boolean> batchImplementationAcknowledgements;
 
@@ -58,6 +86,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.batchImplementationAcknowledgements;
     }
 
+    /**
+     * The value indicating whether to batch the technical acknowledgements.
+     * 
+     */
     @InputImport(name="batchTechnicalAcknowledgements", required=true)
     private final Input<Boolean> batchTechnicalAcknowledgements;
 
@@ -65,6 +97,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.batchTechnicalAcknowledgements;
     }
 
+    /**
+     * The functional acknowledgement version.
+     * 
+     */
     @InputImport(name="functionalAcknowledgementVersion")
     private final @Nullable Input<String> functionalAcknowledgementVersion;
 
@@ -72,6 +108,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.functionalAcknowledgementVersion == null ? Input.empty() : this.functionalAcknowledgementVersion;
     }
 
+    /**
+     * The implementation acknowledgement version.
+     * 
+     */
     @InputImport(name="implementationAcknowledgementVersion")
     private final @Nullable Input<String> implementationAcknowledgementVersion;
 
@@ -79,6 +119,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.implementationAcknowledgementVersion == null ? Input.empty() : this.implementationAcknowledgementVersion;
     }
 
+    /**
+     * The value indicating whether functional acknowledgement is needed.
+     * 
+     */
     @InputImport(name="needFunctionalAcknowledgement", required=true)
     private final Input<Boolean> needFunctionalAcknowledgement;
 
@@ -86,6 +130,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.needFunctionalAcknowledgement;
     }
 
+    /**
+     * The value indicating whether implementation acknowledgement is needed.
+     * 
+     */
     @InputImport(name="needImplementationAcknowledgement", required=true)
     private final Input<Boolean> needImplementationAcknowledgement;
 
@@ -93,6 +141,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.needImplementationAcknowledgement;
     }
 
+    /**
+     * The value indicating whether a loop is needed for valid messages.
+     * 
+     */
     @InputImport(name="needLoopForValidMessages", required=true)
     private final Input<Boolean> needLoopForValidMessages;
 
@@ -100,6 +152,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.needLoopForValidMessages;
     }
 
+    /**
+     * The value indicating whether technical acknowledgement is needed.
+     * 
+     */
     @InputImport(name="needTechnicalAcknowledgement", required=true)
     private final Input<Boolean> needTechnicalAcknowledgement;
 
@@ -107,6 +163,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.needTechnicalAcknowledgement;
     }
 
+    /**
+     * The value indicating whether to rollover acknowledgement control number.
+     * 
+     */
     @InputImport(name="rolloverAcknowledgementControlNumber", required=true)
     private final Input<Boolean> rolloverAcknowledgementControlNumber;
 
@@ -114,6 +174,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
         return this.rolloverAcknowledgementControlNumber;
     }
 
+    /**
+     * The value indicating whether to send synchronous acknowledgement.
+     * 
+     */
     @InputImport(name="sendSynchronousAcknowledgement", required=true)
     private final Input<Boolean> sendSynchronousAcknowledgement;
 

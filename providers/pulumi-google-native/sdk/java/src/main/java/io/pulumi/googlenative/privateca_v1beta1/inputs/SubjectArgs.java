@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subject describes parts of a distinguished name that, in turn, describes the subject of the certificate.
+ * 
+ */
 public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubjectArgs Empty = new SubjectArgs();
 
+    /**
+     * The country code of the subject.
+     * 
+     */
     @InputImport(name="countryCode")
     private final @Nullable Input<String> countryCode;
 
@@ -21,6 +29,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.countryCode == null ? Input.empty() : this.countryCode;
     }
 
+    /**
+     * The locality or city of the subject.
+     * 
+     */
     @InputImport(name="locality")
     private final @Nullable Input<String> locality;
 
@@ -28,6 +40,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.locality == null ? Input.empty() : this.locality;
     }
 
+    /**
+     * The organization of the subject.
+     * 
+     */
     @InputImport(name="organization")
     private final @Nullable Input<String> organization;
 
@@ -35,6 +51,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.organization == null ? Input.empty() : this.organization;
     }
 
+    /**
+     * The organizational_unit of the subject.
+     * 
+     */
     @InputImport(name="organizationalUnit")
     private final @Nullable Input<String> organizationalUnit;
 
@@ -42,6 +62,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
     }
 
+    /**
+     * The postal code of the subject.
+     * 
+     */
     @InputImport(name="postalCode")
     private final @Nullable Input<String> postalCode;
 
@@ -49,6 +73,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.postalCode == null ? Input.empty() : this.postalCode;
     }
 
+    /**
+     * The province, territory, or regional state of the subject.
+     * 
+     */
     @InputImport(name="province")
     private final @Nullable Input<String> province;
 
@@ -56,6 +84,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.province == null ? Input.empty() : this.province;
     }
 
+    /**
+     * The street address of the subject.
+     * 
+     */
     @InputImport(name="streetAddress")
     private final @Nullable Input<String> streetAddress;
 

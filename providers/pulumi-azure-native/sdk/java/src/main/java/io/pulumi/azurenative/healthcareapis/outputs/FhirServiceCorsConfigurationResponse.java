@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FhirServiceCorsConfigurationResponse {
+    /**
+     * If credentials are allowed via CORS.
+     * 
+     */
     private final @Nullable Boolean allowCredentials;
+    /**
+     * The headers to be allowed via CORS.
+     * 
+     */
     private final @Nullable List<String> headers;
+    /**
+     * The max age to be allowed via CORS.
+     * 
+     */
     private final @Nullable Integer maxAge;
+    /**
+     * The methods to be allowed via CORS.
+     * 
+     */
     private final @Nullable List<String> methods;
+    /**
+     * The origins to be allowed via CORS.
+     * 
+     */
     private final @Nullable List<String> origins;
 
     @OutputCustomType.Constructor({"allowCredentials","headers","maxAge","methods","origins"})
@@ -34,18 +54,38 @@ public final class FhirServiceCorsConfigurationResponse {
         this.origins = origins;
     }
 
+    /**
+     * If credentials are allowed via CORS.
+     * 
+     */
     public Optional<Boolean> getAllowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
+    /**
+     * The headers to be allowed via CORS.
+     * 
+     */
     public List<String> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
+    /**
+     * The max age to be allowed via CORS.
+     * 
+     */
     public Optional<Integer> getMaxAge() {
         return Optional.ofNullable(this.maxAge);
     }
+    /**
+     * The methods to be allowed via CORS.
+     * 
+     */
     public List<String> getMethods() {
         return this.methods == null ? List.of() : this.methods;
     }
+    /**
+     * The origins to be allowed via CORS.
+     * 
+     */
     public List<String> getOrigins() {
         return this.origins == null ? List.of() : this.origins;
     }

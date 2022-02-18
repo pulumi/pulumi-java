@@ -15,6 +15,10 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
 
     public static final NamespaceAuthorizationRuleArgs Empty = new NamespaceAuthorizationRuleArgs();
 
+    /**
+     * Authorization Rule Name.
+     * 
+     */
     @InputImport(name="authorizationRuleName")
     private final @Nullable Input<String> authorizationRuleName;
 
@@ -22,6 +26,10 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
     }
 
+    /**
+     * The namespace name.
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -29,6 +37,10 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
         return this.namespaceName;
     }
 
+    /**
+     * Properties of the Namespace AuthorizationRules.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<SharedAccessAuthorizationRulePropertiesArgs> properties;
 
@@ -36,6 +48,10 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
         return this.properties;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

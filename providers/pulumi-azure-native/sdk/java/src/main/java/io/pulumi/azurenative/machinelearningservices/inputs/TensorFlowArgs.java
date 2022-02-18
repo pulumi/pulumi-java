@@ -11,10 +11,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * TensorFlow distribution configuration.
+ * 
+ */
 public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TensorFlowArgs Empty = new TensorFlowArgs();
 
+    /**
+     * Enum to determine the job distribution type.
+     * Expected value is 'TensorFlow'.
+     * 
+     */
     @InputImport(name="distributionType", required=true)
     private final Input<String> distributionType;
 
@@ -22,6 +31,10 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.distributionType;
     }
 
+    /**
+     * Number of parameter server tasks.
+     * 
+     */
     @InputImport(name="parameterServerCount")
     private final @Nullable Input<Integer> parameterServerCount;
 
@@ -29,6 +42,10 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameterServerCount == null ? Input.empty() : this.parameterServerCount;
     }
 
+    /**
+     * Number of workers. Overwrites the node count in compute binding.
+     * 
+     */
     @InputImport(name="workerCount")
     private final @Nullable Input<Integer> workerCount;
 

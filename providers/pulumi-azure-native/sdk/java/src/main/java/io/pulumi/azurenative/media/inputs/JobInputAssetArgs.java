@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents an Asset for input into a Job.
+ * 
+ */
 public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobInputAssetArgs Empty = new JobInputAssetArgs();
 
+    /**
+     * The name of the input Asset.
+     * 
+     */
     @InputImport(name="assetName", required=true)
     private final Input<String> assetName;
 
@@ -29,6 +37,10 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetName;
     }
 
+    /**
+     * Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+     * 
+     */
     @InputImport(name="end")
     private final @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
 
@@ -36,6 +48,10 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.end == null ? Input.empty() : this.end;
     }
 
+    /**
+     * List of files. Required for JobInputHttp. Maximum of 4000 characters each.
+     * 
+     */
     @InputImport(name="files")
     private final @Nullable Input<List<String>> files;
 
@@ -43,6 +59,10 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.files == null ? Input.empty() : this.files;
     }
 
+    /**
+     * Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+     * 
+     */
     @InputImport(name="inputDefinitions")
     private final @Nullable Input<List<Object>> inputDefinitions;
 
@@ -50,6 +70,10 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputDefinitions == null ? Input.empty() : this.inputDefinitions;
     }
 
+    /**
+     * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -57,6 +81,11 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.JobInputAsset'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -64,6 +93,10 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.odataType;
     }
 
+    /**
+     * Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+     * 
+     */
     @InputImport(name="start")
     private final @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 

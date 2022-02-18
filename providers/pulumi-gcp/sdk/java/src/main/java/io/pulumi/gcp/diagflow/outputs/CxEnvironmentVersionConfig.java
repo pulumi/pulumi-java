@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CxEnvironmentVersionConfig {
+    /**
+     * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"version"})
@@ -16,6 +20,10 @@ public final class CxEnvironmentVersionConfig {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

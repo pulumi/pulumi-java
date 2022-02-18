@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppRelayServiceConnection {
+/**
+ * Hybrid Connection for an App Service app.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Hybrid Connection for an App Service app.
+ * 
+ */
     public static CompletableFuture<GetWebAppRelayServiceConnectionResult> invokeAsync(GetWebAppRelayServiceConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppRelayServiceConnection", TypeShape.of(GetWebAppRelayServiceConnectionResult.class), args == null ? GetWebAppRelayServiceConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

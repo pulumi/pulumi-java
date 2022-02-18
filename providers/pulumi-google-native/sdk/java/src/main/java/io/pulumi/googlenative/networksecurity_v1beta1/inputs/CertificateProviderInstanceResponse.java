@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specification of a TLS certificate provider instance. Workloads may have one or more CertificateProvider instances (plugins) and one of them is enabled and configured by specifying this message. Workloads use the values from this message to locate and load the CertificateProvider instance configuration.
+ * 
+ */
 public final class CertificateProviderInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateProviderInstanceResponse Empty = new CertificateProviderInstanceResponse();
 
+    /**
+     * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.
+     * 
+     */
     @InputImport(name="pluginInstance", required=true)
     private final String pluginInstance;
 

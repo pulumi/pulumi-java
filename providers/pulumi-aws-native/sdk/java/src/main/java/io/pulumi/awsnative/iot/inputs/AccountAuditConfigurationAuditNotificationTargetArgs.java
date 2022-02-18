@@ -15,6 +15,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
 
     public static final AccountAuditConfigurationAuditNotificationTargetArgs Empty = new AccountAuditConfigurationAuditNotificationTargetArgs();
 
+    /**
+     * True if notifications to the target are enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +26,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The ARN of the role that grants permission to send notifications to the target.
+     * 
+     */
     @InputImport(name="roleArn")
     private final @Nullable Input<String> roleArn;
 
@@ -29,6 +37,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
         return this.roleArn == null ? Input.empty() : this.roleArn;
     }
 
+    /**
+     * The ARN of the target (SNS topic) to which audit notifications are sent.
+     * 
+     */
     @InputImport(name="targetArn")
     private final @Nullable Input<String> targetArn;
 

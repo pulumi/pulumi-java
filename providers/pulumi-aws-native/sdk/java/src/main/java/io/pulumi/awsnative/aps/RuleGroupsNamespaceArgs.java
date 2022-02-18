@@ -16,6 +16,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
 
     public static final RuleGroupsNamespaceArgs Empty = new RuleGroupsNamespaceArgs();
 
+    /**
+     * The RuleGroupsNamespace data.
+     * 
+     */
     @InputImport(name="data", required=true)
     private final Input<String> data;
 
@@ -23,6 +27,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
         return this.data;
     }
 
+    /**
+     * The RuleGroupsNamespace name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags;
 
@@ -37,6 +49,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
+     * 
+     */
     @InputImport(name="workspace", required=true)
     private final Input<String> workspace;
 

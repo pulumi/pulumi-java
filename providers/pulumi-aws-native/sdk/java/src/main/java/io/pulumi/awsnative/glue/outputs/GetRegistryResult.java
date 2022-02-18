@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRegistryResult {
+    /**
+     * Amazon Resource Name for the created Registry.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * A description of the registry. If description is not provided, there will not be any default value for this.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * List of tags to tag the Registry
+     * 
+     */
     private final @Nullable List<RegistryTag> tags;
 
     @OutputCustomType.Constructor({"arn","description","tags"})
@@ -27,12 +39,24 @@ public final class GetRegistryResult {
         this.tags = tags;
     }
 
+    /**
+     * Amazon Resource Name for the created Registry.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * A description of the registry. If description is not provided, there will not be any default value for this.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * List of tags to tag the Registry
+     * 
+     */
     public List<RegistryTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

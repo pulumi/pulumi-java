@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureClusterControlPlaneRootVolume {
+    /**
+     * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * 
+     */
     private final @Nullable Integer sizeGib;
 
     @OutputCustomType.Constructor({"sizeGib"})
@@ -18,6 +22,10 @@ public final class AzureClusterControlPlaneRootVolume {
         this.sizeGib = sizeGib;
     }
 
+    /**
+     * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * 
+     */
     public Optional<Integer> getSizeGib() {
         return Optional.ofNullable(this.sizeGib);
     }

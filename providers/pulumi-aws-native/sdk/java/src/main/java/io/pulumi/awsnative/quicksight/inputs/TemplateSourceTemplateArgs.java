@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>The source template of the template.</p>
+ * 
+ */
 public final class TemplateSourceTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemplateSourceTemplateArgs Empty = new TemplateSourceTemplateArgs();
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final Input<String> arn;
 

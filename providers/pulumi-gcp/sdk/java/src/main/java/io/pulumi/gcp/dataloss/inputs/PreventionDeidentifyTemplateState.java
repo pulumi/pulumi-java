@@ -15,6 +15,11 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
 
     public static final PreventionDeidentifyTemplateState Empty = new PreventionDeidentifyTemplateState();
 
+    /**
+     * Configuration of the deidentify template
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="deidentifyConfig")
     private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> deidentifyConfig;
 
@@ -22,6 +27,10 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
         return this.deidentifyConfig == null ? Input.empty() : this.deidentifyConfig;
     }
 
+    /**
+     * A description of the template.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,10 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User set display name of the template.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +49,10 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +60,14 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The parent of the template in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 

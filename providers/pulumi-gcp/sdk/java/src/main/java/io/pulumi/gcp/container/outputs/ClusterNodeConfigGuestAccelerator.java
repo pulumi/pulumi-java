@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterNodeConfigGuestAccelerator {
+    /**
+     * The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     private final Integer count;
+    /**
+     * Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+     * 
+     */
     private final @Nullable String gpuPartitionSize;
+    /**
+     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"count","gpuPartitionSize","type"})
@@ -26,12 +38,24 @@ public final class ClusterNodeConfigGuestAccelerator {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     public Integer getCount() {
         return this.count;
     }
+    /**
+     * Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+     * 
+     */
     public Optional<String> getGpuPartitionSize() {
         return Optional.ofNullable(this.gpuPartitionSize);
     }
+    /**
+     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -15,6 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies which Amazon S3 bucket to store replicated objects in and their storage class.
+ * 
+ */
 public final class BucketReplicationDestination extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketReplicationDestination Empty = new BucketReplicationDestination();
@@ -61,6 +65,10 @@ public final class BucketReplicationDestination extends io.pulumi.resources.Invo
         return this.replicationTime == null ? Optional.empty() : Optional.ofNullable(this.replicationTime);
     }
 
+    /**
+     * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
+     * 
+     */
     @InputImport(name="storageClass")
     private final @Nullable BucketReplicationDestinationStorageClass storageClass;
 

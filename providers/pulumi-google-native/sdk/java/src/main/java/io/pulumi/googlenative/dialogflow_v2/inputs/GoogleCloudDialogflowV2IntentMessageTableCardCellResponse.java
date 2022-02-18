@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Cell of TableCardRow.
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageTableCardCellResponse Empty = new GoogleCloudDialogflowV2IntentMessageTableCardCellResponse();
 
+    /**
+     * Text in this cell.
+     * 
+     */
     @InputImport(name="text", required=true)
     private final String text;
 

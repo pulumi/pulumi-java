@@ -16,6 +16,10 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
 
     public static final IntegrationAccountSessionArgs Empty = new IntegrationAccountSessionArgs();
 
+    /**
+     * The session content.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable Input<Object> content;
 
@@ -23,6 +27,10 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -30,6 +38,10 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,10 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The integration account session name.
+     * 
+     */
     @InputImport(name="sessionName")
     private final @Nullable Input<String> sessionName;
 
@@ -51,6 +71,10 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
         return this.sessionName == null ? Input.empty() : this.sessionName;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

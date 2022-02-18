@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The HTTP method to use.
+     * 
+     */
     @EnumType
     public enum HTTPConfigurationMethod {
         Get("Get"),

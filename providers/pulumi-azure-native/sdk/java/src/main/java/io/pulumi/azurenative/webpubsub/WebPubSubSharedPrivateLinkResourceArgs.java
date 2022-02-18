@@ -14,6 +14,10 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
 
     public static final WebPubSubSharedPrivateLinkResourceArgs Empty = new WebPubSubSharedPrivateLinkResourceArgs();
 
+    /**
+     * The group id from the provider of resource the shared private link resource is for
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final Input<String> groupId;
 
@@ -21,6 +25,10 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
         return this.groupId;
     }
 
+    /**
+     * The resource id of the resource the shared private link resource is for
+     * 
+     */
     @InputImport(name="privateLinkResourceId", required=true)
     private final Input<String> privateLinkResourceId;
 
@@ -28,6 +36,10 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
         return this.privateLinkResourceId;
     }
 
+    /**
+     * The request message for requesting approval of the shared private link resource
+     * 
+     */
     @InputImport(name="requestMessage")
     private final @Nullable Input<String> requestMessage;
 
@@ -35,6 +47,10 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
         return this.requestMessage == null ? Input.empty() : this.requestMessage;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -49,6 +69,10 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
         return this.resourceName;
     }
 
+    /**
+     * The name of the shared private link resource
+     * 
+     */
     @InputImport(name="sharedPrivateLinkResourceName")
     private final @Nullable Input<String> sharedPrivateLinkResourceName;
 

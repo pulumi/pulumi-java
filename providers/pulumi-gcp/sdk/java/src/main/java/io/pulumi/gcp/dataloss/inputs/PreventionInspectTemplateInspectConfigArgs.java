@@ -20,6 +20,11 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
 
     public static final PreventionInspectTemplateInspectConfigArgs Empty = new PreventionInspectTemplateInspectConfigArgs();
 
+    /**
+     * List of options defining data content to scan. If empty, text, images, and other content will be included.
+     * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+     * 
+     */
     @InputImport(name="contentOptions")
     private final @Nullable Input<List<String>> contentOptions;
 
@@ -27,6 +32,11 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
         return this.contentOptions == null ? Input.empty() : this.contentOptions;
     }
 
+    /**
+     * Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="customInfoTypes")
     private final @Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> customInfoTypes;
 
@@ -34,6 +44,11 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
         return this.customInfoTypes == null ? Input.empty() : this.customInfoTypes;
     }
 
+    /**
+     * Set of infoTypes for which findings would affect this rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="excludeInfoTypes")
     private final @Nullable Input<Boolean> excludeInfoTypes;
 
@@ -41,6 +56,10 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
         return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
     }
 
+    /**
+     * When true, a contextual quote from the data that triggered a finding is included in the response.
+     * 
+     */
     @InputImport(name="includeQuote")
     private final @Nullable Input<Boolean> includeQuote;
 
@@ -48,6 +67,11 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
         return this.includeQuote == null ? Input.empty() : this.includeQuote;
     }
 
+    /**
+     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="infoTypes")
     private final @Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes;
 
@@ -55,6 +79,11 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
         return this.infoTypes == null ? Input.empty() : this.infoTypes;
     }
 
+    /**
+     * Configuration to control the number of findings returned.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="limits")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigLimitsArgs> limits;
 
@@ -62,6 +91,12 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
         return this.limits == null ? Input.empty() : this.limits;
     }
 
+    /**
+     * Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
+     * Default value is `POSSIBLE`.
+     * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+     * 
+     */
     @InputImport(name="minLikelihood")
     private final @Nullable Input<String> minLikelihood;
 
@@ -69,6 +104,12 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
         return this.minLikelihood == null ? Input.empty() : this.minLikelihood;
     }
 
+    /**
+     * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
+     * other rules are executed in the order they are specified for each info type.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="ruleSets")
     private final @Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets;
 

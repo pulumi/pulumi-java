@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The HA cluster Prometheus Exporter settings.
+ * 
+ */
 public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationHAClusterPrometheusExporterArgs Empty = new ApplicationHAClusterPrometheusExporterArgs();
 
+    /**
+     * Prometheus exporter port.
+     * 
+     */
     @InputImport(name="prometheusPort")
     private final @Nullable Input<String> prometheusPort;
 

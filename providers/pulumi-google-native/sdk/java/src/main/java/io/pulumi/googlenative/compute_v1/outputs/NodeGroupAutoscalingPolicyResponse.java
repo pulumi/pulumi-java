@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeGroupAutoscalingPolicyResponse {
+    /**
+     * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
+     * 
+     */
     private final Integer maxNodes;
+    /**
+     * The minimum number of nodes that the group should have.
+     * 
+     */
     private final Integer minNodes;
+    /**
+     * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
+     * 
+     */
     private final String mode;
 
     @OutputCustomType.Constructor({"maxNodes","minNodes","mode"})
@@ -24,12 +36,24 @@ public final class NodeGroupAutoscalingPolicyResponse {
         this.mode = Objects.requireNonNull(mode);
     }
 
+    /**
+     * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
+     * 
+     */
     public Integer getMaxNodes() {
         return this.maxNodes;
     }
+    /**
+     * The minimum number of nodes that the group should have.
+     * 
+     */
     public Integer getMinNodes() {
         return this.minNodes;
     }
+    /**
+     * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
+     * 
+     */
     public String getMode() {
         return this.mode;
     }

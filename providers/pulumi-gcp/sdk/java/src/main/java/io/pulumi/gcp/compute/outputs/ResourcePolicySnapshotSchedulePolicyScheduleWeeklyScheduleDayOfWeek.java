@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek {
+    /**
+     * The day of the week to create the snapshot. e.g. MONDAY
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     private final String day;
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"day","startTime"})
@@ -20,9 +29,18 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+    /**
+     * The day of the week to create the snapshot. e.g. MONDAY
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     public String getDay() {
         return this.day;
     }
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerDetails {
+/**
+ * Represents an instance of an Analysis Services resource.
+ * API Version: 2017-08-01.
+ * 
+ *
+ * Represents an instance of an Analysis Services resource.
+ * 
+ */
     public static CompletableFuture<GetServerDetailsResult> invokeAsync(GetServerDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:analysisservices:getServerDetails", TypeShape.of(GetServerDetailsResult.class), args == null ? GetServerDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

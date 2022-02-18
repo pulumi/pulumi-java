@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKnowledgeBase {
+/**
+ * Definition of AWS::Wisdom::KnowledgeBase Resource Type
+ * 
+ */
     public static CompletableFuture<GetKnowledgeBaseResult> invokeAsync(GetKnowledgeBaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getKnowledgeBase", TypeShape.of(GetKnowledgeBaseResult.class), args == null ? GetKnowledgeBaseArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * ManagementAssociation properties supported by the OperationsManagement resource provider.
+ * 
+ */
 public final class ManagementAssociationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementAssociationPropertiesArgs Empty = new ManagementAssociationPropertiesArgs();
 
+    /**
+     * The applicationId of the appliance for this association.
+     * 
+     */
     @InputImport(name="applicationId", required=true)
     private final Input<String> applicationId;
 

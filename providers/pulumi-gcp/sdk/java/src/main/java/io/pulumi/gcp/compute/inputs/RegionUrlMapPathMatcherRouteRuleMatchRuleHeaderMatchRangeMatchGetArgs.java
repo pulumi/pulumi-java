@@ -13,6 +13,10 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
 
     public static final RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs Empty = new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs();
 
+    /**
+     * The end of the range (exclusive).
+     * 
+     */
     @InputImport(name="rangeEnd", required=true)
     private final Input<Integer> rangeEnd;
 
@@ -20,6 +24,10 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
         return this.rangeEnd;
     }
 
+    /**
+     * The start of the range (inclusive).
+     * 
+     */
     @InputImport(name="rangeStart", required=true)
     private final Input<Integer> rangeStart;
 

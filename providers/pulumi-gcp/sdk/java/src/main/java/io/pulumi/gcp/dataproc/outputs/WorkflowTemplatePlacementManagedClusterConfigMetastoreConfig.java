@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig {
+    /**
+     * Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
+     * 
+     */
     private final String dataprocMetastoreService;
 
     @OutputCustomType.Constructor({"dataprocMetastoreService"})
@@ -16,6 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig 
         this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
     }
 
+    /**
+     * Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
+     * 
+     */
     public String getDataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }

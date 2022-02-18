@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CopyVideoResponse {
+    /**
+     * An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     private final @Nullable String label;
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.CopyVideo'.
+     * 
+     */
     private final String odataType;
 
     @OutputCustomType.Constructor({"label","odataType"})
@@ -22,9 +31,18 @@ public final class CopyVideoResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+    /**
+     * An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.CopyVideo'.
+     * 
+     */
     public String getOdataType() {
         return this.odataType;
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttachedDatabaseConfiguration {
+/**
+ * Class representing an attached database configuration.
+ * API Version: 2021-01-01.
+ * 
+ *
+ * Class representing an attached database configuration.
+ * 
+ */
     public static CompletableFuture<GetAttachedDatabaseConfigurationResult> invokeAsync(GetAttachedDatabaseConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getAttachedDatabaseConfiguration", TypeShape.of(GetAttachedDatabaseConfigurationResult.class), args == null ? GetAttachedDatabaseConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

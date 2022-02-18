@@ -16,6 +16,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     public static final MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse Empty = new MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse();
 
+    /**
+     * Backup sets that are currently active (Either being uploaded or getting restored)
+     * 
+     */
     @InputImport(name="activeBackupSets", required=true)
     private final List<BackupSetInfoResponse> activeBackupSets;
 
@@ -23,6 +27,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.activeBackupSets;
     }
 
+    /**
+     * Name of container created in the Azure Storage account where backups are copied to
+     * 
+     */
     @InputImport(name="containerName", required=true)
     private final String containerName;
 
@@ -30,6 +38,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.containerName;
     }
 
+    /**
+     * Database migration end time
+     * 
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -37,6 +49,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.endedOn;
     }
 
+    /**
+     * prefix string to use for querying errors for this database
+     * 
+     */
     @InputImport(name="errorPrefix", required=true)
     private final String errorPrefix;
 
@@ -44,6 +60,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.errorPrefix;
     }
 
+    /**
+     * Migration exceptions and warnings
+     * 
+     */
     @InputImport(name="exceptionsAndWarnings", required=true)
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
@@ -51,6 +71,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.exceptionsAndWarnings;
     }
 
+    /**
+     * Details of full backup set
+     * 
+     */
     @InputImport(name="fullBackupSetInfo", required=true)
     private final BackupSetInfoResponse fullBackupSetInfo;
 
@@ -58,6 +82,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.fullBackupSetInfo;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -65,6 +93,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.id;
     }
 
+    /**
+     * Whether full backup has been applied to the target database or not
+     * 
+     */
     @InputImport(name="isFullBackupRestored", required=true)
     private final Boolean isFullBackupRestored;
 
@@ -72,6 +104,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.isFullBackupRestored;
     }
 
+    /**
+     * Last applied backup set information
+     * 
+     */
     @InputImport(name="lastRestoredBackupSetInfo", required=true)
     private final BackupSetInfoResponse lastRestoredBackupSetInfo;
 
@@ -79,6 +115,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.lastRestoredBackupSetInfo;
     }
 
+    /**
+     * Current state of database
+     * 
+     */
     @InputImport(name="migrationState", required=true)
     private final String migrationState;
 
@@ -86,6 +126,11 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.migrationState;
     }
 
+    /**
+     * Result type
+     * Expected value is 'DatabaseLevelOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -93,6 +138,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.resultType;
     }
 
+    /**
+     * Name of the database
+     * 
+     */
     @InputImport(name="sourceDatabaseName", required=true)
     private final String sourceDatabaseName;
 
@@ -100,6 +149,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
         return this.sourceDatabaseName;
     }
 
+    /**
+     * Database migration start time
+     * 
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 

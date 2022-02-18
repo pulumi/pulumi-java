@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * General metadata for the parameter.
+ * 
+ */
 public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterDefinitionsValueResponseMetadata Empty = new ParameterDefinitionsValueResponseMetadata();
 
+    /**
+     * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
+     * 
+     */
     @InputImport(name="assignPermissions")
     private final @Nullable Boolean assignPermissions;
 
@@ -22,6 +30,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
         return this.assignPermissions == null ? Optional.empty() : Optional.ofNullable(this.assignPermissions);
     }
 
+    /**
+     * The description of the parameter.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -29,6 +41,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The display name for the parameter.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -36,6 +52,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
+     * 
+     */
     @InputImport(name="strongType")
     private final @Nullable String strongType;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An RPM package file. RPM packages only support INSTALLED state.
+ * 
+ */
 public final class OSPolicyResourcePackageResourceRPMArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceRPMArgs Empty = new OSPolicyResourcePackageResourceRPMArgs();
 
+    /**
+     * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * 
+     */
     @InputImport(name="pullDeps")
     private final @Nullable Input<Boolean> pullDeps;
 
@@ -22,6 +30,10 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends io.pulumi.reso
         return this.pullDeps == null ? Input.empty() : this.pullDeps;
     }
 
+    /**
+     * An rpm package.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<OSPolicyResourceFileArgs> source;
 

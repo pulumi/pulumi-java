@@ -14,6 +14,10 @@ public final class PrivateEndpointPropertyResponse extends io.pulumi.resources.I
 
     public static final PrivateEndpointPropertyResponse Empty = new PrivateEndpointPropertyResponse();
 
+    /**
+     * Resource id of the private endpoint.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

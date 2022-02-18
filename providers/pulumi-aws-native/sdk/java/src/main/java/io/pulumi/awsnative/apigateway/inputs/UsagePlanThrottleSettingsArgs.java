@@ -15,6 +15,10 @@ public final class UsagePlanThrottleSettingsArgs extends io.pulumi.resources.Res
 
     public static final UsagePlanThrottleSettingsArgs Empty = new UsagePlanThrottleSettingsArgs();
 
+    /**
+     * The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity.
+     * 
+     */
     @InputImport(name="burstLimit")
     private final @Nullable Input<Integer> burstLimit;
 
@@ -22,6 +26,10 @@ public final class UsagePlanThrottleSettingsArgs extends io.pulumi.resources.Res
         return this.burstLimit == null ? Input.empty() : this.burstLimit;
     }
 
+    /**
+     * The API request steady-state rate limit (average requests per second over an extended period of time).
+     * 
+     */
     @InputImport(name="rateLimit")
     private final @Nullable Input<Double> rateLimit;
 

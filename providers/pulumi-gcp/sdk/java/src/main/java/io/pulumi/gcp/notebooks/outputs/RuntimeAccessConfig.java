@@ -11,8 +11,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuntimeAccessConfig {
+    /**
+     * The type of access mode this instance. For valid values, see
+     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+     * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
+     * 
+     */
     private final @Nullable String accessType;
+    /**
+     * - 
+     * The proxy endpoint that is used to access the runtime.
+     * 
+     */
     private final @Nullable String proxyUri;
+    /**
+     * The owner of this runtime after creation. Format: `alias@example.com`.
+     * Currently supports one owner only.
+     * 
+     */
     private final @Nullable String runtimeOwner;
 
     @OutputCustomType.Constructor({"accessType","proxyUri","runtimeOwner"})
@@ -25,12 +41,28 @@ public final class RuntimeAccessConfig {
         this.runtimeOwner = runtimeOwner;
     }
 
+    /**
+     * The type of access mode this instance. For valid values, see
+     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+     * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
+     * 
+     */
     public Optional<String> getAccessType() {
         return Optional.ofNullable(this.accessType);
     }
+    /**
+     * - 
+     * The proxy endpoint that is used to access the runtime.
+     * 
+     */
     public Optional<String> getProxyUri() {
         return Optional.ofNullable(this.proxyUri);
     }
+    /**
+     * The owner of this runtime after creation. Format: `alias@example.com`.
+     * Currently supports one owner only.
+     * 
+     */
     public Optional<String> getRuntimeOwner() {
         return Optional.ofNullable(this.runtimeOwner);
     }

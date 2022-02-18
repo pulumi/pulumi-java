@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Billing information related properties of a server.
+ * 
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * The scale up/out capacity, representing server's compute units.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -22,6 +30,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * The family of hardware.
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -29,6 +41,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
+    /**
+     * The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,6 +52,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The size code, to be interpreted by resource as appropriate.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -43,6 +63,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
+    /**
+     * The tier of the particular SKU, e.g. Basic.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

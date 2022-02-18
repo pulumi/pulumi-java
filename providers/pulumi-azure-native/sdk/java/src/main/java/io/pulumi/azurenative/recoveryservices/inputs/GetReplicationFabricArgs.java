@@ -12,6 +12,10 @@ public final class GetReplicationFabricArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetReplicationFabricArgs Empty = new GetReplicationFabricArgs();
 
+    /**
+     * Fabric name.
+     * 
+     */
     @InputImport(name="fabricName", required=true)
     private final String fabricName;
 
@@ -19,6 +23,10 @@ public final class GetReplicationFabricArgs extends io.pulumi.resources.InvokeAr
         return this.fabricName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetReplicationFabricArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

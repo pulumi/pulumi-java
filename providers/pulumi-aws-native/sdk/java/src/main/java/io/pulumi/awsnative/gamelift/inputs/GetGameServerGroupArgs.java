@@ -12,6 +12,10 @@ public final class GetGameServerGroupArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetGameServerGroupArgs Empty = new GetGameServerGroupArgs();
 
+    /**
+     * A generated unique ID for the game server group.
+     * 
+     */
     @InputImport(name="gameServerGroupArn", required=true)
     private final String gameServerGroupArn;
 

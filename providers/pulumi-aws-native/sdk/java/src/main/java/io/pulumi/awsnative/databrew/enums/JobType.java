@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Job type
+     * 
+     */
     @EnumType
     public enum JobType {
         Profile("PROFILE"),

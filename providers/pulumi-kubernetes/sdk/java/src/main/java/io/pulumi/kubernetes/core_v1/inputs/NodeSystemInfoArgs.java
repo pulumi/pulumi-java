@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * NodeSystemInfo is a set of ids/uuids to uniquely identify the node.
+ * 
+ */
 public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeSystemInfoArgs Empty = new NodeSystemInfoArgs();
 
+    /**
+     * The Architecture reported by the node
+     * 
+     */
     @InputImport(name="architecture", required=true)
     private final Input<String> architecture;
 
@@ -20,6 +28,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.architecture;
     }
 
+    /**
+     * Boot ID reported by the node.
+     * 
+     */
     @InputImport(name="bootID", required=true)
     private final Input<String> bootID;
 
@@ -27,6 +39,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.bootID;
     }
 
+    /**
+     * ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+     * 
+     */
     @InputImport(name="containerRuntimeVersion", required=true)
     private final Input<String> containerRuntimeVersion;
 
@@ -34,6 +50,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerRuntimeVersion;
     }
 
+    /**
+     * Kernel Version reported by the node from 'uname -r' (e.g. 3.16.0-0.bpo.4-amd64).
+     * 
+     */
     @InputImport(name="kernelVersion", required=true)
     private final Input<String> kernelVersion;
 
@@ -41,6 +61,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.kernelVersion;
     }
 
+    /**
+     * KubeProxy Version reported by the node.
+     * 
+     */
     @InputImport(name="kubeProxyVersion", required=true)
     private final Input<String> kubeProxyVersion;
 
@@ -48,6 +72,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.kubeProxyVersion;
     }
 
+    /**
+     * Kubelet Version reported by the node.
+     * 
+     */
     @InputImport(name="kubeletVersion", required=true)
     private final Input<String> kubeletVersion;
 
@@ -55,6 +83,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.kubeletVersion;
     }
 
+    /**
+     * MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
+     * 
+     */
     @InputImport(name="machineID", required=true)
     private final Input<String> machineID;
 
@@ -62,6 +94,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.machineID;
     }
 
+    /**
+     * The Operating System reported by the node
+     * 
+     */
     @InputImport(name="operatingSystem", required=true)
     private final Input<String> operatingSystem;
 
@@ -69,6 +105,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.operatingSystem;
     }
 
+    /**
+     * OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
+     * 
+     */
     @InputImport(name="osImage", required=true)
     private final Input<String> osImage;
 
@@ -76,6 +116,10 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.osImage;
     }
 
+    /**
+     * SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
+     * 
+     */
     @InputImport(name="systemUUID", required=true)
     private final Input<String> systemUUID;
 

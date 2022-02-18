@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The claims for a rule management event data source.
+ * 
+ */
 public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleManagementEventClaimsDataSourceArgs Empty = new RuleManagementEventClaimsDataSourceArgs();
 
+    /**
+     * the email address.
+     * 
+     */
     @InputImport(name="emailAddress")
     private final @Nullable Input<String> emailAddress;
 

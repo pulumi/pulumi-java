@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The status detail properties of the connected registry.
+ * 
+ */
 public final class StatusDetailPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StatusDetailPropertiesResponse Empty = new StatusDetailPropertiesResponse();
 
+    /**
+     * The code of the status.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +27,10 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
         return this.code;
     }
 
+    /**
+     * The correlation ID of the status.
+     * 
+     */
     @InputImport(name="correlationId", required=true)
     private final String correlationId;
 
@@ -26,6 +38,10 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
         return this.correlationId;
     }
 
+    /**
+     * The description of the status.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -33,6 +49,10 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
         return this.description;
     }
 
+    /**
+     * The timestamp of the status.
+     * 
+     */
     @InputImport(name="timestamp", required=true)
     private final String timestamp;
 
@@ -40,6 +60,10 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
         return this.timestamp;
     }
 
+    /**
+     * The component of the connected registry corresponding to the status.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -11,8 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAttributeGroupAssociationResult {
+    /**
+     * The name or the Id of the Application.
+     * 
+     */
     private final @Nullable String application;
     private final @Nullable String applicationArn;
+    /**
+     * The name or the Id of the AttributeGroup.
+     * 
+     */
     private final @Nullable String attributeGroup;
     private final @Nullable String attributeGroupArn;
     private final @Nullable String id;
@@ -31,12 +39,20 @@ public final class GetAttributeGroupAssociationResult {
         this.id = id;
     }
 
+    /**
+     * The name or the Id of the Application.
+     * 
+     */
     public Optional<String> getApplication() {
         return Optional.ofNullable(this.application);
     }
     public Optional<String> getApplicationArn() {
         return Optional.ofNullable(this.applicationArn);
     }
+    /**
+     * The name or the Id of the AttributeGroup.
+     * 
+     */
     public Optional<String> getAttributeGroup() {
         return Optional.ofNullable(this.attributeGroup);
     }

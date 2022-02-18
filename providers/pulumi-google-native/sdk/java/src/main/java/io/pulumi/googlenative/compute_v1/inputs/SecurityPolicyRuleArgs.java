@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).
+ * 
+ */
 public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyRuleArgs Empty = new SecurityPolicyRuleArgs();
 
+    /**
+     * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<String> action;
 
@@ -27,6 +35,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -34,6 +46,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional, additional actions that are performed on headers.
+     * 
+     */
     @InputImport(name="headerAction")
     private final @Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
@@ -41,6 +57,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.headerAction == null ? Input.empty() : this.headerAction;
     }
 
+    /**
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * 
+     */
     @InputImport(name="match")
     private final @Nullable Input<SecurityPolicyRuleMatcherArgs> match;
 
@@ -48,6 +68,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.match == null ? Input.empty() : this.match;
     }
 
+    /**
+     * If set to true, the specified action is not enforced.
+     * 
+     */
     @InputImport(name="preview")
     private final @Nullable Input<Boolean> preview;
 
@@ -55,6 +79,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.preview == null ? Input.empty() : this.preview;
     }
 
+    /**
+     * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -62,6 +90,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
+     * 
+     */
     @InputImport(name="rateLimitOptions")
     private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
@@ -69,6 +101,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.rateLimitOptions == null ? Input.empty() : this.rateLimitOptions;
     }
 
+    /**
+     * Parameters defining the redirect action. Cannot be specified for any other actions.
+     * 
+     */
     @InputImport(name="redirectOptions")
     private final @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 

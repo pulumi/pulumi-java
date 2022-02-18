@@ -15,39 +15,90 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Create a CaPool.
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:privateca/v1:CaPool")
 public class CaPool extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+     * 
+     */
     @OutputExport(name="issuancePolicy", type=IssuancePolicyResponse.class, parameters={})
     private Output<IssuancePolicyResponse> issuancePolicy;
 
+    /**
+     * @return Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+     * 
+     */
     public Output<IssuancePolicyResponse> getIssuancePolicy() {
         return this.issuancePolicy;
     }
+    /**
+     * Optional. Labels with user-defined metadata.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Labels with user-defined metadata.
+     * 
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+     * 
+     */
     @OutputExport(name="publishingOptions", type=PublishingOptionsResponse.class, parameters={})
     private Output<PublishingOptionsResponse> publishingOptions;
 
+    /**
+     * @return Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+     * 
+     */
     public Output<PublishingOptionsResponse> getPublishingOptions() {
         return this.publishingOptions;
     }
+    /**
+     * Immutable. The Tier of this CaPool.
+     * 
+     */
     @OutputExport(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
+    /**
+     * @return Immutable. The Tier of this CaPool.
+     * 
+     */
     public Output<String> getTier() {
         return this.tier;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CaPool(String name, CaPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:privateca/v1:CaPool", name, args == null ? CaPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +114,14 @@ public class CaPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CaPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CaPool(name, id, options);
     }

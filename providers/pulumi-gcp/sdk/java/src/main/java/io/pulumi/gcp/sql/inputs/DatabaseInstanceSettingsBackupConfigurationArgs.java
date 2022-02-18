@@ -17,6 +17,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends io.pu
 
     public static final DatabaseInstanceSettingsBackupConfigurationArgs Empty = new DatabaseInstanceSettingsBackupConfigurationArgs();
 
+    /**
+     * Backup retention settings. The configuration is detailed below.
+     * 
+     */
     @InputImport(name="backupRetentionSettings")
     private final @Nullable Input<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs> backupRetentionSettings;
 
@@ -24,6 +28,11 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends io.pu
         return this.backupRetentionSettings == null ? Input.empty() : this.backupRetentionSettings;
     }
 
+    /**
+     * True if binary logging is enabled.
+     * Cannot be used with Postgres.
+     * 
+     */
     @InputImport(name="binaryLogEnabled")
     private final @Nullable Input<Boolean> binaryLogEnabled;
 
@@ -31,6 +40,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends io.pu
         return this.binaryLogEnabled == null ? Input.empty() : this.binaryLogEnabled;
     }
 
+    /**
+     * True if backup configuration is enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -38,6 +51,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends io.pu
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The region where the backup will be stored
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +62,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends io.pu
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+     * 
+     */
     @InputImport(name="pointInTimeRecoveryEnabled")
     private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
 
@@ -52,6 +73,11 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends io.pu
         return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
     }
 
+    /**
+     * `HH:MM` format time indicating when backup
+     * configuration starts.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -59,6 +85,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends io.pu
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * The number of days of transaction logs we retain for point in time restore, from 1-7.
+     * 
+     */
     @InputImport(name="transactionLogRetentionDays")
     private final @Nullable Input<Integer> transactionLogRetentionDays;
 

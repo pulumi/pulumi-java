@@ -18,6 +18,10 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final StreamingPolicyArgs Empty = new StreamingPolicyArgs();
 
+    /**
+     * The Media Services account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -25,6 +29,10 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.accountName;
     }
 
+    /**
+     * Configuration of CommonEncryptionCbcs
+     * 
+     */
     @InputImport(name="commonEncryptionCbcs")
     private final @Nullable Input<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
 
@@ -32,6 +40,10 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.commonEncryptionCbcs == null ? Input.empty() : this.commonEncryptionCbcs;
     }
 
+    /**
+     * Configuration of CommonEncryptionCenc
+     * 
+     */
     @InputImport(name="commonEncryptionCenc")
     private final @Nullable Input<CommonEncryptionCencArgs> commonEncryptionCenc;
 
@@ -39,6 +51,10 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.commonEncryptionCenc == null ? Input.empty() : this.commonEncryptionCenc;
     }
 
+    /**
+     * Default ContentKey used by current Streaming Policy
+     * 
+     */
     @InputImport(name="defaultContentKeyPolicyName")
     private final @Nullable Input<String> defaultContentKeyPolicyName;
 
@@ -46,6 +62,10 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.defaultContentKeyPolicyName == null ? Input.empty() : this.defaultContentKeyPolicyName;
     }
 
+    /**
+     * Configuration of EnvelopeEncryption
+     * 
+     */
     @InputImport(name="envelopeEncryption")
     private final @Nullable Input<EnvelopeEncryptionArgs> envelopeEncryption;
 
@@ -53,6 +73,10 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.envelopeEncryption == null ? Input.empty() : this.envelopeEncryption;
     }
 
+    /**
+     * Configurations of NoEncryption
+     * 
+     */
     @InputImport(name="noEncryption")
     private final @Nullable Input<NoEncryptionArgs> noEncryption;
 
@@ -60,6 +84,10 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.noEncryption == null ? Input.empty() : this.noEncryption;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,6 +95,10 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The Streaming Policy name.
+     * 
+     */
     @InputImport(name="streamingPolicyName")
     private final @Nullable Input<String> streamingPolicyName;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An internal checker allows Uptime checks to run on private/internal GCP resources.
+ * 
+ */
 public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InternalCheckerArgs Empty = new InternalCheckerArgs();
 
+    /**
+     * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -22,6 +30,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
+     * 
+     */
     @InputImport(name="gcpZone")
     private final @Nullable Input<String> gcpZone;
 
@@ -29,6 +41,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
         return this.gcpZone == null ? Input.empty() : this.gcpZone;
     }
 
+    /**
+     * A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +52,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -43,6 +63,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
+     * 
+     */
     @InputImport(name="peerProjectId")
     private final @Nullable Input<String> peerProjectId;
 
@@ -50,6 +74,10 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
         return this.peerProjectId == null ? Input.empty() : this.peerProjectId;
     }
 
+    /**
+     * The current operational state of the internal checker.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<InternalCheckerState> state;
 

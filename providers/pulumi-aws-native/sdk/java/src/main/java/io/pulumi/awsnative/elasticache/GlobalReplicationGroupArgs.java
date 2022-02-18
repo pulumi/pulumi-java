@@ -19,6 +19,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
 
     public static final GlobalReplicationGroupArgs Empty = new GlobalReplicationGroupArgs();
 
+    /**
+     * AutomaticFailoverEnabled
+     * 
+     */
     @InputImport(name="automaticFailoverEnabled")
     private final @Nullable Input<Boolean> automaticFailoverEnabled;
 
@@ -26,6 +30,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
         return this.automaticFailoverEnabled == null ? Input.empty() : this.automaticFailoverEnabled;
     }
 
+    /**
+     * The cache node type of the Global Datastore
+     * 
+     */
     @InputImport(name="cacheNodeType")
     private final @Nullable Input<String> cacheNodeType;
 
@@ -33,6 +41,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
         return this.cacheNodeType == null ? Input.empty() : this.cacheNodeType;
     }
 
+    /**
+     * Cache parameter group name to use for the new engine version. This parameter cannot be modified independently.
+     * 
+     */
     @InputImport(name="cacheParameterGroupName")
     private final @Nullable Input<String> cacheParameterGroupName;
 
@@ -40,6 +52,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
         return this.cacheParameterGroupName == null ? Input.empty() : this.cacheParameterGroupName;
     }
 
+    /**
+     * The engine version of the Global Datastore.
+     * 
+     */
     @InputImport(name="engineVersion")
     private final @Nullable Input<String> engineVersion;
 
@@ -47,6 +63,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
     }
 
+    /**
+     * Indicates the number of node groups in the Global Datastore.
+     * 
+     */
     @InputImport(name="globalNodeGroupCount")
     private final @Nullable Input<Integer> globalNodeGroupCount;
 
@@ -54,6 +74,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
         return this.globalNodeGroupCount == null ? Input.empty() : this.globalNodeGroupCount;
     }
 
+    /**
+     * The optional description of the Global Datastore
+     * 
+     */
     @InputImport(name="globalReplicationGroupDescription")
     private final @Nullable Input<String> globalReplicationGroupDescription;
 
@@ -61,6 +85,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
         return this.globalReplicationGroupDescription == null ? Input.empty() : this.globalReplicationGroupDescription;
     }
 
+    /**
+     * The suffix name of a Global Datastore. Amazon ElastiCache automatically applies a prefix to the Global Datastore ID when it is created. Each AWS Region has its own prefix.
+     * 
+     */
     @InputImport(name="globalReplicationGroupIdSuffix")
     private final @Nullable Input<String> globalReplicationGroupIdSuffix;
 
@@ -68,6 +96,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
         return this.globalReplicationGroupIdSuffix == null ? Input.empty() : this.globalReplicationGroupIdSuffix;
     }
 
+    /**
+     * The replication groups that comprise the Global Datastore.
+     * 
+     */
     @InputImport(name="members", required=true)
     private final Input<List<GlobalReplicationGroupMemberArgs>> members;
 
@@ -75,6 +107,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
         return this.members;
     }
 
+    /**
+     * Describes the replication group IDs, the AWS regions where they are stored and the shard configuration for each that comprise the Global Datastore
+     * 
+     */
     @InputImport(name="regionalConfigurations")
     private final @Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
 

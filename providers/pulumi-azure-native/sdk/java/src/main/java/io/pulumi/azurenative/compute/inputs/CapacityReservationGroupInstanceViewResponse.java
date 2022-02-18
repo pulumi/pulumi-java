@@ -13,6 +13,10 @@ public final class CapacityReservationGroupInstanceViewResponse extends io.pulum
 
     public static final CapacityReservationGroupInstanceViewResponse Empty = new CapacityReservationGroupInstanceViewResponse();
 
+    /**
+     * List of instance view of the capacity reservations under the capacity reservation group.
+     * 
+     */
     @InputImport(name="capacityReservations", required=true)
     private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
 

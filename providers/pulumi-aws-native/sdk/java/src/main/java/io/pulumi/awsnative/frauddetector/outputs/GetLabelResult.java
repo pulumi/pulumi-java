@@ -13,10 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLabelResult {
+    /**
+     * The label ARN.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The timestamp when the label was created.
+     * 
+     */
     private final @Nullable String createdTime;
+    /**
+     * The label description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The timestamp when the label was last updated.
+     * 
+     */
     private final @Nullable String lastUpdatedTime;
+    /**
+     * Tags associated with this label.
+     * 
+     */
     private final @Nullable List<LabelTag> tags;
 
     @OutputCustomType.Constructor({"arn","createdTime","description","lastUpdatedTime","tags"})
@@ -33,18 +53,38 @@ public final class GetLabelResult {
         this.tags = tags;
     }
 
+    /**
+     * The label ARN.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The timestamp when the label was created.
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+    /**
+     * The label description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The timestamp when the label was last updated.
+     * 
+     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
+    /**
+     * Tags associated with this label.
+     * 
+     */
     public List<LabelTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

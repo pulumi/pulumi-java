@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Customer Certificate used for https
+ * 
+ */
 public final class CustomerCertificateParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomerCertificateParametersResponse Empty = new CustomerCertificateParametersResponse();
 
+    /**
+     * Certificate issuing authority.
+     * 
+     */
     @InputImport(name="certificateAuthority")
     private final @Nullable String certificateAuthority;
 
@@ -24,6 +32,10 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
         return this.certificateAuthority == null ? Optional.empty() : Optional.ofNullable(this.certificateAuthority);
     }
 
+    /**
+     * Resource reference to the KV secret
+     * 
+     */
     @InputImport(name="secretSource", required=true)
     private final ResourceReferenceResponse secretSource;
 
@@ -31,6 +43,10 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
         return this.secretSource;
     }
 
+    /**
+     * Version of the secret to be used
+     * 
+     */
     @InputImport(name="secretVersion")
     private final @Nullable String secretVersion;
 
@@ -38,6 +54,10 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
     }
 
+    /**
+     * The list of SANs.
+     * 
+     */
     @InputImport(name="subjectAlternativeNames")
     private final @Nullable List<String> subjectAlternativeNames;
 
@@ -45,6 +65,11 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
         return this.subjectAlternativeNames == null ? List.of() : this.subjectAlternativeNames;
     }
 
+    /**
+     * The type of the Secret to create.
+     * Expected value is 'CustomerCertificate'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -52,6 +77,10 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
         return this.type;
     }
 
+    /**
+     * Whether to use the latest version for the certificate
+     * 
+     */
     @InputImport(name="useLatestVersion")
     private final @Nullable Boolean useLatestVersion;
 

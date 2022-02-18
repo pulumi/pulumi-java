@@ -16,6 +16,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
 
     public static final RoleAssignmentArtifactArgs Empty = new RoleAssignmentArtifactArgs();
 
+    /**
+     * Name of the blueprint artifact.
+     * 
+     */
     @InputImport(name="artifactName")
     private final @Nullable Input<String> artifactName;
 
@@ -23,6 +27,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.artifactName == null ? Input.empty() : this.artifactName;
     }
 
+    /**
+     * Name of the blueprint definition.
+     * 
+     */
     @InputImport(name="blueprintName", required=true)
     private final Input<String> blueprintName;
 
@@ -30,6 +38,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.blueprintName;
     }
 
+    /**
+     * Artifacts which need to be deployed before the specified artifact.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<String>> dependsOn;
 
@@ -37,6 +49,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Multi-line explain this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -44,6 +60,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * One-liner string explain this resource.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -51,6 +71,11 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Specifies the kind of blueprint artifact.
+     * Expected value is 'roleAssignment'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -58,6 +83,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.kind;
     }
 
+    /**
+     * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
+     * 
+     */
     @InputImport(name="principalIds", required=true)
     private final Input<Object> principalIds;
 
@@ -65,6 +94,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.principalIds;
     }
 
+    /**
+     * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
+     * 
+     */
     @InputImport(name="resourceGroup")
     private final @Nullable Input<String> resourceGroup;
 
@@ -72,6 +105,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
     }
 
+    /**
+     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
+     * 
+     */
     @InputImport(name="resourceScope", required=true)
     private final Input<String> resourceScope;
 
@@ -79,6 +116,10 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
         return this.resourceScope;
     }
 
+    /**
+     * Azure resource ID of the RoleDefinition.
+     * 
+     */
     @InputImport(name="roleDefinitionId", required=true)
     private final Input<String> roleDefinitionId;
 

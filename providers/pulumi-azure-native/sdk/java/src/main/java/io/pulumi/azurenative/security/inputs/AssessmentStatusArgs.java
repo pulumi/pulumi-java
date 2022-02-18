@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The result of the assessment
+ * 
+ */
 public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssessmentStatusArgs Empty = new AssessmentStatusArgs();
 
+    /**
+     * Programmatic code for the cause of the assessment status
+     * 
+     */
     @InputImport(name="cause")
     private final @Nullable Input<String> cause;
 
@@ -23,6 +31,10 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.cause == null ? Input.empty() : this.cause;
     }
 
+    /**
+     * Programmatic code for the status of the assessment
+     * 
+     */
     @InputImport(name="code", required=true)
     private final Input<Either<String,AssessmentStatusCode>> code;
 
@@ -30,6 +42,10 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.code;
     }
 
+    /**
+     * Human readable description of the assessment status
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 

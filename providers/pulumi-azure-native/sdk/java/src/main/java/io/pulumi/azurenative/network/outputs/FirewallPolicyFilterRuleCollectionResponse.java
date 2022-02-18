@@ -18,10 +18,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallPolicyFilterRuleCollectionResponse {
+    /**
+     * The action type of a Filter rule collection.
+     * 
+     */
     private final @Nullable FirewallPolicyFilterRuleCollectionActionResponse action;
+    /**
+     * The name of the rule collection.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Priority of the Firewall Policy Rule Collection resource.
+     * 
+     */
     private final @Nullable Integer priority;
+    /**
+     * The type of the rule collection.
+     * Expected value is 'FirewallPolicyFilterRuleCollection'.
+     * 
+     */
     private final String ruleCollectionType;
+    /**
+     * List of rules included in a rule collection.
+     * 
+     */
     private final @Nullable List<Object> rules;
 
     @OutputCustomType.Constructor({"action","name","priority","ruleCollectionType","rules"})
@@ -38,18 +59,39 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
         this.rules = rules;
     }
 
+    /**
+     * The action type of a Filter rule collection.
+     * 
+     */
     public Optional<FirewallPolicyFilterRuleCollectionActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
+    /**
+     * The name of the rule collection.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Priority of the Firewall Policy Rule Collection resource.
+     * 
+     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
+    /**
+     * The type of the rule collection.
+     * Expected value is 'FirewallPolicyFilterRuleCollection'.
+     * 
+     */
     public String getRuleCollectionType() {
         return this.ruleCollectionType;
     }
+    /**
+     * List of rules included in a rule collection.
+     * 
+     */
     public List<Object> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

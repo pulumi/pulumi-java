@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse {
+    /**
+     * The phone number to fill in the default dialer app. This field should be in [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of a correctly formatted phone number: +15556767888.
+     * 
+     */
     private final String phoneNumber;
 
     @OutputCustomType.Constructor({"phoneNumber"})
@@ -16,6 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
         this.phoneNumber = Objects.requireNonNull(phoneNumber);
     }
 
+    /**
+     * The phone number to fill in the default dialer app. This field should be in [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of a correctly formatted phone number: +15556767888.
+     * 
+     */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }

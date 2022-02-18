@@ -14,15 +14,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DirectConnectionResponse {
+    /**
+     * The bandwidth of the connection.
+     * 
+     */
     private final @Nullable Integer bandwidthInMbps;
+    /**
+     * The BGP session associated with the connection.
+     * 
+     */
     private final @Nullable BgpSessionResponse bgpSession;
+    /**
+     * The unique identifier (GUID) for the connection.
+     * 
+     */
     private final @Nullable String connectionIdentifier;
+    /**
+     * The state of the connection.
+     * 
+     */
     private final String connectionState;
+    /**
+     * The error message related to the connection state, if any.
+     * 
+     */
     private final String errorMessage;
+    /**
+     * The ID used within Microsoft's peering provisioning system to track the connection
+     * 
+     */
     private final String microsoftTrackingId;
+    /**
+     * The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * 
+     */
     private final @Nullable Integer peeringDBFacilityId;
+    /**
+     * The bandwidth that is actually provisioned.
+     * 
+     */
     private final Integer provisionedBandwidthInMbps;
+    /**
+     * The field indicating if Microsoft provides session ip addresses.
+     * 
+     */
     private final @Nullable String sessionAddressProvider;
+    /**
+     * The flag that indicates whether or not the connection is used for peering service.
+     * 
+     */
     private final @Nullable Boolean useForPeeringService;
 
     @OutputCustomType.Constructor({"bandwidthInMbps","bgpSession","connectionIdentifier","connectionState","errorMessage","microsoftTrackingId","peeringDBFacilityId","provisionedBandwidthInMbps","sessionAddressProvider","useForPeeringService"})
@@ -49,33 +89,73 @@ public final class DirectConnectionResponse {
         this.useForPeeringService = useForPeeringService;
     }
 
+    /**
+     * The bandwidth of the connection.
+     * 
+     */
     public Optional<Integer> getBandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
+    /**
+     * The BGP session associated with the connection.
+     * 
+     */
     public Optional<BgpSessionResponse> getBgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
+    /**
+     * The unique identifier (GUID) for the connection.
+     * 
+     */
     public Optional<String> getConnectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
+    /**
+     * The state of the connection.
+     * 
+     */
     public String getConnectionState() {
         return this.connectionState;
     }
+    /**
+     * The error message related to the connection state, if any.
+     * 
+     */
     public String getErrorMessage() {
         return this.errorMessage;
     }
+    /**
+     * The ID used within Microsoft's peering provisioning system to track the connection
+     * 
+     */
     public String getMicrosoftTrackingId() {
         return this.microsoftTrackingId;
     }
+    /**
+     * The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * 
+     */
     public Optional<Integer> getPeeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }
+    /**
+     * The bandwidth that is actually provisioned.
+     * 
+     */
     public Integer getProvisionedBandwidthInMbps() {
         return this.provisionedBandwidthInMbps;
     }
+    /**
+     * The field indicating if Microsoft provides session ip addresses.
+     * 
+     */
     public Optional<String> getSessionAddressProvider() {
         return Optional.ofNullable(this.sessionAddressProvider);
     }
+    /**
+     * The flag that indicates whether or not the connection is used for peering service.
+     * 
+     */
     public Optional<Boolean> getUseForPeeringService() {
         return Optional.ofNullable(this.useForPeeringService);
     }

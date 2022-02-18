@@ -19,10 +19,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of a labeling job.
+ * 
+ */
 public final class LabelingJobPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabelingJobPropertiesResponse Empty = new LabelingJobPropertiesResponse();
 
+    /**
+     * Created time of the job in UTC timezone.
+     * 
+     */
     @InputImport(name="createdTimeUtc", required=true)
     private final String createdTimeUtc;
 
@@ -30,6 +38,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.createdTimeUtc;
     }
 
+    /**
+     * Dataset configuration for the job.
+     * 
+     */
     @InputImport(name="datasetConfiguration", required=true)
     private final LabelingDatasetConfigurationResponse datasetConfiguration;
 
@@ -37,6 +49,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.datasetConfiguration;
     }
 
+    /**
+     * Instructions for the job.
+     * 
+     */
     @InputImport(name="jobInstructions", required=true)
     private final LabelingJobInstructionsResponse jobInstructions;
 
@@ -44,6 +60,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.jobInstructions;
     }
 
+    /**
+     * Label categories of the job.
+     * 
+     */
     @InputImport(name="labelCategories", required=true)
     private final Map<String,LabelCategoryResponse> labelCategories;
 
@@ -51,6 +71,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.labelCategories;
     }
 
+    /**
+     * Media specific properties in a labeling job.
+     * 
+     */
     @InputImport(name="labelingJobMediaProperties", required=true)
     private final LabelingJobImagePropertiesResponse labelingJobMediaProperties;
 
@@ -58,6 +82,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.labelingJobMediaProperties;
     }
 
+    /**
+     * Machine learning assisted configuration for the job.
+     * 
+     */
     @InputImport(name="mlAssistConfiguration")
     private final @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
 
@@ -65,6 +93,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.mlAssistConfiguration == null ? Optional.empty() : Optional.ofNullable(this.mlAssistConfiguration);
     }
 
+    /**
+     * Progress metrics of the job.
+     * 
+     */
     @InputImport(name="progressMetrics", required=true)
     private final ProgressMetricsResponse progressMetrics;
 
@@ -72,6 +104,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.progressMetrics;
     }
 
+    /**
+     * Internal id of the job(Previously called project).
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final String projectId;
 
@@ -79,6 +115,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.projectId;
     }
 
+    /**
+     * The job property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -86,6 +126,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.properties == null ? Map.of() : this.properties;
     }
 
+    /**
+     * Status of the job.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -93,6 +137,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.status;
     }
 
+    /**
+     * Status messages of the job.
+     * 
+     */
     @InputImport(name="statusMessages", required=true)
     private final List<StatusMessageResponse> statusMessages;
 
@@ -100,6 +148,10 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
         return this.statusMessages;
     }
 
+    /**
+     * The job tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 

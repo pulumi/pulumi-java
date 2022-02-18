@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ErrorHandlerResponse {
+    /**
+     * Error condition this handler applies to.
+     * 
+     */
     private final String errorCode;
+    /**
+     * MIME type of file. Defaults to text/html.
+     * 
+     */
     private final String mimeType;
+    /**
+     * Static file content to be served for this error.
+     * 
+     */
     private final String staticFile;
 
     @OutputCustomType.Constructor({"errorCode","mimeType","staticFile"})
@@ -23,12 +35,24 @@ public final class ErrorHandlerResponse {
         this.staticFile = Objects.requireNonNull(staticFile);
     }
 
+    /**
+     * Error condition this handler applies to.
+     * 
+     */
     public String getErrorCode() {
         return this.errorCode;
     }
+    /**
+     * MIME type of file. Defaults to text/html.
+     * 
+     */
     public String getMimeType() {
         return this.mimeType;
     }
+    /**
+     * Static file content to be served for this error.
+     * 
+     */
     public String getStaticFile() {
         return this.staticFile;
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * General identifier of a data field in a storage service.
+ * 
+ */
 public final class GooglePrivacyDlpV2FieldIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2FieldIdResponse Empty = new GooglePrivacyDlpV2FieldIdResponse();
 
+    /**
+     * Name describing the field.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

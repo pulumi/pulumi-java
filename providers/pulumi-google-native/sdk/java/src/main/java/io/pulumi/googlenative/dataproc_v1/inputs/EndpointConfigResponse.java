@@ -10,10 +10,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Endpoint config for this cluster
+ * 
+ */
 public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointConfigResponse Empty = new EndpointConfigResponse();
 
+    /**
+     * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+     * 
+     */
     @InputImport(name="enableHttpPortAccess", required=true)
     private final Boolean enableHttpPortAccess;
 
@@ -21,6 +29,10 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.enableHttpPortAccess;
     }
 
+    /**
+     * The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+     * 
+     */
     @InputImport(name="httpPorts", required=true)
     private final Map<String,String> httpPorts;
 

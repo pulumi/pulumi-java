@@ -15,6 +15,10 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomServiceState Empty = new CustomServiceState();
 
+    /**
+     * Name used for UI elements listing this Service.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -22,6 +26,10 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,11 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -36,6 +49,11 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * An optional service ID to use. If not given, the server will generate a
+     * service ID.
+     * 
+     */
     @InputImport(name="serviceId")
     private final @Nullable Input<String> serviceId;
 
@@ -43,6 +61,11 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
         return this.serviceId == null ? Input.empty() : this.serviceId;
     }
 
+    /**
+     * Configuration for how to query telemetry on a Service.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="telemetry")
     private final @Nullable Input<CustomServiceTelemetryGetArgs> telemetry;
 

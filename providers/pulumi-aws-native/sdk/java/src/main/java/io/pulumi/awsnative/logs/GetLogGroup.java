@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLogGroup {
+/**
+ * Resource schema for AWS::Logs::LogGroup
+ * 
+ */
     public static CompletableFuture<GetLogGroupResult> invokeAsync(GetLogGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:logs:getLogGroup", TypeShape.of(GetLogGroupResult.class), args == null ? GetLogGroupArgs.Empty : args, Utilities.withVersion(options));
     }

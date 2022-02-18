@@ -15,6 +15,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
+    /**
+     * A user-assigned name for this group, used only for display
+     * purposes.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -22,6 +27,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The filter used to determine which monitored resources
+     * belong to this group.
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final Input<String> filter;
 
@@ -29,6 +39,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter;
     }
 
+    /**
+     * If true, the members of this group are considered to be a
+     * cluster. The system can perform additional analysis on
+     * groups that are clusters.
+     * 
+     */
     @InputImport(name="isCluster")
     private final @Nullable Input<Boolean> isCluster;
 
@@ -36,6 +52,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.isCluster == null ? Input.empty() : this.isCluster;
     }
 
+    /**
+     * The name of the group's parent, if it has one. The format is
+     * "projects/{project_id_or_number}/groups/{group_id}". For
+     * groups with no parent, parentName is the empty string, "".
+     * 
+     */
     @InputImport(name="parentName")
     private final @Nullable Input<String> parentName;
 
@@ -43,6 +65,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentName == null ? Input.empty() : this.parentName;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorWorkerConfiguration {
+    /**
+     * The revision of the worker configuration to use.
+     * 
+     */
     private final Integer revision;
+    /**
+     * The Amazon Resource Name (ARN) of the worker configuration to use.
+     * 
+     */
     private final String workerConfigurationArn;
 
     @OutputCustomType.Constructor({"revision","workerConfigurationArn"})
@@ -21,9 +29,17 @@ public final class ConnectorWorkerConfiguration {
         this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
     }
 
+    /**
+     * The revision of the worker configuration to use.
+     * 
+     */
     public Integer getRevision() {
         return this.revision;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the worker configuration to use.
+     * 
+     */
     public String getWorkerConfigurationArn() {
         return this.workerConfigurationArn;
     }

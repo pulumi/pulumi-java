@@ -17,6 +17,11 @@ public final class ReservationSpecificReservationInstancePropertiesArgs extends 
 
     public static final ReservationSpecificReservationInstancePropertiesArgs Empty = new ReservationSpecificReservationInstancePropertiesArgs();
 
+    /**
+     * Guest accelerator type and count.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="guestAccelerators")
     private final @Nullable Input<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs>> guestAccelerators;
 
@@ -24,6 +29,12 @@ public final class ReservationSpecificReservationInstancePropertiesArgs extends 
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
     }
 
+    /**
+     * The amount of local ssd to reserve with each instance. This
+     * reserves disks of type `local-ssd`.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="localSsds")
     private final @Nullable Input<List<ReservationSpecificReservationInstancePropertiesLocalSsdArgs>> localSsds;
 
@@ -31,6 +42,10 @@ public final class ReservationSpecificReservationInstancePropertiesArgs extends 
         return this.localSsds == null ? Input.empty() : this.localSsds;
     }
 
+    /**
+     * The name of the machine type to reserve.
+     * 
+     */
     @InputImport(name="machineType", required=true)
     private final Input<String> machineType;
 
@@ -38,6 +53,13 @@ public final class ReservationSpecificReservationInstancePropertiesArgs extends 
         return this.machineType;
     }
 
+    /**
+     * The minimum CPU platform for the reservation. For example,
+     * `"Intel Skylake"`. See
+     * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+     * for information on available CPU platforms.
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGatewayRouteTableAssociation {
+/**
+ * Associates a gateway with a route table. The gateway and route table must be in the same VPC. This association causes the incoming traffic to the gateway to be routed according to the routes in the route table.
+ * 
+ */
     public static CompletableFuture<GetGatewayRouteTableAssociationResult> invokeAsync(GetGatewayRouteTableAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getGatewayRouteTableAssociation", TypeShape.of(GetGatewayRouteTableAssociationResult.class), args == null ? GetGatewayRouteTableAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

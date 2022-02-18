@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SQL stored procedure activity type.
+ * 
+ */
 public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlServerStoredProcedureActivityArgs Empty = new SqlServerStoredProcedureActivityArgs();
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -29,6 +37,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +48,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -43,6 +59,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
         return this.linkedServiceName;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -50,6 +70,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -57,6 +81,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * Stored procedure name. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="storedProcedureName", required=true)
     private final Input<Object> storedProcedureName;
 
@@ -64,6 +92,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
         return this.storedProcedureName;
     }
 
+    /**
+     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * 
+     */
     @InputImport(name="storedProcedureParameters")
     private final @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
@@ -71,6 +103,11 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
         return this.storedProcedureParameters == null ? Input.empty() : this.storedProcedureParameters;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'SqlServerStoredProcedure'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -78,6 +115,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

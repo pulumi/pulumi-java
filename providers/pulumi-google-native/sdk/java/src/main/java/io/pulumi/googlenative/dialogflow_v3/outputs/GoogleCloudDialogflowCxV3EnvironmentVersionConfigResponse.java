@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse {
+    /**
+     * Format: projects//locations//agents//flows//versions/.
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"version"})
@@ -16,6 +20,10 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * Format: projects//locations//agents//flows//versions/.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

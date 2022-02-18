@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The log pattern.
+ * 
+ */
 public final class ApplicationLogPatternArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationLogPatternArgs Empty = new ApplicationLogPatternArgs();
 
+    /**
+     * The log pattern.
+     * 
+     */
     @InputImport(name="pattern", required=true)
     private final Input<String> pattern;
 
@@ -21,6 +29,10 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
         return this.pattern;
     }
 
+    /**
+     * The name of the log pattern.
+     * 
+     */
     @InputImport(name="patternName", required=true)
     private final Input<String> patternName;
 
@@ -28,6 +40,10 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
         return this.patternName;
     }
 
+    /**
+     * Rank of the log pattern.
+     * 
+     */
     @InputImport(name="rank", required=true)
     private final Input<Integer> rank;
 

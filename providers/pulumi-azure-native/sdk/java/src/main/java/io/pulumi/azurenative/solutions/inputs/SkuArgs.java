@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU for the resource.
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The SKU capacity.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -22,6 +30,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * The SKU family.
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -29,6 +41,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
+    /**
+     * The SKU model.
+     * 
+     */
     @InputImport(name="model")
     private final @Nullable Input<String> model;
 
@@ -36,6 +52,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.model == null ? Input.empty() : this.model;
     }
 
+    /**
+     * The SKU name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -43,6 +63,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The SKU size.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<String> size;
 
@@ -50,6 +74,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * The SKU tier.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

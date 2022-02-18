@@ -16,6 +16,10 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
 
     public static final EdgeCacheServiceRoutingPathMatcherArgs Empty = new EdgeCacheServiceRoutingPathMatcherArgs();
 
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -30,6 +38,11 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="routeRules", required=true)
     private final Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> routeRules;
 

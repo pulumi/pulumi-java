@@ -27,6 +27,10 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
         return this.destination;
     }
 
+    /**
+     * Specifies whether the inventory is enabled or disabled.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -34,6 +38,10 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
         return this.enabled;
     }
 
+    /**
+     * The ID used to identify the inventory configuration.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -41,6 +49,10 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
         return this.id;
     }
 
+    /**
+     * Object versions to include in the inventory list.
+     * 
+     */
     @InputImport(name="includedObjectVersions", required=true)
     private final BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
 
@@ -48,6 +60,10 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
         return this.includedObjectVersions;
     }
 
+    /**
+     * Contains the optional fields that are included in the inventory results.
+     * 
+     */
     @InputImport(name="optionalFields")
     private final @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
 
@@ -55,6 +71,10 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
         return this.optionalFields == null ? List.of() : this.optionalFields;
     }
 
+    /**
+     * The prefix that is prepended to all inventory results.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable String prefix;
 
@@ -62,6 +82,10 @@ public final class BucketInventoryConfiguration extends io.pulumi.resources.Invo
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
+    /**
+     * Specifies the schedule for generating inventory results.
+     * 
+     */
     @InputImport(name="scheduleFrequency", required=true)
     private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
 

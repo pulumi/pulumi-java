@@ -11,8 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobExtractSourceTable {
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     private final @Nullable String datasetId;
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     private final @Nullable String projectId;
+    /**
+     * The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
+     * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
+     * 
+     */
     private final String tableId;
 
     @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
@@ -25,12 +38,25 @@ public final class JobExtractSourceTable {
         this.tableId = Objects.requireNonNull(tableId);
     }
 
+    /**
+     * The ID of the dataset containing this model.
+     * 
+     */
     public Optional<String> getDatasetId() {
         return Optional.ofNullable(this.datasetId);
     }
+    /**
+     * The ID of the project containing this model.
+     * 
+     */
     public Optional<String> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }
+    /**
+     * The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
+     * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
+     * 
+     */
     public String getTableId() {
         return this.tableId;
     }

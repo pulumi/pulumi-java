@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a Replica for this Secret.
+ * 
+ */
 public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicaArgs Empty = new ReplicaArgs();
 
+    /**
+     * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * 
+     */
     @InputImport(name="customerManagedEncryption")
     private final @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
@@ -22,6 +30,10 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerManagedEncryption == null ? Input.empty() : this.customerManagedEncryption;
     }
 
+    /**
+     * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 

@@ -61,6 +61,10 @@ public final class GetClusterNodePool extends io.pulumi.resources.InvokeArgs {
         return this.maxPodsPerNode;
     }
 
+    /**
+     * The name of the cluster.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

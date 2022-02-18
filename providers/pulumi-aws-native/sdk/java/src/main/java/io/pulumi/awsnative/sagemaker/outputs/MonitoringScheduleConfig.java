@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class MonitoringScheduleConfig {
     private final @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
+    /**
+     * Name of the job definition
+     * 
+     */
     private final @Nullable String monitoringJobDefinitionName;
     private final @Nullable MonitoringScheduleMonitoringType monitoringType;
     private final @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
@@ -34,6 +38,10 @@ public final class MonitoringScheduleConfig {
     public Optional<MonitoringScheduleMonitoringJobDefinition> getMonitoringJobDefinition() {
         return Optional.ofNullable(this.monitoringJobDefinition);
     }
+    /**
+     * Name of the job definition
+     * 
+     */
     public Optional<String> getMonitoringJobDefinitionName() {
         return Optional.ofNullable(this.monitoringJobDefinitionName);
     }

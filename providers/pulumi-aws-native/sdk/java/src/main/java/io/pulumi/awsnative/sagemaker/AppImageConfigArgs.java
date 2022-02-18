@@ -17,6 +17,10 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppImageConfigArgs Empty = new AppImageConfigArgs();
 
+    /**
+     * The Name of the AppImageConfig.
+     * 
+     */
     @InputImport(name="appImageConfigName")
     private final @Nullable Input<String> appImageConfigName;
 
@@ -24,6 +28,10 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.appImageConfigName == null ? Input.empty() : this.appImageConfigName;
     }
 
+    /**
+     * The KernelGatewayImageConfig.
+     * 
+     */
     @InputImport(name="kernelGatewayImageConfig")
     private final @Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
@@ -31,6 +39,10 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.kernelGatewayImageConfig == null ? Input.empty() : this.kernelGatewayImageConfig;
     }
 
+    /**
+     * A list of tags to apply to the AppImageConfig.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AppImageConfigTagArgs>> tags;
 

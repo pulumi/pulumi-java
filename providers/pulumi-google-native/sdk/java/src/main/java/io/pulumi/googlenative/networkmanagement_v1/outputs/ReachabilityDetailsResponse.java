@@ -12,9 +12,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReachabilityDetailsResponse {
+    /**
+     * The details of a failure or a cancellation of reachability analysis.
+     * 
+     */
     private final StatusResponse error;
+    /**
+     * The overall result of the test's configuration analysis.
+     * 
+     */
     private final String result;
+    /**
+     * Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
+     * 
+     */
     private final List<TraceResponse> traces;
+    /**
+     * The time of the configuration analysis.
+     * 
+     */
     private final String verifyTime;
 
     @OutputCustomType.Constructor({"error","result","traces","verifyTime"})
@@ -29,15 +45,31 @@ public final class ReachabilityDetailsResponse {
         this.verifyTime = Objects.requireNonNull(verifyTime);
     }
 
+    /**
+     * The details of a failure or a cancellation of reachability analysis.
+     * 
+     */
     public StatusResponse getError() {
         return this.error;
     }
+    /**
+     * The overall result of the test's configuration analysis.
+     * 
+     */
     public String getResult() {
         return this.result;
     }
+    /**
+     * Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
+     * 
+     */
     public List<TraceResponse> getTraces() {
         return this.traces;
     }
+    /**
+     * The time of the configuration analysis.
+     * 
+     */
     public String getVerifyTime() {
         return this.verifyTime;
     }

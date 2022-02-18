@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Schedule
+     * 
+     */
     @EnumType
     public enum ReplicationSchedule {
         ReplicationSchedule_10minutely("_10minutely"),

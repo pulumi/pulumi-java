@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Image Repository
+ * 
+ */
 public final class ServiceImageRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceImageRepositoryArgs Empty = new ServiceImageRepositoryArgs();
@@ -23,6 +27,10 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
         return this.imageConfiguration == null ? Input.empty() : this.imageConfiguration;
     }
 
+    /**
+     * Image Identifier
+     * 
+     */
     @InputImport(name="imageIdentifier", required=true)
     private final Input<String> imageIdentifier;
 
@@ -30,6 +38,10 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
         return this.imageIdentifier;
     }
 
+    /**
+     * Image Repository Type
+     * 
+     */
     @InputImport(name="imageRepositoryType", required=true)
     private final Input<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
 

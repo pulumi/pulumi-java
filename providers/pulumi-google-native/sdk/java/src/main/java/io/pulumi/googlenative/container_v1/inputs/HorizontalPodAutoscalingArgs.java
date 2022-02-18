@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration options for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
+ * 
+ */
 public final class HorizontalPodAutoscalingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HorizontalPodAutoscalingArgs Empty = new HorizontalPodAutoscalingArgs();
 
+    /**
+     * Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that metrics are collected into Stackdriver Monitoring.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 

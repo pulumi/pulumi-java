@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * controller details
+ * 
+ */
 public final class ControllerDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ControllerDetailsResponse Empty = new ControllerDetailsResponse();
 
+    /**
+     * controller arm resource id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

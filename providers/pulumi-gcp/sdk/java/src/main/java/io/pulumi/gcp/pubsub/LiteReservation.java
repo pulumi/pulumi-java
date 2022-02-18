@@ -14,33 +14,109 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A named resource representing a shared pool of capacity.
+ * 
+ * To get more information about Reservation, see:
+ * 
+ * * [API documentation](https://cloud.google.com/pubsub/lite/docs/reference/rest/v1/admin.projects.locations.reservations)
+ * * How-to Guides
+ *     * [Managing Reservations](https://cloud.google.com/pubsub/lite/docs/reservations)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Reservation can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:pubsub/liteReservation:LiteReservation default projects/{{project}}/locations/{{region}}/reservations/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:pubsub/liteReservation:LiteReservation default {{project}}/{{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:pubsub/liteReservation:LiteReservation default {{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:pubsub/liteReservation:LiteReservation default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:pubsub/liteReservation:LiteReservation")
 public class LiteReservation extends io.pulumi.resources.CustomResource {
+    /**
+     * Name of the reservation.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the reservation.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The region of the pubsub lite reservation.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
+    /**
+     * @return The region of the pubsub lite reservation.
+     * 
+     */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
+    /**
+     * The reserved throughput capacity. Every unit of throughput capacity is
+     * equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
+     * messages.
+     * 
+     */
     @OutputExport(name="throughputCapacity", type=Integer.class, parameters={})
     private Output<Integer> throughputCapacity;
 
+    /**
+     * @return The reserved throughput capacity. Every unit of throughput capacity is
+     * equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
+     * messages.
+     * 
+     */
     public Output<Integer> getThroughputCapacity() {
         return this.throughputCapacity;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LiteReservation(String name, LiteReservationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:pubsub/liteReservation:LiteReservation", name, args == null ? LiteReservationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +132,15 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LiteReservation get(String name, Input<String> id, @Nullable LiteReservationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LiteReservation(name, id, state, options);
     }

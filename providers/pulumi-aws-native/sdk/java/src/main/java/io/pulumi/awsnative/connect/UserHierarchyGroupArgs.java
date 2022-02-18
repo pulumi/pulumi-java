@@ -14,6 +14,10 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
 
     public static final UserHierarchyGroupArgs Empty = new UserHierarchyGroupArgs();
 
+    /**
+     * The identifier of the Amazon Connect instance.
+     * 
+     */
     @InputImport(name="instanceArn", required=true)
     private final Input<String> instanceArn;
 
@@ -21,6 +25,10 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
         return this.instanceArn;
     }
 
+    /**
+     * The name of the user hierarchy group.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +36,10 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) for the parent user hierarchy group.
+     * 
+     */
     @InputImport(name="parentGroupArn")
     private final @Nullable Input<String> parentGroupArn;
 

@@ -14,6 +14,10 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
 
     public static final LogzOrganizationPropertiesArgs Empty = new LogzOrganizationPropertiesArgs();
 
+    /**
+     * Name of the Logz organization.
+     * 
+     */
     @InputImport(name="companyName")
     private final @Nullable Input<String> companyName;
 
@@ -21,6 +25,10 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
         return this.companyName == null ? Input.empty() : this.companyName;
     }
 
+    /**
+     * The Id of the Enterprise App used for Single sign on.
+     * 
+     */
     @InputImport(name="enterpriseAppId")
     private final @Nullable Input<String> enterpriseAppId;
 
@@ -28,6 +36,10 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
         return this.enterpriseAppId == null ? Input.empty() : this.enterpriseAppId;
     }
 
+    /**
+     * The login URL specific to this Logz Organization.
+     * 
+     */
     @InputImport(name="singleSignOnUrl")
     private final @Nullable Input<String> singleSignOnUrl;
 

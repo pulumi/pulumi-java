@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuResponse {
+    /**
+     * Current capacity of the target resource
+     * 
+     */
     private final @Nullable Integer capacity;
+    /**
+     * Name of the Sku
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Tier of the Sku
+     * 
+     */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"capacity","name","tier"})
@@ -26,12 +38,24 @@ public final class SkuResponse {
         this.tier = tier;
     }
 
+    /**
+     * Current capacity of the target resource
+     * 
+     */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+    /**
+     * Name of the Sku
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Tier of the Sku
+     * 
+     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

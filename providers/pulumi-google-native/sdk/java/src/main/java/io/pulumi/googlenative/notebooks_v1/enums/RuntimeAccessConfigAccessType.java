@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of access mode this instance.
+     * 
+     */
     @EnumType
     public enum RuntimeAccessConfigAccessType {
+        /**
+         * Unspecified access.
+         * 
+         */
         RuntimeAccessTypeUnspecified("RUNTIME_ACCESS_TYPE_UNSPECIFIED"),
+        /**
+         * Single user login.
+         * 
+         */
         SingleUser("SINGLE_USER");
 
         private final String value;

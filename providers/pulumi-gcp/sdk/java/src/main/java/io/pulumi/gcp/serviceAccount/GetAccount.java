@@ -13,6 +13,19 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccount {
+/**
+ * Get the service account from a project. For more information see
+ * the official [API](https://cloud.google.com/compute/docs/access/service-accounts) documentation.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getAccount.
+ * 
+ *
+ * A collection of values returned by getAccount.
+ * 
+ */
     public static CompletableFuture<GetAccountResult> invokeAsync(GetAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:serviceAccount/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args == null ? GetAccountArgs.Empty : args, Utilities.withVersion(options));
     }

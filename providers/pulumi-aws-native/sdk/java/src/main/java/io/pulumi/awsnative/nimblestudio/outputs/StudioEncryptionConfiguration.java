@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StudioEncryptionConfiguration {
+    /**
+     * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
+     * 
+     */
     private final @Nullable String keyArn;
     private final StudioEncryptionConfigurationKeyType keyType;
 
@@ -23,6 +27,10 @@ public final class StudioEncryptionConfiguration {
         this.keyType = Objects.requireNonNull(keyType);
     }
 
+    /**
+     * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
+     * 
+     */
     public Optional<String> getKeyArn() {
         return Optional.ofNullable(this.keyArn);
     }

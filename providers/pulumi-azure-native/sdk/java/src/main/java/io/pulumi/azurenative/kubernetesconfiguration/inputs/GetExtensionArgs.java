@@ -12,6 +12,10 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExtensionArgs Empty = new GetExtensionArgs();
 
+    /**
+     * The name of the kubernetes cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterName;
     }
 
+    /**
+     * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+     * 
+     */
     @InputImport(name="clusterResourceName", required=true)
     private final String clusterResourceName;
 
@@ -26,6 +34,10 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterResourceName;
     }
 
+    /**
+     * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+     * 
+     */
     @InputImport(name="clusterRp", required=true)
     private final String clusterRp;
 
@@ -33,6 +45,10 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterRp;
     }
 
+    /**
+     * Name of an instance of the Extension.
+     * 
+     */
     @InputImport(name="extensionInstanceName", required=true)
     private final String extensionInstanceName;
 
@@ -40,6 +56,10 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
         return this.extensionInstanceName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PodIP {
+    /**
+     * ip is an IP address (IPv4 or IPv6) assigned to the pod
+     * 
+     */
     private final @Nullable String ip;
 
     @OutputCustomType.Constructor({"ip"})
@@ -18,6 +22,10 @@ public final class PodIP {
         this.ip = ip;
     }
 
+    /**
+     * ip is an IP address (IPv4 or IPv6) assigned to the pod
+     * 
+     */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }

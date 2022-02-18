@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCachePolicy {
+/**
+ * Resource Type definition for AWS::CloudFront::CachePolicy
+ * 
+ */
     public static CompletableFuture<GetCachePolicyResult> invokeAsync(GetCachePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getCachePolicy", TypeShape.of(GetCachePolicyResult.class), args == null ? GetCachePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

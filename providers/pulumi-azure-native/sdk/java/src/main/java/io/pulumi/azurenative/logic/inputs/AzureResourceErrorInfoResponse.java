@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The azure resource error info.
+ * 
+ */
 public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureResourceErrorInfoResponse Empty = new AzureResourceErrorInfoResponse();
 
+    /**
+     * The error code.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -22,6 +30,10 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
         return this.code;
     }
 
+    /**
+     * The error details.
+     * 
+     */
     @InputImport(name="details")
     private final @Nullable List<AzureResourceErrorInfoResponse> details;
 
@@ -29,6 +41,10 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
         return this.details == null ? List.of() : this.details;
     }
 
+    /**
+     * The error message.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

@@ -17,11 +17,25 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::SageMaker::Project
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:sagemaker:Project")
 public class Project extends io.pulumi.resources.CustomResource {
+    /**
+     * The time at which the project was created.
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return The time at which the project was created.
+     * 
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
@@ -49,31 +63,69 @@ public class Project extends io.pulumi.resources.CustomResource {
     public Output<String> getProjectName() {
         return this.projectName;
     }
+    /**
+     * The status of a project.
+     * 
+     */
     @OutputExport(name="projectStatus", type=ProjectStatus.class, parameters={})
     private Output<ProjectStatus> projectStatus;
 
+    /**
+     * @return The status of a project.
+     * 
+     */
     public Output<ProjectStatus> getProjectStatus() {
         return this.projectStatus;
     }
+    /**
+     * Provisioned ServiceCatalog  Details
+     * 
+     */
     @OutputExport(name="serviceCatalogProvisionedProductDetails", type=ServiceCatalogProvisionedProductDetailsProperties.class, parameters={})
     private Output<ServiceCatalogProvisionedProductDetailsProperties> serviceCatalogProvisionedProductDetails;
 
+    /**
+     * @return Provisioned ServiceCatalog  Details
+     * 
+     */
     public Output<ServiceCatalogProvisionedProductDetailsProperties> getServiceCatalogProvisionedProductDetails() {
         return this.serviceCatalogProvisionedProductDetails;
     }
+    /**
+     * Input ServiceCatalog Provisioning Details
+     * 
+     */
     @OutputExport(name="serviceCatalogProvisioningDetails", type=ServiceCatalogProvisioningDetailsProperties.class, parameters={})
     private Output<ServiceCatalogProvisioningDetailsProperties> serviceCatalogProvisioningDetails;
 
+    /**
+     * @return Input ServiceCatalog Provisioning Details
+     * 
+     */
     public Output<ServiceCatalogProvisioningDetailsProperties> getServiceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<ProjectTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:sagemaker:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -89,6 +141,14 @@ public class Project extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Project get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Project(name, id, options);
     }

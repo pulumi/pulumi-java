@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorModelLambda {
+    /**
+     * The ARN of the Lambda function that is executed.
+     * 
+     */
     private final String functionArn;
     private final @Nullable DetectorModelPayload payload;
 
@@ -23,6 +27,10 @@ public final class DetectorModelLambda {
         this.payload = payload;
     }
 
+    /**
+     * The ARN of the Lambda function that is executed.
+     * 
+     */
     public String getFunctionArn() {
         return this.functionArn;
     }

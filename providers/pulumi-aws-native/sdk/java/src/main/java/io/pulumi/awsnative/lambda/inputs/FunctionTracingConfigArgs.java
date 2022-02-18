@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The function's AWS X-Ray tracing configuration. To sample and record incoming requests, set Mode to Active.
+ * 
+ */
 public final class FunctionTracingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionTracingConfigArgs Empty = new FunctionTracingConfigArgs();
 
+    /**
+     * The tracing mode.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<FunctionTracingConfigMode> mode;
 

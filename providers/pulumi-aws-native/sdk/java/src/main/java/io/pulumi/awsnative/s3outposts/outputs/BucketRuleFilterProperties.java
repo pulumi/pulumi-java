@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketRuleFilterProperties {
+    /**
+     * The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
+     * 
+     */
     private final @Nullable BucketFilterAndOperator andOperator;
+    /**
+     * Object key prefix that identifies one or more objects to which this rule applies.
+     * 
+     */
     private final @Nullable String prefix;
+    /**
+     * Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+     * 
+     */
     private final @Nullable BucketFilterTag tag;
 
     @OutputCustomType.Constructor({"andOperator","prefix","tag"})
@@ -27,12 +39,24 @@ public final class BucketRuleFilterProperties {
         this.tag = tag;
     }
 
+    /**
+     * The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
+     * 
+     */
     public Optional<BucketFilterAndOperator> getAndOperator() {
         return Optional.ofNullable(this.andOperator);
     }
+    /**
+     * Object key prefix that identifies one or more objects to which this rule applies.
+     * 
+     */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
+    /**
+     * Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+     * 
+     */
     public Optional<BucketFilterTag> getTag() {
         return Optional.ofNullable(this.tag);
     }

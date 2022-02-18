@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * InputContext specified for the intent.
+ * 
+ */
 public final class BotInputContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotInputContextArgs Empty = new BotInputContextArgs();
 
+    /**
+     * The name of the context.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

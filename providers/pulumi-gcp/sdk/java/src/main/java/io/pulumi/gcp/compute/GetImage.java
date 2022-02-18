@@ -13,6 +13,19 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImage {
+/**
+ * Get information about a Google Compute Image. Check that your service account has the `compute.imageUser` role if you want to share [custom images](https://cloud.google.com/compute/docs/images/sharing-images-across-projects) from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
+ * [the official documentation](https://cloud.google.com/compute/docs/images) and its [API](https://cloud.google.com/compute/docs/reference/latest/images).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getImage.
+ * 
+ *
+ * A collection of values returned by getImage.
+ * 
+ */
     public static CompletableFuture<GetImageResult> invokeAsync(@Nullable GetImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getImage:getImage", TypeShape.of(GetImageResult.class), args == null ? GetImageArgs.Empty : args, Utilities.withVersion(options));
     }

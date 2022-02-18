@@ -22,6 +22,10 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
     }
 
+    /**
+     * Whether client certificate authorization is enabled for this cluster.  For example:
+     * 
+     */
     @InputImport(name="clientCertificateConfig", required=true)
     private final Input<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig;
 

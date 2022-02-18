@@ -17,6 +17,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FormulaArgs Empty = new FormulaArgs();
 
+    /**
+     * The description of the formula.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The content of the formula.
+     * 
+     */
     @InputImport(name="formulaContent")
     private final @Nullable Input<LabVirtualMachineCreationParameterArgs> formulaContent;
 
@@ -31,6 +39,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
         return this.formulaContent == null ? Input.empty() : this.formulaContent;
     }
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -38,6 +50,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +61,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the formula.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +72,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The OS type of the formula.
+     * 
+     */
     @InputImport(name="osType")
     private final @Nullable Input<String> osType;
 
@@ -59,6 +83,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
         return this.osType == null ? Input.empty() : this.osType;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -66,6 +94,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -73,6 +105,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Information about a VM from which a formula is to be created.
+     * 
+     */
     @InputImport(name="vm")
     private final @Nullable Input<FormulaPropertiesFromVmArgs> vm;
 

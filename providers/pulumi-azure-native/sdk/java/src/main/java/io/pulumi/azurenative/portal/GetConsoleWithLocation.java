@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsoleWithLocation {
+/**
+ * Cloud shell console
+ * API Version: 2018-10-01.
+ * 
+ *
+ * Cloud shell console
+ * 
+ */
     public static CompletableFuture<GetConsoleWithLocationResult> invokeAsync(GetConsoleWithLocationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getConsoleWithLocation", TypeShape.of(GetConsoleWithLocationResult.class), args == null ? GetConsoleWithLocationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,15 +8,51 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Which HTTP method to use for the request.
+     * 
+     */
     @EnumType
     public enum HttpTargetHttpMethod {
+        /**
+         * HTTP method unspecified. Defaults to POST.
+         * 
+         */
         HttpMethodUnspecified("HTTP_METHOD_UNSPECIFIED"),
+        /**
+         * HTTP POST
+         * 
+         */
         Post("POST"),
+        /**
+         * HTTP GET
+         * 
+         */
         Get("GET"),
+        /**
+         * HTTP HEAD
+         * 
+         */
         Head("HEAD"),
+        /**
+         * HTTP PUT
+         * 
+         */
         Put("PUT"),
+        /**
+         * HTTP DELETE
+         * 
+         */
         Delete("DELETE"),
+        /**
+         * HTTP PATCH
+         * 
+         */
         Patch("PATCH"),
+        /**
+         * HTTP OPTIONS
+         * 
+         */
         Options("OPTIONS");
 
         private final String value;

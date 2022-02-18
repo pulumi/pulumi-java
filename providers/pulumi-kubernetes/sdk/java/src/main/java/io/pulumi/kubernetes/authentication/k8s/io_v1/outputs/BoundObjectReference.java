@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BoundObjectReference {
+    /**
+     * API version of the referent.
+     * 
+     */
     private final @Nullable String apiVersion;
+    /**
+     * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Name of the referent.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * UID of the referent.
+     * 
+     */
     private final @Nullable String uid;
 
     @OutputCustomType.Constructor({"apiVersion","kind","name","uid"})
@@ -28,15 +44,31 @@ public final class BoundObjectReference {
         this.uid = uid;
     }
 
+    /**
+     * API version of the referent.
+     * 
+     */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
+    /**
+     * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Name of the referent.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * UID of the referent.
+     * 
+     */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }

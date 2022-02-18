@@ -12,6 +12,10 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectorArgs Empty = new GetConnectorArgs();
 
+    /**
+     * Amazon Resource Name for the created Connector.
+     * 
+     */
     @InputImport(name="connectorArn", required=true)
     private final String connectorArn;
 

@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetParameterGroupResult {
+    /**
+     * The Amazon Resource Name (ARN) of the parameter group.
+     * 
+     */
     private final @Nullable String aRN;
+    /**
+     * An array of key-value pairs to apply to this parameter group.
+     * 
+     */
     private final @Nullable List<ParameterGroupTag> tags;
 
     @OutputCustomType.Constructor({"aRN","tags"})
@@ -24,9 +32,17 @@ public final class GetParameterGroupResult {
         this.tags = tags;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the parameter group.
+     * 
+     */
     public Optional<String> getARN() {
         return Optional.ofNullable(this.aRN);
     }
+    /**
+     * An array of key-value pairs to apply to this parameter group.
+     * 
+     */
     public List<ParameterGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

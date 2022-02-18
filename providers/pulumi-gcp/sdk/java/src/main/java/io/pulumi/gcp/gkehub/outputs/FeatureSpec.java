@@ -11,6 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FeatureSpec {
+    /**
+     * Multicluster Ingress-specific spec.
+     * The `multiclusteringress` block supports:
+     * 
+     */
     private final @Nullable FeatureSpecMulticlusteringress multiclusteringress;
 
     @OutputCustomType.Constructor({"multiclusteringress"})
@@ -18,6 +23,11 @@ public final class FeatureSpec {
         this.multiclusteringress = multiclusteringress;
     }
 
+    /**
+     * Multicluster Ingress-specific spec.
+     * The `multiclusteringress` block supports:
+     * 
+     */
     public Optional<FeatureSpecMulticlusteringress> getMulticlusteringress() {
         return Optional.ofNullable(this.multiclusteringress);
     }

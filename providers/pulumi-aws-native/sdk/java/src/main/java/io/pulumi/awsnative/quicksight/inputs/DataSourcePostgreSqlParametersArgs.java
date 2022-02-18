@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>PostgreSQL parameters.</p>
+ * 
+ */
 public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourcePostgreSqlParametersArgs Empty = new DataSourcePostgreSqlParametersArgs();
 
+    /**
+     * <p>Database.</p>
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<String> database;
 
@@ -21,6 +29,10 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
         return this.database;
     }
 
+    /**
+     * <p>Host.</p>
+     * 
+     */
     @InputImport(name="host", required=true)
     private final Input<String> host;
 
@@ -28,6 +40,10 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
         return this.host;
     }
 
+    /**
+     * <p>Port.</p>
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Double> port;
 

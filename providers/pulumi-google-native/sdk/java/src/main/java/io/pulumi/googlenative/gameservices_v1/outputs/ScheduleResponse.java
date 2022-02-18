@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ScheduleResponse {
+    /**
+     * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
+     * 
+     */
     private final String cronJobDuration;
+    /**
+     * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
+     * 
+     */
     private final String cronSpec;
+    /**
+     * The end time of the event.
+     * 
+     */
     private final String endTime;
+    /**
+     * The start time of the event.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"cronJobDuration","cronSpec","endTime","startTime"})
@@ -26,15 +42,31 @@ public final class ScheduleResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+    /**
+     * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
+     * 
+     */
     public String getCronJobDuration() {
         return this.cronJobDuration;
     }
+    /**
+     * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
+     * 
+     */
     public String getCronSpec() {
         return this.cronSpec;
     }
+    /**
+     * The end time of the event.
+     * 
+     */
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * The start time of the event.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

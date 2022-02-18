@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Trigger referenced dependency.
+ * 
+ */
 public final class TriggerDependencyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TriggerDependencyReferenceResponse Empty = new TriggerDependencyReferenceResponse();
 
+    /**
+     * Referenced trigger.
+     * 
+     */
     @InputImport(name="referenceTrigger", required=true)
     private final TriggerReferenceResponse referenceTrigger;
 
@@ -20,6 +28,11 @@ public final class TriggerDependencyReferenceResponse extends io.pulumi.resource
         return this.referenceTrigger;
     }
 
+    /**
+     * The type of dependency reference.
+     * Expected value is 'TriggerDependencyReference'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

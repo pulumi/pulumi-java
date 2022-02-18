@@ -17,6 +17,12 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
 
     public static final GameServerConfigScalingConfigArgs Empty = new GameServerConfigScalingConfigArgs();
 
+    /**
+     * Fleet autoscaler spec, which is sent to Agones.
+     * Example spec can be found :
+     * https://agones.dev/site/docs/reference/fleetautoscaler/
+     * 
+     */
     @InputImport(name="fleetAutoscalerSpec", required=true)
     private final Input<String> fleetAutoscalerSpec;
 
@@ -24,6 +30,10 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
         return this.fleetAutoscalerSpec;
     }
 
+    /**
+     * The name of the ScalingConfig
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -31,6 +41,11 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * The schedules to which this scaling config applies.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="schedules")
     private final @Nullable Input<List<GameServerConfigScalingConfigScheduleArgs>> schedules;
 
@@ -38,6 +53,13 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
         return this.schedules == null ? Input.empty() : this.schedules;
     }
 
+    /**
+     * Labels used to identify the clusters to which this scaling config
+     * applies. A cluster is subject to this scaling config if its labels match
+     * any of the selector entries.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="selectors")
     private final @Nullable Input<List<GameServerConfigScalingConfigSelectorArgs>> selectors;
 

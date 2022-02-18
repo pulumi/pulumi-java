@@ -19,6 +19,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
+    /**
+     * Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
+     * 
+     */
     @InputImport(name="appNetworkAccessType")
     private final @Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType;
 
@@ -26,6 +30,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.appNetworkAccessType == null ? Input.empty() : this.appNetworkAccessType;
     }
 
+    /**
+     * The mode of authentication that members use to access the domain.
+     * 
+     */
     @InputImport(name="authMode", required=true)
     private final Input<DomainAuthMode> authMode;
 
@@ -33,6 +41,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.authMode;
     }
 
+    /**
+     * The default user settings.
+     * 
+     */
     @InputImport(name="defaultUserSettings", required=true)
     private final Input<DomainUserSettingsArgs> defaultUserSettings;
 
@@ -40,6 +52,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultUserSettings;
     }
 
+    /**
+     * A name for the domain.
+     * 
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -47,6 +63,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -54,6 +74,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * The VPC subnets that Studio uses for communication.
+     * 
+     */
     @InputImport(name="subnetIds", required=true)
     private final Input<List<String>> subnetIds;
 
@@ -61,6 +85,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetIds;
     }
 
+    /**
+     * A list of tags to apply to the user profile.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DomainTagArgs>> tags;
 
@@ -68,6 +96,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * 
+     */
     @InputImport(name="vpcId", required=true)
     private final Input<String> vpcId;
 

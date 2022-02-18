@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * OAuth settings for the API
+ * 
+ */
 public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiOAuthSettingsParameterResponse Empty = new ApiOAuthSettingsParameterResponse();
 
+    /**
+     * Options available to this parameter
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Object options;
 
@@ -22,6 +30,10 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
         return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
     }
 
+    /**
+     * UI definitions per culture as caller can specify the culture
+     * 
+     */
     @InputImport(name="uiDefinition")
     private final @Nullable Object uiDefinition;
 
@@ -29,6 +41,10 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
         return this.uiDefinition == null ? Optional.empty() : Optional.ofNullable(this.uiDefinition);
     }
 
+    /**
+     * Value of the setting
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Describes a set of X.509 extensions that may be part of some certificate issuance controls.
+ * 
+ */
 public final class CertificateExtensionConstraintsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateExtensionConstraintsResponse Empty = new CertificateExtensionConstraintsResponse();
 
+    /**
+     * Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+     * 
+     */
     @InputImport(name="additionalExtensions", required=true)
     private final List<ObjectIdResponse> additionalExtensions;
 
@@ -21,6 +29,10 @@ public final class CertificateExtensionConstraintsResponse extends io.pulumi.res
         return this.additionalExtensions;
     }
 
+    /**
+     * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+     * 
+     */
     @InputImport(name="knownExtensions", required=true)
     private final List<String> knownExtensions;
 

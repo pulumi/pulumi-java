@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFaq {
+/**
+ * A Kendra FAQ resource
+ * 
+ */
     public static CompletableFuture<GetFaqResult> invokeAsync(GetFaqArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kendra:getFaq", TypeShape.of(GetFaqResult.class), args == null ? GetFaqArgs.Empty : args, Utilities.withVersion(options));
     }

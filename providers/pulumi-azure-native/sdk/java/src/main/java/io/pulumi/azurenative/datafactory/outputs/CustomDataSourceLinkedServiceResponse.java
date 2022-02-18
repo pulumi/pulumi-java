@@ -16,10 +16,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomDataSourceLinkedServiceResponse {
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * Type of linked service.
+     * Expected value is 'CustomDataSource'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"annotations","connectVia","description","parameters","type"})
@@ -36,18 +57,39 @@ public final class CustomDataSourceLinkedServiceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'CustomDataSource'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

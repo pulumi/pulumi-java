@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotSlotDefaultValue {
+    /**
+     * The default value to use when a user doesn't provide a value for a slot.
+     * 
+     */
     private final String defaultValue;
 
     @OutputCustomType.Constructor({"defaultValue"})
@@ -16,6 +20,10 @@ public final class BotSlotDefaultValue {
         this.defaultValue = Objects.requireNonNull(defaultValue);
     }
 
+    /**
+     * The default value to use when a user doesn't provide a value for a slot.
+     * 
+     */
     public String getDefaultValue() {
         return this.defaultValue;
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * BlockOverrideDnsType
+     * 
+     */
     @EnumType
     public enum FirewallRuleGroupFirewallRuleBlockOverrideDnsType {
         Cname("CNAME");

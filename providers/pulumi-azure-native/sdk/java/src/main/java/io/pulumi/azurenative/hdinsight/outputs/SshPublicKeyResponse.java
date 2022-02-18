@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SshPublicKeyResponse {
+    /**
+     * The certificate for SSH.
+     * 
+     */
     private final @Nullable String certificateData;
 
     @OutputCustomType.Constructor({"certificateData"})
@@ -18,6 +22,10 @@ public final class SshPublicKeyResponse {
         this.certificateData = certificateData;
     }
 
+    /**
+     * The certificate for SSH.
+     * 
+     */
     public Optional<String> getCertificateData() {
         return Optional.ofNullable(this.certificateData);
     }

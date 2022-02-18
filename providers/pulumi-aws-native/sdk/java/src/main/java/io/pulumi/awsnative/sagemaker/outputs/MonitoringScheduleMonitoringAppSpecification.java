@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitoringScheduleMonitoringAppSpecification {
+    /**
+     * An array of arguments for the container used to run the monitoring job.
+     * 
+     */
     private final @Nullable List<String> containerArguments;
+    /**
+     * Specifies the entrypoint for a container used to run the monitoring job.
+     * 
+     */
     private final @Nullable List<String> containerEntrypoint;
+    /**
+     * The container image to be run by the monitoring job.
+     * 
+     */
     private final String imageUri;
+    /**
+     * An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
+     * 
+     */
     private final @Nullable String postAnalyticsProcessorSourceUri;
+    /**
+     * An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
+     * 
+     */
     private final @Nullable String recordPreprocessorSourceUri;
 
     @OutputCustomType.Constructor({"containerArguments","containerEntrypoint","imageUri","postAnalyticsProcessorSourceUri","recordPreprocessorSourceUri"})
@@ -32,18 +52,38 @@ public final class MonitoringScheduleMonitoringAppSpecification {
         this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
     }
 
+    /**
+     * An array of arguments for the container used to run the monitoring job.
+     * 
+     */
     public List<String> getContainerArguments() {
         return this.containerArguments == null ? List.of() : this.containerArguments;
     }
+    /**
+     * Specifies the entrypoint for a container used to run the monitoring job.
+     * 
+     */
     public List<String> getContainerEntrypoint() {
         return this.containerEntrypoint == null ? List.of() : this.containerEntrypoint;
     }
+    /**
+     * The container image to be run by the monitoring job.
+     * 
+     */
     public String getImageUri() {
         return this.imageUri;
     }
+    /**
+     * An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
+     * 
+     */
     public Optional<String> getPostAnalyticsProcessorSourceUri() {
         return Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
     }
+    /**
+     * An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
+     * 
+     */
     public Optional<String> getRecordPreprocessorSourceUri() {
         return Optional.ofNullable(this.recordPreprocessorSourceUri);
     }

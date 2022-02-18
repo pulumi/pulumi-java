@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The contact that SSM Incident Manager is engaging during an incident.
+ * 
+ */
 public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactTargetInfoArgs Empty = new ContactTargetInfoArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the contact.
+     * 
+     */
     @InputImport(name="contactId", required=true)
     private final Input<String> contactId;
 
@@ -21,6 +29,10 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
         return this.contactId;
     }
 
+    /**
+     * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
+     * 
+     */
     @InputImport(name="isEssential", required=true)
     private final Input<Boolean> isEssential;
 

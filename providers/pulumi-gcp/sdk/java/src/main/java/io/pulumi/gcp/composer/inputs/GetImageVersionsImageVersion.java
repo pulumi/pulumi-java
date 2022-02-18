@@ -13,6 +13,10 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
 
     public static final GetImageVersionsImageVersion Empty = new GetImageVersionsImageVersion();
 
+    /**
+     * The string identifier of the image version, in the form: "composer-x.y.z-airflow-a.b(.c)"
+     * 
+     */
     @InputImport(name="imageVersionId", required=true)
     private final String imageVersionId;
 
@@ -20,6 +24,10 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
         return this.imageVersionId;
     }
 
+    /**
+     * Supported python versions for this image version
+     * 
+     */
     @InputImport(name="supportedPythonVersions", required=true)
     private final List<String> supportedPythonVersions;
 

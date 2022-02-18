@@ -16,6 +16,11 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentState Empty = new EnvironmentState();
 
+    /**
+     * Use a container image to start the notebook instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="containerImage")
     private final @Nullable Input<EnvironmentContainerImageGetArgs> containerImage;
 
@@ -23,6 +28,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.containerImage == null ? Input.empty() : this.containerImage;
     }
 
+    /**
+     * Instance creation time
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -30,6 +39,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * A brief description of this environment.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +50,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name of this environment for the UI.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -44,6 +61,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * A reference to the zone where the machine resides.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +72,11 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name specified for the Environment instance.
+     * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +84,11 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Path to a Bash script that automatically runs after a notebook instance fully boots up.
+     * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
+     * 
+     */
     @InputImport(name="postStartupScript")
     private final @Nullable Input<String> postStartupScript;
 
@@ -65,6 +96,11 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.postStartupScript == null ? Input.empty() : this.postStartupScript;
     }
 
+    /**
+     * The name of the Google Cloud project that this VM image belongs to.
+     * Format: projects/{project_id}
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -72,6 +108,11 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Use a Compute Engine VM image to start the notebook instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="vmImage")
     private final @Nullable Input<EnvironmentVmImageGetArgs> vmImage;
 

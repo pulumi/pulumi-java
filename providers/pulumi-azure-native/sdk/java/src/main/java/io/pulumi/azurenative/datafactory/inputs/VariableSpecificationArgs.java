@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of a single variable for a Pipeline.
+ * 
+ */
 public final class VariableSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VariableSpecificationArgs Empty = new VariableSpecificationArgs();
 
+    /**
+     * Default value of variable.
+     * 
+     */
     @InputImport(name="defaultValue")
     private final @Nullable Input<Object> defaultValue;
 
@@ -24,6 +32,10 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
+    /**
+     * Variable type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,VariableType>> type;
 

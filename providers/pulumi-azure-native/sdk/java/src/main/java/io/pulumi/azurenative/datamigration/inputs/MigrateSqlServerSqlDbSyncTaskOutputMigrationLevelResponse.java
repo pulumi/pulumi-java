@@ -13,6 +13,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     public static final MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse Empty = new MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse();
 
+    /**
+     * Count of databases
+     * 
+     */
     @InputImport(name="databaseCount", required=true)
     private final Integer databaseCount;
 
@@ -20,6 +24,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
         return this.databaseCount;
     }
 
+    /**
+     * Migration end time
+     * 
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -27,6 +35,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
         return this.endedOn;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -34,6 +46,11 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
         return this.id;
     }
 
+    /**
+     * Result type
+     * Expected value is 'MigrationLevelOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -41,6 +58,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
         return this.resultType;
     }
 
+    /**
+     * Source server name
+     * 
+     */
     @InputImport(name="sourceServer", required=true)
     private final String sourceServer;
 
@@ -48,6 +69,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
         return this.sourceServer;
     }
 
+    /**
+     * Source server version
+     * 
+     */
     @InputImport(name="sourceServerVersion", required=true)
     private final String sourceServerVersion;
 
@@ -55,6 +80,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
         return this.sourceServerVersion;
     }
 
+    /**
+     * Migration start time
+     * 
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -62,6 +91,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
         return this.startedOn;
     }
 
+    /**
+     * Target server name
+     * 
+     */
     @InputImport(name="targetServer", required=true)
     private final String targetServer;
 
@@ -69,6 +102,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
         return this.targetServer;
     }
 
+    /**
+     * Target server version
+     * 
+     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 

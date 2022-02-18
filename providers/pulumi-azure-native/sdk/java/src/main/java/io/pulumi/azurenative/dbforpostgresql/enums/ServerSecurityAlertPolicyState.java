@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the state of the policy, whether it is enabled or disabled.
+     * 
+     */
     @EnumType
     public enum ServerSecurityAlertPolicyState {
         Enabled("Enabled"),

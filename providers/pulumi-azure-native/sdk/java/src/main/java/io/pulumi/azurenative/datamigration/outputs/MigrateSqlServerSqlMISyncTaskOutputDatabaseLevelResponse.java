@@ -13,18 +13,71 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
+    /**
+     * Backup sets that are currently active (Either being uploaded or getting restored)
+     * 
+     */
     private final List<BackupSetInfoResponse> activeBackupSets;
+    /**
+     * Name of container created in the Azure Storage account where backups are copied to
+     * 
+     */
     private final String containerName;
+    /**
+     * Database migration end time
+     * 
+     */
     private final String endedOn;
+    /**
+     * prefix string to use for querying errors for this database
+     * 
+     */
     private final String errorPrefix;
+    /**
+     * Migration exceptions and warnings
+     * 
+     */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    /**
+     * Details of full backup set
+     * 
+     */
     private final BackupSetInfoResponse fullBackupSetInfo;
+    /**
+     * Result identifier
+     * 
+     */
     private final String id;
+    /**
+     * Whether full backup has been applied to the target database or not
+     * 
+     */
     private final Boolean isFullBackupRestored;
+    /**
+     * Last applied backup set information
+     * 
+     */
     private final BackupSetInfoResponse lastRestoredBackupSetInfo;
+    /**
+     * Current state of database
+     * 
+     */
     private final String migrationState;
+    /**
+     * Result type
+     * Expected value is 'DatabaseLevelOutput'.
+     * 
+     */
     private final String resultType;
+    /**
+     * Name of the database
+     * 
+     */
     private final String sourceDatabaseName;
+    /**
+     * Database migration start time
+     * 
+     */
     private final String startedOn;
 
     @OutputCustomType.Constructor({"activeBackupSets","containerName","endedOn","errorPrefix","exceptionsAndWarnings","fullBackupSetInfo","id","isFullBackupRestored","lastRestoredBackupSetInfo","migrationState","resultType","sourceDatabaseName","startedOn"})
@@ -57,42 +110,95 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
         this.startedOn = Objects.requireNonNull(startedOn);
     }
 
+    /**
+     * Backup sets that are currently active (Either being uploaded or getting restored)
+     * 
+     */
     public List<BackupSetInfoResponse> getActiveBackupSets() {
         return this.activeBackupSets;
     }
+    /**
+     * Name of container created in the Azure Storage account where backups are copied to
+     * 
+     */
     public String getContainerName() {
         return this.containerName;
     }
+    /**
+     * Database migration end time
+     * 
+     */
     public String getEndedOn() {
         return this.endedOn;
     }
+    /**
+     * prefix string to use for querying errors for this database
+     * 
+     */
     public String getErrorPrefix() {
         return this.errorPrefix;
     }
+    /**
+     * Migration exceptions and warnings
+     * 
+     */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
+    /**
+     * Details of full backup set
+     * 
+     */
     public BackupSetInfoResponse getFullBackupSetInfo() {
         return this.fullBackupSetInfo;
     }
+    /**
+     * Result identifier
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Whether full backup has been applied to the target database or not
+     * 
+     */
     public Boolean getIsFullBackupRestored() {
         return this.isFullBackupRestored;
     }
+    /**
+     * Last applied backup set information
+     * 
+     */
     public BackupSetInfoResponse getLastRestoredBackupSetInfo() {
         return this.lastRestoredBackupSetInfo;
     }
+    /**
+     * Current state of database
+     * 
+     */
     public String getMigrationState() {
         return this.migrationState;
     }
+    /**
+     * Result type
+     * Expected value is 'DatabaseLevelOutput'.
+     * 
+     */
     public String getResultType() {
         return this.resultType;
     }
+    /**
+     * Name of the database
+     * 
+     */
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
     }
+    /**
+     * Database migration start time
+     * 
+     */
     public String getStartedOn() {
         return this.startedOn;
     }

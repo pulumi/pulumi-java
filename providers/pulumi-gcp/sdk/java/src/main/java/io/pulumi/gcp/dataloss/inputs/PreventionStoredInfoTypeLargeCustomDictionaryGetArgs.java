@@ -16,6 +16,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
 
     public static final PreventionStoredInfoTypeLargeCustomDictionaryGetArgs Empty = new PreventionStoredInfoTypeLargeCustomDictionaryGetArgs();
 
+    /**
+     * Field in a BigQuery table where each cell represents a dictionary phrase.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="bigQueryField")
     private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs> bigQueryField;
 
@@ -23,6 +28,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
         return this.bigQueryField == null ? Input.empty() : this.bigQueryField;
     }
 
+    /**
+     * Set of files containing newline-delimited lists of dictionary phrases.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudStorageFileSet")
     private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs> cloudStorageFileSet;
 
@@ -30,6 +40,12 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
         return this.cloudStorageFileSet == null ? Input.empty() : this.cloudStorageFileSet;
     }
 
+    /**
+     * Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
+     * If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="outputPath", required=true)
     private final Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs> outputPath;
 

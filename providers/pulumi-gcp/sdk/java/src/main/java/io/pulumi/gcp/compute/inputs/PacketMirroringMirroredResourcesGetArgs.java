@@ -17,6 +17,11 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
 
     public static final PacketMirroringMirroredResourcesGetArgs Empty = new PacketMirroringMirroredResourcesGetArgs();
 
+    /**
+     * All the listed instances will be mirrored.  Specify at most 50.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<List<PacketMirroringMirroredResourcesInstanceGetArgs>> instances;
 
@@ -24,6 +29,11 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
         return this.instances == null ? Input.empty() : this.instances;
     }
 
+    /**
+     * All instances in one of these subnetworks will be mirrored.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="subnetworks")
     private final @Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> subnetworks;
 
@@ -31,6 +41,10 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
         return this.subnetworks == null ? Input.empty() : this.subnetworks;
     }
 
+    /**
+     * All instances with these tags will be mirrored.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 

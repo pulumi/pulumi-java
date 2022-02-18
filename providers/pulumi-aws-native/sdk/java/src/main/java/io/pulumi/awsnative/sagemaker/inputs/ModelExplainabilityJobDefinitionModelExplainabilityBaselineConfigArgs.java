@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Baseline configuration used to validate that the data conforms to the specified constraints and statistics.
+ * 
+ */
 public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs Empty = new ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs();

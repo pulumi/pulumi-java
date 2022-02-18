@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A chart that displays data on a 2D (X and Y axes) plane.
+ * 
+ */
 public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final XyChartArgs Empty = new XyChartArgs();
 
+    /**
+     * Display options for the chart.
+     * 
+     */
     @InputImport(name="chartOptions")
     private final @Nullable Input<ChartOptionsArgs> chartOptions;
 
@@ -26,6 +34,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
         return this.chartOptions == null ? Input.empty() : this.chartOptions;
     }
 
+    /**
+     * The data displayed in this chart.
+     * 
+     */
     @InputImport(name="dataSets", required=true)
     private final Input<List<DataSetArgs>> dataSets;
 
@@ -33,6 +45,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSets;
     }
 
+    /**
+     * Threshold lines drawn horizontally across the chart.
+     * 
+     */
     @InputImport(name="thresholds")
     private final @Nullable Input<List<ThresholdArgs>> thresholds;
 
@@ -40,6 +56,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
         return this.thresholds == null ? Input.empty() : this.thresholds;
     }
 
+    /**
+     * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+     * 
+     */
     @InputImport(name="timeshiftDuration")
     private final @Nullable Input<String> timeshiftDuration;
 
@@ -47,6 +67,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeshiftDuration == null ? Input.empty() : this.timeshiftDuration;
     }
 
+    /**
+     * The properties applied to the X axis.
+     * 
+     */
     @InputImport(name="xAxis")
     private final @Nullable Input<AxisArgs> xAxis;
 
@@ -54,6 +78,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
         return this.xAxis == null ? Input.empty() : this.xAxis;
     }
 
+    /**
+     * The properties applied to the Y2 axis.
+     * 
+     */
     @InputImport(name="y2Axis")
     private final @Nullable Input<AxisArgs> y2Axis;
 
@@ -61,6 +89,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
         return this.y2Axis == null ? Input.empty() : this.y2Axis;
     }
 
+    /**
+     * The properties applied to the Y axis.
+     * 
+     */
     @InputImport(name="yAxis")
     private final @Nullable Input<AxisArgs> yAxis;
 

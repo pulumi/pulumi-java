@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPermissionSet {
+/**
+ * Resource Type definition for SSO PermissionSet
+ * 
+ */
     public static CompletableFuture<GetPermissionSetResult> invokeAsync(GetPermissionSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getPermissionSet", TypeShape.of(GetPermissionSetResult.class), args == null ? GetPermissionSetArgs.Empty : args, Utilities.withVersion(options));
     }

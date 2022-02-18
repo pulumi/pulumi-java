@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies how Amazon S3 Storage Lens metrics should be exported.
+ * 
+ */
 public final class StorageLensDataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensDataExportArgs Empty = new StorageLensDataExportArgs();

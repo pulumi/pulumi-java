@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A reference to a another resource
+ * 
+ */
 public final class SubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubResourceArgs Empty = new SubResourceArgs();
 
+    /**
+     * Resource Id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

@@ -13,6 +13,19 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalAddress {
+/**
+ * Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
+ * the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getGlobalAddress.
+ * 
+ *
+ * A collection of values returned by getGlobalAddress.
+ * 
+ */
     public static CompletableFuture<GetGlobalAddressResult> invokeAsync(GetGlobalAddressArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalAddress:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args == null ? GetGlobalAddressArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,11 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
 
     public static final SecretCiphertextState Empty = new SecretCiphertextState();
 
+    /**
+     * The additional authenticated data used for integrity checks during encryption and decryption.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="additionalAuthenticatedData")
     private final @Nullable Input<String> additionalAuthenticatedData;
 
@@ -21,6 +26,10 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
         return this.additionalAuthenticatedData == null ? Input.empty() : this.additionalAuthenticatedData;
     }
 
+    /**
+     * Contains the result of encrypting the provided plaintext, encoded in base64.
+     * 
+     */
     @InputImport(name="ciphertext")
     private final @Nullable Input<String> ciphertext;
 
@@ -28,6 +37,11 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
         return this.ciphertext == null ? Input.empty() : this.ciphertext;
     }
 
+    /**
+     * The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
+     * 
+     */
     @InputImport(name="cryptoKey")
     private final @Nullable Input<String> cryptoKey;
 
@@ -35,6 +49,11 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
         return this.cryptoKey == null ? Input.empty() : this.cryptoKey;
     }
 
+    /**
+     * The plaintext to be encrypted.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="plaintext")
     private final @Nullable Input<String> plaintext;
 

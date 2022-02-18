@@ -15,11 +15,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTemplateSpec {
+    /**
+     * ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
+     * requests per container of the Revision. Values are:
+     * 
+     */
     private final @Nullable Integer containerConcurrency;
+    /**
+     * Container defines the unit of execution for this Revision.
+     * In the context of a Revision, we disallow a number of the fields of
+     * this Container, including: name, ports, and volumeMounts.
+     * The runtime contract is documented here:
+     * https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<ServiceTemplateSpecContainer> containers;
+    /**
+     * Email address of the IAM service account associated with the revision of the
+     * service. The service account represents the identity of the running revision,
+     * and determines what permissions the revision has. If not provided, the revision
+     * will use the project's default service account.
+     * 
+     */
     private final @Nullable String serviceAccountName;
+    /**
+     * - 
+     * ServingState holds a value describing the state the resources
+     * are in for this Revision.
+     * It is expected
+     * that the system will manipulate this based on routability and load.
+     * 
+     * @deprecated
+     * Not supported by Cloud Run fully managed
+     * 
+     */
+    @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String servingState;
+    /**
+     * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
+     * 
+     */
     private final @Nullable Integer timeoutSeconds;
+    /**
+     * Volume represents a named volume in a container.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<ServiceTemplateSpecVolume> volumes;
 
     @OutputCustomType.Constructor({"containerConcurrency","containers","serviceAccountName","servingState","timeoutSeconds","volumes"})
@@ -38,21 +80,63 @@ public final class ServiceTemplateSpec {
         this.volumes = volumes;
     }
 
+    /**
+     * ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
+     * requests per container of the Revision. Values are:
+     * 
+     */
     public Optional<Integer> getContainerConcurrency() {
         return Optional.ofNullable(this.containerConcurrency);
     }
+    /**
+     * Container defines the unit of execution for this Revision.
+     * In the context of a Revision, we disallow a number of the fields of
+     * this Container, including: name, ports, and volumeMounts.
+     * The runtime contract is documented here:
+     * https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+     * Structure is documented below.
+     * 
+     */
     public List<ServiceTemplateSpecContainer> getContainers() {
         return this.containers == null ? List.of() : this.containers;
     }
+    /**
+     * Email address of the IAM service account associated with the revision of the
+     * service. The service account represents the identity of the running revision,
+     * and determines what permissions the revision has. If not provided, the revision
+     * will use the project's default service account.
+     * 
+     */
     public Optional<String> getServiceAccountName() {
         return Optional.ofNullable(this.serviceAccountName);
     }
+    /**
+     * - 
+     * ServingState holds a value describing the state the resources
+     * are in for this Revision.
+     * It is expected
+     * that the system will manipulate this based on routability and load.
+     * 
+     * @deprecated
+     * Not supported by Cloud Run fully managed
+     * 
+     */
+    @Deprecated /* Not supported by Cloud Run fully managed */
     public Optional<String> getServingState() {
         return Optional.ofNullable(this.servingState);
     }
+    /**
+     * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
+     * 
+     */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
+    /**
+     * Volume represents a named volume in a container.
+     * Structure is documented below.
+     * 
+     */
     public List<ServiceTemplateSpecVolume> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

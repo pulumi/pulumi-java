@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AwsClusterControlPlaneProxyConfig {
+    /**
+     * The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+     * 
+     */
     private final String secretArn;
+    /**
+     * The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+     * 
+     */
     private final String secretVersion;
 
     @OutputCustomType.Constructor({"secretArn","secretVersion"})
@@ -20,9 +28,17 @@ public final class AwsClusterControlPlaneProxyConfig {
         this.secretVersion = Objects.requireNonNull(secretVersion);
     }
 
+    /**
+     * The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+     * 
+     */
     public String getSecretArn() {
         return this.secretArn;
     }
+    /**
+     * The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+     * 
+     */
     public String getSecretVersion() {
         return this.secretVersion;
     }

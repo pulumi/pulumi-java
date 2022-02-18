@@ -18,6 +18,10 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
 
     public static final PrivateLinkServicesForM365SecurityCenterArgs Empty = new PrivateLinkServicesForM365SecurityCenterArgs();
 
+    /**
+     * Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ServicesResourceIdentityArgs> identity;
 
@@ -25,6 +29,10 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The kind of the service.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<Kind> kind;
 
@@ -32,6 +40,10 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
         return this.kind;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +51,10 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The common properties of a service.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ServicesPropertiesArgs> properties;
 
@@ -46,6 +62,10 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +73,10 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service instance.
+     * 
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -60,6 +84,10 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

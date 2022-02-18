@@ -14,6 +14,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArg
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs();
 
+    /**
+     * The number of hours between snapshots.
+     * 
+     */
     @InputImport(name="hoursInCycle", required=true)
     private final Input<Integer> hoursInCycle;
 
@@ -21,6 +25,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArg
         return this.hoursInCycle;
     }
 
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final Input<String> startTime;
 

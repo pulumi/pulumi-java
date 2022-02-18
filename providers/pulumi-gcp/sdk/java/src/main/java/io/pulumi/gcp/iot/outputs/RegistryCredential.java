@@ -11,6 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RegistryCredential {
+    /**
+     * A public key certificate format and data.
+     * 
+     */
     private final Map<String,Object> publicKeyCertificate;
 
     @OutputCustomType.Constructor({"publicKeyCertificate"})
@@ -18,6 +22,10 @@ public final class RegistryCredential {
         this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
     }
 
+    /**
+     * A public key certificate format and data.
+     * 
+     */
     public Map<String,Object> getPublicKeyCertificate() {
         return this.publicKeyCertificate;
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBuildTaskSourceRepositoryProperties {
+/**
+ * The properties of the source code repository.
+ * API Version: 2018-02-01-preview.
+ * 
+ *
+ * The properties of the source code repository.
+ * 
+ */
     public static CompletableFuture<ListBuildTaskSourceRepositoryPropertiesResult> invokeAsync(ListBuildTaskSourceRepositoryPropertiesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listBuildTaskSourceRepositoryProperties", TypeShape.of(ListBuildTaskSourceRepositoryPropertiesResult.class), args == null ? ListBuildTaskSourceRepositoryPropertiesArgs.Empty : args, Utilities.withVersion(options));
     }

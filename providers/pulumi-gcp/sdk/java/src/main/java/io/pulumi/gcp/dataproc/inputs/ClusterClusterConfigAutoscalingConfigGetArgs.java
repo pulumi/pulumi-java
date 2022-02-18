@@ -13,6 +13,10 @@ public final class ClusterClusterConfigAutoscalingConfigGetArgs extends io.pulum
 
     public static final ClusterClusterConfigAutoscalingConfigGetArgs Empty = new ClusterClusterConfigAutoscalingConfigGetArgs();
 
+    /**
+     * The autoscaling policy used by the cluster.
+     * 
+     */
     @InputImport(name="policyUri", required=true)
     private final Input<String> policyUri;
 

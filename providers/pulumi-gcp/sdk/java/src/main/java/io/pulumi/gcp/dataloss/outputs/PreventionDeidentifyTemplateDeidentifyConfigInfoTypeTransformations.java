@@ -10,6 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations {
+    /**
+     * Transformation for each infoType. Cannot specify more than one for a given infoType.
+     * Structure is documented below.
+     * 
+     */
     private final List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> transformations;
 
     @OutputCustomType.Constructor({"transformations"})
@@ -17,6 +22,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.transformations = Objects.requireNonNull(transformations);
     }
 
+    /**
+     * Transformation for each infoType. Cannot specify more than one for a given infoType.
+     * Structure is documented below.
+     * 
+     */
     public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> getTransformations() {
         return this.transformations;
     }

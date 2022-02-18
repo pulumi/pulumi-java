@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+ * 
+ */
 public final class EventSourceMappingDestinationConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final EventSourceMappingDestinationConfig Empty = new EventSourceMappingDestinationConfig();
 
+    /**
+     * The destination configuration for failed invocations.
+     * 
+     */
     @InputImport(name="onFailure")
     private final @Nullable EventSourceMappingOnFailure onFailure;
 

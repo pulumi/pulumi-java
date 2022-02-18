@@ -13,39 +13,109 @@ import io.pulumi.gcp.oslogin.inputs.SshPublicKeyState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * The SSH public key information associated with a Google account.
+ * 
+ * To get more information about SSHPublicKey, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/oslogin/rest/v1/users.sshPublicKeys)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/compute/docs/oslogin)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * SSHPublicKey can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:oslogin/sshPublicKey:SshPublicKey default users/{{user}}/sshPublicKeys/{{fingerprint}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:oslogin/sshPublicKey:SshPublicKey default {{user}}/{{fingerprint}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:oslogin/sshPublicKey:SshPublicKey")
 public class SshPublicKey extends io.pulumi.resources.CustomResource {
+    /**
+     * An expiration time in microseconds since epoch.
+     * 
+     */
     @OutputExport(name="expirationTimeUsec", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationTimeUsec;
 
+    /**
+     * @return An expiration time in microseconds since epoch.
+     * 
+     */
     public Output</* @Nullable */ String> getExpirationTimeUsec() {
         return this.expirationTimeUsec;
     }
+    /**
+     * The SHA-256 fingerprint of the SSH public key.
+     * 
+     */
     @OutputExport(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
+    /**
+     * @return The SHA-256 fingerprint of the SSH public key.
+     * 
+     */
     public Output<String> getFingerprint() {
         return this.fingerprint;
     }
+    /**
+     * Public key text in SSH format, defined by RFC4253 section 6.6.
+     * 
+     */
     @OutputExport(name="key", type=String.class, parameters={})
     private Output<String> key;
 
+    /**
+     * @return Public key text in SSH format, defined by RFC4253 section 6.6.
+     * 
+     */
     public Output<String> getKey() {
         return this.key;
     }
+    /**
+     * The project ID of the Google Cloud Platform project.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output</* @Nullable */ String> project;
 
+    /**
+     * @return The project ID of the Google Cloud Platform project.
+     * 
+     */
     public Output</* @Nullable */ String> getProject() {
         return this.project;
     }
+    /**
+     * The user email.
+     * 
+     */
     @OutputExport(name="user", type=String.class, parameters={})
     private Output<String> user;
 
+    /**
+     * @return The user email.
+     * 
+     */
     public Output<String> getUser() {
         return this.user;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SshPublicKey(String name, SshPublicKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:oslogin/sshPublicKey:SshPublicKey", name, args == null ? SshPublicKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +131,15 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SshPublicKey get(String name, Input<String> id, @Nullable SshPublicKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SshPublicKey(name, id, state, options);
     }

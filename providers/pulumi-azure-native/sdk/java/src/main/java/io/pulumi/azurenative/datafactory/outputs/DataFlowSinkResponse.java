@@ -14,11 +14,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataFlowSinkResponse {
+    /**
+     * Dataset reference.
+     * 
+     */
     private final @Nullable DatasetReferenceResponse dataset;
+    /**
+     * Transformation description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Flowlet Reference
+     * 
+     */
     private final @Nullable DataFlowReferenceResponse flowlet;
+    /**
+     * Linked service reference.
+     * 
+     */
     private final @Nullable LinkedServiceReferenceResponse linkedService;
+    /**
+     * Transformation name.
+     * 
+     */
     private final String name;
+    /**
+     * Schema linked service reference.
+     * 
+     */
     private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 
     @OutputCustomType.Constructor({"dataset","description","flowlet","linkedService","name","schemaLinkedService"})
@@ -37,21 +61,45 @@ public final class DataFlowSinkResponse {
         this.schemaLinkedService = schemaLinkedService;
     }
 
+    /**
+     * Dataset reference.
+     * 
+     */
     public Optional<DatasetReferenceResponse> getDataset() {
         return Optional.ofNullable(this.dataset);
     }
+    /**
+     * Transformation description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Flowlet Reference
+     * 
+     */
     public Optional<DataFlowReferenceResponse> getFlowlet() {
         return Optional.ofNullable(this.flowlet);
     }
+    /**
+     * Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return Optional.ofNullable(this.linkedService);
     }
+    /**
+     * Transformation name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Schema linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> getSchemaLinkedService() {
         return Optional.ofNullable(this.schemaLinkedService);
     }

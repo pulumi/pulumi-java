@@ -15,63 +15,145 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a datasource. **Note:** This API requires an admin account to execute.
+ * 
+ */
 @ResourceType(type="google-native:cloudsearch/v1:DataSource")
 public class DataSource extends io.pulumi.resources.CustomResource {
+    /**
+     * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
+     * 
+     */
     @OutputExport(name="disableModifications", type=Boolean.class, parameters={})
     private Output<Boolean> disableModifications;
 
+    /**
+     * @return If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
+     * 
+     */
     public Output<Boolean> getDisableModifications() {
         return this.disableModifications;
     }
+    /**
+     * Disable serving any search or assist results.
+     * 
+     */
     @OutputExport(name="disableServing", type=Boolean.class, parameters={})
     private Output<Boolean> disableServing;
 
+    /**
+     * @return Disable serving any search or assist results.
+     * 
+     */
     public Output<Boolean> getDisableServing() {
         return this.disableServing;
     }
+    /**
+     * Display name of the datasource The maximum length is 300 characters.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return Display name of the datasource The maximum length is 300 characters.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * List of service accounts that have indexing access.
+     * 
+     */
     @OutputExport(name="indexingServiceAccounts", type=List.class, parameters={String.class})
     private Output<List<String>> indexingServiceAccounts;
 
+    /**
+     * @return List of service accounts that have indexing access.
+     * 
+     */
     public Output<List<String>> getIndexingServiceAccounts() {
         return this.indexingServiceAccounts;
     }
+    /**
+     * This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+     * 
+     */
     @OutputExport(name="itemsVisibility", type=List.class, parameters={GSuitePrincipalResponse.class})
     private Output<List<GSuitePrincipalResponse>> itemsVisibility;
 
+    /**
+     * @return This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+     * 
+     */
     public Output<List<GSuitePrincipalResponse>> getItemsVisibility() {
         return this.itemsVisibility;
     }
+    /**
+     * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * IDs of the Long Running Operations (LROs) currently running for this schema.
+     * 
+     */
     @OutputExport(name="operationIds", type=List.class, parameters={String.class})
     private Output<List<String>> operationIds;
 
+    /**
+     * @return IDs of the Long Running Operations (LROs) currently running for this schema.
+     * 
+     */
     public Output<List<String>> getOperationIds() {
         return this.operationIds;
     }
+    /**
+     * Can a user request to get thumbnail URI for Items indexed in this data source.
+     * 
+     */
     @OutputExport(name="returnThumbnailUrls", type=Boolean.class, parameters={})
     private Output<Boolean> returnThumbnailUrls;
 
+    /**
+     * @return Can a user request to get thumbnail URI for Items indexed in this data source.
+     * 
+     */
     public Output<Boolean> getReturnThumbnailUrls() {
         return this.returnThumbnailUrls;
     }
+    /**
+     * A short name or alias for the source. This value will be used to match the 'source' operator. For example, if the short name is *<value>* then queries like *source:<value>* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+     * 
+     */
     @OutputExport(name="shortName", type=String.class, parameters={})
     private Output<String> shortName;
 
+    /**
+     * @return A short name or alias for the source. This value will be used to match the 'source' operator. For example, if the short name is *<value>* then queries like *source:<value>* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+     * 
+     */
     public Output<String> getShortName() {
         return this.shortName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DataSource(String name, DataSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudsearch/v1:DataSource", name, args == null ? DataSourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +169,14 @@ public class DataSource extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DataSource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataSource(name, id, options);
     }

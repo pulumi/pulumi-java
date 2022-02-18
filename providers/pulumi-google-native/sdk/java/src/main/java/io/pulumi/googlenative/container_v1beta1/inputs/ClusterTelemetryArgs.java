@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Telemetry integration for the cluster.
+ * 
+ */
 public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterTelemetryArgs Empty = new ClusterTelemetryArgs();
 
+    /**
+     * Type of the integration.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ClusterTelemetryType> type;
 

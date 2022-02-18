@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The target architecture of the robot.
+     * 
+     */
     @EnumType
     public enum RobotArchitecture {
         X8664("X86_64"),

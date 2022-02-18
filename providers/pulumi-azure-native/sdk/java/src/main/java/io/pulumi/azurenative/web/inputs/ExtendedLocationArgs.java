@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Extended Location.
+ * 
+ */
 public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtendedLocationArgs Empty = new ExtendedLocationArgs();
 
+    /**
+     * Name of extended location.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

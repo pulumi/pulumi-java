@@ -17,6 +17,10 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
 
     public static final TransitGatewayConnectArgs Empty = new TransitGatewayConnectArgs();
 
+    /**
+     * The Connect attachment options.
+     * 
+     */
     @InputImport(name="options", required=true)
     private final Input<TransitGatewayConnectOptionsArgs> options;
 
@@ -24,6 +28,10 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
         return this.options;
     }
 
+    /**
+     * The tags for the attachment.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<TransitGatewayConnectTagArgs>> tags;
 
@@ -31,6 +39,10 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the attachment from which the Connect attachment was created.
+     * 
+     */
     @InputImport(name="transportTransitGatewayAttachmentId", required=true)
     private final Input<String> transportTransitGatewayAttachmentId;
 

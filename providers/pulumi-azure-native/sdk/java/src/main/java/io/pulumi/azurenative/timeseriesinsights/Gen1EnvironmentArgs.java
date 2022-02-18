@@ -20,6 +20,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final Gen1EnvironmentArgs Empty = new Gen1EnvironmentArgs();
 
+    /**
+     * ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
+     * 
+     */
     @InputImport(name="dataRetentionTime", required=true)
     private final Input<String> dataRetentionTime;
 
@@ -27,6 +31,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.dataRetentionTime;
     }
 
+    /**
+     * Name of the environment
+     * 
+     */
     @InputImport(name="environmentName")
     private final @Nullable Input<String> environmentName;
 
@@ -34,6 +42,11 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.environmentName == null ? Input.empty() : this.environmentName;
     }
 
+    /**
+     * The kind of the environment.
+     * Expected value is 'Gen1'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -41,6 +54,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.kind;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,6 +65,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
+     * 
+     */
     @InputImport(name="partitionKeyProperties")
     private final @Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
 
@@ -55,6 +76,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.partitionKeyProperties == null ? Input.empty() : this.partitionKeyProperties;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -62,6 +87,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -69,6 +98,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.sku;
     }
 
+    /**
+     * The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+     * 
+     */
     @InputImport(name="storageLimitExceededBehavior")
     private final @Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
 
@@ -76,6 +109,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.storageLimitExceededBehavior == null ? Input.empty() : this.storageLimitExceededBehavior;
     }
 
+    /**
+     * Key-value pairs of additional properties for the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

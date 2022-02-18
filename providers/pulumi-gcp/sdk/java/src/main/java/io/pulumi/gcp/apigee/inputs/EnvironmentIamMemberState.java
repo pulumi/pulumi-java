@@ -22,6 +22,10 @@ public final class EnvironmentIamMemberState extends io.pulumi.resources.Resourc
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="envId")
     private final @Nullable Input<String> envId;
 
@@ -29,6 +33,10 @@ public final class EnvironmentIamMemberState extends io.pulumi.resources.Resourc
         return this.envId == null ? Input.empty() : this.envId;
     }
 
+    /**
+     * (Computed) The etag of the IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -50,6 +58,12 @@ public final class EnvironmentIamMemberState extends io.pulumi.resources.Resourc
         return this.orgId == null ? Input.empty() : this.orgId;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.apigee.EnvironmentIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

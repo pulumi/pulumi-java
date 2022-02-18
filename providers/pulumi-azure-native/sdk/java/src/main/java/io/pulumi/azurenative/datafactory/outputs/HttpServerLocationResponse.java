@@ -12,9 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HttpServerLocationResponse {
+    /**
+     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object fileName;
+    /**
+     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     private final @Nullable Object folderPath;
+    /**
+     * Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
+     * 
+     */
     private final @Nullable Object relativeUrl;
+    /**
+     * Type of dataset storage location.
+     * Expected value is 'HttpServerLocation'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"fileName","folderPath","relativeUrl","type"})
@@ -29,15 +46,32 @@ public final class HttpServerLocationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
+    /**
+     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
+    /**
+     * Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> getRelativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
+    /**
+     * Type of dataset storage location.
+     * Expected value is 'HttpServerLocation'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

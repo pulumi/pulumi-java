@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of database.
+     * 
+     */
     @EnumType
     public enum ConnectionStringType {
         MySql("MySql"),

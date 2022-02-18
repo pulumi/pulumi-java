@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ContainerPublicDomainName {
     private final @Nullable String certificateName;
+    /**
+     * An object that describes the configuration for the containers of the deployment.
+     * 
+     */
     private final @Nullable List<String> domainNames;
 
     @OutputCustomType.Constructor({"certificateName","domainNames"})
@@ -26,6 +30,10 @@ public final class ContainerPublicDomainName {
     public Optional<String> getCertificateName() {
         return Optional.ofNullable(this.certificateName);
     }
+    /**
+     * An object that describes the configuration for the containers of the deployment.
+     * 
+     */
     public List<String> getDomainNames() {
         return this.domainNames == null ? List.of() : this.domainNames;
     }

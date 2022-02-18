@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionUrlMapTest {
+    /**
+     * Description of this test case.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Host portion of the URL.
+     * 
+     */
     private final String host;
+    /**
+     * Path portion of the URL.
+     * 
+     */
     private final String path;
+    /**
+     * A reference to expected RegionBackendService resource the given URL should be mapped to.
+     * 
+     */
     private final String service;
 
     @OutputCustomType.Constructor({"description","host","path","service"})
@@ -28,15 +44,31 @@ public final class RegionUrlMapTest {
         this.service = Objects.requireNonNull(service);
     }
 
+    /**
+     * Description of this test case.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Host portion of the URL.
+     * 
+     */
     public String getHost() {
         return this.host;
     }
+    /**
+     * Path portion of the URL.
+     * 
+     */
     public String getPath() {
         return this.path;
     }
+    /**
+     * A reference to expected RegionBackendService resource the given URL should be mapped to.
+     * 
+     */
     public String getService() {
         return this.service;
     }

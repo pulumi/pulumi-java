@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDdosCustomPolicy {
+/**
+ * A DDoS custom policy in a resource group.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * A DDoS custom policy in a resource group.
+ * 
+ */
     public static CompletableFuture<GetDdosCustomPolicyResult> invokeAsync(GetDdosCustomPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDdosCustomPolicy", TypeShape.of(GetDdosCustomPolicyResult.class), args == null ? GetDdosCustomPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

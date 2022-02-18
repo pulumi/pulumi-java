@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListActiveSecurityAdminRule {
+/**
+ * Result of the request to list active security admin rules. It contains a list of active security admin rules and a skiptoken to get the next set of results.
+ * API Version: 2021-02-01-preview.
+ * 
+ *
+ * Result of the request to list active security admin rules. It contains a list of active security admin rules and a skiptoken to get the next set of results.
+ * 
+ */
     public static CompletableFuture<ListActiveSecurityAdminRuleResult> invokeAsync(ListActiveSecurityAdminRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listActiveSecurityAdminRule", TypeShape.of(ListActiveSecurityAdminRuleResult.class), args == null ? ListActiveSecurityAdminRuleArgs.Empty : args, Utilities.withVersion(options));
     }

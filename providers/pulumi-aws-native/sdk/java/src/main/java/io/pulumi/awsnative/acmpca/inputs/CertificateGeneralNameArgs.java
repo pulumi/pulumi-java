@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Structure that contains X.509 GeneralName information. Assign one and ONLY one field.
+ * 
+ */
 public final class CertificateGeneralNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateGeneralNameArgs Empty = new CertificateGeneralNameArgs();

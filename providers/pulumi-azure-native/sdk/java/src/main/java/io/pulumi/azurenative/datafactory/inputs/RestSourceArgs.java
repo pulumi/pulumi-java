@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Rest service source.
+ * 
+ */
 public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestSourceArgs Empty = new RestSourceArgs();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -22,6 +30,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
+    /**
+     * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="additionalHeaders")
     private final @Nullable Input<Object> additionalHeaders;
 
@@ -29,6 +41,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -36,6 +52,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="httpRequestTimeout")
     private final @Nullable Input<Object> httpRequestTimeout;
 
@@ -43,6 +63,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpRequestTimeout == null ? Input.empty() : this.httpRequestTimeout;
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -50,6 +74,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="paginationRules")
     private final @Nullable Input<Object> paginationRules;
 
@@ -57,6 +85,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.paginationRules == null ? Input.empty() : this.paginationRules;
     }
 
+    /**
+     * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="requestBody")
     private final @Nullable Input<Object> requestBody;
 
@@ -64,6 +96,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestBody == null ? Input.empty() : this.requestBody;
     }
 
+    /**
+     * The time to await before sending next page request.
+     * 
+     */
     @InputImport(name="requestInterval")
     private final @Nullable Input<Object> requestInterval;
 
@@ -71,6 +107,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestInterval == null ? Input.empty() : this.requestInterval;
     }
 
+    /**
+     * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="requestMethod")
     private final @Nullable Input<Object> requestMethod;
 
@@ -78,6 +118,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -85,6 +129,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -92,6 +140,11 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
+    /**
+     * Copy source type.
+     * Expected value is 'RestSource'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

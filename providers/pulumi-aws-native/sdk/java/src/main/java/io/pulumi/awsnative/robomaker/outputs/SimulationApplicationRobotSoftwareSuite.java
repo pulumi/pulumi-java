@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SimulationApplicationRobotSoftwareSuite {
+    /**
+     * The name of the robot software suite.
+     * 
+     */
     private final SimulationApplicationRobotSoftwareSuiteName name;
+    /**
+     * The version of the robot software suite.
+     * 
+     */
     private final @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
 
     @OutputCustomType.Constructor({"name","version"})
@@ -23,9 +31,17 @@ public final class SimulationApplicationRobotSoftwareSuite {
         this.version = version;
     }
 
+    /**
+     * The name of the robot software suite.
+     * 
+     */
     public SimulationApplicationRobotSoftwareSuiteName getName() {
         return this.name;
     }
+    /**
+     * The version of the robot software suite.
+     * 
+     */
     public Optional<SimulationApplicationRobotSoftwareSuiteVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }

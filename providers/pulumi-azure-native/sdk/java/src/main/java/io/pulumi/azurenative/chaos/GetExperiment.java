@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExperiment {
+/**
+ * Model that represents a Experiment resource.
+ * API Version: 2021-09-15-preview.
+ * 
+ *
+ * Model that represents a Experiment resource.
+ * 
+ */
     public static CompletableFuture<GetExperimentResult> invokeAsync(GetExperimentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getExperiment", TypeShape.of(GetExperimentResult.class), args == null ? GetExperimentArgs.Empty : args, Utilities.withVersion(options));
     }

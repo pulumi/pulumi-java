@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FeatureMembershipConfigmanagementConfigSync {
+    /**
+     * - 
+     * (Optional) Structure is documented below.
+     * 
+     */
     private final @Nullable FeatureMembershipConfigmanagementConfigSyncGit git;
+    /**
+     * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+     * 
+     */
     private final @Nullable String sourceFormat;
 
     @OutputCustomType.Constructor({"git","sourceFormat"})
@@ -23,9 +32,18 @@ public final class FeatureMembershipConfigmanagementConfigSync {
         this.sourceFormat = sourceFormat;
     }
 
+    /**
+     * - 
+     * (Optional) Structure is documented below.
+     * 
+     */
     public Optional<FeatureMembershipConfigmanagementConfigSyncGit> getGit() {
         return Optional.ofNullable(this.git);
     }
+    /**
+     * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+     * 
+     */
     public Optional<String> getSourceFormat() {
         return Optional.ofNullable(this.sourceFormat);
     }

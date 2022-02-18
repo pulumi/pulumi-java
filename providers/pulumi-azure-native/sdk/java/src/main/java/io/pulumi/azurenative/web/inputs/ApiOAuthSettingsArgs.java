@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * OAuth settings for the connection provider
+ * 
+ */
 public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiOAuthSettingsArgs Empty = new ApiOAuthSettingsArgs();
 
+    /**
+     * Resource provider client id
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -25,6 +33,10 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * Client Secret needed for OAuth
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
@@ -32,6 +44,10 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
+    /**
+     * OAuth parameters key is the name of parameter
+     * 
+     */
     @InputImport(name="customParameters")
     private final @Nullable Input<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
 
@@ -39,6 +55,10 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.customParameters == null ? Input.empty() : this.customParameters;
     }
 
+    /**
+     * Identity provider
+     * 
+     */
     @InputImport(name="identityProvider")
     private final @Nullable Input<String> identityProvider;
 
@@ -46,6 +66,10 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.identityProvider == null ? Input.empty() : this.identityProvider;
     }
 
+    /**
+     * Read only properties for this oauth setting.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Object> properties;
 
@@ -53,6 +77,10 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Url
+     * 
+     */
     @InputImport(name="redirectUrl")
     private final @Nullable Input<String> redirectUrl;
 
@@ -60,6 +88,10 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.redirectUrl == null ? Input.empty() : this.redirectUrl;
     }
 
+    /**
+     * OAuth scopes
+     * 
+     */
     @InputImport(name="scopes")
     private final @Nullable Input<List<String>> scopes;
 

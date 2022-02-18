@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FilterCriteriaProperties {
+    /**
+     * List of filters of this FilterCriteria
+     * 
+     */
     private final @Nullable List<EventSourceMappingFilter> filters;
 
     @OutputCustomType.Constructor({"filters"})
@@ -18,6 +22,10 @@ public final class FilterCriteriaProperties {
         this.filters = filters;
     }
 
+    /**
+     * List of filters of this FilterCriteria
+     * 
+     */
     public List<EventSourceMappingFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
     }

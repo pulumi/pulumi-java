@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScriptReferenceResponse {
+    /**
+     * Optional command line arguments passed to the script to run.
+     * 
+     */
     private final @Nullable String scriptArguments;
+    /**
+     * The location of scripts in the mounted volume.
+     * 
+     */
     private final @Nullable String scriptData;
+    /**
+     * The storage source of the script: inline, workspace.
+     * 
+     */
     private final @Nullable String scriptSource;
+    /**
+     * Optional time period passed to timeout command.
+     * 
+     */
     private final @Nullable String timeout;
 
     @OutputCustomType.Constructor({"scriptArguments","scriptData","scriptSource","timeout"})
@@ -28,15 +44,31 @@ public final class ScriptReferenceResponse {
         this.timeout = timeout;
     }
 
+    /**
+     * Optional command line arguments passed to the script to run.
+     * 
+     */
     public Optional<String> getScriptArguments() {
         return Optional.ofNullable(this.scriptArguments);
     }
+    /**
+     * The location of scripts in the mounted volume.
+     * 
+     */
     public Optional<String> getScriptData() {
         return Optional.ofNullable(this.scriptData);
     }
+    /**
+     * The storage source of the script: inline, workspace.
+     * 
+     */
     public Optional<String> getScriptSource() {
         return Optional.ofNullable(this.scriptSource);
     }
+    /**
+     * Optional time period passed to timeout command.
+     * 
+     */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }

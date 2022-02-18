@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database backup settings.
+ * 
+ */
 public final class DatabaseBackupSettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseBackupSettingResponse Empty = new DatabaseBackupSettingResponse();
 
+    /**
+     * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+     * 
+     */
     @InputImport(name="connectionString")
     private final @Nullable String connectionString;
 
@@ -21,6 +29,11 @@ public final class DatabaseBackupSettingResponse extends io.pulumi.resources.Inv
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
+    /**
+     * Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+     * This is used during restore with overwrite connection strings options.
+     * 
+     */
     @InputImport(name="connectionStringName")
     private final @Nullable String connectionStringName;
 
@@ -28,6 +41,10 @@ public final class DatabaseBackupSettingResponse extends io.pulumi.resources.Inv
         return this.connectionStringName == null ? Optional.empty() : Optional.ofNullable(this.connectionStringName);
     }
 
+    /**
+     * Database type (e.g. SqlAzure / MySql).
+     * 
+     */
     @InputImport(name="databaseType", required=true)
     private final String databaseType;
 

@@ -12,6 +12,10 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectorArgs Empty = new GetConnectorArgs();
 
+    /**
+     * The name of the connector.
+     * 
+     */
     @InputImport(name="connectorName", required=true)
     private final String connectorName;
 
@@ -19,6 +23,10 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
         return this.connectorName;
     }
 
+    /**
+     * The name of the hub.
+     * 
+     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -26,6 +34,10 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
         return this.hubName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

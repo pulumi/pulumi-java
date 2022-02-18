@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A collection of information about the state of the connection between service consumer and provider.
+ * 
+ */
 public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServiceConnectionStateArgs Empty = new PrivateLinkServiceConnectionStateArgs();
 
+    /**
+     * A message indicating if changes on the service provider require any updates on the consumer.
+     * 
+     */
     @InputImport(name="actionsRequired")
     private final @Nullable Input<String> actionsRequired;
 
@@ -23,6 +31,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
         return this.actionsRequired == null ? Input.empty() : this.actionsRequired;
     }
 
+    /**
+     * The reason for approval/rejection of the connection.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +42,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 

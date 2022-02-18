@@ -22,6 +22,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureClusterState Empty = new AzureClusterState();
 
+    /**
+     * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -29,6 +33,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Required. Configuration related to the cluster RBAC settings.
+     * 
+     */
     @InputImport(name="authorization")
     private final @Nullable Input<AzureClusterAuthorizationGetArgs> authorization;
 
@@ -36,6 +44,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.authorization == null ? Input.empty() : this.authorization;
     }
 
+    /**
+     * Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+     * 
+     */
     @InputImport(name="azureRegion")
     private final @Nullable Input<String> azureRegion;
 
@@ -43,6 +55,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.azureRegion == null ? Input.empty() : this.azureRegion;
     }
 
+    /**
+     * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/<project-number>/locations/<region>/azureClients/<client-id>`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * 
+     */
     @InputImport(name="client")
     private final @Nullable Input<String> client;
 
@@ -50,6 +66,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.client == null ? Input.empty() : this.client;
     }
 
+    /**
+     * Required. Configuration related to the cluster control plane.
+     * 
+     */
     @InputImport(name="controlPlane")
     private final @Nullable Input<AzureClusterControlPlaneGetArgs> controlPlane;
 
@@ -57,6 +77,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.controlPlane == null ? Input.empty() : this.controlPlane;
     }
 
+    /**
+     * Output only. The time at which this cluster was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -64,6 +88,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -71,6 +99,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Output only. The endpoint of the cluster's API server.
+     * 
+     */
     @InputImport(name="endpoint")
     private final @Nullable Input<String> endpoint;
 
@@ -78,6 +110,11 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
+    /**
+     * Allows clients to perform consistent read-modify-writes through optimistic concurrency control. May be sent on update
+     * and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -85,6 +122,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Fleet configuration.
+     * 
+     */
     @InputImport(name="fleet")
     private final @Nullable Input<AzureClusterFleetGetArgs> fleet;
 
@@ -92,6 +133,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.fleet == null ? Input.empty() : this.fleet;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -99,6 +144,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of this resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -106,6 +155,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Required. Cluster-wide networking configuration.
+     * 
+     */
     @InputImport(name="networking")
     private final @Nullable Input<AzureClusterNetworkingGetArgs> networking;
 
@@ -113,6 +166,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.networking == null ? Input.empty() : this.networking;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -120,6 +177,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Output only. If set, there are currently changes in flight to the cluster.
+     * 
+     */
     @InputImport(name="reconciling")
     private final @Nullable Input<Boolean> reconciling;
 
@@ -127,6 +188,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.reconciling == null ? Input.empty() : this.reconciling;
     }
 
+    /**
+     * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
+     * 
+     */
     @InputImport(name="resourceGroupId")
     private final @Nullable Input<String> resourceGroupId;
 
@@ -134,6 +199,11 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupId == null ? Input.empty() : this.resourceGroupId;
     }
 
+    /**
+     * Output only. The current state of the cluster. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING,
+     * STOPPING, ERROR, DEGRADED
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -141,6 +211,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Output only. A globally unique identifier for the cluster.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 
@@ -148,6 +222,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.uid == null ? Input.empty() : this.uid;
     }
 
+    /**
+     * Output only. The time at which this cluster was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 
@@ -155,6 +233,10 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
         return this.updateTime == null ? Input.empty() : this.updateTime;
     }
 
+    /**
+     * Output only. Workload Identity settings.
+     * 
+     */
     @InputImport(name="workloadIdentityConfigs")
     private final @Nullable Input<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs;
 

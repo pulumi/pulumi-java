@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Model that represents a step in the Experiment resource.
+ * 
+ */
 public final class StepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StepArgs Empty = new StepArgs();
 
+    /**
+     * List of branches.
+     * 
+     */
     @InputImport(name="branches", required=true)
     private final Input<List<BranchArgs>> branches;
 
@@ -22,6 +30,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
         return this.branches;
     }
 
+    /**
+     * String of the step name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

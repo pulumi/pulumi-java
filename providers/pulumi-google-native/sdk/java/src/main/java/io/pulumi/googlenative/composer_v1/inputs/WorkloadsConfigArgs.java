@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Kubernetes workloads configuration for GKE cluster associated with the Cloud Composer environment. Supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+ * 
+ */
 public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadsConfigArgs Empty = new WorkloadsConfigArgs();
 
+    /**
+     * Optional. Resources used by Airflow schedulers.
+     * 
+     */
     @InputImport(name="scheduler")
     private final @Nullable Input<SchedulerResourceArgs> scheduler;
 
@@ -23,6 +31,10 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.scheduler == null ? Input.empty() : this.scheduler;
     }
 
+    /**
+     * Optional. Resources used by Airflow web server.
+     * 
+     */
     @InputImport(name="webServer")
     private final @Nullable Input<WebServerResourceArgs> webServer;
 
@@ -30,6 +42,10 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.webServer == null ? Input.empty() : this.webServer;
     }
 
+    /**
+     * Optional. Resources used by Airflow workers.
+     * 
+     */
     @InputImport(name="worker")
     private final @Nullable Input<WorkerResourceArgs> worker;
 

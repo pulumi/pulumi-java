@@ -15,17 +15,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetBackendResult {
+    /**
+     * Backend Credentials Contract Properties
+     * 
+     */
     private final @Nullable BackendCredentialsContractResponse credentials;
+    /**
+     * Backend Description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Backend Properties contract
+     * 
+     */
     private final BackendPropertiesResponse properties;
+    /**
+     * Backend communication protocol.
+     * 
+     */
     private final String protocol;
+    /**
+     * Backend Proxy Contract Properties
+     * 
+     */
     private final @Nullable BackendProxyContractResponse proxy;
+    /**
+     * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+     * 
+     */
     private final @Nullable String resourceId;
+    /**
+     * Backend Title.
+     * 
+     */
     private final @Nullable String title;
+    /**
+     * Backend TLS Properties
+     * 
+     */
     private final @Nullable BackendTlsPropertiesResponse tls;
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     private final String type;
+    /**
+     * Runtime Url of the Backend.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"credentials","description","id","name","properties","protocol","proxy","resourceId","title","tls","type","url"})
@@ -56,39 +104,87 @@ public final class GetBackendResult {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * Backend Credentials Contract Properties
+     * 
+     */
     public Optional<BackendCredentialsContractResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
+    /**
+     * Backend Description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Backend Properties contract
+     * 
+     */
     public BackendPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * Backend communication protocol.
+     * 
+     */
     public String getProtocol() {
         return this.protocol;
     }
+    /**
+     * Backend Proxy Contract Properties
+     * 
+     */
     public Optional<BackendProxyContractResponse> getProxy() {
         return Optional.ofNullable(this.proxy);
     }
+    /**
+     * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+     * 
+     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
+    /**
+     * Backend Title.
+     * 
+     */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
+    /**
+     * Backend TLS Properties
+     * 
+     */
     public Optional<BackendTlsPropertiesResponse> getTls() {
         return Optional.ofNullable(this.tls);
     }
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Runtime Url of the Backend.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetFhirResult {
+    /**
+     * The HTTP Content-Type header value specifying the content type of the body.
+     * 
+     */
     private final String contentType;
+    /**
+     * The HTTP request/response body as raw binary.
+     * 
+     */
     private final String data;
+    /**
+     * Application specific response metadata. Must be set in the first response for streaming APIs.
+     * 
+     */
     private final List<Map<String,String>> extensions;
 
     @OutputCustomType.Constructor({"contentType","data","extensions"})
@@ -25,12 +37,24 @@ public final class GetFhirResult {
         this.extensions = Objects.requireNonNull(extensions);
     }
 
+    /**
+     * The HTTP Content-Type header value specifying the content type of the body.
+     * 
+     */
     public String getContentType() {
         return this.contentType;
     }
+    /**
+     * The HTTP request/response body as raw binary.
+     * 
+     */
     public String getData() {
         return this.data;
     }
+    /**
+     * Application specific response metadata. Must be set in the first response for streaming APIs.
+     * 
+     */
     public List<Map<String,String>> getExtensions() {
         return this.extensions;
     }

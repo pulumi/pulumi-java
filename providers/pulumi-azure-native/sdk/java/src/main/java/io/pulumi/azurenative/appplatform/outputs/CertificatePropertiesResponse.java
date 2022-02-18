@@ -12,15 +12,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificatePropertiesResponse {
+    /**
+     * The activate date of certificate.
+     * 
+     */
     private final String activateDate;
+    /**
+     * The certificate version of key vault.
+     * 
+     */
     private final @Nullable String certVersion;
+    /**
+     * The domain list of certificate.
+     * 
+     */
     private final List<String> dnsNames;
+    /**
+     * The expiration date of certificate.
+     * 
+     */
     private final String expirationDate;
+    /**
+     * The issue date of certificate.
+     * 
+     */
     private final String issuedDate;
+    /**
+     * The issuer of certificate.
+     * 
+     */
     private final String issuer;
+    /**
+     * The certificate name of key vault.
+     * 
+     */
     private final String keyVaultCertName;
+    /**
+     * The subject name of certificate.
+     * 
+     */
     private final String subjectName;
+    /**
+     * The thumbprint of certificate.
+     * 
+     */
     private final String thumbprint;
+    /**
+     * The vault uri of user key vault.
+     * 
+     */
     private final String vaultUri;
 
     @OutputCustomType.Constructor({"activateDate","certVersion","dnsNames","expirationDate","issuedDate","issuer","keyVaultCertName","subjectName","thumbprint","vaultUri"})
@@ -47,33 +87,73 @@ public final class CertificatePropertiesResponse {
         this.vaultUri = Objects.requireNonNull(vaultUri);
     }
 
+    /**
+     * The activate date of certificate.
+     * 
+     */
     public String getActivateDate() {
         return this.activateDate;
     }
+    /**
+     * The certificate version of key vault.
+     * 
+     */
     public Optional<String> getCertVersion() {
         return Optional.ofNullable(this.certVersion);
     }
+    /**
+     * The domain list of certificate.
+     * 
+     */
     public List<String> getDnsNames() {
         return this.dnsNames;
     }
+    /**
+     * The expiration date of certificate.
+     * 
+     */
     public String getExpirationDate() {
         return this.expirationDate;
     }
+    /**
+     * The issue date of certificate.
+     * 
+     */
     public String getIssuedDate() {
         return this.issuedDate;
     }
+    /**
+     * The issuer of certificate.
+     * 
+     */
     public String getIssuer() {
         return this.issuer;
     }
+    /**
+     * The certificate name of key vault.
+     * 
+     */
     public String getKeyVaultCertName() {
         return this.keyVaultCertName;
     }
+    /**
+     * The subject name of certificate.
+     * 
+     */
     public String getSubjectName() {
         return this.subjectName;
     }
+    /**
+     * The thumbprint of certificate.
+     * 
+     */
     public String getThumbprint() {
         return this.thumbprint;
     }
+    /**
+     * The vault uri of user key vault.
+     * 
+     */
     public String getVaultUri() {
         return this.vaultUri;
     }

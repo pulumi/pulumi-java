@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a Photon Controller persistent disk resource.
+ * 
+ */
 public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PhotonPersistentDiskVolumeSourceArgs Empty = new PhotonPersistentDiskVolumeSourceArgs();
 
+    /**
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * 
+     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -21,6 +29,10 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
+    /**
+     * ID that identifies Photon Controller persistent disk
+     * 
+     */
     @InputImport(name="pdID", required=true)
     private final Input<String> pdID;
 

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Kubernetes node info
+ * 
+ */
 public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeInfoResponse Empty = new NodeInfoResponse();
 
+    /**
+     * IP Configuration of the Kubernetes node.
+     * 
+     */
     @InputImport(name="ipConfiguration")
     private final @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration;
 
@@ -23,6 +31,10 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.ipConfiguration == null ? List.of() : this.ipConfiguration;
     }
 
+    /**
+     * Node name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -30,6 +42,10 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Node type - Master/Worker
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

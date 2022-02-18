@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The protocol of a Network Rule resource.
+     * 
+     */
     @EnumType
     public enum AzureFirewallNetworkRuleProtocol {
         TCP("TCP"),

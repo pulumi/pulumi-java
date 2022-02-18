@@ -25,6 +25,10 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
         return this.destinationConfiguration;
     }
 
+    /**
+     * Recording Configuration Name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -32,6 +36,10 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RecordingConfigurationTagArgs>> tags;
 

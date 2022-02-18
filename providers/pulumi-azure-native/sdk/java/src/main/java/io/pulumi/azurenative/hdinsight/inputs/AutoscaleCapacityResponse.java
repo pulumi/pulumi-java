@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The load-based autoscale request parameters
+ * 
+ */
 public final class AutoscaleCapacityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoscaleCapacityResponse Empty = new AutoscaleCapacityResponse();
 
+    /**
+     * The maximum instance count of the cluster
+     * 
+     */
     @InputImport(name="maxInstanceCount")
     private final @Nullable Integer maxInstanceCount;
 
@@ -21,6 +29,10 @@ public final class AutoscaleCapacityResponse extends io.pulumi.resources.InvokeA
         return this.maxInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.maxInstanceCount);
     }
 
+    /**
+     * The minimum instance count of the cluster
+     * 
+     */
     @InputImport(name="minInstanceCount")
     private final @Nullable Integer minInstanceCount;
 

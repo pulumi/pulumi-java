@@ -26,10 +26,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * DataBox Disk Job Details.
+ * 
+ */
 public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataBoxDiskJobDetailsResponse Empty = new DataBoxDiskJobDetailsResponse();
 
+    /**
+     * Shared access key to download the chain of custody logs
+     * 
+     */
     @InputImport(name="chainOfCustodySasKey", required=true)
     private final String chainOfCustodySasKey;
 
@@ -37,6 +45,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.chainOfCustodySasKey;
     }
 
+    /**
+     * Contact details for notification and shipping.
+     * 
+     */
     @InputImport(name="contactDetails", required=true)
     private final ContactDetailsResponse contactDetails;
 
@@ -44,6 +56,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.contactDetails;
     }
 
+    /**
+     * List of copy log details.
+     * 
+     */
     @InputImport(name="copyLogDetails", required=true)
     private final List<Object> copyLogDetails;
 
@@ -51,6 +67,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.copyLogDetails;
     }
 
+    /**
+     * Copy progress per disk.
+     * 
+     */
     @InputImport(name="copyProgress", required=true)
     private final List<DataBoxDiskCopyProgressResponse> copyProgress;
 
@@ -58,6 +78,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.copyProgress;
     }
 
+    /**
+     * Details of the data to be exported from azure.
+     * 
+     */
     @InputImport(name="dataExportDetails")
     private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
@@ -65,6 +89,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.dataExportDetails == null ? List.of() : this.dataExportDetails;
     }
 
+    /**
+     * Details of the data to be imported into azure.
+     * 
+     */
     @InputImport(name="dataImportDetails")
     private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
@@ -72,6 +100,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.dataImportDetails == null ? List.of() : this.dataImportDetails;
     }
 
+    /**
+     * Delivery package shipping details.
+     * 
+     */
     @InputImport(name="deliveryPackage", required=true)
     private final PackageShippingDetailsResponse deliveryPackage;
 
@@ -79,6 +111,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.deliveryPackage;
     }
 
+    /**
+     * Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
+     * 
+     */
     @InputImport(name="disksAndSizeDetails", required=true)
     private final Map<String,Integer> disksAndSizeDetails;
 
@@ -86,6 +122,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.disksAndSizeDetails;
     }
 
+    /**
+     * The expected size of the data, which needs to be transferred in this job, in terabytes.
+     * 
+     */
     @InputImport(name="expectedDataSizeInTeraBytes")
     private final @Nullable Integer expectedDataSizeInTeraBytes;
 
@@ -93,6 +133,11 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.expectedDataSizeInTeraBytes == null ? Optional.empty() : Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
 
+    /**
+     * Indicates the type of job details.
+     * Expected value is 'DataBoxDisk'.
+     * 
+     */
     @InputImport(name="jobDetailsType", required=true)
     private final String jobDetailsType;
 
@@ -100,6 +145,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.jobDetailsType;
     }
 
+    /**
+     * List of stages that run in the job.
+     * 
+     */
     @InputImport(name="jobStages", required=true)
     private final List<JobStagesResponse> jobStages;
 
@@ -107,6 +156,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.jobStages;
     }
 
+    /**
+     * Details about which key encryption type is being used.
+     * 
+     */
     @InputImport(name="keyEncryptionKey")
     private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
@@ -114,6 +167,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
     }
 
+    /**
+     * User entered passkey for DataBox Disk job.
+     * 
+     */
     @InputImport(name="passkey")
     private final @Nullable String passkey;
 
@@ -121,6 +178,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.passkey == null ? Optional.empty() : Optional.ofNullable(this.passkey);
     }
 
+    /**
+     * Preferences for the order.
+     * 
+     */
     @InputImport(name="preferences")
     private final @Nullable PreferencesResponse preferences;
 
@@ -128,6 +189,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.preferences == null ? Optional.empty() : Optional.ofNullable(this.preferences);
     }
 
+    /**
+     * User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
+     * 
+     */
     @InputImport(name="preferredDisks")
     private final @Nullable Map<String,Integer> preferredDisks;
 
@@ -135,6 +200,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.preferredDisks == null ? Map.of() : this.preferredDisks;
     }
 
+    /**
+     * Return package shipping details.
+     * 
+     */
     @InputImport(name="returnPackage", required=true)
     private final PackageShippingDetailsResponse returnPackage;
 
@@ -142,6 +211,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.returnPackage;
     }
 
+    /**
+     * Shared access key to download the return shipment label
+     * 
+     */
     @InputImport(name="reverseShipmentLabelSasKey", required=true)
     private final String reverseShipmentLabelSasKey;
 
@@ -149,6 +222,10 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
         return this.reverseShipmentLabelSasKey;
     }
 
+    /**
+     * Shipping address of the customer.
+     * 
+     */
     @InputImport(name="shippingAddress")
     private final @Nullable ShippingAddressResponse shippingAddress;
 

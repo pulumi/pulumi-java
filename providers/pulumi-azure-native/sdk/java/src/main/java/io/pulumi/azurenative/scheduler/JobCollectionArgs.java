@@ -16,6 +16,10 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobCollectionArgs Empty = new JobCollectionArgs();
 
+    /**
+     * The job collection name.
+     * 
+     */
     @InputImport(name="jobCollectionName")
     private final @Nullable Input<String> jobCollectionName;
 
@@ -23,6 +27,10 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobCollectionName == null ? Input.empty() : this.jobCollectionName;
     }
 
+    /**
+     * Gets or sets the storage account location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +38,10 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Gets or sets the job collection resource name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,10 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Gets or sets the job collection properties.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<JobCollectionPropertiesArgs> properties;
 
@@ -44,6 +60,10 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +71,10 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

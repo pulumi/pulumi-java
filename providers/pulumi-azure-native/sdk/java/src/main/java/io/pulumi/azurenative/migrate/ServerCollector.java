@@ -15,6 +15,20 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * API Version: 2019-10-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:migrate:ServerCollector app23df4collector /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindtest/providers/Microsoft.Migrate/assessmentprojects/app11141project/servercollectors/app23df4collector 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:migrate:ServerCollector")
 public class ServerCollector extends io.pulumi.resources.CustomResource {
     @OutputExport(name="eTag", type=String.class, parameters={})
@@ -42,6 +56,12 @@ public class ServerCollector extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ServerCollector(String name, ServerCollectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:migrate:ServerCollector", name, args == null ? ServerCollectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +80,14 @@ public class ServerCollector extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ServerCollector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerCollector(name, id, options);
     }

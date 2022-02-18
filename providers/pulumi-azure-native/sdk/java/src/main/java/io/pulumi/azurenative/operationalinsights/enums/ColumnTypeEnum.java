@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Column data type.
+     * 
+     */
     @EnumType
     public enum ColumnTypeEnum {
         String("string"),

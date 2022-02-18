@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cosmos DB Cassandra table column
+ * 
+ */
 public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ColumnResponse Empty = new ColumnResponse();
 
+    /**
+     * Name of the Cosmos DB Cassandra table column
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Type of the Cosmos DB Cassandra table column
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

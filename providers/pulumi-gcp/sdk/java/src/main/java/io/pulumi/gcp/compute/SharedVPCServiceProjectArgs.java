@@ -13,6 +13,10 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
 
     public static final SharedVPCServiceProjectArgs Empty = new SharedVPCServiceProjectArgs();
 
+    /**
+     * The ID of a host project to associate.
+     * 
+     */
     @InputImport(name="hostProject", required=true)
     private final Input<String> hostProject;
 
@@ -20,6 +24,10 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
         return this.hostProject;
     }
 
+    /**
+     * The ID of the project that will serve as a Shared VPC service project.
+     * 
+     */
     @InputImport(name="serviceProject", required=true)
     private final Input<String> serviceProject;
 

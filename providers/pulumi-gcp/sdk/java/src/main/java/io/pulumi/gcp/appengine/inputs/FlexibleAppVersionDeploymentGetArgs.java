@@ -18,6 +18,11 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
 
     public static final FlexibleAppVersionDeploymentGetArgs Empty = new FlexibleAppVersionDeploymentGetArgs();
 
+    /**
+     * Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cloudBuildOptions")
     private final @Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
 
@@ -25,6 +30,11 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
         return this.cloudBuildOptions == null ? Input.empty() : this.cloudBuildOptions;
     }
 
+    /**
+     * The Docker image for the container that runs the version.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="container")
     private final @Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container;
 
@@ -32,6 +42,12 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
         return this.container == null ? Input.empty() : this.container;
     }
 
+    /**
+     * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * All files must be readable using the credentials supplied with this call.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="files")
     private final @Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
 
@@ -39,6 +55,11 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
         return this.files == null ? Input.empty() : this.files;
     }
 
+    /**
+     * Zip File
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="zip")
     private final @Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip;
 

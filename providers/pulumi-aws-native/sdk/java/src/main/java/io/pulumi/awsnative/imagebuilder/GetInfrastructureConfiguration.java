@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInfrastructureConfiguration {
+/**
+ * Resource schema for AWS::ImageBuilder::InfrastructureConfiguration
+ * 
+ */
     public static CompletableFuture<GetInfrastructureConfigurationResult> invokeAsync(GetInfrastructureConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args == null ? GetInfrastructureConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

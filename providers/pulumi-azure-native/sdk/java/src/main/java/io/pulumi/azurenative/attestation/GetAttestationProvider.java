@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttestationProvider {
+/**
+ * Attestation service response message.
+ * API Version: 2020-10-01.
+ * 
+ *
+ * Attestation service response message.
+ * 
+ */
     public static CompletableFuture<GetAttestationProviderResult> invokeAsync(GetAttestationProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:attestation:getAttestationProvider", TypeShape.of(GetAttestationProviderResult.class), args == null ? GetAttestationProviderArgs.Empty : args, Utilities.withVersion(options));
     }

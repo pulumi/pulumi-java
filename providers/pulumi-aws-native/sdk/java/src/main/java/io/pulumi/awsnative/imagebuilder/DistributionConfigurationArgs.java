@@ -17,6 +17,10 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
 
     public static final DistributionConfigurationArgs Empty = new DistributionConfigurationArgs();
 
+    /**
+     * The description of the distribution configuration.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The distributions of the distribution configuration.
+     * 
+     */
     @InputImport(name="distributions", required=true)
     private final Input<List<DistributionConfigurationDistributionArgs>> distributions;
 
@@ -31,6 +39,10 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
         return this.distributions;
     }
 
+    /**
+     * The name of the distribution configuration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,10 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The tags associated with the component.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 

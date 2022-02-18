@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU of an Azure Firewall.
+ * 
+ */
 public final class AzureFirewallSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFirewallSkuResponse Empty = new AzureFirewallSkuResponse();
 
+    /**
+     * Name of an Azure Firewall SKU.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class AzureFirewallSkuResponse extends io.pulumi.resources.InvokeAr
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Tier of an Azure Firewall.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

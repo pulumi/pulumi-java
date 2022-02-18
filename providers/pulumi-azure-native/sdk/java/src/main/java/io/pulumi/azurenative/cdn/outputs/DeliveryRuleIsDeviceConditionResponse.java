@@ -10,7 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleIsDeviceConditionResponse {
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'IsDevice'.
+     * 
+     */
     private final String name;
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     private final IsDeviceMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +30,18 @@ public final class DeliveryRuleIsDeviceConditionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'IsDevice'.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     public IsDeviceMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

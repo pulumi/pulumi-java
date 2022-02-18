@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetContactResult {
+    /**
+     * The Amazon Resource Name (ARN) of the contact.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
+     * 
+     */
     private final @Nullable String displayName;
 
     @OutputCustomType.Constructor({"arn","displayName"})
@@ -22,9 +30,17 @@ public final class GetContactResult {
         this.displayName = displayName;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the contact.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }

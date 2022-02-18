@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatabaseEncryptionResponse {
+    /**
+     * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+     * 
+     */
     private final String keyName;
+    /**
+     * Denotes the state of etcd encryption.
+     * 
+     */
     private final String state;
 
     @OutputCustomType.Constructor({"keyName","state"})
@@ -20,9 +28,17 @@ public final class DatabaseEncryptionResponse {
         this.state = Objects.requireNonNull(state);
     }
 
+    /**
+     * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+     * 
+     */
     public String getKeyName() {
         return this.keyName;
     }
+    /**
+     * Denotes the state of etcd encryption.
+     * 
+     */
     public String getState() {
         return this.state;
     }

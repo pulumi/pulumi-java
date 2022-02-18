@@ -12,6 +12,10 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCustomerEventArgs Empty = new GetCustomerEventArgs();
 
+    /**
+     * The resource name of the Test Base Customer event.
+     * 
+     */
     @InputImport(name="customerEventName", required=true)
     private final String customerEventName;
 
@@ -19,6 +23,10 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
         return this.customerEventName;
     }
 
+    /**
+     * The name of the resource group that contains the resource.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource name of the Test Base Account.
+     * 
+     */
     @InputImport(name="testBaseAccountName", required=true)
     private final String testBaseAccountName;
 

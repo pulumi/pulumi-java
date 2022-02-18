@@ -12,6 +12,10 @@ public final class GetDatabaseInstanceSettingDatabaseFlag extends io.pulumi.reso
 
     public static final GetDatabaseInstanceSettingDatabaseFlag Empty = new GetDatabaseInstanceSettingDatabaseFlag();
 
+    /**
+     * The name of the instance.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

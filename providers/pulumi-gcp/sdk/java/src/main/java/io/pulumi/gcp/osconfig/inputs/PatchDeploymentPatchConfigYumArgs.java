@@ -16,6 +16,10 @@ public final class PatchDeploymentPatchConfigYumArgs extends io.pulumi.resources
 
     public static final PatchDeploymentPatchConfigYumArgs Empty = new PatchDeploymentPatchConfigYumArgs();
 
+    /**
+     * List of KBs to exclude from update.
+     * 
+     */
     @InputImport(name="excludes")
     private final @Nullable Input<List<String>> excludes;
 
@@ -23,6 +27,12 @@ public final class PatchDeploymentPatchConfigYumArgs extends io.pulumi.resources
         return this.excludes == null ? Input.empty() : this.excludes;
     }
 
+    /**
+     * An exclusive list of packages to be updated. These are the only packages that will be updated.
+     * If these packages are not installed, they will be ignored. This field cannot be specified with
+     * any other patch configuration fields.
+     * 
+     */
     @InputImport(name="exclusivePackages")
     private final @Nullable Input<List<String>> exclusivePackages;
 
@@ -30,6 +40,10 @@ public final class PatchDeploymentPatchConfigYumArgs extends io.pulumi.resources
         return this.exclusivePackages == null ? Input.empty() : this.exclusivePackages;
     }
 
+    /**
+     * Will cause patch to run yum update-minimal instead.
+     * 
+     */
     @InputImport(name="minimal")
     private final @Nullable Input<Boolean> minimal;
 
@@ -37,6 +51,10 @@ public final class PatchDeploymentPatchConfigYumArgs extends io.pulumi.resources
         return this.minimal == null ? Input.empty() : this.minimal;
     }
 
+    /**
+     * Adds the --security flag to yum update. Not supported on all platforms.
+     * 
+     */
     @InputImport(name="security")
     private final @Nullable Input<Boolean> security;
 

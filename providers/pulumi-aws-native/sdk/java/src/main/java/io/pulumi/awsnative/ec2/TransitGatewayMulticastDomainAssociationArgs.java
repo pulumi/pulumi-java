@@ -13,6 +13,10 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
 
     public static final TransitGatewayMulticastDomainAssociationArgs Empty = new TransitGatewayMulticastDomainAssociationArgs();
 
+    /**
+     * The IDs of the subnets to associate with the transit gateway multicast domain.
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 
@@ -20,6 +24,10 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
         return this.subnetId;
     }
 
+    /**
+     * The ID of the transit gateway attachment.
+     * 
+     */
     @InputImport(name="transitGatewayAttachmentId", required=true)
     private final Input<String> transitGatewayAttachmentId;
 
@@ -27,6 +35,10 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
         return this.transitGatewayAttachmentId;
     }
 
+    /**
+     * The ID of the transit gateway multicast domain.
+     * 
+     */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
     private final Input<String> transitGatewayMulticastDomainId;
 

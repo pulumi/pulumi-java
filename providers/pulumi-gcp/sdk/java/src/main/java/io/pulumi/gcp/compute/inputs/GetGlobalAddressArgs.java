@@ -14,6 +14,10 @@ public final class GetGlobalAddressArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalAddressArgs Empty = new GetGlobalAddressArgs();
 
+    /**
+     * A unique name for the resource, required by GCE.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,11 @@ public final class GetGlobalAddressArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

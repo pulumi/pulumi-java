@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual application in an app.
+ * 
+ */
 public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualApplicationArgs Empty = new VirtualApplicationArgs();
 
+    /**
+     * Physical path.
+     * 
+     */
     @InputImport(name="physicalPath")
     private final @Nullable Input<String> physicalPath;
 
@@ -24,6 +32,10 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
         return this.physicalPath == null ? Input.empty() : this.physicalPath;
     }
 
+    /**
+     * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
+     * 
+     */
     @InputImport(name="preloadEnabled")
     private final @Nullable Input<Boolean> preloadEnabled;
 
@@ -31,6 +43,10 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
         return this.preloadEnabled == null ? Input.empty() : this.preloadEnabled;
     }
 
+    /**
+     * Virtual directories for virtual application.
+     * 
+     */
     @InputImport(name="virtualDirectories")
     private final @Nullable Input<List<VirtualDirectoryArgs>> virtualDirectories;
 
@@ -38,6 +54,10 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
         return this.virtualDirectories == null ? Input.empty() : this.virtualDirectories;
     }
 
+    /**
+     * Virtual path.
+     * 
+     */
     @InputImport(name="virtualPath")
     private final @Nullable Input<String> virtualPath;
 

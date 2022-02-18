@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DaemonEndpoint {
+    /**
+     * Port number of the given endpoint.
+     * 
+     */
     private final Integer Port;
 
     @OutputCustomType.Constructor({"Port"})
@@ -16,6 +20,10 @@ public final class DaemonEndpoint {
         this.Port = Objects.requireNonNull(Port);
     }
 
+    /**
+     * Port number of the given endpoint.
+     * 
+     */
     public Integer getPort() {
         return this.Port;
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetToken {
+/**
+ * An object that represents a token for a container registry.
+ * API Version: 2020-11-01-preview.
+ * 
+ *
+ * An object that represents a token for a container registry.
+ * 
+ */
     public static CompletableFuture<GetTokenResult> invokeAsync(GetTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getToken", TypeShape.of(GetTokenResult.class), args == null ? GetTokenArgs.Empty : args, Utilities.withVersion(options));
     }

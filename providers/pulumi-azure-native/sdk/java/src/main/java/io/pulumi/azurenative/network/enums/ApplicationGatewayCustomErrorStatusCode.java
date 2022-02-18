@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Status code of the application gateway customer error.
+     * 
+     */
     @EnumType
     public enum ApplicationGatewayCustomErrorStatusCode {
         HttpStatus403("HttpStatus403"),

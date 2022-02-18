@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Display information of the operation.
+ * 
+ */
 public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OperationsDefinitionDisplayArgs Empty = new OperationsDefinitionDisplayArgs();

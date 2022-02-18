@@ -18,6 +18,13 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
 
     public static final CxEntityTypeState Empty = new CxEntityTypeState();
 
+    /**
+     * Represents kinds of entities.
+     * * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
+     * * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity.
+     *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
+     * 
+     */
     @InputImport(name="autoExpansionMode")
     private final @Nullable Input<String> autoExpansionMode;
 
@@ -25,6 +32,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.autoExpansionMode == null ? Input.empty() : this.autoExpansionMode;
     }
 
+    /**
+     * The human-readable name of the entity type, unique within the agent.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -32,6 +43,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Enables fuzzy entity extraction during classification.
+     * 
+     */
     @InputImport(name="enableFuzzyExtraction")
     private final @Nullable Input<Boolean> enableFuzzyExtraction;
 
@@ -39,6 +54,11 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
     }
 
+    /**
+     * The collection of entity entries associated with the entity type.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="entities")
     private final @Nullable Input<List<CxEntityTypeEntityGetArgs>> entities;
 
@@ -46,6 +66,12 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.entities == null ? Input.empty() : this.entities;
     }
 
+    /**
+     * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
+     * If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="excludedPhrases")
     private final @Nullable Input<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases;
 
@@ -53,6 +79,14 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.excludedPhrases == null ? Input.empty() : this.excludedPhrases;
     }
 
+    /**
+     * Indicates whether the entity type can be automatically expanded.
+     * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
+     * * KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
+     * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
+     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -60,6 +94,14 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The language of the following fields in entityType:
+     * EntityType.entities.value
+     * EntityType.entities.synonyms
+     * EntityType.excluded_phrases.value
+     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -67,6 +109,11 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
+    /**
+     * The unique identifier of the entity type. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent
+     * ID>/entityTypes/<Entity Type ID>.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -74,6 +121,11 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The agent to create a entity type for.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -81,6 +133,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
+     * 
+     */
     @InputImport(name="redact")
     private final @Nullable Input<Boolean> redact;
 

@@ -14,6 +14,10 @@ public final class CertificateConfigX509ConfigPolicyIdArgs extends io.pulumi.res
 
     public static final CertificateConfigX509ConfigPolicyIdArgs Empty = new CertificateConfigX509ConfigPolicyIdArgs();
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     @InputImport(name="objectIdPaths", required=true)
     private final Input<List<Integer>> objectIdPaths;
 

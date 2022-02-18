@@ -20,87 +20,212 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Defines web application firewall policy.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:WebApplicationFirewallPolicy Policy1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/Policy1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:WebApplicationFirewallPolicy")
 public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * A collection of references to application gateways.
+     * 
+     */
     @OutputExport(name="applicationGateways", type=List.class, parameters={ApplicationGatewayResponse.class})
     private Output<List<ApplicationGatewayResponse>> applicationGateways;
 
+    /**
+     * @return A collection of references to application gateways.
+     * 
+     */
     public Output<List<ApplicationGatewayResponse>> getApplicationGateways() {
         return this.applicationGateways;
     }
+    /**
+     * The custom rules inside the policy.
+     * 
+     */
     @OutputExport(name="customRules", type=List.class, parameters={WebApplicationFirewallCustomRuleResponse.class})
     private Output</* @Nullable */ List<WebApplicationFirewallCustomRuleResponse>> customRules;
 
+    /**
+     * @return The custom rules inside the policy.
+     * 
+     */
     public Output</* @Nullable */ List<WebApplicationFirewallCustomRuleResponse>> getCustomRules() {
         return this.customRules;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * A collection of references to application gateway http listeners.
+     * 
+     */
     @OutputExport(name="httpListeners", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> httpListeners;
 
+    /**
+     * @return A collection of references to application gateway http listeners.
+     * 
+     */
     public Output<List<SubResourceResponse>> getHttpListeners() {
         return this.httpListeners;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Describes the managedRules structure.
+     * 
+     */
     @OutputExport(name="managedRules", type=ManagedRulesDefinitionResponse.class, parameters={})
     private Output<ManagedRulesDefinitionResponse> managedRules;
 
+    /**
+     * @return Describes the managedRules structure.
+     * 
+     */
     public Output<ManagedRulesDefinitionResponse> getManagedRules() {
         return this.managedRules;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A collection of references to application gateway path rules.
+     * 
+     */
     @OutputExport(name="pathBasedRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> pathBasedRules;
 
+    /**
+     * @return A collection of references to application gateway path rules.
+     * 
+     */
     public Output<List<SubResourceResponse>> getPathBasedRules() {
         return this.pathBasedRules;
     }
+    /**
+     * The PolicySettings for policy.
+     * 
+     */
     @OutputExport(name="policySettings", type=PolicySettingsResponse.class, parameters={})
     private Output</* @Nullable */ PolicySettingsResponse> policySettings;
 
+    /**
+     * @return The PolicySettings for policy.
+     * 
+     */
     public Output</* @Nullable */ PolicySettingsResponse> getPolicySettings() {
         return this.policySettings;
     }
+    /**
+     * The provisioning state of the web application firewall policy resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the web application firewall policy resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource status of the policy.
+     * 
+     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
+    /**
+     * @return Resource status of the policy.
+     * 
+     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WebApplicationFirewallPolicy(String name, WebApplicationFirewallPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:WebApplicationFirewallPolicy", name, args == null ? WebApplicationFirewallPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -137,6 +262,14 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WebApplicationFirewallPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebApplicationFirewallPolicy(name, id, options);
     }

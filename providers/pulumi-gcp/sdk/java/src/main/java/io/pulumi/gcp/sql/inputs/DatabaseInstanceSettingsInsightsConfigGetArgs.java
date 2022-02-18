@@ -15,6 +15,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
 
     public static final DatabaseInstanceSettingsInsightsConfigGetArgs Empty = new DatabaseInstanceSettingsInsightsConfigGetArgs();
 
+    /**
+     * True if Query Insights feature is enabled.
+     * 
+     */
     @InputImport(name="queryInsightsEnabled")
     private final @Nullable Input<Boolean> queryInsightsEnabled;
 
@@ -22,6 +26,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
         return this.queryInsightsEnabled == null ? Input.empty() : this.queryInsightsEnabled;
     }
 
+    /**
+     * Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+     * 
+     */
     @InputImport(name="queryStringLength")
     private final @Nullable Input<Integer> queryStringLength;
 
@@ -29,6 +37,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
         return this.queryStringLength == null ? Input.empty() : this.queryStringLength;
     }
 
+    /**
+     * True if Query Insights will record application tags from query when enabled.
+     * 
+     */
     @InputImport(name="recordApplicationTags")
     private final @Nullable Input<Boolean> recordApplicationTags;
 
@@ -36,6 +48,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
         return this.recordApplicationTags == null ? Input.empty() : this.recordApplicationTags;
     }
 
+    /**
+     * True if Query Insights will record client address when enabled.
+     * 
+     */
     @InputImport(name="recordClientAddress")
     private final @Nullable Input<Boolean> recordClientAddress;
 

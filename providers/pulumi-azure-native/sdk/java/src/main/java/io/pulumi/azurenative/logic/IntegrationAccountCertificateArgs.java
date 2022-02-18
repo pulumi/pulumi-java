@@ -17,6 +17,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     public static final IntegrationAccountCertificateArgs Empty = new IntegrationAccountCertificateArgs();
 
+    /**
+     * The integration account certificate name.
+     * 
+     */
     @InputImport(name="certificateName")
     private final @Nullable Input<String> certificateName;
 
@@ -24,6 +28,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
         return this.certificateName == null ? Input.empty() : this.certificateName;
     }
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -31,6 +39,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
         return this.integrationAccountName;
     }
 
+    /**
+     * The key details in the key vault.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<KeyVaultKeyReferenceArgs> key;
 
@@ -38,6 +50,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +61,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The metadata.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -52,6 +72,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The public certificate.
+     * 
+     */
     @InputImport(name="publicCertificate")
     private final @Nullable Input<String> publicCertificate;
 
@@ -59,6 +83,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
         return this.publicCertificate == null ? Input.empty() : this.publicCertificate;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -66,6 +94,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

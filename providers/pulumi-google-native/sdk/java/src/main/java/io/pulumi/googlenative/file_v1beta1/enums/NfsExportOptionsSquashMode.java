@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.
+     * 
+     */
     @EnumType
     public enum NfsExportOptionsSquashMode {
+        /**
+         * SquashMode not set.
+         * 
+         */
         SquashModeUnspecified("SQUASH_MODE_UNSPECIFIED"),
+        /**
+         * The Root user has root access to the file share (default).
+         * 
+         */
         NoRootSquash("NO_ROOT_SQUASH"),
+        /**
+         * The Root user has squashed access to the anonymous uid/gid.
+         * 
+         */
         RootSquash("ROOT_SQUASH");
 
         private final String value;

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Status of the date policy
+ * 
+ */
 public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudTieringDatePolicyStatusResponse Empty = new CloudTieringDatePolicyStatusResponse();
 
+    /**
+     * Last updated timestamp
+     * 
+     */
     @InputImport(name="lastUpdatedTimestamp", required=true)
     private final String lastUpdatedTimestamp;
 
@@ -19,6 +27,10 @@ public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resour
         return this.lastUpdatedTimestamp;
     }
 
+    /**
+     * Most recent access time of tiered files
+     * 
+     */
     @InputImport(name="tieredFilesMostRecentAccessTimestamp", required=true)
     private final String tieredFilesMostRecentAccessTimestamp;
 

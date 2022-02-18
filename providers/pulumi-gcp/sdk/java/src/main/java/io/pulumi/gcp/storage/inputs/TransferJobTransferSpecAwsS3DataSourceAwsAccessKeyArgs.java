@@ -13,6 +13,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs extend
 
     public static final TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs Empty = new TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs();
 
+    /**
+     * AWS Key ID.
+     * 
+     */
     @InputImport(name="accessKeyId", required=true)
     private final Input<String> accessKeyId;
 
@@ -20,6 +24,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs extend
         return this.accessKeyId;
     }
 
+    /**
+     * AWS Secret Access Key.
+     * 
+     */
     @InputImport(name="secretAccessKey", required=true)
     private final Input<String> secretAccessKey;
 

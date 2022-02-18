@@ -20,6 +20,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final Gen2EnvironmentArgs Empty = new Gen2EnvironmentArgs();
 
+    /**
+     * Name of the environment
+     * 
+     */
     @InputImport(name="environmentName")
     private final @Nullable Input<String> environmentName;
 
@@ -27,6 +31,11 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.environmentName == null ? Input.empty() : this.environmentName;
     }
 
+    /**
+     * The kind of the environment.
+     * Expected value is 'Gen2'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -34,6 +43,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.kind;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,6 +54,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,6 +65,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -55,6 +76,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.sku;
     }
 
+    /**
+     * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
+     * 
+     */
     @InputImport(name="storageConfiguration", required=true)
     private final Input<Gen2StorageConfigurationInputArgs> storageConfiguration;
 
@@ -62,6 +87,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.storageConfiguration;
     }
 
+    /**
+     * Key-value pairs of additional properties for the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -69,6 +98,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The list of event properties which will be used to define the environment's time series id.
+     * 
+     */
     @InputImport(name="timeSeriesIdProperties", required=true)
     private final Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
 
@@ -76,6 +109,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.timeSeriesIdProperties;
     }
 
+    /**
+     * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
+     * 
+     */
     @InputImport(name="warmStoreConfiguration")
     private final @Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
 

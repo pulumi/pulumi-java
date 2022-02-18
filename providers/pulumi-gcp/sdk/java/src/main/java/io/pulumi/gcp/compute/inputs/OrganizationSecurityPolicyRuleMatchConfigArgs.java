@@ -16,6 +16,11 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
 
     public static final OrganizationSecurityPolicyRuleMatchConfigArgs Empty = new OrganizationSecurityPolicyRuleMatchConfigArgs();
 
+    /**
+     * Destination IP address range in CIDR format. Required for
+     * EGRESS rules.
+     * 
+     */
     @InputImport(name="destIpRanges")
     private final @Nullable Input<List<String>> destIpRanges;
 
@@ -23,6 +28,11 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
         return this.destIpRanges == null ? Input.empty() : this.destIpRanges;
     }
 
+    /**
+     * Pairs of IP protocols and ports that the rule should match.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="layer4Configs", required=true)
     private final Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
 
@@ -30,6 +40,11 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
         return this.layer4Configs;
     }
 
+    /**
+     * Source IP address range in CIDR format. Required for
+     * INGRESS rules.
+     * 
+     */
     @InputImport(name="srcIpRanges")
     private final @Nullable Input<List<String>> srcIpRanges;
 

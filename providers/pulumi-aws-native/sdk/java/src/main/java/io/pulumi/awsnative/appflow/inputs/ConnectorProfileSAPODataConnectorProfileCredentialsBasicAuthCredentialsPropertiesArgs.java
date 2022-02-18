@@ -14,6 +14,10 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
 
     public static final ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs Empty = new ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs();
 
+    /**
+     * The password that corresponds to the username.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -21,6 +25,10 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The name of the user.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

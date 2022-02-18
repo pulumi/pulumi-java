@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The retention policy for a container registry.
+ * 
+ */
 public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RetentionPolicyResponse Empty = new RetentionPolicyResponse();
 
+    /**
+     * The number of days to retain an untagged manifest after which it gets purged.
+     * 
+     */
     @InputImport(name="days")
     private final @Nullable Integer days;
 
@@ -22,6 +30,10 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
         return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
     }
 
+    /**
+     * The timestamp when the policy was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime", required=true)
     private final String lastUpdatedTime;
 
@@ -29,6 +41,10 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
         return this.lastUpdatedTime;
     }
 
+    /**
+     * The value that indicates whether the policy is enabled or not.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

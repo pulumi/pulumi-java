@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network ACL
+ * 
+ */
 public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkACLResponse Empty = new NetworkACLResponse();
 
+    /**
+     * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     * 
+     */
     @InputImport(name="allow")
     private final @Nullable List<String> allow;
 
@@ -22,6 +30,10 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
         return this.allow == null ? List.of() : this.allow;
     }
 
+    /**
+     * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     * 
+     */
     @InputImport(name="deny")
     private final @Nullable List<String> deny;
 

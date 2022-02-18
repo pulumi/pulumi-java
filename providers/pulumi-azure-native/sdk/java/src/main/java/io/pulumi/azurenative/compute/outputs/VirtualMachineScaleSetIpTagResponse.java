@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualMachineScaleSetIpTagResponse {
+    /**
+     * IP tag type. Example: FirstPartyUsage.
+     * 
+     */
     private final @Nullable String ipTagType;
+    /**
+     * IP tag associated with the public IP. Example: SQL, Storage etc.
+     * 
+     */
     private final @Nullable String tag;
 
     @OutputCustomType.Constructor({"ipTagType","tag"})
@@ -22,9 +30,17 @@ public final class VirtualMachineScaleSetIpTagResponse {
         this.tag = tag;
     }
 
+    /**
+     * IP tag type. Example: FirstPartyUsage.
+     * 
+     */
     public Optional<String> getIpTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
+    /**
+     * IP tag associated with the public IP. Example: SQL, Storage etc.
+     * 
+     */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }

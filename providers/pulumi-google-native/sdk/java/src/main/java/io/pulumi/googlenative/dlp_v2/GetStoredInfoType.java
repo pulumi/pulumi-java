@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStoredInfoType {
+/**
+ * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+ * 
+ */
     public static CompletableFuture<GetStoredInfoTypeResult> invokeAsync(GetStoredInfoTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getStoredInfoType", TypeShape.of(GetStoredInfoTypeResult.class), args == null ? GetStoredInfoTypeArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Utilization information of a single VM.
+ * 
+ */
 public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VmUtilizationInfoResponse Empty = new VmUtilizationInfoResponse();
 
+    /**
+     * Utilization metrics for this VM.
+     * 
+     */
     @InputImport(name="utilization", required=true)
     private final VmUtilizationMetricsResponse utilization;
 
@@ -21,6 +29,10 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
         return this.utilization;
     }
 
+    /**
+     * The VM's ID in the source.
+     * 
+     */
     @InputImport(name="vmId", required=true)
     private final String vmId;
 
@@ -28,6 +40,10 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
         return this.vmId;
     }
 
+    /**
+     * The description of the VM in a Source of type Vmware.
+     * 
+     */
     @InputImport(name="vmwareVmDetails", required=true)
     private final VmwareVmDetailsResponse vmwareVmDetails;
 

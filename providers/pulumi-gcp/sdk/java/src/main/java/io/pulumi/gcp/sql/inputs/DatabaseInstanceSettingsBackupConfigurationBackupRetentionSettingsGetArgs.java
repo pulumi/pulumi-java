@@ -15,6 +15,11 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
 
     public static final DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs Empty = new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs();
 
+    /**
+     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
+     * is 'COUNT', we will retain this many backups.
+     * 
+     */
     @InputImport(name="retainedBackups", required=true)
     private final Input<Integer> retainedBackups;
 
@@ -22,6 +27,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
         return this.retainedBackups;
     }
 
+    /**
+     * The unit that 'retained_backups' represents. Defaults to `COUNT`.
+     * 
+     */
     @InputImport(name="retentionUnit")
     private final @Nullable Input<String> retentionUnit;
 

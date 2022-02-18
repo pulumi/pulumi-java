@@ -15,6 +15,10 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse extends io.pul
 
     public static final JobRecurrenceScheduleMonthlyOccurrenceResponse Empty = new JobRecurrenceScheduleMonthlyOccurrenceResponse();
 
+    /**
+     * Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+     * 
+     */
     @InputImport(name="day")
     private final @Nullable String day;
 
@@ -22,6 +26,10 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse extends io.pul
         return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
     }
 
+    /**
+     * Gets or sets the occurrence. Must be between -5 and 5.
+     * 
+     */
     @InputImport(name="occurrence")
     private final @Nullable Integer occurrence;
 

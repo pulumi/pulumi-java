@@ -14,8 +14,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WebACLCustomResponse {
+    /**
+     * Custom response body key.
+     * 
+     */
     private final @Nullable String customResponseBodyKey;
     private final Integer responseCode;
+    /**
+     * Collection of HTTP headers.
+     * 
+     */
     private final @Nullable List<WebACLCustomHTTPHeader> responseHeaders;
 
     @OutputCustomType.Constructor({"customResponseBodyKey","responseCode","responseHeaders"})
@@ -28,12 +36,20 @@ public final class WebACLCustomResponse {
         this.responseHeaders = responseHeaders;
     }
 
+    /**
+     * Custom response body key.
+     * 
+     */
     public Optional<String> getCustomResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
     public Integer getResponseCode() {
         return this.responseCode;
     }
+    /**
+     * Collection of HTTP headers.
+     * 
+     */
     public List<WebACLCustomHTTPHeader> getResponseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }

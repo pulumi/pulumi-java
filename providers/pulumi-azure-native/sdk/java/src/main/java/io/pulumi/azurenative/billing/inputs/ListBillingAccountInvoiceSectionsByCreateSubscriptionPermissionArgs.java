@@ -12,6 +12,10 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
 
     public static final ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs Empty = new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs();
 
+    /**
+     * The ID that uniquely identifies a billing account.
+     * 
+     */
     @InputImport(name="billingAccountName", required=true)
     private final String billingAccountName;
 

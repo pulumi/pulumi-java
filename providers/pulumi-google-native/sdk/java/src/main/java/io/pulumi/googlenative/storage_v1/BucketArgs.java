@@ -31,6 +31,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketArgs Empty = new BucketArgs();
 
+    /**
+     * Access controls on the bucket.
+     * 
+     */
     @InputImport(name="acl")
     private final @Nullable Input<List<BucketAccessControlArgs>> acl;
 
@@ -38,6 +42,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.acl == null ? Input.empty() : this.acl;
     }
 
+    /**
+     * The bucket's Autoclass configuration.
+     * 
+     */
     @InputImport(name="autoclass")
     private final @Nullable Input<BucketAutoclassArgs> autoclass;
 
@@ -45,6 +53,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoclass == null ? Input.empty() : this.autoclass;
     }
 
+    /**
+     * The bucket's billing configuration.
+     * 
+     */
     @InputImport(name="billing")
     private final @Nullable Input<BucketBillingArgs> billing;
 
@@ -52,6 +64,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.billing == null ? Input.empty() : this.billing;
     }
 
+    /**
+     * The bucket's Cross-Origin Resource Sharing (CORS) configuration.
+     * 
+     */
     @InputImport(name="cors")
     private final @Nullable Input<List<BucketCorsItemArgs>> cors;
 
@@ -59,6 +75,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.cors == null ? Input.empty() : this.cors;
     }
 
+    /**
+     * The bucket's custom placement configuration for Custom Dual Regions.
+     * 
+     */
     @InputImport(name="customPlacementConfig")
     private final @Nullable Input<BucketCustomPlacementConfigArgs> customPlacementConfig;
 
@@ -66,6 +86,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.customPlacementConfig == null ? Input.empty() : this.customPlacementConfig;
     }
 
+    /**
+     * The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold's release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
+     * 
+     */
     @InputImport(name="defaultEventBasedHold")
     private final @Nullable Input<Boolean> defaultEventBasedHold;
 
@@ -73,6 +97,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultEventBasedHold == null ? Input.empty() : this.defaultEventBasedHold;
     }
 
+    /**
+     * Default access controls to apply to new objects when no ACL is provided.
+     * 
+     */
     @InputImport(name="defaultObjectAcl")
     private final @Nullable Input<List<ObjectAccessControlArgs>> defaultObjectAcl;
 
@@ -80,6 +108,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultObjectAcl == null ? Input.empty() : this.defaultObjectAcl;
     }
 
+    /**
+     * Encryption configuration for a bucket.
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<BucketEncryptionArgs> encryption;
 
@@ -87,6 +119,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * HTTP 1.1 Entity tag for the bucket.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -94,6 +130,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The bucket's IAM configuration.
+     * 
+     */
     @InputImport(name="iamConfiguration")
     private final @Nullable Input<BucketIamConfigurationArgs> iamConfiguration;
 
@@ -101,6 +141,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.iamConfiguration == null ? Input.empty() : this.iamConfiguration;
     }
 
+    /**
+     * The ID of the bucket. For buckets, the id and name properties are the same.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -108,6 +152,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The kind of item this is. For buckets, this is always storage#bucket.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -115,6 +163,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * User-provided labels, in key/value pairs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -122,6 +174,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The bucket's lifecycle configuration. See lifecycle management for more information.
+     * 
+     */
     @InputImport(name="lifecycle")
     private final @Nullable Input<BucketLifecycleArgs> lifecycle;
 
@@ -129,6 +185,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.lifecycle == null ? Input.empty() : this.lifecycle;
     }
 
+    /**
+     * The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer's guide for the authoritative list.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -136,6 +196,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The type of the bucket location.
+     * 
+     */
     @InputImport(name="locationType")
     private final @Nullable Input<String> locationType;
 
@@ -143,6 +207,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.locationType == null ? Input.empty() : this.locationType;
     }
 
+    /**
+     * The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.
+     * 
+     */
     @InputImport(name="logging")
     private final @Nullable Input<BucketLoggingArgs> logging;
 
@@ -150,6 +218,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.logging == null ? Input.empty() : this.logging;
     }
 
+    /**
+     * The metadata generation of this bucket.
+     * 
+     */
     @InputImport(name="metageneration")
     private final @Nullable Input<String> metageneration;
 
@@ -157,6 +229,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.metageneration == null ? Input.empty() : this.metageneration;
     }
 
+    /**
+     * The name of the bucket.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -164,6 +240,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The owner of the bucket. This is always the project team's owner group.
+     * 
+     */
     @InputImport(name="owner")
     private final @Nullable Input<BucketOwnerArgs> owner;
 
@@ -192,6 +272,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The project number of the project the bucket belongs to.
+     * 
+     */
     @InputImport(name="projectNumber")
     private final @Nullable Input<String> projectNumber;
 
@@ -213,6 +297,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisionalUserProject == null ? Input.empty() : this.provisionalUserProject;
     }
 
+    /**
+     * The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
+     * 
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Input<BucketRetentionPolicyArgs> retentionPolicy;
 
@@ -220,6 +308,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
     }
 
+    /**
+     * The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.
+     * 
+     */
     @InputImport(name="rpo")
     private final @Nullable Input<String> rpo;
 
@@ -227,6 +319,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.rpo == null ? Input.empty() : this.rpo;
     }
 
+    /**
+     * Reserved for future use.
+     * 
+     */
     @InputImport(name="satisfiesPZS")
     private final @Nullable Input<Boolean> satisfiesPZS;
 
@@ -234,6 +330,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.satisfiesPZS == null ? Input.empty() : this.satisfiesPZS;
     }
 
+    /**
+     * The URI of this bucket.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -241,6 +341,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The bucket's default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.
+     * 
+     */
     @InputImport(name="storageClass")
     private final @Nullable Input<String> storageClass;
 
@@ -248,6 +352,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageClass == null ? Input.empty() : this.storageClass;
     }
 
+    /**
+     * The creation time of the bucket in RFC 3339 format.
+     * 
+     */
     @InputImport(name="timeCreated")
     private final @Nullable Input<String> timeCreated;
 
@@ -255,6 +363,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeCreated == null ? Input.empty() : this.timeCreated;
     }
 
+    /**
+     * The modification time of the bucket in RFC 3339 format.
+     * 
+     */
     @InputImport(name="updated")
     private final @Nullable Input<String> updated;
 
@@ -269,6 +381,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.userProject == null ? Input.empty() : this.userProject;
     }
 
+    /**
+     * The bucket's versioning configuration.
+     * 
+     */
     @InputImport(name="versioning")
     private final @Nullable Input<BucketVersioningArgs> versioning;
 
@@ -276,6 +392,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.versioning == null ? Input.empty() : this.versioning;
     }
 
+    /**
+     * The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
+     * 
+     */
     @InputImport(name="website")
     private final @Nullable Input<BucketWebsiteArgs> website;
 

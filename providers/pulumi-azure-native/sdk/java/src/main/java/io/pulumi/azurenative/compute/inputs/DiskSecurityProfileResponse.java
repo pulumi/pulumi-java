@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains the security related information for the resource.
+ * 
+ */
 public final class DiskSecurityProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiskSecurityProfileResponse Empty = new DiskSecurityProfileResponse();
 
+    /**
+     * Specifies the SecurityType of the VM. Applicable for OS disks only.
+     * 
+     */
     @InputImport(name="securityType")
     private final @Nullable String securityType;
 

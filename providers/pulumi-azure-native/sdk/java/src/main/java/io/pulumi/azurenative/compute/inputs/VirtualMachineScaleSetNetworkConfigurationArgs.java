@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine scale set network profile's network configurations.
+ * 
+ */
 public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetNetworkConfigurationArgs Empty = new VirtualMachineScaleSetNetworkConfigurationArgs();
 
+    /**
+     * Specify what happens to the network interface when the VM is deleted
+     * 
+     */
     @InputImport(name="deleteOption")
     private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
@@ -28,6 +36,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
     }
 
+    /**
+     * The dns settings to be applied on the network interfaces.
+     * 
+     */
     @InputImport(name="dnsSettings")
     private final @Nullable Input<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> dnsSettings;
 
@@ -35,6 +47,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
     }
 
+    /**
+     * Specifies whether the network interface is accelerated networking-enabled.
+     * 
+     */
     @InputImport(name="enableAcceleratedNetworking")
     private final @Nullable Input<Boolean> enableAcceleratedNetworking;
 
@@ -42,6 +58,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
     }
 
+    /**
+     * Specifies whether the network interface is FPGA networking-enabled.
+     * 
+     */
     @InputImport(name="enableFpga")
     private final @Nullable Input<Boolean> enableFpga;
 
@@ -49,6 +69,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.enableFpga == null ? Input.empty() : this.enableFpga;
     }
 
+    /**
+     * Whether IP forwarding enabled on this NIC.
+     * 
+     */
     @InputImport(name="enableIPForwarding")
     private final @Nullable Input<Boolean> enableIPForwarding;
 
@@ -56,6 +80,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.enableIPForwarding == null ? Input.empty() : this.enableIPForwarding;
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -63,6 +91,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Specifies the IP configurations of the network interface.
+     * 
+     */
     @InputImport(name="ipConfigurations", required=true)
     private final Input<List<VirtualMachineScaleSetIPConfigurationArgs>> ipConfigurations;
 
@@ -70,6 +102,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.ipConfigurations;
     }
 
+    /**
+     * The network configuration name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -77,6 +113,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.name;
     }
 
+    /**
+     * The network security group.
+     * 
+     */
     @InputImport(name="networkSecurityGroup")
     private final @Nullable Input<SubResourceArgs> networkSecurityGroup;
 
@@ -84,6 +124,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
         return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
     }
 
+    /**
+     * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     * 
+     */
     @InputImport(name="primary")
     private final @Nullable Input<Boolean> primary;
 

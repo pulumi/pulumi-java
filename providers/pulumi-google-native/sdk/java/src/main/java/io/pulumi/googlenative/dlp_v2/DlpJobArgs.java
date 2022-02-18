@@ -16,6 +16,10 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DlpJobArgs Empty = new DlpJobArgs();
 
+    /**
+     * An inspection job scans a storage repository for InfoTypes.
+     * 
+     */
     @InputImport(name="inspectJob")
     private final @Nullable Input<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
@@ -23,6 +27,10 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.inspectJob == null ? Input.empty() : this.inspectJob;
     }
 
+    /**
+     * The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+     * 
+     */
     @InputImport(name="jobId")
     private final @Nullable Input<String> jobId;
 
@@ -44,6 +52,10 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A risk analysis job calculates re-identification risk metrics for a BigQuery table.
+     * 
+     */
     @InputImport(name="riskJob")
     private final @Nullable Input<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of the redirect action.
+     * 
+     */
     @EnumType
     public enum SecurityPolicyRuleRedirectOptionsType {
         External302("EXTERNAL_302"),

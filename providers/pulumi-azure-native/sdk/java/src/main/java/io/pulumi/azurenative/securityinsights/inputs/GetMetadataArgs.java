@@ -12,6 +12,10 @@ public final class GetMetadataArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMetadataArgs Empty = new GetMetadataArgs();
 
+    /**
+     * The Metadata name.
+     * 
+     */
     @InputImport(name="metadataName", required=true)
     private final String metadataName;
 
@@ -19,6 +23,10 @@ public final class GetMetadataArgs extends io.pulumi.resources.InvokeArgs {
         return this.metadataName;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -26,6 +34,10 @@ public final class GetMetadataArgs extends io.pulumi.resources.InvokeArgs {
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetMetadataArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

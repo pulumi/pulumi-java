@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IPConfigResponse {
+    /**
+     * The backend address pools associated with the IP configuration.
+     * 
+     */
     private final @Nullable List<String> lBBackendAddressPoolIds;
+    /**
+     * The Id of the public IP address associated with the IP configuration.
+     * 
+     */
     private final @Nullable String publicIpAddressId;
+    /**
+     * The static IP address of the IP configuration.
+     * 
+     */
     private final @Nullable String staticIPAddress;
 
     @OutputCustomType.Constructor({"lBBackendAddressPoolIds","publicIpAddressId","staticIPAddress"})
@@ -26,12 +38,24 @@ public final class IPConfigResponse {
         this.staticIPAddress = staticIPAddress;
     }
 
+    /**
+     * The backend address pools associated with the IP configuration.
+     * 
+     */
     public List<String> getLBBackendAddressPoolIds() {
         return this.lBBackendAddressPoolIds == null ? List.of() : this.lBBackendAddressPoolIds;
     }
+    /**
+     * The Id of the public IP address associated with the IP configuration.
+     * 
+     */
     public Optional<String> getPublicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
+    /**
+     * The static IP address of the IP configuration.
+     * 
+     */
     public Optional<String> getStaticIPAddress() {
         return Optional.ofNullable(this.staticIPAddress);
     }

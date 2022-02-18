@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of Radius Server root certificate of VpnServerConfiguration.
+ * 
+ */
 public final class VpnServerConfigRadiusServerRootCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnServerConfigRadiusServerRootCertificateArgs Empty = new VpnServerConfigRadiusServerRootCertificateArgs();
 
+    /**
+     * The certificate name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class VpnServerConfigRadiusServerRootCertificateArgs extends io.pul
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The certificate public data.
+     * 
+     */
     @InputImport(name="publicCertData")
     private final @Nullable Input<String> publicCertData;
 

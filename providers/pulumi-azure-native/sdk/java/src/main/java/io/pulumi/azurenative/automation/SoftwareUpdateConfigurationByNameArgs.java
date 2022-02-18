@@ -18,6 +18,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
 
     public static final SoftwareUpdateConfigurationByNameArgs Empty = new SoftwareUpdateConfigurationByNameArgs();
 
+    /**
+     * The name of the automation account.
+     * 
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -25,6 +29,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
         return this.automationAccountName;
     }
 
+    /**
+     * Details of provisioning error
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable Input<ErrorResponseArgs> error;
 
@@ -32,6 +40,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
         return this.error == null ? Input.empty() : this.error;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -39,6 +51,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Schedule information for the Software update configuration
+     * 
+     */
     @InputImport(name="scheduleInfo", required=true)
     private final Input<SUCSchedulePropertiesArgs> scheduleInfo;
 
@@ -46,6 +62,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
         return this.scheduleInfo;
     }
 
+    /**
+     * The name of the software update configuration to be created.
+     * 
+     */
     @InputImport(name="softwareUpdateConfigurationName")
     private final @Nullable Input<String> softwareUpdateConfigurationName;
 
@@ -53,6 +73,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
         return this.softwareUpdateConfigurationName == null ? Input.empty() : this.softwareUpdateConfigurationName;
     }
 
+    /**
+     * Tasks information for the Software update configuration.
+     * 
+     */
     @InputImport(name="tasks")
     private final @Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks;
 
@@ -60,6 +84,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
         return this.tasks == null ? Input.empty() : this.tasks;
     }
 
+    /**
+     * update specific properties for the Software update configuration
+     * 
+     */
     @InputImport(name="updateConfiguration", required=true)
     private final Input<UpdateConfigurationArgs> updateConfiguration;
 

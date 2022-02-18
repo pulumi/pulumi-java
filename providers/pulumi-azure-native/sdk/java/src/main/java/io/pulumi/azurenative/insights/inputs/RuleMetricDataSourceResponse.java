@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rule metric data source. The discriminator value is always RuleMetricDataSource in this case.
+ * 
+ */
 public final class RuleMetricDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleMetricDataSourceResponse Empty = new RuleMetricDataSourceResponse();
 
+    /**
+     * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     @InputImport(name="legacyResourceId")
     private final @Nullable String legacyResourceId;
 
@@ -21,6 +29,10 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
         return this.legacyResourceId == null ? Optional.empty() : Optional.ofNullable(this.legacyResourceId);
     }
 
+    /**
+     * the name of the metric that defines what the rule monitors.
+     * 
+     */
     @InputImport(name="metricName")
     private final @Nullable String metricName;
 
@@ -28,6 +40,10 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
         return this.metricName == null ? Optional.empty() : Optional.ofNullable(this.metricName);
     }
 
+    /**
+     * the namespace of the metric.
+     * 
+     */
     @InputImport(name="metricNamespace")
     private final @Nullable String metricNamespace;
 
@@ -35,6 +51,11 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
+    /**
+     * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -42,6 +63,10 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
         return this.odataType;
     }
 
+    /**
+     * the location of the resource.
+     * 
+     */
     @InputImport(name="resourceLocation")
     private final @Nullable String resourceLocation;
 
@@ -49,6 +74,10 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
         return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
     }
 
+    /**
+     * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     @InputImport(name="resourceUri")
     private final @Nullable String resourceUri;
 

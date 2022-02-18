@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details for a step that creates one or more tags.
+ * 
+ */
 public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkflowStepTagStepDetailsPropertiesArgs Empty = new WorkflowStepTagStepDetailsPropertiesArgs();
 
+    /**
+     * The name of the step, used as an identifier.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +31,10 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Array that contains from 1 to 10 key/value pairs.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<WorkflowS3TagArgs>> tags;
 

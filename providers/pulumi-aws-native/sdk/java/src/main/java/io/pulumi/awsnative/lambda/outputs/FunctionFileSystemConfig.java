@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FunctionFileSystemConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.
+     * 
+     */
     private final String arn;
+    /**
+     * The path where the function can access the file system, starting with /mnt/.
+     * 
+     */
     private final String localMountPath;
 
     @OutputCustomType.Constructor({"arn","localMountPath"})
@@ -20,9 +28,17 @@ public final class FunctionFileSystemConfig {
         this.localMountPath = Objects.requireNonNull(localMountPath);
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.
+     * 
+     */
     public String getArn() {
         return this.arn;
     }
+    /**
+     * The path where the function can access the file system, starting with /mnt/.
+     * 
+     */
     public String getLocalMountPath() {
         return this.localMountPath;
     }

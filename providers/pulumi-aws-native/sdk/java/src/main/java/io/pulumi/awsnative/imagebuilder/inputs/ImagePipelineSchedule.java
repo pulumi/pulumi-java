@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The schedule of the image pipeline.
+ * 
+ */
 public final class ImagePipelineSchedule extends io.pulumi.resources.InvokeArgs {
 
     public static final ImagePipelineSchedule Empty = new ImagePipelineSchedule();
 
+    /**
+     * The condition configures when the pipeline should trigger a new image build.
+     * 
+     */
     @InputImport(name="pipelineExecutionStartCondition")
     private final @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition;
 
@@ -22,6 +30,10 @@ public final class ImagePipelineSchedule extends io.pulumi.resources.InvokeArgs 
         return this.pipelineExecutionStartCondition == null ? Optional.empty() : Optional.ofNullable(this.pipelineExecutionStartCondition);
     }
 
+    /**
+     * The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
+     * 
+     */
     @InputImport(name="scheduleExpression")
     private final @Nullable String scheduleExpression;
 

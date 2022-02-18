@@ -13,6 +13,12 @@ public final class NodePoolUpgradeSettingsGetArgs extends io.pulumi.resources.Re
 
     public static final NodePoolUpgradeSettingsGetArgs Empty = new NodePoolUpgradeSettingsGetArgs();
 
+    /**
+     * The number of additional nodes that can be added to the node pool during
+     * an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
+     * Can be set to 0 or greater.
+     * 
+     */
     @InputImport(name="maxSurge", required=true)
     private final Input<Integer> maxSurge;
 
@@ -20,6 +26,12 @@ public final class NodePoolUpgradeSettingsGetArgs extends io.pulumi.resources.Re
         return this.maxSurge;
     }
 
+    /**
+     * The number of nodes that can be simultaneously unavailable during
+     * an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
+     * parallel. Can be set to 0 or greater.
+     * 
+     */
     @InputImport(name="maxUnavailable", required=true)
     private final Input<Integer> maxUnavailable;
 

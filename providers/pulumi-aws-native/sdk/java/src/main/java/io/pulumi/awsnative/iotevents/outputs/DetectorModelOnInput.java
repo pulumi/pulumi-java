@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorModelOnInput {
+    /**
+     * Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
+     * 
+     */
     private final @Nullable List<DetectorModelEvent> events;
+    /**
+     * Specifies the `actions` performed, and the next `state` entered, when a `condition` evaluates to `TRUE`.
+     * 
+     */
     private final @Nullable List<DetectorModelTransitionEvent> transitionEvents;
 
     @OutputCustomType.Constructor({"events","transitionEvents"})
@@ -23,9 +31,17 @@ public final class DetectorModelOnInput {
         this.transitionEvents = transitionEvents;
     }
 
+    /**
+     * Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
+     * 
+     */
     public List<DetectorModelEvent> getEvents() {
         return this.events == null ? List.of() : this.events;
     }
+    /**
+     * Specifies the `actions` performed, and the next `state` entered, when a `condition` evaluates to `TRUE`.
+     * 
+     */
     public List<DetectorModelTransitionEvent> getTransitionEvents() {
         return this.transitionEvents == null ? List.of() : this.transitionEvents;
     }

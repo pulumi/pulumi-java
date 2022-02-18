@@ -15,6 +15,10 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
 
     public static final JitNetworkAccessRequestVirtualMachineArgs Empty = new JitNetworkAccessRequestVirtualMachineArgs();
 
+    /**
+     * Resource ID of the virtual machine that is linked to this policy
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -22,6 +26,10 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
         return this.id;
     }
 
+    /**
+     * The ports that were opened for the virtual machine
+     * 
+     */
     @InputImport(name="ports", required=true)
     private final Input<List<JitNetworkAccessRequestPortArgs>> ports;
 

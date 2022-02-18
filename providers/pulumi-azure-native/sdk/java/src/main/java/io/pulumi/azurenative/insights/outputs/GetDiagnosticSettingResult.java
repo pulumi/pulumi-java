@@ -14,16 +14,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDiagnosticSettingResult {
+    /**
+     * The resource Id for the event hub authorization rule.
+     * 
+     */
     private final @Nullable String eventHubAuthorizationRuleId;
+    /**
+     * The name of the event hub. If none is specified, the default event hub will be selected.
+     * 
+     */
     private final @Nullable String eventHubName;
+    /**
+     * Azure resource Id
+     * 
+     */
     private final String id;
+    /**
+     * A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: <normalized service identity>_<normalized category name>. Possible values are: Dedicated and null (null is default.)
+     * 
+     */
     private final @Nullable String logAnalyticsDestinationType;
+    /**
+     * The list of logs settings.
+     * 
+     */
     private final @Nullable List<LogSettingsResponse> logs;
+    /**
+     * The list of metric settings.
+     * 
+     */
     private final @Nullable List<MetricSettingsResponse> metrics;
+    /**
+     * Azure resource name
+     * 
+     */
     private final String name;
+    /**
+     * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
+     * 
+     */
     private final @Nullable String serviceBusRuleId;
+    /**
+     * The resource ID of the storage account to which you would like to send Diagnostic Logs.
+     * 
+     */
     private final @Nullable String storageAccountId;
+    /**
+     * Azure resource type
+     * 
+     */
     private final String type;
+    /**
+     * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
+     * 
+     */
     private final @Nullable String workspaceId;
 
     @OutputCustomType.Constructor({"eventHubAuthorizationRuleId","eventHubName","id","logAnalyticsDestinationType","logs","metrics","name","serviceBusRuleId","storageAccountId","type","workspaceId"})
@@ -52,36 +96,80 @@ public final class GetDiagnosticSettingResult {
         this.workspaceId = workspaceId;
     }
 
+    /**
+     * The resource Id for the event hub authorization rule.
+     * 
+     */
     public Optional<String> getEventHubAuthorizationRuleId() {
         return Optional.ofNullable(this.eventHubAuthorizationRuleId);
     }
+    /**
+     * The name of the event hub. If none is specified, the default event hub will be selected.
+     * 
+     */
     public Optional<String> getEventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
+    /**
+     * Azure resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: <normalized service identity>_<normalized category name>. Possible values are: Dedicated and null (null is default.)
+     * 
+     */
     public Optional<String> getLogAnalyticsDestinationType() {
         return Optional.ofNullable(this.logAnalyticsDestinationType);
     }
+    /**
+     * The list of logs settings.
+     * 
+     */
     public List<LogSettingsResponse> getLogs() {
         return this.logs == null ? List.of() : this.logs;
     }
+    /**
+     * The list of metric settings.
+     * 
+     */
     public List<MetricSettingsResponse> getMetrics() {
         return this.metrics == null ? List.of() : this.metrics;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
+     * 
+     */
     public Optional<String> getServiceBusRuleId() {
         return Optional.ofNullable(this.serviceBusRuleId);
     }
+    /**
+     * The resource ID of the storage account to which you would like to send Diagnostic Logs.
+     * 
+     */
     public Optional<String> getStorageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
+    /**
+     * Azure resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
+     * 
+     */
     public Optional<String> getWorkspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }

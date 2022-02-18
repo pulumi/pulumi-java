@@ -12,6 +12,10 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLicenseArgs Empty = new GetLicenseArgs();
 
+    /**
+     * Amazon Resource Name is a unique name for each resource.
+     * 
+     */
     @InputImport(name="licenseArn", required=true)
     private final String licenseArn;
 

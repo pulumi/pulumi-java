@@ -18,6 +18,11 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyArgs Empty = new PolicyArgs();
 
+    /**
+     * A boolean policy is a constraint that is either enforced or not. Structure is documented
+     * below.
+     * 
+     */
     @InputImport(name="booleanPolicy")
     private final @Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy;
 
@@ -25,6 +30,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.booleanPolicy == null ? Input.empty() : this.booleanPolicy;
     }
 
+    /**
+     * The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+     * 
+     */
     @InputImport(name="constraint", required=true)
     private final Input<String> constraint;
 
@@ -32,6 +41,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.constraint;
     }
 
+    /**
+     * A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+     * 
+     */
     @InputImport(name="listPolicy")
     private final @Nullable Input<PolicyListPolicyArgs> listPolicy;
 
@@ -39,6 +52,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.listPolicy == null ? Input.empty() : this.listPolicy;
     }
 
+    /**
+     * The numeric ID of the organization to set the policy for.
+     * 
+     */
     @InputImport(name="orgId", required=true)
     private final Input<String> orgId;
 
@@ -46,6 +63,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.orgId;
     }
 
+    /**
+     * A restore policy is a constraint to restore the default policy. Structure is documented below.
+     * 
+     */
     @InputImport(name="restorePolicy")
     private final @Nullable Input<PolicyRestorePolicyArgs> restorePolicy;
 
@@ -53,6 +74,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
     }
 
+    /**
+     * Version of the Policy. Default version is 0.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<Integer> version;
 

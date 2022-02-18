@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a managed rule group override setting.
+ * 
+ */
 public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedRuleOverrideArgs Empty = new ManagedRuleOverrideArgs();
 
+    /**
+     * Describes the override action to be applied when rule matches.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<Either<String,ActionType>> action;
 
@@ -24,6 +32,10 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+     * 
+     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,ManagedRuleEnabledState>> enabledState;
 
@@ -31,6 +43,10 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
+    /**
+     * Identifier for the managed rule.
+     * 
+     */
     @InputImport(name="ruleId", required=true)
     private final Input<String> ruleId;
 

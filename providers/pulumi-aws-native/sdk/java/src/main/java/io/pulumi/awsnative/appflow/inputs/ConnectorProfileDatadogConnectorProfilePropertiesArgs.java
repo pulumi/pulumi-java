@@ -13,6 +13,10 @@ public final class ConnectorProfileDatadogConnectorProfilePropertiesArgs extends
 
     public static final ConnectorProfileDatadogConnectorProfilePropertiesArgs Empty = new ConnectorProfileDatadogConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the Datadog resource
+     * 
+     */
     @InputImport(name="instanceUrl", required=true)
     private final Input<String> instanceUrl;
 

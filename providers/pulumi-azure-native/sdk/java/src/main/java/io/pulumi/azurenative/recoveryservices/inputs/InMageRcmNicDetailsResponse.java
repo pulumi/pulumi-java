@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * InMageRcm NIC details.
+ * 
+ */
 public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageRcmNicDetailsResponse Empty = new InMageRcmNicDetailsResponse();
 
+    /**
+     * A value indicating whether this is the primary NIC.
+     * 
+     */
     @InputImport(name="isPrimaryNic", required=true)
     private final String isPrimaryNic;
 
@@ -19,6 +27,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.isPrimaryNic;
     }
 
+    /**
+     * A value indicating whether this NIC is selected for failover.
+     * 
+     */
     @InputImport(name="isSelectedForFailover", required=true)
     private final String isSelectedForFailover;
 
@@ -26,6 +38,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.isSelectedForFailover;
     }
 
+    /**
+     * The NIC Id.
+     * 
+     */
     @InputImport(name="nicId", required=true)
     private final String nicId;
 
@@ -33,6 +49,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.nicId;
     }
 
+    /**
+     * The source IP address.
+     * 
+     */
     @InputImport(name="sourceIPAddress", required=true)
     private final String sourceIPAddress;
 
@@ -40,6 +60,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.sourceIPAddress;
     }
 
+    /**
+     * The source IP address type.
+     * 
+     */
     @InputImport(name="sourceIPAddressType", required=true)
     private final String sourceIPAddressType;
 
@@ -47,6 +71,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.sourceIPAddressType;
     }
 
+    /**
+     * Source network Id.
+     * 
+     */
     @InputImport(name="sourceNetworkId", required=true)
     private final String sourceNetworkId;
 
@@ -54,6 +82,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.sourceNetworkId;
     }
 
+    /**
+     * Source subnet name.
+     * 
+     */
     @InputImport(name="sourceSubnetName", required=true)
     private final String sourceSubnetName;
 
@@ -61,6 +93,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.sourceSubnetName;
     }
 
+    /**
+     * The target IP address.
+     * 
+     */
     @InputImport(name="targetIPAddress", required=true)
     private final String targetIPAddress;
 
@@ -68,6 +104,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.targetIPAddress;
     }
 
+    /**
+     * The target IP address type.
+     * 
+     */
     @InputImport(name="targetIPAddressType", required=true)
     private final String targetIPAddressType;
 
@@ -75,6 +115,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.targetIPAddressType;
     }
 
+    /**
+     * Target subnet name.
+     * 
+     */
     @InputImport(name="targetSubnetName", required=true)
     private final String targetSubnetName;
 
@@ -82,6 +126,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.targetSubnetName;
     }
 
+    /**
+     * The test IP address.
+     * 
+     */
     @InputImport(name="testIPAddress", required=true)
     private final String testIPAddress;
 
@@ -89,6 +137,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.testIPAddress;
     }
 
+    /**
+     * The test IP address type.
+     * 
+     */
     @InputImport(name="testIPAddressType", required=true)
     private final String testIPAddressType;
 
@@ -96,6 +148,10 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
         return this.testIPAddressType;
     }
 
+    /**
+     * Test subnet name.
+     * 
+     */
     @InputImport(name="testSubnetName", required=true)
     private final String testSubnetName;
 

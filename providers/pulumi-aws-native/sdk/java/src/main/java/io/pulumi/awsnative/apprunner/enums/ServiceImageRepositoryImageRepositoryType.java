@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Image Repository Type
+     * 
+     */
     @EnumType
     public enum ServiceImageRepositoryImageRepositoryType {
         Ecr("ECR"),

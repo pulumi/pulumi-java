@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeyspace {
+/**
+ * Resource schema for AWS::Cassandra::Keyspace
+ * 
+ */
     public static CompletableFuture<GetKeyspaceResult> invokeAsync(GetKeyspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cassandra:getKeyspace", TypeShape.of(GetKeyspaceResult.class), args == null ? GetKeyspaceArgs.Empty : args, Utilities.withVersion(options));
     }

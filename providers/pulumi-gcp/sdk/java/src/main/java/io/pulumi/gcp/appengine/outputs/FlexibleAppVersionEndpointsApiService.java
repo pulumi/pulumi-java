@@ -12,9 +12,32 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlexibleAppVersionEndpointsApiService {
+    /**
+     * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
+     * By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
+     * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
+     * and is required in this case.
+     * Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
+     * the configuration ID. In this case, configId must be omitted.
+     * 
+     */
     private final @Nullable String configId;
+    /**
+     * Enable or disable trace sampling. By default, this is set to false for enabled.
+     * 
+     */
     private final @Nullable Boolean disableTraceSampling;
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     private final String name;
+    /**
+     * Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+     * Default value is `FIXED`.
+     * Possible values are `FIXED` and `MANAGED`.
+     * 
+     */
     private final @Nullable String rolloutStrategy;
 
     @OutputCustomType.Constructor({"configId","disableTraceSampling","name","rolloutStrategy"})
@@ -29,15 +52,38 @@ public final class FlexibleAppVersionEndpointsApiService {
         this.rolloutStrategy = rolloutStrategy;
     }
 
+    /**
+     * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
+     * By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
+     * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
+     * and is required in this case.
+     * Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
+     * the configuration ID. In this case, configId must be omitted.
+     * 
+     */
     public Optional<String> getConfigId() {
         return Optional.ofNullable(this.configId);
     }
+    /**
+     * Enable or disable trace sampling. By default, this is set to false for enabled.
+     * 
+     */
     public Optional<Boolean> getDisableTraceSampling() {
         return Optional.ofNullable(this.disableTraceSampling);
     }
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+     * Default value is `FIXED`.
+     * Possible values are `FIXED` and `MANAGED`.
+     * 
+     */
     public Optional<String> getRolloutStrategy() {
         return Optional.ofNullable(this.rolloutStrategy);
     }

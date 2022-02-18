@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The JSON object that contains the properties to secure a domain.
+ * 
+ */
 public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AFDDomainHttpsParametersArgs Empty = new AFDDomainHttpsParametersArgs();
 
+    /**
+     * Defines the source of the SSL certificate.
+     * 
+     */
     @InputImport(name="certificateType", required=true)
     private final Input<Either<String,AfdCertificateType>> certificateType;
 
@@ -25,6 +33,10 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
         return this.certificateType;
     }
 
+    /**
+     * TLS protocol version that will be used for Https
+     * 
+     */
     @InputImport(name="minimumTlsVersion")
     private final @Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion;
 
@@ -32,6 +44,10 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
         return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
     }
 
+    /**
+     * Resource reference to the secret. ie. subs/rg/profile/secret
+     * 
+     */
     @InputImport(name="secret")
     private final @Nullable Input<ResourceReferenceArgs> secret;
 

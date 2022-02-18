@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input location
+ * 
+ */
 public final class RecipeS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecipeS3LocationArgs Empty = new RecipeS3LocationArgs();

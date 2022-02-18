@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of sub components.
+ * 
+ */
 public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationSubComponentConfigurationDetailsArgs Empty = new ApplicationSubComponentConfigurationDetailsArgs();
 
+    /**
+     * A list of metrics to monitor for the component.
+     * 
+     */
     @InputImport(name="alarmMetrics")
     private final @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
@@ -24,6 +32,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
         return this.alarmMetrics == null ? Input.empty() : this.alarmMetrics;
     }
 
+    /**
+     * A list of logs to monitor for the component.
+     * 
+     */
     @InputImport(name="logs")
     private final @Nullable Input<List<ApplicationLogArgs>> logs;
 
@@ -31,6 +43,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
         return this.logs == null ? Input.empty() : this.logs;
     }
 
+    /**
+     * A list of Windows Events to log.
+     * 
+     */
     @InputImport(name="windowsEvents")
     private final @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents;
 

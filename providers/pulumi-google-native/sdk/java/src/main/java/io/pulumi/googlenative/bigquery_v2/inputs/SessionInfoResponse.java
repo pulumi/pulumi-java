@@ -12,6 +12,10 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SessionInfoResponse Empty = new SessionInfoResponse();
 
+    /**
+     * // [Preview] Id of the session.
+     * 
+     */
     @InputImport(name="sessionId", required=true)
     private final String sessionId;
 

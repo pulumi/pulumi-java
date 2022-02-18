@@ -11,8 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScriptStringExecutionParameterResponse {
+    /**
+     * The parameter name
+     * 
+     */
     private final String name;
+    /**
+     * The type of execution parameter
+     * Expected value is 'Value'.
+     * 
+     */
     private final String type;
+    /**
+     * The value for the passed parameter
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","type","value"})
@@ -25,12 +38,25 @@ public final class ScriptStringExecutionParameterResponse {
         this.value = value;
     }
 
+    /**
+     * The parameter name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The type of execution parameter
+     * Expected value is 'Value'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The value for the passed parameter
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

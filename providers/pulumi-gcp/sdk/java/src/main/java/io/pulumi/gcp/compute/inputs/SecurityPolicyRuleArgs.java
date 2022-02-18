@@ -18,6 +18,14 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
 
     public static final SecurityPolicyRuleArgs Empty = new SecurityPolicyRuleArgs();
 
+    /**
+     * Action to take when `match` matches the request. Valid values:
+     * * "allow" : allow access to target
+     * * "deny(status)" : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
+     * * "rate_based_ban" : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+     * * "threshold" : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<String> action;
 
@@ -25,6 +33,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.action;
     }
 
+    /**
+     * An optional description of this rule. Max size is 64.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +44,11 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A match condition that incoming traffic is evaluated against.
+     * If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
+     * 
+     */
     @InputImport(name="match", required=true)
     private final Input<SecurityPolicyRuleMatchArgs> match;
 
@@ -39,6 +56,11 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.match;
     }
 
+    /**
+     * When set to true, the `action` specified above is not enforced.
+     * Stackdriver logs for requests that trigger a preview action are annotated as such.
+     * 
+     */
     @InputImport(name="preview")
     private final @Nullable Input<Boolean> preview;
 
@@ -46,6 +68,11 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.preview == null ? Input.empty() : this.preview;
     }
 
+    /**
+     * An unique positive integer indicating the priority of evaluation for a rule.
+     * Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Input<Integer> priority;
 
@@ -53,6 +80,11 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.priority;
     }
 
+    /**
+     * )
+     * Must be specified if the `action` is "rate_based_bad" or "throttle". Cannot be specified for other actions. Structure is documented below.
+     * 
+     */
     @InputImport(name="rateLimitOptions")
     private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 

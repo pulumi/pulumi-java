@@ -14,6 +14,10 @@ public final class CxIntentTrainingPhrasePartArgs extends io.pulumi.resources.Re
 
     public static final CxIntentTrainingPhrasePartArgs Empty = new CxIntentTrainingPhrasePartArgs();
 
+    /**
+     * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+     * 
+     */
     @InputImport(name="parameterId")
     private final @Nullable Input<String> parameterId;
 
@@ -21,6 +25,10 @@ public final class CxIntentTrainingPhrasePartArgs extends io.pulumi.resources.Re
         return this.parameterId == null ? Input.empty() : this.parameterId;
     }
 
+    /**
+     * The text for this part.
+     * 
+     */
     @InputImport(name="text", required=true)
     private final Input<String> text;
 

@@ -19,6 +19,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureState Empty = new FeatureState();
 
+    /**
+     * Output only. When the Feature resource was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -26,6 +30,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Output only. When the Feature resource was deleted.
+     * 
+     */
     @InputImport(name="deleteTime")
     private final @Nullable Input<String> deleteTime;
 
@@ -33,6 +41,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.deleteTime == null ? Input.empty() : this.deleteTime;
     }
 
+    /**
+     * GCP labels for this Feature.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -40,6 +52,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -47,6 +63,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The full, unique name of this Feature resource
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +74,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -61,6 +85,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * State of the Feature resource itself.
+     * 
+     */
     @InputImport(name="resourceStates")
     private final @Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates;
 
@@ -68,6 +96,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.resourceStates == null ? Input.empty() : this.resourceStates;
     }
 
+    /**
+     * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+     * 
+     */
     @InputImport(name="spec")
     private final @Nullable Input<FeatureSpecGetArgs> spec;
 
@@ -75,6 +107,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.spec == null ? Input.empty() : this.spec;
     }
 
+    /**
+     * Output only. The Hub-wide Feature state
+     * 
+     */
     @InputImport(name="states")
     private final @Nullable Input<List<FeatureStateGetArgs>> states;
 
@@ -82,6 +118,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
         return this.states == null ? Input.empty() : this.states;
     }
 
+    /**
+     * Output only. When the Feature resource was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

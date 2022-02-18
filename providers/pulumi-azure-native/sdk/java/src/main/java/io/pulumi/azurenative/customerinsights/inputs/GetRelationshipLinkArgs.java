@@ -12,6 +12,10 @@ public final class GetRelationshipLinkArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetRelationshipLinkArgs Empty = new GetRelationshipLinkArgs();
 
+    /**
+     * The name of the hub.
+     * 
+     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -19,6 +23,10 @@ public final class GetRelationshipLinkArgs extends io.pulumi.resources.InvokeArg
         return this.hubName;
     }
 
+    /**
+     * The name of the relationship link.
+     * 
+     */
     @InputImport(name="relationshipLinkName", required=true)
     private final String relationshipLinkName;
 
@@ -26,6 +34,10 @@ public final class GetRelationshipLinkArgs extends io.pulumi.resources.InvokeArg
         return this.relationshipLinkName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

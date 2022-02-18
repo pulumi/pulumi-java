@@ -15,6 +15,13 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
 
     public static final GlobalForwardingRuleMetadataFilterArgs Empty = new GlobalForwardingRuleMetadataFilterArgs();
 
+    /**
+     * The list of label value pairs that must match labels in the
+     * provided metadata based on filterMatchCriteria
+     * This list must not be empty and can have at the most 64 entries.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="filterLabels", required=true)
     private final Input<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels;
 
@@ -22,6 +29,16 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
         return this.filterLabels;
     }
 
+    /**
+     * Specifies how individual filterLabel matches within the list of
+     * filterLabels contribute towards the overall metadataFilter match.
+     * MATCH_ANY - At least one of the filterLabels must have a matching
+     * label in the provided metadata.
+     * MATCH_ALL - All filterLabels must have matching labels in the
+     * provided metadata.
+     * Possible values are `MATCH_ANY` and `MATCH_ALL`.
+     * 
+     */
     @InputImport(name="filterMatchCriteria", required=true)
     private final Input<String> filterMatchCriteria;
 

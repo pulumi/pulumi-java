@@ -14,6 +14,10 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
 
     public static final ListShareSubscriptionSynchronizationsArgs Empty = new ListShareSubscriptionSynchronizationsArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -21,6 +25,10 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
         return this.accountName;
     }
 
+    /**
+     * Filters the results using OData syntax.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable String filter;
 
@@ -28,6 +36,10 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
+    /**
+     * Sorts the results using OData syntax.
+     * 
+     */
     @InputImport(name="orderby")
     private final @Nullable String orderby;
 
@@ -35,6 +47,10 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
         return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -42,6 +58,10 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share subscription.
+     * 
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final String shareSubscriptionName;
 
@@ -49,6 +69,10 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
         return this.shareSubscriptionName;
     }
 
+    /**
+     * Continuation token
+     * 
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 

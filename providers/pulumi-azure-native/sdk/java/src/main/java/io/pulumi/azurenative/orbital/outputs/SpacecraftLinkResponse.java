@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SpacecraftLinkResponse {
+    /**
+     * Bandwidth in MHz
+     * 
+     */
     private final Double bandwidthMHz;
+    /**
+     * Center Frequency in MHz
+     * 
+     */
     private final Double centerFrequencyMHz;
+    /**
+     * Direction (uplink or downlink)
+     * 
+     */
     private final String direction;
+    /**
+     * polarization. eg (RHCP, LHCP)
+     * 
+     */
     private final String polarization;
 
     @OutputCustomType.Constructor({"bandwidthMHz","centerFrequencyMHz","direction","polarization"})
@@ -27,15 +43,31 @@ public final class SpacecraftLinkResponse {
         this.polarization = Objects.requireNonNull(polarization);
     }
 
+    /**
+     * Bandwidth in MHz
+     * 
+     */
     public Double getBandwidthMHz() {
         return this.bandwidthMHz;
     }
+    /**
+     * Center Frequency in MHz
+     * 
+     */
     public Double getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
+    /**
+     * Direction (uplink or downlink)
+     * 
+     */
     public String getDirection() {
         return this.direction;
     }
+    /**
+     * polarization. eg (RHCP, LHCP)
+     * 
+     */
     public String getPolarization() {
         return this.polarization;
     }

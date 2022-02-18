@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StudioComponentLicenseServiceConfiguration {
+    /**
+     * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
+     * 
+     */
     private final @Nullable String endpoint;
 
     @OutputCustomType.Constructor({"endpoint"})
@@ -18,6 +22,10 @@ public final class StudioComponentLicenseServiceConfiguration {
         this.endpoint = endpoint;
     }
 
+    /**
+     * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
+     * 
+     */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }

@@ -11,10 +11,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Kik channel definition
+ * 
+ */
 public final class KikChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KikChannelResponse Empty = new KikChannelResponse();
 
+    /**
+     * The channel name
+     * Expected value is 'KikChannel'.
+     * 
+     */
     @InputImport(name="channelName", required=true)
     private final String channelName;
 
@@ -22,6 +31,10 @@ public final class KikChannelResponse extends io.pulumi.resources.InvokeArgs {
         return this.channelName;
     }
 
+    /**
+     * Entity Tag of the resource
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -29,6 +42,10 @@ public final class KikChannelResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -36,6 +53,10 @@ public final class KikChannelResponse extends io.pulumi.resources.InvokeArgs {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The set of properties specific to Kik channel resource
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable KikChannelPropertiesResponse properties;
 
@@ -43,6 +64,10 @@ public final class KikChannelResponse extends io.pulumi.resources.InvokeArgs {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * Provisioning state of the resource
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

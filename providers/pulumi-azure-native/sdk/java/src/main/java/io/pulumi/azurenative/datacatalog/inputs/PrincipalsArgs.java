@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * User principals.
+ * 
+ */
 public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrincipalsArgs Empty = new PrincipalsArgs();
 
+    /**
+     * Object Id for the user
+     * 
+     */
     @InputImport(name="objectId")
     private final @Nullable Input<String> objectId;
 
@@ -21,6 +29,10 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectId == null ? Input.empty() : this.objectId;
     }
 
+    /**
+     * UPN of the user.
+     * 
+     */
     @InputImport(name="upn")
     private final @Nullable Input<String> upn;
 

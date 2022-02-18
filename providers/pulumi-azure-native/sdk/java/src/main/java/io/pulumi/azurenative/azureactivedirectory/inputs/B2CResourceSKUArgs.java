@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
+ * 
+ */
 public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final B2CResourceSKUArgs Empty = new B2CResourceSKUArgs();
 
+    /**
+     * The name of the SKU for the tenant.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<B2CResourceSKUName> name;
 
@@ -22,6 +30,10 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The tier of the tenant.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<B2CResourceSKUTier> tier;
 

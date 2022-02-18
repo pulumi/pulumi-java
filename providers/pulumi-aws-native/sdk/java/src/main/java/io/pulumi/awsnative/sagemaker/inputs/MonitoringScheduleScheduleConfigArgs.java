@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration details about the monitoring schedule.
+ * 
+ */
 public final class MonitoringScheduleScheduleConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitoringScheduleScheduleConfigArgs Empty = new MonitoringScheduleScheduleConfigArgs();
 
+    /**
+     * A cron expression that describes details about the monitoring schedule.
+     * 
+     */
     @InputImport(name="scheduleExpression", required=true)
     private final Input<String> scheduleExpression;
 

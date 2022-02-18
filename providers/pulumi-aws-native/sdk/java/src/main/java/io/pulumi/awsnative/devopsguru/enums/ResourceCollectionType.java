@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of ResourceCollection
+     * 
+     */
     @EnumType
     public enum ResourceCollectionType {
         AwsCloudFormation("AWS_CLOUD_FORMATION");

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUsagePlanKey {
+/**
+ * Resource Type definition for AWS::ApiGateway::UsagePlanKey
+ * 
+ */
     public static CompletableFuture<GetUsagePlanKeyResult> invokeAsync(GetUsagePlanKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getUsagePlanKey", TypeShape.of(GetUsagePlanKeyResult.class), args == null ? GetUsagePlanKeyArgs.Empty : args, Utilities.withVersion(options));
     }

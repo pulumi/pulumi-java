@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeploymentOutputEntryResponse {
+    /**
+     * Key of the output
+     * 
+     */
     private final String key;
+    /**
+     * Value of the label
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class DeploymentOutputEntryResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Key of the output
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Value of the label
+     * 
+     */
     public String getValue() {
         return this.value;
     }

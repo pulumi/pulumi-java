@@ -12,6 +12,10 @@ public final class GetSecurityAdminConfigurationArgs extends io.pulumi.resources
 
     public static final GetSecurityAdminConfigurationArgs Empty = new GetSecurityAdminConfigurationArgs();
 
+    /**
+     * The name of the network manager security Configuration.
+     * 
+     */
     @InputImport(name="configurationName", required=true)
     private final String configurationName;
 
@@ -19,6 +23,10 @@ public final class GetSecurityAdminConfigurationArgs extends io.pulumi.resources
         return this.configurationName;
     }
 
+    /**
+     * The name of the network manager.
+     * 
+     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -26,6 +34,10 @@ public final class GetSecurityAdminConfigurationArgs extends io.pulumi.resources
         return this.networkManagerName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

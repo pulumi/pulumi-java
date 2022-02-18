@@ -12,6 +12,10 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatasetArgs Empty = new GetDatasetArgs();
 
+    /**
+     * Dataset name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

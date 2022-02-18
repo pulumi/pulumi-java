@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * APIServerProfile represents an API server profile.
+ * 
+ */
 public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final APIServerProfileArgs Empty = new APIServerProfileArgs();
 
+    /**
+     * The IP of the cluster API server (immutable).
+     * 
+     */
     @InputImport(name="ip")
     private final @Nullable Input<String> ip;
 
@@ -21,6 +29,10 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.ip == null ? Input.empty() : this.ip;
     }
 
+    /**
+     * The URL to access the cluster API server (immutable).
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 
@@ -28,6 +40,10 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.url == null ? Input.empty() : this.url;
     }
 
+    /**
+     * API server visibility (immutable).
+     * 
+     */
     @InputImport(name="visibility")
     private final @Nullable Input<String> visibility;
 

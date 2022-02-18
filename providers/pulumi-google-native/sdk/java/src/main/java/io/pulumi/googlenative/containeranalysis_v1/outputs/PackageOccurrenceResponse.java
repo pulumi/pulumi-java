@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PackageOccurrenceResponse {
+    /**
+     * All of the places within the filesystem versions of this package have been found.
+     * 
+     */
     private final List<LocationResponse> location;
+    /**
+     * The name of the installed package.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"location","name"})
@@ -22,9 +30,17 @@ public final class PackageOccurrenceResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * All of the places within the filesystem versions of this package have been found.
+     * 
+     */
     public List<LocationResponse> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the installed package.
+     * 
+     */
     public String getName() {
         return this.name;
     }

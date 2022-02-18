@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the hardware settings for the HANA instance.
+ * 
+ */
 public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HardwareProfileResponse Empty = new HardwareProfileResponse();
 
+    /**
+     * Specifies the HANA instance SKU.
+     * 
+     */
     @InputImport(name="hanaInstanceSize", required=true)
     private final String hanaInstanceSize;
 
@@ -19,6 +27,10 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
         return this.hanaInstanceSize;
     }
 
+    /**
+     * Name of the hardware type (vendor and/or their product name)
+     * 
+     */
     @InputImport(name="hardwareType", required=true)
     private final String hardwareType;
 

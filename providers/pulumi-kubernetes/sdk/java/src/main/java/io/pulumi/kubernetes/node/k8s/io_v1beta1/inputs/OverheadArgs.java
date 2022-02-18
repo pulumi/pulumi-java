@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Overhead structure represents the resource overhead associated with running a pod.
+ * 
+ */
 public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OverheadArgs Empty = new OverheadArgs();
 
+    /**
+     * PodFixed represents the fixed resource overhead associated with running a pod.
+     * 
+     */
     @InputImport(name="podFixed")
     private final @Nullable Input<Map<String,String>> podFixed;
 

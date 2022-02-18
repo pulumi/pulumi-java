@@ -474,10 +474,11 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		attributeArgs = ", required=true"
 	}
 	if pt.res != nil && pt.res.IsProvider {
+		pType := codegen.UnwrapType(prop.Type)
 		json := true
-		if prop.Type == schema.StringType {
+		if pType == schema.StringType {
 			json = false
-		} else if t, ok := prop.Type.(*schema.TokenType); ok && t.UnderlyingType == schema.StringType {
+		} else if t, ok := pType.(*schema.TokenType); ok && t.UnderlyingType == schema.StringType {
 			json = false
 		}
 		if json {
@@ -501,6 +502,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		_, _ = fmt.Fprintf(w, "%s */\n", indent)
 	}
 
+	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	_, _ = fmt.Fprintf(w, "%s@%s(name=\"%s\"%s)\n", indent, ctx.ref(names.InputImport), wireName, attributeArgs)
 	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
@@ -559,6 +561,12 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	w := ctx.writer
 	_, _ = fmt.Fprintf(w, "\n")
 
+	// TODO: proper support for large constructors
+	props := pt.properties
+	if len(props) > 250 {
+		props = pt.properties[0:250]
+	}
+
 	// Open the class.
 	if pt.comment != "" {
 		_, _ = fmt.Fprintf(w, "/**\n")
@@ -572,7 +580,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Declare each input property.
-	for _, p := range pt.properties {
+	for _, p := range props {
 		if err := pt.genInputProperty(ctx, p); err != nil {
 			return err
 		}
@@ -584,7 +592,8 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	_, _ = fmt.Fprintf(w, "    public %s(", pt.name)
 
 	// Generate the constructor parameters.
-	for i, prop := range pt.properties {
+	for i, prop := range props {
+
 		// TODO: factor this out (with similar code in genOutputType)
 		paramName := names.Ident(prop.Name)
 		paramType := pt.mod.typeString(
@@ -598,17 +607,17 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			false, // inputless overload
 		).ToCode(ctx.imports)
 
-		if i == 0 && len(pt.properties) > 1 { // first param
+		if i == 0 && len(props) > 1 { // first param
 			_, _ = fmt.Fprint(w, "\n")
 		}
 
 		terminator := ""
-		if i != len(pt.properties)-1 { // not last param
+		if i != len(props)-1 { // not last param
 			terminator = ",\n"
 		}
 
 		paramDef := fmt.Sprintf("%s %s%s", paramType, paramName, terminator)
-		if len(pt.properties) > 1 {
+		if len(props) > 1 {
 			paramDef = fmt.Sprintf("        %s", paramDef)
 		}
 		_, _ = fmt.Fprint(w, paramDef)
@@ -617,7 +626,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	_, _ = fmt.Fprintf(w, ") {\n")
 
 	// Generate the constructor body
-	for _, prop := range pt.properties {
+	for _, prop := range props {
 		paramName := names.Ident(prop.Name)
 		fieldName := names.Ident(pt.mod.propertyName(prop))
 		// set default values or assign given values
@@ -641,10 +650,10 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 	// Generate empty constructor, not that the instance created
 	// with this constructor may not be valid if there are 'required' fields.
-	if len(pt.properties) > 0 {
+	if len(props) > 0 {
 		_, _ = fmt.Fprintf(w, "\n")
 		_, _ = fmt.Fprintf(w, "    private %s() {\n", pt.name)
-		for _, prop := range pt.properties {
+		for _, prop := range props {
 			fieldName := names.Ident(pt.mod.propertyName(prop))
 			emptyValue := emptyTypeInitializer(ctx, prop.Type, true)
 			_, _ = fmt.Fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
@@ -655,7 +664,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	// Generate the builder
 	var builderFields []builderFieldTemplateContext
 	var builderSetters []builderSetterTemplateContext
-	for _, prop := range pt.properties {
+	for _, prop := range props {
 		requireInitializers := !pt.args || isInputType(prop.Type)
 		propertyName := names.Ident(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
@@ -757,12 +766,18 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	w := ctx.writer
 	indent := strings.Repeat("    ", 0)
 
+	// TODO: proper support for large constructors
+	props := pt.properties
+	if len(props) > 250 {
+		props = pt.properties[0:250]
+	}
+
 	// Open the class and annotate it appropriately.
 	_, _ = fmt.Fprintf(w, "%s@%s\n", indent, ctx.ref(names.OutputCustomType))
 	_, _ = fmt.Fprintf(w, "%spublic final class %s {\n", indent, pt.name)
 
 	// Generate each output field.
-	for _, prop := range pt.properties {
+	for _, prop := range props {
 		fieldName := names.Ident(pt.mod.propertyName(prop))
 		fieldType := pt.mod.typeString(
 			ctx,
@@ -786,17 +801,17 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			}
 			_, _ = fmt.Fprintf(w, "%s     */\n", indent)
 		}
-
+		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
 		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType.ToCode(ctx.imports), fieldName)
 	}
-	if len(pt.properties) > 0 {
+	if len(props) > 0 {
 		_, _ = fmt.Fprintf(w, "\n")
 	}
 
 	// Generate the constructor parameter names - used as a workaround for Java reflection issues
 	var paramNamesStringBuilder strings.Builder
 	paramNamesStringBuilder.WriteString("{")
-	for i, prop := range pt.properties {
+	for i, prop := range props {
 		if i > 0 {
 			paramNamesStringBuilder.WriteString(",")
 		}
@@ -812,7 +827,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	fmt.Fprintf(w, "%s    private %s(", indent, pt.name)
 
 	// Generate the constructor parameters.
-	for i, prop := range pt.properties {
+	for i, prop := range props {
 		// TODO: factor this out (with similar code in genInputType)
 		paramName := names.Ident(prop.Name)
 		paramType := pt.mod.typeString(
@@ -826,18 +841,18 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 
-		if i == 0 && len(pt.properties) > 1 { // first param
+		if i == 0 && len(props) > 1 { // first param
 			_, _ = fmt.Fprint(w, "\n")
 		}
 
 		terminator := ""
-		if i != len(pt.properties)-1 { // not last param
+		if i != len(props)-1 { // not last param
 			terminator = ",\n"
 		}
 
 		paramDef := fmt.Sprintf("%s %s%s",
 			paramType.ToCode(ctx.imports), paramName, terminator)
-		if len(pt.properties) > 1 {
+		if len(props) > 1 {
 			paramDef = fmt.Sprintf("%s        %s", indent, paramDef)
 		}
 		_, _ = fmt.Fprint(w, paramDef)
@@ -846,7 +861,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	_, _ = fmt.Fprintf(w, ") {\n")
 
 	// Generate the constructor body.
-	for _, prop := range pt.properties {
+	for _, prop := range props {
 		paramName := names.Ident(prop.Name)
 		fieldName := names.Ident(pt.mod.propertyName(prop))
 		if prop.IsRequired() {
@@ -860,7 +875,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Generate getters
-	for _, prop := range pt.properties {
+	for _, prop := range props {
 		if prop.Comment != "" || prop.DeprecationMessage != "" {
 			_, _ = fmt.Fprintf(w, "%s    /**\n", indent)
 			if prop.Comment != "" {
@@ -917,6 +932,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			}
 		}
 
+		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
 			GetterType:      getterType.ToCode(ctx.imports),
@@ -932,7 +948,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	// Generate Builder
 	var builderFields []builderFieldTemplateContext
 	var builderSetters []builderSetterTemplateContext
-	for _, prop := range pt.properties {
+	for _, prop := range props {
 		propertyName := names.Ident(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
 			ctx,
@@ -1193,6 +1209,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		outputParameterType := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
 		})
+		printObsoleteAttribute(ctx, prop.DeprecationMessage, "    ")
 		fmt.Fprintf(w,
 			"    @%s(name=\"%s\", type=%s, parameters={%s})\n",
 			ctx.ref(names.OutputExport), wireName, outputExportType, outputExportParameters)
@@ -1424,6 +1441,7 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	}
 
 	// Emit the datasource method.
+	printObsoleteAttribute(ctx, fun.DeprecationMessage, "    ")
 	_, _ = fmt.Fprintf(w, "    public static %s<%s> invokeAsync(%s@%s %s options) {\n",
 		ctx.ref(names.CompletableFuture), typeParameter, argsParamDef, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
 	_, _ = fmt.Fprintf(w,

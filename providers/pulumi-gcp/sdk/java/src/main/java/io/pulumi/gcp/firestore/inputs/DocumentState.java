@@ -14,6 +14,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
 
     public static final DocumentState Empty = new DocumentState();
 
+    /**
+     * The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
+     * 
+     */
     @InputImport(name="collection")
     private final @Nullable Input<String> collection;
 
@@ -21,6 +25,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
         return this.collection == null ? Input.empty() : this.collection;
     }
 
+    /**
+     * Creation timestamp in RFC3339 format.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -28,6 +36,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The Firestore database id. Defaults to `"(default)"`.
+     * 
+     */
     @InputImport(name="database")
     private final @Nullable Input<String> database;
 
@@ -35,6 +47,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
         return this.database == null ? Input.empty() : this.database;
     }
 
+    /**
+     * The client-assigned document ID to use for this document during creation.
+     * 
+     */
     @InputImport(name="documentId")
     private final @Nullable Input<String> documentId;
 
@@ -42,6 +58,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
         return this.documentId == null ? Input.empty() : this.documentId;
     }
 
+    /**
+     * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+     * 
+     */
     @InputImport(name="fields")
     private final @Nullable Input<String> fields;
 
@@ -49,6 +69,11 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
+    /**
+     * A server defined name for this index. Format:
+     * 'projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}'
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -56,6 +81,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A relative path to the collection this document exists within
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -63,6 +92,11 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -70,6 +104,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Last update timestamp in RFC3339 format.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

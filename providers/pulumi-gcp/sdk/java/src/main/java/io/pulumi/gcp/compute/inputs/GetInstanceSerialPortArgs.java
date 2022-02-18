@@ -15,6 +15,10 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
 
     public static final GetInstanceSerialPortArgs Empty = new GetInstanceSerialPortArgs();
 
+    /**
+     * The name of the Compute Instance to read output from.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final String instance;
 
@@ -22,6 +26,10 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
         return this.instance;
     }
 
+    /**
+     * The number of the serial port to read output from. Possible values are 1-4.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 
@@ -29,6 +37,11 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
         return this.port;
     }
 
+    /**
+     * The project in which the Compute Instance exists. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -36,6 +49,11 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The zone in which the Compute Instance exists.
+     * If it is not provided, the provider zone is used.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable String zone;
 

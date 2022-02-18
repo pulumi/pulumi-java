@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TypedErrorInfoResponse {
+    /**
+     * The scenario specific error details.
+     * 
+     */
     private final Object info;
+    /**
+     * The type of included error details.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"info","type"})
@@ -21,9 +29,17 @@ public final class TypedErrorInfoResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The scenario specific error details.
+     * 
+     */
     public Object getInfo() {
         return this.info;
     }
+    /**
+     * The type of included error details.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -21,129 +21,323 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An Anthos cluster running on Azure.
+ * 
+ * For more information, see:
+ * * [Multicloud overview](https://cloud.google.com/anthos/clusters/docs/multi-cloud)
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Cluster can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:container/azureCluster:AzureCluster default projects/{{project}}/locations/{{location}}/azureClusters/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:container/azureCluster:AzureCluster default {{project}}/{{location}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:container/azureCluster:AzureCluster default {{location}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:container/azureCluster:AzureCluster")
 public class AzureCluster extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> annotations;
 
+    /**
+     * @return Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getAnnotations() {
         return this.annotations;
     }
+    /**
+     * Required. Configuration related to the cluster RBAC settings.
+     * 
+     */
     @OutputExport(name="authorization", type=AzureClusterAuthorization.class, parameters={})
     private Output<AzureClusterAuthorization> authorization;
 
+    /**
+     * @return Required. Configuration related to the cluster RBAC settings.
+     * 
+     */
     public Output<AzureClusterAuthorization> getAuthorization() {
         return this.authorization;
     }
+    /**
+     * Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+     * 
+     */
     @OutputExport(name="azureRegion", type=String.class, parameters={})
     private Output<String> azureRegion;
 
+    /**
+     * @return Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+     * 
+     */
     public Output<String> getAzureRegion() {
         return this.azureRegion;
     }
+    /**
+     * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/<project-number>/locations/<region>/azureClients/<client-id>`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * 
+     */
     @OutputExport(name="client", type=String.class, parameters={})
     private Output<String> client;
 
+    /**
+     * @return Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/<project-number>/locations/<region>/azureClients/<client-id>`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * 
+     */
     public Output<String> getClient() {
         return this.client;
     }
+    /**
+     * Required. Configuration related to the cluster control plane.
+     * 
+     */
     @OutputExport(name="controlPlane", type=AzureClusterControlPlane.class, parameters={})
     private Output<AzureClusterControlPlane> controlPlane;
 
+    /**
+     * @return Required. Configuration related to the cluster control plane.
+     * 
+     */
     public Output<AzureClusterControlPlane> getControlPlane() {
         return this.controlPlane;
     }
+    /**
+     * Output only. The time at which this cluster was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Output only. The time at which this cluster was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Output only. The endpoint of the cluster's API server.
+     * 
+     */
     @OutputExport(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
+    /**
+     * @return Output only. The endpoint of the cluster's API server.
+     * 
+     */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
+    /**
+     * Allows clients to perform consistent read-modify-writes through optimistic concurrency control. May be sent on update
+     * and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Allows clients to perform consistent read-modify-writes through optimistic concurrency control. May be sent on update
+     * and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Fleet configuration.
+     * 
+     */
     @OutputExport(name="fleet", type=AzureClusterFleet.class, parameters={})
     private Output<AzureClusterFleet> fleet;
 
+    /**
+     * @return Fleet configuration.
+     * 
+     */
     public Output<AzureClusterFleet> getFleet() {
         return this.fleet;
     }
+    /**
+     * The location for the resource
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of this resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of this resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Required. Cluster-wide networking configuration.
+     * 
+     */
     @OutputExport(name="networking", type=AzureClusterNetworking.class, parameters={})
     private Output<AzureClusterNetworking> networking;
 
+    /**
+     * @return Required. Cluster-wide networking configuration.
+     * 
+     */
     public Output<AzureClusterNetworking> getNetworking() {
         return this.networking;
     }
+    /**
+     * The project for the resource
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Output only. If set, there are currently changes in flight to the cluster.
+     * 
+     */
     @OutputExport(name="reconciling", type=Boolean.class, parameters={})
     private Output<Boolean> reconciling;
 
+    /**
+     * @return Output only. If set, there are currently changes in flight to the cluster.
+     * 
+     */
     public Output<Boolean> getReconciling() {
         return this.reconciling;
     }
+    /**
+     * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
+     * 
+     */
     @OutputExport(name="resourceGroupId", type=String.class, parameters={})
     private Output<String> resourceGroupId;
 
+    /**
+     * @return The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
+     * 
+     */
     public Output<String> getResourceGroupId() {
         return this.resourceGroupId;
     }
+    /**
+     * Output only. The current state of the cluster. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING,
+     * STOPPING, ERROR, DEGRADED
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return Output only. The current state of the cluster. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING,
+     * STOPPING, ERROR, DEGRADED
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Output only. A globally unique identifier for the cluster.
+     * 
+     */
     @OutputExport(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
+    /**
+     * @return Output only. A globally unique identifier for the cluster.
+     * 
+     */
     public Output<String> getUid() {
         return this.uid;
     }
+    /**
+     * Output only. The time at which this cluster was last updated.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Output only. The time at which this cluster was last updated.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Output only. Workload Identity settings.
+     * 
+     */
     @OutputExport(name="workloadIdentityConfigs", type=List.class, parameters={AzureClusterWorkloadIdentityConfig.class})
     private Output<List<AzureClusterWorkloadIdentityConfig>> workloadIdentityConfigs;
 
+    /**
+     * @return Output only. Workload Identity settings.
+     * 
+     */
     public Output<List<AzureClusterWorkloadIdentityConfig>> getWorkloadIdentityConfigs() {
         return this.workloadIdentityConfigs;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AzureCluster(String name, AzureClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:container/azureCluster:AzureCluster", name, args == null ? AzureClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -159,6 +353,15 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AzureCluster get(String name, Input<String> id, @Nullable AzureClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AzureCluster(name, id, state, options);
     }

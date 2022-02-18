@@ -15,20 +15,80 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRelationshipResult {
+    /**
+     * The Relationship Cardinality.
+     * 
+     */
     private final @Nullable String cardinality;
+    /**
+     * Localized descriptions for the Relationship.
+     * 
+     */
     private final @Nullable Map<String,String> description;
+    /**
+     * Localized display name for the Relationship.
+     * 
+     */
     private final @Nullable Map<String,String> displayName;
+    /**
+     * The expiry date time in UTC.
+     * 
+     */
     private final @Nullable String expiryDateTimeUtc;
+    /**
+     * The properties of the Relationship.
+     * 
+     */
     private final @Nullable List<PropertyDefinitionResponse> fields;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Optional property to be used to map fields in profile to their strong ids in related profile.
+     * 
+     */
     private final @Nullable List<RelationshipTypeMappingResponse> lookupMappings;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Profile type.
+     * 
+     */
     private final String profileType;
+    /**
+     * Provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Related profile being referenced.
+     * 
+     */
     private final String relatedProfileType;
+    /**
+     * The relationship guid id.
+     * 
+     */
     private final String relationshipGuidId;
+    /**
+     * The Relationship name.
+     * 
+     */
     private final String relationshipName;
+    /**
+     * The hub name.
+     * 
+     */
     private final String tenantId;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"cardinality","description","displayName","expiryDateTimeUtc","fields","id","lookupMappings","name","profileType","provisioningState","relatedProfileType","relationshipGuidId","relationshipName","tenantId","type"})
@@ -65,48 +125,108 @@ public final class GetRelationshipResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The Relationship Cardinality.
+     * 
+     */
     public Optional<String> getCardinality() {
         return Optional.ofNullable(this.cardinality);
     }
+    /**
+     * Localized descriptions for the Relationship.
+     * 
+     */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
+    /**
+     * Localized display name for the Relationship.
+     * 
+     */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
+    /**
+     * The expiry date time in UTC.
+     * 
+     */
     public Optional<String> getExpiryDateTimeUtc() {
         return Optional.ofNullable(this.expiryDateTimeUtc);
     }
+    /**
+     * The properties of the Relationship.
+     * 
+     */
     public List<PropertyDefinitionResponse> getFields() {
         return this.fields == null ? List.of() : this.fields;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Optional property to be used to map fields in profile to their strong ids in related profile.
+     * 
+     */
     public List<RelationshipTypeMappingResponse> getLookupMappings() {
         return this.lookupMappings == null ? List.of() : this.lookupMappings;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Profile type.
+     * 
+     */
     public String getProfileType() {
         return this.profileType;
     }
+    /**
+     * Provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Related profile being referenced.
+     * 
+     */
     public String getRelatedProfileType() {
         return this.relatedProfileType;
     }
+    /**
+     * The relationship guid id.
+     * 
+     */
     public String getRelationshipGuidId() {
         return this.relationshipGuidId;
     }
+    /**
+     * The Relationship name.
+     * 
+     */
     public String getRelationshipName() {
         return this.relationshipName;
     }
+    /**
+     * The hub name.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

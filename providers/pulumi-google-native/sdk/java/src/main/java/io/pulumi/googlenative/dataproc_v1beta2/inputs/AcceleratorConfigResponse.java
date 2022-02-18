@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the type and number of accelerator cards attached to the instances of an instance group (see GPUs on Compute Engine (https://cloud.google.com/compute/docs/gpus/)).
+ * 
+ */
 public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AcceleratorConfigResponse Empty = new AcceleratorConfigResponse();
 
+    /**
+     * The number of the accelerator cards of this type exposed to this instance.
+     * 
+     */
     @InputImport(name="acceleratorCount", required=true)
     private final Integer acceleratorCount;
 
@@ -20,6 +28,10 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
         return this.acceleratorCount;
     }
 
+    /**
+     * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes)Examples * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 * projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 * nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
+     * 
+     */
     @InputImport(name="acceleratorTypeUri", required=true)
     private final String acceleratorTypeUri;
 

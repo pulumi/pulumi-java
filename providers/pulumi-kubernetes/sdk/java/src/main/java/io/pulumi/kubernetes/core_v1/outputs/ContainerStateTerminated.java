@@ -12,12 +12,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerStateTerminated {
+    /**
+     * Container's ID in the format 'docker://<container_id>'
+     * 
+     */
     private final @Nullable String containerID;
+    /**
+     * Exit status from the last termination of the container
+     * 
+     */
     private final Integer exitCode;
+    /**
+     * Time at which the container last terminated
+     * 
+     */
     private final @Nullable String finishedAt;
+    /**
+     * Message regarding the last termination of the container
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * (brief) reason from the last termination of the container
+     * 
+     */
     private final @Nullable String reason;
+    /**
+     * Signal from the last termination of the container
+     * 
+     */
     private final @Nullable Integer signal;
+    /**
+     * Time at which previous execution of the container started
+     * 
+     */
     private final @Nullable String startedAt;
 
     @OutputCustomType.Constructor({"containerID","exitCode","finishedAt","message","reason","signal","startedAt"})
@@ -38,24 +66,52 @@ public final class ContainerStateTerminated {
         this.startedAt = startedAt;
     }
 
+    /**
+     * Container's ID in the format 'docker://<container_id>'
+     * 
+     */
     public Optional<String> getContainerID() {
         return Optional.ofNullable(this.containerID);
     }
+    /**
+     * Exit status from the last termination of the container
+     * 
+     */
     public Integer getExitCode() {
         return this.exitCode;
     }
+    /**
+     * Time at which the container last terminated
+     * 
+     */
     public Optional<String> getFinishedAt() {
         return Optional.ofNullable(this.finishedAt);
     }
+    /**
+     * Message regarding the last termination of the container
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * (brief) reason from the last termination of the container
+     * 
+     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
+    /**
+     * Signal from the last termination of the container
+     * 
+     */
     public Optional<Integer> getSignal() {
         return Optional.ofNullable(this.signal);
     }
+    /**
+     * Time at which previous execution of the container started
+     * 
+     */
     public Optional<String> getStartedAt() {
         return Optional.ofNullable(this.startedAt);
     }

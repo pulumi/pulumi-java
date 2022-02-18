@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Spring Cloud Gateway properties payload
+ * 
+ */
 public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayPropertiesArgs Empty = new GatewayPropertiesArgs();
 
+    /**
+     * API metadata property for Spring Cloud Gateway
+     * 
+     */
     @InputImport(name="apiMetadataProperties")
     private final @Nullable Input<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
 
@@ -25,6 +33,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.apiMetadataProperties == null ? Input.empty() : this.apiMetadataProperties;
     }
 
+    /**
+     * Cross-Origin Resource Sharing property
+     * 
+     */
     @InputImport(name="corsProperties")
     private final @Nullable Input<GatewayCorsPropertiesArgs> corsProperties;
 
@@ -32,6 +44,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.corsProperties == null ? Input.empty() : this.corsProperties;
     }
 
+    /**
+     * Indicate if only https is allowed.
+     * 
+     */
     @InputImport(name="httpsOnly")
     private final @Nullable Input<Boolean> httpsOnly;
 
@@ -39,6 +55,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
     }
 
+    /**
+     * Indicates whether the Spring Cloud Gateway exposes endpoint.
+     * 
+     */
     @InputImport(name="public")
     private final @Nullable Input<Boolean> $public;
 
@@ -46,6 +66,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.$public == null ? Input.empty() : this.$public;
     }
 
+    /**
+     * The requested resource quantity for required CPU and Memory.
+     * 
+     */
     @InputImport(name="resourceRequests")
     private final @Nullable Input<GatewayResourceRequestsArgs> resourceRequests;
 
@@ -53,6 +77,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.resourceRequests == null ? Input.empty() : this.resourceRequests;
     }
 
+    /**
+     * Single sign-on related configuration
+     * 
+     */
     @InputImport(name="ssoProperties")
     private final @Nullable Input<SsoPropertiesArgs> ssoProperties;
 

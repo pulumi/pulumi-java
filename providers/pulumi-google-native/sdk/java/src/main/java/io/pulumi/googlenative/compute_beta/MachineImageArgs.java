@@ -19,6 +19,10 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MachineImageArgs Empty = new MachineImageArgs();
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +30,10 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * 
+     */
     @InputImport(name="guestFlush")
     private final @Nullable Input<Boolean> guestFlush;
 
@@ -33,6 +41,10 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.guestFlush == null ? Input.empty() : this.guestFlush;
     }
 
+    /**
+     * Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
+     * 
+     */
     @InputImport(name="machineImageEncryptionKey")
     private final @Nullable Input<CustomerEncryptionKeyArgs> machineImageEncryptionKey;
 
@@ -40,6 +52,10 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.machineImageEncryptionKey == null ? Input.empty() : this.machineImageEncryptionKey;
     }
 
+    /**
+     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +77,10 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * An array of Machine Image specific properties for disks attached to the source instance
+     * 
+     */
     @InputImport(name="savedDisks")
     private final @Nullable Input<List<SavedDiskArgs>> savedDisks;
 
@@ -68,6 +88,10 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.savedDisks == null ? Input.empty() : this.savedDisks;
     }
 
+    /**
+     * [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
+     * 
+     */
     @InputImport(name="sourceDiskEncryptionKeys")
     private final @Nullable Input<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys;
 
@@ -75,6 +99,10 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceDiskEncryptionKeys == null ? Input.empty() : this.sourceDiskEncryptionKeys;
     }
 
+    /**
+     * The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
+     * 
+     */
     @InputImport(name="sourceInstance", required=true)
     private final Input<String> sourceInstance;
 
@@ -82,6 +110,10 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceInstance;
     }
 
+    /**
+     * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+     * 
+     */
     @InputImport(name="storageLocations")
     private final @Nullable Input<List<String>> storageLocations;
 

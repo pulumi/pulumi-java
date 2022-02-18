@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerPublicEndpoint {
+    /**
+     * The name of the container for the endpoint.
+     * 
+     */
     private final @Nullable String containerName;
+    /**
+     * The port of the container to which traffic is forwarded to.
+     * 
+     */
     private final @Nullable Integer containerPort;
+    /**
+     * An object that describes the health check configuration of the container.
+     * 
+     */
     private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
 
     @OutputCustomType.Constructor({"containerName","containerPort","healthCheckConfig"})
@@ -27,12 +39,24 @@ public final class ContainerPublicEndpoint {
         this.healthCheckConfig = healthCheckConfig;
     }
 
+    /**
+     * The name of the container for the endpoint.
+     * 
+     */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
+    /**
+     * The port of the container to which traffic is forwarded to.
+     * 
+     */
     public Optional<Integer> getContainerPort() {
         return Optional.ofNullable(this.containerPort);
     }
+    /**
+     * An object that describes the health check configuration of the container.
+     * 
+     */
     public Optional<ContainerHealthCheckConfig> getHealthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }

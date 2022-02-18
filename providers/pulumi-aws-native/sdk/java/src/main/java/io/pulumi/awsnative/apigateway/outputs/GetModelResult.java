@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetModelResult {
+    /**
+     * A description that identifies this model.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * 
+     */
     private final @Nullable Object schema;
 
     @OutputCustomType.Constructor({"description","schema"})
@@ -23,9 +31,17 @@ public final class GetModelResult {
         this.schema = schema;
     }
 
+    /**
+     * A description that identifies this model.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * 
+     */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }

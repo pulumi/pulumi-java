@@ -12,9 +12,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ElementaryStreamResponse {
+    /**
+     * Encoding of an audio stream.
+     * 
+     */
     private final AudioStreamResponse audioStream;
+    /**
+     * A unique key for this elementary stream.
+     * 
+     */
     private final String key;
+    /**
+     * Encoding of a text stream. For example, closed captions or subtitles.
+     * 
+     */
     private final TextStreamResponse textStream;
+    /**
+     * Encoding of a video stream.
+     * 
+     */
     private final VideoStreamResponse videoStream;
 
     @OutputCustomType.Constructor({"audioStream","key","textStream","videoStream"})
@@ -29,15 +45,31 @@ public final class ElementaryStreamResponse {
         this.videoStream = Objects.requireNonNull(videoStream);
     }
 
+    /**
+     * Encoding of an audio stream.
+     * 
+     */
     public AudioStreamResponse getAudioStream() {
         return this.audioStream;
     }
+    /**
+     * A unique key for this elementary stream.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Encoding of a text stream. For example, closed captions or subtitles.
+     * 
+     */
     public TextStreamResponse getTextStream() {
         return this.textStream;
     }
+    /**
+     * Encoding of a video stream.
+     * 
+     */
     public VideoStreamResponse getVideoStream() {
         return this.videoStream;
     }

@@ -16,6 +16,10 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomUuidState Empty = new RandomUuidState();
 
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -23,6 +27,10 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
+    /**
+     * The generated uuid presented in string format.
+     * 
+     */
     @InputImport(name="result")
     private final @Nullable Input<String> result;
 

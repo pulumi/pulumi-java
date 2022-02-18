@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Instruction from a PDF file.
+ * 
+ */
 public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1PdfInstructionArgs Empty = new GoogleCloudDatalabelingV1beta1PdfInstructionArgs();
 
+    /**
+     * PDF file for the instruction. Only gcs path is allowed.
+     * 
+     */
     @InputImport(name="gcsFileUri")
     private final @Nullable Input<String> gcsFileUri;
 

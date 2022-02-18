@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CspmMonitorAwsOfferingResponse {
+    /**
+     * The offering description.
+     * 
+     */
     private final String description;
+    /**
+     * The native cloud connection configuration
+     * 
+     */
     private final @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
+    /**
+     * The type of the security offering.
+     * Expected value is 'CspmMonitorAws'.
+     * 
+     */
     private final String offeringType;
 
     @OutputCustomType.Constructor({"description","nativeCloudConnection","offeringType"})
@@ -26,12 +39,25 @@ public final class CspmMonitorAwsOfferingResponse {
         this.offeringType = Objects.requireNonNull(offeringType);
     }
 
+    /**
+     * The offering description.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The native cloud connection configuration
+     * 
+     */
     public Optional<CspmMonitorAwsOfferingResponseNativeCloudConnection> getNativeCloudConnection() {
         return Optional.ofNullable(this.nativeCloudConnection);
     }
+    /**
+     * The type of the security offering.
+     * Expected value is 'CspmMonitorAws'.
+     * 
+     */
     public String getOfferingType() {
         return this.offeringType;
     }

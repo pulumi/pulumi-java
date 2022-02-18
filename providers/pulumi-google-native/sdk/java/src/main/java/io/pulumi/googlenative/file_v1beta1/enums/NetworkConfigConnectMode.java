@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.
+     * 
+     */
     @EnumType
     public enum NetworkConfigConnectMode {
+        /**
+         * ConnectMode not set.
+         * 
+         */
         ConnectModeUnspecified("CONNECT_MODE_UNSPECIFIED"),
+        /**
+         * Connect via direct peering to the Filestore service.
+         * 
+         */
         DirectPeering("DIRECT_PEERING"),
+        /**
+         * Connect to your Filestore instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Filestore.
+         * 
+         */
         PrivateServiceAccess("PRIVATE_SERVICE_ACCESS");
 
         private final String value;

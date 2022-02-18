@@ -15,6 +15,10 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
 
     public static final NetworkPeeringRoutesConfigState Empty = new NetworkPeeringRoutesConfigState();
 
+    /**
+     * Whether to export the custom routes to the peer network.
+     * 
+     */
     @InputImport(name="exportCustomRoutes")
     private final @Nullable Input<Boolean> exportCustomRoutes;
 
@@ -22,6 +26,10 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
         return this.exportCustomRoutes == null ? Input.empty() : this.exportCustomRoutes;
     }
 
+    /**
+     * Whether to import the custom routes to the peer network.
+     * 
+     */
     @InputImport(name="importCustomRoutes")
     private final @Nullable Input<Boolean> importCustomRoutes;
 
@@ -29,6 +37,10 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
         return this.importCustomRoutes == null ? Input.empty() : this.importCustomRoutes;
     }
 
+    /**
+     * The name of the primary network for the peering.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -36,6 +48,10 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Name of the peering.
+     * 
+     */
     @InputImport(name="peering")
     private final @Nullable Input<String> peering;
 
@@ -43,6 +59,11 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
         return this.peering == null ? Input.empty() : this.peering;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -14,6 +14,10 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
 
     public static final GetNetworkSecurityGroupArgs Empty = new GetNetworkSecurityGroupArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the network security group.
+     * 
+     */
     @InputImport(name="networkSecurityGroupName", required=true)
     private final String networkSecurityGroupName;
 
@@ -28,6 +36,10 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
         return this.networkSecurityGroupName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

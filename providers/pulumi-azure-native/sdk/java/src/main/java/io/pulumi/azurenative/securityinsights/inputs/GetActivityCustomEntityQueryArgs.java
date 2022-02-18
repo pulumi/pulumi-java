@@ -12,6 +12,10 @@ public final class GetActivityCustomEntityQueryArgs extends io.pulumi.resources.
 
     public static final GetActivityCustomEntityQueryArgs Empty = new GetActivityCustomEntityQueryArgs();
 
+    /**
+     * entity query ID
+     * 
+     */
     @InputImport(name="entityQueryId", required=true)
     private final String entityQueryId;
 
@@ -19,6 +23,10 @@ public final class GetActivityCustomEntityQueryArgs extends io.pulumi.resources.
         return this.entityQueryId;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -26,6 +34,10 @@ public final class GetActivityCustomEntityQueryArgs extends io.pulumi.resources.
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetActivityCustomEntityQueryArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

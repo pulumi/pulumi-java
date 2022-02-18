@@ -11,8 +11,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RouterNatSubnetwork {
+    /**
+     * Self-link of subnetwork to NAT
+     * 
+     */
     private final String name;
+    /**
+     * List of the secondary ranges of the subnetwork that are allowed
+     * to use NAT. This can be populated only if
+     * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+     * sourceIpRangesToNat
+     * 
+     */
     private final @Nullable List<String> secondaryIpRangeNames;
+    /**
+     * List of options for which source IPs in the subnetwork
+     * should have NAT enabled. Supported values include:
+     * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+     * `PRIMARY_IP_RANGE`.
+     * 
+     */
     private final List<String> sourceIpRangesToNats;
 
     @OutputCustomType.Constructor({"name","secondaryIpRangeNames","sourceIpRangesToNats"})
@@ -25,12 +43,30 @@ public final class RouterNatSubnetwork {
         this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats);
     }
 
+    /**
+     * Self-link of subnetwork to NAT
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * List of the secondary ranges of the subnetwork that are allowed
+     * to use NAT. This can be populated only if
+     * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+     * sourceIpRangesToNat
+     * 
+     */
     public List<String> getSecondaryIpRangeNames() {
         return this.secondaryIpRangeNames == null ? List.of() : this.secondaryIpRangeNames;
     }
+    /**
+     * List of options for which source IPs in the subnetwork
+     * should have NAT enabled. Supported values include:
+     * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+     * `PRIMARY_IP_RANGE`.
+     * 
+     */
     public List<String> getSourceIpRangesToNats() {
         return this.sourceIpRangesToNats;
     }

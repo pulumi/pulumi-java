@@ -14,6 +14,10 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
 
     public static final BookmarkRelationArgs Empty = new BookmarkRelationArgs();
 
+    /**
+     * Bookmark ID
+     * 
+     */
     @InputImport(name="bookmarkId", required=true)
     private final Input<String> bookmarkId;
 
@@ -21,6 +25,10 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.bookmarkId;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -28,6 +36,10 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The resource ID of the related resource
+     * 
+     */
     @InputImport(name="relatedResourceId", required=true)
     private final Input<String> relatedResourceId;
 
@@ -35,6 +47,10 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.relatedResourceId;
     }
 
+    /**
+     * Relation Name
+     * 
+     */
     @InputImport(name="relationName")
     private final @Nullable Input<String> relationName;
 
@@ -42,6 +58,10 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.relationName == null ? Input.empty() : this.relationName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,6 +69,10 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

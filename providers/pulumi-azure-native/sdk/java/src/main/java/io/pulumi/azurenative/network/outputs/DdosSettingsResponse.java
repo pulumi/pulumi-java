@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DdosSettingsResponse {
+    /**
+     * The DDoS custom policy associated with the public IP.
+     * 
+     */
     private final @Nullable SubResourceResponse ddosCustomPolicy;
+    /**
+     * Enables DDoS protection on the public IP.
+     * 
+     */
     private final @Nullable Boolean protectedIP;
+    /**
+     * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+     * 
+     */
     private final @Nullable String protectionCoverage;
 
     @OutputCustomType.Constructor({"ddosCustomPolicy","protectedIP","protectionCoverage"})
@@ -27,12 +39,24 @@ public final class DdosSettingsResponse {
         this.protectionCoverage = protectionCoverage;
     }
 
+    /**
+     * The DDoS custom policy associated with the public IP.
+     * 
+     */
     public Optional<SubResourceResponse> getDdosCustomPolicy() {
         return Optional.ofNullable(this.ddosCustomPolicy);
     }
+    /**
+     * Enables DDoS protection on the public IP.
+     * 
+     */
     public Optional<Boolean> getProtectedIP() {
         return Optional.ofNullable(this.protectedIP);
     }
+    /**
+     * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+     * 
+     */
     public Optional<String> getProtectionCoverage() {
         return Optional.ofNullable(this.protectionCoverage);
     }

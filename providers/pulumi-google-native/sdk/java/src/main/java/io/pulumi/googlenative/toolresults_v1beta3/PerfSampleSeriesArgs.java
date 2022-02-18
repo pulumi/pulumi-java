@@ -15,6 +15,10 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
 
     public static final PerfSampleSeriesArgs Empty = new PerfSampleSeriesArgs();
 
+    /**
+     * Basic series represented by a line chart
+     * 
+     */
     @InputImport(name="basicPerfSampleSeries")
     private final @Nullable Input<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
 

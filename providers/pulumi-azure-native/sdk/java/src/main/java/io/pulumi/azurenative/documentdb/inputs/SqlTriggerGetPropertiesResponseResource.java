@@ -15,6 +15,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
 
     public static final SqlTriggerGetPropertiesResponseResource Empty = new SqlTriggerGetPropertiesResponseResource();
 
+    /**
+     * Body of the Trigger
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable String body;
 
@@ -22,6 +26,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
+    /**
+     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -29,6 +37,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
         return this.etag;
     }
 
+    /**
+     * Name of the Cosmos DB SQL trigger
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,6 +48,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
         return this.id;
     }
 
+    /**
+     * A system generated property. A unique identifier.
+     * 
+     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -43,6 +59,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
         return this.rid;
     }
 
+    /**
+     * The operation the trigger is associated with
+     * 
+     */
     @InputImport(name="triggerOperation")
     private final @Nullable String triggerOperation;
 
@@ -50,6 +70,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
         return this.triggerOperation == null ? Optional.empty() : Optional.ofNullable(this.triggerOperation);
     }
 
+    /**
+     * Type of the Trigger
+     * 
+     */
     @InputImport(name="triggerType")
     private final @Nullable String triggerType;
 
@@ -57,6 +81,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
         return this.triggerType == null ? Optional.empty() : Optional.ofNullable(this.triggerType);
     }
 
+    /**
+     * A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 

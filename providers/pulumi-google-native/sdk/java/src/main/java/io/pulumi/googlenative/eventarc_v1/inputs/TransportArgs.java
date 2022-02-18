@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the transport intermediaries created for the trigger to deliver events.
+ * 
+ */
 public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransportArgs Empty = new TransportArgs();
 
+    /**
+     * The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
+     * 
+     */
     @InputImport(name="pubsub")
     private final @Nullable Input<PubsubArgs> pubsub;
 

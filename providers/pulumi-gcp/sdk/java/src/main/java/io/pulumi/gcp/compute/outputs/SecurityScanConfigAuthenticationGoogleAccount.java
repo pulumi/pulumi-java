@@ -9,7 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityScanConfigAuthenticationGoogleAccount {
+    /**
+     * The password of the custom account. The credential is stored encrypted
+     * in GCP.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final String password;
+    /**
+     * The user name of the custom account.
+     * 
+     */
     private final String username;
 
     @OutputCustomType.Constructor({"password","username"})
@@ -20,9 +30,19 @@ public final class SecurityScanConfigAuthenticationGoogleAccount {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * The password of the custom account. The credential is stored encrypted
+     * in GCP.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public String getPassword() {
         return this.password;
     }
+    /**
+     * The user name of the custom account.
+     * 
+     */
     public String getUsername() {
         return this.username;
     }

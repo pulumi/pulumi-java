@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gets or sets the authentication type.
+     * 
+     */
     @EnumType
     public enum ServiceBusAuthenticationType {
         NotSpecified("NotSpecified"),

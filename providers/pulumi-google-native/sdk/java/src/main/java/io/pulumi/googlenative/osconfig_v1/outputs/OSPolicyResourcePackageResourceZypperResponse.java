@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OSPolicyResourcePackageResourceZypperResponse {
+    /**
+     * Package name.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class OSPolicyResourcePackageResourceZypperResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Package name.
+     * 
+     */
     public String getName() {
         return this.name;
     }

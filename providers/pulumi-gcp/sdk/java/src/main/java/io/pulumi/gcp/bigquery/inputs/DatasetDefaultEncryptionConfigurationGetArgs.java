@@ -13,6 +13,12 @@ public final class DatasetDefaultEncryptionConfigurationGetArgs extends io.pulum
 
     public static final DatasetDefaultEncryptionConfigurationGetArgs Empty = new DatasetDefaultEncryptionConfigurationGetArgs();
 
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination
+     * BigQuery table. The BigQuery Service Account associated with your project requires
+     * access to this encryption key.
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final Input<String> kmsKeyName;
 

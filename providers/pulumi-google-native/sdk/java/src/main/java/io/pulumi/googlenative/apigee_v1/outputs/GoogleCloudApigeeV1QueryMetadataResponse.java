@@ -10,11 +10,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1QueryMetadataResponse {
+    /**
+     * Dimensions of the AsyncQuery.
+     * 
+     */
     private final List<String> dimensions;
+    /**
+     * End timestamp of the query range.
+     * 
+     */
     private final String endTimestamp;
+    /**
+     * Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]
+     * 
+     */
     private final List<String> metrics;
+    /**
+     * Output format.
+     * 
+     */
     private final String outputFormat;
+    /**
+     * Start timestamp of the query range.
+     * 
+     */
     private final String startTimestamp;
+    /**
+     * Query GroupBy time unit.
+     * 
+     */
     private final String timeUnit;
 
     @OutputCustomType.Constructor({"dimensions","endTimestamp","metrics","outputFormat","startTimestamp","timeUnit"})
@@ -33,21 +57,45 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
         this.timeUnit = Objects.requireNonNull(timeUnit);
     }
 
+    /**
+     * Dimensions of the AsyncQuery.
+     * 
+     */
     public List<String> getDimensions() {
         return this.dimensions;
     }
+    /**
+     * End timestamp of the query range.
+     * 
+     */
     public String getEndTimestamp() {
         return this.endTimestamp;
     }
+    /**
+     * Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]
+     * 
+     */
     public List<String> getMetrics() {
         return this.metrics;
     }
+    /**
+     * Output format.
+     * 
+     */
     public String getOutputFormat() {
         return this.outputFormat;
     }
+    /**
+     * Start timestamp of the query range.
+     * 
+     */
     public String getStartTimestamp() {
         return this.startTimestamp;
     }
+    /**
+     * Query GroupBy time unit.
+     * 
+     */
     public String getTimeUnit() {
         return this.timeUnit;
     }

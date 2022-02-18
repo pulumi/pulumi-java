@@ -12,6 +12,10 @@ public final class GetResolverDNSSECConfigArgs extends io.pulumi.resources.Invok
 
     public static final GetResolverDNSSECConfigArgs Empty = new GetResolverDNSSECConfigArgs();
 
+    /**
+     * Id
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

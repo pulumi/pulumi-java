@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+     * 
+     */
     @EnumType
     public enum PrivateLinkServiceConnectionStatus {
         Pending("Pending"),

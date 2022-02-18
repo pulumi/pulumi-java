@@ -14,87 +14,214 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Class representing an event hub data connection.
+ * API Version: 2021-01-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:kusto:EventHubDataConnection KustoClusterRPTest4/KustoDatabase8/DataConnections8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8/DataConnections/DataConnections8 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:kusto:EventHubDataConnection")
 public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * The event hub messages compression type
+     * 
+     */
     @OutputExport(name="compression", type=String.class, parameters={})
     private Output</* @Nullable */ String> compression;
 
+    /**
+     * @return The event hub messages compression type
+     * 
+     */
     public Output</* @Nullable */ String> getCompression() {
         return this.compression;
     }
+    /**
+     * The event hub consumer group.
+     * 
+     */
     @OutputExport(name="consumerGroup", type=String.class, parameters={})
     private Output<String> consumerGroup;
 
+    /**
+     * @return The event hub consumer group.
+     * 
+     */
     public Output<String> getConsumerGroup() {
         return this.consumerGroup;
     }
+    /**
+     * The data format of the message. Optionally the data format can be added to each message.
+     * 
+     */
     @OutputExport(name="dataFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataFormat;
 
+    /**
+     * @return The data format of the message. Optionally the data format can be added to each message.
+     * 
+     */
     public Output</* @Nullable */ String> getDataFormat() {
         return this.dataFormat;
     }
+    /**
+     * The resource ID of the event hub to be used to create a data connection.
+     * 
+     */
     @OutputExport(name="eventHubResourceId", type=String.class, parameters={})
     private Output<String> eventHubResourceId;
 
+    /**
+     * @return The resource ID of the event hub to be used to create a data connection.
+     * 
+     */
     public Output<String> getEventHubResourceId() {
         return this.eventHubResourceId;
     }
+    /**
+     * System properties of the event hub
+     * 
+     */
     @OutputExport(name="eventSystemProperties", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> eventSystemProperties;
 
+    /**
+     * @return System properties of the event hub
+     * 
+     */
     public Output</* @Nullable */ List<String>> getEventSystemProperties() {
         return this.eventSystemProperties;
     }
+    /**
+     * Kind of the endpoint for the data connection
+     * Expected value is 'EventHub'.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of the endpoint for the data connection
+     * Expected value is 'EventHub'.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
+     * 
+     */
     @OutputExport(name="managedIdentityResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedIdentityResourceId;
 
+    /**
+     * @return The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
+     * 
+     */
     public Output</* @Nullable */ String> getManagedIdentityResourceId() {
         return this.managedIdentityResourceId;
     }
+    /**
+     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+     * 
+     */
     @OutputExport(name="mappingRuleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> mappingRuleName;
 
+    /**
+     * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+     * 
+     */
     public Output</* @Nullable */ String> getMappingRuleName() {
         return this.mappingRuleName;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioned state of the resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioned state of the resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The table where the data should be ingested. Optionally the table information can be added to each message.
+     * 
+     */
     @OutputExport(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
+    /**
+     * @return The table where the data should be ingested. Optionally the table information can be added to each message.
+     * 
+     */
     public Output</* @Nullable */ String> getTableName() {
         return this.tableName;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EventHubDataConnection(String name, EventHubDataConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kusto:EventHubDataConnection", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -128,6 +255,14 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EventHubDataConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventHubDataConnection(name, id, options);
     }

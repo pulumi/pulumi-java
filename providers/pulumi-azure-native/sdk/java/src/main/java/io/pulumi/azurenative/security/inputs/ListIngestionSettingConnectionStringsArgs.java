@@ -12,6 +12,10 @@ public final class ListIngestionSettingConnectionStringsArgs extends io.pulumi.r
 
     public static final ListIngestionSettingConnectionStringsArgs Empty = new ListIngestionSettingConnectionStringsArgs();
 
+    /**
+     * Name of the ingestion setting
+     * 
+     */
     @InputImport(name="ingestionSettingName", required=true)
     private final String ingestionSettingName;
 

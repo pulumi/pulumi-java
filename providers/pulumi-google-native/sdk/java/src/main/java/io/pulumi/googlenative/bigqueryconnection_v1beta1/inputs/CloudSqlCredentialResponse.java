@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Credential info for the Cloud SQL.
+ * 
+ */
 public final class CloudSqlCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudSqlCredentialResponse Empty = new CloudSqlCredentialResponse();
 
+    /**
+     * The password for the credential.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final String password;
 
@@ -19,6 +27,10 @@ public final class CloudSqlCredentialResponse extends io.pulumi.resources.Invoke
         return this.password;
     }
 
+    /**
+     * The username for the credential.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final String username;
 

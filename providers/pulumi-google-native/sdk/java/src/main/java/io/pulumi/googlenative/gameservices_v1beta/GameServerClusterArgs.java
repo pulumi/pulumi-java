@@ -16,6 +16,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
 
     public static final GameServerClusterArgs Empty = new GameServerClusterArgs();
 
+    /**
+     * The game server cluster connection information. This information is used to manage game server clusters.
+     * 
+     */
     @InputImport(name="connectionInfo")
     private final @Nullable Input<GameServerClusterConnectionInfoArgs> connectionInfo;
 
@@ -23,6 +27,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.connectionInfo == null ? Input.empty() : this.connectionInfo;
     }
 
+    /**
+     * Human readable description of the cluster.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * ETag of the resource.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -44,6 +56,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.gameServerClusterId;
     }
 
+    /**
+     * The labels associated with this game server cluster. Each label is a key-value pair.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -58,6 +74,10 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

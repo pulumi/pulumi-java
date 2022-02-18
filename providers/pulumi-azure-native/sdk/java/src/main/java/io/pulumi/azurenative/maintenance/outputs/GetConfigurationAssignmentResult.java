@@ -12,12 +12,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetConfigurationAssignmentResult {
+    /**
+     * Fully qualified identifier of the resource
+     * 
+     */
     private final String id;
+    /**
+     * Location of the resource
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The maintenance configuration Id
+     * 
+     */
     private final @Nullable String maintenanceConfigurationId;
+    /**
+     * Name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * The unique resourceId
+     * 
+     */
     private final @Nullable String resourceId;
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Type of the resource
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","maintenanceConfigurationId","name","resourceId","systemData","type"})
@@ -38,24 +66,52 @@ public final class GetConfigurationAssignmentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Fully qualified identifier of the resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Location of the resource
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The maintenance configuration Id
+     * 
+     */
     public Optional<String> getMaintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
+    /**
+     * Name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The unique resourceId
+     * 
+     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the resource
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -16,6 +16,12 @@ public final class TriggerGithubGetArgs extends io.pulumi.resources.ResourceArgs
 
     public static final TriggerGithubGetArgs Empty = new TriggerGithubGetArgs();
 
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +29,11 @@ public final class TriggerGithubGetArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Owner of the repository. For example: The owner for
+     * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * 
+     */
     @InputImport(name="owner")
     private final @Nullable Input<String> owner;
 
@@ -30,6 +41,11 @@ public final class TriggerGithubGetArgs extends io.pulumi.resources.ResourceArgs
         return this.owner == null ? Input.empty() : this.owner;
     }
 
+    /**
+     * filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="pullRequest")
     private final @Nullable Input<TriggerGithubPullRequestGetArgs> pullRequest;
 
@@ -37,6 +53,11 @@ public final class TriggerGithubGetArgs extends io.pulumi.resources.ResourceArgs
         return this.pullRequest == null ? Input.empty() : this.pullRequest;
     }
 
+    /**
+     * filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="push")
     private final @Nullable Input<TriggerGithubPushGetArgs> push;
 

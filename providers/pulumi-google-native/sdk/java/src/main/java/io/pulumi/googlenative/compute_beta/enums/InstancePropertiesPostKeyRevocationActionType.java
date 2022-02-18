@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * PostKeyRevocationActionType of the instance.
+     * 
+     */
     @EnumType
     public enum InstancePropertiesPostKeyRevocationActionType {
+        /**
+         * Indicates user chose no operation.
+         * 
+         */
         Noop("NOOP"),
+        /**
+         * Default value. This value is unused.
+         * 
+         */
         PostKeyRevocationActionTypeUnspecified("POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED"),
+        /**
+         * Indicates user chose to opt for VM shutdown on key revocation.
+         * 
+         */
         Shutdown("SHUTDOWN");
 
         private final String value;

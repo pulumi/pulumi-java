@@ -6,6 +6,10 @@ package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 import java.util.Objects;
 
 
+/**
+ * The source database will allow incoming connections from the destination database's public IP. You can retrieve the Cloud SQL instance's public IP from the Cloud SQL console or using Cloud SQL APIs. No additional configuration is required.
+ * 
+ */
 public final class StaticIpConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StaticIpConnectivityArgs Empty = new StaticIpConnectivityArgs();

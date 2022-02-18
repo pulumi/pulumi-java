@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InfrastructureConfigurationS3Logs {
+    /**
+     * S3BucketName
+     * 
+     */
     private final @Nullable String s3BucketName;
+    /**
+     * S3KeyPrefix
+     * 
+     */
     private final @Nullable String s3KeyPrefix;
 
     @OutputCustomType.Constructor({"s3BucketName","s3KeyPrefix"})
@@ -22,9 +30,17 @@ public final class InfrastructureConfigurationS3Logs {
         this.s3KeyPrefix = s3KeyPrefix;
     }
 
+    /**
+     * S3BucketName
+     * 
+     */
     public Optional<String> getS3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
+    /**
+     * S3KeyPrefix
+     * 
+     */
     public Optional<String> getS3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specify public IP sku name
+     * 
+     */
     @EnumType
     public enum PublicIPAddressSkuName {
         Basic("Basic"),

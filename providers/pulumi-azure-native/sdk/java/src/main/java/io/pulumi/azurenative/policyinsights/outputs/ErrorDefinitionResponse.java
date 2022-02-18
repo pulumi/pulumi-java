@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ErrorDefinitionResponse {
+    /**
+     * Additional scenario specific error details.
+     * 
+     */
     private final List<TypedErrorInfoResponse> additionalInfo;
+    /**
+     * Service specific error code which serves as the substatus for the HTTP error code.
+     * 
+     */
     private final String code;
+    /**
+     * Internal error details.
+     * 
+     */
     private final List<ErrorDefinitionResponse> details;
+    /**
+     * Description of the error.
+     * 
+     */
     private final String message;
+    /**
+     * The target of the error.
+     * 
+     */
     private final String target;
 
     @OutputCustomType.Constructor({"additionalInfo","code","details","message","target"})
@@ -31,18 +51,38 @@ public final class ErrorDefinitionResponse {
         this.target = Objects.requireNonNull(target);
     }
 
+    /**
+     * Additional scenario specific error details.
+     * 
+     */
     public List<TypedErrorInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
     }
+    /**
+     * Service specific error code which serves as the substatus for the HTTP error code.
+     * 
+     */
     public String getCode() {
         return this.code;
     }
+    /**
+     * Internal error details.
+     * 
+     */
     public List<ErrorDefinitionResponse> getDetails() {
         return this.details;
     }
+    /**
+     * Description of the error.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * The target of the error.
+     * 
+     */
     public String getTarget() {
         return this.target;
     }

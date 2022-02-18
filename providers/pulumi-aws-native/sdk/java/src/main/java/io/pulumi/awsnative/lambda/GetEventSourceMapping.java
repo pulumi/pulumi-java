@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventSourceMapping {
+/**
+ * Resource Type definition for AWS::Lambda::EventSourceMapping
+ * 
+ */
     public static CompletableFuture<GetEventSourceMappingResult> invokeAsync(GetEventSourceMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getEventSourceMapping", TypeShape.of(GetEventSourceMappingResult.class), args == null ? GetEventSourceMappingArgs.Empty : args, Utilities.withVersion(options));
     }

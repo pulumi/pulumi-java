@@ -15,6 +15,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
 
     public static final NetworkInterfaceTapConfigurationArgs Empty = new NetworkInterfaceTapConfigurationArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +26,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the network interface.
+     * 
+     */
     @InputImport(name="networkInterfaceName", required=true)
     private final Input<String> networkInterfaceName;
 
@@ -36,6 +48,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
         return this.networkInterfaceName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the tap configuration.
+     * 
+     */
     @InputImport(name="tapConfigurationName")
     private final @Nullable Input<String> tapConfigurationName;
 
@@ -50,6 +70,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
         return this.tapConfigurationName == null ? Input.empty() : this.tapConfigurationName;
     }
 
+    /**
+     * The reference to the Virtual Network Tap resource.
+     * 
+     */
     @InputImport(name="virtualNetworkTap")
     private final @Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap;
 

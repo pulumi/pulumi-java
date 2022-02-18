@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetACL {
+/**
+ * Resource Type definition for AWS::MemoryDB::ACL
+ * 
+ */
     public static CompletableFuture<GetACLResult> invokeAsync(GetACLArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getACL", TypeShape.of(GetACLResult.class), args == null ? GetACLArgs.Empty : args, Utilities.withVersion(options));
     }

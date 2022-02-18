@@ -14,6 +14,17 @@ public final class SloRequestBasedSliGoodTotalRatioArgs extends io.pulumi.resour
 
     public static final SloRequestBasedSliGoodTotalRatioArgs Empty = new SloRequestBasedSliGoodTotalRatioArgs();
 
+    /**
+     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * quantifying bad service provided, either demanded service that
+     * was not provided or demanded service that was of inadequate
+     * quality. Exactly two of
+     * good, bad, or total service filter must be defined (where
+     * good + bad = total is assumed)
+     * Must have ValueType = DOUBLE or ValueType = INT64 and
+     * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     @InputImport(name="badServiceFilter")
     private final @Nullable Input<String> badServiceFilter;
 
@@ -21,6 +32,15 @@ public final class SloRequestBasedSliGoodTotalRatioArgs extends io.pulumi.resour
         return this.badServiceFilter == null ? Input.empty() : this.badServiceFilter;
     }
 
+    /**
+     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * quantifying good service provided. Exactly two of
+     * good, bad, or total service filter must be defined (where
+     * good + bad = total is assumed)
+     * Must have ValueType = DOUBLE or ValueType = INT64 and
+     * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     @InputImport(name="goodServiceFilter")
     private final @Nullable Input<String> goodServiceFilter;
 
@@ -28,6 +48,15 @@ public final class SloRequestBasedSliGoodTotalRatioArgs extends io.pulumi.resour
         return this.goodServiceFilter == null ? Input.empty() : this.goodServiceFilter;
     }
 
+    /**
+     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * quantifying total demanded service. Exactly two of
+     * good, bad, or total service filter must be defined (where
+     * good + bad = total is assumed)
+     * Must have ValueType = DOUBLE or ValueType = INT64 and
+     * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     @InputImport(name="totalServiceFilter")
     private final @Nullable Input<String> totalServiceFilter;
 

@@ -15,11 +15,25 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Mitigation actions can be used to take actions to mitigate issues that were found in an Audit finding or Detect violation.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:iot:MitigationAction")
 public class MitigationAction extends io.pulumi.resources.CustomResource {
+    /**
+     * A unique identifier for the mitigation action.
+     * 
+     */
     @OutputExport(name="actionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> actionName;
 
+    /**
+     * @return A unique identifier for the mitigation action.
+     * 
+     */
     public Output</* @Nullable */ String> getActionName() {
         return this.actionName;
     }
@@ -47,13 +61,27 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={MitigationActionTag.class})
     private Output</* @Nullable */ List<MitigationActionTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<MitigationActionTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public MitigationAction(String name, MitigationActionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iot:MitigationAction", name, args == null ? MitigationActionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +97,14 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static MitigationAction get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MitigationAction(name, id, options);
     }

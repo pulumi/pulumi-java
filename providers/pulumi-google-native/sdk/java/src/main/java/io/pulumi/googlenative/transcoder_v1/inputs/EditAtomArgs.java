@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Edit atom.
+ * 
+ */
 public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EditAtomArgs Empty = new EditAtomArgs();
 
+    /**
+     * End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.
+     * 
+     */
     @InputImport(name="endTimeOffset")
     private final @Nullable Input<String> endTimeOffset;
 
@@ -22,6 +30,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
     }
 
+    /**
+     * List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.
+     * 
+     */
     @InputImport(name="inputs")
     private final @Nullable Input<List<String>> inputs;
 
@@ -29,6 +41,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputs == null ? Input.empty() : this.inputs;
     }
 
+    /**
+     * A unique key for this atom. Must be specified when using advanced mapping.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -36,6 +52,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.
+     * 
+     */
     @InputImport(name="startTimeOffset")
     private final @Nullable Input<String> startTimeOffset;
 

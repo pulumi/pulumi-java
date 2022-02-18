@@ -17,6 +17,10 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackagingGroupArgs Empty = new PackagingGroupArgs();
 
+    /**
+     * CDN Authorization
+     * 
+     */
     @InputImport(name="authorization")
     private final @Nullable Input<PackagingGroupAuthorizationArgs> authorization;
 
@@ -24,6 +28,10 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorization == null ? Input.empty() : this.authorization;
     }
 
+    /**
+     * The configuration parameters for egress access logging.
+     * 
+     */
     @InputImport(name="egressAccessLogs")
     private final @Nullable Input<PackagingGroupLogConfigurationArgs> egressAccessLogs;
 
@@ -31,6 +39,10 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.egressAccessLogs == null ? Input.empty() : this.egressAccessLogs;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<PackagingGroupTagArgs>> tags;
 

@@ -14,6 +14,10 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
 
     public static final BackendServiceIapGetArgs Empty = new BackendServiceIapGetArgs();
 
+    /**
+     * OAuth2 Client ID for IAP
+     * 
+     */
     @InputImport(name="oauth2ClientId", required=true)
     private final Input<String> oauth2ClientId;
 
@@ -21,6 +25,11 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
         return this.oauth2ClientId;
     }
 
+    /**
+     * OAuth2 Client Secret for IAP
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="oauth2ClientSecret", required=true)
     private final Input<String> oauth2ClientSecret;
 
@@ -28,6 +37,12 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
         return this.oauth2ClientSecret;
     }
 
+    /**
+     * - 
+     * OAuth2 Client Secret SHA-256 for IAP
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="oauth2ClientSecretSha256")
     private final @Nullable Input<String> oauth2ClientSecretSha256;
 

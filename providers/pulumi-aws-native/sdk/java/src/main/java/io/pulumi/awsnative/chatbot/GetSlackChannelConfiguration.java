@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSlackChannelConfiguration {
+/**
+ * Resource schema for AWS::Chatbot::SlackChannelConfiguration.
+ * 
+ */
     public static CompletableFuture<GetSlackChannelConfigurationResult> invokeAsync(GetSlackChannelConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:chatbot:getSlackChannelConfiguration", TypeShape.of(GetSlackChannelConfigurationResult.class), args == null ? GetSlackChannelConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

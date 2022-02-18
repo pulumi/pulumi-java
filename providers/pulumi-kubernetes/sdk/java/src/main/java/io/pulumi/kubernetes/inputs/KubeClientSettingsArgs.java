@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Options for tuning the Kubernetes client used by a Provider.
+ * 
+ */
 public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubeClientSettingsArgs Empty = new KubeClientSettingsArgs();
 
+    /**
+     * Maximum burst for throttle. Default value is 10.
+     * 
+     */
     @InputImport(name="burst")
     private final @Nullable Input<Integer> burst;
 
@@ -23,6 +31,10 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.burst == null ? Input.empty() : this.burst;
     }
 
+    /**
+     * Maximum queries per second (QPS) to the API server from this client. Default value is 5.
+     * 
+     */
     @InputImport(name="qps")
     private final @Nullable Input<Double> qps;
 

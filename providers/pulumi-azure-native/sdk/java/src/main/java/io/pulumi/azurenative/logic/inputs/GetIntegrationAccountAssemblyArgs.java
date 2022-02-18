@@ -12,6 +12,10 @@ public final class GetIntegrationAccountAssemblyArgs extends io.pulumi.resources
 
     public static final GetIntegrationAccountAssemblyArgs Empty = new GetIntegrationAccountAssemblyArgs();
 
+    /**
+     * The assembly artifact name.
+     * 
+     */
     @InputImport(name="assemblyArtifactName", required=true)
     private final String assemblyArtifactName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationAccountAssemblyArgs extends io.pulumi.resources
         return this.assemblyArtifactName;
     }
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationAccountAssemblyArgs extends io.pulumi.resources
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

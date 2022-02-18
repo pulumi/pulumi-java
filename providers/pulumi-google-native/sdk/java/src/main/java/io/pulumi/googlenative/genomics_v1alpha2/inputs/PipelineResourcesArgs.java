@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The system resources for the pipeline run.
+ * 
+ */
 public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineResourcesArgs Empty = new PipelineResourcesArgs();
 
+    /**
+     * Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.
+     * 
+     */
     @InputImport(name="acceleratorCount")
     private final @Nullable Input<String> acceleratorCount;
 
@@ -26,6 +34,10 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
     }
 
+    /**
+     * Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.
+     * 
+     */
     @InputImport(name="acceleratorType")
     private final @Nullable Input<String> acceleratorType;
 
@@ -33,6 +45,10 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
     }
 
+    /**
+     * The size of the boot disk. Defaults to 10 (GB).
+     * 
+     */
     @InputImport(name="bootDiskSizeGb")
     private final @Nullable Input<Integer> bootDiskSizeGb;
 
@@ -40,6 +56,10 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
         return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
     }
 
+    /**
+     * Disks to attach.
+     * 
+     */
     @InputImport(name="disks")
     private final @Nullable Input<List<DiskArgs>> disks;
 
@@ -47,6 +67,10 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
         return this.disks == null ? Input.empty() : this.disks;
     }
 
+    /**
+     * The minimum number of cores to use. Defaults to 1.
+     * 
+     */
     @InputImport(name="minimumCpuCores")
     private final @Nullable Input<Integer> minimumCpuCores;
 
@@ -54,6 +78,10 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
         return this.minimumCpuCores == null ? Input.empty() : this.minimumCpuCores;
     }
 
+    /**
+     * The minimum amount of RAM to use. Defaults to 3.75 (GB)
+     * 
+     */
     @InputImport(name="minimumRamGb")
     private final @Nullable Input<Double> minimumRamGb;
 
@@ -61,6 +89,10 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
         return this.minimumRamGb == null ? Input.empty() : this.minimumRamGb;
     }
 
+    /**
+     * Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM's Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).
+     * 
+     */
     @InputImport(name="noAddress")
     private final @Nullable Input<Boolean> noAddress;
 
@@ -68,6 +100,10 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
         return this.noAddress == null ? Input.empty() : this.noAddress;
     }
 
+    /**
+     * Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.
+     * 
+     */
     @InputImport(name="preemptible")
     private final @Nullable Input<Boolean> preemptible;
 
@@ -75,6 +111,10 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
         return this.preemptible == null ? Input.empty() : this.preemptible;
     }
 
+    /**
+     * List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

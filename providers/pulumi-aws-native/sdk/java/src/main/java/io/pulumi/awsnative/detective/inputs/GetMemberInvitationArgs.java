@@ -12,6 +12,10 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetMemberInvitationArgs Empty = new GetMemberInvitationArgs();
 
+    /**
+     * The ARN of the graph to which the member account will be invited
+     * 
+     */
     @InputImport(name="graphArn", required=true)
     private final String graphArn;
 
@@ -19,6 +23,10 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
         return this.graphArn;
     }
 
+    /**
+     * The AWS account ID to be invited to join the graph as a member
+     * 
+     */
     @InputImport(name="memberId", required=true)
     private final String memberId;
 

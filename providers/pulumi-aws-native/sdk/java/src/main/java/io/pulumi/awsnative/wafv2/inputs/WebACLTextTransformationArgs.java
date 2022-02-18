@@ -10,6 +10,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Text Transformation on the Search String before match.
+ * 
+ */
 public final class WebACLTextTransformationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLTextTransformationArgs Empty = new WebACLTextTransformationArgs();

@@ -12,6 +12,10 @@ public final class GetMachineLearningDatastoreArgs extends io.pulumi.resources.I
 
     public static final GetMachineLearningDatastoreArgs Empty = new GetMachineLearningDatastoreArgs();
 
+    /**
+     * The Datastore name.
+     * 
+     */
     @InputImport(name="datastoreName", required=true)
     private final String datastoreName;
 
@@ -19,6 +23,10 @@ public final class GetMachineLearningDatastoreArgs extends io.pulumi.resources.I
         return this.datastoreName;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetMachineLearningDatastoreArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

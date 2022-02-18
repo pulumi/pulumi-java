@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToTargetSqlDbTaskInputResponse {
+    /**
+     * Connection information for target SQL DB
+     * 
+     */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
     @OutputCustomType.Constructor({"targetConnectionInfo"})
@@ -16,6 +20,10 @@ public final class ConnectToTargetSqlDbTaskInputResponse {
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
     }
 
+    /**
+     * Connection information for target SQL DB
+     * 
+     */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

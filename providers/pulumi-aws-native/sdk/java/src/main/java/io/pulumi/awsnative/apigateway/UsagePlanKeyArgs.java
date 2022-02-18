@@ -14,6 +14,10 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UsagePlanKeyArgs Empty = new UsagePlanKeyArgs();
 
+    /**
+     * The ID of the usage plan key.
+     * 
+     */
     @InputImport(name="keyId", required=true)
     private final Input<String> keyId;
 
@@ -21,6 +25,10 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyId;
     }
 
+    /**
+     * The type of usage plan key. Currently, the only valid key type is API_KEY.
+     * 
+     */
     @InputImport(name="keyType", required=true)
     private final Input<UsagePlanKeyKeyType> keyType;
 
@@ -28,6 +36,10 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyType;
     }
 
+    /**
+     * The ID of the usage plan.
+     * 
+     */
     @InputImport(name="usagePlanId", required=true)
     private final Input<String> usagePlanId;
 

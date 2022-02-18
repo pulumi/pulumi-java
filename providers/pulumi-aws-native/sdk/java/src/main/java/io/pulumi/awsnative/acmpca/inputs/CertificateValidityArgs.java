@@ -10,6 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Validity for a certificate.
+ * 
+ */
 public final class CertificateValidityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateValidityArgs Empty = new CertificateValidityArgs();

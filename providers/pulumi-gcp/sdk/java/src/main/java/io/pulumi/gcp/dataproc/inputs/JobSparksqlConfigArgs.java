@@ -17,6 +17,10 @@ public final class JobSparksqlConfigArgs extends io.pulumi.resources.ResourceArg
 
     public static final JobSparksqlConfigArgs Empty = new JobSparksqlConfigArgs();
 
+    /**
+     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     @InputImport(name="jarFileUris")
     private final @Nullable Input<List<String>> jarFileUris;
 
@@ -31,6 +35,10 @@ public final class JobSparksqlConfigArgs extends io.pulumi.resources.ResourceArg
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
+    /**
+     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -38,6 +46,11 @@ public final class JobSparksqlConfigArgs extends io.pulumi.resources.ResourceArg
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The HCFS URI of the script that contains SQL queries.
+     * Conflicts with `query_list`
+     * 
+     */
     @InputImport(name="queryFileUri")
     private final @Nullable Input<String> queryFileUri;
 
@@ -45,6 +58,11 @@ public final class JobSparksqlConfigArgs extends io.pulumi.resources.ResourceArg
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
     }
 
+    /**
+     * The list of SQL queries or statements to execute as part of the job.
+     * Conflicts with `query_file_uri`
+     * 
+     */
     @InputImport(name="queryLists")
     private final @Nullable Input<List<String>> queryLists;
 
@@ -52,6 +70,10 @@ public final class JobSparksqlConfigArgs extends io.pulumi.resources.ResourceArg
         return this.queryLists == null ? Input.empty() : this.queryLists;
     }
 
+    /**
+     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
+     * 
+     */
     @InputImport(name="scriptVariables")
     private final @Nullable Input<Map<String,String>> scriptVariables;
 

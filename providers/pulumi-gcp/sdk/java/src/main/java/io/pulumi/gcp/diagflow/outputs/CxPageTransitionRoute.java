@@ -12,11 +12,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CxPageTransitionRoute {
+    /**
+     * The condition to evaluate against form parameters or session parameters.
+     * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     private final @Nullable String condition;
+    /**
+     * The unique identifier of an Intent.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     private final @Nullable String intent;
+    /**
+     * - 
+     * The unique identifier of this event handler.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The target flow to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * 
+     */
     private final @Nullable String targetFlow;
+    /**
+     * The target page to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * 
+     */
     private final @Nullable String targetPage;
+    /**
+     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable CxPageTransitionRouteTriggerFulfillment triggerFulfillment;
 
     @OutputCustomType.Constructor({"condition","intent","name","targetFlow","targetPage","triggerFulfillment"})
@@ -35,21 +65,51 @@ public final class CxPageTransitionRoute {
         this.triggerFulfillment = triggerFulfillment;
     }
 
+    /**
+     * The condition to evaluate against form parameters or session parameters.
+     * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     public Optional<String> getCondition() {
         return Optional.ofNullable(this.condition);
     }
+    /**
+     * The unique identifier of an Intent.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     public Optional<String> getIntent() {
         return Optional.ofNullable(this.intent);
     }
+    /**
+     * - 
+     * The unique identifier of this event handler.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The target flow to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * 
+     */
     public Optional<String> getTargetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
+    /**
+     * The target page to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * 
+     */
     public Optional<String> getTargetPage() {
         return Optional.ofNullable(this.targetPage);
     }
+    /**
+     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * Structure is documented below.
+     * 
+     */
     public Optional<CxPageTransitionRouteTriggerFulfillment> getTriggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }

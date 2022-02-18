@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFunction {
+/**
+ * Get information about a Google Cloud Function. For more information see
+ * the [official documentation](https://cloud.google.com/functions/docs/)
+ * and [API](https://cloud.google.com/functions/docs/apis).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getFunction.
+ * 
+ *
+ * A collection of values returned by getFunction.
+ * 
+ */
     public static CompletableFuture<GetFunctionResult> invokeAsync(GetFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudfunctions/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args == null ? GetFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

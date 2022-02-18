@@ -12,6 +12,10 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetQueueArgs Empty = new GetQueueArgs();
 
+    /**
+     * The namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -19,6 +23,10 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
         return this.namespaceName;
     }
 
+    /**
+     * The queue name.
+     * 
+     */
     @InputImport(name="queueName", required=true)
     private final String queueName;
 
@@ -26,6 +34,10 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
         return this.queueName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -18,63 +18,156 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+ * API Version: 2020-12-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:compute:Image myImage /subscriptions/{subscription-id}/resourceGroups/disk/providers/Microsoft.Compute/images/myImage 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:compute:Image")
 public class Image extends io.pulumi.resources.CustomResource {
+    /**
+     * The extended location of the Image.
+     * 
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of the Image.
+     * 
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
+     * 
+     */
     @OutputExport(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
+    /**
+     * @return Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
+     * 
+     */
     public Output</* @Nullable */ String> getHyperVGeneration() {
         return this.hyperVGeneration;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The source virtual machine from which Image is created.
+     * 
+     */
     @OutputExport(name="sourceVirtualMachine", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> sourceVirtualMachine;
 
+    /**
+     * @return The source virtual machine from which Image is created.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getSourceVirtualMachine() {
         return this.sourceVirtualMachine;
     }
+    /**
+     * Specifies the storage settings for the virtual machine disks.
+     * 
+     */
     @OutputExport(name="storageProfile", type=ImageStorageProfileResponse.class, parameters={})
     private Output</* @Nullable */ ImageStorageProfileResponse> storageProfile;
 
+    /**
+     * @return Specifies the storage settings for the virtual machine disks.
+     * 
+     */
     public Output</* @Nullable */ ImageStorageProfileResponse> getStorageProfile() {
         return this.storageProfile;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Image(String name, ImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +200,14 @@ public class Image extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Image get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Image(name, id, options);
     }

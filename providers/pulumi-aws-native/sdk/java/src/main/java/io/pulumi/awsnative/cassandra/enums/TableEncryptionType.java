@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Server-side encryption type
+     * 
+     */
     @EnumType
     public enum TableEncryptionType {
         AwsOwnedKmsKey("AWS_OWNED_KMS_KEY"),

@@ -14,6 +14,11 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
 
     public static final ApplicationUrlDispatchRulesDispatchRuleGetArgs Empty = new ApplicationUrlDispatchRulesDispatchRuleGetArgs();
 
+    /**
+     * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
+     * Defaults to matching all domains: "*".
+     * 
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -21,6 +26,11 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+     * The sum of the lengths of the domain and path may not exceed 100 characters.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -28,6 +38,11 @@ public final class ApplicationUrlDispatchRulesDispatchRuleGetArgs extends io.pul
         return this.path;
     }
 
+    /**
+     * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+     * The sum of the lengths of the domain and path may not exceed 100 characters.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

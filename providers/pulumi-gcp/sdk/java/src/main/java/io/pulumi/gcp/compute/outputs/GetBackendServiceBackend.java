@@ -13,6 +13,10 @@ import java.util.Objects;
 public final class GetBackendServiceBackend {
     private final String balancingMode;
     private final Double capacityScaler;
+    /**
+     * Textual description for the Backend Service.
+     * 
+     */
     private final String description;
     private final String group;
     private final Integer maxConnections;
@@ -55,6 +59,10 @@ public final class GetBackendServiceBackend {
     public Double getCapacityScaler() {
         return this.capacityScaler;
     }
+    /**
+     * Textual description for the Backend Service.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }

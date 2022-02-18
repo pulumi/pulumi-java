@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The usage indicator.
+     * 
+     */
     @EnumType
     public enum UsageIndicator {
         NotSpecified("NotSpecified"),

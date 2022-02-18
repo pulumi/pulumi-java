@@ -12,15 +12,33 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::EC2::EgressOnlyInternetGateway
+ * 
+ */
 @ResourceType(type="aws-native:ec2:EgressOnlyInternetGateway")
 public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * The ID of the VPC for which to create the egress-only internet gateway.
+     * 
+     */
     @OutputExport(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
+    /**
+     * @return The ID of the VPC for which to create the egress-only internet gateway.
+     * 
+     */
     public Output<String> getVpcId() {
         return this.vpcId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EgressOnlyInternetGateway(String name, EgressOnlyInternetGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:EgressOnlyInternetGateway", name, args == null ? EgressOnlyInternetGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -36,6 +54,14 @@ public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EgressOnlyInternetGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EgressOnlyInternetGateway(name, id, options);
     }

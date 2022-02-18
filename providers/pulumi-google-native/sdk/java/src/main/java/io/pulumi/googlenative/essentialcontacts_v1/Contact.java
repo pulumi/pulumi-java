@@ -13,45 +13,104 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Adds a new contact for a resource.
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:essentialcontacts/v1:Contact")
 public class Contact extends io.pulumi.resources.CustomResource {
+    /**
+     * The email address to send notifications to. This does not need to be a Google account.
+     * 
+     */
     @OutputExport(name="email", type=String.class, parameters={})
     private Output<String> email;
 
+    /**
+     * @return The email address to send notifications to. This does not need to be a Google account.
+     * 
+     */
     public Output<String> getEmail() {
         return this.email;
     }
+    /**
+     * The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
+     * 
+     */
     @OutputExport(name="languageTag", type=String.class, parameters={})
     private Output<String> languageTag;
 
+    /**
+     * @return The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
+     * 
+     */
     public Output<String> getLanguageTag() {
         return this.languageTag;
     }
+    /**
+     * The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The categories of notifications that the contact will receive communications for.
+     * 
+     */
     @OutputExport(name="notificationCategorySubscriptions", type=List.class, parameters={String.class})
     private Output<List<String>> notificationCategorySubscriptions;
 
+    /**
+     * @return The categories of notifications that the contact will receive communications for.
+     * 
+     */
     public Output<List<String>> getNotificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
     }
+    /**
+     * The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
+     * 
+     */
     @OutputExport(name="validateTime", type=String.class, parameters={})
     private Output<String> validateTime;
 
+    /**
+     * @return The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
+     * 
+     */
     public Output<String> getValidateTime() {
         return this.validateTime;
     }
+    /**
+     * The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
+     * 
+     */
     @OutputExport(name="validationState", type=String.class, parameters={})
     private Output<String> validationState;
 
+    /**
+     * @return The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
+     * 
+     */
     public Output<String> getValidationState() {
         return this.validationState;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Contact(String name, ContactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:essentialcontacts/v1:Contact", name, args == null ? ContactArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +126,14 @@ public class Contact extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Contact get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Contact(name, id, options);
     }

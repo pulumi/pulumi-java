@@ -24,147 +24,352 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A network interface in a resource group.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:NetworkInterface test-nic /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/test-nic 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:NetworkInterface")
 public class NetworkInterface extends io.pulumi.resources.CustomResource {
+    /**
+     * The DNS settings in network interface.
+     * 
+     */
     @OutputExport(name="dnsSettings", type=NetworkInterfaceDnsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NetworkInterfaceDnsSettingsResponse> dnsSettings;
 
+    /**
+     * @return The DNS settings in network interface.
+     * 
+     */
     public Output</* @Nullable */ NetworkInterfaceDnsSettingsResponse> getDnsSettings() {
         return this.dnsSettings;
     }
+    /**
+     * A reference to the dscp configuration to which the network interface is linked.
+     * 
+     */
     @OutputExport(name="dscpConfiguration", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> dscpConfiguration;
 
+    /**
+     * @return A reference to the dscp configuration to which the network interface is linked.
+     * 
+     */
     public Output<SubResourceResponse> getDscpConfiguration() {
         return this.dscpConfiguration;
     }
+    /**
+     * If the network interface is accelerated networking enabled.
+     * 
+     */
     @OutputExport(name="enableAcceleratedNetworking", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAcceleratedNetworking;
 
+    /**
+     * @return If the network interface is accelerated networking enabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking;
     }
+    /**
+     * Indicates whether IP forwarding is enabled on this network interface.
+     * 
+     */
     @OutputExport(name="enableIPForwarding", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableIPForwarding;
 
+    /**
+     * @return Indicates whether IP forwarding is enabled on this network interface.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableIPForwarding() {
         return this.enableIPForwarding;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of the network interface.
+     * 
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of the network interface.
+     * 
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * A list of references to linked BareMetal resources.
+     * 
+     */
     @OutputExport(name="hostedWorkloads", type=List.class, parameters={String.class})
     private Output<List<String>> hostedWorkloads;
 
+    /**
+     * @return A list of references to linked BareMetal resources.
+     * 
+     */
     public Output<List<String>> getHostedWorkloads() {
         return this.hostedWorkloads;
     }
+    /**
+     * A list of IPConfigurations of the network interface.
+     * 
+     */
     @OutputExport(name="ipConfigurations", type=List.class, parameters={NetworkInterfaceIPConfigurationResponse.class})
     private Output</* @Nullable */ List<NetworkInterfaceIPConfigurationResponse>> ipConfigurations;
 
+    /**
+     * @return A list of IPConfigurations of the network interface.
+     * 
+     */
     public Output</* @Nullable */ List<NetworkInterfaceIPConfigurationResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The MAC address of the network interface.
+     * 
+     */
     @OutputExport(name="macAddress", type=String.class, parameters={})
     private Output<String> macAddress;
 
+    /**
+     * @return The MAC address of the network interface.
+     * 
+     */
     public Output<String> getMacAddress() {
         return this.macAddress;
     }
+    /**
+     * Migration phase of Network Interface resource.
+     * 
+     */
     @OutputExport(name="migrationPhase", type=String.class, parameters={})
     private Output</* @Nullable */ String> migrationPhase;
 
+    /**
+     * @return Migration phase of Network Interface resource.
+     * 
+     */
     public Output</* @Nullable */ String> getMigrationPhase() {
         return this.migrationPhase;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The reference to the NetworkSecurityGroup resource.
+     * 
+     */
     @OutputExport(name="networkSecurityGroup", type=NetworkSecurityGroupResponse.class, parameters={})
     private Output</* @Nullable */ NetworkSecurityGroupResponse> networkSecurityGroup;
 
+    /**
+     * @return The reference to the NetworkSecurityGroup resource.
+     * 
+     */
     public Output</* @Nullable */ NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
         return this.networkSecurityGroup;
     }
+    /**
+     * Type of Network Interface resource.
+     * 
+     */
     @OutputExport(name="nicType", type=String.class, parameters={})
     private Output</* @Nullable */ String> nicType;
 
+    /**
+     * @return Type of Network Interface resource.
+     * 
+     */
     public Output</* @Nullable */ String> getNicType() {
         return this.nicType;
     }
+    /**
+     * Whether this is a primary network interface on a virtual machine.
+     * 
+     */
     @OutputExport(name="primary", type=Boolean.class, parameters={})
     private Output<Boolean> primary;
 
+    /**
+     * @return Whether this is a primary network interface on a virtual machine.
+     * 
+     */
     public Output<Boolean> getPrimary() {
         return this.primary;
     }
+    /**
+     * A reference to the private endpoint to which the network interface is linked.
+     * 
+     */
     @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output<PrivateEndpointResponse> privateEndpoint;
 
+    /**
+     * @return A reference to the private endpoint to which the network interface is linked.
+     * 
+     */
     public Output<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
+    /**
+     * Privatelinkservice of the network interface resource.
+     * 
+     */
     @OutputExport(name="privateLinkService", type=PrivateLinkServiceResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceResponse> privateLinkService;
 
+    /**
+     * @return Privatelinkservice of the network interface resource.
+     * 
+     */
     public Output</* @Nullable */ PrivateLinkServiceResponse> getPrivateLinkService() {
         return this.privateLinkService;
     }
+    /**
+     * The provisioning state of the network interface resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the network interface resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource GUID property of the network interface resource.
+     * 
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the network interface resource.
+     * 
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * A list of TapConfigurations of the network interface.
+     * 
+     */
     @OutputExport(name="tapConfigurations", type=List.class, parameters={NetworkInterfaceTapConfigurationResponse.class})
     private Output<List<NetworkInterfaceTapConfigurationResponse>> tapConfigurations;
 
+    /**
+     * @return A list of TapConfigurations of the network interface.
+     * 
+     */
     public Output<List<NetworkInterfaceTapConfigurationResponse>> getTapConfigurations() {
         return this.tapConfigurations;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The reference to a virtual machine.
+     * 
+     */
     @OutputExport(name="virtualMachine", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> virtualMachine;
 
+    /**
+     * @return The reference to a virtual machine.
+     * 
+     */
     public Output<SubResourceResponse> getVirtualMachine() {
         return this.virtualMachine;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NetworkInterface(String name, NetworkInterfaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:NetworkInterface", name, args == null ? NetworkInterfaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -221,6 +426,14 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NetworkInterface get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkInterface(name, id, options);
     }

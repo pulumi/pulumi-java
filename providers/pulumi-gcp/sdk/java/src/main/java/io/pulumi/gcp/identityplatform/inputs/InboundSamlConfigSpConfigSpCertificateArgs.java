@@ -14,6 +14,11 @@ public final class InboundSamlConfigSpConfigSpCertificateArgs extends io.pulumi.
 
     public static final InboundSamlConfigSpConfigSpCertificateArgs Empty = new InboundSamlConfigSpConfigSpCertificateArgs();
 
+    /**
+     * - 
+     * The x509 certificate
+     * 
+     */
     @InputImport(name="x509Certificate")
     private final @Nullable Input<String> x509Certificate;
 

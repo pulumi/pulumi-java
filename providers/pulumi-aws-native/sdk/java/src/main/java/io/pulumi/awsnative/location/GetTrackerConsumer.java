@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrackerConsumer {
+/**
+ * Definition of AWS::Location::TrackerConsumer Resource Type
+ * 
+ */
     public static CompletableFuture<GetTrackerConsumerResult> invokeAsync(GetTrackerConsumerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getTrackerConsumer", TypeShape.of(GetTrackerConsumerResult.class), args == null ? GetTrackerConsumerArgs.Empty : args, Utilities.withVersion(options));
     }

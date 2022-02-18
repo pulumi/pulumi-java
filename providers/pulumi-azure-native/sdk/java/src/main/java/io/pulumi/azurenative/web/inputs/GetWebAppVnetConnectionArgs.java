@@ -12,6 +12,10 @@ public final class GetWebAppVnetConnectionArgs extends io.pulumi.resources.Invok
 
     public static final GetWebAppVnetConnectionArgs Empty = new GetWebAppVnetConnectionArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppVnetConnectionArgs extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetWebAppVnetConnectionArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the virtual network.
+     * 
+     */
     @InputImport(name="vnetName", required=true)
     private final String vnetName;
 

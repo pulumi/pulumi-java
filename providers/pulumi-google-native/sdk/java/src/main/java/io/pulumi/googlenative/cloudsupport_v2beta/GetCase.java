@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCase {
+/**
+ * Retrieve the specified case.
+ * 
+ */
     public static CompletableFuture<GetCaseResult> invokeAsync(GetCaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsupport/v2beta:getCase", TypeShape.of(GetCaseResult.class), args == null ? GetCaseArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -15,6 +15,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
 
     public static final PolicyAlternativeNameServerConfigTargetNameServerArgs Empty = new PolicyAlternativeNameServerConfigTargetNameServerArgs();
 
+    /**
+     * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+     * 
+     */
     @InputImport(name="forwardingPath")
     private final @Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
 
@@ -22,6 +26,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
         return this.forwardingPath == null ? Input.empty() : this.forwardingPath;
     }
 
+    /**
+     * IPv4 address to forward to.
+     * 
+     */
     @InputImport(name="ipv4Address")
     private final @Nullable Input<String> ipv4Address;
 
@@ -29,6 +37,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
         return this.ipv4Address == null ? Input.empty() : this.ipv4Address;
     }
 
+    /**
+     * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
+     * 
+     */
     @InputImport(name="ipv6Address")
     private final @Nullable Input<String> ipv6Address;
 

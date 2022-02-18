@@ -16,6 +16,10 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
 
     public static final QueueAuthorizationRuleArgs Empty = new QueueAuthorizationRuleArgs();
 
+    /**
+     * The authorization rule name.
+     * 
+     */
     @InputImport(name="authorizationRuleName")
     private final @Nullable Input<String> authorizationRuleName;
 
@@ -23,6 +27,10 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
     }
 
+    /**
+     * The namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -30,6 +38,10 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
         return this.namespaceName;
     }
 
+    /**
+     * The queue name.
+     * 
+     */
     @InputImport(name="queueName", required=true)
     private final Input<String> queueName;
 
@@ -37,6 +49,10 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
         return this.queueName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The rights associated with the rule.
+     * 
+     */
     @InputImport(name="rights", required=true)
     private final Input<List<AccessRights>> rights;
 

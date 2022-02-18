@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueue {
+/**
+ * Resource Type definition for AWS::SQS::Queue
+ * 
+ */
     public static CompletableFuture<GetQueueResult> invokeAsync(GetQueueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sqs:getQueue", TypeShape.of(GetQueueResult.class), args == null ? GetQueueArgs.Empty : args, Utilities.withVersion(options));
     }

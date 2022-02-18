@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketLogging {
+    /**
+     * The bucket that will receive log objects.
+     * 
+     */
     private final String logBucket;
+    /**
+     * The object prefix for log objects. If it's not provided,
+     * by default GCS sets this to this bucket's name.
+     * 
+     */
     private final @Nullable String logObjectPrefix;
 
     @OutputCustomType.Constructor({"logBucket","logObjectPrefix"})
@@ -22,9 +31,18 @@ public final class BucketLogging {
         this.logObjectPrefix = logObjectPrefix;
     }
 
+    /**
+     * The bucket that will receive log objects.
+     * 
+     */
     public String getLogBucket() {
         return this.logBucket;
     }
+    /**
+     * The object prefix for log objects. If it's not provided,
+     * by default GCS sets this to this bucket's name.
+     * 
+     */
     public Optional<String> getLogObjectPrefix() {
         return Optional.ofNullable(this.logObjectPrefix);
     }

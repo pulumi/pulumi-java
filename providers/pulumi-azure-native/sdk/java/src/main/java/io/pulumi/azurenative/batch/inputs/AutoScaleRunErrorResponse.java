@@ -15,6 +15,10 @@ public final class AutoScaleRunErrorResponse extends io.pulumi.resources.InvokeA
 
     public static final AutoScaleRunErrorResponse Empty = new AutoScaleRunErrorResponse();
 
+    /**
+     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -29,6 +33,10 @@ public final class AutoScaleRunErrorResponse extends io.pulumi.resources.InvokeA
         return this.details == null ? List.of() : this.details;
     }
 
+    /**
+     * A message describing the error, intended to be suitable for display in a user interface.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

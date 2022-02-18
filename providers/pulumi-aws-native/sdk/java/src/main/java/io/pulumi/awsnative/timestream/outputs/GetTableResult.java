@@ -16,9 +16,25 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetTableResult {
     private final @Nullable String arn;
+    /**
+     * The properties that determine whether magnetic store writes are enabled.
+     * 
+     */
     private final @Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties;
+    /**
+     * The table name exposed as a read-only attribute.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The retention duration of the memory store and the magnetic store.
+     * 
+     */
     private final @Nullable RetentionPropertiesProperties retentionProperties;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<TableTag> tags;
 
     @OutputCustomType.Constructor({"arn","magneticStoreWriteProperties","name","retentionProperties","tags"})
@@ -38,15 +54,31 @@ public final class GetTableResult {
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The properties that determine whether magnetic store writes are enabled.
+     * 
+     */
     public Optional<MagneticStoreWritePropertiesProperties> getMagneticStoreWriteProperties() {
         return Optional.ofNullable(this.magneticStoreWriteProperties);
     }
+    /**
+     * The table name exposed as a read-only attribute.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The retention duration of the memory store and the magnetic store.
+     * 
+     */
     public Optional<RetentionPropertiesProperties> getRetentionProperties() {
         return Optional.ofNullable(this.retentionProperties);
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<TableTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

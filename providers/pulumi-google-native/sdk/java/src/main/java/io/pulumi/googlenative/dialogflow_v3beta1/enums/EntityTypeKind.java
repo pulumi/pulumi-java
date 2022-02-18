@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. Indicates the kind of entity type.
+     * 
+     */
     @EnumType
     public enum EntityTypeKind {
+        /**
+         * Not specified. This value should be never used.
+         * 
+         */
         KindUnspecified("KIND_UNSPECIFIED"),
+        /**
+         * Map entity types allow mapping of a group of synonyms to a canonical value.
+         * 
+         */
         KindMap("KIND_MAP"),
+        /**
+         * List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
+         * 
+         */
         KindList("KIND_LIST"),
+        /**
+         * Regexp entity types allow to specify regular expressions in entries values.
+         * 
+         */
         KindRegexp("KIND_REGEXP");
 
         private final String value;

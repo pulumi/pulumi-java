@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * End previous overlay animation from the video. Without AnimationEnd, the overlay object will keep the state of previous animation until the end of the video.
+ * 
+ */
 public final class AnimationEndResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AnimationEndResponse Empty = new AnimationEndResponse();
 
+    /**
+     * The time to end overlay object, in seconds. Default: 0
+     * 
+     */
     @InputImport(name="startTimeOffset", required=true)
     private final String startTimeOffset;
 

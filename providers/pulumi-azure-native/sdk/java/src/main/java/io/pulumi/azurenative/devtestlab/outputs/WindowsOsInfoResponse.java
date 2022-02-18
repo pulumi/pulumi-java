@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WindowsOsInfoResponse {
+    /**
+     * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+     * 
+     */
     private final @Nullable String windowsOsState;
 
     @OutputCustomType.Constructor({"windowsOsState"})
@@ -18,6 +22,10 @@ public final class WindowsOsInfoResponse {
         this.windowsOsState = windowsOsState;
     }
 
+    /**
+     * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+     * 
+     */
     public Optional<String> getWindowsOsState() {
         return Optional.ofNullable(this.windowsOsState);
     }

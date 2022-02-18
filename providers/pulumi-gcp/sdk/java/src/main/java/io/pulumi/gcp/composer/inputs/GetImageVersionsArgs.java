@@ -14,6 +14,11 @@ public final class GetImageVersionsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetImageVersionsArgs Empty = new GetImageVersionsArgs();
 
+    /**
+     * The ID of the project to list versions in.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +26,11 @@ public final class GetImageVersionsArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The location to list versions in.
+     * If it is not provider, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 

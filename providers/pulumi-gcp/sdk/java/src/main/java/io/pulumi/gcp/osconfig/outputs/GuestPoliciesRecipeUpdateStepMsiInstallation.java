@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GuestPoliciesRecipeUpdateStepMsiInstallation {
+    /**
+     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     private final @Nullable List<Integer> allowedExitCodes;
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     private final String artifactId;
+    /**
+     * The flags to use when installing the MSI. Defaults to the install flag.
+     * 
+     */
     private final @Nullable List<String> flags;
 
     @OutputCustomType.Constructor({"allowedExitCodes","artifactId","flags"})
@@ -26,12 +38,24 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallation {
         this.flags = flags;
     }
 
+    /**
+     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? List.of() : this.allowedExitCodes;
     }
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     public String getArtifactId() {
         return this.artifactId;
     }
+    /**
+     * The flags to use when installing the MSI. Defaults to the install flag.
+     * 
+     */
     public List<String> getFlags() {
         return this.flags == null ? List.of() : this.flags;
     }

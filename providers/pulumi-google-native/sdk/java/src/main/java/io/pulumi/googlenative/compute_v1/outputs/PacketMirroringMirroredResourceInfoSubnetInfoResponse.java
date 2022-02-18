@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse {
+    /**
+     * Unique identifier for the subnetwork; defined by the server.
+     * 
+     */
     private final String canonicalUrl;
+    /**
+     * Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"canonicalUrl","url"})
@@ -20,9 +28,17 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * Unique identifier for the subnetwork; defined by the server.
+     * 
+     */
     public String getCanonicalUrl() {
         return this.canonicalUrl;
     }
+    /**
+     * Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

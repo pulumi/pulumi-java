@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRecoveryGroup {
+/**
+ * AWS Route53 Recovery Readiness Recovery Group Schema and API specifications.
+ * 
+ */
     public static CompletableFuture<GetRecoveryGroupResult> invokeAsync(GetRecoveryGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getRecoveryGroup", TypeShape.of(GetRecoveryGroupResult.class), args == null ? GetRecoveryGroupArgs.Empty : args, Utilities.withVersion(options));
     }

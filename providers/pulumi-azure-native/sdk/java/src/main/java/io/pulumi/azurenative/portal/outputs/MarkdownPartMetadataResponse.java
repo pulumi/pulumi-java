@@ -14,8 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MarkdownPartMetadataResponse {
+    /**
+     * Input to dashboard part.
+     * 
+     */
     private final @Nullable List<Object> inputs;
+    /**
+     * Markdown part settings.
+     * 
+     */
     private final @Nullable MarkdownPartMetadataResponseSettings settings;
+    /**
+     * The type of dashboard part.
+     * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"inputs","settings","type"})
@@ -28,12 +41,25 @@ public final class MarkdownPartMetadataResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Input to dashboard part.
+     * 
+     */
     public List<Object> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
+    /**
+     * Markdown part settings.
+     * 
+     */
     public Optional<MarkdownPartMetadataResponseSettings> getSettings() {
         return Optional.ofNullable(this.settings);
     }
+    /**
+     * The type of dashboard part.
+     * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

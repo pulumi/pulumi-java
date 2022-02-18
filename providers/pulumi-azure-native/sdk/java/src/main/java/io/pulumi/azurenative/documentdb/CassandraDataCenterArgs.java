@@ -15,6 +15,10 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
 
     public static final CassandraDataCenterArgs Empty = new CassandraDataCenterArgs();
 
+    /**
+     * Managed Cassandra cluster name.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -22,6 +26,10 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
         return this.clusterName;
     }
 
+    /**
+     * Data center name in a managed Cassandra cluster.
+     * 
+     */
     @InputImport(name="dataCenterName")
     private final @Nullable Input<String> dataCenterName;
 
@@ -29,6 +37,10 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
         return this.dataCenterName == null ? Input.empty() : this.dataCenterName;
     }
 
+    /**
+     * Properties of a managed Cassandra data center.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<DataCenterResourcePropertiesArgs> properties;
 
@@ -36,6 +48,10 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

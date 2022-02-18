@@ -15,6 +15,12 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
 
     public static final GuestPoliciesPackageRepositoryAptArgs Empty = new GuestPoliciesPackageRepositoryAptArgs();
 
+    /**
+     * Type of archive files in this repository. The default behavior is DEB.
+     * Default value is `DEB`.
+     * Possible values are `DEB` and `DEB_SRC`.
+     * 
+     */
     @InputImport(name="archiveType")
     private final @Nullable Input<String> archiveType;
 
@@ -22,6 +28,10 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
         return this.archiveType == null ? Input.empty() : this.archiveType;
     }
 
+    /**
+     * List of components for this repository. Must contain at least one item.
+     * 
+     */
     @InputImport(name="components", required=true)
     private final Input<List<String>> components;
 
@@ -29,6 +39,10 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
         return this.components;
     }
 
+    /**
+     * Distribution of this repository.
+     * 
+     */
     @InputImport(name="distribution", required=true)
     private final Input<String> distribution;
 
@@ -36,6 +50,11 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
         return this.distribution;
     }
 
+    /**
+     * URI of the key file for this repository. The agent maintains a keyring at
+     * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
+     * 
+     */
     @InputImport(name="gpgKey")
     private final @Nullable Input<String> gpgKey;
 
@@ -43,6 +62,10 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
         return this.gpgKey == null ? Input.empty() : this.gpgKey;
     }
 
+    /**
+     * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

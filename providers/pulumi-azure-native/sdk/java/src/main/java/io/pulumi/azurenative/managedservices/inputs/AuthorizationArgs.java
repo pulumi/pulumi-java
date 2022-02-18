@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Authorization tuple containing principal Id (of user/service principal/security group) and role definition id.
+ * 
+ */
 public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizationArgs Empty = new AuthorizationArgs();
 
+    /**
+     * The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
+     * 
+     */
     @InputImport(name="delegatedRoleDefinitionIds")
     private final @Nullable Input<List<String>> delegatedRoleDefinitionIds;
 
@@ -22,6 +30,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.delegatedRoleDefinitionIds == null ? Input.empty() : this.delegatedRoleDefinitionIds;
     }
 
+    /**
+     * Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 
@@ -29,6 +41,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalId;
     }
 
+    /**
+     * Display name of the principal Id.
+     * 
+     */
     @InputImport(name="principalIdDisplayName")
     private final @Nullable Input<String> principalIdDisplayName;
 
@@ -36,6 +52,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalIdDisplayName == null ? Input.empty() : this.principalIdDisplayName;
     }
 
+    /**
+     * The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
+     * 
+     */
     @InputImport(name="roleDefinitionId", required=true)
     private final Input<String> roleDefinitionId;
 

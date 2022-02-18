@@ -12,6 +12,10 @@ public final class GetIntegrationAccountSchemaArgs extends io.pulumi.resources.I
 
     public static final GetIntegrationAccountSchemaArgs Empty = new GetIntegrationAccountSchemaArgs();
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationAccountSchemaArgs extends io.pulumi.resources.I
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationAccountSchemaArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * The integration account schema name.
+     * 
+     */
     @InputImport(name="schemaName", required=true)
     private final String schemaName;
 

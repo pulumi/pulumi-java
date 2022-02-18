@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Properties of a registration assignment.
+ * 
+ */
 public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RegistrationAssignmentPropertiesResponse Empty = new RegistrationAssignmentPropertiesResponse();
 
+    /**
+     * Current state of the registration assignment.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -20,6 +28,10 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
         return this.provisioningState;
     }
 
+    /**
+     * Registration definition inside registration assignment.
+     * 
+     */
     @InputImport(name="registrationDefinition", required=true)
     private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
 
@@ -27,6 +39,10 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
         return this.registrationDefinition;
     }
 
+    /**
+     * Fully qualified path of the registration definition.
+     * 
+     */
     @InputImport(name="registrationDefinitionId", required=true)
     private final String registrationDefinitionId;
 

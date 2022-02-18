@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StageTag {
+    /**
+     * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:.
+     * 
+     */
     private final String key;
+    /**
+     * The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class StageTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

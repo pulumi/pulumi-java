@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TableFieldSchemaCategoriesResponse {
+    /**
+     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
+     * 
+     */
     private final List<String> names;
 
     @OutputCustomType.Constructor({"names"})
@@ -17,6 +21,10 @@ public final class TableFieldSchemaCategoriesResponse {
         this.names = Objects.requireNonNull(names);
     }
 
+    /**
+     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
+     * 
+     */
     public List<String> getNames() {
         return this.names;
     }

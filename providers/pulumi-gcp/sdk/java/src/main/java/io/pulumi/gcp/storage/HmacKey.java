@@ -13,51 +13,156 @@ import io.pulumi.gcp.storage.inputs.HmacKeyState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * The hmacKeys resource represents an HMAC key within Cloud Storage. The resource
+ * consists of a secret and HMAC key metadata. HMAC keys can be used as credentials
+ * for service accounts.
+ * 
+ * To get more information about HmacKey, see:
+ * 
+ * * [API documentation](https://cloud.google.com/storage/docs/json_api/v1/projects/hmacKeys)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/storage/docs/authentication/managing-hmackeys)
+ * 
+ * > **Warning:** All arguments including the `secret` value will be stored in the raw
+ * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
+ * On import, the `secret` value will not be retrieved.
+ * 
+ * > **Warning:** All arguments including `secret` will be stored in the raw
+ * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * HmacKey can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:storage/hmacKey:HmacKey default projects/{{project}}/hmacKeys/{{access_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:storage/hmacKey:HmacKey default {{project}}/{{access_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:storage/hmacKey:HmacKey default {{access_id}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:storage/hmacKey:HmacKey")
 public class HmacKey extends io.pulumi.resources.CustomResource {
+    /**
+     * The access ID of the HMAC Key.
+     * 
+     */
     @OutputExport(name="accessId", type=String.class, parameters={})
     private Output<String> accessId;
 
+    /**
+     * @return The access ID of the HMAC Key.
+     * 
+     */
     public Output<String> getAccessId() {
         return this.accessId;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * HMAC secret key material.
+     * 
+     */
     @OutputExport(name="secret", type=String.class, parameters={})
     private Output<String> secret;
 
+    /**
+     * @return HMAC secret key material.
+     * 
+     */
     public Output<String> getSecret() {
         return this.secret;
     }
+    /**
+     * The email address of the key's associated service account.
+     * 
+     */
     @OutputExport(name="serviceAccountEmail", type=String.class, parameters={})
     private Output<String> serviceAccountEmail;
 
+    /**
+     * @return The email address of the key's associated service account.
+     * 
+     */
     public Output<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
+    /**
+     * The state of the key. Can be set to one of ACTIVE, INACTIVE.
+     * Default value is `ACTIVE`.
+     * Possible values are `ACTIVE` and `INACTIVE`.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
+    /**
+     * @return The state of the key. Can be set to one of ACTIVE, INACTIVE.
+     * Default value is `ACTIVE`.
+     * Possible values are `ACTIVE` and `INACTIVE`.
+     * 
+     */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
+    /**
+     * 'The creation time of the HMAC key in RFC 3339 format. '
+     * 
+     */
     @OutputExport(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
+    /**
+     * @return 'The creation time of the HMAC key in RFC 3339 format. '
+     * 
+     */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
+    /**
+     * 'The last modification time of the HMAC key metadata in RFC 3339 format.'
+     * 
+     */
     @OutputExport(name="updated", type=String.class, parameters={})
     private Output<String> updated;
 
+    /**
+     * @return 'The last modification time of the HMAC key metadata in RFC 3339 format.'
+     * 
+     */
     public Output<String> getUpdated() {
         return this.updated;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public HmacKey(String name, HmacKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:storage/hmacKey:HmacKey", name, args == null ? HmacKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +178,15 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static HmacKey get(String name, Input<String> id, @Nullable HmacKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HmacKey(name, id, state, options);
     }

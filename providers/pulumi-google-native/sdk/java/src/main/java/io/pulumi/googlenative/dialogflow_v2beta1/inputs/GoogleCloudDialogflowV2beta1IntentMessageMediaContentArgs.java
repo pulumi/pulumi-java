@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The media content card for Actions on Google.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs();
 
+    /**
+     * List of media objects.
+     * 
+     */
     @InputImport(name="mediaObjects", required=true)
     private final Input<List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs ext
         return this.mediaObjects;
     }
 
+    /**
+     * Optional. What type of media is the content (ie "audio").
+     * 
+     */
     @InputImport(name="mediaType")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageMediaContentMediaType> mediaType;
 

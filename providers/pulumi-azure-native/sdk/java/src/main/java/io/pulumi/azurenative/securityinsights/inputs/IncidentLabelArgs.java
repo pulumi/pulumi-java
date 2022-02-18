@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents an incident label
+ * 
+ */
 public final class IncidentLabelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IncidentLabelArgs Empty = new IncidentLabelArgs();
 
+    /**
+     * The name of the label
+     * 
+     */
     @InputImport(name="labelName", required=true)
     private final Input<String> labelName;
 

@@ -14,6 +14,10 @@ public final class InstanceVmImageArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final InstanceVmImageArgs Empty = new InstanceVmImageArgs();
 
+    /**
+     * Use this VM image family to find the image; the newest image in this family will be used.
+     * 
+     */
     @InputImport(name="imageFamily")
     private final @Nullable Input<String> imageFamily;
 
@@ -21,6 +25,10 @@ public final class InstanceVmImageArgs extends io.pulumi.resources.ResourceArgs 
         return this.imageFamily == null ? Input.empty() : this.imageFamily;
     }
 
+    /**
+     * Use VM image name to find the image.
+     * 
+     */
     @InputImport(name="imageName")
     private final @Nullable Input<String> imageName;
 
@@ -28,6 +36,11 @@ public final class InstanceVmImageArgs extends io.pulumi.resources.ResourceArgs 
         return this.imageName == null ? Input.empty() : this.imageName;
     }
 
+    /**
+     * The name of the Google Cloud project that this VM image belongs to.
+     * Format: projects/{project_id}
+     * 
+     */
     @InputImport(name="project", required=true)
     private final Input<String> project;
 

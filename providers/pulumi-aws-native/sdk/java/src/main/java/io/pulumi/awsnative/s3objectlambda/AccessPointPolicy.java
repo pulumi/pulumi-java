@@ -13,21 +13,47 @@ import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
+ * 
+ */
 @ResourceType(type="aws-native:s3objectlambda:AccessPointPolicy")
 public class AccessPointPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+     * 
+     */
     @OutputExport(name="objectLambdaAccessPoint", type=String.class, parameters={})
     private Output<String> objectLambdaAccessPoint;
 
+    /**
+     * @return The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+     * 
+     */
     public Output<String> getObjectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
+    /**
+     * A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     @OutputExport(name="policyDocument", type=Object.class, parameters={})
     private Output<Object> policyDocument;
 
+    /**
+     * @return A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     public Output<Object> getPolicyDocument() {
         return this.policyDocument;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AccessPointPolicy(String name, AccessPointPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:s3objectlambda:AccessPointPolicy", name, args == null ? AccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -43,6 +69,14 @@ public class AccessPointPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AccessPointPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessPointPolicy(name, id, options);
     }

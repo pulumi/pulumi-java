@@ -17,6 +17,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TopicArgs Empty = new TopicArgs();
 
+    /**
+     * The resource name of the Cloud KMS CryptoKey to be used to protect access
+     * to messages published on this topic. Your project's PubSub service account
+     * (`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+     * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+     * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`
+     * 
+     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -24,6 +32,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
     }
 
+    /**
+     * A set of key/value label pairs to assign to this Topic.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -31,6 +43,16 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Indicates the minimum duration to retain a message after it is published
+     * to the topic. If this field is set, messages published to the topic in
+     * the last messageRetentionDuration are always available to subscribers.
+     * For instance, it allows any attached subscription to seek to a timestamp
+     * that is up to messageRetentionDuration in the past. If this field is not
+     * set, message retention is controlled by settings on individual subscriptions.
+     * Cannot be more than 7 days or less than 10 minutes.
+     * 
+     */
     @InputImport(name="messageRetentionDuration")
     private final @Nullable Input<String> messageRetentionDuration;
 
@@ -38,6 +60,13 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.messageRetentionDuration == null ? Input.empty() : this.messageRetentionDuration;
     }
 
+    /**
+     * Policy constraining the set of Google Cloud Platform regions where
+     * messages published to the topic may be stored. If not present, then no
+     * constraints are in effect.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="messageStoragePolicy")
     private final @Nullable Input<TopicMessageStoragePolicyArgs> messageStoragePolicy;
 
@@ -45,6 +74,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.messageStoragePolicy == null ? Input.empty() : this.messageStoragePolicy;
     }
 
+    /**
+     * Name of the topic.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +85,11 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,6 +97,11 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Settings for validating messages published against a schema.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="schemaSettings")
     private final @Nullable Input<TopicSchemaSettingsArgs> schemaSettings;
 

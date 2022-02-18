@@ -14,6 +14,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
 
     public static final OrganizationSecurityPolicyAssociationState Empty = new OrganizationSecurityPolicyAssociationState();
 
+    /**
+     * The resource that the security policy is attached to.
+     * 
+     */
     @InputImport(name="attachmentId")
     private final @Nullable Input<String> attachmentId;
 
@@ -21,6 +25,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
         return this.attachmentId == null ? Input.empty() : this.attachmentId;
     }
 
+    /**
+     * The display name of the security policy of the association.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,6 +36,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name for an association.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The security policy ID of the association.
+     * 
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 

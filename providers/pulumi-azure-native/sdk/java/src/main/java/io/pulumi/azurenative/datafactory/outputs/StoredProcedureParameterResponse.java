@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StoredProcedureParameterResponse {
+    /**
+     * Stored procedure parameter type.
+     * 
+     */
     private final @Nullable String type;
+    /**
+     * Stored procedure parameter value. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object value;
 
     @OutputCustomType.Constructor({"type","value"})
@@ -23,9 +31,17 @@ public final class StoredProcedureParameterResponse {
         this.value = value;
     }
 
+    /**
+     * Stored procedure parameter type.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+    /**
+     * Stored procedure parameter value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }

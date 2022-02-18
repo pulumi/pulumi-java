@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MethodResponse {
+    /**
+     * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+     * 
+     */
     private final @Nullable Object responseModels;
+    /**
+     * Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
+     * 
+     */
     private final @Nullable Object responseParameters;
+    /**
+     * The method response's status code, which you map to an IntegrationResponse.
+     * 
+     */
     private final String statusCode;
 
     @OutputCustomType.Constructor({"responseModels","responseParameters","statusCode"})
@@ -26,12 +38,24 @@ public final class MethodResponse {
         this.statusCode = Objects.requireNonNull(statusCode);
     }
 
+    /**
+     * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+     * 
+     */
     public Optional<Object> getResponseModels() {
         return Optional.ofNullable(this.responseModels);
     }
+    /**
+     * Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
+     * 
+     */
     public Optional<Object> getResponseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
+    /**
+     * The method response's status code, which you map to an IntegrationResponse.
+     * 
+     */
     public String getStatusCode() {
         return this.statusCode;
     }

@@ -15,6 +15,12 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintArgs extends
 
     public static final AccessLevelBasicConditionDevicePolicyOsConstraintArgs Empty = new AccessLevelBasicConditionDevicePolicyOsConstraintArgs();
 
+    /**
+     * The minimum allowed OS version. If not set, any version
+     * of this OS satisfies the constraint.
+     * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+     * 
+     */
     @InputImport(name="minimumVersion")
     private final @Nullable Input<String> minimumVersion;
 
@@ -22,6 +28,11 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintArgs extends
         return this.minimumVersion == null ? Input.empty() : this.minimumVersion;
     }
 
+    /**
+     * The operating system type of the device.
+     * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+     * 
+     */
     @InputImport(name="osType", required=true)
     private final Input<String> osType;
 
@@ -29,6 +40,10 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintArgs extends
         return this.osType;
     }
 
+    /**
+     * If you specify DESKTOP_CHROME_OS for osType, you can optionally include requireVerifiedChromeOs to require Chrome Verified Access.
+     * 
+     */
     @InputImport(name="requireVerifiedChromeOs")
     private final @Nullable Input<Boolean> requireVerifiedChromeOs;
 

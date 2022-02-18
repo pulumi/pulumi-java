@@ -8,6 +8,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * A Dynamic Adaptive Streaming over HTTP (DASH) encryption configuration.
+ * 
+ */
 public final class PackagingConfigurationDashEncryption extends io.pulumi.resources.InvokeArgs {
 
     public static final PackagingConfigurationDashEncryption Empty = new PackagingConfigurationDashEncryption();

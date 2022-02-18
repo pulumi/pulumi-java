@@ -8,10 +8,18 @@ import java.lang.Object;
 import java.util.Objects;
 
 
+/**
+ * SSIS execution parameter.
+ * 
+ */
 public final class SSISExecutionParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SSISExecutionParameterResponse Empty = new SSISExecutionParameterResponse();
 
+    /**
+     * SSIS package execution parameter value. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Object value;
 

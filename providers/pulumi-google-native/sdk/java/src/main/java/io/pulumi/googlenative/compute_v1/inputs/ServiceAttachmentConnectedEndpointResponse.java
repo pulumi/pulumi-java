@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * [Output Only] A connection connected to this service attachment.
+ * 
+ */
 public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceAttachmentConnectedEndpointResponse Empty = new ServiceAttachmentConnectedEndpointResponse();
 
+    /**
+     * The url of a connected endpoint.
+     * 
+     */
     @InputImport(name="endpoint", required=true)
     private final String endpoint;
 
@@ -19,6 +27,10 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
         return this.endpoint;
     }
 
+    /**
+     * The PSC connection id of the connected endpoint.
+     * 
+     */
     @InputImport(name="pscConnectionId", required=true)
     private final String pscConnectionId;
 
@@ -26,6 +38,10 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
         return this.pscConnectionId;
     }
 
+    /**
+     * The status of a connected endpoint to this service attachment.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

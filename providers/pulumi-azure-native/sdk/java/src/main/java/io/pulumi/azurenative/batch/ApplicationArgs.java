@@ -15,6 +15,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
+    /**
+     * The name of the Batch account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +26,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * A value indicating whether packages within the application may be overwritten using the same version string.
+     * 
+     */
     @InputImport(name="allowUpdates")
     private final @Nullable Input<Boolean> allowUpdates;
 
@@ -29,6 +37,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowUpdates == null ? Input.empty() : this.allowUpdates;
     }
 
+    /**
+     * The name of the application. This must be unique within the account.
+     * 
+     */
     @InputImport(name="applicationName")
     private final @Nullable Input<String> applicationName;
 
@@ -36,6 +48,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationName == null ? Input.empty() : this.applicationName;
     }
 
+    /**
+     * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
+     * 
+     */
     @InputImport(name="defaultVersion")
     private final @Nullable Input<String> defaultVersion;
 
@@ -43,6 +59,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
     }
 
+    /**
+     * The display name for the application.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -50,6 +70,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the resource group that contains the Batch account.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

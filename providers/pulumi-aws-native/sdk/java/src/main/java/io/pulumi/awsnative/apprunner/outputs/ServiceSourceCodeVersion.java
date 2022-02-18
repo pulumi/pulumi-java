@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceSourceCodeVersion {
+    /**
+     * Source Code Version Type
+     * 
+     */
     private final ServiceSourceCodeVersionType type;
+    /**
+     * Source Code Version Value
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"type","value"})
@@ -21,9 +29,17 @@ public final class ServiceSourceCodeVersion {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Source Code Version Type
+     * 
+     */
     public ServiceSourceCodeVersionType getType() {
         return this.type;
     }
+    /**
+     * Source Code Version Value
+     * 
+     */
     public String getValue() {
         return this.value;
     }

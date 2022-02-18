@@ -30,6 +30,10 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
         return this.members;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +41,12 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.servicedirectory.ServiceIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

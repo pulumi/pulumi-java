@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectorProfileSalesforceConnectorProfileProperties {
+    /**
+     * The location of the Salesforce resource
+     * 
+     */
     private final @Nullable String instanceUrl;
     private final @Nullable Boolean isSandboxEnvironment;
 
@@ -23,6 +27,10 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
         this.isSandboxEnvironment = isSandboxEnvironment;
     }
 
+    /**
+     * The location of the Salesforce resource
+     * 
+     */
     public Optional<String> getInstanceUrl() {
         return Optional.ofNullable(this.instanceUrl);
     }

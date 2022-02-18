@@ -8,12 +8,36 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
+     * 
+     */
     @EnumType
     public enum ImportJobProtectionLevel {
+        /**
+         * Not specified.
+         * 
+         */
         ProtectionLevelUnspecified("PROTECTION_LEVEL_UNSPECIFIED"),
+        /**
+         * Crypto operations are performed in software.
+         * 
+         */
         Software("SOFTWARE"),
+        /**
+         * Crypto operations are performed in a Hardware Security Module.
+         * 
+         */
         Hsm("HSM"),
+        /**
+         * Crypto operations are performed by an external key manager.
+         * 
+         */
         External("EXTERNAL"),
+        /**
+         * Crypto operations are performed in an EKM-over-VPC backend.
+         * 
+         */
         ExternalVpc("EXTERNAL_VPC");
 
         private final String value;

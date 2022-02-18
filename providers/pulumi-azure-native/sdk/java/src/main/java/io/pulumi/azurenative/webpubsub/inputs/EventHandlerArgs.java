@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of event handler.
+ * 
+ */
 public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventHandlerArgs Empty = new EventHandlerArgs();
 
+    /**
+     * Upstream auth settings. If not set, no auth is used for upstream messages.
+     * 
+     */
     @InputImport(name="auth")
     private final @Nullable Input<UpstreamAuthSettingsArgs> auth;
 
@@ -23,6 +31,10 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
         return this.auth == null ? Input.empty() : this.auth;
     }
 
+    /**
+     * Gets ot sets the list of system events.
+     * 
+     */
     @InputImport(name="systemEvents")
     private final @Nullable Input<List<String>> systemEvents;
 
@@ -30,6 +42,11 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
         return this.systemEvents == null ? Input.empty() : this.systemEvents;
     }
 
+    /**
+     * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
+     * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
+     * 
+     */
     @InputImport(name="urlTemplate", required=true)
     private final Input<String> urlTemplate;
 
@@ -37,6 +54,14 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
         return this.urlTemplate;
     }
 
+    /**
+     * Gets or sets the matching pattern for event names.
+     * There are 3 kind of patterns supported:
+     *     1. "*", it to matches any event name
+     *     2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
+     *     3. The single event name, for example, "event1", it matches "event1"
+     * 
+     */
     @InputImport(name="userEventPattern")
     private final @Nullable Input<String> userEventPattern;
 

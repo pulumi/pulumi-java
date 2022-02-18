@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Data used when creating a target resource from a source resource.
+ * 
+ */
 public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreationDataArgs Empty = new CreationDataArgs();
 
+    /**
+     * This is the ARM ID of the source object to be used to create the target object.
+     * 
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 

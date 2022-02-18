@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for Helm operator.
+ * 
+ */
 public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HelmOperatorPropertiesArgs Empty = new HelmOperatorPropertiesArgs();
 
+    /**
+     * Values override for the operator Helm chart.
+     * 
+     */
     @InputImport(name="chartValues")
     private final @Nullable Input<String> chartValues;
 
@@ -21,6 +29,10 @@ public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.Resour
         return this.chartValues == null ? Input.empty() : this.chartValues;
     }
 
+    /**
+     * Version of the operator Helm chart.
+     * 
+     */
     @InputImport(name="chartVersion")
     private final @Nullable Input<String> chartVersion;
 

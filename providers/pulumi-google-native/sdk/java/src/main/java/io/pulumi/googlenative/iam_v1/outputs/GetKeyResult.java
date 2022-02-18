@@ -10,15 +10,55 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetKeyResult {
+    /**
+     * The key status.
+     * 
+     */
     private final Boolean disabled;
+    /**
+     * Specifies the algorithm (and possibly key size) for the key.
+     * 
+     */
     private final String keyAlgorithm;
+    /**
+     * The key origin.
+     * 
+     */
     private final String keyOrigin;
+    /**
+     * The key type.
+     * 
+     */
     private final String keyType;
+    /**
+     * The resource name of the service account key in the following format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+     * 
+     */
     private final String name;
+    /**
+     * The private key data. Only provided in `CreateServiceAccountKey` responses. Make sure to keep the private key data secure because it allows for the assertion of the service account identity. When base64 decoded, the private key data can be used to authenticate with Google API client libraries and with gcloud auth activate-service-account.
+     * 
+     */
     private final String privateKeyData;
+    /**
+     * The output format for the private key. Only provided in `CreateServiceAccountKey` responses, not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes system-managed private keys, and never retains user-managed private keys.
+     * 
+     */
     private final String privateKeyType;
+    /**
+     * The public key data. Only provided in `GetServiceAccountKey` responses.
+     * 
+     */
     private final String publicKeyData;
+    /**
+     * The key can be used after this timestamp.
+     * 
+     */
     private final String validAfterTime;
+    /**
+     * The key can be used before this timestamp. For system-managed key pairs, this timestamp is the end time for the private key signing operation. The public key could still be used for verification for a few hours after this time.
+     * 
+     */
     private final String validBeforeTime;
 
     @OutputCustomType.Constructor({"disabled","keyAlgorithm","keyOrigin","keyType","name","privateKeyData","privateKeyType","publicKeyData","validAfterTime","validBeforeTime"})
@@ -45,33 +85,73 @@ public final class GetKeyResult {
         this.validBeforeTime = Objects.requireNonNull(validBeforeTime);
     }
 
+    /**
+     * The key status.
+     * 
+     */
     public Boolean getDisabled() {
         return this.disabled;
     }
+    /**
+     * Specifies the algorithm (and possibly key size) for the key.
+     * 
+     */
     public String getKeyAlgorithm() {
         return this.keyAlgorithm;
     }
+    /**
+     * The key origin.
+     * 
+     */
     public String getKeyOrigin() {
         return this.keyOrigin;
     }
+    /**
+     * The key type.
+     * 
+     */
     public String getKeyType() {
         return this.keyType;
     }
+    /**
+     * The resource name of the service account key in the following format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The private key data. Only provided in `CreateServiceAccountKey` responses. Make sure to keep the private key data secure because it allows for the assertion of the service account identity. When base64 decoded, the private key data can be used to authenticate with Google API client libraries and with gcloud auth activate-service-account.
+     * 
+     */
     public String getPrivateKeyData() {
         return this.privateKeyData;
     }
+    /**
+     * The output format for the private key. Only provided in `CreateServiceAccountKey` responses, not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes system-managed private keys, and never retains user-managed private keys.
+     * 
+     */
     public String getPrivateKeyType() {
         return this.privateKeyType;
     }
+    /**
+     * The public key data. Only provided in `GetServiceAccountKey` responses.
+     * 
+     */
     public String getPublicKeyData() {
         return this.publicKeyData;
     }
+    /**
+     * The key can be used after this timestamp.
+     * 
+     */
     public String getValidAfterTime() {
         return this.validAfterTime;
     }
+    /**
+     * The key can be used before this timestamp. For system-managed key pairs, this timestamp is the end time for the private key signing operation. The public key could still be used for verification for a few hours after this time.
+     * 
+     */
     public String getValidBeforeTime() {
         return this.validBeforeTime;
     }

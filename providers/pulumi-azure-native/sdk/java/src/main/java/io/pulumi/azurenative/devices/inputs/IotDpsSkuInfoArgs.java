@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * List of possible provisioning service SKUs.
+ * 
+ */
 public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IotDpsSkuInfoArgs Empty = new IotDpsSkuInfoArgs();
 
+    /**
+     * The number of units to provision
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Double> capacity;
 
@@ -24,6 +32,10 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * Sku name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,IotDpsSku>> name;
 

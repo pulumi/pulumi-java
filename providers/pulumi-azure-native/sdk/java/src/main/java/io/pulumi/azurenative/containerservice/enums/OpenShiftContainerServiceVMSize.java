@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Size of agent VMs.
+     * 
+     */
     @EnumType
     public enum OpenShiftContainerServiceVMSize {
         Standard_D2s_v3("Standard_D2s_v3"),

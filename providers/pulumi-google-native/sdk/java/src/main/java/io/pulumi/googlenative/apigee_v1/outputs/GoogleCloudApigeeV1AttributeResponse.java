@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1AttributeResponse {
+    /**
+     * API key of the attribute.
+     * 
+     */
     private final String name;
+    /**
+     * Value of the attribute.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +28,17 @@ public final class GoogleCloudApigeeV1AttributeResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * API key of the attribute.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Value of the attribute.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

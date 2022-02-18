@@ -12,6 +12,10 @@ public final class GetHookVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHookVersionArgs Empty = new GetHookVersionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

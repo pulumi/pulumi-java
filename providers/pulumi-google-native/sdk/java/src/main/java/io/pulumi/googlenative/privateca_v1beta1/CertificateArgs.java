@@ -30,6 +30,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateId == null ? Input.empty() : this.certificateId;
     }
 
+    /**
+     * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<CertificateConfigArgs> config;
 
@@ -37,6 +41,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * Optional. Labels with user-defined metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -44,6 +52,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+     * 
+     */
     @InputImport(name="lifetime", required=true)
     private final Input<String> lifetime;
 
@@ -58,6 +70,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Immutable. A pem-encoded X.509 certificate signing request (CSR).
+     * 
+     */
     @InputImport(name="pemCsr")
     private final @Nullable Input<String> pemCsr;
 

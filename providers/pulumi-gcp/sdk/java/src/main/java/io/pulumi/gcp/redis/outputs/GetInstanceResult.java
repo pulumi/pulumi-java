@@ -28,6 +28,10 @@ public final class GetInstanceResult {
     private final String currentLocationId;
     private final String displayName;
     private final String host;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final Map<String,String> labels;
     private final String locationId;
@@ -144,6 +148,10 @@ public final class GetInstanceResult {
     public String getHost() {
         return this.host;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

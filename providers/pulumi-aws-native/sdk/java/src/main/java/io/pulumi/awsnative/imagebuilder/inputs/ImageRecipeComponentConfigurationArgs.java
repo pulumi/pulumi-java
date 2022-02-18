@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration details of the component.
+ * 
+ */
 public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageRecipeComponentConfigurationArgs Empty = new ImageRecipeComponentConfigurationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the component.
+     * 
+     */
     @InputImport(name="componentArn")
     private final @Nullable Input<String> componentArn;
 
@@ -23,6 +31,10 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
         return this.componentArn == null ? Input.empty() : this.componentArn;
     }
 
+    /**
+     * A group of parameter settings that are used to configure the component for a specific recipe.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<ImageRecipeComponentParameterArgs>> parameters;
 

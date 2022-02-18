@@ -28,6 +28,10 @@ public final class GetBackendServiceBackend extends io.pulumi.resources.InvokeAr
         return this.capacityScaler;
     }
 
+    /**
+     * Textual description for the Backend Service.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 

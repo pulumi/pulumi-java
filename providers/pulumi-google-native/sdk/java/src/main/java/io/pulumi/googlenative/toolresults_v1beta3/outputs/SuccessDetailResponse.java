@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SuccessDetailResponse {
+    /**
+     * If a native process other than the app crashed.
+     * 
+     */
     private final Boolean otherNativeCrash;
 
     @OutputCustomType.Constructor({"otherNativeCrash"})
@@ -16,6 +20,10 @@ public final class SuccessDetailResponse {
         this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
     }
 
+    /**
+     * If a native process other than the app crashed.
+     * 
+     */
     public Boolean getOtherNativeCrash() {
         return this.otherNativeCrash;
     }

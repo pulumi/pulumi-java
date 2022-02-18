@@ -8,8 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of auto scaling mechanism.
+     * 
+     */
     @EnumType
     public enum AutoScalingMechanismKind {
+        /**
+         * Indicates that scaling should be performed by adding or removing replicas.
+         * 
+         */
         AddRemoveReplica("AddRemoveReplica");
 
         private final String value;

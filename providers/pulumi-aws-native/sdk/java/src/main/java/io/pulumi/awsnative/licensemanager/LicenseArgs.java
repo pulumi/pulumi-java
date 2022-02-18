@@ -20,6 +20,10 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LicenseArgs Empty = new LicenseArgs();
 
+    /**
+     * Beneficiary of the license.
+     * 
+     */
     @InputImport(name="beneficiary")
     private final @Nullable Input<String> beneficiary;
 
@@ -41,6 +45,10 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.entitlements;
     }
 
+    /**
+     * Home region for the created license.
+     * 
+     */
     @InputImport(name="homeRegion", required=true)
     private final Input<String> homeRegion;
 
@@ -62,6 +70,10 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.licenseMetadata == null ? Input.empty() : this.licenseMetadata;
     }
 
+    /**
+     * Name for the created license.
+     * 
+     */
     @InputImport(name="licenseName")
     private final @Nullable Input<String> licenseName;
 
@@ -69,6 +81,10 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.licenseName == null ? Input.empty() : this.licenseName;
     }
 
+    /**
+     * Product name for the created license.
+     * 
+     */
     @InputImport(name="productName", required=true)
     private final Input<String> productName;
 
@@ -76,6 +92,10 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.productName;
     }
 
+    /**
+     * ProductSKU of the license.
+     * 
+     */
     @InputImport(name="productSKU")
     private final @Nullable Input<String> productSKU;
 

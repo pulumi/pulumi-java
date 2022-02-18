@@ -14,6 +14,11 @@ public final class GameServerClusterConnectionInfoGetArgs extends io.pulumi.reso
 
     public static final GameServerClusterConnectionInfoGetArgs Empty = new GameServerClusterConnectionInfoGetArgs();
 
+    /**
+     * Reference of the GKE cluster where the game servers are installed.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gkeClusterReference", required=true)
     private final Input<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
 
@@ -21,6 +26,12 @@ public final class GameServerClusterConnectionInfoGetArgs extends io.pulumi.reso
         return this.gkeClusterReference;
     }
 
+    /**
+     * Namespace designated on the game server cluster where the game server
+     * instances will be created. The namespace existence will be validated
+     * during creation.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final Input<String> namespace;
 

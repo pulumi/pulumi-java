@@ -18,105 +18,256 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents Activity entity query.
+ * API Version: 2021-03-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:securityinsights:ActivityCustomEntityQuery 07da3cc8-c8ad-4710-a44e-334cdcb7882b /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/entityQueries/07da3cc8-c8ad-4710-a44e-334cdcb7882b 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:securityinsights:ActivityCustomEntityQuery")
 public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResource {
+    /**
+     * The entity query content to display in timeline
+     * 
+     */
     @OutputExport(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
+    /**
+     * @return The entity query content to display in timeline
+     * 
+     */
     public Output</* @Nullable */ String> getContent() {
         return this.content;
     }
+    /**
+     * The time the activity was created
+     * 
+     */
     @OutputExport(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
+    /**
+     * @return The time the activity was created
+     * 
+     */
     public Output<String> getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
+    /**
+     * The entity query description
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The entity query description
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Determines whether this activity is enabled or disabled.
+     * 
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
+    /**
+     * @return Determines whether this activity is enabled or disabled.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * The query applied only to entities matching to all filters
+     * 
+     */
     @OutputExport(name="entitiesFilter", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> entitiesFilter;
 
+    /**
+     * @return The query applied only to entities matching to all filters
+     * 
+     */
     public Output</* @Nullable */ Map<String,List<String>>> getEntitiesFilter() {
         return this.entitiesFilter;
     }
+    /**
+     * Etag of the azure resource
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Etag of the azure resource
+     * 
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * The type of the query's source entity
+     * 
+     */
     @OutputExport(name="inputEntityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputEntityType;
 
+    /**
+     * @return The type of the query's source entity
+     * 
+     */
     public Output</* @Nullable */ String> getInputEntityType() {
         return this.inputEntityType;
     }
+    /**
+     * The kind of the entity query
+     * Expected value is 'Activity'.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of the entity query
+     * Expected value is 'Activity'.
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The last time the activity was updated
+     * 
+     */
     @OutputExport(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
+    /**
+     * @return The last time the activity was updated
+     * 
+     */
     public Output<String> getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The Activity query definitions
+     * 
+     */
     @OutputExport(name="queryDefinitions", type=ActivityEntityQueriesPropertiesResponseQueryDefinitions.class, parameters={})
     private Output</* @Nullable */ ActivityEntityQueriesPropertiesResponseQueryDefinitions> queryDefinitions;
 
+    /**
+     * @return The Activity query definitions
+     * 
+     */
     public Output</* @Nullable */ ActivityEntityQueriesPropertiesResponseQueryDefinitions> getQueryDefinitions() {
         return this.queryDefinitions;
     }
+    /**
+     * List of the fields of the source entity that are required to run the query
+     * 
+     */
     @OutputExport(name="requiredInputFieldsSets", type=List.class, parameters={List.class})
     private Output</* @Nullable */ List<List<String>>> requiredInputFieldsSets;
 
+    /**
+     * @return List of the fields of the source entity that are required to run the query
+     * 
+     */
     public Output</* @Nullable */ List<List<String>>> getRequiredInputFieldsSets() {
         return this.requiredInputFieldsSets;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The template id this activity was created from
+     * 
+     */
     @OutputExport(name="templateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateName;
 
+    /**
+     * @return The template id this activity was created from
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateName() {
         return this.templateName;
     }
+    /**
+     * The entity query title
+     * 
+     */
     @OutputExport(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
+    /**
+     * @return The entity query title
+     * 
+     */
     public Output</* @Nullable */ String> getTitle() {
         return this.title;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ActivityCustomEntityQuery(String name, ActivityCustomEntityQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:ActivityCustomEntityQuery", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -143,6 +294,14 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ActivityCustomEntityQuery get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ActivityCustomEntityQuery(name, id, options);
     }

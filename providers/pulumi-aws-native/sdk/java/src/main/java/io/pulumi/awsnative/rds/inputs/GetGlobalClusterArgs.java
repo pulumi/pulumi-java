@@ -12,6 +12,10 @@ public final class GetGlobalClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalClusterArgs Empty = new GetGlobalClusterArgs();
 
+    /**
+     * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
+     * 
+     */
     @InputImport(name="globalClusterIdentifier", required=true)
     private final String globalClusterIdentifier;
 

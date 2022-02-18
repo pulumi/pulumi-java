@@ -12,6 +12,10 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSiteArgs Empty = new GetSiteArgs();
 
+    /**
+     * The ID of the global network.
+     * 
+     */
     @InputImport(name="globalNetworkId", required=true)
     private final String globalNetworkId;
 
@@ -19,6 +23,10 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
         return this.globalNetworkId;
     }
 
+    /**
+     * The ID of the site.
+     * 
+     */
     @InputImport(name="siteId", required=true)
     private final String siteId;
 

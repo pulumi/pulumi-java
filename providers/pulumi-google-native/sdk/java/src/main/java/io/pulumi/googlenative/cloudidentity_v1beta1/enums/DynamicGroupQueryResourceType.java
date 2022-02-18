@@ -10,7 +10,15 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum DynamicGroupQueryResourceType {
+        /**
+         * Default value (not valid)
+         * 
+         */
         ResourceTypeUnspecified("RESOURCE_TYPE_UNSPECIFIED"),
+        /**
+         * For queries on User
+         * 
+         */
         User("USER");
 
         private final String value;

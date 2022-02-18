@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProfile {
+/**
+ * Class representing a Traffic Manager profile.
+ * API Version: 2018-08-01.
+ * 
+ *
+ * Class representing a Traffic Manager profile.
+ * 
+ */
     public static CompletableFuture<GetProfileResult> invokeAsync(GetProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getProfile", TypeShape.of(GetProfileResult.class), args == null ? GetProfileArgs.Empty : args, Utilities.withVersion(options));
     }

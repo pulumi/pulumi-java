@@ -14,63 +14,198 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * An SslCertificate resource, used for HTTPS load balancing. This resource
+ * provides a mechanism to upload an SSL key and certificate to
+ * the load balancer to serve secure connections from the user.
+ * 
+ * To get more information about SslCertificate, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/sslCertificates)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/ssl-certificates)
+ * 
+ * > **Warning:** All arguments including `certificate` and `private_key` will be stored in the raw
+ * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * SslCertificate can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default projects/{{project}}/global/sslCertificates/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/sSLCertificate:SSLCertificate default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/sSLCertificate:SSLCertificate")
 public class SSLCertificate extends io.pulumi.resources.CustomResource {
+    /**
+     * The certificate in PEM format.
+     * The certificate chain must be no greater than 5 certs long.
+     * The chain must include at least one intermediate cert.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @OutputExport(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
+    /**
+     * @return The certificate in PEM format.
+     * The certificate chain must be no greater than 5 certs long.
+     * The chain must include at least one intermediate cert.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> getCertificate() {
         return this.certificate;
     }
+    /**
+     * The unique identifier for the resource.
+     * 
+     */
     @OutputExport(name="certificateId", type=Integer.class, parameters={})
     private Output<Integer> certificateId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Output<Integer> getCertificateId() {
         return this.certificateId;
     }
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Creates a unique name beginning with the
+     * specified prefix. Conflicts with `name`.
+     * 
+     */
     @OutputExport(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the
+     * specified prefix. Conflicts with `name`.
+     * 
+     */
     public Output<String> getNamePrefix() {
         return this.namePrefix;
     }
+    /**
+     * The write-only private key in PEM format.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @OutputExport(name="privateKey", type=String.class, parameters={})
     private Output<String> privateKey;
 
+    /**
+     * @return The write-only private key in PEM format.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> getPrivateKey() {
         return this.privateKey;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SSLCertificate(String name, SSLCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/sSLCertificate:SSLCertificate", name, args == null ? SSLCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -86,6 +221,15 @@ public class SSLCertificate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SSLCertificate get(String name, Input<String> id, @Nullable SSLCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SSLCertificate(name, id, state, options);
     }

@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class BotAliasLocaleSettings {
     private final @Nullable BotAliasCodeHookSpecification codeHookSpecification;
+    /**
+     * Whether the Lambda code hook is enabled
+     * 
+     */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"codeHookSpecification","enabled"})
@@ -26,6 +30,10 @@ public final class BotAliasLocaleSettings {
     public Optional<BotAliasCodeHookSpecification> getCodeHookSpecification() {
         return Optional.ofNullable(this.codeHookSpecification);
     }
+    /**
+     * Whether the Lambda code hook is enabled
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }

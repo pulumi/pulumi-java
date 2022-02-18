@@ -14,6 +14,12 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
 
     public static final JobQueryScriptOptionsGetArgs Empty = new JobQueryScriptOptionsGetArgs();
 
+    /**
+     * Determines which statement in the script represents the "key result",
+     * used to populate the schema and query results of the script job.
+     * Possible values are `LAST` and `FIRST_SELECT`.
+     * 
+     */
     @InputImport(name="keyResultStatement")
     private final @Nullable Input<String> keyResultStatement;
 
@@ -21,6 +27,10 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
         return this.keyResultStatement == null ? Input.empty() : this.keyResultStatement;
     }
 
+    /**
+     * Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
+     * 
+     */
     @InputImport(name="statementByteBudget")
     private final @Nullable Input<String> statementByteBudget;
 
@@ -28,6 +38,10 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
         return this.statementByteBudget == null ? Input.empty() : this.statementByteBudget;
     }
 
+    /**
+     * Timeout period for each statement in a script.
+     * 
+     */
     @InputImport(name="statementTimeoutMs")
     private final @Nullable Input<String> statementTimeoutMs;
 

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Filters to select target VMs for an assignment. If more than one filter criteria is specified below, a VM will be selected if and only if it satisfies all of them.
+ * 
+ */
 public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyAssignmentInstanceFilterArgs Empty = new OSPolicyAssignmentInstanceFilterArgs();
 
+    /**
+     * Target all VMs in the project. If true, no other criteria is permitted.
+     * 
+     */
     @InputImport(name="all")
     private final @Nullable Input<Boolean> all;
 
@@ -24,6 +32,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
         return this.all == null ? Input.empty() : this.all;
     }
 
+    /**
+     * List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
+     * 
+     */
     @InputImport(name="exclusionLabels")
     private final @Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
 
@@ -31,6 +43,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
         return this.exclusionLabels == null ? Input.empty() : this.exclusionLabels;
     }
 
+    /**
+     * List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
+     * 
+     */
     @InputImport(name="inclusionLabels")
     private final @Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
 
@@ -38,6 +54,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
         return this.inclusionLabels == null ? Input.empty() : this.inclusionLabels;
     }
 
+    /**
+     * List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
+     * 
+     */
     @InputImport(name="inventories")
     private final @Nullable Input<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 

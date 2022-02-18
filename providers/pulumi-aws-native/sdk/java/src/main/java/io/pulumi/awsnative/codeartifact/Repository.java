@@ -15,69 +15,159 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The resource schema to create a CodeArtifact repository.
+ * 
+ */
 @ResourceType(type="aws-native:codeartifact:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {
+    /**
+     * The ARN of the repository.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The ARN of the repository.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * A text description of the repository.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A text description of the repository.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The name of the domain that contains the repository.
+     * 
+     */
     @OutputExport(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
+    /**
+     * @return The name of the domain that contains the repository.
+     * 
+     */
     public Output<String> getDomainName() {
         return this.domainName;
     }
+    /**
+     * The 12-digit account ID of the AWS account that owns the domain.
+     * 
+     */
     @OutputExport(name="domainOwner", type=String.class, parameters={})
     private Output<String> domainOwner;
 
+    /**
+     * @return The 12-digit account ID of the AWS account that owns the domain.
+     * 
+     */
     public Output<String> getDomainOwner() {
         return this.domainOwner;
     }
+    /**
+     * A list of external connections associated with the repository.
+     * 
+     */
     @OutputExport(name="externalConnections", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> externalConnections;
 
+    /**
+     * @return A list of external connections associated with the repository.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getExternalConnections() {
         return this.externalConnections;
     }
+    /**
+     * The name of the repository. This is used for GetAtt
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the repository. This is used for GetAtt
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The access control resource policy on the provided repository.
+     * 
+     */
     @OutputExport(name="permissionsPolicyDocument", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> permissionsPolicyDocument;
 
+    /**
+     * @return The access control resource policy on the provided repository.
+     * 
+     */
     public Output</* @Nullable */ Object> getPermissionsPolicyDocument() {
         return this.permissionsPolicyDocument;
     }
+    /**
+     * The name of the repository.
+     * 
+     */
     @OutputExport(name="repositoryName", type=String.class, parameters={})
     private Output<String> repositoryName;
 
+    /**
+     * @return The name of the repository.
+     * 
+     */
     public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={RepositoryTag.class})
     private Output</* @Nullable */ List<RepositoryTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<RepositoryTag>> getTags() {
         return this.tags;
     }
+    /**
+     * A list of upstream repositories associated with the repository.
+     * 
+     */
     @OutputExport(name="upstreams", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> upstreams;
 
+    /**
+     * @return A list of upstream repositories associated with the repository.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getUpstreams() {
         return this.upstreams;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Repository(String name, @Nullable RepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:codeartifact:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +183,14 @@ public class Repository extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Repository get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Repository(name, id, options);
     }

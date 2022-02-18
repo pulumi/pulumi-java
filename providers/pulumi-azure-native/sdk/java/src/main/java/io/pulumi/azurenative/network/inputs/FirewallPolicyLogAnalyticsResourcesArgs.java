@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Log Analytics Resources for Firewall Policy Insights.
+ * 
+ */
 public final class FirewallPolicyLogAnalyticsResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyLogAnalyticsResourcesArgs Empty = new FirewallPolicyLogAnalyticsResourcesArgs();
 
+    /**
+     * The default workspace Id for Firewall Policy Insights.
+     * 
+     */
     @InputImport(name="defaultWorkspaceId")
     private final @Nullable Input<SubResourceArgs> defaultWorkspaceId;
 
@@ -23,6 +31,10 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends io.pulumi.res
         return this.defaultWorkspaceId == null ? Input.empty() : this.defaultWorkspaceId;
     }
 
+    /**
+     * List of workspaces for Firewall Policy Insights.
+     * 
+     */
     @InputImport(name="workspaces")
     private final @Nullable Input<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Azure Databricks Delta Lake source.
+ * 
+ */
 public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureDatabricksDeltaLakeSourceArgs Empty = new AzureDatabricksDeltaLakeSourceArgs();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -23,6 +31,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * Azure Databricks Delta Lake export settings.
+     * 
+     */
     @InputImport(name="exportSettings")
     private final @Nullable Input<AzureDatabricksDeltaLakeExportCommandArgs> exportSettings;
 
@@ -30,6 +42,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
         return this.exportSettings == null ? Input.empty() : this.exportSettings;
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -37,6 +53,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="query")
     private final @Nullable Input<Object> query;
 
@@ -44,6 +64,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
         return this.query == null ? Input.empty() : this.query;
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -51,6 +75,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -58,6 +86,11 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends io.pulumi.resource
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
+    /**
+     * Copy source type.
+     * Expected value is 'AzureDatabricksDeltaLakeSource'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the import pipeline source.
+ * 
+ */
 public final class ImportPipelineSourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImportPipelineSourcePropertiesResponse Empty = new ImportPipelineSourcePropertiesResponse();
 
+    /**
+     * They key vault secret uri to obtain the source storage SAS token.
+     * 
+     */
     @InputImport(name="keyVaultUri", required=true)
     private final String keyVaultUri;
 
@@ -21,6 +29,10 @@ public final class ImportPipelineSourcePropertiesResponse extends io.pulumi.reso
         return this.keyVaultUri;
     }
 
+    /**
+     * The type of source for the import pipeline.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -28,6 +40,12 @@ public final class ImportPipelineSourcePropertiesResponse extends io.pulumi.reso
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The source uri of the import pipeline.
+     * When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
+     * When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
+     * 
+     */
     @InputImport(name="uri")
     private final @Nullable String uri;
 

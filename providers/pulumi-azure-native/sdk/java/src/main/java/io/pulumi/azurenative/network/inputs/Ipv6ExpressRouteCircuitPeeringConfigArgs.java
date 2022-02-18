@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains IPv6 peering config.
+ * 
+ */
 public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Ipv6ExpressRouteCircuitPeeringConfigArgs Empty = new Ipv6ExpressRouteCircuitPeeringConfigArgs();
 
+    /**
+     * The Microsoft peering configuration.
+     * 
+     */
     @InputImport(name="microsoftPeeringConfig")
     private final @Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
@@ -25,6 +33,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
         return this.microsoftPeeringConfig == null ? Input.empty() : this.microsoftPeeringConfig;
     }
 
+    /**
+     * The primary address prefix.
+     * 
+     */
     @InputImport(name="primaryPeerAddressPrefix")
     private final @Nullable Input<String> primaryPeerAddressPrefix;
 
@@ -32,6 +44,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
         return this.primaryPeerAddressPrefix == null ? Input.empty() : this.primaryPeerAddressPrefix;
     }
 
+    /**
+     * The reference to the RouteFilter resource.
+     * 
+     */
     @InputImport(name="routeFilter")
     private final @Nullable Input<SubResourceArgs> routeFilter;
 
@@ -39,6 +55,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
         return this.routeFilter == null ? Input.empty() : this.routeFilter;
     }
 
+    /**
+     * The secondary address prefix.
+     * 
+     */
     @InputImport(name="secondaryPeerAddressPrefix")
     private final @Nullable Input<String> secondaryPeerAddressPrefix;
 
@@ -46,6 +66,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
         return this.secondaryPeerAddressPrefix == null ? Input.empty() : this.secondaryPeerAddressPrefix;
     }
 
+    /**
+     * The state of peering.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,ExpressRouteCircuitPeeringState>> state;
 

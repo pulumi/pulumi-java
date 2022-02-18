@@ -12,10 +12,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetJobResult {
+    /**
+     * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources +optional
+     * 
+     */
     private final String apiVersion;
+    /**
+     * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds +optional
+     * 
+     */
     private final String kind;
+    /**
+     * Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+     * 
+     */
     private final ObjectMetaResponse metadata;
+    /**
+     * Optional. Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+     * 
+     */
     private final JobSpecResponse spec;
+    /**
+     * Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+     * 
+     */
     private final JobStatusResponse status;
 
     @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
@@ -32,18 +52,38 @@ public final class GetJobResult {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources +optional
+     * 
+     */
     public String getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds +optional
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+     * 
+     */
     public ObjectMetaResponse getMetadata() {
         return this.metadata;
     }
+    /**
+     * Optional. Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+     * 
+     */
     public JobSpecResponse getSpec() {
         return this.spec;
     }
+    /**
+     * Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+     * 
+     */
     public JobStatusResponse getStatus() {
         return this.status;
     }

@@ -16,6 +16,10 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
 
     public static final AccountAuditConfigurationArgs Empty = new AccountAuditConfigurationArgs();
 
+    /**
+     * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 
@@ -37,6 +41,10 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
         return this.auditNotificationTargetConfigurations == null ? Input.empty() : this.auditNotificationTargetConfigurations;
     }
 
+    /**
+     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 

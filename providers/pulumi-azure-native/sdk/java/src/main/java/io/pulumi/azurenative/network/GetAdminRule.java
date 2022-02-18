@@ -14,6 +14,18 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: AdminRule, DefaultAdminRule. */
 public class GetAdminRule {
+/**
+ * Network base admin rule.
+ * API Version: 2021-02-01-preview.
+ * 
+ *
+ * Network base admin rule.
+ * 
+ * @deprecated
+ * Please use one of the variants: AdminRule, DefaultAdminRule.
+ * 
+ */
+    @Deprecated /* Please use one of the variants: AdminRule, DefaultAdminRule. */
     public static CompletableFuture<GetAdminRuleResult> invokeAsync(GetAdminRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getAdminRule", TypeShape.of(GetAdminRuleResult.class), args == null ? GetAdminRuleArgs.Empty : args, Utilities.withVersion(options));
     }

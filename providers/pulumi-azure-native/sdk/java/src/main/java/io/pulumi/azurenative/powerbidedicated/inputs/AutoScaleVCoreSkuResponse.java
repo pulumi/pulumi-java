@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the SKU name and Azure pricing tier for auto scale v-core resource.
+ * 
+ */
 public final class AutoScaleVCoreSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoScaleVCoreSkuResponse Empty = new AutoScaleVCoreSkuResponse();
 
+    /**
+     * The capacity of an auto scale v-core resource.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -22,6 +30,10 @@ public final class AutoScaleVCoreSkuResponse extends io.pulumi.resources.InvokeA
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * Name of the SKU level.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -29,6 +41,10 @@ public final class AutoScaleVCoreSkuResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * The name of the Azure pricing tier to which the SKU applies.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

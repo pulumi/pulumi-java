@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A list of iOS device configurations in which the test is to be executed.
+ * 
+ */
 public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IosDeviceListArgs Empty = new IosDeviceListArgs();
 
+    /**
+     * A list of iOS devices.
+     * 
+     */
     @InputImport(name="iosDevices", required=true)
     private final Input<List<IosDeviceArgs>> iosDevices;
 

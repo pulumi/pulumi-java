@@ -8,14 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The part of the time to keep.
+     * 
+     */
     @EnumType
     public enum GooglePrivacyDlpV2TimePartConfigPartToExtract {
+        /**
+         * Unused
+         * 
+         */
         TimePartUnspecified("TIME_PART_UNSPECIFIED"),
+        /**
+         * [0-9999]
+         * 
+         */
         Year("YEAR"),
+        /**
+         * [1-12]
+         * 
+         */
         Month("MONTH"),
+        /**
+         * [1-31]
+         * 
+         */
         DayOfMonth("DAY_OF_MONTH"),
+        /**
+         * [1-7]
+         * 
+         */
         DayOfWeek("DAY_OF_WEEK"),
+        /**
+         * [1-53]
+         * 
+         */
         WeekOfYear("WEEK_OF_YEAR"),
+        /**
+         * [0-23]
+         * 
+         */
         HourOfDay("HOUR_OF_DAY");
 
         private final String value;

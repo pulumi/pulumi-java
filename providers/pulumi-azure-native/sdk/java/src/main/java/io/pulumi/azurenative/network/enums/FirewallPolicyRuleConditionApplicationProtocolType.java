@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Protocol type.
+     * 
+     */
     @EnumType
     public enum FirewallPolicyRuleConditionApplicationProtocolType {
         Http("Http"),

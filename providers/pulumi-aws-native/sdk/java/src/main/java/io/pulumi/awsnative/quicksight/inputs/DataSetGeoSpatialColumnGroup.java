@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Geospatial column group that denotes a hierarchy.</p>
+ * 
+ */
 public final class DataSetGeoSpatialColumnGroup extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSetGeoSpatialColumnGroup Empty = new DataSetGeoSpatialColumnGroup();
 
+    /**
+     * <p>Columns in this hierarchy.</p>
+     * 
+     */
     @InputImport(name="columns", required=true)
     private final List<String> columns;
 
@@ -30,6 +38,10 @@ public final class DataSetGeoSpatialColumnGroup extends io.pulumi.resources.Invo
         return this.countryCode == null ? Optional.empty() : Optional.ofNullable(this.countryCode);
     }
 
+    /**
+     * <p>A display name for the hierarchy.</p>
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

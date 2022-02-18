@@ -14,6 +14,10 @@ public final class ResolverDNSSECConfigArgs extends io.pulumi.resources.Resource
 
     public static final ResolverDNSSECConfigArgs Empty = new ResolverDNSSECConfigArgs();
 
+    /**
+     * ResourceId
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

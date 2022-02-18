@@ -12,6 +12,10 @@ public final class GetSchemaArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSchemaArgs Empty = new GetSchemaArgs();
 
+    /**
+     * Amazon Resource Name for the Schema.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

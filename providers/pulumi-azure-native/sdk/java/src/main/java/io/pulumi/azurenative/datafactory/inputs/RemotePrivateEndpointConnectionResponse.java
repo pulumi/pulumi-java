@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A remote private endpoint connection
+ * 
+ */
 public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RemotePrivateEndpointConnectionResponse Empty = new RemotePrivateEndpointConnectionResponse();
 
+    /**
+     * PrivateEndpoint of a remote private endpoint connection
+     * 
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable ArmIdWrapperResponse privateEndpoint;
 
@@ -23,6 +31,10 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
+    /**
+     * The state of a private link connection
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 

@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceGroupNamedPort {
+    /**
+     * The name of the instance group. Either `name` or `self_link` must be provided.
+     * 
+     */
     private final String name;
     private final Integer port;
 
@@ -21,6 +25,10 @@ public final class GetInstanceGroupNamedPort {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * The name of the instance group. Either `name` or `self_link` must be provided.
+     * 
+     */
     public String getName() {
         return this.name;
     }

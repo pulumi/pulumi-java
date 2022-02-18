@@ -16,6 +16,10 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
 
     public static final EnterpriseKeyIosSettingsArgs Empty = new EnterpriseKeyIosSettingsArgs();
 
+    /**
+     * If set to true, it means allowed_bundle_ids will not be enforced.
+     * 
+     */
     @InputImport(name="allowAllBundleIds")
     private final @Nullable Input<Boolean> allowAllBundleIds;
 
@@ -23,6 +27,10 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
         return this.allowAllBundleIds == null ? Input.empty() : this.allowAllBundleIds;
     }
 
+    /**
+     * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+     * 
+     */
     @InputImport(name="allowedBundleIds")
     private final @Nullable Input<List<String>> allowedBundleIds;
 

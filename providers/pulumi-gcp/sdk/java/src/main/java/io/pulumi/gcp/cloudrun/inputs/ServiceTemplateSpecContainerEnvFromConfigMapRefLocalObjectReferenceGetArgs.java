@@ -13,6 +13,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
 
     public static final ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs Empty = new ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs();
 
+    /**
+     * Volume's name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -16,6 +16,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
 
     public static final DatabaseInstanceReplicaConfigurationGetArgs Empty = new DatabaseInstanceReplicaConfigurationGetArgs();
 
+    /**
+     * PEM representation of the trusted CA's x509
+     * certificate.
+     * 
+     */
     @InputImport(name="caCertificate")
     private final @Nullable Input<String> caCertificate;
 
@@ -23,6 +28,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.caCertificate == null ? Input.empty() : this.caCertificate;
     }
 
+    /**
+     * PEM representation of the replica's x509
+     * certificate.
+     * 
+     */
     @InputImport(name="clientCertificate")
     private final @Nullable Input<String> clientCertificate;
 
@@ -30,6 +40,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
     }
 
+    /**
+     * PEM representation of the replica's private key. The
+     * corresponding public key in encoded in the `client_certificate`.
+     * 
+     */
     @InputImport(name="clientKey")
     private final @Nullable Input<String> clientKey;
 
@@ -37,6 +52,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.clientKey == null ? Input.empty() : this.clientKey;
     }
 
+    /**
+     * The number of seconds
+     * between connect retries.
+     * 
+     */
     @InputImport(name="connectRetryInterval")
     private final @Nullable Input<Integer> connectRetryInterval;
 
@@ -44,6 +64,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.connectRetryInterval == null ? Input.empty() : this.connectRetryInterval;
     }
 
+    /**
+     * Path to a SQL file in GCS from which replica
+     * instances are created. Format is `gs://bucket/filename`.
+     * 
+     */
     @InputImport(name="dumpFilePath")
     private final @Nullable Input<String> dumpFilePath;
 
@@ -51,6 +76,13 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.dumpFilePath == null ? Input.empty() : this.dumpFilePath;
     }
 
+    /**
+     * Specifies if the replica is the failover target.
+     * If the field is set to true the replica will be designated as a failover replica.
+     * If the master instance fails, the replica instance will be promoted as
+     * the new master instance.
+     * 
+     */
     @InputImport(name="failoverTarget")
     private final @Nullable Input<Boolean> failoverTarget;
 
@@ -58,6 +90,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.failoverTarget == null ? Input.empty() : this.failoverTarget;
     }
 
+    /**
+     * Time in ms between replication
+     * heartbeats.
+     * 
+     */
     @InputImport(name="masterHeartbeatPeriod")
     private final @Nullable Input<Integer> masterHeartbeatPeriod;
 
@@ -65,6 +102,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.masterHeartbeatPeriod == null ? Input.empty() : this.masterHeartbeatPeriod;
     }
 
+    /**
+     * Password for the replication connection.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -79,6 +120,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.sslCipher == null ? Input.empty() : this.sslCipher;
     }
 
+    /**
+     * Username for replication connection.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 
@@ -86,6 +131,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
         return this.username == null ? Input.empty() : this.username;
     }
 
+    /**
+     * True if the master's common name
+     * value is checked during the SSL handshake.
+     * 
+     */
     @InputImport(name="verifyServerCertificate")
     private final @Nullable Input<Boolean> verifyServerCertificate;
 

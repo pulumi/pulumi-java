@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The on-premises Oracle database dataset.
+ * 
+ */
 public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleTableDatasetArgs Empty = new OracleTableDatasetArgs();
 
+    /**
+     * List of tags that can be used for describing the Dataset.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -27,6 +35,10 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Dataset description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -34,6 +46,10 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     @InputImport(name="folder")
     private final @Nullable Input<DatasetFolderArgs> folder;
 
@@ -41,6 +57,10 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.folder == null ? Input.empty() : this.folder;
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -48,6 +68,10 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.linkedServiceName;
     }
 
+    /**
+     * Parameters for dataset.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -55,6 +79,10 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     @InputImport(name="schema")
     private final @Nullable Input<Object> schema;
 
@@ -62,6 +90,10 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     @InputImport(name="structure")
     private final @Nullable Input<Object> structure;
 
@@ -69,6 +101,10 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.structure == null ? Input.empty() : this.structure;
     }
 
+    /**
+     * The table name of the on-premises Oracle database. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="table")
     private final @Nullable Input<Object> table;
 
@@ -76,6 +112,10 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.table == null ? Input.empty() : this.table;
     }
 
+    /**
+     * This property will be retired. Please consider using schema + table properties instead.
+     * 
+     */
     @InputImport(name="tableName")
     private final @Nullable Input<Object> tableName;
 
@@ -83,6 +123,11 @@ public final class OracleTableDatasetArgs extends io.pulumi.resources.ResourceAr
         return this.tableName == null ? Input.empty() : this.tableName;
     }
 
+    /**
+     * Type of dataset.
+     * Expected value is 'OracleTable'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

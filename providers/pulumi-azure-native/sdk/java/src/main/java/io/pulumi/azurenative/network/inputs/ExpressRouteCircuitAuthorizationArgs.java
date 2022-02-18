@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Authorization in an ExpressRouteCircuit resource.
+ * 
+ */
 public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressRouteCircuitAuthorizationArgs Empty = new ExpressRouteCircuitAuthorizationArgs();
 
+    /**
+     * The authorization key.
+     * 
+     */
     @InputImport(name="authorizationKey")
     private final @Nullable Input<String> authorizationKey;
 
@@ -23,6 +31,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
     }
 
+    /**
+     * The authorization use status.
+     * 
+     */
     @InputImport(name="authorizationUseStatus")
     private final @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
@@ -30,6 +42,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.authorizationUseStatus == null ? Input.empty() : this.authorizationUseStatus;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -37,6 +53,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

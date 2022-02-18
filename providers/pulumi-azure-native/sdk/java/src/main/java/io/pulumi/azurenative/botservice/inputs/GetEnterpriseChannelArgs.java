@@ -12,6 +12,10 @@ public final class GetEnterpriseChannelArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetEnterpriseChannelArgs Empty = new GetEnterpriseChannelArgs();
 
+    /**
+     * The name of the Bot resource group in the user subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetEnterpriseChannelArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Bot resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

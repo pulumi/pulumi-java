@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
+    /**
+     * The Secret Access Key portion of the credentials.
+     * 
+     */
     private final String apiSecretKey;
 
     @OutputCustomType.Constructor({"apiSecretKey"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
         this.apiSecretKey = Objects.requireNonNull(apiSecretKey);
     }
 
+    /**
+     * The Secret Access Key portion of the credentials.
+     * 
+     */
     public String getApiSecretKey() {
         return this.apiSecretKey;
     }

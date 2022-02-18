@@ -16,13 +16,21 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 
-    @InputImport(name="appendUserAgent", json=true)
+    /**
+     * Additional user-agent string to append to the default one (<prod_name>/<ver>).
+     * 
+     */
+    @InputImport(name="appendUserAgent")
     private final @Nullable Input<String> appendUserAgent;
 
     public Input<String> getAppendUserAgent() {
         return this.appendUserAgent == null ? Input.empty() : this.appendUserAgent;
     }
 
+    /**
+     * This will disable the Pulumi Partner Name which is used if a custom `partnerName` isn't specified.
+     * 
+     */
     @InputImport(name="disablePartnerName", json=true)
     private final @Nullable Input<Boolean> disablePartnerName;
 
@@ -30,28 +38,44 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.disablePartnerName == null ? Input.empty() : this.disablePartnerName;
     }
 
-    @InputImport(name="partnerName", json=true)
+    /**
+     * A Google Partner Name to facilitate partner resource usage attribution.
+     * 
+     */
+    @InputImport(name="partnerName")
     private final @Nullable Input<String> partnerName;
 
     public Input<String> getPartnerName() {
         return this.partnerName == null ? Input.empty() : this.partnerName;
     }
 
-    @InputImport(name="project", json=true)
+    /**
+     * The default project to manage resources in. If another project is specified on a resource, it will take precedence.
+     * 
+     */
+    @InputImport(name="project")
     private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    @InputImport(name="region", json=true)
+    /**
+     * The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
+     * 
+     */
+    @InputImport(name="region")
     private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
-    @InputImport(name="zone", json=true)
+    /**
+     * The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
+     * 
+     */
+    @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {

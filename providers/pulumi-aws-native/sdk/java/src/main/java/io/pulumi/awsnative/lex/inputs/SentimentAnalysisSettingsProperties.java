@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+ * 
+ */
 public final class SentimentAnalysisSettingsProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final SentimentAnalysisSettingsProperties Empty = new SentimentAnalysisSettingsProperties();
 
+    /**
+     * Enable to call Amazon Comprehend for Sentiment natively within Lex
+     * 
+     */
     @InputImport(name="detectSentiment", required=true)
     private final Boolean detectSentiment;
 

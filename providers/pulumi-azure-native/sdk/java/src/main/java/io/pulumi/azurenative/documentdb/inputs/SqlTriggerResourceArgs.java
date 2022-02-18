@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cosmos DB SQL trigger resource object
+ * 
+ */
 public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlTriggerResourceArgs Empty = new SqlTriggerResourceArgs();
 
+    /**
+     * Body of the Trigger
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable Input<String> body;
 
@@ -24,6 +32,10 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * Name of the Cosmos DB SQL trigger
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -31,6 +43,10 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
         return this.id;
     }
 
+    /**
+     * The operation the trigger is associated with
+     * 
+     */
     @InputImport(name="triggerOperation")
     private final @Nullable Input<Either<String,TriggerOperation>> triggerOperation;
 
@@ -38,6 +54,10 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
         return this.triggerOperation == null ? Input.empty() : this.triggerOperation;
     }
 
+    /**
+     * Type of the Trigger
+     * 
+     */
     @InputImport(name="triggerType")
     private final @Nullable Input<Either<String,TriggerType>> triggerType;
 

@@ -12,7 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServicePerimeterStatusEgressPolicy {
+    /**
+     * Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServicePerimeterStatusEgressPolicyEgressFrom egressFrom;
+    /**
+     * Defines the conditions on the `ApiOperation` and destination resources that
+     * cause this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ServicePerimeterStatusEgressPolicyEgressTo egressTo;
 
     @OutputCustomType.Constructor({"egressFrom","egressTo"})
@@ -23,9 +34,20 @@ public final class ServicePerimeterStatusEgressPolicy {
         this.egressTo = egressTo;
     }
 
+    /**
+     * Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServicePerimeterStatusEgressPolicyEgressFrom> getEgressFrom() {
         return Optional.ofNullable(this.egressFrom);
     }
+    /**
+     * Defines the conditions on the `ApiOperation` and destination resources that
+     * cause this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ServicePerimeterStatusEgressPolicyEgressTo> getEgressTo() {
         return Optional.ofNullable(this.egressTo);
     }

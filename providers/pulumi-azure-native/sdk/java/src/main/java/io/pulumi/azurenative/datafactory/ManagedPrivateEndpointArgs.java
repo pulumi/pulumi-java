@@ -14,6 +14,10 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
 
     public static final ManagedPrivateEndpointArgs Empty = new ManagedPrivateEndpointArgs();
 
+    /**
+     * The factory name.
+     * 
+     */
     @InputImport(name="factoryName", required=true)
     private final Input<String> factoryName;
 
@@ -21,6 +25,10 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.factoryName;
     }
 
+    /**
+     * Managed private endpoint name
+     * 
+     */
     @InputImport(name="managedPrivateEndpointName")
     private final @Nullable Input<String> managedPrivateEndpointName;
 
@@ -28,6 +36,10 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.managedPrivateEndpointName == null ? Input.empty() : this.managedPrivateEndpointName;
     }
 
+    /**
+     * Managed virtual network name
+     * 
+     */
     @InputImport(name="managedVirtualNetworkName", required=true)
     private final Input<String> managedVirtualNetworkName;
 
@@ -35,6 +47,10 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.managedVirtualNetworkName;
     }
 
+    /**
+     * Managed private endpoint properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
 
@@ -42,6 +58,10 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.properties;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

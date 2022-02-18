@@ -15,27 +15,72 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Default rollout definition.
+ * API Version: 2020-11-20.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:providerhub:DefaultRollout Microsoft.Contoso/2020week10 /subscriptions/ab7a8701-f7ef-471a-a2f4-d0ebbf494f77providers/Microsoft.ProviderHub/providerRegistrations/Microsoft.Contoso/defaultRollouts/2020week10 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:providerhub:DefaultRollout")
 public class DefaultRollout extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of the rollout.
+     * 
+     */
     @OutputExport(name="properties", type=DefaultRolloutResponseProperties.class, parameters={})
     private Output<DefaultRolloutResponseProperties> properties;
 
+    /**
+     * @return Properties of the rollout.
+     * 
+     */
     public Output<DefaultRolloutResponseProperties> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DefaultRollout(String name, DefaultRolloutArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:providerhub:DefaultRollout", name, args == null ? DefaultRolloutArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +102,14 @@ public class DefaultRollout extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DefaultRollout get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DefaultRollout(name, id, options);
     }

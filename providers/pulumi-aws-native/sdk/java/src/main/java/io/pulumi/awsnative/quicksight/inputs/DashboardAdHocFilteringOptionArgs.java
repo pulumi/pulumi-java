@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Ad hoc (one-time) filtering option.</p>
+ * 
+ */
 public final class DashboardAdHocFilteringOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardAdHocFilteringOptionArgs Empty = new DashboardAdHocFilteringOptionArgs();

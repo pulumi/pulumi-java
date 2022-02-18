@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2DateShiftConfigResponse {
+    /**
+     * Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
+     * 
+     */
     private final GooglePrivacyDlpV2FieldIdResponse context;
+    /**
+     * Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
+     * 
+     */
     private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+    /**
+     * For example, -5 means shift date to at most 5 days back in the past.
+     * 
+     */
     private final Integer lowerBoundDays;
+    /**
+     * Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
+     * 
+     */
     private final Integer upperBoundDays;
 
     @OutputCustomType.Constructor({"context","cryptoKey","lowerBoundDays","upperBoundDays"})
@@ -28,15 +44,31 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
         this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
     }
 
+    /**
+     * Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse getContext() {
         return this.context;
     }
+    /**
+     * Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
+     * 
+     */
     public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
         return this.cryptoKey;
     }
+    /**
+     * For example, -5 means shift date to at most 5 days back in the past.
+     * 
+     */
     public Integer getLowerBoundDays() {
         return this.lowerBoundDays;
     }
+    /**
+     * Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
+     * 
+     */
     public Integer getUpperBoundDays() {
         return this.upperBoundDays;
     }

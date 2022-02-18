@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the access location for a blob.
+ * 
+ */
 public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobLocationArgs Empty = new BlobLocationArgs();
 
+    /**
+     * Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
+     * 
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<String> credentials;
 
@@ -21,6 +29,10 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

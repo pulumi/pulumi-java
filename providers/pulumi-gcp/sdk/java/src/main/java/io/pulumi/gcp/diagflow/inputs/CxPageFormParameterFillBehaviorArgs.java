@@ -14,6 +14,11 @@ public final class CxPageFormParameterFillBehaviorArgs extends io.pulumi.resourc
 
     public static final CxPageFormParameterFillBehaviorArgs Empty = new CxPageFormParameterFillBehaviorArgs();
 
+    /**
+     * The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="initialPromptFulfillment")
     private final @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs> initialPromptFulfillment;
 

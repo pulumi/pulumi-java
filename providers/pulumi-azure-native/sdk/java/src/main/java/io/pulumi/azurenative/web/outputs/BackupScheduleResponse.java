@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackupScheduleResponse {
+    /**
+     * How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
+     * 
+     */
     private final Integer frequencyInterval;
+    /**
+     * The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
+     * 
+     */
     private final String frequencyUnit;
+    /**
+     * True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
+     * 
+     */
     private final Boolean keepAtLeastOneBackup;
+    /**
+     * Last time when this schedule was triggered.
+     * 
+     */
     private final String lastExecutionTime;
+    /**
+     * After how many days backups should be deleted.
+     * 
+     */
     private final Integer retentionPeriodInDays;
+    /**
+     * When the schedule should start working.
+     * 
+     */
     private final @Nullable String startTime;
 
     @OutputCustomType.Constructor({"frequencyInterval","frequencyUnit","keepAtLeastOneBackup","lastExecutionTime","retentionPeriodInDays","startTime"})
@@ -36,21 +60,45 @@ public final class BackupScheduleResponse {
         this.startTime = startTime;
     }
 
+    /**
+     * How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
+     * 
+     */
     public Integer getFrequencyInterval() {
         return this.frequencyInterval;
     }
+    /**
+     * The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
+     * 
+     */
     public String getFrequencyUnit() {
         return this.frequencyUnit;
     }
+    /**
+     * True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
+     * 
+     */
     public Boolean getKeepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
+    /**
+     * Last time when this schedule was triggered.
+     * 
+     */
     public String getLastExecutionTime() {
         return this.lastExecutionTime;
     }
+    /**
+     * After how many days backups should be deleted.
+     * 
+     */
     public Integer getRetentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
+    /**
+     * When the schedule should start working.
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

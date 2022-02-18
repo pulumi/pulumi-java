@@ -26,6 +26,12 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::DataBrew::Job.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:databrew:Job")
 public class Job extends io.pulumi.resources.CustomResource {
     @OutputExport(name="dataCatalogOutputs", type=List.class, parameters={JobDataCatalogOutput.class})
@@ -40,57 +46,129 @@ public class Job extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<JobDatabaseOutput>> getDatabaseOutputs() {
         return this.databaseOutputs;
     }
+    /**
+     * Dataset name
+     * 
+     */
     @OutputExport(name="datasetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datasetName;
 
+    /**
+     * @return Dataset name
+     * 
+     */
     public Output</* @Nullable */ String> getDatasetName() {
         return this.datasetName;
     }
+    /**
+     * Encryption Key Arn
+     * 
+     */
     @OutputExport(name="encryptionKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyArn;
 
+    /**
+     * @return Encryption Key Arn
+     * 
+     */
     public Output</* @Nullable */ String> getEncryptionKeyArn() {
         return this.encryptionKeyArn;
     }
+    /**
+     * Encryption mode
+     * 
+     */
     @OutputExport(name="encryptionMode", type=JobEncryptionMode.class, parameters={})
     private Output</* @Nullable */ JobEncryptionMode> encryptionMode;
 
+    /**
+     * @return Encryption mode
+     * 
+     */
     public Output</* @Nullable */ JobEncryptionMode> getEncryptionMode() {
         return this.encryptionMode;
     }
+    /**
+     * Job Sample
+     * 
+     */
     @OutputExport(name="jobSample", type=JobSample.class, parameters={})
     private Output</* @Nullable */ JobSample> jobSample;
 
+    /**
+     * @return Job Sample
+     * 
+     */
     public Output</* @Nullable */ JobSample> getJobSample() {
         return this.jobSample;
     }
+    /**
+     * Log subscription
+     * 
+     */
     @OutputExport(name="logSubscription", type=JobLogSubscription.class, parameters={})
     private Output</* @Nullable */ JobLogSubscription> logSubscription;
 
+    /**
+     * @return Log subscription
+     * 
+     */
     public Output</* @Nullable */ JobLogSubscription> getLogSubscription() {
         return this.logSubscription;
     }
+    /**
+     * Max capacity
+     * 
+     */
     @OutputExport(name="maxCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxCapacity;
 
+    /**
+     * @return Max capacity
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaxCapacity() {
         return this.maxCapacity;
     }
+    /**
+     * Max retries
+     * 
+     */
     @OutputExport(name="maxRetries", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxRetries;
 
+    /**
+     * @return Max retries
+     * 
+     */
     public Output</* @Nullable */ Integer> getMaxRetries() {
         return this.maxRetries;
     }
+    /**
+     * Job name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Job name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Output location
+     * 
+     */
     @OutputExport(name="outputLocation", type=JobOutputLocation.class, parameters={})
     private Output</* @Nullable */ JobOutputLocation> outputLocation;
 
+    /**
+     * @return Output location
+     * 
+     */
     public Output</* @Nullable */ JobOutputLocation> getOutputLocation() {
         return this.outputLocation;
     }
@@ -100,15 +178,31 @@ public class Job extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<JobOutput>> getOutputs() {
         return this.outputs;
     }
+    /**
+     * Profile Job configuration
+     * 
+     */
     @OutputExport(name="profileConfiguration", type=JobProfileConfiguration.class, parameters={})
     private Output</* @Nullable */ JobProfileConfiguration> profileConfiguration;
 
+    /**
+     * @return Profile Job configuration
+     * 
+     */
     public Output</* @Nullable */ JobProfileConfiguration> getProfileConfiguration() {
         return this.profileConfiguration;
     }
+    /**
+     * Project name
+     * 
+     */
     @OutputExport(name="projectName", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectName;
 
+    /**
+     * @return Project name
+     * 
+     */
     public Output</* @Nullable */ String> getProjectName() {
         return this.projectName;
     }
@@ -118,9 +212,17 @@ public class Job extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ JobRecipe> getRecipe() {
         return this.recipe;
     }
+    /**
+     * Role arn
+     * 
+     */
     @OutputExport(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
+    /**
+     * @return Role arn
+     * 
+     */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
@@ -130,25 +232,55 @@ public class Job extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<JobTag>> getTags() {
         return this.tags;
     }
+    /**
+     * Timeout
+     * 
+     */
     @OutputExport(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
+    /**
+     * @return Timeout
+     * 
+     */
     public Output</* @Nullable */ Integer> getTimeout() {
         return this.timeout;
     }
+    /**
+     * Job type
+     * 
+     */
     @OutputExport(name="type", type=JobType.class, parameters={})
     private Output<JobType> type;
 
+    /**
+     * @return Job type
+     * 
+     */
     public Output<JobType> getType() {
         return this.type;
     }
+    /**
+     * Data quality rules configuration
+     * 
+     */
     @OutputExport(name="validationConfigurations", type=List.class, parameters={JobValidationConfiguration.class})
     private Output</* @Nullable */ List<JobValidationConfiguration>> validationConfigurations;
 
+    /**
+     * @return Data quality rules configuration
+     * 
+     */
     public Output</* @Nullable */ List<JobValidationConfiguration>> getValidationConfigurations() {
         return this.validationConfigurations;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:databrew:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -164,6 +296,14 @@ public class Job extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Job get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Job(name, id, options);
     }

@@ -12,6 +12,10 @@ public final class GetDestinationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDestinationArgs Empty = new GetDestinationArgs();
 
+    /**
+     * Unique name of destination
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

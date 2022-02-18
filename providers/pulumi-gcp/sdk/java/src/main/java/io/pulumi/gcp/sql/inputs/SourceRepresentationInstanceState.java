@@ -15,6 +15,11 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
 
     public static final SourceRepresentationInstanceState Empty = new SourceRepresentationInstanceState();
 
+    /**
+     * The MySQL version running on your source database server.
+     * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+     * 
+     */
     @InputImport(name="databaseVersion")
     private final @Nullable Input<String> databaseVersion;
 
@@ -22,6 +27,10 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
         return this.databaseVersion == null ? Input.empty() : this.databaseVersion;
     }
 
+    /**
+     * The externally accessible IPv4 address for the source database server.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -29,6 +38,10 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * The name of the source representation instance. Use any valid Cloud SQL instance name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +49,11 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The externally accessible port for the source database server.
+     * Defaults to 3306.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -43,6 +61,11 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,6 +73,11 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The Region in which the created instance should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FleetIpPermission {
+    /**
+     * A starting value for a range of allowed port numbers.
+     * 
+     */
     private final Integer fromPort;
+    /**
+     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: "000.000.000.000/[subnet mask]" or optionally the shortened version "0.0.0.0/[subnet mask]".
+     * 
+     */
     private final String ipRange;
+    /**
+     * The network communication protocol used by the fleet.
+     * 
+     */
     private final FleetIpPermissionProtocol protocol;
+    /**
+     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+     * 
+     */
     private final Integer toPort;
 
     @OutputCustomType.Constructor({"fromPort","ipRange","protocol","toPort"})
@@ -28,15 +44,31 @@ public final class FleetIpPermission {
         this.toPort = Objects.requireNonNull(toPort);
     }
 
+    /**
+     * A starting value for a range of allowed port numbers.
+     * 
+     */
     public Integer getFromPort() {
         return this.fromPort;
     }
+    /**
+     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: "000.000.000.000/[subnet mask]" or optionally the shortened version "0.0.0.0/[subnet mask]".
+     * 
+     */
     public String getIpRange() {
         return this.ipRange;
     }
+    /**
+     * The network communication protocol used by the fleet.
+     * 
+     */
     public FleetIpPermissionProtocol getProtocol() {
         return this.protocol;
     }
+    /**
+     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+     * 
+     */
     public Integer getToPort() {
         return this.toPort;
     }

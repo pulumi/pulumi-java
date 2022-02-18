@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hub billing info.
+ * 
+ */
 public final class HubBillingInfoFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HubBillingInfoFormatResponse Empty = new HubBillingInfoFormatResponse();
 
+    /**
+     * The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+     * 
+     */
     @InputImport(name="maxUnits")
     private final @Nullable Integer maxUnits;
 
@@ -22,6 +30,10 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
         return this.maxUnits == null ? Optional.empty() : Optional.ofNullable(this.maxUnits);
     }
 
+    /**
+     * The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+     * 
+     */
     @InputImport(name="minUnits")
     private final @Nullable Integer minUnits;
 
@@ -29,6 +41,10 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
         return this.minUnits == null ? Optional.empty() : Optional.ofNullable(this.minUnits);
     }
 
+    /**
+     * The sku name.
+     * 
+     */
     @InputImport(name="skuName")
     private final @Nullable String skuName;
 

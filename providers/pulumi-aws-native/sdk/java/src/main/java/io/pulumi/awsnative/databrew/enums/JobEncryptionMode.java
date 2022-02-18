@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Encryption mode
+     * 
+     */
     @EnumType
     public enum JobEncryptionMode {
         SseKms("SSE-KMS"),

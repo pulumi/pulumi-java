@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An object used to store task related info
+ * 
+ */
 public final class FlowTaskPropertiesObject extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowTaskPropertiesObject Empty = new FlowTaskPropertiesObject();

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the move resource errors.
+ * 
+ */
 public final class MoveResourcePropertiesResponseErrors extends io.pulumi.resources.InvokeArgs {
 
     public static final MoveResourcePropertiesResponseErrors Empty = new MoveResourcePropertiesResponseErrors();
 
+    /**
+     * The move resource error body.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable MoveResourceErrorBodyResponse properties;
 

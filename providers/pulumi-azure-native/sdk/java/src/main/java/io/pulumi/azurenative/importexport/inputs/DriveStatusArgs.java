@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Provides information about the drive's status
+ * 
+ */
 public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DriveStatusArgs Empty = new DriveStatusArgs();
 
+    /**
+     * The BitLocker key used to encrypt the drive.
+     * 
+     */
     @InputImport(name="bitLockerKey")
     private final @Nullable Input<String> bitLockerKey;
 
@@ -25,6 +33,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.bitLockerKey == null ? Input.empty() : this.bitLockerKey;
     }
 
+    /**
+     * Bytes successfully transferred for the drive.
+     * 
+     */
     @InputImport(name="bytesSucceeded")
     private final @Nullable Input<Double> bytesSucceeded;
 
@@ -32,6 +44,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.bytesSucceeded == null ? Input.empty() : this.bytesSucceeded;
     }
 
+    /**
+     * Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
+     * 
+     */
     @InputImport(name="copyStatus")
     private final @Nullable Input<String> copyStatus;
 
@@ -39,6 +55,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.copyStatus == null ? Input.empty() : this.copyStatus;
     }
 
+    /**
+     * The drive header hash value.
+     * 
+     */
     @InputImport(name="driveHeaderHash")
     private final @Nullable Input<String> driveHeaderHash;
 
@@ -46,6 +66,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.driveHeaderHash == null ? Input.empty() : this.driveHeaderHash;
     }
 
+    /**
+     * The drive's hardware serial number, without spaces.
+     * 
+     */
     @InputImport(name="driveId")
     private final @Nullable Input<String> driveId;
 
@@ -53,6 +77,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.driveId == null ? Input.empty() : this.driveId;
     }
 
+    /**
+     * A URI that points to the blob containing the error log for the data transfer operation.
+     * 
+     */
     @InputImport(name="errorLogUri")
     private final @Nullable Input<String> errorLogUri;
 
@@ -60,6 +88,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.errorLogUri == null ? Input.empty() : this.errorLogUri;
     }
 
+    /**
+     * The relative path of the manifest file on the drive.
+     * 
+     */
     @InputImport(name="manifestFile")
     private final @Nullable Input<String> manifestFile;
 
@@ -67,6 +99,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.manifestFile == null ? Input.empty() : this.manifestFile;
     }
 
+    /**
+     * The Base16-encoded MD5 hash of the manifest file on the drive.
+     * 
+     */
     @InputImport(name="manifestHash")
     private final @Nullable Input<String> manifestHash;
 
@@ -74,6 +110,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.manifestHash == null ? Input.empty() : this.manifestHash;
     }
 
+    /**
+     * A URI that points to the blob containing the drive manifest file.
+     * 
+     */
     @InputImport(name="manifestUri")
     private final @Nullable Input<String> manifestUri;
 
@@ -81,6 +121,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.manifestUri == null ? Input.empty() : this.manifestUri;
     }
 
+    /**
+     * Percentage completed for the drive.
+     * 
+     */
     @InputImport(name="percentComplete")
     private final @Nullable Input<Integer> percentComplete;
 
@@ -88,6 +132,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.percentComplete == null ? Input.empty() : this.percentComplete;
     }
 
+    /**
+     * The drive's current state.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,DriveState>> state;
 
@@ -95,6 +143,10 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * A URI that points to the blob containing the verbose log for the data transfer operation.
+     * 
+     */
     @InputImport(name="verboseLogUri")
     private final @Nullable Input<String> verboseLogUri;
 

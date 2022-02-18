@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the component.
+ * 
+ */
 public final class ApplicationComponentConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationComponentConfigurationArgs Empty = new ApplicationComponentConfigurationArgs();
 
+    /**
+     * The configuration settings
+     * 
+     */
     @InputImport(name="configurationDetails")
     private final @Nullable Input<ApplicationConfigurationDetailsArgs> configurationDetails;
 
@@ -23,6 +31,10 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
         return this.configurationDetails == null ? Input.empty() : this.configurationDetails;
     }
 
+    /**
+     * Sub component configurations of the component.
+     * 
+     */
     @InputImport(name="subComponentTypeConfigurations")
     private final @Nullable Input<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The configuration for a shared file storage system that is associated with a studio resource.</p>
+ * 
+ */
 public final class StudioComponentSharedFileSystemConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final StudioComponentSharedFileSystemConfiguration Empty = new StudioComponentSharedFileSystemConfiguration();
 
+    /**
+     * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
+     * 
+     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 
@@ -21,6 +29,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
+    /**
+     * <p>The unique identifier for a file system.</p>
+     * 
+     */
     @InputImport(name="fileSystemId")
     private final @Nullable String fileSystemId;
 
@@ -28,6 +40,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
         return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
     }
 
+    /**
+     * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
+     * 
+     */
     @InputImport(name="linuxMountPoint")
     private final @Nullable String linuxMountPoint;
 
@@ -35,6 +51,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
         return this.linuxMountPoint == null ? Optional.empty() : Optional.ofNullable(this.linuxMountPoint);
     }
 
+    /**
+     * <p>The name of the file share.</p>
+     * 
+     */
     @InputImport(name="shareName")
     private final @Nullable String shareName;
 
@@ -42,6 +62,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
         return this.shareName == null ? Optional.empty() : Optional.ofNullable(this.shareName);
     }
 
+    /**
+     * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
+     * 
+     */
     @InputImport(name="windowsMountDrive")
     private final @Nullable String windowsMountDrive;
 

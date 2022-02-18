@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A function's environment variable settings.
+ * 
+ */
 public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionEnvironmentArgs Empty = new FunctionEnvironmentArgs();
 
+    /**
+     * Environment variable key-value pairs.
+     * 
+     */
     @InputImport(name="variables")
     private final @Nullable Input<Object> variables;
 

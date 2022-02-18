@@ -19,6 +19,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthAlertArgs Empty = new HealthAlertArgs();
 
+    /**
+     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     @InputImport(name="actions")
     private final @Nullable Input<List<HealthAlertActionArgs>> actions;
 
@@ -26,6 +30,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions == null ? Input.empty() : this.actions;
     }
 
+    /**
+     * defines the specific alert criteria information.
+     * 
+     */
     @InputImport(name="criteria", required=true)
     private final Input<HealthAlertCriteriaArgs> criteria;
 
@@ -33,6 +41,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.criteria;
     }
 
+    /**
+     * the description of the health alert that will be included in the alert email.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final Input<String> description;
 
@@ -40,6 +52,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.description;
     }
 
+    /**
+     * the flag that indicates whether the health alert is enabled.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -47,6 +63,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +74,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,6 +85,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the rule.
+     * 
+     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 
@@ -68,6 +96,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
+    /**
+     * the list of resource id's that this health alert is scoped to.
+     * 
+     */
     @InputImport(name="scopes")
     private final @Nullable Input<List<String>> scopes;
 
@@ -75,6 +107,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopes == null ? Input.empty() : this.scopes;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

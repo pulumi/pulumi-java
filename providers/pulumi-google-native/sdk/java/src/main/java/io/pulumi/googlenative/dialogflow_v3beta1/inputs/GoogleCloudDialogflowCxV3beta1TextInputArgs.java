@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents the natural language text to be processed.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3beta1TextInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1TextInputArgs Empty = new GoogleCloudDialogflowCxV3beta1TextInputArgs();
 
+    /**
+     * The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
+     * 
+     */
     @InputImport(name="text", required=true)
     private final Input<String> text;
 

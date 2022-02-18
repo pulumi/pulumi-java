@@ -14,6 +14,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
 
     public static final RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs Empty = new RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs();
 
+    /**
+     * The name of the header.
+     * 
+     */
     @InputImport(name="headerName", required=true)
     private final Input<String> headerName;
 
@@ -21,6 +25,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
         return this.headerName;
     }
 
+    /**
+     * The value of the header to add.
+     * 
+     */
     @InputImport(name="headerValue", required=true)
     private final Input<String> headerValue;
 
@@ -28,6 +36,12 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
         return this.headerValue;
     }
 
+    /**
+     * If false, headerValue is appended to any values that already exist for the
+     * header. If true, headerValue is set for the header, discarding any values that
+     * were set for that header.
+     * 
+     */
     @InputImport(name="replace", required=true)
     private final Input<Boolean> replace;
 

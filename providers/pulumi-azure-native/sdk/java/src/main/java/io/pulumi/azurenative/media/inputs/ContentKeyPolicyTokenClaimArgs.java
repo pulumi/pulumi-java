@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a token claim.
+ * 
+ */
 public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyTokenClaimArgs Empty = new ContentKeyPolicyTokenClaimArgs();
 
+    /**
+     * Token claim type.
+     * 
+     */
     @InputImport(name="claimType")
     private final @Nullable Input<String> claimType;
 
@@ -21,6 +29,10 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
         return this.claimType == null ? Input.empty() : this.claimType;
     }
 
+    /**
+     * Token claim value.
+     * 
+     */
     @InputImport(name="claimValue")
     private final @Nullable Input<String> claimValue;
 

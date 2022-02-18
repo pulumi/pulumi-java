@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDimension {
+/**
+ * A dimension can be used to limit the scope of a metric used in a security profile for AWS IoT Device Defender.
+ * 
+ */
     public static CompletableFuture<GetDimensionResult> invokeAsync(GetDimensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getDimension", TypeShape.of(GetDimensionResult.class), args == null ? GetDimensionArgs.Empty : args, Utilities.withVersion(options));
     }

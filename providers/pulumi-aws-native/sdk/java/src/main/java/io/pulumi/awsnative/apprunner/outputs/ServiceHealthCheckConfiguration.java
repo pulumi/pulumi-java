@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceHealthCheckConfiguration {
+    /**
+     * Health check Healthy Threshold
+     * 
+     */
     private final @Nullable Integer healthyThreshold;
+    /**
+     * Health check Interval
+     * 
+     */
     private final @Nullable Integer interval;
+    /**
+     * Health check Path
+     * 
+     */
     private final @Nullable String path;
+    /**
+     * Health Check Protocol
+     * 
+     */
     private final @Nullable ServiceHealthCheckConfigurationProtocol protocol;
+    /**
+     * Health check Timeout
+     * 
+     */
     private final @Nullable Integer timeout;
+    /**
+     * Health check Unhealthy Threshold
+     * 
+     */
     private final @Nullable Integer unhealthyThreshold;
 
     @OutputCustomType.Constructor({"healthyThreshold","interval","path","protocol","timeout","unhealthyThreshold"})
@@ -36,21 +60,45 @@ public final class ServiceHealthCheckConfiguration {
         this.unhealthyThreshold = unhealthyThreshold;
     }
 
+    /**
+     * Health check Healthy Threshold
+     * 
+     */
     public Optional<Integer> getHealthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
+    /**
+     * Health check Interval
+     * 
+     */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
+    /**
+     * Health check Path
+     * 
+     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+    /**
+     * Health Check Protocol
+     * 
+     */
     public Optional<ServiceHealthCheckConfigurationProtocol> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
+    /**
+     * Health check Timeout
+     * 
+     */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
+    /**
+     * Health check Unhealthy Threshold
+     * 
+     */
     public Optional<Integer> getUnhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }

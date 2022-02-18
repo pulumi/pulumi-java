@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connection profile for how users connect to lab virtual machines.
+ * 
+ */
 public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionProfileResponse Empty = new ConnectionProfileResponse();
 
+    /**
+     * The enabled access level for Client Access over RDP.
+     * 
+     */
     @InputImport(name="clientRdpAccess")
     private final @Nullable String clientRdpAccess;
 
@@ -21,6 +29,10 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
         return this.clientRdpAccess == null ? Optional.empty() : Optional.ofNullable(this.clientRdpAccess);
     }
 
+    /**
+     * The enabled access level for Client Access over SSH.
+     * 
+     */
     @InputImport(name="clientSshAccess")
     private final @Nullable String clientSshAccess;
 
@@ -28,6 +40,10 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
         return this.clientSshAccess == null ? Optional.empty() : Optional.ofNullable(this.clientSshAccess);
     }
 
+    /**
+     * The enabled access level for Web Access over RDP.
+     * 
+     */
     @InputImport(name="webRdpAccess")
     private final @Nullable String webRdpAccess;
 
@@ -35,6 +51,10 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
         return this.webRdpAccess == null ? Optional.empty() : Optional.ofNullable(this.webRdpAccess);
     }
 
+    /**
+     * The enabled access level for Web Access over SSH.
+     * 
+     */
     @InputImport(name="webSshAccess")
     private final @Nullable String webSshAccess;
 

@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetDatabaseInputDefinition {
+    /**
+     * Database table name
+     * 
+     */
     private final @Nullable String databaseTableName;
+    /**
+     * Glue connection name
+     * 
+     */
     private final String glueConnectionName;
+    /**
+     * Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
+     * 
+     */
     private final @Nullable String queryString;
     private final @Nullable DatasetS3Location tempDirectory;
 
@@ -29,12 +41,24 @@ public final class DatasetDatabaseInputDefinition {
         this.tempDirectory = tempDirectory;
     }
 
+    /**
+     * Database table name
+     * 
+     */
     public Optional<String> getDatabaseTableName() {
         return Optional.ofNullable(this.databaseTableName);
     }
+    /**
+     * Glue connection name
+     * 
+     */
     public String getGlueConnectionName() {
         return this.glueConnectionName;
     }
+    /**
+     * Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
+     * 
+     */
     public Optional<String> getQueryString() {
         return Optional.ofNullable(this.queryString);
     }

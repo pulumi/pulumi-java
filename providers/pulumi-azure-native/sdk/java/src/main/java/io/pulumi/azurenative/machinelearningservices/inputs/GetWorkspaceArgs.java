@@ -12,6 +12,10 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkspaceArgs Empty = new GetWorkspaceArgs();
 
+    /**
+     * Name of the resource group in which workspace is located.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

@@ -21,6 +21,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskState Empty = new DiskState();
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="creationTimestamp")
     private final @Nullable Input<String> creationTimestamp;
 
@@ -28,6 +32,11 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +44,19 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Encrypts the disk using a customer-supplied encryption key.
+     * After you encrypt a disk with a customer-supplied key, you must
+     * provide the same key if you use the disk later (e.g. to create a disk
+     * snapshot or an image, or to attach the disk to a virtual machine).
+     * Customer-supplied encryption keys do not protect access to metadata of
+     * the disk.
+     * If you do not provide an encryption key when creating the disk, then
+     * the disk will be encrypted using an automatically generated key and
+     * you do not need to provide a key to use the disk later.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="diskEncryptionKey")
     private final @Nullable Input<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
@@ -42,6 +64,18 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
     }
 
+    /**
+     * The image from which to initialize this disk. This can be
+     * one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
+     * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+     * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+     * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
+     * images names must include the family name. If they don't, use the
+     * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
+     * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
+     * These images can be referred by family name here.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -49,6 +83,14 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
+     * 
+     */
+    @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @InputImport(name="interface")
     private final @Nullable Input<String> $interface;
 
@@ -57,6 +99,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.$interface == null ? Input.empty() : this.$interface;
     }
 
+    /**
+     * The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     @InputImport(name="labelFingerprint")
     private final @Nullable Input<String> labelFingerprint;
 
@@ -64,6 +110,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
     }
 
+    /**
+     * Labels to apply to this disk.  A list of key->value pairs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -71,6 +121,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Last attach timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="lastAttachTimestamp")
     private final @Nullable Input<String> lastAttachTimestamp;
 
@@ -78,6 +132,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.lastAttachTimestamp == null ? Input.empty() : this.lastAttachTimestamp;
     }
 
+    /**
+     * Last detach timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="lastDetachTimestamp")
     private final @Nullable Input<String> lastDetachTimestamp;
 
@@ -85,6 +143,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.lastDetachTimestamp == null ? Input.empty() : this.lastDetachTimestamp;
     }
 
+    /**
+     * Indicates whether or not the disk can be read/write attached to more than one instance.
+     * 
+     */
     @InputImport(name="multiWriter")
     private final @Nullable Input<Boolean> multiWriter;
 
@@ -92,6 +154,16 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.multiWriter == null ? Input.empty() : this.multiWriter;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -99,6 +171,14 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Physical block size of the persistent disk, in bytes. If not present
+     * in a request, a default value is used. Currently supported sizes
+     * are 4096 and 16384, other sizes may be added in the future.
+     * If an unsupported value is requested, the error message will list
+     * the supported values for the caller's project.
+     * 
+     */
     @InputImport(name="physicalBlockSizeBytes")
     private final @Nullable Input<Integer> physicalBlockSizeBytes;
 
@@ -106,6 +186,11 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.physicalBlockSizeBytes == null ? Input.empty() : this.physicalBlockSizeBytes;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -113,6 +198,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Indicates how many IOPS must be provisioned for the disk.
+     * 
+     */
     @InputImport(name="provisionedIops")
     private final @Nullable Input<Integer> provisionedIops;
 
@@ -120,6 +209,15 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
     }
 
+    /**
+     * Resource policies applied to this disk for automatic snapshot creations.
+     * ~>**NOTE** This value does not support updating the
+     * resource policy, as resource policies can not be updated more than
+     * one at a time. Use
+     * `gcp.compute.DiskResourcePolicyAttachment`
+     * to allow for updating the resource policy attached to the disk.
+     * 
+     */
     @InputImport(name="resourcePolicies")
     private final @Nullable Input<List<String>> resourcePolicies;
 
@@ -127,6 +225,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -134,6 +236,20 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * Size of the persistent disk, specified in GB. You can specify this
+     * field when creating a persistent disk using the `image` or
+     * `snapshot` parameter, or specify it alone to create an empty
+     * persistent disk.
+     * If you specify this field along with `image` or `snapshot`,
+     * the value must not be less than the size of the image
+     * or the size of the snapshot.
+     * ~>**NOTE** If you change the size, the provider updates the disk size
+     * if upsizing is detected but recreates the disk if downsizing is requested.
+     * You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+     * and recreating.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<Integer> size;
 
@@ -141,6 +257,17 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * The source snapshot used to create this disk. You can provide this as
+     * a partial or full URL to the resource. If the snapshot is in another
+     * project than this disk, you must supply a full URL. For example, the
+     * following are valid values:
+     * * `https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot`
+     * * `projects/project/global/snapshots/snapshot`
+     * * `global/snapshots/snapshot`
+     * * `snapshot`
+     * 
+     */
     @InputImport(name="snapshot")
     private final @Nullable Input<String> snapshot;
 
@@ -148,6 +275,12 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.snapshot == null ? Input.empty() : this.snapshot;
     }
 
+    /**
+     * The customer-supplied encryption key of the source image. Required if
+     * the source image is protected by a customer-supplied encryption key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sourceImageEncryptionKey")
     private final @Nullable Input<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
 
@@ -155,6 +288,12 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
     }
 
+    /**
+     * The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
+     * persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
+     * under the same name, the source image ID would identify the exact version of the image that was used.
+     * 
+     */
     @InputImport(name="sourceImageId")
     private final @Nullable Input<String> sourceImageId;
 
@@ -162,6 +301,13 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.sourceImageId == null ? Input.empty() : this.sourceImageId;
     }
 
+    /**
+     * The customer-supplied encryption key of the source snapshot. Required
+     * if the source snapshot is protected by a customer-supplied encryption
+     * key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sourceSnapshotEncryptionKey")
     private final @Nullable Input<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
 
@@ -169,6 +315,12 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
     }
 
+    /**
+     * The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
+     * this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
+     * recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
+     * 
+     */
     @InputImport(name="sourceSnapshotId")
     private final @Nullable Input<String> sourceSnapshotId;
 
@@ -176,6 +328,11 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.sourceSnapshotId == null ? Input.empty() : this.sourceSnapshotId;
     }
 
+    /**
+     * URL of the disk type resource describing which disk type to use to
+     * create the disk. Provide this when creating the disk.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -183,6 +340,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
+     * 
+     */
     @InputImport(name="users")
     private final @Nullable Input<List<String>> users;
 
@@ -190,6 +351,10 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         return this.users == null ? Input.empty() : this.users;
     }
 
+    /**
+     * A reference to the zone where the disk resides.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

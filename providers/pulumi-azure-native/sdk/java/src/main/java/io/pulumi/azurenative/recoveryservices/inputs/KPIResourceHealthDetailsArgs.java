@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * KPI Resource Health Details
+ * 
+ */
 public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KPIResourceHealthDetailsArgs Empty = new KPIResourceHealthDetailsArgs();
 
+    /**
+     * Resource Health Status
+     * 
+     */
     @InputImport(name="resourceHealthStatus")
     private final @Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus;
 

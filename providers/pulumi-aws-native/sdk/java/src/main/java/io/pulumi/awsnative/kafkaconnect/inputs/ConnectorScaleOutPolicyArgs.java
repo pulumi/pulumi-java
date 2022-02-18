@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Information about the scale out policy of the connector.
+ * 
+ */
 public final class ConnectorScaleOutPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorScaleOutPolicyArgs Empty = new ConnectorScaleOutPolicyArgs();
 
+    /**
+     * Specifies the CPU utilization percentage threshold at which connector scale out should trigger.
+     * 
+     */
     @InputImport(name="cpuUtilizationPercentage", required=true)
     private final Input<Integer> cpuUtilizationPercentage;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Last backup operation status. Possible values: Healthy, Unhealthy.
+     * 
+     */
     @EnumType
     public enum LastBackupStatus {
         Invalid("Invalid"),

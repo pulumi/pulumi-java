@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An address space to be inserted into this pool. All allocations must be made from this address space.
+ * 
+ */
 public final class IPAMPoolProvisionedCidr extends io.pulumi.resources.InvokeArgs {
 
     public static final IPAMPoolProvisionedCidr Empty = new IPAMPoolProvisionedCidr();

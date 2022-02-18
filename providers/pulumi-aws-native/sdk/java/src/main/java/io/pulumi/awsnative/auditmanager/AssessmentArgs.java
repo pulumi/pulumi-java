@@ -56,6 +56,10 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The list of roles for the specified assessment.
+     * 
+     */
     @InputImport(name="roles")
     private final @Nullable Input<List<AssessmentRoleArgs>> roles;
 
@@ -77,6 +81,10 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The tags associated with the assessment.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AssessmentTagArgs>> tags;
 

@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Kubernetes role network resource
+ * 
+ */
 public final class KubernetesRoleNetworkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesRoleNetworkResponse Empty = new KubernetesRoleNetworkResponse();
 
+    /**
+     * Cni configuration
+     * 
+     */
     @InputImport(name="cniConfig", required=true)
     private final CniConfigResponse cniConfig;
 
@@ -20,6 +28,10 @@ public final class KubernetesRoleNetworkResponse extends io.pulumi.resources.Inv
         return this.cniConfig;
     }
 
+    /**
+     * Load balancer configuration
+     * 
+     */
     @InputImport(name="loadBalancerConfig", required=true)
     private final LoadBalancerConfigResponse loadBalancerConfig;
 

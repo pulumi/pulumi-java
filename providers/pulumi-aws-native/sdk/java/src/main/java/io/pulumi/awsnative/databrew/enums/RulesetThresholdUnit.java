@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Threshold unit for a rule
+     * 
+     */
     @EnumType
     public enum RulesetThresholdUnit {
         Count("COUNT"),

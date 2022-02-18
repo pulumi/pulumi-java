@@ -12,6 +12,10 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobArgs Empty = new GetJobArgs();
 
+    /**
+     * Job name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

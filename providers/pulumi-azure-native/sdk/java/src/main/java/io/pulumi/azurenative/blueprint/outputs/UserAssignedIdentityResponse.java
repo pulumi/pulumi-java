@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserAssignedIdentityResponse {
+    /**
+     * Client App Id associated with this identity.
+     * 
+     */
     private final @Nullable String clientId;
+    /**
+     * Azure Active Directory principal ID associated with this Identity.
+     * 
+     */
     private final @Nullable String principalId;
 
     @OutputCustomType.Constructor({"clientId","principalId"})
@@ -22,9 +30,17 @@ public final class UserAssignedIdentityResponse {
         this.principalId = principalId;
     }
 
+    /**
+     * Client App Id associated with this identity.
+     * 
+     */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
+    /**
+     * Azure Active Directory principal ID associated with this Identity.
+     * 
+     */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }

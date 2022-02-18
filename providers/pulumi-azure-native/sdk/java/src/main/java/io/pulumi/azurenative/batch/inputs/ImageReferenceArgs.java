@@ -14,6 +14,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageReferenceArgs Empty = new ImageReferenceArgs();
 
+    /**
+     * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -21,6 +25,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * For example, UbuntuServer or WindowsServer.
+     * 
+     */
     @InputImport(name="offer")
     private final @Nullable Input<String> offer;
 
@@ -28,6 +36,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.offer == null ? Input.empty() : this.offer;
     }
 
+    /**
+     * For example, Canonical or MicrosoftWindowsServer.
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -35,6 +47,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
+    /**
+     * For example, 18.04-LTS or 2019-Datacenter.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -42,6 +58,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for terminal appearance.
+ * 
+ */
 public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TerminalSettingsResponse Empty = new TerminalSettingsResponse();
 
+    /**
+     * Size of terminal font.
+     * 
+     */
     @InputImport(name="fontSize")
     private final @Nullable String fontSize;
 
@@ -21,6 +29,10 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.fontSize == null ? Optional.empty() : Optional.ofNullable(this.fontSize);
     }
 
+    /**
+     * Style of terminal font.
+     * 
+     */
     @InputImport(name="fontStyle")
     private final @Nullable String fontStyle;
 

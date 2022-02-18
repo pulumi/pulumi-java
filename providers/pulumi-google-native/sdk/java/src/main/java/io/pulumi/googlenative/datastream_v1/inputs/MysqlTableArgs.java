@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MySQL table.
+ * 
+ */
 public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MysqlTableArgs Empty = new MysqlTableArgs();
 
+    /**
+     * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * 
+     */
     @InputImport(name="mysqlColumns")
     private final @Nullable Input<List<MysqlColumnArgs>> mysqlColumns;
 
@@ -23,6 +31,10 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
         return this.mysqlColumns == null ? Input.empty() : this.mysqlColumns;
     }
 
+    /**
+     * Table name.
+     * 
+     */
     @InputImport(name="table")
     private final @Nullable Input<String> table;
 

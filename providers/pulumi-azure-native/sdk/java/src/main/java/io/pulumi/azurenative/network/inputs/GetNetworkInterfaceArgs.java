@@ -14,6 +14,10 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetNetworkInterfaceArgs Empty = new GetNetworkInterfaceArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the network interface.
+     * 
+     */
     @InputImport(name="networkInterfaceName", required=true)
     private final String networkInterfaceName;
 
@@ -28,6 +36,10 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
         return this.networkInterfaceName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -12,8 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterClusterConfigWorkerConfigDiskConfig {
+    /**
+     * Size of the primary disk attached to each preemptible worker node, specified
+     * in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
+     * computed value if not set (currently 500GB). Note: If SSDs are not
+     * attached, it also contains the HDFS data blocks and Hadoop working directories.
+     * 
+     */
     private final @Nullable Integer bootDiskSizeGb;
+    /**
+     * The disk type of the primary disk attached to each preemptible worker node.
+     * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
+     * 
+     */
     private final @Nullable String bootDiskType;
+    /**
+     * The amount of local SSD disks that will be
+     * attached to each preemptible worker node. Defaults to 0.
+     * 
+     */
     private final @Nullable Integer numLocalSsds;
 
     @OutputCustomType.Constructor({"bootDiskSizeGb","bootDiskType","numLocalSsds"})
@@ -26,12 +43,29 @@ public final class ClusterClusterConfigWorkerConfigDiskConfig {
         this.numLocalSsds = numLocalSsds;
     }
 
+    /**
+     * Size of the primary disk attached to each preemptible worker node, specified
+     * in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
+     * computed value if not set (currently 500GB). Note: If SSDs are not
+     * attached, it also contains the HDFS data blocks and Hadoop working directories.
+     * 
+     */
     public Optional<Integer> getBootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
+    /**
+     * The disk type of the primary disk attached to each preemptible worker node.
+     * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
+     * 
+     */
     public Optional<String> getBootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
+    /**
+     * The amount of local SSD disks that will be
+     * attached to each preemptible worker node. Defaults to 0.
+     * 
+     */
     public Optional<Integer> getNumLocalSsds() {
         return Optional.ofNullable(this.numLocalSsds);
     }

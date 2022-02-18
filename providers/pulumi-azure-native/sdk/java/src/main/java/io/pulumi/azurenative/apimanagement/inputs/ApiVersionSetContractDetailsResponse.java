@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An API Version Set contains the common configuration for a set of API Versions relating
+ * 
+ */
 public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiVersionSetContractDetailsResponse Empty = new ApiVersionSetContractDetailsResponse();
 
+    /**
+     * Description of API Version Set.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -21,6 +29,10 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Identifier for existing API Version Set. Omit this value to create a new Version Set.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -28,6 +40,10 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The display Name of the API Version Set.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -35,6 +51,10 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+     * 
+     */
     @InputImport(name="versionHeaderName")
     private final @Nullable String versionHeaderName;
 
@@ -42,6 +62,10 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
         return this.versionHeaderName == null ? Optional.empty() : Optional.ofNullable(this.versionHeaderName);
     }
 
+    /**
+     * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+     * 
+     */
     @InputImport(name="versionQueryName")
     private final @Nullable String versionQueryName;
 
@@ -49,6 +73,10 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
         return this.versionQueryName == null ? Optional.empty() : Optional.ofNullable(this.versionQueryName);
     }
 
+    /**
+     * An value that determines where the API Version identifier will be located in a HTTP request.
+     * 
+     */
     @InputImport(name="versioningScheme")
     private final @Nullable String versioningScheme;
 

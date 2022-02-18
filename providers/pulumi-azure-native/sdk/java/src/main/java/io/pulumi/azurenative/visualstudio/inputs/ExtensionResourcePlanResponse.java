@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Plan data for an extension resource.
+ * 
+ */
 public final class ExtensionResourcePlanResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtensionResourcePlanResponse Empty = new ExtensionResourcePlanResponse();
 
+    /**
+     * Name of the plan.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Product name.
+     * 
+     */
     @InputImport(name="product")
     private final @Nullable String product;
 
@@ -28,6 +40,10 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
         return this.product == null ? Optional.empty() : Optional.ofNullable(this.product);
     }
 
+    /**
+     * Optional: the promotion code associated with the plan.
+     * 
+     */
     @InputImport(name="promotionCode")
     private final @Nullable String promotionCode;
 
@@ -35,6 +51,10 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
     }
 
+    /**
+     * Name of the extension publisher.
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable String publisher;
 
@@ -42,6 +62,10 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
+    /**
+     * A string that uniquely identifies the plan version.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PatchDeploymentPatchConfigPostStep {
+    /**
+     * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfig linuxExecStepConfig;
+    /**
+     * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfig windowsExecStepConfig;
 
     @OutputCustomType.Constructor({"linuxExecStepConfig","windowsExecStepConfig"})
@@ -23,9 +33,19 @@ public final class PatchDeploymentPatchConfigPostStep {
         this.windowsExecStepConfig = windowsExecStepConfig;
     }
 
+    /**
+     * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigPostStepLinuxExecStepConfig> getLinuxExecStepConfig() {
         return Optional.ofNullable(this.linuxExecStepConfig);
     }
+    /**
+     * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PatchDeploymentPatchConfigPostStepWindowsExecStepConfig> getWindowsExecStepConfig() {
         return Optional.ofNullable(this.windowsExecStepConfig);
     }

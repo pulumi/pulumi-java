@@ -14,8 +14,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InquiryInfoResponse {
+    /**
+     * Error Details if the Status is non-success.
+     * 
+     */
     private final @Nullable ErrorDetailResponse errorDetail;
+    /**
+     * Inquiry Details which will have workload specific details.
+     * For e.g. - For SQL and oracle this will contain different details.
+     * 
+     */
     private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
+    /**
+     * Inquiry Status for this container such as
+     * InProgress | Failed | Succeeded
+     * 
+     */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"errorDetail","inquiryDetails","status"})
@@ -28,12 +42,26 @@ public final class InquiryInfoResponse {
         this.status = status;
     }
 
+    /**
+     * Error Details if the Status is non-success.
+     * 
+     */
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
+    /**
+     * Inquiry Details which will have workload specific details.
+     * For e.g. - For SQL and oracle this will contain different details.
+     * 
+     */
     public List<WorkloadInquiryDetailsResponse> getInquiryDetails() {
         return this.inquiryDetails == null ? List.of() : this.inquiryDetails;
     }
+    /**
+     * Inquiry Status for this container such as
+     * InProgress | Failed | Succeeded
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

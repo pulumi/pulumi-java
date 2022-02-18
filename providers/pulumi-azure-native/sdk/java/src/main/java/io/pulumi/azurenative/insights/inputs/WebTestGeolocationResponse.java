@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Geo-physical location to run a web test from. You must specify one or more locations for the test to run from.
+ * 
+ */
 public final class WebTestGeolocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebTestGeolocationResponse Empty = new WebTestGeolocationResponse();
 
+    /**
+     * Location ID for the webtest to run from.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 

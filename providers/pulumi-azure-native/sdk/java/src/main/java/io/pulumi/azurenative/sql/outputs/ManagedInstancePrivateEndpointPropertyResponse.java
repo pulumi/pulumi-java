@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedInstancePrivateEndpointPropertyResponse {
+    /**
+     * Resource id of the private endpoint.
+     * 
+     */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +22,10 @@ public final class ManagedInstancePrivateEndpointPropertyResponse {
         this.id = id;
     }
 
+    /**
+     * Resource id of the private endpoint.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

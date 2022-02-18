@@ -13,6 +13,10 @@ public final class TransferJobScheduleScheduleStartDateArgs extends io.pulumi.re
 
     public static final TransferJobScheduleScheduleStartDateArgs Empty = new TransferJobScheduleScheduleStartDateArgs();
 
+    /**
+     * Day of month. Must be from 1 to 31 and valid for the year and month.
+     * 
+     */
     @InputImport(name="day", required=true)
     private final Input<Integer> day;
 
@@ -20,6 +24,10 @@ public final class TransferJobScheduleScheduleStartDateArgs extends io.pulumi.re
         return this.day;
     }
 
+    /**
+     * Month of year. Must be from 1 to 12.
+     * 
+     */
     @InputImport(name="month", required=true)
     private final Input<Integer> month;
 
@@ -27,6 +35,10 @@ public final class TransferJobScheduleScheduleStartDateArgs extends io.pulumi.re
         return this.month;
     }
 
+    /**
+     * Year of date. Must be from 1 to 9999.
+     * 
+     */
     @InputImport(name="year", required=true)
     private final Input<Integer> year;
 

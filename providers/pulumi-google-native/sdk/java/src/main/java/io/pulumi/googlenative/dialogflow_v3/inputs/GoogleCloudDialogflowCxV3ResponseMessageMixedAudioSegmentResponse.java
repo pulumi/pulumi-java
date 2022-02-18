@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents one segment of audio.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse Empty = new GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse();
 
+    /**
+     * Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.
+     * 
+     */
     @InputImport(name="allowPlaybackInterruption", required=true)
     private final Boolean allowPlaybackInterruption;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
         return this.allowPlaybackInterruption;
     }
 
+    /**
+     * Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.
+     * 
+     */
     @InputImport(name="audio", required=true)
     private final String audio;
 
@@ -27,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
         return this.audio;
     }
 
+    /**
+     * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

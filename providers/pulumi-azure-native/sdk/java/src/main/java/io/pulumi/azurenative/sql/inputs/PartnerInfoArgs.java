@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Partner server information for the failover group.
+ * 
+ */
 public final class PartnerInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PartnerInfoArgs Empty = new PartnerInfoArgs();
 
+    /**
+     * Resource identifier of the partner server.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

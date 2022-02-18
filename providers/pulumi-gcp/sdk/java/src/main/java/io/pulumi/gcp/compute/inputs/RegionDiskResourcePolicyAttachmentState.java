@@ -14,6 +14,10 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
 
     public static final RegionDiskResourcePolicyAttachmentState Empty = new RegionDiskResourcePolicyAttachmentState();
 
+    /**
+     * The name of the regional disk in which the resource policies are attached to.
+     * 
+     */
     @InputImport(name="disk")
     private final @Nullable Input<String> disk;
 
@@ -21,6 +25,11 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
         return this.disk == null ? Input.empty() : this.disk;
     }
 
+    /**
+     * The resource policy to be attached to the disk for scheduling snapshot
+     * creation. Do not specify the self link.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +37,11 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -35,6 +49,10 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A reference to the region where the disk resides.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

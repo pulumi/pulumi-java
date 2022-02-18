@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowTemplateJobHadoopJobLoggingConfig {
+    /**
+     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     * 
+     */
     private final @Nullable Map<String,String> driverLogLevels;
 
     @OutputCustomType.Constructor({"driverLogLevels"})
@@ -18,6 +22,10 @@ public final class WorkflowTemplateJobHadoopJobLoggingConfig {
         this.driverLogLevels = driverLogLevels;
     }
 
+    /**
+     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     * 
+     */
     public Map<String,String> getDriverLogLevels() {
         return this.driverLogLevels == null ? Map.of() : this.driverLogLevels;
     }

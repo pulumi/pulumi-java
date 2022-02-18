@@ -17,6 +17,11 @@ public final class InstanceFileSharesArgs extends io.pulumi.resources.ResourceAr
 
     public static final InstanceFileSharesArgs Empty = new InstanceFileSharesArgs();
 
+    /**
+     * File share capacity in GiB. This must be at least 1024 GiB
+     * for the standard tier, or 2560 GiB for the premium tier.
+     * 
+     */
     @InputImport(name="capacityGb", required=true)
     private final Input<Integer> capacityGb;
 
@@ -24,6 +29,10 @@ public final class InstanceFileSharesArgs extends io.pulumi.resources.ResourceAr
         return this.capacityGb;
     }
 
+    /**
+     * The name of the fileshare (16 characters or less)
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -31,6 +40,11 @@ public final class InstanceFileSharesArgs extends io.pulumi.resources.ResourceAr
         return this.name;
     }
 
+    /**
+     * Nfs Export Options. There is a limit of 10 export options per file share.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="nfsExportOptions")
     private final @Nullable Input<List<InstanceFileSharesNfsExportOptionArgs>> nfsExportOptions;
 

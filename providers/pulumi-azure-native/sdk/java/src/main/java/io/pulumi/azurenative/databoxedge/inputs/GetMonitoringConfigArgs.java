@@ -12,6 +12,10 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetMonitoringConfigArgs Empty = new GetMonitoringConfigArgs();
 
+    /**
+     * The device name.
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +23,10 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
         return this.deviceName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The role name.
+     * 
+     */
     @InputImport(name="roleName", required=true)
     private final String roleName;
 

@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An FMS includeMap or excludeMap.
+ * 
+ */
 public final class PolicyIEMap extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyIEMap Empty = new PolicyIEMap();

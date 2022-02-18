@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+     * 
+     */
     @EnumType
     public enum ManagedRuleExclusionSelectorMatchOperator {
         Equals("Equals"),

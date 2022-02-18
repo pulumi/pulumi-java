@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetUserResult {
+    /**
+     * The Amazon Resource Name (ARN) of the user account.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Indicates the user status. Can be "active", "modifying" or "deleting".
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * An array of key-value pairs to apply to this user.
+     * 
+     */
     private final @Nullable List<UserTag> tags;
 
     @OutputCustomType.Constructor({"arn","status","tags"})
@@ -27,12 +39,24 @@ public final class GetUserResult {
         this.tags = tags;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the user account.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Indicates the user status. Can be "active", "modifying" or "deleting".
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * An array of key-value pairs to apply to this user.
+     * 
+     */
     public List<UserTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

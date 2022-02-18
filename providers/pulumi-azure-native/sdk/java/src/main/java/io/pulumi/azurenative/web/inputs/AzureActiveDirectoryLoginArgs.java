@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the Azure Active Directory login flow.
+ * 
+ */
 public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureActiveDirectoryLoginArgs Empty = new AzureActiveDirectoryLoginArgs();
 
+    /**
+     * <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
+     * 
+     */
     @InputImport(name="disableWWWAuthenticate")
     private final @Nullable Input<Boolean> disableWWWAuthenticate;
 
@@ -23,6 +31,11 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
         return this.disableWWWAuthenticate == null ? Input.empty() : this.disableWWWAuthenticate;
     }
 
+    /**
+     * Login parameters to send to the OpenID Connect authorization endpoint when
+     * a user logs in. Each parameter must be in the form "key=value".
+     * 
+     */
     @InputImport(name="loginParameters")
     private final @Nullable Input<List<String>> loginParameters;
 

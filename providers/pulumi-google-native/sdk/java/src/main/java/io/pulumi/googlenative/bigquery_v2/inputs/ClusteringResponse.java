@@ -13,6 +13,10 @@ public final class ClusteringResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusteringResponse Empty = new ClusteringResponse();
 
+    /**
+     * [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.
+     * 
+     */
     @InputImport(name="fields", required=true)
     private final List<String> fields;
 

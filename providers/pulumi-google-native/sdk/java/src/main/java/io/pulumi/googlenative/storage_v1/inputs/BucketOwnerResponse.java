@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The owner of the bucket. This is always the project team's owner group.
+ * 
+ */
 public final class BucketOwnerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketOwnerResponse Empty = new BucketOwnerResponse();
 
+    /**
+     * The entity, in the form project-owner-projectId.
+     * 
+     */
     @InputImport(name="entity", required=true)
     private final String entity;
 
@@ -19,6 +27,10 @@ public final class BucketOwnerResponse extends io.pulumi.resources.InvokeArgs {
         return this.entity;
     }
 
+    /**
+     * The ID for the entity.
+     * 
+     */
     @InputImport(name="entityId", required=true)
     private final String entityId;
 

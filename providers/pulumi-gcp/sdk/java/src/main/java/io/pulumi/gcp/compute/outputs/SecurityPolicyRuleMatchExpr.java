@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyRuleMatchExpr {
+    /**
+     * Textual representation of an expression in Common Expression Language syntax.
+     * The application context of the containing message determines which well-known feature set of CEL is supported.
+     * 
+     */
     private final String expression;
 
     @OutputCustomType.Constructor({"expression"})
@@ -16,6 +21,11 @@ public final class SecurityPolicyRuleMatchExpr {
         this.expression = Objects.requireNonNull(expression);
     }
 
+    /**
+     * Textual representation of an expression in Common Expression Language syntax.
+     * The application context of the containing message determines which well-known feature set of CEL is supported.
+     * 
+     */
     public String getExpression() {
         return this.expression;
     }

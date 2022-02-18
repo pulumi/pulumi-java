@@ -32,6 +32,10 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Monitor resource name
+     * 
+     */
     @InputImport(name="monitorName")
     private final @Nullable Input<String> monitorName;
 
@@ -39,6 +43,10 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorName == null ? Input.empty() : this.monitorName;
     }
 
+    /**
+     * Properties specific to the monitor resource.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<MonitorPropertiesArgs> properties;
 
@@ -46,6 +54,10 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

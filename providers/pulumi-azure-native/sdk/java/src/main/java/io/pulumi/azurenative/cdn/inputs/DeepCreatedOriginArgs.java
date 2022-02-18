@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The main origin of CDN content which is added when creating a CDN endpoint.
+ * 
+ */
 public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeepCreatedOriginArgs Empty = new DeepCreatedOriginArgs();
 
+    /**
+     * Origin is enabled for load balancing or not. By default, origin is always enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -23,6 +31,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
+     * 
+     */
     @InputImport(name="hostName", required=true)
     private final Input<String> hostName;
 
@@ -30,6 +42,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.hostName;
     }
 
+    /**
+     * The value of the HTTP port. Must be between 1 and 65535.
+     * 
+     */
     @InputImport(name="httpPort")
     private final @Nullable Input<Integer> httpPort;
 
@@ -37,6 +53,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.httpPort == null ? Input.empty() : this.httpPort;
     }
 
+    /**
+     * The value of the HTTPS port. Must be between 1 and 65535.
+     * 
+     */
     @InputImport(name="httpsPort")
     private final @Nullable Input<Integer> httpsPort;
 
@@ -44,6 +64,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.httpsPort == null ? Input.empty() : this.httpsPort;
     }
 
+    /**
+     * Origin name which must be unique within the endpoint.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -51,6 +75,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.name;
     }
 
+    /**
+     * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
+     * 
+     */
     @InputImport(name="originHostHeader")
     private final @Nullable Input<String> originHostHeader;
 
@@ -58,6 +86,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.originHostHeader == null ? Input.empty() : this.originHostHeader;
     }
 
+    /**
+     * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -65,6 +97,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
+     * 
+     */
     @InputImport(name="privateLinkAlias")
     private final @Nullable Input<String> privateLinkAlias;
 
@@ -72,6 +108,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.privateLinkAlias == null ? Input.empty() : this.privateLinkAlias;
     }
 
+    /**
+     * A custom message to be included in the approval request to connect to the Private Link.
+     * 
+     */
     @InputImport(name="privateLinkApprovalMessage")
     private final @Nullable Input<String> privateLinkApprovalMessage;
 
@@ -79,6 +119,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.privateLinkApprovalMessage == null ? Input.empty() : this.privateLinkApprovalMessage;
     }
 
+    /**
+     * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     * 
+     */
     @InputImport(name="privateLinkLocation")
     private final @Nullable Input<String> privateLinkLocation;
 
@@ -86,6 +130,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.privateLinkLocation == null ? Input.empty() : this.privateLinkLocation;
     }
 
+    /**
+     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * 
+     */
     @InputImport(name="privateLinkResourceId")
     private final @Nullable Input<String> privateLinkResourceId;
 
@@ -93,6 +141,10 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
         return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
     }
 
+    /**
+     * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+     * 
+     */
     @InputImport(name="weight")
     private final @Nullable Input<Integer> weight;
 

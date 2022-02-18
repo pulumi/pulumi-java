@@ -12,6 +12,10 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends io.pulumi.reso
 
     public static final GetServerAzureADOnlyAuthenticationArgs Empty = new GetServerAzureADOnlyAuthenticationArgs();
 
+    /**
+     * The name of server azure active directory only authentication.
+     * 
+     */
     @InputImport(name="authenticationName", required=true)
     private final String authenticationName;
 
@@ -19,6 +23,10 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends io.pulumi.reso
         return this.authenticationName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

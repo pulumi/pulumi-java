@@ -16,6 +16,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
 
     public static final MethodIntegrationResponseArgs Empty = new MethodIntegrationResponseArgs();
 
+    /**
+     * Specifies how to handle request payload content type conversions.
+     * 
+     */
     @InputImport(name="contentHandling")
     private final @Nullable Input<MethodIntegrationResponseContentHandling> contentHandling;
 
@@ -23,6 +27,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
         return this.contentHandling == null ? Input.empty() : this.contentHandling;
     }
 
+    /**
+     * The response parameters from the backend response that API Gateway sends to the method response.
+     * 
+     */
     @InputImport(name="responseParameters")
     private final @Nullable Input<Object> responseParameters;
 
@@ -30,6 +38,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
         return this.responseParameters == null ? Input.empty() : this.responseParameters;
     }
 
+    /**
+     * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
+     * 
+     */
     @InputImport(name="responseTemplates")
     private final @Nullable Input<Object> responseTemplates;
 
@@ -37,6 +49,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
         return this.responseTemplates == null ? Input.empty() : this.responseTemplates;
     }
 
+    /**
+     * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
+     * 
+     */
     @InputImport(name="selectionPattern")
     private final @Nullable Input<String> selectionPattern;
 
@@ -44,6 +60,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
         return this.selectionPattern == null ? Input.empty() : this.selectionPattern;
     }
 
+    /**
+     * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
+     * 
+     */
     @InputImport(name="statusCode", required=true)
     private final Input<String> statusCode;
 

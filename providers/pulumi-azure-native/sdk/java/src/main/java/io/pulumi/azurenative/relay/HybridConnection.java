@@ -16,51 +16,128 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Description of hybrid connection resource.
+ * API Version: 2017-04-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:relay:HybridConnection example-Relay-Hybrid-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/HybridConnections/example-Relay-Hybrid-01 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:relay:HybridConnection")
 public class HybridConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * The time the hybrid connection was created.
+     * 
+     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return The time the hybrid connection was created.
+     * 
+     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
+     * 
+     */
     @OutputExport(name="listenerCount", type=Integer.class, parameters={})
     private Output<Integer> listenerCount;
 
+    /**
+     * @return The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
+     * 
+     */
     public Output<Integer> getListenerCount() {
         return this.listenerCount;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Returns true if client authorization is needed for this hybrid connection; otherwise, false.
+     * 
+     */
     @OutputExport(name="requiresClientAuthorization", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresClientAuthorization;
 
+    /**
+     * @return Returns true if client authorization is needed for this hybrid connection; otherwise, false.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getRequiresClientAuthorization() {
         return this.requiresClientAuthorization;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The time the namespace was updated.
+     * 
+     */
     @OutputExport(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
+    /**
+     * @return The time the namespace was updated.
+     * 
+     */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;
     }
+    /**
+     * The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
+     * 
+     */
     @OutputExport(name="userMetadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> userMetadata;
 
+    /**
+     * @return The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
+     * 
+     */
     public Output</* @Nullable */ String> getUserMetadata() {
         return this.userMetadata;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public HybridConnection(String name, HybridConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:relay:HybridConnection", name, args == null ? HybridConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -80,6 +157,14 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static HybridConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HybridConnection(name, id, options);
     }

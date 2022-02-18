@@ -16,69 +16,159 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::EC2::TransitGatewayPeeringAttachment type
+ * 
+ */
 @ResourceType(type="aws-native:ec2:TransitGatewayPeeringAttachment")
 public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomResource {
+    /**
+     * The time the transit gateway peering attachment was created.
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return The time the transit gateway peering attachment was created.
+     * 
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * Options for transit gateway peering attachment
+     * 
+     */
     @OutputExport(name="options", type=TransitGatewayPeeringAttachmentOptions.class, parameters={})
     private Output</* @Nullable */ TransitGatewayPeeringAttachmentOptions> options;
 
+    /**
+     * @return Options for transit gateway peering attachment
+     * 
+     */
     public Output</* @Nullable */ TransitGatewayPeeringAttachmentOptions> getOptions() {
         return this.options;
     }
+    /**
+     * The ID of the peer account
+     * 
+     */
     @OutputExport(name="peerAccountId", type=String.class, parameters={})
     private Output<String> peerAccountId;
 
+    /**
+     * @return The ID of the peer account
+     * 
+     */
     public Output<String> getPeerAccountId() {
         return this.peerAccountId;
     }
+    /**
+     * Peer Region
+     * 
+     */
     @OutputExport(name="peerRegion", type=String.class, parameters={})
     private Output<String> peerRegion;
 
+    /**
+     * @return Peer Region
+     * 
+     */
     public Output<String> getPeerRegion() {
         return this.peerRegion;
     }
+    /**
+     * The ID of the peer transit gateway.
+     * 
+     */
     @OutputExport(name="peerTransitGatewayId", type=String.class, parameters={})
     private Output<String> peerTransitGatewayId;
 
+    /**
+     * @return The ID of the peer transit gateway.
+     * 
+     */
     public Output<String> getPeerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
+    /**
+     * The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The status of the transit gateway peering attachment.
+     * 
+     */
     @OutputExport(name="status", type=TransitGatewayPeeringAttachmentPeeringAttachmentStatus.class, parameters={})
     private Output<TransitGatewayPeeringAttachmentPeeringAttachmentStatus> status;
 
+    /**
+     * @return The status of the transit gateway peering attachment.
+     * 
+     */
     public Output<TransitGatewayPeeringAttachmentPeeringAttachmentStatus> getStatus() {
         return this.status;
     }
+    /**
+     * The tags for the transit gateway peering attachment.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={TransitGatewayPeeringAttachmentTag.class})
     private Output</* @Nullable */ List<TransitGatewayPeeringAttachmentTag>> tags;
 
+    /**
+     * @return The tags for the transit gateway peering attachment.
+     * 
+     */
     public Output</* @Nullable */ List<TransitGatewayPeeringAttachmentTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The ID of the transit gateway peering attachment.
+     * 
+     */
     @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
+    /**
+     * @return The ID of the transit gateway peering attachment.
+     * 
+     */
     public Output<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
+    /**
+     * The ID of the transit gateway.
+     * 
+     */
     @OutputExport(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;
 
+    /**
+     * @return The ID of the transit gateway.
+     * 
+     */
     public Output<String> getTransitGatewayId() {
         return this.transitGatewayId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TransitGatewayPeeringAttachment(String name, TransitGatewayPeeringAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:TransitGatewayPeeringAttachment", name, args == null ? TransitGatewayPeeringAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -94,6 +184,14 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TransitGatewayPeeringAttachment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TransitGatewayPeeringAttachment(name, id, options);
     }

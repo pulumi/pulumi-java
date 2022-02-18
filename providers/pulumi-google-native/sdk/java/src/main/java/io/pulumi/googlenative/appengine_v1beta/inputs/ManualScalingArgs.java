@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+ * 
+ */
 public final class ManualScalingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManualScalingArgs Empty = new ManualScalingArgs();
 
+    /**
+     * Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<Integer> instances;
 

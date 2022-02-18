@@ -13,6 +13,10 @@ public final class PacketMirroringMirroredResourcesSubnetworkGetArgs extends io.
 
     public static final PacketMirroringMirroredResourcesSubnetworkGetArgs Empty = new PacketMirroringMirroredResourcesSubnetworkGetArgs();
 
+    /**
+     * The URL of the instances where this rule should be active.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

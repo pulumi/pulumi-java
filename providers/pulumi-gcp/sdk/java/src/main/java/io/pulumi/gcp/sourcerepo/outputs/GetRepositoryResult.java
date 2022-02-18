@@ -14,6 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRepositoryResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
     private final @Nullable String project;
@@ -37,6 +41,10 @@ public final class GetRepositoryResult {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

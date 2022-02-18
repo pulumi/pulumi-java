@@ -19,6 +19,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplianceArgs Empty = new ApplianceArgs();
 
+    /**
+     * Represents a supported Fabric/Infra. (AKSEdge etc...).
+     * 
+     */
     @InputImport(name="distro")
     private final @Nullable Input<Either<String,Distro>> distro;
 
@@ -26,6 +30,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
         return this.distro == null ? Input.empty() : this.distro;
     }
 
+    /**
+     * Identity for the resource.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -33,6 +41,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Contains infrastructure information about the Appliance
+     * 
+     */
     @InputImport(name="infrastructureConfig")
     private final @Nullable Input<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
 
@@ -40,6 +52,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
         return this.infrastructureConfig == null ? Input.empty() : this.infrastructureConfig;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -47,6 +63,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Certificates pair used to download MSI certificate from HIS
+     * 
+     */
     @InputImport(name="publicKey")
     private final @Nullable Input<String> publicKey;
 
@@ -54,6 +74,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicKey == null ? Input.empty() : this.publicKey;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,6 +85,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Appliances name.
+     * 
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -68,6 +96,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

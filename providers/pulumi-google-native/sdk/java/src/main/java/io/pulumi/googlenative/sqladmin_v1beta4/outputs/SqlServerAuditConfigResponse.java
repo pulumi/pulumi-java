@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SqlServerAuditConfigResponse {
+    /**
+     * The name of the destination bucket (e.g., gs://mybucket).
+     * 
+     */
     private final String bucket;
+    /**
+     * This is always sql#sqlServerAuditConfig
+     * 
+     */
     private final String kind;
 
     @OutputCustomType.Constructor({"bucket","kind"})
@@ -20,9 +28,17 @@ public final class SqlServerAuditConfigResponse {
         this.kind = Objects.requireNonNull(kind);
     }
 
+    /**
+     * The name of the destination bucket (e.g., gs://mybucket).
+     * 
+     */
     public String getBucket() {
         return this.bucket;
     }
+    /**
+     * This is always sql#sqlServerAuditConfig
+     * 
+     */
     public String getKind() {
         return this.kind;
     }

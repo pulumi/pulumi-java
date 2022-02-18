@@ -11,6 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AiFeatureStoreEntityTypeMonitoringConfig {
+    /**
+     * Configuration of how features in Featurestore are monitored.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis;
 
     @OutputCustomType.Constructor({"snapshotAnalysis"})
@@ -18,6 +23,11 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
         this.snapshotAnalysis = snapshotAnalysis;
     }
 
+    /**
+     * Configuration of how features in Featurestore are monitored.
+     * Structure is documented below.
+     * 
+     */
     public Optional<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis> getSnapshotAnalysis() {
         return Optional.ofNullable(this.snapshotAnalysis);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * ResolverQueryLogConfigStatus, possible values are CREATING, CREATED, DELETED AND FAILED.
+     * 
+     */
     @EnumType
     public enum ResolverQueryLoggingConfigStatus {
         Creating("CREATING"),

@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The container Http Get settings, for liveness or readiness probe
+ * 
+ */
 public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerHttpGetArgs Empty = new ContainerHttpGetArgs();
 
+    /**
+     * The HTTP headers.
+     * 
+     */
     @InputImport(name="httpHeaders")
     private final @Nullable Input<HttpHeadersArgs> httpHeaders;
 
@@ -25,6 +33,10 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
         return this.httpHeaders == null ? Input.empty() : this.httpHeaders;
     }
 
+    /**
+     * The path to probe.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -32,6 +44,10 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * The port number to probe.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -39,6 +55,10 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
         return this.port;
     }
 
+    /**
+     * The scheme.
+     * 
+     */
     @InputImport(name="scheme")
     private final @Nullable Input<Either<String,Scheme>> scheme;
 

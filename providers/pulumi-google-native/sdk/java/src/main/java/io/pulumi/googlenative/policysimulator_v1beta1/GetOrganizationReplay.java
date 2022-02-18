@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationReplay {
+/**
+ * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+ * 
+ */
     public static CompletableFuture<GetOrganizationReplayResult> invokeAsync(GetOrganizationReplayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1beta1:getOrganizationReplay", TypeShape.of(GetOrganizationReplayResult.class), args == null ? GetOrganizationReplayArgs.Empty : args, Utilities.withVersion(options));
     }

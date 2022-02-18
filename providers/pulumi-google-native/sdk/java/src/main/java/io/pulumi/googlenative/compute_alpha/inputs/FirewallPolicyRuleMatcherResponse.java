@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents a match condition that incoming traffic is evaluated against. Exactly one field must be specified.
+ * 
+ */
 public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicyRuleMatcherResponse Empty = new FirewallPolicyRuleMatcherResponse();
 
+    /**
+     * Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.
+     * 
+     */
     @InputImport(name="destAddressGroups", required=true)
     private final List<String> destAddressGroups;
 
@@ -22,6 +30,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.destAddressGroups;
     }
 
+    /**
+     * Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 1000.
+     * 
+     */
     @InputImport(name="destFqdns", required=true)
     private final List<String> destFqdns;
 
@@ -29,6 +41,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.destFqdns;
     }
 
+    /**
+     * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+     * 
+     */
     @InputImport(name="destIpRanges", required=true)
     private final List<String> destIpRanges;
 
@@ -36,6 +52,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.destIpRanges;
     }
 
+    /**
+     * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.
+     * 
+     */
     @InputImport(name="destRegionCodes", required=true)
     private final List<String> destRegionCodes;
 
@@ -43,6 +63,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.destRegionCodes;
     }
 
+    /**
+     * Pairs of IP protocols and ports that the rule should match.
+     * 
+     */
     @InputImport(name="layer4Configs", required=true)
     private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
 
@@ -50,6 +74,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.layer4Configs;
     }
 
+    /**
+     * Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.
+     * 
+     */
     @InputImport(name="srcAddressGroups", required=true)
     private final List<String> srcAddressGroups;
 
@@ -57,6 +85,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.srcAddressGroups;
     }
 
+    /**
+     * Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 1000.
+     * 
+     */
     @InputImport(name="srcFqdns", required=true)
     private final List<String> srcFqdns;
 
@@ -64,6 +96,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.srcFqdns;
     }
 
+    /**
+     * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+     * 
+     */
     @InputImport(name="srcIpRanges", required=true)
     private final List<String> srcIpRanges;
 
@@ -71,6 +107,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.srcIpRanges;
     }
 
+    /**
+     * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.
+     * 
+     */
     @InputImport(name="srcRegionCodes", required=true)
     private final List<String> srcRegionCodes;
 
@@ -78,6 +118,10 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
         return this.srcRegionCodes;
     }
 
+    /**
+     * List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
     @InputImport(name="srcSecureTags", required=true)
     private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 

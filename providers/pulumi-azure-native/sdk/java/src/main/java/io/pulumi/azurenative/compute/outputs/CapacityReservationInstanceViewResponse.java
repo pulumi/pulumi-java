@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CapacityReservationInstanceViewResponse {
+    /**
+     * The resource status information.
+     * 
+     */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
+    /**
+     * Unutilized capacity of the capacity reservation.
+     * 
+     */
     private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
     @OutputCustomType.Constructor({"statuses","utilizationInfo"})
@@ -24,9 +32,17 @@ public final class CapacityReservationInstanceViewResponse {
         this.utilizationInfo = utilizationInfo;
     }
 
+    /**
+     * The resource status information.
+     * 
+     */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
+    /**
+     * Unutilized capacity of the capacity reservation.
+     * 
+     */
     public Optional<CapacityReservationUtilizationResponse> getUtilizationInfo() {
         return Optional.ofNullable(this.utilizationInfo);
     }

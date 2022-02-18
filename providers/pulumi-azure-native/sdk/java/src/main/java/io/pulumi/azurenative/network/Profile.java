@@ -19,81 +19,198 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Class representing a Traffic Manager profile.
+ * API Version: 2018-08-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:Profile parentprofile /subscriptions/{subscription-id}/resourceGroups/myresourcegroup/providers/Microsoft.Network/trafficManagerProfiles/parentprofile 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:Profile")
 public class Profile extends io.pulumi.resources.CustomResource {
+    /**
+     * The list of allowed endpoint record types.
+     * 
+     */
     @OutputExport(name="allowedEndpointRecordTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedEndpointRecordTypes;
 
+    /**
+     * @return The list of allowed endpoint record types.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getAllowedEndpointRecordTypes() {
         return this.allowedEndpointRecordTypes;
     }
+    /**
+     * The DNS settings of the Traffic Manager profile.
+     * 
+     */
     @OutputExport(name="dnsConfig", type=DnsConfigResponse.class, parameters={})
     private Output</* @Nullable */ DnsConfigResponse> dnsConfig;
 
+    /**
+     * @return The DNS settings of the Traffic Manager profile.
+     * 
+     */
     public Output</* @Nullable */ DnsConfigResponse> getDnsConfig() {
         return this.dnsConfig;
     }
+    /**
+     * The list of endpoints in the Traffic Manager profile.
+     * 
+     */
     @OutputExport(name="endpoints", type=List.class, parameters={EndpointResponse.class})
     private Output</* @Nullable */ List<EndpointResponse>> endpoints;
 
+    /**
+     * @return The list of endpoints in the Traffic Manager profile.
+     * 
+     */
     public Output</* @Nullable */ List<EndpointResponse>> getEndpoints() {
         return this.endpoints;
     }
+    /**
+     * The Azure Region where the resource lives
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The Azure Region where the resource lives
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Maximum number of endpoints to be returned for MultiValue routing type.
+     * 
+     */
     @OutputExport(name="maxReturn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxReturn;
 
+    /**
+     * @return Maximum number of endpoints to be returned for MultiValue routing type.
+     * 
+     */
     public Output</* @Nullable */ Double> getMaxReturn() {
         return this.maxReturn;
     }
+    /**
+     * The endpoint monitoring settings of the Traffic Manager profile.
+     * 
+     */
     @OutputExport(name="monitorConfig", type=MonitorConfigResponse.class, parameters={})
     private Output</* @Nullable */ MonitorConfigResponse> monitorConfig;
 
+    /**
+     * @return The endpoint monitoring settings of the Traffic Manager profile.
+     * 
+     */
     public Output</* @Nullable */ MonitorConfigResponse> getMonitorConfig() {
         return this.monitorConfig;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The status of the Traffic Manager profile.
+     * 
+     */
     @OutputExport(name="profileStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> profileStatus;
 
+    /**
+     * @return The status of the Traffic Manager profile.
+     * 
+     */
     public Output</* @Nullable */ String> getProfileStatus() {
         return this.profileStatus;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The traffic routing method of the Traffic Manager profile.
+     * 
+     */
     @OutputExport(name="trafficRoutingMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> trafficRoutingMethod;
 
+    /**
+     * @return The traffic routing method of the Traffic Manager profile.
+     * 
+     */
     public Output</* @Nullable */ String> getTrafficRoutingMethod() {
         return this.trafficRoutingMethod;
     }
+    /**
+     * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
+     * 
+     */
     @OutputExport(name="trafficViewEnrollmentStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> trafficViewEnrollmentStatus;
 
+    /**
+     * @return Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
+     * 
+     */
     public Output</* @Nullable */ String> getTrafficViewEnrollmentStatus() {
         return this.trafficViewEnrollmentStatus;
     }
+    /**
+     * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
+    /**
+     * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
+     * 
+     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Profile(String name, ProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:Profile", name, args == null ? ProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -118,6 +235,14 @@ public class Profile extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Profile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Profile(name, id, options);
     }

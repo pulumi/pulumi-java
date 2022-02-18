@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines contents of custom rules
+ * 
+ */
 public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomRuleListArgs Empty = new CustomRuleListArgs();
 
+    /**
+     * List of rules
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<CustomRuleArgs>> rules;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * UncountedTerminatedPods holds UIDs of Pods that have terminated but haven't been accounted in Job status counters.
+ * 
+ */
 public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UncountedTerminatedPodsArgs Empty = new UncountedTerminatedPodsArgs();
 
+    /**
+     * Failed holds UIDs of failed Pods.
+     * 
+     */
     @InputImport(name="failed")
     private final @Nullable Input<List<String>> failed;
 
@@ -22,6 +30,10 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
         return this.failed == null ? Input.empty() : this.failed;
     }
 
+    /**
+     * Succeeded holds UIDs of succeeded Pods.
+     * 
+     */
     @InputImport(name="succeeded")
     private final @Nullable Input<List<String>> succeeded;
 

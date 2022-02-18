@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Format of the input file
+     * 
+     */
     @EnumType
     public enum FaqFileFormat {
         Csv("CSV"),

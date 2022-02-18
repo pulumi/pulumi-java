@@ -16,6 +16,10 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CarrierGatewayArgs Empty = new CarrierGatewayArgs();
 
+    /**
+     * The tags for the carrier gateway.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<CarrierGatewayTagArgs>> tags;
 
@@ -23,6 +27,10 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the VPC.
+     * 
+     */
     @InputImport(name="vpcId", required=true)
     private final Input<String> vpcId;
 

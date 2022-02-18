@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The metric you want to retain. Dimensions are optional.
+ * 
+ */
 public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityProfileMetricToRetainArgs Empty = new SecurityProfileMetricToRetainArgs();
 
+    /**
+     * What is measured by the behavior.
+     * 
+     */
     @InputImport(name="metric", required=true)
     private final Input<String> metric;
 

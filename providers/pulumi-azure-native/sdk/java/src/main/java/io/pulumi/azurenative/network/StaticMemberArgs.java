@@ -14,6 +14,10 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StaticMemberArgs Empty = new StaticMemberArgs();
 
+    /**
+     * The name of the network group.
+     * 
+     */
     @InputImport(name="networkGroupName", required=true)
     private final Input<String> networkGroupName;
 
@@ -21,6 +25,10 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkGroupName;
     }
 
+    /**
+     * The name of the network manager.
+     * 
+     */
     @InputImport(name="networkManagerName", required=true)
     private final Input<String> networkManagerName;
 
@@ -28,6 +36,10 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkManagerName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource Id.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -42,6 +58,10 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
+    /**
+     * The name of the static member.
+     * 
+     */
     @InputImport(name="staticMemberName")
     private final @Nullable Input<String> staticMemberName;
 

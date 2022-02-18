@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * User info
+ * 
+ */
 public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserInfoArgs Empty = new UserInfoArgs();
 
+    /**
+     * Email of the user used by Datadog for contacting them if needed
+     * 
+     */
     @InputImport(name="emailAddress")
     private final @Nullable Input<String> emailAddress;
 
@@ -21,6 +29,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
     }
 
+    /**
+     * Name of the user
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +40,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Phone number of the user used by Datadog for contacting them if needed
+     * 
+     */
     @InputImport(name="phoneNumber")
     private final @Nullable Input<String> phoneNumber;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A configuration item for source resource
+ * 
+ */
 public final class SourceConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceConfigurationResponse Empty = new SourceConfigurationResponse();
 
+    /**
+     * The name of setting.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class SourceConfigurationResponse extends io.pulumi.resources.Invok
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The value of setting
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

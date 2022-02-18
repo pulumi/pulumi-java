@@ -15,6 +15,10 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkPeeringArgs Empty = new NetworkPeeringArgs();
 
+    /**
+     * Whether to export the custom routes to the peer network. Defaults to `false`.
+     * 
+     */
     @InputImport(name="exportCustomRoutes")
     private final @Nullable Input<Boolean> exportCustomRoutes;
 
@@ -22,6 +26,10 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.exportCustomRoutes == null ? Input.empty() : this.exportCustomRoutes;
     }
 
+    /**
+     * Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+     * 
+     */
     @InputImport(name="exportSubnetRoutesWithPublicIp")
     private final @Nullable Input<Boolean> exportSubnetRoutesWithPublicIp;
 
@@ -29,6 +37,10 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.exportSubnetRoutesWithPublicIp == null ? Input.empty() : this.exportSubnetRoutesWithPublicIp;
     }
 
+    /**
+     * Whether to import the custom routes from the peer network. Defaults to `false`.
+     * 
+     */
     @InputImport(name="importCustomRoutes")
     private final @Nullable Input<Boolean> importCustomRoutes;
 
@@ -36,6 +48,10 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.importCustomRoutes == null ? Input.empty() : this.importCustomRoutes;
     }
 
+    /**
+     * Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
+     * 
+     */
     @InputImport(name="importSubnetRoutesWithPublicIp")
     private final @Nullable Input<Boolean> importSubnetRoutesWithPublicIp;
 
@@ -43,6 +59,10 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.importSubnetRoutesWithPublicIp == null ? Input.empty() : this.importSubnetRoutesWithPublicIp;
     }
 
+    /**
+     * Name of the peering.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +70,10 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The primary network of the peering.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final Input<String> network;
 
@@ -57,6 +81,11 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.network;
     }
 
+    /**
+     * The peer network in the peering. The peer network
+     * may belong to a different project.
+     * 
+     */
     @InputImport(name="peerNetwork", required=true)
     private final Input<String> peerNetwork;
 

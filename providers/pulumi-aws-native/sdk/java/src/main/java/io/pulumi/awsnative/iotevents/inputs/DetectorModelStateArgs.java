@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information that defines a state of a detector.
+ * 
+ */
 public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelStateArgs Empty = new DetectorModelStateArgs();
@@ -38,6 +42,10 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
         return this.onInput == null ? Input.empty() : this.onInput;
     }
 
+    /**
+     * The name of the state.
+     * 
+     */
     @InputImport(name="stateName", required=true)
     private final Input<String> stateName;
 

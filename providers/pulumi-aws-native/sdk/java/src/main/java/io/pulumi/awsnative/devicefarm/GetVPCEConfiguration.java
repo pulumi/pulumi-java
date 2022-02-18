@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVPCEConfiguration {
+/**
+ * AWS::DeviceFarm::VPCEConfiguration creates a new Device Farm VPCE Configuration
+ * 
+ */
     public static CompletableFuture<GetVPCEConfigurationResult> invokeAsync(GetVPCEConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getVPCEConfiguration", TypeShape.of(GetVPCEConfigurationResult.class), args == null ? GetVPCEConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

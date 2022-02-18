@@ -13,6 +13,21 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetObjectSignedUrl {
+/**
+ * The Google Cloud storage signed URL data source generates a signed URL for a given storage object. Signed URLs provide a way to give time-limited read or write access to anyone in possession of the URL, regardless of whether they have a Google account.
+ * 
+ * For more info about signed URL's is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
+ * 
+ * ## Example Usage
+ * ## Full Example
+ * 
+ *
+ * A collection of arguments for invoking getObjectSignedUrl.
+ * 
+ *
+ * A collection of values returned by getObjectSignedUrl.
+ * 
+ */
     public static CompletableFuture<GetObjectSignedUrlResult> invokeAsync(GetObjectSignedUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getObjectSignedUrl:getObjectSignedUrl", TypeShape.of(GetObjectSignedUrlResult.class), args == null ? GetObjectSignedUrlArgs.Empty : args, Utilities.withVersion(options));
     }

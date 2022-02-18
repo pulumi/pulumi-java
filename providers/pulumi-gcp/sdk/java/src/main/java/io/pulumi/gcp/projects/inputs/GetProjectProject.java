@@ -55,6 +55,10 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
         return this.parent;
     }
 
+    /**
+     * The project id of the project.
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final String projectId;
 

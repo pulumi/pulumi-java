@@ -15,6 +15,12 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
 
     public static final FunctionEventTriggerArgs Empty = new FunctionEventTriggerArgs();
 
+    /**
+     * The type of event to observe. For example: `"google.storage.object.finalize"`.
+     * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
+     * full reference of accepted triggers.
+     * 
+     */
     @InputImport(name="eventType", required=true)
     private final Input<String> eventType;
 
@@ -22,6 +28,10 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
         return this.eventType;
     }
 
+    /**
+     * Specifies policy for failed executions. Structure is documented below.
+     * 
+     */
     @InputImport(name="failurePolicy")
     private final @Nullable Input<FunctionEventTriggerFailurePolicyArgs> failurePolicy;
 
@@ -29,6 +39,11 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
         return this.failurePolicy == null ? Input.empty() : this.failurePolicy;
     }
 
+    /**
+     * Required. The name or partial URI of the resource from
+     * which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final Input<String> resource;
 

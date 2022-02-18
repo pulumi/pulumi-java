@@ -12,6 +12,10 @@ public final class GetPipelineJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPipelineJobArgs Empty = new GetPipelineJobArgs();
 
+    /**
+     * The Azure Video Analyzer account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetPipelineJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The pipeline job name.
+     * 
+     */
     @InputImport(name="pipelineJobName", required=true)
     private final String pipelineJobName;
 
@@ -26,6 +34,10 @@ public final class GetPipelineJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.pipelineJobName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

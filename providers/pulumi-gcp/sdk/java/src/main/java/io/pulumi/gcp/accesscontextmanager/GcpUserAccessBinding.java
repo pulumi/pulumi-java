@@ -13,33 +13,93 @@ import io.pulumi.gcp.accesscontextmanager.inputs.GcpUserAccessBindingState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Restricts access to Cloud Console and Google Cloud APIs for a set of users using Context-Aware Access.
+ * 
+ * To get more information about GcpUserAccessBinding, see:
+ * 
+ * * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/organizations.gcpUserAccessBindings)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * GcpUserAccessBinding can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding")
 public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
+    /**
+     * Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
+     * 
+     */
     @OutputExport(name="accessLevels", type=String.class, parameters={})
     private Output<String> accessLevels;
 
+    /**
+     * @return Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
+     * 
+     */
     public Output<String> getAccessLevels() {
         return this.accessLevels;
     }
+    /**
+     * Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
+     * 
+     */
     @OutputExport(name="groupKey", type=String.class, parameters={})
     private Output<String> groupKey;
 
+    /**
+     * @return Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
+     * 
+     */
     public Output<String> getGroupKey() {
         return this.groupKey;
     }
+    /**
+     * Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
+     * characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
+     * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
+     * characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
+     * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Required. ID of the parent organization.
+     * 
+     */
     @OutputExport(name="organizationId", type=String.class, parameters={})
     private Output<String> organizationId;
 
+    /**
+     * @return Required. ID of the parent organization.
+     * 
+     */
     public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GcpUserAccessBinding(String name, GcpUserAccessBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding", name, args == null ? GcpUserAccessBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -55,6 +115,15 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GcpUserAccessBinding get(String name, Input<String> id, @Nullable GcpUserAccessBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GcpUserAccessBinding(name, id, state, options);
     }

@@ -14,6 +14,10 @@ public final class AutoscaleSettingsResponse extends io.pulumi.resources.InvokeA
 
     public static final AutoscaleSettingsResponse Empty = new AutoscaleSettingsResponse();
 
+    /**
+     * Represents maximum throughput, the resource can scale up to.
+     * 
+     */
     @InputImport(name="maxThroughput")
     private final @Nullable Integer maxThroughput;
 

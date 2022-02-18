@@ -15,6 +15,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
 
     public static final WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs();
 
+    /**
+     * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+     * 
+     */
     @InputImport(name="consumeReservationType")
     private final @Nullable Input<String> consumeReservationType;
 
@@ -22,6 +26,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
         return this.consumeReservationType == null ? Input.empty() : this.consumeReservationType;
     }
 
+    /**
+     * Optional. Corresponds to the label key of reservation resource.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -29,6 +37,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

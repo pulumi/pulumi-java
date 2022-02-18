@@ -16,6 +16,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EmailTemplateArgs Empty = new EmailTemplateArgs();
 
+    /**
+     * Email Template Body. This should be a valid XDocument
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable Input<String> body;
 
@@ -23,6 +27,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * Description of the Email Template.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Email Template Parameter values.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
 
@@ -37,6 +49,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -51,6 +71,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Subject of the Template.
+     * 
+     */
     @InputImport(name="subject")
     private final @Nullable Input<String> subject;
 
@@ -58,6 +82,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.subject == null ? Input.empty() : this.subject;
     }
 
+    /**
+     * Email Template Name Identifier.
+     * 
+     */
     @InputImport(name="templateName")
     private final @Nullable Input<String> templateName;
 
@@ -65,6 +93,10 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.templateName == null ? Input.empty() : this.templateName;
     }
 
+    /**
+     * Title of the Template.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

@@ -14,6 +14,11 @@ public final class PreventionStoredInfoTypeDictionaryWordListGetArgs extends io.
 
     public static final PreventionStoredInfoTypeDictionaryWordListGetArgs Empty = new PreventionStoredInfoTypeDictionaryWordListGetArgs();
 
+    /**
+     * Words or phrases defining the dictionary. The dictionary must contain at least one
+     * phrase and every phrase must contain at least 2 characters that are letters or digits.
+     * 
+     */
     @InputImport(name="words", required=true)
     private final Input<List<String>> words;
 

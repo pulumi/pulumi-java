@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU of a load balancer.
+ * 
+ */
 public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerSkuArgs Empty = new LoadBalancerSkuArgs();
 
+    /**
+     * Name of a load balancer SKU.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,LoadBalancerSkuName>> name;
 
@@ -24,6 +32,10 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tier of a load balancer SKU.
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,LoadBalancerSkuTier>> tier;
 

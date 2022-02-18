@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TriggerReferenceResponse {
+    /**
+     * Reference trigger name.
+     * 
+     */
     private final String referenceName;
+    /**
+     * Trigger reference type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"referenceName","type"})
@@ -20,9 +28,17 @@ public final class TriggerReferenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Reference trigger name.
+     * 
+     */
     public String getReferenceName() {
         return this.referenceName;
     }
+    /**
+     * Trigger reference type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -12,13 +12,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NfsAccessRuleResponse {
+    /**
+     * Access allowed by this rule.
+     * 
+     */
     private final String access;
+    /**
+     * GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
+     * 
+     */
     private final @Nullable String anonymousGID;
+    /**
+     * UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
+     * 
+     */
     private final @Nullable String anonymousUID;
+    /**
+     * Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
+     * 
+     */
     private final @Nullable String filter;
+    /**
+     * Map root accesses to anonymousUID and anonymousGID.
+     * 
+     */
     private final @Nullable Boolean rootSquash;
+    /**
+     * Scope for this rule. The scope and filter determine which clients match the rule.
+     * 
+     */
     private final String scope;
+    /**
+     * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.
+     * 
+     */
     private final @Nullable Boolean submountAccess;
+    /**
+     * Allow SUID semantics.
+     * 
+     */
     private final @Nullable Boolean suid;
 
     @OutputCustomType.Constructor({"access","anonymousGID","anonymousUID","filter","rootSquash","scope","submountAccess","suid"})
@@ -41,27 +73,59 @@ public final class NfsAccessRuleResponse {
         this.suid = suid;
     }
 
+    /**
+     * Access allowed by this rule.
+     * 
+     */
     public String getAccess() {
         return this.access;
     }
+    /**
+     * GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
+     * 
+     */
     public Optional<String> getAnonymousGID() {
         return Optional.ofNullable(this.anonymousGID);
     }
+    /**
+     * UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
+     * 
+     */
     public Optional<String> getAnonymousUID() {
         return Optional.ofNullable(this.anonymousUID);
     }
+    /**
+     * Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
+     * 
+     */
     public Optional<String> getFilter() {
         return Optional.ofNullable(this.filter);
     }
+    /**
+     * Map root accesses to anonymousUID and anonymousGID.
+     * 
+     */
     public Optional<Boolean> getRootSquash() {
         return Optional.ofNullable(this.rootSquash);
     }
+    /**
+     * Scope for this rule. The scope and filter determine which clients match the rule.
+     * 
+     */
     public String getScope() {
         return this.scope;
     }
+    /**
+     * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.
+     * 
+     */
     public Optional<Boolean> getSubmountAccess() {
         return Optional.ofNullable(this.submountAccess);
     }
+    /**
+     * Allow SUID semantics.
+     * 
+     */
     public Optional<Boolean> getSuid() {
         return Optional.ofNullable(this.suid);
     }

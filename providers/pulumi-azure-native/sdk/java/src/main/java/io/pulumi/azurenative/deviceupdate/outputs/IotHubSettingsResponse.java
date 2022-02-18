@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IotHubSettingsResponse {
+    /**
+     * EventHub connection string.
+     * 
+     */
     private final @Nullable String eventHubConnectionString;
+    /**
+     * IoTHub connection string.
+     * 
+     */
     private final @Nullable String ioTHubConnectionString;
+    /**
+     * IoTHub resource ID
+     * 
+     */
     private final String resourceId;
 
     @OutputCustomType.Constructor({"eventHubConnectionString","ioTHubConnectionString","resourceId"})
@@ -25,12 +37,24 @@ public final class IotHubSettingsResponse {
         this.resourceId = Objects.requireNonNull(resourceId);
     }
 
+    /**
+     * EventHub connection string.
+     * 
+     */
     public Optional<String> getEventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
+    /**
+     * IoTHub connection string.
+     * 
+     */
     public Optional<String> getIoTHubConnectionString() {
         return Optional.ofNullable(this.ioTHubConnectionString);
     }
+    /**
+     * IoTHub resource ID
+     * 
+     */
     public String getResourceId() {
         return this.resourceId;
     }

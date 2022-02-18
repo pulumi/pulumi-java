@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoHealActionsResponse {
+    /**
+     * Predefined action to be taken.
+     * 
+     */
     private final @Nullable String actionType;
+    /**
+     * Custom action to be taken.
+     * 
+     */
     private final @Nullable AutoHealCustomActionResponse customAction;
+    /**
+     * Minimum time the process must execute
+     * before taking the action
+     * 
+     */
     private final @Nullable String minProcessExecutionTime;
 
     @OutputCustomType.Constructor({"actionType","customAction","minProcessExecutionTime"})
@@ -26,12 +39,25 @@ public final class AutoHealActionsResponse {
         this.minProcessExecutionTime = minProcessExecutionTime;
     }
 
+    /**
+     * Predefined action to be taken.
+     * 
+     */
     public Optional<String> getActionType() {
         return Optional.ofNullable(this.actionType);
     }
+    /**
+     * Custom action to be taken.
+     * 
+     */
     public Optional<AutoHealCustomActionResponse> getCustomAction() {
         return Optional.ofNullable(this.customAction);
     }
+    /**
+     * Minimum time the process must execute
+     * before taking the action
+     * 
+     */
     public Optional<String> getMinProcessExecutionTime() {
         return Optional.ofNullable(this.minProcessExecutionTime);
     }

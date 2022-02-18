@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIpGroup {
+/**
+ * The IpGroups resource information.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * The IpGroups resource information.
+ * 
+ */
     public static CompletableFuture<GetIpGroupResult> invokeAsync(GetIpGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getIpGroup", TypeShape.of(GetIpGroupResult.class), args == null ? GetIpGroupArgs.Empty : args, Utilities.withVersion(options));
     }

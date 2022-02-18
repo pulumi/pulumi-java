@@ -12,6 +12,10 @@ public final class GetConfigurationSetArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetConfigurationSetArgs Empty = new GetConfigurationSetArgs();
 
+    /**
+     * The name of the configuration set.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

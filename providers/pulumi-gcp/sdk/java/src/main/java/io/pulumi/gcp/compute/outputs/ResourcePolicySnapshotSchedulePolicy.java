@@ -13,8 +13,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourcePolicySnapshotSchedulePolicy {
+    /**
+     * Retention policy applied to snapshots created by this resource policy.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy;
+    /**
+     * Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     private final ResourcePolicySnapshotSchedulePolicySchedule schedule;
+    /**
+     * Properties with which the snapshots are created, such as labels.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties;
 
     @OutputCustomType.Constructor({"retentionPolicy","schedule","snapshotProperties"})
@@ -27,12 +41,26 @@ public final class ResourcePolicySnapshotSchedulePolicy {
         this.snapshotProperties = snapshotProperties;
     }
 
+    /**
+     * Retention policy applied to snapshots created by this resource policy.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ResourcePolicySnapshotSchedulePolicyRetentionPolicy> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
+    /**
+     * Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     public ResourcePolicySnapshotSchedulePolicySchedule getSchedule() {
         return this.schedule;
     }
+    /**
+     * Properties with which the snapshots are created, such as labels.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ResourcePolicySnapshotSchedulePolicySnapshotProperties> getSnapshotProperties() {
         return Optional.ofNullable(this.snapshotProperties);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of connector.
+     * 
+     */
     @EnumType
     public enum ConnectorTypes {
         None("None"),

@@ -14,6 +14,14 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttachedDiskArgs Empty = new AttachedDiskArgs();
 
+    /**
+     * Specifies a unique device name of your choice that is
+     * reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+     * system running within the instance. This name can be used to
+     * reference the device for mounting, resizing, and so on, from within
+     * the instance.
+     * 
+     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -21,6 +29,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
+    /**
+     * `name` or `self_link` of the disk that will be attached.
+     * 
+     */
     @InputImport(name="disk", required=true)
     private final Input<String> disk;
 
@@ -28,6 +40,13 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.disk;
     }
 
+    /**
+     * `name` or `self_link` of the compute instance that the disk will be attached to.
+     * If the `self_link` is provided then `zone` and `project` are extracted from the
+     * self link. If only the name is used then `zone` and `project` must be defined
+     * as properties on the resource or provider.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -35,6 +54,12 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance;
     }
 
+    /**
+     * The mode in which to attach this disk, either READ_WRITE or
+     * READ_ONLY. If not specified, the default is to attach the disk in
+     * READ_WRITE mode.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -42,6 +67,11 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The project that the referenced compute instance is a part of. If `instance` is referenced by its
+     * `self_link` the project defined in the link will take precedence.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -49,6 +79,11 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The zone that the referenced compute instance is located within. If `instance` is referenced by its
+     * `self_link` the zone defined in the link will take precedence.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

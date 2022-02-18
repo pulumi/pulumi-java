@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Definition of the link mapping of prediction.
+ * 
+ */
 public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PredictionMappingsArgs Empty = new PredictionMappingsArgs();
 
+    /**
+     * The grade of the link mapping.
+     * 
+     */
     @InputImport(name="grade", required=true)
     private final Input<String> grade;
 
@@ -20,6 +28,10 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
         return this.grade;
     }
 
+    /**
+     * The reason of the link mapping.
+     * 
+     */
     @InputImport(name="reason", required=true)
     private final Input<String> reason;
 
@@ -27,6 +39,10 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
         return this.reason;
     }
 
+    /**
+     * The score of the link mapping.
+     * 
+     */
     @InputImport(name="score", required=true)
     private final Input<String> score;
 

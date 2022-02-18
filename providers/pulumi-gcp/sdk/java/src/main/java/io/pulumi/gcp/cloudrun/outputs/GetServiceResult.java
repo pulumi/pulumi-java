@@ -18,6 +18,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetServiceResult {
     private final Boolean autogenerateRevisionName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String location;
     private final List<GetServiceMetadata> metadatas;
@@ -52,6 +56,10 @@ public final class GetServiceResult {
     public Boolean getAutogenerateRevisionName() {
         return this.autogenerateRevisionName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

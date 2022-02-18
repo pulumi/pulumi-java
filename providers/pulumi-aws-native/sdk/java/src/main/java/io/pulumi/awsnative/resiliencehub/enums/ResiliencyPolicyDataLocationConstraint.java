@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Data Location Constraint of the Policy.
+     * 
+     */
     @EnumType
     public enum ResiliencyPolicyDataLocationConstraint {
         AnyLocation("AnyLocation"),

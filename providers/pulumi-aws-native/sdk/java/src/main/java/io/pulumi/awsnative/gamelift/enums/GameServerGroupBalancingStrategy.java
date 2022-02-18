@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
+     * 
+     */
     @EnumType
     public enum GameServerGroupBalancingStrategy {
         SpotOnly("SPOT_ONLY"),

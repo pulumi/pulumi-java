@@ -12,6 +12,10 @@ public final class GetSecurityContactArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetSecurityContactArgs Empty = new GetSecurityContactArgs();
 
+    /**
+     * Name of the security contact object
+     * 
+     */
     @InputImport(name="securityContactName", required=true)
     private final String securityContactName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The managed application deployment mode.
+     * 
+     */
     @EnumType
     public enum DeploymentMode {
         NotSpecified("NotSpecified"),

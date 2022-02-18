@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata of Service Principal secret for autoprovisioning
+ * 
+ */
 public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata extends io.pulumi.resources.InvokeArgs {
 
     public static final DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata Empty = new DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata();
 
+    /**
+     * expiration date of service principal secret
+     * 
+     */
     @InputImport(name="expiryDate")
     private final @Nullable String expiryDate;
 
@@ -21,6 +29,10 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
         return this.expiryDate == null ? Optional.empty() : Optional.ofNullable(this.expiryDate);
     }
 
+    /**
+     * name of secret resource in parameter store
+     * 
+     */
     @InputImport(name="parameterNameInStore")
     private final @Nullable String parameterNameInStore;
 
@@ -28,6 +40,10 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
         return this.parameterNameInStore == null ? Optional.empty() : Optional.ofNullable(this.parameterNameInStore);
     }
 
+    /**
+     * region of parameter store where secret is kept
+     * 
+     */
     @InputImport(name="parameterStoreRegion")
     private final @Nullable String parameterStoreRegion;
 

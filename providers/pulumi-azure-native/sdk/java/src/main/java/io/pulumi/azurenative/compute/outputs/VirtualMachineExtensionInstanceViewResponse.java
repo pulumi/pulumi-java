@@ -13,10 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualMachineExtensionInstanceViewResponse {
+    /**
+     * The virtual machine extension name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The resource status information.
+     * 
+     */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
+    /**
+     * The resource status information.
+     * 
+     */
     private final @Nullable List<InstanceViewStatusResponse> substatuses;
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     private final @Nullable String type;
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     private final @Nullable String typeHandlerVersion;
 
     @OutputCustomType.Constructor({"name","statuses","substatuses","type","typeHandlerVersion"})
@@ -33,18 +53,38 @@ public final class VirtualMachineExtensionInstanceViewResponse {
         this.typeHandlerVersion = typeHandlerVersion;
     }
 
+    /**
+     * The virtual machine extension name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The resource status information.
+     * 
+     */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
+    /**
+     * The resource status information.
+     * 
+     */
     public List<InstanceViewStatusResponse> getSubstatuses() {
         return this.substatuses == null ? List.of() : this.substatuses;
     }
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     public Optional<String> getTypeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }

@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Destinations for data.
+ * 
+ */
 public final class ProjectDataDeliveryObject extends io.pulumi.resources.InvokeArgs {
 
     public static final ProjectDataDeliveryObject Empty = new ProjectDataDeliveryObject();

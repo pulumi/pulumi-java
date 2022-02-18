@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceInputOutputSpecificationResponse {
+    /**
+     * The description of the Swagger schema.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+     * 
+     */
     private final Map<String,TableSpecificationResponse> properties;
+    /**
+     * The title of your Swagger schema.
+     * 
+     */
     private final @Nullable String title;
+    /**
+     * The type of the entity described in swagger. Always 'object'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"description","properties","title","type"})
@@ -30,15 +46,31 @@ public final class ServiceInputOutputSpecificationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The description of the Swagger schema.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+     * 
+     */
     public Map<String,TableSpecificationResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The title of your Swagger schema.
+     * 
+     */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
+    /**
+     * The type of the entity described in swagger. Always 'object'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

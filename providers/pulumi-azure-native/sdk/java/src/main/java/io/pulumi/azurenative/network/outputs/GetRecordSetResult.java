@@ -25,24 +25,100 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRecordSetResult {
+    /**
+     * The list of A records in the record set.
+     * 
+     */
     private final @Nullable List<ARecordResponse> aRecords;
+    /**
+     * The list of AAAA records in the record set.
+     * 
+     */
     private final @Nullable List<AaaaRecordResponse> aaaaRecords;
+    /**
+     * The list of CAA records in the record set.
+     * 
+     */
     private final @Nullable List<CaaRecordResponse> caaRecords;
+    /**
+     * The CNAME record in the  record set.
+     * 
+     */
     private final @Nullable CnameRecordResponse cnameRecord;
+    /**
+     * The etag of the record set.
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Fully qualified domain name of the record set.
+     * 
+     */
     private final String fqdn;
+    /**
+     * The ID of the record set.
+     * 
+     */
     private final String id;
+    /**
+     * The metadata attached to the record set.
+     * 
+     */
     private final @Nullable Map<String,String> metadata;
+    /**
+     * The list of MX records in the record set.
+     * 
+     */
     private final @Nullable List<MxRecordResponse> mxRecords;
+    /**
+     * The name of the record set.
+     * 
+     */
     private final String name;
+    /**
+     * The list of NS records in the record set.
+     * 
+     */
     private final @Nullable List<NsRecordResponse> nsRecords;
+    /**
+     * provisioning State of the record set.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The list of PTR records in the record set.
+     * 
+     */
     private final @Nullable List<PtrRecordResponse> ptrRecords;
+    /**
+     * The SOA record in the record set.
+     * 
+     */
     private final @Nullable SoaRecordResponse soaRecord;
+    /**
+     * The list of SRV records in the record set.
+     * 
+     */
     private final @Nullable List<SrvRecordResponse> srvRecords;
+    /**
+     * A reference to an azure resource from where the dns resource value is taken.
+     * 
+     */
     private final @Nullable SubResourceResponse targetResource;
+    /**
+     * The TTL (time-to-live) of the records in the record set.
+     * 
+     */
     private final @Nullable Double ttl;
+    /**
+     * The list of TXT records in the record set.
+     * 
+     */
     private final @Nullable List<TxtRecordResponse> txtRecords;
+    /**
+     * The type of the record set.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"aRecords","aaaaRecords","caaRecords","cnameRecord","etag","fqdn","id","metadata","mxRecords","name","nsRecords","provisioningState","ptrRecords","soaRecord","srvRecords","targetResource","ttl","txtRecords","type"})
@@ -87,60 +163,136 @@ public final class GetRecordSetResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The list of A records in the record set.
+     * 
+     */
     public List<ARecordResponse> getARecords() {
         return this.aRecords == null ? List.of() : this.aRecords;
     }
+    /**
+     * The list of AAAA records in the record set.
+     * 
+     */
     public List<AaaaRecordResponse> getAaaaRecords() {
         return this.aaaaRecords == null ? List.of() : this.aaaaRecords;
     }
+    /**
+     * The list of CAA records in the record set.
+     * 
+     */
     public List<CaaRecordResponse> getCaaRecords() {
         return this.caaRecords == null ? List.of() : this.caaRecords;
     }
+    /**
+     * The CNAME record in the  record set.
+     * 
+     */
     public Optional<CnameRecordResponse> getCnameRecord() {
         return Optional.ofNullable(this.cnameRecord);
     }
+    /**
+     * The etag of the record set.
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Fully qualified domain name of the record set.
+     * 
+     */
     public String getFqdn() {
         return this.fqdn;
     }
+    /**
+     * The ID of the record set.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The metadata attached to the record set.
+     * 
+     */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
+    /**
+     * The list of MX records in the record set.
+     * 
+     */
     public List<MxRecordResponse> getMxRecords() {
         return this.mxRecords == null ? List.of() : this.mxRecords;
     }
+    /**
+     * The name of the record set.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The list of NS records in the record set.
+     * 
+     */
     public List<NsRecordResponse> getNsRecords() {
         return this.nsRecords == null ? List.of() : this.nsRecords;
     }
+    /**
+     * provisioning State of the record set.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The list of PTR records in the record set.
+     * 
+     */
     public List<PtrRecordResponse> getPtrRecords() {
         return this.ptrRecords == null ? List.of() : this.ptrRecords;
     }
+    /**
+     * The SOA record in the record set.
+     * 
+     */
     public Optional<SoaRecordResponse> getSoaRecord() {
         return Optional.ofNullable(this.soaRecord);
     }
+    /**
+     * The list of SRV records in the record set.
+     * 
+     */
     public List<SrvRecordResponse> getSrvRecords() {
         return this.srvRecords == null ? List.of() : this.srvRecords;
     }
+    /**
+     * A reference to an azure resource from where the dns resource value is taken.
+     * 
+     */
     public Optional<SubResourceResponse> getTargetResource() {
         return Optional.ofNullable(this.targetResource);
     }
+    /**
+     * The TTL (time-to-live) of the records in the record set.
+     * 
+     */
     public Optional<Double> getTtl() {
         return Optional.ofNullable(this.ttl);
     }
+    /**
+     * The list of TXT records in the record set.
+     * 
+     */
     public List<TxtRecordResponse> getTxtRecords() {
         return this.txtRecords == null ? List.of() : this.txtRecords;
     }
+    /**
+     * The type of the record set.
+     * 
+     */
     public String getType() {
         return this.type;
     }

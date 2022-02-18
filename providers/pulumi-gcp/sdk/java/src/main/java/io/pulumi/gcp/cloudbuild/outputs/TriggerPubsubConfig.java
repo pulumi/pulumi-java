@@ -11,9 +11,28 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TriggerPubsubConfig {
+    /**
+     * Service account that will make the push request.
+     * 
+     */
     private final @Nullable String serviceAccountEmail;
+    /**
+     * - 
+     * Potential issues with the underlying Pub/Sub subscription configuration.
+     * Only populated on get requests.
+     * 
+     */
     private final @Nullable String state;
+    /**
+     * - 
+     * Output only. Name of the subscription.
+     * 
+     */
     private final @Nullable String subscription;
+    /**
+     * The name of the topic from which this subscription is receiving messages.
+     * 
+     */
     private final String topic;
 
     @OutputCustomType.Constructor({"serviceAccountEmail","state","subscription","topic"})
@@ -28,15 +47,34 @@ public final class TriggerPubsubConfig {
         this.topic = Objects.requireNonNull(topic);
     }
 
+    /**
+     * Service account that will make the push request.
+     * 
+     */
     public Optional<String> getServiceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
+    /**
+     * - 
+     * Potential issues with the underlying Pub/Sub subscription configuration.
+     * Only populated on get requests.
+     * 
+     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
+    /**
+     * - 
+     * Output only. Name of the subscription.
+     * 
+     */
     public Optional<String> getSubscription() {
         return Optional.ofNullable(this.subscription);
     }
+    /**
+     * The name of the topic from which this subscription is receiving messages.
+     * 
+     */
     public String getTopic() {
         return this.topic;
     }

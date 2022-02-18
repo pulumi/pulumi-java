@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AccountResponse {
+    /**
+     * An automatic google login account.
+     * 
+     */
     private final GoogleAutoResponse googleAuto;
 
     @OutputCustomType.Constructor({"googleAuto"})
@@ -16,6 +20,10 @@ public final class AccountResponse {
         this.googleAuto = Objects.requireNonNull(googleAuto);
     }
 
+    /**
+     * An automatic google login account.
+     * 
+     */
     public GoogleAutoResponse getGoogleAuto() {
         return this.googleAuto;
     }

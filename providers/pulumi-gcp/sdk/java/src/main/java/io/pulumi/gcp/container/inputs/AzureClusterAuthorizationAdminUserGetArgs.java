@@ -13,6 +13,10 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends io.pulumi.r
 
     public static final AzureClusterAuthorizationAdminUserGetArgs Empty = new AzureClusterAuthorizationAdminUserGetArgs();
 
+    /**
+     * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

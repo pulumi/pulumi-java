@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
+    /**
+     * Type of archive files in this repository.
+     * 
+     */
     private final String archiveType;
+    /**
+     * List of components for this repository. Must contain at least one item.
+     * 
+     */
     private final List<String> components;
+    /**
+     * Distribution of this repository.
+     * 
+     */
     private final String distribution;
+    /**
+     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * 
+     */
     private final String gpgKey;
+    /**
+     * URI for this repository.
+     * 
+     */
     private final String uri;
 
     @OutputCustomType.Constructor({"archiveType","components","distribution","gpgKey","uri"})
@@ -30,18 +50,38 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
         this.uri = Objects.requireNonNull(uri);
     }
 
+    /**
+     * Type of archive files in this repository.
+     * 
+     */
     public String getArchiveType() {
         return this.archiveType;
     }
+    /**
+     * List of components for this repository. Must contain at least one item.
+     * 
+     */
     public List<String> getComponents() {
         return this.components;
     }
+    /**
+     * Distribution of this repository.
+     * 
+     */
     public String getDistribution() {
         return this.distribution;
     }
+    /**
+     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * 
+     */
     public String getGpgKey() {
         return this.gpgKey;
     }
+    /**
+     * URI for this repository.
+     * 
+     */
     public String getUri() {
         return this.uri;
     }

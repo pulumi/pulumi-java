@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDatabaseInstanceSettingDatabaseFlag {
+    /**
+     * The name of the instance.
+     * 
+     */
     private final String name;
     private final String value;
 
@@ -20,6 +24,10 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The name of the instance.
+     * 
+     */
     public String getName() {
         return this.name;
     }

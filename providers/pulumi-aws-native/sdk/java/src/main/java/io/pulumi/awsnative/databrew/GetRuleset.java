@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuleset {
+/**
+ * Resource schema for AWS::DataBrew::Ruleset.
+ * 
+ */
     public static CompletableFuture<GetRulesetResult> invokeAsync(GetRulesetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getRuleset", TypeShape.of(GetRulesetResult.class), args == null ? GetRulesetArgs.Empty : args, Utilities.withVersion(options));
     }

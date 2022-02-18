@@ -13,6 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Source Code configuration
+ * 
+ */
 public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceSourceConfigurationArgs Empty = new ServiceSourceConfigurationArgs();
@@ -24,6 +28,10 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
         return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
     }
 
+    /**
+     * Auto Deployment enabled
+     * 
+     */
     @InputImport(name="autoDeploymentsEnabled")
     private final @Nullable Input<Boolean> autoDeploymentsEnabled;
 

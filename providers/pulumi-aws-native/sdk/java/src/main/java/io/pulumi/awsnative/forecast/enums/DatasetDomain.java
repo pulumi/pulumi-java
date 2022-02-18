@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The domain associated with the dataset
+     * 
+     */
     @EnumType
     public enum DatasetDomain {
         Retail("RETAIL"),

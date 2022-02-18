@@ -11,6 +11,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class BotAliasLocaleSettingsItem {
     private final BotAliasLocaleSettings botAliasLocaleSetting;
+    /**
+     * A string used to identify the locale
+     * 
+     */
     private final String localeId;
 
     @OutputCustomType.Constructor({"botAliasLocaleSetting","localeId"})
@@ -24,6 +28,10 @@ public final class BotAliasLocaleSettingsItem {
     public BotAliasLocaleSettings getBotAliasLocaleSetting() {
         return this.botAliasLocaleSetting;
     }
+    /**
+     * A string used to identify the locale
+     * 
+     */
     public String getLocaleId() {
         return this.localeId;
     }

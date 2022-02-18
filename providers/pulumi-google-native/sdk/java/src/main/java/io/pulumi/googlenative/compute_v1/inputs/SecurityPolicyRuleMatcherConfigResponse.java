@@ -13,6 +13,10 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
 
     public static final SecurityPolicyRuleMatcherConfigResponse Empty = new SecurityPolicyRuleMatcherConfigResponse();
 
+    /**
+     * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+     * 
+     */
     @InputImport(name="srcIpRanges", required=true)
     private final List<String> srcIpRanges;
 

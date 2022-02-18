@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetASCDataConnector {
+/**
+ * Represents ASC (Azure Security Center) data connector.
+ * API Version: 2020-01-01.
+ * 
+ *
+ * Represents ASC (Azure Security Center) data connector.
+ * 
+ */
     public static CompletableFuture<GetASCDataConnectorResult> invokeAsync(GetASCDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getASCDataConnector", TypeShape.of(GetASCDataConnectorResult.class), args == null ? GetASCDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

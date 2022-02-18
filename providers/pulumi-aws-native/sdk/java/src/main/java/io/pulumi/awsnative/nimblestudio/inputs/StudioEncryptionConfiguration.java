@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Configuration of the encryption method that is used for the studio.</p>
+ * 
+ */
 public final class StudioEncryptionConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final StudioEncryptionConfiguration Empty = new StudioEncryptionConfiguration();
 
+    /**
+     * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
+     * 
+     */
     @InputImport(name="keyArn")
     private final @Nullable String keyArn;
 

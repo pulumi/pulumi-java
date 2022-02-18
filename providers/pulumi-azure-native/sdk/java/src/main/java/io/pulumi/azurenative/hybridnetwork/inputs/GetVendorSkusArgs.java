@@ -12,6 +12,10 @@ public final class GetVendorSkusArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVendorSkusArgs Empty = new GetVendorSkusArgs();
 
+    /**
+     * The name of the sku.
+     * 
+     */
     @InputImport(name="skuName", required=true)
     private final String skuName;
 
@@ -19,6 +23,10 @@ public final class GetVendorSkusArgs extends io.pulumi.resources.InvokeArgs {
         return this.skuName;
     }
 
+    /**
+     * The name of the vendor.
+     * 
+     */
     @InputImport(name="vendorName", required=true)
     private final String vendorName;
 

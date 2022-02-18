@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Scan schedule configuration.
+ * 
+ */
 public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 
+    /**
+     * The duration of time between executions in days.
+     * 
+     */
     @InputImport(name="intervalDurationDays", required=true)
     private final Input<Integer> intervalDurationDays;
 
@@ -22,6 +30,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.intervalDurationDays;
     }
 
+    /**
+     * A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
+     * 
+     */
     @InputImport(name="scheduleTime")
     private final @Nullable Input<String> scheduleTime;
 

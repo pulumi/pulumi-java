@@ -13,27 +13,61 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Logging Options enable you to configure your IoT V2 logging role and default logging level so that you can monitor progress events logs as it passes from your devices through Iot core service.
+ * 
+ */
 @ResourceType(type="aws-native:iot:Logging")
 public class Logging extends io.pulumi.resources.CustomResource {
+    /**
+     * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+     * 
+     */
     @OutputExport(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
+    /**
+     * @return Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+     * 
+     */
     public Output<String> getAccountId() {
         return this.accountId;
     }
+    /**
+     * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * 
+     */
     @OutputExport(name="defaultLogLevel", type=LoggingDefaultLogLevel.class, parameters={})
     private Output<LoggingDefaultLogLevel> defaultLogLevel;
 
+    /**
+     * @return The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * 
+     */
     public Output<LoggingDefaultLogLevel> getDefaultLogLevel() {
         return this.defaultLogLevel;
     }
+    /**
+     * The ARN of the role that allows IoT to write to Cloudwatch logs.
+     * 
+     */
     @OutputExport(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that allows IoT to write to Cloudwatch logs.
+     * 
+     */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Logging(String name, LoggingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iot:Logging", name, args == null ? LoggingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -49,6 +83,14 @@ public class Logging extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Logging get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Logging(name, id, options);
     }

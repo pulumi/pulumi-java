@@ -16,6 +16,10 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
 
     public static final ResourcePolicyInstanceSchedulePolicyGetArgs Empty = new ResourcePolicyInstanceSchedulePolicyGetArgs();
 
+    /**
+     * The expiration time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -23,6 +27,10 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -30,6 +38,11 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+     * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * 
+     */
     @InputImport(name="timeZone", required=true)
     private final Input<String> timeZone;
 
@@ -37,6 +50,11 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
         return this.timeZone;
     }
 
+    /**
+     * Specifies the schedule for starting instances.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="vmStartSchedule")
     private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule;
 
@@ -44,6 +62,11 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
         return this.vmStartSchedule == null ? Input.empty() : this.vmStartSchedule;
     }
 
+    /**
+     * Specifies the schedule for stopping instances.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="vmStopSchedule")
     private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule;
 

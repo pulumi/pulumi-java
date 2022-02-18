@@ -14,7 +14,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEnvironmentResult {
+    /**
+     * Configuration parameters for the environment.
+     * 
+     */
     private final List<GetEnvironmentConfig> configs;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final Map<String,String> labels;
     private final String name;
@@ -37,9 +45,17 @@ public final class GetEnvironmentResult {
         this.region = region;
     }
 
+    /**
+     * Configuration parameters for the environment.
+     * 
+     */
     public List<GetEnvironmentConfig> getConfigs() {
         return this.configs;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

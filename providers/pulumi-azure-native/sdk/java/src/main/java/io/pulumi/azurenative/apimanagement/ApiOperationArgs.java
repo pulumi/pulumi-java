@@ -18,6 +18,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiOperationArgs Empty = new ApiOperationArgs();
 
+    /**
+     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -25,6 +29,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId;
     }
 
+    /**
+     * Description of the operation. May include HTML formatting tags.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Operation Name.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -39,6 +51,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+     * 
+     */
     @InputImport(name="method", required=true)
     private final Input<String> method;
 
@@ -46,6 +62,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.method;
     }
 
+    /**
+     * Operation identifier within an API. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="operationId")
     private final @Nullable Input<String> operationId;
 
@@ -53,6 +73,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationId == null ? Input.empty() : this.operationId;
     }
 
+    /**
+     * Operation Policies
+     * 
+     */
     @InputImport(name="policies")
     private final @Nullable Input<String> policies;
 
@@ -60,6 +84,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.policies == null ? Input.empty() : this.policies;
     }
 
+    /**
+     * An entity containing request details.
+     * 
+     */
     @InputImport(name="request")
     private final @Nullable Input<RequestContractArgs> request;
 
@@ -67,6 +95,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.request == null ? Input.empty() : this.request;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +106,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Array of Operation responses.
+     * 
+     */
     @InputImport(name="responses")
     private final @Nullable Input<List<ResponseContractArgs>> responses;
 
@@ -81,6 +117,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.responses == null ? Input.empty() : this.responses;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -88,6 +128,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Collection of URL template parameters.
+     * 
+     */
     @InputImport(name="templateParameters")
     private final @Nullable Input<List<ParameterContractArgs>> templateParameters;
 
@@ -95,6 +139,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.templateParameters == null ? Input.empty() : this.templateParameters;
     }
 
+    /**
+     * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+     * 
+     */
     @InputImport(name="urlTemplate", required=true)
     private final Input<String> urlTemplate;
 

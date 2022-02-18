@@ -12,9 +12,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch {
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches
+     * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+     * must be set.
+     * 
+     */
     private final @Nullable String exactMatch;
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     private final String name;
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query
+     * parameter, irrespective of whether the parameter has a value or not. Only one of
+     * presentMatch, exactMatch and regexMatch must be set.
+     * 
+     */
     private final @Nullable Boolean presentMatch;
+    /**
+     * The queryParameterMatch matches if the value of the parameter matches the
+     * regular expression specified by regexMatch. For the regular expression grammar,
+     * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+     * exactMatch and regexMatch must be set.
+     * 
+     */
     private final @Nullable String regexMatch;
 
     @OutputCustomType.Constructor({"exactMatch","name","presentMatch","regexMatch"})
@@ -29,15 +53,39 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
         this.regexMatch = regexMatch;
     }
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches
+     * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+     * must be set.
+     * 
+     */
     public Optional<String> getExactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query
+     * parameter, irrespective of whether the parameter has a value or not. Only one of
+     * presentMatch, exactMatch and regexMatch must be set.
+     * 
+     */
     public Optional<Boolean> getPresentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
+    /**
+     * The queryParameterMatch matches if the value of the parameter matches the
+     * regular expression specified by regexMatch. For the regular expression grammar,
+     * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+     * exactMatch and regexMatch must be set.
+     * 
+     */
     public Optional<String> getRegexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }

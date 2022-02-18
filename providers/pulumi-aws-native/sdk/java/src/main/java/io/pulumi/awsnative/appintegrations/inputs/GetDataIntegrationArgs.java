@@ -12,6 +12,10 @@ public final class GetDataIntegrationArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetDataIntegrationArgs Empty = new GetDataIntegrationArgs();
 
+    /**
+     * The unique identifer of the data integration.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

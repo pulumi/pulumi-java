@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttributeDefinition {
+/**
+ * Gets the specified Attribute definition.
+ * 
+ */
     public static CompletableFuture<GetAttributeDefinitionResult> invokeAsync(GetAttributeDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getAttributeDefinition", TypeShape.of(GetAttributeDefinitionResult.class), args == null ? GetAttributeDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

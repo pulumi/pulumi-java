@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the key, either stored in `public_key` or referenced in `key_id`
+     * 
+     */
     @EnumType
     public enum BuildSignatureKeyType {
+        /**
+         * `KeyType` is not set.
+         * 
+         */
         KeyTypeUnspecified("KEY_TYPE_UNSPECIFIED"),
+        /**
+         * `PGP ASCII Armored` public key.
+         * 
+         */
         PgpAsciiArmored("PGP_ASCII_ARMORED"),
+        /**
+         * `PKIX PEM` public key.
+         * 
+         */
         PkixPem("PKIX_PEM");
 
         private final String value;

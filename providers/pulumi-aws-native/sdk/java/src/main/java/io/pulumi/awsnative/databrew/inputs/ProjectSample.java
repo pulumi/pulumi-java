@@ -15,6 +15,10 @@ public final class ProjectSample extends io.pulumi.resources.InvokeArgs {
 
     public static final ProjectSample Empty = new ProjectSample();
 
+    /**
+     * Sample size
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Integer size;
 
@@ -22,6 +26,10 @@ public final class ProjectSample extends io.pulumi.resources.InvokeArgs {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
+    /**
+     * Sample type
+     * 
+     */
     @InputImport(name="type", required=true)
     private final ProjectSampleType type;
 

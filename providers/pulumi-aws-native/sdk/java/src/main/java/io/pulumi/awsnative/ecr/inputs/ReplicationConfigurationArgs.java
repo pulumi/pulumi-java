@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An object representing the replication configuration for a registry.
+ * 
+ */
 public final class ReplicationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationConfigurationArgs Empty = new ReplicationConfigurationArgs();
 
+    /**
+     * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
+     * 
+     */
     @InputImport(name="rules", required=true)
     private final Input<List<ReplicationConfigurationReplicationRuleArgs>> rules;
 

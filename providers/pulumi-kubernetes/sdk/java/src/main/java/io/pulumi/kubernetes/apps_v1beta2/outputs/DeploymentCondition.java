@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeploymentCondition {
+    /**
+     * Last time the condition transitioned from one status to another.
+     * 
+     */
     private final @Nullable String lastTransitionTime;
+    /**
+     * The last time this condition was updated.
+     * 
+     */
     private final @Nullable String lastUpdateTime;
+    /**
+     * A human readable message indicating details about the transition.
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * The reason for the condition's last transition.
+     * 
+     */
     private final @Nullable String reason;
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     * 
+     */
     private final String status;
+    /**
+     * Type of deployment condition.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"lastTransitionTime","lastUpdateTime","message","reason","status","type"})
@@ -34,21 +58,45 @@ public final class DeploymentCondition {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Last time the condition transitioned from one status to another.
+     * 
+     */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
+    /**
+     * The last time this condition was updated.
+     * 
+     */
     public Optional<String> getLastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
+    /**
+     * A human readable message indicating details about the transition.
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * The reason for the condition's last transition.
+     * 
+     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Type of deployment condition.
+     * 
+     */
     public String getType() {
         return this.type;
     }

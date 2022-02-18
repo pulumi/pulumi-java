@@ -16,13 +16,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEventTypeResult {
+    /**
+     * The ARN of the event type.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The time when the event type was created.
+     * 
+     */
     private final @Nullable String createdTime;
+    /**
+     * The description of the event type.
+     * 
+     */
     private final @Nullable String description;
     private final @Nullable List<EventTypeEntityType> entityTypes;
     private final @Nullable List<EventTypeEventVariable> eventVariables;
     private final @Nullable List<EventTypeLabel> labels;
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     private final @Nullable String lastUpdatedTime;
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     private final @Nullable List<EventTypeTag> tags;
 
     @OutputCustomType.Constructor({"arn","createdTime","description","entityTypes","eventVariables","labels","lastUpdatedTime","tags"})
@@ -45,12 +65,24 @@ public final class GetEventTypeResult {
         this.tags = tags;
     }
 
+    /**
+     * The ARN of the event type.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The time when the event type was created.
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+    /**
+     * The description of the event type.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -63,9 +95,17 @@ public final class GetEventTypeResult {
     public List<EventTypeLabel> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     public List<EventTypeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

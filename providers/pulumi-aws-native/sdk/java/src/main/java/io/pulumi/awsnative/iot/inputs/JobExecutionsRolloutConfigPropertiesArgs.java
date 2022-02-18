@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Allows you to create a staged rollout of a job.
+ * 
+ */
 public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobExecutionsRolloutConfigPropertiesArgs Empty = new JobExecutionsRolloutConfigPropertiesArgs();
 
+    /**
+     * The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
+     * 
+     */
     @InputImport(name="exponentialRolloutRate")
     private final @Nullable Input<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
 
@@ -22,6 +30,10 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
         return this.exponentialRolloutRate == null ? Input.empty() : this.exponentialRolloutRate;
     }
 
+    /**
+     * The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
+     * 
+     */
     @InputImport(name="maximumPerMinute")
     private final @Nullable Input<Integer> maximumPerMinute;
 

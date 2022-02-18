@@ -14,6 +14,10 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
 
     public static final ManagementGroupSubscriptionArgs Empty = new ManagementGroupSubscriptionArgs();
 
+    /**
+     * Management Group ID.
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final Input<String> groupId;
 
@@ -21,6 +25,10 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
         return this.groupId;
     }
 
+    /**
+     * Subscription ID.
+     * 
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 

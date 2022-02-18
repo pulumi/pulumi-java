@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the settings to produce a PNG image from the input video.
+ * 
+ */
 public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PngLayerResponse Empty = new PngLayerResponse();
 
+    /**
+     * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+     * 
+     */
     @InputImport(name="height")
     private final @Nullable String height;
 
@@ -21,6 +29,10 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
         return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
     }
 
+    /**
+     * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable String label;
 
@@ -28,6 +40,11 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.PngLayer'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -35,6 +52,10 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
         return this.odataType;
     }
 
+    /**
+     * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+     * 
+     */
     @InputImport(name="width")
     private final @Nullable String width;
 

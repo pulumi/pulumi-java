@@ -11,10 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class P2SVpnServerConfigRadiusClientRootCertificateResponse {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The provisioning state of the radius client root certificate resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The Radius client root certificate thumbprint.
+     * 
+     */
     private final @Nullable String thumbprint;
 
     @OutputCustomType.Constructor({"etag","id","name","provisioningState","thumbprint"})
@@ -31,18 +51,38 @@ public final class P2SVpnServerConfigRadiusClientRootCertificateResponse {
         this.thumbprint = thumbprint;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The provisioning state of the radius client root certificate resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The Radius client root certificate thumbprint.
+     * 
+     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

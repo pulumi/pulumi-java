@@ -16,11 +16,23 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Lightsail::Bucket
+ * 
+ */
 @ResourceType(type="aws-native:lightsail:Bucket")
 public class Bucket extends io.pulumi.resources.CustomResource {
+    /**
+     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * 
+     */
     @OutputExport(name="ableToUpdateBundle", type=Boolean.class, parameters={})
     private Output<Boolean> ableToUpdateBundle;
 
+    /**
+     * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * 
+     */
     public Output<Boolean> getAbleToUpdateBundle() {
         return this.ableToUpdateBundle;
     }
@@ -36,49 +48,111 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     public Output<String> getBucketArn() {
         return this.bucketArn;
     }
+    /**
+     * The name for the bucket.
+     * 
+     */
     @OutputExport(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
+    /**
+     * @return The name for the bucket.
+     * 
+     */
     public Output<String> getBucketName() {
         return this.bucketName;
     }
+    /**
+     * The ID of the bundle to use for the bucket.
+     * 
+     */
     @OutputExport(name="bundleId", type=String.class, parameters={})
     private Output<String> bundleId;
 
+    /**
+     * @return The ID of the bundle to use for the bucket.
+     * 
+     */
     public Output<String> getBundleId() {
         return this.bundleId;
     }
+    /**
+     * Specifies whether to enable or disable versioning of objects in the bucket.
+     * 
+     */
     @OutputExport(name="objectVersioning", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> objectVersioning;
 
+    /**
+     * @return Specifies whether to enable or disable versioning of objects in the bucket.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getObjectVersioning() {
         return this.objectVersioning;
     }
+    /**
+     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * 
+     */
     @OutputExport(name="readOnlyAccessAccounts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> readOnlyAccessAccounts;
 
+    /**
+     * @return An array of strings to specify the AWS account IDs that can access the bucket.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getReadOnlyAccessAccounts() {
         return this.readOnlyAccessAccounts;
     }
+    /**
+     * The names of the Lightsail resources for which to set bucket access.
+     * 
+     */
     @OutputExport(name="resourcesReceivingAccess", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> resourcesReceivingAccess;
 
+    /**
+     * @return The names of the Lightsail resources for which to set bucket access.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getResourcesReceivingAccess() {
         return this.resourcesReceivingAccess;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={BucketTag.class})
     private Output</* @Nullable */ List<BucketTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<BucketTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The URL of the bucket.
+     * 
+     */
     @OutputExport(name="url", type=String.class, parameters={})
     private Output<String> url;
 
+    /**
+     * @return The URL of the bucket.
+     * 
+     */
     public Output<String> getUrl() {
         return this.url;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Bucket(String name, BucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lightsail:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -94,6 +168,14 @@ public class Bucket extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Bucket get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Bucket(name, id, options);
     }

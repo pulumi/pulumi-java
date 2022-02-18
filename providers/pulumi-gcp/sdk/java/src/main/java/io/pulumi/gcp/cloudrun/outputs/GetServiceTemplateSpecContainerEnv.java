@@ -11,6 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetServiceTemplateSpecContainerEnv {
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     private final String name;
     private final String value;
     private final List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
@@ -25,6 +29,10 @@ public final class GetServiceTemplateSpecContainerEnv {
         this.valueFroms = Objects.requireNonNull(valueFroms);
     }
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     public String getName() {
         return this.name;
     }

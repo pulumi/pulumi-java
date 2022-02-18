@@ -22,6 +22,10 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
 
     public static final VirtualMachineConfigurationResponse Empty = new VirtualMachineConfigurationResponse();
 
+    /**
+     * If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
+     * 
+     */
     @InputImport(name="containerConfiguration")
     private final @Nullable ContainerConfigurationResponse containerConfiguration;
 
@@ -29,6 +33,10 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
         return this.containerConfiguration == null ? Optional.empty() : Optional.ofNullable(this.containerConfiguration);
     }
 
+    /**
+     * This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
+     * 
+     */
     @InputImport(name="dataDisks")
     private final @Nullable List<DataDiskResponse> dataDisks;
 
@@ -36,6 +44,10 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
+    /**
+     * If specified, encryption is performed on each node in the pool during node provisioning.
+     * 
+     */
     @InputImport(name="diskEncryptionConfiguration")
     private final @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
 
@@ -43,6 +55,10 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
         return this.diskEncryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionConfiguration);
     }
 
+    /**
+     * If specified, the extensions mentioned in this configuration will be installed on each node.
+     * 
+     */
     @InputImport(name="extensions")
     private final @Nullable List<VMExtensionResponse> extensions;
 
@@ -57,6 +73,13 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
         return this.imageReference;
     }
 
+    /**
+     * This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
+     * 
+     *  Windows_Server - The on-premises license is for Windows Server.
+     *  Windows_Client - The on-premises license is for Windows Client.
+     * 
+     */
     @InputImport(name="licenseType")
     private final @Nullable String licenseType;
 
@@ -64,6 +87,10 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
+    /**
+     * The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.
+     * 
+     */
     @InputImport(name="nodeAgentSkuId", required=true)
     private final String nodeAgentSkuId;
 
@@ -71,6 +98,10 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
         return this.nodeAgentSkuId;
     }
 
+    /**
+     * This configuration will specify rules on how nodes in the pool will be physically allocated.
+     * 
+     */
     @InputImport(name="nodePlacementConfiguration")
     private final @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration;
 
@@ -78,6 +109,10 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
         return this.nodePlacementConfiguration == null ? Optional.empty() : Optional.ofNullable(this.nodePlacementConfiguration);
     }
 
+    /**
+     * This property must not be specified if the imageReference specifies a Linux OS image.
+     * 
+     */
     @InputImport(name="windowsConfiguration")
     private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 

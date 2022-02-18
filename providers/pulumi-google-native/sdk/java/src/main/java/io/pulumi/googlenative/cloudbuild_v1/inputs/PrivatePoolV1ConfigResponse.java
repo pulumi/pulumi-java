@@ -9,10 +9,18 @@ import io.pulumi.googlenative.cloudbuild_v1.inputs.WorkerConfigResponse;
 import java.util.Objects;
 
 
+/**
+ * Configuration for a V1 `PrivatePool`.
+ * 
+ */
 public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivatePoolV1ConfigResponse Empty = new PrivatePoolV1ConfigResponse();
 
+    /**
+     * Network configuration for the pool.
+     * 
+     */
     @InputImport(name="networkConfig", required=true)
     private final NetworkConfigResponse networkConfig;
 
@@ -20,6 +28,10 @@ public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.Invok
         return this.networkConfig;
     }
 
+    /**
+     * Machine configuration for the workers in the pool.
+     * 
+     */
     @InputImport(name="workerConfig", required=true)
     private final WorkerConfigResponse workerConfig;
 

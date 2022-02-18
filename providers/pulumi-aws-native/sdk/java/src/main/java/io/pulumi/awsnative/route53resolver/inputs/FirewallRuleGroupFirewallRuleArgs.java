@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Firewall Rule associating the Rule Group to a Domain List
+ * 
+ */
 public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallRuleGroupFirewallRuleArgs Empty = new FirewallRuleGroupFirewallRuleArgs();
 
+    /**
+     * Rule Action
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<FirewallRuleGroupFirewallRuleAction> action;
 
@@ -25,6 +33,10 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
         return this.action;
     }
 
+    /**
+     * BlockOverrideDnsType
+     * 
+     */
     @InputImport(name="blockOverrideDnsType")
     private final @Nullable Input<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType;
 
@@ -32,6 +44,10 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
         return this.blockOverrideDnsType == null ? Input.empty() : this.blockOverrideDnsType;
     }
 
+    /**
+     * BlockOverrideDomain
+     * 
+     */
     @InputImport(name="blockOverrideDomain")
     private final @Nullable Input<String> blockOverrideDomain;
 
@@ -39,6 +55,10 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
         return this.blockOverrideDomain == null ? Input.empty() : this.blockOverrideDomain;
     }
 
+    /**
+     * BlockOverrideTtl
+     * 
+     */
     @InputImport(name="blockOverrideTtl")
     private final @Nullable Input<Integer> blockOverrideTtl;
 
@@ -46,6 +66,10 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
         return this.blockOverrideTtl == null ? Input.empty() : this.blockOverrideTtl;
     }
 
+    /**
+     * BlockResponse
+     * 
+     */
     @InputImport(name="blockResponse")
     private final @Nullable Input<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse;
 
@@ -53,6 +77,10 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
         return this.blockResponse == null ? Input.empty() : this.blockResponse;
     }
 
+    /**
+     * ResourceId
+     * 
+     */
     @InputImport(name="firewallDomainListId", required=true)
     private final Input<String> firewallDomainListId;
 
@@ -60,6 +88,10 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
         return this.firewallDomainListId;
     }
 
+    /**
+     * Rule Priority
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Input<Integer> priority;
 

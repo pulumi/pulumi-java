@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings for event handler in webpubsub service
+ * 
+ */
 public final class EventHandlerSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventHandlerSettingsResponse Empty = new EventHandlerSettingsResponse();
 
+    /**
+     * Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+     * 
+     */
     @InputImport(name="items")
     private final @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 

@@ -17,10 +17,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that validates connection to PostgreSQL server and source server requirements for online migration
+ * 
+ */
 public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourcePostgreSqlSyncTaskPropertiesResponse Empty = new ConnectToSourcePostgreSqlSyncTaskPropertiesResponse();
 
+    /**
+     * Array of command properties.
+     * 
+     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -28,6 +36,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
         return this.commands;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -35,6 +47,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
         return this.errors;
     }
 
+    /**
+     * Task input
+     * 
+     */
     @InputImport(name="input")
     private final @Nullable ConnectToSourcePostgreSqlSyncTaskInputResponse input;
 
@@ -42,6 +58,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Task output. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="output", required=true)
     private final List<ConnectToSourcePostgreSqlSyncTaskOutputResponse> output;
 
@@ -49,6 +69,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
         return this.output;
     }
 
+    /**
+     * The state of the task. This is ignored if submitted.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -56,6 +80,11 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
         return this.state;
     }
 
+    /**
+     * Task type.
+     * Expected value is 'ConnectToSource.PostgreSql.Sync'.
+     * 
+     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

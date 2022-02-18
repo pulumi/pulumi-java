@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The desired detector version status for the detector
+     * 
+     */
     @EnumType
     public enum DetectorVersionStatus {
         Draft("DRAFT"),

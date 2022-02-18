@@ -10,6 +10,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyRuleMatchConfig {
+    /**
+     * Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+     * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
+     * (can be used to override the default behavior).
+     * 
+     */
     private final List<String> srcIpRanges;
 
     @OutputCustomType.Constructor({"srcIpRanges"})
@@ -17,6 +23,12 @@ public final class SecurityPolicyRuleMatchConfig {
         this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
     }
 
+    /**
+     * Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+     * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
+     * (can be used to override the default behavior).
+     * 
+     */
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges;
     }

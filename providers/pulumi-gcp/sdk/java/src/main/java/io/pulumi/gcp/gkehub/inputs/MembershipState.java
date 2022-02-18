@@ -17,6 +17,13 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
 
     public static final MembershipState Empty = new MembershipState();
 
+    /**
+     * Authority encodes how Google will recognize identities from this Membership.
+     * See the workload identity documentation for more details:
+     * https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="authority")
     private final @Nullable Input<MembershipAuthorityGetArgs> authority;
 
@@ -24,6 +31,14 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
         return this.authority == null ? Input.empty() : this.authority;
     }
 
+    /**
+     * The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
+     * 
+     * @deprecated
+     * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
+     * 
+     */
+    @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +47,11 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="endpoint")
     private final @Nullable Input<MembershipEndpointGetArgs> endpoint;
 
@@ -39,6 +59,10 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
+    /**
+     * Labels to apply to this membership.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -46,6 +70,10 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The client-provided identifier of the membership.
+     * 
+     */
     @InputImport(name="membershipId")
     private final @Nullable Input<String> membershipId;
 
@@ -53,6 +81,10 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
         return this.membershipId == null ? Input.empty() : this.membershipId;
     }
 
+    /**
+     * The unique identifier of the membership.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,6 +92,11 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

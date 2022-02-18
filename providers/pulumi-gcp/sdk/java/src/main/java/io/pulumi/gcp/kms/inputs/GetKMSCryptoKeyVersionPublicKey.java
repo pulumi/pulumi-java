@@ -12,6 +12,10 @@ public final class GetKMSCryptoKeyVersionPublicKey extends io.pulumi.resources.I
 
     public static final GetKMSCryptoKeyVersionPublicKey Empty = new GetKMSCryptoKeyVersionPublicKey();
 
+    /**
+     * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+     * 
+     */
     @InputImport(name="algorithm", required=true)
     private final String algorithm;
 
@@ -19,6 +23,10 @@ public final class GetKMSCryptoKeyVersionPublicKey extends io.pulumi.resources.I
         return this.algorithm;
     }
 
+    /**
+     * The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
+     * 
+     */
     @InputImport(name="pem", required=true)
     private final String pem;
 

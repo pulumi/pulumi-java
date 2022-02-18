@@ -14,11 +14,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPermissionSetResult {
+    /**
+     * The permission set description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The inline policy to put in permission set.
+     * 
+     */
     private final @Nullable Object inlinePolicy;
     private final @Nullable List<String> managedPolicies;
+    /**
+     * The permission set that the policy will be attached to
+     * 
+     */
     private final @Nullable String permissionSetArn;
+    /**
+     * The relay state URL that redirect links to any service in the AWS Management Console.
+     * 
+     */
     private final @Nullable String relayStateType;
+    /**
+     * The length of time that a user can be signed in to an AWS account.
+     * 
+     */
     private final @Nullable String sessionDuration;
     private final @Nullable List<PermissionSetTag> tags;
 
@@ -40,21 +60,41 @@ public final class GetPermissionSetResult {
         this.tags = tags;
     }
 
+    /**
+     * The permission set description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The inline policy to put in permission set.
+     * 
+     */
     public Optional<Object> getInlinePolicy() {
         return Optional.ofNullable(this.inlinePolicy);
     }
     public List<String> getManagedPolicies() {
         return this.managedPolicies == null ? List.of() : this.managedPolicies;
     }
+    /**
+     * The permission set that the policy will be attached to
+     * 
+     */
     public Optional<String> getPermissionSetArn() {
         return Optional.ofNullable(this.permissionSetArn);
     }
+    /**
+     * The relay state URL that redirect links to any service in the AWS Management Console.
+     * 
+     */
     public Optional<String> getRelayStateType() {
         return Optional.ofNullable(this.relayStateType);
     }
+    /**
+     * The length of time that a user can be signed in to an AWS account.
+     * 
+     */
     public Optional<String> getSessionDuration() {
         return Optional.ofNullable(this.sessionDuration);
     }

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AnimationEndResponse {
+    /**
+     * The time to end overlay object, in seconds. Default: 0
+     * 
+     */
     private final String startTimeOffset;
 
     @OutputCustomType.Constructor({"startTimeOffset"})
@@ -16,6 +20,10 @@ public final class AnimationEndResponse {
         this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
     }
 
+    /**
+     * The time to end overlay object, in seconds. Default: 0
+     * 
+     */
     public String getStartTimeOffset() {
         return this.startTimeOffset;
     }

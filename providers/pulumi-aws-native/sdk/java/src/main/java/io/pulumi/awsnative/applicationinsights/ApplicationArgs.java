@@ -20,6 +20,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
+    /**
+     * If set to true, application will be configured with recommended monitoring configuration.
+     * 
+     */
     @InputImport(name="autoConfigurationEnabled")
     private final @Nullable Input<Boolean> autoConfigurationEnabled;
 
@@ -27,6 +31,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoConfigurationEnabled == null ? Input.empty() : this.autoConfigurationEnabled;
     }
 
+    /**
+     * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
+     * 
+     */
     @InputImport(name="cWEMonitorEnabled")
     private final @Nullable Input<Boolean> cWEMonitorEnabled;
 
@@ -34,6 +42,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.cWEMonitorEnabled == null ? Input.empty() : this.cWEMonitorEnabled;
     }
 
+    /**
+     * The monitoring settings of the components.
+     * 
+     */
     @InputImport(name="componentMonitoringSettings")
     private final @Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
 
@@ -41,6 +53,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.componentMonitoringSettings == null ? Input.empty() : this.componentMonitoringSettings;
     }
 
+    /**
+     * The custom grouped components.
+     * 
+     */
     @InputImport(name="customComponents")
     private final @Nullable Input<List<ApplicationCustomComponentArgs>> customComponents;
 
@@ -48,6 +64,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.customComponents == null ? Input.empty() : this.customComponents;
     }
 
+    /**
+     * The log pattern sets.
+     * 
+     */
     @InputImport(name="logPatternSets")
     private final @Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets;
 
@@ -55,6 +75,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.logPatternSets == null ? Input.empty() : this.logPatternSets;
     }
 
+    /**
+     * When set to true, creates opsItems for any problems detected on an application.
+     * 
+     */
     @InputImport(name="opsCenterEnabled")
     private final @Nullable Input<Boolean> opsCenterEnabled;
 
@@ -62,6 +86,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.opsCenterEnabled == null ? Input.empty() : this.opsCenterEnabled;
     }
 
+    /**
+     * The SNS topic provided to Application Insights that is associated to the created opsItem.
+     * 
+     */
     @InputImport(name="opsItemSNSTopicArn")
     private final @Nullable Input<String> opsItemSNSTopicArn;
 
@@ -69,6 +97,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.opsItemSNSTopicArn == null ? Input.empty() : this.opsItemSNSTopicArn;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -76,6 +108,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of Application Insights application.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ApplicationTagArgs>> tags;
 

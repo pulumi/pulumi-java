@@ -12,6 +12,10 @@ public final class GetResourceCollectionArgs extends io.pulumi.resources.InvokeA
 
     public static final GetResourceCollectionArgs Empty = new GetResourceCollectionArgs();
 
+    /**
+     * The type of ResourceCollection
+     * 
+     */
     @InputImport(name="resourceCollectionType", required=true)
     private final ResourceCollectionType resourceCollectionType;
 

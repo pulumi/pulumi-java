@@ -17,15 +17,39 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorEventType {
+    /**
+     * The ARN of the event type.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The time when the event type was created.
+     * 
+     */
     private final @Nullable String createdTime;
+    /**
+     * The description of the event type.
+     * 
+     */
     private final @Nullable String description;
     private final @Nullable List<DetectorEntityType> entityTypes;
     private final @Nullable List<DetectorEventVariable> eventVariables;
     private final @Nullable Boolean inline;
     private final @Nullable List<DetectorLabel> labels;
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     private final @Nullable String lastUpdatedTime;
+    /**
+     * The name for the event type
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     private final @Nullable List<DetectorTag> tags;
 
     @OutputCustomType.Constructor({"arn","createdTime","description","entityTypes","eventVariables","inline","labels","lastUpdatedTime","name","tags"})
@@ -52,12 +76,24 @@ public final class DetectorEventType {
         this.tags = tags;
     }
 
+    /**
+     * The ARN of the event type.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The time when the event type was created.
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+    /**
+     * The description of the event type.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -73,12 +109,24 @@ public final class DetectorEventType {
     public List<DetectorLabel> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
+    /**
+     * The name for the event type
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

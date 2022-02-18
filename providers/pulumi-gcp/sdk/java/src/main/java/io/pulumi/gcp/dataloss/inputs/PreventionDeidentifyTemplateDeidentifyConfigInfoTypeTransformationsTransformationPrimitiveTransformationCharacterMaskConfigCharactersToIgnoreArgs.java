@@ -14,6 +14,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs();
 
+    /**
+     * Characters to not transform when masking.
+     * 
+     */
     @InputImport(name="charactersToSkip")
     private final @Nullable Input<String> charactersToSkip;
 
@@ -21,6 +25,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         return this.charactersToSkip == null ? Input.empty() : this.charactersToSkip;
     }
 
+    /**
+     * Common characters to not transform when masking. Useful to avoid removing punctuation.
+     * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
+     * 
+     */
     @InputImport(name="commonCharactersToIgnore")
     private final @Nullable Input<String> commonCharactersToIgnore;
 

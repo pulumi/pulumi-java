@@ -15,6 +15,10 @@ public final class ObjectACLArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectACLArgs Empty = new ObjectACLArgs();
 
+    /**
+     * The name of the bucket the object is stored in.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -22,6 +26,10 @@ public final class ObjectACLArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucket;
     }
 
+    /**
+     * The name of the object to apply the acl to.
+     * 
+     */
     @InputImport(name="object", required=true)
     private final Input<String> object;
 
@@ -29,6 +37,10 @@ public final class ObjectACLArgs extends io.pulumi.resources.ResourceArgs {
         return this.object;
     }
 
+    /**
+     * The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
+     * 
+     */
     @InputImport(name="predefinedAcl")
     private final @Nullable Input<String> predefinedAcl;
 
@@ -36,6 +48,11 @@ public final class ObjectACLArgs extends io.pulumi.resources.ResourceArgs {
         return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
     }
 
+    /**
+     * List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+     * Must be set if `predefined_acl` is not.
+     * 
+     */
     @InputImport(name="roleEntities")
     private final @Nullable Input<List<String>> roleEntities;
 

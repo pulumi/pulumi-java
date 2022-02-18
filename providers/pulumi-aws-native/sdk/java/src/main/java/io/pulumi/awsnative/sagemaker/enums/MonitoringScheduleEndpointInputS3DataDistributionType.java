@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     @EnumType
     public enum MonitoringScheduleEndpointInputS3DataDistributionType {
         FullyReplicated("FullyReplicated"),

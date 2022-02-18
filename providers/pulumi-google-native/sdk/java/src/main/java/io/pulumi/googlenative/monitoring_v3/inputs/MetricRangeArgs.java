@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A MetricRange is used when each window is good when the value x of a single TimeSeries satisfies range.min <= x <= range.max. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE.
+ * 
+ */
 public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricRangeArgs Empty = new MetricRangeArgs();
 
+    /**
+     * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
+     * 
+     */
     @InputImport(name="range")
     private final @Nullable Input<GoogleMonitoringV3RangeArgs> range;
 
@@ -22,6 +30,10 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.range == null ? Input.empty() : this.range;
     }
 
+    /**
+     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
+     * 
+     */
     @InputImport(name="timeSeries")
     private final @Nullable Input<String> timeSeries;
 

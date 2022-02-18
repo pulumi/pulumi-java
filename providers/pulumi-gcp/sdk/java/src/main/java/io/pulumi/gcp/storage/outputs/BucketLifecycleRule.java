@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketLifecycleRule {
+    /**
+     * The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
+     * 
+     */
     private final BucketLifecycleRuleAction action;
+    /**
+     * The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
+     * 
+     */
     private final BucketLifecycleRuleCondition condition;
 
     @OutputCustomType.Constructor({"action","condition"})
@@ -21,9 +29,17 @@ public final class BucketLifecycleRule {
         this.condition = Objects.requireNonNull(condition);
     }
 
+    /**
+     * The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
+     * 
+     */
     public BucketLifecycleRuleAction getAction() {
         return this.action;
     }
+    /**
+     * The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
+     * 
+     */
     public BucketLifecycleRuleCondition getCondition() {
         return this.condition;
     }

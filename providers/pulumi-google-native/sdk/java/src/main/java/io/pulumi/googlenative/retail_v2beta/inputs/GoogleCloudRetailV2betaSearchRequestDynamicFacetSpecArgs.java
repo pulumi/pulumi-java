@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The specifications of dynamically generated facets.
+ * 
+ */
 public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs Empty = new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs();
 
+    /**
+     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode;
 

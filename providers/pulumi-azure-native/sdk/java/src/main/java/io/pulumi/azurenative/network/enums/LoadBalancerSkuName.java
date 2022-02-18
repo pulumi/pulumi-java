@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Name of a load balancer SKU.
+     * 
+     */
     @EnumType
     public enum LoadBalancerSkuName {
         Basic("Basic"),

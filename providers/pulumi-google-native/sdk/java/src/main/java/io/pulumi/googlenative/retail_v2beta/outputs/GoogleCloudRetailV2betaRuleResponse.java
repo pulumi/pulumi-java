@@ -17,14 +17,50 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2betaRuleResponse {
+    /**
+     * A boost action.
+     * 
+     */
     private final GoogleCloudRetailV2betaRuleBoostActionResponse boostAction;
+    /**
+     * The condition that triggers the rule. If the condition is empty, the rule will always apply.
+     * 
+     */
     private final GoogleCloudRetailV2betaConditionResponse condition;
+    /**
+     * Prevents term from being associated with other terms.
+     * 
+     */
     private final GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction;
+    /**
+     * Filters results.
+     * 
+     */
     private final GoogleCloudRetailV2betaRuleFilterActionResponse filterAction;
+    /**
+     * Ignores specific terms from query during search.
+     * 
+     */
     private final GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction;
+    /**
+     * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
+     * 
+     */
     private final GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
+    /**
+     * Redirects a shopper to a specific page.
+     * 
+     */
     private final GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction;
+    /**
+     * Replaces specific terms in the query.
+     * 
+     */
     private final GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction;
+    /**
+     * Treats a set of terms as synonyms of one another.
+     * 
+     */
     private final GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
     @OutputCustomType.Constructor({"boostAction","condition","doNotAssociateAction","filterAction","ignoreAction","onewaySynonymsAction","redirectAction","replacementAction","twowaySynonymsAction"})
@@ -49,30 +85,66 @@ public final class GoogleCloudRetailV2betaRuleResponse {
         this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction);
     }
 
+    /**
+     * A boost action.
+     * 
+     */
     public GoogleCloudRetailV2betaRuleBoostActionResponse getBoostAction() {
         return this.boostAction;
     }
+    /**
+     * The condition that triggers the rule. If the condition is empty, the rule will always apply.
+     * 
+     */
     public GoogleCloudRetailV2betaConditionResponse getCondition() {
         return this.condition;
     }
+    /**
+     * Prevents term from being associated with other terms.
+     * 
+     */
     public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse getDoNotAssociateAction() {
         return this.doNotAssociateAction;
     }
+    /**
+     * Filters results.
+     * 
+     */
     public GoogleCloudRetailV2betaRuleFilterActionResponse getFilterAction() {
         return this.filterAction;
     }
+    /**
+     * Ignores specific terms from query during search.
+     * 
+     */
     public GoogleCloudRetailV2betaRuleIgnoreActionResponse getIgnoreAction() {
         return this.ignoreAction;
     }
+    /**
+     * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
+     * 
+     */
     public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse getOnewaySynonymsAction() {
         return this.onewaySynonymsAction;
     }
+    /**
+     * Redirects a shopper to a specific page.
+     * 
+     */
     public GoogleCloudRetailV2betaRuleRedirectActionResponse getRedirectAction() {
         return this.redirectAction;
     }
+    /**
+     * Replaces specific terms in the query.
+     * 
+     */
     public GoogleCloudRetailV2betaRuleReplacementActionResponse getReplacementAction() {
         return this.replacementAction;
     }
+    /**
+     * Treats a set of terms as synonyms of one another.
+     * 
+     */
     public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse getTwowaySynonymsAction() {
         return this.twowaySynonymsAction;
     }

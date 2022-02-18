@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotDpsResource {
+/**
+ * The description of the provisioning service.
+ * API Version: 2020-03-01.
+ * 
+ *
+ * The description of the provisioning service.
+ * 
+ */
     public static CompletableFuture<GetIotDpsResourceResult> invokeAsync(GetIotDpsResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getIotDpsResource", TypeShape.of(GetIotDpsResourceResult.class), args == null ? GetIotDpsResourceArgs.Empty : args, Utilities.withVersion(options));
     }

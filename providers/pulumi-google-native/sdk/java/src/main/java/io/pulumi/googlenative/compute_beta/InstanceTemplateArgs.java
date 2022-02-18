@@ -16,6 +16,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     public static final InstanceTemplateArgs Empty = new InstanceTemplateArgs();
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +45,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The instance properties for this instance template.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<InstancePropertiesArgs> properties;
 
@@ -51,6 +63,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * The source instance used to create the template. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
+     * 
+     */
     @InputImport(name="sourceInstance")
     private final @Nullable Input<String> sourceInstance;
 
@@ -58,6 +74,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.sourceInstance == null ? Input.empty() : this.sourceInstance;
     }
 
+    /**
+     * The source instance params to use to create this instance template.
+     * 
+     */
     @InputImport(name="sourceInstanceParams")
     private final @Nullable Input<SourceInstanceParamsArgs> sourceInstanceParams;
 

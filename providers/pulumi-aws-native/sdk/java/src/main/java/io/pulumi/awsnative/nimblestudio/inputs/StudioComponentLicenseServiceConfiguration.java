@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The configuration for a license service that is associated with a studio resource.</p>
+ * 
+ */
 public final class StudioComponentLicenseServiceConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final StudioComponentLicenseServiceConfiguration Empty = new StudioComponentLicenseServiceConfiguration();
 
+    /**
+     * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
+     * 
+     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 

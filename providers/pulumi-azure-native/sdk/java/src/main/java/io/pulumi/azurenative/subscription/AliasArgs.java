@@ -15,6 +15,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AliasArgs Empty = new AliasArgs();
 
+    /**
+     * Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
+     * 
+     */
     @InputImport(name="aliasName")
     private final @Nullable Input<String> aliasName;
 
@@ -22,6 +26,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.aliasName == null ? Input.empty() : this.aliasName;
     }
 
+    /**
+     * Put alias request properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<PutAliasRequestPropertiesArgs> properties;
 

@@ -19,6 +19,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleAssignmentArgs Empty = new RoleAssignmentArgs();
 
+    /**
+     * The assignment name
+     * 
+     */
     @InputImport(name="assignmentName")
     private final @Nullable Input<String> assignmentName;
 
@@ -26,6 +30,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.assignmentName == null ? Input.empty() : this.assignmentName;
     }
 
+    /**
+     * Widget types set for the assignment.
+     * 
+     */
     @InputImport(name="conflationPolicies")
     private final @Nullable Input<ResourceSetDescriptionArgs> conflationPolicies;
 
@@ -33,6 +41,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.conflationPolicies == null ? Input.empty() : this.conflationPolicies;
     }
 
+    /**
+     * Connectors set for the assignment.
+     * 
+     */
     @InputImport(name="connectors")
     private final @Nullable Input<ResourceSetDescriptionArgs> connectors;
 
@@ -40,6 +52,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectors == null ? Input.empty() : this.connectors;
     }
 
+    /**
+     * Localized description for the metadata.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<Map<String,String>> description;
 
@@ -47,6 +63,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Localized display names for the metadata.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<Map<String,String>> displayName;
 
@@ -54,6 +74,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the hub.
+     * 
+     */
     @InputImport(name="hubName", required=true)
     private final Input<String> hubName;
 
@@ -61,6 +85,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubName;
     }
 
+    /**
+     * Interactions set for the assignment.
+     * 
+     */
     @InputImport(name="interactions")
     private final @Nullable Input<ResourceSetDescriptionArgs> interactions;
 
@@ -68,6 +96,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.interactions == null ? Input.empty() : this.interactions;
     }
 
+    /**
+     * Kpis set for the assignment.
+     * 
+     */
     @InputImport(name="kpis")
     private final @Nullable Input<ResourceSetDescriptionArgs> kpis;
 
@@ -75,6 +107,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.kpis == null ? Input.empty() : this.kpis;
     }
 
+    /**
+     * Links set for the assignment.
+     * 
+     */
     @InputImport(name="links")
     private final @Nullable Input<ResourceSetDescriptionArgs> links;
 
@@ -82,6 +118,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.links == null ? Input.empty() : this.links;
     }
 
+    /**
+     * The principals being assigned to.
+     * 
+     */
     @InputImport(name="principals", required=true)
     private final Input<List<AssignmentPrincipalArgs>> principals;
 
@@ -89,6 +129,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.principals;
     }
 
+    /**
+     * Profiles set for the assignment.
+     * 
+     */
     @InputImport(name="profiles")
     private final @Nullable Input<ResourceSetDescriptionArgs> profiles;
 
@@ -96,6 +140,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.profiles == null ? Input.empty() : this.profiles;
     }
 
+    /**
+     * The Role assignments set for the relationship links.
+     * 
+     */
     @InputImport(name="relationshipLinks")
     private final @Nullable Input<ResourceSetDescriptionArgs> relationshipLinks;
 
@@ -103,6 +151,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.relationshipLinks == null ? Input.empty() : this.relationshipLinks;
     }
 
+    /**
+     * The Role assignments set for the relationships.
+     * 
+     */
     @InputImport(name="relationships")
     private final @Nullable Input<ResourceSetDescriptionArgs> relationships;
 
@@ -110,6 +162,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.relationships == null ? Input.empty() : this.relationships;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -117,6 +173,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Type of roles.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<RoleTypes> role;
 
@@ -124,6 +184,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.role;
     }
 
+    /**
+     * The Role assignments set for the assignment.
+     * 
+     */
     @InputImport(name="roleAssignments")
     private final @Nullable Input<ResourceSetDescriptionArgs> roleAssignments;
 
@@ -131,6 +195,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleAssignments == null ? Input.empty() : this.roleAssignments;
     }
 
+    /**
+     * Sas Policies set for the assignment.
+     * 
+     */
     @InputImport(name="sasPolicies")
     private final @Nullable Input<ResourceSetDescriptionArgs> sasPolicies;
 
@@ -138,6 +206,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.sasPolicies == null ? Input.empty() : this.sasPolicies;
     }
 
+    /**
+     * The Role assignments set for the assignment.
+     * 
+     */
     @InputImport(name="segments")
     private final @Nullable Input<ResourceSetDescriptionArgs> segments;
 
@@ -145,6 +217,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.segments == null ? Input.empty() : this.segments;
     }
 
+    /**
+     * Views set for the assignment.
+     * 
+     */
     @InputImport(name="views")
     private final @Nullable Input<ResourceSetDescriptionArgs> views;
 
@@ -152,6 +228,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.views == null ? Input.empty() : this.views;
     }
 
+    /**
+     * Widget types set for the assignment.
+     * 
+     */
     @InputImport(name="widgetTypes")
     private final @Nullable Input<ResourceSetDescriptionArgs> widgetTypes;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The text response message.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageTextArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageTextArgs();
 
+    /**
+     * Optional. The collection of the agent's responses.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<List<String>> text;
 

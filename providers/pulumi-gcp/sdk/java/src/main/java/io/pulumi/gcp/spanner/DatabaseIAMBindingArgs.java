@@ -23,6 +23,10 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The name of the Spanner database.
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<String> database;
 
@@ -30,6 +34,10 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
         return this.database;
     }
 
+    /**
+     * The name of the Spanner instance the database belongs to.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -44,6 +52,11 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
         return this.members;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +64,12 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.spanner.DatabaseIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

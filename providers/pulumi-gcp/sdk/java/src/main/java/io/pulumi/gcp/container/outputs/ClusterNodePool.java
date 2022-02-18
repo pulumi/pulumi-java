@@ -19,16 +19,50 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ClusterNodePool {
     private final @Nullable ClusterNodePoolAutoscaling autoscaling;
+    /**
+     * The number of nodes to create in this
+     * cluster's default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you're using
+     * `gcp.container.NodePool` objects with no default node pool, you'll need to
+     * set this to a value of at least `1`, alongside setting
+     * `remove_default_node_pool` to `true`.
+     * 
+     */
     private final @Nullable Integer initialNodeCount;
     private final @Nullable List<String> instanceGroupUrls;
     private final @Nullable List<String> managedInstanceGroupUrls;
     private final @Nullable ClusterNodePoolManagement management;
     private final @Nullable Integer maxPodsPerNode;
+    /**
+     * The name of the cluster, unique within the project and
+     * location.
+     * 
+     */
     private final @Nullable String name;
     private final @Nullable String namePrefix;
+    /**
+     * Configuration for
+     * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
+     * 
+     */
     private final @Nullable ClusterNodePoolNetworkConfig networkConfig;
+    /**
+     * Parameters used in creating the default node pool.
+     * Generally, this field should not be used at the same time as a
+     * `gcp.container.NodePool` or a `node_pool` block; this configuration
+     * manages the default node pool, which isn't recommended to be used.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable ClusterNodePoolNodeConfig nodeConfig;
     private final @Nullable Integer nodeCount;
+    /**
+     * The list of zones in which the cluster's nodes
+     * are located. Nodes must be in the region of their regional cluster or in the
+     * same region as their cluster's zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster's zone.
+     * 
+     */
     private final @Nullable List<String> nodeLocations;
     private final @Nullable ClusterNodePoolUpgradeSettings upgradeSettings;
     private final @Nullable String version;
@@ -68,6 +102,15 @@ public final class ClusterNodePool {
     public Optional<ClusterNodePoolAutoscaling> getAutoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
+    /**
+     * The number of nodes to create in this
+     * cluster's default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you're using
+     * `gcp.container.NodePool` objects with no default node pool, you'll need to
+     * set this to a value of at least `1`, alongside setting
+     * `remove_default_node_pool` to `true`.
+     * 
+     */
     public Optional<Integer> getInitialNodeCount() {
         return Optional.ofNullable(this.initialNodeCount);
     }
@@ -83,21 +126,46 @@ public final class ClusterNodePool {
     public Optional<Integer> getMaxPodsPerNode() {
         return Optional.ofNullable(this.maxPodsPerNode);
     }
+    /**
+     * The name of the cluster, unique within the project and
+     * location.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     public Optional<String> getNamePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
+    /**
+     * Configuration for
+     * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
+     * 
+     */
     public Optional<ClusterNodePoolNetworkConfig> getNetworkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
+    /**
+     * Parameters used in creating the default node pool.
+     * Generally, this field should not be used at the same time as a
+     * `gcp.container.NodePool` or a `node_pool` block; this configuration
+     * manages the default node pool, which isn't recommended to be used.
+     * Structure is documented below.
+     * 
+     */
     public Optional<ClusterNodePoolNodeConfig> getNodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
     public Optional<Integer> getNodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
+    /**
+     * The list of zones in which the cluster's nodes
+     * are located. Nodes must be in the region of their regional cluster or in the
+     * same region as their cluster's zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster's zone.
+     * 
+     */
     public List<String> getNodeLocations() {
         return this.nodeLocations == null ? List.of() : this.nodeLocations;
     }

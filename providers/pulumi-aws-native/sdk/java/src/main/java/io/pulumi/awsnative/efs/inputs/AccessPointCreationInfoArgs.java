@@ -13,6 +13,10 @@ public final class AccessPointCreationInfoArgs extends io.pulumi.resources.Resou
 
     public static final AccessPointCreationInfoArgs Empty = new AccessPointCreationInfoArgs();
 
+    /**
+     * Specifies the POSIX group ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
+     * 
+     */
     @InputImport(name="ownerGid", required=true)
     private final Input<String> ownerGid;
 
@@ -20,6 +24,10 @@ public final class AccessPointCreationInfoArgs extends io.pulumi.resources.Resou
         return this.ownerGid;
     }
 
+    /**
+     * Specifies the POSIX user ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
+     * 
+     */
     @InputImport(name="ownerUid", required=true)
     private final Input<String> ownerUid;
 
@@ -27,6 +35,10 @@ public final class AccessPointCreationInfoArgs extends io.pulumi.resources.Resou
         return this.ownerUid;
     }
 
+    /**
+     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+     * 
+     */
     @InputImport(name="permissions", required=true)
     private final Input<String> permissions;
 

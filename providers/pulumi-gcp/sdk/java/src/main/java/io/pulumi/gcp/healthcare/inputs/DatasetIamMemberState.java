@@ -22,6 +22,13 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The dataset ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}` or
+     * `{location_name}/{dataset_name}`. In the second form, the provider's
+     * project setting will be used as a fallback.
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -29,6 +36,10 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * (Computed) The etag of the dataset's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -43,6 +54,12 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
         return this.member == null ? Input.empty() : this.member;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.healthcare.DatasetIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

@@ -15,39 +15,89 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type Definition for AWS::S3Outposts::Bucket
+ * 
+ */
 @ResourceType(type="aws-native:s3outposts:Bucket")
 public class Bucket extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the specified bucket.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the specified bucket.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * A name for the bucket.
+     * 
+     */
     @OutputExport(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
+    /**
+     * @return A name for the bucket.
+     * 
+     */
     public Output<String> getBucketName() {
         return this.bucketName;
     }
+    /**
+     * Rules that define how Amazon S3Outposts manages objects during their lifetime.
+     * 
+     */
     @OutputExport(name="lifecycleConfiguration", type=BucketLifecycleConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration;
 
+    /**
+     * @return Rules that define how Amazon S3Outposts manages objects during their lifetime.
+     * 
+     */
     public Output</* @Nullable */ BucketLifecycleConfiguration> getLifecycleConfiguration() {
         return this.lifecycleConfiguration;
     }
+    /**
+     * The id of the customer outpost on which the bucket resides.
+     * 
+     */
     @OutputExport(name="outpostId", type=String.class, parameters={})
     private Output<String> outpostId;
 
+    /**
+     * @return The id of the customer outpost on which the bucket resides.
+     * 
+     */
     public Output<String> getOutpostId() {
         return this.outpostId;
     }
+    /**
+     * An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={BucketTag.class})
     private Output</* @Nullable */ List<BucketTag>> tags;
 
+    /**
+     * @return An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+     * 
+     */
     public Output</* @Nullable */ List<BucketTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Bucket(String name, BucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:s3outposts:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +113,14 @@ public class Bucket extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Bucket get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Bucket(name, id, options);
     }

@@ -14,33 +14,86 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a server firewall rule.
+ * API Version: 2017-12-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:dbforpostgresql:FirewallRule rule1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforPostgreSQL/servers/testserver/firewallRules/rule1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:dbforpostgresql:FirewallRule")
 public class FirewallRule extends io.pulumi.resources.CustomResource {
+    /**
+     * The end IP address of the server firewall rule. Must be IPv4 format.
+     * 
+     */
     @OutputExport(name="endIpAddress", type=String.class, parameters={})
     private Output<String> endIpAddress;
 
+    /**
+     * @return The end IP address of the server firewall rule. Must be IPv4 format.
+     * 
+     */
     public Output<String> getEndIpAddress() {
         return this.endIpAddress;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The start IP address of the server firewall rule. Must be IPv4 format.
+     * 
+     */
     @OutputExport(name="startIpAddress", type=String.class, parameters={})
     private Output<String> startIpAddress;
 
+    /**
+     * @return The start IP address of the server firewall rule. Must be IPv4 format.
+     * 
+     */
     public Output<String> getStartIpAddress() {
         return this.startIpAddress;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FirewallRule(String name, FirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:dbforpostgresql:FirewallRule", name, args == null ? FirewallRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +113,14 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FirewallRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FirewallRule(name, id, options);
     }

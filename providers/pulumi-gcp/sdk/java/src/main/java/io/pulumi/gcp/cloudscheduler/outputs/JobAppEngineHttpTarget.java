@@ -13,10 +13,39 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobAppEngineHttpTarget {
+    /**
+     * App Engine Routing setting for the job.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable JobAppEngineHttpTargetAppEngineRouting appEngineRouting;
+    /**
+     * HTTP request body.
+     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+     * It is an error to set body on a job with an incompatible HttpMethod.
+     * A base64-encoded string.
+     * 
+     */
     private final @Nullable String body;
+    /**
+     * This map contains the header field names and values.
+     * Repeated headers are not supported, but a header value can contain commas.
+     * 
+     */
     private final @Nullable Map<String,String> headers;
+    /**
+     * Which HTTP method to use for the request.
+     * 
+     */
     private final @Nullable String httpMethod;
+    /**
+     * The relative URI.
+     * The relative URL must begin with "/" and must be a valid HTTP relative URL.
+     * It can contain a path, query string arguments, and \# fragments.
+     * If the relative URL is empty, then the root path "/" will be used.
+     * No spaces are allowed, and the maximum length allowed is 2083 characters
+     * 
+     */
     private final String relativeUri;
 
     @OutputCustomType.Constructor({"appEngineRouting","body","headers","httpMethod","relativeUri"})
@@ -33,18 +62,47 @@ public final class JobAppEngineHttpTarget {
         this.relativeUri = Objects.requireNonNull(relativeUri);
     }
 
+    /**
+     * App Engine Routing setting for the job.
+     * Structure is documented below.
+     * 
+     */
     public Optional<JobAppEngineHttpTargetAppEngineRouting> getAppEngineRouting() {
         return Optional.ofNullable(this.appEngineRouting);
     }
+    /**
+     * HTTP request body.
+     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+     * It is an error to set body on a job with an incompatible HttpMethod.
+     * A base64-encoded string.
+     * 
+     */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
+    /**
+     * This map contains the header field names and values.
+     * Repeated headers are not supported, but a header value can contain commas.
+     * 
+     */
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
     }
+    /**
+     * Which HTTP method to use for the request.
+     * 
+     */
     public Optional<String> getHttpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
+    /**
+     * The relative URI.
+     * The relative URL must begin with "/" and must be a valid HTTP relative URL.
+     * It can contain a path, query string arguments, and \# fragments.
+     * If the relative URL is empty, then the root path "/" will be used.
+     * No spaces are allowed, and the maximum length allowed is 2083 characters
+     * 
+     */
     public String getRelativeUri() {
         return this.relativeUri;
     }

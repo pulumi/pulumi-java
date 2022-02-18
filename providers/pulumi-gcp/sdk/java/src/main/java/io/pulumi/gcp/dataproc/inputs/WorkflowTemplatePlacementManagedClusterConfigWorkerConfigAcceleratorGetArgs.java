@@ -15,6 +15,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
 
     public static final WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorGetArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorGetArgs();
 
+    /**
+     * The number of the accelerator cards of this type exposed to this instance.
+     * 
+     */
     @InputImport(name="acceleratorCount")
     private final @Nullable Input<Integer> acceleratorCount;
 
@@ -22,6 +26,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
     }
 
+    /**
+     * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
+     * 
+     */
     @InputImport(name="acceleratorType")
     private final @Nullable Input<String> acceleratorType;
 

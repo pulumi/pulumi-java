@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A description of how to run the test.
+ * 
+ */
 public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestSpecificationArgs Empty = new TestSpecificationArgs();
 
+    /**
+     * An Android instrumentation test.
+     * 
+     */
     @InputImport(name="androidInstrumentationTest")
     private final @Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
@@ -29,6 +37,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.androidInstrumentationTest == null ? Input.empty() : this.androidInstrumentationTest;
     }
 
+    /**
+     * An Android robo test.
+     * 
+     */
     @InputImport(name="androidRoboTest")
     private final @Nullable Input<AndroidRoboTestArgs> androidRoboTest;
 
@@ -36,6 +48,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.androidRoboTest == null ? Input.empty() : this.androidRoboTest;
     }
 
+    /**
+     * An Android Application with a Test Loop.
+     * 
+     */
     @InputImport(name="androidTestLoop")
     private final @Nullable Input<AndroidTestLoopArgs> androidTestLoop;
 
@@ -43,6 +59,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.androidTestLoop == null ? Input.empty() : this.androidTestLoop;
     }
 
+    /**
+     * Disables performance metrics recording. May reduce test latency.
+     * 
+     */
     @InputImport(name="disablePerformanceMetrics")
     private final @Nullable Input<Boolean> disablePerformanceMetrics;
 
@@ -50,6 +70,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.disablePerformanceMetrics == null ? Input.empty() : this.disablePerformanceMetrics;
     }
 
+    /**
+     * Disables video recording. May reduce test latency.
+     * 
+     */
     @InputImport(name="disableVideoRecording")
     private final @Nullable Input<Boolean> disableVideoRecording;
 
@@ -57,6 +81,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.disableVideoRecording == null ? Input.empty() : this.disableVideoRecording;
     }
 
+    /**
+     * An iOS application with a test loop.
+     * 
+     */
     @InputImport(name="iosTestLoop")
     private final @Nullable Input<IosTestLoopArgs> iosTestLoop;
 
@@ -64,6 +92,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.iosTestLoop == null ? Input.empty() : this.iosTestLoop;
     }
 
+    /**
+     * Test setup requirements for iOS.
+     * 
+     */
     @InputImport(name="iosTestSetup")
     private final @Nullable Input<IosTestSetupArgs> iosTestSetup;
 
@@ -71,6 +103,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.iosTestSetup == null ? Input.empty() : this.iosTestSetup;
     }
 
+    /**
+     * An iOS XCTest, via an .xctestrun file.
+     * 
+     */
     @InputImport(name="iosXcTest")
     private final @Nullable Input<IosXcTestArgs> iosXcTest;
 
@@ -78,6 +114,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.iosXcTest == null ? Input.empty() : this.iosXcTest;
     }
 
+    /**
+     * Test setup requirements for Android e.g. files to install, bootstrap scripts.
+     * 
+     */
     @InputImport(name="testSetup")
     private final @Nullable Input<TestSetupArgs> testSetup;
 
@@ -85,6 +125,10 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
         return this.testSetup == null ? Input.empty() : this.testSetup;
     }
 
+    /**
+     * Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
+     * 
+     */
     @InputImport(name="testTimeout")
     private final @Nullable Input<String> testTimeout;
 

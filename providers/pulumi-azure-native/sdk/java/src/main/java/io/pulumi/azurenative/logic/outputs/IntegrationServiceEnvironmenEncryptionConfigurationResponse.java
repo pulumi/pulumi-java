@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
+    /**
+     * The encryption key reference.
+     * 
+     */
     private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
     @OutputCustomType.Constructor({"encryptionKeyReference"})
@@ -18,6 +22,10 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
         this.encryptionKeyReference = encryptionKeyReference;
     }
 
+    /**
+     * The encryption key reference.
+     * 
+     */
     public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> getEncryptionKeyReference() {
         return Optional.ofNullable(this.encryptionKeyReference);
     }

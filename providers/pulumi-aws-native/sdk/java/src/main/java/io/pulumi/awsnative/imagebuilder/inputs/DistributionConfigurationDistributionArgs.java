@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The distributions of the distribution configuration.
+ * 
+ */
 public final class DistributionConfigurationDistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionConfigurationDistributionArgs Empty = new DistributionConfigurationDistributionArgs();
 
+    /**
+     * The specific AMI settings (for example, launch permissions, AMI tags).
+     * 
+     */
     @InputImport(name="amiDistributionConfiguration")
     private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
 
@@ -25,6 +33,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
         return this.amiDistributionConfiguration == null ? Input.empty() : this.amiDistributionConfiguration;
     }
 
+    /**
+     * Container distribution settings for encryption, licensing, and sharing in a specific Region.
+     * 
+     */
     @InputImport(name="containerDistributionConfiguration")
     private final @Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
 
@@ -32,6 +44,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
         return this.containerDistributionConfiguration == null ? Input.empty() : this.containerDistributionConfiguration;
     }
 
+    /**
+     * A group of launchTemplateConfiguration settings that apply to image distribution.
+     * 
+     */
     @InputImport(name="launchTemplateConfigurations")
     private final @Nullable Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
 
@@ -39,6 +55,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
         return this.launchTemplateConfigurations == null ? Input.empty() : this.launchTemplateConfigurations;
     }
 
+    /**
+     * The License Manager Configuration to associate with the AMI in the specified Region.
+     * 
+     */
     @InputImport(name="licenseConfigurationArns")
     private final @Nullable Input<List<String>> licenseConfigurationArns;
 
@@ -46,6 +66,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
         return this.licenseConfigurationArns == null ? Input.empty() : this.licenseConfigurationArns;
     }
 
+    /**
+     * region
+     * 
+     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 

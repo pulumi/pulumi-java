@@ -13,6 +13,21 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstance {
+/**
+ * Get information about a VM instance resource within GCE. For more information see
+ * [the official documentation](https://cloud.google.com/compute/docs/instances)
+ * and
+ * [API](https://cloud.google.com/compute/docs/reference/latest/instances).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getInstance.
+ * 
+ *
+ * A collection of values returned by getInstance.
+ * 
+ */
     public static CompletableFuture<GetInstanceResult> invokeAsync(@Nullable GetInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args == null ? GetInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

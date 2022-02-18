@@ -23,6 +23,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorId;
     }
 
+    /**
+     * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
+     * 
+     */
     @InputImport(name="ipCidrRange")
     private final @Nullable Input<String> ipCidrRange;
 
@@ -37,6 +41,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Machine type of VM Instance underlying connector. Default is e2-micro
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -44,6 +52,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * Maximum value of instances in autoscaling group underlying the connector.
+     * 
+     */
     @InputImport(name="maxInstances")
     private final @Nullable Input<Integer> maxInstances;
 
@@ -51,6 +63,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
     }
 
+    /**
+     * Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
+     * 
+     */
     @InputImport(name="maxThroughput")
     private final @Nullable Input<Integer> maxThroughput;
 
@@ -58,6 +74,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxThroughput == null ? Input.empty() : this.maxThroughput;
     }
 
+    /**
+     * Minimum value of instances in autoscaling group underlying the connector.
+     * 
+     */
     @InputImport(name="minInstances")
     private final @Nullable Input<Integer> minInstances;
 
@@ -65,6 +85,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.minInstances == null ? Input.empty() : this.minInstances;
     }
 
+    /**
+     * Minimum throughput of the connector in Mbps. Default and min is 200.
+     * 
+     */
     @InputImport(name="minThroughput")
     private final @Nullable Input<Integer> minThroughput;
 
@@ -72,6 +96,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.minThroughput == null ? Input.empty() : this.minThroughput;
     }
 
+    /**
+     * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -79,6 +107,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name of a VPC network.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -93,6 +125,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The subnet in which to house the VPC Access Connector.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetArgs> subnet;
 

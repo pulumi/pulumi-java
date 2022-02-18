@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Json options
+ * 
+ */
 public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetJsonOptionsArgs Empty = new DatasetJsonOptionsArgs();

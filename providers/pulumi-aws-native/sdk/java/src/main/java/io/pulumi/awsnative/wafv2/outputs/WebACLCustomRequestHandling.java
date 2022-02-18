@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WebACLCustomRequestHandling {
+    /**
+     * Collection of HTTP headers.
+     * 
+     */
     private final List<WebACLCustomHTTPHeader> insertHeaders;
 
     @OutputCustomType.Constructor({"insertHeaders"})
@@ -17,6 +21,10 @@ public final class WebACLCustomRequestHandling {
         this.insertHeaders = Objects.requireNonNull(insertHeaders);
     }
 
+    /**
+     * Collection of HTTP headers.
+     * 
+     */
     public List<WebACLCustomHTTPHeader> getInsertHeaders() {
         return this.insertHeaders;
     }

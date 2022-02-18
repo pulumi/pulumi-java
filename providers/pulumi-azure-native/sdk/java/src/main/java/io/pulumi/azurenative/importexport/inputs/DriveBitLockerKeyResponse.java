@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * BitLocker recovery key or password to the specified drive
+ * 
+ */
 public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DriveBitLockerKeyResponse Empty = new DriveBitLockerKeyResponse();
 
+    /**
+     * BitLocker recovery key or password
+     * 
+     */
     @InputImport(name="bitLockerKey")
     private final @Nullable String bitLockerKey;
 
@@ -21,6 +29,10 @@ public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeA
         return this.bitLockerKey == null ? Optional.empty() : Optional.ofNullable(this.bitLockerKey);
     }
 
+    /**
+     * Drive ID
+     * 
+     */
     @InputImport(name="driveId")
     private final @Nullable String driveId;
 

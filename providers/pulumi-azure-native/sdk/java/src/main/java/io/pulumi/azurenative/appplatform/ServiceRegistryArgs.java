@@ -14,6 +14,10 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ServiceRegistryArgs Empty = new ServiceRegistryArgs();
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -21,6 +25,10 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -28,6 +36,10 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
         return this.serviceName;
     }
 
+    /**
+     * The name of Service Registry.
+     * 
+     */
     @InputImport(name="serviceRegistryName")
     private final @Nullable Input<String> serviceRegistryName;
 

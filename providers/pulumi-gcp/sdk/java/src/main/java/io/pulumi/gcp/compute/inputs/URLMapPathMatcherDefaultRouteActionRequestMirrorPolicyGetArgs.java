@@ -13,6 +13,10 @@ public final class URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs
 
     public static final URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs Empty = new URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs();
 
+    /**
+     * The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     @InputImport(name="backendService", required=true)
     private final Input<String> backendService;
 

@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for a R environment.
+ * 
+ */
 public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi.resources.InvokeArgs {
 
     public static final ModelEnvironmentDefinitionResponseResponseR Empty = new ModelEnvironmentDefinitionResponseResponseR();
 
+    /**
+     * The packages from Bioconductor.
+     * 
+     */
     @InputImport(name="bioConductorPackages")
     private final @Nullable List<String> bioConductorPackages;
 
@@ -25,6 +33,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
         return this.bioConductorPackages == null ? List.of() : this.bioConductorPackages;
     }
 
+    /**
+     * The CRAN packages to use.
+     * 
+     */
     @InputImport(name="cranPackages")
     private final @Nullable List<RCranPackageResponse> cranPackages;
 
@@ -32,6 +44,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
         return this.cranPackages == null ? List.of() : this.cranPackages;
     }
 
+    /**
+     * The packages from custom urls.
+     * 
+     */
     @InputImport(name="customUrlPackages")
     private final @Nullable List<String> customUrlPackages;
 
@@ -39,6 +55,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
         return this.customUrlPackages == null ? List.of() : this.customUrlPackages;
     }
 
+    /**
+     * The packages directly from GitHub.
+     * 
+     */
     @InputImport(name="gitHubPackages")
     private final @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
 
@@ -46,6 +66,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
         return this.gitHubPackages == null ? List.of() : this.gitHubPackages;
     }
 
+    /**
+     * The version of R to be installed
+     * 
+     */
     @InputImport(name="rVersion")
     private final @Nullable String rVersion;
 
@@ -53,6 +77,11 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
         return this.rVersion == null ? Optional.empty() : Optional.ofNullable(this.rVersion);
     }
 
+    /**
+     * The Rscript path to use if an environment build is not required.
+     * The path specified gets used to call the user script.
+     * 
+     */
     @InputImport(name="rscriptPath")
     private final @Nullable String rscriptPath;
 
@@ -60,6 +89,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
         return this.rscriptPath == null ? Optional.empty() : Optional.ofNullable(this.rscriptPath);
     }
 
+    /**
+     * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+     * 
+     */
     @InputImport(name="snapshotDate")
     private final @Nullable String snapshotDate;
 
@@ -67,6 +100,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
         return this.snapshotDate == null ? Optional.empty() : Optional.ofNullable(this.snapshotDate);
     }
 
+    /**
+     * Indicates whether the environment is managed by user or by AzureML.
+     * 
+     */
     @InputImport(name="userManaged")
     private final @Nullable Boolean userManaged;
 

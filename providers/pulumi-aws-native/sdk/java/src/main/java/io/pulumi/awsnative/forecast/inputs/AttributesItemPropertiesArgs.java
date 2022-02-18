@@ -15,6 +15,10 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
 
     public static final AttributesItemPropertiesArgs Empty = new AttributesItemPropertiesArgs();
 
+    /**
+     * Name of the dataset field
+     * 
+     */
     @InputImport(name="attributeName")
     private final @Nullable Input<String> attributeName;
 
@@ -22,6 +26,10 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
         return this.attributeName == null ? Input.empty() : this.attributeName;
     }
 
+    /**
+     * Data type of the field
+     * 
+     */
     @InputImport(name="attributeType")
     private final @Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType;
 

@@ -14,9 +14,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReservationSpecificReservationInstanceProperties {
+    /**
+     * Guest accelerator type and count.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators;
+    /**
+     * The amount of local ssd to reserve with each instance. This
+     * reserves disks of type `local-ssd`.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds;
+    /**
+     * The name of the machine type to reserve.
+     * 
+     */
     private final String machineType;
+    /**
+     * The minimum CPU platform for the reservation. For example,
+     * `"Intel Skylake"`. See
+     * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+     * for information on available CPU platforms.
+     * 
+     */
     private final @Nullable String minCpuPlatform;
 
     @OutputCustomType.Constructor({"guestAccelerators","localSsds","machineType","minCpuPlatform"})
@@ -31,15 +53,37 @@ public final class ReservationSpecificReservationInstanceProperties {
         this.minCpuPlatform = minCpuPlatform;
     }
 
+    /**
+     * Guest accelerator type and count.
+     * Structure is documented below.
+     * 
+     */
     public List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> getGuestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
     }
+    /**
+     * The amount of local ssd to reserve with each instance. This
+     * reserves disks of type `local-ssd`.
+     * Structure is documented below.
+     * 
+     */
     public List<ReservationSpecificReservationInstancePropertiesLocalSsd> getLocalSsds() {
         return this.localSsds == null ? List.of() : this.localSsds;
     }
+    /**
+     * The name of the machine type to reserve.
+     * 
+     */
     public String getMachineType() {
         return this.machineType;
     }
+    /**
+     * The minimum CPU platform for the reservation. For example,
+     * `"Intel Skylake"`. See
+     * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+     * for information on available CPU platforms.
+     * 
+     */
     public Optional<String> getMinCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }

@@ -21,6 +21,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupId;
     }
 
+    /**
+     * Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.
+     * 
+     */
     @InputImport(name="database")
     private final @Nullable Input<String> database;
 
@@ -42,6 +46,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionConfigKmsKeyName == null ? Input.empty() : this.encryptionConfigKmsKeyName;
     }
 
+    /**
+     * Required for the CreateBackup operation. The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup request is processed. Once the `expire_time` has passed, the backup is eligible to be automatically deleted by Cloud Spanner to free the resources used by the backup.
+     * 
+     */
     @InputImport(name="expireTime")
     private final @Nullable Input<String> expireTime;
 
@@ -56,6 +64,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
+    /**
+     * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -70,6 +82,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The backup will contain an externally consistent copy of the database at the timestamp specified by `version_time`. If `version_time` is not specified, the system will set `version_time` to the `create_time` of the backup.
+     * 
+     */
     @InputImport(name="versionTime")
     private final @Nullable Input<String> versionTime;
 

@@ -14,6 +14,10 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
 
     public static final ResolverQueryLoggingConfigArgs Empty = new ResolverQueryLoggingConfigArgs();
 
+    /**
+     * destination arn
+     * 
+     */
     @InputImport(name="destinationArn")
     private final @Nullable Input<String> destinationArn;
 
@@ -21,6 +25,10 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
         return this.destinationArn == null ? Input.empty() : this.destinationArn;
     }
 
+    /**
+     * ResolverQueryLogConfigName
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

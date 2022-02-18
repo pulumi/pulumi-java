@@ -12,6 +12,10 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetContactArgs Empty = new GetContactArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the contact.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SessionInfoResponse {
+    /**
+     * // [Preview] Id of the session.
+     * 
+     */
     private final String sessionId;
 
     @OutputCustomType.Constructor({"sessionId"})
@@ -16,6 +20,10 @@ public final class SessionInfoResponse {
         this.sessionId = Objects.requireNonNull(sessionId);
     }
 
+    /**
+     * // [Preview] Id of the session.
+     * 
+     */
     public String getSessionId() {
         return this.sessionId;
     }

@@ -12,6 +12,10 @@ public final class GetApplicationSecurityGroupArgs extends io.pulumi.resources.I
 
     public static final GetApplicationSecurityGroupArgs Empty = new GetApplicationSecurityGroupArgs();
 
+    /**
+     * The name of the application security group.
+     * 
+     */
     @InputImport(name="applicationSecurityGroupName", required=true)
     private final String applicationSecurityGroupName;
 
@@ -19,6 +23,10 @@ public final class GetApplicationSecurityGroupArgs extends io.pulumi.resources.I
         return this.applicationSecurityGroupName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,6 +11,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SourceRegistryCredentialsResponse {
+    /**
+     * The authentication mode which determines the source registry login scope. The credentials for the source registry
+     * will be generated using the given scope. These credentials will be used to login to
+     * the source registry during the run.
+     * 
+     */
     private final @Nullable String loginMode;
 
     @OutputCustomType.Constructor({"loginMode"})
@@ -18,6 +24,12 @@ public final class SourceRegistryCredentialsResponse {
         this.loginMode = loginMode;
     }
 
+    /**
+     * The authentication mode which determines the source registry login scope. The credentials for the source registry
+     * will be generated using the given scope. These credentials will be used to login to
+     * the source registry during the run.
+     * 
+     */
     public Optional<String> getLoginMode() {
         return Optional.ofNullable(this.loginMode);
     }

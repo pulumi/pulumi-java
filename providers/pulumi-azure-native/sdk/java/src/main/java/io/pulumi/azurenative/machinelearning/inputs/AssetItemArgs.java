@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about an asset associated with the web service.
+ * 
+ */
 public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssetItemArgs Empty = new AssetItemArgs();
 
+    /**
+     * Asset's Id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -29,6 +37,10 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Information about the asset's input ports.
+     * 
+     */
     @InputImport(name="inputPorts")
     private final @Nullable Input<Map<String,InputPortArgs>> inputPorts;
 
@@ -36,6 +48,10 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputPorts == null ? Input.empty() : this.inputPorts;
     }
 
+    /**
+     * Access information for the asset.
+     * 
+     */
     @InputImport(name="locationInfo", required=true)
     private final Input<BlobLocationArgs> locationInfo;
 
@@ -43,6 +59,10 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.locationInfo;
     }
 
+    /**
+     * If the asset is a custom module, this holds the module's metadata.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -50,6 +70,10 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Asset's friendly name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -57,6 +81,10 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Information about the asset's output ports.
+     * 
+     */
     @InputImport(name="outputPorts")
     private final @Nullable Input<Map<String,OutputPortArgs>> outputPorts;
 
@@ -64,6 +92,10 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputPorts == null ? Input.empty() : this.outputPorts;
     }
 
+    /**
+     * If the asset is a custom module, this holds the module's parameters.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
 
@@ -71,6 +103,10 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Asset's type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,AssetType>> type;
 

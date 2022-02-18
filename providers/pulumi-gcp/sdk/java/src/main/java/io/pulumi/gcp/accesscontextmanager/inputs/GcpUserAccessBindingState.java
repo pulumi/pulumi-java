@@ -14,6 +14,10 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
 
     public static final GcpUserAccessBindingState Empty = new GcpUserAccessBindingState();
 
+    /**
+     * Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
+     * 
+     */
     @InputImport(name="accessLevels")
     private final @Nullable Input<String> accessLevels;
 
@@ -21,6 +25,10 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
         return this.accessLevels == null ? Input.empty() : this.accessLevels;
     }
 
+    /**
+     * Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
+     * 
+     */
     @InputImport(name="groupKey")
     private final @Nullable Input<String> groupKey;
 
@@ -28,6 +36,12 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
         return this.groupKey == null ? Input.empty() : this.groupKey;
     }
 
+    /**
+     * Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
+     * characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
+     * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +49,10 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Required. ID of the parent organization.
+     * 
+     */
     @InputImport(name="organizationId")
     private final @Nullable Input<String> organizationId;
 

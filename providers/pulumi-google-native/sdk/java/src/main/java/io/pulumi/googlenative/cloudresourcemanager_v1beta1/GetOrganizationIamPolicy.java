@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationIamPolicy {
+/**
+ * Gets the access control policy for an Organization resource. May be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123".
+ * 
+ */
     public static CompletableFuture<GetOrganizationIamPolicyResult> invokeAsync(GetOrganizationIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v1beta1:getOrganizationIamPolicy", TypeShape.of(GetOrganizationIamPolicyResult.class), args == null ? GetOrganizationIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class GetHybridUseBenefitArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetHybridUseBenefitArgs Empty = new GetHybridUseBenefitArgs();
 
+    /**
+     * This is a unique identifier for a plan. Should be a guid.
+     * 
+     */
     @InputImport(name="planId", required=true)
     private final String planId;
 
@@ -19,6 +23,10 @@ public final class GetHybridUseBenefitArgs extends io.pulumi.resources.InvokeArg
         return this.planId;
     }
 
+    /**
+     * The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

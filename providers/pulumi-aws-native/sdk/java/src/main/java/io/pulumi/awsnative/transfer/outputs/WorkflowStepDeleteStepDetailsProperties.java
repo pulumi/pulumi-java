@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowStepDeleteStepDetailsProperties {
+    /**
+     * The name of the step, used as an identifier.
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +22,10 @@ public final class WorkflowStepDeleteStepDetailsProperties {
         this.name = name;
     }
 
+    /**
+     * The name of the step, used as an identifier.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

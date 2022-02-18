@@ -14,6 +14,10 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends io.pulumi.reso
 
     public static final TriggerBuildSourceStorageSourceGetArgs Empty = new TriggerBuildSourceStorageSourceGetArgs();
 
+    /**
+     * Google Cloud Storage bucket containing the source.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -21,6 +25,11 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends io.pulumi.reso
         return this.bucket;
     }
 
+    /**
+     * Google Cloud Storage generation for the object.
+     * If the generation is omitted, the latest generation will be used
+     * 
+     */
     @InputImport(name="generation")
     private final @Nullable Input<String> generation;
 
@@ -28,6 +37,11 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends io.pulumi.reso
         return this.generation == null ? Input.empty() : this.generation;
     }
 
+    /**
+     * Google Cloud Storage object containing the source.
+     * This object must be a gzipped archive file (.tar.gz) containing source to build.
+     * 
+     */
     @InputImport(name="object", required=true)
     private final Input<String> object;
 

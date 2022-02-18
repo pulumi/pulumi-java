@@ -13,6 +13,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
 
     public static final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs Empty = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs();
 
+    /**
+     * The name of the Datastore kind.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

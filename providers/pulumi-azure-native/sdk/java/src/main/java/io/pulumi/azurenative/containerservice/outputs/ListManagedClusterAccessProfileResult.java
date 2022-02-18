@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListManagedClusterAccessProfileResult {
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Base64-encoded Kubernetes configuration file.
+     * 
+     */
     private final @Nullable String kubeConfig;
+    /**
+     * Resource location
+     * 
+     */
     private final String location;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kubeConfig","location","name","tags","type"})
@@ -35,21 +59,45 @@ public final class ListManagedClusterAccessProfileResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Base64-encoded Kubernetes configuration file.
+     * 
+     */
     public Optional<String> getKubeConfig() {
         return Optional.ofNullable(this.kubeConfig);
     }
+    /**
+     * Resource location
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

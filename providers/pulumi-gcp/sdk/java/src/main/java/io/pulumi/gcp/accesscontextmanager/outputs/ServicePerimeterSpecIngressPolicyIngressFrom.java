@@ -13,8 +13,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServicePerimeterSpecIngressPolicyIngressFrom {
+    /**
+     * A list of identities that are allowed access through this `EgressPolicy`.
+     * Should be in the format of email address. The email address should
+     * represent individual user or service account only.
+     * 
+     */
     private final @Nullable List<String> identities;
+    /**
+     * Specifies the type of identities that are allowed access to outside the
+     * perimeter. If left unspecified, then members of `identities` field will
+     * be allowed access.
+     * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+     * 
+     */
     private final @Nullable String identityType;
+    /**
+     * Sources that this `IngressPolicy` authorizes access from.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<ServicePerimeterSpecIngressPolicyIngressFromSource> sources;
 
     @OutputCustomType.Constructor({"identities","identityType","sources"})
@@ -27,12 +45,30 @@ public final class ServicePerimeterSpecIngressPolicyIngressFrom {
         this.sources = sources;
     }
 
+    /**
+     * A list of identities that are allowed access through this `EgressPolicy`.
+     * Should be in the format of email address. The email address should
+     * represent individual user or service account only.
+     * 
+     */
     public List<String> getIdentities() {
         return this.identities == null ? List.of() : this.identities;
     }
+    /**
+     * Specifies the type of identities that are allowed access to outside the
+     * perimeter. If left unspecified, then members of `identities` field will
+     * be allowed access.
+     * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+     * 
+     */
     public Optional<String> getIdentityType() {
         return Optional.ofNullable(this.identityType);
     }
+    /**
+     * Sources that this `IngressPolicy` authorizes access from.
+     * Structure is documented below.
+     * 
+     */
     public List<ServicePerimeterSpecIngressPolicyIngressFromSource> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }

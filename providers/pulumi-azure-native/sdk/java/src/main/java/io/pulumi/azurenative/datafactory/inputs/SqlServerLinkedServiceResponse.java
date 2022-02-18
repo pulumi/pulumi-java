@@ -19,10 +19,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SQL Server linked service.
+ * 
+ */
 public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlServerLinkedServiceResponse Empty = new SqlServerLinkedServiceResponse();
 
+    /**
+     * Sql always encrypted properties.
+     * 
+     */
     @InputImport(name="alwaysEncryptedSettings")
     private final @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
 
@@ -30,6 +38,10 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.alwaysEncryptedSettings == null ? Optional.empty() : Optional.ofNullable(this.alwaysEncryptedSettings);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -37,6 +49,10 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -44,6 +60,10 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     @InputImport(name="connectionString", required=true)
     private final Object connectionString;
 
@@ -51,6 +71,10 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.connectionString;
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -58,6 +82,10 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -65,6 +93,10 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -72,6 +104,10 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The on-premises Windows authentication password.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -79,6 +115,11 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'SqlServer'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -86,6 +127,10 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.type;
     }
 
+    /**
+     * The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable Object userName;
 

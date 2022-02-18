@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings for the source of the flow.
+ * 
+ */
 public final class FlowSource extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowSource Empty = new FlowSource();
 
+    /**
+     * The type of decryption that is used on the content ingested from this source.
+     * 
+     */
     @InputImport(name="decryption")
     private final @Nullable FlowEncryption decryption;
 
@@ -24,6 +32,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.decryption == null ? Optional.empty() : Optional.ofNullable(this.decryption);
     }
 
+    /**
+     * A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -31,6 +43,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
+     * 
+     */
     @InputImport(name="entitlementArn")
     private final @Nullable String entitlementArn;
 
@@ -38,6 +54,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.entitlementArn == null ? Optional.empty() : Optional.ofNullable(this.entitlementArn);
     }
 
+    /**
+     * The IP address that the flow will be listening on for incoming content.
+     * 
+     */
     @InputImport(name="ingestIp")
     private final @Nullable String ingestIp;
 
@@ -45,6 +65,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.ingestIp == null ? Optional.empty() : Optional.ofNullable(this.ingestIp);
     }
 
+    /**
+     * The port that the flow will be listening on for incoming content.
+     * 
+     */
     @InputImport(name="ingestPort")
     private final @Nullable Integer ingestPort;
 
@@ -52,6 +76,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.ingestPort == null ? Optional.empty() : Optional.ofNullable(this.ingestPort);
     }
 
+    /**
+     * The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
+     * 
+     */
     @InputImport(name="maxBitrate")
     private final @Nullable Integer maxBitrate;
 
@@ -59,6 +87,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.maxBitrate == null ? Optional.empty() : Optional.ofNullable(this.maxBitrate);
     }
 
+    /**
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * 
+     */
     @InputImport(name="maxLatency")
     private final @Nullable Integer maxLatency;
 
@@ -66,6 +98,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.maxLatency == null ? Optional.empty() : Optional.ofNullable(this.maxLatency);
     }
 
+    /**
+     * The minimum latency in milliseconds.
+     * 
+     */
     @InputImport(name="minLatency")
     private final @Nullable Integer minLatency;
 
@@ -73,6 +109,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.minLatency == null ? Optional.empty() : Optional.ofNullable(this.minLatency);
     }
 
+    /**
+     * The name of the source.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -80,6 +120,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The protocol that is used by the source or output.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable FlowSourceProtocol protocol;
 
@@ -87,6 +131,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
+    /**
+     * The ARN of the source.
+     * 
+     */
     @InputImport(name="sourceArn")
     private final @Nullable String sourceArn;
 
@@ -94,6 +142,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.sourceArn == null ? Optional.empty() : Optional.ofNullable(this.sourceArn);
     }
 
+    /**
+     * The port that the flow will be listening on for incoming content.(ReadOnly)
+     * 
+     */
     @InputImport(name="sourceIngestPort")
     private final @Nullable String sourceIngestPort;
 
@@ -101,6 +153,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.sourceIngestPort == null ? Optional.empty() : Optional.ofNullable(this.sourceIngestPort);
     }
 
+    /**
+     * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+     * 
+     */
     @InputImport(name="streamId")
     private final @Nullable String streamId;
 
@@ -108,6 +164,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.streamId == null ? Optional.empty() : Optional.ofNullable(this.streamId);
     }
 
+    /**
+     * The name of the VPC Interface this Source is configured with.
+     * 
+     */
     @InputImport(name="vpcInterfaceName")
     private final @Nullable String vpcInterfaceName;
 
@@ -115,6 +175,10 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
         return this.vpcInterfaceName == null ? Optional.empty() : Optional.ofNullable(this.vpcInterfaceName);
     }
 
+    /**
+     * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+     * 
+     */
     @InputImport(name="whitelistCidr")
     private final @Nullable String whitelistCidr;
 

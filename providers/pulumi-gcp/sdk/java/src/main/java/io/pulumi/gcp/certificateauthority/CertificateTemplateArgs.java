@@ -18,6 +18,10 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
 
     public static final CertificateTemplateArgs Empty = new CertificateTemplateArgs();
 
+    /**
+     * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
+     * 
+     */
     @InputImport(name="identityConstraints")
     private final @Nullable Input<CertificateTemplateIdentityConstraintsArgs> identityConstraints;
 
@@ -32,6 +40,10 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
         return this.identityConstraints == null ? Input.empty() : this.identityConstraints;
     }
 
+    /**
+     * Optional. Labels with user-defined metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -39,6 +51,10 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -46,6 +62,10 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
         return this.location;
     }
 
+    /**
+     * The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,6 +73,10 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
+     * 
+     */
     @InputImport(name="passthroughExtensions")
     private final @Nullable Input<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions;
 
@@ -60,6 +84,10 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
         return this.passthroughExtensions == null ? Input.empty() : this.passthroughExtensions;
     }
 
+    /**
+     * Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+     * 
+     */
     @InputImport(name="predefinedValues")
     private final @Nullable Input<CertificateTemplatePredefinedValuesArgs> predefinedValues;
 
@@ -67,6 +95,10 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
         return this.predefinedValues == null ? Input.empty() : this.predefinedValues;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

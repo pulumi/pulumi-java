@@ -15,45 +15,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The Network Manager Connection resource
+ * API Version: 2021-05-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:SubscriptionNetworkManagerConnection TestMConnection /subscriptions/subscriptionA/providers/Microsoft.Network/networkManagerConnections/TestNMConnection 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:SubscriptionNetworkManagerConnection")
 public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * A description of the scope connection.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description of the scope connection.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Network Manager Id.
+     * 
+     */
     @OutputExport(name="networkManagerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkManagerId;
 
+    /**
+     * @return Network Manager Id.
+     * 
+     */
     public Output</* @Nullable */ String> getNetworkManagerId() {
         return this.networkManagerId;
     }
+    /**
+     * The system metadata related to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata related to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SubscriptionNetworkManagerConnection(String name, @Nullable SubscriptionNetworkManagerConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:SubscriptionNetworkManagerConnection", name, args == null ? SubscriptionNetworkManagerConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -72,6 +141,14 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SubscriptionNetworkManagerConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubscriptionNetworkManagerConnection(name, id, options);
     }

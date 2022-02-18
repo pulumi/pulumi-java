@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Enabled configuration.
+ * 
+ */
 public final class EnabledConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnabledConfigArgs Empty = new EnabledConfigArgs();
 
+    /**
+     * True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

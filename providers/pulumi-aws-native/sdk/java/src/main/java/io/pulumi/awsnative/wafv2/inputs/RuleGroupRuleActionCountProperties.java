@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Count traffic towards application.
+ * 
+ */
 public final class RuleGroupRuleActionCountProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupRuleActionCountProperties Empty = new RuleGroupRuleActionCountProperties();

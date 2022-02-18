@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
+ * 
+ */
 public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetResponseDataPath Empty = new DatasetResponseDataPath();
 
+    /**
+     * Additional Properties.
+     * 
+     */
     @InputImport(name="additionalProperties")
     private final @Nullable Map<String,Object> additionalProperties;
 
@@ -26,6 +34,10 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
     }
 
+    /**
+     * Azure path for Azure Blob or File
+     * 
+     */
     @InputImport(name="azureFilePath", required=true)
     private final String azureFilePath;
 
@@ -33,6 +45,10 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
         return this.azureFilePath;
     }
 
+    /**
+     * Data store Name
+     * 
+     */
     @InputImport(name="datastoreName", required=true)
     private final String datastoreName;
 
@@ -40,6 +56,10 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
         return this.datastoreName;
     }
 
+    /**
+     * HTTP URL.
+     * 
+     */
     @InputImport(name="httpUrl", required=true)
     private final String httpUrl;
 
@@ -47,6 +67,10 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
         return this.httpUrl;
     }
 
+    /**
+     * Specify the partition format of path. Defaults to None.
+     * 
+     */
     @InputImport(name="partitionFormat", required=true)
     private final String partitionFormat;
 
@@ -54,6 +78,10 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
         return this.partitionFormat;
     }
 
+    /**
+     * Whether or not to ignore unmatched path.
+     * 
+     */
     @InputImport(name="partitionFormatIgnoreError", required=true)
     private final Boolean partitionFormatIgnoreError;
 
@@ -61,6 +89,10 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
         return this.partitionFormatIgnoreError;
     }
 
+    /**
+     * List of files expanded from a file GLOB specified
+     * 
+     */
     @InputImport(name="paths", required=true)
     private final List<String> paths;
 
@@ -68,6 +100,10 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
         return this.paths;
     }
 
+    /**
+     * Relative path in the data store
+     * 
+     */
     @InputImport(name="relativePath", required=true)
     private final String relativePath;
 
@@ -75,6 +111,10 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
         return this.relativePath;
     }
 
+    /**
+     * Sql Query/Table/Stored Procedure details.
+     * 
+     */
     @InputImport(name="sqlDataPath")
     private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 

@@ -18,63 +18,63 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 
-    @InputImport(name="accessApprovalCustomEndpoint", json=true)
+    @InputImport(name="accessApprovalCustomEndpoint")
     private final @Nullable Input<String> accessApprovalCustomEndpoint;
 
     public Input<String> getAccessApprovalCustomEndpoint() {
         return this.accessApprovalCustomEndpoint == null ? Input.empty() : this.accessApprovalCustomEndpoint;
     }
 
-    @InputImport(name="accessContextManagerCustomEndpoint", json=true)
+    @InputImport(name="accessContextManagerCustomEndpoint")
     private final @Nullable Input<String> accessContextManagerCustomEndpoint;
 
     public Input<String> getAccessContextManagerCustomEndpoint() {
         return this.accessContextManagerCustomEndpoint == null ? Input.empty() : this.accessContextManagerCustomEndpoint;
     }
 
-    @InputImport(name="accessToken", json=true)
+    @InputImport(name="accessToken")
     private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
     }
 
-    @InputImport(name="activeDirectoryCustomEndpoint", json=true)
+    @InputImport(name="activeDirectoryCustomEndpoint")
     private final @Nullable Input<String> activeDirectoryCustomEndpoint;
 
     public Input<String> getActiveDirectoryCustomEndpoint() {
         return this.activeDirectoryCustomEndpoint == null ? Input.empty() : this.activeDirectoryCustomEndpoint;
     }
 
-    @InputImport(name="apiGatewayCustomEndpoint", json=true)
+    @InputImport(name="apiGatewayCustomEndpoint")
     private final @Nullable Input<String> apiGatewayCustomEndpoint;
 
     public Input<String> getApiGatewayCustomEndpoint() {
         return this.apiGatewayCustomEndpoint == null ? Input.empty() : this.apiGatewayCustomEndpoint;
     }
 
-    @InputImport(name="apigeeCustomEndpoint", json=true)
+    @InputImport(name="apigeeCustomEndpoint")
     private final @Nullable Input<String> apigeeCustomEndpoint;
 
     public Input<String> getApigeeCustomEndpoint() {
         return this.apigeeCustomEndpoint == null ? Input.empty() : this.apigeeCustomEndpoint;
     }
 
-    @InputImport(name="appEngineCustomEndpoint", json=true)
+    @InputImport(name="appEngineCustomEndpoint")
     private final @Nullable Input<String> appEngineCustomEndpoint;
 
     public Input<String> getAppEngineCustomEndpoint() {
         return this.appEngineCustomEndpoint == null ? Input.empty() : this.appEngineCustomEndpoint;
     }
 
-    @InputImport(name="artifactRegistryCustomEndpoint", json=true)
+    @InputImport(name="artifactRegistryCustomEndpoint")
     private final @Nullable Input<String> artifactRegistryCustomEndpoint;
 
     public Input<String> getArtifactRegistryCustomEndpoint() {
         return this.artifactRegistryCustomEndpoint == null ? Input.empty() : this.artifactRegistryCustomEndpoint;
     }
 
-    @InputImport(name="assuredWorkloadsCustomEndpoint", json=true)
+    @InputImport(name="assuredWorkloadsCustomEndpoint")
     private final @Nullable Input<String> assuredWorkloadsCustomEndpoint;
 
     public Input<String> getAssuredWorkloadsCustomEndpoint() {
@@ -88,252 +88,252 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.batching == null ? Input.empty() : this.batching;
     }
 
-    @InputImport(name="bigQueryCustomEndpoint", json=true)
+    @InputImport(name="bigQueryCustomEndpoint")
     private final @Nullable Input<String> bigQueryCustomEndpoint;
 
     public Input<String> getBigQueryCustomEndpoint() {
         return this.bigQueryCustomEndpoint == null ? Input.empty() : this.bigQueryCustomEndpoint;
     }
 
-    @InputImport(name="bigqueryConnectionCustomEndpoint", json=true)
+    @InputImport(name="bigqueryConnectionCustomEndpoint")
     private final @Nullable Input<String> bigqueryConnectionCustomEndpoint;
 
     public Input<String> getBigqueryConnectionCustomEndpoint() {
         return this.bigqueryConnectionCustomEndpoint == null ? Input.empty() : this.bigqueryConnectionCustomEndpoint;
     }
 
-    @InputImport(name="bigqueryDataTransferCustomEndpoint", json=true)
+    @InputImport(name="bigqueryDataTransferCustomEndpoint")
     private final @Nullable Input<String> bigqueryDataTransferCustomEndpoint;
 
     public Input<String> getBigqueryDataTransferCustomEndpoint() {
         return this.bigqueryDataTransferCustomEndpoint == null ? Input.empty() : this.bigqueryDataTransferCustomEndpoint;
     }
 
-    @InputImport(name="bigqueryReservationCustomEndpoint", json=true)
+    @InputImport(name="bigqueryReservationCustomEndpoint")
     private final @Nullable Input<String> bigqueryReservationCustomEndpoint;
 
     public Input<String> getBigqueryReservationCustomEndpoint() {
         return this.bigqueryReservationCustomEndpoint == null ? Input.empty() : this.bigqueryReservationCustomEndpoint;
     }
 
-    @InputImport(name="bigtableCustomEndpoint", json=true)
+    @InputImport(name="bigtableCustomEndpoint")
     private final @Nullable Input<String> bigtableCustomEndpoint;
 
     public Input<String> getBigtableCustomEndpoint() {
         return this.bigtableCustomEndpoint == null ? Input.empty() : this.bigtableCustomEndpoint;
     }
 
-    @InputImport(name="billingCustomEndpoint", json=true)
+    @InputImport(name="billingCustomEndpoint")
     private final @Nullable Input<String> billingCustomEndpoint;
 
     public Input<String> getBillingCustomEndpoint() {
         return this.billingCustomEndpoint == null ? Input.empty() : this.billingCustomEndpoint;
     }
 
-    @InputImport(name="billingProject", json=true)
+    @InputImport(name="billingProject")
     private final @Nullable Input<String> billingProject;
 
     public Input<String> getBillingProject() {
         return this.billingProject == null ? Input.empty() : this.billingProject;
     }
 
-    @InputImport(name="binaryAuthorizationCustomEndpoint", json=true)
+    @InputImport(name="binaryAuthorizationCustomEndpoint")
     private final @Nullable Input<String> binaryAuthorizationCustomEndpoint;
 
     public Input<String> getBinaryAuthorizationCustomEndpoint() {
         return this.binaryAuthorizationCustomEndpoint == null ? Input.empty() : this.binaryAuthorizationCustomEndpoint;
     }
 
-    @InputImport(name="cloudAssetCustomEndpoint", json=true)
+    @InputImport(name="cloudAssetCustomEndpoint")
     private final @Nullable Input<String> cloudAssetCustomEndpoint;
 
     public Input<String> getCloudAssetCustomEndpoint() {
         return this.cloudAssetCustomEndpoint == null ? Input.empty() : this.cloudAssetCustomEndpoint;
     }
 
-    @InputImport(name="cloudBillingCustomEndpoint", json=true)
+    @InputImport(name="cloudBillingCustomEndpoint")
     private final @Nullable Input<String> cloudBillingCustomEndpoint;
 
     public Input<String> getCloudBillingCustomEndpoint() {
         return this.cloudBillingCustomEndpoint == null ? Input.empty() : this.cloudBillingCustomEndpoint;
     }
 
-    @InputImport(name="cloudBuildCustomEndpoint", json=true)
+    @InputImport(name="cloudBuildCustomEndpoint")
     private final @Nullable Input<String> cloudBuildCustomEndpoint;
 
     public Input<String> getCloudBuildCustomEndpoint() {
         return this.cloudBuildCustomEndpoint == null ? Input.empty() : this.cloudBuildCustomEndpoint;
     }
 
-    @InputImport(name="cloudBuildWorkerPoolCustomEndpoint", json=true)
+    @InputImport(name="cloudBuildWorkerPoolCustomEndpoint")
     private final @Nullable Input<String> cloudBuildWorkerPoolCustomEndpoint;
 
     public Input<String> getCloudBuildWorkerPoolCustomEndpoint() {
         return this.cloudBuildWorkerPoolCustomEndpoint == null ? Input.empty() : this.cloudBuildWorkerPoolCustomEndpoint;
     }
 
-    @InputImport(name="cloudFunctionsCustomEndpoint", json=true)
+    @InputImport(name="cloudFunctionsCustomEndpoint")
     private final @Nullable Input<String> cloudFunctionsCustomEndpoint;
 
     public Input<String> getCloudFunctionsCustomEndpoint() {
         return this.cloudFunctionsCustomEndpoint == null ? Input.empty() : this.cloudFunctionsCustomEndpoint;
     }
 
-    @InputImport(name="cloudIdentityCustomEndpoint", json=true)
+    @InputImport(name="cloudIdentityCustomEndpoint")
     private final @Nullable Input<String> cloudIdentityCustomEndpoint;
 
     public Input<String> getCloudIdentityCustomEndpoint() {
         return this.cloudIdentityCustomEndpoint == null ? Input.empty() : this.cloudIdentityCustomEndpoint;
     }
 
-    @InputImport(name="cloudIotCustomEndpoint", json=true)
+    @InputImport(name="cloudIotCustomEndpoint")
     private final @Nullable Input<String> cloudIotCustomEndpoint;
 
     public Input<String> getCloudIotCustomEndpoint() {
         return this.cloudIotCustomEndpoint == null ? Input.empty() : this.cloudIotCustomEndpoint;
     }
 
-    @InputImport(name="cloudResourceManagerCustomEndpoint", json=true)
+    @InputImport(name="cloudResourceManagerCustomEndpoint")
     private final @Nullable Input<String> cloudResourceManagerCustomEndpoint;
 
     public Input<String> getCloudResourceManagerCustomEndpoint() {
         return this.cloudResourceManagerCustomEndpoint == null ? Input.empty() : this.cloudResourceManagerCustomEndpoint;
     }
 
-    @InputImport(name="cloudRunCustomEndpoint", json=true)
+    @InputImport(name="cloudRunCustomEndpoint")
     private final @Nullable Input<String> cloudRunCustomEndpoint;
 
     public Input<String> getCloudRunCustomEndpoint() {
         return this.cloudRunCustomEndpoint == null ? Input.empty() : this.cloudRunCustomEndpoint;
     }
 
-    @InputImport(name="cloudSchedulerCustomEndpoint", json=true)
+    @InputImport(name="cloudSchedulerCustomEndpoint")
     private final @Nullable Input<String> cloudSchedulerCustomEndpoint;
 
     public Input<String> getCloudSchedulerCustomEndpoint() {
         return this.cloudSchedulerCustomEndpoint == null ? Input.empty() : this.cloudSchedulerCustomEndpoint;
     }
 
-    @InputImport(name="cloudTasksCustomEndpoint", json=true)
+    @InputImport(name="cloudTasksCustomEndpoint")
     private final @Nullable Input<String> cloudTasksCustomEndpoint;
 
     public Input<String> getCloudTasksCustomEndpoint() {
         return this.cloudTasksCustomEndpoint == null ? Input.empty() : this.cloudTasksCustomEndpoint;
     }
 
-    @InputImport(name="composerCustomEndpoint", json=true)
+    @InputImport(name="composerCustomEndpoint")
     private final @Nullable Input<String> composerCustomEndpoint;
 
     public Input<String> getComposerCustomEndpoint() {
         return this.composerCustomEndpoint == null ? Input.empty() : this.composerCustomEndpoint;
     }
 
-    @InputImport(name="computeCustomEndpoint", json=true)
+    @InputImport(name="computeCustomEndpoint")
     private final @Nullable Input<String> computeCustomEndpoint;
 
     public Input<String> getComputeCustomEndpoint() {
         return this.computeCustomEndpoint == null ? Input.empty() : this.computeCustomEndpoint;
     }
 
-    @InputImport(name="containerAnalysisCustomEndpoint", json=true)
+    @InputImport(name="containerAnalysisCustomEndpoint")
     private final @Nullable Input<String> containerAnalysisCustomEndpoint;
 
     public Input<String> getContainerAnalysisCustomEndpoint() {
         return this.containerAnalysisCustomEndpoint == null ? Input.empty() : this.containerAnalysisCustomEndpoint;
     }
 
-    @InputImport(name="containerAwsCustomEndpoint", json=true)
+    @InputImport(name="containerAwsCustomEndpoint")
     private final @Nullable Input<String> containerAwsCustomEndpoint;
 
     public Input<String> getContainerAwsCustomEndpoint() {
         return this.containerAwsCustomEndpoint == null ? Input.empty() : this.containerAwsCustomEndpoint;
     }
 
-    @InputImport(name="containerAzureCustomEndpoint", json=true)
+    @InputImport(name="containerAzureCustomEndpoint")
     private final @Nullable Input<String> containerAzureCustomEndpoint;
 
     public Input<String> getContainerAzureCustomEndpoint() {
         return this.containerAzureCustomEndpoint == null ? Input.empty() : this.containerAzureCustomEndpoint;
     }
 
-    @InputImport(name="containerCustomEndpoint", json=true)
+    @InputImport(name="containerCustomEndpoint")
     private final @Nullable Input<String> containerCustomEndpoint;
 
     public Input<String> getContainerCustomEndpoint() {
         return this.containerCustomEndpoint == null ? Input.empty() : this.containerCustomEndpoint;
     }
 
-    @InputImport(name="credentials", json=true)
+    @InputImport(name="credentials")
     private final @Nullable Input<String> credentials;
 
     public Input<String> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
-    @InputImport(name="dataCatalogCustomEndpoint", json=true)
+    @InputImport(name="dataCatalogCustomEndpoint")
     private final @Nullable Input<String> dataCatalogCustomEndpoint;
 
     public Input<String> getDataCatalogCustomEndpoint() {
         return this.dataCatalogCustomEndpoint == null ? Input.empty() : this.dataCatalogCustomEndpoint;
     }
 
-    @InputImport(name="dataFusionCustomEndpoint", json=true)
+    @InputImport(name="dataFusionCustomEndpoint")
     private final @Nullable Input<String> dataFusionCustomEndpoint;
 
     public Input<String> getDataFusionCustomEndpoint() {
         return this.dataFusionCustomEndpoint == null ? Input.empty() : this.dataFusionCustomEndpoint;
     }
 
-    @InputImport(name="dataLossPreventionCustomEndpoint", json=true)
+    @InputImport(name="dataLossPreventionCustomEndpoint")
     private final @Nullable Input<String> dataLossPreventionCustomEndpoint;
 
     public Input<String> getDataLossPreventionCustomEndpoint() {
         return this.dataLossPreventionCustomEndpoint == null ? Input.empty() : this.dataLossPreventionCustomEndpoint;
     }
 
-    @InputImport(name="dataflowCustomEndpoint", json=true)
+    @InputImport(name="dataflowCustomEndpoint")
     private final @Nullable Input<String> dataflowCustomEndpoint;
 
     public Input<String> getDataflowCustomEndpoint() {
         return this.dataflowCustomEndpoint == null ? Input.empty() : this.dataflowCustomEndpoint;
     }
 
-    @InputImport(name="dataprocCustomEndpoint", json=true)
+    @InputImport(name="dataprocCustomEndpoint")
     private final @Nullable Input<String> dataprocCustomEndpoint;
 
     public Input<String> getDataprocCustomEndpoint() {
         return this.dataprocCustomEndpoint == null ? Input.empty() : this.dataprocCustomEndpoint;
     }
 
-    @InputImport(name="dataprocMetastoreCustomEndpoint", json=true)
+    @InputImport(name="dataprocMetastoreCustomEndpoint")
     private final @Nullable Input<String> dataprocMetastoreCustomEndpoint;
 
     public Input<String> getDataprocMetastoreCustomEndpoint() {
         return this.dataprocMetastoreCustomEndpoint == null ? Input.empty() : this.dataprocMetastoreCustomEndpoint;
     }
 
-    @InputImport(name="datastoreCustomEndpoint", json=true)
+    @InputImport(name="datastoreCustomEndpoint")
     private final @Nullable Input<String> datastoreCustomEndpoint;
 
     public Input<String> getDatastoreCustomEndpoint() {
         return this.datastoreCustomEndpoint == null ? Input.empty() : this.datastoreCustomEndpoint;
     }
 
-    @InputImport(name="deploymentManagerCustomEndpoint", json=true)
+    @InputImport(name="deploymentManagerCustomEndpoint")
     private final @Nullable Input<String> deploymentManagerCustomEndpoint;
 
     public Input<String> getDeploymentManagerCustomEndpoint() {
         return this.deploymentManagerCustomEndpoint == null ? Input.empty() : this.deploymentManagerCustomEndpoint;
     }
 
-    @InputImport(name="dialogflowCustomEndpoint", json=true)
+    @InputImport(name="dialogflowCustomEndpoint")
     private final @Nullable Input<String> dialogflowCustomEndpoint;
 
     public Input<String> getDialogflowCustomEndpoint() {
         return this.dialogflowCustomEndpoint == null ? Input.empty() : this.dialogflowCustomEndpoint;
     }
 
-    @InputImport(name="dialogflowCxCustomEndpoint", json=true)
+    @InputImport(name="dialogflowCxCustomEndpoint")
     private final @Nullable Input<String> dialogflowCxCustomEndpoint;
 
     public Input<String> getDialogflowCxCustomEndpoint() {
@@ -347,119 +347,119 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableGooglePartnerName == null ? Input.empty() : this.disableGooglePartnerName;
     }
 
-    @InputImport(name="dnsCustomEndpoint", json=true)
+    @InputImport(name="dnsCustomEndpoint")
     private final @Nullable Input<String> dnsCustomEndpoint;
 
     public Input<String> getDnsCustomEndpoint() {
         return this.dnsCustomEndpoint == null ? Input.empty() : this.dnsCustomEndpoint;
     }
 
-    @InputImport(name="essentialContactsCustomEndpoint", json=true)
+    @InputImport(name="essentialContactsCustomEndpoint")
     private final @Nullable Input<String> essentialContactsCustomEndpoint;
 
     public Input<String> getEssentialContactsCustomEndpoint() {
         return this.essentialContactsCustomEndpoint == null ? Input.empty() : this.essentialContactsCustomEndpoint;
     }
 
-    @InputImport(name="eventarcCustomEndpoint", json=true)
+    @InputImport(name="eventarcCustomEndpoint")
     private final @Nullable Input<String> eventarcCustomEndpoint;
 
     public Input<String> getEventarcCustomEndpoint() {
         return this.eventarcCustomEndpoint == null ? Input.empty() : this.eventarcCustomEndpoint;
     }
 
-    @InputImport(name="filestoreCustomEndpoint", json=true)
+    @InputImport(name="filestoreCustomEndpoint")
     private final @Nullable Input<String> filestoreCustomEndpoint;
 
     public Input<String> getFilestoreCustomEndpoint() {
         return this.filestoreCustomEndpoint == null ? Input.empty() : this.filestoreCustomEndpoint;
     }
 
-    @InputImport(name="firebaseCustomEndpoint", json=true)
+    @InputImport(name="firebaseCustomEndpoint")
     private final @Nullable Input<String> firebaseCustomEndpoint;
 
     public Input<String> getFirebaseCustomEndpoint() {
         return this.firebaseCustomEndpoint == null ? Input.empty() : this.firebaseCustomEndpoint;
     }
 
-    @InputImport(name="firestoreCustomEndpoint", json=true)
+    @InputImport(name="firestoreCustomEndpoint")
     private final @Nullable Input<String> firestoreCustomEndpoint;
 
     public Input<String> getFirestoreCustomEndpoint() {
         return this.firestoreCustomEndpoint == null ? Input.empty() : this.firestoreCustomEndpoint;
     }
 
-    @InputImport(name="gameServicesCustomEndpoint", json=true)
+    @InputImport(name="gameServicesCustomEndpoint")
     private final @Nullable Input<String> gameServicesCustomEndpoint;
 
     public Input<String> getGameServicesCustomEndpoint() {
         return this.gameServicesCustomEndpoint == null ? Input.empty() : this.gameServicesCustomEndpoint;
     }
 
-    @InputImport(name="gkeHubCustomEndpoint", json=true)
+    @InputImport(name="gkeHubCustomEndpoint")
     private final @Nullable Input<String> gkeHubCustomEndpoint;
 
     public Input<String> getGkeHubCustomEndpoint() {
         return this.gkeHubCustomEndpoint == null ? Input.empty() : this.gkeHubCustomEndpoint;
     }
 
-    @InputImport(name="gkehubFeatureCustomEndpoint", json=true)
+    @InputImport(name="gkehubFeatureCustomEndpoint")
     private final @Nullable Input<String> gkehubFeatureCustomEndpoint;
 
     public Input<String> getGkehubFeatureCustomEndpoint() {
         return this.gkehubFeatureCustomEndpoint == null ? Input.empty() : this.gkehubFeatureCustomEndpoint;
     }
 
-    @InputImport(name="googlePartnerName", json=true)
+    @InputImport(name="googlePartnerName")
     private final @Nullable Input<String> googlePartnerName;
 
     public Input<String> getGooglePartnerName() {
         return this.googlePartnerName == null ? Input.empty() : this.googlePartnerName;
     }
 
-    @InputImport(name="healthcareCustomEndpoint", json=true)
+    @InputImport(name="healthcareCustomEndpoint")
     private final @Nullable Input<String> healthcareCustomEndpoint;
 
     public Input<String> getHealthcareCustomEndpoint() {
         return this.healthcareCustomEndpoint == null ? Input.empty() : this.healthcareCustomEndpoint;
     }
 
-    @InputImport(name="iamBetaCustomEndpoint", json=true)
+    @InputImport(name="iamBetaCustomEndpoint")
     private final @Nullable Input<String> iamBetaCustomEndpoint;
 
     public Input<String> getIamBetaCustomEndpoint() {
         return this.iamBetaCustomEndpoint == null ? Input.empty() : this.iamBetaCustomEndpoint;
     }
 
-    @InputImport(name="iamCredentialsCustomEndpoint", json=true)
+    @InputImport(name="iamCredentialsCustomEndpoint")
     private final @Nullable Input<String> iamCredentialsCustomEndpoint;
 
     public Input<String> getIamCredentialsCustomEndpoint() {
         return this.iamCredentialsCustomEndpoint == null ? Input.empty() : this.iamCredentialsCustomEndpoint;
     }
 
-    @InputImport(name="iamCustomEndpoint", json=true)
+    @InputImport(name="iamCustomEndpoint")
     private final @Nullable Input<String> iamCustomEndpoint;
 
     public Input<String> getIamCustomEndpoint() {
         return this.iamCustomEndpoint == null ? Input.empty() : this.iamCustomEndpoint;
     }
 
-    @InputImport(name="iapCustomEndpoint", json=true)
+    @InputImport(name="iapCustomEndpoint")
     private final @Nullable Input<String> iapCustomEndpoint;
 
     public Input<String> getIapCustomEndpoint() {
         return this.iapCustomEndpoint == null ? Input.empty() : this.iapCustomEndpoint;
     }
 
-    @InputImport(name="identityPlatformCustomEndpoint", json=true)
+    @InputImport(name="identityPlatformCustomEndpoint")
     private final @Nullable Input<String> identityPlatformCustomEndpoint;
 
     public Input<String> getIdentityPlatformCustomEndpoint() {
         return this.identityPlatformCustomEndpoint == null ? Input.empty() : this.identityPlatformCustomEndpoint;
     }
 
-    @InputImport(name="impersonateServiceAccount", json=true)
+    @InputImport(name="impersonateServiceAccount")
     private final @Nullable Input<String> impersonateServiceAccount;
 
     public Input<String> getImpersonateServiceAccount() {
@@ -473,175 +473,175 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.impersonateServiceAccountDelegates == null ? Input.empty() : this.impersonateServiceAccountDelegates;
     }
 
-    @InputImport(name="kmsCustomEndpoint", json=true)
+    @InputImport(name="kmsCustomEndpoint")
     private final @Nullable Input<String> kmsCustomEndpoint;
 
     public Input<String> getKmsCustomEndpoint() {
         return this.kmsCustomEndpoint == null ? Input.empty() : this.kmsCustomEndpoint;
     }
 
-    @InputImport(name="loggingCustomEndpoint", json=true)
+    @InputImport(name="loggingCustomEndpoint")
     private final @Nullable Input<String> loggingCustomEndpoint;
 
     public Input<String> getLoggingCustomEndpoint() {
         return this.loggingCustomEndpoint == null ? Input.empty() : this.loggingCustomEndpoint;
     }
 
-    @InputImport(name="memcacheCustomEndpoint", json=true)
+    @InputImport(name="memcacheCustomEndpoint")
     private final @Nullable Input<String> memcacheCustomEndpoint;
 
     public Input<String> getMemcacheCustomEndpoint() {
         return this.memcacheCustomEndpoint == null ? Input.empty() : this.memcacheCustomEndpoint;
     }
 
-    @InputImport(name="mlEngineCustomEndpoint", json=true)
+    @InputImport(name="mlEngineCustomEndpoint")
     private final @Nullable Input<String> mlEngineCustomEndpoint;
 
     public Input<String> getMlEngineCustomEndpoint() {
         return this.mlEngineCustomEndpoint == null ? Input.empty() : this.mlEngineCustomEndpoint;
     }
 
-    @InputImport(name="monitoringCustomEndpoint", json=true)
+    @InputImport(name="monitoringCustomEndpoint")
     private final @Nullable Input<String> monitoringCustomEndpoint;
 
     public Input<String> getMonitoringCustomEndpoint() {
         return this.monitoringCustomEndpoint == null ? Input.empty() : this.monitoringCustomEndpoint;
     }
 
-    @InputImport(name="networkConnectivityCustomEndpoint", json=true)
+    @InputImport(name="networkConnectivityCustomEndpoint")
     private final @Nullable Input<String> networkConnectivityCustomEndpoint;
 
     public Input<String> getNetworkConnectivityCustomEndpoint() {
         return this.networkConnectivityCustomEndpoint == null ? Input.empty() : this.networkConnectivityCustomEndpoint;
     }
 
-    @InputImport(name="networkManagementCustomEndpoint", json=true)
+    @InputImport(name="networkManagementCustomEndpoint")
     private final @Nullable Input<String> networkManagementCustomEndpoint;
 
     public Input<String> getNetworkManagementCustomEndpoint() {
         return this.networkManagementCustomEndpoint == null ? Input.empty() : this.networkManagementCustomEndpoint;
     }
 
-    @InputImport(name="networkServicesCustomEndpoint", json=true)
+    @InputImport(name="networkServicesCustomEndpoint")
     private final @Nullable Input<String> networkServicesCustomEndpoint;
 
     public Input<String> getNetworkServicesCustomEndpoint() {
         return this.networkServicesCustomEndpoint == null ? Input.empty() : this.networkServicesCustomEndpoint;
     }
 
-    @InputImport(name="notebooksCustomEndpoint", json=true)
+    @InputImport(name="notebooksCustomEndpoint")
     private final @Nullable Input<String> notebooksCustomEndpoint;
 
     public Input<String> getNotebooksCustomEndpoint() {
         return this.notebooksCustomEndpoint == null ? Input.empty() : this.notebooksCustomEndpoint;
     }
 
-    @InputImport(name="orgPolicyCustomEndpoint", json=true)
+    @InputImport(name="orgPolicyCustomEndpoint")
     private final @Nullable Input<String> orgPolicyCustomEndpoint;
 
     public Input<String> getOrgPolicyCustomEndpoint() {
         return this.orgPolicyCustomEndpoint == null ? Input.empty() : this.orgPolicyCustomEndpoint;
     }
 
-    @InputImport(name="osConfigCustomEndpoint", json=true)
+    @InputImport(name="osConfigCustomEndpoint")
     private final @Nullable Input<String> osConfigCustomEndpoint;
 
     public Input<String> getOsConfigCustomEndpoint() {
         return this.osConfigCustomEndpoint == null ? Input.empty() : this.osConfigCustomEndpoint;
     }
 
-    @InputImport(name="osLoginCustomEndpoint", json=true)
+    @InputImport(name="osLoginCustomEndpoint")
     private final @Nullable Input<String> osLoginCustomEndpoint;
 
     public Input<String> getOsLoginCustomEndpoint() {
         return this.osLoginCustomEndpoint == null ? Input.empty() : this.osLoginCustomEndpoint;
     }
 
-    @InputImport(name="privatecaCustomEndpoint", json=true)
+    @InputImport(name="privatecaCustomEndpoint")
     private final @Nullable Input<String> privatecaCustomEndpoint;
 
     public Input<String> getPrivatecaCustomEndpoint() {
         return this.privatecaCustomEndpoint == null ? Input.empty() : this.privatecaCustomEndpoint;
     }
 
-    @InputImport(name="project", json=true)
+    @InputImport(name="project")
     private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    @InputImport(name="pubsubCustomEndpoint", json=true)
+    @InputImport(name="pubsubCustomEndpoint")
     private final @Nullable Input<String> pubsubCustomEndpoint;
 
     public Input<String> getPubsubCustomEndpoint() {
         return this.pubsubCustomEndpoint == null ? Input.empty() : this.pubsubCustomEndpoint;
     }
 
-    @InputImport(name="pubsubLiteCustomEndpoint", json=true)
+    @InputImport(name="pubsubLiteCustomEndpoint")
     private final @Nullable Input<String> pubsubLiteCustomEndpoint;
 
     public Input<String> getPubsubLiteCustomEndpoint() {
         return this.pubsubLiteCustomEndpoint == null ? Input.empty() : this.pubsubLiteCustomEndpoint;
     }
 
-    @InputImport(name="recaptchaEnterpriseCustomEndpoint", json=true)
+    @InputImport(name="recaptchaEnterpriseCustomEndpoint")
     private final @Nullable Input<String> recaptchaEnterpriseCustomEndpoint;
 
     public Input<String> getRecaptchaEnterpriseCustomEndpoint() {
         return this.recaptchaEnterpriseCustomEndpoint == null ? Input.empty() : this.recaptchaEnterpriseCustomEndpoint;
     }
 
-    @InputImport(name="redisCustomEndpoint", json=true)
+    @InputImport(name="redisCustomEndpoint")
     private final @Nullable Input<String> redisCustomEndpoint;
 
     public Input<String> getRedisCustomEndpoint() {
         return this.redisCustomEndpoint == null ? Input.empty() : this.redisCustomEndpoint;
     }
 
-    @InputImport(name="region", json=true)
+    @InputImport(name="region")
     private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
-    @InputImport(name="requestReason", json=true)
+    @InputImport(name="requestReason")
     private final @Nullable Input<String> requestReason;
 
     public Input<String> getRequestReason() {
         return this.requestReason == null ? Input.empty() : this.requestReason;
     }
 
-    @InputImport(name="requestTimeout", json=true)
+    @InputImport(name="requestTimeout")
     private final @Nullable Input<String> requestTimeout;
 
     public Input<String> getRequestTimeout() {
         return this.requestTimeout == null ? Input.empty() : this.requestTimeout;
     }
 
-    @InputImport(name="resourceManagerCustomEndpoint", json=true)
+    @InputImport(name="resourceManagerCustomEndpoint")
     private final @Nullable Input<String> resourceManagerCustomEndpoint;
 
     public Input<String> getResourceManagerCustomEndpoint() {
         return this.resourceManagerCustomEndpoint == null ? Input.empty() : this.resourceManagerCustomEndpoint;
     }
 
-    @InputImport(name="resourceManagerV2CustomEndpoint", json=true)
+    @InputImport(name="resourceManagerV2CustomEndpoint")
     private final @Nullable Input<String> resourceManagerV2CustomEndpoint;
 
     public Input<String> getResourceManagerV2CustomEndpoint() {
         return this.resourceManagerV2CustomEndpoint == null ? Input.empty() : this.resourceManagerV2CustomEndpoint;
     }
 
-    @InputImport(name="runtimeConfigCustomEndpoint", json=true)
+    @InputImport(name="runtimeConfigCustomEndpoint")
     private final @Nullable Input<String> runtimeConfigCustomEndpoint;
 
     public Input<String> getRuntimeConfigCustomEndpoint() {
         return this.runtimeConfigCustomEndpoint == null ? Input.empty() : this.runtimeConfigCustomEndpoint;
     }
 
-    @InputImport(name="runtimeconfigCustomEndpoint", json=true)
+    @InputImport(name="runtimeconfigCustomEndpoint")
     private final @Nullable Input<String> runtimeconfigCustomEndpoint;
 
     public Input<String> getRuntimeconfigCustomEndpoint() {
@@ -655,98 +655,98 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopes == null ? Input.empty() : this.scopes;
     }
 
-    @InputImport(name="secretManagerCustomEndpoint", json=true)
+    @InputImport(name="secretManagerCustomEndpoint")
     private final @Nullable Input<String> secretManagerCustomEndpoint;
 
     public Input<String> getSecretManagerCustomEndpoint() {
         return this.secretManagerCustomEndpoint == null ? Input.empty() : this.secretManagerCustomEndpoint;
     }
 
-    @InputImport(name="securityCenterCustomEndpoint", json=true)
+    @InputImport(name="securityCenterCustomEndpoint")
     private final @Nullable Input<String> securityCenterCustomEndpoint;
 
     public Input<String> getSecurityCenterCustomEndpoint() {
         return this.securityCenterCustomEndpoint == null ? Input.empty() : this.securityCenterCustomEndpoint;
     }
 
-    @InputImport(name="securityScannerCustomEndpoint", json=true)
+    @InputImport(name="securityScannerCustomEndpoint")
     private final @Nullable Input<String> securityScannerCustomEndpoint;
 
     public Input<String> getSecurityScannerCustomEndpoint() {
         return this.securityScannerCustomEndpoint == null ? Input.empty() : this.securityScannerCustomEndpoint;
     }
 
-    @InputImport(name="serviceDirectoryCustomEndpoint", json=true)
+    @InputImport(name="serviceDirectoryCustomEndpoint")
     private final @Nullable Input<String> serviceDirectoryCustomEndpoint;
 
     public Input<String> getServiceDirectoryCustomEndpoint() {
         return this.serviceDirectoryCustomEndpoint == null ? Input.empty() : this.serviceDirectoryCustomEndpoint;
     }
 
-    @InputImport(name="serviceManagementCustomEndpoint", json=true)
+    @InputImport(name="serviceManagementCustomEndpoint")
     private final @Nullable Input<String> serviceManagementCustomEndpoint;
 
     public Input<String> getServiceManagementCustomEndpoint() {
         return this.serviceManagementCustomEndpoint == null ? Input.empty() : this.serviceManagementCustomEndpoint;
     }
 
-    @InputImport(name="serviceNetworkingCustomEndpoint", json=true)
+    @InputImport(name="serviceNetworkingCustomEndpoint")
     private final @Nullable Input<String> serviceNetworkingCustomEndpoint;
 
     public Input<String> getServiceNetworkingCustomEndpoint() {
         return this.serviceNetworkingCustomEndpoint == null ? Input.empty() : this.serviceNetworkingCustomEndpoint;
     }
 
-    @InputImport(name="serviceUsageCustomEndpoint", json=true)
+    @InputImport(name="serviceUsageCustomEndpoint")
     private final @Nullable Input<String> serviceUsageCustomEndpoint;
 
     public Input<String> getServiceUsageCustomEndpoint() {
         return this.serviceUsageCustomEndpoint == null ? Input.empty() : this.serviceUsageCustomEndpoint;
     }
 
-    @InputImport(name="sourceRepoCustomEndpoint", json=true)
+    @InputImport(name="sourceRepoCustomEndpoint")
     private final @Nullable Input<String> sourceRepoCustomEndpoint;
 
     public Input<String> getSourceRepoCustomEndpoint() {
         return this.sourceRepoCustomEndpoint == null ? Input.empty() : this.sourceRepoCustomEndpoint;
     }
 
-    @InputImport(name="spannerCustomEndpoint", json=true)
+    @InputImport(name="spannerCustomEndpoint")
     private final @Nullable Input<String> spannerCustomEndpoint;
 
     public Input<String> getSpannerCustomEndpoint() {
         return this.spannerCustomEndpoint == null ? Input.empty() : this.spannerCustomEndpoint;
     }
 
-    @InputImport(name="sqlCustomEndpoint", json=true)
+    @InputImport(name="sqlCustomEndpoint")
     private final @Nullable Input<String> sqlCustomEndpoint;
 
     public Input<String> getSqlCustomEndpoint() {
         return this.sqlCustomEndpoint == null ? Input.empty() : this.sqlCustomEndpoint;
     }
 
-    @InputImport(name="storageCustomEndpoint", json=true)
+    @InputImport(name="storageCustomEndpoint")
     private final @Nullable Input<String> storageCustomEndpoint;
 
     public Input<String> getStorageCustomEndpoint() {
         return this.storageCustomEndpoint == null ? Input.empty() : this.storageCustomEndpoint;
     }
 
-    @InputImport(name="storageTransferCustomEndpoint", json=true)
+    @InputImport(name="storageTransferCustomEndpoint")
     private final @Nullable Input<String> storageTransferCustomEndpoint;
 
     public Input<String> getStorageTransferCustomEndpoint() {
         return this.storageTransferCustomEndpoint == null ? Input.empty() : this.storageTransferCustomEndpoint;
     }
 
-    @InputImport(name="tagsCustomEndpoint", json=true)
+    @InputImport(name="tagsCustomEndpoint")
     private final @Nullable Input<String> tagsCustomEndpoint;
 
     public Input<String> getTagsCustomEndpoint() {
         return this.tagsCustomEndpoint == null ? Input.empty() : this.tagsCustomEndpoint;
     }
 
-    @InputImport(name="tpuCustomEndpoint", json=true)
+    @InputImport(name="tpuCustomEndpoint")
     private final @Nullable Input<String> tpuCustomEndpoint;
 
     public Input<String> getTpuCustomEndpoint() {
@@ -760,28 +760,28 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.userProjectOverride == null ? Input.empty() : this.userProjectOverride;
     }
 
-    @InputImport(name="vertexAiCustomEndpoint", json=true)
+    @InputImport(name="vertexAiCustomEndpoint")
     private final @Nullable Input<String> vertexAiCustomEndpoint;
 
     public Input<String> getVertexAiCustomEndpoint() {
         return this.vertexAiCustomEndpoint == null ? Input.empty() : this.vertexAiCustomEndpoint;
     }
 
-    @InputImport(name="vpcAccessCustomEndpoint", json=true)
+    @InputImport(name="vpcAccessCustomEndpoint")
     private final @Nullable Input<String> vpcAccessCustomEndpoint;
 
     public Input<String> getVpcAccessCustomEndpoint() {
         return this.vpcAccessCustomEndpoint == null ? Input.empty() : this.vpcAccessCustomEndpoint;
     }
 
-    @InputImport(name="workflowsCustomEndpoint", json=true)
+    @InputImport(name="workflowsCustomEndpoint")
     private final @Nullable Input<String> workflowsCustomEndpoint;
 
     public Input<String> getWorkflowsCustomEndpoint() {
         return this.workflowsCustomEndpoint == null ? Input.empty() : this.workflowsCustomEndpoint;
     }
 
-    @InputImport(name="zone", json=true)
+    @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {

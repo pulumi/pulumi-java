@@ -23,6 +23,10 @@ public final class GetBucketResult {
     private final Boolean defaultEventBasedHold;
     private final List<GetBucketEncryption> encryptions;
     private final Boolean forceDestroy;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final Map<String,String> labels;
     private final List<GetBucketLifecycleRule> lifecycleRules;
@@ -96,6 +100,10 @@ public final class GetBucketResult {
     public Boolean getForceDestroy() {
         return this.forceDestroy;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

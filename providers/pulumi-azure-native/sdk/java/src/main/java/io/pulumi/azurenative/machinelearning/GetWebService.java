@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebService {
+/**
+ * Instance of an Azure ML web service resource.
+ * API Version: 2017-01-01.
+ * 
+ *
+ * Instance of an Azure ML web service resource.
+ * 
+ */
     public static CompletableFuture<GetWebServiceResult> invokeAsync(GetWebServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearning:getWebService", TypeShape.of(GetWebServiceResult.class), args == null ? GetWebServiceArgs.Empty : args, Utilities.withVersion(options));
     }

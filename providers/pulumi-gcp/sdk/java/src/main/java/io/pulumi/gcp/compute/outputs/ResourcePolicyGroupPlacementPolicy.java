@@ -12,8 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourcePolicyGroupPlacementPolicy {
+    /**
+     * The number of availability domains instances will be spread across. If two instances are in different
+     * availability domain, they will not be put in the same low latency network
+     * 
+     */
     private final @Nullable Integer availabilityDomainCount;
+    /**
+     * Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+     * Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+     * with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+     * attached.
+     * Possible values are `COLLOCATED`.
+     * 
+     */
     private final @Nullable String collocation;
+    /**
+     * Number of vms in this placement group.
+     * 
+     */
     private final @Nullable Integer vmCount;
 
     @OutputCustomType.Constructor({"availabilityDomainCount","collocation","vmCount"})
@@ -26,12 +43,29 @@ public final class ResourcePolicyGroupPlacementPolicy {
         this.vmCount = vmCount;
     }
 
+    /**
+     * The number of availability domains instances will be spread across. If two instances are in different
+     * availability domain, they will not be put in the same low latency network
+     * 
+     */
     public Optional<Integer> getAvailabilityDomainCount() {
         return Optional.ofNullable(this.availabilityDomainCount);
     }
+    /**
+     * Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+     * Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+     * with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+     * attached.
+     * Possible values are `COLLOCATED`.
+     * 
+     */
     public Optional<String> getCollocation() {
         return Optional.ofNullable(this.collocation);
     }
+    /**
+     * Number of vms in this placement group.
+     * 
+     */
     public Optional<Integer> getVmCount() {
         return Optional.ofNullable(this.vmCount);
     }

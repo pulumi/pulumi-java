@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * For display only. The specification of the endpoints for the test. EndpointInfo is derived from source and destination Endpoint and validated by the backend data plane model.
+ * 
+ */
 public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointInfoResponse Empty = new EndpointInfoResponse();
 
+    /**
+     * Destination IP address.
+     * 
+     */
     @InputImport(name="destinationIp", required=true)
     private final String destinationIp;
 
@@ -20,6 +28,10 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationIp;
     }
 
+    /**
+     * URI of the network where this packet is sent to.
+     * 
+     */
     @InputImport(name="destinationNetworkUri", required=true)
     private final String destinationNetworkUri;
 
@@ -27,6 +39,10 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationNetworkUri;
     }
 
+    /**
+     * Destination port. Only valid when protocol is TCP or UDP.
+     * 
+     */
     @InputImport(name="destinationPort", required=true)
     private final Integer destinationPort;
 
@@ -34,6 +50,10 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationPort;
     }
 
+    /**
+     * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
+     * 
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 
@@ -41,6 +61,10 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.protocol;
     }
 
+    /**
+     * Source IP address.
+     * 
+     */
     @InputImport(name="sourceIp", required=true)
     private final String sourceIp;
 
@@ -48,6 +72,10 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceIp;
     }
 
+    /**
+     * URI of the network where this packet originates from.
+     * 
+     */
     @InputImport(name="sourceNetworkUri", required=true)
     private final String sourceNetworkUri;
 
@@ -55,6 +83,10 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceNetworkUri;
     }
 
+    /**
+     * Source port. Only valid when protocol is TCP or UDP.
+     * 
+     */
     @InputImport(name="sourcePort", required=true)
     private final Integer sourcePort;
 

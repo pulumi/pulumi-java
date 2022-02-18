@@ -14,6 +14,10 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     public static final RoutineReferenceArgs Empty = new RoutineReferenceArgs();
 
+    /**
+     * [Required] The ID of the dataset containing this routine.
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -21,6 +25,10 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * [Required] The ID of the project containing this routine.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -28,6 +36,10 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+     * 
+     */
     @InputImport(name="routineId")
     private final @Nullable Input<String> routineId;
 

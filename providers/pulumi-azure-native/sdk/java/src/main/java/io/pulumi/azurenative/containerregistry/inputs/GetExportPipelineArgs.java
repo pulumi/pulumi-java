@@ -12,6 +12,10 @@ public final class GetExportPipelineArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetExportPipelineArgs Empty = new GetExportPipelineArgs();
 
+    /**
+     * The name of the export pipeline.
+     * 
+     */
     @InputImport(name="exportPipelineName", required=true)
     private final String exportPipelineName;
 
@@ -19,6 +23,10 @@ public final class GetExportPipelineArgs extends io.pulumi.resources.InvokeArgs 
         return this.exportPipelineName;
     }
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -26,6 +34,10 @@ public final class GetExportPipelineArgs extends io.pulumi.resources.InvokeArgs 
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

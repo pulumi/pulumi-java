@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateStoreOffer {
+/**
+ * The privateStore offer data structure.
+ * API Version: 2020-01-01.
+ * 
+ *
+ * The privateStore offer data structure.
+ * 
+ */
     public static CompletableFuture<GetPrivateStoreOfferResult> invokeAsync(GetPrivateStoreOfferArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:marketplace:getPrivateStoreOffer", TypeShape.of(GetPrivateStoreOfferResult.class), args == null ? GetPrivateStoreOfferArgs.Empty : args, Utilities.withVersion(options));
     }

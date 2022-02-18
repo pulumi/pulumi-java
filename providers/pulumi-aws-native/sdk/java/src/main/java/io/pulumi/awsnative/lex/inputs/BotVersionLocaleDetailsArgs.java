@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The version of a bot used for a bot locale.
+ * 
+ */
 public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotVersionLocaleDetailsArgs Empty = new BotVersionLocaleDetailsArgs();

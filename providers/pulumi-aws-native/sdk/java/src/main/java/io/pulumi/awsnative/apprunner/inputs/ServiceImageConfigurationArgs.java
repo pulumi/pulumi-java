@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Image Configuration
+ * 
+ */
 public final class ServiceImageConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceImageConfigurationArgs Empty = new ServiceImageConfigurationArgs();
 
+    /**
+     * Port
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<String> port;
 
@@ -30,6 +38,10 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
         return this.runtimeEnvironmentVariables == null ? Input.empty() : this.runtimeEnvironmentVariables;
     }
 
+    /**
+     * Start Command
+     * 
+     */
     @InputImport(name="startCommand")
     private final @Nullable Input<String> startCommand;
 

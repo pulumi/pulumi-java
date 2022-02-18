@@ -15,6 +15,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SnapshotArgs Empty = new SnapshotArgs();
 
+    /**
+     * See Creating and managing labels.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -36,6 +40,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotId;
     }
 
+    /**
+     * The subscription whose backlog the snapshot retains. Specifically, the created snapshot is guaranteed to retain: (a) The existing backlog on the subscription. More precisely, this is defined as the messages in the subscription's backlog that are unacknowledged upon the successful completion of the `CreateSnapshot` request; as well as: (b) Any messages published to the subscription's topic following the successful completion of the CreateSnapshot request. Format is `projects/{project}/subscriptions/{sub}`.
+     * 
+     */
     @InputImport(name="subscription", required=true)
     private final Input<String> subscription;
 

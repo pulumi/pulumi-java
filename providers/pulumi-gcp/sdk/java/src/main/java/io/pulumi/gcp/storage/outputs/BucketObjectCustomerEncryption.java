@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketObjectCustomerEncryption {
+    /**
+     * Encryption algorithm. Default: AES256
+     * 
+     */
     private final @Nullable String encryptionAlgorithm;
+    /**
+     * Base64 encoded Customer-Supplied Encryption Key.
+     * 
+     */
     private final String encryptionKey;
 
     @OutputCustomType.Constructor({"encryptionAlgorithm","encryptionKey"})
@@ -22,9 +30,17 @@ public final class BucketObjectCustomerEncryption {
         this.encryptionKey = Objects.requireNonNull(encryptionKey);
     }
 
+    /**
+     * Encryption algorithm. Default: AES256
+     * 
+     */
     public Optional<String> getEncryptionAlgorithm() {
         return Optional.ofNullable(this.encryptionAlgorithm);
     }
+    /**
+     * Base64 encoded Customer-Supplied Encryption Key.
+     * 
+     */
     public String getEncryptionKey() {
         return this.encryptionKey;
     }

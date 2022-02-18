@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A rule governing the accessibility of a managed hsm pool from a specific ip address or ip range.
+ * 
+ */
 public final class MHSMIPRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MHSMIPRuleArgs Empty = new MHSMIPRuleArgs();
 
+    /**
+     * An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Encryption at rest options for the error reports. If no encryption option is specified, Timestream will choose SSE_S3 as default.
+     * 
+     */
     @EnumType
     public enum ScheduledQueryEncryptionOption {
         SseS3("SSE_S3"),

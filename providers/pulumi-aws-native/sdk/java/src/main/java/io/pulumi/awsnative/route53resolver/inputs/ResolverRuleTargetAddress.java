@@ -14,6 +14,10 @@ public final class ResolverRuleTargetAddress extends io.pulumi.resources.InvokeA
 
     public static final ResolverRuleTargetAddress Empty = new ResolverRuleTargetAddress();
 
+    /**
+     * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * 
+     */
     @InputImport(name="ip", required=true)
     private final String ip;
 
@@ -21,6 +25,10 @@ public final class ResolverRuleTargetAddress extends io.pulumi.resources.InvokeA
         return this.ip;
     }
 
+    /**
+     * The port at Ip that you want to forward DNS queries to.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable String port;
 

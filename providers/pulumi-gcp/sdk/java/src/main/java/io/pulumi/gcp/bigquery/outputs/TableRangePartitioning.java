@@ -10,7 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TableRangePartitioning {
+    /**
+     * The field used to determine how to create a range-based
+     * partition.
+     * 
+     */
     private final String field;
+    /**
+     * Information required to partition based on ranges.
+     * Structure is documented below.
+     * 
+     */
     private final TableRangePartitioningRange range;
 
     @OutputCustomType.Constructor({"field","range"})
@@ -21,9 +31,19 @@ public final class TableRangePartitioning {
         this.range = Objects.requireNonNull(range);
     }
 
+    /**
+     * The field used to determine how to create a range-based
+     * partition.
+     * 
+     */
     public String getField() {
         return this.field;
     }
+    /**
+     * Information required to partition based on ranges.
+     * Structure is documented below.
+     * 
+     */
     public TableRangePartitioningRange getRange() {
         return this.range;
     }

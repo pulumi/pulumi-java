@@ -13,33 +13,103 @@ import io.pulumi.gcp.firebase.inputs.WebAppState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A Google Cloud Firebase web application instance
+ * 
+ * To get more information about WebApp, see:
+ * 
+ * * [API documentation](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps)
+ * * How-to Guides
+ *     * [Official Documentation](https://firebase.google.com/)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * WebApp can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:firebase/webApp:WebApp default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:firebase/webApp:WebApp default {{project}} {{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:firebase/webApp:WebApp default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:firebase/webApp:WebApp")
 public class WebApp extends io.pulumi.resources.CustomResource {
+    /**
+     * Immutable. The globally unique, Firebase-assigned identifier of the App. This identifier should be treated as an opaque
+     * token, as the data format is not specified.
+     * 
+     */
     @OutputExport(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
+    /**
+     * @return Immutable. The globally unique, Firebase-assigned identifier of the App. This identifier should be treated as an opaque
+     * token, as the data format is not specified.
+     * 
+     */
     public Output<String> getAppId() {
         return this.appId;
     }
+    /**
+     * The user-assigned display name of the App.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The user-assigned display name of the App.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The fully qualified resource name of the App, for example: projects/projectId/webApps/appId
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The fully qualified resource name of the App, for example: projects/projectId/webApps/appId
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WebApp(String name, WebAppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:firebase/webApp:WebApp", name, args == null ? WebAppArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -55,6 +125,15 @@ public class WebApp extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WebApp get(String name, Input<String> id, @Nullable WebAppState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebApp(name, id, state, options);
     }

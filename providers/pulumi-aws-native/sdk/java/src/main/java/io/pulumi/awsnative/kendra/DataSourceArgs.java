@@ -60,6 +60,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * Tags for labeling the data source
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DataSourceTagArgs>> tags;
 

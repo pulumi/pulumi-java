@@ -14,6 +14,10 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
 
     public static final NotebookWorkspaceArgs Empty = new NotebookWorkspaceArgs();
 
+    /**
+     * Cosmos DB database account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +25,10 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
         return this.accountName;
     }
 
+    /**
+     * The name of the notebook workspace resource.
+     * 
+     */
     @InputImport(name="notebookWorkspaceName")
     private final @Nullable Input<String> notebookWorkspaceName;
 
@@ -28,6 +36,10 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
         return this.notebookWorkspaceName == null ? Input.empty() : this.notebookWorkspaceName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

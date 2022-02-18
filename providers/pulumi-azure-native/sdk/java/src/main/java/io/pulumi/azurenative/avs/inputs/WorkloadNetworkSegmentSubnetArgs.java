@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subnet configuration for segment
+ * 
+ */
 public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadNetworkSegmentSubnetArgs Empty = new WorkloadNetworkSegmentSubnetArgs();
 
+    /**
+     * DHCP Range assigned for subnet.
+     * 
+     */
     @InputImport(name="dhcpRanges")
     private final @Nullable Input<List<String>> dhcpRanges;
 
@@ -22,6 +30,10 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
         return this.dhcpRanges == null ? Input.empty() : this.dhcpRanges;
     }
 
+    /**
+     * Gateway address.
+     * 
+     */
     @InputImport(name="gatewayAddress")
     private final @Nullable Input<String> gatewayAddress;
 

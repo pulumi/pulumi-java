@@ -36,6 +36,10 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
         return this.member == null ? Input.empty() : this.member;
     }
 
+    /**
+     * The numeric ID of the organization in which you want to manage the audit logging config.
+     * 
+     */
     @InputImport(name="orgId")
     private final @Nullable Input<String> orgId;
 

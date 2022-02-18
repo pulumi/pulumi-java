@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AgentPermissionsProperties {
+    /**
+     * The principals for the agent permissions.
+     * 
+     */
     private final List<String> principals;
 
     @OutputCustomType.Constructor({"principals"})
@@ -17,6 +21,10 @@ public final class AgentPermissionsProperties {
         this.principals = Objects.requireNonNull(principals);
     }
 
+    /**
+     * The principals for the agent permissions.
+     * 
+     */
     public List<String> getPrincipals() {
         return this.principals;
     }

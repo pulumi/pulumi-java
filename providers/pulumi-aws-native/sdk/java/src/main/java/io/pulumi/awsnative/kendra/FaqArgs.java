@@ -18,6 +18,10 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FaqArgs Empty = new FaqArgs();
 
+    /**
+     * FAQ description
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * FAQ file format
+     * 
+     */
     @InputImport(name="fileFormat")
     private final @Nullable Input<FaqFileFormat> fileFormat;
 
@@ -32,6 +40,10 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileFormat == null ? Input.empty() : this.fileFormat;
     }
 
+    /**
+     * Index ID
+     * 
+     */
     @InputImport(name="indexId", required=true)
     private final Input<String> indexId;
 
@@ -39,6 +51,10 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
         return this.indexId;
     }
 
+    /**
+     * FAQ name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +62,10 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * FAQ role ARN
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -53,6 +73,10 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * FAQ S3 path
+     * 
+     */
     @InputImport(name="s3Path", required=true)
     private final Input<FaqS3PathArgs> s3Path;
 
@@ -60,6 +84,10 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
         return this.s3Path;
     }
 
+    /**
+     * Tags for labeling the FAQ
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FaqTagArgs>> tags;
 

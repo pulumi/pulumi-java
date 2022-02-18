@@ -12,6 +12,10 @@ public final class GetStaticSitePrivateEndpointConnectionArgs extends io.pulumi.
 
     public static final GetStaticSitePrivateEndpointConnectionArgs Empty = new GetStaticSitePrivateEndpointConnectionArgs();
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetStaticSitePrivateEndpointConnectionArgs extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * Name of the private endpoint connection.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -26,6 +34,10 @@ public final class GetStaticSitePrivateEndpointConnectionArgs extends io.pulumi.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

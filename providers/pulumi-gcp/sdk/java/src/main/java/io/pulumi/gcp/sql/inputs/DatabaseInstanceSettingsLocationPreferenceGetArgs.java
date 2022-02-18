@@ -14,6 +14,11 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
 
     public static final DatabaseInstanceSettingsLocationPreferenceGetArgs Empty = new DatabaseInstanceSettingsLocationPreferenceGetArgs();
 
+    /**
+     * A GAE application whose zone to remain
+     * in. Must be in the same region as this instance.
+     * 
+     */
     @InputImport(name="followGaeApplication")
     private final @Nullable Input<String> followGaeApplication;
 
@@ -21,6 +26,11 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
         return this.followGaeApplication == null ? Input.empty() : this.followGaeApplication;
     }
 
+    /**
+     * The preferred compute engine
+     * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

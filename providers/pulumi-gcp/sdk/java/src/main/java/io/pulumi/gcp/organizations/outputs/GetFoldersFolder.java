@@ -9,13 +9,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetFoldersFolder {
+    /**
+     * The timestamp of when the folder was created
+     * 
+     */
     private final String createTime;
+    /**
+     * The timestamp of when the folder was requested to be deleted (if applicable)
+     * 
+     */
     private final String deleteTime;
+    /**
+     * The display name of the folder
+     * 
+     */
     private final String displayName;
+    /**
+     * Entity tag identifier of the folder
+     * 
+     */
     private final String etag;
+    /**
+     * The id of the folder
+     * 
+     */
     private final String name;
+    /**
+     * The parent id of the folder
+     * 
+     */
     private final String parent;
+    /**
+     * The lifecycle state of the folder
+     * 
+     */
     private final String state;
+    /**
+     * The timestamp of when the folder was last modified
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","deleteTime","displayName","etag","name","parent","state","updateTime"})
@@ -38,27 +70,59 @@ public final class GetFoldersFolder {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * The timestamp of when the folder was created
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The timestamp of when the folder was requested to be deleted (if applicable)
+     * 
+     */
     public String getDeleteTime() {
         return this.deleteTime;
     }
+    /**
+     * The display name of the folder
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Entity tag identifier of the folder
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * The id of the folder
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The parent id of the folder
+     * 
+     */
     public String getParent() {
         return this.parent;
     }
+    /**
+     * The lifecycle state of the folder
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The timestamp of when the folder was last modified
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

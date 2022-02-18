@@ -17,14 +17,51 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureDataExplorerCommandActivityResponse {
+    /**
+     * A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object command;
+    /**
+     * Control command timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..)
+     * 
+     */
     private final @Nullable Object commandTimeout;
+    /**
+     * Activity depends on condition.
+     * 
+     */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    /**
+     * Activity description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Linked service reference.
+     * 
+     */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    /**
+     * Activity name.
+     * 
+     */
     private final String name;
+    /**
+     * Activity policy.
+     * 
+     */
     private final @Nullable ActivityPolicyResponse policy;
+    /**
+     * Type of activity.
+     * Expected value is 'AzureDataExplorerCommand'.
+     * 
+     */
     private final String type;
+    /**
+     * Activity user properties.
+     * 
+     */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"command","commandTimeout","dependsOn","description","linkedServiceName","name","policy","type","userProperties"})
@@ -49,30 +86,67 @@ public final class AzureDataExplorerCommandActivityResponse {
         this.userProperties = userProperties;
     }
 
+    /**
+     * A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getCommand() {
         return this.command;
     }
+    /**
+     * Control command timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..)
+     * 
+     */
     public Optional<Object> getCommandTimeout() {
         return Optional.ofNullable(this.commandTimeout);
     }
+    /**
+     * Activity depends on condition.
+     * 
+     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
+    /**
+     * Activity description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
+    /**
+     * Activity name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
+    /**
+     * Type of activity.
+     * Expected value is 'AzureDataExplorerCommand'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Activity user properties.
+     * 
+     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

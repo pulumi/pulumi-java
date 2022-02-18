@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendBucket {
+/**
+ * Get information about a BackendBucket.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getBackendBucket.
+ * 
+ *
+ * A collection of values returned by getBackendBucket.
+ * 
+ */
     public static CompletableFuture<GetBackendBucketResult> invokeAsync(GetBackendBucketArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getBackendBucket:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args == null ? GetBackendBucketArgs.Empty : args, Utilities.withVersion(options));
     }

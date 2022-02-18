@@ -12,6 +12,10 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApplicationArgs Empty = new GetApplicationArgs();
 
+    /**
+     * The ARN of the ApplicationInsights application.
+     * 
+     */
     @InputImport(name="applicationARN", required=true)
     private final String applicationARN;
 

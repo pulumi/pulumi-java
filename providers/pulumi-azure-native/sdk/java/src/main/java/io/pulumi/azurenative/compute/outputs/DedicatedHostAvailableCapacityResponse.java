@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DedicatedHostAvailableCapacityResponse {
+    /**
+     * The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.
+     * 
+     */
     private final @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs;
 
     @OutputCustomType.Constructor({"allocatableVMs"})
@@ -18,6 +22,10 @@ public final class DedicatedHostAvailableCapacityResponse {
         this.allocatableVMs = allocatableVMs;
     }
 
+    /**
+     * The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.
+     * 
+     */
     public List<DedicatedHostAllocatableVMResponse> getAllocatableVMs() {
         return this.allocatableVMs == null ? List.of() : this.allocatableVMs;
     }

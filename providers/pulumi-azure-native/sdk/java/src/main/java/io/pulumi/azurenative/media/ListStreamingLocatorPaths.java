@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStreamingLocatorPaths {
+/**
+ * Class of response for listPaths action
+ * API Version: 2020-05-01.
+ * 
+ *
+ * Class of response for listPaths action
+ * 
+ */
     public static CompletableFuture<ListStreamingLocatorPathsResult> invokeAsync(ListStreamingLocatorPathsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listStreamingLocatorPaths", TypeShape.of(ListStreamingLocatorPathsResult.class), args == null ? ListStreamingLocatorPathsArgs.Empty : args, Utilities.withVersion(options));
     }

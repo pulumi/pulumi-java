@@ -14,6 +14,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostArgs Empty = new HostArgs();
 
+    /**
+     * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
+     * 
+     */
     @InputImport(name="autoPlacement")
     private final @Nullable Input<String> autoPlacement;
 
@@ -21,6 +25,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoPlacement == null ? Input.empty() : this.autoPlacement;
     }
 
+    /**
+     * The Availability Zone in which to allocate the Dedicated Host.
+     * 
+     */
     @InputImport(name="availabilityZone", required=true)
     private final Input<String> availabilityZone;
 
@@ -28,6 +36,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZone;
     }
 
+    /**
+     * Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
+     * 
+     */
     @InputImport(name="hostRecovery")
     private final @Nullable Input<String> hostRecovery;
 
@@ -35,6 +47,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostRecovery == null ? Input.empty() : this.hostRecovery;
     }
 
+    /**
+     * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final Input<String> instanceType;
 

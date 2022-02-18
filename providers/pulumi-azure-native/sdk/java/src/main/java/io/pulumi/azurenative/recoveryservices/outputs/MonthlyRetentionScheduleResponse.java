@@ -15,10 +15,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonthlyRetentionScheduleResponse {
+    /**
+     * Retention duration of retention Policy.
+     * 
+     */
     private final @Nullable RetentionDurationResponse retentionDuration;
+    /**
+     * Daily retention format for monthly retention policy.
+     * 
+     */
     private final @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
+    /**
+     * Retention schedule format type for monthly retention policy.
+     * 
+     */
     private final @Nullable String retentionScheduleFormatType;
+    /**
+     * Weekly retention format for monthly retention policy.
+     * 
+     */
     private final @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
+    /**
+     * Retention times of retention policy.
+     * 
+     */
     private final @Nullable List<String> retentionTimes;
 
     @OutputCustomType.Constructor({"retentionDuration","retentionScheduleDaily","retentionScheduleFormatType","retentionScheduleWeekly","retentionTimes"})
@@ -35,18 +55,38 @@ public final class MonthlyRetentionScheduleResponse {
         this.retentionTimes = retentionTimes;
     }
 
+    /**
+     * Retention duration of retention Policy.
+     * 
+     */
     public Optional<RetentionDurationResponse> getRetentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
+    /**
+     * Daily retention format for monthly retention policy.
+     * 
+     */
     public Optional<DailyRetentionFormatResponse> getRetentionScheduleDaily() {
         return Optional.ofNullable(this.retentionScheduleDaily);
     }
+    /**
+     * Retention schedule format type for monthly retention policy.
+     * 
+     */
     public Optional<String> getRetentionScheduleFormatType() {
         return Optional.ofNullable(this.retentionScheduleFormatType);
     }
+    /**
+     * Weekly retention format for monthly retention policy.
+     * 
+     */
     public Optional<WeeklyRetentionFormatResponse> getRetentionScheduleWeekly() {
         return Optional.ofNullable(this.retentionScheduleWeekly);
     }
+    /**
+     * Retention times of retention policy.
+     * 
+     */
     public List<String> getRetentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }

@@ -16,6 +16,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProductArgs Empty = new ProductArgs();
 
+    /**
+     * User-provided metadata to be stored with this product. Must be at most 4096 characters long.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The user-provided name for this Product. Must not be empty. Must be at most 4096 characters long.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -37,6 +45,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the product. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating a product.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +56,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Immutable. The category for the product identified by the reference image. This should be one of "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1" or "general-v1". The legacy categories "homegoods", "apparel", and "toys" are still supported, but these should not be used for new products.
+     * 
+     */
     @InputImport(name="productCategory")
     private final @Nullable Input<String> productCategory;
 
@@ -58,6 +74,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.productId == null ? Input.empty() : this.productId;
     }
 
+    /**
+     * Key-value pairs that can be attached to a product. At query time, constraints can be specified based on the product_labels. Note that integer values can be provided as strings, e.g. "1199". Only strings with integer values can match a range-based restriction which is to be supported soon. Multiple values can be assigned to the same key. One product may have up to 500 product_labels. Notice that the total number of distinct product_labels over all products in one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for that ProductSet.
+     * 
+     */
     @InputImport(name="productLabels")
     private final @Nullable Input<List<KeyValueArgs>> productLabels;
 

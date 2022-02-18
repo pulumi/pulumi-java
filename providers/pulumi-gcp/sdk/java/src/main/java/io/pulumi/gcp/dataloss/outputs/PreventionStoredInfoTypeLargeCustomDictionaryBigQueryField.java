@@ -10,7 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
+    /**
+     * Designated field in the BigQuery table.
+     * Structure is documented below.
+     * 
+     */
     private final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field;
+    /**
+     * Field in a BigQuery table where each cell represents a dictionary phrase.
+     * Structure is documented below.
+     * 
+     */
     private final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table;
 
     @OutputCustomType.Constructor({"field","table"})
@@ -21,9 +31,19 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
         this.table = Objects.requireNonNull(table);
     }
 
+    /**
+     * Designated field in the BigQuery table.
+     * Structure is documented below.
+     * 
+     */
     public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField getField() {
         return this.field;
     }
+    /**
+     * Field in a BigQuery table where each cell represents a dictionary phrase.
+     * Structure is documented below.
+     * 
+     */
     public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable getTable() {
         return this.table;
     }

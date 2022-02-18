@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connector mapping property availability.
+ * 
+ */
 public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorMappingAvailabilityArgs Empty = new ConnectorMappingAvailabilityArgs();
 
+    /**
+     * The frequency to update.
+     * 
+     */
     @InputImport(name="frequency")
     private final @Nullable Input<FrequencyTypes> frequency;
 
@@ -22,6 +30,10 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
         return this.frequency == null ? Input.empty() : this.frequency;
     }
 
+    /**
+     * The interval of the given frequency to use.
+     * 
+     */
     @InputImport(name="interval", required=true)
     private final Input<Integer> interval;
 

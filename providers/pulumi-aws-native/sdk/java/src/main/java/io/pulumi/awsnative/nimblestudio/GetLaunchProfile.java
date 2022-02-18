@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLaunchProfile {
+/**
+ * Represents a launch profile which delegates access to a collection of studio components to studio users
+ * 
+ */
     public static CompletableFuture<GetLaunchProfileResult> invokeAsync(GetLaunchProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getLaunchProfile", TypeShape.of(GetLaunchProfileResult.class), args == null ? GetLaunchProfileArgs.Empty : args, Utilities.withVersion(options));
     }

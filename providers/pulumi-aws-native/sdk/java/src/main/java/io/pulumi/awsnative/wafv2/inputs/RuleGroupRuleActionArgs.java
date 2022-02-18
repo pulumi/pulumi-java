@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Action taken when Rule matches its condition.
+ * 
+ */
 public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupRuleActionArgs Empty = new RuleGroupRuleActionArgs();
 
+    /**
+     * Allow traffic towards application.
+     * 
+     */
     @InputImport(name="allow")
     private final @Nullable Input<RuleGroupRuleActionAllowPropertiesArgs> allow;
 
@@ -24,6 +32,10 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
         return this.allow == null ? Input.empty() : this.allow;
     }
 
+    /**
+     * Block traffic towards application.
+     * 
+     */
     @InputImport(name="block")
     private final @Nullable Input<RuleGroupRuleActionBlockPropertiesArgs> block;
 
@@ -31,6 +43,10 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
         return this.block == null ? Input.empty() : this.block;
     }
 
+    /**
+     * Checks valid token exists with request.
+     * 
+     */
     @InputImport(name="captcha")
     private final @Nullable Input<RuleGroupRuleActionCaptchaPropertiesArgs> captcha;
 
@@ -38,6 +54,10 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
         return this.captcha == null ? Input.empty() : this.captcha;
     }
 
+    /**
+     * Count traffic towards application.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable Input<RuleGroupRuleActionCountPropertiesArgs> count;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Define match variables.
+ * 
+ */
 public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MatchVariableArgs Empty = new MatchVariableArgs();
 
+    /**
+     * The selector of match variable.
+     * 
+     */
     @InputImport(name="selector")
     private final @Nullable Input<String> selector;
 
@@ -23,6 +31,10 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.selector == null ? Input.empty() : this.selector;
     }
 
+    /**
+     * Match Variable.
+     * 
+     */
     @InputImport(name="variableName", required=true)
     private final Input<Either<String,WebApplicationFirewallMatchVariable>> variableName;
 

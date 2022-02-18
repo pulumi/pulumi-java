@@ -22,7 +22,15 @@ public final class StorageLensConfiguration {
     private final @Nullable StorageLensBucketsAndRegions exclude;
     private final String id;
     private final @Nullable StorageLensBucketsAndRegions include;
+    /**
+     * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
+     * 
+     */
     private final Boolean isEnabled;
+    /**
+     * The ARN for the Amazon S3 Storage Lens configuration.
+     * 
+     */
     private final @Nullable String storageLensArn;
 
     @OutputCustomType.Constructor({"accountLevel","awsOrg","dataExport","exclude","id","include","isEnabled","storageLensArn"})
@@ -63,9 +71,17 @@ public final class StorageLensConfiguration {
     public Optional<StorageLensBucketsAndRegions> getInclude() {
         return Optional.ofNullable(this.include);
     }
+    /**
+     * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
+     * 
+     */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
+    /**
+     * The ARN for the Amazon S3 Storage Lens configuration.
+     * 
+     */
     public Optional<String> getStorageLensArn() {
         return Optional.ofNullable(this.storageLensArn);
     }

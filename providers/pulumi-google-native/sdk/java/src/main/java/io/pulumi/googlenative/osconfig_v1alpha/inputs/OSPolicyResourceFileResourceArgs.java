@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A resource that manages the state of a file.
+ * 
+ */
 public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourceFileResourceArgs Empty = new OSPolicyResourceFileResourceArgs();
 
+    /**
+     * A a file with this content. The size of the content is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -23,6 +31,10 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * A remote or local source.
+     * 
+     */
     @InputImport(name="file")
     private final @Nullable Input<OSPolicyResourceFileArgs> file;
 
@@ -30,6 +42,10 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
         return this.file == null ? Input.empty() : this.file;
     }
 
+    /**
+     * The absolute path of the file within the VM.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -37,6 +53,10 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
         return this.path;
     }
 
+    /**
+     * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<String> permissions;
 
@@ -44,6 +64,10 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
+    /**
+     * Desired state of the file.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final Input<OSPolicyResourceFileResourceState> state;
 

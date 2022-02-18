@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExternalVpnGateway {
+/**
+ * Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+ * 
+ */
     public static CompletableFuture<GetExternalVpnGatewayResult> invokeAsync(GetExternalVpnGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getExternalVpnGateway", TypeShape.of(GetExternalVpnGatewayResult.class), args == null ? GetExternalVpnGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

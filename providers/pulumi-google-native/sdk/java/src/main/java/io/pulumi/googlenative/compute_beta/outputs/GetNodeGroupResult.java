@@ -12,19 +12,63 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetNodeGroupResult {
+    /**
+     * Specifies how autoscaling should behave.
+     * 
+     */
     private final NodeGroupAutoscalingPolicyResponse autoscalingPolicy;
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     private final String creationTimestamp;
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     private final String description;
     private final String fingerprint;
+    /**
+     * The type of the resource. Always compute#nodeGroup for node group.
+     * 
+     */
     private final String kind;
+    /**
+     * An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
+     * 
+     */
     private final String locationHint;
+    /**
+     * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
+     * 
+     */
     private final String maintenancePolicy;
     private final NodeGroupMaintenanceWindowResponse maintenanceWindow;
+    /**
+     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     private final String name;
+    /**
+     * URL of the node template to create the node group from.
+     * 
+     */
     private final String nodeTemplate;
+    /**
+     * Server-defined URL for the resource.
+     * 
+     */
     private final String selfLink;
+    /**
+     * The total number of nodes in the node group.
+     * 
+     */
     private final Integer size;
     private final String status;
+    /**
+     * The name of the zone where the node group resides, such as us-central1-a.
+     * 
+     */
     private final String zone;
 
     @OutputCustomType.Constructor({"autoscalingPolicy","creationTimestamp","description","fingerprint","kind","locationHint","maintenancePolicy","maintenanceWindow","name","nodeTemplate","selfLink","size","status","zone"})
@@ -59,45 +103,89 @@ public final class GetNodeGroupResult {
         this.zone = Objects.requireNonNull(zone);
     }
 
+    /**
+     * Specifies how autoscaling should behave.
+     * 
+     */
     public NodeGroupAutoscalingPolicyResponse getAutoscalingPolicy() {
         return this.autoscalingPolicy;
     }
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
     public String getFingerprint() {
         return this.fingerprint;
     }
+    /**
+     * The type of the resource. Always compute#nodeGroup for node group.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
+     * 
+     */
     public String getLocationHint() {
         return this.locationHint;
     }
+    /**
+     * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
+     * 
+     */
     public String getMaintenancePolicy() {
         return this.maintenancePolicy;
     }
     public NodeGroupMaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;
     }
+    /**
+     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * URL of the node template to create the node group from.
+     * 
+     */
     public String getNodeTemplate() {
         return this.nodeTemplate;
     }
+    /**
+     * Server-defined URL for the resource.
+     * 
+     */
     public String getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * The total number of nodes in the node group.
+     * 
+     */
     public Integer getSize() {
         return this.size;
     }
     public String getStatus() {
         return this.status;
     }
+    /**
+     * The name of the zone where the node group resides, such as us-central1-a.
+     * 
+     */
     public String getZone() {
         return this.zone;
     }

@@ -13,9 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TriggerGithub {
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Owner of the repository. For example: The owner for
+     * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * 
+     */
     private final @Nullable String owner;
+    /**
+     * filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable TriggerGithubPullRequest pullRequest;
+    /**
+     * filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable TriggerGithubPush push;
 
     @OutputCustomType.Constructor({"name","owner","pullRequest","push"})
@@ -30,15 +51,36 @@ public final class TriggerGithub {
         this.push = push;
     }
 
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Owner of the repository. For example: The owner for
+     * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * 
+     */
     public Optional<String> getOwner() {
         return Optional.ofNullable(this.owner);
     }
+    /**
+     * filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
+     * Structure is documented below.
+     * 
+     */
     public Optional<TriggerGithubPullRequest> getPullRequest() {
         return Optional.ofNullable(this.pullRequest);
     }
+    /**
+     * filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
+     * Structure is documented below.
+     * 
+     */
     public Optional<TriggerGithubPush> getPush() {
         return Optional.ofNullable(this.push);
     }

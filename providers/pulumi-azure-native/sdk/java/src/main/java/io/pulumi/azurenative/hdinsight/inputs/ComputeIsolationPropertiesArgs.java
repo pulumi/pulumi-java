@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The compute isolation properties.
+ * 
+ */
 public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComputeIsolationPropertiesArgs Empty = new ComputeIsolationPropertiesArgs();
 
+    /**
+     * The flag indicates whether enable compute isolation or not.
+     * 
+     */
     @InputImport(name="enableComputeIsolation")
     private final @Nullable Input<Boolean> enableComputeIsolation;
 
@@ -22,6 +30,10 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
         return this.enableComputeIsolation == null ? Input.empty() : this.enableComputeIsolation;
     }
 
+    /**
+     * The host sku.
+     * 
+     */
     @InputImport(name="hostSku")
     private final @Nullable Input<String> hostSku;
 

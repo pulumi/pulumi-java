@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * <p>A date-time parameter.</p>
+ * 
+ */
 public final class DashboardDateTimeParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardDateTimeParameterArgs Empty = new DashboardDateTimeParameterArgs();
 
+    /**
+     * <p>A display name for the date-time parameter.</p>
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +29,10 @@ public final class DashboardDateTimeParameterArgs extends io.pulumi.resources.Re
         return this.name;
     }
 
+    /**
+     * <p>The values for the date-time parameter.</p>
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

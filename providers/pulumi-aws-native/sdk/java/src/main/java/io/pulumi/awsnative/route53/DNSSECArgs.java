@@ -13,6 +13,10 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DNSSECArgs Empty = new DNSSECArgs();
 
+    /**
+     * The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     @InputImport(name="hostedZoneId", required=true)
     private final Input<String> hostedZoneId;
 

@@ -15,63 +15,156 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A NotebookProxy resource.
+ * API Version: 2019-10-11-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:notebooks:NotebookProxy testResource subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRP/providers/Microsoft.Notebooks/NotebookProxies/testResource 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:notebooks:NotebookProxy")
 public class NotebookProxy extends io.pulumi.resources.CustomResource {
+    /**
+     * The friendly string identifier of the creator of the NotebookProxy resource.
+     * 
+     */
     @OutputExport(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
+    /**
+     * @return The friendly string identifier of the creator of the NotebookProxy resource.
+     * 
+     */
     public Output</* @Nullable */ String> getHostname() {
         return this.hostname;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The public DNS name
+     * 
+     */
     @OutputExport(name="publicDns", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicDns;
 
+    /**
+     * @return The public DNS name
+     * 
+     */
     public Output</* @Nullable */ String> getPublicDns() {
         return this.publicDns;
     }
+    /**
+     * Allow public network access on a V-Net locked notebook resource
+     * 
+     */
     @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
+    /**
+     * @return Allow public network access on a V-Net locked notebook resource
+     * 
+     */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
+    /**
+     * The region of the NotebookProxy resource.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
+    /**
+     * @return The region of the NotebookProxy resource.
+     * 
+     */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
+    /**
+     * The unique identifier (a GUID) generated for every resource.
+     * 
+     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
+    /**
+     * @return The unique identifier (a GUID) generated for every resource.
+     * 
+     */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
+    /**
+     * The alternate application ID used for auth token request in the data plane
+     * 
+     */
     @OutputExport(name="secondaryAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryAppId;
 
+    /**
+     * @return The alternate application ID used for auth token request in the data plane
+     * 
+     */
     public Output</* @Nullable */ String> getSecondaryAppId() {
         return this.secondaryAppId;
     }
+    /**
+     * System data for notebook resource
+     * 
+     */
     @OutputExport(name="systemData", type=NotebookResourceSystemDataResponse.class, parameters={})
     private Output</* @Nullable */ NotebookResourceSystemDataResponse> systemData;
 
+    /**
+     * @return System data for notebook resource
+     * 
+     */
     public Output</* @Nullable */ NotebookResourceSystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NotebookProxy(String name, NotebookProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:notebooks:NotebookProxy", name, args == null ? NotebookProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -90,6 +183,14 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NotebookProxy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotebookProxy(name, id, options);
     }

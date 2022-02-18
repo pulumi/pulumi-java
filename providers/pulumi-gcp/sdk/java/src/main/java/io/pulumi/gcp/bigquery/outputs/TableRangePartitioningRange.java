@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TableRangePartitioningRange {
+    /**
+     * End of the range partitioning, exclusive.
+     * 
+     */
     private final Integer end;
+    /**
+     * The width of each range within the partition.
+     * 
+     */
     private final Integer interval;
+    /**
+     * Start of the range partitioning, inclusive.
+     * 
+     */
     private final Integer start;
 
     @OutputCustomType.Constructor({"end","interval","start"})
@@ -23,12 +35,24 @@ public final class TableRangePartitioningRange {
         this.start = Objects.requireNonNull(start);
     }
 
+    /**
+     * End of the range partitioning, exclusive.
+     * 
+     */
     public Integer getEnd() {
         return this.end;
     }
+    /**
+     * The width of each range within the partition.
+     * 
+     */
     public Integer getInterval() {
         return this.interval;
     }
+    /**
+     * Start of the range partitioning, inclusive.
+     * 
+     */
     public Integer getStart() {
         return this.start;
     }

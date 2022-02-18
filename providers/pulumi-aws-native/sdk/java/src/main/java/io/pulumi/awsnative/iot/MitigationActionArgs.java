@@ -17,6 +17,10 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
 
     public static final MitigationActionArgs Empty = new MitigationActionArgs();
 
+    /**
+     * A unique identifier for the mitigation action.
+     * 
+     */
     @InputImport(name="actionName")
     private final @Nullable Input<String> actionName;
 
@@ -38,6 +42,10 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
         return this.roleArn;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<MitigationActionTagArgs>> tags;
 

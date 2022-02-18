@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetricStream {
+/**
+ * Resource Type definition for Metric Stream
+ * 
+ */
     public static CompletableFuture<GetMetricStreamResult> invokeAsync(GetMetricStreamArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudwatch:getMetricStream", TypeShape.of(GetMetricStreamResult.class), args == null ? GetMetricStreamArgs.Empty : args, Utilities.withVersion(options));
     }

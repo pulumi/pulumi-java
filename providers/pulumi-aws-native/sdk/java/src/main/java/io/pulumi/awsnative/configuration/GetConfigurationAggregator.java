@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationAggregator {
+/**
+ * Resource Type definition for AWS::Config::ConfigurationAggregator
+ * 
+ */
     public static CompletableFuture<GetConfigurationAggregatorResult> invokeAsync(GetConfigurationAggregatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getConfigurationAggregator", TypeShape.of(GetConfigurationAggregatorResult.class), args == null ? GetConfigurationAggregatorArgs.Empty : args, Utilities.withVersion(options));
     }

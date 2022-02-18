@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the variable and its new value.
+ * 
+ */
 public final class DetectorModelSetVariable extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelSetVariable Empty = new DetectorModelSetVariable();
 
+    /**
+     * The new value of the variable.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 
@@ -19,6 +27,10 @@ public final class DetectorModelSetVariable extends io.pulumi.resources.InvokeAr
         return this.value;
     }
 
+    /**
+     * The name of the variable.
+     * 
+     */
     @InputImport(name="variableName", required=true)
     private final String variableName;
 

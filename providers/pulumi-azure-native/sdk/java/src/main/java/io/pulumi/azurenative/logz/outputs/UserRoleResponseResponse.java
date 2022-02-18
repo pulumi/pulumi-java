@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserRoleResponseResponse {
+    /**
+     * User roles on configured in Logz.io account.
+     * 
+     */
     private final @Nullable String role;
 
     @OutputCustomType.Constructor({"role"})
@@ -18,6 +22,10 @@ public final class UserRoleResponseResponse {
         this.role = role;
     }
 
+    /**
+     * User roles on configured in Logz.io account.
+     * 
+     */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }

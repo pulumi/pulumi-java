@@ -15,6 +15,10 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
 
     public static final PatchDeploymentPatchConfigAptGetArgs Empty = new PatchDeploymentPatchConfigAptGetArgs();
 
+    /**
+     * List of KBs to exclude from update.
+     * 
+     */
     @InputImport(name="excludes")
     private final @Nullable Input<List<String>> excludes;
 
@@ -22,6 +26,12 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
         return this.excludes == null ? Input.empty() : this.excludes;
     }
 
+    /**
+     * An exclusive list of packages to be updated. These are the only packages that will be updated.
+     * If these packages are not installed, they will be ignored. This field cannot be specified with
+     * any other patch configuration fields.
+     * 
+     */
     @InputImport(name="exclusivePackages")
     private final @Nullable Input<List<String>> exclusivePackages;
 
@@ -29,6 +39,11 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
         return this.exclusivePackages == null ? Input.empty() : this.exclusivePackages;
     }
 
+    /**
+     * By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
+     * Possible values are `DIST` and `UPGRADE`.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

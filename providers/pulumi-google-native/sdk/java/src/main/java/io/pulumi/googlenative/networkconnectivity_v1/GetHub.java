@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHub {
+/**
+ * Gets details about the specified hub.
+ * 
+ */
     public static CompletableFuture<GetHubResult> invokeAsync(GetHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getHub", TypeShape.of(GetHubResult.class), args == null ? GetHubArgs.Empty : args, Utilities.withVersion(options));
     }

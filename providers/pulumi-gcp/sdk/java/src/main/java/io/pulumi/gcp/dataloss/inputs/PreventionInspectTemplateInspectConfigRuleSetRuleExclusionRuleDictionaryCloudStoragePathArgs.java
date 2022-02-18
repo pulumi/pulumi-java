@@ -13,6 +13,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs();
 
+    /**
+     * A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 

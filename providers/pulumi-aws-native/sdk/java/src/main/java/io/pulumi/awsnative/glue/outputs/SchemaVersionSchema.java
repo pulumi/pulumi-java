@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SchemaVersionSchema {
+    /**
+     * Name of the registry to identify where the Schema is located.
+     * 
+     */
     private final @Nullable String registryName;
+    /**
+     * Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
+     * 
+     */
     private final @Nullable String schemaArn;
+    /**
+     * Name of the schema. This parameter requires RegistryName to be provided.
+     * 
+     */
     private final @Nullable String schemaName;
 
     @OutputCustomType.Constructor({"registryName","schemaArn","schemaName"})
@@ -25,12 +37,24 @@ public final class SchemaVersionSchema {
         this.schemaName = schemaName;
     }
 
+    /**
+     * Name of the registry to identify where the Schema is located.
+     * 
+     */
     public Optional<String> getRegistryName() {
         return Optional.ofNullable(this.registryName);
     }
+    /**
+     * Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
+     * 
+     */
     public Optional<String> getSchemaArn() {
         return Optional.ofNullable(this.schemaArn);
     }
+    /**
+     * Name of the schema. This parameter requires RegistryName to be provided.
+     * 
+     */
     public Optional<String> getSchemaName() {
         return Optional.ofNullable(this.schemaName);
     }

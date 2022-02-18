@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Resource stage details.
+ * 
+ */
 public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StageDetailsResponse Empty = new StageDetailsResponse();
 
+    /**
+     * Display name of the resource stage.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -19,6 +27,10 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName;
     }
 
+    /**
+     * Stage name
+     * 
+     */
     @InputImport(name="stageName", required=true)
     private final String stageName;
 
@@ -26,6 +38,10 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.stageName;
     }
 
+    /**
+     * Stage status.
+     * 
+     */
     @InputImport(name="stageStatus", required=true)
     private final String stageStatus;
 
@@ -33,6 +49,10 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.stageStatus;
     }
 
+    /**
+     * Stage start time
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

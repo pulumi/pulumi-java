@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Table display options that can be reused.
+ * 
+ */
 public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableDisplayOptionsArgs Empty = new TableDisplayOptionsArgs();
 
+    /**
+     * Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
+     * 
+     */
     @InputImport(name="shownColumns")
     private final @Nullable Input<List<String>> shownColumns;
 

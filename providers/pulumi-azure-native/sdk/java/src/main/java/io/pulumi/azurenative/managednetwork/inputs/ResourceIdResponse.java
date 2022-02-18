@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Generic pointer to a resource
+ * 
+ */
 public final class ResourceIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceIdResponse Empty = new ResourceIdResponse();
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

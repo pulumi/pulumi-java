@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecretReplicationUserManagedReplicaCustomerManagedEncryption {
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination secret.
+     * 
+     */
     private final String kmsKeyName;
 
     @OutputCustomType.Constructor({"kmsKeyName"})
@@ -16,6 +20,10 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryption 
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
     }
 
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination secret.
+     * 
+     */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

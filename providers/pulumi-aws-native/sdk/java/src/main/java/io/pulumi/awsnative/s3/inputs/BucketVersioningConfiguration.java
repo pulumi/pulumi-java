@@ -8,10 +8,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Describes the versioning state of an Amazon S3 bucket.
+ * 
+ */
 public final class BucketVersioningConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketVersioningConfiguration Empty = new BucketVersioningConfiguration();
 
+    /**
+     * The versioning state of the bucket.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final BucketVersioningConfigurationStatus status;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identifies the report template for the report. Reports are built using a report template.
+ * 
+ */
 public final class ReportSettingProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportSettingProperties Empty = new ReportSettingProperties();
 
+    /**
+     * The Amazon Resource Names (ARNs) of the frameworks a report covers.
+     * 
+     */
     @InputImport(name="frameworkArns")
     private final @Nullable List<String> frameworkArns;
 
@@ -22,6 +30,10 @@ public final class ReportSettingProperties extends io.pulumi.resources.InvokeArg
         return this.frameworkArns == null ? List.of() : this.frameworkArns;
     }
 
+    /**
+     * Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
+     * 
+     */
     @InputImport(name="reportTemplate", required=true)
     private final String reportTemplate;
 

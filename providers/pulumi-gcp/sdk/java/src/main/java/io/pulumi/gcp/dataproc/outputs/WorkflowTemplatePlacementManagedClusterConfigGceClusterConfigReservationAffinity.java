@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity {
+    /**
+     * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+     * 
+     */
     private final @Nullable String consumeReservationType;
+    /**
+     * Optional. Corresponds to the label key of reservation resource.
+     * 
+     */
     private final @Nullable String key;
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     private final @Nullable List<String> values;
 
     @OutputCustomType.Constructor({"consumeReservationType","key","values"})
@@ -26,12 +38,24 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
         this.values = values;
     }
 
+    /**
+     * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+     * 
+     */
     public Optional<String> getConsumeReservationType() {
         return Optional.ofNullable(this.consumeReservationType);
     }
+    /**
+     * Optional. Corresponds to the label key of reservation resource.
+     * 
+     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * JWT claims used for the jwt-bearer authorization grant.
+ * 
+ */
 public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JwtClaimsResponse Empty = new JwtClaimsResponse();
 
+    /**
+     * Value for the "aud" claim.
+     * 
+     */
     @InputImport(name="audience", required=true)
     private final String audience;
 
@@ -19,6 +27,10 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
         return this.audience;
     }
 
+    /**
+     * Value for the "iss" claim.
+     * 
+     */
     @InputImport(name="issuer", required=true)
     private final String issuer;
 
@@ -26,6 +38,10 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
         return this.issuer;
     }
 
+    /**
+     * Value for the "sub" claim.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final String subject;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInternetGateway {
+/**
+ * Resource Type definition for AWS::EC2::InternetGateway
+ * 
+ */
     public static CompletableFuture<GetInternetGatewayResult> invokeAsync(GetInternetGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getInternetGateway", TypeShape.of(GetInternetGatewayResult.class), args == null ? GetInternetGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

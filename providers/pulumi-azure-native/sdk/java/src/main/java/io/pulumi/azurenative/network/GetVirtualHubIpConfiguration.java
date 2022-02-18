@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualHubIpConfiguration {
+/**
+ * IpConfigurations.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * IpConfigurations.
+ * 
+ */
     public static CompletableFuture<GetVirtualHubIpConfigurationResult> invokeAsync(GetVirtualHubIpConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubIpConfiguration", TypeShape.of(GetVirtualHubIpConfigurationResult.class), args == null ? GetVirtualHubIpConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

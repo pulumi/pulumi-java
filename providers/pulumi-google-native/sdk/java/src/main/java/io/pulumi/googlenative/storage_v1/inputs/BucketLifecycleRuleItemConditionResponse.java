@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The condition(s) under which the action will be taken.
+ * 
+ */
 public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketLifecycleRuleItemConditionResponse Empty = new BucketLifecycleRuleItemConditionResponse();
 
+    /**
+     * Age of an object (in days). This condition is satisfied when an object reaches the specified age.
+     * 
+     */
     @InputImport(name="age", required=true)
     private final Integer age;
 
@@ -22,6 +30,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.age;
     }
 
+    /**
+     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.
+     * 
+     */
     @InputImport(name="createdBefore", required=true)
     private final String createdBefore;
 
@@ -29,6 +41,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.createdBefore;
     }
 
+    /**
+     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.
+     * 
+     */
     @InputImport(name="customTimeBefore", required=true)
     private final String customTimeBefore;
 
@@ -36,6 +52,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.customTimeBefore;
     }
 
+    /**
+     * Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
+     * 
+     */
     @InputImport(name="daysSinceCustomTime", required=true)
     private final Integer daysSinceCustomTime;
 
@@ -43,6 +63,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.daysSinceCustomTime;
     }
 
+    /**
+     * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
+     * 
+     */
     @InputImport(name="daysSinceNoncurrentTime", required=true)
     private final Integer daysSinceNoncurrentTime;
 
@@ -50,6 +74,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.daysSinceNoncurrentTime;
     }
 
+    /**
+     * Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
+     * 
+     */
     @InputImport(name="isLive", required=true)
     private final Boolean isLive;
 
@@ -57,6 +85,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.isLive;
     }
 
+    /**
+     * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
+     * 
+     */
     @InputImport(name="matchesPattern", required=true)
     private final String matchesPattern;
 
@@ -64,6 +96,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.matchesPattern;
     }
 
+    /**
+     * Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
+     * 
+     */
     @InputImport(name="matchesStorageClass", required=true)
     private final List<String> matchesStorageClass;
 
@@ -71,6 +107,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.matchesStorageClass;
     }
 
+    /**
+     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
+     * 
+     */
     @InputImport(name="noncurrentTimeBefore", required=true)
     private final String noncurrentTimeBefore;
 
@@ -78,6 +118,10 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
         return this.noncurrentTimeBefore;
     }
 
+    /**
+     * Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
+     * 
+     */
     @InputImport(name="numNewerVersions", required=true)
     private final Integer numNewerVersions;
 

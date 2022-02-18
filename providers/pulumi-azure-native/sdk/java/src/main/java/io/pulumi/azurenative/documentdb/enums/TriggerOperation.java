@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The operation the trigger is associated with
+     * 
+     */
     @EnumType
     public enum TriggerOperation {
         All("All"),

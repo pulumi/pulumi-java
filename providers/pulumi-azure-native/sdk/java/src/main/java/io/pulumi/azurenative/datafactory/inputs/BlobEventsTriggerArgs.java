@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Trigger that runs every time a Blob event occurs.
+ * 
+ */
 public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobEventsTriggerArgs Empty = new BlobEventsTriggerArgs();
 
+    /**
+     * List of tags that can be used for describing the trigger.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -27,6 +35,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+     * 
+     */
     @InputImport(name="blobPathBeginsWith")
     private final @Nullable Input<String> blobPathBeginsWith;
 
@@ -34,6 +46,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
         return this.blobPathBeginsWith == null ? Input.empty() : this.blobPathBeginsWith;
     }
 
+    /**
+     * The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+     * 
+     */
     @InputImport(name="blobPathEndsWith")
     private final @Nullable Input<String> blobPathEndsWith;
 
@@ -41,6 +57,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
         return this.blobPathEndsWith == null ? Input.empty() : this.blobPathEndsWith;
     }
 
+    /**
+     * Trigger description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -48,6 +68,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The type of events that cause this trigger to fire.
+     * 
+     */
     @InputImport(name="events", required=true)
     private final Input<List<Either<String,BlobEventTypes>>> events;
 
@@ -55,6 +79,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
         return this.events;
     }
 
+    /**
+     * If set to true, blobs with zero bytes will be ignored.
+     * 
+     */
     @InputImport(name="ignoreEmptyBlobs")
     private final @Nullable Input<Boolean> ignoreEmptyBlobs;
 
@@ -62,6 +90,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
         return this.ignoreEmptyBlobs == null ? Input.empty() : this.ignoreEmptyBlobs;
     }
 
+    /**
+     * Pipelines that need to be started.
+     * 
+     */
     @InputImport(name="pipelines")
     private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
@@ -69,6 +101,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
         return this.pipelines == null ? Input.empty() : this.pipelines;
     }
 
+    /**
+     * The ARM resource ID of the Storage Account.
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -76,6 +112,11 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
         return this.scope;
     }
 
+    /**
+     * Trigger type.
+     * Expected value is 'BlobEventsTrigger'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

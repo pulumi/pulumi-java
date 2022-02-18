@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a field in a ProfileObjectType.
+ * 
+ */
 public final class ObjectTypeField extends io.pulumi.resources.InvokeArgs {
 
     public static final ObjectTypeField Empty = new ObjectTypeField();
 
+    /**
+     * The content type of the field. Used for determining equality when searching.
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable ObjectTypeFieldContentType contentType;
 
@@ -22,6 +30,10 @@ public final class ObjectTypeField extends io.pulumi.resources.InvokeArgs {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
+    /**
+     * A field of a ProfileObject. For example: _source.FirstName, where "_source" is a ProfileObjectType of a Zendesk user and "FirstName" is a field in that ObjectType.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable String source;
 
@@ -29,6 +41,10 @@ public final class ObjectTypeField extends io.pulumi.resources.InvokeArgs {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
+    /**
+     * The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 

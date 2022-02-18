@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity for the managed cluster.
+ * 
+ */
 public final class ConfigurationIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationIdentityResponse Empty = new ConfigurationIdentityResponse();
 
+    /**
+     * The principal id of the system assigned identity which is used by the configuration.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +29,10 @@ public final class ConfigurationIdentityResponse extends io.pulumi.resources.Inv
         return this.principalId;
     }
 
+    /**
+     * The tenant id of the system assigned identity which is used by the configuration.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +40,10 @@ public final class ConfigurationIdentityResponse extends io.pulumi.resources.Inv
         return this.tenantId;
     }
 
+    /**
+     * The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

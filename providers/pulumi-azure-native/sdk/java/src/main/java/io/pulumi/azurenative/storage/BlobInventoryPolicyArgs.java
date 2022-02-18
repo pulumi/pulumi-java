@@ -15,6 +15,10 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
 
     public static final BlobInventoryPolicyArgs Empty = new BlobInventoryPolicyArgs();
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +26,10 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
         return this.accountName;
     }
 
+    /**
+     * The name of the storage account blob inventory policy. It should always be 'default'
+     * 
+     */
     @InputImport(name="blobInventoryPolicyName")
     private final @Nullable Input<String> blobInventoryPolicyName;
 
@@ -29,6 +37,10 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
         return this.blobInventoryPolicyName == null ? Input.empty() : this.blobInventoryPolicyName;
     }
 
+    /**
+     * The storage account blob inventory policy object. It is composed of policy rules.
+     * 
+     */
     @InputImport(name="policy", required=true)
     private final Input<BlobInventoryPolicySchemaArgs> policy;
 
@@ -36,6 +48,10 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
         return this.policy;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -13,6 +13,17 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
 
     public static final GameServerClusterConnectionInfoGkeClusterReferenceArgs Empty = new GameServerClusterConnectionInfoGkeClusterReferenceArgs();
 
+    /**
+     * The full or partial name of a GKE cluster, using one of the following
+     * forms:
+     * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+     * * `locations/{location}/clusters/{cluster_id}`
+     * * `{cluster_id}`
+     *   If project and location are not specified, the project and location of the
+     *   GameServerCluster resource are used to generate the full name of the
+     *   GKE cluster.
+     * 
+     */
     @InputImport(name="cluster", required=true)
     private final Input<String> cluster;
 

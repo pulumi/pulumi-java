@@ -11,6 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterMasterAuthorizedNetworksConfig {
+    /**
+     * External networks that can access the
+     * Kubernetes cluster master through HTTPS.
+     * 
+     */
     private final @Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
     @OutputCustomType.Constructor({"cidrBlocks"})
@@ -18,6 +23,11 @@ public final class ClusterMasterAuthorizedNetworksConfig {
         this.cidrBlocks = cidrBlocks;
     }
 
+    /**
+     * External networks that can access the
+     * Kubernetes cluster master through HTTPS.
+     * 
+     */
     public List<ClusterMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
         return this.cidrBlocks == null ? List.of() : this.cidrBlocks;
     }

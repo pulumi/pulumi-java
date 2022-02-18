@@ -12,6 +12,10 @@ public final class GetWorkGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkGroupArgs Empty = new GetWorkGroupArgs();
 
+    /**
+     * The workGroup name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

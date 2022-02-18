@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A descriptive representation of submitted pipeline as well as the executed form. This data is provided by the Dataflow service for ease of visualizing the pipeline and interpreting Dataflow provided metrics.
+ * 
+ */
 public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineDescriptionArgs Empty = new PipelineDescriptionArgs();
 
+    /**
+     * Pipeline level display data.
+     * 
+     */
     @InputImport(name="displayData")
     private final @Nullable Input<List<DisplayDataArgs>> displayData;
 
@@ -24,6 +32,10 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
         return this.displayData == null ? Input.empty() : this.displayData;
     }
 
+    /**
+     * Description of each stage of execution of the pipeline.
+     * 
+     */
     @InputImport(name="executionPipelineStage")
     private final @Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage;
 
@@ -31,6 +43,10 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
         return this.executionPipelineStage == null ? Input.empty() : this.executionPipelineStage;
     }
 
+    /**
+     * Description of each transform in the pipeline and collections between them.
+     * 
+     */
     @InputImport(name="originalPipelineTransform")
     private final @Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform;
 

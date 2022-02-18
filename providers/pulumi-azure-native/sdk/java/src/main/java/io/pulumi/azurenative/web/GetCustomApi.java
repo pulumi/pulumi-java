@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomApi {
+/**
+ * A custom API
+ * API Version: 2016-06-01.
+ * 
+ *
+ * A custom API
+ * 
+ */
     public static CompletableFuture<GetCustomApiResult> invokeAsync(GetCustomApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getCustomApi", TypeShape.of(GetCustomApiResult.class), args == null ? GetCustomApiArgs.Empty : args, Utilities.withVersion(options));
     }

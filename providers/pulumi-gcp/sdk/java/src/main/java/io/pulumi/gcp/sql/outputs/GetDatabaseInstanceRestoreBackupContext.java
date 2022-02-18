@@ -12,6 +12,10 @@ import java.util.Objects;
 public final class GetDatabaseInstanceRestoreBackupContext {
     private final Integer backupRunId;
     private final String instanceId;
+    /**
+     * The ID of the project in which the resource belongs.
+     * 
+     */
     private final String project;
 
     @OutputCustomType.Constructor({"backupRunId","instanceId","project"})
@@ -30,6 +34,10 @@ public final class GetDatabaseInstanceRestoreBackupContext {
     public String getInstanceId() {
         return this.instanceId;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * 
+     */
     public String getProject() {
         return this.project;
     }

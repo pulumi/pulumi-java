@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Migration Validation Database level summary result
+ * 
+ */
 public final class MigrationValidationDatabaseSummaryResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrationValidationDatabaseSummaryResultResponse Empty = new MigrationValidationDatabaseSummaryResultResponse();
 
+    /**
+     * Validation end time
+     * 
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -19,6 +27,10 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
         return this.endedOn;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -26,6 +38,10 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
         return this.id;
     }
 
+    /**
+     * Migration Identifier
+     * 
+     */
     @InputImport(name="migrationId", required=true)
     private final String migrationId;
 
@@ -33,6 +49,10 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
         return this.migrationId;
     }
 
+    /**
+     * Name of the source database
+     * 
+     */
     @InputImport(name="sourceDatabaseName", required=true)
     private final String sourceDatabaseName;
 
@@ -40,6 +60,10 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
         return this.sourceDatabaseName;
     }
 
+    /**
+     * Validation start time
+     * 
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -47,6 +71,10 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
         return this.startedOn;
     }
 
+    /**
+     * Current status of validation at the database level
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -54,6 +82,10 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
         return this.status;
     }
 
+    /**
+     * Name of the target database
+     * 
+     */
     @InputImport(name="targetDatabaseName", required=true)
     private final String targetDatabaseName;
 

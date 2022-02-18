@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDocumentResult {
+    /**
+     * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
+     * 
+     */
     private final @Nullable List<DocumentTag> tags;
 
     @OutputCustomType.Constructor({"tags"})
@@ -18,6 +22,10 @@ public final class GetDocumentResult {
         this.tags = tags;
     }
 
+    /**
+     * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
+     * 
+     */
     public List<DocumentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

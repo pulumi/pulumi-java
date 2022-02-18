@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The component monitoring configuration mode.
+     * 
+     */
     @EnumType
     public enum ApplicationComponentMonitoringSettingComponentConfigurationMode {
         Default("DEFAULT"),

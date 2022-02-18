@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadIdentityPool {
+/**
+ * Get a IAM workload identity pool from Google Cloud by its id.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getWorkloadIdentityPool.
+ * 
+ *
+ * A collection of values returned by getWorkloadIdentityPool.
+ * 
+ */
     public static CompletableFuture<GetWorkloadIdentityPoolResult> invokeAsync(GetWorkloadIdentityPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iam/getWorkloadIdentityPool:getWorkloadIdentityPool", TypeShape.of(GetWorkloadIdentityPoolResult.class), args == null ? GetWorkloadIdentityPoolArgs.Empty : args, Utilities.withVersion(options));
     }

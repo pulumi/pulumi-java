@@ -22,6 +22,10 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -29,6 +33,10 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SQL Migration Service.
+     * 
+     */
     @InputImport(name="sqlMigrationServiceName")
     private final @Nullable Input<String> sqlMigrationServiceName;
 

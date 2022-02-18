@@ -12,6 +12,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
+    /**
+     * Unique name of a private endpoint connection within a project.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * Name of the Azure Migrate project.
+     * 
+     */
     @InputImport(name="projectName", required=true)
     private final String projectName;
 
@@ -26,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.projectName;
     }
 
+    /**
+     * Name of the Azure Resource Group that project is part of.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Configuration for Data Transfer Protection.
+     * 
+     */
     @EnumType
     public enum LocationHDFSQopConfigurationDataTransferProtection {
         Authentication("AUTHENTICATION"),

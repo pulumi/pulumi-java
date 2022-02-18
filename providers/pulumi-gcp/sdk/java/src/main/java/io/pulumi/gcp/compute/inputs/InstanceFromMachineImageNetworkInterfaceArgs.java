@@ -47,6 +47,11 @@ public final class InstanceFromMachineImageNetworkInterfaceArgs extends io.pulum
         return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
     }
 
+    /**
+     * A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

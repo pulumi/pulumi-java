@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiPropertiesResponse {
+    /**
+     * Describes the ServerVersion of an a MongoDB account.
+     * 
+     */
     private final @Nullable String serverVersion;
 
     @OutputCustomType.Constructor({"serverVersion"})
@@ -18,6 +22,10 @@ public final class ApiPropertiesResponse {
         this.serverVersion = serverVersion;
     }
 
+    /**
+     * Describes the ServerVersion of an a MongoDB account.
+     * 
+     */
     public Optional<String> getServerVersion() {
         return Optional.ofNullable(this.serverVersion);
     }

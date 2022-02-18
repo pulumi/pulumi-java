@@ -14,6 +14,10 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebServiceArgs Empty = new GetWebServiceArgs();
 
+    /**
+     * The region for which encrypted credential parameters are valid.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 
@@ -21,6 +25,10 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
+    /**
+     * Name of the resource group in which the web service is located.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +36,10 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the web service.
+     * 
+     */
     @InputImport(name="webServiceName", required=true)
     private final String webServiceName;
 

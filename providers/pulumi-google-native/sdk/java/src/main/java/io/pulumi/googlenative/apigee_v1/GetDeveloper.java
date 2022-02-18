@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeveloper {
+/**
+ * Returns the developer details, including the developer's name, email address, apps, and other information. **Note**: The response includes only the first 100 developer apps.
+ * 
+ */
     public static CompletableFuture<GetDeveloperResult> invokeAsync(GetDeveloperArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getDeveloper", TypeShape.of(GetDeveloperResult.class), args == null ? GetDeveloperArgs.Empty : args, Utilities.withVersion(options));
     }

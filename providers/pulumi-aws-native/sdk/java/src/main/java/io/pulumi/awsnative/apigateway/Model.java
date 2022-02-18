@@ -13,39 +13,89 @@ import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::ApiGateway::Model
+ * 
+ */
 @ResourceType(type="aws-native:apigateway:Model")
 public class Model extends io.pulumi.resources.CustomResource {
+    /**
+     * The content type for the model.
+     * 
+     */
     @OutputExport(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
+    /**
+     * @return The content type for the model.
+     * 
+     */
     public Output</* @Nullable */ String> getContentType() {
         return this.contentType;
     }
+    /**
+     * A description that identifies this model.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description that identifies this model.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The ID of a REST API with which to associate this model.
+     * 
+     */
     @OutputExport(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
+    /**
+     * @return The ID of a REST API with which to associate this model.
+     * 
+     */
     public Output<String> getRestApiId() {
         return this.restApiId;
     }
+    /**
+     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * 
+     */
     @OutputExport(name="schema", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> schema;
 
+    /**
+     * @return The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * 
+     */
     public Output</* @Nullable */ Object> getSchema() {
         return this.schema;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Model(String name, ModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:apigateway:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +111,14 @@ public class Model extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Model get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Model(name, id, options);
     }

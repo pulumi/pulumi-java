@@ -17,81 +17,198 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * IpAllocation resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:IpAllocation test-ipallocation /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/IpAllocations/test-ipallocation 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:IpAllocation")
 public class IpAllocation extends io.pulumi.resources.CustomResource {
+    /**
+     * IpAllocation tags.
+     * 
+     */
     @OutputExport(name="allocationTags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> allocationTags;
 
+    /**
+     * @return IpAllocation tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getAllocationTags() {
         return this.allocationTags;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The IPAM allocation ID.
+     * 
+     */
     @OutputExport(name="ipamAllocationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipamAllocationId;
 
+    /**
+     * @return The IPAM allocation ID.
+     * 
+     */
     public Output</* @Nullable */ String> getIpamAllocationId() {
         return this.ipamAllocationId;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The address prefix for the IpAllocation.
+     * 
+     */
     @OutputExport(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
+    /**
+     * @return The address prefix for the IpAllocation.
+     * 
+     */
     public Output</* @Nullable */ String> getPrefix() {
         return this.prefix;
     }
+    /**
+     * The address prefix length for the IpAllocation.
+     * 
+     */
     @OutputExport(name="prefixLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> prefixLength;
 
+    /**
+     * @return The address prefix length for the IpAllocation.
+     * 
+     */
     public Output</* @Nullable */ Integer> getPrefixLength() {
         return this.prefixLength;
     }
+    /**
+     * The address prefix Type for the IpAllocation.
+     * 
+     */
     @OutputExport(name="prefixType", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefixType;
 
+    /**
+     * @return The address prefix Type for the IpAllocation.
+     * 
+     */
     public Output</* @Nullable */ String> getPrefixType() {
         return this.prefixType;
     }
+    /**
+     * The Subnet that using the prefix of this IpAllocation resource.
+     * 
+     */
     @OutputExport(name="subnet", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> subnet;
 
+    /**
+     * @return The Subnet that using the prefix of this IpAllocation resource.
+     * 
+     */
     public Output<SubResourceResponse> getSubnet() {
         return this.subnet;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The VirtualNetwork that using the prefix of this IpAllocation resource.
+     * 
+     */
     @OutputExport(name="virtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> virtualNetwork;
 
+    /**
+     * @return The VirtualNetwork that using the prefix of this IpAllocation resource.
+     * 
+     */
     public Output<SubResourceResponse> getVirtualNetwork() {
         return this.virtualNetwork;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IpAllocation(String name, IpAllocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:IpAllocation", name, args == null ? IpAllocationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -119,6 +236,14 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IpAllocation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IpAllocation(name, id, options);
     }

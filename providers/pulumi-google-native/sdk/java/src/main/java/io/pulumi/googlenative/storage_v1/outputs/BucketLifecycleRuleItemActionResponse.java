@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketLifecycleRuleItemActionResponse {
+    /**
+     * Target storage class. Required iff the type of the action is SetStorageClass.
+     * 
+     */
     private final String storageClass;
+    /**
+     * Type of the action. Currently, only Delete and SetStorageClass are supported.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"storageClass","type"})
@@ -20,9 +28,17 @@ public final class BucketLifecycleRuleItemActionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Target storage class. Required iff the type of the action is SetStorageClass.
+     * 
+     */
     public String getStorageClass() {
         return this.storageClass;
     }
+    /**
+     * Type of the action. Currently, only Delete and SetStorageClass are supported.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Data Lake Store trusted identity provider information.
+ * 
+ */
 public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TrustedIdProviderResponse Empty = new TrustedIdProviderResponse();
 
+    /**
+     * The resource identifier.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -19,6 +27,10 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
         return this.id;
     }
 
+    /**
+     * The URL of this trusted identity provider.
+     * 
+     */
     @InputImport(name="idProvider", required=true)
     private final String idProvider;
 
@@ -26,6 +38,10 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
         return this.idProvider;
     }
 
+    /**
+     * The resource name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -33,6 +49,10 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * The resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

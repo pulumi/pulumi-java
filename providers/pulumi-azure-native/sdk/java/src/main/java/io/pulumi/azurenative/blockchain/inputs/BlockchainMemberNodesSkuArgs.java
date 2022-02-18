@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Payload of the blockchain member nodes Sku for a blockchain member.
+ * 
+ */
 public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlockchainMemberNodesSkuArgs Empty = new BlockchainMemberNodesSkuArgs();
 
+    /**
+     * Gets or sets the nodes capacity.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 

@@ -18,6 +18,10 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
 
     public static final PrivateStoreCollectionOfferArgs Empty = new PrivateStoreCollectionOfferArgs();
 
+    /**
+     * The collection ID
+     * 
+     */
     @InputImport(name="collectionId", required=true)
     private final Input<String> collectionId;
 
@@ -25,6 +29,10 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
         return this.collectionId;
     }
 
+    /**
+     * Identifier for purposes of race condition
+     * 
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -32,6 +40,10 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Icon File Uris
+     * 
+     */
     @InputImport(name="iconFileUris")
     private final @Nullable Input<Map<String,String>> iconFileUris;
 
@@ -39,6 +51,10 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
         return this.iconFileUris == null ? Input.empty() : this.iconFileUris;
     }
 
+    /**
+     * The offer ID to update or delete
+     * 
+     */
     @InputImport(name="offerId")
     private final @Nullable Input<String> offerId;
 
@@ -46,6 +62,10 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
         return this.offerId == null ? Input.empty() : this.offerId;
     }
 
+    /**
+     * Offer plans
+     * 
+     */
     @InputImport(name="plans")
     private final @Nullable Input<List<PlanArgs>> plans;
 
@@ -53,6 +73,10 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
         return this.plans == null ? Input.empty() : this.plans;
     }
 
+    /**
+     * The store ID - must use the tenant ID
+     * 
+     */
     @InputImport(name="privateStoreId", required=true)
     private final Input<String> privateStoreId;
 
@@ -60,6 +84,10 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
         return this.privateStoreId;
     }
 
+    /**
+     * Plan ids limitation for this offer
+     * 
+     */
     @InputImport(name="specificPlanIdsLimitation")
     private final @Nullable Input<List<String>> specificPlanIdsLimitation;
 
@@ -67,6 +95,10 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
         return this.specificPlanIdsLimitation == null ? Input.empty() : this.specificPlanIdsLimitation;
     }
 
+    /**
+     * Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
+     * 
+     */
     @InputImport(name="updateSuppressedDueIdempotence")
     private final @Nullable Input<Boolean> updateSuppressedDueIdempotence;
 

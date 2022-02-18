@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The state of the Kubernetes cluster.
+ * 
+ */
 public final class KubernetesClusterStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesClusterStateResponse Empty = new KubernetesClusterStateResponse();
 
+    /**
+     * The version of Agones currently installed in the registered Kubernetes cluster.
+     * 
+     */
     @InputImport(name="agonesVersionInstalled", required=true)
     private final String agonesVersionInstalled;
 
@@ -19,6 +27,10 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
         return this.agonesVersionInstalled;
     }
 
+    /**
+     * The version of Agones that is targeted to be installed in the cluster.
+     * 
+     */
     @InputImport(name="agonesVersionTargeted", required=true)
     private final String agonesVersionTargeted;
 
@@ -26,6 +38,10 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
         return this.agonesVersionTargeted;
     }
 
+    /**
+     * The state for the installed versions of Agones/Kubernetes.
+     * 
+     */
     @InputImport(name="installationState", required=true)
     private final String installationState;
 
@@ -33,6 +49,10 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
         return this.installationState;
     }
 
+    /**
+     * The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).
+     * 
+     */
     @InputImport(name="kubernetesVersionInstalled", required=true)
     private final String kubernetesVersionInstalled;
 
@@ -40,6 +60,10 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
         return this.kubernetesVersionInstalled;
     }
 
+    /**
+     * The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
+     * 
+     */
     @InputImport(name="provider", required=true)
     private final String provider;
 
@@ -47,6 +71,10 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
         return this.provider;
     }
 
+    /**
+     * The detailed error message for the installed versions of Agones/Kubernetes.
+     * 
+     */
     @InputImport(name="versionInstalledErrorMessage", required=true)
     private final String versionInstalledErrorMessage;
 

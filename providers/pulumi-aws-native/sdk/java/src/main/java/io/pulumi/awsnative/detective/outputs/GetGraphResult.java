@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGraphResult {
+    /**
+     * The Detective graph ARN
+     * 
+     */
     private final @Nullable String arn;
     private final @Nullable List<GraphTag> tags;
 
@@ -24,6 +28,10 @@ public final class GetGraphResult {
         this.tags = tags;
     }
 
+    /**
+     * The Detective graph ARN
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

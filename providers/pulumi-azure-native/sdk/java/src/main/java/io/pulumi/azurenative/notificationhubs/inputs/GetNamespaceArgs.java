@@ -12,6 +12,10 @@ public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNamespaceArgs Empty = new GetNamespaceArgs();
 
+    /**
+     * The namespace name.
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -19,6 +23,10 @@ public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
         return this.namespaceName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

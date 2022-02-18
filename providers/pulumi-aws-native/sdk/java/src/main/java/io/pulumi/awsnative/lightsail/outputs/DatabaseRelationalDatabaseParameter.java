@@ -12,13 +12,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseRelationalDatabaseParameter {
+    /**
+     * Specifies the valid range of values for the parameter.
+     * 
+     */
     private final @Nullable String allowedValues;
+    /**
+     * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
+     * 
+     */
     private final @Nullable String applyMethod;
+    /**
+     * Specifies the engine-specific parameter type.
+     * 
+     */
     private final @Nullable String applyType;
+    /**
+     * Specifies the valid data type for the parameter.
+     * 
+     */
     private final @Nullable String dataType;
+    /**
+     * Provides a description of the parameter.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * A Boolean value indicating whether the parameter can be modified.
+     * 
+     */
     private final @Nullable Boolean isModifiable;
+    /**
+     * Specifies the name of the parameter.
+     * 
+     */
     private final @Nullable String parameterName;
+    /**
+     * Specifies the value of the parameter.
+     * 
+     */
     private final @Nullable String parameterValue;
 
     @OutputCustomType.Constructor({"allowedValues","applyMethod","applyType","dataType","description","isModifiable","parameterName","parameterValue"})
@@ -41,27 +73,59 @@ public final class DatabaseRelationalDatabaseParameter {
         this.parameterValue = parameterValue;
     }
 
+    /**
+     * Specifies the valid range of values for the parameter.
+     * 
+     */
     public Optional<String> getAllowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
+    /**
+     * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
+     * 
+     */
     public Optional<String> getApplyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
+    /**
+     * Specifies the engine-specific parameter type.
+     * 
+     */
     public Optional<String> getApplyType() {
         return Optional.ofNullable(this.applyType);
     }
+    /**
+     * Specifies the valid data type for the parameter.
+     * 
+     */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
+    /**
+     * Provides a description of the parameter.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * A Boolean value indicating whether the parameter can be modified.
+     * 
+     */
     public Optional<Boolean> getIsModifiable() {
         return Optional.ofNullable(this.isModifiable);
     }
+    /**
+     * Specifies the name of the parameter.
+     * 
+     */
     public Optional<String> getParameterName() {
         return Optional.ofNullable(this.parameterName);
     }
+    /**
+     * Specifies the value of the parameter.
+     * 
+     */
     public Optional<String> getParameterValue() {
         return Optional.ofNullable(this.parameterValue);
     }

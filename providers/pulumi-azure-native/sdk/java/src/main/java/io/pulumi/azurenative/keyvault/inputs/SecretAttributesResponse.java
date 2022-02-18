@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The secret management attributes.
+ * 
+ */
 public final class SecretAttributesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretAttributesResponse Empty = new SecretAttributesResponse();
 
+    /**
+     * Creation time in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     @InputImport(name="created", required=true)
     private final Integer created;
 
@@ -22,6 +30,10 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
         return this.created;
     }
 
+    /**
+     * Determines whether the object is enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -29,6 +41,10 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * Expiry date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     @InputImport(name="expires")
     private final @Nullable Integer expires;
 
@@ -36,6 +52,10 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
         return this.expires == null ? Optional.empty() : Optional.ofNullable(this.expires);
     }
 
+    /**
+     * Not before date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     @InputImport(name="notBefore")
     private final @Nullable Integer notBefore;
 
@@ -43,6 +63,10 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
         return this.notBefore == null ? Optional.empty() : Optional.ofNullable(this.notBefore);
     }
 
+    /**
+     * Last updated time in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     @InputImport(name="updated", required=true)
     private final Integer updated;
 

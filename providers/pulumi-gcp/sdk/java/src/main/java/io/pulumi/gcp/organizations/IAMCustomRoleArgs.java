@@ -15,6 +15,10 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMCustomRoleArgs Empty = new IAMCustomRoleArgs();
 
+    /**
+     * A human-readable description for the role.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The numeric ID of the organization in which you want to create a custom role.
+     * 
+     */
     @InputImport(name="orgId", required=true)
     private final Input<String> orgId;
 
@@ -29,6 +37,10 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.orgId;
     }
 
+    /**
+     * The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
+     * 
+     */
     @InputImport(name="permissions", required=true)
     private final Input<List<String>> permissions;
 
@@ -36,6 +48,10 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.permissions;
     }
 
+    /**
+     * The role id to use for this role.
+     * 
+     */
     @InputImport(name="roleId", required=true)
     private final Input<String> roleId;
 
@@ -43,6 +59,12 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleId;
     }
 
+    /**
+     * The current launch stage of the role.
+     * Defaults to `GA`.
+     * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
+     * 
+     */
     @InputImport(name="stage")
     private final @Nullable Input<String> stage;
 
@@ -50,6 +72,10 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.stage == null ? Input.empty() : this.stage;
     }
 
+    /**
+     * A human-readable title for the role.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

@@ -16,6 +16,11 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends io.pulumi.
 
     public static final ServiceTemplateSpecContainerEnvFromGetArgs Empty = new ServiceTemplateSpecContainerEnvFromGetArgs();
 
+    /**
+     * The ConfigMap to select from.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="configMapRef")
     private final @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs> configMapRef;
 
@@ -23,6 +28,10 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends io.pulumi.
         return this.configMapRef == null ? Input.empty() : this.configMapRef;
     }
 
+    /**
+     * An optional identifier to prepend to each key in the ConfigMap.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -30,6 +39,11 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends io.pulumi.
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
+    /**
+     * The Secret to select from.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secretRef")
     private final @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> secretRef;
 

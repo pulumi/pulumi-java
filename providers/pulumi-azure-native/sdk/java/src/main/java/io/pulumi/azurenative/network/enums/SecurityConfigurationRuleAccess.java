@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates the access allowed for this particular rule
+     * 
+     */
     @EnumType
     public enum SecurityConfigurationRuleAccess {
         Allow("Allow"),

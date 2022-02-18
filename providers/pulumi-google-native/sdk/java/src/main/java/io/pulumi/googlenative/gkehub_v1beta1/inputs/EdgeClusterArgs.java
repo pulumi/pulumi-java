@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * EdgeCluster contains information specific to Google Edge Clusters.
+ * 
+ */
 public final class EdgeClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EdgeClusterArgs Empty = new EdgeClusterArgs();
 
+    /**
+     * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+     * 
+     */
     @InputImport(name="resourceLink")
     private final @Nullable Input<String> resourceLink;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterClusterTelemetry {
+    /**
+     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +20,10 @@ public final class ClusterClusterTelemetry {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public String getType() {
         return this.type;
     }

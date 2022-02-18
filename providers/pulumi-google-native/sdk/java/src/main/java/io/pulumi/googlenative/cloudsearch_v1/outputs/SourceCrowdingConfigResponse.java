@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceCrowdingConfigResponse {
+    /**
+     * Maximum number of results allowed from a datasource in a result page as long as results from other sources are not exhausted. Value specified must not be negative. A default value is used if this value is equal to 0. To disable crowding, set the value greater than 100.
+     * 
+     */
     private final Integer numResults;
+    /**
+     * Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.
+     * 
+     */
     private final Integer numSuggestions;
 
     @OutputCustomType.Constructor({"numResults","numSuggestions"})
@@ -20,9 +28,17 @@ public final class SourceCrowdingConfigResponse {
         this.numSuggestions = Objects.requireNonNull(numSuggestions);
     }
 
+    /**
+     * Maximum number of results allowed from a datasource in a result page as long as results from other sources are not exhausted. Value specified must not be negative. A default value is used if this value is equal to 0. To disable crowding, set the value greater than 100.
+     * 
+     */
     public Integer getNumResults() {
         return this.numResults;
     }
+    /**
+     * Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.
+     * 
+     */
     public Integer getNumSuggestions() {
         return this.numSuggestions;
     }

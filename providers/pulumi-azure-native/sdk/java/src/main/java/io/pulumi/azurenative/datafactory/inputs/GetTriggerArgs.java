@@ -12,6 +12,10 @@ public final class GetTriggerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTriggerArgs Empty = new GetTriggerArgs();
 
+    /**
+     * The factory name.
+     * 
+     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -19,6 +23,10 @@ public final class GetTriggerArgs extends io.pulumi.resources.InvokeArgs {
         return this.factoryName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetTriggerArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The trigger name.
+     * 
+     */
     @InputImport(name="triggerName", required=true)
     private final String triggerName;
 

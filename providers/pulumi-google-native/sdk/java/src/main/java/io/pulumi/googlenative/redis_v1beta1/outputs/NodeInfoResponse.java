@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeInfoResponse {
+    /**
+     * Location of the node.
+     * 
+     */
     private final String zone;
 
     @OutputCustomType.Constructor({"zone"})
@@ -16,6 +20,10 @@ public final class NodeInfoResponse {
         this.zone = Objects.requireNonNull(zone);
     }
 
+    /**
+     * Location of the node.
+     * 
+     */
     public String getZone() {
         return this.zone;
     }

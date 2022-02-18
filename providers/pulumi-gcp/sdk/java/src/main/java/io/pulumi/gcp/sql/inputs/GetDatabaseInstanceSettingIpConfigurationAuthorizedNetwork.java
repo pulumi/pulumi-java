@@ -19,6 +19,10 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
         return this.expirationTime;
     }
 
+    /**
+     * The name of the instance.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

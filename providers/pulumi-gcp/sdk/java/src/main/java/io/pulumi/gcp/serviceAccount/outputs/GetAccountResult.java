@@ -12,11 +12,33 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetAccountResult {
     private final String accountId;
+    /**
+     * The display name for the service account.
+     * 
+     */
     private final String displayName;
+    /**
+     * The e-mail address of the service account. This value
+     * should be referenced from any `gcp.organizations.getIAMPolicy` data sources
+     * that would grant the service account privileges.
+     * 
+     */
     private final String email;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The fully-qualified name of the service account.
+     * 
+     */
     private final String name;
     private final @Nullable String project;
+    /**
+     * The unique id of the service account.
+     * 
+     */
     private final String uniqueId;
 
     @OutputCustomType.Constructor({"accountId","displayName","email","id","name","project","uniqueId"})
@@ -40,21 +62,43 @@ public final class GetAccountResult {
     public String getAccountId() {
         return this.accountId;
     }
+    /**
+     * The display name for the service account.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The e-mail address of the service account. This value
+     * should be referenced from any `gcp.organizations.getIAMPolicy` data sources
+     * that would grant the service account privileges.
+     * 
+     */
     public String getEmail() {
         return this.email;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The fully-qualified name of the service account.
+     * 
+     */
     public String getName() {
         return this.name;
     }
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
+    /**
+     * The unique id of the service account.
+     * 
+     */
     public String getUniqueId() {
         return this.uniqueId;
     }

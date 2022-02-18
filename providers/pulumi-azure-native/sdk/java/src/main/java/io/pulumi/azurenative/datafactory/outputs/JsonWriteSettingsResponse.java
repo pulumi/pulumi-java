@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JsonWriteSettingsResponse {
+    /**
+     * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
+     * 
+     */
     private final @Nullable Object filePattern;
+    /**
+     * The write setting type.
+     * Expected value is 'JsonWriteSettings'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"filePattern","type"})
@@ -23,9 +32,18 @@ public final class JsonWriteSettingsResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
+     * 
+     */
     public Optional<Object> getFilePattern() {
         return Optional.ofNullable(this.filePattern);
     }
+    /**
+     * The write setting type.
+     * Expected value is 'JsonWriteSettings'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -8,10 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the key vault resource settings.
+ * 
+ */
 public final class KeyVaultResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultResourceSettingsResponse Empty = new KeyVaultResourceSettingsResponse();
 
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is 'Microsoft.KeyVault/vaults'.
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 
@@ -19,6 +28,10 @@ public final class KeyVaultResourceSettingsResponse extends io.pulumi.resources.
         return this.resourceType;
     }
 
+    /**
+     * Gets or sets the target Resource name.
+     * 
+     */
     @InputImport(name="targetResourceName", required=true)
     private final String targetResourceName;
 

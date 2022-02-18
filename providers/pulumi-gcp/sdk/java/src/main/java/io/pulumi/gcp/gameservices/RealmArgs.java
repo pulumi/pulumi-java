@@ -15,6 +15,10 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RealmArgs Empty = new RealmArgs();
 
+    /**
+     * Human readable description of the realm.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The labels associated with this realm. Each label is a key-value pair.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -29,6 +37,10 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Location of the Realm.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +48,11 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +60,10 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * GCP region of the Realm.
+     * 
+     */
     @InputImport(name="realmId", required=true)
     private final Input<String> realmId;
 
@@ -50,6 +71,12 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.realmId;
     }
 
+    /**
+     * Required. Time zone where all realm-specific policies are evaluated. The value of
+     * this field must be from the IANA time zone database:
+     * https://www.iana.org/time-zones.
+     * 
+     */
     @InputImport(name="timeZone", required=true)
     private final Input<String> timeZone;
 

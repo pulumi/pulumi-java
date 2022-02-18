@@ -10,7 +10,15 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum DatasetAccessEntryTargetTypesItem {
+        /**
+         * Do not use. You must set a target type explicitly.
+         * 
+         */
         TargetTypeUnspecified("TARGET_TYPE_UNSPECIFIED"),
+        /**
+         * This entry applies to views in the dataset.
+         * 
+         */
         Views("VIEWS");
 
         private final String value;

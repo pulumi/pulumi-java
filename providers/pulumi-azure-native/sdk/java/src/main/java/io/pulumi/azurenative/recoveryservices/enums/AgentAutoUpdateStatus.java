@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A value indicating whether the auto update is enabled.
+     * 
+     */
     @EnumType
     public enum AgentAutoUpdateStatus {
         Disabled("Disabled"),

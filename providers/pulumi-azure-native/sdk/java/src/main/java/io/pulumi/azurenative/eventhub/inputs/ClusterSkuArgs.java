@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU parameters particular to a cluster instance.
+ * 
+ */
 public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterSkuArgs Empty = new ClusterSkuArgs();
 
+    /**
+     * The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -24,6 +32,10 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * Name of this SKU.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,ClusterSkuName>> name;
 

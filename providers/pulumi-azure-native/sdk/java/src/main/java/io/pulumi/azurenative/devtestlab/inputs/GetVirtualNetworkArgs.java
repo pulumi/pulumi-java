@@ -14,6 +14,10 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetVirtualNetworkArgs Empty = new GetVirtualNetworkArgs();
 
+    /**
+     * Specify the $expand query. Example: 'properties($expand=externalSubnets)'
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -28,6 +36,10 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
         return this.labName;
     }
 
+    /**
+     * The name of the virtual network.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +47,10 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

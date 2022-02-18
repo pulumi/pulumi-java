@@ -16,6 +16,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ShareArgs Empty = new ShareArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +27,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Share description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Share kind.
+     * 
+     */
     @InputImport(name="shareKind")
     private final @Nullable Input<Either<String,ShareKind>> shareKind;
 
@@ -44,6 +60,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareKind == null ? Input.empty() : this.shareKind;
     }
 
+    /**
+     * The name of the share.
+     * 
+     */
     @InputImport(name="shareName")
     private final @Nullable Input<String> shareName;
 
@@ -51,6 +71,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareName == null ? Input.empty() : this.shareName;
     }
 
+    /**
+     * Share terms.
+     * 
+     */
     @InputImport(name="terms")
     private final @Nullable Input<String> terms;
 

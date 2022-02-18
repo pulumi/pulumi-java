@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
+    /**
+     * The WAF feature for which this key is enabled.
+     * 
+     */
     private final String wafFeature;
+    /**
+     * The WAF service that uses this key.
+     * 
+     */
     private final String wafService;
 
     @OutputCustomType.Constructor({"wafFeature","wafService"})
@@ -20,9 +28,17 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
         this.wafService = Objects.requireNonNull(wafService);
     }
 
+    /**
+     * The WAF feature for which this key is enabled.
+     * 
+     */
     public String getWafFeature() {
         return this.wafFeature;
     }
+    /**
+     * The WAF service that uses this key.
+     * 
+     */
     public String getWafService() {
         return this.wafService;
     }

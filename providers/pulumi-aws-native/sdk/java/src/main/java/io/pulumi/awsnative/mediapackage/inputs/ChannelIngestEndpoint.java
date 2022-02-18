@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An endpoint for ingesting source content for a Channel.
+ * 
+ */
 public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs {
 
     public static final ChannelIngestEndpoint Empty = new ChannelIngestEndpoint();
 
+    /**
+     * The system generated unique identifier for the IngestEndpoint
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The system generated password for ingest authentication.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -28,6 +40,10 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The ingest URL to which the source stream should be sent.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable String url;
 
@@ -35,6 +51,10 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 
+    /**
+     * The system generated username for ingest authentication.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable String username;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains stats associated with the peering.
+ * 
+ */
 public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressRouteCircuitStatsArgs Empty = new ExpressRouteCircuitStatsArgs();
 
+    /**
+     * The Primary BytesIn of the peering.
+     * 
+     */
     @InputImport(name="primarybytesIn")
     private final @Nullable Input<Double> primarybytesIn;
 
@@ -21,6 +29,10 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
         return this.primarybytesIn == null ? Input.empty() : this.primarybytesIn;
     }
 
+    /**
+     * The primary BytesOut of the peering.
+     * 
+     */
     @InputImport(name="primarybytesOut")
     private final @Nullable Input<Double> primarybytesOut;
 
@@ -28,6 +40,10 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
         return this.primarybytesOut == null ? Input.empty() : this.primarybytesOut;
     }
 
+    /**
+     * The secondary BytesIn of the peering.
+     * 
+     */
     @InputImport(name="secondarybytesIn")
     private final @Nullable Input<Double> secondarybytesIn;
 
@@ -35,6 +51,10 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
         return this.secondarybytesIn == null ? Input.empty() : this.secondarybytesIn;
     }
 
+    /**
+     * The secondary BytesOut of the peering.
+     * 
+     */
     @InputImport(name="secondarybytesOut")
     private final @Nullable Input<Double> secondarybytesOut;
 

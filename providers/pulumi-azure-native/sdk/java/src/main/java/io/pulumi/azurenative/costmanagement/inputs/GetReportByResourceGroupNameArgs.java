@@ -12,6 +12,10 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
 
     public static final GetReportByResourceGroupNameArgs Empty = new GetReportByResourceGroupNameArgs();
 
+    /**
+     * Report Name.
+     * 
+     */
     @InputImport(name="reportName", required=true)
     private final String reportName;
 
@@ -19,6 +23,10 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
         return this.reportName;
     }
 
+    /**
+     * Azure Resource Group Name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

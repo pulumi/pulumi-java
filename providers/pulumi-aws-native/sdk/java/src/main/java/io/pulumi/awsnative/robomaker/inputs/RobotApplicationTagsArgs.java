@@ -6,6 +6,10 @@ package io.pulumi.awsnative.robomaker.inputs;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class RobotApplicationTagsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RobotApplicationTagsArgs Empty = new RobotApplicationTagsArgs();

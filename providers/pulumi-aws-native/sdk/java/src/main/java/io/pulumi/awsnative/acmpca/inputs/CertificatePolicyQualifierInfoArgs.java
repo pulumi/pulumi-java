@@ -10,6 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Structure that contains X.509 Policy qualifier information.
+ * 
+ */
 public final class CertificatePolicyQualifierInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificatePolicyQualifierInfoArgs Empty = new CertificatePolicyQualifierInfoArgs();

@@ -23,6 +23,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     public static final SecurityConnectorArgs Empty = new SecurityConnectorArgs();
 
+    /**
+     * The multi cloud resource's cloud name.
+     * 
+     */
     @InputImport(name="cloudName")
     private final @Nullable Input<Either<String,CloudName>> cloudName;
 
@@ -30,6 +34,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
         return this.cloudName == null ? Input.empty() : this.cloudName;
     }
 
+    /**
+     * The multi cloud resource identifier (account id in case of AWS connector).
+     * 
+     */
     @InputImport(name="hierarchyIdentifier")
     private final @Nullable Input<String> hierarchyIdentifier;
 
@@ -37,6 +45,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
         return this.hierarchyIdentifier == null ? Input.empty() : this.hierarchyIdentifier;
     }
 
+    /**
+     * Kind of the resource
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -44,6 +56,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Location where the resource is stored
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +67,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * A collection of offerings for the security connector.
+     * 
+     */
     @InputImport(name="offerings")
     private final @Nullable Input<List<Object>> offerings;
 
@@ -58,6 +78,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
         return this.offerings == null ? Input.empty() : this.offerings;
     }
 
+    /**
+     * The multi cloud account's organizational data
+     * 
+     */
     @InputImport(name="organizationalData")
     private final @Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
 
@@ -65,6 +89,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
         return this.organizationalData == null ? Input.empty() : this.organizationalData;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -72,6 +100,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The security connector name.
+     * 
+     */
     @InputImport(name="securityConnectorName")
     private final @Nullable Input<String> securityConnectorName;
 
@@ -79,6 +111,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
         return this.securityConnectorName == null ? Input.empty() : this.securityConnectorName;
     }
 
+    /**
+     * A list of key value pairs that describe the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

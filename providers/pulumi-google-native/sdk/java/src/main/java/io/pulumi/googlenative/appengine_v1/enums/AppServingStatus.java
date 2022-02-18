@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Serving status of this application.
+     * 
+     */
     @EnumType
     public enum AppServingStatus {
+        /**
+         * Serving status is unspecified.
+         * 
+         */
         Unspecified("UNSPECIFIED"),
+        /**
+         * Application is serving.
+         * 
+         */
         Serving("SERVING"),
+        /**
+         * Application has been disabled by the user.
+         * 
+         */
         UserDisabled("USER_DISABLED"),
+        /**
+         * Application has been disabled by the system.
+         * 
+         */
         SystemDisabled("SYSTEM_DISABLED");
 
         private final String value;

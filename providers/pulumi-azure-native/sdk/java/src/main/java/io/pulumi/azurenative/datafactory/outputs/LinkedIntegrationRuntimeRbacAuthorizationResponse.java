@@ -12,8 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
+    /**
+     * The authorization type for integration runtime sharing.
+     * Expected value is 'RBAC'.
+     * 
+     */
     private final String authorizationType;
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     private final @Nullable CredentialReferenceResponse credential;
+    /**
+     * The resource identifier of the integration runtime to be shared.
+     * 
+     */
     private final String resourceId;
 
     @OutputCustomType.Constructor({"authorizationType","credential","resourceId"})
@@ -26,12 +39,25 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
         this.resourceId = Objects.requireNonNull(resourceId);
     }
 
+    /**
+     * The authorization type for integration runtime sharing.
+     * Expected value is 'RBAC'.
+     * 
+     */
     public String getAuthorizationType() {
         return this.authorizationType;
     }
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
+    /**
+     * The resource identifier of the integration runtime to be shared.
+     * 
+     */
     public String getResourceId() {
         return this.resourceId;
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceGroupManager {
+/**
+ * Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
+ * 
+ */
     public static CompletableFuture<GetInstanceGroupManagerResult> invokeAsync(GetInstanceGroupManagerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getInstanceGroupManager", TypeShape.of(GetInstanceGroupManagerResult.class), args == null ? GetInstanceGroupManagerArgs.Empty : args, Utilities.withVersion(options));
     }

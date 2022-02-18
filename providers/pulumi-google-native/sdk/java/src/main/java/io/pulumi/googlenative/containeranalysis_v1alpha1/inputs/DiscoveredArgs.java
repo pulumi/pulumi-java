@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Provides information about the scan status of a discovered resource.
+ * 
+ */
 public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiscoveredArgs Empty = new DiscoveredArgs();
 
+    /**
+     * The status of discovery for the resource.
+     * 
+     */
     @InputImport(name="analysisStatus")
     private final @Nullable Input<DiscoveredAnalysisStatus> analysisStatus;
 
@@ -24,6 +32,10 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
         return this.analysisStatus == null ? Input.empty() : this.analysisStatus;
     }
 
+    /**
+     * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage output only and populated by the API.
+     * 
+     */
     @InputImport(name="analysisStatusError")
     private final @Nullable Input<StatusArgs> analysisStatusError;
 
@@ -31,6 +43,10 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
         return this.analysisStatusError == null ? Input.empty() : this.analysisStatusError;
     }
 
+    /**
+     * Whether the resource is continuously analyzed.
+     * 
+     */
     @InputImport(name="continuousAnalysis")
     private final @Nullable Input<DiscoveredContinuousAnalysis> continuousAnalysis;
 
@@ -38,6 +54,10 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
         return this.continuousAnalysis == null ? Input.empty() : this.continuousAnalysis;
     }
 
+    /**
+     * The CPE of the resource being scanned.
+     * 
+     */
     @InputImport(name="cpe")
     private final @Nullable Input<String> cpe;
 

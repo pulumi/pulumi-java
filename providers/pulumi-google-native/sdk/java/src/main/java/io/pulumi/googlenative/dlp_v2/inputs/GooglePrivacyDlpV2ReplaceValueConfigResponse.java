@@ -8,10 +8,18 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.Objects;
 
 
+/**
+ * Replace each input value with a given `Value`.
+ * 
+ */
 public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ReplaceValueConfigResponse Empty = new GooglePrivacyDlpV2ReplaceValueConfigResponse();
 
+    /**
+     * Value to replace it with.
+     * 
+     */
     @InputImport(name="newValue", required=true)
     private final GooglePrivacyDlpV2ValueResponse newValue;
 

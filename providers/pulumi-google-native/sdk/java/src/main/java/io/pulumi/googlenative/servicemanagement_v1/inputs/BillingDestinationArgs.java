@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration of a specific billing destination (Currently only support bill against consumer project).
+ * 
+ */
 public final class BillingDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BillingDestinationArgs Empty = new BillingDestinationArgs();
 
+    /**
+     * Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
+     * 
+     */
     @InputImport(name="metrics")
     private final @Nullable Input<List<String>> metrics;
 
@@ -22,6 +30,10 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
         return this.metrics == null ? Input.empty() : this.metrics;
     }
 
+    /**
+     * The monitored resource type. The type must be defined in Service.monitored_resources section.
+     * 
+     */
     @InputImport(name="monitoredResource")
     private final @Nullable Input<String> monitoredResource;
 

@@ -18,6 +18,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     public static final VirtualMachineExtensionArgs Empty = new VirtualMachineExtensionArgs();
 
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
@@ -25,6 +29,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
     }
 
+    /**
+     * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
+     * 
+     */
     @InputImport(name="enableAutomaticUpgrade")
     private final @Nullable Input<Boolean> enableAutomaticUpgrade;
 
@@ -32,6 +40,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.enableAutomaticUpgrade == null ? Input.empty() : this.enableAutomaticUpgrade;
     }
 
+    /**
+     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * 
+     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable Input<String> forceUpdateTag;
 
@@ -39,6 +51,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
     }
 
+    /**
+     * The virtual machine extension instance view.
+     * 
+     */
     @InputImport(name="instanceView")
     private final @Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView;
 
@@ -46,6 +62,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.instanceView == null ? Input.empty() : this.instanceView;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,6 +73,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     @InputImport(name="protectedSettings")
     private final @Nullable Input<Object> protectedSettings;
 
@@ -60,6 +84,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
     }
 
+    /**
+     * The name of the extension handler publisher.
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -67,6 +95,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +106,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Json formatted public settings for the extension.
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Input<Object> settings;
 
@@ -81,6 +117,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.settings == null ? Input.empty() : this.settings;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -88,6 +128,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -95,6 +139,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable Input<String> typeHandlerVersion;
 
@@ -102,6 +150,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
     }
 
+    /**
+     * The name of the virtual machine extension.
+     * 
+     */
     @InputImport(name="vmExtensionName")
     private final @Nullable Input<String> vmExtensionName;
 
@@ -109,6 +161,10 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
         return this.vmExtensionName == null ? Input.empty() : this.vmExtensionName;
     }
 
+    /**
+     * The name of the virtual machine where the extension should be created or updated.
+     * 
+     */
     @InputImport(name="vmName", required=true)
     private final Input<String> vmName;
 

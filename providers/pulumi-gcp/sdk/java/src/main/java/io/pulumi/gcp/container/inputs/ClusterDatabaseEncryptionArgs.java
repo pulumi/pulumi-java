@@ -14,6 +14,10 @@ public final class ClusterDatabaseEncryptionArgs extends io.pulumi.resources.Res
 
     public static final ClusterDatabaseEncryptionArgs Empty = new ClusterDatabaseEncryptionArgs();
 
+    /**
+     * the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
+     * 
+     */
     @InputImport(name="keyName")
     private final @Nullable Input<String> keyName;
 
@@ -21,6 +25,10 @@ public final class ClusterDatabaseEncryptionArgs extends io.pulumi.resources.Res
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
+    /**
+     * `ENCRYPTED` or `DECRYPTED`
+     * 
+     */
     @InputImport(name="state", required=true)
     private final Input<String> state;
 

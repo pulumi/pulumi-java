@@ -17,6 +17,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * The API version for this call such as "serving.knative.dev/v1".
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -31,6 +35,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dryRun == null ? Input.empty() : this.dryRun;
     }
 
+    /**
+     * The kind of resource, in this case "Service".
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -45,6 +53,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -59,6 +71,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Spec holds the desired state of the Service (from the client).
+     * 
+     */
     @InputImport(name="spec")
     private final @Nullable Input<ServiceSpecArgs> spec;
 
@@ -66,6 +82,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.spec == null ? Input.empty() : this.spec;
     }
 
+    /**
+     * Status communicates the observed state of the Service (from the controller).
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<ServiceStatusArgs> status;
 

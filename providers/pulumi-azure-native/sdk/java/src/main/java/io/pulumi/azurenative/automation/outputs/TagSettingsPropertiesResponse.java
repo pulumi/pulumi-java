@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TagSettingsPropertiesResponse {
+    /**
+     * Filter VMs by Any or All specified tags.
+     * 
+     */
     private final @Nullable String filterOperator;
+    /**
+     * Dictionary of tags with its list of values.
+     * 
+     */
     private final @Nullable Map<String,List<String>> tags;
 
     @OutputCustomType.Constructor({"filterOperator","tags"})
@@ -24,9 +32,17 @@ public final class TagSettingsPropertiesResponse {
         this.tags = tags;
     }
 
+    /**
+     * Filter VMs by Any or All specified tags.
+     * 
+     */
     public Optional<String> getFilterOperator() {
         return Optional.ofNullable(this.filterOperator);
     }
+    /**
+     * Dictionary of tags with its list of values.
+     * 
+     */
     public Map<String,List<String>> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

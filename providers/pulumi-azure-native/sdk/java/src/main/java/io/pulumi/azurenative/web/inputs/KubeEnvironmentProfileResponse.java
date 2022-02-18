@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification for a Kubernetes Environment to use for this resource.
+ * 
+ */
 public final class KubeEnvironmentProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubeEnvironmentProfileResponse Empty = new KubeEnvironmentProfileResponse();
 
+    /**
+     * Resource ID of the Kubernetes Environment.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class KubeEnvironmentProfileResponse extends io.pulumi.resources.In
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Name of the Kubernetes Environment.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +40,10 @@ public final class KubeEnvironmentProfileResponse extends io.pulumi.resources.In
         return this.name;
     }
 
+    /**
+     * Resource type of the Kubernetes Environment.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

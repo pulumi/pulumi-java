@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The qos type of the pool
+     * 
+     */
     @EnumType
     public enum QosType {
+        /**
+         * qos type Auto
+         * 
+         */
         Auto("Auto"),
+        /**
+         * qos type Manual
+         * 
+         */
         Manual("Manual");
 
         private final String value;

@@ -14,39 +14,124 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * OAuth brand data. Only "Organization Internal" brands can be created
+ * programmatically via API. To convert it into an external brands
+ * please use the GCP Console.
+ * 
+ * > **Note:** Brands can only be created once for a Google Cloud
+ * project and the underlying Google API doesn't not support DELETE or PATCH methods.
+ * Destroying a provider-managed Brand will remove it from state
+ * but *will not delete it from Google Cloud.*
+ * 
+ * To get more information about Brand, see:
+ * 
+ * * [API documentation](https://cloud.google.com/iap/docs/reference/rest/v1/projects.brands)
+ * * How-to Guides
+ *     * [Setting up IAP Brand](https://cloud.google.com/iap/docs/tutorial-gce#set_up_iap)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Brand can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:iap/brand:Brand default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:iap/brand:Brand")
 public class Brand extends io.pulumi.resources.CustomResource {
+    /**
+     * Application name displayed on OAuth consent screen.
+     * 
+     */
     @OutputExport(name="applicationTitle", type=String.class, parameters={})
     private Output<String> applicationTitle;
 
+    /**
+     * @return Application name displayed on OAuth consent screen.
+     * 
+     */
     public Output<String> getApplicationTitle() {
         return this.applicationTitle;
     }
+    /**
+     * Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
+     * identification corresponds to the project number as only one brand per project can be created.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
+     * identification corresponds to the project number as only one brand per project can be created.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Whether the brand is only intended for usage inside the GSuite organization only.
+     * 
+     */
     @OutputExport(name="orgInternalOnly", type=Boolean.class, parameters={})
     private Output<Boolean> orgInternalOnly;
 
+    /**
+     * @return Whether the brand is only intended for usage inside the GSuite organization only.
+     * 
+     */
     public Output<Boolean> getOrgInternalOnly() {
         return this.orgInternalOnly;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Support email displayed on the OAuth consent screen. Can be either a
+     * user or group email. When a user email is specified, the caller must
+     * be the user with the associated email address. When a group email is
+     * specified, the caller can be either a user or a service account which
+     * is an owner of the specified group in Cloud Identity.
+     * 
+     */
     @OutputExport(name="supportEmail", type=String.class, parameters={})
     private Output<String> supportEmail;
 
+    /**
+     * @return Support email displayed on the OAuth consent screen. Can be either a
+     * user or group email. When a user email is specified, the caller must
+     * be the user with the associated email address. When a group email is
+     * specified, the caller can be either a user or a service account which
+     * is an owner of the specified group in Cloud Identity.
+     * 
+     */
     public Output<String> getSupportEmail() {
         return this.supportEmail;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Brand(String name, BrandArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iap/brand:Brand", name, args == null ? BrandArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +147,15 @@ public class Brand extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Brand get(String name, Input<String> id, @Nullable BrandState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Brand(name, id, state, options);
     }

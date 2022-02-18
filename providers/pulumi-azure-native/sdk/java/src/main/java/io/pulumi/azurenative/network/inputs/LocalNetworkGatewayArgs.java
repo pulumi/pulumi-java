@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A common class for general resource information.
+ * 
+ */
 public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocalNetworkGatewayArgs Empty = new LocalNetworkGatewayArgs();
 
+    /**
+     * Local network gateway's BGP speaker settings.
+     * 
+     */
     @InputImport(name="bgpSettings")
     private final @Nullable Input<BgpSettingsArgs> bgpSettings;
 
@@ -24,6 +32,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
         return this.bgpSettings == null ? Input.empty() : this.bgpSettings;
     }
 
+    /**
+     * FQDN of local network gateway.
+     * 
+     */
     @InputImport(name="fqdn")
     private final @Nullable Input<String> fqdn;
 
@@ -31,6 +43,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
         return this.fqdn == null ? Input.empty() : this.fqdn;
     }
 
+    /**
+     * IP address of local network gateway.
+     * 
+     */
     @InputImport(name="gatewayIpAddress")
     private final @Nullable Input<String> gatewayIpAddress;
 
@@ -38,6 +54,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
         return this.gatewayIpAddress == null ? Input.empty() : this.gatewayIpAddress;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -45,6 +65,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Local network site address space.
+     * 
+     */
     @InputImport(name="localNetworkAddressSpace")
     private final @Nullable Input<AddressSpaceArgs> localNetworkAddressSpace;
 
@@ -52,6 +76,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
         return this.localNetworkAddressSpace == null ? Input.empty() : this.localNetworkAddressSpace;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,6 +87,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

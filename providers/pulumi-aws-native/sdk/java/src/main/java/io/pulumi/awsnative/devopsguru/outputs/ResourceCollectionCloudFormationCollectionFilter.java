@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceCollectionCloudFormationCollectionFilter {
+    /**
+     * An array of CloudFormation stack names.
+     * 
+     */
     private final @Nullable List<String> stackNames;
 
     @OutputCustomType.Constructor({"stackNames"})
@@ -18,6 +22,10 @@ public final class ResourceCollectionCloudFormationCollectionFilter {
         this.stackNames = stackNames;
     }
 
+    /**
+     * An array of CloudFormation stack names.
+     * 
+     */
     public List<String> getStackNames() {
         return this.stackNames == null ? List.of() : this.stackNames;
     }

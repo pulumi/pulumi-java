@@ -15,6 +15,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::AppStream::Application
+ * 
+ */
 @ResourceType(type="aws-native:appstream:Application")
 public class Application extends io.pulumi.resources.CustomResource {
     @OutputExport(name="appBlockArn", type=String.class, parameters={})
@@ -102,6 +106,12 @@ public class Application extends io.pulumi.resources.CustomResource {
         return this.workingDirectory;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:appstream:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -117,6 +127,14 @@ public class Application extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Application get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Application(name, id, options);
     }

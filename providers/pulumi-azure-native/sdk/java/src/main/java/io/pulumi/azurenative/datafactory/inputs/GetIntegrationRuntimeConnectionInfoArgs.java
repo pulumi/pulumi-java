@@ -12,6 +12,10 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends io.pulumi.res
 
     public static final GetIntegrationRuntimeConnectionInfoArgs Empty = new GetIntegrationRuntimeConnectionInfoArgs();
 
+    /**
+     * The factory name.
+     * 
+     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends io.pulumi.res
         return this.factoryName;
     }
 
+    /**
+     * The integration runtime name.
+     * 
+     */
     @InputImport(name="integrationRuntimeName", required=true)
     private final String integrationRuntimeName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends io.pulumi.res
         return this.integrationRuntimeName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

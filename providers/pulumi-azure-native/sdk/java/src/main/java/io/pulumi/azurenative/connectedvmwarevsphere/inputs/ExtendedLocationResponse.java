@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The extended location.
+ * 
+ */
 public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtendedLocationResponse Empty = new ExtendedLocationResponse();
 
+    /**
+     * The extended location name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeAr
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The extended location type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

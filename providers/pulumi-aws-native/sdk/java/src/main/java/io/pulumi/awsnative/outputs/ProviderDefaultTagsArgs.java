@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProviderDefaultTagsArgs {
+    /**
+     * A group of tags to set across all resources.
+     * 
+     */
     private final @Nullable Input<Map<String,String>> tags;
 
     @OutputCustomType.Constructor({"tags"})
@@ -19,6 +23,10 @@ public final class ProviderDefaultTagsArgs {
         this.tags = tags;
     }
 
+    /**
+     * A group of tags to set across all resources.
+     * 
+     */
     public @Nullable Input<Map<String,String>> getTags() {
         return this.tags;
     }

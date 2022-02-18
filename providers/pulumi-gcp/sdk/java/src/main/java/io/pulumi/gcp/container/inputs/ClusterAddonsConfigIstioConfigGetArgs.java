@@ -15,6 +15,10 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
 
     public static final ClusterAddonsConfigIstioConfigGetArgs Empty = new ClusterAddonsConfigIstioConfigGetArgs();
 
+    /**
+     * The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
+     * 
+     */
     @InputImport(name="auth")
     private final @Nullable Input<String> auth;
 
@@ -22,6 +26,11 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
         return this.auth == null ? Input.empty() : this.auth;
     }
 
+    /**
+     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     @InputImport(name="disabled", required=true)
     private final Input<Boolean> disabled;
 

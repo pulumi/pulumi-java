@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
+     * 
+     */
     @EnumType
     public enum RequestSource {
         Rest("rest");

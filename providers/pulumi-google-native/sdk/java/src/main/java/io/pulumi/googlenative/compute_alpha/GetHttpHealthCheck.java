@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHttpHealthCheck {
+/**
+ * Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
+ * 
+ */
     public static CompletableFuture<GetHttpHealthCheckResult> invokeAsync(GetHttpHealthCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getHttpHealthCheck", TypeShape.of(GetHttpHealthCheckResult.class), args == null ? GetHttpHealthCheckArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,7 +13,17 @@ import javax.annotation.Nullable;
 public final class InstanceNetworkInterfaceIpv6AccessConfig {
     private final @Nullable String externalIpv6;
     private final @Nullable String externalIpv6PrefixLength;
+    /**
+     * The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     private final String networkTier;
+    /**
+     * The domain name to be used when creating DNSv6
+     * records for the external IPv6 ranges..
+     * 
+     */
     private final @Nullable String publicPtrDomainName;
 
     @OutputCustomType.Constructor({"externalIpv6","externalIpv6PrefixLength","networkTier","publicPtrDomainName"})
@@ -34,9 +44,19 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
     public Optional<String> getExternalIpv6PrefixLength() {
         return Optional.ofNullable(this.externalIpv6PrefixLength);
     }
+    /**
+     * The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     public String getNetworkTier() {
         return this.networkTier;
     }
+    /**
+     * The domain name to be used when creating DNSv6
+     * records for the external IPv6 ranges..
+     * 
+     */
     public Optional<String> getPublicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }

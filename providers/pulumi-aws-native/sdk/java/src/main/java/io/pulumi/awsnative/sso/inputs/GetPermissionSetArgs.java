@@ -12,6 +12,10 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPermissionSetArgs Empty = new GetPermissionSetArgs();
 
+    /**
+     * The sso instance arn that the permission set is owned.
+     * 
+     */
     @InputImport(name="instanceArn", required=true)
     private final String instanceArn;
 
@@ -19,6 +23,10 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
         return this.instanceArn;
     }
 
+    /**
+     * The permission set that the policy will be attached to
+     * 
+     */
     @InputImport(name="permissionSetArn", required=true)
     private final String permissionSetArn;
 

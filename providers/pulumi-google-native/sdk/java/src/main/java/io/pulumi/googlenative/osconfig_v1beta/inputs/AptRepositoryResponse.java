@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents a single Apt package repository. This repository is added to a repo file that is stored at `/etc/apt/sources.list.d/google_osconfig.list`.
+ * 
+ */
 public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AptRepositoryResponse Empty = new AptRepositoryResponse();
 
+    /**
+     * Type of archive files in this repository. The default behavior is DEB.
+     * 
+     */
     @InputImport(name="archiveType", required=true)
     private final String archiveType;
 
@@ -20,6 +28,10 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
         return this.archiveType;
     }
 
+    /**
+     * List of components for this repository. Must contain at least one item.
+     * 
+     */
     @InputImport(name="components", required=true)
     private final List<String> components;
 
@@ -27,6 +39,10 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
         return this.components;
     }
 
+    /**
+     * Distribution of this repository.
+     * 
+     */
     @InputImport(name="distribution", required=true)
     private final String distribution;
 
@@ -34,6 +50,10 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
         return this.distribution;
     }
 
+    /**
+     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.
+     * 
+     */
     @InputImport(name="gpgKey", required=true)
     private final String gpgKey;
 
@@ -41,6 +61,10 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
         return this.gpgKey;
     }
 
+    /**
+     * URI for this repository.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

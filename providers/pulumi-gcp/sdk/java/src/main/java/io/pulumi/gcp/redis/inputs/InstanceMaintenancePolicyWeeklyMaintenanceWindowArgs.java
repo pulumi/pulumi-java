@@ -15,6 +15,19 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
 
     public static final InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs Empty = new InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs();
 
+    /**
+     * Required. The day of week that maintenance updates occur.
+     * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+     * - MONDAY: Monday
+     * - TUESDAY: Tuesday
+     * - WEDNESDAY: Wednesday
+     * - THURSDAY: Thursday
+     * - FRIDAY: Friday
+     * - SATURDAY: Saturday
+     * - SUNDAY: Sunday
+     *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     @InputImport(name="day", required=true)
     private final Input<String> day;
 
@@ -22,6 +35,14 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
         return this.day;
     }
 
+    /**
+     * - 
+     * Output only. Duration of the maintenance window.
+     * The current window is fixed at 1 hour.
+     * A duration in seconds with up to nine fractional digits,
+     * terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="duration")
     private final @Nullable Input<String> duration;
 
@@ -29,6 +50,13 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
         return this.duration == null ? Input.empty() : this.duration;
     }
 
+    /**
+     * - 
+     * Output only. The start time of any upcoming scheduled maintenance for this instance.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final Input<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
 

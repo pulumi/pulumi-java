@@ -13,12 +13,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPrivateLinkScopeResult {
+    /**
+     * Azure resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Resource location
+     * 
+     */
     private final String location;
+    /**
+     * Azure resource name
+     * 
+     */
     private final String name;
+    /**
+     * List of private endpoint connections.
+     * 
+     */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    /**
+     * Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Azure resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","privateEndpointConnections","provisioningState","tags","type"})
@@ -39,24 +67,52 @@ public final class GetPrivateLinkScopeResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Azure resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource location
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * List of private endpoint connections.
+     * 
+     */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

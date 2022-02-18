@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecretReplication {
+    /**
+     * The Secret will automatically be replicated without any restrictions.
+     * 
+     */
     private final @Nullable Boolean automatic;
+    /**
+     * The Secret will automatically be replicated without any restrictions.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable SecretReplicationUserManaged userManaged;
 
     @OutputCustomType.Constructor({"automatic","userManaged"})
@@ -23,9 +32,18 @@ public final class SecretReplication {
         this.userManaged = userManaged;
     }
 
+    /**
+     * The Secret will automatically be replicated without any restrictions.
+     * 
+     */
     public Optional<Boolean> getAutomatic() {
         return Optional.ofNullable(this.automatic);
     }
+    /**
+     * The Secret will automatically be replicated without any restrictions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<SecretReplicationUserManaged> getUserManaged() {
         return Optional.ofNullable(this.userManaged);
     }

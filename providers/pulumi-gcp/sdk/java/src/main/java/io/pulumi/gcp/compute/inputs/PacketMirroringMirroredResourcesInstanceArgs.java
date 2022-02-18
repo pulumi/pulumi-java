@@ -13,6 +13,10 @@ public final class PacketMirroringMirroredResourcesInstanceArgs extends io.pulum
 
     public static final PacketMirroringMirroredResourcesInstanceArgs Empty = new PacketMirroringMirroredResourcesInstanceArgs();
 
+    /**
+     * The URL of the instances where this rule should be active.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

@@ -16,6 +16,10 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
 
     public static final WebAppAzureStorageAccountsArgs Empty = new WebAppAzureStorageAccountsArgs();
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -23,6 +27,10 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -30,6 +38,10 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
         return this.name;
     }
 
+    /**
+     * Azure storage accounts.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,AzureStorageInfoValueArgs>> properties;
 
@@ -37,6 +49,10 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

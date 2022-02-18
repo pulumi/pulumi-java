@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RelationshipTypeFieldMappingResponse {
+    /**
+     * Specifies the fieldName in profile.
+     * 
+     */
     private final String profileFieldName;
+    /**
+     * Specifies the KeyProperty (from StrongId) of the related profile.
+     * 
+     */
     private final String relatedProfileKeyProperty;
 
     @OutputCustomType.Constructor({"profileFieldName","relatedProfileKeyProperty"})
@@ -20,9 +28,17 @@ public final class RelationshipTypeFieldMappingResponse {
         this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
     }
 
+    /**
+     * Specifies the fieldName in profile.
+     * 
+     */
     public String getProfileFieldName() {
         return this.profileFieldName;
     }
+    /**
+     * Specifies the KeyProperty (from StrongId) of the related profile.
+     * 
+     */
     public String getRelatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }

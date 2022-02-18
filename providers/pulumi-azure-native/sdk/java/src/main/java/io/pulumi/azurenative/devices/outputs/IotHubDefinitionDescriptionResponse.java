@@ -13,10 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IotHubDefinitionDescriptionResponse {
+    /**
+     * weight to apply for a given iot h.
+     * 
+     */
     private final @Nullable Integer allocationWeight;
+    /**
+     * flag for applying allocationPolicy or not for a given iot hub.
+     * 
+     */
     private final @Nullable Boolean applyAllocationPolicy;
+    /**
+     * Connection string of the IoT hub.
+     * 
+     */
     private final String connectionString;
+    /**
+     * ARM region of the IoT hub.
+     * 
+     */
     private final String location;
+    /**
+     * Host name of the IoT hub.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"allocationWeight","applyAllocationPolicy","connectionString","location","name"})
@@ -33,18 +53,38 @@ public final class IotHubDefinitionDescriptionResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * weight to apply for a given iot h.
+     * 
+     */
     public Optional<Integer> getAllocationWeight() {
         return Optional.ofNullable(this.allocationWeight);
     }
+    /**
+     * flag for applying allocationPolicy or not for a given iot hub.
+     * 
+     */
     public Optional<Boolean> getApplyAllocationPolicy() {
         return Optional.ofNullable(this.applyAllocationPolicy);
     }
+    /**
+     * Connection string of the IoT hub.
+     * 
+     */
     public String getConnectionString() {
         return this.connectionString;
     }
+    /**
+     * ARM region of the IoT hub.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Host name of the IoT hub.
+     * 
+     */
     public String getName() {
         return this.name;
     }

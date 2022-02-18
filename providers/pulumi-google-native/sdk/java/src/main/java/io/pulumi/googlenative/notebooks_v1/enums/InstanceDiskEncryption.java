@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+     * 
+     */
     @EnumType
     public enum InstanceDiskEncryption {
+        /**
+         * Disk encryption is not specified.
+         * 
+         */
         DiskEncryptionUnspecified("DISK_ENCRYPTION_UNSPECIFIED"),
+        /**
+         * Use Google managed encryption keys to encrypt the boot disk.
+         * 
+         */
         Gmek("GMEK"),
+        /**
+         * Use customer managed encryption keys to encrypt the boot disk.
+         * 
+         */
         Cmek("CMEK");
 
         private final String value;

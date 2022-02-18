@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StreamModeDetails {
+    /**
+     * The mode of the stream
+     * 
+     */
     private final StreamModeDetailsStreamMode streamMode;
 
     @OutputCustomType.Constructor({"streamMode"})
@@ -16,6 +20,10 @@ public final class StreamModeDetails {
         this.streamMode = Objects.requireNonNull(streamMode);
     }
 
+    /**
+     * The mode of the stream
+     * 
+     */
     public StreamModeDetailsStreamMode getStreamMode() {
         return this.streamMode;
     }

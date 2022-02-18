@@ -16,11 +16,23 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Contains a list of IP addresses. This can be either IPV4 or IPV6. The list will be mutually
+ * 
+ */
 @ResourceType(type="aws-native:wafv2:IPSet")
 public class IPSet extends io.pulumi.resources.CustomResource {
+    /**
+     * List of IPAddresses.
+     * 
+     */
     @OutputExport(name="addresses", type=List.class, parameters={String.class})
     private Output<List<String>> addresses;
 
+    /**
+     * @return List of IPAddresses.
+     * 
+     */
     public Output<List<String>> getAddresses() {
         return this.addresses;
     }
@@ -61,6 +73,12 @@ public class IPSet extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IPSet(String name, IPSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:wafv2:IPSet", name, args == null ? IPSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +94,14 @@ public class IPSet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IPSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IPSet(name, id, options);
     }

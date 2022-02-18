@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
+    /**
+     * Target bytes read per second.
+     * 
+     */
     private final @Nullable Integer targetReadBytesPerSecond;
+    /**
+     * Target ops read per seconds.
+     * 
+     */
     private final @Nullable Integer targetReadOpsPerSecond;
+    /**
+     * Target bytes written per second.
+     * 
+     */
     private final @Nullable Integer targetWriteBytesPerSecond;
+    /**
+     * Target ops written per second.
+     * 
+     */
     private final @Nullable Integer targetWriteOpsPerSecond;
 
     @OutputCustomType.Constructor({"targetReadBytesPerSecond","targetReadOpsPerSecond","targetWriteBytesPerSecond","targetWriteOpsPerSecond"})
@@ -28,15 +44,31 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
         this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
     }
 
+    /**
+     * Target bytes read per second.
+     * 
+     */
     public Optional<Integer> getTargetReadBytesPerSecond() {
         return Optional.ofNullable(this.targetReadBytesPerSecond);
     }
+    /**
+     * Target ops read per seconds.
+     * 
+     */
     public Optional<Integer> getTargetReadOpsPerSecond() {
         return Optional.ofNullable(this.targetReadOpsPerSecond);
     }
+    /**
+     * Target bytes written per second.
+     * 
+     */
     public Optional<Integer> getTargetWriteBytesPerSecond() {
         return Optional.ofNullable(this.targetWriteBytesPerSecond);
     }
+    /**
+     * Target ops written per second.
+     * 
+     */
     public Optional<Integer> getTargetWriteOpsPerSecond() {
         return Optional.ofNullable(this.targetWriteOpsPerSecond);
     }

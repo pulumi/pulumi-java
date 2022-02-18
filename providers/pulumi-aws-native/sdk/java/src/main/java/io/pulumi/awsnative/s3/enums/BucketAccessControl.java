@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A canned access control list (ACL) that grants predefined permissions to the bucket.
+     * 
+     */
     @EnumType
     public enum BucketAccessControl {
         AuthenticatedRead("AuthenticatedRead"),

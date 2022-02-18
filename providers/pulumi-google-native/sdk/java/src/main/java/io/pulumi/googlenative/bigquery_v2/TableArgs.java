@@ -26,6 +26,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableArgs Empty = new TableArgs();
 
+    /**
+     * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
+     * 
+     */
     @InputImport(name="clustering")
     private final @Nullable Input<ClusteringArgs> clustering;
 
@@ -40,6 +44,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetId;
     }
 
+    /**
+     * [Optional] A user-friendly description of this table.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -47,6 +55,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Custom encryption configuration (e.g., Cloud KMS keys).
+     * 
+     */
     @InputImport(name="encryptionConfiguration")
     private final @Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration;
 
@@ -54,6 +66,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
+    /**
+     * [Optional] The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to set a default expirationTime on newly created tables.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -61,6 +77,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * [Optional] Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
+     * 
+     */
     @InputImport(name="externalDataConfiguration")
     private final @Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration;
 
@@ -68,6 +88,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.externalDataConfiguration == null ? Input.empty() : this.externalDataConfiguration;
     }
 
+    /**
+     * [Optional] A descriptive name for this table.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -75,6 +99,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * The labels associated with this table. You can use these to organize and group your tables. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -82,6 +110,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * [Optional] Materialized view definition.
+     * 
+     */
     @InputImport(name="materializedView")
     private final @Nullable Input<MaterializedViewDefinitionArgs> materializedView;
 
@@ -89,6 +121,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.materializedView == null ? Input.empty() : this.materializedView;
     }
 
+    /**
+     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.
+     * 
+     */
     @InputImport(name="model")
     private final @Nullable Input<ModelDefinitionArgs> model;
 
@@ -103,6 +139,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
+     * 
+     */
     @InputImport(name="rangePartitioning")
     private final @Nullable Input<RangePartitioningArgs> rangePartitioning;
 
@@ -110,6 +150,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.rangePartitioning == null ? Input.empty() : this.rangePartitioning;
     }
 
+    /**
+     * [Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
+     * 
+     */
     @InputImport(name="requirePartitionFilter")
     private final @Nullable Input<Boolean> requirePartitionFilter;
 
@@ -117,6 +161,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
     }
 
+    /**
+     * [Optional] Describes the schema of this table.
+     * 
+     */
     @InputImport(name="schema")
     private final @Nullable Input<TableSchemaArgs> schema;
 
@@ -124,6 +172,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * [Required] Reference describing the ID of this table.
+     * 
+     */
     @InputImport(name="tableReference")
     private final @Nullable Input<TableReferenceArgs> tableReference;
 
@@ -131,6 +183,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.tableReference == null ? Input.empty() : this.tableReference;
     }
 
+    /**
+     * Time-based partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
+     * 
+     */
     @InputImport(name="timePartitioning")
     private final @Nullable Input<TimePartitioningArgs> timePartitioning;
 
@@ -138,6 +194,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.timePartitioning == null ? Input.empty() : this.timePartitioning;
     }
 
+    /**
+     * [Optional] The view definition.
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable Input<ViewDefinitionArgs> view;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines an early termination policy based on running averages of the primary metric of all runs.
+ * 
+ */
 public final class MedianStoppingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MedianStoppingPolicyResponse Empty = new MedianStoppingPolicyResponse();
 
+    /**
+     * Number of intervals by which to delay the first evaluation.
+     * 
+     */
     @InputImport(name="delayEvaluation")
     private final @Nullable Integer delayEvaluation;
 
@@ -22,6 +30,10 @@ public final class MedianStoppingPolicyResponse extends io.pulumi.resources.Invo
         return this.delayEvaluation == null ? Optional.empty() : Optional.ofNullable(this.delayEvaluation);
     }
 
+    /**
+     * Interval (number of runs) between policy evaluations.
+     * 
+     */
     @InputImport(name="evaluationInterval")
     private final @Nullable Integer evaluationInterval;
 
@@ -29,6 +41,10 @@ public final class MedianStoppingPolicyResponse extends io.pulumi.resources.Invo
         return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
     }
 
+    /**
+     * Expected value is 'MedianStopping'.
+     * 
+     */
     @InputImport(name="policyType", required=true)
     private final String policyType;
 

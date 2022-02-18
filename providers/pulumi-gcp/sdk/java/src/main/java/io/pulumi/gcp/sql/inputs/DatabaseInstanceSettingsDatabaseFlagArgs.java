@@ -13,6 +13,10 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
 
     public static final DatabaseInstanceSettingsDatabaseFlagArgs Empty = new DatabaseInstanceSettingsDatabaseFlagArgs();
 
+    /**
+     * A name for this whitelist entry.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +24,12 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
         return this.name;
     }
 
+    /**
+     * A CIDR notation IPv4 or IPv6 address that is allowed to
+     * access this instance. Must be set even if other two attributes are not for
+     * the whitelist to become active.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

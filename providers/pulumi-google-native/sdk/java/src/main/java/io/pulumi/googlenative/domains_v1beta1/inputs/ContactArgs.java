@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details required for a contact associated with a `Registration`.
+ * 
+ */
 public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactArgs Empty = new ContactArgs();
 
+    /**
+     * Email address of the contact.
+     * 
+     */
     @InputImport(name="email", required=true)
     private final Input<String> email;
 
@@ -22,6 +30,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.email;
     }
 
+    /**
+     * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
+     * 
+     */
     @InputImport(name="faxNumber")
     private final @Nullable Input<String> faxNumber;
 
@@ -29,6 +41,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.faxNumber == null ? Input.empty() : this.faxNumber;
     }
 
+    /**
+     * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
+     * 
+     */
     @InputImport(name="phoneNumber", required=true)
     private final Input<String> phoneNumber;
 
@@ -36,6 +52,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.phoneNumber;
     }
 
+    /**
+     * Postal address of the contact.
+     * 
+     */
     @InputImport(name="postalAddress", required=true)
     private final Input<PostalAddressArgs> postalAddress;
 

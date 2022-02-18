@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1PropertyResponse {
+    /**
+     * The property key
+     * 
+     */
     private final String name;
+    /**
+     * The property value
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +28,17 @@ public final class GoogleCloudApigeeV1PropertyResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The property key
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The property value
+     * 
+     */
     public String getValue() {
         return this.value;
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An alias to a repo revision.
+ * 
+ */
 public final class AliasContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AliasContextResponse Empty = new AliasContextResponse();
 
+    /**
+     * The alias kind.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -19,6 +27,10 @@ public final class AliasContextResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind;
     }
 
+    /**
+     * The alias name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

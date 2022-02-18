@@ -15,17 +15,65 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetEntitlementResult {
+    /**
+     * Association information to other entitlements.
+     * 
+     */
     private final GoogleCloudChannelV1AssociationInfoResponse associationInfo;
+    /**
+     * Commitment settings for a commitment-based Offer. Required for commitment based offers.
+     * 
+     */
     private final GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings;
+    /**
+     * The time at which the entitlement is created.
+     * 
+     */
     private final String createTime;
+    /**
+     * Resource name of an entitlement in the form: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}.
+     * 
+     */
     private final String name;
+    /**
+     * The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
+     * 
+     */
     private final String offer;
+    /**
+     * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
+     * 
+     */
     private final List<GoogleCloudChannelV1ParameterResponse> parameters;
+    /**
+     * Service provisioning details for the entitlement.
+     * 
+     */
     private final GoogleCloudChannelV1ProvisionedServiceResponse provisionedService;
+    /**
+     * Current provisioning state of the entitlement.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+     * 
+     */
     private final String purchaseOrderId;
+    /**
+     * Enumerable of all current suspension reasons for an entitlement.
+     * 
+     */
     private final List<String> suspensionReasons;
+    /**
+     * Settings for trial offers.
+     * 
+     */
     private final GoogleCloudChannelV1TrialSettingsResponse trialSettings;
+    /**
+     * The time at which the entitlement is updated.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"associationInfo","commitmentSettings","createTime","name","offer","parameters","provisionedService","provisioningState","purchaseOrderId","suspensionReasons","trialSettings","updateTime"})
@@ -56,39 +104,87 @@ public final class GetEntitlementResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * Association information to other entitlements.
+     * 
+     */
     public GoogleCloudChannelV1AssociationInfoResponse getAssociationInfo() {
         return this.associationInfo;
     }
+    /**
+     * Commitment settings for a commitment-based Offer. Required for commitment based offers.
+     * 
+     */
     public GoogleCloudChannelV1CommitmentSettingsResponse getCommitmentSettings() {
         return this.commitmentSettings;
     }
+    /**
+     * The time at which the entitlement is created.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Resource name of an entitlement in the form: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
+     * 
+     */
     public String getOffer() {
         return this.offer;
     }
+    /**
+     * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
+     * 
+     */
     public List<GoogleCloudChannelV1ParameterResponse> getParameters() {
         return this.parameters;
     }
+    /**
+     * Service provisioning details for the entitlement.
+     * 
+     */
     public GoogleCloudChannelV1ProvisionedServiceResponse getProvisionedService() {
         return this.provisionedService;
     }
+    /**
+     * Current provisioning state of the entitlement.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+     * 
+     */
     public String getPurchaseOrderId() {
         return this.purchaseOrderId;
     }
+    /**
+     * Enumerable of all current suspension reasons for an entitlement.
+     * 
+     */
     public List<String> getSuspensionReasons() {
         return this.suspensionReasons;
     }
+    /**
+     * Settings for trial offers.
+     * 
+     */
     public GoogleCloudChannelV1TrialSettingsResponse getTrialSettings() {
         return this.trialSettings;
     }
+    /**
+     * The time at which the entitlement is updated.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

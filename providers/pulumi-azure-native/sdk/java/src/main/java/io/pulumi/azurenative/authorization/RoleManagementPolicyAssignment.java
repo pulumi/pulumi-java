@@ -15,45 +15,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Role management policy
+ * API Version: 2020-10-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:authorization:RoleManagementPolicyAssignment b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 /providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicyAssignment/b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:authorization:RoleManagementPolicyAssignment")
 public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomResource {
+    /**
+     * The role management policy name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The role management policy name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Additional properties of scope, role definition and policy
+     * 
+     */
     @OutputExport(name="policyAssignmentProperties", type=PolicyAssignmentPropertiesResponse.class, parameters={})
     private Output<PolicyAssignmentPropertiesResponse> policyAssignmentProperties;
 
+    /**
+     * @return Additional properties of scope, role definition and policy
+     * 
+     */
     public Output<PolicyAssignmentPropertiesResponse> getPolicyAssignmentProperties() {
         return this.policyAssignmentProperties;
     }
+    /**
+     * The policy id role management policy assignment.
+     * 
+     */
     @OutputExport(name="policyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyId;
 
+    /**
+     * @return The policy id role management policy assignment.
+     * 
+     */
     public Output</* @Nullable */ String> getPolicyId() {
         return this.policyId;
     }
+    /**
+     * The role definition of management policy assignment.
+     * 
+     */
     @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleDefinitionId;
 
+    /**
+     * @return The role definition of management policy assignment.
+     * 
+     */
     public Output</* @Nullable */ String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
+    /**
+     * The role management policy scope.
+     * 
+     */
     @OutputExport(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
+    /**
+     * @return The role management policy scope.
+     * 
+     */
     public Output</* @Nullable */ String> getScope() {
         return this.scope;
     }
+    /**
+     * The role management policy type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The role management policy type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RoleManagementPolicyAssignment(String name, RoleManagementPolicyAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:RoleManagementPolicyAssignment", name, args == null ? RoleManagementPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -72,6 +141,14 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RoleManagementPolicyAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RoleManagementPolicyAssignment(name, id, options);
     }

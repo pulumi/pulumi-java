@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom header name and value.
+ * 
+ */
 public final class EndpointPropertiesResponseCustomHeaders extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointPropertiesResponseCustomHeaders Empty = new EndpointPropertiesResponseCustomHeaders();
 
+    /**
+     * Header name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class EndpointPropertiesResponseCustomHeaders extends io.pulumi.res
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Header value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

@@ -13,6 +13,10 @@ public final class AwsNodePoolMaxPodsConstraintGetArgs extends io.pulumi.resourc
 
     public static final AwsNodePoolMaxPodsConstraintGetArgs Empty = new AwsNodePoolMaxPodsConstraintGetArgs();
 
+    /**
+     * Required. The maximum number of pods to schedule on a single node.
+     * 
+     */
     @InputImport(name="maxPodsPerNode", required=true)
     private final Input<Integer> maxPodsPerNode;
 

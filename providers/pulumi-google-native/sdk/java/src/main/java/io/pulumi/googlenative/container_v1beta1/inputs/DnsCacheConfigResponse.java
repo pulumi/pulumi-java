@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for NodeLocal DNSCache
+ * 
+ */
 public final class DnsCacheConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DnsCacheConfigResponse Empty = new DnsCacheConfigResponse();
 
+    /**
+     * Whether NodeLocal DNSCache is enabled for this cluster.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

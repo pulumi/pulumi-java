@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Output only. Details about the shard.
+ * 
+ */
 public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShardResponse Empty = new ShardResponse();
 
+    /**
+     * The total number of shards.
+     * 
+     */
     @InputImport(name="numShards", required=true)
     private final Integer numShards;
 
@@ -20,6 +28,10 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
         return this.numShards;
     }
 
+    /**
+     * The index of the shard among all the shards.
+     * 
+     */
     @InputImport(name="shardIndex", required=true)
     private final Integer shardIndex;
 
@@ -27,6 +39,10 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
         return this.shardIndex;
     }
 
+    /**
+     * Test targets for each shard.
+     * 
+     */
     @InputImport(name="testTargetsForShard", required=true)
     private final TestTargetsForShardResponse testTargetsForShard;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The HANA DB Prometheus Exporter settings.
+ * 
+ */
 public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationHANAPrometheusExporterArgs Empty = new ApplicationHANAPrometheusExporterArgs();
 
+    /**
+     * A flag which indicates agreeing to install SAP HANA DB client.
+     * 
+     */
     @InputImport(name="agreeToInstallHANADBClient", required=true)
     private final Input<Boolean> agreeToInstallHANADBClient;
 
@@ -22,6 +30,10 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
         return this.agreeToInstallHANADBClient;
     }
 
+    /**
+     * The HANA DB port.
+     * 
+     */
     @InputImport(name="hANAPort", required=true)
     private final Input<String> hANAPort;
 
@@ -29,6 +41,10 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
         return this.hANAPort;
     }
 
+    /**
+     * HANA DB SID.
+     * 
+     */
     @InputImport(name="hANASID", required=true)
     private final Input<String> hANASID;
 
@@ -36,6 +52,13 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
         return this.hANASID;
     }
 
+    /**
+     * The secret name which manages the HANA DB credentials e.g. {
+     *   "username": "<>",
+     *   "password": "<>"
+     * }.
+     * 
+     */
     @InputImport(name="hANASecretName", required=true)
     private final Input<String> hANASecretName;
 
@@ -43,6 +66,10 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
         return this.hANASecretName;
     }
 
+    /**
+     * Prometheus exporter port.
+     * 
+     */
     @InputImport(name="prometheusPort")
     private final @Nullable Input<String> prometheusPort;
 

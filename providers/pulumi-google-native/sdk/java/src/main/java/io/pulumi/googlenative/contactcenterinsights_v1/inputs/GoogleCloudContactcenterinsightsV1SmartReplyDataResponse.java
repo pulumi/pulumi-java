@@ -10,10 +10,18 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Agent Assist Smart Reply data.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1SmartReplyDataResponse Empty = new GoogleCloudContactcenterinsightsV1SmartReplyDataResponse();
 
+    /**
+     * The system's confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * 
+     */
     @InputImport(name="confidenceScore", required=true)
     private final Double confidenceScore;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
         return this.confidenceScore;
     }
 
+    /**
+     * Map that contains metadata about the Smart Reply and the document from which it originates.
+     * 
+     */
     @InputImport(name="metadata", required=true)
     private final Map<String,String> metadata;
 
@@ -28,6 +40,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
         return this.metadata;
     }
 
+    /**
+     * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+     * 
+     */
     @InputImport(name="queryRecord", required=true)
     private final String queryRecord;
 
@@ -35,6 +51,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
         return this.queryRecord;
     }
 
+    /**
+     * The content of the reply.
+     * 
+     */
     @InputImport(name="reply", required=true)
     private final String reply;
 

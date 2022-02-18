@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlowSourceFlowConfig {
+    /**
+     * Name of source connector profile
+     * 
+     */
     private final @Nullable String connectorProfileName;
+    /**
+     * Type of source connector
+     * 
+     */
     private final FlowConnectorType connectorType;
+    /**
+     * Configuration for scheduled incremental data pull
+     * 
+     */
     private final @Nullable FlowIncrementalPullConfig incrementalPullConfig;
+    /**
+     * Source connector details required to query a connector
+     * 
+     */
     private final FlowSourceConnectorProperties sourceConnectorProperties;
 
     @OutputCustomType.Constructor({"connectorProfileName","connectorType","incrementalPullConfig","sourceConnectorProperties"})
@@ -31,15 +47,31 @@ public final class FlowSourceFlowConfig {
         this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
     }
 
+    /**
+     * Name of source connector profile
+     * 
+     */
     public Optional<String> getConnectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
+    /**
+     * Type of source connector
+     * 
+     */
     public FlowConnectorType getConnectorType() {
         return this.connectorType;
     }
+    /**
+     * Configuration for scheduled incremental data pull
+     * 
+     */
     public Optional<FlowIncrementalPullConfig> getIncrementalPullConfig() {
         return Optional.ofNullable(this.incrementalPullConfig);
     }
+    /**
+     * Source connector details required to query a connector
+     * 
+     */
     public FlowSourceConnectorProperties getSourceConnectorProperties() {
         return this.sourceConnectorProperties;
     }

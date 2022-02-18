@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the endpoint properties
+ * 
+ */
 public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExperimentEndpointArgs Empty = new ExperimentEndpointArgs();
 
+    /**
+     * The endpoint URL
+     * 
+     */
     @InputImport(name="endpoint")
     private final @Nullable Input<String> endpoint;
 
@@ -21,6 +29,10 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
+    /**
+     * The name of the endpoint
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

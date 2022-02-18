@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the key. For valid values, see JsonWebKeyType.
+     * 
+     */
     @EnumType
     public enum JsonWebKeyType {
         EC("EC"),

@@ -12,6 +12,10 @@ public final class GetRegistryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegistryArgs Empty = new GetRegistryArgs();
 
+    /**
+     * Amazon Resource Name for the created Registry.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

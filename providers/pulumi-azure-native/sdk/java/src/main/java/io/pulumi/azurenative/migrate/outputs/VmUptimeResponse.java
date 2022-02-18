@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VmUptimeResponse {
+    /**
+     * Number of days in a month for VM uptime.
+     * 
+     */
     private final @Nullable Double daysPerMonth;
+    /**
+     * Number of hours per day for VM uptime.
+     * 
+     */
     private final @Nullable Double hoursPerDay;
 
     @OutputCustomType.Constructor({"daysPerMonth","hoursPerDay"})
@@ -22,9 +30,17 @@ public final class VmUptimeResponse {
         this.hoursPerDay = hoursPerDay;
     }
 
+    /**
+     * Number of days in a month for VM uptime.
+     * 
+     */
     public Optional<Double> getDaysPerMonth() {
         return Optional.ofNullable(this.daysPerMonth);
     }
+    /**
+     * Number of hours per day for VM uptime.
+     * 
+     */
     public Optional<Double> getHoursPerDay() {
         return Optional.ofNullable(this.hoursPerDay);
     }

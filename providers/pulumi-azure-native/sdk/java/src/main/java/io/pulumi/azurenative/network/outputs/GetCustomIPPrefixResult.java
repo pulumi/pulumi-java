@@ -15,18 +15,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCustomIPPrefixResult {
+    /**
+     * The prefix range in CIDR notation. Should include the start address and the prefix length.
+     * 
+     */
     private final @Nullable String cidr;
+    /**
+     * The commissioned state of the Custom IP Prefix.
+     * 
+     */
     private final @Nullable String commissionedState;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * The extended location of the custom IP prefix.
+     * 
+     */
     private final @Nullable ExtendedLocationResponse extendedLocation;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Resource location.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The provisioning state of the custom IP prefix resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The list of all referenced PublicIpPrefixes.
+     * 
+     */
     private final List<SubResourceResponse> publicIpPrefixes;
+    /**
+     * The resource GUID property of the custom IP prefix resource.
+     * 
+     */
     private final String resourceGuid;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
+    /**
+     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * 
+     */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"cidr","commissionedState","etag","extendedLocation","id","location","name","provisioningState","publicIpPrefixes","resourceGuid","tags","type","zones"})
@@ -59,42 +111,94 @@ public final class GetCustomIPPrefixResult {
         this.zones = zones;
     }
 
+    /**
+     * The prefix range in CIDR notation. Should include the start address and the prefix length.
+     * 
+     */
     public Optional<String> getCidr() {
         return Optional.ofNullable(this.cidr);
     }
+    /**
+     * The commissioned state of the Custom IP Prefix.
+     * 
+     */
     public Optional<String> getCommissionedState() {
         return Optional.ofNullable(this.commissionedState);
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of the custom IP prefix.
+     * 
+     */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Resource location.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the custom IP prefix resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The list of all referenced PublicIpPrefixes.
+     * 
+     */
     public List<SubResourceResponse> getPublicIpPrefixes() {
         return this.publicIpPrefixes;
     }
+    /**
+     * The resource GUID property of the custom IP prefix resource.
+     * 
+     */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * 
+     */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

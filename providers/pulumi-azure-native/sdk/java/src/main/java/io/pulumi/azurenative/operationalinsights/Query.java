@@ -18,81 +18,198 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Log Analytics QueryPack-Query definition.
+ * API Version: 2019-09-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:operationalinsights:Query a449f8af-8e64-4b3a-9b16-5a7165ff98c4 /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/my-resource-group/providers/microsoft.operationalinsights/queryPacks/my-querypack/queries/a449f8af-8e64-4b3a-9b16-5a7165ff98c4 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:operationalinsights:Query")
 public class Query extends io.pulumi.resources.CustomResource {
+    /**
+     * Object Id of user creating the query.
+     * 
+     */
     @OutputExport(name="author", type=String.class, parameters={})
     private Output<String> author;
 
+    /**
+     * @return Object Id of user creating the query.
+     * 
+     */
     public Output<String> getAuthor() {
         return this.author;
     }
+    /**
+     * Body of the query.
+     * 
+     */
     @OutputExport(name="body", type=String.class, parameters={})
     private Output<String> body;
 
+    /**
+     * @return Body of the query.
+     * 
+     */
     public Output<String> getBody() {
         return this.body;
     }
+    /**
+     * Description of the query.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the query.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Unique display name for your query within the Query Pack.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return Unique display name for your query within the Query Pack.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Additional properties that can be set for the query.
+     * 
+     */
     @OutputExport(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
+    /**
+     * @return Additional properties that can be set for the query.
+     * 
+     */
     public Output<Object> getProperties() {
         return this.properties;
     }
+    /**
+     * The related metadata items for the function.
+     * 
+     */
     @OutputExport(name="related", type=LogAnalyticsQueryPackQueryPropertiesResponseRelated.class, parameters={})
     private Output</* @Nullable */ LogAnalyticsQueryPackQueryPropertiesResponseRelated> related;
 
+    /**
+     * @return The related metadata items for the function.
+     * 
+     */
     public Output</* @Nullable */ LogAnalyticsQueryPackQueryPropertiesResponseRelated> getRelated() {
         return this.related;
     }
+    /**
+     * Read only system data
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Read only system data
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Tags associated with the query.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> tags;
 
+    /**
+     * @return Tags associated with the query.
+     * 
+     */
     public Output</* @Nullable */ Map<String,List<String>>> getTags() {
         return this.tags;
     }
+    /**
+     * Creation Date for the Log Analytics Query, in ISO 8601 format.
+     * 
+     */
     @OutputExport(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
+    /**
+     * @return Creation Date for the Log Analytics Query, in ISO 8601 format.
+     * 
+     */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
+    /**
+     * Last modified date of the Log Analytics Query, in ISO 8601 format.
+     * 
+     */
     @OutputExport(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
+    /**
+     * @return Last modified date of the Log Analytics Query, in ISO 8601 format.
+     * 
+     */
     public Output<String> getTimeModified() {
         return this.timeModified;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Query(String name, QueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:operationalinsights:Query", name, args == null ? QueryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -111,6 +228,14 @@ public class Query extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Query get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Query(name, id, options);
     }

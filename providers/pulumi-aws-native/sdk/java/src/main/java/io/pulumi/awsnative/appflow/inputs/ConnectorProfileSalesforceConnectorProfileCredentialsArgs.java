@@ -15,6 +15,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
 
     public static final ConnectorProfileSalesforceConnectorProfileCredentialsArgs Empty = new ConnectorProfileSalesforceConnectorProfileCredentialsArgs();
 
+    /**
+     * The credentials used to access protected resources.
+     * 
+     */
     @InputImport(name="accessToken")
     private final @Nullable Input<String> accessToken;
 
@@ -22,6 +26,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
         return this.accessToken == null ? Input.empty() : this.accessToken;
     }
 
+    /**
+     * The client credentials to fetch access token and refresh token.
+     * 
+     */
     @InputImport(name="clientCredentialsArn")
     private final @Nullable Input<String> clientCredentialsArn;
 
@@ -29,6 +37,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
         return this.clientCredentialsArn == null ? Input.empty() : this.clientCredentialsArn;
     }
 
+    /**
+     * The oauth needed to request security tokens from the connector endpoint.
+     * 
+     */
     @InputImport(name="connectorOAuthRequest")
     private final @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
@@ -36,6 +48,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
         return this.connectorOAuthRequest == null ? Input.empty() : this.connectorOAuthRequest;
     }
 
+    /**
+     * The credentials used to acquire new access tokens.
+     * 
+     */
     @InputImport(name="refreshToken")
     private final @Nullable Input<String> refreshToken;
 

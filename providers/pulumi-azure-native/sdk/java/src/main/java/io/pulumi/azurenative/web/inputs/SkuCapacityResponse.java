@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of the App Service plan scale options.
+ * 
+ */
 public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuCapacityResponse Empty = new SkuCapacityResponse();
 
+    /**
+     * Default number of workers for this App Service plan SKU.
+     * 
+     */
     @InputImport(name="default")
     private final @Nullable Integer $default;
 
@@ -22,6 +30,10 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
         return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
     }
 
+    /**
+     * Maximum number of Elastic workers for this App Service plan SKU.
+     * 
+     */
     @InputImport(name="elasticMaximum")
     private final @Nullable Integer elasticMaximum;
 
@@ -29,6 +41,10 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
         return this.elasticMaximum == null ? Optional.empty() : Optional.ofNullable(this.elasticMaximum);
     }
 
+    /**
+     * Maximum number of workers for this App Service plan SKU.
+     * 
+     */
     @InputImport(name="maximum")
     private final @Nullable Integer maximum;
 
@@ -36,6 +52,10 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
         return this.maximum == null ? Optional.empty() : Optional.ofNullable(this.maximum);
     }
 
+    /**
+     * Minimum number of workers for this App Service plan SKU.
+     * 
+     */
     @InputImport(name="minimum")
     private final @Nullable Integer minimum;
 
@@ -43,6 +63,10 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
         return this.minimum == null ? Optional.empty() : Optional.ofNullable(this.minimum);
     }
 
+    /**
+     * Available scale configurations for an App Service plan.
+     * 
+     */
     @InputImport(name="scaleType")
     private final @Nullable String scaleType;
 

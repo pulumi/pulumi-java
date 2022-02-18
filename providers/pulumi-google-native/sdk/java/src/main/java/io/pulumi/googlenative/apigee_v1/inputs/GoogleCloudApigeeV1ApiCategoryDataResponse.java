@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * the Api category resource.
+ * 
+ */
 public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1ApiCategoryDataResponse Empty = new GoogleCloudApigeeV1ApiCategoryDataResponse();
 
+    /**
+     * Name of the category.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * Name of the portal.
+     * 
+     */
     @InputImport(name="siteId", required=true)
     private final String siteId;
 
@@ -26,6 +38,10 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
         return this.siteId;
     }
 
+    /**
+     * Time the category was last modified in milliseconds since epoch.
+     * 
+     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

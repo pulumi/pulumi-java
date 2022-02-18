@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Cloud Storage source of conversation data.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1GcsSourceArgs Empty = new GoogleCloudContactcenterinsightsV1GcsSourceArgs();
 
+    /**
+     * Cloud Storage URI that points to a file that contains the conversation audio.
+     * 
+     */
     @InputImport(name="audioUri")
     private final @Nullable Input<String> audioUri;
 
@@ -21,6 +29,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
         return this.audioUri == null ? Input.empty() : this.audioUri;
     }
 
+    /**
+     * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+     * 
+     */
     @InputImport(name="transcriptUri")
     private final @Nullable Input<String> transcriptUri;
 

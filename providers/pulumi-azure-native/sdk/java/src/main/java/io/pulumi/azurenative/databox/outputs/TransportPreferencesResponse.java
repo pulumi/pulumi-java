@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TransportPreferencesResponse {
+    /**
+     * Indicates Shipment Logistics type that the customer preferred.
+     * 
+     */
     private final String preferredShipmentType;
 
     @OutputCustomType.Constructor({"preferredShipmentType"})
@@ -16,6 +20,10 @@ public final class TransportPreferencesResponse {
         this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
     }
 
+    /**
+     * Indicates Shipment Logistics type that the customer preferred.
+     * 
+     */
     public String getPreferredShipmentType() {
         return this.preferredShipmentType;
     }

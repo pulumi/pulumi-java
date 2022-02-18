@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The SKU (tier) of a workspace.
+ * 
+ */
 public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceSkuArgs Empty = new WorkspaceSkuArgs();
 
+    /**
+     * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+     * 
+     */
     @InputImport(name="capacityReservationLevel")
     private final @Nullable Input<Integer> capacityReservationLevel;
 
@@ -24,6 +32,10 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacityReservationLevel == null ? Input.empty() : this.capacityReservationLevel;
     }
 
+    /**
+     * The name of the SKU.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,WorkspaceSkuNameEnum>> name;
 

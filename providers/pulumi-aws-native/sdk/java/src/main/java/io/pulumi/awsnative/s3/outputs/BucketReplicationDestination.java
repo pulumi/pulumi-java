@@ -22,6 +22,10 @@ public final class BucketReplicationDestination {
     private final @Nullable BucketEncryptionConfiguration encryptionConfiguration;
     private final @Nullable BucketMetrics metrics;
     private final @Nullable BucketReplicationTime replicationTime;
+    /**
+     * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
+     * 
+     */
     private final @Nullable BucketReplicationDestinationStorageClass storageClass;
 
     @OutputCustomType.Constructor({"accessControlTranslation","account","bucket","encryptionConfiguration","metrics","replicationTime","storageClass"})
@@ -60,6 +64,10 @@ public final class BucketReplicationDestination {
     public Optional<BucketReplicationTime> getReplicationTime() {
         return Optional.ofNullable(this.replicationTime);
     }
+    /**
+     * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
+     * 
+     */
     public Optional<BucketReplicationDestinationStorageClass> getStorageClass() {
         return Optional.ofNullable(this.storageClass);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Rights that this key has.
+     * 
+     */
     @EnumType
     public enum AccessRightsDescription {
         ServiceConfig("ServiceConfig"),

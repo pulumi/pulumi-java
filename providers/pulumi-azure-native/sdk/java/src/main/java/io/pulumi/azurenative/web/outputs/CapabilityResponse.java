@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CapabilityResponse {
+    /**
+     * Name of the SKU capability.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Reason of the SKU capability.
+     * 
+     */
     private final @Nullable String reason;
+    /**
+     * Value of the SKU capability.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","reason","value"})
@@ -25,12 +37,24 @@ public final class CapabilityResponse {
         this.value = value;
     }
 
+    /**
+     * Name of the SKU capability.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Reason of the SKU capability.
+     * 
+     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
+    /**
+     * Value of the SKU capability.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

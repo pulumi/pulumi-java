@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
+    /**
+     * The Cloud Secret Manager secret version.
+     * Can be 'latest' for the latest value or an integer for a specific version.
+     * 
+     */
     private final String key;
+    /**
+     * Volume's name.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"key","name"})
@@ -20,9 +29,18 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The Cloud Secret Manager secret version.
+     * Can be 'latest' for the latest value or an integer for a specific version.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Volume's name.
+     * 
+     */
     public String getName() {
         return this.name;
     }

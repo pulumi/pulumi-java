@@ -29,6 +29,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
 
     public static final FlexibleAppVersionArgs Empty = new FlexibleAppVersionArgs();
 
+    /**
+     * Serving configuration for Google Cloud Endpoints.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="apiConfig")
     private final @Nullable Input<FlexibleAppVersionApiConfigArgs> apiConfig;
 
@@ -36,6 +41,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.apiConfig == null ? Input.empty() : this.apiConfig;
     }
 
+    /**
+     * Automatic scaling is based on request rate, response latencies, and other application metrics.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="automaticScaling")
     private final @Nullable Input<FlexibleAppVersionAutomaticScalingArgs> automaticScaling;
 
@@ -43,6 +53,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.automaticScaling == null ? Input.empty() : this.automaticScaling;
     }
 
+    /**
+     * Metadata settings that are supplied to this version to enable beta runtime features.
+     * 
+     */
     @InputImport(name="betaSettings")
     private final @Nullable Input<Map<String,String>> betaSettings;
 
@@ -50,6 +64,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.betaSettings == null ? Input.empty() : this.betaSettings;
     }
 
+    /**
+     * Duration that static files should be cached by web proxies and browsers.
+     * Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
+     * 
+     */
     @InputImport(name="defaultExpiration")
     private final @Nullable Input<String> defaultExpiration;
 
@@ -57,6 +76,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.defaultExpiration == null ? Input.empty() : this.defaultExpiration;
     }
 
+    /**
+     * If set to `true`, the service will be deleted if it is the last version.
+     * 
+     */
     @InputImport(name="deleteServiceOnDestroy")
     private final @Nullable Input<Boolean> deleteServiceOnDestroy;
 
@@ -64,6 +87,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.deleteServiceOnDestroy == null ? Input.empty() : this.deleteServiceOnDestroy;
     }
 
+    /**
+     * Code and application artifacts that make up this version.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="deployment")
     private final @Nullable Input<FlexibleAppVersionDeploymentArgs> deployment;
 
@@ -71,6 +99,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.deployment == null ? Input.empty() : this.deployment;
     }
 
+    /**
+     * Code and application artifacts that make up this version.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="endpointsApiService")
     private final @Nullable Input<FlexibleAppVersionEndpointsApiServiceArgs> endpointsApiService;
 
@@ -78,6 +111,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.endpointsApiService == null ? Input.empty() : this.endpointsApiService;
     }
 
+    /**
+     * The entrypoint for the application.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="entrypoint")
     private final @Nullable Input<FlexibleAppVersionEntrypointArgs> entrypoint;
 
@@ -85,6 +123,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
     }
 
+    /**
+     * Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
+     * 
+     */
     @InputImport(name="envVariables")
     private final @Nullable Input<Map<String,String>> envVariables;
 
@@ -92,6 +134,12 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.envVariables == null ? Input.empty() : this.envVariables;
     }
 
+    /**
+     * An ordered list of URL-matching patterns that should be applied to incoming requests.
+     * The first matching URL handles the request and other request handlers are not attempted.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="handlers")
     private final @Nullable Input<List<FlexibleAppVersionHandlerArgs>> handlers;
 
@@ -99,6 +147,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.handlers == null ? Input.empty() : this.handlers;
     }
 
+    /**
+     * A list of the types of messages that this application is able to receive.
+     * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
+     * 
+     */
     @InputImport(name="inboundServices")
     private final @Nullable Input<List<String>> inboundServices;
 
@@ -106,6 +159,13 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.inboundServices == null ? Input.empty() : this.inboundServices;
     }
 
+    /**
+     * Instance class that is used to run this version. Valid values are
+     * AutomaticScaling: F1, F2, F4, F4_1G
+     * ManualScaling: B1, B2, B4, B8, B4_1G
+     * Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
+     * 
+     */
     @InputImport(name="instanceClass")
     private final @Nullable Input<String> instanceClass;
 
@@ -113,6 +173,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.instanceClass == null ? Input.empty() : this.instanceClass;
     }
 
+    /**
+     * Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="livenessCheck", required=true)
     private final Input<FlexibleAppVersionLivenessCheckArgs> livenessCheck;
 
@@ -120,6 +185,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.livenessCheck;
     }
 
+    /**
+     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="manualScaling")
     private final @Nullable Input<FlexibleAppVersionManualScalingArgs> manualScaling;
 
@@ -127,6 +197,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.manualScaling == null ? Input.empty() : this.manualScaling;
     }
 
+    /**
+     * Extra network settings
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<FlexibleAppVersionNetworkArgs> network;
 
@@ -134,6 +209,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
+     * 
+     */
     @InputImport(name="nobuildFilesRegex")
     private final @Nullable Input<String> nobuildFilesRegex;
 
@@ -141,6 +220,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.nobuildFilesRegex == null ? Input.empty() : this.nobuildFilesRegex;
     }
 
+    /**
+     * If set to `true`, the application version will not be deleted.
+     * 
+     */
     @InputImport(name="noopOnDestroy")
     private final @Nullable Input<Boolean> noopOnDestroy;
 
@@ -148,6 +231,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.noopOnDestroy == null ? Input.empty() : this.noopOnDestroy;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -155,6 +243,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="readinessCheck", required=true)
     private final Input<FlexibleAppVersionReadinessCheckArgs> readinessCheck;
 
@@ -162,6 +255,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.readinessCheck;
     }
 
+    /**
+     * Machine resources for a version.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="resources")
     private final @Nullable Input<FlexibleAppVersionResourcesArgs> resources;
 
@@ -169,6 +267,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.resources == null ? Input.empty() : this.resources;
     }
 
+    /**
+     * Desired runtime. Example python27.
+     * 
+     */
     @InputImport(name="runtime", required=true)
     private final Input<String> runtime;
 
@@ -176,6 +278,12 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.runtime;
     }
 
+    /**
+     * The version of the API in the given runtime environment.
+     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/<language>/config/appref`\
+     * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+     * 
+     */
     @InputImport(name="runtimeApiVersion")
     private final @Nullable Input<String> runtimeApiVersion;
 
@@ -183,6 +291,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.runtimeApiVersion == null ? Input.empty() : this.runtimeApiVersion;
     }
 
+    /**
+     * The channel of the runtime to use. Only available for some runtimes.
+     * 
+     */
     @InputImport(name="runtimeChannel")
     private final @Nullable Input<String> runtimeChannel;
 
@@ -190,6 +302,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.runtimeChannel == null ? Input.empty() : this.runtimeChannel;
     }
 
+    /**
+     * The path or name of the app's main executable.
+     * 
+     */
     @InputImport(name="runtimeMainExecutablePath")
     private final @Nullable Input<String> runtimeMainExecutablePath;
 
@@ -197,6 +313,10 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.runtimeMainExecutablePath == null ? Input.empty() : this.runtimeMainExecutablePath;
     }
 
+    /**
+     * AppEngine service resource. Can contain numbers, letters, and hyphens.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 
@@ -204,6 +324,12 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.service;
     }
 
+    /**
+     * Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+     * Default value is `SERVING`.
+     * Possible values are `SERVING` and `STOPPED`.
+     * 
+     */
     @InputImport(name="servingStatus")
     private final @Nullable Input<String> servingStatus;
 
@@ -211,6 +337,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.servingStatus == null ? Input.empty() : this.servingStatus;
     }
 
+    /**
+     * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
+     * Reserved names,"default", "latest", and any name with the prefix "ah-".
+     * 
+     */
     @InputImport(name="versionId")
     private final @Nullable Input<String> versionId;
 
@@ -218,6 +349,11 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
         return this.versionId == null ? Input.empty() : this.versionId;
     }
 
+    /**
+     * Enables VPC connectivity for standard apps.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="vpcAccessConnector")
     private final @Nullable Input<FlexibleAppVersionVpcAccessConnectorArgs> vpcAccessConnector;
 

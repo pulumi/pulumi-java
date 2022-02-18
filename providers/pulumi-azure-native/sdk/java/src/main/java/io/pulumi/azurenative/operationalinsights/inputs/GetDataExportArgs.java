@@ -12,6 +12,10 @@ public final class GetDataExportArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataExportArgs Empty = new GetDataExportArgs();
 
+    /**
+     * The data export rule name.
+     * 
+     */
     @InputImport(name="dataExportName", required=true)
     private final String dataExportName;
 
@@ -19,6 +23,10 @@ public final class GetDataExportArgs extends io.pulumi.resources.InvokeArgs {
         return this.dataExportName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetDataExportArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

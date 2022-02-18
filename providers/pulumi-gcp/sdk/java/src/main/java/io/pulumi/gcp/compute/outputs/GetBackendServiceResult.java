@@ -23,32 +23,80 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetBackendServiceResult {
     private final Integer affinityCookieTtlSec;
+    /**
+     * The set of backends that serve this Backend Service.
+     * 
+     */
     private final List<GetBackendServiceBackend> backends;
     private final List<GetBackendServiceCdnPolicy> cdnPolicies;
     private final List<GetBackendServiceCircuitBreaker> circuitBreakers;
+    /**
+     * Time for which instance will be drained (not accept new connections, but still work to finish started ones).
+     * 
+     */
     private final Integer connectionDrainingTimeoutSec;
     private final List<GetBackendServiceConsistentHash> consistentHash;
     private final String creationTimestamp;
     private final List<String> customRequestHeaders;
     private final List<String> customResponseHeaders;
+    /**
+     * Textual description for the Backend Service.
+     * 
+     */
     private final String description;
+    /**
+     * Whether or not Cloud CDN is enabled on the Backend Service.
+     * 
+     */
     private final Boolean enableCdn;
+    /**
+     * The fingerprint of the Backend Service.
+     * 
+     */
     private final String fingerprint;
+    /**
+     * The set of HTTP/HTTPS health checks used by the Backend Service.
+     * 
+     */
     private final List<String> healthChecks;
     private final List<GetBackendServiceIap> iaps;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String loadBalancingScheme;
     private final String localityLbPolicy;
     private final List<GetBackendServiceLogConfig> logConfigs;
     private final String name;
     private final List<GetBackendServiceOutlierDetection> outlierDetections;
+    /**
+     * The name of a service that has been added to an instance group in this backend.
+     * 
+     */
     private final String portName;
     private final @Nullable String project;
+    /**
+     * The protocol for incoming requests.
+     * 
+     */
     private final String protocol;
     private final String securityPolicy;
     private final List<GetBackendServiceSecuritySetting> securitySettings;
+    /**
+     * The URI of the Backend Service.
+     * 
+     */
     private final String selfLink;
+    /**
+     * The Backend Service session stickiness configuration.
+     * 
+     */
     private final String sessionAffinity;
+    /**
+     * The number of seconds to wait for a backend to respond to a request before considering the request failed.
+     * 
+     */
     private final Integer timeoutSec;
 
     @OutputCustomType.Constructor({"affinityCookieTtlSec","backends","cdnPolicies","circuitBreakers","connectionDrainingTimeoutSec","consistentHash","creationTimestamp","customRequestHeaders","customResponseHeaders","description","enableCdn","fingerprint","healthChecks","iaps","id","loadBalancingScheme","localityLbPolicy","logConfigs","name","outlierDetections","portName","project","protocol","securityPolicy","securitySettings","selfLink","sessionAffinity","timeoutSec"})
@@ -114,6 +162,10 @@ public final class GetBackendServiceResult {
     public Integer getAffinityCookieTtlSec() {
         return this.affinityCookieTtlSec;
     }
+    /**
+     * The set of backends that serve this Backend Service.
+     * 
+     */
     public List<GetBackendServiceBackend> getBackends() {
         return this.backends;
     }
@@ -123,6 +175,10 @@ public final class GetBackendServiceResult {
     public List<GetBackendServiceCircuitBreaker> getCircuitBreakers() {
         return this.circuitBreakers;
     }
+    /**
+     * Time for which instance will be drained (not accept new connections, but still work to finish started ones).
+     * 
+     */
     public Integer getConnectionDrainingTimeoutSec() {
         return this.connectionDrainingTimeoutSec;
     }
@@ -138,21 +194,41 @@ public final class GetBackendServiceResult {
     public List<String> getCustomResponseHeaders() {
         return this.customResponseHeaders;
     }
+    /**
+     * Textual description for the Backend Service.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * Whether or not Cloud CDN is enabled on the Backend Service.
+     * 
+     */
     public Boolean getEnableCdn() {
         return this.enableCdn;
     }
+    /**
+     * The fingerprint of the Backend Service.
+     * 
+     */
     public String getFingerprint() {
         return this.fingerprint;
     }
+    /**
+     * The set of HTTP/HTTPS health checks used by the Backend Service.
+     * 
+     */
     public List<String> getHealthChecks() {
         return this.healthChecks;
     }
     public List<GetBackendServiceIap> getIaps() {
         return this.iaps;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
@@ -171,12 +247,20 @@ public final class GetBackendServiceResult {
     public List<GetBackendServiceOutlierDetection> getOutlierDetections() {
         return this.outlierDetections;
     }
+    /**
+     * The name of a service that has been added to an instance group in this backend.
+     * 
+     */
     public String getPortName() {
         return this.portName;
     }
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
+    /**
+     * The protocol for incoming requests.
+     * 
+     */
     public String getProtocol() {
         return this.protocol;
     }
@@ -186,12 +270,24 @@ public final class GetBackendServiceResult {
     public List<GetBackendServiceSecuritySetting> getSecuritySettings() {
         return this.securitySettings;
     }
+    /**
+     * The URI of the Backend Service.
+     * 
+     */
     public String getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * The Backend Service session stickiness configuration.
+     * 
+     */
     public String getSessionAffinity() {
         return this.sessionAffinity;
     }
+    /**
+     * The number of seconds to wait for a backend to respond to a request before considering the request failed.
+     * 
+     */
     public Integer getTimeoutSec() {
         return this.timeoutSec;
     }

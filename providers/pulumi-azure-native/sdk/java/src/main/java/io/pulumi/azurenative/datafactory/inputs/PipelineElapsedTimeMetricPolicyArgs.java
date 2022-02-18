@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Pipeline ElapsedTime Metric Policy.
+ * 
+ */
 public final class PipelineElapsedTimeMetricPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineElapsedTimeMetricPolicyArgs Empty = new PipelineElapsedTimeMetricPolicyArgs();
 
+    /**
+     * TimeSpan value, after which an Azure Monitoring Metric is fired.
+     * 
+     */
     @InputImport(name="duration")
     private final @Nullable Input<Object> duration;
 

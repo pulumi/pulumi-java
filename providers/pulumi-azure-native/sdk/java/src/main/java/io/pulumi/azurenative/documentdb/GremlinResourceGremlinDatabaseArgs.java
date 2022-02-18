@@ -17,6 +17,10 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
 
     public static final GremlinResourceGremlinDatabaseArgs Empty = new GremlinResourceGremlinDatabaseArgs();
 
+    /**
+     * Cosmos DB database account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -24,6 +28,10 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
         return this.accountName;
     }
 
+    /**
+     * Cosmos DB database name.
+     * 
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -31,6 +39,10 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * The location of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,10 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<CreateUpdateOptionsArgs> options;
 
@@ -45,6 +61,10 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * The standard JSON format of a Gremlin database
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final Input<GremlinDatabaseResourceArgs> resource;
 
@@ -52,6 +72,10 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
         return this.resource;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +83,10 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

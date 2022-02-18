@@ -12,11 +12,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StepOperationInfoResponse {
+    /**
+     * Unique identifier to track the request for ARM-based resources.
+     * 
+     */
     private final String correlationId;
+    /**
+     * The name of the ARM deployment initiated as part of the step.
+     * 
+     */
     private final String deploymentName;
+    /**
+     * End time of the action in UTC.
+     * 
+     */
     private final String endTime;
+    /**
+     * The errors, if any, for the action.
+     * 
+     */
     private final @Nullable CloudErrorBodyResponse error;
+    /**
+     * Last time in UTC this operation was updated.
+     * 
+     */
     private final String lastUpdatedTime;
+    /**
+     * Start time of the action in UTC.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"correlationId","deploymentName","endTime","error","lastUpdatedTime","startTime"})
@@ -35,21 +59,45 @@ public final class StepOperationInfoResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+    /**
+     * Unique identifier to track the request for ARM-based resources.
+     * 
+     */
     public String getCorrelationId() {
         return this.correlationId;
     }
+    /**
+     * The name of the ARM deployment initiated as part of the step.
+     * 
+     */
     public String getDeploymentName() {
         return this.deploymentName;
     }
+    /**
+     * End time of the action in UTC.
+     * 
+     */
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * The errors, if any, for the action.
+     * 
+     */
     public Optional<CloudErrorBodyResponse> getError() {
         return Optional.ofNullable(this.error);
     }
+    /**
+     * Last time in UTC this operation was updated.
+     * 
+     */
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
+    /**
+     * Start time of the action in UTC.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

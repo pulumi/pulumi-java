@@ -12,6 +12,10 @@ public final class GetParameterGroupArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetParameterGroupArgs Empty = new GetParameterGroupArgs();
 
+    /**
+     * The name of the parameter group.
+     * 
+     */
     @InputImport(name="parameterGroupName", required=true)
     private final String parameterGroupName;
 

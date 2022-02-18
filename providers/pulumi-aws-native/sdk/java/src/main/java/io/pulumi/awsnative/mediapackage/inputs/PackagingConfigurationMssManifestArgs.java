@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Microsoft Smooth Streaming (MSS) manifest configuration.
+ * 
+ */
 public final class PackagingConfigurationMssManifestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackagingConfigurationMssManifestArgs Empty = new PackagingConfigurationMssManifestArgs();

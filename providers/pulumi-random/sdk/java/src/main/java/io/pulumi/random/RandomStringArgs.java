@@ -18,6 +18,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomStringArgs Empty = new RandomStringArgs();
 
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -25,6 +29,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
+    /**
+     * The length of the string desired.
+     * 
+     */
     @InputImport(name="length", required=true)
     private final Input<Integer> length;
 
@@ -32,6 +40,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.length;
     }
 
+    /**
+     * Include lowercase alphabet characters in the result.
+     * 
+     */
     @InputImport(name="lower")
     private final @Nullable Input<Boolean> lower;
 
@@ -39,6 +51,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.lower == null ? Input.empty() : this.lower;
     }
 
+    /**
+     * Minimum number of lowercase alphabet characters in the result.
+     * 
+     */
     @InputImport(name="minLower")
     private final @Nullable Input<Integer> minLower;
 
@@ -46,6 +62,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.minLower == null ? Input.empty() : this.minLower;
     }
 
+    /**
+     * Minimum number of numeric characters in the result.
+     * 
+     */
     @InputImport(name="minNumeric")
     private final @Nullable Input<Integer> minNumeric;
 
@@ -53,6 +73,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.minNumeric == null ? Input.empty() : this.minNumeric;
     }
 
+    /**
+     * Minimum number of special characters in the result.
+     * 
+     */
     @InputImport(name="minSpecial")
     private final @Nullable Input<Integer> minSpecial;
 
@@ -60,6 +84,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.minSpecial == null ? Input.empty() : this.minSpecial;
     }
 
+    /**
+     * Minimum number of uppercase alphabet characters in the result.
+     * 
+     */
     @InputImport(name="minUpper")
     private final @Nullable Input<Integer> minUpper;
 
@@ -67,6 +95,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.minUpper == null ? Input.empty() : this.minUpper;
     }
 
+    /**
+     * Include numeric characters in the result.
+     * 
+     */
     @InputImport(name="number")
     private final @Nullable Input<Boolean> number;
 
@@ -74,6 +106,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.number == null ? Input.empty() : this.number;
     }
 
+    /**
+     * Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
+     * 
+     */
     @InputImport(name="overrideSpecial")
     private final @Nullable Input<String> overrideSpecial;
 
@@ -81,6 +117,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.overrideSpecial == null ? Input.empty() : this.overrideSpecial;
     }
 
+    /**
+     * Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
+     * 
+     */
     @InputImport(name="special")
     private final @Nullable Input<Boolean> special;
 
@@ -88,6 +128,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
         return this.special == null ? Input.empty() : this.special;
     }
 
+    /**
+     * Include uppercase alphabet characters in the result.
+     * 
+     */
     @InputImport(name="upper")
     private final @Nullable Input<Boolean> upper;
 

@@ -17,6 +17,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
 
     public static final SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs Empty = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs();
 
+    /**
+     * Availability based SLI, dervied from count of requests made to this service that return successfully.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="availability")
     private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability;
 
@@ -24,6 +29,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
         return this.availability == null ? Input.empty() : this.availability;
     }
 
+    /**
+     * Parameters for a latency threshold SLI.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="latency")
     private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency;
 
@@ -31,6 +41,15 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
         return this.latency == null ? Input.empty() : this.latency;
     }
 
+    /**
+     * An optional set of locations to which this SLI is relevant.
+     * Telemetry from other locations will not be used to calculate
+     * performance for this SLI. If omitted, this SLI applies to all
+     * locations in which the Service has activity. For service types
+     * that don't support breaking down by location, setting this
+     * field will result in an error.
+     * 
+     */
     @InputImport(name="locations")
     private final @Nullable Input<List<String>> locations;
 
@@ -38,6 +57,15 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
         return this.locations == null ? Input.empty() : this.locations;
     }
 
+    /**
+     * An optional set of RPCs to which this SLI is relevant.
+     * Telemetry from other methods will not be used to calculate
+     * performance for this SLI. If omitted, this SLI applies to all
+     * the Service's methods. For service types that don't support
+     * breaking down by method, setting this field will result in an
+     * error.
+     * 
+     */
     @InputImport(name="methods")
     private final @Nullable Input<List<String>> methods;
 
@@ -45,6 +73,15 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
         return this.methods == null ? Input.empty() : this.methods;
     }
 
+    /**
+     * The set of API versions to which this SLI is relevant.
+     * Telemetry from other API versions will not be used to
+     * calculate performance for this SLI. If omitted,
+     * this SLI applies to all API versions. For service types
+     * that don't support breaking down by version, setting this
+     * field will result in an error.
+     * 
+     */
     @InputImport(name="versions")
     private final @Nullable Input<List<String>> versions;
 

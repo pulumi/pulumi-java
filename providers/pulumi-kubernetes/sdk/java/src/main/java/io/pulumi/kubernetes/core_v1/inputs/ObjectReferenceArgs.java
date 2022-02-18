@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ObjectReference contains enough information to let you inspect or modify the referred object.
+ * 
+ */
 public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectReferenceArgs Empty = new ObjectReferenceArgs();
 
+    /**
+     * API version of the referent.
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -21,6 +29,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers to the name of the container that triggered the event) or if no container name is specified "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.
+     * 
+     */
     @InputImport(name="fieldPath")
     private final @Nullable Input<String> fieldPath;
 
@@ -28,6 +40,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.fieldPath == null ? Input.empty() : this.fieldPath;
     }
 
+    /**
+     * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -35,6 +51,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,6 +62,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -49,6 +73,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
+    /**
+     * Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+     * 
+     */
     @InputImport(name="resourceVersion")
     private final @Nullable Input<String> resourceVersion;
 
@@ -56,6 +84,10 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
     }
 
+    /**
+     * UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 

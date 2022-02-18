@@ -14,6 +14,10 @@ public final class InstanceGroupNamedPortGetArgs extends io.pulumi.resources.Res
 
     public static final InstanceGroupNamedPortGetArgs Empty = new InstanceGroupNamedPortGetArgs();
 
+    /**
+     * The name which the port will be mapped to.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +25,10 @@ public final class InstanceGroupNamedPortGetArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * The port number to map the name to.
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 

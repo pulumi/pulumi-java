@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMECRole {
+/**
+ * MEC role.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * MEC role.
+ * 
+ */
     public static CompletableFuture<GetMECRoleResult> invokeAsync(GetMECRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getMECRole", TypeShape.of(GetMECRoleResult.class), args == null ? GetMECRoleArgs.Empty : args, Utilities.withVersion(options));
     }

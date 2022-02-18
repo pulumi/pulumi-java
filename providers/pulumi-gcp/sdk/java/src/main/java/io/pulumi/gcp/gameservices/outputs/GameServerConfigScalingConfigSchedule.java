@@ -11,9 +11,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GameServerConfigScalingConfigSchedule {
+    /**
+     * The duration for the cron job event. The duration of the event is effective
+     * after the cron job's start time.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     private final @Nullable String cronJobDuration;
+    /**
+     * The cron definition of the scheduled event. See
+     * https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+     * defined by the realm.
+     * 
+     */
     private final @Nullable String cronSpec;
+    /**
+     * The end time of the event.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String endTime;
+    /**
+     * The start time of the event.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final @Nullable String startTime;
 
     @OutputCustomType.Constructor({"cronJobDuration","cronSpec","endTime","startTime"})
@@ -28,15 +50,37 @@ public final class GameServerConfigScalingConfigSchedule {
         this.startTime = startTime;
     }
 
+    /**
+     * The duration for the cron job event. The duration of the event is effective
+     * after the cron job's start time.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     public Optional<String> getCronJobDuration() {
         return Optional.ofNullable(this.cronJobDuration);
     }
+    /**
+     * The cron definition of the scheduled event. See
+     * https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+     * defined by the realm.
+     * 
+     */
     public Optional<String> getCronSpec() {
         return Optional.ofNullable(this.cronSpec);
     }
+    /**
+     * The end time of the event.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+    /**
+     * The start time of the event.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

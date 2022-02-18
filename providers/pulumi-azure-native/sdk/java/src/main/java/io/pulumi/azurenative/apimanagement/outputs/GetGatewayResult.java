@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGatewayResult {
+    /**
+     * Gateway description
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Gateway location.
+     * 
+     */
     private final @Nullable ResourceLocationDataContractResponse locationData;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"description","id","locationData","name","type"})
@@ -32,18 +52,38 @@ public final class GetGatewayResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Gateway description
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Gateway location.
+     * 
+     */
     public Optional<ResourceLocationDataContractResponse> getLocationData() {
         return Optional.ofNullable(this.locationData);
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

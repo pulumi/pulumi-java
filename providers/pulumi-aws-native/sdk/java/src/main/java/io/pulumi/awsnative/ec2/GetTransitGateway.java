@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGateway {
+/**
+ * Resource Type definition for AWS::EC2::TransitGateway
+ * 
+ */
     public static CompletableFuture<GetTransitGatewayResult> invokeAsync(GetTransitGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGateway", TypeShape.of(GetTransitGatewayResult.class), args == null ? GetTransitGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

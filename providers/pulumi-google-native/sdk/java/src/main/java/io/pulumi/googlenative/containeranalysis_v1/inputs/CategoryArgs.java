@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The category to which the update belongs.
+ * 
+ */
 public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CategoryArgs Empty = new CategoryArgs();
 
+    /**
+     * The identifier of the category.
+     * 
+     */
     @InputImport(name="categoryId")
     private final @Nullable Input<String> categoryId;
 
@@ -21,6 +29,10 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.categoryId == null ? Input.empty() : this.categoryId;
     }
 
+    /**
+     * The localized name of the category.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

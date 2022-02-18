@@ -8,6 +8,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The output object for a monitoring job.
+ * 
+ */
 public final class MonitoringScheduleMonitoringOutput extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringScheduleMonitoringOutput Empty = new MonitoringScheduleMonitoringOutput();

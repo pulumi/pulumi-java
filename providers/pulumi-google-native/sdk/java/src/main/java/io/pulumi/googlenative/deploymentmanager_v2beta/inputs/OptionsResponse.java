@@ -12,10 +12,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Options allows customized resource handling by Deployment Manager.
+ * 
+ */
 public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OptionsResponse Empty = new OptionsResponse();
 
+    /**
+     * Options regarding how to thread async requests.
+     * 
+     */
     @InputImport(name="asyncOptions", required=true)
     private final List<AsyncOptionsResponse> asyncOptions;
 
@@ -23,6 +31,10 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.asyncOptions;
     }
 
+    /**
+     * The mappings that apply for requests.
+     * 
+     */
     @InputImport(name="inputMappings", required=true)
     private final List<InputMappingResponse> inputMappings;
 
@@ -30,6 +42,10 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.inputMappings;
     }
 
+    /**
+     * Options for how to validate and process properties on a resource.
+     * 
+     */
     @InputImport(name="validationOptions", required=true)
     private final ValidationOptionsResponse validationOptions;
 
@@ -37,6 +53,10 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.validationOptions;
     }
 
+    /**
+     * Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
+     * 
+     */
     @InputImport(name="virtualProperties", required=true)
     private final String virtualProperties;
 

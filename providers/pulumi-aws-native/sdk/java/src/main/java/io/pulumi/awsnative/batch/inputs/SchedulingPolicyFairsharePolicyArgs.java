@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Fair Share Policy for the Job Queue.
+ * 
+ */
 public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchedulingPolicyFairsharePolicyArgs Empty = new SchedulingPolicyFairsharePolicyArgs();
@@ -30,6 +34,10 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
         return this.shareDecaySeconds == null ? Input.empty() : this.shareDecaySeconds;
     }
 
+    /**
+     * List of Share Attributes
+     * 
+     */
     @InputImport(name="shareDistribution")
     private final @Nullable Input<List<SchedulingPolicyShareAttributesArgs>> shareDistribution;
 

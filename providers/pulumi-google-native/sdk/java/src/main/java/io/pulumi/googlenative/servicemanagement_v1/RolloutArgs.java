@@ -17,6 +17,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RolloutArgs Empty = new RolloutArgs();
 
+    /**
+     * Creation time of the rollout. Readonly.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -24,6 +28,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The strategy associated with a rollout to delete a `ManagedService`. Readonly.
+     * 
+     */
     @InputImport(name="deleteServiceStrategy")
     private final @Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy;
 
@@ -31,6 +39,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.deleteServiceStrategy == null ? Input.empty() : this.deleteServiceStrategy;
     }
 
+    /**
+     * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, '.', '_' and '-' are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where "date" is the create date in ISO 8601 format. "revision number" is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is '2016-02-16r1'
+     * 
+     */
     @InputImport(name="rolloutId")
     private final @Nullable Input<String> rolloutId;
 
@@ -38,6 +50,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.rolloutId == null ? Input.empty() : this.rolloutId;
     }
 
+    /**
+     * The name of the service associated with this Rollout.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -45,6 +61,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<RolloutStatus> status;
 
@@ -52,6 +72,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * Google Service Control selects service configurations based on traffic percentage.
+     * 
+     */
     @InputImport(name="trafficPercentStrategy")
     private final @Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy;
 

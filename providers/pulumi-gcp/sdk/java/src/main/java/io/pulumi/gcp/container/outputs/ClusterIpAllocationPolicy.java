@@ -11,9 +11,38 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterIpAllocationPolicy {
+    /**
+     * The IP address range for the cluster pod IPs.
+     * Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+     * to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+     * from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+     * pick a specific range to use.
+     * 
+     */
     private final @Nullable String clusterIpv4CidrBlock;
+    /**
+     * The name of the existing secondary
+     * range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
+     * `cluster_ipv4_cidr_block` can be used to automatically create a GKE-managed one.
+     * 
+     */
     private final @Nullable String clusterSecondaryRangeName;
+    /**
+     * The IP address range of the services IPs in this cluster.
+     * Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+     * to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+     * from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+     * pick a specific range to use.
+     * 
+     */
     private final @Nullable String servicesIpv4CidrBlock;
+    /**
+     * The name of the existing
+     * secondary range in the cluster's subnetwork to use for service `ClusterIP`s.
+     * Alternatively, `services_ipv4_cidr_block` can be used to automatically create a
+     * GKE-managed one.
+     * 
+     */
     private final @Nullable String servicesSecondaryRangeName;
 
     @OutputCustomType.Constructor({"clusterIpv4CidrBlock","clusterSecondaryRangeName","servicesIpv4CidrBlock","servicesSecondaryRangeName"})
@@ -28,15 +57,44 @@ public final class ClusterIpAllocationPolicy {
         this.servicesSecondaryRangeName = servicesSecondaryRangeName;
     }
 
+    /**
+     * The IP address range for the cluster pod IPs.
+     * Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+     * to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+     * from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+     * pick a specific range to use.
+     * 
+     */
     public Optional<String> getClusterIpv4CidrBlock() {
         return Optional.ofNullable(this.clusterIpv4CidrBlock);
     }
+    /**
+     * The name of the existing secondary
+     * range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
+     * `cluster_ipv4_cidr_block` can be used to automatically create a GKE-managed one.
+     * 
+     */
     public Optional<String> getClusterSecondaryRangeName() {
         return Optional.ofNullable(this.clusterSecondaryRangeName);
     }
+    /**
+     * The IP address range of the services IPs in this cluster.
+     * Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+     * to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+     * from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+     * pick a specific range to use.
+     * 
+     */
     public Optional<String> getServicesIpv4CidrBlock() {
         return Optional.ofNullable(this.servicesIpv4CidrBlock);
     }
+    /**
+     * The name of the existing
+     * secondary range in the cluster's subnetwork to use for service `ClusterIP`s.
+     * Alternatively, `services_ipv4_cidr_block` can be used to automatically create a
+     * GKE-managed one.
+     * 
+     */
     public Optional<String> getServicesSecondaryRangeName() {
         return Optional.ofNullable(this.servicesSecondaryRangeName);
     }

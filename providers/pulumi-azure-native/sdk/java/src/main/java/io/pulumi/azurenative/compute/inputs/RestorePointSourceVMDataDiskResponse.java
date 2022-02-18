@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a data disk.
+ * 
+ */
 public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestorePointSourceVMDataDiskResponse Empty = new RestorePointSourceVMDataDiskResponse();
 
+    /**
+     * Gets the caching type.
+     * 
+     */
     @InputImport(name="caching")
     private final @Nullable String caching;
 
@@ -24,6 +32,10 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
     }
 
+    /**
+     * Gets the disk restore point Id.
+     * 
+     */
     @InputImport(name="diskRestorePoint")
     private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
@@ -31,6 +43,10 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
         return this.diskRestorePoint == null ? Optional.empty() : Optional.ofNullable(this.diskRestorePoint);
     }
 
+    /**
+     * Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
+     * 
+     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Integer diskSizeGB;
 
@@ -38,6 +54,10 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
+    /**
+     * Gets the logical unit number.
+     * 
+     */
     @InputImport(name="lun")
     private final @Nullable Integer lun;
 
@@ -45,6 +65,10 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
         return this.lun == null ? Optional.empty() : Optional.ofNullable(this.lun);
     }
 
+    /**
+     * Gets the managed disk details
+     * 
+     */
     @InputImport(name="managedDisk")
     private final @Nullable ManagedDiskParametersResponse managedDisk;
 
@@ -52,6 +76,10 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
     }
 
+    /**
+     * Gets the disk name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

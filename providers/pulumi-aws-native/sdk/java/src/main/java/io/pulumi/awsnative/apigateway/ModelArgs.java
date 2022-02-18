@@ -15,6 +15,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelArgs Empty = new ModelArgs();
 
+    /**
+     * The content type for the model.
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -22,6 +26,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * A description that identifies this model.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +48,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of a REST API with which to associate this model.
+     * 
+     */
     @InputImport(name="restApiId", required=true)
     private final Input<String> restApiId;
 
@@ -43,6 +59,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.restApiId;
     }
 
+    /**
+     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * 
+     */
     @InputImport(name="schema")
     private final @Nullable Input<Object> schema;
 

@@ -10,6 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A container for object key name prefix and suffix filtering rules.
+ * 
+ */
 public final class BucketS3KeyFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketS3KeyFilterArgs Empty = new BucketS3KeyFilterArgs();

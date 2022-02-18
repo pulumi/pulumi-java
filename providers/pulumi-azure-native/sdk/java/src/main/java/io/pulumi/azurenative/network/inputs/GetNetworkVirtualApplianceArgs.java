@@ -14,6 +14,10 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
 
     public static final GetNetworkVirtualApplianceArgs Empty = new GetNetworkVirtualApplianceArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of Network Virtual Appliance.
+     * 
+     */
     @InputImport(name="networkVirtualApplianceName", required=true)
     private final String networkVirtualApplianceName;
 
@@ -28,6 +36,10 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
         return this.networkVirtualApplianceName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

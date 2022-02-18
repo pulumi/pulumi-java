@@ -13,11 +13,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeProfileSubscriptionResponse {
+    /**
+     * ARM ID of the subscription
+     * 
+     */
     private final @Nullable String id;
     private final @Nullable String locationPlacementId;
     private final @Nullable String quotaId;
     private final @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures;
     private final @Nullable String registrationDate;
+    /**
+     * Edge Subscription Registration ID
+     * 
+     */
     private final @Nullable String registrationId;
     private final @Nullable String serializedDetails;
     private final @Nullable String state;
@@ -48,6 +56,10 @@ public final class EdgeProfileSubscriptionResponse {
         this.tenantId = tenantId;
     }
 
+    /**
+     * ARM ID of the subscription
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -63,6 +75,10 @@ public final class EdgeProfileSubscriptionResponse {
     public Optional<String> getRegistrationDate() {
         return Optional.ofNullable(this.registrationDate);
     }
+    /**
+     * Edge Subscription Registration ID
+     * 
+     */
     public Optional<String> getRegistrationId() {
         return Optional.ofNullable(this.registrationId);
     }

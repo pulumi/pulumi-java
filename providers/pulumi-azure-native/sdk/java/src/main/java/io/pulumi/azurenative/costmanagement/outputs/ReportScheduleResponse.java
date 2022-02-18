@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReportScheduleResponse {
+    /**
+     * The schedule recurrence.
+     * 
+     */
     private final String recurrence;
+    /**
+     * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * 
+     */
     private final @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
+    /**
+     * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
+     * 
+     */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"recurrence","recurrencePeriod","status"})
@@ -26,12 +38,24 @@ public final class ReportScheduleResponse {
         this.status = status;
     }
 
+    /**
+     * The schedule recurrence.
+     * 
+     */
     public String getRecurrence() {
         return this.recurrence;
     }
+    /**
+     * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * 
+     */
     public Optional<ReportRecurrencePeriodResponse> getRecurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
+    /**
+     * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

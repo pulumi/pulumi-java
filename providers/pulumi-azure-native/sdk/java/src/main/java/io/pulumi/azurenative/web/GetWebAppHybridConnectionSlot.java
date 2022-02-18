@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppHybridConnectionSlot {
+/**
+ * Hybrid Connection contract. This is used to configure a Hybrid Connection.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Hybrid Connection contract. This is used to configure a Hybrid Connection.
+ * 
+ */
     public static CompletableFuture<GetWebAppHybridConnectionSlotResult> invokeAsync(GetWebAppHybridConnectionSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHybridConnectionSlot", TypeShape.of(GetWebAppHybridConnectionSlotResult.class), args == null ? GetWebAppHybridConnectionSlotArgs.Empty : args, Utilities.withVersion(options));
     }

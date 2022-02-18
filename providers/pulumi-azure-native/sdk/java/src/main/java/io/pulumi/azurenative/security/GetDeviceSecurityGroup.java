@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceSecurityGroup {
+/**
+ * The device security group resource
+ * API Version: 2019-08-01.
+ * 
+ *
+ * The device security group resource
+ * 
+ */
     public static CompletableFuture<GetDeviceSecurityGroupResult> invokeAsync(GetDeviceSecurityGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getDeviceSecurityGroup", TypeShape.of(GetDeviceSecurityGroupResult.class), args == null ? GetDeviceSecurityGroupArgs.Empty : args, Utilities.withVersion(options));
     }

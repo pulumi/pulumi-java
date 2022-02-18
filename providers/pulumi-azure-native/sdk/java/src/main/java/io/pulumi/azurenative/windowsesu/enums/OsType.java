@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of OS for which the key is requested.
+     * 
+     */
     @EnumType
     public enum OsType {
         Windows7("Windows7"),

@@ -16,6 +16,10 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
 
     public static final EndpointAuthorizationArgs Empty = new EndpointAuthorizationArgs();
 
+    /**
+     * The target AWS account ID to grant or revoke access for.
+     * 
+     */
     @InputImport(name="account", required=true)
     private final Input<String> account;
 
@@ -23,6 +27,10 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
         return this.account;
     }
 
+    /**
+     * The cluster identifier.
+     * 
+     */
     @InputImport(name="clusterIdentifier", required=true)
     private final Input<String> clusterIdentifier;
 
@@ -30,6 +38,10 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
         return this.clusterIdentifier;
     }
 
+    /**
+     *  Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
+     * 
+     */
     @InputImport(name="force")
     private final @Nullable Input<Boolean> force;
 
@@ -37,6 +49,10 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
         return this.force == null ? Input.empty() : this.force;
     }
 
+    /**
+     * The virtual private cloud (VPC) identifiers to grant or revoke access to.
+     * 
+     */
     @InputImport(name="vpcIds")
     private final @Nullable Input<List<String>> vpcIds;
 

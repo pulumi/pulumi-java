@@ -13,6 +13,19 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAddress {
+/**
+ * Get the IP address from a static address. For more information see
+ * the official [API](https://cloud.google.com/compute/docs/reference/latest/addresses/get) documentation.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getAddress.
+ * 
+ *
+ * A collection of values returned by getAddress.
+ * 
+ */
     public static CompletableFuture<GetAddressResult> invokeAsync(GetAddressArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getAddress:getAddress", TypeShape.of(GetAddressResult.class), args == null ? GetAddressArgs.Empty : args, Utilities.withVersion(options));
     }

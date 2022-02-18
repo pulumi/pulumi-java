@@ -12,6 +12,10 @@ public final class GetResourcePolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetResourcePolicyArgs Empty = new GetResourcePolicyArgs();
 
+    /**
+     * A name for resource policy
+     * 
+     */
     @InputImport(name="policyName", required=true)
     private final String policyName;
 

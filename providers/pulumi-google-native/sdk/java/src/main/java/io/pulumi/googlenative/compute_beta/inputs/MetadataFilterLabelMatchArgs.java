@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MetadataFilter label name value pairs that are expected to match corresponding labels presented as metadata to the load balancer.
+ * 
+ */
 public final class MetadataFilterLabelMatchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetadataFilterLabelMatchArgs Empty = new MetadataFilterLabelMatchArgs();
 
+    /**
+     * Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +29,10 @@ public final class MetadataFilterLabelMatchArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The value of the label must match the specified value. value can have a maximum length of 1024 characters.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

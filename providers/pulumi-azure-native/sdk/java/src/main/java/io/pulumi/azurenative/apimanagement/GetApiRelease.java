@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiRelease {
+/**
+ * ApiRelease details.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * ApiRelease details.
+ * 
+ */
     public static CompletableFuture<GetApiReleaseResult> invokeAsync(GetApiReleaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiRelease", TypeShape.of(GetApiReleaseResult.class), args == null ? GetApiReleaseArgs.Empty : args, Utilities.withVersion(options));
     }

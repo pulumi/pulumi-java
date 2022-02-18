@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
+     * 
+     */
     @EnumType
     public enum ChannelCredentialsChannelCredentialType {
+        /**
+         * Use TLS certificates to access the SDS server.
+         * 
+         */
         Certificates("CERTIFICATES"),
+        /**
+         * Use local GCE VM credentials to access the SDS server.
+         * 
+         */
         GceVm("GCE_VM"),
         Invalid("INVALID");
 

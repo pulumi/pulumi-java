@@ -13,13 +13,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BindingResourcePropertiesResponse {
+    /**
+     * Binding parameters of the Binding resource
+     * 
+     */
     private final @Nullable Map<String,Object> bindingParameters;
+    /**
+     * Creation time of the Binding resource
+     * 
+     */
     private final String createdAt;
+    /**
+     * The generated Spring Boot property file for this binding. The secret will be deducted.
+     * 
+     */
     private final String generatedProperties;
+    /**
+     * The key of the bound resource
+     * 
+     */
     private final @Nullable String key;
+    /**
+     * The Azure resource id of the bound resource
+     * 
+     */
     private final @Nullable String resourceId;
+    /**
+     * The name of the bound resource
+     * 
+     */
     private final String resourceName;
+    /**
+     * The standard Azure resource type of the bound resource
+     * 
+     */
     private final String resourceType;
+    /**
+     * Update time of the Binding resource
+     * 
+     */
     private final String updatedAt;
 
     @OutputCustomType.Constructor({"bindingParameters","createdAt","generatedProperties","key","resourceId","resourceName","resourceType","updatedAt"})
@@ -42,27 +74,59 @@ public final class BindingResourcePropertiesResponse {
         this.updatedAt = Objects.requireNonNull(updatedAt);
     }
 
+    /**
+     * Binding parameters of the Binding resource
+     * 
+     */
     public Map<String,Object> getBindingParameters() {
         return this.bindingParameters == null ? Map.of() : this.bindingParameters;
     }
+    /**
+     * Creation time of the Binding resource
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * The generated Spring Boot property file for this binding. The secret will be deducted.
+     * 
+     */
     public String getGeneratedProperties() {
         return this.generatedProperties;
     }
+    /**
+     * The key of the bound resource
+     * 
+     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+    /**
+     * The Azure resource id of the bound resource
+     * 
+     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
+    /**
+     * The name of the bound resource
+     * 
+     */
     public String getPropResourceName() {
         return this.resourceName;
     }
+    /**
+     * The standard Azure resource type of the bound resource
+     * 
+     */
     public String getPropResourceType() {
         return this.resourceType;
     }
+    /**
+     * Update time of the Binding resource
+     * 
+     */
     public String getUpdatedAt() {
         return this.updatedAt;
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * This is used for defining User Defined Function (UDF) resources only when using legacy SQL. Users of Standard SQL should leverage either DDL (e.g. CREATE [TEMPORARY] FUNCTION ... ) or the Routines API to define UDF resources. For additional information on migrating, see: https://cloud.google.com/bigquery/docs/reference/standard-sql/migrating-from-legacy-sql#differences_in_user-defined_javascript_functions
+ * 
+ */
 public final class UserDefinedFunctionResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserDefinedFunctionResourceResponse Empty = new UserDefinedFunctionResourceResponse();
 
+    /**
+     * [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+     * 
+     */
     @InputImport(name="inlineCode", required=true)
     private final String inlineCode;
 
@@ -19,6 +27,10 @@ public final class UserDefinedFunctionResourceResponse extends io.pulumi.resourc
         return this.inlineCode;
     }
 
+    /**
+     * [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

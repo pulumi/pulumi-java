@@ -11,9 +11,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiskSourceSnapshotEncryptionKey {
+    /**
+     * The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
+     * in the cloud console. Your project's Compute Engine System service account
+     * (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
+     * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+     * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+     * 
+     */
     private final @Nullable String kmsKeySelfLink;
+    /**
+     * The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     private final @Nullable String kmsKeyServiceAccount;
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * 
+     */
     private final @Nullable String rawKey;
+    /**
+     * - 
+     * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+     * encryption key that protects this resource.
+     * 
+     */
     private final @Nullable String sha256;
 
     @OutputCustomType.Constructor({"kmsKeySelfLink","kmsKeyServiceAccount","rawKey","sha256"})
@@ -28,15 +52,39 @@ public final class DiskSourceSnapshotEncryptionKey {
         this.sha256 = sha256;
     }
 
+    /**
+     * The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
+     * in the cloud console. Your project's Compute Engine System service account
+     * (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
+     * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+     * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+     * 
+     */
     public Optional<String> getKmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
+    /**
+     * The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     public Optional<String> getKmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * 
+     */
     public Optional<String> getRawKey() {
         return Optional.ofNullable(this.rawKey);
     }
+    /**
+     * - 
+     * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+     * encryption key that protects this resource.
+     * 
+     */
     public Optional<String> getSha256() {
         return Optional.ofNullable(this.sha256);
     }

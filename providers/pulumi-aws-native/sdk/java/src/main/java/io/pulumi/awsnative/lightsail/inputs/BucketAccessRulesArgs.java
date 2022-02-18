@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object that sets the public accessibility of objects in the specified bucket.
+ * 
+ */
 public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketAccessRulesArgs Empty = new BucketAccessRulesArgs();
 
+    /**
+     * A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
+     * 
+     */
     @InputImport(name="allowPublicOverrides")
     private final @Nullable Input<Boolean> allowPublicOverrides;
 
@@ -22,6 +30,10 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
         return this.allowPublicOverrides == null ? Input.empty() : this.allowPublicOverrides;
     }
 
+    /**
+     * Specifies the anonymous access to all objects in a bucket.
+     * 
+     */
     @InputImport(name="getObject")
     private final @Nullable Input<String> getObject;
 

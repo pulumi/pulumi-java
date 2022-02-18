@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AnalysisIntegerParameter {
+    /**
+     * <p>The name of the integer parameter.</p>
+     * 
+     */
     private final String name;
+    /**
+     * <p>The values for the integer parameter.</p>
+     * 
+     */
     private final List<Double> values;
 
     @OutputCustomType.Constructor({"name","values"})
@@ -22,9 +30,17 @@ public final class AnalysisIntegerParameter {
         this.values = Objects.requireNonNull(values);
     }
 
+    /**
+     * <p>The name of the integer parameter.</p>
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * <p>The values for the integer parameter.</p>
+     * 
+     */
     public List<Double> getValues() {
         return this.values;
     }

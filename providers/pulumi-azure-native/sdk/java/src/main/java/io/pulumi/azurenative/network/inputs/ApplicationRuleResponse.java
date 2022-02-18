@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rule of type application.
+ * 
+ */
 public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationRuleResponse Empty = new ApplicationRuleResponse();
 
+    /**
+     * Description of the rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -24,6 +32,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * List of destination IP addresses or Service Tags.
+     * 
+     */
     @InputImport(name="destinationAddresses")
     private final @Nullable List<String> destinationAddresses;
 
@@ -31,6 +43,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
+    /**
+     * List of FQDN Tags for this rule.
+     * 
+     */
     @InputImport(name="fqdnTags")
     private final @Nullable List<String> fqdnTags;
 
@@ -38,6 +54,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
 
+    /**
+     * Name of the rule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -45,6 +65,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Array of Application Protocols.
+     * 
+     */
     @InputImport(name="protocols")
     private final @Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols;
 
@@ -52,6 +76,11 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.protocols == null ? List.of() : this.protocols;
     }
 
+    /**
+     * Rule Type.
+     * Expected value is 'ApplicationRule'.
+     * 
+     */
     @InputImport(name="ruleType", required=true)
     private final String ruleType;
 
@@ -59,6 +88,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.ruleType;
     }
 
+    /**
+     * List of source IP addresses for this rule.
+     * 
+     */
     @InputImport(name="sourceAddresses")
     private final @Nullable List<String> sourceAddresses;
 
@@ -66,6 +99,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
+    /**
+     * List of source IpGroups for this rule.
+     * 
+     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable List<String> sourceIpGroups;
 
@@ -73,6 +110,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 
+    /**
+     * List of FQDNs for this rule.
+     * 
+     */
     @InputImport(name="targetFqdns")
     private final @Nullable List<String> targetFqdns;
 
@@ -80,6 +121,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }
 
+    /**
+     * List of Urls for this rule condition.
+     * 
+     */
     @InputImport(name="targetUrls")
     private final @Nullable List<String> targetUrls;
 
@@ -87,6 +132,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.targetUrls == null ? List.of() : this.targetUrls;
     }
 
+    /**
+     * Terminate TLS connections for this rule.
+     * 
+     */
     @InputImport(name="terminateTLS")
     private final @Nullable Boolean terminateTLS;
 
@@ -94,6 +143,10 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
         return this.terminateTLS == null ? Optional.empty() : Optional.ofNullable(this.terminateTLS);
     }
 
+    /**
+     * List of destination azure web categories.
+     * 
+     */
     @InputImport(name="webCategories")
     private final @Nullable List<String> webCategories;
 

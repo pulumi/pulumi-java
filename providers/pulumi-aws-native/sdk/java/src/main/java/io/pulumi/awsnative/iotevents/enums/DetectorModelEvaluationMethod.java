@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Information about the order in which events are evaluated and how actions are executed.
+     * 
+     */
     @EnumType
     public enum DetectorModelEvaluationMethod {
         Batch("BATCH"),

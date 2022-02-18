@@ -14,6 +14,11 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
 
     public static final DeviceGatewayConfigGetArgs Empty = new DeviceGatewayConfigGetArgs();
 
+    /**
+     * Indicates whether the device is a gateway.
+     * Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
+     * 
+     */
     @InputImport(name="gatewayAuthMethod")
     private final @Nullable Input<String> gatewayAuthMethod;
 
@@ -21,6 +26,12 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
         return this.gatewayAuthMethod == null ? Input.empty() : this.gatewayAuthMethod;
     }
 
+    /**
+     * Indicates whether the device is a gateway.
+     * Default value is `NON_GATEWAY`.
+     * Possible values are `GATEWAY` and `NON_GATEWAY`.
+     * 
+     */
     @InputImport(name="gatewayType")
     private final @Nullable Input<String> gatewayType;
 
@@ -28,6 +39,11 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
         return this.gatewayType == null ? Input.empty() : this.gatewayType;
     }
 
+    /**
+     * - 
+     * The ID of the gateway the device accessed most recently.
+     * 
+     */
     @InputImport(name="lastAccessedGatewayId")
     private final @Nullable Input<String> lastAccessedGatewayId;
 
@@ -35,6 +51,11 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
         return this.lastAccessedGatewayId == null ? Input.empty() : this.lastAccessedGatewayId;
     }
 
+    /**
+     * - 
+     * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
+     * 
+     */
     @InputImport(name="lastAccessedGatewayTime")
     private final @Nullable Input<String> lastAccessedGatewayTime;
 

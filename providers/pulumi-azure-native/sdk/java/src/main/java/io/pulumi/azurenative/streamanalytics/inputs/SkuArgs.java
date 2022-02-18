@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that are associated with a SKU.
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The name of the SKU. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,SkuName>> name;
 

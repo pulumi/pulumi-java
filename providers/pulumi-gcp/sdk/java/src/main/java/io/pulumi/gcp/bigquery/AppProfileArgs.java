@@ -16,6 +16,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppProfileArgs Empty = new AppProfileArgs();
 
+    /**
+     * The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
+     * 
+     */
     @InputImport(name="appProfileId", required=true)
     private final Input<String> appProfileId;
 
@@ -23,6 +27,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.appProfileId;
     }
 
+    /**
+     * Long form description of the use case for this app profile.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * If true, ignore safety checks when deleting/updating the app profile.
+     * 
+     */
     @InputImport(name="ignoreWarnings")
     private final @Nullable Input<Boolean> ignoreWarnings;
 
@@ -37,6 +49,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.ignoreWarnings == null ? Input.empty() : this.ignoreWarnings;
     }
 
+    /**
+     * The name of the instance to create the app profile within.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -44,6 +60,12 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
+    /**
+     * If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+     * in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+     * consistency to improve availability.
+     * 
+     */
     @InputImport(name="multiClusterRoutingUseAny")
     private final @Nullable Input<Boolean> multiClusterRoutingUseAny;
 
@@ -51,6 +73,11 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.multiClusterRoutingUseAny == null ? Input.empty() : this.multiClusterRoutingUseAny;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +85,11 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Use a single-cluster routing policy.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="singleClusterRouting")
     private final @Nullable Input<AppProfileSingleClusterRoutingArgs> singleClusterRouting;
 

@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouter {
+/**
+ * Get a router within GCE from its name and VPC.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getRouter.
+ * 
+ *
+ * A collection of values returned by getRouter.
+ * 
+ */
     public static CompletableFuture<GetRouterResult> invokeAsync(GetRouterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRouter:getRouter", TypeShape.of(GetRouterResult.class), args == null ? GetRouterArgs.Empty : args, Utilities.withVersion(options));
     }

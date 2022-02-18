@@ -14,6 +14,12 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
 
     public static final RegionNetworkEndpointGroupCloudRunArgs Empty = new RegionNetworkEndpointGroupCloudRunArgs();
 
+    /**
+     * Optional serving service.
+     * The service name must be 1-63 characters long, and comply with RFC1035.
+     * Example value: "default", "my-service".
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -21,6 +27,13 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
         return this.service == null ? Input.empty() : this.service;
     }
 
+    /**
+     * Cloud Run tag represents the "named-revision" to provide
+     * additional fine-grained traffic routing information.
+     * The tag must be 1-63 characters long, and comply with RFC1035.
+     * Example value: "revision-0010".
+     * 
+     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 
@@ -28,6 +41,15 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
         return this.tag == null ? Input.empty() : this.tag;
     }
 
+    /**
+     * A template to parse function field from a request URL. URL mask allows
+     * for routing to multiple Cloud Functions without having to create
+     * multiple Network Endpoint Groups and backend services.
+     * For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
+     * can be backed by the same Serverless NEG with URL mask "/". The URL mask
+     * will parse them to { function = "function1" } and { function = "function2" } respectively.
+     * 
+     */
     @InputImport(name="urlMask")
     private final @Nullable Input<String> urlMask;
 

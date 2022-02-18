@@ -12,6 +12,10 @@ public final class GetVideoAnalyzerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVideoAnalyzerArgs Empty = new GetVideoAnalyzerArgs();
 
+    /**
+     * The Video Analyzer account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetVideoAnalyzerArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

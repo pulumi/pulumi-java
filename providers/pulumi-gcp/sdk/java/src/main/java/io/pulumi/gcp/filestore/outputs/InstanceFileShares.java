@@ -13,8 +13,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceFileShares {
+    /**
+     * File share capacity in GiB. This must be at least 1024 GiB
+     * for the standard tier, or 2560 GiB for the premium tier.
+     * 
+     */
     private final Integer capacityGb;
+    /**
+     * The name of the fileshare (16 characters or less)
+     * 
+     */
     private final String name;
+    /**
+     * Nfs Export Options. There is a limit of 10 export options per file share.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions;
 
     @OutputCustomType.Constructor({"capacityGb","name","nfsExportOptions"})
@@ -27,12 +41,26 @@ public final class InstanceFileShares {
         this.nfsExportOptions = nfsExportOptions;
     }
 
+    /**
+     * File share capacity in GiB. This must be at least 1024 GiB
+     * for the standard tier, or 2560 GiB for the premium tier.
+     * 
+     */
     public Integer getCapacityGb() {
         return this.capacityGb;
     }
+    /**
+     * The name of the fileshare (16 characters or less)
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Nfs Export Options. There is a limit of 10 export options per file share.
+     * Structure is documented below.
+     * 
+     */
     public List<InstanceFileSharesNfsExportOption> getNfsExportOptions() {
         return this.nfsExportOptions == null ? List.of() : this.nfsExportOptions;
     }

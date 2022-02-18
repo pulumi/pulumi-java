@@ -18,6 +18,18 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Information about a domain.
+ * API Version: 2020-10-01.
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:domainregistration:Domain myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName} 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:domainregistration:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
     @OutputExport(name="authCode", type=String.class, parameters={})
@@ -26,127 +38,295 @@ public class Domain extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAuthCode() {
         return this.authCode;
     }
+    /**
+     * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
+     * 
+     */
     @OutputExport(name="autoRenew", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoRenew;
 
+    /**
+     * @return <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAutoRenew() {
         return this.autoRenew;
     }
+    /**
+     * Domain creation timestamp.
+     * 
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return Domain creation timestamp.
+     * 
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * Current DNS type
+     * 
+     */
     @OutputExport(name="dnsType", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsType;
 
+    /**
+     * @return Current DNS type
+     * 
+     */
     public Output</* @Nullable */ String> getDnsType() {
         return this.dnsType;
     }
+    /**
+     * Azure DNS Zone to use
+     * 
+     */
     @OutputExport(name="dnsZoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsZoneId;
 
+    /**
+     * @return Azure DNS Zone to use
+     * 
+     */
     public Output</* @Nullable */ String> getDnsZoneId() {
         return this.dnsZoneId;
     }
+    /**
+     * Reasons why domain is not renewable.
+     * 
+     */
     @OutputExport(name="domainNotRenewableReasons", type=List.class, parameters={String.class})
     private Output<List<String>> domainNotRenewableReasons;
 
+    /**
+     * @return Reasons why domain is not renewable.
+     * 
+     */
     public Output<List<String>> getDomainNotRenewableReasons() {
         return this.domainNotRenewableReasons;
     }
+    /**
+     * Domain expiration timestamp.
+     * 
+     */
     @OutputExport(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
+    /**
+     * @return Domain expiration timestamp.
+     * 
+     */
     public Output<String> getExpirationTime() {
         return this.expirationTime;
     }
+    /**
+     * Kind of resource.
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Timestamp when the domain was renewed last time.
+     * 
+     */
     @OutputExport(name="lastRenewedTime", type=String.class, parameters={})
     private Output<String> lastRenewedTime;
 
+    /**
+     * @return Timestamp when the domain was renewed last time.
+     * 
+     */
     public Output<String> getLastRenewedTime() {
         return this.lastRenewedTime;
     }
+    /**
+     * Resource Location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * All hostnames derived from the domain and assigned to Azure resources.
+     * 
+     */
     @OutputExport(name="managedHostNames", type=List.class, parameters={HostNameResponse.class})
     private Output<List<HostNameResponse>> managedHostNames;
 
+    /**
+     * @return All hostnames derived from the domain and assigned to Azure resources.
+     * 
+     */
     public Output<List<HostNameResponse>> getManagedHostNames() {
         return this.managedHostNames;
     }
+    /**
+     * Resource Name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Name servers.
+     * 
+     */
     @OutputExport(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
+    /**
+     * @return Name servers.
+     * 
+     */
     public Output<List<String>> getNameServers() {
         return this.nameServers;
     }
+    /**
+     * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
+     * 
+     */
     @OutputExport(name="privacy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> privacy;
 
+    /**
+     * @return <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getPrivacy() {
         return this.privacy;
     }
+    /**
+     * Domain provisioning state.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Domain provisioning state.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
+     *  it is hosted on name servers Azure has programmatic access to.
+     * 
+     */
     @OutputExport(name="readyForDnsRecordManagement", type=Boolean.class, parameters={})
     private Output<Boolean> readyForDnsRecordManagement;
 
+    /**
+     * @return <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
+     *  it is hosted on name servers Azure has programmatic access to.
+     * 
+     */
     public Output<Boolean> getReadyForDnsRecordManagement() {
         return this.readyForDnsRecordManagement;
     }
+    /**
+     * Domain registration status.
+     * 
+     */
     @OutputExport(name="registrationStatus", type=String.class, parameters={})
     private Output<String> registrationStatus;
 
+    /**
+     * @return Domain registration status.
+     * 
+     */
     public Output<String> getRegistrationStatus() {
         return this.registrationStatus;
     }
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Target DNS type (would be used for migration)
+     * 
+     */
     @OutputExport(name="targetDnsType", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetDnsType;
 
+    /**
+     * @return Target DNS type (would be used for migration)
+     * 
+     */
     public Output</* @Nullable */ String> getTargetDnsType() {
         return this.targetDnsType;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Domain(String name, DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:domainregistration:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -175,6 +355,14 @@ public class Domain extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Domain get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Domain(name, id, options);
     }

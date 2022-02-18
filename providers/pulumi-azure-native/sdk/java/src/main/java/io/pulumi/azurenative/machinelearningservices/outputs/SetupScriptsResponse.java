@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SetupScriptsResponse {
+    /**
+     * Customized setup scripts
+     * 
+     */
     private final @Nullable ScriptsToExecuteResponse scripts;
 
     @OutputCustomType.Constructor({"scripts"})
@@ -18,6 +22,10 @@ public final class SetupScriptsResponse {
         this.scripts = scripts;
     }
 
+    /**
+     * Customized setup scripts
+     * 
+     */
     public Optional<ScriptsToExecuteResponse> getScripts() {
         return Optional.ofNullable(this.scripts);
     }

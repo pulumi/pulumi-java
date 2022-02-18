@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Protect LDAP communication using SSL certificate (LDAPS)
+     * 
+     */
     @EnumType
     public enum SslEnum {
         Enabled("Enabled"),

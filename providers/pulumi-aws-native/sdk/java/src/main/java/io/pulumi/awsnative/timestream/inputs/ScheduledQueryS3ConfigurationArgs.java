@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details on S3 location for error reports that result from running a query.
+ * 
+ */
 public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledQueryS3ConfigurationArgs Empty = new ScheduledQueryS3ConfigurationArgs();

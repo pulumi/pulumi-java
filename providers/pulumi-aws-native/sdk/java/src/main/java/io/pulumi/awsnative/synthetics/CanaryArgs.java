@@ -24,6 +24,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CanaryArgs Empty = new CanaryArgs();
 
+    /**
+     * Provide artifact configuration
+     * 
+     */
     @InputImport(name="artifactConfig")
     private final @Nullable Input<CanaryArtifactConfigArgs> artifactConfig;
 
@@ -31,6 +35,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifactConfig == null ? Input.empty() : this.artifactConfig;
     }
 
+    /**
+     * Provide the s3 bucket output location for test results
+     * 
+     */
     @InputImport(name="artifactS3Location", required=true)
     private final Input<String> artifactS3Location;
 
@@ -38,6 +46,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifactS3Location;
     }
 
+    /**
+     * Provide the canary script source
+     * 
+     */
     @InputImport(name="code", required=true)
     private final Input<CanaryCodeArgs> code;
 
@@ -45,6 +57,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.code;
     }
 
+    /**
+     * Lambda Execution role used to run your canaries
+     * 
+     */
     @InputImport(name="executionRoleArn", required=true)
     private final Input<String> executionRoleArn;
 
@@ -52,6 +68,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.executionRoleArn;
     }
 
+    /**
+     * Retention period of failed canary runs represented in number of days
+     * 
+     */
     @InputImport(name="failureRetentionPeriod")
     private final @Nullable Input<Integer> failureRetentionPeriod;
 
@@ -59,6 +79,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.failureRetentionPeriod == null ? Input.empty() : this.failureRetentionPeriod;
     }
 
+    /**
+     * Name of the canary.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -66,6 +90,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Provide canary run configuration
+     * 
+     */
     @InputImport(name="runConfig")
     private final @Nullable Input<CanaryRunConfigArgs> runConfig;
 
@@ -73,6 +101,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.runConfig == null ? Input.empty() : this.runConfig;
     }
 
+    /**
+     * Runtime version of Synthetics Library
+     * 
+     */
     @InputImport(name="runtimeVersion", required=true)
     private final Input<String> runtimeVersion;
 
@@ -80,6 +112,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.runtimeVersion;
     }
 
+    /**
+     * Frequency to run your canaries
+     * 
+     */
     @InputImport(name="schedule", required=true)
     private final Input<CanaryScheduleArgs> schedule;
 
@@ -87,6 +123,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedule;
     }
 
+    /**
+     * Runs canary if set to True. Default is False
+     * 
+     */
     @InputImport(name="startCanaryAfterCreation", required=true)
     private final Input<Boolean> startCanaryAfterCreation;
 
@@ -94,6 +134,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.startCanaryAfterCreation;
     }
 
+    /**
+     * Retention period of successful canary runs represented in number of days
+     * 
+     */
     @InputImport(name="successRetentionPeriod")
     private final @Nullable Input<Integer> successRetentionPeriod;
 
@@ -108,6 +152,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Provide VPC Configuration if enabled.
+     * 
+     */
     @InputImport(name="vPCConfig")
     private final @Nullable Input<CanaryVPCConfigArgs> vPCConfig;
 
@@ -115,6 +163,10 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.vPCConfig == null ? Input.empty() : this.vPCConfig;
     }
 
+    /**
+     * Visual reference configuration for visual testing
+     * 
+     */
     @InputImport(name="visualReference")
     private final @Nullable Input<CanaryVisualReferenceArgs> visualReference;
 

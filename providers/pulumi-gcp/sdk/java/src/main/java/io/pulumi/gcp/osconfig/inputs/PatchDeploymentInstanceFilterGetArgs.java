@@ -17,6 +17,10 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
 
     public static final PatchDeploymentInstanceFilterGetArgs Empty = new PatchDeploymentInstanceFilterGetArgs();
 
+    /**
+     * Target all VM instances in the project. If true, no other criteria is permitted.
+     * 
+     */
     @InputImport(name="all")
     private final @Nullable Input<Boolean> all;
 
@@ -24,6 +28,11 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
         return this.all == null ? Input.empty() : this.all;
     }
 
+    /**
+     * Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="groupLabels")
     private final @Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels;
 
@@ -31,6 +40,11 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
         return this.groupLabels == null ? Input.empty() : this.groupLabels;
     }
 
+    /**
+     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
+     * VMs when targeting configs, for example prefix="prod-".
+     * 
+     */
     @InputImport(name="instanceNamePrefixes")
     private final @Nullable Input<List<String>> instanceNamePrefixes;
 
@@ -38,6 +52,12 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
         return this.instanceNamePrefixes == null ? Input.empty() : this.instanceNamePrefixes;
     }
 
+    /**
+     * Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
+     * `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
+     * `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<List<String>> instances;
 
@@ -45,6 +65,10 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
         return this.instances == null ? Input.empty() : this.instances;
     }
 
+    /**
+     * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApicategory {
+/**
+ * Gets a category on the portal.
+ * 
+ */
     public static CompletableFuture<GetApicategoryResult> invokeAsync(GetApicategoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getApicategory", TypeShape.of(GetApicategoryResult.class), args == null ? GetApicategoryArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * ResourceNavigationLink resource.
+ * 
+ */
 public final class ResourceNavigationLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceNavigationLinkResponse Empty = new ResourceNavigationLinkResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -21,6 +29,10 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,6 +40,10 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
         return this.id;
     }
 
+    /**
+     * Link to the external resource.
+     * 
+     */
     @InputImport(name="link")
     private final @Nullable String link;
 
@@ -35,6 +51,10 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
+    /**
+     * Resource type of the linked resource.
+     * 
+     */
     @InputImport(name="linkedResourceType")
     private final @Nullable String linkedResourceType;
 
@@ -42,6 +62,10 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
         return this.linkedResourceType == null ? Optional.empty() : Optional.ofNullable(this.linkedResourceType);
     }
 
+    /**
+     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -49,6 +73,10 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the resource navigation link resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -56,6 +84,10 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
         return this.provisioningState;
     }
 
+    /**
+     * Resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

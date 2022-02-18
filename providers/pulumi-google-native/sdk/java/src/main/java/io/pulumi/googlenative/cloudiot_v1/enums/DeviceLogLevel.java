@@ -8,12 +8,36 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * **Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.
+     * 
+     */
     @EnumType
     public enum DeviceLogLevel {
+        /**
+         * No logging specified. If not specified, logging will be disabled.
+         * 
+         */
         LogLevelUnspecified("LOG_LEVEL_UNSPECIFIED"),
+        /**
+         * Disables logging.
+         * 
+         */
         None("NONE"),
+        /**
+         * Error events will be logged.
+         * 
+         */
         Error("ERROR"),
+        /**
+         * Informational events will be logged, such as connections and disconnections.
+         * 
+         */
         Info("INFO"),
+        /**
+         * All events will be logged.
+         * 
+         */
         Debug("DEBUG");
 
         private final String value;

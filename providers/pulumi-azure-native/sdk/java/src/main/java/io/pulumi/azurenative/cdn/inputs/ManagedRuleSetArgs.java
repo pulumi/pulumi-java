@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a managed rule set.
+ * 
+ */
 public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedRuleSetArgs Empty = new ManagedRuleSetArgs();
 
+    /**
+     * Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
+     * 
+     */
     @InputImport(name="anomalyScore")
     private final @Nullable Input<Integer> anomalyScore;
 
@@ -24,6 +32,10 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.anomalyScore == null ? Input.empty() : this.anomalyScore;
     }
 
+    /**
+     * Defines the rule overrides to apply to the rule set.
+     * 
+     */
     @InputImport(name="ruleGroupOverrides")
     private final @Nullable Input<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
@@ -31,6 +43,10 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleGroupOverrides == null ? Input.empty() : this.ruleGroupOverrides;
     }
 
+    /**
+     * Defines the rule set type to use.
+     * 
+     */
     @InputImport(name="ruleSetType", required=true)
     private final Input<String> ruleSetType;
 
@@ -38,6 +54,10 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleSetType;
     }
 
+    /**
+     * Defines the version of the rule set to use.
+     * 
+     */
     @InputImport(name="ruleSetVersion", required=true)
     private final Input<String> ruleSetVersion;
 

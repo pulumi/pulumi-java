@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEmailTemplate {
+/**
+ * Email Template details.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Email Template details.
+ * 
+ */
     public static CompletableFuture<GetEmailTemplateResult> invokeAsync(GetEmailTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getEmailTemplate", TypeShape.of(GetEmailTemplateResult.class), args == null ? GetEmailTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

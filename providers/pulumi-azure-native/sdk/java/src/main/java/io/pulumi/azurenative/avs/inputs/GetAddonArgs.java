@@ -12,6 +12,10 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAddonArgs Empty = new GetAddonArgs();
 
+    /**
+     * Name of the addon for the private cloud
+     * 
+     */
     @InputImport(name="addonName", required=true)
     private final String addonName;
 
@@ -19,6 +23,10 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
         return this.addonName;
     }
 
+    /**
+     * Name of the private cloud
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -26,6 +34,10 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

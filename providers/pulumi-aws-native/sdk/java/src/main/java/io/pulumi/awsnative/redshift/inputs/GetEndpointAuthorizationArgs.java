@@ -12,6 +12,10 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
 
     public static final GetEndpointAuthorizationArgs Empty = new GetEndpointAuthorizationArgs();
 
+    /**
+     * The target AWS account ID to grant or revoke access for.
+     * 
+     */
     @InputImport(name="account", required=true)
     private final String account;
 
@@ -19,6 +23,10 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
         return this.account;
     }
 
+    /**
+     * The cluster identifier.
+     * 
+     */
     @InputImport(name="clusterIdentifier", required=true)
     private final String clusterIdentifier;
 

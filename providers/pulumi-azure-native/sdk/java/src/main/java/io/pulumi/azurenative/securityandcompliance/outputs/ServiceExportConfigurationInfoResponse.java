@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceExportConfigurationInfoResponse {
+    /**
+     * The name of the default export storage account.
+     * 
+     */
     private final @Nullable String storageAccountName;
 
     @OutputCustomType.Constructor({"storageAccountName"})
@@ -18,6 +22,10 @@ public final class ServiceExportConfigurationInfoResponse {
         this.storageAccountName = storageAccountName;
     }
 
+    /**
+     * The name of the default export storage account.
+     * 
+     */
     public Optional<String> getStorageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }

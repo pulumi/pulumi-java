@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Disk's independence mode type
+     * 
+     */
     @EnumType
     public enum DiskIndependenceMode {
         Persistent("persistent"),

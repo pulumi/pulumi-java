@@ -15,6 +15,10 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
 
     public static final FlexibleAppVersionAutomaticScalingCpuUtilizationArgs Empty = new FlexibleAppVersionAutomaticScalingCpuUtilizationArgs();
 
+    /**
+     * Period of time over which CPU utilization is calculated.
+     * 
+     */
     @InputImport(name="aggregationWindowLength")
     private final @Nullable Input<String> aggregationWindowLength;
 
@@ -22,6 +26,10 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
         return this.aggregationWindowLength == null ? Input.empty() : this.aggregationWindowLength;
     }
 
+    /**
+     * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+     * 
+     */
     @InputImport(name="targetUtilization", required=true)
     private final Input<Double> targetUtilization;
 

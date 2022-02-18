@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDHCPOptions {
+/**
+ * Resource Type definition for AWS::EC2::DHCPOptions
+ * 
+ */
     public static CompletableFuture<GetDHCPOptionsResult> invokeAsync(GetDHCPOptionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getDHCPOptions", TypeShape.of(GetDHCPOptionsResult.class), args == null ? GetDHCPOptionsArgs.Empty : args, Utilities.withVersion(options));
     }

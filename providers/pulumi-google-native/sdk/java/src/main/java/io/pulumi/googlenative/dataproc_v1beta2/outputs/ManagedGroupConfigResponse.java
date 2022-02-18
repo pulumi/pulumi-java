@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedGroupConfigResponse {
+    /**
+     * The name of the Instance Group Manager for this group.
+     * 
+     */
     private final String instanceGroupManagerName;
+    /**
+     * The name of the Instance Template used for the Managed Instance Group.
+     * 
+     */
     private final String instanceTemplateName;
 
     @OutputCustomType.Constructor({"instanceGroupManagerName","instanceTemplateName"})
@@ -20,9 +28,17 @@ public final class ManagedGroupConfigResponse {
         this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
     }
 
+    /**
+     * The name of the Instance Group Manager for this group.
+     * 
+     */
     public String getInstanceGroupManagerName() {
         return this.instanceGroupManagerName;
     }
+    /**
+     * The name of the Instance Template used for the Managed Instance Group.
+     * 
+     */
     public String getInstanceTemplateName() {
         return this.instanceTemplateName;
     }

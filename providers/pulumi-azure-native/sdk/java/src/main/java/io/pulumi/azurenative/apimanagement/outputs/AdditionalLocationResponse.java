@@ -15,13 +15,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AdditionalLocationResponse {
+    /**
+     * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
+     * 
+     */
     private final @Nullable Boolean disableGateway;
+    /**
+     * Gateway URL of the API Management service in the Region.
+     * 
+     */
     private final String gatewayRegionalUrl;
+    /**
+     * The location name of the additional region among Azure Data center regions.
+     * 
+     */
     private final String location;
+    /**
+     * Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     private final List<String> privateIPAddresses;
+    /**
+     * Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     private final List<String> publicIPAddresses;
+    /**
+     * SKU properties of the API Management service.
+     * 
+     */
     private final ApiManagementServiceSkuPropertiesResponse sku;
+    /**
+     * Virtual network configuration for the location.
+     * 
+     */
     private final @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
+    /**
+     * A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"disableGateway","gatewayRegionalUrl","location","privateIPAddresses","publicIPAddresses","sku","virtualNetworkConfiguration","zones"})
@@ -44,27 +76,59 @@ public final class AdditionalLocationResponse {
         this.zones = zones;
     }
 
+    /**
+     * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
+     * 
+     */
     public Optional<Boolean> getDisableGateway() {
         return Optional.ofNullable(this.disableGateway);
     }
+    /**
+     * Gateway URL of the API Management service in the Region.
+     * 
+     */
     public String getGatewayRegionalUrl() {
         return this.gatewayRegionalUrl;
     }
+    /**
+     * The location name of the additional region among Azure Data center regions.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     public List<String> getPrivateIPAddresses() {
         return this.privateIPAddresses;
     }
+    /**
+     * Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     public List<String> getPublicIPAddresses() {
         return this.publicIPAddresses;
     }
+    /**
+     * SKU properties of the API Management service.
+     * 
+     */
     public ApiManagementServiceSkuPropertiesResponse getSku() {
         return this.sku;
     }
+    /**
+     * Virtual network configuration for the location.
+     * 
+     */
     public Optional<VirtualNetworkConfigurationResponse> getVirtualNetworkConfiguration() {
         return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
+    /**
+     * A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning the virtual network.
+ * 
+ */
 public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkPropertiesArgs Empty = new VirtualNetworkPropertiesArgs();
 
+    /**
+     * Uri of the virtual network.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +30,10 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Properties of a subnet.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetPropertiesArgs> subnet;
 

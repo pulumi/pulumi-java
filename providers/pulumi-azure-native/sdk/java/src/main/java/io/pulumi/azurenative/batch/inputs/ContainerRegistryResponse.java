@@ -21,6 +21,10 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
         return this.password;
     }
 
+    /**
+     * If omitted, the default is "docker.io".
+     * 
+     */
     @InputImport(name="registryServer")
     private final @Nullable String registryServer;
 

@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies data related to access patterns to be collected and made available to analyze the tradeoffs between different storage classes for an Amazon S3 bucket.
+ * 
+ */
 public final class BucketStorageClassAnalysisArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketStorageClassAnalysisArgs Empty = new BucketStorageClassAnalysisArgs();

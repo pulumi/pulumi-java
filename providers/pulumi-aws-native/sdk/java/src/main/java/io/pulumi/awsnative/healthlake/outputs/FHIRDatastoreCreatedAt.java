@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FHIRDatastoreCreatedAt {
+    /**
+     * Nanoseconds.
+     * 
+     */
     private final Integer nanos;
+    /**
+     * Seconds since epoch.
+     * 
+     */
     private final String seconds;
 
     @OutputCustomType.Constructor({"nanos","seconds"})
@@ -21,9 +29,17 @@ public final class FHIRDatastoreCreatedAt {
         this.seconds = Objects.requireNonNull(seconds);
     }
 
+    /**
+     * Nanoseconds.
+     * 
+     */
     public Integer getNanos() {
         return this.nanos;
     }
+    /**
+     * Seconds since epoch.
+     * 
+     */
     public String getSeconds() {
         return this.seconds;
     }

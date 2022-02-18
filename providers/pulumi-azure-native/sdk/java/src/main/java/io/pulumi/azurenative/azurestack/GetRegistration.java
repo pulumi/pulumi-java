@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistration {
+/**
+ * Registration information.
+ * API Version: 2017-06-01.
+ * 
+ *
+ * Registration information.
+ * 
+ */
     public static CompletableFuture<GetRegistrationResult> invokeAsync(GetRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestack:getRegistration", TypeShape.of(GetRegistrationResult.class), args == null ? GetRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

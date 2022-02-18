@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The data for a phrase match rule.
+ * 
+ */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs Empty = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs();
 
+    /**
+     * Provides additional information about the rule that specifies how to apply the rule.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
+     * 
+     */
     @InputImport(name="negated")
     private final @Nullable Input<Boolean> negated;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
         return this.negated == null ? Input.empty() : this.negated;
     }
 
+    /**
+     * The phrase to be matched.
+     * 
+     */
     @InputImport(name="query", required=true)
     private final Input<String> query;
 

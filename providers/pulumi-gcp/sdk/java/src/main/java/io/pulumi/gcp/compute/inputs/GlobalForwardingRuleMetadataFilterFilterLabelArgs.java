@@ -13,6 +13,11 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelArgs extends io.
 
     public static final GlobalForwardingRuleMetadataFilterFilterLabelArgs Empty = new GlobalForwardingRuleMetadataFilterFilterLabelArgs();
 
+    /**
+     * Name of the metadata label. The length must be between
+     * 1 and 1024 characters, inclusive.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +25,11 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelArgs extends io.
         return this.name;
     }
 
+    /**
+     * The value that the label must match. The value has a maximum
+     * length of 1024 characters.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

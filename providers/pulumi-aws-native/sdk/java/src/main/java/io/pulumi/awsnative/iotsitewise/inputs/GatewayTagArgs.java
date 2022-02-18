@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * To add or update tag, provide both key and value. To delete tag, provide only tag key to be deleted
+ * 
+ */
 public final class GatewayTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayTagArgs Empty = new GatewayTagArgs();

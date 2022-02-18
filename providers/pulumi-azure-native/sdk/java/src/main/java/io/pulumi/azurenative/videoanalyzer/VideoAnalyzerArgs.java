@@ -19,6 +19,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VideoAnalyzerArgs Empty = new VideoAnalyzerArgs();
 
+    /**
+     * The Video Analyzer account name.
+     * 
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -26,6 +30,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * The account encryption properties.
+     * 
+     */
     @InputImport(name="encryption", required=true)
     private final Input<AccountEncryptionArgs> encryption;
 
@@ -33,6 +41,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption;
     }
 
+    /**
+     * The set of managed identities associated with the Video Analyzer resource.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<VideoAnalyzerIdentityArgs> identity;
 
@@ -40,6 +52,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -47,6 +63,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -54,6 +74,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The storage accounts for this resource.
+     * 
+     */
     @InputImport(name="storageAccounts", required=true)
     private final Input<List<StorageAccountArgs>> storageAccounts;
 
@@ -61,6 +85,10 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccounts;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

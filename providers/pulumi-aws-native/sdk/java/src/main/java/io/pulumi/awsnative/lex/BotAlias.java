@@ -18,6 +18,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Bot Alias enables you to change the version of a bot without updating applications that use the bot
+ * 
+ */
 @ResourceType(type="aws-native:lex:BotAlias")
 public class BotAlias extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -50,9 +54,17 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
     public Output<BotAliasStatus> getBotAliasStatus() {
         return this.botAliasStatus;
     }
+    /**
+     * A list of tags to add to the bot alias.
+     * 
+     */
     @OutputExport(name="botAliasTags", type=List.class, parameters={BotAliasTag.class})
     private Output</* @Nullable */ List<BotAliasTag>> botAliasTags;
 
+    /**
+     * @return A list of tags to add to the bot alias.
+     * 
+     */
     public Output</* @Nullable */ List<BotAliasTag>> getBotAliasTags() {
         return this.botAliasTags;
     }
@@ -80,13 +92,27 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+     * 
+     */
     @OutputExport(name="sentimentAnalysisSettings", type=SentimentAnalysisSettingsProperties.class, parameters={})
     private Output</* @Nullable */ SentimentAnalysisSettingsProperties> sentimentAnalysisSettings;
 
+    /**
+     * @return Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+     * 
+     */
     public Output</* @Nullable */ SentimentAnalysisSettingsProperties> getSentimentAnalysisSettings() {
         return this.sentimentAnalysisSettings;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BotAlias(String name, BotAliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lex:BotAlias", name, args == null ? BotAliasArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -102,6 +128,14 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BotAlias get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BotAlias(name, id, options);
     }

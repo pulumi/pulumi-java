@@ -12,6 +12,10 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
 
     public static final ListServiceFabricApplicableSchedulesArgs Empty = new ListServiceFabricApplicableSchedulesArgs();
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -19,6 +23,10 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
         return this.labName;
     }
 
+    /**
+     * The name of the service fabric.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +34,10 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the user profile.
+     * 
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

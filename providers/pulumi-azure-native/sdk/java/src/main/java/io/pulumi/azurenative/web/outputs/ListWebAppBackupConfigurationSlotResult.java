@@ -15,14 +15,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListWebAppBackupConfigurationSlotResult {
+    /**
+     * Name of the backup.
+     * 
+     */
     private final @Nullable String backupName;
+    /**
+     * Schedule for the backup if it is executed periodically.
+     * 
+     */
     private final @Nullable BackupScheduleResponse backupSchedule;
+    /**
+     * Databases included in the backup.
+     * 
+     */
     private final @Nullable List<DatabaseBackupSettingResponse> databases;
+    /**
+     * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+     * 
+     */
     private final @Nullable Boolean enabled;
+    /**
+     * Resource Id.
+     * 
+     */
     private final String id;
+    /**
+     * Kind of resource.
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Resource Name.
+     * 
+     */
     private final String name;
+    /**
+     * SAS URL to the container.
+     * 
+     */
     private final String storageAccountUrl;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"backupName","backupSchedule","databases","enabled","id","kind","name","storageAccountUrl","type"})
@@ -47,30 +83,66 @@ public final class ListWebAppBackupConfigurationSlotResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Name of the backup.
+     * 
+     */
     public Optional<String> getBackupName() {
         return Optional.ofNullable(this.backupName);
     }
+    /**
+     * Schedule for the backup if it is executed periodically.
+     * 
+     */
     public Optional<BackupScheduleResponse> getBackupSchedule() {
         return Optional.ofNullable(this.backupSchedule);
     }
+    /**
+     * Databases included in the backup.
+     * 
+     */
     public List<DatabaseBackupSettingResponse> getDatabases() {
         return this.databases == null ? List.of() : this.databases;
     }
+    /**
+     * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * Resource Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Kind of resource.
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Resource Name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * SAS URL to the container.
+     * 
+     */
     public String getStorageAccountUrl() {
         return this.storageAccountUrl;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

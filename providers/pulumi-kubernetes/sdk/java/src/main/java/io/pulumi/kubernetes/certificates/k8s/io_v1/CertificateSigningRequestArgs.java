@@ -16,6 +16,10 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
 
     public static final CertificateSigningRequestArgs Empty = new CertificateSigningRequestArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -23,6 +27,10 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -37,6 +45,10 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
+     * 
+     */
     @InputImport(name="spec", required=true)
     private final Input<CertificateSigningRequestSpecArgs> spec;
 

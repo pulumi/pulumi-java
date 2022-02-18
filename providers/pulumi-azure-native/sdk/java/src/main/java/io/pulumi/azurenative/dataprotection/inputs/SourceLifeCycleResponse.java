@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Source LifeCycle
+ * 
+ */
 public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceLifeCycleResponse Empty = new SourceLifeCycleResponse();
 
+    /**
+     * Delete Option
+     * 
+     */
     @InputImport(name="deleteAfter", required=true)
     private final AbsoluteDeleteOptionResponse deleteAfter;
 
@@ -24,6 +32,10 @@ public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArg
         return this.deleteAfter;
     }
 
+    /**
+     * DataStoreInfo base
+     * 
+     */
     @InputImport(name="sourceDataStore", required=true)
     private final DataStoreInfoBaseResponse sourceDataStore;
 

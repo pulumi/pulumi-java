@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for Salesforce Service Cloud.
+ * 
+ */
 public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SalesforceServiceCloudLinkedServiceResponse Empty = new SalesforceServiceCloudLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +37,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Object apiVersion;
 
@@ -36,6 +48,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.apiVersion == null ? Optional.empty() : Optional.ofNullable(this.apiVersion);
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -43,6 +59,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -50,6 +70,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -57,6 +81,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="environmentUrl")
     private final @Nullable Object environmentUrl;
 
@@ -64,6 +92,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.environmentUrl == null ? Optional.empty() : Optional.ofNullable(this.environmentUrl);
     }
 
+    /**
+     * Extended properties appended to the connection string. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="extendedProperties")
     private final @Nullable Object extendedProperties;
 
@@ -71,6 +103,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.extendedProperties == null ? Optional.empty() : Optional.ofNullable(this.extendedProperties);
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -78,6 +114,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The password for Basic authentication of the Salesforce instance.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -85,6 +125,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * The security token is optional to remotely access Salesforce instance.
+     * 
+     */
     @InputImport(name="securityToken")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
 
@@ -92,6 +136,11 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.securityToken == null ? null : this.securityToken;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'SalesforceServiceCloud'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -99,6 +148,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends io.pulumi
         return this.type;
     }
 
+    /**
+     * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Object username;
 

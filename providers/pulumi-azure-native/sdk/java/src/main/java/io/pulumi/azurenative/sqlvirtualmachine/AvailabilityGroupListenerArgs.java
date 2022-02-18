@@ -18,6 +18,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
 
     public static final AvailabilityGroupListenerArgs Empty = new AvailabilityGroupListenerArgs();
 
+    /**
+     * Name of the availability group listener.
+     * 
+     */
     @InputImport(name="availabilityGroupListenerName")
     private final @Nullable Input<String> availabilityGroupListenerName;
 
@@ -25,6 +29,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
         return this.availabilityGroupListenerName == null ? Input.empty() : this.availabilityGroupListenerName;
     }
 
+    /**
+     * Name of the availability group.
+     * 
+     */
     @InputImport(name="availabilityGroupName")
     private final @Nullable Input<String> availabilityGroupName;
 
@@ -32,6 +40,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
         return this.availabilityGroupName == null ? Input.empty() : this.availabilityGroupName;
     }
 
+    /**
+     * Create a default availability group if it does not exist.
+     * 
+     */
     @InputImport(name="createDefaultAvailabilityGroupIfNotExist")
     private final @Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist;
 
@@ -39,6 +51,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
         return this.createDefaultAvailabilityGroupIfNotExist == null ? Input.empty() : this.createDefaultAvailabilityGroupIfNotExist;
     }
 
+    /**
+     * List of load balancer configurations for an availability group listener.
+     * 
+     */
     @InputImport(name="loadBalancerConfigurations")
     private final @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
@@ -46,6 +62,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
         return this.loadBalancerConfigurations == null ? Input.empty() : this.loadBalancerConfigurations;
     }
 
+    /**
+     * Listener port.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -53,6 +73,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +84,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SQL virtual machine group.
+     * 
+     */
     @InputImport(name="sqlVirtualMachineGroupName", required=true)
     private final Input<String> sqlVirtualMachineGroupName;
 

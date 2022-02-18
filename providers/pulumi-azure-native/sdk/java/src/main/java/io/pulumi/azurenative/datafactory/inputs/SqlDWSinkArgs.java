@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity SQL Data Warehouse sink.
+ * 
+ */
 public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlDWSinkArgs Empty = new SqlDWSinkArgs();
 
+    /**
+     * Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="allowCopyCommand")
     private final @Nullable Input<Object> allowCopyCommand;
 
@@ -25,6 +33,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowCopyCommand == null ? Input.empty() : this.allowCopyCommand;
     }
 
+    /**
+     * Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="allowPolyBase")
     private final @Nullable Input<Object> allowPolyBase;
 
@@ -32,6 +44,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowPolyBase == null ? Input.empty() : this.allowPolyBase;
     }
 
+    /**
+     * Specifies Copy Command related settings when allowCopyCommand is true.
+     * 
+     */
     @InputImport(name="copyCommandSettings")
     private final @Nullable Input<DWCopyCommandSettingsArgs> copyCommandSettings;
 
@@ -39,6 +55,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.copyCommandSettings == null ? Input.empty() : this.copyCommandSettings;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -46,6 +66,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -53,6 +77,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * Specifies PolyBase-related settings when allowPolyBase is true.
+     * 
+     */
     @InputImport(name="polyBaseSettings")
     private final @Nullable Input<PolybaseSettingsArgs> polyBaseSettings;
 
@@ -60,6 +88,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.polyBaseSettings == null ? Input.empty() : this.polyBaseSettings;
     }
 
+    /**
+     * SQL pre-copy script. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="preCopyScript")
     private final @Nullable Input<Object> preCopyScript;
 
@@ -67,6 +99,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.preCopyScript == null ? Input.empty() : this.preCopyScript;
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -74,6 +110,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -81,6 +121,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
+    /**
+     * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="sqlWriterUseTableLock")
     private final @Nullable Input<Object> sqlWriterUseTableLock;
 
@@ -88,6 +132,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlWriterUseTableLock == null ? Input.empty() : this.sqlWriterUseTableLock;
     }
 
+    /**
+     * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="tableOption")
     private final @Nullable Input<Object> tableOption;
 
@@ -95,6 +143,11 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.tableOption == null ? Input.empty() : this.tableOption;
     }
 
+    /**
+     * Copy sink type.
+     * Expected value is 'SqlDWSink'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -102,6 +155,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * SQL DW upsert settings.
+     * 
+     */
     @InputImport(name="upsertSettings")
     private final @Nullable Input<SqlDWUpsertSettingsArgs> upsertSettings;
 
@@ -109,6 +166,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.upsertSettings == null ? Input.empty() : this.upsertSettings;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -116,6 +177,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 
@@ -123,6 +188,10 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
     }
 
+    /**
+     * Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
+     * 
+     */
     @InputImport(name="writeBehavior")
     private final @Nullable Input<Object> writeBehavior;
 

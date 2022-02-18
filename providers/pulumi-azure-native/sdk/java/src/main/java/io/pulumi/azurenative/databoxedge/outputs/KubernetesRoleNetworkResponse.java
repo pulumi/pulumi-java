@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KubernetesRoleNetworkResponse {
+    /**
+     * Cni configuration
+     * 
+     */
     private final CniConfigResponse cniConfig;
+    /**
+     * Load balancer configuration
+     * 
+     */
     private final LoadBalancerConfigResponse loadBalancerConfig;
 
     @OutputCustomType.Constructor({"cniConfig","loadBalancerConfig"})
@@ -21,9 +29,17 @@ public final class KubernetesRoleNetworkResponse {
         this.loadBalancerConfig = Objects.requireNonNull(loadBalancerConfig);
     }
 
+    /**
+     * Cni configuration
+     * 
+     */
     public CniConfigResponse getCniConfig() {
         return this.cniConfig;
     }
+    /**
+     * Load balancer configuration
+     * 
+     */
     public LoadBalancerConfigResponse getLoadBalancerConfig() {
         return this.loadBalancerConfig;
     }

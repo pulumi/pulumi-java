@@ -14,6 +14,10 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
 
     public static final DatasetCreateRequestQueryArgs Empty = new DatasetCreateRequestQueryArgs();
 
+    /**
+     * The SQL/PostgreSQL/MySQL datastore name.
+     * 
+     */
     @InputImport(name="datastoreName")
     private final @Nullable Input<String> datastoreName;
 
@@ -21,6 +25,10 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
     }
 
+    /**
+     * SQL Quey.
+     * 
+     */
     @InputImport(name="query")
     private final @Nullable Input<String> query;
 

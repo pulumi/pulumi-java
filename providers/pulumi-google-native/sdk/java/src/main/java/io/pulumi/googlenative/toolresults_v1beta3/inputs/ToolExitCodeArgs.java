@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Exit code from a tool execution.
+ * 
+ */
 public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ToolExitCodeArgs Empty = new ToolExitCodeArgs();
 
+    /**
+     * Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
+     * 
+     */
     @InputImport(name="number")
     private final @Nullable Input<Integer> number;
 

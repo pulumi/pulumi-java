@@ -17,45 +17,114 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * EnterpriseKnowledgeGraph resource definition
+ * API Version: 2018-12-03.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:enterpriseknowledgegraph:EnterpriseKnowledgeGraph samplename someid 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:enterpriseknowledgegraph:EnterpriseKnowledgeGraph")
 public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource {
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Specifies the name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Specifies the name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The set of properties specific to EnterpriseKnowledgeGraph resource
+     * 
+     */
     @OutputExport(name="properties", type=EnterpriseKnowledgeGraphPropertiesResponse.class, parameters={})
     private Output<EnterpriseKnowledgeGraphPropertiesResponse> properties;
 
+    /**
+     * @return The set of properties specific to EnterpriseKnowledgeGraph resource
+     * 
+     */
     public Output<EnterpriseKnowledgeGraphPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Gets or sets the SKU of the resource.
+     * 
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return Gets or sets the SKU of the resource.
+     * 
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Contains resource tags defined as key/value pairs.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EnterpriseKnowledgeGraph(String name, EnterpriseKnowledgeGraphArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:enterpriseknowledgegraph:EnterpriseKnowledgeGraph", name, args == null ? EnterpriseKnowledgeGraphArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +143,14 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EnterpriseKnowledgeGraph get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EnterpriseKnowledgeGraph(name, id, options);
     }

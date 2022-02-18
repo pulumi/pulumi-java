@@ -12,6 +12,10 @@ public final class GetDataManagerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataManagerArgs Empty = new GetDataManagerArgs();
 
+    /**
+     * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     @InputImport(name="dataManagerName", required=true)
     private final String dataManagerName;
 
@@ -19,6 +23,10 @@ public final class GetDataManagerArgs extends io.pulumi.resources.InvokeArgs {
         return this.dataManagerName;
     }
 
+    /**
+     * The Resource Group Name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

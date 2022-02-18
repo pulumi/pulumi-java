@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWaiter {
+/**
+ * Gets information about a single waiter.
+ * 
+ */
     public static CompletableFuture<GetWaiterResult> invokeAsync(GetWaiterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:runtimeconfig/v1beta1:getWaiter", TypeShape.of(GetWaiterResult.class), args == null ? GetWaiterArgs.Empty : args, Utilities.withVersion(options));
     }

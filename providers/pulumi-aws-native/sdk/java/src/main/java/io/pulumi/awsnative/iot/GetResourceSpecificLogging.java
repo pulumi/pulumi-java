@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceSpecificLogging {
+/**
+ * Resource-specific logging allows you to specify a logging level for a specific thing group.
+ * 
+ */
     public static CompletableFuture<GetResourceSpecificLoggingResult> invokeAsync(GetResourceSpecificLoggingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getResourceSpecificLogging", TypeShape.of(GetResourceSpecificLoggingResult.class), args == null ? GetResourceSpecificLoggingArgs.Empty : args, Utilities.withVersion(options));
     }

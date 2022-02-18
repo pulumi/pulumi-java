@@ -14,6 +14,10 @@ public final class InsightsTableResultResponseColumns extends io.pulumi.resource
 
     public static final InsightsTableResultResponseColumns Empty = new InsightsTableResultResponseColumns();
 
+    /**
+     * the name of the colum
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +25,10 @@ public final class InsightsTableResultResponseColumns extends io.pulumi.resource
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * the type of the colum
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

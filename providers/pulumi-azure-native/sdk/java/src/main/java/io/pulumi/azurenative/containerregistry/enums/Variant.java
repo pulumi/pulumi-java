@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Variant of the CPU.
+     * 
+     */
     @EnumType
     public enum Variant {
         V6("v6"),

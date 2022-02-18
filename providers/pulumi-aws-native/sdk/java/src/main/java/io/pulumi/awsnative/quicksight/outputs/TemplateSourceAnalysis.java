@@ -11,7 +11,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TemplateSourceAnalysis {
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     private final String arn;
+    /**
+     * <p>A structure containing information about the dataset references used as placeholders
+     *             in the template.</p>
+     * 
+     */
     private final List<TemplateDataSetReference> dataSetReferences;
 
     @OutputCustomType.Constructor({"arn","dataSetReferences"})
@@ -22,9 +31,18 @@ public final class TemplateSourceAnalysis {
         this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
     }
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     public String getArn() {
         return this.arn;
     }
+    /**
+     * <p>A structure containing information about the dataset references used as placeholders
+     *             in the template.</p>
+     * 
+     */
     public List<TemplateDataSetReference> getDataSetReferences() {
         return this.dataSetReferences;
     }

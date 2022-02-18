@@ -14,6 +14,10 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final SupportPlanTypeArgs Empty = new SupportPlanTypeArgs();
 
+    /**
+     * The Canonical support plan type.
+     * 
+     */
     @InputImport(name="planTypeName")
     private final @Nullable Input<String> planTypeName;
 
@@ -21,6 +25,10 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
         return this.planTypeName == null ? Input.empty() : this.planTypeName;
     }
 
+    /**
+     * The support plan type. For now the only valid type is "canonical".
+     * 
+     */
     @InputImport(name="providerName", required=true)
     private final Input<String> providerName;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionProxy {
+/**
+ * Private endpoint connection proxy details.
+ * API Version: 2020-03-01-preview.
+ * 
+ *
+ * Private endpoint connection proxy details.
+ * 
+ */
     public static CompletableFuture<GetPrivateEndpointConnectionProxyResult> invokeAsync(GetPrivateEndpointConnectionProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deviceupdate:getPrivateEndpointConnectionProxy", TypeShape.of(GetPrivateEndpointConnectionProxyResult.class), args == null ? GetPrivateEndpointConnectionProxyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A custom alert rule that checks if a value (depends on the custom alert type) is allowed.
+ * 
+ */
 public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AllowlistCustomAlertRuleArgs Empty = new AllowlistCustomAlertRuleArgs();
 
+    /**
+     * The values to allow. The format of the values depends on the rule type.
+     * 
+     */
     @InputImport(name="allowlistValues", required=true)
     private final Input<List<String>> allowlistValues;
 
@@ -22,6 +30,10 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
         return this.allowlistValues;
     }
 
+    /**
+     * Status of the custom alert.
+     * 
+     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 
@@ -29,6 +41,11 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
         return this.isEnabled;
     }
 
+    /**
+     * The type of the custom alert rule.
+     * Expected value is 'AllowlistCustomAlertRule'.
+     * 
+     */
     @InputImport(name="ruleType", required=true)
     private final Input<String> ruleType;
 

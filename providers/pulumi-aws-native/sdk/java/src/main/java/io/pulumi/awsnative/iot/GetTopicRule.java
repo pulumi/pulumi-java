@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTopicRule {
+/**
+ * Resource Type definition for AWS::IoT::TopicRule
+ * 
+ */
     public static CompletableFuture<GetTopicRuleResult> invokeAsync(GetTopicRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getTopicRule", TypeShape.of(GetTopicRuleResult.class), args == null ? GetTopicRuleArgs.Empty : args, Utilities.withVersion(options));
     }

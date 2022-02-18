@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Amazon OpenSearch Service parameters.</p>
+ * 
+ */
 public final class DataSourceAmazonOpenSearchParameters extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceAmazonOpenSearchParameters Empty = new DataSourceAmazonOpenSearchParameters();
 
+    /**
+     * <p>The Amazon OpenSearch Service domain.</p>
+     * 
+     */
     @InputImport(name="domain", required=true)
     private final String domain;
 

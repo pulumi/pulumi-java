@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Message containing information of one individual backend.
+ * 
+ */
 public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendResponse Empty = new BackendResponse();
 
+    /**
+     * Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.
+     * 
+     */
     @InputImport(name="balancingMode", required=true)
     private final String balancingMode;
 
@@ -22,6 +30,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.balancingMode;
     }
 
+    /**
+     * A multiplier applied to the backend's target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
+     * 
+     */
     @InputImport(name="capacityScaler", required=true)
     private final Double capacityScaler;
 
@@ -29,6 +41,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacityScaler;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -36,6 +52,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
+    /**
+     * This field designates whether this is a failover backend. More than one failover backend can be configured for a given BackendService.
+     * 
+     */
     @InputImport(name="failover", required=true)
     private final Boolean failover;
 
@@ -43,6 +63,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.failover;
     }
 
+    /**
+     * The fully-qualified URL of an instance group or network endpoint group (NEG) resource. To determine what types of backends a load balancer supports, see the [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance group or NEG. Partial URLs are not supported.
+     * 
+     */
     @InputImport(name="group", required=true)
     private final String group;
 
@@ -50,6 +74,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.group;
     }
 
+    /**
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * 
+     */
     @InputImport(name="maxConnections", required=true)
     private final Integer maxConnections;
 
@@ -57,6 +85,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxConnections;
     }
 
+    /**
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * 
+     */
     @InputImport(name="maxConnectionsPerEndpoint", required=true)
     private final Integer maxConnectionsPerEndpoint;
 
@@ -64,6 +96,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxConnectionsPerEndpoint;
     }
 
+    /**
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * 
+     */
     @InputImport(name="maxConnectionsPerInstance", required=true)
     private final Integer maxConnectionsPerInstance;
 
@@ -71,6 +107,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxConnectionsPerInstance;
     }
 
+    /**
+     * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * 
+     */
     @InputImport(name="maxRate", required=true)
     private final Integer maxRate;
 
@@ -78,6 +118,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxRate;
     }
 
+    /**
+     * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * 
+     */
     @InputImport(name="maxRatePerEndpoint", required=true)
     private final Double maxRatePerEndpoint;
 
@@ -85,6 +129,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxRatePerEndpoint;
     }
 
+    /**
+     * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * 
+     */
     @InputImport(name="maxRatePerInstance", required=true)
     private final Double maxRatePerInstance;
 
@@ -92,6 +140,10 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxRatePerInstance;
     }
 
+    /**
+     * Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
+     * 
+     */
     @InputImport(name="maxUtilization", required=true)
     private final Double maxUtilization;
 

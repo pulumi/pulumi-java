@@ -14,6 +14,10 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KnowledgeBaseArgs Empty = new KnowledgeBaseArgs();
 
+    /**
+     * The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +25,10 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A link to the KB in the [Windows update catalog] (https://www.catalog.update.microsoft.com/).
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

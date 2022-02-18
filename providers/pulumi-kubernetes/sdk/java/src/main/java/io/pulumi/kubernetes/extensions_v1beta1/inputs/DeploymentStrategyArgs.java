@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DeploymentStrategy describes how to replace existing pods with new ones.
+ * 
+ */
 public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentStrategyArgs Empty = new DeploymentStrategyArgs();
 
+    /**
+     * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
+     * 
+     */
     @InputImport(name="rollingUpdate")
     private final @Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate;
 
@@ -22,6 +30,10 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
     }
 
+    /**
+     * Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

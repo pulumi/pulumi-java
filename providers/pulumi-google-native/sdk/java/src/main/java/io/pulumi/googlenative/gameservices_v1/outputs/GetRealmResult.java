@@ -10,12 +10,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetRealmResult {
+    /**
+     * The creation time.
+     * 
+     */
     private final String createTime;
+    /**
+     * Human readable description of the realm.
+     * 
+     */
     private final String description;
+    /**
+     * ETag of the resource.
+     * 
+     */
     private final String etag;
+    /**
+     * The labels associated with this realm. Each label is a key-value pair.
+     * 
+     */
     private final Map<String,String> labels;
+    /**
+     * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+     * 
+     */
     private final String name;
+    /**
+     * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+     * 
+     */
     private final String timeZone;
+    /**
+     * The last-modified time.
+     * 
+     */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","description","etag","labels","name","timeZone","updateTime"})
@@ -36,24 +64,52 @@ public final class GetRealmResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+    /**
+     * The creation time.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Human readable description of the realm.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * ETag of the resource.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * The labels associated with this realm. Each label is a key-value pair.
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+    /**
+     * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+     * 
+     */
     public String getTimeZone() {
         return this.timeZone;
     }
+    /**
+     * The last-modified time.
+     * 
+     */
     public String getUpdateTime() {
         return this.updateTime;
     }

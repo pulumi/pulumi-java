@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OpenShiftRouterProfileResponse {
+    /**
+     * Auto-allocated FQDN for the OpenShift router.
+     * 
+     */
     private final String fqdn;
+    /**
+     * Name of the router profile.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * DNS subdomain for OpenShift router.
+     * 
+     */
     private final String publicSubdomain;
 
     @OutputCustomType.Constructor({"fqdn","name","publicSubdomain"})
@@ -25,12 +37,24 @@ public final class OpenShiftRouterProfileResponse {
         this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
     }
 
+    /**
+     * Auto-allocated FQDN for the OpenShift router.
+     * 
+     */
     public String getFqdn() {
         return this.fqdn;
     }
+    /**
+     * Name of the router profile.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * DNS subdomain for OpenShift router.
+     * 
+     */
     public String getPublicSubdomain() {
         return this.publicSubdomain;
     }

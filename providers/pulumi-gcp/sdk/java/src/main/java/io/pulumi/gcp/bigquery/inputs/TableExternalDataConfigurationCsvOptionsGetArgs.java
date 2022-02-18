@@ -16,6 +16,11 @@ public final class TableExternalDataConfigurationCsvOptionsGetArgs extends io.pu
 
     public static final TableExternalDataConfigurationCsvOptionsGetArgs Empty = new TableExternalDataConfigurationCsvOptionsGetArgs();
 
+    /**
+     * Indicates if BigQuery should accept rows
+     * that are missing trailing optional columns.
+     * 
+     */
     @InputImport(name="allowJaggedRows")
     private final @Nullable Input<Boolean> allowJaggedRows;
 
@@ -23,6 +28,12 @@ public final class TableExternalDataConfigurationCsvOptionsGetArgs extends io.pu
         return this.allowJaggedRows == null ? Input.empty() : this.allowJaggedRows;
     }
 
+    /**
+     * Indicates if BigQuery should allow
+     * quoted data sections that contain newline characters in a CSV file.
+     * The default value is false.
+     * 
+     */
     @InputImport(name="allowQuotedNewlines")
     private final @Nullable Input<Boolean> allowQuotedNewlines;
 
@@ -30,6 +41,11 @@ public final class TableExternalDataConfigurationCsvOptionsGetArgs extends io.pu
         return this.allowQuotedNewlines == null ? Input.empty() : this.allowQuotedNewlines;
     }
 
+    /**
+     * The character encoding of the data. The supported
+     * values are UTF-8 or ISO-8859-1.
+     * 
+     */
     @InputImport(name="encoding")
     private final @Nullable Input<String> encoding;
 
@@ -37,6 +53,10 @@ public final class TableExternalDataConfigurationCsvOptionsGetArgs extends io.pu
         return this.encoding == null ? Input.empty() : this.encoding;
     }
 
+    /**
+     * The separator for fields in a CSV file.
+     * 
+     */
     @InputImport(name="fieldDelimiter")
     private final @Nullable Input<String> fieldDelimiter;
 
@@ -44,6 +64,16 @@ public final class TableExternalDataConfigurationCsvOptionsGetArgs extends io.pu
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
     }
 
+    /**
+     * The value that is used to quote data sections in a
+     * CSV file. If your data does not contain quoted sections, set the
+     * property value to an empty string. If your data contains quoted newline
+     * characters, you must also set the `allow_quoted_newlines` property to true.
+     * The API-side default is `"`, specified in the provider escaped as `\"`. Due to
+     * limitations with default values, this value is required to be
+     * explicitly set.
+     * 
+     */
     @InputImport(name="quote", required=true)
     private final Input<String> quote;
 
@@ -51,6 +81,12 @@ public final class TableExternalDataConfigurationCsvOptionsGetArgs extends io.pu
         return this.quote;
     }
 
+    /**
+     * The number of rows at the top of the sheet
+     * that BigQuery will skip when reading the data. At least one of `range` or
+     * `skip_leading_rows` must be set.
+     * 
+     */
     @InputImport(name="skipLeadingRows")
     private final @Nullable Input<Integer> skipLeadingRows;
 

@@ -12,6 +12,10 @@ public final class GetRecoveryGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRecoveryGroupArgs Empty = new GetRecoveryGroupArgs();
 
+    /**
+     * The name of the recovery group to create.
+     * 
+     */
     @InputImport(name="recoveryGroupName", required=true)
     private final String recoveryGroupName;
 

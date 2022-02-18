@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configurations of Source connector of the flow.
+ * 
+ */
 public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowSourceFlowConfigArgs Empty = new FlowSourceFlowConfigArgs();
 
+    /**
+     * Name of source connector profile
+     * 
+     */
     @InputImport(name="connectorProfileName")
     private final @Nullable Input<String> connectorProfileName;
 
@@ -24,6 +32,10 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
         return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
     }
 
+    /**
+     * Type of source connector
+     * 
+     */
     @InputImport(name="connectorType", required=true)
     private final Input<FlowConnectorType> connectorType;
 
@@ -31,6 +43,10 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
         return this.connectorType;
     }
 
+    /**
+     * Configuration for scheduled incremental data pull
+     * 
+     */
     @InputImport(name="incrementalPullConfig")
     private final @Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig;
 
@@ -38,6 +54,10 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
         return this.incrementalPullConfig == null ? Input.empty() : this.incrementalPullConfig;
     }
 
+    /**
+     * Source connector details required to query a connector
+     * 
+     */
     @InputImport(name="sourceConnectorProperties", required=true)
     private final Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
 

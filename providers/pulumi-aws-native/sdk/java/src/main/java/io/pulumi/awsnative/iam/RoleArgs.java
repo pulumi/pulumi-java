@@ -19,6 +19,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleArgs Empty = new RoleArgs();
 
+    /**
+     * The trust policy that is associated with this role.
+     * 
+     */
     @InputImport(name="assumeRolePolicyDocument", required=true)
     private final Input<Object> assumeRolePolicyDocument;
 
@@ -26,6 +30,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.assumeRolePolicyDocument;
     }
 
+    /**
+     * A description of the role that you provide.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +41,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
+     * 
+     */
     @InputImport(name="managedPolicyArns")
     private final @Nullable Input<List<String>> managedPolicyArns;
 
@@ -40,6 +52,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedPolicyArns == null ? Input.empty() : this.managedPolicyArns;
     }
 
+    /**
+     * The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+     * 
+     */
     @InputImport(name="maxSessionDuration")
     private final @Nullable Input<Integer> maxSessionDuration;
 
@@ -47,6 +63,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxSessionDuration == null ? Input.empty() : this.maxSessionDuration;
     }
 
+    /**
+     * The path to the role.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -54,6 +74,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * The ARN of the policy used to set the permissions boundary for the role.
+     * 
+     */
     @InputImport(name="permissionsBoundary")
     private final @Nullable Input<String> permissionsBoundary;
 
@@ -61,6 +85,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.permissionsBoundary == null ? Input.empty() : this.permissionsBoundary;
     }
 
+    /**
+     * Adds or updates an inline policy document that is embedded in the specified IAM role.
+     * 
+     */
     @InputImport(name="policies")
     private final @Nullable Input<List<RolePolicyArgs>> policies;
 
@@ -68,6 +96,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.policies == null ? Input.empty() : this.policies;
     }
 
+    /**
+     * A name for the IAM role, up to 64 characters in length.
+     * 
+     */
     @InputImport(name="roleName")
     private final @Nullable Input<String> roleName;
 
@@ -75,6 +107,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleName == null ? Input.empty() : this.roleName;
     }
 
+    /**
+     * A list of tags that are attached to the role.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RoleTagArgs>> tags;
 

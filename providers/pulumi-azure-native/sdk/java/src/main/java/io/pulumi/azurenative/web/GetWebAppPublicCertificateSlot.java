@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppPublicCertificateSlot {
+/**
+ * Public certificate object
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Public certificate object
+ * 
+ */
     public static CompletableFuture<GetWebAppPublicCertificateSlotResult> invokeAsync(GetWebAppPublicCertificateSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPublicCertificateSlot", TypeShape.of(GetWebAppPublicCertificateSlotResult.class), args == null ? GetWebAppPublicCertificateSlotArgs.Empty : args, Utilities.withVersion(options));
     }

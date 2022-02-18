@@ -16,6 +16,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 
+    /**
+     * Arbitrary map of values that, when changed, will trigger a new key to be generated.
+     * 
+     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -23,6 +27,13 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
+    /**
+     * The algorithm used to generate the key. KEY_ALG_RSA_2048 is the default algorithm.
+     * Valid values are listed at
+     * [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
+     * (only used on create)
+     * 
+     */
     @InputImport(name="keyAlgorithm")
     private final @Nullable Input<String> keyAlgorithm;
 
@@ -30,6 +41,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyAlgorithm == null ? Input.empty() : this.keyAlgorithm;
     }
 
+    /**
+     * The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
+     * 
+     */
     @InputImport(name="privateKeyType")
     private final @Nullable Input<String> privateKeyType;
 
@@ -37,6 +52,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateKeyType == null ? Input.empty() : this.privateKeyType;
     }
 
+    /**
+     * Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
+     * 
+     */
     @InputImport(name="publicKeyData")
     private final @Nullable Input<String> publicKeyData;
 
@@ -44,6 +63,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicKeyData == null ? Input.empty() : this.publicKeyData;
     }
 
+    /**
+     * The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
+     * 
+     */
     @InputImport(name="publicKeyType")
     private final @Nullable Input<String> publicKeyType;
 
@@ -51,6 +74,12 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicKeyType == null ? Input.empty() : this.publicKeyType;
     }
 
+    /**
+     * The Service account id of the Key. This can be a string in the format
+     * `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
+     * unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
+     * 
+     */
     @InputImport(name="serviceAccountId", required=true)
     private final Input<String> serviceAccountId;
 

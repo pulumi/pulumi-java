@@ -10,10 +10,21 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is used to express the source of an input schema mapping for a single target field
+ * in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
+ * 'eventtype' and 'dataversion' properties. This represents a field in the input event schema
+ * along with a default value to be used, and at least one of these two properties should be provided.
+ * 
+ */
 public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JsonFieldWithDefaultArgs Empty = new JsonFieldWithDefaultArgs();
 
+    /**
+     * The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload.
+     * 
+     */
     @InputImport(name="defaultValue")
     private final @Nullable Input<String> defaultValue;
 
@@ -21,6 +32,10 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
+    /**
+     * Name of a field in the input event schema that's to be used as the source of a mapping.
+     * 
+     */
     @InputImport(name="sourceField")
     private final @Nullable Input<String> sourceField;
 

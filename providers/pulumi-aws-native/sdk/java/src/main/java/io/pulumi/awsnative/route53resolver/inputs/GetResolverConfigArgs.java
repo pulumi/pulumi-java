@@ -12,6 +12,10 @@ public final class GetResolverConfigArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetResolverConfigArgs Empty = new GetResolverConfigArgs();
 
+    /**
+     * Id
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetMetadata {
+    /**
+     * Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
+     * 
+     */
     private final @Nullable String sourceArn;
 
     @OutputCustomType.Constructor({"sourceArn"})
@@ -18,6 +22,10 @@ public final class DatasetMetadata {
         this.sourceArn = sourceArn;
     }
 
+    /**
+     * Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
+     * 
+     */
     public Optional<String> getSourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }

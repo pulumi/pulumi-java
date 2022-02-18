@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetShare {
+/**
+ * Represents a share on the  Data Box Edge/Gateway device.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Represents a share on the  Data Box Edge/Gateway device.
+ * 
+ */
     public static CompletableFuture<GetShareResult> invokeAsync(GetShareArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getShare", TypeShape.of(GetShareResult.class), args == null ? GetShareArgs.Empty : args, Utilities.withVersion(options));
     }

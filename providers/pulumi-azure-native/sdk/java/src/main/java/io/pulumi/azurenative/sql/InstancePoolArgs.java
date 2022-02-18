@@ -19,6 +19,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstancePoolArgs Empty = new InstancePoolArgs();
 
+    /**
+     * The name of the instance pool to be created or updated.
+     * 
+     */
     @InputImport(name="instancePoolName")
     private final @Nullable Input<String> instancePoolName;
 
@@ -26,6 +30,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.instancePoolName == null ? Input.empty() : this.instancePoolName;
     }
 
+    /**
+     * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
+     * 
+     */
     @InputImport(name="licenseType", required=true)
     private final Input<Either<String,InstancePoolLicenseType>> licenseType;
 
@@ -33,6 +41,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.licenseType;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,6 +52,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,6 +63,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name and tier of the SKU.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -54,6 +74,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource ID of the subnet to place this instance pool in.
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 
@@ -61,6 +85,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetId;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -68,6 +96,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Count of vCores belonging to this instance pool.
+     * 
+     */
     @InputImport(name="vCores", required=true)
     private final Input<Integer> vCores;
 

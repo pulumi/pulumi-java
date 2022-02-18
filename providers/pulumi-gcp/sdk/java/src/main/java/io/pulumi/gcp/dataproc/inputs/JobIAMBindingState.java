@@ -23,6 +23,10 @@ public final class JobIAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the jobs's IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -44,6 +48,11 @@ public final class JobIAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The project in which the job belongs. If it
+     * is not provided, the provider will use a default.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +60,11 @@ public final class JobIAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region in which the job belongs. If it
+     * is not provided, the provider will use a default.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -58,6 +72,12 @@ public final class JobIAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.dataproc.JobIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

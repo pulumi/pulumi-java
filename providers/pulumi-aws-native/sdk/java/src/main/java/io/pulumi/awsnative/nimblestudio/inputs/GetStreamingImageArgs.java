@@ -19,6 +19,10 @@ public final class GetStreamingImageArgs extends io.pulumi.resources.InvokeArgs 
         return this.streamingImageId;
     }
 
+    /**
+     * <p>The studioId. </p>
+     * 
+     */
     @InputImport(name="studioId", required=true)
     private final String studioId;
 

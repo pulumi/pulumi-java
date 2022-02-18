@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceTemplateSpecContainerVolumeMount {
+    /**
+     * Path within the container at which the volume should be mounted.  Must
+     * not contain ':'.
+     * 
+     */
     private final String mountPath;
+    /**
+     * Volume's name.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"mountPath","name"})
@@ -20,9 +29,18 @@ public final class ServiceTemplateSpecContainerVolumeMount {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Path within the container at which the volume should be mounted.  Must
+     * not contain ':'.
+     * 
+     */
     public String getMountPath() {
         return this.mountPath;
     }
+    /**
+     * Volume's name.
+     * 
+     */
     public String getName() {
         return this.name;
     }

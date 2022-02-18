@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A list of message groups that Amazon Lex uses to respond the user input.
+ * 
+ */
 public final class BotResponseSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotResponseSpecificationArgs Empty = new BotResponseSpecificationArgs();
 
+    /**
+     * Indicates whether the user can interrupt a speech prompt from the bot.
+     * 
+     */
     @InputImport(name="allowInterrupt")
     private final @Nullable Input<Boolean> allowInterrupt;
 

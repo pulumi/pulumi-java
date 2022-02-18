@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Sets the frequency at which data is written to disk.
+     * 
+     */
     @EnumType
     public enum AofFrequency {
         AofFrequency_1s("1s"),

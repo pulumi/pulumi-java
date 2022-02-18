@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".
+     * 
+     */
     @EnumType
     public enum IngressStartAtType {
         EarliestAvailable("EarliestAvailable"),

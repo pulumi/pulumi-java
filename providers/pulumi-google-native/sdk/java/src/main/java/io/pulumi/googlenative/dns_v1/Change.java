@@ -15,23 +15,54 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Atomically updates the ResourceRecordSet collection.
+ * Auto-naming is currently not supported for this resource.
+ * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * on Google Cloud even though it will be deleted from Pulumi state.
+ * 
+ */
 @ResourceType(type="google-native:dns/v1:Change")
 public class Change extends io.pulumi.resources.CustomResource {
+    /**
+     * Which ResourceRecordSets to add?
+     * 
+     */
     @OutputExport(name="additions", type=List.class, parameters={ResourceRecordSetResponse.class})
     private Output<List<ResourceRecordSetResponse>> additions;
 
+    /**
+     * @return Which ResourceRecordSets to add?
+     * 
+     */
     public Output<List<ResourceRecordSetResponse>> getAdditions() {
         return this.additions;
     }
+    /**
+     * Which ResourceRecordSets to remove? Must match existing data exactly.
+     * 
+     */
     @OutputExport(name="deletions", type=List.class, parameters={ResourceRecordSetResponse.class})
     private Output<List<ResourceRecordSetResponse>> deletions;
 
+    /**
+     * @return Which ResourceRecordSets to remove? Must match existing data exactly.
+     * 
+     */
     public Output<List<ResourceRecordSetResponse>> getDeletions() {
         return this.deletions;
     }
+    /**
+     * If the DNS queries for the zone will be served.
+     * 
+     */
     @OutputExport(name="isServing", type=Boolean.class, parameters={})
     private Output<Boolean> isServing;
 
+    /**
+     * @return If the DNS queries for the zone will be served.
+     * 
+     */
     public Output<Boolean> getIsServing() {
         return this.isServing;
     }
@@ -41,19 +72,41 @@ public class Change extends io.pulumi.resources.CustomResource {
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The time that this operation was started by the server (output only). This is in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
+    /**
+     * @return The time that this operation was started by the server (output only). This is in RFC3339 text format.
+     * 
+     */
     public Output<String> getStartTime() {
         return this.startTime;
     }
+    /**
+     * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Change(String name, ChangeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dns/v1:Change", name, args == null ? ChangeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +122,14 @@ public class Change extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Change get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Change(name, id, options);
     }

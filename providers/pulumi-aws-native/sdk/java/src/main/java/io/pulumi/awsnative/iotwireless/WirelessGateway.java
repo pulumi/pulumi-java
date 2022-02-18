@@ -15,57 +15,131 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Create and manage wireless gateways, including LoRa gateways.
+ * 
+ */
 @ResourceType(type="aws-native:iotwireless:WirelessGateway")
 public class WirelessGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * Arn for Wireless Gateway. Returned upon successful create.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return Arn for Wireless Gateway. Returned upon successful create.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Description of Wireless Gateway.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of Wireless Gateway.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The date and time when the most recent uplink was received.
+     * 
+     */
     @OutputExport(name="lastUplinkReceivedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUplinkReceivedAt;
 
+    /**
+     * @return The date and time when the most recent uplink was received.
+     * 
+     */
     public Output</* @Nullable */ String> getLastUplinkReceivedAt() {
         return this.lastUplinkReceivedAt;
     }
+    /**
+     * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
+     * 
+     */
     @OutputExport(name="loRaWAN", type=WirelessGatewayLoRaWANGateway.class, parameters={})
     private Output<WirelessGatewayLoRaWANGateway> loRaWAN;
 
+    /**
+     * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
+     * 
+     */
     public Output<WirelessGatewayLoRaWANGateway> getLoRaWAN() {
         return this.loRaWAN;
     }
+    /**
+     * Name of Wireless Gateway.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Name of Wireless Gateway.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * A list of key-value pairs that contain metadata for the gateway.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={WirelessGatewayTag.class})
     private Output</* @Nullable */ List<WirelessGatewayTag>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the gateway.
+     * 
+     */
     public Output</* @Nullable */ List<WirelessGatewayTag>> getTags() {
         return this.tags;
     }
+    /**
+     * Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
+     * 
+     */
     @OutputExport(name="thingArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> thingArn;
 
+    /**
+     * @return Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
+     * 
+     */
     public Output</* @Nullable */ String> getThingArn() {
         return this.thingArn;
     }
+    /**
+     * Thing Arn. If there is a Thing created, this can be returned with a Get call.
+     * 
+     */
     @OutputExport(name="thingName", type=String.class, parameters={})
     private Output<String> thingName;
 
+    /**
+     * @return Thing Arn. If there is a Thing created, this can be returned with a Get call.
+     * 
+     */
     public Output<String> getThingName() {
         return this.thingName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WirelessGateway(String name, WirelessGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iotwireless:WirelessGateway", name, args == null ? WirelessGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -81,6 +155,14 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WirelessGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WirelessGateway(name, id, options);
     }

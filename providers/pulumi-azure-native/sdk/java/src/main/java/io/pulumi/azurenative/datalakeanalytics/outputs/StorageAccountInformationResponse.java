@@ -9,9 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageAccountInformationResponse {
+    /**
+     * The resource identifier.
+     * 
+     */
     private final String id;
+    /**
+     * The resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The optional suffix for the storage account.
+     * 
+     */
     private final String suffix;
+    /**
+     * The resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","suffix","type"})
@@ -26,15 +42,31 @@ public final class StorageAccountInformationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The resource identifier.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The optional suffix for the storage account.
+     * 
+     */
     public String getSuffix() {
         return this.suffix;
     }
+    /**
+     * The resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

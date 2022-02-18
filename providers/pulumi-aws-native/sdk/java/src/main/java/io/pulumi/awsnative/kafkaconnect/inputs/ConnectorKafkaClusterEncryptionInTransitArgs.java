@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Details of encryption in transit to the Kafka cluster.
+ * 
+ */
 public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorKafkaClusterEncryptionInTransitArgs Empty = new ConnectorKafkaClusterEncryptionInTransitArgs();

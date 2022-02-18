@@ -13,45 +13,133 @@ import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Organization security policies are used to control incoming/outgoing traffic.
+ * 
+ * To get more information about OrganizationSecurityPolicy, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/organizationSecurityPolicies)
+ * * How-to Guides
+ *     * [Creating a firewall policy](https://cloud.google.com/vpc/docs/using-firewall-policies#create-policy)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * OrganizationSecurityPolicy can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy default locations/global/securityPolicies/{{policy_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy default {{policy_id}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy")
 public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * A textual description for the organization security policy.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A textual description for the organization security policy.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * A textual name of the security policy.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return A textual name of the security policy.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Fingerprint of this resource. This field is used internally during updates of this resource.
+     * 
+     */
     @OutputExport(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
+    /**
+     * @return Fingerprint of this resource. This field is used internally during updates of this resource.
+     * 
+     */
     public Output<String> getFingerprint() {
         return this.fingerprint;
     }
+    /**
+     * The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
+     * Format: organizations/{organization_id} or folders/{folder_id}
+     * 
+     */
     @OutputExport(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
+    /**
+     * @return The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
+     * Format: organizations/{organization_id} or folders/{folder_id}
+     * 
+     */
     public Output<String> getParent() {
         return this.parent;
     }
+    /**
+     * The unique identifier for the resource. This identifier is defined by the server.
+     * 
+     */
     @OutputExport(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
+    /**
+     * @return The unique identifier for the resource. This identifier is defined by the server.
+     * 
+     */
     public Output<String> getPolicyId() {
         return this.policyId;
     }
+    /**
+     * The type indicates the intended use of the security policy.
+     * For organization security policies, the only supported type
+     * is "FIREWALL".
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
+    /**
+     * @return The type indicates the intended use of the security policy.
+     * For organization security policies, the only supported type
+     * is "FIREWALL".
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public OrganizationSecurityPolicy(String name, OrganizationSecurityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy", name, args == null ? OrganizationSecurityPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +155,15 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static OrganizationSecurityPolicy get(String name, Input<String> id, @Nullable OrganizationSecurityPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationSecurityPolicy(name, id, state, options);
     }

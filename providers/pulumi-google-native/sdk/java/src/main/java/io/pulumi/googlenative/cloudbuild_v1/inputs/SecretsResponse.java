@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Secrets and secret environment variables.
+ * 
+ */
 public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretsResponse Empty = new SecretsResponse();
 
+    /**
+     * Secrets encrypted with KMS key and the associated secret environment variable.
+     * 
+     */
     @InputImport(name="inline", required=true)
     private final List<InlineSecretResponse> inline;
 
@@ -21,6 +29,10 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
         return this.inline;
     }
 
+    /**
+     * Secrets in Secret Manager and associated secret environment variable.
+     * 
+     */
     @InputImport(name="secretManager", required=true)
     private final List<SecretManagerSecretResponse> secretManager;
 

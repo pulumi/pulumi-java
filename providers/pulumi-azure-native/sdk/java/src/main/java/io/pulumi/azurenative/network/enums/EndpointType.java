@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The endpoint type.
+     * 
+     */
     @EnumType
     public enum EndpointType {
         AzureVM("AzureVM"),

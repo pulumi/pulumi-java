@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of health probe request that is made.
+     * 
+     */
     @EnumType
     public enum HealthProbeRequestType {
         NotSet("NotSet"),

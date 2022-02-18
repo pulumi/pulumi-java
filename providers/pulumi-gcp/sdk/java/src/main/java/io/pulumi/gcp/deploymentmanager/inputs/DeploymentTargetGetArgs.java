@@ -16,6 +16,11 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
 
     public static final DeploymentTargetGetArgs Empty = new DeploymentTargetGetArgs();
 
+    /**
+     * The root configuration file to use for this deployment.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final Input<DeploymentTargetConfigGetArgs> config;
 
@@ -23,6 +28,13 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
         return this.config;
     }
 
+    /**
+     * Specifies import files for this configuration. This can be
+     * used to import templates or other files. For example, you might
+     * import a text file in order to use the file in a template.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="imports")
     private final @Nullable Input<List<DeploymentTargetImportGetArgs>> imports;
 

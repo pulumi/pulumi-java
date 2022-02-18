@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PosixFilesystemResponse {
+    /**
+     * Root directory path to the filesystem.
+     * 
+     */
     private final String rootDirectory;
 
     @OutputCustomType.Constructor({"rootDirectory"})
@@ -16,6 +20,10 @@ public final class PosixFilesystemResponse {
         this.rootDirectory = Objects.requireNonNull(rootDirectory);
     }
 
+    /**
+     * Root directory path to the filesystem.
+     * 
+     */
     public String getRootDirectory() {
         return this.rootDirectory;
     }

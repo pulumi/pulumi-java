@@ -13,6 +13,10 @@ public final class InstanceTemplateConfidentialInstanceConfigArgs extends io.pul
 
     public static final InstanceTemplateConfidentialInstanceConfigArgs Empty = new InstanceTemplateConfidentialInstanceConfigArgs();
 
+    /**
+     * Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+     * 
+     */
     @InputImport(name="enableConfidentialCompute", required=true)
     private final Input<Boolean> enableConfidentialCompute;
 

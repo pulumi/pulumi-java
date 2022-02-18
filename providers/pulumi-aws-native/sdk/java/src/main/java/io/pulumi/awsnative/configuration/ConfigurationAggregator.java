@@ -16,6 +16,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Config::ConfigurationAggregator
+ * 
+ */
 @ResourceType(type="aws-native:configuration:ConfigurationAggregator")
 public class ConfigurationAggregator extends io.pulumi.resources.CustomResource {
     @OutputExport(name="accountAggregationSources", type=List.class, parameters={ConfigurationAggregatorAccountAggregationSource.class})
@@ -24,15 +28,31 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
     public Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> getAccountAggregationSources() {
         return this.accountAggregationSources;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the aggregator.
+     * 
+     */
     @OutputExport(name="configurationAggregatorArn", type=String.class, parameters={})
     private Output<String> configurationAggregatorArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the aggregator.
+     * 
+     */
     public Output<String> getConfigurationAggregatorArn() {
         return this.configurationAggregatorArn;
     }
+    /**
+     * The name of the aggregator.
+     * 
+     */
     @OutputExport(name="configurationAggregatorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationAggregatorName;
 
+    /**
+     * @return The name of the aggregator.
+     * 
+     */
     public Output</* @Nullable */ String> getConfigurationAggregatorName() {
         return this.configurationAggregatorName;
     }
@@ -42,13 +62,27 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
     public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> getOrganizationAggregationSource() {
         return this.organizationAggregationSource;
     }
+    /**
+     * The tags for the configuration aggregator.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ConfigurationAggregatorTag.class})
     private Output</* @Nullable */ List<ConfigurationAggregatorTag>> tags;
 
+    /**
+     * @return The tags for the configuration aggregator.
+     * 
+     */
     public Output</* @Nullable */ List<ConfigurationAggregatorTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ConfigurationAggregator(String name, @Nullable ConfigurationAggregatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:configuration:ConfigurationAggregator", name, args == null ? ConfigurationAggregatorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -64,6 +98,14 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ConfigurationAggregator get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationAggregator(name, id, options);
     }

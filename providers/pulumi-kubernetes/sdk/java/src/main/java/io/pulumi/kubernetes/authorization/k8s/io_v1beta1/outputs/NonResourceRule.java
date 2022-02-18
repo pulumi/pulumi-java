@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NonResourceRule {
+    /**
+     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.
+     * 
+     */
     private final @Nullable List<String> nonResourceURLs;
+    /**
+     * Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.
+     * 
+     */
     private final List<String> verbs;
 
     @OutputCustomType.Constructor({"nonResourceURLs","verbs"})
@@ -22,9 +30,17 @@ public final class NonResourceRule {
         this.verbs = Objects.requireNonNull(verbs);
     }
 
+    /**
+     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.
+     * 
+     */
     public List<String> getNonResourceURLs() {
         return this.nonResourceURLs == null ? List.of() : this.nonResourceURLs;
     }
+    /**
+     * Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.
+     * 
+     */
     public List<String> getVerbs() {
         return this.verbs;
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListIntegrationAccountCallbackUrlResult {
+    /**
+     * The URL value.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +22,10 @@ public final class ListIntegrationAccountCallbackUrlResult {
         this.value = value;
     }
 
+    /**
+     * The URL value.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

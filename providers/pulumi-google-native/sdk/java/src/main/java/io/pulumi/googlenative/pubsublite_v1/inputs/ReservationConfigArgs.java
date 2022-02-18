@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings for this topic's Reservation usage.
+ * 
+ */
 public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReservationConfigArgs Empty = new ReservationConfigArgs();
 
+    /**
+     * The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+     * 
+     */
     @InputImport(name="throughputReservation")
     private final @Nullable Input<String> throughputReservation;
 

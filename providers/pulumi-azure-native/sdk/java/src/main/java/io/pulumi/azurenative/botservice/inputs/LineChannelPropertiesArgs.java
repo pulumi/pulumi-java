@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The parameters to provide for the Line channel.
+ * 
+ */
 public final class LineChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LineChannelPropertiesArgs Empty = new LineChannelPropertiesArgs();
 
+    /**
+     * The list of line channel registrations
+     * 
+     */
     @InputImport(name="lineRegistrations", required=true)
     private final Input<List<LineRegistrationArgs>> lineRegistrations;
 

@@ -12,6 +12,10 @@ public final class GetResourcePoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourcePoolArgs Empty = new GetResourcePoolArgs();
 
+    /**
+     * The Resource Group Name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetResourcePoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the resourcePool.
+     * 
+     */
     @InputImport(name="resourcePoolName", required=true)
     private final String resourcePoolName;
 

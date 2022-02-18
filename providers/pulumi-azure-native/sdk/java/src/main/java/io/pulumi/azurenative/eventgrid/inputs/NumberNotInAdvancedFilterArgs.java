@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * NumberNotIn Advanced Filter.
+ * 
+ */
 public final class NumberNotInAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NumberNotInAdvancedFilterArgs Empty = new NumberNotInAdvancedFilterArgs();
 
+    /**
+     * The field/property in the event based on which you want to filter.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -23,6 +31,11 @@ public final class NumberNotInAdvancedFilterArgs extends io.pulumi.resources.Res
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is 'NumberNotIn'.
+     * 
+     */
     @InputImport(name="operatorType", required=true)
     private final Input<String> operatorType;
 
@@ -30,6 +43,10 @@ public final class NumberNotInAdvancedFilterArgs extends io.pulumi.resources.Res
         return this.operatorType;
     }
 
+    /**
+     * The set of filter values.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<Double>> values;
 

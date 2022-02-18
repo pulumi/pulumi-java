@@ -14,6 +14,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs();
 
+    /**
+     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="infoTypes", required=true)
     private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs>> infoTypes;
 

@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectionCloudSqlCredential {
+    /**
+     * Password for database.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final String password;
+    /**
+     * Username for database.
+     * 
+     */
     private final String username;
 
     @OutputCustomType.Constructor({"password","username"})
@@ -20,9 +29,18 @@ public final class ConnectionCloudSqlCredential {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * Password for database.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public String getPassword() {
         return this.password;
     }
+    /**
+     * Username for database.
+     * 
+     */
     public String getUsername() {
         return this.username;
     }

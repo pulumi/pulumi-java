@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class to specify properties of default content key for each encryption scheme
+ * 
+ */
 public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultKeyArgs Empty = new DefaultKeyArgs();
 
+    /**
+     * Label can be used to specify Content Key when creating a Streaming Locator
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -21,6 +29,10 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * Policy used by Default Key
+     * 
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Reference to another resource.
+ * 
+ */
 public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceReferenceResponse Empty = new ResourceReferenceResponse();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

@@ -12,6 +12,10 @@ public final class GetTypeActivationArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetTypeActivationArgs Empty = new GetTypeActivationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the extension.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

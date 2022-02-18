@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateTemplatePassthroughExtensions {
+    /**
+     * Optional. Describes custom X.509 extensions.
+     * 
+     */
     private final @Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtension> additionalExtensions;
+    /**
+     * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+     * 
+     */
     private final @Nullable List<String> knownExtensions;
 
     @OutputCustomType.Constructor({"additionalExtensions","knownExtensions"})
@@ -23,9 +31,17 @@ public final class CertificateTemplatePassthroughExtensions {
         this.knownExtensions = knownExtensions;
     }
 
+    /**
+     * Optional. Describes custom X.509 extensions.
+     * 
+     */
     public List<CertificateTemplatePassthroughExtensionsAdditionalExtension> getAdditionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
+    /**
+     * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+     * 
+     */
     public List<String> getKnownExtensions() {
         return this.knownExtensions == null ? List.of() : this.knownExtensions;
     }

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identifier for the registry which the schema is part of.
+ * 
+ */
 public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaRegistryArgs Empty = new SchemaRegistryArgs();
 
+    /**
+     * Amazon Resource Name for the Registry.
+     * 
+     */
     @InputImport(name="arn")
     private final @Nullable Input<String> arn;
 
@@ -21,6 +29,10 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.arn == null ? Input.empty() : this.arn;
     }
 
+    /**
+     * Name of the registry in which the schema will be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

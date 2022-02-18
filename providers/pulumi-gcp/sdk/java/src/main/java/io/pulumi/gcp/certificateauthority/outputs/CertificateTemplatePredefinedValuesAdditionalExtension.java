@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateTemplatePredefinedValuesAdditionalExtension {
+    /**
+     * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * 
+     */
     private final @Nullable Boolean critical;
+    /**
+     * Required. The OID for this X.509 extension.
+     * 
+     */
     private final CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId;
+    /**
+     * Required. The value of this X.509 extension.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"critical","objectId","value"})
@@ -27,12 +39,24 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * 
+     */
     public Optional<Boolean> getCritical() {
         return Optional.ofNullable(this.critical);
     }
+    /**
+     * Required. The OID for this X.509 extension.
+     * 
+     */
     public CertificateTemplatePredefinedValuesAdditionalExtensionObjectId getObjectId() {
         return this.objectId;
     }
+    /**
+     * Required. The value of this X.509 extension.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * StorageSource describes the location of the source in an archive file in Google Cloud Storage.
+ * 
+ */
 public final class StorageSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageSourceResponse Empty = new StorageSourceResponse();
 
+    /**
+     * Google Cloud Storage bucket containing source (see [Bucket Name Requirements] (https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -19,6 +27,10 @@ public final class StorageSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.bucket;
     }
 
+    /**
+     * Google Cloud Storage generation for the object.
+     * 
+     */
     @InputImport(name="generation", required=true)
     private final String generation;
 
@@ -26,6 +38,10 @@ public final class StorageSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.generation;
     }
 
+    /**
+     * Google Cloud Storage object containing source.
+     * 
+     */
     @InputImport(name="object", required=true)
     private final String object;
 

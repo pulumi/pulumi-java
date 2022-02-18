@@ -12,6 +12,10 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkflowArgs Empty = new GetWorkflowArgs();
 
+    /**
+     * A unique identifier for the workflow.
+     * 
+     */
     @InputImport(name="workflowId", required=true)
     private final String workflowId;
 

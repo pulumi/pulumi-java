@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LibraryResponse {
+    /**
+     * Name of the library. Example: "django".
+     * 
+     */
     private final String name;
+    /**
+     * Version of the library to select, or "latest".
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"name","version"})
@@ -20,9 +28,17 @@ public final class LibraryResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * Name of the library. Example: "django".
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Version of the library to select, or "latest".
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

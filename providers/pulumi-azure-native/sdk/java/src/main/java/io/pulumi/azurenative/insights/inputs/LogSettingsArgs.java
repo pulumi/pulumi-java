@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Part of MultiTenantDiagnosticSettings. Specifies the settings for a particular log.
+ * 
+ */
 public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogSettingsArgs Empty = new LogSettingsArgs();
 
+    /**
+     * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+     * 
+     */
     @InputImport(name="category")
     private final @Nullable Input<String> category;
 
@@ -23,6 +31,10 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.category == null ? Input.empty() : this.category;
     }
 
+    /**
+     * a value indicating whether this log is enabled.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -30,6 +42,10 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled;
     }
 
+    /**
+     * the retention policy for this log.
+     * 
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
 

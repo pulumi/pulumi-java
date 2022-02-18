@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * ExpressRoute circuit peering identifier.
+ * 
+ */
 public final class ExpressRouteCircuitPeeringIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteCircuitPeeringIdResponse Empty = new ExpressRouteCircuitPeeringIdResponse();
 
+    /**
+     * The ID of the ExpressRoute circuit peering.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

@@ -15,9 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResponseContractResponse {
+    /**
+     * Operation response description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Collection of operation response headers.
+     * 
+     */
     private final @Nullable List<ParameterContractResponse> headers;
+    /**
+     * Collection of operation response representations.
+     * 
+     */
     private final @Nullable List<RepresentationContractResponse> representations;
+    /**
+     * Operation response HTTP status code.
+     * 
+     */
     private final Integer statusCode;
 
     @OutputCustomType.Constructor({"description","headers","representations","statusCode"})
@@ -32,15 +48,31 @@ public final class ResponseContractResponse {
         this.statusCode = Objects.requireNonNull(statusCode);
     }
 
+    /**
+     * Operation response description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Collection of operation response headers.
+     * 
+     */
     public List<ParameterContractResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
+    /**
+     * Collection of operation response representations.
+     * 
+     */
     public List<RepresentationContractResponse> getRepresentations() {
         return this.representations == null ? List.of() : this.representations;
     }
+    /**
+     * Operation response HTTP status code.
+     * 
+     */
     public Integer getStatusCode() {
         return this.statusCode;
     }

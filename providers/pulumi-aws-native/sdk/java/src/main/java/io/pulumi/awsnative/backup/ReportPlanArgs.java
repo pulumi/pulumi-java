@@ -18,6 +18,10 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportPlanArgs Empty = new ReportPlanArgs();
 
+    /**
+     * A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
+     * 
+     */
     @InputImport(name="reportDeliveryChannel", required=true)
     private final Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
 
@@ -25,6 +29,10 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportDeliveryChannel;
     }
 
+    /**
+     * An optional description of the report plan with a maximum of 1,024 characters.
+     * 
+     */
     @InputImport(name="reportPlanDescription")
     private final @Nullable Input<String> reportPlanDescription;
 
@@ -32,6 +40,10 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportPlanDescription == null ? Input.empty() : this.reportPlanDescription;
     }
 
+    /**
+     * The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
+     * 
+     */
     @InputImport(name="reportPlanName")
     private final @Nullable Input<String> reportPlanName;
 
@@ -39,6 +51,10 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportPlanName == null ? Input.empty() : this.reportPlanName;
     }
 
+    /**
+     * Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
+     * 
+     */
     @InputImport(name="reportPlanTags")
     private final @Nullable Input<List<ReportPlanTagArgs>> reportPlanTags;
 
@@ -46,6 +62,10 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportPlanTags == null ? Input.empty() : this.reportPlanTags;
     }
 
+    /**
+     * Identifies the report template for the report. Reports are built using a report template.
+     * 
+     */
     @InputImport(name="reportSetting", required=true)
     private final Input<ReportSettingPropertiesArgs> reportSetting;
 

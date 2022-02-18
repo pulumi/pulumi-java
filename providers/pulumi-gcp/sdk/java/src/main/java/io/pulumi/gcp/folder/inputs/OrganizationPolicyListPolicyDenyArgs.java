@@ -16,6 +16,10 @@ public final class OrganizationPolicyListPolicyDenyArgs extends io.pulumi.resour
 
     public static final OrganizationPolicyListPolicyDenyArgs Empty = new OrganizationPolicyListPolicyDenyArgs();
 
+    /**
+     * The policy allows or denies all values.
+     * 
+     */
     @InputImport(name="all")
     private final @Nullable Input<Boolean> all;
 
@@ -23,6 +27,10 @@ public final class OrganizationPolicyListPolicyDenyArgs extends io.pulumi.resour
         return this.all == null ? Input.empty() : this.all;
     }
 
+    /**
+     * The policy can define specific values that are allowed or denied.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

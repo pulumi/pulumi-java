@@ -16,6 +16,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointState Empty = new EndpointState();
 
+    /**
+     * IPv4 or IPv6 address of the endpoint.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -23,6 +27,11 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * The Resource ID must be 1-63 characters long, including digits,
+     * lowercase letters or the hyphen character.
+     * 
+     */
     @InputImport(name="endpointId")
     private final @Nullable Input<String> endpointId;
 
@@ -30,6 +39,13 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
         return this.endpointId == null ? Input.empty() : this.endpointId;
     }
 
+    /**
+     * Metadata for the endpoint. This data can be consumed
+     * by service clients. The entire metadata dictionary may contain
+     * up to 512 characters, spread across all key-value pairs.
+     * Metadata that goes beyond any these limits will be rejected.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -37,6 +53,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The resource name for the endpoint in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*'.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +64,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The URL to the network, such as projects/PROJECT_NUMBER/locations/global/networks/NETWORK_NAME.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -51,6 +75,11 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Port that the endpoint is running on, must be in the
+     * range of [0, 65535]. If unspecified, the default is 0.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -58,6 +87,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The resource name of the service that this endpoint provides.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

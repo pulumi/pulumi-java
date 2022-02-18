@@ -20,6 +20,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
 
     public static final ConfigurationStoreArgs Empty = new ConfigurationStoreArgs();
 
+    /**
+     * The name of the configuration store.
+     * 
+     */
     @InputImport(name="configStoreName")
     private final @Nullable Input<String> configStoreName;
 
@@ -27,6 +31,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
         return this.configStoreName == null ? Input.empty() : this.configStoreName;
     }
 
+    /**
+     * The encryption settings of the configuration store.
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<EncryptionPropertiesArgs> encryption;
 
@@ -34,6 +42,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * The managed identity information, if configured.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -41,6 +53,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,6 +64,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -55,6 +75,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -62,6 +86,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku of the configuration store.
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -69,6 +97,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
         return this.sku;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

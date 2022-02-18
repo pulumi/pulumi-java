@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information about the phone configuration settings for a user.
+ * 
+ */
 public final class UserPhoneConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final UserPhoneConfig Empty = new UserPhoneConfig();

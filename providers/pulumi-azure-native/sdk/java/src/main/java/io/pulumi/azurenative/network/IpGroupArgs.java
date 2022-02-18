@@ -16,6 +16,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IpGroupArgs Empty = new IpGroupArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -23,6 +27,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * IpAddresses/IpAddressPrefixes in the IpGroups resource.
+     * 
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable Input<List<String>> ipAddresses;
 
@@ -30,6 +38,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
     }
 
+    /**
+     * The name of the ipGroups.
+     * 
+     */
     @InputImport(name="ipGroupsName")
     private final @Nullable Input<String> ipGroupsName;
 
@@ -37,6 +49,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipGroupsName == null ? Input.empty() : this.ipGroupsName;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -44,6 +60,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +71,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

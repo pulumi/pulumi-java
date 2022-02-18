@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * InMageRcm specific policy details.
+ * 
+ */
 public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageRcmPolicyDetailsResponse Empty = new InMageRcmPolicyDetailsResponse();
 
+    /**
+     * The app consistent snapshot frequency in minutes.
+     * 
+     */
     @InputImport(name="appConsistentFrequencyInMinutes", required=true)
     private final Integer appConsistentFrequencyInMinutes;
 
@@ -20,6 +28,10 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
         return this.appConsistentFrequencyInMinutes;
     }
 
+    /**
+     * The crash consistent snapshot frequency in minutes.
+     * 
+     */
     @InputImport(name="crashConsistentFrequencyInMinutes", required=true)
     private final Integer crashConsistentFrequencyInMinutes;
 
@@ -27,6 +39,10 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
         return this.crashConsistentFrequencyInMinutes;
     }
 
+    /**
+     * A value indicating whether multi-VM sync has to be enabled.
+     * 
+     */
     @InputImport(name="enableMultiVmSync", required=true)
     private final String enableMultiVmSync;
 
@@ -34,6 +50,11 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
         return this.enableMultiVmSync;
     }
 
+    /**
+     * Gets the class type. Overridden in derived classes.
+     * Expected value is 'InMageRcm'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -41,6 +62,10 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
         return this.instanceType;
     }
 
+    /**
+     * The duration in minutes until which the recovery points need to be stored.
+     * 
+     */
     @InputImport(name="recoveryPointHistoryInMinutes", required=true)
     private final Integer recoveryPointHistoryInMinutes;
 

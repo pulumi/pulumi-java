@@ -9,10 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A TrackSelection to select video tracks.
+ * 
+ */
 public final class VideoTrackDescriptorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VideoTrackDescriptorArgs Empty = new VideoTrackDescriptorArgs();
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.VideoTrackDescriptor'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

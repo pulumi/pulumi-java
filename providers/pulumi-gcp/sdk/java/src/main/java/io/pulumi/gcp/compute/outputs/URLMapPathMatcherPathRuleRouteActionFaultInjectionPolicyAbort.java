@@ -10,7 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
+    /**
+     * The HTTP status code used to abort the request.
+     * The value must be between 200 and 599 inclusive.
+     * 
+     */
     private final Integer httpStatus;
+    /**
+     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * The value must be between 0.0 and 100.0 inclusive.
+     * 
+     */
     private final Double percentage;
 
     @OutputCustomType.Constructor({"httpStatus","percentage"})
@@ -21,9 +31,19 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
         this.percentage = Objects.requireNonNull(percentage);
     }
 
+    /**
+     * The HTTP status code used to abort the request.
+     * The value must be between 200 and 599 inclusive.
+     * 
+     */
     public Integer getHttpStatus() {
         return this.httpStatus;
     }
+    /**
+     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * The value must be between 0.0 and 100.0 inclusive.
+     * 
+     */
     public Double getPercentage() {
         return this.percentage;
     }

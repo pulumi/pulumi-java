@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnterpriseKnowledgeGraph {
+/**
+ * EnterpriseKnowledgeGraph resource definition
+ * API Version: 2018-12-03.
+ * 
+ *
+ * EnterpriseKnowledgeGraph resource definition
+ * 
+ */
     public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> invokeAsync(GetEnterpriseKnowledgeGraphArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:enterpriseknowledgegraph:getEnterpriseKnowledgeGraph", TypeShape.of(GetEnterpriseKnowledgeGraphResult.class), args == null ? GetEnterpriseKnowledgeGraphArgs.Empty : args, Utilities.withVersion(options));
     }

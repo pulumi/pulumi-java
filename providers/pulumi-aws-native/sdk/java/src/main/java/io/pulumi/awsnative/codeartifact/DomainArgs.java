@@ -17,6 +17,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
+    /**
+     * The name of the domain.
+     * 
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -24,6 +28,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * The access control resource policy on the provided domain.
+     * 
+     */
     @InputImport(name="permissionsPolicyDocument")
     private final @Nullable Input<Object> permissionsPolicyDocument;
 
@@ -31,6 +39,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.permissionsPolicyDocument == null ? Input.empty() : this.permissionsPolicyDocument;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DomainTagArgs>> tags;
 

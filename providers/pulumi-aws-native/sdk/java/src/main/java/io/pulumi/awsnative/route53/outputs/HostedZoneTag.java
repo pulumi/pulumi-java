@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HostedZoneTag {
+    /**
+     * The key name of the tag.
+     * 
+     */
     private final String key;
+    /**
+     * The value for the tag.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class HostedZoneTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The key name of the tag.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The value for the tag.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

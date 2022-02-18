@@ -12,10 +12,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A protocol buffer message type.
+ * 
+ */
 public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TypeResponse Empty = new TypeResponse();
 
+    /**
+     * The list of fields.
+     * 
+     */
     @InputImport(name="fields", required=true)
     private final List<FieldResponse> fields;
 
@@ -23,6 +31,10 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.fields;
     }
 
+    /**
+     * The fully qualified message name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -30,6 +42,10 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The list of types appearing in `oneof` definitions in this type.
+     * 
+     */
     @InputImport(name="oneofs", required=true)
     private final List<String> oneofs;
 
@@ -37,6 +53,10 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.oneofs;
     }
 
+    /**
+     * The protocol buffer options.
+     * 
+     */
     @InputImport(name="options", required=true)
     private final List<OptionResponse> options;
 
@@ -44,6 +64,10 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.options;
     }
 
+    /**
+     * The source context.
+     * 
+     */
     @InputImport(name="sourceContext", required=true)
     private final SourceContextResponse sourceContext;
 
@@ -51,6 +75,10 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceContext;
     }
 
+    /**
+     * The source syntax.
+     * 
+     */
     @InputImport(name="syntax", required=true)
     private final String syntax;
 

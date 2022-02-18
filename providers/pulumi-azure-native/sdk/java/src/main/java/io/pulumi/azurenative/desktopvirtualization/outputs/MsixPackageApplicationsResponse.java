@@ -11,12 +11,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MsixPackageApplicationsResponse {
+    /**
+     * Package Application Id, found in appxmanifest.xml.
+     * 
+     */
     private final @Nullable String appId;
+    /**
+     * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
+     * 
+     */
     private final @Nullable String appUserModelID;
+    /**
+     * Description of Package Application.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * User friendly name.
+     * 
+     */
     private final @Nullable String friendlyName;
+    /**
+     * User friendly name.
+     * 
+     */
     private final @Nullable String iconImageName;
+    /**
+     * the icon a 64 bit string as a byte array.
+     * 
+     */
     private final @Nullable String rawIcon;
+    /**
+     * the icon a 64 bit string as a byte array.
+     * 
+     */
     private final @Nullable String rawPng;
 
     @OutputCustomType.Constructor({"appId","appUserModelID","description","friendlyName","iconImageName","rawIcon","rawPng"})
@@ -37,24 +65,52 @@ public final class MsixPackageApplicationsResponse {
         this.rawPng = rawPng;
     }
 
+    /**
+     * Package Application Id, found in appxmanifest.xml.
+     * 
+     */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
+    /**
+     * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
+     * 
+     */
     public Optional<String> getAppUserModelID() {
         return Optional.ofNullable(this.appUserModelID);
     }
+    /**
+     * Description of Package Application.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * User friendly name.
+     * 
+     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
+    /**
+     * User friendly name.
+     * 
+     */
     public Optional<String> getIconImageName() {
         return Optional.ofNullable(this.iconImageName);
     }
+    /**
+     * the icon a 64 bit string as a byte array.
+     * 
+     */
     public Optional<String> getRawIcon() {
         return Optional.ofNullable(this.rawIcon);
     }
+    /**
+     * the icon a 64 bit string as a byte array.
+     * 
+     */
     public Optional<String> getRawPng() {
         return Optional.ofNullable(this.rawPng);
     }

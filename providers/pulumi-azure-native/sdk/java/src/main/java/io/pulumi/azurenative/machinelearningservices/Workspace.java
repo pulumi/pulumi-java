@@ -25,171 +25,408 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An object that represents a machine learning workspace.
+ * API Version: 2021-01-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:machinelearningservices:Workspace testworkspace /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:machinelearningservices:Workspace")
 public class Workspace extends io.pulumi.resources.CustomResource {
+    /**
+     * The flag to indicate whether to allow public access when behind VNet.
+     * 
+     */
     @OutputExport(name="allowPublicAccessWhenBehindVnet", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowPublicAccessWhenBehindVnet;
 
+    /**
+     * @return The flag to indicate whether to allow public access when behind VNet.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAllowPublicAccessWhenBehindVnet() {
         return this.allowPublicAccessWhenBehindVnet;
     }
+    /**
+     * ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     @OutputExport(name="applicationInsights", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationInsights;
 
+    /**
+     * @return ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     public Output</* @Nullable */ String> getApplicationInsights() {
         return this.applicationInsights;
     }
+    /**
+     * ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     @OutputExport(name="containerRegistry", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerRegistry;
 
+    /**
+     * @return ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     public Output</* @Nullable */ String> getContainerRegistry() {
         return this.containerRegistry;
     }
+    /**
+     * The description of this workspace.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of this workspace.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Url for the discovery service to identify regional endpoints for machine learning experimentation services
+     * 
+     */
     @OutputExport(name="discoveryUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> discoveryUrl;
 
+    /**
+     * @return Url for the discovery service to identify regional endpoints for machine learning experimentation services
+     * 
+     */
     public Output</* @Nullable */ String> getDiscoveryUrl() {
         return this.discoveryUrl;
     }
+    /**
+     * The encryption settings of Azure ML workspace.
+     * 
+     */
     @OutputExport(name="encryption", type=EncryptionPropertyResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionPropertyResponse> encryption;
 
+    /**
+     * @return The encryption settings of Azure ML workspace.
+     * 
+     */
     public Output</* @Nullable */ EncryptionPropertyResponse> getEncryption() {
         return this.encryption;
     }
+    /**
+     * The friendly name for this workspace. This name in mutable
+     * 
+     */
     @OutputExport(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
+    /**
+     * @return The friendly name for this workspace. This name in mutable
+     * 
+     */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
+    /**
+     * The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+     * 
+     */
     @OutputExport(name="hbiWorkspace", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hbiWorkspace;
 
+    /**
+     * @return The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+     * 
+     */
     public Output</* @Nullable */ Boolean> getHbiWorkspace() {
         return this.hbiWorkspace;
     }
+    /**
+     * The identity of the resource.
+     * 
+     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The compute name for image build
+     * 
+     */
     @OutputExport(name="imageBuildCompute", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageBuildCompute;
 
+    /**
+     * @return The compute name for image build
+     * 
+     */
     public Output</* @Nullable */ String> getImageBuildCompute() {
         return this.imageBuildCompute;
     }
+    /**
+     * ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     @OutputExport(name="keyVault", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVault;
 
+    /**
+     * @return ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     public Output</* @Nullable */ String> getKeyVault() {
         return this.keyVault;
     }
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Specifies the name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Specifies the name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The notebook info of Azure ML workspace.
+     * 
+     */
     @OutputExport(name="notebookInfo", type=NotebookResourceInfoResponse.class, parameters={})
     private Output<NotebookResourceInfoResponse> notebookInfo;
 
+    /**
+     * @return The notebook info of Azure ML workspace.
+     * 
+     */
     public Output<NotebookResourceInfoResponse> getNotebookInfo() {
         return this.notebookInfo;
     }
+    /**
+     * The user assigned identity resource id that represents the workspace identity.
+     * 
+     */
     @OutputExport(name="primaryUserAssignedIdentity", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryUserAssignedIdentity;
 
+    /**
+     * @return The user assigned identity resource id that represents the workspace identity.
+     * 
+     */
     public Output</* @Nullable */ String> getPrimaryUserAssignedIdentity() {
         return this.primaryUserAssignedIdentity;
     }
+    /**
+     * The list of private endpoint connections in the workspace.
+     * 
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return The list of private endpoint connections in the workspace.
+     * 
+     */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * Count of private connections in the workspace
+     * 
+     */
     @OutputExport(name="privateLinkCount", type=Integer.class, parameters={})
     private Output<Integer> privateLinkCount;
 
+    /**
+     * @return Count of private connections in the workspace
+     * 
+     */
     public Output<Integer> getPrivateLinkCount() {
         return this.privateLinkCount;
     }
+    /**
+     * The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The service managed resource settings.
+     * 
+     */
     @OutputExport(name="serviceManagedResourcesSettings", type=ServiceManagedResourcesSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ServiceManagedResourcesSettingsResponse> serviceManagedResourcesSettings;
 
+    /**
+     * @return The service managed resource settings.
+     * 
+     */
     public Output</* @Nullable */ ServiceManagedResourcesSettingsResponse> getServiceManagedResourcesSettings() {
         return this.serviceManagedResourcesSettings;
     }
+    /**
+     * The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
+     * 
+     */
     @OutputExport(name="serviceProvisionedResourceGroup", type=String.class, parameters={})
     private Output<String> serviceProvisionedResourceGroup;
 
+    /**
+     * @return The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
+     * 
+     */
     public Output<String> getServiceProvisionedResourceGroup() {
         return this.serviceProvisionedResourceGroup;
     }
+    /**
+     * The list of shared private link resources in this workspace.
+     * 
+     */
     @OutputExport(name="sharedPrivateLinkResources", type=List.class, parameters={SharedPrivateLinkResourceResponse.class})
     private Output</* @Nullable */ List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources;
 
+    /**
+     * @return The list of shared private link resources in this workspace.
+     * 
+     */
     public Output</* @Nullable */ List<SharedPrivateLinkResourceResponse>> getSharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources;
     }
+    /**
+     * The sku of the workspace.
+     * 
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return The sku of the workspace.
+     * 
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     @OutputExport(name="storageAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccount;
 
+    /**
+     * @return ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     public Output</* @Nullable */ String> getStorageAccount() {
         return this.storageAccount;
     }
+    /**
+     * Read only system data
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Read only system data
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Contains resource tags defined as key/value pairs.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The immutable id associated with this workspace.
+     * 
+     */
     @OutputExport(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
+    /**
+     * @return The immutable id associated with this workspace.
+     * 
+     */
     public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -226,6 +463,14 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Workspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, options);
     }

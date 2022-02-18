@@ -37,6 +37,10 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryName;
     }
 
+    /**
+     * The tags for the stored query.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<StoredQueryTagArgs>> tags;
 

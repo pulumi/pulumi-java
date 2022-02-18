@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings that will be leveraged for SAP HANA source partitioning.
+ * 
+ */
 public final class SapHanaPartitionSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SapHanaPartitionSettingsResponse Empty = new SapHanaPartitionSettingsResponse();
 
+    /**
+     * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionColumnName")
     private final @Nullable Object partitionColumnName;
 

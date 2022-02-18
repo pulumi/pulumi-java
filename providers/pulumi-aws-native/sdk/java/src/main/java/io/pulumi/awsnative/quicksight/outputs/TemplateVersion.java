@@ -17,14 +17,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TemplateVersion {
+    /**
+     * <p>The time that this template version was created.</p>
+     * 
+     */
     private final @Nullable String createdTime;
+    /**
+     * <p>Schema of the dataset identified by the placeholder. Any dashboard created from this
+     *             template should be bound to new datasets matching the same schema described through this
+     *             API operation.</p>
+     * 
+     */
     private final @Nullable List<TemplateDataSetConfiguration> dataSetConfigurations;
+    /**
+     * <p>The description of the template.</p>
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * <p>Errors associated with this template version.</p>
+     * 
+     */
     private final @Nullable List<TemplateError> errors;
+    /**
+     * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
+     * 
+     */
     private final @Nullable List<TemplateSheet> sheets;
+    /**
+     * <p>The Amazon Resource Name (ARN) of an analysis or template that was used to create this
+     *             template.</p>
+     * 
+     */
     private final @Nullable String sourceEntityArn;
     private final @Nullable TemplateResourceStatus status;
+    /**
+     * <p>The ARN of the theme associated with this version of the template.</p>
+     * 
+     */
     private final @Nullable String themeArn;
+    /**
+     * <p>The version number of the template version.</p>
+     * 
+     */
     private final @Nullable Double versionNumber;
 
     @OutputCustomType.Constructor({"createdTime","dataSetConfigurations","description","errors","sheets","sourceEntityArn","status","themeArn","versionNumber"})
@@ -49,30 +84,65 @@ public final class TemplateVersion {
         this.versionNumber = versionNumber;
     }
 
+    /**
+     * <p>The time that this template version was created.</p>
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+    /**
+     * <p>Schema of the dataset identified by the placeholder. Any dashboard created from this
+     *             template should be bound to new datasets matching the same schema described through this
+     *             API operation.</p>
+     * 
+     */
     public List<TemplateDataSetConfiguration> getDataSetConfigurations() {
         return this.dataSetConfigurations == null ? List.of() : this.dataSetConfigurations;
     }
+    /**
+     * <p>The description of the template.</p>
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * <p>Errors associated with this template version.</p>
+     * 
+     */
     public List<TemplateError> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
+    /**
+     * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
+     * 
+     */
     public List<TemplateSheet> getSheets() {
         return this.sheets == null ? List.of() : this.sheets;
     }
+    /**
+     * <p>The Amazon Resource Name (ARN) of an analysis or template that was used to create this
+     *             template.</p>
+     * 
+     */
     public Optional<String> getSourceEntityArn() {
         return Optional.ofNullable(this.sourceEntityArn);
     }
     public Optional<TemplateResourceStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * <p>The ARN of the theme associated with this version of the template.</p>
+     * 
+     */
     public Optional<String> getThemeArn() {
         return Optional.ofNullable(this.themeArn);
     }
+    /**
+     * <p>The version number of the template version.</p>
+     * 
+     */
     public Optional<Double> getVersionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }

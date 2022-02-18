@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure bucket separation as well as network locality
+ * 
+ */
 public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyGroupPlacementPolicyArgs Empty = new ResourcePolicyGroupPlacementPolicyArgs();
 
+    /**
+     * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+     * 
+     */
     @InputImport(name="availabilityDomainCount")
     private final @Nullable Input<Integer> availabilityDomainCount;
 
@@ -22,6 +30,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
         return this.availabilityDomainCount == null ? Input.empty() : this.availabilityDomainCount;
     }
 
+    /**
+     * Specifies network collocation
+     * 
+     */
     @InputImport(name="collocation")
     private final @Nullable Input<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
 
@@ -29,6 +41,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
         return this.collocation == null ? Input.empty() : this.collocation;
     }
 
+    /**
+     * Number of vms in this placement group
+     * 
+     */
     @InputImport(name="vmCount")
     private final @Nullable Input<Integer> vmCount;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for for customizing service endpoints.
+ * 
+ */
 public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderEndpointArgs Empty = new ProviderEndpointArgs();
 
+    /**
+     * Override the default endpoint for AWS Access Analyzer
+     * 
+     */
     @InputImport(name="accessanalyzer")
     private final @Nullable Input<String> accessanalyzer;
 
@@ -21,6 +29,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.accessanalyzer == null ? Input.empty() : this.accessanalyzer;
     }
 
+    /**
+     * Override the default endpoint for AWS Certificate Manager
+     * 
+     */
     @InputImport(name="acm")
     private final @Nullable Input<String> acm;
 
@@ -28,6 +40,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.acm == null ? Input.empty() : this.acm;
     }
 
+    /**
+     * Override the default endpoint for AWS Certificate Manager Private Certificate Authority
+     * 
+     */
     @InputImport(name="acmpca")
     private final @Nullable Input<String> acmpca;
 
@@ -35,6 +51,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.acmpca == null ? Input.empty() : this.acmpca;
     }
 
+    /**
+     * Override the default endpoint for AWS Amplify Console
+     * 
+     */
     @InputImport(name="amplify")
     private final @Nullable Input<String> amplify;
 
@@ -42,6 +62,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.amplify == null ? Input.empty() : this.amplify;
     }
 
+    /**
+     * Override the default endpoint for AWS AppConfig
+     * 
+     */
     @InputImport(name="appconfig")
     private final @Nullable Input<String> appconfig;
 
@@ -49,6 +73,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.appconfig == null ? Input.empty() : this.appconfig;
     }
 
+    /**
+     * Override the default endpoint for AWS Application Auto Scaling
+     * 
+     */
     @InputImport(name="applicationautoscaling")
     private final @Nullable Input<String> applicationautoscaling;
 
@@ -56,6 +84,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.applicationautoscaling == null ? Input.empty() : this.applicationautoscaling;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudWatch Application Insights
+     * 
+     */
     @InputImport(name="applicationinsights")
     private final @Nullable Input<String> applicationinsights;
 
@@ -63,6 +95,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.applicationinsights == null ? Input.empty() : this.applicationinsights;
     }
 
+    /**
+     * Override the default endpoint for AWS App Mesh
+     * 
+     */
     @InputImport(name="appmesh")
     private final @Nullable Input<String> appmesh;
 
@@ -70,6 +106,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.appmesh == null ? Input.empty() : this.appmesh;
     }
 
+    /**
+     * Override the default endpoint for AWS App Runner
+     * 
+     */
     @InputImport(name="apprunner")
     private final @Nullable Input<String> apprunner;
 
@@ -77,6 +117,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.apprunner == null ? Input.empty() : this.apprunner;
     }
 
+    /**
+     * Override the default endpoint for AWS AppStream 2.0
+     * 
+     */
     @InputImport(name="appstream")
     private final @Nullable Input<String> appstream;
 
@@ -84,6 +128,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.appstream == null ? Input.empty() : this.appstream;
     }
 
+    /**
+     * Override the default endpoint for AWS AppSync
+     * 
+     */
     @InputImport(name="appsync")
     private final @Nullable Input<String> appsync;
 
@@ -91,6 +139,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.appsync == null ? Input.empty() : this.appsync;
     }
 
+    /**
+     * Override the default endpoint for AWS Athena
+     * 
+     */
     @InputImport(name="athena")
     private final @Nullable Input<String> athena;
 
@@ -98,6 +150,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.athena == null ? Input.empty() : this.athena;
     }
 
+    /**
+     * Override the default endpoint for AWS Audit Manager
+     * 
+     */
     @InputImport(name="auditmanager")
     private final @Nullable Input<String> auditmanager;
 
@@ -105,6 +161,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.auditmanager == null ? Input.empty() : this.auditmanager;
     }
 
+    /**
+     * Override the default endpoint for AWS Auto Scaling
+     * 
+     */
     @InputImport(name="autoscaling")
     private final @Nullable Input<String> autoscaling;
 
@@ -112,6 +172,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
     }
 
+    /**
+     * Override the default endpoint for AWS Backup
+     * 
+     */
     @InputImport(name="backup")
     private final @Nullable Input<String> backup;
 
@@ -119,6 +183,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.backup == null ? Input.empty() : this.backup;
     }
 
+    /**
+     * Override the default endpoint for AWS Batch
+     * 
+     */
     @InputImport(name="batch")
     private final @Nullable Input<String> batch;
 
@@ -126,6 +194,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.batch == null ? Input.empty() : this.batch;
     }
 
+    /**
+     * Override the default endpoint for AWS Budgets
+     * 
+     */
     @InputImport(name="budgets")
     private final @Nullable Input<String> budgets;
 
@@ -133,6 +205,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.budgets == null ? Input.empty() : this.budgets;
     }
 
+    /**
+     * Override the default endpoint for Amazon Chime
+     * 
+     */
     @InputImport(name="chime")
     private final @Nullable Input<String> chime;
 
@@ -140,6 +216,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.chime == null ? Input.empty() : this.chime;
     }
 
+    /**
+     * Override the default endpoint for AWS Cloud9
+     * 
+     */
     @InputImport(name="cloud9")
     private final @Nullable Input<String> cloud9;
 
@@ -147,6 +227,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloud9 == null ? Input.empty() : this.cloud9;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudFormation
+     * 
+     */
     @InputImport(name="cloudformation")
     private final @Nullable Input<String> cloudformation;
 
@@ -154,6 +238,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloudformation == null ? Input.empty() : this.cloudformation;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudFront
+     * 
+     */
     @InputImport(name="cloudfront")
     private final @Nullable Input<String> cloudfront;
 
@@ -161,6 +249,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloudfront == null ? Input.empty() : this.cloudfront;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudHSM
+     * 
+     */
     @InputImport(name="cloudhsm")
     private final @Nullable Input<String> cloudhsm;
 
@@ -168,6 +260,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloudhsm == null ? Input.empty() : this.cloudhsm;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudSearch
+     * 
+     */
     @InputImport(name="cloudsearch")
     private final @Nullable Input<String> cloudsearch;
 
@@ -175,6 +271,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloudsearch == null ? Input.empty() : this.cloudsearch;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudTrail
+     * 
+     */
     @InputImport(name="cloudtrail")
     private final @Nullable Input<String> cloudtrail;
 
@@ -182,6 +282,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloudtrail == null ? Input.empty() : this.cloudtrail;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudWatch
+     * 
+     */
     @InputImport(name="cloudwatch")
     private final @Nullable Input<String> cloudwatch;
 
@@ -189,6 +293,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloudwatch == null ? Input.empty() : this.cloudwatch;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudWatch Events
+     * 
+     */
     @InputImport(name="cloudwatchevents")
     private final @Nullable Input<String> cloudwatchevents;
 
@@ -196,6 +304,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloudwatchevents == null ? Input.empty() : this.cloudwatchevents;
     }
 
+    /**
+     * Override the default endpoint for AWS CloudWatch Logs
+     * 
+     */
     @InputImport(name="cloudwatchlogs")
     private final @Nullable Input<String> cloudwatchlogs;
 
@@ -203,6 +315,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cloudwatchlogs == null ? Input.empty() : this.cloudwatchlogs;
     }
 
+    /**
+     * Override the default endpoint for AWS CodeArtifact
+     * 
+     */
     @InputImport(name="codeartifact")
     private final @Nullable Input<String> codeartifact;
 
@@ -210,6 +326,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.codeartifact == null ? Input.empty() : this.codeartifact;
     }
 
+    /**
+     * Override the default endpoint for AWS CodeBuild
+     * 
+     */
     @InputImport(name="codebuild")
     private final @Nullable Input<String> codebuild;
 
@@ -217,6 +337,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.codebuild == null ? Input.empty() : this.codebuild;
     }
 
+    /**
+     * Override the default endpoint for AWS CodeCommit
+     * 
+     */
     @InputImport(name="codecommit")
     private final @Nullable Input<String> codecommit;
 
@@ -224,6 +348,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.codecommit == null ? Input.empty() : this.codecommit;
     }
 
+    /**
+     * Override the default endpoint for AWS CodeDeploy
+     * 
+     */
     @InputImport(name="codedeploy")
     private final @Nullable Input<String> codedeploy;
 
@@ -231,6 +359,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.codedeploy == null ? Input.empty() : this.codedeploy;
     }
 
+    /**
+     * Override the default endpoint for AWS CodePipeline
+     * 
+     */
     @InputImport(name="codepipeline")
     private final @Nullable Input<String> codepipeline;
 
@@ -238,6 +370,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.codepipeline == null ? Input.empty() : this.codepipeline;
     }
 
+    /**
+     * Override the default endpoint for AWS CodeStart Connections
+     * 
+     */
     @InputImport(name="codestarconnections")
     private final @Nullable Input<String> codestarconnections;
 
@@ -245,6 +381,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.codestarconnections == null ? Input.empty() : this.codestarconnections;
     }
 
+    /**
+     * Override the default endpoint for Amazon Cognito
+     * 
+     */
     @InputImport(name="cognitoidentity")
     private final @Nullable Input<String> cognitoidentity;
 
@@ -252,6 +392,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cognitoidentity == null ? Input.empty() : this.cognitoidentity;
     }
 
+    /**
+     * Override the default endpoint for AWS Config
+     * 
+     */
     @InputImport(name="configservice")
     private final @Nullable Input<String> configservice;
 
@@ -259,6 +403,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.configservice == null ? Input.empty() : this.configservice;
     }
 
+    /**
+     * Override the default endpoint for Amazon Connect
+     * 
+     */
     @InputImport(name="connect")
     private final @Nullable Input<String> connect;
 
@@ -266,6 +414,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.connect == null ? Input.empty() : this.connect;
     }
 
+    /**
+     * Override the default endpoint for AWS Cost and Usage Reports
+     * 
+     */
     @InputImport(name="cur")
     private final @Nullable Input<String> cur;
 
@@ -273,6 +425,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.cur == null ? Input.empty() : this.cur;
     }
 
+    /**
+     * Override the default endpoint for AWS Data Exchange
+     * 
+     */
     @InputImport(name="dataexchange")
     private final @Nullable Input<String> dataexchange;
 
@@ -280,6 +436,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.dataexchange == null ? Input.empty() : this.dataexchange;
     }
 
+    /**
+     * Override the default endpoint for AWS Data Pipeline
+     * 
+     */
     @InputImport(name="datapipeline")
     private final @Nullable Input<String> datapipeline;
 
@@ -287,6 +447,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.datapipeline == null ? Input.empty() : this.datapipeline;
     }
 
+    /**
+     * Override the default endpoint for AWS DataSync
+     * 
+     */
     @InputImport(name="datasync")
     private final @Nullable Input<String> datasync;
 
@@ -294,6 +458,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.datasync == null ? Input.empty() : this.datasync;
     }
 
+    /**
+     * Override the default endpoint for AWS DynamoDB Accelerator
+     * 
+     */
     @InputImport(name="dax")
     private final @Nullable Input<String> dax;
 
@@ -301,6 +469,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.dax == null ? Input.empty() : this.dax;
     }
 
+    /**
+     * Override the default endpoint for AWS Detective
+     * 
+     */
     @InputImport(name="detective")
     private final @Nullable Input<String> detective;
 
@@ -308,6 +480,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.detective == null ? Input.empty() : this.detective;
     }
 
+    /**
+     * Override the default endpoint for AWS Device Farm
+     * 
+     */
     @InputImport(name="devicefarm")
     private final @Nullable Input<String> devicefarm;
 
@@ -315,6 +491,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.devicefarm == null ? Input.empty() : this.devicefarm;
     }
 
+    /**
+     * Override the default endpoint for AWS Direct Connect
+     * 
+     */
     @InputImport(name="directconnect")
     private final @Nullable Input<String> directconnect;
 
@@ -322,6 +502,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.directconnect == null ? Input.empty() : this.directconnect;
     }
 
+    /**
+     * Override the default endpoint for AWS Data Lifecycle Manager
+     * 
+     */
     @InputImport(name="dlm")
     private final @Nullable Input<String> dlm;
 
@@ -329,6 +513,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.dlm == null ? Input.empty() : this.dlm;
     }
 
+    /**
+     * Override the default endpoint for AWS Database Migration Service
+     * 
+     */
     @InputImport(name="dms")
     private final @Nullable Input<String> dms;
 
@@ -336,6 +524,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.dms == null ? Input.empty() : this.dms;
     }
 
+    /**
+     * Override the default endpoint for AWS DocumentDB
+     * 
+     */
     @InputImport(name="docdb")
     private final @Nullable Input<String> docdb;
 
@@ -343,6 +535,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.docdb == null ? Input.empty() : this.docdb;
     }
 
+    /**
+     * Override the default endpoint for AWS Directory Service
+     * 
+     */
     @InputImport(name="ds")
     private final @Nullable Input<String> ds;
 
@@ -350,6 +546,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ds == null ? Input.empty() : this.ds;
     }
 
+    /**
+     * Override the default endpoint for AWS DynamoDB
+     * 
+     */
     @InputImport(name="dynamodb")
     private final @Nullable Input<String> dynamodb;
 
@@ -357,6 +557,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.dynamodb == null ? Input.empty() : this.dynamodb;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Compute Cloud (EC2)
+     * 
+     */
     @InputImport(name="ec2")
     private final @Nullable Input<String> ec2;
 
@@ -364,6 +568,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ec2 == null ? Input.empty() : this.ec2;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Container Registry (ECR)
+     * 
+     */
     @InputImport(name="ecr")
     private final @Nullable Input<String> ecr;
 
@@ -371,6 +579,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ecr == null ? Input.empty() : this.ecr;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Container Registry (ECR) Public
+     * 
+     */
     @InputImport(name="ecrpublic")
     private final @Nullable Input<String> ecrpublic;
 
@@ -378,6 +590,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ecrpublic == null ? Input.empty() : this.ecrpublic;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Container Service (ECS)
+     * 
+     */
     @InputImport(name="ecs")
     private final @Nullable Input<String> ecs;
 
@@ -385,6 +601,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ecs == null ? Input.empty() : this.ecs;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic File System (EFS)
+     * 
+     */
     @InputImport(name="efs")
     private final @Nullable Input<String> efs;
 
@@ -392,6 +612,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.efs == null ? Input.empty() : this.efs;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
+     * 
+     */
     @InputImport(name="eks")
     private final @Nullable Input<String> eks;
 
@@ -399,6 +623,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.eks == null ? Input.empty() : this.eks;
     }
 
+    /**
+     * Override the default endpoint for AWS ElastiCache
+     * 
+     */
     @InputImport(name="elasticache")
     private final @Nullable Input<String> elasticache;
 
@@ -406,6 +634,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.elasticache == null ? Input.empty() : this.elasticache;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Beanstalk
+     * 
+     */
     @InputImport(name="elasticbeanstalk")
     private final @Nullable Input<String> elasticbeanstalk;
 
@@ -413,6 +645,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.elasticbeanstalk == null ? Input.empty() : this.elasticbeanstalk;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Transcoder
+     * 
+     */
     @InputImport(name="elastictranscoder")
     private final @Nullable Input<String> elastictranscoder;
 
@@ -420,6 +656,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.elastictranscoder == null ? Input.empty() : this.elastictranscoder;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Load Balancing
+     * 
+     */
     @InputImport(name="elb")
     private final @Nullable Input<String> elb;
 
@@ -427,6 +667,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.elb == null ? Input.empty() : this.elb;
     }
 
+    /**
+     * Override the default endpoint for AWS Elastic Load Balancing V2
+     * 
+     */
     @InputImport(name="elbv2")
     private final @Nullable Input<String> elbv2;
 
@@ -434,6 +678,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.elbv2 == null ? Input.empty() : this.elbv2;
     }
 
+    /**
+     * Override the default endpoint for AWS EMR
+     * 
+     */
     @InputImport(name="emr")
     private final @Nullable Input<String> emr;
 
@@ -441,6 +689,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.emr == null ? Input.empty() : this.emr;
     }
 
+    /**
+     * Override the default endpoint for AWS EMR on EKS
+     * 
+     */
     @InputImport(name="emrcontainers")
     private final @Nullable Input<String> emrcontainers;
 
@@ -448,6 +700,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.emrcontainers == null ? Input.empty() : this.emrcontainers;
     }
 
+    /**
+     * Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
+     * 
+     */
     @InputImport(name="es")
     private final @Nullable Input<String> es;
 
@@ -455,6 +711,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.es == null ? Input.empty() : this.es;
     }
 
+    /**
+     * Override the default endpoint for AWS Kinesis Data Firehose
+     * 
+     */
     @InputImport(name="firehose")
     private final @Nullable Input<String> firehose;
 
@@ -462,6 +722,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.firehose == null ? Input.empty() : this.firehose;
     }
 
+    /**
+     * Override the default endpoint for AWS Firewall Manager
+     * 
+     */
     @InputImport(name="fms")
     private final @Nullable Input<String> fms;
 
@@ -469,6 +733,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.fms == null ? Input.empty() : this.fms;
     }
 
+    /**
+     * Override the default endpoint for Amazon Forecast
+     * 
+     */
     @InputImport(name="forecast")
     private final @Nullable Input<String> forecast;
 
@@ -476,6 +744,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.forecast == null ? Input.empty() : this.forecast;
     }
 
+    /**
+     * Override the default endpoint for AWS FSx
+     * 
+     */
     @InputImport(name="fsx")
     private final @Nullable Input<String> fsx;
 
@@ -483,6 +755,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.fsx == null ? Input.empty() : this.fsx;
     }
 
+    /**
+     * Override the default endpoint for AWS GameLift
+     * 
+     */
     @InputImport(name="gamelift")
     private final @Nullable Input<String> gamelift;
 
@@ -490,6 +766,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.gamelift == null ? Input.empty() : this.gamelift;
     }
 
+    /**
+     * Override the default endpoint for Amazon S3 Glacier
+     * 
+     */
     @InputImport(name="glacier")
     private final @Nullable Input<String> glacier;
 
@@ -497,6 +777,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.glacier == null ? Input.empty() : this.glacier;
     }
 
+    /**
+     * Override the default endpoint for AWS Global Accelerator
+     * 
+     */
     @InputImport(name="globalaccelerator")
     private final @Nullable Input<String> globalaccelerator;
 
@@ -504,6 +788,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.globalaccelerator == null ? Input.empty() : this.globalaccelerator;
     }
 
+    /**
+     * Override the default endpoint for AWS Glue
+     * 
+     */
     @InputImport(name="glue")
     private final @Nullable Input<String> glue;
 
@@ -511,6 +799,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.glue == null ? Input.empty() : this.glue;
     }
 
+    /**
+     * Override the default endpoint for AWS IoT Greengrass
+     * 
+     */
     @InputImport(name="greengrass")
     private final @Nullable Input<String> greengrass;
 
@@ -518,6 +810,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.greengrass == null ? Input.empty() : this.greengrass;
     }
 
+    /**
+     * Override the default endpoint for AWS GuardDuty
+     * 
+     */
     @InputImport(name="guardduty")
     private final @Nullable Input<String> guardduty;
 
@@ -525,6 +821,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.guardduty == null ? Input.empty() : this.guardduty;
     }
 
+    /**
+     * Override the default endpoint for AWS Identity and Access Management
+     * 
+     */
     @InputImport(name="iam")
     private final @Nullable Input<String> iam;
 
@@ -532,6 +832,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.iam == null ? Input.empty() : this.iam;
     }
 
+    /**
+     * Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
+     * 
+     */
     @InputImport(name="identitystore")
     private final @Nullable Input<String> identitystore;
 
@@ -539,6 +843,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.identitystore == null ? Input.empty() : this.identitystore;
     }
 
+    /**
+     * Override the default endpoint for AWS Image Builder
+     * 
+     */
     @InputImport(name="imagebuilder")
     private final @Nullable Input<String> imagebuilder;
 
@@ -546,6 +854,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.imagebuilder == null ? Input.empty() : this.imagebuilder;
     }
 
+    /**
+     * Override the default endpoint for Amazon Inspector
+     * 
+     */
     @InputImport(name="inspector")
     private final @Nullable Input<String> inspector;
 
@@ -553,6 +865,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.inspector == null ? Input.empty() : this.inspector;
     }
 
+    /**
+     * Override the default endpoint for AWS IoT
+     * 
+     */
     @InputImport(name="iot")
     private final @Nullable Input<String> iot;
 
@@ -560,6 +876,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.iot == null ? Input.empty() : this.iot;
     }
 
+    /**
+     * Override the default endpoint for AWS IoT Analytics
+     * 
+     */
     @InputImport(name="iotanalytics")
     private final @Nullable Input<String> iotanalytics;
 
@@ -567,6 +887,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.iotanalytics == null ? Input.empty() : this.iotanalytics;
     }
 
+    /**
+     * Override the default endpoint for AWS IoT Events
+     * 
+     */
     @InputImport(name="iotevents")
     private final @Nullable Input<String> iotevents;
 
@@ -574,6 +898,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.iotevents == null ? Input.empty() : this.iotevents;
     }
 
+    /**
+     * Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
+     * 
+     */
     @InputImport(name="kafka")
     private final @Nullable Input<String> kafka;
 
@@ -581,6 +909,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.kafka == null ? Input.empty() : this.kafka;
     }
 
+    /**
+     * Override the default endpoint for Amazon Kinesis
+     * 
+     */
     @InputImport(name="kinesis")
     private final @Nullable Input<String> kinesis;
 
@@ -588,6 +920,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.kinesis == null ? Input.empty() : this.kinesis;
     }
 
+    /**
+     * Override the default endpoint for Amazon Kinesis Data Analytics
+     * 
+     */
     @InputImport(name="kinesisanalytics")
     private final @Nullable Input<String> kinesisanalytics;
 
@@ -595,6 +931,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.kinesisanalytics == null ? Input.empty() : this.kinesisanalytics;
     }
 
+    /**
+     * Override the default endpoint for Amazon Kinesis Data Analytics V2
+     * 
+     */
     @InputImport(name="kinesisanalyticsv2")
     private final @Nullable Input<String> kinesisanalyticsv2;
 
@@ -602,6 +942,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.kinesisanalyticsv2 == null ? Input.empty() : this.kinesisanalyticsv2;
     }
 
+    /**
+     * Override the default endpoint for Amazon Kinesis Video Streams
+     * 
+     */
     @InputImport(name="kinesisvideo")
     private final @Nullable Input<String> kinesisvideo;
 
@@ -609,6 +953,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.kinesisvideo == null ? Input.empty() : this.kinesisvideo;
     }
 
+    /**
+     * Override the default endpoint for AWS Key Management Service
+     * 
+     */
     @InputImport(name="kms")
     private final @Nullable Input<String> kms;
 
@@ -616,6 +964,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.kms == null ? Input.empty() : this.kms;
     }
 
+    /**
+     * Override the default endpoint for AWS Lake Formation
+     * 
+     */
     @InputImport(name="lakeformation")
     private final @Nullable Input<String> lakeformation;
 
@@ -623,6 +975,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.lakeformation == null ? Input.empty() : this.lakeformation;
     }
 
+    /**
+     * Override the default endpoint for AWS Lambda
+     * 
+     */
     @InputImport(name="lambda")
     private final @Nullable Input<String> lambda;
 
@@ -630,6 +986,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.lambda == null ? Input.empty() : this.lambda;
     }
 
+    /**
+     * Override the default endpoint for Amazon Lex
+     * 
+     */
     @InputImport(name="lexmodels")
     private final @Nullable Input<String> lexmodels;
 
@@ -637,6 +997,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.lexmodels == null ? Input.empty() : this.lexmodels;
     }
 
+    /**
+     * Override the default endpoint for AWS License Manager
+     * 
+     */
     @InputImport(name="licensemanager")
     private final @Nullable Input<String> licensemanager;
 
@@ -644,6 +1008,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.licensemanager == null ? Input.empty() : this.licensemanager;
     }
 
+    /**
+     * Override the default endpoint for Amazon Lightsail
+     * 
+     */
     @InputImport(name="lightsail")
     private final @Nullable Input<String> lightsail;
 
@@ -651,6 +1019,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.lightsail == null ? Input.empty() : this.lightsail;
     }
 
+    /**
+     * Override the default endpoint for Amazon Location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -658,6 +1030,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Override the default endpoint for Amazon Macie
+     * 
+     */
     @InputImport(name="macie")
     private final @Nullable Input<String> macie;
 
@@ -665,6 +1041,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.macie == null ? Input.empty() : this.macie;
     }
 
+    /**
+     * Override the default endpoint for Amazon Macie V2
+     * 
+     */
     @InputImport(name="macie2")
     private final @Nullable Input<String> macie2;
 
@@ -672,6 +1052,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.macie2 == null ? Input.empty() : this.macie2;
     }
 
+    /**
+     * Override the default endpoint for Amazon Managed Blockchain
+     * 
+     */
     @InputImport(name="managedblockchain")
     private final @Nullable Input<String> managedblockchain;
 
@@ -679,6 +1063,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.managedblockchain == null ? Input.empty() : this.managedblockchain;
     }
 
+    /**
+     * Override the default endpoint for AWS Marketplace Catalog
+     * 
+     */
     @InputImport(name="marketplacecatalog")
     private final @Nullable Input<String> marketplacecatalog;
 
@@ -686,6 +1074,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.marketplacecatalog == null ? Input.empty() : this.marketplacecatalog;
     }
 
+    /**
+     * Override the default endpoint for AWS MediaConnect
+     * 
+     */
     @InputImport(name="mediaconnect")
     private final @Nullable Input<String> mediaconnect;
 
@@ -693,6 +1085,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.mediaconnect == null ? Input.empty() : this.mediaconnect;
     }
 
+    /**
+     * Override the default endpoint for AWS MediaConvert
+     * 
+     */
     @InputImport(name="mediaconvert")
     private final @Nullable Input<String> mediaconvert;
 
@@ -700,6 +1096,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.mediaconvert == null ? Input.empty() : this.mediaconvert;
     }
 
+    /**
+     * Override the default endpoint for AWS MediaLive
+     * 
+     */
     @InputImport(name="medialive")
     private final @Nullable Input<String> medialive;
 
@@ -707,6 +1107,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.medialive == null ? Input.empty() : this.medialive;
     }
 
+    /**
+     * Override the default endpoint for AWS MediaPackage
+     * 
+     */
     @InputImport(name="mediapackage")
     private final @Nullable Input<String> mediapackage;
 
@@ -714,6 +1118,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.mediapackage == null ? Input.empty() : this.mediapackage;
     }
 
+    /**
+     * Override the default endpoint for AWS Elemental MediaStore container
+     * 
+     */
     @InputImport(name="mediastore")
     private final @Nullable Input<String> mediastore;
 
@@ -721,6 +1129,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.mediastore == null ? Input.empty() : this.mediastore;
     }
 
+    /**
+     * Override the default endpoint for AWS Elemental MediaStore asset
+     * 
+     */
     @InputImport(name="mediastoredata")
     private final @Nullable Input<String> mediastoredata;
 
@@ -728,6 +1140,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.mediastoredata == null ? Input.empty() : this.mediastoredata;
     }
 
+    /**
+     * Override the default endpoint for AWS MemoryDB for Redis
+     * 
+     */
     @InputImport(name="memorydb")
     private final @Nullable Input<String> memorydb;
 
@@ -735,6 +1151,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.memorydb == null ? Input.empty() : this.memorydb;
     }
 
+    /**
+     * Override the default endpoint for Amazon MQ
+     * 
+     */
     @InputImport(name="mq")
     private final @Nullable Input<String> mq;
 
@@ -742,6 +1162,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.mq == null ? Input.empty() : this.mq;
     }
 
+    /**
+     * Override the default endpoint for Amazon Managed Workflows for Apache Airflow
+     * 
+     */
     @InputImport(name="mwaa")
     private final @Nullable Input<String> mwaa;
 
@@ -749,6 +1173,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.mwaa == null ? Input.empty() : this.mwaa;
     }
 
+    /**
+     * Override the default endpoint for Amazon Neptune
+     * 
+     */
     @InputImport(name="neptune")
     private final @Nullable Input<String> neptune;
 
@@ -756,6 +1184,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.neptune == null ? Input.empty() : this.neptune;
     }
 
+    /**
+     * Override the default endpoint for AWS Network Firewall
+     * 
+     */
     @InputImport(name="networkfirewall")
     private final @Nullable Input<String> networkfirewall;
 
@@ -763,6 +1195,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.networkfirewall == null ? Input.empty() : this.networkfirewall;
     }
 
+    /**
+     * Override the default endpoint for AWS Network Manager
+     * 
+     */
     @InputImport(name="networkmanager")
     private final @Nullable Input<String> networkmanager;
 
@@ -770,6 +1206,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.networkmanager == null ? Input.empty() : this.networkmanager;
     }
 
+    /**
+     * Override the default endpoint for AWS OpsWorks
+     * 
+     */
     @InputImport(name="opsworks")
     private final @Nullable Input<String> opsworks;
 
@@ -777,6 +1217,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.opsworks == null ? Input.empty() : this.opsworks;
     }
 
+    /**
+     * Override the default endpoint for AWS Organizations
+     * 
+     */
     @InputImport(name="organizations")
     private final @Nullable Input<String> organizations;
 
@@ -784,6 +1228,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.organizations == null ? Input.empty() : this.organizations;
     }
 
+    /**
+     * Override the default endpoint for AWS Outposts
+     * 
+     */
     @InputImport(name="outposts")
     private final @Nullable Input<String> outposts;
 
@@ -791,6 +1239,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.outposts == null ? Input.empty() : this.outposts;
     }
 
+    /**
+     * Override the default endpoint for Amazon Personalize
+     * 
+     */
     @InputImport(name="personalize")
     private final @Nullable Input<String> personalize;
 
@@ -798,6 +1250,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.personalize == null ? Input.empty() : this.personalize;
     }
 
+    /**
+     * Override the default endpoint for Amazon Pinpoint
+     * 
+     */
     @InputImport(name="pinpoint")
     private final @Nullable Input<String> pinpoint;
 
@@ -805,6 +1261,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.pinpoint == null ? Input.empty() : this.pinpoint;
     }
 
+    /**
+     * Override the default endpoint for Amazon Web Services Price List Service
+     * 
+     */
     @InputImport(name="pricing")
     private final @Nullable Input<String> pricing;
 
@@ -812,6 +1272,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.pricing == null ? Input.empty() : this.pricing;
     }
 
+    /**
+     * Override the default endpoint for Amazon QLDB
+     * 
+     */
     @InputImport(name="qldb")
     private final @Nullable Input<String> qldb;
 
@@ -819,6 +1283,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.qldb == null ? Input.empty() : this.qldb;
     }
 
+    /**
+     * Override the default endpoint for Amazon QuickSight
+     * 
+     */
     @InputImport(name="quicksight")
     private final @Nullable Input<String> quicksight;
 
@@ -826,6 +1294,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.quicksight == null ? Input.empty() : this.quicksight;
     }
 
+    /**
+     * Override the default endpoint for AWS Resource Access Manager
+     * 
+     */
     @InputImport(name="ram")
     private final @Nullable Input<String> ram;
 
@@ -833,6 +1305,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ram == null ? Input.empty() : this.ram;
     }
 
+    /**
+     * Override the default endpoint for Amazon Relational Database Service
+     * 
+     */
     @InputImport(name="rds")
     private final @Nullable Input<String> rds;
 
@@ -840,6 +1316,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.rds == null ? Input.empty() : this.rds;
     }
 
+    /**
+     * Override the default endpoint for Amazon Redshift
+     * 
+     */
     @InputImport(name="redshift")
     private final @Nullable Input<String> redshift;
 
@@ -847,6 +1327,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.redshift == null ? Input.empty() : this.redshift;
     }
 
+    /**
+     * Override the default endpoint for AWS Resource Groups
+     * 
+     */
     @InputImport(name="resourcegroups")
     private final @Nullable Input<String> resourcegroups;
 
@@ -854,6 +1338,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.resourcegroups == null ? Input.empty() : this.resourcegroups;
     }
 
+    /**
+     * Override the default endpoint for AWS Resource Groups Tagging API
+     * 
+     */
     @InputImport(name="resourcegroupstaggingapi")
     private final @Nullable Input<String> resourcegroupstaggingapi;
 
@@ -861,6 +1349,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.resourcegroupstaggingapi == null ? Input.empty() : this.resourcegroupstaggingapi;
     }
 
+    /**
+     * Override the default endpoint for Amazon Route 53
+     * 
+     */
     @InputImport(name="route53")
     private final @Nullable Input<String> route53;
 
@@ -868,6 +1360,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.route53 == null ? Input.empty() : this.route53;
     }
 
+    /**
+     * Override the default endpoint for Amazon Route 53 Domains
+     * 
+     */
     @InputImport(name="route53domains")
     private final @Nullable Input<String> route53domains;
 
@@ -875,6 +1371,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.route53domains == null ? Input.empty() : this.route53domains;
     }
 
+    /**
+     * Override the default endpoint for Amazon Route 53 Recovery Control
+     * 
+     */
     @InputImport(name="route53recoverycontrolconfig")
     private final @Nullable Input<String> route53recoverycontrolconfig;
 
@@ -882,6 +1382,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.route53recoverycontrolconfig == null ? Input.empty() : this.route53recoverycontrolconfig;
     }
 
+    /**
+     * Override the default endpoint for Amazon Route 53 Recovery Readiness
+     * 
+     */
     @InputImport(name="route53recoveryreadiness")
     private final @Nullable Input<String> route53recoveryreadiness;
 
@@ -889,6 +1393,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.route53recoveryreadiness == null ? Input.empty() : this.route53recoveryreadiness;
     }
 
+    /**
+     * Override the default endpoint for Amazon Route 53 Resolver
+     * 
+     */
     @InputImport(name="route53resolver")
     private final @Nullable Input<String> route53resolver;
 
@@ -896,6 +1404,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.route53resolver == null ? Input.empty() : this.route53resolver;
     }
 
+    /**
+     * Override the default endpoint for Amazon Simple Storage Service (S3)
+     * 
+     */
     @InputImport(name="s3")
     private final @Nullable Input<String> s3;
 
@@ -903,6 +1415,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.s3 == null ? Input.empty() : this.s3;
     }
 
+    /**
+     * Override the default endpoint for Amazon Simple Storage Service (S3) Control
+     * 
+     */
     @InputImport(name="s3control")
     private final @Nullable Input<String> s3control;
 
@@ -910,6 +1426,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.s3control == null ? Input.empty() : this.s3control;
     }
 
+    /**
+     * Override the default endpoint for Amazon S3 on Outposts
+     * 
+     */
     @InputImport(name="s3outposts")
     private final @Nullable Input<String> s3outposts;
 
@@ -917,6 +1437,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.s3outposts == null ? Input.empty() : this.s3outposts;
     }
 
+    /**
+     * Override the default endpoint for AWS SageMaker
+     * 
+     */
     @InputImport(name="sagemaker")
     private final @Nullable Input<String> sagemaker;
 
@@ -924,6 +1448,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.sagemaker == null ? Input.empty() : this.sagemaker;
     }
 
+    /**
+     * Override the default endpoint for Amazon EventBridge Schema Registry
+     * 
+     */
     @InputImport(name="schemas")
     private final @Nullable Input<String> schemas;
 
@@ -931,6 +1459,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.schemas == null ? Input.empty() : this.schemas;
     }
 
+    /**
+     * Override the default endpoint for Amazon SimpleDB
+     * 
+     */
     @InputImport(name="sdb")
     private final @Nullable Input<String> sdb;
 
@@ -938,6 +1470,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.sdb == null ? Input.empty() : this.sdb;
     }
 
+    /**
+     * Override the default endpoint for AWS Secrets Manager
+     * 
+     */
     @InputImport(name="secretsmanager")
     private final @Nullable Input<String> secretsmanager;
 
@@ -945,6 +1481,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.secretsmanager == null ? Input.empty() : this.secretsmanager;
     }
 
+    /**
+     * Override the default endpoint for AWS Security Hub
+     * 
+     */
     @InputImport(name="securityhub")
     private final @Nullable Input<String> securityhub;
 
@@ -952,6 +1492,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.securityhub == null ? Input.empty() : this.securityhub;
     }
 
+    /**
+     * Override the default endpoint for AWS Serverless Application Repository
+     * 
+     */
     @InputImport(name="serverlessrepo")
     private final @Nullable Input<String> serverlessrepo;
 
@@ -959,6 +1503,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.serverlessrepo == null ? Input.empty() : this.serverlessrepo;
     }
 
+    /**
+     * Override the default endpoint for AWS Service Catalog
+     * 
+     */
     @InputImport(name="servicecatalog")
     private final @Nullable Input<String> servicecatalog;
 
@@ -966,6 +1514,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.servicecatalog == null ? Input.empty() : this.servicecatalog;
     }
 
+    /**
+     * Override the default endpoint for AWS Cloud Map
+     * 
+     */
     @InputImport(name="servicediscovery")
     private final @Nullable Input<String> servicediscovery;
 
@@ -973,6 +1525,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.servicediscovery == null ? Input.empty() : this.servicediscovery;
     }
 
+    /**
+     * Override the default endpoint for AWS Service Quotas
+     * 
+     */
     @InputImport(name="servicequotas")
     private final @Nullable Input<String> servicequotas;
 
@@ -980,6 +1536,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.servicequotas == null ? Input.empty() : this.servicequotas;
     }
 
+    /**
+     * Override the default endpoint for Amazon Simple Email Service (SES)
+     * 
+     */
     @InputImport(name="ses")
     private final @Nullable Input<String> ses;
 
@@ -987,6 +1547,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ses == null ? Input.empty() : this.ses;
     }
 
+    /**
+     * Override the default endpoint for AWS Shield Advanced API
+     * 
+     */
     @InputImport(name="shield")
     private final @Nullable Input<String> shield;
 
@@ -994,6 +1558,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.shield == null ? Input.empty() : this.shield;
     }
 
+    /**
+     * Override the default endpoint for AWS Signer
+     * 
+     */
     @InputImport(name="signer")
     private final @Nullable Input<String> signer;
 
@@ -1001,6 +1569,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.signer == null ? Input.empty() : this.signer;
     }
 
+    /**
+     * Override the default endpoint for Amazon Simple Notification Service (SNS)
+     * 
+     */
     @InputImport(name="sns")
     private final @Nullable Input<String> sns;
 
@@ -1008,6 +1580,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.sns == null ? Input.empty() : this.sns;
     }
 
+    /**
+     * Override the default endpoint for Amazon Simple Queue Service (SQS)
+     * 
+     */
     @InputImport(name="sqs")
     private final @Nullable Input<String> sqs;
 
@@ -1015,6 +1591,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.sqs == null ? Input.empty() : this.sqs;
     }
 
+    /**
+     * Override the default endpoint for AWS Systems Manager
+     * 
+     */
     @InputImport(name="ssm")
     private final @Nullable Input<String> ssm;
 
@@ -1022,6 +1602,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ssm == null ? Input.empty() : this.ssm;
     }
 
+    /**
+     * Override the default endpoint for AWS Single Sign On (SSO)
+     * 
+     */
     @InputImport(name="ssoadmin")
     private final @Nullable Input<String> ssoadmin;
 
@@ -1029,6 +1613,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.ssoadmin == null ? Input.empty() : this.ssoadmin;
     }
 
+    /**
+     * Override the default endpoint for AWS Step Functions
+     * 
+     */
     @InputImport(name="stepfunctions")
     private final @Nullable Input<String> stepfunctions;
 
@@ -1036,6 +1624,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.stepfunctions == null ? Input.empty() : this.stepfunctions;
     }
 
+    /**
+     * Override the default endpoint for AWS Storage Gateway
+     * 
+     */
     @InputImport(name="storagegateway")
     private final @Nullable Input<String> storagegateway;
 
@@ -1043,6 +1635,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.storagegateway == null ? Input.empty() : this.storagegateway;
     }
 
+    /**
+     * Override the default endpoint for AWS Security Token Service (STS)
+     * 
+     */
     @InputImport(name="sts")
     private final @Nullable Input<String> sts;
 
@@ -1050,6 +1646,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.sts == null ? Input.empty() : this.sts;
     }
 
+    /**
+     * Override the default endpoint for Amazon Simple Workflow Service (SWF)
+     * 
+     */
     @InputImport(name="swf")
     private final @Nullable Input<String> swf;
 
@@ -1057,6 +1657,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.swf == null ? Input.empty() : this.swf;
     }
 
+    /**
+     * Override the default endpoint for Amazon CloudWatch Synthetics
+     * 
+     */
     @InputImport(name="synthetics")
     private final @Nullable Input<String> synthetics;
 
@@ -1064,6 +1668,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.synthetics == null ? Input.empty() : this.synthetics;
     }
 
+    /**
+     * Override the default endpoint for Amazon Timestream
+     * 
+     */
     @InputImport(name="timestreamwrite")
     private final @Nullable Input<String> timestreamwrite;
 
@@ -1071,6 +1679,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.timestreamwrite == null ? Input.empty() : this.timestreamwrite;
     }
 
+    /**
+     * Override the default endpoint for AWS Transfer Family
+     * 
+     */
     @InputImport(name="transfer")
     private final @Nullable Input<String> transfer;
 
@@ -1078,6 +1690,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.transfer == null ? Input.empty() : this.transfer;
     }
 
+    /**
+     * Override the default endpoint for AWS WAF Classic
+     * 
+     */
     @InputImport(name="waf")
     private final @Nullable Input<String> waf;
 
@@ -1085,6 +1701,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.waf == null ? Input.empty() : this.waf;
     }
 
+    /**
+     * Override the default endpoint for AWS WAF Regional Classic
+     * 
+     */
     @InputImport(name="wafregional")
     private final @Nullable Input<String> wafregional;
 
@@ -1092,6 +1712,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.wafregional == null ? Input.empty() : this.wafregional;
     }
 
+    /**
+     * Override the default endpoint for AWS WAF V2
+     * 
+     */
     @InputImport(name="wafv2")
     private final @Nullable Input<String> wafv2;
 
@@ -1099,6 +1723,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.wafv2 == null ? Input.empty() : this.wafv2;
     }
 
+    /**
+     * Override the default endpoint for Amazon WorkLink
+     * 
+     */
     @InputImport(name="worklink")
     private final @Nullable Input<String> worklink;
 
@@ -1106,6 +1734,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.worklink == null ? Input.empty() : this.worklink;
     }
 
+    /**
+     * Override the default endpoint for Amazon WorkMail
+     * 
+     */
     @InputImport(name="workmail")
     private final @Nullable Input<String> workmail;
 
@@ -1113,6 +1745,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.workmail == null ? Input.empty() : this.workmail;
     }
 
+    /**
+     * Override the default endpoint for Amazon WorkSpaces
+     * 
+     */
     @InputImport(name="workspaces")
     private final @Nullable Input<String> workspaces;
 
@@ -1120,6 +1756,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.workspaces == null ? Input.empty() : this.workspaces;
     }
 
+    /**
+     * Override the default endpoint for AWS X-Ray
+     * 
+     */
     @InputImport(name="xray")
     private final @Nullable Input<String> xray;
 

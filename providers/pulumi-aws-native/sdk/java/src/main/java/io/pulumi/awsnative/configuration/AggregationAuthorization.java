@@ -14,33 +14,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Config::AggregationAuthorization
+ * 
+ */
 @ResourceType(type="aws-native:configuration:AggregationAuthorization")
 public class AggregationAuthorization extends io.pulumi.resources.CustomResource {
+    /**
+     * The ARN of the AggregationAuthorization.
+     * 
+     */
     @OutputExport(name="aggregationAuthorizationArn", type=String.class, parameters={})
     private Output<String> aggregationAuthorizationArn;
 
+    /**
+     * @return The ARN of the AggregationAuthorization.
+     * 
+     */
     public Output<String> getAggregationAuthorizationArn() {
         return this.aggregationAuthorizationArn;
     }
+    /**
+     * The 12-digit account ID of the account authorized to aggregate data.
+     * 
+     */
     @OutputExport(name="authorizedAccountId", type=String.class, parameters={})
     private Output<String> authorizedAccountId;
 
+    /**
+     * @return The 12-digit account ID of the account authorized to aggregate data.
+     * 
+     */
     public Output<String> getAuthorizedAccountId() {
         return this.authorizedAccountId;
     }
+    /**
+     * The region authorized to collect aggregated data.
+     * 
+     */
     @OutputExport(name="authorizedAwsRegion", type=String.class, parameters={})
     private Output<String> authorizedAwsRegion;
 
+    /**
+     * @return The region authorized to collect aggregated data.
+     * 
+     */
     public Output<String> getAuthorizedAwsRegion() {
         return this.authorizedAwsRegion;
     }
+    /**
+     * The tags for the AggregationAuthorization.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={AggregationAuthorizationTag.class})
     private Output</* @Nullable */ List<AggregationAuthorizationTag>> tags;
 
+    /**
+     * @return The tags for the AggregationAuthorization.
+     * 
+     */
     public Output</* @Nullable */ List<AggregationAuthorizationTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AggregationAuthorization(String name, AggregationAuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:configuration:AggregationAuthorization", name, args == null ? AggregationAuthorizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +98,14 @@ public class AggregationAuthorization extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AggregationAuthorization get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AggregationAuthorization(name, id, options);
     }

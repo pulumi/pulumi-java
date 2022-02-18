@@ -17,6 +17,10 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PhraseSetArgs Empty = new PhraseSetArgs();
 
+    /**
+     * Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
+     * 
+     */
     @InputImport(name="boost")
     private final @Nullable Input<Double> boost;
 
@@ -31,6 +35,10 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the phrase set.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +46,10 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID to use for the phrase set, which will become the final component of the phrase set's resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     * 
+     */
     @InputImport(name="phraseSetId", required=true)
     private final Input<String> phraseSetId;
 
@@ -45,6 +57,10 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.phraseSetId;
     }
 
+    /**
+     * A list of word and phrases.
+     * 
+     */
     @InputImport(name="phrases")
     private final @Nullable Input<List<PhraseArgs>> phrases;
 

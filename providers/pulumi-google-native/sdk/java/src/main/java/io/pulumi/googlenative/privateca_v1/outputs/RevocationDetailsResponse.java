@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RevocationDetailsResponse {
+    /**
+     * Indicates why a Certificate was revoked.
+     * 
+     */
     private final String revocationState;
+    /**
+     * The time at which this Certificate was revoked.
+     * 
+     */
     private final String revocationTime;
 
     @OutputCustomType.Constructor({"revocationState","revocationTime"})
@@ -20,9 +28,17 @@ public final class RevocationDetailsResponse {
         this.revocationTime = Objects.requireNonNull(revocationTime);
     }
 
+    /**
+     * Indicates why a Certificate was revoked.
+     * 
+     */
     public String getRevocationState() {
         return this.revocationState;
     }
+    /**
+     * The time at which this Certificate was revoked.
+     * 
+     */
     public String getRevocationTime() {
         return this.revocationTime;
     }

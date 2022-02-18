@@ -13,27 +13,83 @@ import io.pulumi.gcp.apigee.inputs.InstanceAttachmentState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * An `Instance attachment` in Apigee.
+ * 
+ * To get more information about InstanceAttachment, see:
+ * 
+ * * [API documentation](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances.attachments/create)
+ * * How-to Guides
+ *     * [Creating an environment](https://cloud.google.com/apigee/docs/api-platform/get-started/create-environment)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * InstanceAttachment can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:apigee/instanceAttachment:InstanceAttachment default {{instance_id}}/attachments/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:apigee/instanceAttachment:InstanceAttachment default {{instance_id}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:apigee/instanceAttachment:InstanceAttachment")
 public class InstanceAttachment extends io.pulumi.resources.CustomResource {
+    /**
+     * The resource ID of the environment.
+     * 
+     */
     @OutputExport(name="environment", type=String.class, parameters={})
     private Output<String> environment;
 
+    /**
+     * @return The resource ID of the environment.
+     * 
+     */
     public Output<String> getEnvironment() {
         return this.environment;
     }
+    /**
+     * The Apigee instance associated with the Apigee environment,
+     * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
+     * 
+     */
     @OutputExport(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
+    /**
+     * @return The Apigee instance associated with the Apigee environment,
+     * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
+     * 
+     */
     public Output<String> getInstanceId() {
         return this.instanceId;
     }
+    /**
+     * The name of the newly created attachment (output parameter).
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the newly created attachment (output parameter).
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public InstanceAttachment(String name, InstanceAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigee/instanceAttachment:InstanceAttachment", name, args == null ? InstanceAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -49,6 +105,15 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static InstanceAttachment get(String name, Input<String> id, @Nullable InstanceAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstanceAttachment(name, id, state, options);
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetVMExtension {
+/**
+ * Describes a VMSS VM Extension.
+ * API Version: 2021-03-01.
+ * 
+ *
+ * Describes a VMSS VM Extension.
+ * 
+ */
     public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> invokeAsync(GetVirtualMachineScaleSetVMExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVMExtension", TypeShape.of(GetVirtualMachineScaleSetVMExtensionResult.class), args == null ? GetVirtualMachineScaleSetVMExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

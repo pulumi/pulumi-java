@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+     * 
+     */
     @EnumType
     public enum FlowEncryptionKeyType {
         Speke("speke"),

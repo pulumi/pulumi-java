@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rule is a condition-action pair * A condition defines when a rule is to be triggered. * An action specifies what occurs on that trigger. Currently only boost rules are supported. Currently only supported by the search endpoint.
+ * 
+ */
 public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2betaRuleArgs Empty = new GoogleCloudRetailV2betaRuleArgs();
 
+    /**
+     * A boost action.
+     * 
+     */
     @InputImport(name="boostAction")
     private final @Nullable Input<GoogleCloudRetailV2betaRuleBoostActionArgs> boostAction;
 
@@ -29,6 +37,10 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
         return this.boostAction == null ? Input.empty() : this.boostAction;
     }
 
+    /**
+     * The condition that triggers the rule. If the condition is empty, the rule will always apply.
+     * 
+     */
     @InputImport(name="condition", required=true)
     private final Input<GoogleCloudRetailV2betaConditionArgs> condition;
 
@@ -36,6 +48,10 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
         return this.condition;
     }
 
+    /**
+     * Prevents term from being associated with other terms.
+     * 
+     */
     @InputImport(name="doNotAssociateAction")
     private final @Nullable Input<GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs> doNotAssociateAction;
 
@@ -43,6 +59,10 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
         return this.doNotAssociateAction == null ? Input.empty() : this.doNotAssociateAction;
     }
 
+    /**
+     * Filters results.
+     * 
+     */
     @InputImport(name="filterAction")
     private final @Nullable Input<GoogleCloudRetailV2betaRuleFilterActionArgs> filterAction;
 
@@ -50,6 +70,10 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
         return this.filterAction == null ? Input.empty() : this.filterAction;
     }
 
+    /**
+     * Ignores specific terms from query during search.
+     * 
+     */
     @InputImport(name="ignoreAction")
     private final @Nullable Input<GoogleCloudRetailV2betaRuleIgnoreActionArgs> ignoreAction;
 
@@ -57,6 +81,10 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
         return this.ignoreAction == null ? Input.empty() : this.ignoreAction;
     }
 
+    /**
+     * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
+     * 
+     */
     @InputImport(name="onewaySynonymsAction")
     private final @Nullable Input<GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs> onewaySynonymsAction;
 
@@ -64,6 +92,10 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
         return this.onewaySynonymsAction == null ? Input.empty() : this.onewaySynonymsAction;
     }
 
+    /**
+     * Redirects a shopper to a specific page.
+     * 
+     */
     @InputImport(name="redirectAction")
     private final @Nullable Input<GoogleCloudRetailV2betaRuleRedirectActionArgs> redirectAction;
 
@@ -71,6 +103,10 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
         return this.redirectAction == null ? Input.empty() : this.redirectAction;
     }
 
+    /**
+     * Replaces specific terms in the query.
+     * 
+     */
     @InputImport(name="replacementAction")
     private final @Nullable Input<GoogleCloudRetailV2betaRuleReplacementActionArgs> replacementAction;
 
@@ -78,6 +114,10 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
         return this.replacementAction == null ? Input.empty() : this.replacementAction;
     }
 
+    /**
+     * Treats a set of terms as synonyms of one another.
+     * 
+     */
     @InputImport(name="twowaySynonymsAction")
     private final @Nullable Input<GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs> twowaySynonymsAction;
 

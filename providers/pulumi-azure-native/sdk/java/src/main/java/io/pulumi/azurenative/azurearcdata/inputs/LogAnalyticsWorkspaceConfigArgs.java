@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Log analytics workspace id and primary key
+ * 
+ */
 public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogAnalyticsWorkspaceConfigArgs Empty = new LogAnalyticsWorkspaceConfigArgs();
 
+    /**
+     * Primary key of the workspace
+     * 
+     */
     @InputImport(name="primaryKey")
     private final @Nullable Input<String> primaryKey;
 
@@ -21,6 +29,10 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
     }
 
+    /**
+     * Azure Log Analytics workspace ID
+     * 
+     */
     @InputImport(name="workspaceId")
     private final @Nullable Input<String> workspaceId;
 

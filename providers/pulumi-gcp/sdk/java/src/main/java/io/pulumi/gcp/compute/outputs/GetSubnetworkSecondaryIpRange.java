@@ -9,7 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSubnetworkSecondaryIpRange {
+    /**
+     * The range of IP addresses belonging to this subnetwork
+     * secondary range.
+     * 
+     */
     private final String ipCidrRange;
+    /**
+     * The name associated with this subnetwork secondary range, used
+     * when adding an alias IP range to a VM instance.
+     * 
+     */
     private final String rangeName;
 
     @OutputCustomType.Constructor({"ipCidrRange","rangeName"})
@@ -20,9 +30,19 @@ public final class GetSubnetworkSecondaryIpRange {
         this.rangeName = Objects.requireNonNull(rangeName);
     }
 
+    /**
+     * The range of IP addresses belonging to this subnetwork
+     * secondary range.
+     * 
+     */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
+    /**
+     * The name associated with this subnetwork secondary range, used
+     * when adding an alias IP range to a VM instance.
+     * 
+     */
     public String getRangeName() {
         return this.rangeName;
     }

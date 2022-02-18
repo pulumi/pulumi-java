@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An identity that can be associated with a resource.
+ * 
+ */
 public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceIdentityResponse Empty = new ResourceIdentityResponse();
 
+    /**
+     * The principal id of the identity. This property will only be provided for a system-assigned identity.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -23,6 +31,10 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.principalId;
     }
 
+    /**
+     * The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -30,6 +42,10 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.tenantId;
     }
 
+    /**
+     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -37,6 +53,10 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,UserIdentityResponse> userAssignedIdentities;
 

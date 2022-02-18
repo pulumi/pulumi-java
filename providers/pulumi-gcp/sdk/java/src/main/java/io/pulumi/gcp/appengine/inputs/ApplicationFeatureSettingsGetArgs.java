@@ -13,6 +13,11 @@ public final class ApplicationFeatureSettingsGetArgs extends io.pulumi.resources
 
     public static final ApplicationFeatureSettingsGetArgs Empty = new ApplicationFeatureSettingsGetArgs();
 
+    /**
+     * Set to false to use the legacy health check instead of the readiness
+     * and liveness checks.
+     * 
+     */
     @InputImport(name="splitHealthChecks", required=true)
     private final Input<Boolean> splitHealthChecks;
 

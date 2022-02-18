@@ -4,30 +4,50 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static java.util.Objects.requireNonNull;
 
 public class PulumiCollectors {
 
-    public static <T> Collector<? super T, ?, T> toSingleton() {
-        return toSingleton(size -> new IllegalStateException(String.format(
-                "Expected a single element, got: %d", size
+    private PulumiCollectors() {
+        throw new UnsupportedOperationException("static class");
+    }
+
+    public static <T> Collector<T, ?, T> toSingleton() {
+        return toSingleton(cause -> new IllegalArgumentException(String.format(
+                "Expected a single element, got: %s", cause
         )));
     }
 
-    public static <T> Collector<? super T, ?, T> toSingleton(Function<Integer, RuntimeException> exceptionSupplier) {
-        return Collectors.collectingAndThen(
-                Collectors.toList(),
-                list -> {
-                    if (list.size() != 1) {
-                        throw exceptionSupplier.apply(list.size());
+    public static <T> Collector<T, ?, T> toSingleton(Function<String, RuntimeException> exceptionSupplier) {
+        return Collector.of(
+                AtomicReference::new,
+                (acc, e) -> {
+                    if (!acc.compareAndSet(null, e)) {
+                        throw exceptionSupplier.apply("multiple");
                     }
-                    return list.get(0);
-                }
+                },
+                (acc1, acc2) -> {
+                    if (acc1.get() == null) {
+                        return acc2;
+                    } else if (acc2.get() != null) {
+                        throw exceptionSupplier.apply("multiple");
+                    } else {
+                        return acc1;
+                    }
+                },
+                acc -> {
+                    if (acc.get() == null) {
+                        throw exceptionSupplier.apply("empty or null");
+                    }
+                    //noinspection unchecked
+                    return (T) acc.get();
+                },
+                Collector.Characteristics.UNORDERED
         );
     }
 

@@ -15,6 +15,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallRuleArgs Empty = new FirewallRuleArgs();
 
+    /**
+     * The action to take if this rule matches.
+     * Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<String> action;
 
@@ -22,6 +27,10 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action;
     }
 
+    /**
+     * An optional string description of this rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,14 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A positive integer that defines the order of rule evaluation.
+     * Rules with the lowest priority are evaluated first.
+     * A default rule at priority Int32.MaxValue matches all IPv4 and
+     * IPv6 traffic when no previous rule matches. Only the action of
+     * this rule can be modified by the user.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -36,6 +53,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +65,10 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * IP address or range, defined using CIDR notation, of requests that this rule applies to.
+     * 
+     */
     @InputImport(name="sourceRange", required=true)
     private final Input<String> sourceRange;
 

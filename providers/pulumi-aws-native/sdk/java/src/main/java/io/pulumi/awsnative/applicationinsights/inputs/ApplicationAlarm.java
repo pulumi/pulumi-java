@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A CloudWatch alarm to be monitored for the component.
+ * 
+ */
 public final class ApplicationAlarm extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationAlarm Empty = new ApplicationAlarm();
 
+    /**
+     * The name of the CloudWatch alarm to be monitored for the component.
+     * 
+     */
     @InputImport(name="alarmName", required=true)
     private final String alarmName;
 
@@ -22,6 +30,10 @@ public final class ApplicationAlarm extends io.pulumi.resources.InvokeArgs {
         return this.alarmName;
     }
 
+    /**
+     * Indicates the degree of outage when the alarm goes off.
+     * 
+     */
     @InputImport(name="severity")
     private final @Nullable ApplicationAlarmSeverity severity;
 

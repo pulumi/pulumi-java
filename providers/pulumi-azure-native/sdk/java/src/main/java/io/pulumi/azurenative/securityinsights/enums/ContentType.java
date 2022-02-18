@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Content type.
+     * 
+     */
     @EnumType
     public enum ContentType {
         AnalyticRule("AnalyticRule"),

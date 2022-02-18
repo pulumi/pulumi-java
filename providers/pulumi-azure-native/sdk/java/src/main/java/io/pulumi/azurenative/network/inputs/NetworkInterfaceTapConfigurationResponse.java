@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Tap configuration in a Network Interface.
+ * 
+ */
 public final class NetworkInterfaceTapConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfaceTapConfigurationResponse Empty = new NetworkInterfaceTapConfigurationResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -22,6 +30,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends io.pulumi.re
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -29,6 +41,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends io.pulumi.re
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -36,6 +52,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends io.pulumi.re
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the network interface tap configuration resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -43,6 +63,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends io.pulumi.re
         return this.provisioningState;
     }
 
+    /**
+     * Sub Resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -50,6 +74,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends io.pulumi.re
         return this.type;
     }
 
+    /**
+     * The reference to the Virtual Network Tap resource.
+     * 
+     */
     @InputImport(name="virtualNetworkTap")
     private final @Nullable VirtualNetworkTapResponse virtualNetworkTap;
 

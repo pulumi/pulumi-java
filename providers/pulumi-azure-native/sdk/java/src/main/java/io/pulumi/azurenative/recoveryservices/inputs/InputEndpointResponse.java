@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure VM input endpoint details.
+ * 
+ */
 public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InputEndpointResponse Empty = new InputEndpointResponse();
 
+    /**
+     * The input endpoint name.
+     * 
+     */
     @InputImport(name="endpointName")
     private final @Nullable String endpointName;
 
@@ -22,6 +30,10 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
         return this.endpointName == null ? Optional.empty() : Optional.ofNullable(this.endpointName);
     }
 
+    /**
+     * The input endpoint private port.
+     * 
+     */
     @InputImport(name="privatePort")
     private final @Nullable Integer privatePort;
 
@@ -29,6 +41,10 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
         return this.privatePort == null ? Optional.empty() : Optional.ofNullable(this.privatePort);
     }
 
+    /**
+     * The input endpoint protocol.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 
@@ -36,6 +52,10 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
+    /**
+     * The input endpoint public port.
+     * 
+     */
     @InputImport(name="publicPort")
     private final @Nullable Integer publicPort;
 

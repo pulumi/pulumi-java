@@ -15,6 +15,10 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
 
     public static final GetInstanceBootDiskInitializeParam Empty = new GetInstanceBootDiskInitializeParam();
 
+    /**
+     * The image from which this disk was initialised.
+     * 
+     */
     @InputImport(name="image", required=true)
     private final String image;
 
@@ -22,6 +26,10 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
         return this.image;
     }
 
+    /**
+     * A set of key/value label pairs assigned to the instance.
+     * 
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,Object> labels;
 
@@ -29,6 +37,10 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
         return this.labels;
     }
 
+    /**
+     * The size of the image in gigabytes.
+     * 
+     */
     @InputImport(name="size", required=true)
     private final Integer size;
 
@@ -36,6 +48,10 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
         return this.size;
     }
 
+    /**
+     * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

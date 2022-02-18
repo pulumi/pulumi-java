@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Common Vulnerability Scoring System version 3. For details, see https://www.first.org/cvss/specification-document
+ * 
+ */
 public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
 
     public static final CVSSv3Response Empty = new CVSSv3Response();
@@ -20,6 +24,10 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
         return this.attackComplexity;
     }
 
+    /**
+     * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+     * 
+     */
     @InputImport(name="attackVector", required=true)
     private final String attackVector;
 
@@ -34,6 +42,10 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
         return this.availabilityImpact;
     }
 
+    /**
+     * The base score is a function of the base metric scores.
+     * 
+     */
     @InputImport(name="baseScore", required=true)
     private final Double baseScore;
 

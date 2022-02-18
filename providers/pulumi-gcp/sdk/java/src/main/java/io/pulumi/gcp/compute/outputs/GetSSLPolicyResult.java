@@ -13,15 +13,49 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetSSLPolicyResult {
     private final String creationTimestamp;
+    /**
+     * If the `profile` is `CUSTOM`, these are the custom encryption
+     * ciphers supported by the profile. If the `profile` is *not* `CUSTOM`, this
+     * attribute will be empty.
+     * 
+     */
     private final List<String> customFeatures;
+    /**
+     * Description of this SSL Policy.
+     * 
+     */
     private final String description;
+    /**
+     * The set of enabled encryption ciphers as a result of the policy config
+     * 
+     */
     private final List<String> enabledFeatures;
+    /**
+     * Fingerprint of this resource.
+     * 
+     */
     private final String fingerprint;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The minimum supported TLS version of this policy.
+     * 
+     */
     private final String minTlsVersion;
     private final String name;
+    /**
+     * The Google-curated or custom profile used by this policy.
+     * 
+     */
     private final String profile;
     private final @Nullable String project;
+    /**
+     * The URI of the created resource.
+     * 
+     */
     private final String selfLink;
 
     @OutputCustomType.Constructor({"creationTimestamp","customFeatures","description","enabledFeatures","fingerprint","id","minTlsVersion","name","profile","project","selfLink"})
@@ -53,33 +87,67 @@ public final class GetSSLPolicyResult {
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * If the `profile` is `CUSTOM`, these are the custom encryption
+     * ciphers supported by the profile. If the `profile` is *not* `CUSTOM`, this
+     * attribute will be empty.
+     * 
+     */
     public List<String> getCustomFeatures() {
         return this.customFeatures;
     }
+    /**
+     * Description of this SSL Policy.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The set of enabled encryption ciphers as a result of the policy config
+     * 
+     */
     public List<String> getEnabledFeatures() {
         return this.enabledFeatures;
     }
+    /**
+     * Fingerprint of this resource.
+     * 
+     */
     public String getFingerprint() {
         return this.fingerprint;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The minimum supported TLS version of this policy.
+     * 
+     */
     public String getMinTlsVersion() {
         return this.minTlsVersion;
     }
     public String getName() {
         return this.name;
     }
+    /**
+     * The Google-curated or custom profile used by this policy.
+     * 
+     */
     public String getProfile() {
         return this.profile;
     }
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     public String getSelfLink() {
         return this.selfLink;
     }

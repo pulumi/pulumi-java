@@ -17,6 +17,12 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs e
 
     public static final RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs Empty = new RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs();
 
+    /**
+     * In response to a preflight request, setting this to true indicates that the
+     * actual request can include user credentials. This translates to the Access-
+     * Control-Allow-Credentials header. Defaults to false.
+     * 
+     */
     @InputImport(name="allowCredentials")
     private final @Nullable Input<Boolean> allowCredentials;
 
@@ -24,6 +30,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs e
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers header.
+     * 
+     */
     @InputImport(name="allowHeaders")
     private final @Nullable Input<List<String>> allowHeaders;
 
@@ -31,6 +41,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs e
         return this.allowHeaders == null ? Input.empty() : this.allowHeaders;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Allow-Methods header.
+     * 
+     */
     @InputImport(name="allowMethods")
     private final @Nullable Input<List<String>> allowMethods;
 
@@ -38,6 +52,12 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs e
         return this.allowMethods == null ? Input.empty() : this.allowMethods;
     }
 
+    /**
+     * Specifies the regular expression patterns that match allowed origins. For
+     * regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+     * An origin is allowed if it matches either allow_origins or allow_origin_regex.
+     * 
+     */
     @InputImport(name="allowOriginRegexes")
     private final @Nullable Input<List<String>> allowOriginRegexes;
 
@@ -45,6 +65,11 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs e
         return this.allowOriginRegexes == null ? Input.empty() : this.allowOriginRegexes;
     }
 
+    /**
+     * Specifies the list of origins that will be allowed to do CORS requests. An
+     * origin is allowed if it matches either allow_origins or allow_origin_regex.
+     * 
+     */
     @InputImport(name="allowOrigins")
     private final @Nullable Input<List<String>> allowOrigins;
 
@@ -52,6 +77,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs e
         return this.allowOrigins == null ? Input.empty() : this.allowOrigins;
     }
 
+    /**
+     * If true, specifies the CORS policy is disabled.
+     * 
+     */
     @InputImport(name="disabled", required=true)
     private final Input<Boolean> disabled;
 
@@ -59,6 +88,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs e
         return this.disabled;
     }
 
+    /**
+     * Specifies the content for the Access-Control-Expose-Headers header.
+     * 
+     */
     @InputImport(name="exposeHeaders")
     private final @Nullable Input<List<String>> exposeHeaders;
 
@@ -66,6 +99,11 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs e
         return this.exposeHeaders == null ? Input.empty() : this.exposeHeaders;
     }
 
+    /**
+     * Specifies how long the results of a preflight request can be cached. This
+     * translates to the content for the Access-Control-Max-Age header.
+     * 
+     */
     @InputImport(name="maxAge")
     private final @Nullable Input<Integer> maxAge;
 

@@ -10,6 +10,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork {
     private final String expirationTime;
+    /**
+     * The name of the instance.
+     * 
+     */
     private final String name;
     private final String value;
 
@@ -26,6 +30,10 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork {
     public String getExpirationTime() {
         return this.expirationTime;
     }
+    /**
+     * The name of the instance.
+     * 
+     */
     public String getName() {
         return this.name;
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * placement policy affinity type
+     * 
+     */
     @EnumType
     public enum AffinityType {
         Affinity("Affinity"),

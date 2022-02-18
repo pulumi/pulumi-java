@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The collection of suggestions.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse();
 
+    /**
+     * The list of suggested replies.
+     * 
+     */
     @InputImport(name="suggestions", required=true)
     private final List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions;
 

@@ -16,6 +16,10 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
 
     public static final DocumentAttachmentsSourceArgs Empty = new DocumentAttachmentsSourceArgs();
 
+    /**
+     * The key of a key-value pair that identifies the location of an attachment to a document.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<DocumentAttachmentsSourceKey> key;
 
@@ -23,6 +27,10 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The name of the document attachment file.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

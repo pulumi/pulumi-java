@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The permitted JSON web key operations of the key. For more information, see JsonWebKeyOperation.
+     * 
+     */
     @EnumType
     public enum JsonWebKeyOperation {
         Encrypt("encrypt"),

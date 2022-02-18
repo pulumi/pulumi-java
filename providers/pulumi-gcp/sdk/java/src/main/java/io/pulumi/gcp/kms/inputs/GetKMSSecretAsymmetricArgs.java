@@ -14,6 +14,10 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
 
     public static final GetKMSSecretAsymmetricArgs Empty = new GetKMSSecretAsymmetricArgs();
 
+    /**
+     * The ciphertext to be decrypted, encoded in base64
+     * 
+     */
     @InputImport(name="ciphertext", required=true)
     private final String ciphertext;
 
@@ -21,6 +25,10 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
         return this.ciphertext;
     }
 
+    /**
+     * The crc32 checksum of the `ciphertext` in hexadecimal notation. If not specified, it will be computed.
+     * 
+     */
     @InputImport(name="crc32")
     private final @Nullable String crc32;
 
@@ -28,6 +36,12 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
         return this.crc32 == null ? Optional.empty() : Optional.ofNullable(this.crc32);
     }
 
+    /**
+     * The id of the CryptoKey version that will be used to
+     * decrypt the provided ciphertext. This is represented by the format
+     * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
+     * 
+     */
     @InputImport(name="cryptoKeyVersion", required=true)
     private final String cryptoKeyVersion;
 

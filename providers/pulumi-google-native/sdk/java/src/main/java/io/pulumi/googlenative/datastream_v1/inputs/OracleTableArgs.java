@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Oracle table.
+ * 
+ */
 public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleTableArgs Empty = new OracleTableArgs();
 
+    /**
+     * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * 
+     */
     @InputImport(name="oracleColumns")
     private final @Nullable Input<List<OracleColumnArgs>> oracleColumns;
 
@@ -23,6 +31,10 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
         return this.oracleColumns == null ? Input.empty() : this.oracleColumns;
     }
 
+    /**
+     * Table name.
+     * 
+     */
     @InputImport(name="table")
     private final @Nullable Input<String> table;
 

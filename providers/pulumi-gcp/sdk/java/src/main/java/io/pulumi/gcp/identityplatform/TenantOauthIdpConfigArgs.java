@@ -15,6 +15,10 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
 
     public static final TenantOauthIdpConfigArgs Empty = new TenantOauthIdpConfigArgs();
 
+    /**
+     * The client id of an OAuth client.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -22,6 +26,10 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
         return this.clientId;
     }
 
+    /**
+     * The client secret of the OAuth client, to enable OIDC code flow.
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
@@ -29,6 +37,10 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
+    /**
+     * Human friendly display name.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -36,6 +48,10 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
         return this.displayName;
     }
 
+    /**
+     * If this config allows users to sign in with the provider.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -43,6 +59,10 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * For OIDC Idps, the issuer identifier.
+     * 
+     */
     @InputImport(name="issuer", required=true)
     private final Input<String> issuer;
 
@@ -50,6 +70,10 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
         return this.issuer;
     }
 
+    /**
+     * The name of the OauthIdpConfig. Must start with `oidc.`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +81,11 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -64,6 +93,10 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The name of the tenant where this OIDC IDP configuration resource exists
+     * 
+     */
     @InputImport(name="tenant", required=true)
     private final Input<String> tenant;
 

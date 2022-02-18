@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LogConfigResponse {
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     private final LogConfigCloudAuditOptionsResponse cloudAudit;
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     private final LogConfigCounterOptionsResponse counter;
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     private final LogConfigDataAccessOptionsResponse dataAccess;
 
     @OutputCustomType.Constructor({"cloudAudit","counter","dataAccess"})
@@ -25,12 +37,24 @@ public final class LogConfigResponse {
         this.dataAccess = Objects.requireNonNull(dataAccess);
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     public LogConfigCloudAuditOptionsResponse getCloudAudit() {
         return this.cloudAudit;
     }
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     public LogConfigCounterOptionsResponse getCounter() {
         return this.counter;
     }
+    /**
+     * This is deprecated and has no effect. Do not use.
+     * 
+     */
     public LogConfigDataAccessOptionsResponse getDataAccess() {
         return this.dataAccess;
     }

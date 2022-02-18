@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A type definition for some HL7v2 type (incl. Segments and Datatypes).
+ * 
+ */
 public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TypeArgs Empty = new TypeArgs();
 
+    /**
+     * The (sub) fields this type has (if not primitive).
+     * 
+     */
     @InputImport(name="fields")
     private final @Nullable Input<List<FieldArgs>> fields;
 
@@ -24,6 +32,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
+    /**
+     * The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +43,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
+     * 
+     */
     @InputImport(name="primitive")
     private final @Nullable Input<TypePrimitive> primitive;
 

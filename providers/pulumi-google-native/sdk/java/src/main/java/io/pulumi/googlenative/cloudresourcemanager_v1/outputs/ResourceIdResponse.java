@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceIdResponse {
+    /**
+     * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +20,10 @@ public final class ResourceIdResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
+     * 
+     */
     public String getType() {
         return this.type;
     }

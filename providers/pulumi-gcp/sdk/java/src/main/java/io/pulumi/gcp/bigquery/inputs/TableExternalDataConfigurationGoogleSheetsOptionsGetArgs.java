@@ -15,6 +15,11 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
 
     public static final TableExternalDataConfigurationGoogleSheetsOptionsGetArgs Empty = new TableExternalDataConfigurationGoogleSheetsOptionsGetArgs();
 
+    /**
+     * Information required to partition based on ranges.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="range")
     private final @Nullable Input<String> range;
 
@@ -22,6 +27,12 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
         return this.range == null ? Input.empty() : this.range;
     }
 
+    /**
+     * The number of rows at the top of the sheet
+     * that BigQuery will skip when reading the data. At least one of `range` or
+     * `skip_leading_rows` must be set.
+     * 
+     */
     @InputImport(name="skipLeadingRows")
     private final @Nullable Input<Integer> skipLeadingRows;
 

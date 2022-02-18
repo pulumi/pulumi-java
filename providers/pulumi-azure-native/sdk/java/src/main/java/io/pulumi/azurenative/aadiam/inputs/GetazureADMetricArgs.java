@@ -12,6 +12,10 @@ public final class GetazureADMetricArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetazureADMetricArgs Empty = new GetazureADMetricArgs();
 
+    /**
+     * Name of the azureADMetrics instance.
+     * 
+     */
     @InputImport(name="azureADMetricsName", required=true)
     private final String azureADMetricsName;
 
@@ -19,6 +23,10 @@ public final class GetazureADMetricArgs extends io.pulumi.resources.InvokeArgs {
         return this.azureADMetricsName;
     }
 
+    /**
+     * Name of an Azure resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

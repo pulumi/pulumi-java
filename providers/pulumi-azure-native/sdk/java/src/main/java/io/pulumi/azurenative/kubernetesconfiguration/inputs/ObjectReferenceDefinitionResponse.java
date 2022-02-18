@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Object reference to a Kubernetes object on a cluster
+ * 
+ */
 public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ObjectReferenceDefinitionResponse Empty = new ObjectReferenceDefinitionResponse();
 
+    /**
+     * Name of the object
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Namespace of the object
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable String namespace;
 

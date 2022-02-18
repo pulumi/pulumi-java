@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+     * 
+     */
     @EnumType
     public enum JsonWebKeyCurveName {
         P256("P-256"),

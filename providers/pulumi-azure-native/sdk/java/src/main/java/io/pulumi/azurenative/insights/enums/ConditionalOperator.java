@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
+     * 
+     */
     @EnumType
     public enum ConditionalOperator {
         GreaterThanOrEqual("GreaterThanOrEqual"),

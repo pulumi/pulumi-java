@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Stack instances in some specific accounts and Regions.
+ * 
+ */
 public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs {
 
     public static final StackSetStackInstances Empty = new StackSetStackInstances();
@@ -24,6 +28,10 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
         return this.deploymentTargets;
     }
 
+    /**
+     * A list of stack set parameters whose values you want to override in the selected stack instances.
+     * 
+     */
     @InputImport(name="parameterOverrides")
     private final @Nullable List<StackSetParameter> parameterOverrides;
 
@@ -31,6 +39,10 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
         return this.parameterOverrides == null ? List.of() : this.parameterOverrides;
     }
 
+    /**
+     * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * 
+     */
     @InputImport(name="regions", required=true)
     private final List<String> regions;
 

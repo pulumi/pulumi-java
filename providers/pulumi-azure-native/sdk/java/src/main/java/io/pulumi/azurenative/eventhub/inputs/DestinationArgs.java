@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Capture storage details for capture description
+ * 
+ */
 public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DestinationArgs Empty = new DestinationArgs();
 
+    /**
+     * Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
+     * 
+     */
     @InputImport(name="archiveNameFormat")
     private final @Nullable Input<String> archiveNameFormat;
 
@@ -21,6 +29,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.archiveNameFormat == null ? Input.empty() : this.archiveNameFormat;
     }
 
+    /**
+     * Blob container Name
+     * 
+     */
     @InputImport(name="blobContainer")
     private final @Nullable Input<String> blobContainer;
 
@@ -28,6 +40,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.blobContainer == null ? Input.empty() : this.blobContainer;
     }
 
+    /**
+     * Name for capture destination
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +51,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Resource id of the storage account to be used to create the blobs
+     * 
+     */
     @InputImport(name="storageAccountResourceId")
     private final @Nullable Input<String> storageAccountResourceId;
 

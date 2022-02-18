@@ -12,27 +12,115 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetReportResult {
+    /**
+     * This field contains the chart type for the report
+     * 
+     */
     private final String chartType;
+    /**
+     * Legacy field: not used. This field contains a list of comments associated with custom report
+     * 
+     */
     private final List<String> comments;
+    /**
+     * Unix time when the app was created json key: createdAt
+     * 
+     */
     private final String createdAt;
+    /**
+     * This contains the list of dimensions for the report
+     * 
+     */
     private final List<String> dimensions;
+    /**
+     * This is the display name for the report
+     * 
+     */
     private final String displayName;
+    /**
+     * Environment name
+     * 
+     */
     private final String environment;
+    /**
+     * This field contains the filter expression
+     * 
+     */
     private final String filter;
+    /**
+     * Legacy field: not used. Contains the from time for the report
+     * 
+     */
     private final String fromTime;
+    /**
+     * Modified time of this entity as milliseconds since epoch. json key: lastModifiedAt
+     * 
+     */
     private final String lastModifiedAt;
+    /**
+     * Last viewed time of this entity as milliseconds since epoch
+     * 
+     */
     private final String lastViewedAt;
+    /**
+     * Legacy field: not used This field contains the limit for the result retrieved
+     * 
+     */
     private final String limit;
+    /**
+     * This contains the list of metrics
+     * 
+     */
     private final List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics;
+    /**
+     * Unique identifier for the report T his is a legacy field used to encode custom report unique id
+     * 
+     */
     private final String name;
+    /**
+     * Legacy field: not used. This field contains the offset for the data
+     * 
+     */
     private final String offset;
+    /**
+     * Organization name
+     * 
+     */
     private final String organization;
+    /**
+     * This field contains report properties such as ui metadata etc.
+     * 
+     */
     private final List<GoogleCloudApigeeV1ReportPropertyResponse> properties;
+    /**
+     * Legacy field: not used much. Contains the list of sort by columns
+     * 
+     */
     private final List<String> sortByCols;
+    /**
+     * Legacy field: not used much. Contains the sort order for the sort columns
+     * 
+     */
     private final String sortOrder;
+    /**
+     * Legacy field: not used. This field contains a list of tags associated with custom report
+     * 
+     */
     private final List<String> tags;
+    /**
+     * This field contains the time unit of aggregation for the report
+     * 
+     */
     private final String timeUnit;
+    /**
+     * Legacy field: not used. Contains the end time for the report
+     * 
+     */
     private final String toTime;
+    /**
+     * Legacy field: not used. This field contains the top k parameter value for restricting the result
+     * 
+     */
     private final String topk;
 
     @OutputCustomType.Constructor({"chartType","comments","createdAt","dimensions","displayName","environment","filter","fromTime","lastModifiedAt","lastViewedAt","limit","metrics","name","offset","organization","properties","sortByCols","sortOrder","tags","timeUnit","toTime","topk"})
@@ -83,69 +171,157 @@ public final class GetReportResult {
         this.topk = Objects.requireNonNull(topk);
     }
 
+    /**
+     * This field contains the chart type for the report
+     * 
+     */
     public String getChartType() {
         return this.chartType;
     }
+    /**
+     * Legacy field: not used. This field contains a list of comments associated with custom report
+     * 
+     */
     public List<String> getComments() {
         return this.comments;
     }
+    /**
+     * Unix time when the app was created json key: createdAt
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * This contains the list of dimensions for the report
+     * 
+     */
     public List<String> getDimensions() {
         return this.dimensions;
     }
+    /**
+     * This is the display name for the report
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Environment name
+     * 
+     */
     public String getEnvironment() {
         return this.environment;
     }
+    /**
+     * This field contains the filter expression
+     * 
+     */
     public String getFilter() {
         return this.filter;
     }
+    /**
+     * Legacy field: not used. Contains the from time for the report
+     * 
+     */
     public String getFromTime() {
         return this.fromTime;
     }
+    /**
+     * Modified time of this entity as milliseconds since epoch. json key: lastModifiedAt
+     * 
+     */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+    /**
+     * Last viewed time of this entity as milliseconds since epoch
+     * 
+     */
     public String getLastViewedAt() {
         return this.lastViewedAt;
     }
+    /**
+     * Legacy field: not used This field contains the limit for the result retrieved
+     * 
+     */
     public String getLimit() {
         return this.limit;
     }
+    /**
+     * This contains the list of metrics
+     * 
+     */
     public List<GoogleCloudApigeeV1CustomReportMetricResponse> getMetrics() {
         return this.metrics;
     }
+    /**
+     * Unique identifier for the report T his is a legacy field used to encode custom report unique id
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Legacy field: not used. This field contains the offset for the data
+     * 
+     */
     public String getOffset() {
         return this.offset;
     }
+    /**
+     * Organization name
+     * 
+     */
     public String getOrganization() {
         return this.organization;
     }
+    /**
+     * This field contains report properties such as ui metadata etc.
+     * 
+     */
     public List<GoogleCloudApigeeV1ReportPropertyResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Legacy field: not used much. Contains the list of sort by columns
+     * 
+     */
     public List<String> getSortByCols() {
         return this.sortByCols;
     }
+    /**
+     * Legacy field: not used much. Contains the sort order for the sort columns
+     * 
+     */
     public String getSortOrder() {
         return this.sortOrder;
     }
+    /**
+     * Legacy field: not used. This field contains a list of tags associated with custom report
+     * 
+     */
     public List<String> getTags() {
         return this.tags;
     }
+    /**
+     * This field contains the time unit of aggregation for the report
+     * 
+     */
     public String getTimeUnit() {
         return this.timeUnit;
     }
+    /**
+     * Legacy field: not used. Contains the end time for the report
+     * 
+     */
     public String getToTime() {
         return this.toTime;
     }
+    /**
+     * Legacy field: not used. This field contains the top k parameter value for restricting the result
+     * 
+     */
     public String getTopk() {
         return this.topk;
     }

@@ -17,6 +17,11 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
 
     public static final AutoscalingPolicyState Empty = new AutoscalingPolicyState();
 
+    /**
+     * Basic algorithm for autoscaling.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="basicAlgorithm")
     private final @Nullable Input<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm;
 
@@ -24,6 +29,11 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
         return this.basicAlgorithm == null ? Input.empty() : this.basicAlgorithm;
     }
 
+    /**
+     * The  location where the autoscaling policy should reside.
+     * The default value is `global`.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +41,10 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The "resource name" of the autoscaling policy.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +52,12 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+     * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+     * 3 and 50 characters.
+     * 
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -45,6 +65,11 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -52,6 +77,11 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Describes how the autoscaler will operate for secondary workers.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secondaryWorkerConfig")
     private final @Nullable Input<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
 
@@ -59,6 +89,11 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
         return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
     }
 
+    /**
+     * Describes how the autoscaler will operate for primary workers.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="workerConfig")
     private final @Nullable Input<AutoscalingPolicyWorkerConfigGetArgs> workerConfig;
 

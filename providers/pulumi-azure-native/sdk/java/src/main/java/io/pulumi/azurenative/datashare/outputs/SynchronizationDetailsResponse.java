@@ -11,20 +11,80 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SynchronizationDetailsResponse {
+    /**
+     * Id of data set
+     * 
+     */
     private final String dataSetId;
+    /**
+     * Type of the data set
+     * 
+     */
     private final String dataSetType;
+    /**
+     * Duration of data set level copy
+     * 
+     */
     private final Integer durationMs;
+    /**
+     * End time of data set level copy
+     * 
+     */
     private final String endTime;
+    /**
+     * The number of files read from the source data set
+     * 
+     */
     private final Double filesRead;
+    /**
+     * The number of files written into the sink data set
+     * 
+     */
     private final Double filesWritten;
+    /**
+     * Error message if any
+     * 
+     */
     private final String message;
+    /**
+     * Name of the data set
+     * 
+     */
     private final String name;
+    /**
+     * The number of files copied into the sink data set
+     * 
+     */
     private final Double rowsCopied;
+    /**
+     * The number of rows read from the source data set.
+     * 
+     */
     private final Double rowsRead;
+    /**
+     * The size of the data read from the source data set in bytes
+     * 
+     */
     private final Double sizeRead;
+    /**
+     * The size of the data written into the sink data set in bytes
+     * 
+     */
     private final Double sizeWritten;
+    /**
+     * Start time of data set level copy
+     * 
+     */
     private final String startTime;
+    /**
+     * Raw Status
+     * 
+     */
     private final String status;
+    /**
+     * The vCore units consumed for the data set synchronization
+     * 
+     */
     private final Double vCore;
 
     @OutputCustomType.Constructor({"dataSetId","dataSetType","durationMs","endTime","filesRead","filesWritten","message","name","rowsCopied","rowsRead","sizeRead","sizeWritten","startTime","status","vCore"})
@@ -61,48 +121,108 @@ public final class SynchronizationDetailsResponse {
         this.vCore = Objects.requireNonNull(vCore);
     }
 
+    /**
+     * Id of data set
+     * 
+     */
     public String getDataSetId() {
         return this.dataSetId;
     }
+    /**
+     * Type of the data set
+     * 
+     */
     public String getDataSetType() {
         return this.dataSetType;
     }
+    /**
+     * Duration of data set level copy
+     * 
+     */
     public Integer getDurationMs() {
         return this.durationMs;
     }
+    /**
+     * End time of data set level copy
+     * 
+     */
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * The number of files read from the source data set
+     * 
+     */
     public Double getFilesRead() {
         return this.filesRead;
     }
+    /**
+     * The number of files written into the sink data set
+     * 
+     */
     public Double getFilesWritten() {
         return this.filesWritten;
     }
+    /**
+     * Error message if any
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * Name of the data set
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The number of files copied into the sink data set
+     * 
+     */
     public Double getRowsCopied() {
         return this.rowsCopied;
     }
+    /**
+     * The number of rows read from the source data set.
+     * 
+     */
     public Double getRowsRead() {
         return this.rowsRead;
     }
+    /**
+     * The size of the data read from the source data set in bytes
+     * 
+     */
     public Double getSizeRead() {
         return this.sizeRead;
     }
+    /**
+     * The size of the data written into the sink data set in bytes
+     * 
+     */
     public Double getSizeWritten() {
         return this.sizeWritten;
     }
+    /**
+     * Start time of data set level copy
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }
+    /**
+     * Raw Status
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * The vCore units consumed for the data set synchronization
+     * 
+     */
     public Double getVCore() {
         return this.vCore;
     }

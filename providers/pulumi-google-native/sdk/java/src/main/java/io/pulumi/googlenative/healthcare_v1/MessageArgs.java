@@ -18,6 +18,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MessageArgs Empty = new MessageArgs();
 
+    /**
+     * Raw message bytes.
+     * 
+     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -39,6 +43,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
         return this.hl7V2StoreId;
     }
 
+    /**
+     * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -53,6 +61,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The message type for this message. MSH-9.1.
+     * 
+     */
     @InputImport(name="messageType")
     private final @Nullable Input<String> messageType;
 
@@ -60,6 +72,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
         return this.messageType == null ? Input.empty() : this.messageType;
     }
 
+    /**
+     * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +83,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
+     * 
+     */
     @InputImport(name="patientIds")
     private final @Nullable Input<List<PatientIdArgs>> patientIds;
 
@@ -81,6 +101,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
+     * 
+     */
     @InputImport(name="schematizedData")
     private final @Nullable Input<SchematizedDataArgs> schematizedData;
 
@@ -88,6 +112,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
         return this.schematizedData == null ? Input.empty() : this.schematizedData;
     }
 
+    /**
+     * The hospital that this message came from. MSH-4.
+     * 
+     */
     @InputImport(name="sendFacility")
     private final @Nullable Input<String> sendFacility;
 
@@ -95,6 +123,10 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
         return this.sendFacility == null ? Input.empty() : this.sendFacility;
     }
 
+    /**
+     * The datetime the sending application sent this message. MSH-7.
+     * 
+     */
     @InputImport(name="sendTime")
     private final @Nullable Input<String> sendTime;
 

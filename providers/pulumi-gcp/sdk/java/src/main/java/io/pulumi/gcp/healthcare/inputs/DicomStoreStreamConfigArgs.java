@@ -13,6 +13,11 @@ public final class DicomStoreStreamConfigArgs extends io.pulumi.resources.Resour
 
     public static final DicomStoreStreamConfigArgs Empty = new DicomStoreStreamConfigArgs();
 
+    /**
+     * BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="bigqueryDestination", required=true)
     private final Input<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 

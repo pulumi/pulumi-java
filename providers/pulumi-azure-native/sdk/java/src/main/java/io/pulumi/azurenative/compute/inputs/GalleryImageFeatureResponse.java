@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A feature for gallery image.
+ * 
+ */
 public final class GalleryImageFeatureResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GalleryImageFeatureResponse Empty = new GalleryImageFeatureResponse();
 
+    /**
+     * The name of the gallery image feature.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class GalleryImageFeatureResponse extends io.pulumi.resources.Invok
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The value of the gallery image feature.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

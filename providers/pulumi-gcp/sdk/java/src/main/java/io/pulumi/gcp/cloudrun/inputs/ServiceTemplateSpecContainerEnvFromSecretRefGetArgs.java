@@ -15,6 +15,11 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefGetArgs extends i
 
     public static final ServiceTemplateSpecContainerEnvFromSecretRefGetArgs Empty = new ServiceTemplateSpecContainerEnvFromSecretRefGetArgs();
 
+    /**
+     * The Secret to select from.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="localObjectReference")
     private final @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceGetArgs> localObjectReference;
 
@@ -22,6 +27,10 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefGetArgs extends i
         return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
     }
 
+    /**
+     * Specify whether the Secret must be defined
+     * 
+     */
     @InputImport(name="optional")
     private final @Nullable Input<Boolean> optional;
 

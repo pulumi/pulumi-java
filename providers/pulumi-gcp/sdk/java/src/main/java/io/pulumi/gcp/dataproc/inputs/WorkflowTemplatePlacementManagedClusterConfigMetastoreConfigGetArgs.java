@@ -13,6 +13,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigG
 
     public static final WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs();
 
+    /**
+     * Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
+     * 
+     */
     @InputImport(name="dataprocMetastoreService", required=true)
     private final Input<String> dataprocMetastoreService;
 

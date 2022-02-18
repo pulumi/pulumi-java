@@ -18,6 +18,10 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPSetArgs Empty = new IPSetArgs();
 
+    /**
+     * List of IPAddresses.
+     * 
+     */
     @InputImport(name="addresses", required=true)
     private final Input<List<String>> addresses;
 

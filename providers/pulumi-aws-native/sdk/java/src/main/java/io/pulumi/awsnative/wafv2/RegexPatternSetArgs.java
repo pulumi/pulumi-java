@@ -17,6 +17,10 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final RegexPatternSetArgs Empty = new RegexPatternSetArgs();
 
+    /**
+     * Description of the entity.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the RegexPatternSet.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +46,10 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
         return this.regularExpressionList;
     }
 
+    /**
+     * Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<RegexPatternSetScope> scope;
 

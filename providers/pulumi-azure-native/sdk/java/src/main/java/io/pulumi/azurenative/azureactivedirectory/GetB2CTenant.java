@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetB2CTenant {
+/**
+ * API Version: 2019-01-01-preview.
+ * 
+ */
     public static CompletableFuture<GetB2CTenantResult> invokeAsync(GetB2CTenantArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getB2CTenant", TypeShape.of(GetB2CTenantResult.class), args == null ? GetB2CTenantArgs.Empty : args, Utilities.withVersion(options));
     }

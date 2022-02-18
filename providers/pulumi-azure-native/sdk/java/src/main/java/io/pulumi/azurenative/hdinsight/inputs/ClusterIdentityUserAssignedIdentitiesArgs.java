@@ -14,6 +14,10 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
 
     public static final ClusterIdentityUserAssignedIdentitiesArgs Empty = new ClusterIdentityUserAssignedIdentitiesArgs();
 
+    /**
+     * The tenant id of user assigned identity.
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

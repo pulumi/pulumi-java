@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
+ * 
+ */
 public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GuestConfigurationNavigationArgs Empty = new GuestConfigurationNavigationArgs();
 
+    /**
+     * Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+     * 
+     */
     @InputImport(name="assignmentType")
     private final @Nullable Input<Either<String,AssignmentType>> assignmentType;
 
@@ -27,6 +35,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
         return this.assignmentType == null ? Input.empty() : this.assignmentType;
     }
 
+    /**
+     * The configuration parameters for the guest configuration.
+     * 
+     */
     @InputImport(name="configurationParameter")
     private final @Nullable Input<List<ConfigurationParameterArgs>> configurationParameter;
 
@@ -34,6 +46,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
         return this.configurationParameter == null ? Input.empty() : this.configurationParameter;
     }
 
+    /**
+     * The protected configuration parameters for the guest configuration.
+     * 
+     */
     @InputImport(name="configurationProtectedParameter")
     private final @Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter;
 
@@ -41,6 +57,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
         return this.configurationProtectedParameter == null ? Input.empty() : this.configurationProtectedParameter;
     }
 
+    /**
+     * The configuration setting for the guest configuration.
+     * 
+     */
     @InputImport(name="configurationSetting")
     private final @Nullable Input<ConfigurationSettingArgs> configurationSetting;
 
@@ -48,6 +68,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
         return this.configurationSetting == null ? Input.empty() : this.configurationSetting;
     }
 
+    /**
+     * Combined hash of the guest configuration package and configuration parameters.
+     * 
+     */
     @InputImport(name="contentHash")
     private final @Nullable Input<String> contentHash;
 
@@ -55,6 +79,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
         return this.contentHash == null ? Input.empty() : this.contentHash;
     }
 
+    /**
+     * Uri of the storage where guest configuration package is uploaded.
+     * 
+     */
     @InputImport(name="contentUri")
     private final @Nullable Input<String> contentUri;
 
@@ -62,6 +90,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
         return this.contentUri == null ? Input.empty() : this.contentUri;
     }
 
+    /**
+     * Kind of the guest configuration. For example:DSC
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,Kind>> kind;
 
@@ -69,6 +101,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the guest configuration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -76,6 +112,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Version of the guest configuration.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

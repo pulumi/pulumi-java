@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AttachedVolume {
+    /**
+     * DevicePath represents the device path where the volume should be available
+     * 
+     */
     private final String devicePath;
+    /**
+     * Name of the attached volume
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"devicePath","name"})
@@ -20,9 +28,17 @@ public final class AttachedVolume {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * DevicePath represents the device path where the volume should be available
+     * 
+     */
     public String getDevicePath() {
         return this.devicePath;
     }
+    /**
+     * Name of the attached volume
+     * 
+     */
     public String getName() {
         return this.name;
     }

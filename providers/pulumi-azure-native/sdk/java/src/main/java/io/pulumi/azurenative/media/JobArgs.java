@@ -25,6 +25,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * The Media Services account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -32,6 +36,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
+     * 
+     */
     @InputImport(name="correlationData")
     private final @Nullable Input<Map<String,String>> correlationData;
 
@@ -39,6 +47,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.correlationData == null ? Input.empty() : this.correlationData;
     }
 
+    /**
+     * Optional customer supplied description of the Job.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -46,6 +58,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The inputs for the Job.
+     * 
+     */
     @InputImport(name="input", required=true)
     private final Input<Object> input;
 
@@ -53,6 +69,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.input;
     }
 
+    /**
+     * The Job name.
+     * 
+     */
     @InputImport(name="jobName")
     private final @Nullable Input<String> jobName;
 
@@ -60,6 +80,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobName == null ? Input.empty() : this.jobName;
     }
 
+    /**
+     * The outputs for the Job.
+     * 
+     */
     @InputImport(name="outputs", required=true)
     private final Input<List<JobOutputAssetArgs>> outputs;
 
@@ -67,6 +91,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputs;
     }
 
+    /**
+     * Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Either<String,Priority>> priority;
 
@@ -74,6 +102,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -81,6 +113,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The Transform name.
+     * 
+     */
     @InputImport(name="transformName", required=true)
     private final Input<String> transformName;
 

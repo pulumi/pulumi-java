@@ -17,6 +17,10 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
 
     public static final InboundSamlConfigState Empty = new InboundSamlConfigState();
 
+    /**
+     * Human friendly display name.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -24,6 +28,10 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * If this config allows users to sign in with the provider.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -31,6 +39,11 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * SAML IdP configuration when the project acts as the relying party
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="idpConfig")
     private final @Nullable Input<InboundSamlConfigIdpConfigGetArgs> idpConfig;
 
@@ -38,6 +51,12 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
         return this.idpConfig == null ? Input.empty() : this.idpConfig;
     }
 
+    /**
+     * The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+     * hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+     * alphanumeric character, and have at least 2 characters.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +64,11 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -52,6 +76,12 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+     * and accept an authentication assertion issued by a SAML identity provider.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="spConfig")
     private final @Nullable Input<InboundSamlConfigSpConfigGetArgs> spConfig;
 

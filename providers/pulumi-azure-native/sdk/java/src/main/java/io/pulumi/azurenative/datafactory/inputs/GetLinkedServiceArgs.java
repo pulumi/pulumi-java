@@ -12,6 +12,10 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLinkedServiceArgs Empty = new GetLinkedServiceArgs();
 
+    /**
+     * The factory name.
+     * 
+     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -19,6 +23,10 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.factoryName;
     }
 
+    /**
+     * The linked service name.
+     * 
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final String linkedServiceName;
 
@@ -26,6 +34,10 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.linkedServiceName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

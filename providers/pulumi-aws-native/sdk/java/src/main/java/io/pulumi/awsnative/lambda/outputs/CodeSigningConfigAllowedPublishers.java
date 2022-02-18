@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CodeSigningConfigAllowedPublishers {
+    /**
+     * List of Signing profile version Arns
+     * 
+     */
     private final List<String> signingProfileVersionArns;
 
     @OutputCustomType.Constructor({"signingProfileVersionArns"})
@@ -17,6 +21,10 @@ public final class CodeSigningConfigAllowedPublishers {
         this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
     }
 
+    /**
+     * List of Signing profile version Arns
+     * 
+     */
     public List<String> getSigningProfileVersionArns() {
         return this.signingProfileVersionArns;
     }

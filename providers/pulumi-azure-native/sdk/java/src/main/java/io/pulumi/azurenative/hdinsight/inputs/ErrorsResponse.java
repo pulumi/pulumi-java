@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The error message associated with the cluster creation.
+ * 
+ */
 public final class ErrorsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorsResponse Empty = new ErrorsResponse();
 
+    /**
+     * The error code.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -21,6 +29,10 @@ public final class ErrorsResponse extends io.pulumi.resources.InvokeArgs {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * The error message.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 

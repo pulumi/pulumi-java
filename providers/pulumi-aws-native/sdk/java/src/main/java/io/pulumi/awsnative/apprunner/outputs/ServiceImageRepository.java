@@ -14,7 +14,15 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ServiceImageRepository {
     private final @Nullable ServiceImageConfiguration imageConfiguration;
+    /**
+     * Image Identifier
+     * 
+     */
     private final String imageIdentifier;
+    /**
+     * Image Repository Type
+     * 
+     */
     private final ServiceImageRepositoryImageRepositoryType imageRepositoryType;
 
     @OutputCustomType.Constructor({"imageConfiguration","imageIdentifier","imageRepositoryType"})
@@ -30,9 +38,17 @@ public final class ServiceImageRepository {
     public Optional<ServiceImageConfiguration> getImageConfiguration() {
         return Optional.ofNullable(this.imageConfiguration);
     }
+    /**
+     * Image Identifier
+     * 
+     */
     public String getImageIdentifier() {
         return this.imageIdentifier;
     }
+    /**
+     * Image Repository Type
+     * 
+     */
     public ServiceImageRepositoryImageRepositoryType getImageRepositoryType() {
         return this.imageRepositoryType;
     }

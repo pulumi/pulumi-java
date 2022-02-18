@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings that will be leveraged for Netezza source partitioning.
+ * 
+ */
 public final class NetezzaPartitionSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetezzaPartitionSettingsResponse Empty = new NetezzaPartitionSettingsResponse();
 
+    /**
+     * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionColumnName")
     private final @Nullable Object partitionColumnName;
 
@@ -21,6 +29,10 @@ public final class NetezzaPartitionSettingsResponse extends io.pulumi.resources.
         return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
     }
 
+    /**
+     * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionLowerBound")
     private final @Nullable Object partitionLowerBound;
 
@@ -28,6 +40,10 @@ public final class NetezzaPartitionSettingsResponse extends io.pulumi.resources.
         return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
     }
 
+    /**
+     * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionUpperBound")
     private final @Nullable Object partitionUpperBound;
 

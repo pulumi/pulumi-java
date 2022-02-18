@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabelSelector {
+    /**
+     * matchExpressions is a list of label selector requirements. The requirements are ANDed.
+     * 
+     */
     private final @Nullable List<LabelSelectorRequirement> matchExpressions;
+    /**
+     * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
+     * 
+     */
     private final @Nullable Map<String,String> matchLabels;
 
     @OutputCustomType.Constructor({"matchExpressions","matchLabels"})
@@ -24,9 +32,17 @@ public final class LabelSelector {
         this.matchLabels = matchLabels;
     }
 
+    /**
+     * matchExpressions is a list of label selector requirements. The requirements are ANDed.
+     * 
+     */
     public List<LabelSelectorRequirement> getMatchExpressions() {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }
+    /**
+     * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
+     * 
+     */
     public Map<String,String> getMatchLabels() {
         return this.matchLabels == null ? Map.of() : this.matchLabels;
     }

@@ -19,6 +19,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final NetworkFunctionArgs Empty = new NetworkFunctionArgs();
 
+    /**
+     * The reference to the device resource.
+     * 
+     */
     @InputImport(name="device")
     private final @Nullable Input<SubResourceArgs> device;
 
@@ -26,6 +30,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
         return this.device == null ? Input.empty() : this.device;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -33,6 +41,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The parameters for the managed application.
+     * 
+     */
     @InputImport(name="managedApplicationParameters")
     private final @Nullable Input<Object> managedApplicationParameters;
 
@@ -40,6 +52,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
         return this.managedApplicationParameters == null ? Input.empty() : this.managedApplicationParameters;
     }
 
+    /**
+     * Resource name for the network function resource.
+     * 
+     */
     @InputImport(name="networkFunctionName")
     private final @Nullable Input<String> networkFunctionName;
 
@@ -47,6 +63,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
         return this.networkFunctionName == null ? Input.empty() : this.networkFunctionName;
     }
 
+    /**
+     * The network function configurations from the user.
+     * 
+     */
     @InputImport(name="networkFunctionUserConfigurations")
     private final @Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
 
@@ -54,6 +74,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
         return this.networkFunctionUserConfigurations == null ? Input.empty() : this.networkFunctionUserConfigurations;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,6 +85,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku name for the network function.
+     * 
+     */
     @InputImport(name="skuName")
     private final @Nullable Input<String> skuName;
 
@@ -68,6 +96,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
         return this.skuName == null ? Input.empty() : this.skuName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -75,6 +107,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The vendor name for the network function.
+     * 
+     */
     @InputImport(name="vendorName")
     private final @Nullable Input<String> vendorName;
 

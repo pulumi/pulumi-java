@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The mapping of content type to a repo path.
+ * 
+ */
 public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContentPathMapResponse Empty = new ContentPathMapResponse();
 
+    /**
+     * Content type.
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable String contentType;
 
@@ -21,6 +29,10 @@ public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
+    /**
+     * The path to the content.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable String path;
 

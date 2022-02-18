@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Output for task that validates migration input for SQL sync migrations
+ * 
+ */
 public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValidateSyncMigrationInputSqlServerTaskOutputResponse Empty = new ValidateSyncMigrationInputSqlServerTaskOutputResponse();
 
+    /**
+     * Database identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -21,6 +29,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
         return this.id;
     }
 
+    /**
+     * Name of database
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +40,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
         return this.name;
     }
 
+    /**
+     * Errors associated with a selected database object
+     * 
+     */
     @InputImport(name="validationErrors", required=true)
     private final List<ReportableExceptionResponse> validationErrors;
 

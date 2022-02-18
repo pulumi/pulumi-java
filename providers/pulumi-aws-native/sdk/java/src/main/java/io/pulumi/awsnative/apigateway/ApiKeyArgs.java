@@ -18,6 +18,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiKeyArgs Empty = new ApiKeyArgs();
 
+    /**
+     * An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace.
+     * 
+     */
     @InputImport(name="customerId")
     private final @Nullable Input<String> customerId;
 
@@ -25,6 +29,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerId == null ? Input.empty() : this.customerId;
     }
 
+    /**
+     * A description of the purpose of the API key.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Indicates whether the API key can be used by clients.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -39,6 +51,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Specifies whether the key identifier is distinct from the created API key value. This parameter is deprecated and should not be used.
+     * 
+     */
     @InputImport(name="generateDistinctId")
     private final @Nullable Input<Boolean> generateDistinctId;
 
@@ -46,6 +62,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.generateDistinctId == null ? Input.empty() : this.generateDistinctId;
     }
 
+    /**
+     * A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,6 +73,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of stages to associate with this API key.
+     * 
+     */
     @InputImport(name="stageKeys")
     private final @Nullable Input<List<ApiKeyStageKeyArgs>> stageKeys;
 
@@ -60,6 +84,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.stageKeys == null ? Input.empty() : this.stageKeys;
     }
 
+    /**
+     * An array of arbitrary tags (key-value pairs) to associate with the API key.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ApiKeyTagArgs>> tags;
 
@@ -67,6 +95,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The value of the API key. Must be at least 20 characters long.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

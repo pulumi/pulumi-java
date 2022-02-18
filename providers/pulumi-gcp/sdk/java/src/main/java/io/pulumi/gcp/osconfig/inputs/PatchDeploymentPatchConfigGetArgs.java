@@ -21,6 +21,11 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
 
     public static final PatchDeploymentPatchConfigGetArgs Empty = new PatchDeploymentPatchConfigGetArgs();
 
+    /**
+     * Apt update settings. Use this setting to override the default apt patch rules.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="apt")
     private final @Nullable Input<PatchDeploymentPatchConfigAptGetArgs> apt;
 
@@ -28,6 +33,11 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
         return this.apt == null ? Input.empty() : this.apt;
     }
 
+    /**
+     * goo update settings. Use this setting to override the default goo patch rules.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="goo")
     private final @Nullable Input<PatchDeploymentPatchConfigGooGetArgs> goo;
 
@@ -35,6 +45,11 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
         return this.goo == null ? Input.empty() : this.goo;
     }
 
+    /**
+     * The ExecStep to run after the patch update.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="postStep")
     private final @Nullable Input<PatchDeploymentPatchConfigPostStepGetArgs> postStep;
 
@@ -42,6 +57,11 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
         return this.postStep == null ? Input.empty() : this.postStep;
     }
 
+    /**
+     * The ExecStep to run before the patch update.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="preStep")
     private final @Nullable Input<PatchDeploymentPatchConfigPreStepGetArgs> preStep;
 
@@ -49,6 +69,11 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
         return this.preStep == null ? Input.empty() : this.preStep;
     }
 
+    /**
+     * Post-patch reboot settings.
+     * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
+     * 
+     */
     @InputImport(name="rebootConfig")
     private final @Nullable Input<String> rebootConfig;
 
@@ -56,6 +81,11 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
         return this.rebootConfig == null ? Input.empty() : this.rebootConfig;
     }
 
+    /**
+     * Windows update settings. Use this setting to override the default Windows patch rules.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="windowsUpdate")
     private final @Nullable Input<PatchDeploymentPatchConfigWindowsUpdateGetArgs> windowsUpdate;
 
@@ -63,6 +93,11 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
         return this.windowsUpdate == null ? Input.empty() : this.windowsUpdate;
     }
 
+    /**
+     * Yum update settings. Use this setting to override the default yum patch rules.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="yum")
     private final @Nullable Input<PatchDeploymentPatchConfigYumGetArgs> yum;
 
@@ -70,6 +105,11 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
         return this.yum == null ? Input.empty() : this.yum;
     }
 
+    /**
+     * zypper update settings. Use this setting to override the default zypper patch rules.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="zypper")
     private final @Nullable Input<PatchDeploymentPatchConfigZypperGetArgs> zypper;
 

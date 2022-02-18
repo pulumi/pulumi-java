@@ -9,10 +9,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * CloudWatch metrics settings for the Amazon S3 Storage Lens metrics export.
+ * 
+ */
 public final class StorageLensCloudWatchMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensCloudWatchMetricsArgs Empty = new StorageLensCloudWatchMetricsArgs();
 
+    /**
+     * Specifies whether CloudWatch metrics are enabled or disabled.
+     * 
+     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 

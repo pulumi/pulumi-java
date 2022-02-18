@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container network interface configuration child resource.
+ * 
+ */
 public final class ContainerNetworkInterfaceConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerNetworkInterfaceConfigurationResponse Empty = new ContainerNetworkInterfaceConfigurationResponse();
 
+    /**
+     * A list of container network interfaces created from this container network interface configuration.
+     * 
+     */
     @InputImport(name="containerNetworkInterfaces")
     private final @Nullable List<SubResourceResponse> containerNetworkInterfaces;
 
@@ -24,6 +32,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
         return this.containerNetworkInterfaces == null ? List.of() : this.containerNetworkInterfaces;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -31,6 +43,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -38,6 +54,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * A list of ip configurations of the container network interface configuration.
+     * 
+     */
     @InputImport(name="ipConfigurations")
     private final @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
 
@@ -45,6 +65,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
+    /**
+     * The name of the resource. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -52,6 +76,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the container network interface configuration resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -59,6 +87,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
         return this.provisioningState;
     }
 
+    /**
+     * Sub Resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

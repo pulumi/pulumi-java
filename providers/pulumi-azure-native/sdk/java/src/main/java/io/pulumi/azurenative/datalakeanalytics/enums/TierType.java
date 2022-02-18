@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The commitment tier for the next month.
+     * 
+     */
     @EnumType
     public enum TierType {
         Consumption("Consumption"),

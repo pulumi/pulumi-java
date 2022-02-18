@@ -14,14 +14,50 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PipelineResourcesResponse {
+    /**
+     * Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.
+     * 
+     */
     private final String acceleratorCount;
+    /**
+     * Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.
+     * 
+     */
     private final String acceleratorType;
+    /**
+     * The size of the boot disk. Defaults to 10 (GB).
+     * 
+     */
     private final Integer bootDiskSizeGb;
+    /**
+     * Disks to attach.
+     * 
+     */
     private final List<DiskResponse> disks;
+    /**
+     * The minimum number of cores to use. Defaults to 1.
+     * 
+     */
     private final Integer minimumCpuCores;
+    /**
+     * The minimum amount of RAM to use. Defaults to 3.75 (GB)
+     * 
+     */
     private final Double minimumRamGb;
+    /**
+     * Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM's Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).
+     * 
+     */
     private final Boolean noAddress;
+    /**
+     * Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.
+     * 
+     */
     private final Boolean preemptible;
+    /**
+     * List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.
+     * 
+     */
     private final List<String> zones;
 
     @OutputCustomType.Constructor({"acceleratorCount","acceleratorType","bootDiskSizeGb","disks","minimumCpuCores","minimumRamGb","noAddress","preemptible","zones"})
@@ -46,30 +82,66 @@ public final class PipelineResourcesResponse {
         this.zones = Objects.requireNonNull(zones);
     }
 
+    /**
+     * Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.
+     * 
+     */
     public String getAcceleratorCount() {
         return this.acceleratorCount;
     }
+    /**
+     * Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.
+     * 
+     */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
+    /**
+     * The size of the boot disk. Defaults to 10 (GB).
+     * 
+     */
     public Integer getBootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
+    /**
+     * Disks to attach.
+     * 
+     */
     public List<DiskResponse> getDisks() {
         return this.disks;
     }
+    /**
+     * The minimum number of cores to use. Defaults to 1.
+     * 
+     */
     public Integer getMinimumCpuCores() {
         return this.minimumCpuCores;
     }
+    /**
+     * The minimum amount of RAM to use. Defaults to 3.75 (GB)
+     * 
+     */
     public Double getMinimumRamGb() {
         return this.minimumRamGb;
     }
+    /**
+     * Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM's Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).
+     * 
+     */
     public Boolean getNoAddress() {
         return this.noAddress;
     }
+    /**
+     * Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.
+     * 
+     */
     public Boolean getPreemptible() {
         return this.preemptible;
     }
+    /**
+     * List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.
+     * 
+     */
     public List<String> getZones() {
         return this.zones;
     }

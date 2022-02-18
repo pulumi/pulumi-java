@@ -12,6 +12,10 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGatewayArgs Empty = new GetGatewayArgs();
 
+    /**
+     * The ID of the gateway device.
+     * 
+     */
     @InputImport(name="gatewayId", required=true)
     private final String gatewayId;
 

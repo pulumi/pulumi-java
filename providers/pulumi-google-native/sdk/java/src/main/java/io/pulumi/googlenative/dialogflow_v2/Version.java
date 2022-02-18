@@ -13,39 +13,90 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates an agent version. The new version points to the agent instance in the "default" environment.
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:dialogflow/v2:Version")
 public class Version extends io.pulumi.resources.CustomResource {
+    /**
+     * The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Optional. The developer-provided description of this version.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return Optional. The developer-provided description of this version.
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The unique identifier of this agent version. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The unique identifier of this agent version. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The status of this version. This field is read-only and cannot be set by create and update methods.
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return The status of this version. This field is read-only and cannot be set by create and update methods.
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * The sequential number of this version. This field is read-only which means it cannot be set by create and update methods.
+     * 
+     */
     @OutputExport(name="versionNumber", type=Integer.class, parameters={})
     private Output<Integer> versionNumber;
 
+    /**
+     * @return The sequential number of this version. This field is read-only which means it cannot be set by create and update methods.
+     * 
+     */
     public Output<Integer> getVersionNumber() {
         return this.versionNumber;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Version(String name, @Nullable VersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dialogflow/v2:Version", name, args == null ? VersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +112,14 @@ public class Version extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Version get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Version(name, id, options);
     }

@@ -15,6 +15,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SnapshotArgs Empty = new SnapshotArgs();
 
+    /**
+     * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +33,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
+    /**
+     * Resource labels to represent user provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

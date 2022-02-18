@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of the webhook at the time the operation was called.
+     * 
+     */
     @EnumType
     public enum WebhookStatus {
         Enabled("enabled"),

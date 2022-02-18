@@ -14,27 +14,87 @@ import io.pulumi.gcp.appengine.outputs.ServiceNetworkSettingsNetworkSettings;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A NetworkSettings resource is a container for ingress settings for a version or service.
+ * 
+ * To get more information about ServiceNetworkSettings, see:
+ * 
+ * * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * ServiceNetworkSettings can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings default apps/{{project}}/services/{{service}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings default {{project}}/{{service}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings default {{service}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings")
 public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
+    /**
+     * Ingress settings for this service. Will apply to all versions.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="networkSettings", type=ServiceNetworkSettingsNetworkSettings.class, parameters={})
     private Output<ServiceNetworkSettingsNetworkSettings> networkSettings;
 
+    /**
+     * @return Ingress settings for this service. Will apply to all versions.
+     * Structure is documented below.
+     * 
+     */
     public Output<ServiceNetworkSettingsNetworkSettings> getNetworkSettings() {
         return this.networkSettings;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The name of the service these settings apply to.
+     * 
+     */
     @OutputExport(name="service", type=String.class, parameters={})
     private Output<String> service;
 
+    /**
+     * @return The name of the service these settings apply to.
+     * 
+     */
     public Output<String> getService() {
         return this.service;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ServiceNetworkSettings(String name, ServiceNetworkSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings", name, args == null ? ServiceNetworkSettingsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -50,6 +110,15 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ServiceNetworkSettings get(String name, Input<String> id, @Nullable ServiceNetworkSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceNetworkSettings(name, id, state, options);
     }

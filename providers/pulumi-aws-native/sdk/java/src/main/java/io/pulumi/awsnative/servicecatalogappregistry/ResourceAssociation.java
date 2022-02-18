@@ -13,11 +13,23 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
+ * 
+ */
 @ResourceType(type="aws-native:servicecatalogappregistry:ResourceAssociation")
 public class ResourceAssociation extends io.pulumi.resources.CustomResource {
+    /**
+     * The name or the Id of the Application.
+     * 
+     */
     @OutputExport(name="application", type=String.class, parameters={})
     private Output<String> application;
 
+    /**
+     * @return The name or the Id of the Application.
+     * 
+     */
     public Output<String> getApplication() {
         return this.application;
     }
@@ -27,9 +39,17 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
     public Output<String> getApplicationArn() {
         return this.applicationArn;
     }
+    /**
+     * The name or the Id of the Resource.
+     * 
+     */
     @OutputExport(name="resource", type=String.class, parameters={})
     private Output<String> resource;
 
+    /**
+     * @return The name or the Id of the Resource.
+     * 
+     */
     public Output<String> getResource() {
         return this.resource;
     }
@@ -39,13 +59,27 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
     public Output<String> getResourceArn() {
         return this.resourceArn;
     }
+    /**
+     * The type of the CFN Resource for now it's enum CFN_STACK.
+     * 
+     */
     @OutputExport(name="resourceType", type=ResourceAssociationResourceType.class, parameters={})
     private Output<ResourceAssociationResourceType> resourceType;
 
+    /**
+     * @return The type of the CFN Resource for now it's enum CFN_STACK.
+     * 
+     */
     public Output<ResourceAssociationResourceType> getPropResourceType() {
         return this.resourceType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ResourceAssociation(String name, ResourceAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:servicecatalogappregistry:ResourceAssociation", name, args == null ? ResourceAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +95,14 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ResourceAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceAssociation(name, id, options);
     }

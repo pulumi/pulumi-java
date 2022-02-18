@@ -15,6 +15,11 @@ public final class ClusterNodePoolNodeConfigKubeletConfigGetArgs extends io.pulu
 
     public static final ClusterNodePoolNodeConfigKubeletConfigGetArgs Empty = new ClusterNodePoolNodeConfigKubeletConfigGetArgs();
 
+    /**
+     * If true, enables CPU CFS quota enforcement for
+     * containers that specify CPU limits.
+     * 
+     */
     @InputImport(name="cpuCfsQuota")
     private final @Nullable Input<Boolean> cpuCfsQuota;
 
@@ -22,6 +27,13 @@ public final class ClusterNodePoolNodeConfigKubeletConfigGetArgs extends io.pulu
         return this.cpuCfsQuota == null ? Input.empty() : this.cpuCfsQuota;
     }
 
+    /**
+     * The CPU CFS quota period value. Specified
+     * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
+     * such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
+     * "h". The value must be a positive duration.
+     * 
+     */
     @InputImport(name="cpuCfsQuotaPeriod")
     private final @Nullable Input<String> cpuCfsQuotaPeriod;
 
@@ -29,6 +41,12 @@ public final class ClusterNodePoolNodeConfigKubeletConfigGetArgs extends io.pulu
         return this.cpuCfsQuotaPeriod == null ? Input.empty() : this.cpuCfsQuotaPeriod;
     }
 
+    /**
+     * The CPU management policy on the node. See
+     * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
+     * One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset.
+     * 
+     */
     @InputImport(name="cpuManagerPolicy", required=true)
     private final Input<String> cpuManagerPolicy;
 

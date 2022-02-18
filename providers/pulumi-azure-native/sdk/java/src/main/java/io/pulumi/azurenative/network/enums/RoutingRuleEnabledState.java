@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * 
+     */
     @EnumType
     public enum RoutingRuleEnabledState {
         Enabled("Enabled"),

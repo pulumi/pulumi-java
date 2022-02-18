@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Currency to report prices in.
+     * 
+     */
     @EnumType
     public enum Currency {
         Unknown("Unknown"),

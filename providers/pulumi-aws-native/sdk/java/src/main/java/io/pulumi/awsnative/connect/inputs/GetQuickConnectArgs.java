@@ -12,6 +12,10 @@ public final class GetQuickConnectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetQuickConnectArgs Empty = new GetQuickConnectArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) for the quick connect.
+     * 
+     */
     @InputImport(name="quickConnectArn", required=true)
     private final String quickConnectArn;
 

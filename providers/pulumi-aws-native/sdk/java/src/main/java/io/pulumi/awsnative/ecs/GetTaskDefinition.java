@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaskDefinition {
+/**
+ * Resource Schema describing various properties for ECS TaskDefinition
+ * 
+ */
     public static CompletableFuture<GetTaskDefinitionResult> invokeAsync(GetTaskDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args == null ? GetTaskDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

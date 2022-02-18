@@ -13,6 +13,10 @@ public final class TableSchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TableSchemaResponse Empty = new TableSchemaResponse();
 
+    /**
+     * Describes the fields in a table.
+     * 
+     */
     @InputImport(name="fields", required=true)
     private final List<TableFieldSchemaResponse> fields;
 

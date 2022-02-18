@@ -23,6 +23,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
 
     public static final DeploymentStageDescriptionArgs Empty = new DeploymentStageDescriptionArgs();
 
+    /**
+     * Specifies settings for logging access in this stage.
+     * 
+     */
     @InputImport(name="accessLogSetting")
     private final @Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting;
 
@@ -30,6 +34,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.accessLogSetting == null ? Input.empty() : this.accessLogSetting;
     }
 
+    /**
+     * Indicates whether cache clustering is enabled for the stage.
+     * 
+     */
     @InputImport(name="cacheClusterEnabled")
     private final @Nullable Input<Boolean> cacheClusterEnabled;
 
@@ -37,6 +45,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.cacheClusterEnabled == null ? Input.empty() : this.cacheClusterEnabled;
     }
 
+    /**
+     * The size of the stage's cache cluster.
+     * 
+     */
     @InputImport(name="cacheClusterSize")
     private final @Nullable Input<String> cacheClusterSize;
 
@@ -44,6 +56,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.cacheClusterSize == null ? Input.empty() : this.cacheClusterSize;
     }
 
+    /**
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     @InputImport(name="cacheDataEncrypted")
     private final @Nullable Input<Boolean> cacheDataEncrypted;
 
@@ -51,6 +67,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.cacheDataEncrypted == null ? Input.empty() : this.cacheDataEncrypted;
     }
 
+    /**
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     @InputImport(name="cacheTtlInSeconds")
     private final @Nullable Input<Integer> cacheTtlInSeconds;
 
@@ -58,6 +78,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.cacheTtlInSeconds == null ? Input.empty() : this.cacheTtlInSeconds;
     }
 
+    /**
+     * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+     * 
+     */
     @InputImport(name="cachingEnabled")
     private final @Nullable Input<Boolean> cachingEnabled;
 
@@ -65,6 +89,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.cachingEnabled == null ? Input.empty() : this.cachingEnabled;
     }
 
+    /**
+     * Specifies settings for the canary deployment in this stage.
+     * 
+     */
     @InputImport(name="canarySetting")
     private final @Nullable Input<DeploymentCanarySettingArgs> canarySetting;
 
@@ -72,6 +100,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.canarySetting == null ? Input.empty() : this.canarySetting;
     }
 
+    /**
+     * The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+     * 
+     */
     @InputImport(name="clientCertificateId")
     private final @Nullable Input<String> clientCertificateId;
 
@@ -79,6 +111,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
     }
 
+    /**
+     * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+     * 
+     */
     @InputImport(name="dataTraceEnabled")
     private final @Nullable Input<Boolean> dataTraceEnabled;
 
@@ -86,6 +122,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.dataTraceEnabled == null ? Input.empty() : this.dataTraceEnabled;
     }
 
+    /**
+     * A description of the purpose of the stage.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -93,6 +133,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The version identifier of the API documentation snapshot.
+     * 
+     */
     @InputImport(name="documentationVersion")
     private final @Nullable Input<String> documentationVersion;
 
@@ -100,6 +144,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.documentationVersion == null ? Input.empty() : this.documentationVersion;
     }
 
+    /**
+     * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
+     * 
+     */
     @InputImport(name="loggingLevel")
     private final @Nullable Input<String> loggingLevel;
 
@@ -107,6 +155,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
     }
 
+    /**
+     * Configures settings for all of the stage's methods.
+     * 
+     */
     @InputImport(name="methodSettings")
     private final @Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings;
 
@@ -114,6 +166,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.methodSettings == null ? Input.empty() : this.methodSettings;
     }
 
+    /**
+     * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+     * 
+     */
     @InputImport(name="metricsEnabled")
     private final @Nullable Input<Boolean> metricsEnabled;
 
@@ -121,6 +177,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.metricsEnabled == null ? Input.empty() : this.metricsEnabled;
     }
 
+    /**
+     * An array of arbitrary tags (key-value pairs) to associate with the stage.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DeploymentTagArgs>> tags;
 
@@ -128,6 +188,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     @InputImport(name="throttlingBurstLimit")
     private final @Nullable Input<Integer> throttlingBurstLimit;
 
@@ -135,6 +199,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.throttlingBurstLimit == null ? Input.empty() : this.throttlingBurstLimit;
     }
 
+    /**
+     * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     @InputImport(name="throttlingRateLimit")
     private final @Nullable Input<Double> throttlingRateLimit;
 
@@ -142,6 +210,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.throttlingRateLimit == null ? Input.empty() : this.throttlingRateLimit;
     }
 
+    /**
+     * Specifies whether active tracing with X-ray is enabled for this stage.
+     * 
+     */
     @InputImport(name="tracingEnabled")
     private final @Nullable Input<Boolean> tracingEnabled;
 
@@ -149,6 +221,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
         return this.tracingEnabled == null ? Input.empty() : this.tracingEnabled;
     }
 
+    /**
+     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+.
+     * 
+     */
     @InputImport(name="variables")
     private final @Nullable Input<Object> variables;
 

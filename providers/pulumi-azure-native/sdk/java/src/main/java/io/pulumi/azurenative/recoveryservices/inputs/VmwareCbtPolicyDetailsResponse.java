@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * VMware Cbt specific policy details.
+ * 
+ */
 public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VmwareCbtPolicyDetailsResponse Empty = new VmwareCbtPolicyDetailsResponse();
 
+    /**
+     * The app consistent snapshot frequency in minutes.
+     * 
+     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Integer appConsistentFrequencyInMinutes;
 
@@ -22,6 +30,10 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
         return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
+    /**
+     * The crash consistent snapshot frequency in minutes.
+     * 
+     */
     @InputImport(name="crashConsistentFrequencyInMinutes")
     private final @Nullable Integer crashConsistentFrequencyInMinutes;
 
@@ -29,6 +41,11 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
         return this.crashConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
 
+    /**
+     * Gets the class type. Overridden in derived classes.
+     * Expected value is 'VMwareCbt'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -36,6 +53,10 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
         return this.instanceType;
     }
 
+    /**
+     * The duration in minutes until which the recovery points need to be stored.
+     * 
+     */
     @InputImport(name="recoveryPointHistoryInMinutes")
     private final @Nullable Integer recoveryPointHistoryInMinutes;
 

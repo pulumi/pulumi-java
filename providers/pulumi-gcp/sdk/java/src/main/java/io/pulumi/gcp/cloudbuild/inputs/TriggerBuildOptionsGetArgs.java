@@ -18,6 +18,14 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
 
     public static final TriggerBuildOptionsGetArgs Empty = new TriggerBuildOptionsGetArgs();
 
+    /**
+     * Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
+     * some of the space will be used by the operating system and build utilities.
+     * Also note that this is the minimum disk size that will be allocated for the build --
+     * the build may run with a larger disk than requested. At present, the maximum disk size
+     * is 1000GB; builds that request more than the maximum are rejected with an error.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<Integer> diskSizeGb;
 
@@ -25,6 +33,11 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * Option to specify whether or not to apply bash style string operations to the substitutions.
+     * NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+     * 
+     */
     @InputImport(name="dynamicSubstitutions")
     private final @Nullable Input<Boolean> dynamicSubstitutions;
 
@@ -32,6 +45,13 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.dynamicSubstitutions == null ? Input.empty() : this.dynamicSubstitutions;
     }
 
+    /**
+     * A list of global environment variable definitions that will exist for all build steps
+     * in this build. If a variable is defined in both globally and in a build step,
+     * the variable will use the build step value.
+     * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * 
+     */
     @InputImport(name="envs")
     private final @Nullable Input<List<String>> envs;
 
@@ -39,6 +59,11 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.envs == null ? Input.empty() : this.envs;
     }
 
+    /**
+     * Option to define build log streaming behavior to Google Cloud Storage.
+     * Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
+     * 
+     */
     @InputImport(name="logStreamingOption")
     private final @Nullable Input<String> logStreamingOption;
 
@@ -46,6 +71,11 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.logStreamingOption == null ? Input.empty() : this.logStreamingOption;
     }
 
+    /**
+     * Option to specify the logging mode, which determines if and where build logs are stored.
+     * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+     * 
+     */
     @InputImport(name="logging")
     private final @Nullable Input<String> logging;
 
@@ -53,6 +83,11 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.logging == null ? Input.empty() : this.logging;
     }
 
+    /**
+     * Compute Engine machine type on which to run the build.
+     * Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
+     * 
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -60,6 +95,11 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * Requested verifiability options.
+     * Possible values are `NOT_VERIFIED` and `VERIFIED`.
+     * 
+     */
     @InputImport(name="requestedVerifyOption")
     private final @Nullable Input<String> requestedVerifyOption;
 
@@ -67,6 +107,12 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.requestedVerifyOption == null ? Input.empty() : this.requestedVerifyOption;
     }
 
+    /**
+     * A list of global environment variables, which are encrypted using a Cloud Key Management
+     * Service crypto key. These values must be specified in the build's Secret. These variables
+     * will be available to all build steps in this build.
+     * 
+     */
     @InputImport(name="secretEnvs")
     private final @Nullable Input<List<String>> secretEnvs;
 
@@ -74,6 +120,11 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.secretEnvs == null ? Input.empty() : this.secretEnvs;
     }
 
+    /**
+     * Requested hash for SourceProvenance.
+     * Each value may be one of `NONE`, `SHA256`, and `MD5`.
+     * 
+     */
     @InputImport(name="sourceProvenanceHashes")
     private final @Nullable Input<List<String>> sourceProvenanceHashes;
 
@@ -81,6 +132,13 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.sourceProvenanceHashes == null ? Input.empty() : this.sourceProvenanceHashes;
     }
 
+    /**
+     * Option to specify behavior when there is an error in the substitution checks.
+     * NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
+     * in the build configuration file.
+     * Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
+     * 
+     */
     @InputImport(name="substitutionOption")
     private final @Nullable Input<String> substitutionOption;
 
@@ -88,6 +146,16 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.substitutionOption == null ? Input.empty() : this.substitutionOption;
     }
 
+    /**
+     * Global list of volumes to mount for ALL build steps
+     * Each volume is created as an empty volume prior to starting the build process.
+     * Upon completion of the build, volumes and their contents are discarded. Global
+     * volume names and paths cannot conflict with the volumes defined a build step.
+     * Using a global volume in a build with only one step is not valid as it is indicative
+     * of a build request with an incorrect configuration.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<TriggerBuildOptionsVolumeGetArgs>> volumes;
 
@@ -95,6 +163,11 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
         return this.volumes == null ? Input.empty() : this.volumes;
     }
 
+    /**
+     * Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
+     * This field is experimental.
+     * 
+     */
     @InputImport(name="workerPool")
     private final @Nullable Input<String> workerPool;
 

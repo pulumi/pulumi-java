@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification for an App Service Environment to use for this resource.
+ * 
+ */
 public final class HostingEnvironmentProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HostingEnvironmentProfileResponse Empty = new HostingEnvironmentProfileResponse();
 
+    /**
+     * Resource ID of the App Service Environment.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class HostingEnvironmentProfileResponse extends io.pulumi.resources
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Name of the App Service Environment.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +40,10 @@ public final class HostingEnvironmentProfileResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Resource type of the App Service Environment.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

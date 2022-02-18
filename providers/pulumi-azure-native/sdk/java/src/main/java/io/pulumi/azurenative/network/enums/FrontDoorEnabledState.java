@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+     * 
+     */
     @EnumType
     public enum FrontDoorEnabledState {
         Enabled("Enabled"),

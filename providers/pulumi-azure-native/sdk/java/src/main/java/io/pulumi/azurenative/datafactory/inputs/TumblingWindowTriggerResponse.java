@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Trigger that schedules pipeline runs for all fixed time interval windows from a start time without gaps and also supports backfill scenarios (when start time is in the past).
+ * 
+ */
 public final class TumblingWindowTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TumblingWindowTriggerResponse Empty = new TumblingWindowTriggerResponse();
 
+    /**
+     * List of tags that can be used for describing the trigger.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +37,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="delay")
     private final @Nullable Object delay;
 
@@ -36,6 +48,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.delay == null ? Optional.empty() : Optional.ofNullable(this.delay);
     }
 
+    /**
+     * Triggers that this trigger depends on. Only tumbling window triggers are supported.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<Object> dependsOn;
 
@@ -43,6 +59,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Trigger description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -50,6 +70,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -57,6 +81,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
+    /**
+     * The frequency of the time windows.
+     * 
+     */
     @InputImport(name="frequency", required=true)
     private final String frequency;
 
@@ -64,6 +92,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.frequency;
     }
 
+    /**
+     * The interval of the time windows. The minimum interval allowed is 15 Minutes.
+     * 
+     */
     @InputImport(name="interval", required=true)
     private final Integer interval;
 
@@ -71,6 +103,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.interval;
     }
 
+    /**
+     * The max number of parallel time windows (ready for execution) for which a new run is triggered.
+     * 
+     */
     @InputImport(name="maxConcurrency", required=true)
     private final Integer maxConcurrency;
 
@@ -78,6 +114,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.maxConcurrency;
     }
 
+    /**
+     * Pipeline for which runs are created when an event is fired for trigger window that is ready.
+     * 
+     */
     @InputImport(name="pipeline", required=true)
     private final TriggerPipelineReferenceResponse pipeline;
 
@@ -85,6 +125,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.pipeline;
     }
 
+    /**
+     * Retry policy that will be applied for failed pipeline runs.
+     * 
+     */
     @InputImport(name="retryPolicy")
     private final @Nullable RetryPolicyResponse retryPolicy;
 
@@ -92,6 +136,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.retryPolicy == null ? Optional.empty() : Optional.ofNullable(this.retryPolicy);
     }
 
+    /**
+     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * 
+     */
     @InputImport(name="runtimeState", required=true)
     private final String runtimeState;
 
@@ -99,6 +147,10 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.runtimeState;
     }
 
+    /**
+     * The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -106,6 +158,11 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
         return this.startTime;
     }
 
+    /**
+     * Trigger type.
+     * Expected value is 'TumblingWindowTrigger'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

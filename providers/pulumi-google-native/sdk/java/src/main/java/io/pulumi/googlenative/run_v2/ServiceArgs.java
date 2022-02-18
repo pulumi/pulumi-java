@@ -21,6 +21,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -28,6 +32,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Settings for the Binary Authorization feature.
+     * 
+     */
     @InputImport(name="binaryAuthorization")
     private final @Nullable Input<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
 
@@ -35,6 +43,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.binaryAuthorization == null ? Input.empty() : this.binaryAuthorization;
     }
 
+    /**
+     * Arbitrary identifier for the API client.
+     * 
+     */
     @InputImport(name="client")
     private final @Nullable Input<String> client;
 
@@ -42,6 +54,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.client == null ? Input.empty() : this.client;
     }
 
+    /**
+     * Arbitrary version identifier for the API client.
+     * 
+     */
     @InputImport(name="clientVersion")
     private final @Nullable Input<String> clientVersion;
 
@@ -49,6 +65,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientVersion == null ? Input.empty() : this.clientVersion;
     }
 
+    /**
+     * User-provided description of the Service.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -56,6 +76,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+     * 
+     */
     @InputImport(name="ingress")
     private final @Nullable Input<ServiceIngress> ingress;
 
@@ -63,6 +87,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.ingress == null ? Input.empty() : this.ingress;
     }
 
+    /**
+     * Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev' namespaces. Those labels are read-only, and user changes will not be preserved.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -70,6 +98,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * 
+     */
     @InputImport(name="launchStage")
     private final @Nullable Input<ServiceLaunchStage> launchStage;
 
@@ -84,6 +116,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -105,6 +141,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceId;
     }
 
+    /**
+     * The template used to create revisions for this Service.
+     * 
+     */
     @InputImport(name="template", required=true)
     private final Input<GoogleCloudRunOpV2RevisionTemplateArgs> template;
 
@@ -112,6 +152,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.template;
     }
 
+    /**
+     * Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+     * 
+     */
     @InputImport(name="traffic")
     private final @Nullable Input<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
 

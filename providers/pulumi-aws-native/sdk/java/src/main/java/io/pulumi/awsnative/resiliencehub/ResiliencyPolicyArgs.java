@@ -18,6 +18,10 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ResiliencyPolicyArgs Empty = new ResiliencyPolicyArgs();
 
+    /**
+     * Data Location Constraint of the Policy.
+     * 
+     */
     @InputImport(name="dataLocationConstraint")
     private final @Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
@@ -32,6 +36,10 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.policy;
     }
 
+    /**
+     * Description of Resiliency Policy.
+     * 
+     */
     @InputImport(name="policyDescription")
     private final @Nullable Input<String> policyDescription;
 
@@ -39,6 +47,10 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.policyDescription == null ? Input.empty() : this.policyDescription;
     }
 
+    /**
+     * Name of Resiliency Policy.
+     * 
+     */
     @InputImport(name="policyName", required=true)
     private final Input<String> policyName;
 
@@ -53,6 +65,10 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Resiliency Policy Tier.
+     * 
+     */
     @InputImport(name="tier", required=true)
     private final Input<ResiliencyPolicyTier> tier;
 

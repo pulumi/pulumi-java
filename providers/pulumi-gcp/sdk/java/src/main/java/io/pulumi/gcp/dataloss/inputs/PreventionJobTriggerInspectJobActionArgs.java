@@ -13,6 +13,11 @@ public final class PreventionJobTriggerInspectJobActionArgs extends io.pulumi.re
 
     public static final PreventionJobTriggerInspectJobActionArgs Empty = new PreventionJobTriggerInspectJobActionArgs();
 
+    /**
+     * Schedule for triggered jobs
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="saveFindings", required=true)
     private final Input<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings;
 

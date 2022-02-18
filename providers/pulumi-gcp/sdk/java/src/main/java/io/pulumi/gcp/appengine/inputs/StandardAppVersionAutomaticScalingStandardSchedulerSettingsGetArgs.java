@@ -15,6 +15,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
 
     public static final StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs Empty = new StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs();
 
+    /**
+     * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+     * 
+     */
     @InputImport(name="maxInstances")
     private final @Nullable Input<Integer> maxInstances;
 
@@ -22,6 +26,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
     }
 
+    /**
+     * Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+     * 
+     */
     @InputImport(name="minInstances")
     private final @Nullable Input<Integer> minInstances;
 
@@ -29,6 +37,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
         return this.minInstances == null ? Input.empty() : this.minInstances;
     }
 
+    /**
+     * Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * 
+     */
     @InputImport(name="targetCpuUtilization")
     private final @Nullable Input<Double> targetCpuUtilization;
 
@@ -36,6 +48,10 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
         return this.targetCpuUtilization == null ? Input.empty() : this.targetCpuUtilization;
     }
 
+    /**
+     * Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * 
+     */
     @InputImport(name="targetThroughputUtilization")
     private final @Nullable Input<Double> targetThroughputUtilization;
 

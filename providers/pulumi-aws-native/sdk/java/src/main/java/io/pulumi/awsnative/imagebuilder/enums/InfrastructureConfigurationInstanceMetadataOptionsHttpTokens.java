@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
+     * 
+     */
     @EnumType
     public enum InfrastructureConfigurationInstanceMetadataOptionsHttpTokens {
         Required("required"),

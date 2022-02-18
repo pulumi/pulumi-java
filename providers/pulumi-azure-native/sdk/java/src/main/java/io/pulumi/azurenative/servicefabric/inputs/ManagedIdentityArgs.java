@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the managed identities for an Azure resource.
+ * 
+ */
 public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedIdentityArgs Empty = new ManagedIdentityArgs();
 
+    /**
+     * The type of managed identity for the resource.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ManagedIdentityType> type;
 
@@ -24,6 +32,11 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+     * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * 
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

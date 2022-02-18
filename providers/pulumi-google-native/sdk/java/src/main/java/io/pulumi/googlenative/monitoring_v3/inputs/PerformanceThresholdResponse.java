@@ -10,10 +10,18 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * A PerformanceThreshold is used when each window is good when that window has a sufficiently high performance.
+ * 
+ */
 public final class PerformanceThresholdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PerformanceThresholdResponse Empty = new PerformanceThresholdResponse();
 
+    /**
+     * BasicSli to evaluate to judge window quality.
+     * 
+     */
     @InputImport(name="basicSliPerformance", required=true)
     private final BasicSliResponse basicSliPerformance;
 
@@ -21,6 +29,10 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
         return this.basicSliPerformance;
     }
 
+    /**
+     * RequestBasedSli to evaluate to judge window quality.
+     * 
+     */
     @InputImport(name="performance", required=true)
     private final RequestBasedSliResponse performance;
 
@@ -28,6 +40,10 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
         return this.performance;
     }
 
+    /**
+     * If window performance >= threshold, the window is counted as good.
+     * 
+     */
     @InputImport(name="threshold", required=true)
     private final Double threshold;
 

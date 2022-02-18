@@ -15,6 +15,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
 
     public static final AwsNodePoolConfigRootVolumeGetArgs Empty = new AwsNodePoolConfigRootVolumeGetArgs();
 
+    /**
+     * Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
+     * 
+     */
     @InputImport(name="iops")
     private final @Nullable Input<Integer> iops;
 
@@ -22,6 +26,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
         return this.iops == null ? Input.empty() : this.iops;
     }
 
+    /**
+     * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
+     * 
+     */
     @InputImport(name="kmsKeyArn")
     private final @Nullable Input<String> kmsKeyArn;
 
@@ -29,6 +37,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
     }
 
+    /**
+     * Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * 
+     */
     @InputImport(name="sizeGib")
     private final @Nullable Input<Integer> sizeGib;
 
@@ -36,6 +48,10 @@ public final class AwsNodePoolConfigRootVolumeGetArgs extends io.pulumi.resource
         return this.sizeGib == null ? Input.empty() : this.sizeGib;
     }
 
+    /**
+     * Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3
+     * 
+     */
     @InputImport(name="volumeType")
     private final @Nullable Input<String> volumeType;
 

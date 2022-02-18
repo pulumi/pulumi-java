@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A frequency period to aggregate the data
+     * 
+     */
     @EnumType
     public enum AnomalyDetectorMetricSetMetricSetFrequency {
         Pt5m("PT5M"),

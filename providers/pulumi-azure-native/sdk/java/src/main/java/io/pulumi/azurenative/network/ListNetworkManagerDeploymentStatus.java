@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNetworkManagerDeploymentStatus {
+/**
+ * A list of Network Manager Deployment Status
+ * API Version: 2021-02-01-preview.
+ * 
+ *
+ * A list of Network Manager Deployment Status
+ * 
+ */
     public static CompletableFuture<ListNetworkManagerDeploymentStatusResult> invokeAsync(ListNetworkManagerDeploymentStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listNetworkManagerDeploymentStatus", TypeShape.of(ListNetworkManagerDeploymentStatusResult.class), args == null ? ListNetworkManagerDeploymentStatusArgs.Empty : args, Utilities.withVersion(options));
     }

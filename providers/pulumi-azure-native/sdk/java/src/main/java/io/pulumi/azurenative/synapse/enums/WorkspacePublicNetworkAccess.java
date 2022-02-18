@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Enable or Disable public network access to workspace
+     * 
+     */
     @EnumType
     public enum WorkspacePublicNetworkAccess {
         Enabled("Enabled"),

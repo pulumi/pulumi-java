@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagRule {
+/**
+ * Capture logs and metrics of Azure resources based on ARM tags.
+ * API Version: 2020-10-01.
+ * 
+ *
+ * Capture logs and metrics of Azure resources based on ARM tags.
+ * 
+ */
     public static CompletableFuture<GetTagRuleResult> invokeAsync(GetTagRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getTagRule", TypeShape.of(GetTagRuleResult.class), args == null ? GetTagRuleArgs.Empty : args, Utilities.withVersion(options));
     }

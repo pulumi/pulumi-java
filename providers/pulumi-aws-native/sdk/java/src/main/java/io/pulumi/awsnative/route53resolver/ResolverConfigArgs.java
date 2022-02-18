@@ -14,6 +14,10 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResolverConfigArgs Empty = new ResolverConfigArgs();
 
+    /**
+     * Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
+     * 
+     */
     @InputImport(name="autodefinedReverseFlag", required=true)
     private final Input<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
@@ -21,6 +25,10 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.autodefinedReverseFlag;
     }
 
+    /**
+     * ResourceId
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 

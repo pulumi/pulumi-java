@@ -11,6 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Xss Match Statement.
+ * 
+ */
 public final class WebACLXssMatchStatementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLXssMatchStatementArgs Empty = new WebACLXssMatchStatementArgs();

@@ -13,6 +13,10 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
 
     public static final AwsClusterControlPlaneProxyConfigGetArgs Empty = new AwsClusterControlPlaneProxyConfigGetArgs();
 
+    /**
+     * The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+     * 
+     */
     @InputImport(name="secretArn", required=true)
     private final Input<String> secretArn;
 
@@ -20,6 +24,10 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
         return this.secretArn;
     }
 
+    /**
+     * The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+     * 
+     */
     @InputImport(name="secretVersion", required=true)
     private final Input<String> secretVersion;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationGatewayBackendHealthOnDemand {
+/**
+ * Result of on demand test probe.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * Result of on demand test probe.
+ * 
+ */
     public static CompletableFuture<GetApplicationGatewayBackendHealthOnDemandResult> invokeAsync(GetApplicationGatewayBackendHealthOnDemandArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationGatewayBackendHealthOnDemand", TypeShape.of(GetApplicationGatewayBackendHealthOnDemandResult.class), args == null ? GetApplicationGatewayBackendHealthOnDemandArgs.Empty : args, Utilities.withVersion(options));
     }

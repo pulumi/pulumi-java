@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
+     * 
+     */
     @EnumType
     public enum ElevationLevel {
+        /**
+         * The user is a standard user without elevated access.
+         * 
+         */
         NonAdmin("NonAdmin"),
+        /**
+         * The user is a user with elevated access and operates with full Administrator permissions.
+         * 
+         */
         Admin("Admin");
 
         private final String value;

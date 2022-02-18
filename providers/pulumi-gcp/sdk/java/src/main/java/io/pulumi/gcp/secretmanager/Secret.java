@@ -18,69 +18,211 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Secret is a logical secret whose value and versions can be accessed.
+ * 
+ * To get more information about Secret, see:
+ * 
+ * * [API documentation](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Secret can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:secretmanager/secret:Secret default projects/{{project}}/secrets/{{secret_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:secretmanager/secret:Secret default {{project}}/{{secret_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:secretmanager/secret:Secret default {{secret_id}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:secretmanager/secret:Secret")
 public class Secret extends io.pulumi.resources.CustomResource {
+    /**
+     * The time at which the Secret was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time at which the Secret was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @OutputExport(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
+    /**
+     * @return Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
+    /**
+     * The labels assigned to this Secret.
+     * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+     * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+     * Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+     * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+     * No more than 64 labels can be assigned to a given resource.
+     * An object containing a list of "key": value pairs. Example:
+     * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return The labels assigned to this Secret.
+     * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+     * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+     * Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+     * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+     * No more than 64 labels can be assigned to a given resource.
+     * An object containing a list of "key": value pairs. Example:
+     * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*{@literal /}topics/*.
+     * For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*{@literal /}topics/*.
+     * For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The replication policy of the secret data attached to the Secret. It cannot be changed
+     * after the Secret has been created.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="replication", type=SecretReplication.class, parameters={})
     private Output<SecretReplication> replication;
 
+    /**
+     * @return The replication policy of the secret data attached to the Secret. It cannot be changed
+     * after the Secret has been created.
+     * Structure is documented below.
+     * 
+     */
     public Output<SecretReplication> getReplication() {
         return this.replication;
     }
+    /**
+     * The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="rotation", type=SecretRotation.class, parameters={})
     private Output</* @Nullable */ SecretRotation> rotation;
 
+    /**
+     * @return The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ SecretRotation> getRotation() {
         return this.rotation;
     }
+    /**
+     * This must be unique within the project.
+     * 
+     */
     @OutputExport(name="secretId", type=String.class, parameters={})
     private Output<String> secretId;
 
+    /**
+     * @return This must be unique within the project.
+     * 
+     */
     public Output<String> getSecretId() {
         return this.secretId;
     }
+    /**
+     * A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="topics", type=List.class, parameters={SecretTopic.class})
     private Output</* @Nullable */ List<SecretTopic>> topics;
 
+    /**
+     * @return A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ List<SecretTopic>> getTopics() {
         return this.topics;
     }
+    /**
+     * The TTL for the Secret.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @OutputExport(name="ttl", type=String.class, parameters={})
     private Output</* @Nullable */ String> ttl;
 
+    /**
+     * @return The TTL for the Secret.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     public Output</* @Nullable */ String> getTtl() {
         return this.ttl;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Secret(String name, SecretArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:secretmanager/secret:Secret", name, args == null ? SecretArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -96,6 +238,15 @@ public class Secret extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Secret get(String name, Input<String> id, @Nullable SecretState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Secret(name, id, state, options);
     }

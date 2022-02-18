@@ -14,6 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A custom, extended built-in or a grammar slot type.
+ * 
+ */
 public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSlotTypeArgs Empty = new BotSlotTypeArgs();

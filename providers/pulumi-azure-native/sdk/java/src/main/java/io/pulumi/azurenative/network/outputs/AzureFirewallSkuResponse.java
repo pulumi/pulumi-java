@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureFirewallSkuResponse {
+    /**
+     * Name of an Azure Firewall SKU.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Tier of an Azure Firewall.
+     * 
+     */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"name","tier"})
@@ -22,9 +30,17 @@ public final class AzureFirewallSkuResponse {
         this.tier = tier;
     }
 
+    /**
+     * Name of an Azure Firewall SKU.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Tier of an Azure Firewall.
+     * 
+     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

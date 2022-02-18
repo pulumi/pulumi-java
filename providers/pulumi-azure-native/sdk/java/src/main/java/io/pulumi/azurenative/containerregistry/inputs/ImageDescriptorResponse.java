@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for a registry image.
+ * 
+ */
 public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageDescriptorResponse Empty = new ImageDescriptorResponse();
 
+    /**
+     * The sha256-based digest of the image manifest.
+     * 
+     */
     @InputImport(name="digest")
     private final @Nullable String digest;
 
@@ -21,6 +29,10 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
     }
 
+    /**
+     * The registry login server.
+     * 
+     */
     @InputImport(name="registry")
     private final @Nullable String registry;
 
@@ -28,6 +40,10 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
         return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
     }
 
+    /**
+     * The repository name.
+     * 
+     */
     @InputImport(name="repository")
     private final @Nullable String repository;
 
@@ -35,6 +51,10 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
     }
 
+    /**
+     * The tag name.
+     * 
+     */
     @InputImport(name="tag")
     private final @Nullable String tag;
 

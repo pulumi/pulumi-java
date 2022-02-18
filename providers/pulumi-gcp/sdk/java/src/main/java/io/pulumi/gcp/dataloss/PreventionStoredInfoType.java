@@ -16,51 +16,151 @@ import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeRegex;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Allows creation of custom info types.
+ * 
+ * To get more information about StoredInfoType, see:
+ * 
+ * * [API documentation](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.storedInfoTypes)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-stored-infotypes)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * StoredInfoType can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType default {{parent}}/storedInfoTypes/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType default {{parent}}/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType")
 public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource {
+    /**
+     * A description of the info type.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description of the info type.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="dictionary", type=PreventionStoredInfoTypeDictionary.class, parameters={})
     private Output</* @Nullable */ PreventionStoredInfoTypeDictionary> dictionary;
 
+    /**
+     * @return Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ PreventionStoredInfoTypeDictionary> getDictionary() {
         return this.dictionary;
     }
+    /**
+     * User set display name of the info type.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return User set display name of the info type.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="largeCustomDictionary", type=PreventionStoredInfoTypeLargeCustomDictionary.class, parameters={})
     private Output</* @Nullable */ PreventionStoredInfoTypeLargeCustomDictionary> largeCustomDictionary;
 
+    /**
+     * @return Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ PreventionStoredInfoTypeLargeCustomDictionary> getLargeCustomDictionary() {
         return this.largeCustomDictionary;
     }
+    /**
+     * Name describing the field.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name describing the field.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The parent of the info type in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     @OutputExport(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
+    /**
+     * @return The parent of the info type in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     public Output<String> getParent() {
         return this.parent;
     }
+    /**
+     * Regular expression which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="regex", type=PreventionStoredInfoTypeRegex.class, parameters={})
     private Output</* @Nullable */ PreventionStoredInfoTypeRegex> regex;
 
+    /**
+     * @return Regular expression which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ PreventionStoredInfoTypeRegex> getRegex() {
         return this.regex;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PreventionStoredInfoType(String name, PreventionStoredInfoTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType", name, args == null ? PreventionStoredInfoTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +176,15 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PreventionStoredInfoType get(String name, Input<String> id, @Nullable PreventionStoredInfoTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PreventionStoredInfoType(name, id, state, options);
     }

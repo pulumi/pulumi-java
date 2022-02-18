@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Encryption information for a Cloud Spanner database or backup.
+ * 
+ */
 public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionInfoResponse Empty = new EncryptionInfoResponse();
 
+    /**
+     * If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
+     * 
+     */
     @InputImport(name="encryptionStatus", required=true)
     private final StatusResponse encryptionStatus;
 
@@ -20,6 +28,10 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.encryptionStatus;
     }
 
+    /**
+     * The type of encryption.
+     * 
+     */
     @InputImport(name="encryptionType", required=true)
     private final String encryptionType;
 
@@ -27,6 +39,10 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.encryptionType;
     }
 
+    /**
+     * A Cloud KMS key version that is being used to protect the database or backup.
+     * 
+     */
     @InputImport(name="kmsKeyVersion", required=true)
     private final String kmsKeyVersion;
 

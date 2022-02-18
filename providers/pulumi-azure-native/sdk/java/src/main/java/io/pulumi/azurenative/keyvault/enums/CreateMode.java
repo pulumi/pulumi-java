@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The vault's create mode to indicate whether the vault need to be recovered or not.
+     * 
+     */
     @EnumType
     public enum CreateMode {
         Recover("recover"),

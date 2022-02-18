@@ -23,6 +23,10 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
         return this.createTime;
     }
 
+    /**
+     * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+     * 
+     */
     @InputImport(name="group", required=true)
     private final String group;
 
@@ -37,6 +41,10 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
         return this.memberKeys;
     }
 
+    /**
+     * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -51,6 +59,10 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
         return this.preferredMemberKeys;
     }
 
+    /**
+     * The MembershipRoles that apply to the Membership. Structure is documented below.
+     * 
+     */
     @InputImport(name="roles", required=true)
     private final List<GetGroupMembershipsMembershipRole> roles;
 

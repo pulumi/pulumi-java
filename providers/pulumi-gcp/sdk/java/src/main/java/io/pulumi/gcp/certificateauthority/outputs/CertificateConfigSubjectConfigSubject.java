@@ -11,13 +11,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateConfigSubjectConfigSubject {
+    /**
+     * The common name of the distinguished name.
+     * 
+     */
     private final String commonName;
+    /**
+     * The country code of the subject.
+     * 
+     */
     private final @Nullable String countryCode;
+    /**
+     * The locality or city of the subject.
+     * 
+     */
     private final @Nullable String locality;
+    /**
+     * The organization of the subject.
+     * 
+     */
     private final String organization;
+    /**
+     * The organizational unit of the subject.
+     * 
+     */
     private final @Nullable String organizationalUnit;
+    /**
+     * The postal code of the subject.
+     * 
+     */
     private final @Nullable String postalCode;
+    /**
+     * The province, territory, or regional state of the subject.
+     * 
+     */
     private final @Nullable String province;
+    /**
+     * The street address of the subject.
+     * 
+     */
     private final @Nullable String streetAddress;
 
     @OutputCustomType.Constructor({"commonName","countryCode","locality","organization","organizationalUnit","postalCode","province","streetAddress"})
@@ -40,27 +72,59 @@ public final class CertificateConfigSubjectConfigSubject {
         this.streetAddress = streetAddress;
     }
 
+    /**
+     * The common name of the distinguished name.
+     * 
+     */
     public String getCommonName() {
         return this.commonName;
     }
+    /**
+     * The country code of the subject.
+     * 
+     */
     public Optional<String> getCountryCode() {
         return Optional.ofNullable(this.countryCode);
     }
+    /**
+     * The locality or city of the subject.
+     * 
+     */
     public Optional<String> getLocality() {
         return Optional.ofNullable(this.locality);
     }
+    /**
+     * The organization of the subject.
+     * 
+     */
     public String getOrganization() {
         return this.organization;
     }
+    /**
+     * The organizational unit of the subject.
+     * 
+     */
     public Optional<String> getOrganizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
+    /**
+     * The postal code of the subject.
+     * 
+     */
     public Optional<String> getPostalCode() {
         return Optional.ofNullable(this.postalCode);
     }
+    /**
+     * The province, territory, or regional state of the subject.
+     * 
+     */
     public Optional<String> getProvince() {
         return Optional.ofNullable(this.province);
     }
+    /**
+     * The street address of the subject.
+     * 
+     */
     public Optional<String> getStreetAddress() {
         return Optional.ofNullable(this.streetAddress);
     }

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contains the ARN of AWS IoT Greengrass Group V1 that the gateway runs on.
+ * 
+ */
 public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayGreengrassArgs Empty = new GatewayGreengrassArgs();
 
+    /**
+     * The ARN of the Greengrass group.
+     * 
+     */
     @InputImport(name="groupArn", required=true)
     private final Input<String> groupArn;
 

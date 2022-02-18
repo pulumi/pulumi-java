@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobQueryUserDefinedFunctionResource {
+    /**
+     * An inline resource that contains code for a user-defined function (UDF).
+     * Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+     * 
+     */
     private final @Nullable String inlineCode;
+    /**
+     * A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+     * 
+     */
     private final @Nullable String resourceUri;
 
     @OutputCustomType.Constructor({"inlineCode","resourceUri"})
@@ -22,9 +31,18 @@ public final class JobQueryUserDefinedFunctionResource {
         this.resourceUri = resourceUri;
     }
 
+    /**
+     * An inline resource that contains code for a user-defined function (UDF).
+     * Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+     * 
+     */
     public Optional<String> getInlineCode() {
         return Optional.ofNullable(this.inlineCode);
     }
+    /**
+     * A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+     * 
+     */
     public Optional<String> getResourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }

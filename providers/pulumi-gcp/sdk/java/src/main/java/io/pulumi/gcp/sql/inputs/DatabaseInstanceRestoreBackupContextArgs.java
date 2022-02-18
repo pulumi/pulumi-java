@@ -15,6 +15,10 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
 
     public static final DatabaseInstanceRestoreBackupContextArgs Empty = new DatabaseInstanceRestoreBackupContextArgs();
 
+    /**
+     * The ID of the backup run to restore from.
+     * 
+     */
     @InputImport(name="backupRunId", required=true)
     private final Input<Integer> backupRunId;
 
@@ -22,6 +26,11 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
         return this.backupRunId;
     }
 
+    /**
+     * The ID of the instance that the backup was taken from. If left empty,
+     * this instance's ID will be used.
+     * 
+     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -29,6 +38,10 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
+    /**
+     * The full project ID of the source instance.`
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

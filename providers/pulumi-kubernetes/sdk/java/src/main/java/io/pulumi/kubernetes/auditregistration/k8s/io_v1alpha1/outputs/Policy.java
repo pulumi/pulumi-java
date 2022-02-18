@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Policy {
+    /**
+     * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
+     * 
+     */
     private final String level;
+    /**
+     * Stages is a list of stages for which events are created.
+     * 
+     */
     private final @Nullable List<String> stages;
 
     @OutputCustomType.Constructor({"level","stages"})
@@ -22,9 +30,17 @@ public final class Policy {
         this.stages = stages;
     }
 
+    /**
+     * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
+     * 
+     */
     public String getLevel() {
         return this.level;
     }
+    /**
+     * Stages is a list of stages for which events are created.
+     * 
+     */
     public List<String> getStages() {
         return this.stages == null ? List.of() : this.stages;
     }

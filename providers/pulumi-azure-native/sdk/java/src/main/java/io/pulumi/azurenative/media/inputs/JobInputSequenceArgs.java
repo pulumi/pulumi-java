@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Sequence contains an ordered list of Clips where each clip is a JobInput.  The Sequence will be treated as a single input.
+ * 
+ */
 public final class JobInputSequenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobInputSequenceArgs Empty = new JobInputSequenceArgs();
 
+    /**
+     * JobInputs that make up the timeline.
+     * 
+     */
     @InputImport(name="inputs")
     private final @Nullable Input<List<JobInputClipArgs>> inputs;
 
@@ -23,6 +31,11 @@ public final class JobInputSequenceArgs extends io.pulumi.resources.ResourceArgs
         return this.inputs == null ? Input.empty() : this.inputs;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.JobInputSequence'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

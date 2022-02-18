@@ -14,6 +14,10 @@ public final class CxEntityTypeExcludedPhraseGetArgs extends io.pulumi.resources
 
     public static final CxEntityTypeExcludedPhraseGetArgs Empty = new CxEntityTypeExcludedPhraseGetArgs();
 
+    /**
+     * The word or phrase to be excluded.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

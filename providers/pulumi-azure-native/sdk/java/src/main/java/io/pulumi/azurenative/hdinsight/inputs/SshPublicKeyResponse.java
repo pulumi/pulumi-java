@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The SSH public key for the cluster nodes.
+ * 
+ */
 public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SshPublicKeyResponse Empty = new SshPublicKeyResponse();
 
+    /**
+     * The certificate for SSH.
+     * 
+     */
     @InputImport(name="certificateData")
     private final @Nullable String certificateData;
 

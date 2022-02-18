@@ -10,8 +10,20 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum CertificateVisibility {
+        /**
+         * The certificate should be visible to the user account under which the start task is run. Note that if AutoUser Scope is Pool for both the StartTask and a Task, this certificate will be visible to the Task as well.
+         * 
+         */
         StartTask("StartTask"),
+        /**
+         * The certificate should be visible to the user accounts under which job tasks are run.
+         * 
+         */
         Task("Task"),
+        /**
+         * The certificate should be visible to the user accounts under which users remotely access the node.
+         * 
+         */
         RemoteUser("RemoteUser");
 
         private final String value;

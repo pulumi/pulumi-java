@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom domain of app resource payload.
+ * 
+ */
 public final class CustomDomainPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomDomainPropertiesResponse Empty = new CustomDomainPropertiesResponse();
 
+    /**
+     * The app name of domain.
+     * 
+     */
     @InputImport(name="appName", required=true)
     private final String appName;
 
@@ -21,6 +29,10 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
         return this.appName;
     }
 
+    /**
+     * The bound certificate name of domain.
+     * 
+     */
     @InputImport(name="certName")
     private final @Nullable String certName;
 
@@ -28,6 +40,10 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
         return this.certName == null ? Optional.empty() : Optional.ofNullable(this.certName);
     }
 
+    /**
+     * The thumbprint of bound certificate.
+     * 
+     */
     @InputImport(name="thumbprint")
     private final @Nullable String thumbprint;
 

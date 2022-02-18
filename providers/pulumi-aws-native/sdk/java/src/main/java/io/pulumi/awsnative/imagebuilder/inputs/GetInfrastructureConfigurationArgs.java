@@ -12,6 +12,10 @@ public final class GetInfrastructureConfigurationArgs extends io.pulumi.resource
 
     public static final GetInfrastructureConfigurationArgs Empty = new GetInfrastructureConfigurationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

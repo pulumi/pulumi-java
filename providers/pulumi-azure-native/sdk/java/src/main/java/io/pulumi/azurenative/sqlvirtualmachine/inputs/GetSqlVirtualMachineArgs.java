@@ -14,6 +14,10 @@ public final class GetSqlVirtualMachineArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetSqlVirtualMachineArgs Empty = new GetSqlVirtualMachineArgs();
 
+    /**
+     * The child resources to include in the response.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetSqlVirtualMachineArgs extends io.pulumi.resources.InvokeAr
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +36,10 @@ public final class GetSqlVirtualMachineArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SQL virtual machine.
+     * 
+     */
     @InputImport(name="sqlVirtualMachineName", required=true)
     private final String sqlVirtualMachineName;
 

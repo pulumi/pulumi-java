@@ -14,6 +14,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
 
     public static final WorkflowAccessKeyArgs Empty = new WorkflowAccessKeyArgs();
 
+    /**
+     * The workflow access key name.
+     * 
+     */
     @InputImport(name="accessKeyName")
     private final @Nullable Input<String> accessKeyName;
 
@@ -21,6 +25,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
         return this.accessKeyName == null ? Input.empty() : this.accessKeyName;
     }
 
+    /**
+     * Gets or sets the resource id.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,6 +36,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Gets or sets the not-after time.
+     * 
+     */
     @InputImport(name="notAfter")
     private final @Nullable Input<String> notAfter;
 
@@ -35,6 +47,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
         return this.notAfter == null ? Input.empty() : this.notAfter;
     }
 
+    /**
+     * Gets or sets the not-before time.
+     * 
+     */
     @InputImport(name="notBefore")
     private final @Nullable Input<String> notBefore;
 
@@ -42,6 +58,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
         return this.notBefore == null ? Input.empty() : this.notBefore;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,6 +69,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The workflow name.
+     * 
+     */
     @InputImport(name="workflowName", required=true)
     private final Input<String> workflowName;
 

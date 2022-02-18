@@ -11,8 +11,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet {
+    /**
+     * The name of a Cloud Storage bucket.
+     * 
+     */
     private final String bucketName;
+    /**
+     * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+     * least one of these regular expressions will be excluded from the scan.
+     * 
+     */
     private final @Nullable List<String> excludeRegexes;
+    /**
+     * A list of regular expressions matching file paths to include. All files in the bucket
+     * that match at least one of these regular expressions will be included in the set of files,
+     * except for those that also match an item in excludeRegex. Leaving this field empty will
+     * match all files by default (this is equivalent to including .* in the list)
+     * 
+     */
     private final @Nullable List<String> includeRegexes;
 
     @OutputCustomType.Constructor({"bucketName","excludeRegexes","includeRegexes"})
@@ -25,12 +41,28 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         this.includeRegexes = includeRegexes;
     }
 
+    /**
+     * The name of a Cloud Storage bucket.
+     * 
+     */
     public String getBucketName() {
         return this.bucketName;
     }
+    /**
+     * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+     * least one of these regular expressions will be excluded from the scan.
+     * 
+     */
     public List<String> getExcludeRegexes() {
         return this.excludeRegexes == null ? List.of() : this.excludeRegexes;
     }
+    /**
+     * A list of regular expressions matching file paths to include. All files in the bucket
+     * that match at least one of these regular expressions will be included in the set of files,
+     * except for those that also match an item in excludeRegex. Leaving this field empty will
+     * match all files by default (this is equivalent to including .* in the list)
+     * 
+     */
     public List<String> getIncludeRegexes() {
         return this.includeRegexes == null ? List.of() : this.includeRegexes;
     }

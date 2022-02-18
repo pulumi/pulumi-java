@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * CloudFormation resource for DevOps Guru to monitor
+ * 
+ */
 public final class ResourceCollectionCloudFormationCollectionFilter extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceCollectionCloudFormationCollectionFilter Empty = new ResourceCollectionCloudFormationCollectionFilter();
 
+    /**
+     * An array of CloudFormation stack names.
+     * 
+     */
     @InputImport(name="stackNames")
     private final @Nullable List<String> stackNames;
 

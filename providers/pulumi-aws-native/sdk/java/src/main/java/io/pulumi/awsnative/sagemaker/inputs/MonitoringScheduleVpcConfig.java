@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Specifies a VPC that your training jobs and hosted models have access to. Control access to and from your training and model containers by configuring the VPC.
+ * 
+ */
 public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringScheduleVpcConfig Empty = new MonitoringScheduleVpcConfig();
 
+    /**
+     * The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
+     * 
+     */
     @InputImport(name="securityGroupIds", required=true)
     private final List<String> securityGroupIds;
 
@@ -20,6 +28,10 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
         return this.securityGroupIds;
     }
 
+    /**
+     * The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
+     * 
+     */
     @InputImport(name="subnets", required=true)
     private final List<String> subnets;
 

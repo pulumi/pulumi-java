@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClient {
+/**
+ * Get info about a Google Cloud IAP Client.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getClient.
+ * 
+ *
+ * A collection of values returned by getClient.
+ * 
+ */
     public static CompletableFuture<GetClientResult> invokeAsync(GetClientArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iap/getClient:getClient", TypeShape.of(GetClientResult.class), args == null ? GetClientArgs.Empty : args, Utilities.withVersion(options));
     }

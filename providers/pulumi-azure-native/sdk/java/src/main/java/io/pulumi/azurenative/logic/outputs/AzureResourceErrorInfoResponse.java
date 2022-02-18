@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureResourceErrorInfoResponse {
+    /**
+     * The error code.
+     * 
+     */
     private final String code;
+    /**
+     * The error details.
+     * 
+     */
     private final @Nullable List<AzureResourceErrorInfoResponse> details;
+    /**
+     * The error message.
+     * 
+     */
     private final String message;
 
     @OutputCustomType.Constructor({"code","details","message"})
@@ -25,12 +37,24 @@ public final class AzureResourceErrorInfoResponse {
         this.message = Objects.requireNonNull(message);
     }
 
+    /**
+     * The error code.
+     * 
+     */
     public String getCode() {
         return this.code;
     }
+    /**
+     * The error details.
+     * 
+     */
     public List<AzureResourceErrorInfoResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
+    /**
+     * The error message.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }

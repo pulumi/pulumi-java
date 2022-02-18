@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListKeyByAutomationAccount {
+/**
+ * API Version: 2021-06-22.
+ * 
+ */
     public static CompletableFuture<ListKeyByAutomationAccountResult> invokeAsync(ListKeyByAutomationAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:listKeyByAutomationAccount", TypeShape.of(ListKeyByAutomationAccountResult.class), args == null ? ListKeyByAutomationAccountArgs.Empty : args, Utilities.withVersion(options));
     }

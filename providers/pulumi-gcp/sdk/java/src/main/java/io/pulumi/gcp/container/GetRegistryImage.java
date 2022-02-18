@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistryImage {
+/**
+ * This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
+ * 
+ * The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getRegistryImage.
+ * 
+ *
+ * A collection of values returned by getRegistryImage.
+ * 
+ */
     public static CompletableFuture<GetRegistryImageResult> invokeAsync(GetRegistryImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args == null ? GetRegistryImageArgs.Empty : args, Utilities.withVersion(options));
     }

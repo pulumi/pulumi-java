@@ -12,6 +12,10 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
 
     public static final FileContentBufferResponse Empty = new FileContentBufferResponse();
 
+    /**
+     * The raw content in the secure keys file.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final String content;
 
@@ -19,6 +23,10 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
         return this.content;
     }
 
+    /**
+     * The file type of source file.
+     * 
+     */
     @InputImport(name="fileType", required=true)
     private final String fileType;
 

@@ -13,6 +13,10 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
 
     public static final EventIntegrationEventFilterArgs Empty = new EventIntegrationEventFilterArgs();
 
+    /**
+     * The source of the events.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 

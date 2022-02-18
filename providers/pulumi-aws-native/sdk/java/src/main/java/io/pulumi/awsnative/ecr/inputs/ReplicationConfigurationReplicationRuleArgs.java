@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An array of objects representing the details of a replication destination.
+ * 
+ */
 public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationConfigurationReplicationRuleArgs Empty = new ReplicationConfigurationReplicationRuleArgs();
 
+    /**
+     * An array of objects representing the details of a replication destination.
+     * 
+     */
     @InputImport(name="destinations", required=true)
     private final Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
 
@@ -23,6 +31,10 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
         return this.destinations;
     }
 
+    /**
+     * An array of objects representing the details of a repository filter.
+     * 
+     */
     @InputImport(name="repositoryFilters")
     private final @Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 

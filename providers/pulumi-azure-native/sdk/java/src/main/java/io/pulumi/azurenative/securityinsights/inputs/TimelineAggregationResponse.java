@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * timeline aggregation information per kind
+ * 
+ */
 public final class TimelineAggregationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimelineAggregationResponse Empty = new TimelineAggregationResponse();
 
+    /**
+     * the total items found for a kind
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -20,6 +28,10 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
         return this.count;
     }
 
+    /**
+     * the query kind
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

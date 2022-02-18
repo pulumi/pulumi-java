@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The SKU of the EnterpriseKnowledgeGraph service account.
+ * 
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * The sku name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

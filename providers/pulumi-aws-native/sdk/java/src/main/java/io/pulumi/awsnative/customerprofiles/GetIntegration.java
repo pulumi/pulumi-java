@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegration {
+/**
+ * The resource schema for creating an Amazon Connect Customer Profiles Integration.
+ * 
+ */
     public static CompletableFuture<GetIntegrationResult> invokeAsync(GetIntegrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getIntegration", TypeShape.of(GetIntegrationResult.class), args == null ? GetIntegrationArgs.Empty : args, Utilities.withVersion(options));
     }

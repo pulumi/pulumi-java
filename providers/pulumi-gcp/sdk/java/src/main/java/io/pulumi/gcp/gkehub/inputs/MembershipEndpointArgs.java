@@ -14,6 +14,11 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
 
     public static final MembershipEndpointArgs Empty = new MembershipEndpointArgs();
 
+    /**
+     * If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gkeCluster")
     private final @Nullable Input<MembershipEndpointGkeClusterArgs> gkeCluster;
 
