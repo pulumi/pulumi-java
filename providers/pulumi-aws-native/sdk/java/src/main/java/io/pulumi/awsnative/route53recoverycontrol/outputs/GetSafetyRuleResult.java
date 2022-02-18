@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53recoverycontrol.outputs;
 import io.pulumi.awsnative.route53recoverycontrol.enums.SafetyRuleStatus;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleAssertionRule;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleGatingRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

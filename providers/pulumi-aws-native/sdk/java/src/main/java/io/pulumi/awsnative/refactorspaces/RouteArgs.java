@@ -7,7 +7,7 @@ import io.pulumi.awsnative.refactorspaces.enums.RouteType;
 import io.pulumi.awsnative.refactorspaces.inputs.RouteTagArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.RouteUriPathRouteInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

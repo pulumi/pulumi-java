@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cassandra.outputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableClusteringKeyColumnOrderBy;
 import io.pulumi.awsnative.cassandra.outputs.TableColumn;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

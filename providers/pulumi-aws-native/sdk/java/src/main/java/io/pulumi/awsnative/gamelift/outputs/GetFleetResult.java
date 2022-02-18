@@ -8,7 +8,7 @@ import io.pulumi.awsnative.gamelift.outputs.FleetIpPermission;
 import io.pulumi.awsnative.gamelift.outputs.FleetLocationConfiguration;
 import io.pulumi.awsnative.gamelift.outputs.FleetResourceCreationLimitPolicy;
 import io.pulumi.awsnative.gamelift.outputs.FleetRuntimeConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

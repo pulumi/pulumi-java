@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmcontacts.outputs;
 
 import io.pulumi.awsnative.ssmcontacts.outputs.ContactChannelTargetInfo;
 import io.pulumi.awsnative.ssmcontacts.outputs.ContactTargetInfo;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

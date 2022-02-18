@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup.inputs;
 import io.pulumi.awsnative.backup.inputs.FrameworkControlControlScopePropertiesArgs;
 import io.pulumi.awsnative.backup.inputs.FrameworkControlInputParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

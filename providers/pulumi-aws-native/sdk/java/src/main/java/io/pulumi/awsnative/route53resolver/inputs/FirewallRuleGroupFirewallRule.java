@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver.inputs;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleAction;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockOverrideDnsType;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

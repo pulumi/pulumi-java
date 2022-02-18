@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lex.outputs.BotPromptSpecification;
 import io.pulumi.awsnative.lex.outputs.BotSampleUtterance;
 import io.pulumi.awsnative.lex.outputs.BotSlotDefaultValueSpecification;
 import io.pulumi.awsnative.lex.outputs.BotWaitAndContinueSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

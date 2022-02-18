@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceColumnConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceConnectionConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSqlConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

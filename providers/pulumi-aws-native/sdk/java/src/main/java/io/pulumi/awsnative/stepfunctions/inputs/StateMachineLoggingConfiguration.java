@@ -5,7 +5,7 @@ package io.pulumi.awsnative.stepfunctions.inputs;
 
 import io.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfigurationLevel;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineLogDestination;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;

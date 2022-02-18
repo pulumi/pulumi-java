@@ -6,7 +6,7 @@ package io.pulumi.awsnative.eventschemas;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.eventschemas.inputs.GetRegistryPolicyArgs;
 import io.pulumi.awsnative.eventschemas.outputs.GetRegistryPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleHttpReques
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRulePathPatternConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleQueryStringConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleSourceIpConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

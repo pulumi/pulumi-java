@@ -13,7 +13,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.PipelineLambda;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineMath;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineRemoveAttributes;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineSelectAttributes;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -20,7 +20,7 @@ import io.pulumi.awsnative.quicksight.outputs.DataSourceSnowflakeParameters;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceSparkParameters;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceSqlServerParameters;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceTeradataParameters;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

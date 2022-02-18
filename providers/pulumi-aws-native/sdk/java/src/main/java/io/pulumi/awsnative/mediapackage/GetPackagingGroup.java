@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.mediapackage.inputs.GetPackagingGroupArgs;
 import io.pulumi.awsnative.mediapackage.outputs.GetPackagingGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

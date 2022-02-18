@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudtrail.outputs;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailEventSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailInsightSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

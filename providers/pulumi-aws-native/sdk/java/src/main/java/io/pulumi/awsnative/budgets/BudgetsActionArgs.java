@@ -10,7 +10,7 @@ import io.pulumi.awsnative.budgets.inputs.BudgetsActionActionThresholdArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionDefinitionArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionSubscriberArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

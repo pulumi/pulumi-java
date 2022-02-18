@@ -8,7 +8,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerAuthenticateOid
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerFixedResponseConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerForwardConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRedirectConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

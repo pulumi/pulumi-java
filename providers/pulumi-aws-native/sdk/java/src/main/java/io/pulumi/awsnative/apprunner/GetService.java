@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apprunner.inputs.GetServiceArgs;
 import io.pulumi.awsnative.apprunner.outputs.GetServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

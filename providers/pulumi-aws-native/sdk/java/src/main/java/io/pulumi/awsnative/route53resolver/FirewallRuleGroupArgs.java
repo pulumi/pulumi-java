@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver;
 import io.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupFirewallRuleArgs;
 import io.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

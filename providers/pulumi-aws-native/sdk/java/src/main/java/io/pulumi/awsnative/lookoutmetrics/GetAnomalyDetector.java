@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lookoutmetrics.inputs.GetAnomalyDetectorArgs;
 import io.pulumi.awsnative.lookoutmetrics.outputs.GetAnomalyDetectorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

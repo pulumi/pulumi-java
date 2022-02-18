@@ -6,7 +6,7 @@ package io.pulumi.awsnative.refactorspaces.inputs;
 import io.pulumi.awsnative.refactorspaces.enums.RouteActivationState;
 import io.pulumi.awsnative.refactorspaces.enums.RouteMethod;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.auditmanager.inputs.AssessmentRoleArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentScopeArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

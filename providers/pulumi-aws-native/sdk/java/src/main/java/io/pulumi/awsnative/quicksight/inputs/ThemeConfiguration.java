@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.ThemeDataColorPalette;
 import io.pulumi.awsnative.quicksight.inputs.ThemeSheetStyle;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTypography;
 import io.pulumi.awsnative.quicksight.inputs.ThemeUIColorPalette;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

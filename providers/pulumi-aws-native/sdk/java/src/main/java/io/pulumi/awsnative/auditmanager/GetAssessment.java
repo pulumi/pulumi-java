@@ -6,7 +6,7 @@ package io.pulumi.awsnative.auditmanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.auditmanager.inputs.GetAssessmentArgs;
 import io.pulumi.awsnative.auditmanager.outputs.GetAssessmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

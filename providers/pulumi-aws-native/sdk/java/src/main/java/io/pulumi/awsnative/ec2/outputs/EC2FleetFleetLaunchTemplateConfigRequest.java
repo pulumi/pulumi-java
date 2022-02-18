@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.EC2FleetFleetLaunchTemplateOverridesRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetFleetLaunchTemplateSpecificationRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

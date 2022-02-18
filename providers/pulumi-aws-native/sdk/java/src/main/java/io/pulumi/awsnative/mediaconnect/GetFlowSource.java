@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.mediaconnect.inputs.GetFlowSourceArgs;
 import io.pulumi.awsnative.mediaconnect.outputs.GetFlowSourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

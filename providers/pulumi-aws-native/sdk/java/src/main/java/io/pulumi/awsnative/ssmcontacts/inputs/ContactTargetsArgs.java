@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssmcontacts.inputs;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactChannelTargetInfoArgs;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactTargetInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationMutationProtection;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupAssociationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

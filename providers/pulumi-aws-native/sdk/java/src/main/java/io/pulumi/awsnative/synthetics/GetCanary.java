@@ -6,7 +6,7 @@ package io.pulumi.awsnative.synthetics;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.synthetics.inputs.GetCanaryArgs;
 import io.pulumi.awsnative.synthetics.outputs.GetCanaryResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -8,8 +8,8 @@ import io.pulumi.awsnative.gamelift.AliasArgs;
 import io.pulumi.awsnative.gamelift.outputs.AliasRoutingStrategy;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 

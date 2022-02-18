@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lightsail.inputs.ContainerPublicDomainNameArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerServiceDeploymentArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

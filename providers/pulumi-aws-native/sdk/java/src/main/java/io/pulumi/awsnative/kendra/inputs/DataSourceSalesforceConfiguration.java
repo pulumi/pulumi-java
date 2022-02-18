@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceChatterFeedConfigur
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceKnowledgeArticleConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardObjectAttachmentConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardObjectConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecr.outputs;
 
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfigurationReplicationDestination;
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfigurationRepositoryFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

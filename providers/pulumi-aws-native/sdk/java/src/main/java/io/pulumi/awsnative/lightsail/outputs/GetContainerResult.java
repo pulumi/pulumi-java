@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 import io.pulumi.awsnative.lightsail.outputs.ContainerPublicDomainName;
 import io.pulumi.awsnative.lightsail.outputs.ContainerServiceDeployment;
 import io.pulumi.awsnative.lightsail.outputs.ContainerTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

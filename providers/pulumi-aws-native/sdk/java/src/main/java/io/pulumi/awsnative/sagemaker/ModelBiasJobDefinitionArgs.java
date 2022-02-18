@@ -12,7 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionNetworkConfigA
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionStoppingConditionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

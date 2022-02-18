@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3outposts.enums.BucketRuleStatus;
 import io.pulumi.awsnative.s3outposts.inputs.BucketAbortIncompleteMultipartUploadArgs;
 import io.pulumi.awsnative.s3outposts.inputs.BucketRuleFilterPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.groundstation.inputs.ConfigDecodeConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigDemodulationConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

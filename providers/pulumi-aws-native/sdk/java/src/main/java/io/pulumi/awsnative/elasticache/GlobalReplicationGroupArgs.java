@@ -6,7 +6,7 @@ package io.pulumi.awsnative.elasticache;
 import io.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupMemberArgs;
 import io.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupRegionalConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

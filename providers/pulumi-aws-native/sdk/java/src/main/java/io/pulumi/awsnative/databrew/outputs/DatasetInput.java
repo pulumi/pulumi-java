@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.outputs.DatasetDataCatalogInputDefinition;
 import io.pulumi.awsnative.databrew.outputs.DatasetDatabaseInputDefinition;
 import io.pulumi.awsnative.databrew.outputs.DatasetMetadata;
 import io.pulumi.awsnative.databrew.outputs.DatasetS3Location;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

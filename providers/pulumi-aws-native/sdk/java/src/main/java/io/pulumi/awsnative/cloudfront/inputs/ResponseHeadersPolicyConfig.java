@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCorsConfig;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfig;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

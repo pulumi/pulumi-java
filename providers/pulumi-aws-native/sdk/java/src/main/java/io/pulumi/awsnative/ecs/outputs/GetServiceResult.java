@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecs.outputs.ServiceCapacityProviderStrategyItem;
 import io.pulumi.awsnative.ecs.outputs.ServiceDeploymentConfiguration;
 import io.pulumi.awsnative.ecs.outputs.ServiceNetworkConfiguration;
 import io.pulumi.awsnative.ecs.outputs.ServiceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

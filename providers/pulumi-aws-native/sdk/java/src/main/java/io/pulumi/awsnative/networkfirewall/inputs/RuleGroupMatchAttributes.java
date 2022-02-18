@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupAddress;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupPortRange;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupTCPFlagField;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;

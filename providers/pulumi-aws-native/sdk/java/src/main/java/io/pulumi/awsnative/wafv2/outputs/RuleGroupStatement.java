@@ -16,7 +16,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupRegexPatternSetReferenceStatem
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupSizeConstraintStatement;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupSqliMatchStatement;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupXssMatchStatement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

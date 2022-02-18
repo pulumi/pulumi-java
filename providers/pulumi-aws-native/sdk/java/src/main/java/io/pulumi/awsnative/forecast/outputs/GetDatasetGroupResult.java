@@ -5,7 +5,7 @@ package io.pulumi.awsnative.forecast.outputs;
 
 import io.pulumi.awsnative.forecast.enums.DatasetGroupDomain;
 import io.pulumi.awsnative.forecast.outputs.DatasetGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

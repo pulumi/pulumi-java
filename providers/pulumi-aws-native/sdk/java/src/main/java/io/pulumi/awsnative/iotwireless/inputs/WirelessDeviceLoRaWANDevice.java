@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceAbpV10x;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceAbpV11;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV10x;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV11;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

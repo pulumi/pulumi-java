@@ -6,7 +6,7 @@ package io.pulumi.awsnative.events.inputs;
 import io.pulumi.awsnative.events.enums.ConnectionOAuthParametersHttpMethod;
 import io.pulumi.awsnative.events.inputs.ConnectionClientParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParameters;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

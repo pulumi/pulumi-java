@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationTriggerType;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTriggerProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

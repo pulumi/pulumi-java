@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.CapacityProviderAutoScalingGroupProviderManagedTerminationProtection;
 import io.pulumi.awsnative.ecs.outputs.CapacityProviderManagedScaling;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

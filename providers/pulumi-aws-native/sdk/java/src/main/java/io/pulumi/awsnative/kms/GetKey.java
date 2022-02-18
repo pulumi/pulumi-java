@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kms;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.kms.inputs.GetKeyArgs;
 import io.pulumi.awsnative.kms.outputs.GetKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

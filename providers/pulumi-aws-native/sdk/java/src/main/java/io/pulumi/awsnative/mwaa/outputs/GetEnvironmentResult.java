@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mwaa.outputs;
 import io.pulumi.awsnative.mwaa.enums.EnvironmentWebserverAccessMode;
 import io.pulumi.awsnative.mwaa.outputs.EnvironmentLoggingConfiguration;
 import io.pulumi.awsnative.mwaa.outputs.EnvironmentNetworkConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

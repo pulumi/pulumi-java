@@ -8,7 +8,7 @@ import io.pulumi.awsnative.licensemanager.outputs.LicenseEntitlement;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseIssuerData;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseMetadata;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseValidityDateFormat;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

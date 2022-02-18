@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway.outputs;
 import io.pulumi.awsnative.apigateway.outputs.DomainNameEndpointConfiguration;
 import io.pulumi.awsnative.apigateway.outputs.DomainNameMutualTlsAuthentication;
 import io.pulumi.awsnative.apigateway.outputs.DomainNameTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

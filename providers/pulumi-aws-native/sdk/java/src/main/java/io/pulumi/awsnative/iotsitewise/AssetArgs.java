@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AssetHierarchyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetPropertyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.enums.DomainConfigurationStatus;
 import io.pulumi.awsnative.iot.outputs.DomainConfigurationAuthorizerConfig;
 import io.pulumi.awsnative.iot.outputs.DomainConfigurationServerCertificateSummary;
 import io.pulumi.awsnative.iot.outputs.DomainConfigurationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

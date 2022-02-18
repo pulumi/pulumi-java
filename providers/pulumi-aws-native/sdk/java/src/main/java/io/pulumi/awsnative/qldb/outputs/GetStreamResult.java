@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.qldb.outputs;
 
 import io.pulumi.awsnative.qldb.outputs.StreamTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

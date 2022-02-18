@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.enums.IntegrationTaskType;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationConnectorOperatorArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskPropertiesMapArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -16,7 +16,7 @@ import io.pulumi.awsnative.appflow.inputs.ConnectorProfileSnowflakeConnectorProf
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileVeevaConnectorProfilePropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileZendeskConnectorProfilePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

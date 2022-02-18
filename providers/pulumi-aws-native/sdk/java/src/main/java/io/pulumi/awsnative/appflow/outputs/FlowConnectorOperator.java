@@ -18,7 +18,7 @@ import io.pulumi.awsnative.appflow.enums.FlowSlackConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowTrendmicroConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowVeevaConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowZendeskConnectorOperator;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

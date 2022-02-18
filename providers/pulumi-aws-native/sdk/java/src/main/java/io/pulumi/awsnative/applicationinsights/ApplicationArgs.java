@@ -8,7 +8,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationCustomComponent
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogPatternSetArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

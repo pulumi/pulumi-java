@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilesLimit;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpression;
 import io.pulumi.awsnative.databrew.inputs.DatasetPathParameter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

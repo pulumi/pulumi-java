@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotExternalSourceSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotTypeValueArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueSelectionSettingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

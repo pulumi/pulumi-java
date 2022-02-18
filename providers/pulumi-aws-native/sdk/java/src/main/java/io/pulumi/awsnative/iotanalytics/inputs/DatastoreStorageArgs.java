@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatastoreCustomerManagedS3Args;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreIotSiteWiseMultiLayerStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreServiceManagedS3Args;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

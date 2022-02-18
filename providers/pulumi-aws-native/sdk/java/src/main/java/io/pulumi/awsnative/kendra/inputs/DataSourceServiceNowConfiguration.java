@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceServiceNowAuthenticationType;
 import io.pulumi.awsnative.kendra.enums.DataSourceServiceNowBuildVersionType;
 import io.pulumi.awsnative.kendra.inputs.DataSourceServiceNowKnowledgeArticleConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceServiceNowServiceCatalogConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

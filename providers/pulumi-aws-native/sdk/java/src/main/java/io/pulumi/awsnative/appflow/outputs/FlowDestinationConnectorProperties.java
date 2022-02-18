@@ -11,7 +11,7 @@ import io.pulumi.awsnative.appflow.outputs.FlowSalesforceDestinationProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowSnowflakeDestinationProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowUpsolverDestinationProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowZendeskDestinationProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

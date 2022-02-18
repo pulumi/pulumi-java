@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityCrlConfiguration;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityOcspConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

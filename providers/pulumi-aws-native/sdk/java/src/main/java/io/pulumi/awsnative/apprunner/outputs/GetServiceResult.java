@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner.outputs;
 import io.pulumi.awsnative.apprunner.outputs.ServiceHealthCheckConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceInstanceConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceSourceConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

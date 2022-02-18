@@ -10,7 +10,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentInitializationScri
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentScriptParameterKeyValueArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentTagsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

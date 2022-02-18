@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.batch.outputs;
 
 import io.pulumi.awsnative.batch.outputs.SchedulingPolicyShareAttributes;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.frauddetector;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.frauddetector.inputs.GetOutcomeArgs;
 import io.pulumi.awsnative.frauddetector.outputs.GetOutcomeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanAction;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanChatChannel;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanIncidentTemplate;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

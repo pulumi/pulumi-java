@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionCustomOriginConfig;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginCustomHeader;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginShield;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionS3OriginConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

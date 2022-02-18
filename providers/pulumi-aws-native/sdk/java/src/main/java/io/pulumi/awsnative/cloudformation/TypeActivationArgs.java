@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudformation.enums.TypeActivationType;
 import io.pulumi.awsnative.cloudformation.enums.TypeActivationVersionBump;
 import io.pulumi.awsnative.cloudformation.inputs.TypeActivationLoggingConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

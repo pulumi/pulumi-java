@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotcoredeviceadvisor.outputs;
 
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionConfigurationProperties;
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

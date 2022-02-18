@@ -5,7 +5,7 @@ package io.pulumi.awsnative.emr;
 
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

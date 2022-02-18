@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotevents;
 import io.pulumi.awsnative.iotevents.inputs.InputDefinitionArgs;
 import io.pulumi.awsnative.iotevents.inputs.InputTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

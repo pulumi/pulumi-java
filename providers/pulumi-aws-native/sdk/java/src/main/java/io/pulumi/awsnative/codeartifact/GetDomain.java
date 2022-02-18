@@ -6,7 +6,7 @@ package io.pulumi.awsnative.codeartifact;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.codeartifact.inputs.GetDomainArgs;
 import io.pulumi.awsnative.codeartifact.outputs.GetDomainResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupRateBasedStatementAggregateKeyTy
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupForwardedIPConfigurationArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupStatementArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;

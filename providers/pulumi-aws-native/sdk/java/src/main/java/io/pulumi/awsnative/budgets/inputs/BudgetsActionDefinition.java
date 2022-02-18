@@ -6,7 +6,7 @@ package io.pulumi.awsnative.budgets.inputs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionIamActionDefinition;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionScpActionDefinition;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionSsmActionDefinition;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

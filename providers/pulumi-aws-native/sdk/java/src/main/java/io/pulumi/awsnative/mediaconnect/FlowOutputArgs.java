@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediaconnect.enums.FlowOutputProtocol;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowOutputEncryptionArgs;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowOutputVpcInterfaceAttachmentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

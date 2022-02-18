@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamInputFormatConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOutputFormatConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSchemaConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;

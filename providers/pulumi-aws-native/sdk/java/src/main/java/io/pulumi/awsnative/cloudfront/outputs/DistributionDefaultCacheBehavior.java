@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.outputs;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionForwardedValues;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionFunctionAssociation;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionLambdaFunctionAssociation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

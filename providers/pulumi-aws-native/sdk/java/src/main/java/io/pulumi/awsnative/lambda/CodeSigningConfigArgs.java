@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lambda;
 import io.pulumi.awsnative.lambda.inputs.CodeSigningConfigAllowedPublishersArgs;
 import io.pulumi.awsnative.lambda.inputs.CodeSigningConfigCodeSigningPoliciesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

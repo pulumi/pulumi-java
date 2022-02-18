@@ -8,7 +8,7 @@ import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationDashPackag
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsPackage;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationMssPackage;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

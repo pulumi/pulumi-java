@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appflow.inputs.GetFlowArgs;
 import io.pulumi.awsnative.appflow.outputs.GetFlowResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

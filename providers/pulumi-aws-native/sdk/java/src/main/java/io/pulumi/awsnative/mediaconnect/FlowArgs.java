@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowFailoverConfigArgs;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

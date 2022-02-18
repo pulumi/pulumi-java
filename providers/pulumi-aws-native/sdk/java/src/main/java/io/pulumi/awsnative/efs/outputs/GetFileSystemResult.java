@@ -6,7 +6,7 @@ package io.pulumi.awsnative.efs.outputs;
 import io.pulumi.awsnative.efs.outputs.FileSystemBackupPolicy;
 import io.pulumi.awsnative.efs.outputs.FileSystemElasticFileSystemTag;
 import io.pulumi.awsnative.efs.outputs.FileSystemLifecyclePolicy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;

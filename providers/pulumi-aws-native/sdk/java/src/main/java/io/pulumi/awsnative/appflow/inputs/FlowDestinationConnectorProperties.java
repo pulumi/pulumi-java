@@ -11,7 +11,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowSalesforceDestinationProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowSnowflakeDestinationProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowUpsolverDestinationProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowZendeskDestinationProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

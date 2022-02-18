@@ -7,7 +7,7 @@ import io.pulumi.awsnative.xray.outputs.SamplingRule;
 import io.pulumi.awsnative.xray.outputs.SamplingRuleRecord;
 import io.pulumi.awsnative.xray.outputs.SamplingRuleUpdate;
 import io.pulumi.awsnative.xray.outputs.TagsItemProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

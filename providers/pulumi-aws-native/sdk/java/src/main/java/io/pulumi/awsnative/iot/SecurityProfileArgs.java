@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricToRetainArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

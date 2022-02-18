@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.enums.ThemeResourceStatus;
 import io.pulumi.awsnative.quicksight.inputs.ThemeConfiguration;
 import io.pulumi.awsnative.quicksight.inputs.ThemeError;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

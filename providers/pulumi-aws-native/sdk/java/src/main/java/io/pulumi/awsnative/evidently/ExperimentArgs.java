@@ -8,7 +8,7 @@ import io.pulumi.awsnative.evidently.inputs.ExperimentOnlineAbConfigObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentTagArgs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentTreatmentObjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

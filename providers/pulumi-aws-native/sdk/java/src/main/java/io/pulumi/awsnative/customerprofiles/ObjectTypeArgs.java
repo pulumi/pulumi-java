@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeFieldMapArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeKeyMapArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

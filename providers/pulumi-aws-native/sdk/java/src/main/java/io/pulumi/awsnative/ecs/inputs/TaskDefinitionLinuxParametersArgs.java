@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionDeviceArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionKernelCapabilitiesArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionTmpfsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;

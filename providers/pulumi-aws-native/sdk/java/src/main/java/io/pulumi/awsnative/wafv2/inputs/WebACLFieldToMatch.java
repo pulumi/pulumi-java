@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleHeaderProperties;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleQueryArgumentProperties;
 import io.pulumi.awsnative.wafv2.inputs.WebACLJsonBody;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;

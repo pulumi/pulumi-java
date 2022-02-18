@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.backup.inputs.BackupVaultLockConfigurationTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupVaultNotificationObjectTypeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

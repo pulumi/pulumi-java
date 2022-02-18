@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringOutputCo
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringResources;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleNetworkConfig;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStoppingCondition;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

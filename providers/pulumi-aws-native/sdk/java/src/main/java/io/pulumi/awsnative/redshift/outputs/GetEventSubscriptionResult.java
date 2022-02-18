@@ -8,7 +8,7 @@ import io.pulumi.awsnative.redshift.enums.EventSubscriptionSeverity;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionSourceType;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionStatus;
 import io.pulumi.awsnative.redshift.outputs.EventSubscriptionTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

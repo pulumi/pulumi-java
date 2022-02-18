@@ -8,7 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.JobColumnStatisticsConfigurationArgs;
 import io.pulumi.awsnative.databrew.inputs.JobEntityDetectorConfigurationArgs;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
