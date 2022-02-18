@@ -13,10 +13,18 @@ import io.pulumi.googlenative.transcoder_v1.inputs.PadResponse;
 import java.util.Objects;
 
 
+/**
+ * Preprocessing configurations.
+ * 
+ */
 public final class PreprocessingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PreprocessingConfigResponse Empty = new PreprocessingConfigResponse();
 
+    /**
+     * Audio preprocessing configuration.
+     * 
+     */
     @InputImport(name="audio", required=true)
     private final AudioResponse audio;
 
@@ -24,6 +32,10 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
         return this.audio;
     }
 
+    /**
+     * Color preprocessing configuration.
+     * 
+     */
     @InputImport(name="color", required=true)
     private final ColorResponse color;
 
@@ -31,6 +43,10 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
         return this.color;
     }
 
+    /**
+     * Specify the video cropping configuration.
+     * 
+     */
     @InputImport(name="crop", required=true)
     private final CropResponse crop;
 
@@ -38,6 +54,10 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
         return this.crop;
     }
 
+    /**
+     * Deblock preprocessing configuration.
+     * 
+     */
     @InputImport(name="deblock", required=true)
     private final DeblockResponse deblock;
 
@@ -45,6 +65,10 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
         return this.deblock;
     }
 
+    /**
+     * Denoise preprocessing configuration.
+     * 
+     */
     @InputImport(name="denoise", required=true)
     private final DenoiseResponse denoise;
 
@@ -52,6 +76,10 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
         return this.denoise;
     }
 
+    /**
+     * Specify the video pad filter configuration.
+     * 
+     */
     @InputImport(name="pad", required=true)
     private final PadResponse pad;
 

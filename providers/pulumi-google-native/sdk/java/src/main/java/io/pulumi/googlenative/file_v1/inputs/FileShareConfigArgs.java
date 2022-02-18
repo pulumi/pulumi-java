@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * File share configuration for the instance.
+ * 
+ */
 public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileShareConfigArgs Empty = new FileShareConfigArgs();
 
+    /**
+     * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+     * 
+     */
     @InputImport(name="capacityGb")
     private final @Nullable Input<String> capacityGb;
 
@@ -23,6 +31,10 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.capacityGb == null ? Input.empty() : this.capacityGb;
     }
 
+    /**
+     * The name of the file share (must be 16 characters or less).
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +42,10 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Nfs Export Options. There is a limit of 10 export options per file share.
+     * 
+     */
     @InputImport(name="nfsExportOptions")
     private final @Nullable Input<List<NfsExportOptionsArgs>> nfsExportOptions;
 
@@ -37,6 +53,10 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.nfsExportOptions == null ? Input.empty() : this.nfsExportOptions;
     }
 
+    /**
+     * The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.
+     * 
+     */
     @InputImport(name="sourceBackup")
     private final @Nullable Input<String> sourceBackup;
 

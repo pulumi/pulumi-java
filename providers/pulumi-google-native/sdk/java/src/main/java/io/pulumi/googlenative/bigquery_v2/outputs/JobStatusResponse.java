@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobStatusResponse {
+    /**
+     * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
+     * 
+     */
     private final ErrorProtoResponse errorResult;
+    /**
+     * The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
+     * 
+     */
     private final List<ErrorProtoResponse> errors;
+    /**
+     * Running state of the job.
+     * 
+     */
     private final String state;
 
     @OutputCustomType.Constructor({"errorResult","errors","state"})
@@ -25,12 +37,24 @@ public final class JobStatusResponse {
         this.state = Objects.requireNonNull(state);
     }
 
+    /**
+     * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
+     * 
+     */
     public ErrorProtoResponse getErrorResult() {
         return this.errorResult;
     }
+    /**
+     * The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
+     * 
+     */
     public List<ErrorProtoResponse> getErrors() {
         return this.errors;
     }
+    /**
+     * Running state of the job.
+     * 
+     */
     public String getState() {
         return this.state;
     }

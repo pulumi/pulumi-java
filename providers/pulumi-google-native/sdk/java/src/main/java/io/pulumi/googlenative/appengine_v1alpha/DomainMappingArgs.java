@@ -22,6 +22,10 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId;
     }
 
+    /**
+     * Relative name of the domain serving the application. Example: example.com.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -43,6 +47,10 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.overrideStrategy == null ? Input.empty() : this.overrideStrategy;
     }
 
+    /**
+     * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+     * 
+     */
     @InputImport(name="sslSettings")
     private final @Nullable Input<SslSettingsArgs> sslSettings;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Browsing carousel tile
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs Empty = new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs();
 
+    /**
+     * Optional. Description of the carousel item. Maximum of four lines of text.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
+     * 
+     */
     @InputImport(name="footer")
     private final @Nullable Input<String> footer;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
         return this.footer == null ? Input.empty() : this.footer;
     }
 
+    /**
+     * Optional. Hero image for the carousel item.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
@@ -37,6 +53,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * Action to present to the user.
+     * 
+     */
     @InputImport(name="openUriAction", required=true)
     private final Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction;
 
@@ -44,6 +64,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
         return this.openUriAction;
     }
 
+    /**
+     * Title of the carousel item. Maximum of two lines of text.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

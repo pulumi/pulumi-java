@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Method represents a method of an API interface.
+ * 
+ */
 public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MethodArgs Empty = new MethodArgs();
 
+    /**
+     * The simple name of this method.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -25,6 +33,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Any metadata attached to the method.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<List<OptionArgs>> options;
 
@@ -32,6 +44,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * If true, the request is streamed.
+     * 
+     */
     @InputImport(name="requestStreaming")
     private final @Nullable Input<Boolean> requestStreaming;
 
@@ -39,6 +55,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestStreaming == null ? Input.empty() : this.requestStreaming;
     }
 
+    /**
+     * A URL of the input message type.
+     * 
+     */
     @InputImport(name="requestTypeUrl")
     private final @Nullable Input<String> requestTypeUrl;
 
@@ -46,6 +66,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestTypeUrl == null ? Input.empty() : this.requestTypeUrl;
     }
 
+    /**
+     * If true, the response is streamed.
+     * 
+     */
     @InputImport(name="responseStreaming")
     private final @Nullable Input<Boolean> responseStreaming;
 
@@ -53,6 +77,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
         return this.responseStreaming == null ? Input.empty() : this.responseStreaming;
     }
 
+    /**
+     * The URL of the output message type.
+     * 
+     */
     @InputImport(name="responseTypeUrl")
     private final @Nullable Input<String> responseTypeUrl;
 
@@ -60,6 +88,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
         return this.responseTypeUrl == null ? Input.empty() : this.responseTypeUrl;
     }
 
+    /**
+     * The source syntax of this method.
+     * 
+     */
     @InputImport(name="syntax")
     private final @Nullable Input<MethodSyntax> syntax;
 

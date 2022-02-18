@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A compliance check that is a CIS benchmark.
+ * 
+ */
 public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CisBenchmarkResponse Empty = new CisBenchmarkResponse();

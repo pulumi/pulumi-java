@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A maintenance window for VMs. When set, we restrict our maintenance operations to this window.
+ * 
+ */
 public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs Empty = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs();

@@ -14,6 +14,10 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigFileArgs Empty = new ConfigFileArgs();
 
+    /**
+     * The contents of the file.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 

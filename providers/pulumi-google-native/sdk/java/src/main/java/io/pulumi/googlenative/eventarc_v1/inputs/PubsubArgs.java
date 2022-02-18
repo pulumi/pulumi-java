@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a Pub/Sub transport.
+ * 
+ */
 public final class PubsubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PubsubArgs Empty = new PubsubArgs();
 
+    /**
+     * Optional. The name of the Pub/Sub topic created and managed by Eventarc as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You can set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished`. The topic you provide here is not deleted by Eventarc at trigger deletion.
+     * 
+     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 

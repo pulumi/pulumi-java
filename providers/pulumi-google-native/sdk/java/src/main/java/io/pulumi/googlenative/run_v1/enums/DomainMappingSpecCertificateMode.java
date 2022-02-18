@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The mode of the certificate.
+     * 
+     */
     @EnumType
     public enum DomainMappingSpecCertificateMode {
         CertificateModeUnspecified("CERTIFICATE_MODE_UNSPECIFIED"),
+        /**
+         * Do not provision an HTTPS certificate.
+         * 
+         */
         None("NONE"),
+        /**
+         * Automatically provisions an HTTPS certificate via GoogleCA or LetsEncrypt.
+         * 
+         */
         Automatic("AUTOMATIC");
 
         private final String value;

@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OperationErrorResponse {
+    /**
+     * Identifies the specific error that occurred.
+     * 
+     */
     private final String code;
+    /**
+     * This is always `sql#operationError`.
+     * 
+     */
     private final String kind;
+    /**
+     * Additional information about the error encountered.
+     * 
+     */
     private final String message;
 
     @OutputCustomType.Constructor({"code","kind","message"})
@@ -23,12 +35,24 @@ public final class OperationErrorResponse {
         this.message = Objects.requireNonNull(message);
     }
 
+    /**
+     * Identifies the specific error that occurred.
+     * 
+     */
     public String getCode() {
         return this.code;
     }
+    /**
+     * This is always `sql#operationError`.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Additional information about the error encountered.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }

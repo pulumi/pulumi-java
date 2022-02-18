@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTag {
+/**
+ * Gets a tag.
+ * 
+ */
     public static CompletableFuture<GetTagResult> invokeAsync(GetTagArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta2:getTag", TypeShape.of(GetTagResult.class), args == null ? GetTagArgs.Empty : args, Utilities.withVersion(options));
     }

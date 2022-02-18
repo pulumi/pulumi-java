@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+     * 
+     */
     @EnumType
     public enum ResourceCommitmentType {
         Accelerator("ACCELERATOR"),

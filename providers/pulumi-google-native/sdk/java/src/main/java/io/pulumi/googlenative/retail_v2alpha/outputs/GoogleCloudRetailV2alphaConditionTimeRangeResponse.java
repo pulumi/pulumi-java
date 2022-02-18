@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse {
+    /**
+     * End of time range. Range is inclusive.
+     * 
+     */
     private final String endTime;
+    /**
+     * Start of time range. Range is inclusive.
+     * 
+     */
     private final String startTime;
 
     @OutputCustomType.Constructor({"endTime","startTime"})
@@ -20,9 +28,17 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+    /**
+     * End of time range. Range is inclusive.
+     * 
+     */
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * Start of time range. Range is inclusive.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }

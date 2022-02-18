@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionHealthCheckService {
+/**
+ * Returns the specified regional HealthCheckService resource.
+ * 
+ */
     public static CompletableFuture<GetRegionHealthCheckServiceResult> invokeAsync(GetRegionHealthCheckServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionHealthCheckService", TypeShape.of(GetRegionHealthCheckServiceResult.class), args == null ? GetRegionHealthCheckServiceArgs.Empty : args, Utilities.withVersion(options));
     }

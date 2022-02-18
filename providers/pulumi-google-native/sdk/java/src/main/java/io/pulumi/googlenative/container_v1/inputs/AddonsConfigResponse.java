@@ -16,10 +16,18 @@ import io.pulumi.googlenative.container_v1.inputs.NetworkPolicyConfigResponse;
 import java.util.Objects;
 
 
+/**
+ * Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
+ * 
+ */
 public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AddonsConfigResponse Empty = new AddonsConfigResponse();
 
+    /**
+     * Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
+     * 
+     */
     @InputImport(name="cloudRunConfig", required=true)
     private final CloudRunConfigResponse cloudRunConfig;
 
@@ -27,6 +35,10 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.cloudRunConfig;
     }
 
+    /**
+     * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
+     * 
+     */
     @InputImport(name="configConnectorConfig", required=true)
     private final ConfigConnectorConfigResponse configConnectorConfig;
 
@@ -34,6 +46,10 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.configConnectorConfig;
     }
 
+    /**
+     * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+     * 
+     */
     @InputImport(name="dnsCacheConfig", required=true)
     private final DnsCacheConfigResponse dnsCacheConfig;
 
@@ -41,6 +57,10 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.dnsCacheConfig;
     }
 
+    /**
+     * Configuration for the Compute Engine Persistent Disk CSI driver.
+     * 
+     */
     @InputImport(name="gcePersistentDiskCsiDriverConfig", required=true)
     private final GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
 
@@ -48,6 +68,10 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.gcePersistentDiskCsiDriverConfig;
     }
 
+    /**
+     * Configuration for the GCP Filestore CSI driver.
+     * 
+     */
     @InputImport(name="gcpFilestoreCsiDriverConfig", required=true)
     private final GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
 
@@ -55,6 +79,10 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.gcpFilestoreCsiDriverConfig;
     }
 
+    /**
+     * Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
+     * 
+     */
     @InputImport(name="horizontalPodAutoscaling", required=true)
     private final HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
 
@@ -62,6 +90,10 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.horizontalPodAutoscaling;
     }
 
+    /**
+     * Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
+     * 
+     */
     @InputImport(name="httpLoadBalancing", required=true)
     private final HttpLoadBalancingResponse httpLoadBalancing;
 
@@ -69,6 +101,10 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.httpLoadBalancing;
     }
 
+    /**
+     * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
+     * 
+     */
     @InputImport(name="kubernetesDashboard", required=true)
     private final KubernetesDashboardResponse kubernetesDashboard;
 
@@ -76,6 +112,10 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.kubernetesDashboard;
     }
 
+    /**
+     * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
+     * 
+     */
     @InputImport(name="networkPolicyConfig", required=true)
     private final NetworkPolicyConfigResponse networkPolicyConfig;
 

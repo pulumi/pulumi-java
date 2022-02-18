@@ -10,6 +10,10 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum RouterBgpAdvertisedGroupsItem {
+        /**
+         * Advertise all available subnets (including peer VPC subnets).
+         * 
+         */
         AllSubnets("ALL_SUBNETS");
 
         private final String value;

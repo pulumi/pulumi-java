@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Message containing information of one individual backend.
+ * 
+ */
 public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendArgs Empty = new BackendArgs();
 
+    /**
+     * Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.
+     * 
+     */
     @InputImport(name="balancingMode")
     private final @Nullable Input<BackendBalancingMode> balancingMode;
 
@@ -25,6 +33,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.balancingMode == null ? Input.empty() : this.balancingMode;
     }
 
+    /**
+     * A multiplier applied to the backend's target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
+     * 
+     */
     @InputImport(name="capacityScaler")
     private final @Nullable Input<Double> capacityScaler;
 
@@ -32,6 +44,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacityScaler == null ? Input.empty() : this.capacityScaler;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +55,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * This field designates whether this is a failover backend. More than one failover backend can be configured for a given BackendService.
+     * 
+     */
     @InputImport(name="failover")
     private final @Nullable Input<Boolean> failover;
 
@@ -46,6 +66,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.failover == null ? Input.empty() : this.failover;
     }
 
+    /**
+     * The fully-qualified URL of an instance group or network endpoint group (NEG) resource. To determine what types of backends a load balancer supports, see the [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance group or NEG. Partial URLs are not supported.
+     * 
+     */
     @InputImport(name="group")
     private final @Nullable Input<String> group;
 
@@ -53,6 +77,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.group == null ? Input.empty() : this.group;
     }
 
+    /**
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * 
+     */
     @InputImport(name="maxConnections")
     private final @Nullable Input<Integer> maxConnections;
 
@@ -60,6 +88,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConnections == null ? Input.empty() : this.maxConnections;
     }
 
+    /**
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * 
+     */
     @InputImport(name="maxConnectionsPerEndpoint")
     private final @Nullable Input<Integer> maxConnectionsPerEndpoint;
 
@@ -67,6 +99,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConnectionsPerEndpoint == null ? Input.empty() : this.maxConnectionsPerEndpoint;
     }
 
+    /**
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * 
+     */
     @InputImport(name="maxConnectionsPerInstance")
     private final @Nullable Input<Integer> maxConnectionsPerInstance;
 
@@ -74,6 +110,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConnectionsPerInstance == null ? Input.empty() : this.maxConnectionsPerInstance;
     }
 
+    /**
+     * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * 
+     */
     @InputImport(name="maxRate")
     private final @Nullable Input<Integer> maxRate;
 
@@ -81,6 +121,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxRate == null ? Input.empty() : this.maxRate;
     }
 
+    /**
+     * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * 
+     */
     @InputImport(name="maxRatePerEndpoint")
     private final @Nullable Input<Double> maxRatePerEndpoint;
 
@@ -88,6 +132,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxRatePerEndpoint == null ? Input.empty() : this.maxRatePerEndpoint;
     }
 
+    /**
+     * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * 
+     */
     @InputImport(name="maxRatePerInstance")
     private final @Nullable Input<Double> maxRatePerInstance;
 
@@ -95,6 +143,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxRatePerInstance == null ? Input.empty() : this.maxRatePerInstance;
     }
 
+    /**
+     * Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
+     * 
+     */
     @InputImport(name="maxUtilization")
     private final @Nullable Input<Double> maxUtilization;
 

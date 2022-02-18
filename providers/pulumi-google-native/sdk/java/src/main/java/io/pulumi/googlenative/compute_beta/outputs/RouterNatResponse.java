@@ -15,22 +15,86 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RouterNatResponse {
+    /**
+     * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+     * 
+     */
     private final List<String> drainNatIps;
+    /**
+     * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, - Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
+     * 
+     */
     private final Boolean enableDynamicPortAllocation;
     private final Boolean enableEndpointIndependentMapping;
+    /**
+     * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
+     * 
+     */
     private final Integer icmpIdleTimeoutSec;
+    /**
+     * Configure logging on this NAT.
+     * 
+     */
     private final RouterNatLogConfigResponse logConfig;
+    /**
+     * Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port Allocation is enabled, and this field is set, it must be set to a power of two greater than minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
+     * 
+     */
     private final Integer maxPortsPerVm;
+    /**
+     * Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.
+     * 
+     */
     private final Integer minPortsPerVm;
+    /**
+     * Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.
+     * 
+     */
     private final String name;
+    /**
+     * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
+     * 
+     */
     private final String natIpAllocateOption;
+    /**
+     * A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.
+     * 
+     */
     private final List<String> natIps;
+    /**
+     * A list of rules associated with this NAT.
+     * 
+     */
     private final List<RouterNatRuleResponse> rules;
+    /**
+     * Specify the Nat option, which can take one of the following values: - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in any Router for this network in this region.
+     * 
+     */
     private final String sourceSubnetworkIpRangesToNat;
+    /**
+     * A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.
+     * 
+     */
     private final List<RouterNatSubnetworkToNatResponse> subnetworks;
+    /**
+     * Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+     * 
+     */
     private final Integer tcpEstablishedIdleTimeoutSec;
+    /**
+     * Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not set.
+     * 
+     */
     private final Integer tcpTimeWaitTimeoutSec;
+    /**
+     * Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+     * 
+     */
     private final Integer tcpTransitoryIdleTimeoutSec;
+    /**
+     * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
+     * 
+     */
     private final Integer udpIdleTimeoutSec;
 
     @OutputCustomType.Constructor({"drainNatIps","enableDynamicPortAllocation","enableEndpointIndependentMapping","icmpIdleTimeoutSec","logConfig","maxPortsPerVm","minPortsPerVm","name","natIpAllocateOption","natIps","rules","sourceSubnetworkIpRangesToNat","subnetworks","tcpEstablishedIdleTimeoutSec","tcpTimeWaitTimeoutSec","tcpTransitoryIdleTimeoutSec","udpIdleTimeoutSec"})
@@ -71,54 +135,118 @@ public final class RouterNatResponse {
         this.udpIdleTimeoutSec = Objects.requireNonNull(udpIdleTimeoutSec);
     }
 
+    /**
+     * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+     * 
+     */
     public List<String> getDrainNatIps() {
         return this.drainNatIps;
     }
+    /**
+     * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, - Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
+     * 
+     */
     public Boolean getEnableDynamicPortAllocation() {
         return this.enableDynamicPortAllocation;
     }
     public Boolean getEnableEndpointIndependentMapping() {
         return this.enableEndpointIndependentMapping;
     }
+    /**
+     * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
+     * 
+     */
     public Integer getIcmpIdleTimeoutSec() {
         return this.icmpIdleTimeoutSec;
     }
+    /**
+     * Configure logging on this NAT.
+     * 
+     */
     public RouterNatLogConfigResponse getLogConfig() {
         return this.logConfig;
     }
+    /**
+     * Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port Allocation is enabled, and this field is set, it must be set to a power of two greater than minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
+     * 
+     */
     public Integer getMaxPortsPerVm() {
         return this.maxPortsPerVm;
     }
+    /**
+     * Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.
+     * 
+     */
     public Integer getMinPortsPerVm() {
         return this.minPortsPerVm;
     }
+    /**
+     * Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
+     * 
+     */
     public String getNatIpAllocateOption() {
         return this.natIpAllocateOption;
     }
+    /**
+     * A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.
+     * 
+     */
     public List<String> getNatIps() {
         return this.natIps;
     }
+    /**
+     * A list of rules associated with this NAT.
+     * 
+     */
     public List<RouterNatRuleResponse> getRules() {
         return this.rules;
     }
+    /**
+     * Specify the Nat option, which can take one of the following values: - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in any Router for this network in this region.
+     * 
+     */
     public String getSourceSubnetworkIpRangesToNat() {
         return this.sourceSubnetworkIpRangesToNat;
     }
+    /**
+     * A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.
+     * 
+     */
     public List<RouterNatSubnetworkToNatResponse> getSubnetworks() {
         return this.subnetworks;
     }
+    /**
+     * Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+     * 
+     */
     public Integer getTcpEstablishedIdleTimeoutSec() {
         return this.tcpEstablishedIdleTimeoutSec;
     }
+    /**
+     * Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not set.
+     * 
+     */
     public Integer getTcpTimeWaitTimeoutSec() {
         return this.tcpTimeWaitTimeoutSec;
     }
+    /**
+     * Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+     * 
+     */
     public Integer getTcpTransitoryIdleTimeoutSec() {
         return this.tcpTransitoryIdleTimeoutSec;
     }
+    /**
+     * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
+     * 
+     */
     public Integer getUdpIdleTimeoutSec() {
         return this.udpIdleTimeoutSec;
     }

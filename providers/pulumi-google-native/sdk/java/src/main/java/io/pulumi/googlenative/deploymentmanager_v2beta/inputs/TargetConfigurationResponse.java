@@ -14,6 +14,10 @@ public final class TargetConfigurationResponse extends io.pulumi.resources.Invok
 
     public static final TargetConfigurationResponse Empty = new TargetConfigurationResponse();
 
+    /**
+     * The configuration to use for this deployment.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final ConfigFileResponse config;
 
@@ -21,6 +25,10 @@ public final class TargetConfigurationResponse extends io.pulumi.resources.Invok
         return this.config;
     }
 
+    /**
+     * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+     * 
+     */
     @InputImport(name="imports", required=true)
     private final List<ImportFileResponse> imports;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A KeyId identifies a specific public key, usually by hashing the public key.
+ * 
+ */
 public final class KeyIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyIdResponse Empty = new KeyIdResponse();
 
+    /**
+     * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.
+     * 
+     */
     @InputImport(name="keyId", required=true)
     private final String keyId;
 

@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The current certificate provisioning status information for a domain.
+ * 
+ */
 public final class DomainProvisioningResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainProvisioningResponse Empty = new DomainProvisioningResponse();
 
+    /**
+     * The TXT records (for the certificate challenge) that were found at the last DNS fetch.
+     * 
+     */
     @InputImport(name="certChallengeDiscoveredTxt", required=true)
     private final List<String> certChallengeDiscoveredTxt;
 
@@ -22,6 +30,10 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
         return this.certChallengeDiscoveredTxt;
     }
 
+    /**
+     * The DNS challenge for generating a certificate.
+     * 
+     */
     @InputImport(name="certChallengeDns", required=true)
     private final CertDnsChallengeResponse certChallengeDns;
 
@@ -29,6 +41,10 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
         return this.certChallengeDns;
     }
 
+    /**
+     * The HTTP challenge for generating a certificate.
+     * 
+     */
     @InputImport(name="certChallengeHttp", required=true)
     private final CertHttpChallengeResponse certChallengeHttp;
 
@@ -36,6 +52,10 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
         return this.certChallengeHttp;
     }
 
+    /**
+     * The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.
+     * 
+     */
     @InputImport(name="certStatus", required=true)
     private final String certStatus;
 
@@ -43,6 +63,10 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
         return this.certStatus;
     }
 
+    /**
+     * The IPs found at the last DNS fetch.
+     * 
+     */
     @InputImport(name="discoveredIps", required=true)
     private final List<String> discoveredIps;
 
@@ -50,6 +74,10 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
         return this.discoveredIps;
     }
 
+    /**
+     * The time at which the last DNS fetch occurred.
+     * 
+     */
     @InputImport(name="dnsFetchTime", required=true)
     private final String dnsFetchTime;
 
@@ -57,6 +85,10 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
         return this.dnsFetchTime;
     }
 
+    /**
+     * The DNS record match status as of the last DNS fetch.
+     * 
+     */
     @InputImport(name="dnsStatus", required=true)
     private final String dnsStatus;
 
@@ -64,6 +96,10 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
         return this.dnsStatus;
     }
 
+    /**
+     * The list of IPs to which the domain is expected to resolve.
+     * 
+     */
     @InputImport(name="expectedIps", required=true)
     private final List<String> expectedIps;
 

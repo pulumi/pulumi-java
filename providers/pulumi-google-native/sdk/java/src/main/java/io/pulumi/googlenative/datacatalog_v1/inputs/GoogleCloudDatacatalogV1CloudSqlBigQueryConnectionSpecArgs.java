@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification for the BigQuery connection to a Cloud SQL instance.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs Empty = new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs();
 
+    /**
+     * Database name.
+     * 
+     */
     @InputImport(name="database")
     private final @Nullable Input<String> database;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
         return this.database == null ? Input.empty() : this.database;
     }
 
+    /**
+     * Cloud SQL instance ID in the format of `project:location:instance`.
+     * 
+     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -29,6 +41,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
+    /**
+     * Type of the Cloud SQL database.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
 

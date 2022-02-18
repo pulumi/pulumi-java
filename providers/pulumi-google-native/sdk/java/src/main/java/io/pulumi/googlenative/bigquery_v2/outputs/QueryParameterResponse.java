@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class QueryParameterResponse {
+    /**
+     * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+     * 
+     */
     private final String name;
+    /**
+     * [Required] The type of this parameter.
+     * 
+     */
     private final QueryParameterTypeResponse parameterType;
+    /**
+     * [Required] The value of this parameter.
+     * 
+     */
     private final QueryParameterValueResponse parameterValue;
 
     @OutputCustomType.Constructor({"name","parameterType","parameterValue"})
@@ -25,12 +37,24 @@ public final class QueryParameterResponse {
         this.parameterValue = Objects.requireNonNull(parameterValue);
     }
 
+    /**
+     * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * [Required] The type of this parameter.
+     * 
+     */
     public QueryParameterTypeResponse getParameterType() {
         return this.parameterType;
     }
+    /**
+     * [Required] The value of this parameter.
+     * 
+     */
     public QueryParameterValueResponse getParameterValue() {
         return this.parameterValue;
     }

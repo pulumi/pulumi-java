@@ -11,12 +11,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateClusterConfigResponse {
+    /**
+     * Whether the master's internal IP address is used as the cluster endpoint.
+     * 
+     */
     private final Boolean enablePrivateEndpoint;
+    /**
+     * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+     * 
+     */
     private final Boolean enablePrivateNodes;
+    /**
+     * Controls master global access settings.
+     * 
+     */
     private final PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig;
+    /**
+     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
+     * 
+     */
     private final String masterIpv4CidrBlock;
+    /**
+     * The peering name in the customer VPC used by this cluster.
+     * 
+     */
     private final String peeringName;
+    /**
+     * The internal IP address of this cluster's master endpoint.
+     * 
+     */
     private final String privateEndpoint;
+    /**
+     * The external IP address of this cluster's master endpoint.
+     * 
+     */
     private final String publicEndpoint;
 
     @OutputCustomType.Constructor({"enablePrivateEndpoint","enablePrivateNodes","masterGlobalAccessConfig","masterIpv4CidrBlock","peeringName","privateEndpoint","publicEndpoint"})
@@ -37,24 +65,52 @@ public final class PrivateClusterConfigResponse {
         this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
     }
 
+    /**
+     * Whether the master's internal IP address is used as the cluster endpoint.
+     * 
+     */
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
+    /**
+     * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+     * 
+     */
     public Boolean getEnablePrivateNodes() {
         return this.enablePrivateNodes;
     }
+    /**
+     * Controls master global access settings.
+     * 
+     */
     public PrivateClusterMasterGlobalAccessConfigResponse getMasterGlobalAccessConfig() {
         return this.masterGlobalAccessConfig;
     }
+    /**
+     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
+     * 
+     */
     public String getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
+    /**
+     * The peering name in the customer VPC used by this cluster.
+     * 
+     */
     public String getPeeringName() {
         return this.peeringName;
     }
+    /**
+     * The internal IP address of this cluster's master endpoint.
+     * 
+     */
     public String getPrivateEndpoint() {
         return this.privateEndpoint;
     }
+    /**
+     * The external IP address of this cluster's master endpoint.
+     * 
+     */
     public String getPublicEndpoint() {
         return this.publicEndpoint;
     }

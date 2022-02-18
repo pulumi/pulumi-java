@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucketObject {
+/**
+ * Retrieves an object or its metadata.
+ * 
+ */
     public static CompletableFuture<GetBucketObjectResult> invokeAsync(GetBucketObjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args == null ? GetBucketObjectArgs.Empty : args, Utilities.withVersion(options));
     }

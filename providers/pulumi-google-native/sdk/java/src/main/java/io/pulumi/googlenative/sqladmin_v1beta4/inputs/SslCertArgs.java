@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SslCerts Resource
+ * 
+ */
 public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SslCertArgs Empty = new SslCertArgs();
 
+    /**
+     * PEM representation.
+     * 
+     */
     @InputImport(name="cert")
     private final @Nullable Input<String> cert;
 
@@ -21,6 +29,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.cert == null ? Input.empty() : this.cert;
     }
 
+    /**
+     * Serial number, as extracted from the certificate.
+     * 
+     */
     @InputImport(name="certSerialNumber")
     private final @Nullable Input<String> certSerialNumber;
 
@@ -28,6 +40,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.certSerialNumber == null ? Input.empty() : this.certSerialNumber;
     }
 
+    /**
+     * User supplied name. Constrained to [a-zA-Z.-_ ]+.
+     * 
+     */
     @InputImport(name="commonName")
     private final @Nullable Input<String> commonName;
 
@@ -35,6 +51,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.commonName == null ? Input.empty() : this.commonName;
     }
 
+    /**
+     * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -42,6 +62,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -49,6 +73,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * Name of the database instance.
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -56,6 +84,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
+    /**
+     * This is always `sql#sslCert`.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -63,6 +95,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The URI of this resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -70,6 +106,10 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * Sha1 Fingerprint.
+     * 
+     */
     @InputImport(name="sha1Fingerprint")
     private final @Nullable Input<String> sha1Fingerprint;
 

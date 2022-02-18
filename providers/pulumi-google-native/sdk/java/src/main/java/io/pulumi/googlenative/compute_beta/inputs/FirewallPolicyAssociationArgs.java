@@ -14,6 +14,10 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
 
     public static final FirewallPolicyAssociationArgs Empty = new FirewallPolicyAssociationArgs();
 
+    /**
+     * The target that the firewall policy is attached to.
+     * 
+     */
     @InputImport(name="attachmentTarget")
     private final @Nullable Input<String> attachmentTarget;
 
@@ -21,6 +25,10 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
         return this.attachmentTarget == null ? Input.empty() : this.attachmentTarget;
     }
 
+    /**
+     * The name for an association.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

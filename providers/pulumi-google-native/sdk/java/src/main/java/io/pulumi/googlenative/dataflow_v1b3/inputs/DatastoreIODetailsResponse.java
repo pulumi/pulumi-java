@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Metadata for a Datastore connector used by the job.
+ * 
+ */
 public final class DatastoreIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatastoreIODetailsResponse Empty = new DatastoreIODetailsResponse();
 
+    /**
+     * Namespace used in the connection.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final String namespace;
 
@@ -19,6 +27,10 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
         return this.namespace;
     }
 
+    /**
+     * ProjectId accessed in the connection.
+     * 
+     */
     @InputImport(name="project", required=true)
     private final String project;
 

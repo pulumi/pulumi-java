@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An AzureBlobStorageData resource can be a data source, but not a data sink. An AzureBlobStorageData resource represents one Azure container. The storage account determines the [Azure endpoint](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#storage-account-endpoints). In an AzureBlobStorageData resource, a blobs's name is the [Azure Blob Storage blob's key name](https://docs.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata#blob-names).
+ * 
+ */
 public final class AzureBlobStorageDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureBlobStorageDataArgs Empty = new AzureBlobStorageDataArgs();
 
+    /**
+     * Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+     * 
+     */
     @InputImport(name="azureCredentials", required=true)
     private final Input<AzureCredentialsArgs> azureCredentials;
 
@@ -22,6 +30,10 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
         return this.azureCredentials;
     }
 
+    /**
+     * The container to transfer from the Azure Storage account.
+     * 
+     */
     @InputImport(name="container", required=true)
     private final Input<String> container;
 
@@ -29,6 +41,10 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
         return this.container;
     }
 
+    /**
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -36,6 +52,10 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * The name of the Azure Storage account.
+     * 
+     */
     @InputImport(name="storageAccount", required=true)
     private final Input<String> storageAccount;
 

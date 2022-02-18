@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Node specific properties.
+ * 
+ */
 public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeInfoResponse Empty = new NodeInfoResponse();
 
+    /**
+     * Location of the node.
+     * 
+     */
     @InputImport(name="zone", required=true)
     private final String zone;
 

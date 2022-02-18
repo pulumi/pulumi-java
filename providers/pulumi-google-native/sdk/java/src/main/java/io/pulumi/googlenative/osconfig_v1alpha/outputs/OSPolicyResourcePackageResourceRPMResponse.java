@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OSPolicyResourcePackageResourceRPMResponse {
+    /**
+     * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * 
+     */
     private final Boolean pullDeps;
+    /**
+     * An rpm package.
+     * 
+     */
     private final OSPolicyResourceFileResponse source;
 
     @OutputCustomType.Constructor({"pullDeps","source"})
@@ -21,9 +29,17 @@ public final class OSPolicyResourcePackageResourceRPMResponse {
         this.source = Objects.requireNonNull(source);
     }
 
+    /**
+     * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * 
+     */
     public Boolean getPullDeps() {
         return this.pullDeps;
     }
+    /**
+     * An rpm package.
+     * 
+     */
     public OSPolicyResourceFileResponse getSource() {
         return this.source;
     }

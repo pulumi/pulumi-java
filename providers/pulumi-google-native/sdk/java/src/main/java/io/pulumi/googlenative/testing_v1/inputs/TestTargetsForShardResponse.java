@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Test targets for a shard.
+ * 
+ */
 public final class TestTargetsForShardResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TestTargetsForShardResponse Empty = new TestTargetsForShardResponse();
 
+    /**
+     * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, "package com.my.packages" "class com.my.package.MyClass". The number of shard_test_targets must be greater than 0.
+     * 
+     */
     @InputImport(name="testTargets", required=true)
     private final List<String> testTargets;
 

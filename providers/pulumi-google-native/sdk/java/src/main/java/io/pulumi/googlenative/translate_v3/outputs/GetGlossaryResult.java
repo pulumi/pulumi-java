@@ -13,12 +13,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetGlossaryResult {
+    /**
+     * When the glossary creation was finished.
+     * 
+     */
     private final String endTime;
+    /**
+     * The number of entries defined in the glossary.
+     * 
+     */
     private final Integer entryCount;
+    /**
+     * Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
+     * 
+     */
     private final GlossaryInputConfigResponse inputConfig;
+    /**
+     * Used with equivalent term set glossaries.
+     * 
+     */
     private final LanguageCodesSetResponse languageCodesSet;
+    /**
+     * Used with unidirectional glossaries.
+     * 
+     */
     private final LanguageCodePairResponse languagePair;
+    /**
+     * The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+     * 
+     */
     private final String name;
+    /**
+     * When CreateGlossary was called.
+     * 
+     */
     private final String submitTime;
 
     @OutputCustomType.Constructor({"endTime","entryCount","inputConfig","languageCodesSet","languagePair","name","submitTime"})
@@ -39,24 +67,52 @@ public final class GetGlossaryResult {
         this.submitTime = Objects.requireNonNull(submitTime);
     }
 
+    /**
+     * When the glossary creation was finished.
+     * 
+     */
     public String getEndTime() {
         return this.endTime;
     }
+    /**
+     * The number of entries defined in the glossary.
+     * 
+     */
     public Integer getEntryCount() {
         return this.entryCount;
     }
+    /**
+     * Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
+     * 
+     */
     public GlossaryInputConfigResponse getInputConfig() {
         return this.inputConfig;
     }
+    /**
+     * Used with equivalent term set glossaries.
+     * 
+     */
     public LanguageCodesSetResponse getLanguageCodesSet() {
         return this.languageCodesSet;
     }
+    /**
+     * Used with unidirectional glossaries.
+     * 
+     */
     public LanguageCodePairResponse getLanguagePair() {
         return this.languagePair;
     }
+    /**
+     * The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * When CreateGlossary was called.
+     * 
+     */
     public String getSubmitTime() {
         return this.submitTime;
     }

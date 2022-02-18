@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * `SourceContext` represents information about the source of a protobuf element, like the file in which it is defined.
+ * 
+ */
 public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceContextResponse Empty = new SourceContextResponse();
 
+    /**
+     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
+     * 
+     */
     @InputImport(name="fileName", required=true)
     private final String fileName;
 

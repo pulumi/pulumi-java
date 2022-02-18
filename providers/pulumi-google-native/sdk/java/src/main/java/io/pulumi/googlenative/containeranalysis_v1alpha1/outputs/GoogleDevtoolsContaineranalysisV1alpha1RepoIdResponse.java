@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
+    /**
+     * A combination of a project ID and a repo name.
+     * 
+     */
     private final GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId;
+    /**
+     * A server-assigned, globally unique identifier.
+     * 
+     */
     private final String uid;
 
     @OutputCustomType.Constructor({"projectRepoId","uid"})
@@ -21,9 +29,17 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
         this.uid = Objects.requireNonNull(uid);
     }
 
+    /**
+     * A combination of a project ID and a repo name.
+     * 
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse getProjectRepoId() {
         return this.projectRepoId;
     }
+    /**
+     * A server-assigned, globally unique identifier.
+     * 
+     */
     public String getUid() {
         return this.uid;
     }

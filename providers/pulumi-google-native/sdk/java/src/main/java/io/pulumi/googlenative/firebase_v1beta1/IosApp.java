@@ -12,51 +12,119 @@ import io.pulumi.googlenative.firebase_v1beta1.IosAppArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Requests the creation of a new IosApp in the specified FirebaseProject. The result of this call is an `Operation` which can be used to track the provisioning process. The `Operation` is automatically deleted after completion, so there is no need to call `DeleteOperation`.
+ * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * on Google Cloud even though it will be deleted from Pulumi state.
+ * 
+ */
 @ResourceType(type="google-native:firebase/v1beta1:IosApp")
 public class IosApp extends io.pulumi.resources.CustomResource {
+    /**
+     * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
+     * 
+     */
     @OutputExport(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
+    /**
+     * @return Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
+     * 
+     */
     public Output<String> getAppId() {
         return this.appId;
     }
+    /**
+     * The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
+     * 
+     */
     @OutputExport(name="appStoreId", type=String.class, parameters={})
     private Output<String> appStoreId;
 
+    /**
+     * @return The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
+     * 
+     */
     public Output<String> getAppStoreId() {
         return this.appStoreId;
     }
+    /**
+     * Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
+     * 
+     */
     @OutputExport(name="bundleId", type=String.class, parameters={})
     private Output<String> bundleId;
 
+    /**
+     * @return Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
+     * 
+     */
     public Output<String> getBundleId() {
         return this.bundleId;
     }
+    /**
+     * The user-assigned display name for the `IosApp`.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The user-assigned display name for the `IosApp`.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The Apple Developer Team ID associated with the App in the App Store.
+     * 
+     */
     @OutputExport(name="teamId", type=String.class, parameters={})
     private Output<String> teamId;
 
+    /**
+     * @return The Apple Developer Team ID associated with the App in the App Store.
+     * 
+     */
     public Output<String> getTeamId() {
         return this.teamId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IosApp(String name, @Nullable IosAppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:firebase/v1beta1:IosApp", name, args == null ? IosAppArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -72,6 +140,14 @@ public class IosApp extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IosApp get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IosApp(name, id, options);
     }

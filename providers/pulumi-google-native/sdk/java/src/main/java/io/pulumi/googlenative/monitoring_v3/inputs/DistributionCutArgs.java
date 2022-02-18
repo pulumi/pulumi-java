@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A DistributionCut defines a TimeSeries and thresholds used for measuring good service and total service. The TimeSeries must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE. The computed good_service will be the estimated count of values in the Distribution that fall within the specified min and max.
+ * 
+ */
 public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionCutArgs Empty = new DistributionCutArgs();
 
+    /**
+     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     @InputImport(name="distributionFilter")
     private final @Nullable Input<String> distributionFilter;
 
@@ -22,6 +30,10 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
         return this.distributionFilter == null ? Input.empty() : this.distributionFilter;
     }
 
+    /**
+     * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
+     * 
+     */
     @InputImport(name="range")
     private final @Nullable Input<GoogleMonitoringV3RangeArgs> range;
 

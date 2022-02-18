@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetTcpProxy {
+/**
+ * Returns the specified TargetTcpProxy resource. Gets a list of available target TCP proxies by making a list() request.
+ * 
+ */
     public static CompletableFuture<GetTargetTcpProxyResult> invokeAsync(GetTargetTcpProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetTcpProxy", TypeShape.of(GetTargetTcpProxyResult.class), args == null ? GetTargetTcpProxyArgs.Empty : args, Utilities.withVersion(options));
     }

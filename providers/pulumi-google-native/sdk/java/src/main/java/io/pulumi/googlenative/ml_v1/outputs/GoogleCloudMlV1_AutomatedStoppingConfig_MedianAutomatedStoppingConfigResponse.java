@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse {
+    /**
+     * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.
+     * 
+     */
     private final Boolean useElapsedTime;
 
     @OutputCustomType.Constructor({"useElapsedTime"})
@@ -16,6 +20,10 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
         this.useElapsedTime = Objects.requireNonNull(useElapsedTime);
     }
 
+    /**
+     * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.
+     * 
+     */
     public Boolean getUseElapsedTime() {
         return this.useElapsedTime;
     }

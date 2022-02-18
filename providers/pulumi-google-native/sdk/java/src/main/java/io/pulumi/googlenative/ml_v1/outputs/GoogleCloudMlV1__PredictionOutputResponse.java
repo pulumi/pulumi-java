@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1__PredictionOutputResponse {
+    /**
+     * The number of data instances which resulted in errors.
+     * 
+     */
     private final String errorCount;
+    /**
+     * Node hours used by the batch prediction job.
+     * 
+     */
     private final Double nodeHours;
+    /**
+     * The output Google Cloud Storage location provided at the job creation time.
+     * 
+     */
     private final String outputPath;
+    /**
+     * The number of generated predictions.
+     * 
+     */
     private final String predictionCount;
 
     @OutputCustomType.Constructor({"errorCount","nodeHours","outputPath","predictionCount"})
@@ -27,15 +43,31 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
         this.predictionCount = Objects.requireNonNull(predictionCount);
     }
 
+    /**
+     * The number of data instances which resulted in errors.
+     * 
+     */
     public String getErrorCount() {
         return this.errorCount;
     }
+    /**
+     * Node hours used by the batch prediction job.
+     * 
+     */
     public Double getNodeHours() {
         return this.nodeHours;
     }
+    /**
+     * The output Google Cloud Storage location provided at the job creation time.
+     * 
+     */
     public String getOutputPath() {
         return this.outputPath;
     }
+    /**
+     * The number of generated predictions.
+     * 
+     */
     public String getPredictionCount() {
         return this.predictionCount;
     }

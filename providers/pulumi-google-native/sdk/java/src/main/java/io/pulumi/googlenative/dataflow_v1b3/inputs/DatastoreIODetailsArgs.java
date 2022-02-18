@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata for a Datastore connector used by the job.
+ * 
+ */
 public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatastoreIODetailsArgs Empty = new DatastoreIODetailsArgs();
 
+    /**
+     * Namespace used in the connection.
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -21,6 +29,10 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
+    /**
+     * ProjectId accessed in the connection.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

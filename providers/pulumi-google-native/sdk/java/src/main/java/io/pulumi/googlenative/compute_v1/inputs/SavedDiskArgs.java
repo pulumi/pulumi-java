@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An instance-attached disk resource.
+ * 
+ */
 public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SavedDiskArgs Empty = new SavedDiskArgs();
 
+    /**
+     * Specifies a URL of the disk attached to the source instance.
+     * 
+     */
     @InputImport(name="sourceDisk")
     private final @Nullable Input<String> sourceDisk;
 

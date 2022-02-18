@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines a name-pair value for a single label.
+ * 
+ */
 public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetadataLabelsArgs Empty = new MetadataLabelsArgs();
 
+    /**
+     * Label name presented as key in xDS Node Metadata.
+     * 
+     */
     @InputImport(name="labelName", required=true)
     private final Input<String> labelName;
 
@@ -20,6 +28,10 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
         return this.labelName;
     }
 
+    /**
+     * Label value presented as value corresponding to the above key, in xDS Node Metadata.
+     * 
+     */
     @InputImport(name="labelValue", required=true)
     private final Input<String> labelValue;
 

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClientInfoDetailResponse {
+    /**
+     * The key of detailed client information.
+     * 
+     */
     private final String key;
+    /**
+     * The value of detailed client information.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class ClientInfoDetailResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The key of detailed client information.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The value of detailed client information.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

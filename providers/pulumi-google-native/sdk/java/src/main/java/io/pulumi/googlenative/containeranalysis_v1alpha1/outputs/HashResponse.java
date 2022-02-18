@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HashResponse {
+    /**
+     * The type of hash that was performed.
+     * 
+     */
     private final String type;
+    /**
+     * The hash value.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"type","value"})
@@ -20,9 +28,17 @@ public final class HashResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The type of hash that was performed.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The hash value.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

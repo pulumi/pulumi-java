@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.
+     * 
+     */
     @EnumType
     public enum HttpCheckRequestMethod {
+        /**
+         * No request method specified.
+         * 
+         */
         MethodUnspecified("METHOD_UNSPECIFIED"),
+        /**
+         * GET request.
+         * 
+         */
         Get("GET"),
+        /**
+         * POST request.
+         * 
+         */
         Post("POST");
 
         private final String value;

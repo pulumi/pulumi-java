@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
+    /**
+     * Number of findings for this infoType.
+     * 
+     */
     private final String count;
+    /**
+     * The type of finding this stat is for.
+     * 
+     */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     @OutputCustomType.Constructor({"count","infoType"})
@@ -21,9 +29,17 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
         this.infoType = Objects.requireNonNull(infoType);
     }
 
+    /**
+     * Number of findings for this infoType.
+     * 
+     */
     public String getCount() {
         return this.count;
     }
+    /**
+     * The type of finding this stat is for.
+     * 
+     */
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
     }

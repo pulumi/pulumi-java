@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EcKeyTypeResponse {
+    /**
+     * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+     * 
+     */
     private final String signatureAlgorithm;
 
     @OutputCustomType.Constructor({"signatureAlgorithm"})
@@ -16,6 +20,10 @@ public final class EcKeyTypeResponse {
         this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
     }
 
+    /**
+     * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+     * 
+     */
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }

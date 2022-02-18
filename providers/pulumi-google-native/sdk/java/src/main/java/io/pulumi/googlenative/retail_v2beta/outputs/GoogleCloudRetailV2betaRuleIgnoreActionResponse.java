@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse {
+    /**
+     * Terms to ignore in the search query.
+     * 
+     */
     private final List<String> ignoreTerms;
 
     @OutputCustomType.Constructor({"ignoreTerms"})
@@ -17,6 +21,10 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse {
         this.ignoreTerms = Objects.requireNonNull(ignoreTerms);
     }
 
+    /**
+     * Terms to ignore in the search query.
+     * 
+     */
     public List<String> getIgnoreTerms() {
         return this.ignoreTerms;
     }

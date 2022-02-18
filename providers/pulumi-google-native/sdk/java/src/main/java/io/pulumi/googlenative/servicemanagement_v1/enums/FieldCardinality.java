@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The field cardinality.
+     * 
+     */
     @EnumType
     public enum FieldCardinality {
+        /**
+         * For fields with unknown cardinality.
+         * 
+         */
         CardinalityUnknown("CARDINALITY_UNKNOWN"),
+        /**
+         * For optional fields.
+         * 
+         */
         CardinalityOptional("CARDINALITY_OPTIONAL"),
+        /**
+         * For required fields. Proto2 syntax only.
+         * 
+         */
         CardinalityRequired("CARDINALITY_REQUIRED"),
+        /**
+         * For repeated fields.
+         * 
+         */
         CardinalityRepeated("CARDINALITY_REPEATED");
 
         private final String value;

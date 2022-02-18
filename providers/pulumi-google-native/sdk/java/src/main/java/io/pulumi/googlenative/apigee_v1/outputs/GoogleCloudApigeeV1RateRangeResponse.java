@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1RateRangeResponse {
+    /**
+     * Ending value of the range. Set to 0 or `null` for the last range of values.
+     * 
+     */
     private final String end;
+    /**
+     * Fee to charge when total number of API calls falls within this range.
+     * 
+     */
     private final GoogleTypeMoneyResponse fee;
+    /**
+     * Starting value of the range. Set to 0 or `null` for the initial range of values.
+     * 
+     */
     private final String start;
 
     @OutputCustomType.Constructor({"end","fee","start"})
@@ -24,12 +36,24 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
         this.start = Objects.requireNonNull(start);
     }
 
+    /**
+     * Ending value of the range. Set to 0 or `null` for the last range of values.
+     * 
+     */
     public String getEnd() {
         return this.end;
     }
+    /**
+     * Fee to charge when total number of API calls falls within this range.
+     * 
+     */
     public GoogleTypeMoneyResponse getFee() {
         return this.fee;
     }
+    /**
+     * Starting value of the range. Set to 0 or `null` for the initial range of values.
+     * 
+     */
     public String getStart() {
         return this.start;
     }

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The BigQuery table where the server writes output.
+ * 
+ */
 public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs Empty = new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs();
 
+    /**
+     * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+     * 
+     */
     @InputImport(name="force")
     private final @Nullable Input<Boolean> force;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
         return this.force == null ? Input.empty() : this.force;
     }
 
+    /**
+     * BigQuery URI to a table, up to 2000 characters long, in the format `bq://projectId.bqDatasetId.tableId`
+     * 
+     */
     @InputImport(name="tableUri")
     private final @Nullable Input<String> tableUri;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
         return this.tableUri == null ? Input.empty() : this.tableUri;
     }
 
+    /**
+     * Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.
+     * 
+     */
     @InputImport(name="writeDisposition")
     private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
 

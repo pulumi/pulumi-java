@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRelease {
+/**
+ * Gets details of a single Release.
+ * 
+ */
     public static CompletableFuture<GetReleaseResult> invokeAsync(GetReleaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getRelease", TypeShape.of(GetReleaseResult.class), args == null ? GetReleaseArgs.Empty : args, Utilities.withVersion(options));
     }

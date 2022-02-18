@@ -13,39 +13,89 @@ import io.pulumi.googlenative.securitycenter_v1.outputs.StreamingConfigResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a notification config.
+ * 
+ */
 @ResourceType(type="google-native:securitycenter/v1:NotificationConfig")
 public class NotificationConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * The description of the notification config (max of 1024 characters).
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return The description of the notification config (max of 1024 characters).
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
+     * 
+     */
     @OutputExport(name="pubsubTopic", type=String.class, parameters={})
     private Output<String> pubsubTopic;
 
+    /**
+     * @return The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
+     * 
+     */
     public Output<String> getPubsubTopic() {
         return this.pubsubTopic;
     }
+    /**
+     * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * 
+     */
     @OutputExport(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
+    /**
+     * @return The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * 
+     */
     public Output<String> getServiceAccount() {
         return this.serviceAccount;
     }
+    /**
+     * The config for triggering streaming-based notifications.
+     * 
+     */
     @OutputExport(name="streamingConfig", type=StreamingConfigResponse.class, parameters={})
     private Output<StreamingConfigResponse> streamingConfig;
 
+    /**
+     * @return The config for triggering streaming-based notifications.
+     * 
+     */
     public Output<StreamingConfigResponse> getStreamingConfig() {
         return this.streamingConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NotificationConfig(String name, NotificationConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:securitycenter/v1:NotificationConfig", name, args == null ? NotificationConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +111,14 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NotificationConfig get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotificationConfig(name, id, options);
     }

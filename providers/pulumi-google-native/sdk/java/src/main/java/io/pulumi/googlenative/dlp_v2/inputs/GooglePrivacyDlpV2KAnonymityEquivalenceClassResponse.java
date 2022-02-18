@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The set of columns' values that share the same ldiversity value
+ * 
+ */
 public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse Empty = new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse();
 
+    /**
+     * Size of the equivalence class, for example number of rows with the above set of values.
+     * 
+     */
     @InputImport(name="equivalenceClassSize", required=true)
     private final String equivalenceClassSize;
 
@@ -21,6 +29,10 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
         return this.equivalenceClassSize;
     }
 
+    /**
+     * Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
+     * 
+     */
     @InputImport(name="quasiIdsValues", required=true)
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 

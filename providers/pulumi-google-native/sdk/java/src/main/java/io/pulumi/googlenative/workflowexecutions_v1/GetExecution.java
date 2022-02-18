@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExecution {
+/**
+ * Returns an execution of the given name.
+ * 
+ */
     public static CompletableFuture<GetExecutionResult> invokeAsync(GetExecutionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:workflowexecutions/v1:getExecution", TypeShape.of(GetExecutionResult.class), args == null ? GetExecutionArgs.Empty : args, Utilities.withVersion(options));
     }

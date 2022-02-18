@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * `File` containing source content.
+ * 
+ */
 public final class FileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileArgs Empty = new FileArgs();
 
+    /**
+     * Textual Content.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final Input<String> content;
 
@@ -21,6 +29,10 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
         return this.content;
     }
 
+    /**
+     * Fingerprint (e.g. github sha) associated with the `File`.
+     * 
+     */
     @InputImport(name="fingerprint")
     private final @Nullable Input<String> fingerprint;
 
@@ -28,6 +40,10 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
     }
 
+    /**
+     * File name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

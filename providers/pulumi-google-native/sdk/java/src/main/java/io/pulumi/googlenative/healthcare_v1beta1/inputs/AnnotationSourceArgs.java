@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * AnnotationSource holds the source information of the annotation.
+ * 
+ */
 public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnnotationSourceArgs Empty = new AnnotationSourceArgs();
 
+    /**
+     * Cloud Healthcare API resource.
+     * 
+     */
     @InputImport(name="cloudHealthcareSource")
     private final @Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource;
 

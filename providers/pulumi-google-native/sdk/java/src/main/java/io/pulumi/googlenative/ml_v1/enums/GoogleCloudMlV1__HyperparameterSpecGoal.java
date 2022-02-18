@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.
+     * 
+     */
     @EnumType
     public enum GoogleCloudMlV1__HyperparameterSpecGoal {
+        /**
+         * Goal Type will default to maximize.
+         * 
+         */
         GoalTypeUnspecified("GOAL_TYPE_UNSPECIFIED"),
+        /**
+         * Maximize the goal metric.
+         * 
+         */
         Maximize("MAXIMIZE"),
+        /**
+         * Minimize the goal metric.
+         * 
+         */
         Minimize("MINIMIZE");
 
         private final String value;

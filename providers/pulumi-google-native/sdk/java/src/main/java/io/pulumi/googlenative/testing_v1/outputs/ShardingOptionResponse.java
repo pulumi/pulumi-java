@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ShardingOptionResponse {
+    /**
+     * Shards test cases into the specified groups of packages, classes, and/or methods.
+     * 
+     */
     private final ManualShardingResponse manualSharding;
+    /**
+     * Uniformly shards test cases given a total number of shards.
+     * 
+     */
     private final UniformShardingResponse uniformSharding;
 
     @OutputCustomType.Constructor({"manualSharding","uniformSharding"})
@@ -21,9 +29,17 @@ public final class ShardingOptionResponse {
         this.uniformSharding = Objects.requireNonNull(uniformSharding);
     }
 
+    /**
+     * Shards test cases into the specified groups of packages, classes, and/or methods.
+     * 
+     */
     public ManualShardingResponse getManualSharding() {
         return this.manualSharding;
     }
+    /**
+     * Uniformly shards test cases given a total number of shards.
+     * 
+     */
     public UniformShardingResponse getUniformSharding() {
         return this.uniformSharding;
     }

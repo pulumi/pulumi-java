@@ -8,14 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Asset content type. If not specified, no content but the asset name and type will be returned.
+     * 
+     */
     @EnumType
     public enum FeedContentType {
+        /**
+         * Unspecified content type.
+         * 
+         */
         ContentTypeUnspecified("CONTENT_TYPE_UNSPECIFIED"),
+        /**
+         * Resource metadata.
+         * 
+         */
         Resource("RESOURCE"),
+        /**
+         * The actual IAM policy set on a resource.
+         * 
+         */
         IamPolicy("IAM_POLICY"),
+        /**
+         * The Cloud Organization Policy set on an asset.
+         * 
+         */
         OrgPolicy("ORG_POLICY"),
+        /**
+         * The Cloud Access context manager Policy set on an asset.
+         * 
+         */
         AccessPolicy("ACCESS_POLICY"),
+        /**
+         * The runtime OS Inventory information.
+         * 
+         */
         OsInventory("OS_INVENTORY"),
+        /**
+         * The related resources.
+         * 
+         */
         Relationship("RELATIONSHIP");
 
         private final String value;

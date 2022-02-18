@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
+    /**
+     * Histogram of value frequencies in the column.
+     * 
+     */
     private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
     @OutputCustomType.Constructor({"valueFrequencyHistogramBuckets"})
@@ -17,6 +21,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
         this.valueFrequencyHistogramBuckets = Objects.requireNonNull(valueFrequencyHistogramBuckets);
     }
 
+    /**
+     * Histogram of value frequencies in the column.
+     * 
+     */
     public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> getValueFrequencyHistogramBuckets() {
         return this.valueFrequencyHistogramBuckets;
     }

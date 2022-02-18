@@ -15,45 +15,104 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a `Membership`.
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:cloudidentity/v1:Membership")
 public class Membership extends io.pulumi.resources.CustomResource {
+    /**
+     * The time when the `Membership` was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time when the `Membership` was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership`. Shall be of the form `groups/{group}/memberships/{membership}`.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership`. Shall be of the form `groups/{group}/memberships/{membership}`.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Immutable. The `EntityKey` of the member.
+     * 
+     */
     @OutputExport(name="preferredMemberKey", type=EntityKeyResponse.class, parameters={})
     private Output<EntityKeyResponse> preferredMemberKey;
 
+    /**
+     * @return Immutable. The `EntityKey` of the member.
+     * 
+     */
     public Output<EntityKeyResponse> getPreferredMemberKey() {
         return this.preferredMemberKey;
     }
+    /**
+     * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
+     * 
+     */
     @OutputExport(name="roles", type=List.class, parameters={MembershipRoleResponse.class})
     private Output<List<MembershipRoleResponse>> roles;
 
+    /**
+     * @return The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
+     * 
+     */
     public Output<List<MembershipRoleResponse>> getRoles() {
         return this.roles;
     }
+    /**
+     * The type of the membership.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the membership.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The time when the `Membership` was last updated.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return The time when the `Membership` was last updated.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Membership(String name, MembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudidentity/v1:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +128,14 @@ public class Membership extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Membership get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Membership(name, id, options);
     }

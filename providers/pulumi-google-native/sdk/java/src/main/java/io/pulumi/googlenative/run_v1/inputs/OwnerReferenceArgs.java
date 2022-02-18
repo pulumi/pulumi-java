@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * OwnerReference contains enough information to let you identify an owning object. Currently, an owning object must be in the same namespace, so there is no namespace field.
+ * 
+ */
 public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OwnerReferenceArgs Empty = new OwnerReferenceArgs();
 
+    /**
+     * API version of the referent.
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -22,6 +30,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional
+     * 
+     */
     @InputImport(name="blockOwnerDeletion")
     private final @Nullable Input<Boolean> blockOwnerDeletion;
 
@@ -29,6 +41,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.blockOwnerDeletion == null ? Input.empty() : this.blockOwnerDeletion;
     }
 
+    /**
+     * If true, this reference points to the managing controller. +optional
+     * 
+     */
     @InputImport(name="controller")
     private final @Nullable Input<Boolean> controller;
 
@@ -36,6 +52,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.controller == null ? Input.empty() : this.controller;
     }
 
+    /**
+     * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -43,6 +63,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +74,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 

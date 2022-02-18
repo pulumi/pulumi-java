@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceConfigResponse {
+    /**
+     * MySQL data source configuration
+     * 
+     */
     private final MysqlSourceConfigResponse mysqlSourceConfig;
+    /**
+     * Oracle data source configuration
+     * 
+     */
     private final OracleSourceConfigResponse oracleSourceConfig;
+    /**
+     * Source connection profile identifier.
+     * 
+     */
     private final String sourceConnectionProfileName;
 
     @OutputCustomType.Constructor({"mysqlSourceConfig","oracleSourceConfig","sourceConnectionProfileName"})
@@ -25,12 +37,24 @@ public final class SourceConfigResponse {
         this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName);
     }
 
+    /**
+     * MySQL data source configuration
+     * 
+     */
     public MysqlSourceConfigResponse getMysqlSourceConfig() {
         return this.mysqlSourceConfig;
     }
+    /**
+     * Oracle data source configuration
+     * 
+     */
     public OracleSourceConfigResponse getOracleSourceConfig() {
         return this.oracleSourceConfig;
     }
+    /**
+     * Source connection profile identifier.
+     * 
+     */
     public String getSourceConnectionProfileName() {
         return this.sourceConnectionProfileName;
     }

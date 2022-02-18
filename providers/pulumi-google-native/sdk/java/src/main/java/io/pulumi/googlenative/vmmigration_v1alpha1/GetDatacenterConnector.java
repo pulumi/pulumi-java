@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatacenterConnector {
+/**
+ * Gets details of a single DatacenterConnector.
+ * 
+ */
     public static CompletableFuture<GetDatacenterConnectorResult> invokeAsync(GetDatacenterConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1alpha1:getDatacenterConnector", TypeShape.of(GetDatacenterConnectorResult.class), args == null ? GetDatacenterConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

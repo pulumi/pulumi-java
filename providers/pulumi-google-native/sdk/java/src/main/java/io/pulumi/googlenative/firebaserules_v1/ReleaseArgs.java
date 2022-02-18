@@ -14,6 +14,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReleaseArgs Empty = new ReleaseArgs();
 
+    /**
+     * Format: `projects/{project_id}/releases/{release_id}`
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +32,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
+     * 
+     */
     @InputImport(name="rulesetName")
     private final @Nullable Input<String> rulesetName;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * GitHubEnterpriseSecrets represents the names of all necessary secrets in Secret Manager for a GitHub Enterprise server. Format is: projects//secrets/.
+ * 
+ */
 public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitHubEnterpriseSecretsArgs Empty = new GitHubEnterpriseSecretsArgs();
 
+    /**
+     * The resource name for the OAuth client ID secret in Secret Manager.
+     * 
+     */
     @InputImport(name="oauthClientIdName")
     private final @Nullable Input<String> oauthClientIdName;
 
@@ -21,6 +29,10 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
         return this.oauthClientIdName == null ? Input.empty() : this.oauthClientIdName;
     }
 
+    /**
+     * The resource name for the OAuth client ID secret version in Secret Manager.
+     * 
+     */
     @InputImport(name="oauthClientIdVersionName")
     private final @Nullable Input<String> oauthClientIdVersionName;
 
@@ -28,6 +40,10 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
         return this.oauthClientIdVersionName == null ? Input.empty() : this.oauthClientIdVersionName;
     }
 
+    /**
+     * The resource name for the OAuth secret in Secret Manager.
+     * 
+     */
     @InputImport(name="oauthSecretName")
     private final @Nullable Input<String> oauthSecretName;
 
@@ -35,6 +51,10 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
         return this.oauthSecretName == null ? Input.empty() : this.oauthSecretName;
     }
 
+    /**
+     * The resource name for the OAuth secret secret version in Secret Manager.
+     * 
+     */
     @InputImport(name="oauthSecretVersionName")
     private final @Nullable Input<String> oauthSecretVersionName;
 
@@ -42,6 +62,10 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
         return this.oauthSecretVersionName == null ? Input.empty() : this.oauthSecretVersionName;
     }
 
+    /**
+     * The resource name for the private key secret.
+     * 
+     */
     @InputImport(name="privateKeyName")
     private final @Nullable Input<String> privateKeyName;
 
@@ -49,6 +73,10 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
         return this.privateKeyName == null ? Input.empty() : this.privateKeyName;
     }
 
+    /**
+     * The resource name for the private key secret version.
+     * 
+     */
     @InputImport(name="privateKeyVersionName")
     private final @Nullable Input<String> privateKeyVersionName;
 
@@ -56,6 +84,10 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
         return this.privateKeyVersionName == null ? Input.empty() : this.privateKeyVersionName;
     }
 
+    /**
+     * The resource name for the webhook secret in Secret Manager.
+     * 
+     */
     @InputImport(name="webhookSecretName")
     private final @Nullable Input<String> webhookSecretName;
 
@@ -63,6 +95,10 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
         return this.webhookSecretName == null ? Input.empty() : this.webhookSecretName;
     }
 
+    /**
+     * The resource name for the webhook secret secret version in Secret Manager.
+     * 
+     */
     @InputImport(name="webhookSecretVersionName")
     private final @Nullable Input<String> webhookSecretVersionName;
 

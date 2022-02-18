@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Latency percentile rank and value.
+ * 
+ */
 public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LatencyPercentileResponse Empty = new LatencyPercentileResponse();
 
+    /**
+     * percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
+     * 
+     */
     @InputImport(name="latencyMicros", required=true)
     private final String latencyMicros;
 
@@ -20,6 +28,10 @@ public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeA
         return this.latencyMicros;
     }
 
+    /**
+     * Percentage of samples this data point applies to.
+     * 
+     */
     @InputImport(name="percent", required=true)
     private final Integer percent;
 

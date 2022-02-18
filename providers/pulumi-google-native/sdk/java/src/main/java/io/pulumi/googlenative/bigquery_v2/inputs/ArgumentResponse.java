@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Input/output argument of a function or a stored procedure.
+ * 
+ */
 public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArgumentResponse Empty = new ArgumentResponse();
 
+    /**
+     * Optional. Defaults to FIXED_TYPE.
+     * 
+     */
     @InputImport(name="argumentKind", required=true)
     private final String argumentKind;
 
@@ -20,6 +28,10 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
         return this.argumentKind;
     }
 
+    /**
+     * Required unless argument_kind = ANY_TYPE.
+     * 
+     */
     @InputImport(name="dataType", required=true)
     private final StandardSqlDataTypeResponse dataType;
 
@@ -27,6 +39,10 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataType;
     }
 
+    /**
+     * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
+     * 
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 
@@ -34,6 +50,10 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
         return this.mode;
     }
 
+    /**
+     * Optional. The name of this argument. Can be absent for function return argument.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * MySQL Column.
+ * 
+ */
 public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MysqlColumnResponse Empty = new MysqlColumnResponse();
 
+    /**
+     * Column collation.
+     * 
+     */
     @InputImport(name="collation", required=true)
     private final String collation;
 
@@ -21,6 +29,10 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.collation;
     }
 
+    /**
+     * Column name.
+     * 
+     */
     @InputImport(name="column", required=true)
     private final String column;
 
@@ -28,6 +40,10 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.column;
     }
 
+    /**
+     * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+     * 
+     */
     @InputImport(name="dataType", required=true)
     private final String dataType;
 
@@ -35,6 +51,10 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataType;
     }
 
+    /**
+     * Column length.
+     * 
+     */
     @InputImport(name="length", required=true)
     private final Integer length;
 
@@ -42,6 +62,10 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.length;
     }
 
+    /**
+     * Whether or not the column can accept a null value.
+     * 
+     */
     @InputImport(name="nullable", required=true)
     private final Boolean nullable;
 
@@ -49,6 +73,10 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.nullable;
     }
 
+    /**
+     * The ordinal position of the column in the table.
+     * 
+     */
     @InputImport(name="ordinalPosition", required=true)
     private final Integer ordinalPosition;
 
@@ -56,6 +84,10 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.ordinalPosition;
     }
 
+    /**
+     * Whether or not the column represents a primary key.
+     * 
+     */
     @InputImport(name="primaryKey", required=true)
     private final Boolean primaryKey;
 

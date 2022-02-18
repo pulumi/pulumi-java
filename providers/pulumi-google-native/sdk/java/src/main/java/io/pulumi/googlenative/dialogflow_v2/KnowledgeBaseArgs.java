@@ -14,6 +14,10 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KnowledgeBaseArgs Empty = new KnowledgeBaseArgs();
 
+    /**
+     * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -21,6 +25,10 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, expect this to be present for non en-us languages. When unspecified, the default language code en-us applies.
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -35,6 +43,10 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

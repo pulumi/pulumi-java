@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FileContentBufferResponse {
+    /**
+     * The raw content in the secure keys file.
+     * 
+     */
     private final String content;
+    /**
+     * The file type of source file.
+     * 
+     */
     private final String fileType;
 
     @OutputCustomType.Constructor({"content","fileType"})
@@ -20,9 +28,17 @@ public final class FileContentBufferResponse {
         this.fileType = Objects.requireNonNull(fileType);
     }
 
+    /**
+     * The raw content in the secure keys file.
+     * 
+     */
     public String getContent() {
         return this.content;
     }
+    /**
+     * The file type of source file.
+     * 
+     */
     public String getFileType() {
         return this.fileType;
     }

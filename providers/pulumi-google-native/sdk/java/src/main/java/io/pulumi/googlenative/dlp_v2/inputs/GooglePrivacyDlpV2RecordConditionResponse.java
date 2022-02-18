@@ -8,10 +8,18 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExpressionsRespons
 import java.util.Objects;
 
 
+/**
+ * A condition for determining whether a transformation should be applied to a field.
+ * 
+ */
 public final class GooglePrivacyDlpV2RecordConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2RecordConditionResponse Empty = new GooglePrivacyDlpV2RecordConditionResponse();
 
+    /**
+     * An expression.
+     * 
+     */
     @InputImport(name="expressions", required=true)
     private final GooglePrivacyDlpV2ExpressionsResponse expressions;
 

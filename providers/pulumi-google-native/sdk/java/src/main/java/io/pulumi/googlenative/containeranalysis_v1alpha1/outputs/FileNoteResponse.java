@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FileNoteResponse {
+    /**
+     * Provide a unique identifier to match analysis information on each specific file in a package
+     * 
+     */
     private final List<String> checksum;
+    /**
+     * This field provides information about the type of file identified
+     * 
+     */
     private final String fileType;
+    /**
+     * Identify the full path and filename that corresponds to the file information in this section
+     * 
+     */
     private final String title;
 
     @OutputCustomType.Constructor({"checksum","fileType","title"})
@@ -24,12 +36,24 @@ public final class FileNoteResponse {
         this.title = Objects.requireNonNull(title);
     }
 
+    /**
+     * Provide a unique identifier to match analysis information on each specific file in a package
+     * 
+     */
     public List<String> getChecksum() {
         return this.checksum;
     }
+    /**
+     * This field provides information about the type of file identified
+     * 
+     */
     public String getFileType() {
         return this.fileType;
     }
+    /**
+     * Identify the full path and filename that corresponds to the file information in this section
+     * 
+     */
     public String getTitle() {
         return this.title;
     }

@@ -15,6 +15,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppArgs Empty = new WebAppArgs();
 
+    /**
+     * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
+     * 
+     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -22,6 +26,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId == null ? Input.empty() : this.appId;
     }
 
+    /**
+     * The URLs where the `WebApp` is hosted.
+     * 
+     */
     @InputImport(name="appUrls")
     private final @Nullable Input<List<String>> appUrls;
 
@@ -29,6 +37,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.appUrls == null ? Input.empty() : this.appUrls;
     }
 
+    /**
+     * The user-assigned display name for the `WebApp`.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +48,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +59,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

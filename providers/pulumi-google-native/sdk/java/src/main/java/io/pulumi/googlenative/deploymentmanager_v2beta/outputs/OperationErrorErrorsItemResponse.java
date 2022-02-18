@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OperationErrorErrorsItemResponse {
+    /**
+     * The error type identifier for this error.
+     * 
+     */
     private final String code;
+    /**
+     * Indicates the field in the request that caused the error. This property is optional.
+     * 
+     */
     private final String location;
+    /**
+     * An optional, human-readable error message.
+     * 
+     */
     private final String message;
 
     @OutputCustomType.Constructor({"code","location","message"})
@@ -23,12 +35,24 @@ public final class OperationErrorErrorsItemResponse {
         this.message = Objects.requireNonNull(message);
     }
 
+    /**
+     * The error type identifier for this error.
+     * 
+     */
     public String getCode() {
         return this.code;
     }
+    /**
+     * Indicates the field in the request that caused the error. This property is optional.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * An optional, human-readable error message.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }

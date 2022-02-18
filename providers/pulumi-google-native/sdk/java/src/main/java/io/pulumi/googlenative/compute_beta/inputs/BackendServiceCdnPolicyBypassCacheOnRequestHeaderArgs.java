@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Bypass the cache when the specified request headers are present, e.g. Pragma or Authorization headers. Values are case insensitive. The presence of such a header overrides the cache_mode setting.
+ * 
+ */
 public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs Empty = new BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs();
 
+    /**
+     * The header field name to match on when bypassing cache. Values are case-insensitive.
+     * 
+     */
     @InputImport(name="headerName")
     private final @Nullable Input<String> headerName;
 

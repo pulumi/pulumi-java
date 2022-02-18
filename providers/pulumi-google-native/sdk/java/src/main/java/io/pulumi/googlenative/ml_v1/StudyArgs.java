@@ -29,6 +29,10 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Configuration of the study.
+     * 
+     */
     @InputImport(name="studyConfig", required=true)
     private final Input<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
 

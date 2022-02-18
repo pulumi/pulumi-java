@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Specification that applies to a routine. Valid only for entries with the `ROUTINE` type.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1RoutineSpecResponse Empty = new GoogleCloudDatacatalogV1RoutineSpecResponse();
 
+    /**
+     * Fields specific for BigQuery routines.
+     * 
+     */
     @InputImport(name="bigqueryRoutineSpec", required=true)
     private final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
         return this.bigqueryRoutineSpec;
     }
 
+    /**
+     * The body of the routine.
+     * 
+     */
     @InputImport(name="definitionBody", required=true)
     private final String definitionBody;
 
@@ -29,6 +41,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
         return this.definitionBody;
     }
 
+    /**
+     * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
+     * 
+     */
     @InputImport(name="language", required=true)
     private final String language;
 
@@ -36,6 +52,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
         return this.language;
     }
 
+    /**
+     * Return type of the argument. The exact value depends on the source system and the language.
+     * 
+     */
     @InputImport(name="returnType", required=true)
     private final String returnType;
 
@@ -43,6 +63,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
         return this.returnType;
     }
 
+    /**
+     * Arguments of the routine.
+     * 
+     */
     @InputImport(name="routineArguments", required=true)
     private final List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
 
@@ -50,6 +74,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
         return this.routineArguments;
     }
 
+    /**
+     * The type of the routine.
+     * 
+     */
     @InputImport(name="routineType", required=true)
     private final String routineType;
 

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NormalizedCoordinateResponse {
+    /**
+     * Normalized x coordinate.
+     * 
+     */
     private final Double x;
+    /**
+     * Normalized y coordinate.
+     * 
+     */
     private final Double y;
 
     @OutputCustomType.Constructor({"x","y"})
@@ -20,9 +28,17 @@ public final class NormalizedCoordinateResponse {
         this.y = Objects.requireNonNull(y);
     }
 
+    /**
+     * Normalized x coordinate.
+     * 
+     */
     public Double getX() {
         return this.x;
     }
+    /**
+     * Normalized y coordinate.
+     * 
+     */
     public Double getY() {
         return this.y;
     }

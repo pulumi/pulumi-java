@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProvider {
+/**
+ * Gets an individual WorkloadIdentityPoolProvider.
+ * 
+ */
     public static CompletableFuture<GetProviderResult> invokeAsync(GetProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getProvider", TypeShape.of(GetProviderResult.class), args == null ? GetProviderArgs.Empty : args, Utilities.withVersion(options));
     }

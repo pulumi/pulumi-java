@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network configuration for the Dataproc Metastore service.
+ * 
+ */
 public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkConfigArgs Empty = new NetworkConfigArgs();
 
+    /**
+     * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
+     * 
+     */
     @InputImport(name="consumers")
     private final @Nullable Input<List<ConsumerArgs>> consumers;
 

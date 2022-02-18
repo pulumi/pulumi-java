@@ -6,6 +6,10 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 import java.util.Objects;
 
 
+/**
+ * Enable email notification to project owners and editors on jobs's completion/failure.
+ * 
+ */
 public final class GooglePrivacyDlpV2JobNotificationEmailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2JobNotificationEmailsArgs Empty = new GooglePrivacyDlpV2JobNotificationEmailsArgs();

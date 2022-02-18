@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleIamV1AuditLogConfigResponse {
+    /**
+     * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+     * 
+     */
     private final List<String> exemptedMembers;
+    /**
+     * The log type that this config enables.
+     * 
+     */
     private final String logType;
 
     @OutputCustomType.Constructor({"exemptedMembers","logType"})
@@ -21,9 +29,17 @@ public final class GoogleIamV1AuditLogConfigResponse {
         this.logType = Objects.requireNonNull(logType);
     }
 
+    /**
+     * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+     * 
+     */
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
     }
+    /**
+     * The log type that this config enables.
+     * 
+     */
     public String getLogType() {
         return this.logType;
     }

@@ -15,6 +15,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HubArgs Empty = new HubArgs();
 
+    /**
+     * Time when the Hub was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -22,6 +26,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Short description of the hub resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +44,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubId == null ? Input.empty() : this.hubId;
     }
 
+    /**
+     * User-defined labels.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -43,6 +55,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Immutable. The name of a Hub resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -64,6 +80,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Time when the Hub was updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleFirestoreAdminV1IndexFieldResponse {
+    /**
+     * Indicates that this field supports operations on `array_value`s.
+     * 
+     */
     private final String arrayConfig;
+    /**
+     * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+     * 
+     */
     private final String fieldPath;
+    /**
+     * Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.
+     * 
+     */
     private final String order;
 
     @OutputCustomType.Constructor({"arrayConfig","fieldPath","order"})
@@ -23,12 +35,24 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse {
         this.order = Objects.requireNonNull(order);
     }
 
+    /**
+     * Indicates that this field supports operations on `array_value`s.
+     * 
+     */
     public String getArrayConfig() {
         return this.arrayConfig;
     }
+    /**
+     * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+     * 
+     */
     public String getFieldPath() {
         return this.fieldPath;
     }
+    /**
+     * Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.
+     * 
+     */
     public String getOrder() {
         return this.order;
     }

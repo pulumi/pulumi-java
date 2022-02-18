@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Uses Google Cloud Endpoints to handle requests.
+ * 
+ */
 public final class ApiEndpointHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiEndpointHandlerResponse Empty = new ApiEndpointHandlerResponse();
 
+    /**
+     * Path to the script from the application root directory.
+     * 
+     */
     @InputImport(name="scriptPath", required=true)
     private final String scriptPath;
 

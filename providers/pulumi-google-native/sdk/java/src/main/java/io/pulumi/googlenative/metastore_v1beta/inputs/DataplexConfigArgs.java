@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies how metastore metadata should be integrated with the Dataplex service.
+ * 
+ */
 public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataplexConfigArgs Empty = new DataplexConfigArgs();
 
+    /**
+     * A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+     * 
+     */
     @InputImport(name="lakeResources")
     private final @Nullable Input<Map<String,String>> lakeResources;
 

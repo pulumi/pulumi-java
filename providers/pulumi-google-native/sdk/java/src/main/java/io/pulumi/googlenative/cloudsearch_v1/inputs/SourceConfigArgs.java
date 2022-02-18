@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configurations for a source while processing a Search or Suggest request.
+ * 
+ */
 public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceConfigArgs Empty = new SourceConfigArgs();
 
+    /**
+     * The crowding configuration for the source.
+     * 
+     */
     @InputImport(name="crowdingConfig")
     private final @Nullable Input<SourceCrowdingConfigArgs> crowdingConfig;
 
@@ -23,6 +31,10 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.crowdingConfig == null ? Input.empty() : this.crowdingConfig;
     }
 
+    /**
+     * The scoring configuration for the source.
+     * 
+     */
     @InputImport(name="scoringConfig")
     private final @Nullable Input<SourceScoringConfigArgs> scoringConfig;
 
@@ -30,6 +42,10 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.scoringConfig == null ? Input.empty() : this.scoringConfig;
     }
 
+    /**
+     * The source for which this configuration is to be used.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<SourceArgs> source;
 

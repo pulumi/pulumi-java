@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A type of transformation that is applied over structured data such as a table.
+ * 
+ */
 public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2RecordTransformationsArgs Empty = new GooglePrivacyDlpV2RecordTransformationsArgs();
 
+    /**
+     * Transform the record by applying various field transformations.
+     * 
+     */
     @InputImport(name="fieldTransformations")
     private final @Nullable Input<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
 
@@ -23,6 +31,10 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
         return this.fieldTransformations == null ? Input.empty() : this.fieldTransformations;
     }
 
+    /**
+     * Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+     * 
+     */
     @InputImport(name="recordSuppressions")
     private final @Nullable Input<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
 

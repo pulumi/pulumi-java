@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The entrypoint for the application.
+ * 
+ */
 public final class EntrypointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EntrypointResponse Empty = new EntrypointResponse();
 
+    /**
+     * The format should be a shell command that can be fed to bash -c.
+     * 
+     */
     @InputImport(name="shell", required=true)
     private final String shell;
 

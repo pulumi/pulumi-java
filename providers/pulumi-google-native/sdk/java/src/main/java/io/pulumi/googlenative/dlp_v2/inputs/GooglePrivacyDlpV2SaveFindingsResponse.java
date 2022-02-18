@@ -8,10 +8,18 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2OutputStorageConfi
 import java.util.Objects;
 
 
+/**
+ * If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a single instance of this action can be specified. Compatible with: Inspect, Risk
+ * 
+ */
 public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2SaveFindingsResponse Empty = new GooglePrivacyDlpV2SaveFindingsResponse();
 
+    /**
+     * Location to store findings outside of DLP.
+     * 
+     */
     @InputImport(name="outputConfig", required=true)
     private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 

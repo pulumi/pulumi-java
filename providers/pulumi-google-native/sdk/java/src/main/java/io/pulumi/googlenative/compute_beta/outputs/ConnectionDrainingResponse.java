@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectionDrainingResponse {
+    /**
+     * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
+     * 
+     */
     private final Integer drainingTimeoutSec;
 
     @OutputCustomType.Constructor({"drainingTimeoutSec"})
@@ -16,6 +20,10 @@ public final class ConnectionDrainingResponse {
         this.drainingTimeoutSec = Objects.requireNonNull(drainingTimeoutSec);
     }
 
+    /**
+     * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
+     * 
+     */
     public Integer getDrainingTimeoutSec() {
         return this.drainingTimeoutSec;
     }

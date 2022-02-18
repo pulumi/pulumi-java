@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents the observed state of a single `TrafficTarget` entry.
+ * 
+ */
 public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRunOpV2TrafficTargetStatusResponse Empty = new GoogleCloudRunOpV2TrafficTargetStatusResponse();
 
+    /**
+     * Specifies percent of the traffic to this Revision.
+     * 
+     */
     @InputImport(name="percent", required=true)
     private final Integer percent;
 
@@ -20,6 +28,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
         return this.percent;
     }
 
+    /**
+     * Revision to which this traffic is sent.
+     * 
+     */
     @InputImport(name="revision", required=true)
     private final String revision;
 
@@ -27,6 +39,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
         return this.revision;
     }
 
+    /**
+     * Indicates the string used in the URI to exclusively reference this target.
+     * 
+     */
     @InputImport(name="tag", required=true)
     private final String tag;
 
@@ -34,6 +50,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
         return this.tag;
     }
 
+    /**
+     * The allocation type for this traffic target.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -41,6 +61,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
         return this.type;
     }
 
+    /**
+     * Displays the target URI.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Scoring configurations for a source while processing a Search or Suggest request.
+ * 
+ */
 public final class ScoringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScoringConfigResponse Empty = new ScoringConfigResponse();
 
+    /**
+     * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
+     * 
+     */
     @InputImport(name="disableFreshness", required=true)
     private final Boolean disableFreshness;
 
@@ -19,6 +27,10 @@ public final class ScoringConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.disableFreshness;
     }
 
+    /**
+     * Whether to personalize the results. By default, personal signals will be used to boost results.
+     * 
+     */
     @InputImport(name="disablePersonalization", required=true)
     private final Boolean disablePersonalization;
 

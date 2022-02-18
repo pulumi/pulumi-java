@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceGroup {
+/**
+ * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+ * 
+ */
     public static CompletableFuture<GetInstanceGroupResult> invokeAsync(GetInstanceGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args == null ? GetInstanceGroupArgs.Empty : args, Utilities.withVersion(options));
     }

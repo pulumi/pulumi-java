@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TlsCertificatePathsResponse {
+    /**
+     * The path to the file holding the client or server TLS certificate to use.
+     * 
+     */
     private final String certificatePath;
+    /**
+     * The path to the file holding the client or server private key.
+     * 
+     */
     private final String privateKeyPath;
 
     @OutputCustomType.Constructor({"certificatePath","privateKeyPath"})
@@ -20,9 +28,17 @@ public final class TlsCertificatePathsResponse {
         this.privateKeyPath = Objects.requireNonNull(privateKeyPath);
     }
 
+    /**
+     * The path to the file holding the client or server TLS certificate to use.
+     * 
+     */
     public String getCertificatePath() {
         return this.certificatePath;
     }
+    /**
+     * The path to the file holding the client or server private key.
+     * 
+     */
     public String getPrivateKeyPath() {
         return this.privateKeyPath;
     }

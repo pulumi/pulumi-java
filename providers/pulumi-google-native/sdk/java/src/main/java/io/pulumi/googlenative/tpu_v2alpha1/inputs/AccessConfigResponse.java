@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An access config attached to the TPU worker.
+ * 
+ */
 public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessConfigResponse Empty = new AccessConfigResponse();
 
+    /**
+     * An external IP address associated with the TPU worker.
+     * 
+     */
     @InputImport(name="externalIp", required=true)
     private final String externalIp;
 

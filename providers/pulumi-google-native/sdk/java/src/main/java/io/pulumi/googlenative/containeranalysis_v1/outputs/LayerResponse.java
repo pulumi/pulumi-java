@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LayerResponse {
+    /**
+     * The recovered arguments to the Dockerfile directive.
+     * 
+     */
     private final String arguments;
+    /**
+     * The recovered Dockerfile directive used to construct this layer. See https://docs.docker.com/engine/reference/builder/ for more information.
+     * 
+     */
     private final String directive;
 
     @OutputCustomType.Constructor({"arguments","directive"})
@@ -20,9 +28,17 @@ public final class LayerResponse {
         this.directive = Objects.requireNonNull(directive);
     }
 
+    /**
+     * The recovered arguments to the Dockerfile directive.
+     * 
+     */
     public String getArguments() {
         return this.arguments;
     }
+    /**
+     * The recovered Dockerfile directive used to construct this layer. See https://docs.docker.com/engine/reference/builder/ for more information.
+     * 
+     */
     public String getDirective() {
         return this.directive;
     }

@@ -11,8 +11,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceLevelIndicatorResponse {
+    /**
+     * Basic SLI on a well-known service type.
+     * 
+     */
     private final BasicSliResponse basicSli;
+    /**
+     * Request-based SLIs
+     * 
+     */
     private final RequestBasedSliResponse requestBased;
+    /**
+     * Windows-based SLIs
+     * 
+     */
     private final WindowsBasedSliResponse windowsBased;
 
     @OutputCustomType.Constructor({"basicSli","requestBased","windowsBased"})
@@ -25,12 +37,24 @@ public final class ServiceLevelIndicatorResponse {
         this.windowsBased = Objects.requireNonNull(windowsBased);
     }
 
+    /**
+     * Basic SLI on a well-known service type.
+     * 
+     */
     public BasicSliResponse getBasicSli() {
         return this.basicSli;
     }
+    /**
+     * Request-based SLIs
+     * 
+     */
     public RequestBasedSliResponse getRequestBased() {
         return this.requestBased;
     }
+    /**
+     * Windows-based SLIs
+     * 
+     */
     public WindowsBasedSliResponse getWindowsBased() {
         return this.windowsBased;
     }

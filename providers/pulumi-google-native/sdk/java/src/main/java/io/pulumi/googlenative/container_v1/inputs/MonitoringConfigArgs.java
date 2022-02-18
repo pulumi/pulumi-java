@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MonitoringConfig is cluster monitoring configuration.
+ * 
+ */
 public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitoringConfigArgs Empty = new MonitoringConfigArgs();
 
+    /**
+     * Monitoring components configuration
+     * 
+     */
     @InputImport(name="componentConfig")
     private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
 

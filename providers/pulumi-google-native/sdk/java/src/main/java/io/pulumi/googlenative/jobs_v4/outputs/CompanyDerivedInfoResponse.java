@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CompanyDerivedInfoResponse {
+    /**
+     * A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
+     * 
+     */
     private final LocationResponse headquartersLocation;
 
     @OutputCustomType.Constructor({"headquartersLocation"})
@@ -16,6 +20,10 @@ public final class CompanyDerivedInfoResponse {
         this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
     }
 
+    /**
+     * A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
+     * 
+     */
     public LocationResponse getHeadquartersLocation() {
         return this.headquartersLocation;
     }

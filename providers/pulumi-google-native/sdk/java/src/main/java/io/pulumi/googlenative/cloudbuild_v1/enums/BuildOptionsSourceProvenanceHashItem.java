@@ -10,8 +10,20 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum BuildOptionsSourceProvenanceHashItem {
+        /**
+         * No hash requested.
+         * 
+         */
         None("NONE"),
+        /**
+         * Use a sha256 hash.
+         * 
+         */
         Sha256("SHA256"),
+        /**
+         * Use a md5 hash.
+         * 
+         */
         Md5("MD5");
 
         private final String value;

@@ -14,6 +14,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 
+    /**
+     * Optional. The developer-provided description of this version.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 

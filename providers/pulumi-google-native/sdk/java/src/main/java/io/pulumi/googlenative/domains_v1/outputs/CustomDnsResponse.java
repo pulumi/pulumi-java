@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CustomDnsResponse {
+    /**
+     * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+     * 
+     */
     private final List<DsRecordResponse> dsRecords;
+    /**
+     * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+     * 
+     */
     private final List<String> nameServers;
 
     @OutputCustomType.Constructor({"dsRecords","nameServers"})
@@ -22,9 +30,17 @@ public final class CustomDnsResponse {
         this.nameServers = Objects.requireNonNull(nameServers);
     }
 
+    /**
+     * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+     * 
+     */
     public List<DsRecordResponse> getDsRecords() {
         return this.dsRecords;
     }
+    /**
+     * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+     * 
+     */
     public List<String> getNameServers() {
         return this.nameServers;
     }

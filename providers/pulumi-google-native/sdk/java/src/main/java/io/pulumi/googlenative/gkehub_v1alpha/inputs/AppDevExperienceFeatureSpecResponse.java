@@ -6,6 +6,10 @@ package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 import java.util.Objects;
 
 
+/**
+ * Spec for App Dev Experience Feature.
+ * 
+ */
 public final class AppDevExperienceFeatureSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppDevExperienceFeatureSpecResponse Empty = new AppDevExperienceFeatureSpecResponse();

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents a tool results step resource. This has the results of a TestExecution.
+ * 
+ */
 public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ToolResultsStepResponse Empty = new ToolResultsStepResponse();
 
+    /**
+     * A tool results execution ID.
+     * 
+     */
     @InputImport(name="executionId", required=true)
     private final String executionId;
 
@@ -19,6 +27,10 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
         return this.executionId;
     }
 
+    /**
+     * A tool results history ID.
+     * 
+     */
     @InputImport(name="historyId", required=true)
     private final String historyId;
 
@@ -26,6 +38,10 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
         return this.historyId;
     }
 
+    /**
+     * The cloud project that owns the tool results step.
+     * 
+     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -33,6 +49,10 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
         return this.project;
     }
 
+    /**
+     * A tool results step ID.
+     * 
+     */
     @InputImport(name="stepId", required=true)
     private final String stepId;
 

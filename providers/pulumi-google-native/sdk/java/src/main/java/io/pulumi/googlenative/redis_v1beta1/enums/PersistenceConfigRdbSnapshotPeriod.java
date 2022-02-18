@@ -8,12 +8,36 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
+     * 
+     */
     @EnumType
     public enum PersistenceConfigRdbSnapshotPeriod {
+        /**
+         * Not set.
+         * 
+         */
         SnapshotPeriodUnspecified("SNAPSHOT_PERIOD_UNSPECIFIED"),
+        /**
+         * Snapshot every 1 hour.
+         * 
+         */
         OneHour("ONE_HOUR"),
+        /**
+         * Snapshot every 6 hours.
+         * 
+         */
         SixHours("SIX_HOURS"),
+        /**
+         * Snapshot every 12 hours.
+         * 
+         */
         TwelveHours("TWELVE_HOURS"),
+        /**
+         * Snapshot every 24 horus.
+         * 
+         */
         TwentyFourHours("TWENTY_FOUR_HOURS");
 
         private final String value;

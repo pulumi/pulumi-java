@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A Certificate represents an X.509 certificate used to authenticate HTTPS connections to EKM replicas.
+ * 
+ */
 public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateResponse Empty = new CertificateResponse();
 
+    /**
+     * The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
+     * 
+     */
     @InputImport(name="issuer", required=true)
     private final String issuer;
 
@@ -21,6 +29,10 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
         return this.issuer;
     }
 
+    /**
+     * The certificate is not valid after this time. Only present if parsed is true.
+     * 
+     */
     @InputImport(name="notAfterTime", required=true)
     private final String notAfterTime;
 
@@ -28,6 +40,10 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
         return this.notAfterTime;
     }
 
+    /**
+     * The certificate is not valid before this time. Only present if parsed is true.
+     * 
+     */
     @InputImport(name="notBeforeTime", required=true)
     private final String notBeforeTime;
 
@@ -35,6 +51,10 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
         return this.notBeforeTime;
     }
 
+    /**
+     * True if the certificate was parsed successfully.
+     * 
+     */
     @InputImport(name="parsed", required=true)
     private final Boolean parsed;
 
@@ -42,6 +62,10 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
         return this.parsed;
     }
 
+    /**
+     * The raw certificate bytes in DER format.
+     * 
+     */
     @InputImport(name="rawDer", required=true)
     private final String rawDer;
 
@@ -49,6 +73,10 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
         return this.rawDer;
     }
 
+    /**
+     * The certificate serial number as a hex string. Only present if parsed is true.
+     * 
+     */
     @InputImport(name="serialNumber", required=true)
     private final String serialNumber;
 
@@ -56,6 +84,10 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
         return this.serialNumber;
     }
 
+    /**
+     * The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
+     * 
+     */
     @InputImport(name="sha256Fingerprint", required=true)
     private final String sha256Fingerprint;
 
@@ -63,6 +95,10 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
         return this.sha256Fingerprint;
     }
 
+    /**
+     * The subject distinguished name in RFC 2253 format. Only present if parsed is true.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final String subject;
 
@@ -70,6 +106,10 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
         return this.subject;
     }
 
+    /**
+     * The subject Alternative DNS names. Only present if parsed is true.
+     * 
+     */
     @InputImport(name="subjectAlternativeDnsNames", required=true)
     private final List<String> subjectAlternativeDnsNames;
 

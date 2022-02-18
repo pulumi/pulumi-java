@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TriggerResponse {
+    /**
+     * The absolute number of time series that must fail the predicate for the condition to be triggered.
+     * 
+     */
     private final Integer count;
+    /**
+     * The percentage of time series that must fail the predicate for the condition to be triggered.
+     * 
+     */
     private final Double percent;
 
     @OutputCustomType.Constructor({"count","percent"})
@@ -21,9 +29,17 @@ public final class TriggerResponse {
         this.percent = Objects.requireNonNull(percent);
     }
 
+    /**
+     * The absolute number of time series that must fail the predicate for the condition to be triggered.
+     * 
+     */
     public Integer getCount() {
         return this.count;
     }
+    /**
+     * The percentage of time series that must fail the predicate for the condition to be triggered.
+     * 
+     */
     public Double getPercent() {
         return this.percent;
     }

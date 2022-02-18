@@ -23,6 +23,10 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
         return this.conversationId;
     }
 
+    /**
+     * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ```documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" }```
+     * 
+     */
     @InputImport(name="documentsMetadataFilters")
     private final @Nullable Input<Map<String,String>> documentsMetadataFilters;
 
@@ -37,6 +41,10 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +59,10 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<ParticipantRole> role;
 
@@ -58,6 +70,10 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
         return this.role == null ? Input.empty() : this.role;
     }
 
+    /**
+     * Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
+     * 
+     */
     @InputImport(name="sipRecordingMediaLabel")
     private final @Nullable Input<String> sipRecordingMediaLabel;
 

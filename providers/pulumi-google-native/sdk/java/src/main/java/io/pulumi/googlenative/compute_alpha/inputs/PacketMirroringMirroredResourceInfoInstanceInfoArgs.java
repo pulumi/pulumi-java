@@ -14,6 +14,10 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoArgs extends i
 
     public static final PacketMirroringMirroredResourceInfoInstanceInfoArgs Empty = new PacketMirroringMirroredResourceInfoInstanceInfoArgs();
 
+    /**
+     * Resource URL to the virtual machine instance which is being mirrored.
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

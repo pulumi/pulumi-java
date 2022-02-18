@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ScanConfigErrorResponse {
+    /**
+     * Indicates the reason code for a configuration failure.
+     * 
+     */
     private final String code;
+    /**
+     * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
+     * 
+     */
     private final String fieldName;
 
     @OutputCustomType.Constructor({"code","fieldName"})
@@ -20,9 +28,17 @@ public final class ScanConfigErrorResponse {
         this.fieldName = Objects.requireNonNull(fieldName);
     }
 
+    /**
+     * Indicates the reason code for a configuration failure.
+     * 
+     */
     public String getCode() {
         return this.code;
     }
+    /**
+     * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
+     * 
+     */
     public String getFieldName() {
         return this.fieldName;
     }

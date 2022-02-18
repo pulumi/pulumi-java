@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
+     * 
+     */
     @EnumType
     public enum ClusterDefaultStorageType {
+        /**
+         * The user did not specify a storage type.
+         * 
+         */
         StorageTypeUnspecified("STORAGE_TYPE_UNSPECIFIED"),
+        /**
+         * Flash (SSD) storage should be used.
+         * 
+         */
         Ssd("SSD"),
+        /**
+         * Magnetic drive (HDD) storage should be used.
+         * 
+         */
         Hdd("HDD");
 
         private final String value;

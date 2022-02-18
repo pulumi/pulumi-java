@@ -13,34 +13,150 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDeviceResult {
+    /**
+     * Attributes specific to Android devices.
+     * 
+     */
     private final AndroidAttributesResponse androidSpecificAttributes;
+    /**
+     * Asset tag of the device.
+     * 
+     */
     private final String assetTag;
+    /**
+     * Baseband version of the device.
+     * 
+     */
     private final String basebandVersion;
+    /**
+     * Device bootloader version. Example: 0.6.7.
+     * 
+     */
     private final String bootloaderVersion;
+    /**
+     * Device brand. Example: Samsung.
+     * 
+     */
     private final String brand;
+    /**
+     * Build number of the device.
+     * 
+     */
     private final String buildNumber;
+    /**
+     * Represents whether the Device is compromised.
+     * 
+     */
     private final String compromisedState;
+    /**
+     * When the Company-Owned device was imported. This field is empty for BYOD devices.
+     * 
+     */
     private final String createTime;
+    /**
+     * Type of device.
+     * 
+     */
     private final String deviceType;
+    /**
+     * Whether developer options is enabled on device.
+     * 
+     */
     private final Boolean enabledDeveloperOptions;
+    /**
+     * Whether USB debugging is enabled on device.
+     * 
+     */
     private final Boolean enabledUsbDebugging;
+    /**
+     * Device encryption state.
+     * 
+     */
     private final String encryptionState;
+    /**
+     * Attributes specific to Endpoint Verification devices.
+     * 
+     */
     private final EndpointVerificationSpecificAttributesResponse endpointVerificationSpecificAttributes;
+    /**
+     * IMEI number of device if GSM device; empty otherwise.
+     * 
+     */
     private final String imei;
+    /**
+     * Kernel version of the device.
+     * 
+     */
     private final String kernelVersion;
+    /**
+     * Most recent time when device synced with this service.
+     * 
+     */
     private final String lastSyncTime;
+    /**
+     * Management state of the device
+     * 
+     */
     private final String managementState;
+    /**
+     * Device manufacturer. Example: Motorola.
+     * 
+     */
     private final String manufacturer;
+    /**
+     * MEID number of device if CDMA device; empty otherwise.
+     * 
+     */
     private final String meid;
+    /**
+     * Model name of device. Example: Pixel 3.
+     * 
+     */
     private final String model;
+    /**
+     * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.
+     * 
+     */
     private final String name;
+    /**
+     * Mobile or network operator of device, if available.
+     * 
+     */
     private final String networkOperator;
+    /**
+     * OS version of the device. Example: Android 8.1.0.
+     * 
+     */
     private final String osVersion;
+    /**
+     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
+     * 
+     */
     private final List<String> otherAccounts;
+    /**
+     * Whether the device is owned by the company or an individual
+     * 
+     */
     private final String ownerType;
+    /**
+     * OS release version. Example: 6.0.
+     * 
+     */
     private final String releaseVersion;
+    /**
+     * OS security patch update time on device.
+     * 
+     */
     private final String securityPatchTime;
+    /**
+     * Serial Number of device. Example: HT82V1A01076.
+     * 
+     */
     private final String serialNumber;
+    /**
+     * WiFi MAC addresses of device.
+     * 
+     */
     private final List<String> wifiMacAddresses;
 
     @OutputCustomType.Constructor({"androidSpecificAttributes","assetTag","basebandVersion","bootloaderVersion","brand","buildNumber","compromisedState","createTime","deviceType","enabledDeveloperOptions","enabledUsbDebugging","encryptionState","endpointVerificationSpecificAttributes","imei","kernelVersion","lastSyncTime","managementState","manufacturer","meid","model","name","networkOperator","osVersion","otherAccounts","ownerType","releaseVersion","securityPatchTime","serialNumber","wifiMacAddresses"})
@@ -105,90 +221,206 @@ public final class GetDeviceResult {
         this.wifiMacAddresses = Objects.requireNonNull(wifiMacAddresses);
     }
 
+    /**
+     * Attributes specific to Android devices.
+     * 
+     */
     public AndroidAttributesResponse getAndroidSpecificAttributes() {
         return this.androidSpecificAttributes;
     }
+    /**
+     * Asset tag of the device.
+     * 
+     */
     public String getAssetTag() {
         return this.assetTag;
     }
+    /**
+     * Baseband version of the device.
+     * 
+     */
     public String getBasebandVersion() {
         return this.basebandVersion;
     }
+    /**
+     * Device bootloader version. Example: 0.6.7.
+     * 
+     */
     public String getBootloaderVersion() {
         return this.bootloaderVersion;
     }
+    /**
+     * Device brand. Example: Samsung.
+     * 
+     */
     public String getBrand() {
         return this.brand;
     }
+    /**
+     * Build number of the device.
+     * 
+     */
     public String getBuildNumber() {
         return this.buildNumber;
     }
+    /**
+     * Represents whether the Device is compromised.
+     * 
+     */
     public String getCompromisedState() {
         return this.compromisedState;
     }
+    /**
+     * When the Company-Owned device was imported. This field is empty for BYOD devices.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Type of device.
+     * 
+     */
     public String getDeviceType() {
         return this.deviceType;
     }
+    /**
+     * Whether developer options is enabled on device.
+     * 
+     */
     public Boolean getEnabledDeveloperOptions() {
         return this.enabledDeveloperOptions;
     }
+    /**
+     * Whether USB debugging is enabled on device.
+     * 
+     */
     public Boolean getEnabledUsbDebugging() {
         return this.enabledUsbDebugging;
     }
+    /**
+     * Device encryption state.
+     * 
+     */
     public String getEncryptionState() {
         return this.encryptionState;
     }
+    /**
+     * Attributes specific to Endpoint Verification devices.
+     * 
+     */
     public EndpointVerificationSpecificAttributesResponse getEndpointVerificationSpecificAttributes() {
         return this.endpointVerificationSpecificAttributes;
     }
+    /**
+     * IMEI number of device if GSM device; empty otherwise.
+     * 
+     */
     public String getImei() {
         return this.imei;
     }
+    /**
+     * Kernel version of the device.
+     * 
+     */
     public String getKernelVersion() {
         return this.kernelVersion;
     }
+    /**
+     * Most recent time when device synced with this service.
+     * 
+     */
     public String getLastSyncTime() {
         return this.lastSyncTime;
     }
+    /**
+     * Management state of the device
+     * 
+     */
     public String getManagementState() {
         return this.managementState;
     }
+    /**
+     * Device manufacturer. Example: Motorola.
+     * 
+     */
     public String getManufacturer() {
         return this.manufacturer;
     }
+    /**
+     * MEID number of device if CDMA device; empty otherwise.
+     * 
+     */
     public String getMeid() {
         return this.meid;
     }
+    /**
+     * Model name of device. Example: Pixel 3.
+     * 
+     */
     public String getModel() {
         return this.model;
     }
+    /**
+     * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Mobile or network operator of device, if available.
+     * 
+     */
     public String getNetworkOperator() {
         return this.networkOperator;
     }
+    /**
+     * OS version of the device. Example: Android 8.1.0.
+     * 
+     */
     public String getOsVersion() {
         return this.osVersion;
     }
+    /**
+     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
+     * 
+     */
     public List<String> getOtherAccounts() {
         return this.otherAccounts;
     }
+    /**
+     * Whether the device is owned by the company or an individual
+     * 
+     */
     public String getOwnerType() {
         return this.ownerType;
     }
+    /**
+     * OS release version. Example: 6.0.
+     * 
+     */
     public String getReleaseVersion() {
         return this.releaseVersion;
     }
+    /**
+     * OS security patch update time on device.
+     * 
+     */
     public String getSecurityPatchTime() {
         return this.securityPatchTime;
     }
+    /**
+     * Serial Number of device. Example: HT82V1A01076.
+     * 
+     */
     public String getSerialNumber() {
         return this.serialNumber;
     }
+    /**
+     * WiFi MAC addresses of device.
+     * 
+     */
     public List<String> getWifiMacAddresses() {
         return this.wifiMacAddresses;
     }

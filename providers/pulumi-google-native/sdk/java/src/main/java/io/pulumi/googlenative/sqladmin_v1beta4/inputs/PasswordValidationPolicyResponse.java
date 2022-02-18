@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Database instance local user password validation policy
+ * 
+ */
 public final class PasswordValidationPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PasswordValidationPolicyResponse Empty = new PasswordValidationPolicyResponse();
 
+    /**
+     * The complexity of the password.
+     * 
+     */
     @InputImport(name="complexity", required=true)
     private final String complexity;
 
@@ -21,6 +29,10 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
         return this.complexity;
     }
 
+    /**
+     * Disallow username as a part of the password.
+     * 
+     */
     @InputImport(name="disallowUsernameSubstring", required=true)
     private final Boolean disallowUsernameSubstring;
 
@@ -28,6 +40,10 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
         return this.disallowUsernameSubstring;
     }
 
+    /**
+     * Minimum number of characters allowed.
+     * 
+     */
     @InputImport(name="minLength", required=true)
     private final Integer minLength;
 
@@ -35,6 +51,10 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
         return this.minLength;
     }
 
+    /**
+     * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+     * 
+     */
     @InputImport(name="passwordChangeInterval", required=true)
     private final String passwordChangeInterval;
 
@@ -42,6 +62,10 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
         return this.passwordChangeInterval;
     }
 
+    /**
+     * Number of previous passwords that cannot be reused.
+     * 
+     */
     @InputImport(name="reuseInterval", required=true)
     private final Integer reuseInterval;
 

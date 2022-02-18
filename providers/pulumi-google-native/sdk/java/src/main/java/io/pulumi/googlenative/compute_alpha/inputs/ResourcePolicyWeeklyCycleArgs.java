@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Time window specified for weekly operations.
+ * 
+ */
 public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyWeeklyCycleArgs Empty = new ResourcePolicyWeeklyCycleArgs();
 
+    /**
+     * Up to 7 intervals/windows, one for each day of the week.
+     * 
+     */
     @InputImport(name="dayOfWeeks")
     private final @Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 

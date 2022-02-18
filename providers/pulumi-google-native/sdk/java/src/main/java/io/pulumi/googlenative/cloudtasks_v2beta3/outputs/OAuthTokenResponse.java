@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OAuthTokenResponse {
+    /**
+     * OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * 
+     */
     private final String scope;
+    /**
+     * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+     * 
+     */
     private final String serviceAccountEmail;
 
     @OutputCustomType.Constructor({"scope","serviceAccountEmail"})
@@ -20,9 +28,17 @@ public final class OAuthTokenResponse {
         this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
     }
 
+    /**
+     * OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * 
+     */
     public String getScope() {
         return this.scope;
     }
+    /**
+     * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+     * 
+     */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Message for specifying an adjustment to the likelihood of a finding as part of a detection rule.
+ * 
+ */
 public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2LikelihoodAdjustmentResponse Empty = new GooglePrivacyDlpV2LikelihoodAdjustmentResponse();
 
+    /**
+     * Set the likelihood of a finding to a fixed value.
+     * 
+     */
     @InputImport(name="fixedLikelihood", required=true)
     private final String fixedLikelihood;
 
@@ -20,6 +28,10 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends io.pul
         return this.fixedLikelihood;
     }
 
+    /**
+     * Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
+     * 
+     */
     @InputImport(name="relativeLikelihood", required=true)
     private final Integer relativeLikelihood;
 

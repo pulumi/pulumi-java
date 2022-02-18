@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
+ * 
+ */
 public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse Empty = new GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse();
 
+    /**
+     * The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
+     * 
+     */
     @InputImport(name="dataset", required=true)
     private final String dataset;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
         return this.dataset;
     }
 
+    /**
+     * BigQuery resource name of the latest shard.
+     * 
+     */
     @InputImport(name="latestShardResource", required=true)
     private final String latestShardResource;
 
@@ -26,6 +38,10 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
         return this.latestShardResource;
     }
 
+    /**
+     * Total number of shards.
+     * 
+     */
     @InputImport(name="shardCount", required=true)
     private final String shardCount;
 
@@ -33,6 +49,10 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
         return this.shardCount;
     }
 
+    /**
+     * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
+     * 
+     */
     @InputImport(name="tablePrefix", required=true)
     private final String tablePrefix;
 

@@ -13,12 +13,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetFlowResult {
+    /**
+     * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     private final String description;
+    /**
+     * The human-readable name of the flow.
+     * 
+     */
     private final String displayName;
+    /**
+     * A flow's event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page's event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
+     * 
+     */
     private final List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers;
+    /**
+     * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     private final String name;
+    /**
+     * NLU related settings of the flow.
+     * 
+     */
     private final GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings;
+    /**
+     * A flow's transition route group serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+     * 
+     */
     private final List<String> transitionRouteGroups;
+    /**
+     * A flow's transition routes serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition routes and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
+     * 
+     */
     private final List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
 
     @OutputCustomType.Constructor({"description","displayName","eventHandlers","name","nluSettings","transitionRouteGroups","transitionRoutes"})
@@ -39,24 +67,52 @@ public final class GetFlowResult {
         this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
     }
 
+    /**
+     * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The human-readable name of the flow.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * A flow's event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page's event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3EventHandlerResponse> getEventHandlers() {
         return this.eventHandlers;
     }
+    /**
+     * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * NLU related settings of the flow.
+     * 
+     */
     public GoogleCloudDialogflowCxV3NluSettingsResponse getNluSettings() {
         return this.nluSettings;
     }
+    /**
+     * A flow's transition route group serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+     * 
+     */
     public List<String> getTransitionRouteGroups() {
         return this.transitionRouteGroups;
     }
+    /**
+     * A flow's transition routes serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition routes and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3TransitionRouteResponse> getTransitionRoutes() {
         return this.transitionRoutes;
     }

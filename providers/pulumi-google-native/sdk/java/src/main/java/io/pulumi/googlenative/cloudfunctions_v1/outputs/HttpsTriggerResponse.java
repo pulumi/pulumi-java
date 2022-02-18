@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HttpsTriggerResponse {
+    /**
+     * The security level for the function.
+     * 
+     */
     private final String securityLevel;
+    /**
+     * The deployed url for the function.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"securityLevel","url"})
@@ -20,9 +28,17 @@ public final class HttpsTriggerResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * The security level for the function.
+     * 
+     */
     public String getSecurityLevel() {
         return this.securityLevel;
     }
+    /**
+     * The deployed url for the function.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

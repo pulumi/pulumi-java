@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeystore {
+/**
+ * Gets a keystore or truststore.
+ * 
+ */
     public static CompletableFuture<GetKeystoreResult> invokeAsync(GetKeystoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getKeystore", TypeShape.of(GetKeystoreResult.class), args == null ? GetKeystoreArgs.Empty : args, Utilities.withVersion(options));
     }

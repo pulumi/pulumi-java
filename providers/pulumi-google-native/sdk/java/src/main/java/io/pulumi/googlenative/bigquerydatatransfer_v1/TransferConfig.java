@@ -18,105 +18,243 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new data transfer configuration.
+ * 
+ */
 @ResourceType(type="google-native:bigquerydatatransfer/v1:TransferConfig")
 public class TransferConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
+     * 
+     */
     @OutputExport(name="dataRefreshWindowDays", type=Integer.class, parameters={})
     private Output<Integer> dataRefreshWindowDays;
 
+    /**
+     * @return The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
+     * 
+     */
     public Output<Integer> getDataRefreshWindowDays() {
         return this.dataRefreshWindowDays;
     }
+    /**
+     * Data source id. Cannot be changed once data transfer is created.
+     * 
+     */
     @OutputExport(name="dataSourceId", type=String.class, parameters={})
     private Output<String> dataSourceId;
 
+    /**
+     * @return Data source id. Cannot be changed once data transfer is created.
+     * 
+     */
     public Output<String> getDataSourceId() {
         return this.dataSourceId;
     }
+    /**
+     * Region in which BigQuery dataset is located.
+     * 
+     */
     @OutputExport(name="datasetRegion", type=String.class, parameters={})
     private Output<String> datasetRegion;
 
+    /**
+     * @return Region in which BigQuery dataset is located.
+     * 
+     */
     public Output<String> getDatasetRegion() {
         return this.datasetRegion;
     }
+    /**
+     * The BigQuery target dataset id.
+     * 
+     */
     @OutputExport(name="destinationDatasetId", type=String.class, parameters={})
     private Output<String> destinationDatasetId;
 
+    /**
+     * @return The BigQuery target dataset id.
+     * 
+     */
     public Output<String> getDestinationDatasetId() {
         return this.destinationDatasetId;
     }
+    /**
+     * Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+     * 
+     */
     @OutputExport(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
+    /**
+     * @return Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+     * 
+     */
     public Output<Boolean> getDisabled() {
         return this.disabled;
     }
+    /**
+     * User specified display name for the data transfer.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return User specified display name for the data transfer.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.
+     * 
+     */
     @OutputExport(name="emailPreferences", type=EmailPreferencesResponse.class, parameters={})
     private Output<EmailPreferencesResponse> emailPreferences;
 
+    /**
+     * @return Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.
+     * 
+     */
     public Output<EmailPreferencesResponse> getEmailPreferences() {
         return this.emailPreferences;
     }
+    /**
+     * The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Next time when data transfer will run.
+     * 
+     */
     @OutputExport(name="nextRunTime", type=String.class, parameters={})
     private Output<String> nextRunTime;
 
+    /**
+     * @return Next time when data transfer will run.
+     * 
+     */
     public Output<String> getNextRunTime() {
         return this.nextRunTime;
     }
+    /**
+     * Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
+     * 
+     */
     @OutputExport(name="notificationPubsubTopic", type=String.class, parameters={})
     private Output<String> notificationPubsubTopic;
 
+    /**
+     * @return Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
+     * 
+     */
     public Output<String> getNotificationPubsubTopic() {
         return this.notificationPubsubTopic;
     }
+    /**
+     * Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.
+     * 
+     */
     @OutputExport(name="ownerInfo", type=UserInfoResponse.class, parameters={})
     private Output<UserInfoResponse> ownerInfo;
 
+    /**
+     * @return Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.
+     * 
+     */
     public Output<UserInfoResponse> getOwnerInfo() {
         return this.ownerInfo;
     }
+    /**
+     * Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer' section for each data source. For example the parameters for Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+     * 
+     */
     @OutputExport(name="params", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> params;
 
+    /**
+     * @return Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer' section for each data source. For example the parameters for Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+     * 
+     */
     public Output<Map<String,String>> getParams() {
         return this.params;
     }
+    /**
+     * Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the default value for the data source will be used. The specified times are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on the data source; refer to the documentation for your data source.
+     * 
+     */
     @OutputExport(name="schedule", type=String.class, parameters={})
     private Output<String> schedule;
 
+    /**
+     * @return Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the default value for the data source will be used. The specified times are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on the data source; refer to the documentation for your data source.
+     * 
+     */
     public Output<String> getSchedule() {
         return this.schedule;
     }
+    /**
+     * Options customizing the data transfer schedule.
+     * 
+     */
     @OutputExport(name="scheduleOptions", type=ScheduleOptionsResponse.class, parameters={})
     private Output<ScheduleOptionsResponse> scheduleOptions;
 
+    /**
+     * @return Options customizing the data transfer schedule.
+     * 
+     */
     public Output<ScheduleOptionsResponse> getScheduleOptions() {
         return this.scheduleOptions;
     }
+    /**
+     * State of the most recently updated transfer run.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return State of the most recently updated transfer run.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Data transfer modification time. Ignored by server on input.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Data transfer modification time. Ignored by server on input.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TransferConfig(String name, @Nullable TransferConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:bigquerydatatransfer/v1:TransferConfig", name, args == null ? TransferConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -132,6 +270,14 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TransferConfig get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TransferConfig(name, id, options);
     }

@@ -11,10 +11,18 @@ import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceRepositoryResou
 import java.util.Objects;
 
 
+/**
+ * A resource that manages a package repository.
+ * 
+ */
 public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourceRepositoryResourceResponse Empty = new OSPolicyResourceRepositoryResourceResponse();
 
+    /**
+     * An Apt Repository.
+     * 
+     */
     @InputImport(name="apt", required=true)
     private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
 
@@ -22,6 +30,10 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
         return this.apt;
     }
 
+    /**
+     * A Goo Repository.
+     * 
+     */
     @InputImport(name="goo", required=true)
     private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
 
@@ -29,6 +41,10 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
         return this.goo;
     }
 
+    /**
+     * A Yum Repository.
+     * 
+     */
     @InputImport(name="yum", required=true)
     private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
 
@@ -36,6 +52,10 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
         return this.yum;
     }
 
+    /**
+     * A Zypper Repository.
+     * 
+     */
     @InputImport(name="zypper", required=true)
     private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 

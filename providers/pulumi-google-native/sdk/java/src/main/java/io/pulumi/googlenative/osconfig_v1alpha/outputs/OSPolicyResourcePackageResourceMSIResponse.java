@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OSPolicyResourcePackageResourceMSIResponse {
+    /**
+     * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+     * 
+     */
     private final List<String> properties;
+    /**
+     * The MSI package.
+     * 
+     */
     private final OSPolicyResourceFileResponse source;
 
     @OutputCustomType.Constructor({"properties","source"})
@@ -22,9 +30,17 @@ public final class OSPolicyResourcePackageResourceMSIResponse {
         this.source = Objects.requireNonNull(source);
     }
 
+    /**
+     * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+     * 
+     */
     public List<String> getProperties() {
         return this.properties;
     }
+    /**
+     * The MSI package.
+     * 
+     */
     public OSPolicyResourceFileResponse getSource() {
         return this.source;
     }

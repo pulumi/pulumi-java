@@ -11,12 +11,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FileOccurrenceResponse {
+    /**
+     * This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
+     * 
+     */
     private final List<String> attributions;
+    /**
+     * This field provides a place for the SPDX file creator to record any general comments about the file
+     * 
+     */
     private final String comment;
+    /**
+     * This field provides a place for the SPDX file creator to record file contributors
+     * 
+     */
     private final List<String> contributors;
+    /**
+     * Identify the copyright holder of the file, as well as any dates present
+     * 
+     */
     private final String copyright;
+    /**
+     * This field contains the license information actually found in the file, if any
+     * 
+     */
     private final List<String> filesLicenseInfo;
+    /**
+     * This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
+     * 
+     */
     private final LicenseResponse licenseConcluded;
+    /**
+     * This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
+     * 
+     */
     private final String notice;
 
     @OutputCustomType.Constructor({"attributions","comment","contributors","copyright","filesLicenseInfo","licenseConcluded","notice"})
@@ -37,24 +65,52 @@ public final class FileOccurrenceResponse {
         this.notice = Objects.requireNonNull(notice);
     }
 
+    /**
+     * This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
+     * 
+     */
     public List<String> getAttributions() {
         return this.attributions;
     }
+    /**
+     * This field provides a place for the SPDX file creator to record any general comments about the file
+     * 
+     */
     public String getComment() {
         return this.comment;
     }
+    /**
+     * This field provides a place for the SPDX file creator to record file contributors
+     * 
+     */
     public List<String> getContributors() {
         return this.contributors;
     }
+    /**
+     * Identify the copyright holder of the file, as well as any dates present
+     * 
+     */
     public String getCopyright() {
         return this.copyright;
     }
+    /**
+     * This field contains the license information actually found in the file, if any
+     * 
+     */
     public List<String> getFilesLicenseInfo() {
         return this.filesLicenseInfo;
     }
+    /**
+     * This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
+     * 
+     */
     public LicenseResponse getLicenseConcluded() {
         return this.licenseConcluded;
     }
+    /**
+     * This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
+     * 
+     */
     public String getNotice() {
         return this.notice;
     }

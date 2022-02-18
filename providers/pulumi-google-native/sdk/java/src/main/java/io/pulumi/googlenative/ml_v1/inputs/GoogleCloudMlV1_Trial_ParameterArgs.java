@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A message representing a parameter to be tuned. Contains the name of the parameter and the suggested value to use for this trial.
+ * 
+ */
 public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1_Trial_ParameterArgs Empty = new GoogleCloudMlV1_Trial_ParameterArgs();
 
+    /**
+     * Must be set if ParameterType is DOUBLE or DISCRETE.
+     * 
+     */
     @InputImport(name="floatValue")
     private final @Nullable Input<Double> floatValue;
 
@@ -22,6 +30,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
         return this.floatValue == null ? Input.empty() : this.floatValue;
     }
 
+    /**
+     * Must be set if ParameterType is INTEGER
+     * 
+     */
     @InputImport(name="intValue")
     private final @Nullable Input<String> intValue;
 
@@ -29,6 +41,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
         return this.intValue == null ? Input.empty() : this.intValue;
     }
 
+    /**
+     * The name of the parameter.
+     * 
+     */
     @InputImport(name="parameter")
     private final @Nullable Input<String> parameter;
 
@@ -36,6 +52,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
         return this.parameter == null ? Input.empty() : this.parameter;
     }
 
+    /**
+     * Must be set if ParameterTypeis CATEGORICAL
+     * 
+     */
     @InputImport(name="stringValue")
     private final @Nullable Input<String> stringValue;
 

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * MySQL table.
+ * 
+ */
 public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MysqlTableResponse Empty = new MysqlTableResponse();
 
+    /**
+     * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * 
+     */
     @InputImport(name="mysqlColumns", required=true)
     private final List<MysqlColumnResponse> mysqlColumns;
 
@@ -21,6 +29,10 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
         return this.mysqlColumns;
     }
 
+    /**
+     * Table name.
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 

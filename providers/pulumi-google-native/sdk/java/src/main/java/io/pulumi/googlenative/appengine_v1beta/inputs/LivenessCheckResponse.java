@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+ * 
+ */
 public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LivenessCheckResponse Empty = new LivenessCheckResponse();
 
+    /**
+     * Interval between health checks.
+     * 
+     */
     @InputImport(name="checkInterval", required=true)
     private final String checkInterval;
 
@@ -20,6 +28,10 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
         return this.checkInterval;
     }
 
+    /**
+     * Number of consecutive failed checks required before considering the VM unhealthy.
+     * 
+     */
     @InputImport(name="failureThreshold", required=true)
     private final Integer failureThreshold;
 
@@ -27,6 +39,10 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
         return this.failureThreshold;
     }
 
+    /**
+     * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
+     * 
+     */
     @InputImport(name="host", required=true)
     private final String host;
 
@@ -34,6 +50,10 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
         return this.host;
     }
 
+    /**
+     * The initial delay before starting to execute the checks.
+     * 
+     */
     @InputImport(name="initialDelay", required=true)
     private final String initialDelay;
 
@@ -41,6 +61,10 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
         return this.initialDelay;
     }
 
+    /**
+     * The request path.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -48,6 +72,10 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
         return this.path;
     }
 
+    /**
+     * Number of consecutive successful checks required before considering the VM healthy.
+     * 
+     */
     @InputImport(name="successThreshold", required=true)
     private final Integer successThreshold;
 
@@ -55,6 +83,10 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
         return this.successThreshold;
     }
 
+    /**
+     * Time before the check is considered failed.
+     * 
+     */
     @InputImport(name="timeout", required=true)
     private final String timeout;
 

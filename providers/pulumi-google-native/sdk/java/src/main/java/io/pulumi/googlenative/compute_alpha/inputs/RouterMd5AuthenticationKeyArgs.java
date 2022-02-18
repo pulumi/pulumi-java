@@ -14,6 +14,10 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
 
     public static final RouterMd5AuthenticationKeyArgs Empty = new RouterMd5AuthenticationKeyArgs();
 
+    /**
+     * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value from the previous configuration. This is allowed if the key with the same name existed before the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +25,10 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Name used to identify the key. Must be unique within a router. Must be referenced by at least one bgpPeer. Must comply with RFC1035.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

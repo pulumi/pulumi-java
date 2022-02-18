@@ -11,9 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketCorsItemResponse {
+    /**
+     * The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+     * 
+     */
     private final Integer maxAgeSeconds;
+    /**
+     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
+     * 
+     */
     private final List<String> method;
+    /**
+     * The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
+     * 
+     */
     private final List<String> origin;
+    /**
+     * The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+     * 
+     */
     private final List<String> responseHeader;
 
     @OutputCustomType.Constructor({"maxAgeSeconds","method","origin","responseHeader"})
@@ -28,15 +44,31 @@ public final class BucketCorsItemResponse {
         this.responseHeader = Objects.requireNonNull(responseHeader);
     }
 
+    /**
+     * The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+     * 
+     */
     public Integer getMaxAgeSeconds() {
         return this.maxAgeSeconds;
     }
+    /**
+     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
+     * 
+     */
     public List<String> getMethod() {
         return this.method;
     }
+    /**
+     * The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
+     * 
+     */
     public List<String> getOrigin() {
         return this.origin;
     }
+    /**
+     * The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+     * 
+     */
     public List<String> getResponseHeader() {
         return this.responseHeader;
     }

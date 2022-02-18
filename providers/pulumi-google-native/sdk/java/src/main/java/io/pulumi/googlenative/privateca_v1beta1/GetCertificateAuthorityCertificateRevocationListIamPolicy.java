@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateAuthorityCertificateRevocationListIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ * 
+ */
     public static CompletableFuture<GetCertificateAuthorityCertificateRevocationListIamPolicyResult> invokeAsync(GetCertificateAuthorityCertificateRevocationListIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getCertificateAuthorityCertificateRevocationListIamPolicy", TypeShape.of(GetCertificateAuthorityCertificateRevocationListIamPolicyResult.class), args == null ? GetCertificateAuthorityCertificateRevocationListIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Actions on Google action to open a given url.
+ * 
+ */
 public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse Empty = new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse();
 
+    /**
+     * URL
+     * 
+     */
     @InputImport(name="url", required=true)
     private final String url;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
         return this.url;
     }
 
+    /**
+     * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+     * 
+     */
     @InputImport(name="urlTypeHint", required=true)
     private final String urlTypeHint;
 

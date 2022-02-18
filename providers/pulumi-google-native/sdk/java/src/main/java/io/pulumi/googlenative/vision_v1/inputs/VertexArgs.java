@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A vertex represents a 2D point in the image. NOTE: the vertex coordinates are in the same scale as the original image.
+ * 
+ */
 public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VertexArgs Empty = new VertexArgs();
 
+    /**
+     * X coordinate.
+     * 
+     */
     @InputImport(name="x")
     private final @Nullable Input<Integer> x;
 
@@ -21,6 +29,10 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
         return this.x == null ? Input.empty() : this.x;
     }
 
+    /**
+     * Y coordinate.
+     * 
+     */
     @InputImport(name="y")
     private final @Nullable Input<Integer> y;
 

@@ -8,11 +8,31 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of authentication configured.
+     * 
+     */
     @EnumType
     public enum AuthConfigAuthType {
+        /**
+         * Authentication type not specified.
+         * 
+         */
         AuthTypeUnspecified("AUTH_TYPE_UNSPECIFIED"),
+        /**
+         * Username and Password Authentication.
+         * 
+         */
         UserPassword("USER_PASSWORD"),
+        /**
+         * JSON Web Token (JWT) Profile for Oauth 2.0 Authorization Grant based authentication
+         * 
+         */
         Oauth2JwtBearer("OAUTH2_JWT_BEARER"),
+        /**
+         * Oauth 2.0 Client Credentials Grant Authentication
+         * 
+         */
         Oauth2ClientCredentials("OAUTH2_CLIENT_CREDENTIALS");
 
         private final String value;

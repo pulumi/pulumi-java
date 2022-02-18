@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Key-value pair to store extra metadata.
+ * 
+ */
 public final class GoogleCloudApigeeV1AttributeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1AttributeResponse Empty = new GoogleCloudApigeeV1AttributeResponse();
 
+    /**
+     * API key of the attribute.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +27,10 @@ public final class GoogleCloudApigeeV1AttributeResponse extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * Value of the attribute.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

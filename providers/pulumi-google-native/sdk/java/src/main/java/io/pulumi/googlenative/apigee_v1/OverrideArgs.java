@@ -15,6 +15,10 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OverrideArgs Empty = new OverrideArgs();
 
+    /**
+     * ID of the API proxy that will have its trace configuration overridden.
+     * 
+     */
     @InputImport(name="apiProxy")
     private final @Nullable Input<String> apiProxy;
 
@@ -29,6 +33,10 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
+    /**
+     * ID of the trace configuration override specified as a system-generated UUID.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +51,10 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * Trace configuration to override.
+     * 
+     */
     @InputImport(name="samplingConfig")
     private final @Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
 

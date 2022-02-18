@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The selected network policy provider.
+     * 
+     */
     @EnumType
     public enum NetworkPolicyProvider {
+        /**
+         * Not set
+         * 
+         */
         ProviderUnspecified("PROVIDER_UNSPECIFIED"),
+        /**
+         * Tigera (Calico Felix).
+         * 
+         */
         Calico("CALICO");
 
         private final String value;

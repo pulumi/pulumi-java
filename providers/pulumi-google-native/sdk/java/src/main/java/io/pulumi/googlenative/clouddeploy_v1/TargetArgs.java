@@ -20,6 +20,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetArgs Empty = new TargetArgs();
 
+    /**
+     * Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -27,6 +31,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Information specifying an Anthos Cluster.
+     * 
+     */
     @InputImport(name="anthosCluster")
     private final @Nullable Input<AnthosClusterArgs> anthosCluster;
 
@@ -34,6 +42,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.anthosCluster == null ? Input.empty() : this.anthosCluster;
     }
 
+    /**
+     * Optional. Description of the `Target`. Max length is 255 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -41,6 +53,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -48,6 +64,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+     * 
+     */
     @InputImport(name="executionConfigs")
     private final @Nullable Input<List<ExecutionConfigArgs>> executionConfigs;
 
@@ -55,6 +75,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.executionConfigs == null ? Input.empty() : this.executionConfigs;
     }
 
+    /**
+     * Information specifying a GKE Cluster.
+     * 
+     */
     @InputImport(name="gke")
     private final @Nullable Input<GkeClusterArgs> gke;
 
@@ -62,6 +86,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.gke == null ? Input.empty() : this.gke;
     }
 
+    /**
+     * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -76,6 +104,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -97,6 +129,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Optional. Whether or not the `Target` requires approval.
+     * 
+     */
     @InputImport(name="requireApproval")
     private final @Nullable Input<Boolean> requireApproval;
 

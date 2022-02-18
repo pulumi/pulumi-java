@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contains information about Service Directory-backed zones.
+ * 
+ */
 public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedZoneServiceDirectoryConfigResponse Empty = new ManagedZoneServiceDirectoryConfigResponse();
@@ -20,6 +24,10 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.r
         return this.kind;
     }
 
+    /**
+     * Contains information about the namespace associated with the zone.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 

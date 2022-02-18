@@ -6,6 +6,10 @@ package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 import java.util.Objects;
 
 
+/**
+ * Table view specification.
+ * 
+ */
 public final class GoogleCloudDatacatalogV1beta1ViewSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1beta1ViewSpecArgs Empty = new GoogleCloudDatacatalogV1beta1ViewSpecArgs();

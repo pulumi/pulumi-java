@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Network configuration for the Dataproc Metastore service.
+ * 
+ */
 public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkConfigResponse Empty = new NetworkConfigResponse();
 
+    /**
+     * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
+     * 
+     */
     @InputImport(name="consumers", required=true)
     private final List<ConsumerResponse> consumers;
 

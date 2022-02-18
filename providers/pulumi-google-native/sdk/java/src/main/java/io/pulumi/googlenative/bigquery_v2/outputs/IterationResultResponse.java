@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IterationResultResponse {
+    /**
+     * Time taken to run the iteration in milliseconds.
+     * 
+     */
     private final String durationMs;
+    /**
+     * Loss computed on the eval data at the end of iteration.
+     * 
+     */
     private final Double evalLoss;
+    /**
+     * Index of the iteration, 0 based.
+     * 
+     */
     private final Integer index;
+    /**
+     * Learn rate used for this iteration.
+     * 
+     */
     private final Double learnRate;
+    /**
+     * Loss computed on the training data at the end of iteration.
+     * 
+     */
     private final Double trainingLoss;
 
     @OutputCustomType.Constructor({"durationMs","evalLoss","index","learnRate","trainingLoss"})
@@ -31,18 +51,38 @@ public final class IterationResultResponse {
         this.trainingLoss = Objects.requireNonNull(trainingLoss);
     }
 
+    /**
+     * Time taken to run the iteration in milliseconds.
+     * 
+     */
     public String getDurationMs() {
         return this.durationMs;
     }
+    /**
+     * Loss computed on the eval data at the end of iteration.
+     * 
+     */
     public Double getEvalLoss() {
         return this.evalLoss;
     }
+    /**
+     * Index of the iteration, 0 based.
+     * 
+     */
     public Integer getIndex() {
         return this.index;
     }
+    /**
+     * Learn rate used for this iteration.
+     * 
+     */
     public Double getLearnRate() {
         return this.learnRate;
     }
+    /**
+     * Loss computed on the training data at the end of iteration.
+     * 
+     */
     public Double getTrainingLoss() {
         return this.trainingLoss;
     }

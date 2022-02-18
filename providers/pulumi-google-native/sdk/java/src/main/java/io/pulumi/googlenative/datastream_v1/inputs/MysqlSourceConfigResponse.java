@@ -8,10 +8,18 @@ import io.pulumi.googlenative.datastream_v1.inputs.MysqlRdbmsResponse;
 import java.util.Objects;
 
 
+/**
+ * MySQL source configuration
+ * 
+ */
 public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MysqlSourceConfigResponse Empty = new MysqlSourceConfigResponse();
 
+    /**
+     * MySQL objects to exclude from the stream.
+     * 
+     */
     @InputImport(name="excludeObjects", required=true)
     private final MysqlRdbmsResponse excludeObjects;
 
@@ -19,6 +27,10 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
         return this.excludeObjects;
     }
 
+    /**
+     * MySQL objects to retrieve from the source.
+     * 
+     */
     @InputImport(name="includeObjects", required=true)
     private final MysqlRdbmsResponse includeObjects;
 

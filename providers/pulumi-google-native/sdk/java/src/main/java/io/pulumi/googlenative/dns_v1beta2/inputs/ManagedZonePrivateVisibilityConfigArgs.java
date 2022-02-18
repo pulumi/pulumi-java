@@ -17,6 +17,10 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
 
     public static final ManagedZonePrivateVisibilityConfigArgs Empty = new ManagedZonePrivateVisibilityConfigArgs();
 
+    /**
+     * The list of Google Kubernetes Engine clusters that can see this zone.
+     * 
+     */
     @InputImport(name="gkeClusters")
     private final @Nullable Input<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
 
@@ -31,6 +35,10 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The list of VPC networks that can see this zone.
+     * 
+     */
     @InputImport(name="networks")
     private final @Nullable Input<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 

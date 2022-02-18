@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for the GCP Filestore CSI driver.
+ * 
+ */
 public final class GcpFilestoreCsiDriverConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GcpFilestoreCsiDriverConfigResponse Empty = new GcpFilestoreCsiDriverConfigResponse();
 
+    /**
+     * Whether the GCP Filestore CSI driver is enabled for this cluster.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

@@ -16,10 +16,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents a single parameter to optimize.
+ * 
+ */
 public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_StudyConfig_ParameterSpecResponse Empty = new GoogleCloudMlV1_StudyConfig_ParameterSpecResponse();
 
+    /**
+     * The value spec for a 'CATEGORICAL' parameter.
+     * 
+     */
     @InputImport(name="categoricalValueSpec", required=true)
     private final GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec;
 
@@ -27,6 +35,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
         return this.categoricalValueSpec;
     }
 
+    /**
+     * A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+     * 
+     */
     @InputImport(name="childParameterSpecs", required=true)
     private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs;
 
@@ -34,6 +46,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
         return this.childParameterSpecs;
     }
 
+    /**
+     * The value spec for a 'DISCRETE' parameter.
+     * 
+     */
     @InputImport(name="discreteValueSpec", required=true)
     private final GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec;
 
@@ -41,6 +57,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
         return this.discreteValueSpec;
     }
 
+    /**
+     * The value spec for a 'DOUBLE' parameter.
+     * 
+     */
     @InputImport(name="doubleValueSpec", required=true)
     private final GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec;
 
@@ -48,6 +68,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
         return this.doubleValueSpec;
     }
 
+    /**
+     * The value spec for an 'INTEGER' parameter.
+     * 
+     */
     @InputImport(name="integerValueSpec", required=true)
     private final GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec;
 
@@ -55,6 +79,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
         return this.integerValueSpec;
     }
 
+    /**
+     * The parameter name must be unique amongst all ParameterSpecs.
+     * 
+     */
     @InputImport(name="parameter", required=true)
     private final String parameter;
 
@@ -83,6 +111,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
         return this.parentIntValues;
     }
 
+    /**
+     * How the parameter should be scaled. Leave unset for categorical parameters.
+     * 
+     */
     @InputImport(name="scaleType", required=true)
     private final String scaleType;
 
@@ -90,6 +122,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
         return this.scaleType;
     }
 
+    /**
+     * The type of the parameter.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

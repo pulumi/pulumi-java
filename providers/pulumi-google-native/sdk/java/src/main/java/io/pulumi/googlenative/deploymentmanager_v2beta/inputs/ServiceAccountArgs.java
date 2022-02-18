@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Service Account used as a credential.
+ * 
+ */
 public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceAccountArgs Empty = new ServiceAccountArgs();
 
+    /**
+     * The IAM service account email address like test@myproject.iam.gserviceaccount.com
+     * 
+     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 

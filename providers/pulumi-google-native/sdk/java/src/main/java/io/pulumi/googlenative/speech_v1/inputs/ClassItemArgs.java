@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An item of the class.
+ * 
+ */
 public final class ClassItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClassItemArgs Empty = new ClassItemArgs();
 
+    /**
+     * The class item's value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

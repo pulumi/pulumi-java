@@ -10,11 +10,35 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum IndividualOutcomeOutcomeSummary {
+        /**
+         * Do not use. For proto versioning only.
+         * 
+         */
         Unset("unset"),
+        /**
+         * The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.
+         * 
+         */
         Success("success"),
+        /**
+         * A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.
+         * 
+         */
         Failure("failure"),
+        /**
+         * Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.
+         * 
+         */
         Inconclusive("inconclusive"),
+        /**
+         * All tests were skipped, for instance: - All device configurations were incompatible.
+         * 
+         */
         Skipped("skipped"),
+        /**
+         * A group of steps that were run with the same configuration had both failure and success outcomes.
+         * 
+         */
         Flaky("flaky");
 
         private final String value;

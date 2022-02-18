@@ -13,22 +13,90 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EnvironmentResponse {
+    /**
+     * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".
+     * 
+     */
     private final String clusterManagerApiService;
+    /**
+     * The dataset for the current project where various workflow related tables are stored. The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
+     * 
+     */
     private final String dataset;
+    /**
+     * Any debugging options to be supplied to the job.
+     * 
+     */
     private final DebugOptionsResponse debugOptions;
+    /**
+     * The list of experiments to enable. This field should be used for SDK related experiments and not for service related experiments. The proper field for service related experiments is service_options.
+     * 
+     */
     private final List<String> experiments;
+    /**
+     * Which Flexible Resource Scheduling mode to run in.
+     * 
+     */
     private final String flexResourceSchedulingGoal;
+    /**
+     * Experimental settings.
+     * 
+     */
     private final Map<String,String> internalExperiments;
+    /**
+     * The Cloud Dataflow SDK pipeline options specified by the user. These options are passed through the service and are used to recreate the SDK pipeline options on the worker in a language agnostic and platform independent way.
+     * 
+     */
     private final Map<String,String> sdkPipelineOptions;
+    /**
+     * Identity to run virtual machines as. Defaults to the default account.
+     * 
+     */
     private final String serviceAccountEmail;
+    /**
+     * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer Managed Encryption Key (CMEK). Format: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+     * 
+     */
     private final String serviceKmsKeyName;
+    /**
+     * The list of service options to enable. This field should be used for service related experiments only. These experiments, when graduating to GA, should be replaced by dedicated fields or become default (i.e. always on).
+     * 
+     */
     private final List<String> serviceOptions;
+    /**
+     * The shuffle mode used for the job.
+     * 
+     */
     private final String shuffleMode;
+    /**
+     * The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * 
+     */
     private final String tempStoragePrefix;
+    /**
+     * A description of the process that generated the request.
+     * 
+     */
     private final Map<String,String> userAgent;
+    /**
+     * A structure describing which components and their versions of the service are required in order to run the job.
+     * 
+     */
     private final Map<String,String> version;
+    /**
+     * The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.
+     * 
+     */
     private final List<WorkerPoolResponse> workerPools;
+    /**
+     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.
+     * 
+     */
     private final String workerRegion;
+    /**
+     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.
+     * 
+     */
     private final String workerZone;
 
     @OutputCustomType.Constructor({"clusterManagerApiService","dataset","debugOptions","experiments","flexResourceSchedulingGoal","internalExperiments","sdkPipelineOptions","serviceAccountEmail","serviceKmsKeyName","serviceOptions","shuffleMode","tempStoragePrefix","userAgent","version","workerPools","workerRegion","workerZone"})
@@ -69,54 +137,122 @@ public final class EnvironmentResponse {
         this.workerZone = Objects.requireNonNull(workerZone);
     }
 
+    /**
+     * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".
+     * 
+     */
     public String getClusterManagerApiService() {
         return this.clusterManagerApiService;
     }
+    /**
+     * The dataset for the current project where various workflow related tables are stored. The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
+     * 
+     */
     public String getDataset() {
         return this.dataset;
     }
+    /**
+     * Any debugging options to be supplied to the job.
+     * 
+     */
     public DebugOptionsResponse getDebugOptions() {
         return this.debugOptions;
     }
+    /**
+     * The list of experiments to enable. This field should be used for SDK related experiments and not for service related experiments. The proper field for service related experiments is service_options.
+     * 
+     */
     public List<String> getExperiments() {
         return this.experiments;
     }
+    /**
+     * Which Flexible Resource Scheduling mode to run in.
+     * 
+     */
     public String getFlexResourceSchedulingGoal() {
         return this.flexResourceSchedulingGoal;
     }
+    /**
+     * Experimental settings.
+     * 
+     */
     public Map<String,String> getInternalExperiments() {
         return this.internalExperiments;
     }
+    /**
+     * The Cloud Dataflow SDK pipeline options specified by the user. These options are passed through the service and are used to recreate the SDK pipeline options on the worker in a language agnostic and platform independent way.
+     * 
+     */
     public Map<String,String> getSdkPipelineOptions() {
         return this.sdkPipelineOptions;
     }
+    /**
+     * Identity to run virtual machines as. Defaults to the default account.
+     * 
+     */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
+    /**
+     * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer Managed Encryption Key (CMEK). Format: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+     * 
+     */
     public String getServiceKmsKeyName() {
         return this.serviceKmsKeyName;
     }
+    /**
+     * The list of service options to enable. This field should be used for service related experiments only. These experiments, when graduating to GA, should be replaced by dedicated fields or become default (i.e. always on).
+     * 
+     */
     public List<String> getServiceOptions() {
         return this.serviceOptions;
     }
+    /**
+     * The shuffle mode used for the job.
+     * 
+     */
     public String getShuffleMode() {
         return this.shuffleMode;
     }
+    /**
+     * The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * 
+     */
     public String getTempStoragePrefix() {
         return this.tempStoragePrefix;
     }
+    /**
+     * A description of the process that generated the request.
+     * 
+     */
     public Map<String,String> getUserAgent() {
         return this.userAgent;
     }
+    /**
+     * A structure describing which components and their versions of the service are required in order to run the job.
+     * 
+     */
     public Map<String,String> getVersion() {
         return this.version;
     }
+    /**
+     * The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.
+     * 
+     */
     public List<WorkerPoolResponse> getWorkerPools() {
         return this.workerPools;
     }
+    /**
+     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.
+     * 
+     */
     public String getWorkerRegion() {
         return this.workerRegion;
     }
+    /**
+     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.
+     * 
+     */
     public String getWorkerZone() {
         return this.workerZone;
     }

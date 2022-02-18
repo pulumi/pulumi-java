@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CustomHttpPatternResponse {
+    /**
+     * The name of this custom HTTP verb.
+     * 
+     */
     private final String kind;
+    /**
+     * The path matched by this custom verb.
+     * 
+     */
     private final String path;
 
     @OutputCustomType.Constructor({"kind","path"})
@@ -20,9 +28,17 @@ public final class CustomHttpPatternResponse {
         this.path = Objects.requireNonNull(path);
     }
 
+    /**
+     * The name of this custom HTTP verb.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * The path matched by this custom verb.
+     * 
+     */
     public String getPath() {
         return this.path;
     }

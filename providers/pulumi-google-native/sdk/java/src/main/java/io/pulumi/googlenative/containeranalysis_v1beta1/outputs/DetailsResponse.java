@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DetailsResponse {
+    /**
+     * Attestation for the resource.
+     * 
+     */
     private final AttestationResponse attestation;
 
     @OutputCustomType.Constructor({"attestation"})
@@ -16,6 +20,10 @@ public final class DetailsResponse {
         this.attestation = Objects.requireNonNull(attestation);
     }
 
+    /**
+     * Attestation for the resource.
+     * 
+     */
     public AttestationResponse getAttestation() {
         return this.attestation;
     }

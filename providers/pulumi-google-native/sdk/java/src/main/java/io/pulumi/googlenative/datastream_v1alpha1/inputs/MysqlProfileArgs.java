@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MySQL database profile.
+ * 
+ */
 public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MysqlProfileArgs Empty = new MysqlProfileArgs();
 
+    /**
+     * Hostname for the MySQL connection.
+     * 
+     */
     @InputImport(name="hostname", required=true)
     private final Input<String> hostname;
 
@@ -23,6 +31,10 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostname;
     }
 
+    /**
+     * Input only. Password for the MySQL connection.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -30,6 +42,10 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.password;
     }
 
+    /**
+     * Port for the MySQL connection, default value is 3306.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -37,6 +53,10 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * SSL configuration for the MySQL connection.
+     * 
+     */
     @InputImport(name="sslConfig")
     private final @Nullable Input<MysqlSslConfigArgs> sslConfig;
 
@@ -44,6 +64,10 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.sslConfig == null ? Input.empty() : this.sslConfig;
     }
 
+    /**
+     * Username for the MySQL connection.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

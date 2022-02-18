@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Code and application artifacts used to deploy a version to App Engine.
+ * 
+ */
 public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 
+    /**
+     * Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
+     * 
+     */
     @InputImport(name="cloudBuildOptions")
     private final @Nullable Input<CloudBuildOptionsArgs> cloudBuildOptions;
 
@@ -25,6 +33,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudBuildOptions == null ? Input.empty() : this.cloudBuildOptions;
     }
 
+    /**
+     * The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
+     * 
+     */
     @InputImport(name="container")
     private final @Nullable Input<ContainerInfoArgs> container;
 
@@ -32,6 +44,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.container == null ? Input.empty() : this.container;
     }
 
+    /**
+     * Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
+     * 
+     */
     @InputImport(name="files")
     private final @Nullable Input<Map<String,String>> files;
 
@@ -39,6 +55,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.files == null ? Input.empty() : this.files;
     }
 
+    /**
+     * The zip file for this deployment, if this is a zip deployment.
+     * 
+     */
     @InputImport(name="zip")
     private final @Nullable Input<ZipInfoArgs> zip;
 

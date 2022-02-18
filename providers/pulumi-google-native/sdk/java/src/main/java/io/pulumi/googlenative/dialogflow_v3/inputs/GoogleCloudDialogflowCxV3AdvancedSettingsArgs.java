@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at lower level overrides the settings exposed at higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter.
+ * 
+ */
 public final class GoogleCloudDialogflowCxV3AdvancedSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3AdvancedSettingsArgs Empty = new GoogleCloudDialogflowCxV3AdvancedSettingsArgs();
 
+    /**
+     * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+     * 
+     */
     @InputImport(name="loggingSettings")
     private final @Nullable Input<GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs> loggingSettings;
 

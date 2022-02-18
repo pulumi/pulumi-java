@@ -13,51 +13,117 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new Hub in a given project and location.
+ * 
+ */
 @ResourceType(type="google-native:networkconnectivity/v1alpha1:Hub")
 public class Hub extends io.pulumi.resources.CustomResource {
+    /**
+     * Time when the Hub was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Time when the Hub was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Short description of the hub resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return Short description of the hub resource.
+     * 
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * User-defined labels.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return User-defined labels.
+     * 
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Immutable. The name of a Hub resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Immutable. The name of a Hub resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The current lifecycle state of this Hub.
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The current lifecycle state of this Hub.
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Google-generated UUID for this resource. This is unique across all Hub resources. If a Hub resource is deleted and another with the same name is created, it gets a different unique_id.
+     * 
+     */
     @OutputExport(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
+    /**
+     * @return Google-generated UUID for this resource. This is unique across all Hub resources. If a Hub resource is deleted and another with the same name is created, it gets a different unique_id.
+     * 
+     */
     public Output<String> getUniqueId() {
         return this.uniqueId;
     }
+    /**
+     * Time when the Hub was updated.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Time when the Hub was updated.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Hub(String name, @Nullable HubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:networkconnectivity/v1alpha1:Hub", name, args == null ? HubArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +139,14 @@ public class Hub extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Hub get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Hub(name, id, options);
     }

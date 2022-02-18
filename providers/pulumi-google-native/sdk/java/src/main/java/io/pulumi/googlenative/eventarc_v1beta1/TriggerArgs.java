@@ -18,6 +18,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TriggerArgs Empty = new TriggerArgs();
 
+    /**
+     * Destination specifies where the events should be sent to.
+     * 
+     */
     @InputImport(name="destination", required=true)
     private final Input<DestinationArgs> destination;
 
@@ -25,6 +29,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.destination;
     }
 
+    /**
+     * Optional. User labels attached to the triggers that can be used to group resources.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -39,6 +47,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+     * 
+     */
     @InputImport(name="matchingCriteria", required=true)
     private final Input<List<MatchingCriteriaArgs>> matchingCriteria;
 
@@ -46,6 +58,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.matchingCriteria;
     }
 
+    /**
+     * The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,6 +76,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have 'eventarc.events.receiveAuditLogV1Written' permission.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 

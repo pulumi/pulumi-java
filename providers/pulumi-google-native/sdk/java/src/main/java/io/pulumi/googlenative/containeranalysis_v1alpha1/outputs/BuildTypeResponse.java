@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BuildTypeResponse {
+    /**
+     * Version of the builder which produced this Note.
+     * 
+     */
     private final String builderVersion;
+    /**
+     * Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
+     * 
+     */
     private final BuildSignatureResponse signature;
 
     @OutputCustomType.Constructor({"builderVersion","signature"})
@@ -21,9 +29,17 @@ public final class BuildTypeResponse {
         this.signature = Objects.requireNonNull(signature);
     }
 
+    /**
+     * Version of the builder which produced this Note.
+     * 
+     */
     public String getBuilderVersion() {
         return this.builderVersion;
     }
+    /**
+     * Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
+     * 
+     */
     public BuildSignatureResponse getSignature() {
         return this.signature;
     }

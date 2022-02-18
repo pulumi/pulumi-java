@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes any options that have an effect on the debugging of pipelines.
+ * 
+ */
 public final class DebugOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DebugOptionsArgs Empty = new DebugOptionsArgs();
 
+    /**
+     * When true, enables the logging of the literal hot key to the user's Cloud Logging.
+     * 
+     */
     @InputImport(name="enableHotKeyLogging")
     private final @Nullable Input<Boolean> enableHotKeyLogging;
 

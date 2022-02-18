@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Location of output file(s) in a Cloud Storage bucket.
+ * 
+ */
 public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OutputArgs Empty = new OutputArgs();
 
+    /**
+     * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+     * 
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPeering {
+/**
+ * Gets details of a single Peering.
+ * 
+ */
     public static CompletableFuture<GetPeeringResult> invokeAsync(GetPeeringArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1alpha1:getPeering", TypeShape.of(GetPeeringResult.class), args == null ? GetPeeringArgs.Empty : args, Utilities.withVersion(options));
     }

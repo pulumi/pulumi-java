@@ -8,10 +8,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * A set of Shielded VM options.
+ * 
+ */
 public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShieldedVmConfigResponse Empty = new ShieldedVmConfigResponse();
 
+    /**
+     * Defines whether the instance has integrity monitoring enabled.
+     * 
+     */
     @InputImport(name="enableIntegrityMonitoring", required=true)
     private final Boolean enableIntegrityMonitoring;
 
@@ -19,6 +27,10 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
         return this.enableIntegrityMonitoring;
     }
 
+    /**
+     * Defines whether the instance has Secure Boot enabled.
+     * 
+     */
     @InputImport(name="enableSecureBoot", required=true)
     private final Boolean enableSecureBoot;
 
@@ -26,6 +38,10 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
         return this.enableSecureBoot;
     }
 
+    /**
+     * Defines whether the instance has the vTPM enabled.
+     * 
+     */
     @InputImport(name="enableVtpm", required=true)
     private final Boolean enableVtpm;
 

@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.
+     * 
+     */
     @EnumType
     public enum KeyKeyAlgorithm {
+        /**
+         * An unspecified key algorithm.
+         * 
+         */
         KeyAlgUnspecified("KEY_ALG_UNSPECIFIED"),
+        /**
+         * 1k RSA Key.
+         * 
+         */
         KeyAlgRsa1024("KEY_ALG_RSA_1024"),
+        /**
+         * 2k RSA Key.
+         * 
+         */
         KeyAlgRsa2048("KEY_ALG_RSA_2048");
 
         private final String value;

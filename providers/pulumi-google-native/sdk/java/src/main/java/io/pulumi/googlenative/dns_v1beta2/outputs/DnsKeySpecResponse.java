@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DnsKeySpecResponse {
+    /**
+     * String mnemonic specifying the DNSSEC algorithm of this key.
+     * 
+     */
     private final String algorithm;
+    /**
+     * Length of the keys in bits.
+     * 
+     */
     private final Integer keyLength;
+    /**
+     * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
+     * 
+     */
     private final String keyType;
     private final String kind;
 
@@ -27,12 +39,24 @@ public final class DnsKeySpecResponse {
         this.kind = Objects.requireNonNull(kind);
     }
 
+    /**
+     * String mnemonic specifying the DNSSEC algorithm of this key.
+     * 
+     */
     public String getAlgorithm() {
         return this.algorithm;
     }
+    /**
+     * Length of the keys in bits.
+     * 
+     */
     public Integer getKeyLength() {
         return this.keyLength;
     }
+    /**
+     * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
+     * 
+     */
     public String getKeyType() {
         return this.keyType;
     }

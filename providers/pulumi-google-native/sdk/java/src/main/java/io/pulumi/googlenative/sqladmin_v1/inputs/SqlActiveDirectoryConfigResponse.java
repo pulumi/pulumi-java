@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
+ * 
+ */
 public final class SqlActiveDirectoryConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlActiveDirectoryConfigResponse Empty = new SqlActiveDirectoryConfigResponse();
 
+    /**
+     * The name of the domain (e.g., mydomain.com).
+     * 
+     */
     @InputImport(name="domain", required=true)
     private final String domain;
 
@@ -19,6 +27,10 @@ public final class SqlActiveDirectoryConfigResponse extends io.pulumi.resources.
         return this.domain;
     }
 
+    /**
+     * This is always sql#activeDirectoryConfig.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

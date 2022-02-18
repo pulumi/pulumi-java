@@ -22,6 +22,10 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * `Source` for the `Ruleset`.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<SourceArgs> source;
 

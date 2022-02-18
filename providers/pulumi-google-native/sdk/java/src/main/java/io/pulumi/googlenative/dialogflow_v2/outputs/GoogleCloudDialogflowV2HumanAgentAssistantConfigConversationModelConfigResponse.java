@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse {
+    /**
+     * Conversation model resource name. Format: `projects//conversationModels/`.
+     * 
+     */
     private final String model;
 
     @OutputCustomType.Constructor({"model"})
@@ -16,6 +20,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
         this.model = Objects.requireNonNull(model);
     }
 
+    /**
+     * Conversation model resource name. Format: `projects//conversationModels/`.
+     * 
+     */
     public String getModel() {
         return this.model;
     }

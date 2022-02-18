@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The rating of a Product.
+ * 
+ */
 public final class GoogleCloudRetailV2RatingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2RatingArgs Empty = new GoogleCloudRetailV2RatingArgs();
 
+    /**
+     * The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.
+     * 
+     */
     @InputImport(name="averageRating")
     private final @Nullable Input<Double> averageRating;
 
@@ -23,6 +31,10 @@ public final class GoogleCloudRetailV2RatingArgs extends io.pulumi.resources.Res
         return this.averageRating == null ? Input.empty() : this.averageRating;
     }
 
+    /**
+     * The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
+     * 
+     */
     @InputImport(name="ratingCount")
     private final @Nullable Input<Integer> ratingCount;
 
@@ -30,6 +42,10 @@ public final class GoogleCloudRetailV2RatingArgs extends io.pulumi.resources.Res
         return this.ratingCount == null ? Input.empty() : this.ratingCount;
     }
 
+    /**
+     * List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.
+     * 
+     */
     @InputImport(name="ratingHistogram")
     private final @Nullable Input<List<Integer>> ratingHistogram;
 

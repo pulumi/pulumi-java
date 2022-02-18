@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnnotationStore {
+/**
+ * Gets the specified Annotation store or returns NOT_FOUND if it does not exist.
+ * 
+ */
     public static CompletableFuture<GetAnnotationStoreResult> invokeAsync(GetAnnotationStoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getAnnotationStore", TypeShape.of(GetAnnotationStoreResult.class), args == null ? GetAnnotationStoreArgs.Empty : args, Utilities.withVersion(options));
     }

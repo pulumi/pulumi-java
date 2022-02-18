@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateClusterMasterGlobalAccessConfigResponse {
+    /**
+     * Whenever master is accessible globally or not.
+     * 
+     */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -16,6 +20,10 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+    /**
+     * Whenever master is accessible globally or not.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }

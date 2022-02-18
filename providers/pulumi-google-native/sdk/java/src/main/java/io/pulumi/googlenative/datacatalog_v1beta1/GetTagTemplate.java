@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagTemplate {
+/**
+ * Gets a tag template.
+ * 
+ */
     public static CompletableFuture<GetTagTemplateResult> invokeAsync(GetTagTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getTagTemplate", TypeShape.of(GetTagTemplateResult.class), args == null ? GetTagTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

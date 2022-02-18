@@ -13,6 +13,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
 
     public static final GoogleCloudApigeeV1QueryMetadataResponse Empty = new GoogleCloudApigeeV1QueryMetadataResponse();
 
+    /**
+     * Dimensions of the AsyncQuery.
+     * 
+     */
     @InputImport(name="dimensions", required=true)
     private final List<String> dimensions;
 
@@ -20,6 +24,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
         return this.dimensions;
     }
 
+    /**
+     * End timestamp of the query range.
+     * 
+     */
     @InputImport(name="endTimestamp", required=true)
     private final String endTimestamp;
 
@@ -27,6 +35,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
         return this.endTimestamp;
     }
 
+    /**
+     * Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]
+     * 
+     */
     @InputImport(name="metrics", required=true)
     private final List<String> metrics;
 
@@ -34,6 +46,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
         return this.metrics;
     }
 
+    /**
+     * Output format.
+     * 
+     */
     @InputImport(name="outputFormat", required=true)
     private final String outputFormat;
 
@@ -41,6 +57,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
         return this.outputFormat;
     }
 
+    /**
+     * Start timestamp of the query range.
+     * 
+     */
     @InputImport(name="startTimestamp", required=true)
     private final String startTimestamp;
 
@@ -48,6 +68,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
         return this.startTimestamp;
     }
 
+    /**
+     * Query GroupBy time unit.
+     * 
+     */
     @InputImport(name="timeUnit", required=true)
     private final String timeUnit;
 

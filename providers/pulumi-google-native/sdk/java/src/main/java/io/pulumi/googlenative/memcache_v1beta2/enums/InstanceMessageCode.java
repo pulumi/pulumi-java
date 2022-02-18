@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A code that correspond to one type of user-facing message.
+     * 
+     */
     @EnumType
     public enum InstanceMessageCode {
+        /**
+         * Message Code not set.
+         * 
+         */
         CodeUnspecified("CODE_UNSPECIFIED"),
+        /**
+         * Memcached nodes are distributed unevenly.
+         * 
+         */
         ZoneDistributionUnbalanced("ZONE_DISTRIBUTION_UNBALANCED");
 
         private final String value;

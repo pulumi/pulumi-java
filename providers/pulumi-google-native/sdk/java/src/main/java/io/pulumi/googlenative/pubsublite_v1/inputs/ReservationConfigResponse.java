@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The settings for this topic's Reservation usage.
+ * 
+ */
 public final class ReservationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReservationConfigResponse Empty = new ReservationConfigResponse();
 
+    /**
+     * The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+     * 
+     */
     @InputImport(name="throughputReservation", required=true)
     private final String throughputReservation;
 

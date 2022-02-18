@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSL configuration for a DomainMapping resource.
+ * 
+ */
 public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SslSettingsArgs Empty = new SslSettingsArgs();
 
+    /**
+     * ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify SslManagementType.MANUAL on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+     * 
+     */
     @InputImport(name="certificateId")
     private final @Nullable Input<String> certificateId;
 
@@ -22,6 +30,10 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateId == null ? Input.empty() : this.certificateId;
     }
 
+    /**
+     * SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.
+     * 
+     */
     @InputImport(name="sslManagementType")
     private final @Nullable Input<SslSettingsSslManagementType> sslManagementType;
 

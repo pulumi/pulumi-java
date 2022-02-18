@@ -14,9 +14,25 @@ import java.util.Objects;
 @OutputCustomType
 public final class ComputeSchedulingResponse {
     private final Boolean automaticRestart;
+    /**
+     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+     * 
+     */
     private final Integer minNodeCpus;
+    /**
+     * A set of node affinity and anti-affinity configurations for sole tenant nodes.
+     * 
+     */
     private final List<SchedulingNodeAffinityResponse> nodeAffinities;
+    /**
+     * How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+     * 
+     */
     private final String onHostMaintenance;
+    /**
+     * Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+     * 
+     */
     private final String restartType;
 
     @OutputCustomType.Constructor({"automaticRestart","minNodeCpus","nodeAffinities","onHostMaintenance","restartType"})
@@ -36,15 +52,31 @@ public final class ComputeSchedulingResponse {
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
+    /**
+     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+     * 
+     */
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
     }
+    /**
+     * A set of node affinity and anti-affinity configurations for sole tenant nodes.
+     * 
+     */
     public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
         return this.nodeAffinities;
     }
+    /**
+     * How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+     * 
+     */
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
     }
+    /**
+     * Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+     * 
+     */
     public String getRestartType() {
         return this.restartType;
     }

@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
+     * 
+     */
     @EnumType
     public enum PersistenceConfigPersistenceMode {
+        /**
+         * Not set.
+         * 
+         */
         PersistenceModeUnspecified("PERSISTENCE_MODE_UNSPECIFIED"),
+        /**
+         * Persistence is disabled for the instance, and any existing snapshots are deleted.
+         * 
+         */
         Disabled("DISABLED"),
+        /**
+         * RDB based Persistence is enabled.
+         * 
+         */
         Rdb("RDB");
 
         private final String value;

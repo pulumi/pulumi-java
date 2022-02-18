@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The suggestion chip message that the user can tap to quickly post a reply to the conversation.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse();
 
+    /**
+     * The text shown the in the suggestion chip.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HorizontalPodAutoscalingResponse {
+    /**
+     * Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that metrics are collected into Stackdriver Monitoring.
+     * 
+     */
     private final Boolean disabled;
 
     @OutputCustomType.Constructor({"disabled"})
@@ -16,6 +20,10 @@ public final class HorizontalPodAutoscalingResponse {
         this.disabled = Objects.requireNonNull(disabled);
     }
 
+    /**
+     * Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that metrics are collected into Stackdriver Monitoring.
+     * 
+     */
     public Boolean getDisabled() {
         return this.disabled;
     }

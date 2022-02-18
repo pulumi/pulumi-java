@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents an OpenId Connect 1.0 identity provider.
+ * 
+ */
 public final class OidcResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OidcResponse Empty = new OidcResponse();
 
+    /**
+     * Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ```//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/```
+     * 
+     */
     @InputImport(name="allowedAudiences", required=true)
     private final List<String> allowedAudiences;
 
@@ -20,6 +28,10 @@ public final class OidcResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowedAudiences;
     }
 
+    /**
+     * The OIDC issuer URL. Must be an HTTPS endpoint.
+     * 
+     */
     @InputImport(name="issuerUri", required=true)
     private final String issuerUri;
 

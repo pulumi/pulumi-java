@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * What action should be used to replace instances. See minimal_action.REPLACE
+     * 
+     */
     @EnumType
     public enum InstanceGroupManagerUpdatePolicyReplacementMethod {
+        /**
+         * Instances will be recreated (with the same name)
+         * 
+         */
         Recreate("RECREATE"),
+        /**
+         * Default option: instances will be deleted and created (with a new name)
+         * 
+         */
         Substitute("SUBSTITUTE");
 
         private final String value;

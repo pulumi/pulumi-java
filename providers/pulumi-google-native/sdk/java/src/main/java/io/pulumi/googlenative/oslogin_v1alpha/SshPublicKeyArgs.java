@@ -14,6 +14,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SshPublicKeyArgs Empty = new SshPublicKeyArgs();
 
+    /**
+     * An expiration time in microseconds since epoch.
+     * 
+     */
     @InputImport(name="expirationTimeUsec")
     private final @Nullable Input<String> expirationTimeUsec;
 
@@ -21,6 +25,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationTimeUsec == null ? Input.empty() : this.expirationTimeUsec;
     }
 
+    /**
+     * Public key text in SSH format, defined by RFC4253 section 6.6.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 

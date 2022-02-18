@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VPC access connector specification.
+ * 
+ */
 public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpcAccessConnectorArgs Empty = new VpcAccessConnectorArgs();
 
+    /**
+     * The egress setting for the connector, controlling what traffic is diverted through it.
+     * 
+     */
     @InputImport(name="egressSetting")
     private final @Nullable Input<VpcAccessConnectorEgressSetting> egressSetting;
 
@@ -22,6 +30,10 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
         return this.egressSetting == null ? Input.empty() : this.egressSetting;
     }
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

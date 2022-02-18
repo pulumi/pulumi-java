@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecretsResponse {
+    /**
+     * Secrets encrypted with KMS key and the associated secret environment variable.
+     * 
+     */
     private final List<InlineSecretResponse> inline;
+    /**
+     * Secrets in Secret Manager and associated secret environment variable.
+     * 
+     */
     private final List<SecretManagerSecretResponse> secretManager;
 
     @OutputCustomType.Constructor({"inline","secretManager"})
@@ -22,9 +30,17 @@ public final class SecretsResponse {
         this.secretManager = Objects.requireNonNull(secretManager);
     }
 
+    /**
+     * Secrets encrypted with KMS key and the associated secret environment variable.
+     * 
+     */
     public List<InlineSecretResponse> getInline() {
         return this.inline;
     }
+    /**
+     * Secrets in Secret Manager and associated secret environment variable.
+     * 
+     */
     public List<SecretManagerSecretResponse> getSecretManager() {
         return this.secretManager;
     }

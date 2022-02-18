@@ -13,10 +13,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Table card for Actions on Google.
+ * 
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse();
 
+    /**
+     * Optional. List of buttons for the card.
+     * 
+     */
     @InputImport(name="buttons", required=true)
     private final List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
 
@@ -24,6 +32,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
         return this.buttons;
     }
 
+    /**
+     * Optional. Display properties for the columns in this table.
+     * 
+     */
     @InputImport(name="columnProperties", required=true)
     private final List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties;
 
@@ -31,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
         return this.columnProperties;
     }
 
+    /**
+     * Optional. Image which should be displayed on the card.
+     * 
+     */
     @InputImport(name="image", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
@@ -38,6 +54,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
         return this.image;
     }
 
+    /**
+     * Optional. Rows in this table of data.
+     * 
+     */
     @InputImport(name="rows", required=true)
     private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows;
 
@@ -45,6 +65,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
         return this.rows;
     }
 
+    /**
+     * Optional. Subtitle to the title.
+     * 
+     */
     @InputImport(name="subtitle", required=true)
     private final String subtitle;
 
@@ -52,6 +76,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
         return this.subtitle;
     }
 
+    /**
+     * Title of the card.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

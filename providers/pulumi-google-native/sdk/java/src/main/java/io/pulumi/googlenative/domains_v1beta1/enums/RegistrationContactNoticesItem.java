@@ -10,7 +10,15 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum RegistrationContactNoticesItem {
+        /**
+         * The notice is undefined.
+         * 
+         */
         ContactNoticeUnspecified("CONTACT_NOTICE_UNSPECIFIED"),
+        /**
+         * Required when setting the `privacy` field of `ContactSettings` to `PUBLIC_CONTACT_DATA`, which exposes contact data publicly.
+         * 
+         */
         PublicContactDataAcknowledgement("PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT");
 
         private final String value;

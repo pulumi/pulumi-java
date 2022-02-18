@@ -15,69 +15,159 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new `BitbucketServerConfig`. This API is experimental.
+ * 
+ */
 @ResourceType(type="google-native:cloudbuild/v1:BitbucketServerConfig")
 public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * Immutable. API Key that will be attached to webhook. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     * 
+     */
     @OutputExport(name="apiKey", type=String.class, parameters={})
     private Output<String> apiKey;
 
+    /**
+     * @return Immutable. API Key that will be attached to webhook. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     * 
+     */
     public Output<String> getApiKey() {
         return this.apiKey;
     }
+    /**
+     * Connected Bitbucket Server repositories for this config.
+     * 
+     */
     @OutputExport(name="connectedRepositories", type=List.class, parameters={BitbucketServerRepositoryIdResponse.class})
     private Output<List<BitbucketServerRepositoryIdResponse>> connectedRepositories;
 
+    /**
+     * @return Connected Bitbucket Server repositories for this config.
+     * 
+     */
     public Output<List<BitbucketServerRepositoryIdResponse>> getConnectedRepositories() {
         return this.connectedRepositories;
     }
+    /**
+     * Time when the config was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Time when the config was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     * 
+     */
     @OutputExport(name="hostUri", type=String.class, parameters={})
     private Output<String> hostUri;
 
+    /**
+     * @return Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     * 
+     */
     public Output<String> getHostUri() {
         return this.hostUri;
     }
+    /**
+     * The resource name for the config.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name for the config.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Optional. The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
+     * 
+     */
     @OutputExport(name="peeredNetwork", type=String.class, parameters={})
     private Output<String> peeredNetwork;
 
+    /**
+     * @return Optional. The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
+     * 
+     */
     public Output<String> getPeeredNetwork() {
         return this.peeredNetwork;
     }
+    /**
+     * Secret Manager secrets needed by the config.
+     * 
+     */
     @OutputExport(name="secrets", type=BitbucketServerSecretsResponse.class, parameters={})
     private Output<BitbucketServerSecretsResponse> secrets;
 
+    /**
+     * @return Secret Manager secrets needed by the config.
+     * 
+     */
     public Output<BitbucketServerSecretsResponse> getSecrets() {
         return this.secrets;
     }
+    /**
+     * Optional. SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt.
+     * 
+     */
     @OutputExport(name="sslCa", type=String.class, parameters={})
     private Output<String> sslCa;
 
+    /**
+     * @return Optional. SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt.
+     * 
+     */
     public Output<String> getSslCa() {
         return this.sslCa;
     }
+    /**
+     * Username of the account Cloud Build will use on Bitbucket Server.
+     * 
+     */
     @OutputExport(name="username", type=String.class, parameters={})
     private Output<String> username;
 
+    /**
+     * @return Username of the account Cloud Build will use on Bitbucket Server.
+     * 
+     */
     public Output<String> getUsername() {
         return this.username;
     }
+    /**
+     * UUID included in webhook requests. The UUID is used to look up the corresponding config.
+     * 
+     */
     @OutputExport(name="webhookKey", type=String.class, parameters={})
     private Output<String> webhookKey;
 
+    /**
+     * @return UUID included in webhook requests. The UUID is used to look up the corresponding config.
+     * 
+     */
     public Output<String> getWebhookKey() {
         return this.webhookKey;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BitbucketServerConfig(String name, BitbucketServerConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudbuild/v1:BitbucketServerConfig", name, args == null ? BitbucketServerConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +183,14 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BitbucketServerConfig get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BitbucketServerConfig(name, id, options);
     }

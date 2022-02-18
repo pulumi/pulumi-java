@@ -24,6 +24,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +35,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The settings for this topic's partitions.
+     * 
+     */
     @InputImport(name="partitionConfig")
     private final @Nullable Input<PartitionConfigArgs> partitionConfig;
 
@@ -45,6 +53,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The settings for this topic's Reservation usage.
+     * 
+     */
     @InputImport(name="reservationConfig")
     private final @Nullable Input<ReservationConfigArgs> reservationConfig;
 
@@ -52,6 +64,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.reservationConfig == null ? Input.empty() : this.reservationConfig;
     }
 
+    /**
+     * The settings for this topic's message retention.
+     * 
+     */
     @InputImport(name="retentionConfig")
     private final @Nullable Input<RetentionConfigArgs> retentionConfig;
 

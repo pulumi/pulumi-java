@@ -8,38 +8,166 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of issue. Required.
+     * 
+     */
     @EnumType
     public enum TestIssueType {
+        /**
+         * Default unspecified type. Do not use. For versioning only.
+         * 
+         */
         UnspecifiedType("unspecifiedType"),
+        /**
+         * Issue is a fatal exception.
+         * 
+         */
         FatalException("fatalException"),
+        /**
+         * Issue is a native crash.
+         * 
+         */
         NativeCrash("nativeCrash"),
+        /**
+         * Issue is an ANR crash.
+         * 
+         */
         Anr("anr"),
+        /**
+         * Issue is an unused robo directive.
+         * 
+         */
         UnusedRoboDirective("unusedRoboDirective"),
+        /**
+         * Issue is a suggestion to use orchestrator.
+         * 
+         */
         CompatibleWithOrchestrator("compatibleWithOrchestrator"),
+        /**
+         * Issue with finding a launcher activity
+         * 
+         */
         LauncherActivityNotFound("launcherActivityNotFound"),
+        /**
+         * Issue with resolving a user-provided intent to start an activity
+         * 
+         */
         StartActivityNotFound("startActivityNotFound"),
+        /**
+         * A Robo script was not fully executed.
+         * 
+         */
         IncompleteRoboScriptExecution("incompleteRoboScriptExecution"),
+        /**
+         * A Robo script was fully and successfully executed.
+         * 
+         */
         CompleteRoboScriptExecution("completeRoboScriptExecution"),
+        /**
+         * The APK failed to install.
+         * 
+         */
         FailedToInstall("failedToInstall"),
+        /**
+         * The app-under-test has deep links, but none were provided to Robo.
+         * 
+         */
         AvailableDeepLinks("availableDeepLinks"),
+        /**
+         * App accessed a non-sdk Api.
+         * 
+         */
         NonSdkApiUsageViolation("nonSdkApiUsageViolation"),
+        /**
+         * App accessed a non-sdk Api (new detailed report)
+         * 
+         */
         NonSdkApiUsageReport("nonSdkApiUsageReport"),
+        /**
+         * Robo crawl encountered at least one screen with elements that are not Android UI widgets.
+         * 
+         */
         EncounteredNonAndroidUiWidgetScreen("encounteredNonAndroidUiWidgetScreen"),
+        /**
+         * Robo crawl encountered at least one probable login screen.
+         * 
+         */
         EncounteredLoginScreen("encounteredLoginScreen"),
+        /**
+         * Robo signed in with Google.
+         * 
+         */
         PerformedGoogleLogin("performedGoogleLogin"),
+        /**
+         * iOS App crashed with an exception.
+         * 
+         */
         IosException("iosException"),
+        /**
+         * iOS App crashed without an exception (e.g. killed).
+         * 
+         */
         IosCrash("iosCrash"),
+        /**
+         * Robo crawl involved performing some monkey actions.
+         * 
+         */
         PerformedMonkeyActions("performedMonkeyActions"),
+        /**
+         * Robo crawl used a Robo directive.
+         * 
+         */
         UsedRoboDirective("usedRoboDirective"),
+        /**
+         * Robo crawl used a Robo directive to ignore an UI element.
+         * 
+         */
         UsedRoboIgnoreDirective("usedRoboIgnoreDirective"),
+        /**
+         * Robo did not crawl some potentially important parts of the app.
+         * 
+         */
         InsufficientCoverage("insufficientCoverage"),
+        /**
+         * Robo crawl involved some in-app purchases.
+         * 
+         */
         InAppPurchases("inAppPurchases"),
+        /**
+         * Crash dialog was detected during the test execution
+         * 
+         */
         CrashDialogError("crashDialogError"),
+        /**
+         * UI element depth is greater than the threshold
+         * 
+         */
         UiElementsTooDeep("uiElementsTooDeep"),
+        /**
+         * Blank screen is found in the Robo crawl
+         * 
+         */
         BlankScreen("blankScreen"),
+        /**
+         * Overlapping UI elements are found in the Robo crawl
+         * 
+         */
         OverlappingUiElements("overlappingUiElements"),
+        /**
+         * An uncaught Unity exception was detected (these don't crash apps).
+         * 
+         */
         UnityException("unityException"),
+        /**
+         * Device running out of memory was detected
+         * 
+         */
         DeviceOutOfMemory("deviceOutOfMemory"),
+        /**
+         * Problems detected while collecting logcat
+         * 
+         */
         LogcatCollectionError("logcatCollectionError");
 
         private final String value;

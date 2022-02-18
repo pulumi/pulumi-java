@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MlStatisticsResponse {
+    /**
+     * Results for all completed iterations.
+     * 
+     */
     private final List<IterationResultResponse> iterationResults;
+    /**
+     * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
+     * 
+     */
     private final String maxIterations;
 
     @OutputCustomType.Constructor({"iterationResults","maxIterations"})
@@ -22,9 +30,17 @@ public final class MlStatisticsResponse {
         this.maxIterations = Objects.requireNonNull(maxIterations);
     }
 
+    /**
+     * Results for all completed iterations.
+     * 
+     */
     public List<IterationResultResponse> getIterationResults() {
         return this.iterationResults;
     }
+    /**
+     * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
+     * 
+     */
     public String getMaxIterations() {
         return this.maxIterations;
     }

@@ -13,51 +13,120 @@ import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new conversation. Conversations are auto-completed after 24 hours. Conversation Lifecycle: There are two stages during a conversation: Automated Agent Stage and Assist Stage. For Automated Agent Stage, there will be a dialogflow agent responding to user queries. For Assist Stage, there's no dialogflow agent responding to user queries. But we will provide suggestions which are generated from conversation. If Conversation.conversation_profile is configured for a dialogflow agent, conversation will start from `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And during `Automated Agent Stage`, once an Intent with Intent.live_agent_handoff is triggered, conversation will transfer to Assist Stage.
+ * Auto-naming is currently not supported for this resource.
+ * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * on Google Cloud even though it will be deleted from Pulumi state.
+ * 
+ */
 @ResourceType(type="google-native:dialogflow/v2beta1:Conversation")
 public class Conversation extends io.pulumi.resources.CustomResource {
+    /**
+     * The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
+     * 
+     */
     @OutputExport(name="conversationProfile", type=String.class, parameters={})
     private Output<String> conversationProfile;
 
+    /**
+     * @return The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
+     * 
+     */
     public Output<String> getConversationProfile() {
         return this.conversationProfile;
     }
+    /**
+     * The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
+     * 
+     */
     @OutputExport(name="conversationStage", type=String.class, parameters={})
     private Output<String> conversationStage;
 
+    /**
+     * @return The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
+     * 
+     */
     public Output<String> getConversationStage() {
         return this.conversationStage;
     }
+    /**
+     * The time the conversation was finished.
+     * 
+     */
     @OutputExport(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
+    /**
+     * @return The time the conversation was finished.
+     * 
+     */
     public Output<String> getEndTime() {
         return this.endTime;
     }
+    /**
+     * The current state of the Conversation.
+     * 
+     */
     @OutputExport(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
+    /**
+     * @return The current state of the Conversation.
+     * 
+     */
     public Output<String> getLifecycleState() {
         return this.lifecycleState;
     }
+    /**
+     * The unique identifier of this conversation. Format: `projects//locations//conversations/`.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The unique identifier of this conversation. Format: `projects//locations//conversations/`.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Required if the conversation is to be connected over telephony.
+     * 
+     */
     @OutputExport(name="phoneNumber", type=GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse> phoneNumber;
 
+    /**
+     * @return Required if the conversation is to be connected over telephony.
+     * 
+     */
     public Output<GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse> getPhoneNumber() {
         return this.phoneNumber;
     }
+    /**
+     * The time the conversation was started.
+     * 
+     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
+    /**
+     * @return The time the conversation was started.
+     * 
+     */
     public Output<String> getStartTime() {
         return this.startTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Conversation(String name, ConversationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dialogflow/v2beta1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +142,14 @@ public class Conversation extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Conversation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Conversation(name, id, options);
     }

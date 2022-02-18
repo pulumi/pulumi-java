@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SDKInfoResponse {
+    /**
+     * The SDK Language.
+     * 
+     */
     private final String language;
+    /**
+     * Optional. The SDK version.
+     * 
+     */
     private final String version;
 
     @OutputCustomType.Constructor({"language","version"})
@@ -20,9 +28,17 @@ public final class SDKInfoResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+    /**
+     * The SDK Language.
+     * 
+     */
     public String getLanguage() {
         return this.language;
     }
+    /**
+     * Optional. The SDK version.
+     * 
+     */
     public String getVersion() {
         return this.version;
     }

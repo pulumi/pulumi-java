@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration of the environment to use when calling Skaffold.
+ * 
+ */
 public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExecutionConfigArgs Empty = new ExecutionConfigArgs();
 
+    /**
+     * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
+     * 
+     */
     @InputImport(name="artifactStorage")
     private final @Nullable Input<String> artifactStorage;
 
@@ -25,6 +33,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.artifactStorage == null ? Input.empty() : this.artifactStorage;
     }
 
+    /**
+     * Optional. Use default Cloud Build pool.
+     * 
+     */
     @InputImport(name="defaultPool")
     private final @Nullable Input<DefaultPoolArgs> defaultPool;
 
@@ -32,6 +44,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.defaultPool == null ? Input.empty() : this.defaultPool;
     }
 
+    /**
+     * Optional. Use private Cloud Build pool.
+     * 
+     */
     @InputImport(name="privatePool")
     private final @Nullable Input<PrivatePoolArgs> privatePool;
 
@@ -39,6 +55,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.privatePool == null ? Input.empty() : this.privatePool;
     }
 
+    /**
+     * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -46,6 +66,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Usages when this configuration should be applied.
+     * 
+     */
     @InputImport(name="usages", required=true)
     private final Input<List<ExecutionConfigUsagesItem>> usages;
 
@@ -53,6 +77,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.usages;
     }
 
+    /**
+     * Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
+     * 
+     */
     @InputImport(name="workerPool")
     private final @Nullable Input<String> workerPool;
 

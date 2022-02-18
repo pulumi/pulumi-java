@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse {
+    /**
+     * Optional. The collection of the agent's responses.
+     * 
+     */
     private final List<String> text;
 
     @OutputCustomType.Constructor({"text"})
@@ -17,6 +21,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse {
         this.text = Objects.requireNonNull(text);
     }
 
+    /**
+     * Optional. The collection of the agent's responses.
+     * 
+     */
     public List<String> getText() {
         return this.text;
     }

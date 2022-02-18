@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AcceleratorConfigResponse {
+    /**
+     * Count of cores of this accelerator.
+     * 
+     */
     private final String coreCount;
+    /**
+     * Type of this accelerator.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"coreCount","type"})
@@ -20,9 +28,17 @@ public final class AcceleratorConfigResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Count of cores of this accelerator.
+     * 
+     */
     public String getCoreCount() {
         return this.coreCount;
     }
+    /**
+     * Type of this accelerator.
+     * 
+     */
     public String getType() {
         return this.type;
     }

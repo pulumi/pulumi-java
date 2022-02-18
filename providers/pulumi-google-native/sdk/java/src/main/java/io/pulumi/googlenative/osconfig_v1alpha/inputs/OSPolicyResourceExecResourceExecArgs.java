@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A file or script to execute.
+ * 
+ */
 public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourceExecResourceExecArgs Empty = new OSPolicyResourceExecResourceExecArgs();
 
+    /**
+     * Optional arguments to pass to the source during execution.
+     * 
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -24,6 +32,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * A remote or local file.
+     * 
+     */
     @InputImport(name="file")
     private final @Nullable Input<OSPolicyResourceFileArgs> file;
 
@@ -31,6 +43,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
         return this.file == null ? Input.empty() : this.file;
     }
 
+    /**
+     * The script interpreter to use.
+     * 
+     */
     @InputImport(name="interpreter", required=true)
     private final Input<OSPolicyResourceExecResourceExecInterpreter> interpreter;
 
@@ -38,6 +54,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
         return this.interpreter;
     }
 
+    /**
+     * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+     * 
+     */
     @InputImport(name="outputFilePath")
     private final @Nullable Input<String> outputFilePath;
 
@@ -45,6 +65,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
         return this.outputFilePath == null ? Input.empty() : this.outputFilePath;
     }
 
+    /**
+     * An inline script. The size of the script is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 

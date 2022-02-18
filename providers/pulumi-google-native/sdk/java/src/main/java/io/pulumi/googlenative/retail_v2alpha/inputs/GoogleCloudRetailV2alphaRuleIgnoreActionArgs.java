@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Prevents a term in the query from being used in search. Example: Don't search for "shoddy".
+ * 
+ */
 public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaRuleIgnoreActionArgs Empty = new GoogleCloudRetailV2alphaRuleIgnoreActionArgs();
 
+    /**
+     * Terms to ignore in the search query.
+     * 
+     */
     @InputImport(name="ignoreTerms")
     private final @Nullable Input<List<String>> ignoreTerms;
 

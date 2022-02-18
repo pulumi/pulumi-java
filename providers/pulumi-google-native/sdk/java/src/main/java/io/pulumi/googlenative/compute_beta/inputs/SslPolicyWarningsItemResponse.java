@@ -14,6 +14,10 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
 
     public static final SslPolicyWarningsItemResponse Empty = new SslPolicyWarningsItemResponse();
 
+    /**
+     * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -21,6 +25,10 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
         return this.code;
     }
 
+    /**
+     * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
+     * 
+     */
     @InputImport(name="data", required=true)
     private final List<SslPolicyWarningsItemDataItemResponse> data;
 
@@ -28,6 +36,10 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
         return this.data;
     }
 
+    /**
+     * A human-readable description of the warning code.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

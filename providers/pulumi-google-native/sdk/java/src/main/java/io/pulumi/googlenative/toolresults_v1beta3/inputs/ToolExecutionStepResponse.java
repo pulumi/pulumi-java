@@ -8,10 +8,18 @@ import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionResponse;
 import java.util.Objects;
 
 
+/**
+ * Generic tool step to be used for binaries we do not explicitly support. For example: running cp to copy artifacts from one location to another.
+ * 
+ */
 public final class ToolExecutionStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ToolExecutionStepResponse Empty = new ToolExecutionStepResponse();
 
+    /**
+     * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     @InputImport(name="toolExecution", required=true)
     private final ToolExecutionResponse toolExecution;
 

@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSubscriptionResult {
+    /**
+     * The settings for this subscription's message delivery.
+     * 
+     */
     private final DeliveryConfigResponse deliveryConfig;
+    /**
+     * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
+     * 
+     */
     private final String name;
+    /**
+     * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * 
+     */
     private final String topic;
 
     @OutputCustomType.Constructor({"deliveryConfig","name","topic"})
@@ -24,12 +36,24 @@ public final class GetSubscriptionResult {
         this.topic = Objects.requireNonNull(topic);
     }
 
+    /**
+     * The settings for this subscription's message delivery.
+     * 
+     */
     public DeliveryConfigResponse getDeliveryConfig() {
         return this.deliveryConfig;
     }
+    /**
+     * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * 
+     */
     public String getTopic() {
         return this.topic;
     }

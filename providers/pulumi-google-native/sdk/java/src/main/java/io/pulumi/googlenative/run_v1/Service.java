@@ -15,39 +15,90 @@ import io.pulumi.googlenative.run_v1.outputs.ServiceStatusResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Create a service.
+ * Auto-naming is currently not supported for this resource.
+ * 
+ */
 @ResourceType(type="google-native:run/v1:Service")
 public class Service extends io.pulumi.resources.CustomResource {
+    /**
+     * The API version for this call such as "serving.knative.dev/v1".
+     * 
+     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
+    /**
+     * @return The API version for this call such as "serving.knative.dev/v1".
+     * 
+     */
     public Output<String> getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * The kind of resource, in this case "Service".
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of resource, in this case "Service".
+     * 
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
+     * 
+     */
     @OutputExport(name="metadata", type=ObjectMetaResponse.class, parameters={})
     private Output<ObjectMetaResponse> metadata;
 
+    /**
+     * @return Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
+     * 
+     */
     public Output<ObjectMetaResponse> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Spec holds the desired state of the Service (from the client).
+     * 
+     */
     @OutputExport(name="spec", type=ServiceSpecResponse.class, parameters={})
     private Output<ServiceSpecResponse> spec;
 
+    /**
+     * @return Spec holds the desired state of the Service (from the client).
+     * 
+     */
     public Output<ServiceSpecResponse> getSpec() {
         return this.spec;
     }
+    /**
+     * Status communicates the observed state of the Service (from the controller).
+     * 
+     */
     @OutputExport(name="status", type=ServiceStatusResponse.class, parameters={})
     private Output<ServiceStatusResponse> status;
 
+    /**
+     * @return Status communicates the observed state of the Service (from the controller).
+     * 
+     */
     public Output<ServiceStatusResponse> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Service(String name, @Nullable ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:run/v1:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +114,14 @@ public class Service extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Service get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, options);
     }

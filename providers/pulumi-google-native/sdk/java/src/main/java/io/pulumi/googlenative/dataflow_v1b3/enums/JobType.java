@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of Cloud Dataflow job.
+     * 
+     */
     @EnumType
     public enum JobType {
+        /**
+         * The type of the job is unspecified, or unknown.
+         * 
+         */
         JobTypeUnknown("JOB_TYPE_UNKNOWN"),
+        /**
+         * A batch job with a well-defined end point: data is read, data is processed, data is written, and the job is done.
+         * 
+         */
         JobTypeBatch("JOB_TYPE_BATCH"),
+        /**
+         * A continuously streaming job with no end: data is read, processed, and written continuously.
+         * 
+         */
         JobTypeStreaming("JOB_TYPE_STREAMING");
 
         private final String value;

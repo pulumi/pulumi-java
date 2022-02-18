@@ -22,6 +22,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupId;
     }
 
+    /**
+     * A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +33,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Resource labels to represent user provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -50,6 +58,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Name of the file share in the source Cloud Filestore instance that the backup is created from.
+     * 
+     */
     @InputImport(name="sourceFileShare")
     private final @Nullable Input<String> sourceFileShare;
 
@@ -57,6 +69,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceFileShare == null ? Input.empty() : this.sourceFileShare;
     }
 
+    /**
+     * The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
+     * 
+     */
     @InputImport(name="sourceInstance")
     private final @Nullable Input<String> sourceInstance;
 

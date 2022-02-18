@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The bucket's lifecycle configuration. See lifecycle management for more information.
+ * 
+ */
 public final class BucketLifecycleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketLifecycleResponse Empty = new BucketLifecycleResponse();
 
+    /**
+     * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
+     * 
+     */
     @InputImport(name="rule", required=true)
     private final List<BucketLifecycleRuleItemResponse> rule;
 

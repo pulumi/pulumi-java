@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A schedule for disks where the schedueled operations are performed.
+ * 
+ */
 public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleArgs();

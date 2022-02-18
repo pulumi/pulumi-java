@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceAttachment {
+/**
+ * Returns the specified ServiceAttachment resource in the given scope.
+ * 
+ */
     public static CompletableFuture<GetServiceAttachmentResult> invokeAsync(GetServiceAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getServiceAttachment", TypeShape.of(GetServiceAttachmentResult.class), args == null ? GetServiceAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

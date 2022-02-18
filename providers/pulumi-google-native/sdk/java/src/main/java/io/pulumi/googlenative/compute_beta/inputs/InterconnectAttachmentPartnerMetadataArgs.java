@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Informational metadata about Partner attachments from Partners to display to customers. These fields are propagated from PARTNER_PROVIDER attachments to their corresponding PARTNER attachments.
+ * 
+ */
 public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InterconnectAttachmentPartnerMetadataArgs Empty = new InterconnectAttachmentPartnerMetadataArgs();
 
+    /**
+     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
+     * 
+     */
     @InputImport(name="interconnectName")
     private final @Nullable Input<String> interconnectName;
 
@@ -21,6 +29,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
         return this.interconnectName == null ? Input.empty() : this.interconnectName;
     }
 
+    /**
+     * Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
+     * 
+     */
     @InputImport(name="partnerName")
     private final @Nullable Input<String> partnerName;
 
@@ -28,6 +40,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
         return this.partnerName == null ? Input.empty() : this.partnerName;
     }
 
+    /**
+     * URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+     * 
+     */
     @InputImport(name="portalUrl")
     private final @Nullable Input<String> portalUrl;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The location where this mapping applies.
+     * 
+     */
     @EnumType
     public enum InputMappingLocation {
         Unknown("UNKNOWN"),

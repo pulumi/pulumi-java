@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CardinalityResponse {
+    /**
+     * The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
+     * 
+     */
     private final Integer number;
+    /**
+     * The root of the variable subtree to monitor. For example, `/foo`.
+     * 
+     */
     private final String path;
 
     @OutputCustomType.Constructor({"number","path"})
@@ -21,9 +29,17 @@ public final class CardinalityResponse {
         this.path = Objects.requireNonNull(path);
     }
 
+    /**
+     * The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
+     * 
+     */
     public Integer getNumber() {
         return this.number;
     }
+    /**
+     * The root of the variable subtree to monitor. For example, `/foo`.
+     * 
+     */
     public String getPath() {
         return this.path;
     }

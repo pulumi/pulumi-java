@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
+ * 
+ */
 public final class BucketRetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketRetentionPolicyArgs Empty = new BucketRetentionPolicyArgs();
 
+    /**
+     * Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
+     * 
+     */
     @InputImport(name="effectiveTime")
     private final @Nullable Input<String> effectiveTime;
 
@@ -22,6 +30,10 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
         return this.effectiveTime == null ? Input.empty() : this.effectiveTime;
     }
 
+    /**
+     * Once locked, an object retention policy cannot be modified.
+     * 
+     */
     @InputImport(name="isLocked")
     private final @Nullable Input<Boolean> isLocked;
 
@@ -29,6 +41,10 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
         return this.isLocked == null ? Input.empty() : this.isLocked;
     }
 
+    /**
+     * The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
+     * 
+     */
     @InputImport(name="retentionPeriod")
     private final @Nullable Input<String> retentionPeriod;
 

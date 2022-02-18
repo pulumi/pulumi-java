@@ -20,20 +20,80 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EnvironmentConfigResponse {
+    /**
+     * The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
+     * 
+     */
     private final String airflowUri;
+    /**
+     * The Cloud Storage prefix of the DAGs for this environment. Although Cloud Storage objects reside in a flat namespace, a hierarchical file tree can be simulated using "/"-delimited object name prefixes. DAG objects for this environment reside in a simulated directory with the given prefix.
+     * 
+     */
     private final String dagGcsPrefix;
+    /**
+     * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     private final DatabaseConfigResponse databaseConfig;
+    /**
+     * Optional. The encryption options for the Cloud Composer environment and its dependencies. Cannot be updated.
+     * 
+     */
     private final EncryptionConfigResponse encryptionConfig;
+    /**
+     * Optional. The size of the Cloud Composer environment. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * 
+     */
     private final String environmentSize;
+    /**
+     * The Kubernetes Engine cluster used to run this environment.
+     * 
+     */
     private final String gkeCluster;
+    /**
+     * Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.
+     * 
+     */
     private final MaintenanceWindowResponse maintenanceWindow;
+    /**
+     * Optional. The configuration options for GKE clusters master authorized networks. By default master authorized networks feature is: - in case of private environment: enabled with no external networks allowlisted. - in case of public environment: disabled.
+     * 
+     */
     private final MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig;
+    /**
+     * The configuration used for the Kubernetes Engine cluster.
+     * 
+     */
     private final NodeConfigResponse nodeConfig;
+    /**
+     * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     private final Integer nodeCount;
+    /**
+     * The configuration used for the Private IP Cloud Composer environment.
+     * 
+     */
     private final PrivateEnvironmentConfigResponse privateEnvironmentConfig;
+    /**
+     * The configuration settings for software inside the environment.
+     * 
+     */
     private final SoftwareConfigResponse softwareConfig;
+    /**
+     * Optional. The configuration settings for the Airflow web server App Engine instance. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     private final WebServerConfigResponse webServerConfig;
+    /**
+     * Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
+     * 
+     */
     private final WebServerNetworkAccessControlResponse webServerNetworkAccessControl;
+    /**
+     * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * 
+     */
     private final WorkloadsConfigResponse workloadsConfig;
 
     @OutputCustomType.Constructor({"airflowUri","dagGcsPrefix","databaseConfig","encryptionConfig","environmentSize","gkeCluster","maintenanceWindow","masterAuthorizedNetworksConfig","nodeConfig","nodeCount","privateEnvironmentConfig","softwareConfig","webServerConfig","webServerNetworkAccessControl","workloadsConfig"})
@@ -70,48 +130,108 @@ public final class EnvironmentConfigResponse {
         this.workloadsConfig = Objects.requireNonNull(workloadsConfig);
     }
 
+    /**
+     * The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
+     * 
+     */
     public String getAirflowUri() {
         return this.airflowUri;
     }
+    /**
+     * The Cloud Storage prefix of the DAGs for this environment. Although Cloud Storage objects reside in a flat namespace, a hierarchical file tree can be simulated using "/"-delimited object name prefixes. DAG objects for this environment reside in a simulated directory with the given prefix.
+     * 
+     */
     public String getDagGcsPrefix() {
         return this.dagGcsPrefix;
     }
+    /**
+     * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     public DatabaseConfigResponse getDatabaseConfig() {
         return this.databaseConfig;
     }
+    /**
+     * Optional. The encryption options for the Cloud Composer environment and its dependencies. Cannot be updated.
+     * 
+     */
     public EncryptionConfigResponse getEncryptionConfig() {
         return this.encryptionConfig;
     }
+    /**
+     * Optional. The size of the Cloud Composer environment. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * 
+     */
     public String getEnvironmentSize() {
         return this.environmentSize;
     }
+    /**
+     * The Kubernetes Engine cluster used to run this environment.
+     * 
+     */
     public String getGkeCluster() {
         return this.gkeCluster;
     }
+    /**
+     * Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.
+     * 
+     */
     public MaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;
     }
+    /**
+     * Optional. The configuration options for GKE clusters master authorized networks. By default master authorized networks feature is: - in case of private environment: enabled with no external networks allowlisted. - in case of public environment: disabled.
+     * 
+     */
     public MasterAuthorizedNetworksConfigResponse getMasterAuthorizedNetworksConfig() {
         return this.masterAuthorizedNetworksConfig;
     }
+    /**
+     * The configuration used for the Kubernetes Engine cluster.
+     * 
+     */
     public NodeConfigResponse getNodeConfig() {
         return this.nodeConfig;
     }
+    /**
+     * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     public Integer getNodeCount() {
         return this.nodeCount;
     }
+    /**
+     * The configuration used for the Private IP Cloud Composer environment.
+     * 
+     */
     public PrivateEnvironmentConfigResponse getPrivateEnvironmentConfig() {
         return this.privateEnvironmentConfig;
     }
+    /**
+     * The configuration settings for software inside the environment.
+     * 
+     */
     public SoftwareConfigResponse getSoftwareConfig() {
         return this.softwareConfig;
     }
+    /**
+     * Optional. The configuration settings for the Airflow web server App Engine instance. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     public WebServerConfigResponse getWebServerConfig() {
         return this.webServerConfig;
     }
+    /**
+     * Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
+     * 
+     */
     public WebServerNetworkAccessControlResponse getWebServerNetworkAccessControl() {
         return this.webServerNetworkAccessControl;
     }
+    /**
+     * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * 
+     */
     public WorkloadsConfigResponse getWorkloadsConfig() {
         return this.workloadsConfig;
     }

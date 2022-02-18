@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubnetResponse {
+    /**
+     * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}
+     * 
+     */
     private final String name;
+    /**
+     * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+     * 
+     */
     private final String project;
 
     @OutputCustomType.Constructor({"name","project"})
@@ -20,9 +28,17 @@ public final class SubnetResponse {
         this.project = Objects.requireNonNull(project);
     }
 
+    /**
+     * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+     * 
+     */
     public String getProject() {
         return this.project;
     }

@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AndroidDeviceListResponse {
+    /**
+     * A list of Android devices.
+     * 
+     */
     private final List<AndroidDeviceResponse> androidDevices;
 
     @OutputCustomType.Constructor({"androidDevices"})
@@ -17,6 +21,10 @@ public final class AndroidDeviceListResponse {
         this.androidDevices = Objects.requireNonNull(androidDevices);
     }
 
+    /**
+     * A list of Android devices.
+     * 
+     */
     public List<AndroidDeviceResponse> getAndroidDevices() {
         return this.androidDevices;
     }

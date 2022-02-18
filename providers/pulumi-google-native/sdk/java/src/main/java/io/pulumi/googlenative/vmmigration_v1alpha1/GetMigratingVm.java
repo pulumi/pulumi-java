@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMigratingVm {
+/**
+ * Gets details of a single MigratingVm.
+ * 
+ */
     public static CompletableFuture<GetMigratingVmResult> invokeAsync(GetMigratingVmArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1alpha1:getMigratingVm", TypeShape.of(GetMigratingVmResult.class), args == null ? GetMigratingVmArgs.Empty : args, Utilities.withVersion(options));
     }

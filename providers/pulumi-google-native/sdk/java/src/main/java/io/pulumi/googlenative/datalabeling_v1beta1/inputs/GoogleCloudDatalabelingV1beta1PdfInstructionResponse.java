@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Instruction from a PDF file.
+ * 
+ */
 public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatalabelingV1beta1PdfInstructionResponse Empty = new GoogleCloudDatalabelingV1beta1PdfInstructionResponse();
 
+    /**
+     * PDF file for the instruction. Only gcs path is allowed.
+     * 
+     */
     @InputImport(name="gcsFileUri", required=true)
     private final String gcsFileUri;
 

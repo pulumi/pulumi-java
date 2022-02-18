@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * 
+     */
     @EnumType
     public enum MetadataOptionsMode {
+        /**
+         * Mode behavior is unspecified.
+         * 
+         */
         ModeUnspecified("MODE_UNSPECIFIED"),
+        /**
+         * Skip mode during a transfer job.
+         * 
+         */
         ModeSkip("MODE_SKIP"),
+        /**
+         * Preserve mode during a transfer job.
+         * 
+         */
         ModePreserve("MODE_PRESERVE");
 
         private final String value;

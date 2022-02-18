@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_Trial_ParameterResponse {
+    /**
+     * Must be set if ParameterType is DOUBLE or DISCRETE.
+     * 
+     */
     private final Double floatValue;
+    /**
+     * Must be set if ParameterType is INTEGER
+     * 
+     */
     private final String intValue;
+    /**
+     * The name of the parameter.
+     * 
+     */
     private final String parameter;
+    /**
+     * Must be set if ParameterTypeis CATEGORICAL
+     * 
+     */
     private final String stringValue;
 
     @OutputCustomType.Constructor({"floatValue","intValue","parameter","stringValue"})
@@ -27,15 +43,31 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
         this.stringValue = Objects.requireNonNull(stringValue);
     }
 
+    /**
+     * Must be set if ParameterType is DOUBLE or DISCRETE.
+     * 
+     */
     public Double getFloatValue() {
         return this.floatValue;
     }
+    /**
+     * Must be set if ParameterType is INTEGER
+     * 
+     */
     public String getIntValue() {
         return this.intValue;
     }
+    /**
+     * The name of the parameter.
+     * 
+     */
     public String getParameter() {
         return this.parameter;
     }
+    /**
+     * Must be set if ParameterTypeis CATEGORICAL
+     * 
+     */
     public String getStringValue() {
         return this.stringValue;
     }

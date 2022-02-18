@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The settings for a subscription's message delivery.
+ * 
+ */
 public final class DeliveryConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryConfigResponse Empty = new DeliveryConfigResponse();
 
+    /**
+     * The DeliveryRequirement for this subscription.
+     * 
+     */
     @InputImport(name="deliveryRequirement", required=true)
     private final String deliveryRequirement;
 

@@ -6,6 +6,10 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 import java.util.Objects;
 
 
+/**
+ * AutoUpgradeOptions defines the set of options for the user to control how the Auto Upgrades will proceed.
+ * 
+ */
 public final class AutoUpgradeOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoUpgradeOptionsArgs Empty = new AutoUpgradeOptionsArgs();

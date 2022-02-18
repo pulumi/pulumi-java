@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * JobCondition defines a readiness condition for a Revision.
+ * 
+ */
 public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobConditionArgs Empty = new JobConditionArgs();
 
+    /**
+     * Optional. Last time the condition transitioned from one status to another.
+     * 
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -21,6 +29,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * Optional. Human readable message indicating details about the current status.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -28,6 +40,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * Optional. One-word CamelCase reason for the condition's last transition.
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -35,6 +51,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Optional. How to interpret failures of this condition, one of Error, Warning, Info
+     * 
+     */
     @InputImport(name="severity")
     private final @Nullable Input<String> severity;
 
@@ -42,6 +62,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.severity == null ? Input.empty() : this.severity;
     }
 
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -49,6 +73,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.status;
     }
 
+    /**
+     * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

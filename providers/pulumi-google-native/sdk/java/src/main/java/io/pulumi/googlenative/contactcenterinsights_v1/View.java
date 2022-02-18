@@ -12,39 +12,89 @@ import io.pulumi.googlenative.contactcenterinsights_v1.ViewArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a view.
+ * 
+ */
 @ResourceType(type="google-native:contactcenterinsights/v1:View")
 public class View extends io.pulumi.resources.CustomResource {
+    /**
+     * The time at which this view was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time at which this view was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The human-readable display name of the view.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable display name of the view.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The most recent time at which the view was updated.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return The most recent time at which the view was updated.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * String with specific view properties.
+     * 
+     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output<String> value;
 
+    /**
+     * @return String with specific view properties.
+     * 
+     */
     public Output<String> getValue() {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public View(String name, @Nullable ViewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:contactcenterinsights/v1:View", name, args == null ? ViewArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +110,14 @@ public class View extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static View get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new View(name, id, options);
     }

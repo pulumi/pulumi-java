@@ -15,6 +15,10 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StoredInfoTypeArgs Empty = new StoredInfoTypeArgs();
 
+    /**
+     * Configuration of the storedInfoType to create.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
 
@@ -36,6 +40,10 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+     * 
+     */
     @InputImport(name="storedInfoTypeId")
     private final @Nullable Input<String> storedInfoTypeId;
 

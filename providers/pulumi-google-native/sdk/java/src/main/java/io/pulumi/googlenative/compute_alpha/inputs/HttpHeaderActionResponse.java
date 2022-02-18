@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The request and response header transformations that take effect before the request is passed along to the selected backendService.
+ * 
+ */
 public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpHeaderActionResponse Empty = new HttpHeaderActionResponse();
 
+    /**
+     * Headers to add to a matching request before forwarding the request to the backendService.
+     * 
+     */
     @InputImport(name="requestHeadersToAdd", required=true)
     private final List<HttpHeaderOptionResponse> requestHeadersToAdd;
 
@@ -21,6 +29,10 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
         return this.requestHeadersToAdd;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
+     * 
+     */
     @InputImport(name="requestHeadersToRemove", required=true)
     private final List<String> requestHeadersToRemove;
 
@@ -28,6 +40,10 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
         return this.requestHeadersToRemove;
     }
 
+    /**
+     * Headers to add the response before sending the response back to the client.
+     * 
+     */
     @InputImport(name="responseHeadersToAdd", required=true)
     private final List<HttpHeaderOptionResponse> responseHeadersToAdd;
 
@@ -35,6 +51,10 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
         return this.responseHeadersToAdd;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the response before sending the response back to the client.
+     * 
+     */
     @InputImport(name="responseHeadersToRemove", required=true)
     private final List<String> responseHeadersToRemove;
 

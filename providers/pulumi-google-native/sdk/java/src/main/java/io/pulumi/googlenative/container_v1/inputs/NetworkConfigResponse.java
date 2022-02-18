@@ -12,10 +12,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * NetworkConfig reports the relative names of network & subnetwork.
+ * 
+ */
 public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkConfigResponse Empty = new NetworkConfigResponse();
 
+    /**
+     * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+     * 
+     */
     @InputImport(name="datapathProvider", required=true)
     private final String datapathProvider;
 
@@ -23,6 +31,10 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.datapathProvider;
     }
 
+    /**
+     * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+     * 
+     */
     @InputImport(name="defaultSnatStatus", required=true)
     private final DefaultSnatStatusResponse defaultSnatStatus;
 
@@ -30,6 +42,10 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.defaultSnatStatus;
     }
 
+    /**
+     * DNSConfig contains clusterDNS config for this cluster.
+     * 
+     */
     @InputImport(name="dnsConfig", required=true)
     private final DNSConfigResponse dnsConfig;
 
@@ -37,6 +53,10 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.dnsConfig;
     }
 
+    /**
+     * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+     * 
+     */
     @InputImport(name="enableIntraNodeVisibility", required=true)
     private final Boolean enableIntraNodeVisibility;
 
@@ -44,6 +64,10 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.enableIntraNodeVisibility;
     }
 
+    /**
+     * Whether L4ILB Subsetting is enabled for this cluster.
+     * 
+     */
     @InputImport(name="enableL4ilbSubsetting", required=true)
     private final Boolean enableL4ilbSubsetting;
 
@@ -51,6 +75,10 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.enableL4ilbSubsetting;
     }
 
+    /**
+     * The relative name of the Google Compute Engine network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. Example: projects/my-project/global/networks/my-network
+     * 
+     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -58,6 +86,10 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.network;
     }
 
+    /**
+     * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
+     * 
+     */
     @InputImport(name="privateIpv6GoogleAccess", required=true)
     private final String privateIpv6GoogleAccess;
 
@@ -65,6 +97,10 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.privateIpv6GoogleAccess;
     }
 
+    /**
+     * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+     * 
+     */
     @InputImport(name="serviceExternalIpsConfig", required=true)
     private final ServiceExternalIPsConfigResponse serviceExternalIpsConfig;
 
@@ -72,6 +108,10 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.serviceExternalIpsConfig;
     }
 
+    /**
+     * The relative name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
+     * 
+     */
     @InputImport(name="subnetwork", required=true)
     private final String subnetwork;
 

@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Required. The optimization goal of the metric.
+     * 
+     */
     @EnumType
     public enum GoogleCloudMlV1_StudyConfig_MetricSpecGoal {
+        /**
+         * Goal Type will default to maximize.
+         * 
+         */
         GoalTypeUnspecified("GOAL_TYPE_UNSPECIFIED"),
+        /**
+         * Maximize the goal metric.
+         * 
+         */
         Maximize("MAXIMIZE"),
+        /**
+         * Minimize the goal metric.
+         * 
+         */
         Minimize("MINIMIZE");
 
         private final String value;

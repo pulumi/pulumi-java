@@ -20,6 +20,10 @@ public final class ManagedZonePeeringConfigResponse extends io.pulumi.resources.
         return this.kind;
     }
 
+    /**
+     * The network with which to peer.
+     * 
+     */
     @InputImport(name="targetNetwork", required=true)
     private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 

@@ -12,10 +12,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RouterBgpResponse {
+    /**
+     * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.
+     * 
+     */
     private final String advertiseMode;
+    /**
+     * User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+     * 
+     */
     private final List<String> advertisedGroups;
+    /**
+     * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+     * 
+     */
     private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
+    /**
+     * Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.
+     * 
+     */
     private final Integer asn;
+    /**
+     * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is three times the interval at which keepalive messages are sent, and the hold time is the maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer. BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+     * 
+     */
     private final Integer keepaliveInterval;
 
     @OutputCustomType.Constructor({"advertiseMode","advertisedGroups","advertisedIpRanges","asn","keepaliveInterval"})
@@ -32,18 +52,38 @@ public final class RouterBgpResponse {
         this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
     }
 
+    /**
+     * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.
+     * 
+     */
     public String getAdvertiseMode() {
         return this.advertiseMode;
     }
+    /**
+     * User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+     * 
+     */
     public List<String> getAdvertisedGroups() {
         return this.advertisedGroups;
     }
+    /**
+     * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+     * 
+     */
     public List<RouterAdvertisedIpRangeResponse> getAdvertisedIpRanges() {
         return this.advertisedIpRanges;
     }
+    /**
+     * Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.
+     * 
+     */
     public Integer getAsn() {
         return this.asn;
     }
+    /**
+     * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is three times the interval at which keepalive messages are sent, and the hold time is the maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer. BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+     * 
+     */
     public Integer getKeepaliveInterval() {
         return this.keepaliveInterval;
     }

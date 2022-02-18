@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse {
+    /**
+     * A description of the diff, showing the actual output vs expected output.
+     * 
+     */
     private final String description;
+    /**
+     * The type of diff.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"description","type"})
@@ -20,9 +28,17 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * A description of the diff, showing the actual output vs expected output.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The type of diff.
+     * 
+     */
     public String getType() {
         return this.type;
     }

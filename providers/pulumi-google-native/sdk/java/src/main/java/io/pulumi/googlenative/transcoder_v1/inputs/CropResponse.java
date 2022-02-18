@@ -8,10 +8,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Video cropping configuration for the input video. The cropped input video is scaled to match the output resolution.
+ * 
+ */
 public final class CropResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CropResponse Empty = new CropResponse();
 
+    /**
+     * The number of pixels to crop from the bottom. The default is 0.
+     * 
+     */
     @InputImport(name="bottomPixels", required=true)
     private final Integer bottomPixels;
 
@@ -19,6 +27,10 @@ public final class CropResponse extends io.pulumi.resources.InvokeArgs {
         return this.bottomPixels;
     }
 
+    /**
+     * The number of pixels to crop from the left. The default is 0.
+     * 
+     */
     @InputImport(name="leftPixels", required=true)
     private final Integer leftPixels;
 
@@ -26,6 +38,10 @@ public final class CropResponse extends io.pulumi.resources.InvokeArgs {
         return this.leftPixels;
     }
 
+    /**
+     * The number of pixels to crop from the right. The default is 0.
+     * 
+     */
     @InputImport(name="rightPixels", required=true)
     private final Integer rightPixels;
 
@@ -33,6 +49,10 @@ public final class CropResponse extends io.pulumi.resources.InvokeArgs {
         return this.rightPixels;
     }
 
+    /**
+     * The number of pixels to crop from the top. The default is 0.
+     * 
+     */
     @InputImport(name="topPixels", required=true)
     private final Integer topPixels;
 

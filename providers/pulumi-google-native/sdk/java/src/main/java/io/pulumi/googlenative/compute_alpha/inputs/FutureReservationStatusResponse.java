@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * [Output only] Represents status related to the future reservation.
+ * 
+ */
 public final class FutureReservationStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FutureReservationStatusResponse Empty = new FutureReservationStatusResponse();
 
+    /**
+     * Fully qualified urls of the automatically created reservations at start_time.
+     * 
+     */
     @InputImport(name="autoCreatedReservations", required=true)
     private final List<String> autoCreatedReservations;
 
@@ -20,6 +28,10 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
         return this.autoCreatedReservations;
     }
 
+    /**
+     * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state. This count also includes capacity delivered as part of existing matching reservations.
+     * 
+     */
     @InputImport(name="fulfilledCount", required=true)
     private final String fulfilledCount;
 
@@ -27,6 +39,10 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
         return this.fulfilledCount;
     }
 
+    /**
+     * Time when Future Reservation would become LOCKED, after which no modifications to Future Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING state at this time.
+     * 
+     */
     @InputImport(name="lockTime", required=true)
     private final String lockTime;
 
@@ -34,6 +50,10 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
         return this.lockTime;
     }
 
+    /**
+     * Current state of this Future Reservation
+     * 
+     */
     @InputImport(name="procurementStatus", required=true)
     private final String procurementStatus;
 

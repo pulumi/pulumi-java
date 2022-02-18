@@ -23,6 +23,10 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The list of VPC networks that can see this zone.
+     * 
+     */
     @InputImport(name="networks")
     private final @Nullable Input<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 

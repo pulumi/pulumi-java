@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * These values are used to create the distinguished name and subject alternative name fields in an X.509 certificate.
+ * 
+ */
 public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubjectConfigArgs Empty = new SubjectConfigArgs();
 
+    /**
+     * Optional. The "common name" of the distinguished name.
+     * 
+     */
     @InputImport(name="commonName")
     private final @Nullable Input<String> commonName;
 
@@ -23,6 +31,10 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.commonName == null ? Input.empty() : this.commonName;
     }
 
+    /**
+     * Contains distinguished name fields such as the location and organization.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final Input<SubjectArgs> subject;
 
@@ -30,6 +42,10 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.subject;
     }
 
+    /**
+     * Optional. The subject alternative name fields.
+     * 
+     */
     @InputImport(name="subjectAltName")
     private final @Nullable Input<SubjectAltNamesArgs> subjectAltName;
 

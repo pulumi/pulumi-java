@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An OpenAPI Specification Document describing an API.
+ * 
+ */
 public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApigatewayApiConfigOpenApiDocumentArgs Empty = new ApigatewayApiConfigOpenApiDocumentArgs();
 
+    /**
+     * The OpenAPI Specification document file.
+     * 
+     */
     @InputImport(name="document")
     private final @Nullable Input<ApigatewayApiConfigFileArgs> document;
 

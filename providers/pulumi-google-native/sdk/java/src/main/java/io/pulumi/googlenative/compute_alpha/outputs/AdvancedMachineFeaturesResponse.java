@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AdvancedMachineFeaturesResponse {
+    /**
+     * Whether to enable nested virtualization or not (default is false).
+     * 
+     */
     private final Boolean enableNestedVirtualization;
+    /**
+     * Whether to enable UEFI networking for instance creation.
+     * 
+     */
     private final Boolean enableUefiNetworking;
+    /**
+     * The number of vNUMA nodes.
+     * 
+     */
     private final Integer numaNodeCount;
+    /**
+     * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+     * 
+     */
     private final Integer threadsPerCore;
+    /**
+     * The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance's nominal CPU count and the underlying platform's SMT width.
+     * 
+     */
     private final Integer visibleCoreCount;
 
     @OutputCustomType.Constructor({"enableNestedVirtualization","enableUefiNetworking","numaNodeCount","threadsPerCore","visibleCoreCount"})
@@ -30,18 +50,38 @@ public final class AdvancedMachineFeaturesResponse {
         this.visibleCoreCount = Objects.requireNonNull(visibleCoreCount);
     }
 
+    /**
+     * Whether to enable nested virtualization or not (default is false).
+     * 
+     */
     public Boolean getEnableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
+    /**
+     * Whether to enable UEFI networking for instance creation.
+     * 
+     */
     public Boolean getEnableUefiNetworking() {
         return this.enableUefiNetworking;
     }
+    /**
+     * The number of vNUMA nodes.
+     * 
+     */
     public Integer getNumaNodeCount() {
         return this.numaNodeCount;
     }
+    /**
+     * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+     * 
+     */
     public Integer getThreadsPerCore() {
         return this.threadsPerCore;
     }
+    /**
+     * The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance's nominal CPU count and the underlying platform's SMT width.
+     * 
+     */
     public Integer getVisibleCoreCount() {
         return this.visibleCoreCount;
     }

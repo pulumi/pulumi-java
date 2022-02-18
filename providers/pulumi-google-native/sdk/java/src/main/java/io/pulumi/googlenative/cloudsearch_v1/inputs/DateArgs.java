@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a whole calendar date, for example a date of birth. The time of day and time zone are either specified elsewhere or are not significant. The date is relative to the [Proleptic Gregorian Calendar](https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar). The date must be a valid calendar date between the year 1 and 9999.
+ * 
+ */
 public final class DateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DateArgs Empty = new DateArgs();
 
+    /**
+     * Day of month. Must be from 1 to 31 and valid for the year and month.
+     * 
+     */
     @InputImport(name="day")
     private final @Nullable Input<Integer> day;
 
@@ -21,6 +29,10 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
         return this.day == null ? Input.empty() : this.day;
     }
 
+    /**
+     * Month of date. Must be from 1 to 12.
+     * 
+     */
     @InputImport(name="month")
     private final @Nullable Input<Integer> month;
 
@@ -28,6 +40,10 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
         return this.month == null ? Input.empty() : this.month;
     }
 
+    /**
+     * Year of date. Must be from 1 to 9999.
+     * 
+     */
     @InputImport(name="year")
     private final @Nullable Input<Integer> year;
 

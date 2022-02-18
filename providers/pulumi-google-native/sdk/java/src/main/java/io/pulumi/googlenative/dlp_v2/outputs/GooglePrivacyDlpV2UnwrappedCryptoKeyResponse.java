@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
+    /**
+     * A 128/192/256 bit key.
+     * 
+     */
     private final String key;
 
     @OutputCustomType.Constructor({"key"})
@@ -16,6 +20,10 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
         this.key = Objects.requireNonNull(key);
     }
 
+    /**
+     * A 128/192/256 bit key.
+     * 
+     */
     public String getKey() {
         return this.key;
     }

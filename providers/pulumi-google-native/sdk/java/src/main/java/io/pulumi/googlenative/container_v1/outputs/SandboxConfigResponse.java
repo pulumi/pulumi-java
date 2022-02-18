@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SandboxConfigResponse {
+    /**
+     * Type of the sandbox to use for the node.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +20,10 @@ public final class SandboxConfigResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Type of the sandbox to use for the node.
+     * 
+     */
     public String getType() {
         return this.type;
     }

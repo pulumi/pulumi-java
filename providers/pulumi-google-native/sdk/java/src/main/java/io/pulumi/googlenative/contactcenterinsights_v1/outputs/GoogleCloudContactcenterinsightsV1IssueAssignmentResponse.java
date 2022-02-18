@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
+    /**
+     * Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
+     * 
+     */
     private final String displayName;
+    /**
+     * Resource name of the assigned issue.
+     * 
+     */
     private final String issue;
+    /**
+     * Score indicating the likelihood of the issue assignment. currently bounded on [0,1].
+     * 
+     */
     private final Double score;
 
     @OutputCustomType.Constructor({"displayName","issue","score"})
@@ -24,12 +36,24 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
         this.score = Objects.requireNonNull(score);
     }
 
+    /**
+     * Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Resource name of the assigned issue.
+     * 
+     */
     public String getIssue() {
         return this.issue;
     }
+    /**
+     * Score indicating the likelihood of the issue assignment. currently bounded on [0,1].
+     * 
+     */
     public Double getScore() {
         return this.score;
     }

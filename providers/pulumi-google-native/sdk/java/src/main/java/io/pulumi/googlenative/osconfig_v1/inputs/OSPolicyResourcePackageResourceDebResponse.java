@@ -9,10 +9,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * A deb package file. dpkg packages only support INSTALLED state.
+ * 
+ */
 public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourcePackageResourceDebResponse Empty = new OSPolicyResourcePackageResourceDebResponse();
 
+    /**
+     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
+     * 
+     */
     @InputImport(name="pullDeps", required=true)
     private final Boolean pullDeps;
 
@@ -20,6 +28,10 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
         return this.pullDeps;
     }
 
+    /**
+     * A deb package.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final OSPolicyResourceFileResponse source;
 

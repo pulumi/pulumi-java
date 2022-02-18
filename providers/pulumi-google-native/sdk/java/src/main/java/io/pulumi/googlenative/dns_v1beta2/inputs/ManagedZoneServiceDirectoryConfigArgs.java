@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information about Service Directory-backed zones.
+ * 
+ */
 public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedZoneServiceDirectoryConfigArgs Empty = new ManagedZoneServiceDirectoryConfigArgs();
@@ -22,6 +26,10 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Contains information about the namespace associated with the zone.
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 

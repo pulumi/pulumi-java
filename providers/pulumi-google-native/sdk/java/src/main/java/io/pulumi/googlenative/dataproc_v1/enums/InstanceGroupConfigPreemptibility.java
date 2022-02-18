@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.
+     * 
+     */
     @EnumType
     public enum InstanceGroupConfigPreemptibility {
+        /**
+         * Preemptibility is unspecified, the system will choose the appropriate setting for each instance group.
+         * 
+         */
         PreemptibilityUnspecified("PREEMPTIBILITY_UNSPECIFIED"),
+        /**
+         * Instances are non-preemptible.This option is allowed for all instance groups and is the only valid value for Master and Worker instance groups.
+         * 
+         */
         NonPreemptible("NON_PREEMPTIBLE"),
+        /**
+         * Instances are preemptible.This option is allowed only for secondary worker groups.
+         * 
+         */
         Preemptible("PREEMPTIBLE");
 
         private final String value;

@@ -15,6 +15,10 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
 
     public static final WorkloadIdentityPoolArgs Empty = new WorkloadIdentityPoolArgs();
 
+    /**
+     * A description of the pool. Cannot exceed 256 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -29,6 +37,10 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * A display name for the pool. Cannot exceed 32 characters.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 

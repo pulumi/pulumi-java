@@ -10,8 +10,20 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum ControlSolutionTypesItem {
+        /**
+         * Default value.
+         * 
+         */
         SolutionTypeUnspecified("SOLUTION_TYPE_UNSPECIFIED"),
+        /**
+         * Used for Recommendations AI.
+         * 
+         */
         SolutionTypeRecommendation("SOLUTION_TYPE_RECOMMENDATION"),
+        /**
+         * Used for Retail Search.
+         * 
+         */
         SolutionTypeSearch("SOLUTION_TYPE_SEARCH");
 
         private final String value;

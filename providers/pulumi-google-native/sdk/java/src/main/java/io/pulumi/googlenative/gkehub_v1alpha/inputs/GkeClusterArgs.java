@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * GkeCluster contains information specific to GKE clusters.
+ * 
+ */
 public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GkeClusterArgs Empty = new GkeClusterArgs();
 
+    /**
+     * Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+     * 
+     */
     @InputImport(name="resourceLink")
     private final @Nullable Input<String> resourceLink;
 

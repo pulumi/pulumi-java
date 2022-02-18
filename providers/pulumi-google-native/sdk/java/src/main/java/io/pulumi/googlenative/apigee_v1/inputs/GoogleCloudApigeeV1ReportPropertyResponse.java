@@ -14,6 +14,10 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends io.pulumi.r
 
     public static final GoogleCloudApigeeV1ReportPropertyResponse Empty = new GoogleCloudApigeeV1ReportPropertyResponse();
 
+    /**
+     * name of the property
+     * 
+     */
     @InputImport(name="property", required=true)
     private final String property;
 
@@ -21,6 +25,10 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends io.pulumi.r
         return this.property;
     }
 
+    /**
+     * property values
+     * 
+     */
     @InputImport(name="value", required=true)
     private final List<GoogleCloudApigeeV1AttributeResponse> value;
 

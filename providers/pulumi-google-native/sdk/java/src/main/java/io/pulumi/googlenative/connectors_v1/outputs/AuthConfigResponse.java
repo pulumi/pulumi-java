@@ -14,10 +14,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthConfigResponse {
+    /**
+     * List containing additional auth configs.
+     * 
+     */
     private final List<ConfigVariableResponse> additionalVariables;
+    /**
+     * The type of authentication configured.
+     * 
+     */
     private final String authType;
+    /**
+     * Oauth2ClientCredentials.
+     * 
+     */
     private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
+    /**
+     * Oauth2JwtBearer.
+     * 
+     */
     private final Oauth2JwtBearerResponse oauth2JwtBearer;
+    /**
+     * UserPassword.
+     * 
+     */
     private final UserPasswordResponse userPassword;
 
     @OutputCustomType.Constructor({"additionalVariables","authType","oauth2ClientCredentials","oauth2JwtBearer","userPassword"})
@@ -34,18 +54,38 @@ public final class AuthConfigResponse {
         this.userPassword = Objects.requireNonNull(userPassword);
     }
 
+    /**
+     * List containing additional auth configs.
+     * 
+     */
     public List<ConfigVariableResponse> getAdditionalVariables() {
         return this.additionalVariables;
     }
+    /**
+     * The type of authentication configured.
+     * 
+     */
     public String getAuthType() {
         return this.authType;
     }
+    /**
+     * Oauth2ClientCredentials.
+     * 
+     */
     public Oauth2ClientCredentialsResponse getOauth2ClientCredentials() {
         return this.oauth2ClientCredentials;
     }
+    /**
+     * Oauth2JwtBearer.
+     * 
+     */
     public Oauth2JwtBearerResponse getOauth2JwtBearer() {
         return this.oauth2JwtBearer;
     }
+    /**
+     * UserPassword.
+     * 
+     */
     public UserPasswordResponse getUserPassword() {
         return this.userPassword;
     }

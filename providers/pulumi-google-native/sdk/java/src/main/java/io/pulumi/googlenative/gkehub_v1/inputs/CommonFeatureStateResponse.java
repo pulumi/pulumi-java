@@ -9,10 +9,18 @@ import io.pulumi.googlenative.gkehub_v1.inputs.FeatureStateResponse;
 import java.util.Objects;
 
 
+/**
+ * CommonFeatureState contains Hub-wide Feature status information.
+ * 
+ */
 public final class CommonFeatureStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommonFeatureStateResponse Empty = new CommonFeatureStateResponse();
 
+    /**
+     * Appdevexperience specific state.
+     * 
+     */
     @InputImport(name="appdevexperience", required=true)
     private final AppDevExperienceFeatureStateResponse appdevexperience;
 
@@ -20,6 +28,10 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
         return this.appdevexperience;
     }
 
+    /**
+     * The "running state" of the Feature in this Hub.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final FeatureStateResponse state;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The `MembershipRole` expiry details.
+ * 
+ */
 public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpiryDetailArgs Empty = new ExpiryDetailArgs();
 
+    /**
+     * The time at which the `MembershipRole` will expire.
+     * 
+     */
     @InputImport(name="expireTime")
     private final @Nullable Input<String> expireTime;
 

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OutputConfigResponse {
+    /**
+     * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+     * 
+     */
     private final String destination;
 
     @OutputCustomType.Constructor({"destination"})
@@ -16,6 +20,10 @@ public final class OutputConfigResponse {
         this.destination = Objects.requireNonNull(destination);
     }
 
+    /**
+     * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+     * 
+     */
     public String getDestination() {
         return this.destination;
     }

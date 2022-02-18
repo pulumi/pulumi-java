@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Layer holds metadata specific to a layer of a Docker image.
+ * 
+ */
 public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LayerArgs Empty = new LayerArgs();
 
+    /**
+     * The recovered arguments to the Dockerfile directive.
+     * 
+     */
     @InputImport(name="arguments")
     private final @Nullable Input<String> arguments;
 
@@ -21,6 +29,10 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
         return this.arguments == null ? Input.empty() : this.arguments;
     }
 
+    /**
+     * The recovered Dockerfile directive used to construct this layer. See https://docs.docker.com/engine/reference/builder/ for more information.
+     * 
+     */
     @InputImport(name="directive", required=true)
     private final Input<String> directive;
 

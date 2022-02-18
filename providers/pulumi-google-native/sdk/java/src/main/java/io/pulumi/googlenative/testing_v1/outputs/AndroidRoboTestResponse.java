@@ -14,13 +14,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AndroidRoboTestResponse {
+    /**
+     * The APK for the application under test.
+     * 
+     */
     private final FileReferenceResponse appApk;
+    /**
+     * A multi-apk app bundle for the application under test.
+     * 
+     */
     private final AppBundleResponse appBundle;
+    /**
+     * The initial activity that should be used to start the app.
+     * 
+     */
     private final String appInitialActivity;
+    /**
+     * The java package for the application under test. The default value is determined by examining the application's manifest.
+     * 
+     */
     private final String appPackageId;
+    /**
+     * A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
+     * 
+     */
     private final List<RoboDirectiveResponse> roboDirectives;
+    /**
+     * The mode in which Robo should run. Most clients should allow the server to populate this field automatically.
+     * 
+     */
     private final String roboMode;
+    /**
+     * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
+     * 
+     */
     private final FileReferenceResponse roboScript;
+    /**
+     * The intents used to launch the app for the crawl. If none are provided, then the main launcher activity is launched. If some are provided, then only those provided are launched (the main launcher activity must be provided explicitly).
+     * 
+     */
     private final List<RoboStartingIntentResponse> startingIntents;
 
     @OutputCustomType.Constructor({"appApk","appBundle","appInitialActivity","appPackageId","roboDirectives","roboMode","roboScript","startingIntents"})
@@ -43,27 +75,59 @@ public final class AndroidRoboTestResponse {
         this.startingIntents = Objects.requireNonNull(startingIntents);
     }
 
+    /**
+     * The APK for the application under test.
+     * 
+     */
     public FileReferenceResponse getAppApk() {
         return this.appApk;
     }
+    /**
+     * A multi-apk app bundle for the application under test.
+     * 
+     */
     public AppBundleResponse getAppBundle() {
         return this.appBundle;
     }
+    /**
+     * The initial activity that should be used to start the app.
+     * 
+     */
     public String getAppInitialActivity() {
         return this.appInitialActivity;
     }
+    /**
+     * The java package for the application under test. The default value is determined by examining the application's manifest.
+     * 
+     */
     public String getAppPackageId() {
         return this.appPackageId;
     }
+    /**
+     * A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
+     * 
+     */
     public List<RoboDirectiveResponse> getRoboDirectives() {
         return this.roboDirectives;
     }
+    /**
+     * The mode in which Robo should run. Most clients should allow the server to populate this field automatically.
+     * 
+     */
     public String getRoboMode() {
         return this.roboMode;
     }
+    /**
+     * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
+     * 
+     */
     public FileReferenceResponse getRoboScript() {
         return this.roboScript;
     }
+    /**
+     * The intents used to launch the app for the crawl. If none are provided, then the main launcher activity is launched. If some are provided, then only those provided are launched (the main launcher activity must be provided explicitly).
+     * 
+     */
     public List<RoboStartingIntentResponse> getStartingIntents() {
         return this.startingIntents;
     }

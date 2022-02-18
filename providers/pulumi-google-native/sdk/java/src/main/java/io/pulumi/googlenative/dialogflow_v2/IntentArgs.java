@@ -23,6 +23,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntentArgs Empty = new IntentArgs();
 
+    /**
+     * Optional. The name of the action associated with the intent. Note: The action name must not contain whitespaces.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<String> action;
 
@@ -30,6 +34,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
+     * 
+     */
     @InputImport(name="defaultResponsePlatforms")
     private final @Nullable Input<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms;
 
@@ -37,6 +45,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultResponsePlatforms == null ? Input.empty() : this.defaultResponsePlatforms;
     }
 
+    /**
+     * The name of this intent.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -44,6 +56,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Optional. Indicates that this intent ends an interaction. Some integrations (e.g., Actions on Google or Dialogflow phone gateway) use this information to close interaction with an end user. Default is false.
+     * 
+     */
     @InputImport(name="endInteraction")
     private final @Nullable Input<Boolean> endInteraction;
 
@@ -51,6 +67,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.endInteraction == null ? Input.empty() : this.endInteraction;
     }
 
+    /**
+     * Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.
+     * 
+     */
     @InputImport(name="events")
     private final @Nullable Input<List<String>> events;
 
@@ -58,6 +78,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.events == null ? Input.empty() : this.events;
     }
 
+    /**
+     * Optional. The list of context names required for this intent to be triggered. Format: `projects//agent/sessions/-/contexts/`.
+     * 
+     */
     @InputImport(name="inputContextNames")
     private final @Nullable Input<List<String>> inputContextNames;
 
@@ -72,6 +96,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.intentView == null ? Input.empty() : this.intentView;
     }
 
+    /**
+     * Optional. Indicates whether this is a fallback intent.
+     * 
+     */
     @InputImport(name="isFallback")
     private final @Nullable Input<Boolean> isFallback;
 
@@ -86,6 +114,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
+    /**
+     * Optional. Indicates that a live agent should be brought in to handle the interaction with the user. In most cases, when you set this flag to true, you would also want to set end_interaction to true as well. Default is false.
+     * 
+     */
     @InputImport(name="liveAgentHandoff")
     private final @Nullable Input<Boolean> liveAgentHandoff;
 
@@ -100,6 +132,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. The collection of rich messages corresponding to the `Response` field in the Dialogflow console.
+     * 
+     */
     @InputImport(name="messages")
     private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageArgs>> messages;
 
@@ -107,6 +143,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.messages == null ? Input.empty() : this.messages;
     }
 
+    /**
+     * Optional. Indicates whether Machine Learning is disabled for the intent. Note: If `ml_disabled` setting is set to true, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off.
+     * 
+     */
     @InputImport(name="mlDisabled")
     private final @Nullable Input<Boolean> mlDisabled;
 
@@ -114,6 +154,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.mlDisabled == null ? Input.empty() : this.mlDisabled;
     }
 
+    /**
+     * Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -121,6 +165,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Optional. The collection of contexts that are activated when the intent is matched. Context messages in this collection should not set the parameters field. Setting the `lifespan_count` to 0 will reset the context when the intent is matched. Format: `projects//agent/sessions/-/contexts/`.
+     * 
+     */
     @InputImport(name="outputContexts")
     private final @Nullable Input<List<GoogleCloudDialogflowV2ContextArgs>> outputContexts;
 
@@ -128,6 +176,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputContexts == null ? Input.empty() : this.outputContexts;
     }
 
+    /**
+     * Optional. The collection of parameters associated with the intent.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<GoogleCloudDialogflowV2IntentParameterArgs>> parameters;
 
@@ -135,6 +187,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Read-only after creation. The unique identifier of the parent intent in the chain of followup intents. You can set this field when creating an intent, for example with CreateIntent or BatchUpdateIntents, in order to make this intent a followup intent. It identifies the parent followup intent. Format: `projects//agent/intents/`.
+     * 
+     */
     @InputImport(name="parentFollowupIntentName")
     private final @Nullable Input<String> parentFollowupIntentName;
 
@@ -142,6 +198,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentFollowupIntentName == null ? Input.empty() : this.parentFollowupIntentName;
     }
 
+    /**
+     * Optional. The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -156,6 +216,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. Indicates whether to delete all contexts in the current session when this intent is matched.
+     * 
+     */
     @InputImport(name="resetContexts")
     private final @Nullable Input<Boolean> resetContexts;
 
@@ -163,6 +227,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resetContexts == null ? Input.empty() : this.resetContexts;
     }
 
+    /**
+     * Optional. The collection of examples that the agent is trained on.
+     * 
+     */
     @InputImport(name="trainingPhrases")
     private final @Nullable Input<List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs>> trainingPhrases;
 
@@ -170,6 +238,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
         return this.trainingPhrases == null ? Input.empty() : this.trainingPhrases;
     }
 
+    /**
+     * Optional. Indicates whether webhooks are enabled for the intent.
+     * 
+     */
     @InputImport(name="webhookState")
     private final @Nullable Input<IntentWebhookState> webhookState;
 
