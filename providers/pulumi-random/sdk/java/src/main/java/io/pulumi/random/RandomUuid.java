@@ -7,10 +7,13 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.random.RandomUuidArgs;
+import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomUuidState;
-
-import javax.annotation.Nullable;
+import java.lang.Object;
+import java.lang.String;
 import java.util.Map;
+import javax.annotation.Nullable;
 
 /**
  * The resource `random.RandomUuid` generates random uuid string that is intended to be used as unique identifiers for other resources.
