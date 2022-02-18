@@ -26,6 +26,7 @@ import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 import static io.pulumi.core.internal.Reflection.TypeShape.of;
@@ -109,6 +110,8 @@ public class MocksTest {
                 .setOptions(new TestOptions(false))
                 .setMocks(new ThrowingMocks())
                 .setSpyGlobalInstance();
+
+        mock.standardLogger.setLevel(Level.OFF);
 
         var result = mock.runAsync(
                 () -> mock.deployment.invokeAsync(

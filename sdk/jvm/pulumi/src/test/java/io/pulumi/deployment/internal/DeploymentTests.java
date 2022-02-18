@@ -15,7 +15,6 @@ import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
@@ -24,6 +23,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
+import static java.util.Objects.requireNonNull;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
@@ -41,6 +41,7 @@ public class DeploymentTests {
         public final DeploymentImpl deployment;
         public final DeploymentImpl.Config config;
         public final DeploymentImpl.DeploymentState state;
+        public final Logger standardLogger;
         public final EngineLogger logger;
         public final Log log;
 
@@ -52,18 +53,20 @@ public class DeploymentTests {
                 DeploymentImpl deployment,
                 DeploymentImpl.Config config,
                 DeploymentImpl.DeploymentState state,
+                Logger standardLogger,
                 EngineLogger logger,
                 Log log
         ) {
-            this.options = Objects.requireNonNull(options);
-            this.runner = Objects.requireNonNull(runner);
-            this.engine = Objects.requireNonNull(engine);
-            this.monitor = Objects.requireNonNull(monitor);
-            this.deployment = Objects.requireNonNull(deployment);
-            this.config = Objects.requireNonNull(config);
-            this.state = Objects.requireNonNull(state);
-            this.logger = Objects.requireNonNull(logger);
-            this.log = Objects.requireNonNull(log);
+            this.options = requireNonNull(options);
+            this.runner = requireNonNull(runner);
+            this.engine = requireNonNull(engine);
+            this.monitor = requireNonNull(monitor);
+            this.deployment = requireNonNull(deployment);
+            this.config = requireNonNull(config);
+            this.state = requireNonNull(state);
+            this.standardLogger = requireNonNull(standardLogger);
+            this.logger = requireNonNull(logger);
+            this.log = requireNonNull(log);
         }
 
         public void overrideConfig(String key, String value) {
@@ -165,61 +168,61 @@ public class DeploymentTests {
         }
 
         public DeploymentMockBuilder setOptions(TestOptions options) {
-            Objects.requireNonNull(options);
+            requireNonNull(options);
             this.options = options;
             return this;
         }
 
         public DeploymentMockBuilder setRunner(Runner runner) {
-            Objects.requireNonNull(runner);
+            requireNonNull(runner);
             this.runner = runner;
             return this;
         }
 
         public DeploymentMockBuilder setEngine(Engine engine) {
-            Objects.requireNonNull(engine);
+            requireNonNull(engine);
             this.engine = engine;
             return this;
         }
 
         public DeploymentMockBuilder setMonitor(Monitor monitor) {
-            Objects.requireNonNull(monitor);
+            requireNonNull(monitor);
             this.monitor = monitor;
             return this;
         }
 
         public DeploymentMockBuilder setMocks(Mocks mocks) {
-            Objects.requireNonNull(mocks);
+            requireNonNull(mocks);
             this.mocks = mocks;
             return this;
         }
 
         public DeploymentMockBuilder setConfig(DeploymentImpl.Config config) {
-            Objects.requireNonNull(config);
+            requireNonNull(config);
             this.config = config;
             return this;
         }
 
         public DeploymentMockBuilder setState(DeploymentImpl.DeploymentState state) {
-            Objects.requireNonNull(state);
+            requireNonNull(state);
             this.state = state;
             return this;
         }
 
         public DeploymentMockBuilder setLogger(EngineLogger logger) {
-            Objects.requireNonNull(logger);
+            requireNonNull(logger);
             this.logger = logger;
             return this;
         }
 
         public DeploymentMockBuilder setStandardLogger(Logger logger) {
-            Objects.requireNonNull(logger);
+            requireNonNull(logger);
             this.standardLogger = logger;
             return this;
         }
 
         public DeploymentMockBuilder setLog(Log log) {
-            Objects.requireNonNull(log);
+            requireNonNull(log);
             this.log = log;
             return this;
         }
@@ -277,7 +280,7 @@ public class DeploymentTests {
             this.runner = this.deployment.getRunner();
 
             DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
-            return new DeploymentMock(options, runner, engine, monitor, deployment, config, state, logger, log);
+            return new DeploymentMock(options, runner, engine, monitor, deployment, config, state, standardLogger, logger, log);
         }
 
         public DeploymentMock setMockGlobalInstance() {
@@ -300,7 +303,7 @@ public class DeploymentTests {
 
             DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
             return new DeploymentMock(
-                    options, runner, engine, monitor, deployment, config, state, logger, log);
+                    options, runner, engine, monitor, deployment, config, state, standardLogger, logger, log);
         }
     }
 

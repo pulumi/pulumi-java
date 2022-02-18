@@ -4,10 +4,7 @@ import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.logging.Level;
-import java.util.logging.LogManager;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 public final class InMemoryLogger extends Logger implements CountingLogger {
 
@@ -36,6 +33,8 @@ public final class InMemoryLogger extends Logger implements CountingLogger {
             }
         }
         logger.setLevel(newLevel);
+        logger.setUseParentHandlers(false);
+        logger.addHandler(new MemoryHandler()); // configured in logging.properties
         return (InMemoryLogger) logger;
     }
 
