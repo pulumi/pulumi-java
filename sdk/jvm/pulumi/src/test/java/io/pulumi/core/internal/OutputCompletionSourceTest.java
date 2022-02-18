@@ -3,7 +3,8 @@ package io.pulumi.core.internal;
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import org.junit.jupiter.api.Test;
 
@@ -45,7 +46,7 @@ class OutputCompletionSourceTest {
         var expectedComplex1 = Either.ofLeft(1);
         OutputCompletionSource<?> sourceComplex1 = sources.get("complex1");
         assertThat(sourceComplex1.mutableData).isNotCompleted();
-        sourceComplex1.setObjectValue(expectedComplex1, Reflection.TypeShape.either(Integer.class, String.class), true);
+        sourceComplex1.setObjectValue(expectedComplex1, TypeShape.either(Integer.class, String.class), true);
         assertThat(sourceComplex1.mutableData)
                 .isCompletedWithValueMatching(d -> Objects.equals(d.getValueNullable(), expectedComplex1));
     }
