@@ -17,6 +17,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretArgs Empty = new SecretArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +28,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
+     * 
+     */
     @InputImport(name="data")
     private final @Nullable Input<Map<String,String>> data;
 
@@ -31,6 +39,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.data == null ? Input.empty() : this.data;
     }
 
+    /**
+     * Immutable, if set to true, ensures that data stored in the Secret cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.
+     * 
+     */
     @InputImport(name="immutable")
     private final @Nullable Input<Boolean> immutable;
 
@@ -38,6 +50,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.immutable == null ? Input.empty() : this.immutable;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -45,6 +61,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -52,6 +72,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * stringData allows specifying non-binary secret data in string form. It is provided as a write-only input field for convenience. All keys and values are merged into the data field on write, overwriting any existing values. The stringData field is never output when reading from the API.
+     * 
+     */
     @InputImport(name="stringData")
     private final @Nullable Input<Map<String,String>> stringData;
 
@@ -59,6 +83,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.stringData == null ? Input.empty() : this.stringData;
     }
 
+    /**
+     * Used to facilitate programmatic handling of secret data. More info: https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

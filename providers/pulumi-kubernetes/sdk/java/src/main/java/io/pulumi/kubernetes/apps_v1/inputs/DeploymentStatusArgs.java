@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DeploymentStatus is the most recently observed status of the Deployment.
+ * 
+ */
 public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentStatusArgs Empty = new DeploymentStatusArgs();
 
+    /**
+     * Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
+     * 
+     */
     @InputImport(name="availableReplicas")
     private final @Nullable Input<Integer> availableReplicas;
 
@@ -23,6 +31,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.availableReplicas == null ? Input.empty() : this.availableReplicas;
     }
 
+    /**
+     * Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
+     * 
+     */
     @InputImport(name="collisionCount")
     private final @Nullable Input<Integer> collisionCount;
 
@@ -30,6 +42,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.collisionCount == null ? Input.empty() : this.collisionCount;
     }
 
+    /**
+     * Represents the latest available observations of a deployment's current state.
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<DeploymentConditionArgs>> conditions;
 
@@ -37,6 +53,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * The generation observed by the deployment controller.
+     * 
+     */
     @InputImport(name="observedGeneration")
     private final @Nullable Input<Integer> observedGeneration;
 
@@ -44,6 +64,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
+    /**
+     * readyReplicas is the number of pods targeted by this Deployment with a Ready Condition.
+     * 
+     */
     @InputImport(name="readyReplicas")
     private final @Nullable Input<Integer> readyReplicas;
 
@@ -51,6 +75,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
     }
 
+    /**
+     * Total number of non-terminated pods targeted by this deployment (their labels match the selector).
+     * 
+     */
     @InputImport(name="replicas")
     private final @Nullable Input<Integer> replicas;
 
@@ -58,6 +86,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.replicas == null ? Input.empty() : this.replicas;
     }
 
+    /**
+     * Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
+     * 
+     */
     @InputImport(name="unavailableReplicas")
     private final @Nullable Input<Integer> unavailableReplicas;
 
@@ -65,6 +97,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.unavailableReplicas == null ? Input.empty() : this.unavailableReplicas;
     }
 
+    /**
+     * Total number of non-terminated pods targeted by this deployment that have the desired template spec.
+     * 
+     */
     @InputImport(name="updatedReplicas")
     private final @Nullable Input<Integer> updatedReplicas;
 

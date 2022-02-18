@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SecretKeySelector selects a key of a Secret.
+ * 
+ */
 public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretKeySelectorArgs Empty = new SecretKeySelectorArgs();
 
+    /**
+     * The key of the secret to select from.  Must be a valid secret key.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -22,6 +30,10 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
         return this.key;
     }
 
+    /**
+     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +41,10 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specify whether the Secret or its key must be defined
+     * 
+     */
     @InputImport(name="optional")
     private final @Nullable Input<Boolean> optional;
 

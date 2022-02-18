@@ -11,10 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class APIServiceCondition {
+    /**
+     * Last time the condition transitioned from one status to another.
+     * 
+     */
     private final @Nullable String lastTransitionTime;
+    /**
+     * Human-readable message indicating details about last transition.
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * Unique, one-word, CamelCase reason for the condition's last transition.
+     * 
+     */
     private final @Nullable String reason;
+    /**
+     * Status is the status of the condition. Can be True, False, Unknown.
+     * 
+     */
     private final String status;
+    /**
+     * Type is the type of the condition.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"lastTransitionTime","message","reason","status","type"})
@@ -31,18 +51,38 @@ public final class APIServiceCondition {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Last time the condition transitioned from one status to another.
+     * 
+     */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
+    /**
+     * Human-readable message indicating details about last transition.
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * Unique, one-word, CamelCase reason for the condition's last transition.
+     * 
+     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
+    /**
+     * Status is the status of the condition. Can be True, False, Unknown.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Type is the type of the condition.
+     * 
+     */
     public String getType() {
         return this.type;
     }

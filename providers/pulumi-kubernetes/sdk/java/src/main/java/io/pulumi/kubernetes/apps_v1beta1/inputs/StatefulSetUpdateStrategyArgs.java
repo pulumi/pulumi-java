@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.
+ * 
+ */
 public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatefulSetUpdateStrategyArgs Empty = new StatefulSetUpdateStrategyArgs();
 
+    /**
+     * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
+     * 
+     */
     @InputImport(name="rollingUpdate")
     private final @Nullable Input<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
 
@@ -22,6 +30,10 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
     }
 
+    /**
+     * Type indicates the type of the StatefulSetUpdateStrategy.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

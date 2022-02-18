@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
+ * 
+ */
 public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectMetricSourceArgs Empty = new ObjectMetricSourceArgs();
 
+    /**
+     * averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+     * 
+     */
     @InputImport(name="averageValue")
     private final @Nullable Input<String> averageValue;
 
@@ -23,6 +31,10 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
         return this.averageValue == null ? Input.empty() : this.averageValue;
     }
 
+    /**
+     * metricName is the name of the metric in question.
+     * 
+     */
     @InputImport(name="metricName", required=true)
     private final Input<String> metricName;
 
@@ -30,6 +42,10 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
         return this.metricName;
     }
 
+    /**
+     * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.
+     * 
+     */
     @InputImport(name="selector")
     private final @Nullable Input<LabelSelectorArgs> selector;
 
@@ -37,6 +53,10 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
         return this.selector == null ? Input.empty() : this.selector;
     }
 
+    /**
+     * target is the described Kubernetes object.
+     * 
+     */
     @InputImport(name="target", required=true)
     private final Input<CrossVersionObjectReferenceArgs> target;
 
@@ -44,6 +64,10 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
         return this.target;
     }
 
+    /**
+     * targetValue is the target value of the metric (as a quantity).
+     * 
+     */
     @InputImport(name="targetValue", required=true)
     private final Input<String> targetValue;
 

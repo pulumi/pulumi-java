@@ -10,10 +10,18 @@ import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricValueStatusArgs;
 import java.util.Objects;
 
 
+/**
+ * ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.
+ * 
+ */
 public final class ExternalMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExternalMetricStatusArgs Empty = new ExternalMetricStatusArgs();
 
+    /**
+     * current contains the current value for the given metric
+     * 
+     */
     @InputImport(name="current", required=true)
     private final Input<MetricValueStatusArgs> current;
 
@@ -21,6 +29,10 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
         return this.current;
     }
 
+    /**
+     * metric identifies the target metric by name and selector
+     * 
+     */
     @InputImport(name="metric", required=true)
     private final Input<MetricIdentifierArgs> metric;
 

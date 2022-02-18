@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * CertificateSigningRequestCondition describes a condition of a CertificateSigningRequest object
+ * 
+ */
 public final class CertificateSigningRequestConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateSigningRequestConditionArgs Empty = new CertificateSigningRequestConditionArgs();
 
+    /**
+     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
+     * 
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -21,6 +29,10 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * lastUpdateTime is the time of the last update to this condition
+     * 
+     */
     @InputImport(name="lastUpdateTime")
     private final @Nullable Input<String> lastUpdateTime;
 
@@ -28,6 +40,10 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.lastUpdateTime == null ? Input.empty() : this.lastUpdateTime;
     }
 
+    /**
+     * message contains a human readable message with details about the request state
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -35,6 +51,10 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * reason indicates a brief reason for the request state
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -42,6 +62,10 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown".
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -49,6 +73,25 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.status;
     }
 
+    /**
+     * type of the condition. Known conditions are "Approved", "Denied", and "Failed".
+     * 
+     * An "Approved" condition is added via the /approval subresource, indicating the request was approved and should be issued by the signer.
+     * 
+     * A "Denied" condition is added via the /approval subresource, indicating the request was denied and should not be issued by the signer.
+     * 
+     * A "Failed" condition is added via the /status subresource, indicating the signer failed to issue the certificate.
+     * 
+     * Approved and Denied conditions are mutually exclusive. Approved, Denied, and Failed conditions cannot be removed once added.
+     * 
+     * Only one condition of a given type is allowed.
+     * 
+     * Possible enum values:
+     *  - `"Approved"` Approved indicates the request was approved and should be issued by the signer.
+     *  - `"Denied"` Denied indicates the request was denied and should not be issued by the signer.
+     *  - `"Failed"` Failed indicates the signer failed to issue the certificate.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

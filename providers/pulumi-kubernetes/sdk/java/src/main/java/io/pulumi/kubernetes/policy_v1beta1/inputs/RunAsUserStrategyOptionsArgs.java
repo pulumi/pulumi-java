@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy.
+ * 
+ */
 public final class RunAsUserStrategyOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RunAsUserStrategyOptionsArgs Empty = new RunAsUserStrategyOptionsArgs();
 
+    /**
+     * ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
+     * 
+     */
     @InputImport(name="ranges")
     private final @Nullable Input<List<IDRangeArgs>> ranges;
 
@@ -23,6 +31,10 @@ public final class RunAsUserStrategyOptionsArgs extends io.pulumi.resources.Reso
         return this.ranges == null ? Input.empty() : this.ranges;
     }
 
+    /**
+     * rule is the strategy that will dictate the allowable RunAsUser values that may be set.
+     * 
+     */
     @InputImport(name="rule", required=true)
     private final Input<String> rule;
 

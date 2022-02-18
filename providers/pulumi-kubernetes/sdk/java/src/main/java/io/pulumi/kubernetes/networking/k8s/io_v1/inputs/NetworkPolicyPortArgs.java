@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * NetworkPolicyPort describes a port to allow traffic on
+ * 
+ */
 public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkPolicyPortArgs Empty = new NetworkPolicyPortArgs();
 
+    /**
+     * If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate "NetworkPolicyEndPort".
+     * 
+     */
     @InputImport(name="endPort")
     private final @Nullable Input<Integer> endPort;
 
@@ -23,6 +31,10 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
         return this.endPort == null ? Input.empty() : this.endPort;
     }
 
+    /**
+     * The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Either<Integer,String>> port;
 
@@ -30,6 +42,10 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<String> protocol;
 

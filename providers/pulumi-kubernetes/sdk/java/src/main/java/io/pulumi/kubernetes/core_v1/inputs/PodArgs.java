@@ -13,10 +13,33 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.
+ * 
+ * This resource waits until its status is ready before registering success
+ * for create/update, and populating output properties from the current state of the resource.
+ * The following conditions are used to determine whether the resource creation has
+ * succeeded or failed:
+ * 
+ * 1. The Pod is scheduled ("PodScheduled"" '.status.condition' is true).
+ * 2. The Pod is initialized ("Initialized" '.status.condition' is true).
+ * 3. The Pod is ready ("Ready" '.status.condition' is true) and the '.status.phase' is
+ *    set to "Running".
+ *    Or (for Jobs): The Pod succeeded ('.status.phase' set to "Succeeded").
+ * 
+ * If the Pod has not reached a Ready state after 10 minutes, it will
+ * time out and mark the resource update as Failed. You can override the default timeout value
+ * by setting the 'customTimeouts' option on the resource.
+ * 
+ */
 public final class PodArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodArgs Empty = new PodArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +47,10 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -31,6 +58,10 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -38,6 +69,10 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
     @InputImport(name="spec")
     private final @Nullable Input<PodSpecArgs> spec;
 
@@ -45,6 +80,10 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
         return this.spec == null ? Input.empty() : this.spec;
     }
 
+    /**
+     * Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<PodStatusArgs> status;
 

@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateSigningRequestCondition {
+    /**
+     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
+     * 
+     */
     private final @Nullable String lastTransitionTime;
+    /**
+     * timestamp for the last update to this condition
+     * 
+     */
     private final @Nullable String lastUpdateTime;
+    /**
+     * human readable message with details about the request state
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * brief reason for the request state
+     * 
+     */
     private final @Nullable String reason;
+    /**
+     * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown". Defaults to "True". If unset, should be treated as "True".
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * request approval state, currently Approved or Denied.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"lastTransitionTime","lastUpdateTime","message","reason","status","type"})
@@ -34,21 +58,45 @@ public final class CertificateSigningRequestCondition {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
+     * 
+     */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
+    /**
+     * timestamp for the last update to this condition
+     * 
+     */
     public Optional<String> getLastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
+    /**
+     * human readable message with details about the request state
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * brief reason for the request state
+     * 
+     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
+    /**
+     * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown". Defaults to "True". If unset, should be treated as "True".
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * request approval state, currently Approved or Denied.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * current status of a horizontal pod autoscaler
+ * 
+ */
 public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HorizontalPodAutoscalerStatusArgs Empty = new HorizontalPodAutoscalerStatusArgs();
 
+    /**
+     * current average CPU utilization over all pods, represented as a percentage of requested CPU, e.g. 70 means that an average pod is using now 70% of its requested CPU.
+     * 
+     */
     @InputImport(name="currentCPUUtilizationPercentage")
     private final @Nullable Input<Integer> currentCPUUtilizationPercentage;
 
@@ -22,6 +30,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
         return this.currentCPUUtilizationPercentage == null ? Input.empty() : this.currentCPUUtilizationPercentage;
     }
 
+    /**
+     * current number of replicas of pods managed by this autoscaler.
+     * 
+     */
     @InputImport(name="currentReplicas", required=true)
     private final Input<Integer> currentReplicas;
 
@@ -29,6 +41,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
         return this.currentReplicas;
     }
 
+    /**
+     * desired number of replicas of pods managed by this autoscaler.
+     * 
+     */
     @InputImport(name="desiredReplicas", required=true)
     private final Input<Integer> desiredReplicas;
 
@@ -36,6 +52,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
         return this.desiredReplicas;
     }
 
+    /**
+     * last time the HorizontalPodAutoscaler scaled the number of pods; used by the autoscaler to control how often the number of pods is changed.
+     * 
+     */
     @InputImport(name="lastScaleTime")
     private final @Nullable Input<String> lastScaleTime;
 
@@ -43,6 +63,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
         return this.lastScaleTime == null ? Input.empty() : this.lastScaleTime;
     }
 
+    /**
+     * most recent generation observed by this autoscaler.
+     * 
+     */
     @InputImport(name="observedGeneration")
     private final @Nullable Input<Integer> observedGeneration;
 

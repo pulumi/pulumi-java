@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * WindowsSecurityContextOptions contain Windows-specific options and credentials.
+ * 
+ */
 public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsSecurityContextOptionsArgs Empty = new WindowsSecurityContextOptionsArgs();
 
+    /**
+     * GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
+     * 
+     */
     @InputImport(name="gmsaCredentialSpec")
     private final @Nullable Input<String> gmsaCredentialSpec;
 
@@ -22,6 +30,10 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
         return this.gmsaCredentialSpec == null ? Input.empty() : this.gmsaCredentialSpec;
     }
 
+    /**
+     * GMSACredentialSpecName is the name of the GMSA credential spec to use.
+     * 
+     */
     @InputImport(name="gmsaCredentialSpecName")
     private final @Nullable Input<String> gmsaCredentialSpecName;
 
@@ -29,6 +41,10 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
         return this.gmsaCredentialSpecName == null ? Input.empty() : this.gmsaCredentialSpecName;
     }
 
+    /**
+     * HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.
+     * 
+     */
     @InputImport(name="hostProcess")
     private final @Nullable Input<Boolean> hostProcess;
 
@@ -36,6 +52,10 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
         return this.hostProcess == null ? Input.empty() : this.hostProcess;
     }
 
+    /**
+     * The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+     * 
+     */
     @InputImport(name="runAsUserName")
     private final @Nullable Input<String> runAsUserName;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SessionAffinityConfig represents the configurations of session affinity.
+ * 
+ */
 public final class SessionAffinityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SessionAffinityConfigArgs Empty = new SessionAffinityConfigArgs();
 
+    /**
+     * clientIP contains the configurations of Client IP based session affinity.
+     * 
+     */
     @InputImport(name="clientIP")
     private final @Nullable Input<ClientIPConfigArgs> clientIP;
 

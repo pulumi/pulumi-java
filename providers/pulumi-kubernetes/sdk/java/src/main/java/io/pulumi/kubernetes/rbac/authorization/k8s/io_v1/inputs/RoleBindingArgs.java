@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace.
+ * 
+ */
 public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleBindingArgs Empty = new RoleBindingArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -25,6 +33,10 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -32,6 +44,10 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object's metadata.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -39,6 +55,10 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * RoleRef can reference a Role in the current namespace or a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.
+     * 
+     */
     @InputImport(name="roleRef", required=true)
     private final Input<RoleRefArgs> roleRef;
 
@@ -46,6 +66,10 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleRef;
     }
 
+    /**
+     * Subjects holds references to the objects the role applies to.
+     * 
+     */
     @InputImport(name="subjects")
     private final @Nullable Input<List<SubjectArgs>> subjects;
 

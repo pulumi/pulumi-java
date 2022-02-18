@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * NodeDaemonEndpoints lists ports opened by daemons running on the Node.
+ * 
+ */
 public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeDaemonEndpointsArgs Empty = new NodeDaemonEndpointsArgs();
 
+    /**
+     * Endpoint on which Kubelet is listening.
+     * 
+     */
     @InputImport(name="kubeletEndpoint")
     private final @Nullable Input<DaemonEndpointArgs> kubeletEndpoint;
 

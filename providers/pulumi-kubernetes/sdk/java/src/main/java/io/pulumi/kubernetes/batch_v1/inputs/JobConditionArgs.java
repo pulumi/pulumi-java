@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * JobCondition describes current state of a job.
+ * 
+ */
 public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobConditionArgs Empty = new JobConditionArgs();
 
+    /**
+     * Last time the condition was checked.
+     * 
+     */
     @InputImport(name="lastProbeTime")
     private final @Nullable Input<String> lastProbeTime;
 
@@ -21,6 +29,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastProbeTime == null ? Input.empty() : this.lastProbeTime;
     }
 
+    /**
+     * Last time the condition transit from one status to another.
+     * 
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -28,6 +40,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * Human readable message indicating details about last transition.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -35,6 +51,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * (brief) reason for the condition's last transition.
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -42,6 +62,10 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -49,6 +73,15 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.status;
     }
 
+    /**
+     * Type of job condition, Complete or Failed.
+     * 
+     * Possible enum values:
+     *  - `"Complete"` means the job has completed its execution.
+     *  - `"Failed"` means the job has failed its execution.
+     *  - `"Suspended"` means the job has been suspended.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

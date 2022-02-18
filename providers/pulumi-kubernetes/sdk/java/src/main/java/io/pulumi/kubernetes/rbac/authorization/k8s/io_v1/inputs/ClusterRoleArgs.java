@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.
+ * 
+ */
 public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterRoleArgs Empty = new ClusterRoleArgs();
 
+    /**
+     * AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
+     * 
+     */
     @InputImport(name="aggregationRule")
     private final @Nullable Input<AggregationRuleArgs> aggregationRule;
 
@@ -25,6 +33,10 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.aggregationRule == null ? Input.empty() : this.aggregationRule;
     }
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -32,6 +44,10 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -39,6 +55,10 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object's metadata.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -46,6 +66,10 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Rules holds all the PolicyRules for this ClusterRole
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<PolicyRuleArgs>> rules;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SelfSubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
+ * 
+ */
 public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SelfSubjectAccessReviewSpecArgs Empty = new SelfSubjectAccessReviewSpecArgs();
 
+    /**
+     * NonResourceAttributes describes information for a non-resource access request
+     * 
+     */
     @InputImport(name="nonResourceAttributes")
     private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
 
@@ -22,6 +30,10 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
         return this.nonResourceAttributes == null ? Input.empty() : this.nonResourceAttributes;
     }
 
+    /**
+     * ResourceAuthorizationAttributes describes information for a resource access request
+     * 
+     */
     @InputImport(name="resourceAttributes")
     private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Sysctl defines a kernel parameter to be set
+ * 
+ */
 public final class SysctlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SysctlArgs Empty = new SysctlArgs();
 
+    /**
+     * Name of a property to set
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +28,10 @@ public final class SysctlArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Value of a property to set
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

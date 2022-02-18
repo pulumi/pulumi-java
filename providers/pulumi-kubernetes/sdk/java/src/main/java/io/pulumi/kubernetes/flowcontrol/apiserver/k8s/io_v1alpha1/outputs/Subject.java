@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class Subject {
     private final @Nullable GroupSubject group;
+    /**
+     * Required
+     * 
+     */
     private final String kind;
     private final @Nullable ServiceAccountSubject serviceAccount;
     private final @Nullable UserSubject user;
@@ -34,6 +38,10 @@ public final class Subject {
     public Optional<GroupSubject> getGroup() {
         return Optional.ofNullable(this.group);
     }
+    /**
+     * Required
+     * 
+     */
     public String getKind() {
         return this.kind;
     }

@@ -19,111 +19,257 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Event is a report of an event somewhere in the cluster.  Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.
+ * 
+ */
 @ResourceType(type="kubernetes:core/v1:Event")
 public class Event extends io.pulumi.resources.CustomResource {
+    /**
+     * What action was taken/failed regarding to the Regarding object.
+     * 
+     */
     @OutputExport(name="action", type=String.class, parameters={})
     private Output</* @Nullable */ String> action;
 
+    /**
+     * @return What action was taken/failed regarding to the Regarding object.
+     * 
+     */
     public Output</* @Nullable */ String> getAction() {
         return this.action;
     }
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * The number of times this event has occurred.
+     * 
+     */
     @OutputExport(name="count", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> count;
 
+    /**
+     * @return The number of times this event has occurred.
+     * 
+     */
     public Output</* @Nullable */ Integer> getCount() {
         return this.count;
     }
+    /**
+     * Time when this Event was first observed.
+     * 
+     */
     @OutputExport(name="eventTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventTime;
 
+    /**
+     * @return Time when this Event was first observed.
+     * 
+     */
     public Output</* @Nullable */ String> getEventTime() {
         return this.eventTime;
     }
+    /**
+     * The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
+     * 
+     */
     @OutputExport(name="firstTimestamp", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstTimestamp;
 
+    /**
+     * @return The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
+     * 
+     */
     public Output</* @Nullable */ String> getFirstTimestamp() {
         return this.firstTimestamp;
     }
+    /**
+     * The object that this event is about.
+     * 
+     */
     @OutputExport(name="involvedObject", type=ObjectReference.class, parameters={})
     private Output<ObjectReference> involvedObject;
 
+    /**
+     * @return The object that this event is about.
+     * 
+     */
     public Output<ObjectReference> getInvolvedObject() {
         return this.involvedObject;
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * The time at which the most recent occurrence of this event was recorded.
+     * 
+     */
     @OutputExport(name="lastTimestamp", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastTimestamp;
 
+    /**
+     * @return The time at which the most recent occurrence of this event was recorded.
+     * 
+     */
     public Output</* @Nullable */ String> getLastTimestamp() {
         return this.lastTimestamp;
     }
+    /**
+     * A human-readable description of the status of this operation.
+     * 
+     */
     @OutputExport(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
+    /**
+     * @return A human-readable description of the status of this operation.
+     * 
+     */
     public Output</* @Nullable */ String> getMessage() {
         return this.message;
     }
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output<ObjectMeta> metadata;
 
+    /**
+     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Output<ObjectMeta> getMetadata() {
         return this.metadata;
     }
+    /**
+     * This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
+     * 
+     */
     @OutputExport(name="reason", type=String.class, parameters={})
     private Output</* @Nullable */ String> reason;
 
+    /**
+     * @return This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
+     * 
+     */
     public Output</* @Nullable */ String> getReason() {
         return this.reason;
     }
+    /**
+     * Optional secondary object for more complex actions.
+     * 
+     */
     @OutputExport(name="related", type=ObjectReference.class, parameters={})
     private Output</* @Nullable */ ObjectReference> related;
 
+    /**
+     * @return Optional secondary object for more complex actions.
+     * 
+     */
     public Output</* @Nullable */ ObjectReference> getRelated() {
         return this.related;
     }
+    /**
+     * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
+     * 
+     */
     @OutputExport(name="reportingComponent", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportingComponent;
 
+    /**
+     * @return Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
+     * 
+     */
     public Output</* @Nullable */ String> getReportingComponent() {
         return this.reportingComponent;
     }
+    /**
+     * ID of the controller instance, e.g. `kubelet-xyzf`.
+     * 
+     */
     @OutputExport(name="reportingInstance", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportingInstance;
 
+    /**
+     * @return ID of the controller instance, e.g. `kubelet-xyzf`.
+     * 
+     */
     public Output</* @Nullable */ String> getReportingInstance() {
         return this.reportingInstance;
     }
+    /**
+     * Data about the Event series this event represents or nil if it's a singleton Event.
+     * 
+     */
     @OutputExport(name="series", type=EventSeries.class, parameters={})
     private Output</* @Nullable */ EventSeries> series;
 
+    /**
+     * @return Data about the Event series this event represents or nil if it's a singleton Event.
+     * 
+     */
     public Output</* @Nullable */ EventSeries> getSeries() {
         return this.series;
     }
+    /**
+     * The component reporting this event. Should be a short machine understandable string.
+     * 
+     */
     @OutputExport(name="source", type=EventSource.class, parameters={})
     private Output</* @Nullable */ EventSource> source;
 
+    /**
+     * @return The component reporting this event. Should be a short machine understandable string.
+     * 
+     */
     public Output</* @Nullable */ EventSource> getSource() {
         return this.source;
     }
+    /**
+     * Type of this event (Normal, Warning), new types could be added in the future
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
+    /**
+     * @return Type of this event (Normal, Warning), new types could be added in the future
+     * 
+     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Event(String name, EventArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:core/v1:Event", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -151,6 +297,14 @@ public class Event extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Event get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Event(name, id, options);
     }
