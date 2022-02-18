@@ -1,22 +1,21 @@
 package io.pulumi.kubernetes;
 
-import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
-
 import io.pulumi.Log;
+import io.pulumi.core.Input;
+import io.pulumi.deployment.internal.EngineLogger;
 import io.pulumi.kubernetes.ProviderArgs;
-
+import java.util.Optional;
+import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.mock;
 
 class JsonAttrTests {
     @Test
-    void verifyStuff() {
+    void verifyKubeConfigNotDoubleEncoded() {
+        var log = new Log(mock(EngineLogger.class));
         var providerArgs = ProviderArgs.builder().setKubeconfig(Input.of("kc")).build();
-
-
-        assertThat(1).isEqualTo(1);
+        var map = providerArgs.internalToOptionalMapAsync(log).join();
+        assertThat((String)map.get("kubeconfig").get()).isEqualTo("kc");
     }
 }
