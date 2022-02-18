@@ -1,0 +1,12 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/generatedserializers/Provider.java",
+    "src/main/java/io/pulumi/generatedserializers/ProviderArgs.java",
+    "src/main/java/io/pulumi/generatedserializers/Res1.java",
+    "src/main/java/io/pulumi/generatedserializers/Res1Args.java",
+    "src/main/java/io/pulumi/generatedserializers/Utilities.java"
+  ]
+}

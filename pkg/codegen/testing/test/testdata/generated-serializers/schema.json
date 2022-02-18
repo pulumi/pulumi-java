@@ -1,0 +1,846 @@
+{
+  "name": "generated-serializers",
+  "config": {},
+  "provider": {},
+  "resources": {
+    "generated-serializers::Res1": {
+      "inputProperties": {
+        "p0": {
+          "type": "boolean",
+          "plain": true
+        },
+        "p1": {
+          "type": "boolean",
+          "plain": true
+        },
+        "p10": {
+          "type": "number"
+        },
+        "p100": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "plain": true
+        },
+        "p101": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "plain": true
+        },
+        "p102": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "p103": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "p104": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "plain": true
+        },
+        "p105": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "plain": true
+        },
+        "p106": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "p107": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "p108": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "plain": true
+        },
+        "p109": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "plain": true
+        },
+        "p11": {
+          "type": "number"
+        },
+        "p110": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "p111": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "p112": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Any"
+            }
+          },
+          "plain": true
+        },
+        "p113": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Any"
+            }
+          },
+          "plain": true
+        },
+        "p114": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Any"
+            }
+          }
+        },
+        "p115": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Any"
+            }
+          }
+        },
+        "p116": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Archive"
+            }
+          },
+          "plain": true
+        },
+        "p117": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Archive"
+            }
+          },
+          "plain": true
+        },
+        "p118": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Archive"
+            }
+          }
+        },
+        "p119": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Archive"
+            }
+          }
+        },
+        "p12": {
+          "type": "string",
+          "plain": true
+        },
+        "p120": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Asset"
+            }
+          },
+          "plain": true
+        },
+        "p121": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Asset"
+            }
+          },
+          "plain": true
+        },
+        "p122": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Asset"
+            }
+          }
+        },
+        "p123": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Asset"
+            }
+          }
+        },
+        "p124": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Json"
+            }
+          },
+          "plain": true
+        },
+        "p125": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Json"
+            }
+          },
+          "plain": true
+        },
+        "p126": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Json"
+            }
+          }
+        },
+        "p127": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "pulumi.json#/Json"
+            }
+          }
+        },
+        "p13": {
+          "type": "string",
+          "plain": true
+        },
+        "p14": {
+          "type": "string"
+        },
+        "p15": {
+          "type": "string"
+        },
+        "p16": {
+          "$ref": "pulumi.json#/Any",
+          "plain": true
+        },
+        "p17": {
+          "$ref": "pulumi.json#/Any",
+          "plain": true
+        },
+        "p18": {
+          "$ref": "pulumi.json#/Any"
+        },
+        "p19": {
+          "$ref": "pulumi.json#/Any"
+        },
+        "p2": {
+          "type": "boolean"
+        },
+        "p20": {
+          "$ref": "pulumi.json#/Archive",
+          "plain": true
+        },
+        "p21": {
+          "$ref": "pulumi.json#/Archive",
+          "plain": true
+        },
+        "p22": {
+          "$ref": "pulumi.json#/Archive"
+        },
+        "p23": {
+          "$ref": "pulumi.json#/Archive"
+        },
+        "p24": {
+          "$ref": "pulumi.json#/Asset",
+          "plain": true
+        },
+        "p25": {
+          "$ref": "pulumi.json#/Asset",
+          "plain": true
+        },
+        "p26": {
+          "$ref": "pulumi.json#/Asset"
+        },
+        "p27": {
+          "$ref": "pulumi.json#/Asset"
+        },
+        "p28": {
+          "$ref": "pulumi.json#/Json",
+          "plain": true
+        },
+        "p29": {
+          "$ref": "pulumi.json#/Json",
+          "plain": true
+        },
+        "p3": {
+          "type": "boolean"
+        },
+        "p30": {
+          "$ref": "pulumi.json#/Json"
+        },
+        "p31": {
+          "$ref": "pulumi.json#/Json"
+        },
+        "p32": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          },
+          "plain": true
+        },
+        "p33": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          },
+          "plain": true
+        },
+        "p34": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "p35": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "p36": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "plain": true
+        },
+        "p37": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "plain": true
+        },
+        "p38": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "p39": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "p4": {
+          "type": "integer",
+          "plain": true
+        },
+        "p40": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "plain": true
+        },
+        "p41": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "plain": true
+        },
+        "p42": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "p43": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "p44": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "plain": true
+        },
+        "p45": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "plain": true
+        },
+        "p46": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "p47": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "p48": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Any"
+          },
+          "plain": true
+        },
+        "p49": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Any"
+          },
+          "plain": true
+        },
+        "p5": {
+          "type": "integer",
+          "plain": true
+        },
+        "p50": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Any"
+          }
+        },
+        "p51": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Any"
+          }
+        },
+        "p52": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Archive"
+          },
+          "plain": true
+        },
+        "p53": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Archive"
+          },
+          "plain": true
+        },
+        "p54": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Archive"
+          }
+        },
+        "p55": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Archive"
+          }
+        },
+        "p56": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Asset"
+          },
+          "plain": true
+        },
+        "p57": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Asset"
+          },
+          "plain": true
+        },
+        "p58": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Asset"
+          }
+        },
+        "p59": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Asset"
+          }
+        },
+        "p6": {
+          "type": "integer"
+        },
+        "p60": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Json"
+          },
+          "plain": true
+        },
+        "p61": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Json"
+          },
+          "plain": true
+        },
+        "p62": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Json"
+          }
+        },
+        "p63": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Json"
+          }
+        },
+        "p64": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          },
+          "plain": true
+        },
+        "p65": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          },
+          "plain": true
+        },
+        "p66": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "p67": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "p68": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "plain": true
+        },
+        "p69": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "plain": true
+        },
+        "p7": {
+          "type": "integer"
+        },
+        "p70": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "p71": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "p72": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "plain": true
+        },
+        "p73": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "plain": true
+        },
+        "p74": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "p75": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "p76": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "plain": true
+        },
+        "p77": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "plain": true
+        },
+        "p78": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "p79": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "p8": {
+          "type": "number",
+          "plain": true
+        },
+        "p80": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Any"
+          },
+          "plain": true
+        },
+        "p81": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Any"
+          },
+          "plain": true
+        },
+        "p82": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Any"
+          }
+        },
+        "p83": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Any"
+          }
+        },
+        "p84": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Archive"
+          },
+          "plain": true
+        },
+        "p85": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Archive"
+          },
+          "plain": true
+        },
+        "p86": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Archive"
+          }
+        },
+        "p87": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Archive"
+          }
+        },
+        "p88": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Asset"
+          },
+          "plain": true
+        },
+        "p89": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Asset"
+          },
+          "plain": true
+        },
+        "p9": {
+          "type": "number",
+          "plain": true
+        },
+        "p90": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Asset"
+          }
+        },
+        "p91": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Asset"
+          }
+        },
+        "p92": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Json"
+          },
+          "plain": true
+        },
+        "p93": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Json"
+          },
+          "plain": true
+        },
+        "p94": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Json"
+          }
+        },
+        "p95": {
+          "type": "array",
+          "items": {
+            "$ref": "pulumi.json#/Json"
+          }
+        },
+        "p96": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "plain": true
+        },
+        "p97": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "plain": true
+        },
+        "p98": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          }
+        },
+        "p99": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "requiredInputs": [
+        "p126"
+      ]
+    }
+  }
+}
