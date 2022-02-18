@@ -15,6 +15,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Supplier;
+import java.util.logging.Level;
 
 import static io.pulumi.deployment.internal.DeploymentTests.*;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -57,6 +58,7 @@ public class DeploymentTest {
             var ignore = config.require("missing");
             return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());
         };
+        mock.standardLogger.setLevel(Level.OFF);
         var code = mock.runner.runAsyncFuture(supplier, null).join();
         assertThat(code).isEqualTo(32);
     }

@@ -13,7 +13,7 @@ build_go::	ensure_go
 	cd pkg && go build -v all
 
 test_go:: build_go submodule_update
-	cd pkg && go test -test.v ./...
+	cd pkg && go test ./...
 
 ensure_go::
 	cd pkg && go mod tidy

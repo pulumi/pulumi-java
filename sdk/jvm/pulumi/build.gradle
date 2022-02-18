@@ -74,8 +74,21 @@ sourceSets {
 
 test {
     useJUnitPlatform()
-    testLogging.showStandardStreams = true
-    testLogging.exceptionFormat = 'full'
+    testLogging {
+        showStandardStreams = true
+        exceptionFormat = 'full'
+
+        // set options for log level LIFECYCLE
+        events = ['failed']
+
+        info {
+            events = ['failed', 'skipped']
+        }
+
+        debug {
+            events = ['started', 'skipped', 'failed']
+        }
+    }
 
     systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
 }
@@ -94,7 +107,7 @@ publishing {
 }
 
 javadoc {
-    if(JavaVersion.current().isJava9Compatible()) {
+    if (JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
     }
 }
