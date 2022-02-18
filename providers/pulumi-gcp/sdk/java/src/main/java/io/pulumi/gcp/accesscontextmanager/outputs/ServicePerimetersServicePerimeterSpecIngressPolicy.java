@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo;
 import java.util.Objects;

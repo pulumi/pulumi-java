@@ -4,7 +4,7 @@
 package io.pulumi.gcp.eventarc;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.eventarc.inputs.TriggerDestinationArgs;
 import io.pulumi.gcp.eventarc.inputs.TriggerMatchingCriteriaArgs;
 import io.pulumi.gcp.eventarc.inputs.TriggerTransportArgs;

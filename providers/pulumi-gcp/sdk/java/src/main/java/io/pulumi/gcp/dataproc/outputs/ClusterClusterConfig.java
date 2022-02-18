@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigAutoscalingConfig;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigEncryptionConfig;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigEndpointConfig;

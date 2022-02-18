@@ -4,7 +4,7 @@
 package io.pulumi.gcp.assuredworkloads;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsArgs;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingArgs;
 import java.lang.String;

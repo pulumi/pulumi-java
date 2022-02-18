@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentOneTimeScheduleArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigArgs;

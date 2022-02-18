@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceMetadataArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTrafficArgs;

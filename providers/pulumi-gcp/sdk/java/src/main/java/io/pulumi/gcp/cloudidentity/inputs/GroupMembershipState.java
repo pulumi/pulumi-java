@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudidentity.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyGetArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyGetArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleGetArgs;

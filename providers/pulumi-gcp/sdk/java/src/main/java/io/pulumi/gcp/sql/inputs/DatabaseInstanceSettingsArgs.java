@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsBackupConfigurationArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsDatabaseFlagArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsInsightsConfigArgs;

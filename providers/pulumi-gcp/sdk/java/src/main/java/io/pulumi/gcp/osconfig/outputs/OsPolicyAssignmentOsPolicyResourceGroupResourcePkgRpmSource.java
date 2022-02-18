@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemote;
 import java.lang.Boolean;

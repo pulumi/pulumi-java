@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceFromMachineImageNetworkInterfaceAccessConfig;
 import io.pulumi.gcp.compute.outputs.InstanceFromMachineImageNetworkInterfaceAliasIpRange;
 import io.pulumi.gcp.compute.outputs.InstanceFromMachineImageNetworkInterfaceIpv6AccessConfig;

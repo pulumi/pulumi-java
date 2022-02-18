@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateMetadata;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpec;
 import java.util.List;

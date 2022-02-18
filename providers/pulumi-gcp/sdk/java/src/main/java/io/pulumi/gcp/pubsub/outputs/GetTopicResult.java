@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.pubsub.outputs.GetTopicMessageStoragePolicy;
 import io.pulumi.gcp.pubsub.outputs.GetTopicSchemaSetting;
 import java.lang.String;

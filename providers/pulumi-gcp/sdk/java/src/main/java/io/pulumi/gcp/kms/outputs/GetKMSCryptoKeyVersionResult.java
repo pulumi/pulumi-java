@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.kms.outputs.GetKMSCryptoKeyVersionPublicKey;
 import java.lang.Integer;
 import java.lang.String;

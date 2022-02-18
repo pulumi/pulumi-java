@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsGetArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationIapGetArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRuleGetArgs;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceLogConfigGetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingGetArgs;
 import java.lang.Boolean;

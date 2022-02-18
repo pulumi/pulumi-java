@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tpu.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.tpu.inputs.NodeNetworkEndpointGetArgs;
 import io.pulumi.gcp.tpu.inputs.NodeSchedulingConfigGetArgs;
 import java.lang.Boolean;

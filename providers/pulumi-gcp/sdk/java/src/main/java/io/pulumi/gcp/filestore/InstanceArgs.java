@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesArgs;
 import io.pulumi.gcp.filestore.inputs.InstanceNetworkArgs;
 import java.lang.String;

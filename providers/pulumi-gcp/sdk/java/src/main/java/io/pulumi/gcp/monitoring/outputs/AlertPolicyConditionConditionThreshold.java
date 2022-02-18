@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdDenominatorAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdTrigger;

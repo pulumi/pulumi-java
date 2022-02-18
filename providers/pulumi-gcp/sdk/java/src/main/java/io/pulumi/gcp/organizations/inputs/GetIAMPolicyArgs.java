@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyAuditConfig;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyBinding;
 import java.util.List;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolPublishingOptionsArgs;
 import java.lang.String;

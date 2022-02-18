@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.BackendServiceCdnPolicyCacheKeyPolicy;
 import io.pulumi.gcp.compute.outputs.BackendServiceCdnPolicyNegativeCachingPolicy;
 import java.lang.Boolean;

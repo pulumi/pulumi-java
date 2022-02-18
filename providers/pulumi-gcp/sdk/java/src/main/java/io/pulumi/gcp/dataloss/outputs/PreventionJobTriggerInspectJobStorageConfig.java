@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptions;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptions;

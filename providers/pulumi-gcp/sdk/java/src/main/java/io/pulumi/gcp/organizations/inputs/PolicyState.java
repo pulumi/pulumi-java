@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.PolicyBooleanPolicyGetArgs;
 import io.pulumi.gcp.organizations.inputs.PolicyListPolicyGetArgs;
 import io.pulumi.gcp.organizations.inputs.PolicyRestorePolicyGetArgs;

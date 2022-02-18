@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeInstallStepArchiveExtraction;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeInstallStepDpkgInstallation;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeInstallStepFileCopy;

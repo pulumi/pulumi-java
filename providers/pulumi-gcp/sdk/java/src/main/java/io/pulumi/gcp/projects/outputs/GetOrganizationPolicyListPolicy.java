@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.projects.outputs.GetOrganizationPolicyListPolicyAllow;
 import io.pulumi.gcp.projects.outputs.GetOrganizationPolicyListPolicyDeny;
 import java.lang.Boolean;

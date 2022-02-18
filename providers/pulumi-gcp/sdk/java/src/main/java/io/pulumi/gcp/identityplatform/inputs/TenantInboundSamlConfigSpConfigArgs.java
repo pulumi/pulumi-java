@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigSpCertificateArgs;
 import java.lang.String;
 import java.util.List;

@@ -3,8 +3,8 @@
 
 package io.pulumi.gcp;
 
+import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.Optionals;
-import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.config.inputs.Batching;
 import java.lang.Boolean;

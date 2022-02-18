@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.NodePoolAutoscalingArgs;
 import io.pulumi.gcp.container.inputs.NodePoolManagementArgs;
 import io.pulumi.gcp.container.inputs.NodePoolNetworkConfigArgs;

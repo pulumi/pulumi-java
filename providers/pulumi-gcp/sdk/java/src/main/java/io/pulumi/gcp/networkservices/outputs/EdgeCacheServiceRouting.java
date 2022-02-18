@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingHostRule;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcher;
 import java.util.List;

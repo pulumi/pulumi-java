@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.NodePoolNodeConfigEphemeralStorageConfigArgs;
 import io.pulumi.gcp.container.inputs.NodePoolNodeConfigGcfsConfigArgs;
 import io.pulumi.gcp.container.inputs.NodePoolNodeConfigGuestAcceleratorArgs;

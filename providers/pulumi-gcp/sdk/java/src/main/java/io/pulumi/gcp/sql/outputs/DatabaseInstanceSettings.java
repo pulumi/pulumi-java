@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sql.outputs.DatabaseInstanceSettingsBackupConfiguration;
 import io.pulumi.gcp.sql.outputs.DatabaseInstanceSettingsDatabaseFlag;
 import io.pulumi.gcp.sql.outputs.DatabaseInstanceSettingsInsightsConfig;

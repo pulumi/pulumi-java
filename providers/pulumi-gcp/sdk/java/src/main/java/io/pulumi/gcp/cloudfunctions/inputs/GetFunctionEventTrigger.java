@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudfunctions.inputs.GetFunctionEventTriggerFailurePolicy;
 import java.lang.String;
 import java.util.List;

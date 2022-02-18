@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.RegistryCredentialArgs;
 import io.pulumi.gcp.kms.inputs.RegistryEventNotificationConfigItemArgs;
 import java.lang.Object;
