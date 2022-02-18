@@ -1,7 +1,7 @@
 package io.pulumi.deployment.internal;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.DeploymentInstance;

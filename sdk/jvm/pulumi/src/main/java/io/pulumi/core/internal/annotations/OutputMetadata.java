@@ -3,9 +3,10 @@ package io.pulumi.core.internal.annotations;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
+import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.Optionals;
 import io.pulumi.core.internal.Reflection;
-import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;

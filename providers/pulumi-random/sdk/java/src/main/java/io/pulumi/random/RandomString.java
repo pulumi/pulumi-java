@@ -5,17 +5,12 @@ package io.pulumi.random;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
-import io.pulumi.random.RandomStringArgs;
-import io.pulumi.random.Utilities;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.inputs.RandomStringState;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
-import java.util.Map;
+
 import javax.annotation.Nullable;
+import java.util.Map;
 
 /**
  * The resource `random.RandomString` generates a random permutation of alphanumeric characters and optionally special characters.

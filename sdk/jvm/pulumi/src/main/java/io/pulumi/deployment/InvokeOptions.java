@@ -1,5 +1,6 @@
 package io.pulumi.deployment;
 
+import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.InvokeArgs;
@@ -11,7 +12,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Optional;
 
 /**
- * Options to help control the behavior of @see {@link Deployment#invokeAsync(String, io.pulumi.core.internal.Reflection.TypeShape, InvokeArgs, InvokeOptions)}.
+ * Options to help control the behavior of @see {@link Deployment#invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions)}.
  */
 @ParametersAreNonnullByDefault
 public final class InvokeOptions {

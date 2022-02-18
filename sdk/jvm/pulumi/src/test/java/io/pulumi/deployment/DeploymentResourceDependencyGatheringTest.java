@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.Stack;
 import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Tuples;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.CustomResource;
