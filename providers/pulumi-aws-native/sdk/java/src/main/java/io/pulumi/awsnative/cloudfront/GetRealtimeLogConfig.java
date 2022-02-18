@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRealtimeLogConfig {
+/**
+ * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
+ * 
+ */
     public static CompletableFuture<GetRealtimeLogConfigResult> invokeAsync(GetRealtimeLogConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getRealtimeLogConfig", TypeShape.of(GetRealtimeLogConfigResult.class), args == null ? GetRealtimeLogConfigArgs.Empty : args, Utilities.withVersion(options));
     }

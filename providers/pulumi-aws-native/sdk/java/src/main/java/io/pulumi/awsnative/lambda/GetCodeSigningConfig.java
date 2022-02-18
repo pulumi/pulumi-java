@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCodeSigningConfig {
+/**
+ * Resource Type definition for AWS::Lambda::CodeSigningConfig.
+ * 
+ */
     public static CompletableFuture<GetCodeSigningConfigResult> invokeAsync(GetCodeSigningConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args == null ? GetCodeSigningConfigArgs.Empty : args, Utilities.withVersion(options));
     }

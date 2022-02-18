@@ -12,11 +12,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCostCategoryResult {
+    /**
+     * Cost category ARN
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The default value for the cost category
+     * 
+     */
     private final @Nullable String defaultValue;
     private final @Nullable String effectiveStart;
     private final @Nullable CostCategoryRuleVersion ruleVersion;
+    /**
+     * JSON array format of Expression in Billing and Cost Management API
+     * 
+     */
     private final @Nullable String rules;
+    /**
+     * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
+     * 
+     */
     private final @Nullable String splitChargeRules;
 
     @OutputCustomType.Constructor({"arn","defaultValue","effectiveStart","ruleVersion","rules","splitChargeRules"})
@@ -35,9 +51,17 @@ public final class GetCostCategoryResult {
         this.splitChargeRules = splitChargeRules;
     }
 
+    /**
+     * Cost category ARN
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The default value for the cost category
+     * 
+     */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -47,9 +71,17 @@ public final class GetCostCategoryResult {
     public Optional<CostCategoryRuleVersion> getRuleVersion() {
         return Optional.ofNullable(this.ruleVersion);
     }
+    /**
+     * JSON array format of Expression in Billing and Cost Management API
+     * 
+     */
     public Optional<String> getRules() {
         return Optional.ofNullable(this.rules);
     }
+    /**
+     * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
+     * 
+     */
     public Optional<String> getSplitChargeRules() {
         return Optional.ofNullable(this.splitChargeRules);
     }

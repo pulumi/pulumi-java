@@ -25,6 +25,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessPointTags == null ? Input.empty() : this.accessPointTags;
     }
 
+    /**
+     * (optional) A string of up to 64 ASCII characters that Amazon EFS uses to ensure idempotent creation.
+     * 
+     */
     @InputImport(name="clientToken")
     private final @Nullable Input<String> clientToken;
 
@@ -32,6 +36,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientToken == null ? Input.empty() : this.clientToken;
     }
 
+    /**
+     * The ID of the EFS file system that the access point provides access to.
+     * 
+     */
     @InputImport(name="fileSystemId", required=true)
     private final Input<String> fileSystemId;
 
@@ -39,6 +47,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileSystemId;
     }
 
+    /**
+     * The operating system user and group applied to all file system requests made using the access point.
+     * 
+     */
     @InputImport(name="posixUser")
     private final @Nullable Input<AccessPointPosixUserArgs> posixUser;
 
@@ -46,6 +58,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
         return this.posixUser == null ? Input.empty() : this.posixUser;
     }
 
+    /**
+     * Specifies the directory on the Amazon EFS file system that the access point exposes as the root directory of your file system to NFS clients using the access point. The clients using the access point can only access the root directory and below. If the RootDirectory>Path specified does not exist, EFS creates it and applies the CreationInfo settings when a client connects to an access point. When specifying a RootDirectory, you need to provide the Path, and the CreationInfo is optional.
+     * 
+     */
     @InputImport(name="rootDirectory")
     private final @Nullable Input<AccessPointRootDirectoryArgs> rootDirectory;
 

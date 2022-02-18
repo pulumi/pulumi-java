@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContactChannel {
+/**
+ * Resource Type definition for AWS::SSMContacts::ContactChannel
+ * 
+ */
     public static CompletableFuture<GetContactChannelResult> invokeAsync(GetContactChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmcontacts:getContactChannel", TypeShape.of(GetContactChannelResult.class), args == null ? GetContactChannelArgs.Empty : args, Utilities.withVersion(options));
     }

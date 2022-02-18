@@ -13,6 +13,10 @@ public final class ApplicationInstanceTagArgs extends io.pulumi.resources.Resour
 
     public static final ApplicationInstanceTagArgs Empty = new ApplicationInstanceTagArgs();
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +24,10 @@ public final class ApplicationInstanceTagArgs extends io.pulumi.resources.Resour
         return this.key;
     }
 
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

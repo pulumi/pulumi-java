@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Status of the Addon
+     * 
+     */
     @EnumType
     public enum InstanceAddOnStatus {
         Enabling("Enabling"),

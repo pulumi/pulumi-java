@@ -13,6 +13,10 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * This resource represents an individual schema version of a schema defined in Glue Schema Registry.
+ * 
+ */
 @ResourceType(type="aws-native:glue:SchemaVersion")
 public class SchemaVersion extends io.pulumi.resources.CustomResource {
     @OutputExport(name="schema", type=SchemaVersionSchema.class, parameters={})
@@ -21,19 +25,41 @@ public class SchemaVersion extends io.pulumi.resources.CustomResource {
     public Output<SchemaVersionSchema> getSchema() {
         return this.schema;
     }
+    /**
+     * Complete definition of the schema in plain-text.
+     * 
+     */
     @OutputExport(name="schemaDefinition", type=String.class, parameters={})
     private Output<String> schemaDefinition;
 
+    /**
+     * @return Complete definition of the schema in plain-text.
+     * 
+     */
     public Output<String> getSchemaDefinition() {
         return this.schemaDefinition;
     }
+    /**
+     * Represents the version ID associated with the schema version.
+     * 
+     */
     @OutputExport(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
+    /**
+     * @return Represents the version ID associated with the schema version.
+     * 
+     */
     public Output<String> getVersionId() {
         return this.versionId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SchemaVersion(String name, SchemaVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:glue:SchemaVersion", name, args == null ? SchemaVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -49,6 +75,14 @@ public class SchemaVersion extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SchemaVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SchemaVersion(name, id, options);
     }

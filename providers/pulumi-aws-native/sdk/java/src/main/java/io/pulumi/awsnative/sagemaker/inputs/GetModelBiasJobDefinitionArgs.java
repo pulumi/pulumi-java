@@ -12,6 +12,10 @@ public final class GetModelBiasJobDefinitionArgs extends io.pulumi.resources.Inv
 
     public static final GetModelBiasJobDefinitionArgs Empty = new GetModelBiasJobDefinitionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of job definition.
+     * 
+     */
     @InputImport(name="jobDefinitionArn", required=true)
     private final String jobDefinitionArn;
 

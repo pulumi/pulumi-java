@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The class of storage used to store the object.
+     * 
+     */
     @EnumType
     public enum BucketNoncurrentVersionTransitionStorageClass {
         DeepArchive("DEEP_ARCHIVE"),

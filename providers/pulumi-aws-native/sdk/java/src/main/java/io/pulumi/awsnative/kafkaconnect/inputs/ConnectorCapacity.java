@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the capacity allocated to the connector.
+ * 
+ */
 public final class ConnectorCapacity extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorCapacity Empty = new ConnectorCapacity();

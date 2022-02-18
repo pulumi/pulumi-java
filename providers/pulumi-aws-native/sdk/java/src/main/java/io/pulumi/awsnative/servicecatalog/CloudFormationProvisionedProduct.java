@@ -18,6 +18,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Schema for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+ * 
+ */
 @ResourceType(type="aws-native:servicecatalog:CloudFormationProvisionedProduct")
 public class CloudFormationProvisionedProduct extends io.pulumi.resources.CustomResource {
     @OutputExport(name="acceptLanguage", type=CloudFormationProvisionedProductAcceptLanguage.class, parameters={})
@@ -38,9 +42,17 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
     public Output</* @Nullable */ List<String>> getNotificationArns() {
         return this.notificationArns;
     }
+    /**
+     * List of key-value pair outputs.
+     * 
+     */
     @OutputExport(name="outputs", type=Object.class, parameters={})
     private Output<Object> outputs;
 
+    /**
+     * @return List of key-value pair outputs.
+     * 
+     */
     public Output<Object> getOutputs() {
         return this.outputs;
     }
@@ -117,6 +129,12 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CloudFormationProvisionedProduct(String name, @Nullable CloudFormationProvisionedProductArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:servicecatalog:CloudFormationProvisionedProduct", name, args == null ? CloudFormationProvisionedProductArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -132,6 +150,14 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CloudFormationProvisionedProduct get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CloudFormationProvisionedProduct(name, id, options);
     }

@@ -17,6 +17,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryArgs Empty = new RepositoryArgs();
 
+    /**
+     * A text description of the repository.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A list of external connections associated with the repository.
+     * 
+     */
     @InputImport(name="externalConnections")
     private final @Nullable Input<List<String>> externalConnections;
 
@@ -31,6 +39,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.externalConnections == null ? Input.empty() : this.externalConnections;
     }
 
+    /**
+     * The access control resource policy on the provided repository.
+     * 
+     */
     @InputImport(name="permissionsPolicyDocument")
     private final @Nullable Input<Object> permissionsPolicyDocument;
 
@@ -38,6 +50,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.permissionsPolicyDocument == null ? Input.empty() : this.permissionsPolicyDocument;
     }
 
+    /**
+     * The name of the repository.
+     * 
+     */
     @InputImport(name="repositoryName")
     private final @Nullable Input<String> repositoryName;
 
@@ -45,6 +61,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RepositoryTagArgs>> tags;
 
@@ -52,6 +72,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A list of upstream repositories associated with the repository.
+     * 
+     */
     @InputImport(name="upstreams")
     private final @Nullable Input<List<String>> upstreams;
 

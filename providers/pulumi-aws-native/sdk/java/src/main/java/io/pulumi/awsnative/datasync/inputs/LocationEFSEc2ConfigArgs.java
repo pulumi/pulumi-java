@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The subnet and security group that DataSync uses to access target EFS file system.
+ * 
+ */
 public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationEFSEc2ConfigArgs Empty = new LocationEFSEc2ConfigArgs();
 
+    /**
+     * The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
+     * 
+     */
     @InputImport(name="securityGroupArns", required=true)
     private final Input<List<String>> securityGroupArns;
 
@@ -21,6 +29,10 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
         return this.securityGroupArns;
     }
 
+    /**
+     * The ARN of the subnet that DataSync uses to access the target EFS file system.
+     * 
+     */
     @InputImport(name="subnetArn", required=true)
     private final Input<String> subnetArn;
 

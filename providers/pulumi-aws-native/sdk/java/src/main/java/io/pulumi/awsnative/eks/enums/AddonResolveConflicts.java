@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Resolve parameter value conflicts
+     * 
+     */
     @EnumType
     public enum AddonResolveConflicts {
         None("NONE"),

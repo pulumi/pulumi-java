@@ -13,10 +13,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetHookVersionResult {
+    /**
+     * The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Indicates if this type version is the current default version
+     * 
+     */
     private final @Nullable Boolean isDefaultVersion;
+    /**
+     * The Amazon Resource Name (ARN) of the type without the versionID.
+     * 
+     */
     private final @Nullable String typeArn;
+    /**
+     * The ID of the version of the type represented by this hook instance.
+     * 
+     */
     private final @Nullable String versionId;
+    /**
+     * The scope at which the type is visible and usable in CloudFormation operations.
+     * 
+     * Valid values include:
+     * 
+     * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
+     * 
+     * PUBLIC: The type is publically visible and usable within any Amazon account.
+     * 
+     */
     private final @Nullable HookVersionVisibility visibility;
 
     @OutputCustomType.Constructor({"arn","isDefaultVersion","typeArn","versionId","visibility"})
@@ -33,18 +59,44 @@ public final class GetHookVersionResult {
         this.visibility = visibility;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Indicates if this type version is the current default version
+     * 
+     */
     public Optional<Boolean> getIsDefaultVersion() {
         return Optional.ofNullable(this.isDefaultVersion);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the type without the versionID.
+     * 
+     */
     public Optional<String> getTypeArn() {
         return Optional.ofNullable(this.typeArn);
     }
+    /**
+     * The ID of the version of the type represented by this hook instance.
+     * 
+     */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
     }
+    /**
+     * The scope at which the type is visible and usable in CloudFormation operations.
+     * 
+     * Valid values include:
+     * 
+     * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
+     * 
+     * PUBLIC: The type is publically visible and usable within any Amazon account.
+     * 
+     */
     public Optional<HookVersionVisibility> getVisibility() {
         return Optional.ofNullable(this.visibility);
     }

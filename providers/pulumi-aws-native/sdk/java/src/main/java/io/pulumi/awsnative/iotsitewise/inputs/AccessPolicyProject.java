@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A project resource.
+ * 
+ */
 public final class AccessPolicyProject extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessPolicyProject Empty = new AccessPolicyProject();
 
+    /**
+     * The ID of the project.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

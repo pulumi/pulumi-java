@@ -14,6 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The type of email sending events to publish to the event destination.
+ * 
+ */
 public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
 
     public static final TrailEventSelector Empty = new TrailEventSelector();
@@ -25,6 +29,10 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
         return this.dataResources == null ? List.of() : this.dataResources;
     }
 
+    /**
+     * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing "kms.amazonaws.com". By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
+     * 
+     */
     @InputImport(name="excludeManagementEventSources")
     private final @Nullable List<String> excludeManagementEventSources;
 
@@ -32,6 +40,10 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
         return this.excludeManagementEventSources == null ? List.of() : this.excludeManagementEventSources;
     }
 
+    /**
+     * Specify if you want your event selector to include management events for your trail.
+     * 
+     */
     @InputImport(name="includeManagementEvents")
     private final @Nullable Boolean includeManagementEvents;
 
@@ -39,6 +51,10 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
         return this.includeManagementEvents == null ? Optional.empty() : Optional.ofNullable(this.includeManagementEvents);
     }
 
+    /**
+     * Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
+     * 
+     */
     @InputImport(name="readWriteType")
     private final @Nullable TrailEventSelectorReadWriteType readWriteType;
 

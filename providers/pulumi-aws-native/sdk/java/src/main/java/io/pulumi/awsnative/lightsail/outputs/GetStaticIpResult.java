@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetStaticIpResult {
+    /**
+     * The instance where the static IP is attached.
+     * 
+     */
     private final @Nullable String attachedTo;
+    /**
+     * The static IP address.
+     * 
+     */
     private final @Nullable String ipAddress;
+    /**
+     * A Boolean value indicating whether the static IP is attached.
+     * 
+     */
     private final @Nullable Boolean isAttached;
     private final @Nullable String staticIpArn;
 
@@ -29,12 +41,24 @@ public final class GetStaticIpResult {
         this.staticIpArn = staticIpArn;
     }
 
+    /**
+     * The instance where the static IP is attached.
+     * 
+     */
     public Optional<String> getAttachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
+    /**
+     * The static IP address.
+     * 
+     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
+    /**
+     * A Boolean value indicating whether the static IP is attached.
+     * 
+     */
     public Optional<Boolean> getIsAttached() {
         return Optional.ofNullable(this.isAttached);
     }

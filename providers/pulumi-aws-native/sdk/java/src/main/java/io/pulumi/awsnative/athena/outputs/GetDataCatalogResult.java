@@ -15,9 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDataCatalogResult {
+    /**
+     * A description of the data catalog to be created.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
+     * 
+     */
     private final @Nullable Object parameters;
+    /**
+     * A list of comma separated tags to add to the data catalog that is created.
+     * 
+     */
     private final @Nullable List<DataCatalogTag> tags;
+    /**
+     * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
+     * 
+     */
     private final @Nullable DataCatalogType type;
 
     @OutputCustomType.Constructor({"description","parameters","tags","type"})
@@ -32,15 +48,31 @@ public final class GetDataCatalogResult {
         this.type = type;
     }
 
+    /**
+     * A description of the data catalog to be created.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
+     * 
+     */
     public Optional<Object> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
+    /**
+     * A list of comma separated tags to add to the data catalog that is created.
+     * 
+     */
     public List<DataCatalogTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
+    /**
+     * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
+     * 
+     */
     public Optional<DataCatalogType> getType() {
         return Optional.ofNullable(this.type);
     }

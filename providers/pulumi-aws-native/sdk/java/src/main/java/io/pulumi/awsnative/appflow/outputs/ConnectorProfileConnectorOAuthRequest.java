@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectorProfileConnectorOAuthRequest {
+    /**
+     * The code provided by the connector when it has been authenticated via the connected app.
+     * 
+     */
     private final @Nullable String authCode;
+    /**
+     * The URL to which the authentication server redirects the browser after authorization has been
+     * granted.
+     * 
+     */
     private final @Nullable String redirectUri;
 
     @OutputCustomType.Constructor({"authCode","redirectUri"})
@@ -22,9 +31,18 @@ public final class ConnectorProfileConnectorOAuthRequest {
         this.redirectUri = redirectUri;
     }
 
+    /**
+     * The code provided by the connector when it has been authenticated via the connected app.
+     * 
+     */
     public Optional<String> getAuthCode() {
         return Optional.ofNullable(this.authCode);
     }
+    /**
+     * The URL to which the authentication server redirects the browser after authorization has been
+     * granted.
+     * 
+     */
     public Optional<String> getRedirectUri() {
         return Optional.ofNullable(this.redirectUri);
     }

@@ -14,11 +14,35 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ModelExplainabilityJobDefinitionEndpointInput {
     private final String endpointName;
+    /**
+     * JSONpath to locate features in JSONlines dataset
+     * 
+     */
     private final @Nullable String featuresAttribute;
+    /**
+     * Index or JSONpath to locate predicted label(s)
+     * 
+     */
     private final @Nullable String inferenceAttribute;
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     private final String localPath;
+    /**
+     * Index or JSONpath to locate probabilities
+     * 
+     */
     private final @Nullable String probabilityAttribute;
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     private final @Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType;
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     private final @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode;
 
     @OutputCustomType.Constructor({"endpointName","featuresAttribute","inferenceAttribute","localPath","probabilityAttribute","s3DataDistributionType","s3InputMode"})
@@ -42,21 +66,45 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
     public String getEndpointName() {
         return this.endpointName;
     }
+    /**
+     * JSONpath to locate features in JSONlines dataset
+     * 
+     */
     public Optional<String> getFeaturesAttribute() {
         return Optional.ofNullable(this.featuresAttribute);
     }
+    /**
+     * Index or JSONpath to locate predicted label(s)
+     * 
+     */
     public Optional<String> getInferenceAttribute() {
         return Optional.ofNullable(this.inferenceAttribute);
     }
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     public String getLocalPath() {
         return this.localPath;
     }
+    /**
+     * Index or JSONpath to locate probabilities
+     * 
+     */
     public Optional<String> getProbabilityAttribute() {
         return Optional.ofNullable(this.probabilityAttribute);
     }
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     public Optional<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     public Optional<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }

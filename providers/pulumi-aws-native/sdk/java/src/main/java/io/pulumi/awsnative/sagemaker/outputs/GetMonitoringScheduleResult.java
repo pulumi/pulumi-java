@@ -16,14 +16,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMonitoringScheduleResult {
+    /**
+     * The time at which the schedule was created.
+     * 
+     */
     private final @Nullable String creationTime;
     private final @Nullable String endpointName;
+    /**
+     * Contains the reason a monitoring job failed, if it failed.
+     * 
+     */
     private final @Nullable String failureReason;
+    /**
+     * A timestamp that indicates the last time the monitoring job was modified.
+     * 
+     */
     private final @Nullable String lastModifiedTime;
+    /**
+     * Describes metadata on the last execution to run, if there was one.
+     * 
+     */
     private final @Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary;
+    /**
+     * The Amazon Resource Name (ARN) of the monitoring schedule.
+     * 
+     */
     private final @Nullable String monitoringScheduleArn;
     private final @Nullable MonitoringScheduleConfig monitoringScheduleConfig;
+    /**
+     * The status of a schedule job.
+     * 
+     */
     private final @Nullable MonitoringScheduleStatus monitoringScheduleStatus;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<MonitoringScheduleTag> tags;
 
     @OutputCustomType.Constructor({"creationTime","endpointName","failureReason","lastModifiedTime","lastMonitoringExecutionSummary","monitoringScheduleArn","monitoringScheduleConfig","monitoringScheduleStatus","tags"})
@@ -48,30 +76,58 @@ public final class GetMonitoringScheduleResult {
         this.tags = tags;
     }
 
+    /**
+     * The time at which the schedule was created.
+     * 
+     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     public Optional<String> getEndpointName() {
         return Optional.ofNullable(this.endpointName);
     }
+    /**
+     * Contains the reason a monitoring job failed, if it failed.
+     * 
+     */
     public Optional<String> getFailureReason() {
         return Optional.ofNullable(this.failureReason);
     }
+    /**
+     * A timestamp that indicates the last time the monitoring job was modified.
+     * 
+     */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
+    /**
+     * Describes metadata on the last execution to run, if there was one.
+     * 
+     */
     public Optional<MonitoringScheduleMonitoringExecutionSummary> getLastMonitoringExecutionSummary() {
         return Optional.ofNullable(this.lastMonitoringExecutionSummary);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the monitoring schedule.
+     * 
+     */
     public Optional<String> getMonitoringScheduleArn() {
         return Optional.ofNullable(this.monitoringScheduleArn);
     }
     public Optional<MonitoringScheduleConfig> getMonitoringScheduleConfig() {
         return Optional.ofNullable(this.monitoringScheduleConfig);
     }
+    /**
+     * The status of a schedule job.
+     * 
+     */
     public Optional<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
         return Optional.ofNullable(this.monitoringScheduleStatus);
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<MonitoringScheduleTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

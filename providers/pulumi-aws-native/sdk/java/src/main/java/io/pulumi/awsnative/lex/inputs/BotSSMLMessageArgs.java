@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A message in Speech Synthesis Markup Language (SSML).
+ * 
+ */
 public final class BotSSMLMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSSMLMessageArgs Empty = new BotSSMLMessageArgs();
 
+    /**
+     * The SSML text that defines the prompt.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

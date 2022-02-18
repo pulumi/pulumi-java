@@ -9,6 +9,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Data privacy setting of the Bot.
+ * 
+ */
 public final class DataPrivacyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataPrivacyPropertiesArgs Empty = new DataPrivacyPropertiesArgs();

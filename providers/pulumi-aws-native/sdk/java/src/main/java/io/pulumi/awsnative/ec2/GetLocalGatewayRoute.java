@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocalGatewayRoute {
+/**
+ * Describes a route for a local gateway route table.
+ * 
+ */
     public static CompletableFuture<GetLocalGatewayRouteResult> invokeAsync(GetLocalGatewayRouteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getLocalGatewayRoute", TypeShape.of(GetLocalGatewayRouteResult.class), args == null ? GetLocalGatewayRouteArgs.Empty : args, Utilities.withVersion(options));
     }

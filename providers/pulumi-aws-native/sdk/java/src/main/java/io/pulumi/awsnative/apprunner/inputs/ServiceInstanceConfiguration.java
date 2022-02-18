@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Instance Configuration
+ * 
+ */
 public final class ServiceInstanceConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceInstanceConfiguration Empty = new ServiceInstanceConfiguration();
 
+    /**
+     * CPU
+     * 
+     */
     @InputImport(name="cpu")
     private final @Nullable String cpu;
 
@@ -21,6 +29,10 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
+    /**
+     * Instance Role Arn
+     * 
+     */
     @InputImport(name="instanceRoleArn")
     private final @Nullable String instanceRoleArn;
 
@@ -28,6 +40,10 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
         return this.instanceRoleArn == null ? Optional.empty() : Optional.ofNullable(this.instanceRoleArn);
     }
 
+    /**
+     * Memory
+     * 
+     */
     @InputImport(name="memory")
     private final @Nullable String memory;
 

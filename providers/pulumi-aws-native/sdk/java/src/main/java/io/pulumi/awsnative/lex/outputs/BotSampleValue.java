@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotSampleValue {
+    /**
+     * The value that can be used for a slot type.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -16,6 +20,10 @@ public final class BotSampleValue {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The value that can be used for a slot type.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

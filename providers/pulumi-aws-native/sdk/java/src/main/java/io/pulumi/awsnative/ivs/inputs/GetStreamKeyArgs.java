@@ -12,6 +12,10 @@ public final class GetStreamKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStreamKeyArgs Empty = new GetStreamKeyArgs();
 
+    /**
+     * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

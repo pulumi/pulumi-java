@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoutingControl {
+/**
+ * AWS Route53 Recovery Control Routing Control resource schema .
+ * 
+ */
     public static CompletableFuture<GetRoutingControlResult> invokeAsync(GetRoutingControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoverycontrol:getRoutingControl", TypeShape.of(GetRoutingControlResult.class), args == null ? GetRoutingControlArgs.Empty : args, Utilities.withVersion(options));
     }

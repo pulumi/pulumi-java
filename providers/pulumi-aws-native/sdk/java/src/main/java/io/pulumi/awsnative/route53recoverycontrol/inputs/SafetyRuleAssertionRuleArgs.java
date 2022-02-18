@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An assertion rule enforces that, when a routing control state is changed, that the criteria set by the rule configuration is met. Otherwise, the change to the routing control is not accepted.
+ * 
+ */
 public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SafetyRuleAssertionRuleArgs Empty = new SafetyRuleAssertionRuleArgs();
 
+    /**
+     * The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three AWS Regions.
+     * 
+     */
     @InputImport(name="assertedControls", required=true)
     private final Input<List<String>> assertedControls;
 
@@ -22,6 +30,10 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
         return this.assertedControls;
     }
 
+    /**
+     * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
+     * 
+     */
     @InputImport(name="waitPeriodMs", required=true)
     private final Input<Integer> waitPeriodMs;
 

@@ -20,6 +20,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationHDFSArgs Empty = new LocationHDFSArgs();
 
+    /**
+     * ARN(s) of the agent(s) to use for an HDFS location.
+     * 
+     */
     @InputImport(name="agentArns", required=true)
     private final Input<List<String>> agentArns;
 
@@ -27,6 +31,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentArns;
     }
 
+    /**
+     * The authentication mode used to determine identity of user.
+     * 
+     */
     @InputImport(name="authenticationType", required=true)
     private final Input<LocationHDFSAuthenticationType> authenticationType;
 
@@ -34,6 +42,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticationType;
     }
 
+    /**
+     * Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
+     * 
+     */
     @InputImport(name="blockSize")
     private final @Nullable Input<Integer> blockSize;
 
@@ -41,6 +53,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.blockSize == null ? Input.empty() : this.blockSize;
     }
 
+    /**
+     * The Base64 string representation of the Keytab file.
+     * 
+     */
     @InputImport(name="kerberosKeytab")
     private final @Nullable Input<String> kerberosKeytab;
 
@@ -48,6 +64,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.kerberosKeytab == null ? Input.empty() : this.kerberosKeytab;
     }
 
+    /**
+     * The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
+     * 
+     */
     @InputImport(name="kerberosKrb5Conf")
     private final @Nullable Input<String> kerberosKrb5Conf;
 
@@ -55,6 +75,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.kerberosKrb5Conf == null ? Input.empty() : this.kerberosKrb5Conf;
     }
 
+    /**
+     * The unique identity, or principal, to which Kerberos can assign tickets.
+     * 
+     */
     @InputImport(name="kerberosPrincipal")
     private final @Nullable Input<String> kerberosPrincipal;
 
@@ -62,6 +86,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.kerberosPrincipal == null ? Input.empty() : this.kerberosPrincipal;
     }
 
+    /**
+     * The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
+     * 
+     */
     @InputImport(name="kmsKeyProviderUri")
     private final @Nullable Input<String> kmsKeyProviderUri;
 
@@ -69,6 +97,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyProviderUri == null ? Input.empty() : this.kmsKeyProviderUri;
     }
 
+    /**
+     * An array of Name Node(s) of the HDFS location.
+     * 
+     */
     @InputImport(name="nameNodes", required=true)
     private final Input<List<LocationHDFSNameNodeArgs>> nameNodes;
 
@@ -83,6 +115,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.qopConfiguration == null ? Input.empty() : this.qopConfiguration;
     }
 
+    /**
+     * Number of copies of each block that exists inside the HDFS cluster.
+     * 
+     */
     @InputImport(name="replicationFactor")
     private final @Nullable Input<Integer> replicationFactor;
 
@@ -90,6 +126,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicationFactor == null ? Input.empty() : this.replicationFactor;
     }
 
+    /**
+     * The user name that has read and write permissions on the specified HDFS cluster.
+     * 
+     */
     @InputImport(name="simpleUser")
     private final @Nullable Input<String> simpleUser;
 
@@ -97,6 +137,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.simpleUser == null ? Input.empty() : this.simpleUser;
     }
 
+    /**
+     * The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
+     * 
+     */
     @InputImport(name="subdirectory")
     private final @Nullable Input<String> subdirectory;
 
@@ -104,6 +148,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LocationHDFSTagArgs>> tags;
 

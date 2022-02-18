@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A string that contains insight types that are logged on a trail.
+ * 
+ */
 public final class TrailInsightSelector extends io.pulumi.resources.InvokeArgs {
 
     public static final TrailInsightSelector Empty = new TrailInsightSelector();
 
+    /**
+     * The type of insight to log on a trail.
+     * 
+     */
     @InputImport(name="insightType")
     private final @Nullable String insightType;
 

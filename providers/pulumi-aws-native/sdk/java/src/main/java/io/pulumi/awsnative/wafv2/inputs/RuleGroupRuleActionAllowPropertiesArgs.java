@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Allow traffic towards application.
+ * 
+ */
 public final class RuleGroupRuleActionAllowPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupRuleActionAllowPropertiesArgs Empty = new RuleGroupRuleActionAllowPropertiesArgs();

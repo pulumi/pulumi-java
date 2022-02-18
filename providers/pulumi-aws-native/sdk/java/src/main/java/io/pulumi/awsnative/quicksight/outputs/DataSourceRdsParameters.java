@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourceRdsParameters {
+    /**
+     * <p>Database.</p>
+     * 
+     */
     private final String database;
+    /**
+     * <p>Instance ID.</p>
+     * 
+     */
     private final String instanceId;
 
     @OutputCustomType.Constructor({"database","instanceId"})
@@ -20,9 +28,17 @@ public final class DataSourceRdsParameters {
         this.instanceId = Objects.requireNonNull(instanceId);
     }
 
+    /**
+     * <p>Database.</p>
+     * 
+     */
     public String getDatabase() {
         return this.database;
     }
+    /**
+     * <p>Instance ID.</p>
+     * 
+     */
     public String getInstanceId() {
         return this.instanceId;
     }

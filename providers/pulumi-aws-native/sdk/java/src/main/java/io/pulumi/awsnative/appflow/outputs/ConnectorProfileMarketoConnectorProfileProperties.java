@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileMarketoConnectorProfileProperties {
+    /**
+     * The location of the Marketo resource
+     * 
+     */
     private final String instanceUrl;
 
     @OutputCustomType.Constructor({"instanceUrl"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileMarketoConnectorProfileProperties {
         this.instanceUrl = Objects.requireNonNull(instanceUrl);
     }
 
+    /**
+     * The location of the Marketo resource
+     * 
+     */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

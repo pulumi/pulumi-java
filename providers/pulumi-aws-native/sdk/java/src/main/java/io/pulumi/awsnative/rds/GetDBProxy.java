@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDBProxy {
+/**
+ * Resource schema for AWS::RDS::DBProxy
+ * 
+ */
     public static CompletableFuture<GetDBProxyResult> invokeAsync(GetDBProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxy", TypeShape.of(GetDBProxyResult.class), args == null ? GetDBProxyArgs.Empty : args, Utilities.withVersion(options));
     }

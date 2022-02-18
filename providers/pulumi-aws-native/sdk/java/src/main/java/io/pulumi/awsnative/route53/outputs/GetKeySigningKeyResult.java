@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetKeySigningKeyResult {
+    /**
+     * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
+     * 
+     */
     private final @Nullable KeySigningKeyStatus status;
 
     @OutputCustomType.Constructor({"status"})
@@ -18,6 +22,10 @@ public final class GetKeySigningKeyResult {
         this.status = status;
     }
 
+    /**
+     * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
+     * 
+     */
     public Optional<KeySigningKeyStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

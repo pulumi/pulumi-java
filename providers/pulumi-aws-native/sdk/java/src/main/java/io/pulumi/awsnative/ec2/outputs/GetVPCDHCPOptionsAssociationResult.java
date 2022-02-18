@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVPCDHCPOptionsAssociationResult {
+    /**
+     * The ID of the VPC DHCPOptions Association.
+     * 
+     */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +22,10 @@ public final class GetVPCDHCPOptionsAssociationResult {
         this.id = id;
     }
 
+    /**
+     * The ID of the VPC DHCPOptions Association.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

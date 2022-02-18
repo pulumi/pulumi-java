@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImagePipeline {
+/**
+ * Resource schema for AWS::ImageBuilder::ImagePipeline
+ * 
+ */
     public static CompletableFuture<GetImagePipelineResult> invokeAsync(GetImagePipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args == null ? GetImagePipelineArgs.Empty : args, Utilities.withVersion(options));
     }

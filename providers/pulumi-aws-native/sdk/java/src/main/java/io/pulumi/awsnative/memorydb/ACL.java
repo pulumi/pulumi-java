@@ -14,39 +14,89 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::MemoryDB::ACL
+ * 
+ */
 @ResourceType(type="aws-native:memorydb:ACL")
 public class ACL extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the acl.
+     * 
+     */
     @OutputExport(name="aCLName", type=String.class, parameters={})
     private Output<String> aCLName;
 
+    /**
+     * @return The name of the acl.
+     * 
+     */
     public Output<String> getACLName() {
         return this.aCLName;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the acl.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the acl.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return Indicates acl status. Can be "creating", "active", "modifying", "deleting".
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * An array of key-value pairs to apply to this cluster.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ACLTag.class})
     private Output</* @Nullable */ List<ACLTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this cluster.
+     * 
+     */
     public Output</* @Nullable */ List<ACLTag>> getTags() {
         return this.tags;
     }
+    /**
+     * List of users associated to this acl.
+     * 
+     */
     @OutputExport(name="userNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> userNames;
 
+    /**
+     * @return List of users associated to this acl.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getUserNames() {
         return this.userNames;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ACL(String name, @Nullable ACLArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:memorydb:ACL", name, args == null ? ACLArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +112,14 @@ public class ACL extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ACL get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ACL(name, id, options);
     }

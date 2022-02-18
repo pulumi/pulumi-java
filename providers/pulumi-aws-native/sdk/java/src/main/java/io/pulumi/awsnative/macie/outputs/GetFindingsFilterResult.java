@@ -16,13 +16,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFindingsFilterResult {
+    /**
+     * Findings filter action.
+     * 
+     */
     private final @Nullable FindingsFilterFindingFilterAction action;
+    /**
+     * Findings filter ARN.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Findings filter description
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Findings filter criteria.
+     * 
+     */
     private final @Nullable FindingsFilterFindingCriteria findingCriteria;
+    /**
+     * Findings filters list.
+     * 
+     */
     private final @Nullable List<FindingsFilterListItem> findingsFilterListItems;
+    /**
+     * Findings filter ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Findings filter name
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Findings filter position.
+     * 
+     */
     private final @Nullable Integer position;
 
     @OutputCustomType.Constructor({"action","arn","description","findingCriteria","findingsFilterListItems","id","name","position"})
@@ -45,27 +77,59 @@ public final class GetFindingsFilterResult {
         this.position = position;
     }
 
+    /**
+     * Findings filter action.
+     * 
+     */
     public Optional<FindingsFilterFindingFilterAction> getAction() {
         return Optional.ofNullable(this.action);
     }
+    /**
+     * Findings filter ARN.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Findings filter description
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Findings filter criteria.
+     * 
+     */
     public Optional<FindingsFilterFindingCriteria> getFindingCriteria() {
         return Optional.ofNullable(this.findingCriteria);
     }
+    /**
+     * Findings filters list.
+     * 
+     */
     public List<FindingsFilterListItem> getFindingsFilterListItems() {
         return this.findingsFilterListItems == null ? List.of() : this.findingsFilterListItems;
     }
+    /**
+     * Findings filter ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Findings filter name
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Findings filter position.
+     * 
+     */
     public Optional<Integer> getPosition() {
         return Optional.ofNullable(this.position);
     }

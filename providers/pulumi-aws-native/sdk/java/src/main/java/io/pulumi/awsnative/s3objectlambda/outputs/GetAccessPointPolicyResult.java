@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAccessPointPolicyResult {
+    /**
+     * A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     private final @Nullable Object policyDocument;
 
     @OutputCustomType.Constructor({"policyDocument"})
@@ -18,6 +22,10 @@ public final class GetAccessPointPolicyResult {
         this.policyDocument = policyDocument;
     }
 
+    /**
+     * A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     public Optional<Object> getPolicyDocument() {
         return Optional.ofNullable(this.policyDocument);
     }

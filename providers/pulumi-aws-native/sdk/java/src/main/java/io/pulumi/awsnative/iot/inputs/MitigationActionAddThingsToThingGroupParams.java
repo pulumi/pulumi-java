@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters to define a mitigation action that moves devices associated with a certificate to one or more specified thing groups, typically for quarantine.
+ * 
+ */
 public final class MitigationActionAddThingsToThingGroupParams extends io.pulumi.resources.InvokeArgs {
 
     public static final MitigationActionAddThingsToThingGroupParams Empty = new MitigationActionAddThingsToThingGroupParams();
 
+    /**
+     * Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
+     * 
+     */
     @InputImport(name="overrideDynamicGroups")
     private final @Nullable Boolean overrideDynamicGroups;
 
@@ -23,6 +31,10 @@ public final class MitigationActionAddThingsToThingGroupParams extends io.pulumi
         return this.overrideDynamicGroups == null ? Optional.empty() : Optional.ofNullable(this.overrideDynamicGroups);
     }
 
+    /**
+     * The list of groups to which you want to add the things that triggered the mitigation action.
+     * 
+     */
     @InputImport(name="thingGroupNames", required=true)
     private final List<String> thingGroupNames;
 

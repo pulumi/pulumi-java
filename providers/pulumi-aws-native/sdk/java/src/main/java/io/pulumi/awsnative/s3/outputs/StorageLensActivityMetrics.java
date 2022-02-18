@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageLensActivityMetrics {
+    /**
+     * Specifies whether activity metrics are enabled or disabled.
+     * 
+     */
     private final @Nullable Boolean isEnabled;
 
     @OutputCustomType.Constructor({"isEnabled"})
@@ -18,6 +22,10 @@ public final class StorageLensActivityMetrics {
         this.isEnabled = isEnabled;
     }
 
+    /**
+     * Specifies whether activity metrics are enabled or disabled.
+     * 
+     */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }

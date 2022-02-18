@@ -14,33 +14,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::IVS::StreamKey
+ * 
+ */
 @ResourceType(type="aws-native:ivs:StreamKey")
 public class StreamKey extends io.pulumi.resources.CustomResource {
+    /**
+     * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Channel ARN for the stream.
+     * 
+     */
     @OutputExport(name="channelArn", type=String.class, parameters={})
     private Output<String> channelArn;
 
+    /**
+     * @return Channel ARN for the stream.
+     * 
+     */
     public Output<String> getChannelArn() {
         return this.channelArn;
     }
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={StreamKeyTag.class})
     private Output</* @Nullable */ List<StreamKeyTag>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     public Output</* @Nullable */ List<StreamKeyTag>> getTags() {
         return this.tags;
     }
+    /**
+     * Stream-key value.
+     * 
+     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output<String> value;
 
+    /**
+     * @return Stream-key value.
+     * 
+     */
     public Output<String> getValue() {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StreamKey(String name, StreamKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ivs:StreamKey", name, args == null ? StreamKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +98,14 @@ public class StreamKey extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StreamKey get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StreamKey(name, id, options);
     }

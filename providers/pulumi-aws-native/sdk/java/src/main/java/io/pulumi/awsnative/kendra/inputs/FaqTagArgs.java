@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A label for tagging Kendra resources
+ * 
+ */
 public final class FaqTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FaqTagArgs Empty = new FaqTagArgs();
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class FaqTagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

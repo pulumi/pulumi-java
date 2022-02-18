@@ -13,6 +13,12 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import javax.annotation.Nullable;
 
+/**
+ * This resource schema represents the ResourceCollection resource in the Amazon DevOps Guru.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:devopsguru:ResourceCollection")
 public class ResourceCollection extends io.pulumi.resources.CustomResource {
     @OutputExport(name="resourceCollectionFilter", type=ResourceCollectionFilter.class, parameters={})
@@ -21,13 +27,27 @@ public class ResourceCollection extends io.pulumi.resources.CustomResource {
     public Output<ResourceCollectionFilter> getResourceCollectionFilter() {
         return this.resourceCollectionFilter;
     }
+    /**
+     * The type of ResourceCollection
+     * 
+     */
     @OutputExport(name="resourceCollectionType", type=ResourceCollectionType.class, parameters={})
     private Output<ResourceCollectionType> resourceCollectionType;
 
+    /**
+     * @return The type of ResourceCollection
+     * 
+     */
     public Output<ResourceCollectionType> getResourceCollectionType() {
         return this.resourceCollectionType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ResourceCollection(String name, ResourceCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:devopsguru:ResourceCollection", name, args == null ? ResourceCollectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -43,6 +63,14 @@ public class ResourceCollection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ResourceCollection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceCollection(name, id, options);
     }

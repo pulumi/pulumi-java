@@ -16,6 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SharePoint configuration
+ * 
+ */
 public final class DataSourceSharePointConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceSharePointConfiguration Empty = new DataSourceSharePointConfiguration();

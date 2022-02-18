@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceAccessControlAttributeConfiguration {
+/**
+ * Resource Type definition for SSO InstanceAccessControlAttributeConfiguration
+ * 
+ */
     public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> invokeAsync(GetInstanceAccessControlAttributeConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getInstanceAccessControlAttributeConfiguration", TypeShape.of(GetInstanceAccessControlAttributeConfigurationResult.class), args == null ? GetInstanceAccessControlAttributeConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

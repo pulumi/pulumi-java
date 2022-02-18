@@ -12,6 +12,10 @@ public final class GetDBProxyEndpointArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetDBProxyEndpointArgs Empty = new GetDBProxyEndpointArgs();
 
+    /**
+     * The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
+     * 
+     */
     @InputImport(name="dBProxyEndpointName", required=true)
     private final String dBProxyEndpointName;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStudio {
+/**
+ * Resource schema for AWS::EMR::Studio
+ * 
+ */
     public static CompletableFuture<GetStudioResult> invokeAsync(GetStudioArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emr:getStudio", TypeShape.of(GetStudioResult.class), args == null ? GetStudioArgs.Empty : args, Utilities.withVersion(options));
     }

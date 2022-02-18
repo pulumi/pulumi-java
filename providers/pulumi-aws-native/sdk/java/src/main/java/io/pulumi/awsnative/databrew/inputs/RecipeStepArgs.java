@@ -23,6 +23,10 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.action;
     }
 
+    /**
+     * Condition expressions applied to the step action
+     * 
+     */
     @InputImport(name="conditionExpressions")
     private final @Nullable Input<List<RecipeConditionExpressionArgs>> conditionExpressions;
 

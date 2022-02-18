@@ -27,6 +27,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.checkpointVersion == null ? Input.empty() : this.checkpointVersion;
     }
 
+    /**
+     * Compatibility setting for the schema.
+     * 
+     */
     @InputImport(name="compatibility", required=true)
     private final Input<SchemaCompatibility> compatibility;
 
@@ -34,6 +38,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.compatibility;
     }
 
+    /**
+     * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
+     * 
+     */
     @InputImport(name="dataFormat", required=true)
     private final Input<SchemaDataFormat> dataFormat;
 
@@ -41,6 +49,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataFormat;
     }
 
+    /**
+     * A description of the schema. If description is not provided, there will not be any default value for this.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -48,6 +60,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the schema.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -62,6 +78,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.registry == null ? Input.empty() : this.registry;
     }
 
+    /**
+     * Definition for the initial schema version in plain-text.
+     * 
+     */
     @InputImport(name="schemaDefinition", required=true)
     private final Input<String> schemaDefinition;
 
@@ -69,6 +89,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemaDefinition;
     }
 
+    /**
+     * List of tags to tag the schema
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<SchemaTagArgs>> tags;
 

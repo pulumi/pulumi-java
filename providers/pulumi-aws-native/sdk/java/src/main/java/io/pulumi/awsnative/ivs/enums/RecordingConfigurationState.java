@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Recording Configuration State.
+     * 
+     */
     @EnumType
     public enum RecordingConfigurationState {
         Creating("CREATING"),

@@ -14,10 +14,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDashboardResult {
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * <p>The last time that this dataset was published.</p>
+     * 
+     */
     private final @Nullable String lastPublishedTime;
+    /**
+     * <p>The display name of the dashboard.</p>
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * <p>A structure that contains the permissions of the dashboard. You can use this structure
+     *             for granting permissions by providing a list of IAM action information for each
+     *             principal ARN. </p>
+     * 
+     *         <p>To specify no permissions, omit the permissions list.</p>
+     * 
+     */
     private final @Nullable List<DashboardResourcePermission> permissions;
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.</p>
+     * 
+     */
     private final @Nullable List<DashboardTag> tags;
 
     @OutputCustomType.Constructor({"arn","lastPublishedTime","name","permissions","tags"})
@@ -34,18 +59,43 @@ public final class GetDashboardResult {
         this.tags = tags;
     }
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * <p>The last time that this dataset was published.</p>
+     * 
+     */
     public Optional<String> getLastPublishedTime() {
         return Optional.ofNullable(this.lastPublishedTime);
     }
+    /**
+     * <p>The display name of the dashboard.</p>
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * <p>A structure that contains the permissions of the dashboard. You can use this structure
+     *             for granting permissions by providing a list of IAM action information for each
+     *             principal ARN. </p>
+     * 
+     *         <p>To specify no permissions, omit the permissions list.</p>
+     * 
+     */
     public List<DashboardResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.</p>
+     * 
+     */
     public List<DashboardTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

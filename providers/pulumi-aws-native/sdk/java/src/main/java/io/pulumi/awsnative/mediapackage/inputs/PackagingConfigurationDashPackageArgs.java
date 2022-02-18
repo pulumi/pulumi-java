@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+ * 
+ */
 public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackagingConfigurationDashPackageArgs Empty = new PackagingConfigurationDashPackageArgs();
 
+    /**
+     * A list of DASH manifest configurations.
+     * 
+     */
     @InputImport(name="dashManifests", required=true)
     private final Input<List<PackagingConfigurationDashManifestArgs>> dashManifests;
 
@@ -34,6 +42,10 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
+     * 
+     */
     @InputImport(name="includeEncoderConfigurationInSegments")
     private final @Nullable Input<Boolean> includeEncoderConfigurationInSegments;
 
@@ -41,6 +53,10 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
         return this.includeEncoderConfigurationInSegments == null ? Input.empty() : this.includeEncoderConfigurationInSegments;
     }
 
+    /**
+     * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Asset contains SCTE-35 ad markers.
+     * 
+     */
     @InputImport(name="periodTriggers")
     private final @Nullable Input<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers;
 
@@ -55,6 +71,10 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
     }
 
+    /**
+     * Determines the type of SegmentTemplate included in the Media Presentation Description (MPD). When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs. When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+     * 
+     */
     @InputImport(name="segmentTemplateFormat")
     private final @Nullable Input<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat;
 

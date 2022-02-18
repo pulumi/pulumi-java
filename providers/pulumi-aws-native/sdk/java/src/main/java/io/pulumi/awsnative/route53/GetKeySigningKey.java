@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeySigningKey {
+/**
+ * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
+ * 
+ */
     public static CompletableFuture<GetKeySigningKeyResult> invokeAsync(GetKeySigningKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getKeySigningKey", TypeShape.of(GetKeySigningKeyResult.class), args == null ? GetKeySigningKeyArgs.Empty : args, Utilities.withVersion(options));
     }

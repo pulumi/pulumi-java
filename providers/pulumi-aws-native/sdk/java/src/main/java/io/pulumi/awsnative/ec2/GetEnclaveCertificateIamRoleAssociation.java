@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnclaveCertificateIamRoleAssociation {
+/**
+ * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This association is based on Amazon Resource Names and it enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave.
+ * 
+ */
     public static CompletableFuture<GetEnclaveCertificateIamRoleAssociationResult> invokeAsync(GetEnclaveCertificateIamRoleAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getEnclaveCertificateIamRoleAssociation", TypeShape.of(GetEnclaveCertificateIamRoleAssociationResult.class), args == null ? GetEnclaveCertificateIamRoleAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

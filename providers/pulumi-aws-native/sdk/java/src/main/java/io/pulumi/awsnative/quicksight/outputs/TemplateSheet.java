@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TemplateSheet {
+    /**
+     * <p>The name of a sheet. This name is displayed on the sheet's tab in the QuickSight
+     *             console.</p>
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * <p>The unique identifier associated with a sheet.</p>
+     * 
+     */
     private final @Nullable String sheetId;
 
     @OutputCustomType.Constructor({"name","sheetId"})
@@ -22,9 +31,18 @@ public final class TemplateSheet {
         this.sheetId = sheetId;
     }
 
+    /**
+     * <p>The name of a sheet. This name is displayed on the sheet's tab in the QuickSight
+     *             console.</p>
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * <p>The unique identifier associated with a sheet.</p>
+     * 
+     */
     public Optional<String> getSheetId() {
         return Optional.ofNullable(this.sheetId);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
+     * 
+     */
     @EnumType
     public enum DBProxyEndpointTargetRole {
         ReadWrite("READ_WRITE"),

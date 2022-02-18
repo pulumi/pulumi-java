@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Dashboard source entity.</p>
+ * 
+ */
 public final class DashboardSourceEntityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardSourceEntityArgs Empty = new DashboardSourceEntityArgs();

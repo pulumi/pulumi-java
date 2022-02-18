@@ -18,23 +18,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Create a task set in the specified cluster and service. This is used when a service uses the EXTERNAL deployment controller type. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.htmlin the Amazon Elastic Container Service Developer Guide.
+ * 
+ */
 @ResourceType(type="aws-native:ecs:TaskSet")
 public class TaskSet extends io.pulumi.resources.CustomResource {
+    /**
+     * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+     * 
+     */
     @OutputExport(name="cluster", type=String.class, parameters={})
     private Output<String> cluster;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+     * 
+     */
     public Output<String> getCluster() {
         return this.cluster;
     }
+    /**
+     * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value.
+     * 
+     */
     @OutputExport(name="externalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalId;
 
+    /**
+     * @return An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value.
+     * 
+     */
     public Output</* @Nullable */ String> getExternalId() {
         return this.externalId;
     }
+    /**
+     * The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide.
+     * 
+     */
     @OutputExport(name="launchType", type=TaskSetLaunchType.class, parameters={})
     private Output</* @Nullable */ TaskSetLaunchType> launchType;
 
+    /**
+     * @return The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide.
+     * 
+     */
     public Output</* @Nullable */ TaskSetLaunchType> getLaunchType() {
         return this.launchType;
     }
@@ -50,37 +78,83 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ TaskSetNetworkConfiguration> getNetworkConfiguration() {
         return this.networkConfiguration;
     }
+    /**
+     * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
+     * 
+     */
     @OutputExport(name="platformVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> platformVersion;
 
+    /**
+     * @return The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
+     * 
+     */
     public Output</* @Nullable */ String> getPlatformVersion() {
         return this.platformVersion;
     }
+    /**
+     * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
+     * 
+     */
     @OutputExport(name="scale", type=TaskSetScale.class, parameters={})
     private Output</* @Nullable */ TaskSetScale> scale;
 
+    /**
+     * @return A floating-point percentage of the desired number of tasks to place and keep running in the task set.
+     * 
+     */
     public Output</* @Nullable */ TaskSetScale> getScale() {
         return this.scale;
     }
+    /**
+     * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+     * 
+     */
     @OutputExport(name="service", type=String.class, parameters={})
     private Output<String> service;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+     * 
+     */
     public Output<String> getService() {
         return this.service;
     }
+    /**
+     * The details of the service discovery registries to assign to this task set. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html.
+     * 
+     */
     @OutputExport(name="serviceRegistries", type=List.class, parameters={TaskSetServiceRegistry.class})
     private Output</* @Nullable */ List<TaskSetServiceRegistry>> serviceRegistries;
 
+    /**
+     * @return The details of the service discovery registries to assign to this task set. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html.
+     * 
+     */
     public Output</* @Nullable */ List<TaskSetServiceRegistry>> getServiceRegistries() {
         return this.serviceRegistries;
     }
+    /**
+     * The short name or full Amazon Resource Name (ARN) of the task definition for the tasks in the task set to use.
+     * 
+     */
     @OutputExport(name="taskDefinition", type=String.class, parameters={})
     private Output<String> taskDefinition;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the task definition for the tasks in the task set to use.
+     * 
+     */
     public Output<String> getTaskDefinition() {
         return this.taskDefinition;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TaskSet(String name, TaskSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ecs:TaskSet", name, args == null ? TaskSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -96,6 +170,14 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TaskSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TaskSet(name, id, options);
     }

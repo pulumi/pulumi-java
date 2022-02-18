@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LocationS3S3Config {
+    /**
+     * The ARN of the IAM role of the Amazon S3 bucket.
+     * 
+     */
     private final String bucketAccessRoleArn;
 
     @OutputCustomType.Constructor({"bucketAccessRoleArn"})
@@ -16,6 +20,10 @@ public final class LocationS3S3Config {
         this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn);
     }
 
+    /**
+     * The ARN of the IAM role of the Amazon S3 bucket.
+     * 
+     */
     public String getBucketAccessRoleArn() {
         return this.bucketAccessRoleArn;
     }

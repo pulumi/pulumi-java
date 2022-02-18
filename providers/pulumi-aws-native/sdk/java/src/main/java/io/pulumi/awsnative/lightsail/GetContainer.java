@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContainer {
+/**
+ * Resource Type definition for AWS::Lightsail::Container
+ * 
+ */
     public static CompletableFuture<GetContainerResult> invokeAsync(GetContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getContainer", TypeShape.of(GetContainerResult.class), args == null ? GetContainerArgs.Empty : args, Utilities.withVersion(options));
     }

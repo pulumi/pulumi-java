@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Sample configuration mode for profile jobs.
+     * 
+     */
     @EnumType
     public enum JobSampleMode {
         FullDataset("FULL_DATASET"),

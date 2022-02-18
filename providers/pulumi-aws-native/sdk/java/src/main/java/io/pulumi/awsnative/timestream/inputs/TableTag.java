@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * You can use the Resource Tags property to apply tags to resources, which can help you identify and categorize those resources.
+ * 
+ */
 public final class TableTag extends io.pulumi.resources.InvokeArgs {
 
     public static final TableTag Empty = new TableTag();

@@ -12,6 +12,10 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAgentArgs Empty = new GetAgentArgs();
 
+    /**
+     * The DataSync Agent ARN.
+     * 
+     */
     @InputImport(name="agentArn", required=true)
     private final String agentArn;
 

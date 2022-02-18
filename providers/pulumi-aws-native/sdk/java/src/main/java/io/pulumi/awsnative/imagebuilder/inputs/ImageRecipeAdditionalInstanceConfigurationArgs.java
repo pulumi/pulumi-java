@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specify additional settings and launch scripts for your build instances.
+ * 
+ */
 public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageRecipeAdditionalInstanceConfigurationArgs Empty = new ImageRecipeAdditionalInstanceConfigurationArgs();
 
+    /**
+     * Contains settings for the SSM agent on your build instance.
+     * 
+     */
     @InputImport(name="systemsManagerAgent")
     private final @Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
@@ -22,6 +30,10 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
         return this.systemsManagerAgent == null ? Input.empty() : this.systemsManagerAgent;
     }
 
+    /**
+     * Use this property to provide commands or a command script to run when you launch your build instance.
+     * 
+     */
     @InputImport(name="userDataOverride")
     private final @Nullable Input<String> userDataOverride;
 

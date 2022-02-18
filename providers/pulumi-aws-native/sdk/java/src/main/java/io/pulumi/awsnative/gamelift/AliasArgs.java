@@ -15,6 +15,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AliasArgs Empty = new AliasArgs();
 
+    /**
+     * A human-readable description of the alias.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A descriptive label that is associated with an alias. Alias names do not need to be unique.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+     * 
+     */
     @InputImport(name="routingStrategy", required=true)
     private final Input<AliasRoutingStrategyArgs> routingStrategy;
 

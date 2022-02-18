@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResolverQueryLoggingConfigAssociation {
+/**
+ * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
+ * 
+ */
     public static CompletableFuture<GetResolverQueryLoggingConfigAssociationResult> invokeAsync(GetResolverQueryLoggingConfigAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverQueryLoggingConfigAssociation", TypeShape.of(GetResolverQueryLoggingConfigAssociationResult.class), args == null ? GetResolverQueryLoggingConfigAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

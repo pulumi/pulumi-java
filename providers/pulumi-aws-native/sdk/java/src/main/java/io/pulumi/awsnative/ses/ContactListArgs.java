@@ -17,6 +17,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactListArgs Empty = new ContactListArgs();
 
+    /**
+     * The name of the contact list.
+     * 
+     */
     @InputImport(name="contactListName")
     private final @Nullable Input<String> contactListName;
 
@@ -24,6 +28,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactListName == null ? Input.empty() : this.contactListName;
     }
 
+    /**
+     * The description of the contact list.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The tags (keys and values) associated with the contact list.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ContactListTagArgs>> tags;
 
@@ -38,6 +50,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The topics associated with the contact list.
+     * 
+     */
     @InputImport(name="topics")
     private final @Nullable Input<List<ContactListTopicArgs>> topics;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallRuleGroupAssociation {
+/**
+ * Resource schema for AWS::Route53Resolver::FirewallRuleGroupAssociation.
+ * 
+ */
     public static CompletableFuture<GetFirewallRuleGroupAssociationResult> invokeAsync(GetFirewallRuleGroupAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getFirewallRuleGroupAssociation", TypeShape.of(GetFirewallRuleGroupAssociationResult.class), args == null ? GetFirewallRuleGroupAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,10 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketTieringArgs Empty = new BucketTieringArgs();
 
+    /**
+     * S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
+     * 
+     */
     @InputImport(name="accessTier", required=true)
     private final Input<BucketTieringAccessTier> accessTier;
 
@@ -21,6 +25,10 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessTier;
     }
 
+    /**
+     * The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).
+     * 
+     */
     @InputImport(name="days", required=true)
     private final Input<Integer> days;
 

@@ -13,6 +13,10 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
 
     public static final LocalGatewayRouteArgs Empty = new LocalGatewayRouteArgs();
 
+    /**
+     * The CIDR block used for destination matches.
+     * 
+     */
     @InputImport(name="destinationCidrBlock", required=true)
     private final Input<String> destinationCidrBlock;
 
@@ -20,6 +24,10 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
         return this.destinationCidrBlock;
     }
 
+    /**
+     * The ID of the local gateway route table.
+     * 
+     */
     @InputImport(name="localGatewayRouteTableId", required=true)
     private final Input<String> localGatewayRouteTableId;
 
@@ -27,6 +35,10 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
         return this.localGatewayRouteTableId;
     }
 
+    /**
+     * The ID of the virtual interface group.
+     * 
+     */
     @InputImport(name="localGatewayVirtualInterfaceGroupId", required=true)
     private final Input<String> localGatewayVirtualInterfaceGroupId;
 

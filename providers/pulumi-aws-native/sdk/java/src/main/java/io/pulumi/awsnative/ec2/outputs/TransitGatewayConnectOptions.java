@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransitGatewayConnectOptions {
+    /**
+     * The tunnel protocol.
+     * 
+     */
     private final @Nullable String protocol;
 
     @OutputCustomType.Constructor({"protocol"})
@@ -18,6 +22,10 @@ public final class TransitGatewayConnectOptions {
         this.protocol = protocol;
     }
 
+    /**
+     * The tunnel protocol.
+     * 
+     */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }

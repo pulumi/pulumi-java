@@ -16,6 +16,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::ElasticLoadBalancingV2::Listener
+ * 
+ */
 @ResourceType(type="aws-native:elasticloadbalancingv2:Listener")
 public class Listener extends io.pulumi.resources.CustomResource {
     @OutputExport(name="alpnPolicy", type=List.class, parameters={String.class})
@@ -67,6 +71,12 @@ public class Listener extends io.pulumi.resources.CustomResource {
         return this.sslPolicy;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Listener(String name, ListenerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:elasticloadbalancingv2:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +92,14 @@ public class Listener extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Listener get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Listener(name, id, options);
     }

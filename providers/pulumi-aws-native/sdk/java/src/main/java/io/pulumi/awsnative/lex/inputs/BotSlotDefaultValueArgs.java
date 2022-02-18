@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The default value to use when a user doesn't provide a value for a slot.
+ * 
+ */
 public final class BotSlotDefaultValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSlotDefaultValueArgs Empty = new BotSlotDefaultValueArgs();
 
+    /**
+     * The default value to use when a user doesn't provide a value for a slot.
+     * 
+     */
     @InputImport(name="defaultValue", required=true)
     private final Input<String> defaultValue;
 

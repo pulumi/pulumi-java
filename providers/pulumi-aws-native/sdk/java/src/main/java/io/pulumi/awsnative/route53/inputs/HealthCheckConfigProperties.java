@@ -16,6 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A complex type that contains information about the health check.
+ * 
+ */
 public final class HealthCheckConfigProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final HealthCheckConfigProperties Empty = new HealthCheckConfigProperties();

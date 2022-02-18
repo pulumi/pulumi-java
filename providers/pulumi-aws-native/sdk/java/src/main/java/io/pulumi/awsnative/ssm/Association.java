@@ -20,6 +20,12 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::SSM::Association resource associates an SSM document in AWS Systems Manager with EC2 instances that contain a configuration agent to process the document.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:ssm:Association")
 public class Association extends io.pulumi.resources.CustomResource {
     @OutputExport(name="applyOnlyAtCronInterval", type=Boolean.class, parameters={})
@@ -28,15 +34,31 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getApplyOnlyAtCronInterval() {
         return this.applyOnlyAtCronInterval;
     }
+    /**
+     * Unique identifier of the association.
+     * 
+     */
     @OutputExport(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
+    /**
+     * @return Unique identifier of the association.
+     * 
+     */
     public Output<String> getAssociationId() {
         return this.associationId;
     }
+    /**
+     * The name of the association.
+     * 
+     */
     @OutputExport(name="associationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> associationName;
 
+    /**
+     * @return The name of the association.
+     * 
+     */
     public Output</* @Nullable */ String> getAssociationName() {
         return this.associationName;
     }
@@ -58,15 +80,31 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ AssociationComplianceSeverity> getComplianceSeverity() {
         return this.complianceSeverity;
     }
+    /**
+     * The version of the SSM document to associate with the target.
+     * 
+     */
     @OutputExport(name="documentVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentVersion;
 
+    /**
+     * @return The version of the SSM document to associate with the target.
+     * 
+     */
     public Output</* @Nullable */ String> getDocumentVersion() {
         return this.documentVersion;
     }
+    /**
+     * The ID of the instance that the SSM document is associated with.
+     * 
+     */
     @OutputExport(name="instanceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceId;
 
+    /**
+     * @return The ID of the instance that the SSM document is associated with.
+     * 
+     */
     public Output</* @Nullable */ String> getInstanceId() {
         return this.instanceId;
     }
@@ -82,9 +120,17 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getMaxErrors() {
         return this.maxErrors;
     }
+    /**
+     * The name of the SSM document.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the SSM document.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
@@ -94,15 +140,31 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ AssociationInstanceAssociationOutputLocation> getOutputLocation() {
         return this.outputLocation;
     }
+    /**
+     * Parameter values that the SSM document uses at runtime.
+     * 
+     */
     @OutputExport(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
+    /**
+     * @return Parameter values that the SSM document uses at runtime.
+     * 
+     */
     public Output</* @Nullable */ Object> getParameters() {
         return this.parameters;
     }
+    /**
+     * A Cron or Rate expression that specifies when the association is applied to the target.
+     * 
+     */
     @OutputExport(name="scheduleExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduleExpression;
 
+    /**
+     * @return A Cron or Rate expression that specifies when the association is applied to the target.
+     * 
+     */
     public Output</* @Nullable */ String> getScheduleExpression() {
         return this.scheduleExpression;
     }
@@ -112,9 +174,17 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ AssociationSyncCompliance> getSyncCompliance() {
         return this.syncCompliance;
     }
+    /**
+     * The targets that the SSM document sends commands to.
+     * 
+     */
     @OutputExport(name="targets", type=List.class, parameters={AssociationTarget.class})
     private Output</* @Nullable */ List<AssociationTarget>> targets;
 
+    /**
+     * @return The targets that the SSM document sends commands to.
+     * 
+     */
     public Output</* @Nullable */ List<AssociationTarget>> getTargets() {
         return this.targets;
     }
@@ -125,6 +195,12 @@ public class Association extends io.pulumi.resources.CustomResource {
         return this.waitForSuccessTimeoutSeconds;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Association(String name, @Nullable AssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ssm:Association", name, args == null ? AssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -140,6 +216,14 @@ public class Association extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Association get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Association(name, id, options);
     }

@@ -14,6 +14,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
 
     public static final ConnectorProfileSnowflakeConnectorProfilePropertiesArgs Empty = new ConnectorProfileSnowflakeConnectorProfilePropertiesArgs();
 
+    /**
+     * The name of the account.
+     * 
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -21,6 +25,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * The name of the Amazon S3 bucket associated with Snowﬂake.
+     * 
+     */
     @InputImport(name="bucketName", required=true)
     private final Input<String> bucketName;
 
@@ -28,6 +36,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
         return this.bucketName;
     }
 
+    /**
+     * The bucket prefix that refers to the Amazon S3 bucket associated with Snowﬂake.
+     * 
+     */
     @InputImport(name="bucketPrefix")
     private final @Nullable Input<String> bucketPrefix;
 
@@ -35,6 +47,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
     }
 
+    /**
+     * The Snowﬂake Private Link service name to be used for private data transfers.
+     * 
+     */
     @InputImport(name="privateLinkServiceName")
     private final @Nullable Input<String> privateLinkServiceName;
 
@@ -42,6 +58,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
         return this.privateLinkServiceName == null ? Input.empty() : this.privateLinkServiceName;
     }
 
+    /**
+     * The region of the Snowﬂake account.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -49,6 +69,11 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the
+     * Snowﬂake account. This is written in the following format: < Database>< Schema><Stage Name>.
+     * 
+     */
     @InputImport(name="stage", required=true)
     private final Input<String> stage;
 
@@ -56,6 +81,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
         return this.stage;
     }
 
+    /**
+     * The name of the Snowﬂake warehouse.
+     * 
+     */
     @InputImport(name="warehouse", required=true)
     private final Input<String> warehouse;
 

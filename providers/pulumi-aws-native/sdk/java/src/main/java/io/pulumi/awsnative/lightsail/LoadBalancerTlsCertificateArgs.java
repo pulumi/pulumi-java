@@ -16,6 +16,10 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
 
     public static final LoadBalancerTlsCertificateArgs Empty = new LoadBalancerTlsCertificateArgs();
 
+    /**
+     * An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
+     * 
+     */
     @InputImport(name="certificateAlternativeNames")
     private final @Nullable Input<List<String>> certificateAlternativeNames;
 
@@ -23,6 +27,10 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
         return this.certificateAlternativeNames == null ? Input.empty() : this.certificateAlternativeNames;
     }
 
+    /**
+     * The domain name (e.g., example.com ) for your SSL/TLS certificate.
+     * 
+     */
     @InputImport(name="certificateDomainName", required=true)
     private final Input<String> certificateDomainName;
 
@@ -30,6 +38,10 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
         return this.certificateDomainName;
     }
 
+    /**
+     * The SSL/TLS certificate name.
+     * 
+     */
     @InputImport(name="certificateName", required=true)
     private final Input<String> certificateName;
 
@@ -37,6 +49,10 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
         return this.certificateName;
     }
 
+    /**
+     * When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
+     * 
+     */
     @InputImport(name="isAttached")
     private final @Nullable Input<Boolean> isAttached;
 
@@ -44,6 +60,10 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
         return this.isAttached == null ? Input.empty() : this.isAttached;
     }
 
+    /**
+     * The name of your load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerName", required=true)
     private final Input<String> loadBalancerName;
 

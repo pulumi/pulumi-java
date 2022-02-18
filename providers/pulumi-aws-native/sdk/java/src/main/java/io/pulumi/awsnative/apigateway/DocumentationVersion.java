@@ -12,27 +12,61 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A snapshot of the documentation of an API.
+ * 
+ */
 @ResourceType(type="aws-native:apigateway:DocumentationVersion")
 public class DocumentationVersion extends io.pulumi.resources.CustomResource {
+    /**
+     * The description of the API documentation snapshot.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the API documentation snapshot.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The version identifier of the API documentation snapshot.
+     * 
+     */
     @OutputExport(name="documentationVersion", type=String.class, parameters={})
     private Output<String> documentationVersion;
 
+    /**
+     * @return The version identifier of the API documentation snapshot.
+     * 
+     */
     public Output<String> getDocumentationVersion() {
         return this.documentationVersion;
     }
+    /**
+     * The identifier of the API.
+     * 
+     */
     @OutputExport(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
+    /**
+     * @return The identifier of the API.
+     * 
+     */
     public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DocumentationVersion(String name, DocumentationVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:apigateway:DocumentationVersion", name, args == null ? DocumentationVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -48,6 +82,14 @@ public class DocumentationVersion extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DocumentationVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DocumentationVersion(name, id, options);
     }

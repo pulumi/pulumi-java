@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCompositeAlarm {
+/**
+ * The AWS::CloudWatch::CompositeAlarm type specifies an alarm which aggregates the states of other Alarms (Metric or Composite Alarms) as defined by the AlarmRule expression
+ * 
+ */
     public static CompletableFuture<GetCompositeAlarmResult> invokeAsync(GetCompositeAlarmArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudwatch:getCompositeAlarm", TypeShape.of(GetCompositeAlarmResult.class), args == null ? GetCompositeAlarmArgs.Empty : args, Utilities.withVersion(options));
     }

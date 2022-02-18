@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FunctionEnvironment {
+    /**
+     * Environment variable key-value pairs.
+     * 
+     */
     private final @Nullable Object variables;
 
     @OutputCustomType.Constructor({"variables"})
@@ -18,6 +22,10 @@ public final class FunctionEnvironment {
         this.variables = variables;
     }
 
+    /**
+     * Environment variable key-value pairs.
+     * 
+     */
     public Optional<Object> getVariables() {
         return Optional.ofNullable(this.variables);
     }

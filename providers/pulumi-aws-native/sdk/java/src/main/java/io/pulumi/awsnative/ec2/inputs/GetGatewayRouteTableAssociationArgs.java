@@ -12,6 +12,10 @@ public final class GetGatewayRouteTableAssociationArgs extends io.pulumi.resourc
 
     public static final GetGatewayRouteTableAssociationArgs Empty = new GetGatewayRouteTableAssociationArgs();
 
+    /**
+     * The ID of the gateway.
+     * 
+     */
     @InputImport(name="gatewayId", required=true)
     private final String gatewayId;
 

@@ -12,6 +12,10 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatabaseArgs Empty = new GetDatabaseArgs();
 
+    /**
+     * The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 

@@ -17,6 +17,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PortalArgs Empty = new PortalArgs();
 
+    /**
+     * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
+     * 
+     */
     @InputImport(name="alarms")
     private final @Nullable Input<AlarmsPropertiesArgs> alarms;
 
@@ -24,6 +28,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
         return this.alarms == null ? Input.empty() : this.alarms;
     }
 
+    /**
+     * The email address that sends alarm notifications.
+     * 
+     */
     @InputImport(name="notificationSenderEmail")
     private final @Nullable Input<String> notificationSenderEmail;
 
@@ -31,6 +39,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationSenderEmail == null ? Input.empty() : this.notificationSenderEmail;
     }
 
+    /**
+     * The service to use to authenticate users to the portal. Choose from SSO or IAM. You can't change this value after you create a portal.
+     * 
+     */
     @InputImport(name="portalAuthMode")
     private final @Nullable Input<String> portalAuthMode;
 
@@ -38,6 +50,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
         return this.portalAuthMode == null ? Input.empty() : this.portalAuthMode;
     }
 
+    /**
+     * The AWS administrator's contact email address.
+     * 
+     */
     @InputImport(name="portalContactEmail", required=true)
     private final Input<String> portalContactEmail;
 
@@ -45,6 +61,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
         return this.portalContactEmail;
     }
 
+    /**
+     * A description for the portal.
+     * 
+     */
     @InputImport(name="portalDescription")
     private final @Nullable Input<String> portalDescription;
 
@@ -52,6 +72,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
         return this.portalDescription == null ? Input.empty() : this.portalDescription;
     }
 
+    /**
+     * A friendly name for the portal.
+     * 
+     */
     @InputImport(name="portalName")
     private final @Nullable Input<String> portalName;
 
@@ -59,6 +83,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
         return this.portalName == null ? Input.empty() : this.portalName;
     }
 
+    /**
+     * The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -66,6 +94,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the portal.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<PortalTagArgs>> tags;
 

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotButton {
+    /**
+     * The text that appears on the button.
+     * 
+     */
     private final String text;
+    /**
+     * The value returned to Amazon Lex when the user chooses this button.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"text","value"})
@@ -20,9 +28,17 @@ public final class BotButton {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The text that appears on the button.
+     * 
+     */
     public String getText() {
         return this.text;
     }
+    /**
+     * The value returned to Amazon Lex when the user chooses this button.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

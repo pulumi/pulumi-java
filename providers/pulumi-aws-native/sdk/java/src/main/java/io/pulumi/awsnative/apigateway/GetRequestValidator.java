@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRequestValidator {
+/**
+ * Resource Type definition for AWS::ApiGateway::RequestValidator
+ * 
+ */
     public static CompletableFuture<GetRequestValidatorResult> invokeAsync(GetRequestValidatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getRequestValidator", TypeShape.of(GetRequestValidatorResult.class), args == null ? GetRequestValidatorArgs.Empty : args, Utilities.withVersion(options));
     }

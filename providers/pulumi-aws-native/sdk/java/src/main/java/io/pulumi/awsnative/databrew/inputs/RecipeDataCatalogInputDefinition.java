@@ -15,6 +15,10 @@ public final class RecipeDataCatalogInputDefinition extends io.pulumi.resources.
 
     public static final RecipeDataCatalogInputDefinition Empty = new RecipeDataCatalogInputDefinition();
 
+    /**
+     * Catalog id
+     * 
+     */
     @InputImport(name="catalogId")
     private final @Nullable String catalogId;
 
@@ -22,6 +26,10 @@ public final class RecipeDataCatalogInputDefinition extends io.pulumi.resources.
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 
+    /**
+     * Database name
+     * 
+     */
     @InputImport(name="databaseName")
     private final @Nullable String databaseName;
 
@@ -29,6 +37,10 @@ public final class RecipeDataCatalogInputDefinition extends io.pulumi.resources.
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
+    /**
+     * Table name
+     * 
+     */
     @InputImport(name="tableName")
     private final @Nullable String tableName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of authentication strategy for this user.
+     * 
+     */
     @EnumType
     public enum UserAuthenticationModePropertiesType {
         Password("password");

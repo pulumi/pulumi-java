@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An FMS includeMap or excludeMap.
+ * 
+ */
 public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyIEMapArgs Empty = new PolicyIEMapArgs();

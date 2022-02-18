@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights for a cluster. If this value is specified, it will override the containerInsights value set with PutAccountSetting or PutAccountSettingDefault.
+ * 
+ */
 public final class ClusterSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterSettingsArgs Empty = new ClusterSettingsArgs();

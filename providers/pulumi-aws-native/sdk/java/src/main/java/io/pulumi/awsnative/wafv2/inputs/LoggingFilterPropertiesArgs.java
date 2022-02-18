@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
+ * 
+ */
 public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingFilterPropertiesArgs Empty = new LoggingFilterPropertiesArgs();
 
+    /**
+     * Default handling for logs that don't match any of the specified filtering conditions.
+     * 
+     */
     @InputImport(name="defaultBehavior", required=true)
     private final Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
 
@@ -22,6 +30,10 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
         return this.defaultBehavior;
     }
 
+    /**
+     * The filters that you want to apply to the logs.
+     * 
+     */
     @InputImport(name="filters", required=true)
     private final Input<List<LoggingConfigurationFilterArgs>> filters;
 

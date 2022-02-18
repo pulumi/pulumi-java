@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGrant {
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
     public static CompletableFuture<GetGrantResult> invokeAsync(GetGrantArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:licensemanager:getGrant", TypeShape.of(GetGrantResult.class), args == null ? GetGrantArgs.Empty : args, Utilities.withVersion(options));
     }

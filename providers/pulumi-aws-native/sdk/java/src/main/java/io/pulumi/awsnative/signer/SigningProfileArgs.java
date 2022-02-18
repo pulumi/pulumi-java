@@ -17,6 +17,10 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SigningProfileArgs Empty = new SigningProfileArgs();
 
+    /**
+     * The ID of the target signing platform.
+     * 
+     */
     @InputImport(name="platformId", required=true)
     private final Input<SigningProfilePlatformId> platformId;
 
@@ -24,6 +28,10 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.platformId;
     }
 
+    /**
+     * Signature validity period of the profile.
+     * 
+     */
     @InputImport(name="signatureValidityPeriod")
     private final @Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
@@ -31,6 +39,10 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.signatureValidityPeriod == null ? Input.empty() : this.signatureValidityPeriod;
     }
 
+    /**
+     * A list of tags associated with the signing profile.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<SigningProfileTagArgs>> tags;
 

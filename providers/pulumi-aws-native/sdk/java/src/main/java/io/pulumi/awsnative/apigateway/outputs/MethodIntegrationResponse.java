@@ -13,10 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MethodIntegrationResponse {
+    /**
+     * Specifies how to handle request payload content type conversions.
+     * 
+     */
     private final @Nullable MethodIntegrationResponseContentHandling contentHandling;
+    /**
+     * The response parameters from the backend response that API Gateway sends to the method response.
+     * 
+     */
     private final @Nullable Object responseParameters;
+    /**
+     * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
+     * 
+     */
     private final @Nullable Object responseTemplates;
+    /**
+     * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
+     * 
+     */
     private final @Nullable String selectionPattern;
+    /**
+     * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
+     * 
+     */
     private final String statusCode;
 
     @OutputCustomType.Constructor({"contentHandling","responseParameters","responseTemplates","selectionPattern","statusCode"})
@@ -33,18 +53,38 @@ public final class MethodIntegrationResponse {
         this.statusCode = Objects.requireNonNull(statusCode);
     }
 
+    /**
+     * Specifies how to handle request payload content type conversions.
+     * 
+     */
     public Optional<MethodIntegrationResponseContentHandling> getContentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
+    /**
+     * The response parameters from the backend response that API Gateway sends to the method response.
+     * 
+     */
     public Optional<Object> getResponseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
+    /**
+     * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
+     * 
+     */
     public Optional<Object> getResponseTemplates() {
         return Optional.ofNullable(this.responseTemplates);
     }
+    /**
+     * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
+     * 
+     */
     public Optional<String> getSelectionPattern() {
         return Optional.ofNullable(this.selectionPattern);
     }
+    /**
+     * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
+     * 
+     */
     public String getStatusCode() {
         return this.statusCode;
     }

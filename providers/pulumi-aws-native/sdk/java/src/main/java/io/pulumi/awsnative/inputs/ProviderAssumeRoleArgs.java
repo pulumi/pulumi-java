@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for a Provider to assume a role.
+ * 
+ */
 public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderAssumeRoleArgs Empty = new ProviderAssumeRoleArgs();
 
+    /**
+     * Number of seconds to restrict the assume role session duration.
+     * 
+     */
     @InputImport(name="durationSeconds")
     private final @Nullable Input<Integer> durationSeconds;
 
@@ -24,6 +32,10 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
         return this.durationSeconds == null ? Input.empty() : this.durationSeconds;
     }
 
+    /**
+     * External identifier to use when assuming the role.
+     * 
+     */
     @InputImport(name="externalId")
     private final @Nullable Input<String> externalId;
 
@@ -31,6 +43,10 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
         return this.externalId == null ? Input.empty() : this.externalId;
     }
 
+    /**
+     * IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<String> policy;
 
@@ -38,6 +54,10 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+     * 
+     */
     @InputImport(name="policyArns")
     private final @Nullable Input<List<String>> policyArns;
 
@@ -45,6 +65,10 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
         return this.policyArns == null ? Input.empty() : this.policyArns;
     }
 
+    /**
+     * Amazon Resource Name (ARN) of the IAM Role to assume.
+     * 
+     */
     @InputImport(name="roleArn")
     private final @Nullable Input<String> roleArn;
 
@@ -52,6 +76,10 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
         return this.roleArn == null ? Input.empty() : this.roleArn;
     }
 
+    /**
+     * Session name to use when assuming the role.
+     * 
+     */
     @InputImport(name="sessionName")
     private final @Nullable Input<String> sessionName;
 
@@ -59,6 +87,10 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
         return this.sessionName == null ? Input.empty() : this.sessionName;
     }
 
+    /**
+     * Map of assume role session tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -66,6 +98,10 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+     * 
+     */
     @InputImport(name="transitiveTagKeys")
     private final @Nullable Input<List<String>> transitiveTagKeys;
 

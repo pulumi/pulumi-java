@@ -13,6 +13,10 @@ public final class VPCDHCPOptionsAssociationArgs extends io.pulumi.resources.Res
 
     public static final VPCDHCPOptionsAssociationArgs Empty = new VPCDHCPOptionsAssociationArgs();
 
+    /**
+     * The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
+     * 
+     */
     @InputImport(name="dhcpOptionsId", required=true)
     private final Input<String> dhcpOptionsId;
 
@@ -20,6 +24,10 @@ public final class VPCDHCPOptionsAssociationArgs extends io.pulumi.resources.Res
         return this.dhcpOptionsId;
     }
 
+    /**
+     * The ID of the VPC.
+     * 
+     */
     @InputImport(name="vpcId", required=true)
     private final Input<String> vpcId;
 

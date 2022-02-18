@@ -12,6 +12,10 @@ public final class GetFlowSourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFlowSourceArgs Empty = new GetFlowSourceArgs();
 
+    /**
+     * The ARN of the source.
+     * 
+     */
     @InputImport(name="sourceArn", required=true)
     private final String sourceArn;
 

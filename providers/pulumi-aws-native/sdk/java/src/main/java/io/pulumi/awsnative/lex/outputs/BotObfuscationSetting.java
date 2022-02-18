@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotObfuscationSetting {
+    /**
+     * Value that determines whether Amazon Lex obscures slot values in conversation logs. The default is to obscure the values.
+     * 
+     */
     private final BotObfuscationSettingObfuscationSettingType obfuscationSettingType;
 
     @OutputCustomType.Constructor({"obfuscationSettingType"})
@@ -16,6 +20,10 @@ public final class BotObfuscationSetting {
         this.obfuscationSettingType = Objects.requireNonNull(obfuscationSettingType);
     }
 
+    /**
+     * Value that determines whether Amazon Lex obscures slot values in conversation logs. The default is to obscure the values.
+     * 
+     */
     public BotObfuscationSettingObfuscationSettingType getObfuscationSettingType() {
         return this.obfuscationSettingType;
     }

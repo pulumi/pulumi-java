@@ -14,6 +14,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Config::StoredQuery
+ * 
+ */
 @ResourceType(type="aws-native:configuration:StoredQuery")
 public class StoredQuery extends io.pulumi.resources.CustomResource {
     @OutputExport(name="queryArn", type=String.class, parameters={})
@@ -46,13 +50,27 @@ public class StoredQuery extends io.pulumi.resources.CustomResource {
     public Output<String> getQueryName() {
         return this.queryName;
     }
+    /**
+     * The tags for the stored query.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={StoredQueryTag.class})
     private Output</* @Nullable */ List<StoredQueryTag>> tags;
 
+    /**
+     * @return The tags for the stored query.
+     * 
+     */
     public Output</* @Nullable */ List<StoredQueryTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StoredQuery(String name, StoredQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:configuration:StoredQuery", name, args == null ? StoredQueryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +86,14 @@ public class StoredQuery extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StoredQuery get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StoredQuery(name, id, options);
     }

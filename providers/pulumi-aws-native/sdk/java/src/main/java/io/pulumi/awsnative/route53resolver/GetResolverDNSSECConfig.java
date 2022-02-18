@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResolverDNSSECConfig {
+/**
+ * Resource schema for AWS::Route53Resolver::ResolverDNSSECConfig.
+ * 
+ */
     public static CompletableFuture<GetResolverDNSSECConfigResult> invokeAsync(GetResolverDNSSECConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverDNSSECConfig", TypeShape.of(GetResolverDNSSECConfigResult.class), args == null ? GetResolverDNSSECConfigArgs.Empty : args, Utilities.withVersion(options));
     }

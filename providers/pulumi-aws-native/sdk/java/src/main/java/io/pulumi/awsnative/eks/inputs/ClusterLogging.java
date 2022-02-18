@@ -9,10 +9,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Enable exporting the Kubernetes control plane logs for your cluster to CloudWatch Logs based on log types. By default, cluster control plane logs aren't exported to CloudWatch Logs.
+ * 
+ */
 public final class ClusterLogging extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterLogging Empty = new ClusterLogging();
 
+    /**
+     * The cluster control plane logging configuration for your cluster.
+     * 
+     */
     @InputImport(name="clusterLogging")
     private final @Nullable ClusterLogging clusterLogging;
 

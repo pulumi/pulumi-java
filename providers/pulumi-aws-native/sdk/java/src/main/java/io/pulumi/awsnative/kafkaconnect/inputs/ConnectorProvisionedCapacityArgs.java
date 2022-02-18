@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details about a fixed capacity allocated to a connector.
+ * 
+ */
 public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorProvisionedCapacityArgs Empty = new ConnectorProvisionedCapacityArgs();
 
+    /**
+     * Specifies how many MSK Connect Units (MCU) are allocated to the connector.
+     * 
+     */
     @InputImport(name="mcuCount")
     private final @Nullable Input<Integer> mcuCount;
 
@@ -21,6 +29,10 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
         return this.mcuCount == null ? Input.empty() : this.mcuCount;
     }
 
+    /**
+     * Number of workers for a connector.
+     * 
+     */
     @InputImport(name="workerCount", required=true)
     private final Input<Integer> workerCount;
 

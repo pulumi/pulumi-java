@@ -21,6 +21,10 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.schema;
     }
 
+    /**
+     * Complete definition of the schema in plain-text.
+     * 
+     */
     @InputImport(name="schemaDefinition", required=true)
     private final Input<String> schemaDefinition;
 

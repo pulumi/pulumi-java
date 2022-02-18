@@ -14,6 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the notification configuration for an Amazon S3 bucket.
+ * 
+ */
 public final class BucketNotificationConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketNotificationConfiguration Empty = new BucketNotificationConfiguration();

@@ -17,6 +17,10 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FindingsFilterArgs Empty = new FindingsFilterArgs();
 
+    /**
+     * Findings filter action.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<FindingsFilterFindingFilterAction> action;
 
@@ -24,6 +28,10 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Findings filter description
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Findings filter criteria.
+     * 
+     */
     @InputImport(name="findingCriteria", required=true)
     private final Input<FindingsFilterFindingCriteriaArgs> findingCriteria;
 
@@ -38,6 +50,10 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.findingCriteria;
     }
 
+    /**
+     * Findings filter name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Findings filter position.
+     * 
+     */
     @InputImport(name="position")
     private final @Nullable Input<Integer> position;
 

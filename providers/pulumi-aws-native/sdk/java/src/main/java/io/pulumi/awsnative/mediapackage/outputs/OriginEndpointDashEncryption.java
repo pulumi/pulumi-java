@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OriginEndpointDashEncryption {
+    /**
+     * Time (in seconds) between each encryption key rotation.
+     * 
+     */
     private final @Nullable Integer keyRotationIntervalSeconds;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
@@ -23,6 +27,10 @@ public final class OriginEndpointDashEncryption {
         this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
     }
 
+    /**
+     * Time (in seconds) between each encryption key rotation.
+     * 
+     */
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }

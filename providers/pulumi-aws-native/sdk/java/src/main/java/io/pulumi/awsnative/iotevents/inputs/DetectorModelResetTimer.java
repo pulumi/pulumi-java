@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information required to reset the timer. The timer is reset to the previously evaluated result of the duration. The duration expression isn't reevaluated when you reset the timer.
+ * 
+ */
 public final class DetectorModelResetTimer extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelResetTimer Empty = new DetectorModelResetTimer();
 
+    /**
+     * The name of the timer to reset.
+     * 
+     */
     @InputImport(name="timerName", required=true)
     private final String timerName;
 

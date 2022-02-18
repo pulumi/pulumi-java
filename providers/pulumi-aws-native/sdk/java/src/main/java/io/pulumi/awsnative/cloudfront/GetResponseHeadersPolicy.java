@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResponseHeadersPolicy {
+/**
+ * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
+ * 
+ */
     public static CompletableFuture<GetResponseHeadersPolicyResult> invokeAsync(GetResponseHeadersPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args == null ? GetResponseHeadersPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

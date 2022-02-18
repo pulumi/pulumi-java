@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LocationSMBMountOptions {
+    /**
+     * The specific SMB version that you want DataSync to use to mount your SMB share.
+     * 
+     */
     private final @Nullable LocationSMBMountOptionsVersion version;
 
     @OutputCustomType.Constructor({"version"})
@@ -18,6 +22,10 @@ public final class LocationSMBMountOptions {
         this.version = version;
     }
 
+    /**
+     * The specific SMB version that you want DataSync to use to mount your SMB share.
+     * 
+     */
     public Optional<LocationSMBMountOptionsVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }

@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A notification target.
+ * 
+ */
 public final class ResponsePlanNotificationTargetItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePlanNotificationTargetItemArgs Empty = new ResponsePlanNotificationTargetItemArgs();

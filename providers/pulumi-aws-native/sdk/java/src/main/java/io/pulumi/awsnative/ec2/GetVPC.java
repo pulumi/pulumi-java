@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVPC {
+/**
+ * Resource Type definition for AWS::EC2::VPC
+ * 
+ */
     public static CompletableFuture<GetVPCResult> invokeAsync(GetVPCArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getVPC", TypeShape.of(GetVPCResult.class), args == null ? GetVPCArgs.Empty : args, Utilities.withVersion(options));
     }

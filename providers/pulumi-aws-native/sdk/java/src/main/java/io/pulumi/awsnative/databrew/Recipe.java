@@ -15,17 +15,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::DataBrew::Recipe.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:databrew:Recipe")
 public class Recipe extends io.pulumi.resources.CustomResource {
+    /**
+     * Description of the recipe
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the recipe
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Recipe name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Recipe name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
@@ -42,6 +64,12 @@ public class Recipe extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Recipe(String name, RecipeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:databrew:Recipe", name, args == null ? RecipeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +85,14 @@ public class Recipe extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Recipe get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Recipe(name, id, options);
     }

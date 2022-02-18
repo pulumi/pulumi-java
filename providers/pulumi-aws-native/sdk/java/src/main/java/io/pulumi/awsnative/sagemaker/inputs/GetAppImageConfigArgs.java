@@ -12,6 +12,10 @@ public final class GetAppImageConfigArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetAppImageConfigArgs Empty = new GetAppImageConfigArgs();
 
+    /**
+     * The Name of the AppImageConfig.
+     * 
+     */
     @InputImport(name="appImageConfigName", required=true)
     private final String appImageConfigName;
 

@@ -23,6 +23,10 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.deletionProtected == null ? Input.empty() : this.deletionProtected;
     }
 
+    /**
+     * The ReplicationSet configuration.
+     * 
+     */
     @InputImport(name="regions", required=true)
     private final Input<List<ReplicationSetReplicationRegionArgs>> regions;
 

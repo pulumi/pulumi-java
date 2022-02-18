@@ -12,6 +12,10 @@ public final class GetPublisherArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPublisherArgs Empty = new GetPublisherArgs();
 
+    /**
+     * The publisher id assigned by CloudFormation for publishing in this region.
+     * 
+     */
     @InputImport(name="publisherId", required=true)
     private final String publisherId;
 

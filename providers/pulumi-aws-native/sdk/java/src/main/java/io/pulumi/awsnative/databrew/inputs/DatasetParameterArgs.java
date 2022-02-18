@@ -18,6 +18,10 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DatasetParameterArgs Empty = new DatasetParameterArgs();
 
+    /**
+     * Add the value of this parameter as a column in a dataset.
+     * 
+     */
     @InputImport(name="createColumn")
     private final @Nullable Input<Boolean> createColumn;
 
@@ -46,6 +50,10 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
+    /**
+     * Parameter type
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<DatasetParameterType> type;
 

@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The value to be compared with the metric.
+ * 
+ */
 public final class SecurityProfileMetricValue extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityProfileMetricValue Empty = new SecurityProfileMetricValue();
 
+    /**
+     * If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
+     * 
+     */
     @InputImport(name="cidrs")
     private final @Nullable List<String> cidrs;
 
@@ -24,6 +32,10 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
         return this.cidrs == null ? List.of() : this.cidrs;
     }
 
+    /**
+     * If the ComparisonOperator calls for a numeric value, use this to specify that (integer) numeric value to be compared with the metric.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable String count;
 
@@ -31,6 +43,10 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
+    /**
+     * The numeral value of a metric.
+     * 
+     */
     @InputImport(name="number")
     private final @Nullable Double number;
 
@@ -38,6 +54,10 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
         return this.number == null ? Optional.empty() : Optional.ofNullable(this.number);
     }
 
+    /**
+     * The numeral values of a metric.
+     * 
+     */
     @InputImport(name="numbers")
     private final @Nullable List<Double> numbers;
 
@@ -45,6 +65,10 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
         return this.numbers == null ? List.of() : this.numbers;
     }
 
+    /**
+     * If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
+     * 
+     */
     @InputImport(name="ports")
     private final @Nullable List<Integer> ports;
 
@@ -52,6 +76,10 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
         return this.ports == null ? List.of() : this.ports;
     }
 
+    /**
+     * The string values of a metric.
+     * 
+     */
     @InputImport(name="strings")
     private final @Nullable List<String> strings;
 

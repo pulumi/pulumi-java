@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Returned by ListHandler representing filter name and ID.
+ * 
+ */
 public final class FindingsFilterListItem extends io.pulumi.resources.InvokeArgs {
 
     public static final FindingsFilterListItem Empty = new FindingsFilterListItem();

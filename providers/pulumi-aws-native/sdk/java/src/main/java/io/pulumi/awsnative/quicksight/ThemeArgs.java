@@ -25,6 +25,13 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
         return this.awsAccountId;
     }
 
+    /**
+     * <p>The ID of the theme that a custom theme will inherit from. All themes inherit from one of
+     * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
+     * 				<code>ListThemes</code> or choose <b>Themes</b> from
+     * 			within a QuickSight analysis. </p>
+     * 
+     */
     @InputImport(name="baseThemeId")
     private final @Nullable Input<String> baseThemeId;
 
@@ -39,6 +46,10 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
+    /**
+     * <p>A display name for the theme.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +57,11 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * <p>A valid grouping of resource permissions to apply to the new theme.
+     * 			</p>
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<ThemeResourcePermissionArgs>> permissions;
 
@@ -53,6 +69,11 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
+    /**
+     * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.</p>
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ThemeTagArgs>> tags;
 
@@ -67,6 +88,13 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
         return this.themeId;
     }
 
+    /**
+     * <p>A description of the first version of the theme that you're creating. Every time
+     * 				<code>UpdateTheme</code> is called, a new version is created. Each version of the
+     * 			theme has a description of the version in the <code>VersionDescription</code>
+     * 			field.</p>
+     * 
+     */
     @InputImport(name="versionDescription")
     private final @Nullable Input<String> versionDescription;
 

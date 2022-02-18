@@ -12,6 +12,10 @@ public final class GetResolverQueryLoggingConfigAssociationArgs extends io.pulum
 
     public static final GetResolverQueryLoggingConfigAssociationArgs Empty = new GetResolverQueryLoggingConfigAssociationArgs();
 
+    /**
+     * Id
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

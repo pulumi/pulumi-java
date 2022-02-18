@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the settings of a public endpoint for an Amazon Lightsail container service.
+ * 
+ */
 public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerPublicEndpoint Empty = new ContainerPublicEndpoint();
 
+    /**
+     * The name of the container for the endpoint.
+     * 
+     */
     @InputImport(name="containerName")
     private final @Nullable String containerName;
 
@@ -23,6 +31,10 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
+    /**
+     * The port of the container to which traffic is forwarded to.
+     * 
+     */
     @InputImport(name="containerPort")
     private final @Nullable Integer containerPort;
 
@@ -30,6 +42,10 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
         return this.containerPort == null ? Optional.empty() : Optional.ofNullable(this.containerPort);
     }
 
+    /**
+     * An object that describes the health check configuration of the container.
+     * 
+     */
     @InputImport(name="healthCheckConfig")
     private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
 

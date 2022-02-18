@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the contact flow.
+     * 
+     */
     @EnumType
     public enum ContactFlowType {
         ContactFlow("CONTACT_FLOW"),

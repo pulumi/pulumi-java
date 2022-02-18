@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class ReportPlanTag extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportPlanTag Empty = new ReportPlanTag();
 
+    /**
+     * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -21,6 +29,10 @@ public final class ReportPlanTag extends io.pulumi.resources.InvokeArgs {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

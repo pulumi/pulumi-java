@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the key-value pair that are assigned to a file during the execution of a Tagging step.
+ * 
+ */
 public final class WorkflowS3TagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkflowS3TagArgs Empty = new WorkflowS3TagArgs();
 
+    /**
+     * The name assigned to the tag that you create.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class WorkflowS3TagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
+    /**
+     * The value that corresponds to the key.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

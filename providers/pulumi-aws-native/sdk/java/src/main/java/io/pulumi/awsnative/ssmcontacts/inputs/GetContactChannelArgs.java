@@ -12,6 +12,10 @@ public final class GetContactChannelArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetContactChannelArgs Empty = new GetContactChannelArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the engagement to a contact channel.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

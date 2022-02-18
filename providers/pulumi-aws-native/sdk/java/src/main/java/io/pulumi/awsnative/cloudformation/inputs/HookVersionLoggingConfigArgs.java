@@ -14,6 +14,10 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
 
     public static final HookVersionLoggingConfigArgs Empty = new HookVersionLoggingConfigArgs();
 
+    /**
+     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers.
+     * 
+     */
     @InputImport(name="logGroupName")
     private final @Nullable Input<String> logGroupName;
 
@@ -21,6 +25,10 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
     }
 
+    /**
+     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * 
+     */
     @InputImport(name="logRoleArn")
     private final @Nullable Input<String> logRoleArn;
 

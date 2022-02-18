@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * <p>The source template of an analysis.</p>
+ * 
+ */
 public final class AnalysisSourceTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalysisSourceTemplateArgs Empty = new AnalysisSourceTemplateArgs();
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final Input<String> arn;
 
@@ -22,6 +30,10 @@ public final class AnalysisSourceTemplateArgs extends io.pulumi.resources.Resour
         return this.arn;
     }
 
+    /**
+     * <p>The dataset references of the source template of an analysis.</p>
+     * 
+     */
     @InputImport(name="dataSetReferences", required=true)
     private final Input<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
 

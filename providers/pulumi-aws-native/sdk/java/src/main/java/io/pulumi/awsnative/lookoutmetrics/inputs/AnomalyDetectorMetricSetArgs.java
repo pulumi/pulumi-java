@@ -20,6 +20,10 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
 
     public static final AnomalyDetectorMetricSetArgs Empty = new AnomalyDetectorMetricSetArgs();
 
+    /**
+     * Dimensions for this MetricSet.
+     * 
+     */
     @InputImport(name="dimensionList")
     private final @Nullable Input<List<String>> dimensionList;
 
@@ -27,6 +31,10 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
         return this.dimensionList == null ? Input.empty() : this.dimensionList;
     }
 
+    /**
+     * Metrics captured by this MetricSet.
+     * 
+     */
     @InputImport(name="metricList", required=true)
     private final Input<List<AnomalyDetectorMetricArgs>> metricList;
 
@@ -34,6 +42,10 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
         return this.metricList;
     }
 
+    /**
+     * A description for the MetricSet.
+     * 
+     */
     @InputImport(name="metricSetDescription")
     private final @Nullable Input<String> metricSetDescription;
 
@@ -41,6 +53,10 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
         return this.metricSetDescription == null ? Input.empty() : this.metricSetDescription;
     }
 
+    /**
+     * A frequency period to aggregate the data
+     * 
+     */
     @InputImport(name="metricSetFrequency")
     private final @Nullable Input<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency;
 
@@ -48,6 +64,10 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
         return this.metricSetFrequency == null ? Input.empty() : this.metricSetFrequency;
     }
 
+    /**
+     * The name of the MetricSet.
+     * 
+     */
     @InputImport(name="metricSetName", required=true)
     private final Input<String> metricSetName;
 
@@ -62,6 +82,10 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
         return this.metricSource;
     }
 
+    /**
+     * Offset, in seconds, between the frequency interval and the time at which the metrics are available.
+     * 
+     */
     @InputImport(name="offset")
     private final @Nullable Input<Integer> offset;
 

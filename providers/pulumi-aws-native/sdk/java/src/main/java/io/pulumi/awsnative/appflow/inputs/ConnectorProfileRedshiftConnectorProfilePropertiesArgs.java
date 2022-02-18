@@ -14,6 +14,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
 
     public static final ConnectorProfileRedshiftConnectorProfilePropertiesArgs Empty = new ConnectorProfileRedshiftConnectorProfilePropertiesArgs();
 
+    /**
+     * The name of the Amazon S3 bucket associated with Redshift.
+     * 
+     */
     @InputImport(name="bucketName", required=true)
     private final Input<String> bucketName;
 
@@ -21,6 +25,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
         return this.bucketName;
     }
 
+    /**
+     * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
+     * 
+     */
     @InputImport(name="bucketPrefix")
     private final @Nullable Input<String> bucketPrefix;
 
@@ -28,6 +36,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
     }
 
+    /**
+     * The JDBC URL of the Amazon Redshift cluster.
+     * 
+     */
     @InputImport(name="databaseUrl", required=true)
     private final Input<String> databaseUrl;
 
@@ -35,6 +47,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
         return this.databaseUrl;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 

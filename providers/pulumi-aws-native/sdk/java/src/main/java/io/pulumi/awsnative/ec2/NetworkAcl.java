@@ -14,21 +14,47 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::EC2::NetworkAcl
+ * 
+ */
 @ResourceType(type="aws-native:ec2:NetworkAcl")
 public class NetworkAcl extends io.pulumi.resources.CustomResource {
+    /**
+     * The tags to assign to the network ACL.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={NetworkAclTag.class})
     private Output</* @Nullable */ List<NetworkAclTag>> tags;
 
+    /**
+     * @return The tags to assign to the network ACL.
+     * 
+     */
     public Output</* @Nullable */ List<NetworkAclTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The ID of the VPC.
+     * 
+     */
     @OutputExport(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
+    /**
+     * @return The ID of the VPC.
+     * 
+     */
     public Output<String> getVpcId() {
         return this.vpcId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NetworkAcl(String name, NetworkAclArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:NetworkAcl", name, args == null ? NetworkAclArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -44,6 +70,14 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NetworkAcl get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkAcl(name, id, options);
     }

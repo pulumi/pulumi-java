@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the members of a VPC security group.
+ * 
+ */
 public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointAccessVpcSecurityGroup Empty = new EndpointAccessVpcSecurityGroup();
 
+    /**
+     * The status of the VPC security group.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -21,6 +29,10 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * The identifier of the VPC security group.
+     * 
+     */
     @InputImport(name="vpcSecurityGroupId")
     private final @Nullable String vpcSecurityGroupId;
 

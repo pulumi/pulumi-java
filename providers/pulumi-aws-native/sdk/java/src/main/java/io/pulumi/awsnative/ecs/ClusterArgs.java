@@ -26,6 +26,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacityProviders == null ? Input.empty() : this.capacityProviders;
     }
 
+    /**
+     * A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
+     * 
+     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 

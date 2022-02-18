@@ -12,15 +12,73 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorModelDynamoDB {
+    /**
+     * The name of the hash key (also called the partition key).
+     * 
+     */
     private final String hashKeyField;
+    /**
+     * The data type for the hash key (also called the partition key). You can specify the following values:
+     * 
+     * * `STRING` - The hash key is a string.
+     * 
+     * * `NUMBER` - The hash key is a number.
+     * 
+     * If you don't specify `hashKeyType`, the default value is `STRING`.
+     * 
+     */
     private final @Nullable String hashKeyType;
+    /**
+     * The value of the hash key (also called the partition key).
+     * 
+     */
     private final String hashKeyValue;
+    /**
+     * The type of operation to perform. You can specify the following values:
+     * 
+     * * `INSERT` - Insert data as a new item into the DynamoDB table. This item uses the specified hash key as a partition key. If you specified a range key, the item uses the range key as a sort key.
+     * 
+     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * 
+     * * `DELETE` - Delete an existing item of the DynamoDB table. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * 
+     * If you don't specify this parameter, AWS IoT Events triggers the `INSERT` operation.
+     * 
+     */
     private final @Nullable String operation;
     private final @Nullable DetectorModelPayload payload;
+    /**
+     * The name of the DynamoDB column that receives the action payload.
+     * 
+     * If you don't specify this parameter, the name of the DynamoDB column is `payload`.
+     * 
+     */
     private final @Nullable String payloadField;
+    /**
+     * The name of the range key (also called the sort key).
+     * 
+     */
     private final @Nullable String rangeKeyField;
+    /**
+     * The data type for the range key (also called the sort key), You can specify the following values:
+     * 
+     * * `STRING` - The range key is a string.
+     * 
+     * * `NUMBER` - The range key is number.
+     * 
+     * If you don't specify `rangeKeyField`, the default value is `STRING`.
+     * 
+     */
     private final @Nullable String rangeKeyType;
+    /**
+     * The value of the range key (also called the sort key).
+     * 
+     */
     private final @Nullable String rangeKeyValue;
+    /**
+     * The name of the DynamoDB table.
+     * 
+     */
     private final String tableName;
 
     @OutputCustomType.Constructor({"hashKeyField","hashKeyType","hashKeyValue","operation","payload","payloadField","rangeKeyField","rangeKeyType","rangeKeyValue","tableName"})
@@ -47,33 +105,91 @@ public final class DetectorModelDynamoDB {
         this.tableName = Objects.requireNonNull(tableName);
     }
 
+    /**
+     * The name of the hash key (also called the partition key).
+     * 
+     */
     public String getHashKeyField() {
         return this.hashKeyField;
     }
+    /**
+     * The data type for the hash key (also called the partition key). You can specify the following values:
+     * 
+     * * `STRING` - The hash key is a string.
+     * 
+     * * `NUMBER` - The hash key is a number.
+     * 
+     * If you don't specify `hashKeyType`, the default value is `STRING`.
+     * 
+     */
     public Optional<String> getHashKeyType() {
         return Optional.ofNullable(this.hashKeyType);
     }
+    /**
+     * The value of the hash key (also called the partition key).
+     * 
+     */
     public String getHashKeyValue() {
         return this.hashKeyValue;
     }
+    /**
+     * The type of operation to perform. You can specify the following values:
+     * 
+     * * `INSERT` - Insert data as a new item into the DynamoDB table. This item uses the specified hash key as a partition key. If you specified a range key, the item uses the range key as a sort key.
+     * 
+     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * 
+     * * `DELETE` - Delete an existing item of the DynamoDB table. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * 
+     * If you don't specify this parameter, AWS IoT Events triggers the `INSERT` operation.
+     * 
+     */
     public Optional<String> getOperation() {
         return Optional.ofNullable(this.operation);
     }
     public Optional<DetectorModelPayload> getPayload() {
         return Optional.ofNullable(this.payload);
     }
+    /**
+     * The name of the DynamoDB column that receives the action payload.
+     * 
+     * If you don't specify this parameter, the name of the DynamoDB column is `payload`.
+     * 
+     */
     public Optional<String> getPayloadField() {
         return Optional.ofNullable(this.payloadField);
     }
+    /**
+     * The name of the range key (also called the sort key).
+     * 
+     */
     public Optional<String> getRangeKeyField() {
         return Optional.ofNullable(this.rangeKeyField);
     }
+    /**
+     * The data type for the range key (also called the sort key), You can specify the following values:
+     * 
+     * * `STRING` - The range key is a string.
+     * 
+     * * `NUMBER` - The range key is number.
+     * 
+     * If you don't specify `rangeKeyField`, the default value is `STRING`.
+     * 
+     */
     public Optional<String> getRangeKeyType() {
         return Optional.ofNullable(this.rangeKeyType);
     }
+    /**
+     * The value of the range key (also called the sort key).
+     * 
+     */
     public Optional<String> getRangeKeyValue() {
         return Optional.ofNullable(this.rangeKeyValue);
     }
+    /**
+     * The name of the DynamoDB table.
+     * 
+     */
     public String getTableName() {
         return this.tableName;
     }

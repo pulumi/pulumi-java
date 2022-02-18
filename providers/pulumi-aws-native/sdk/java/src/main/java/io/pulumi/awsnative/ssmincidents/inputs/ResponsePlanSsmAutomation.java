@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration to use when starting the SSM automation document.
+ * 
+ */
 public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeArgs {
 
     public static final ResponsePlanSsmAutomation Empty = new ResponsePlanSsmAutomation();
 
+    /**
+     * The document name to use when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="documentName", required=true)
     private final String documentName;
 
@@ -24,6 +32,10 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
         return this.documentName;
     }
 
+    /**
+     * The version of the document to use when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="documentVersion")
     private final @Nullable String documentVersion;
 
@@ -31,6 +43,10 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
         return this.documentVersion == null ? Optional.empty() : Optional.ofNullable(this.documentVersion);
     }
 
+    /**
+     * The parameters to set when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable List<ResponsePlanSsmParameter> parameters;
 
@@ -38,6 +54,10 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
         return this.parameters == null ? List.of() : this.parameters;
     }
 
+    /**
+     * The role ARN to use when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final String roleArn;
 
@@ -45,6 +65,10 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
         return this.roleArn;
     }
 
+    /**
+     * The account type to use when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="targetAccount")
     private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 

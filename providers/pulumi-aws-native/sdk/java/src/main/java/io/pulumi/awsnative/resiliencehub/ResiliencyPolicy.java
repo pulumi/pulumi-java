@@ -16,11 +16,23 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type Definition for Resiliency Policy.
+ * 
+ */
 @ResourceType(type="aws-native:resiliencehub:ResiliencyPolicy")
 public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Data Location Constraint of the Policy.
+     * 
+     */
     @OutputExport(name="dataLocationConstraint", type=ResiliencyPolicyDataLocationConstraint.class, parameters={})
     private Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
+    /**
+     * @return Data Location Constraint of the Policy.
+     * 
+     */
     public Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
         return this.dataLocationConstraint;
     }
@@ -30,21 +42,45 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
     public Output<ResiliencyPolicyPolicyMap> getPolicy() {
         return this.policy;
     }
+    /**
+     * Amazon Resource Name (ARN) of the Resiliency Policy.
+     * 
+     */
     @OutputExport(name="policyArn", type=String.class, parameters={})
     private Output<String> policyArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Resiliency Policy.
+     * 
+     */
     public Output<String> getPolicyArn() {
         return this.policyArn;
     }
+    /**
+     * Description of Resiliency Policy.
+     * 
+     */
     @OutputExport(name="policyDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDescription;
 
+    /**
+     * @return Description of Resiliency Policy.
+     * 
+     */
     public Output</* @Nullable */ String> getPolicyDescription() {
         return this.policyDescription;
     }
+    /**
+     * Name of Resiliency Policy.
+     * 
+     */
     @OutputExport(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
 
+    /**
+     * @return Name of Resiliency Policy.
+     * 
+     */
     public Output<String> getPolicyName() {
         return this.policyName;
     }
@@ -54,13 +90,27 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ResiliencyPolicyTagMap> getTags() {
         return this.tags;
     }
+    /**
+     * Resiliency Policy Tier.
+     * 
+     */
     @OutputExport(name="tier", type=ResiliencyPolicyTier.class, parameters={})
     private Output<ResiliencyPolicyTier> tier;
 
+    /**
+     * @return Resiliency Policy Tier.
+     * 
+     */
     public Output<ResiliencyPolicyTier> getTier() {
         return this.tier;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ResiliencyPolicy(String name, ResiliencyPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:resiliencehub:ResiliencyPolicy", name, args == null ? ResiliencyPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +126,14 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ResiliencyPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResiliencyPolicy(name, id, options);
     }

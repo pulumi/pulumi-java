@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Amazon RDS parameters.</p>
+ * 
+ */
 public final class DataSourceRdsParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceRdsParametersArgs Empty = new DataSourceRdsParametersArgs();
 
+    /**
+     * <p>Database.</p>
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<String> database;
 
@@ -20,6 +28,10 @@ public final class DataSourceRdsParametersArgs extends io.pulumi.resources.Resou
         return this.database;
     }
 
+    /**
+     * <p>Instance ID.</p>
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 

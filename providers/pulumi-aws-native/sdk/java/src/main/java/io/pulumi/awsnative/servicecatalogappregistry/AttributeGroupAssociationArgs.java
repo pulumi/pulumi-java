@@ -13,6 +13,10 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
 
     public static final AttributeGroupAssociationArgs Empty = new AttributeGroupAssociationArgs();
 
+    /**
+     * The name or the Id of the Application.
+     * 
+     */
     @InputImport(name="application", required=true)
     private final Input<String> application;
 
@@ -20,6 +24,10 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
         return this.application;
     }
 
+    /**
+     * The name or the Id of the AttributeGroup.
+     * 
+     */
     @InputImport(name="attributeGroup", required=true)
     private final Input<String> attributeGroup;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAggregationAuthorization {
+/**
+ * Resource Type definition for AWS::Config::AggregationAuthorization
+ * 
+ */
     public static CompletableFuture<GetAggregationAuthorizationResult> invokeAsync(GetAggregationAuthorizationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getAggregationAuthorization", TypeShape.of(GetAggregationAuthorizationResult.class), args == null ? GetAggregationAuthorizationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class GetHookTypeConfigArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetHookTypeConfigArgs Empty = new GetHookTypeConfigArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the type version.
+     * 
+     */
     @InputImport(name="typeArn", required=true)
     private final String typeArn;
 

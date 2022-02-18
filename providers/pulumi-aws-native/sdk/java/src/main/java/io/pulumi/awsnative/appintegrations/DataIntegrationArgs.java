@@ -17,6 +17,10 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final DataIntegrationArgs Empty = new DataIntegrationArgs();
 
+    /**
+     * The data integration description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The KMS key of the data integration.
+     * 
+     */
     @InputImport(name="kmsKey", required=true)
     private final Input<String> kmsKey;
 
@@ -31,6 +39,10 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
         return this.kmsKey;
     }
 
+    /**
+     * The name of the data integration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,10 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the data and how often it should be pulled from the source.
+     * 
+     */
     @InputImport(name="scheduleConfig", required=true)
     private final Input<DataIntegrationScheduleConfigArgs> scheduleConfig;
 
@@ -45,6 +61,10 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
         return this.scheduleConfig;
     }
 
+    /**
+     * The URI of the data source.
+     * 
+     */
     @InputImport(name="sourceURI", required=true)
     private final Input<String> sourceURI;
 
@@ -52,6 +72,10 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceURI;
     }
 
+    /**
+     * The tags (keys and values) associated with the data integration.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DataIntegrationTagArgs>> tags;
 

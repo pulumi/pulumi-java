@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PackagingConfigurationStreamSelection {
+    /**
+     * The maximum video bitrate (bps) to include in output.
+     * 
+     */
     private final @Nullable Integer maxVideoBitsPerSecond;
+    /**
+     * The minimum video bitrate (bps) to include in output.
+     * 
+     */
     private final @Nullable Integer minVideoBitsPerSecond;
+    /**
+     * A directive that determines the order of streams in the output.
+     * 
+     */
     private final @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder;
 
     @OutputCustomType.Constructor({"maxVideoBitsPerSecond","minVideoBitsPerSecond","streamOrder"})
@@ -26,12 +38,24 @@ public final class PackagingConfigurationStreamSelection {
         this.streamOrder = streamOrder;
     }
 
+    /**
+     * The maximum video bitrate (bps) to include in output.
+     * 
+     */
     public Optional<Integer> getMaxVideoBitsPerSecond() {
         return Optional.ofNullable(this.maxVideoBitsPerSecond);
     }
+    /**
+     * The minimum video bitrate (bps) to include in output.
+     * 
+     */
     public Optional<Integer> getMinVideoBitsPerSecond() {
         return Optional.ofNullable(this.minVideoBitsPerSecond);
     }
+    /**
+     * A directive that determines the order of streams in the output.
+     * 
+     */
     public Optional<PackagingConfigurationStreamSelectionStreamOrder> getStreamOrder() {
         return Optional.ofNullable(this.streamOrder);
     }

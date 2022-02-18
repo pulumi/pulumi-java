@@ -14,6 +14,10 @@ public final class AssetModelTransform extends io.pulumi.resources.InvokeArgs {
 
     public static final AssetModelTransform Empty = new AssetModelTransform();
 
+    /**
+     * The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
+     * 
+     */
     @InputImport(name="expression", required=true)
     private final String expression;
 
@@ -21,6 +25,10 @@ public final class AssetModelTransform extends io.pulumi.resources.InvokeArgs {
         return this.expression;
     }
 
+    /**
+     * The list of variables used in the expression.
+     * 
+     */
     @InputImport(name="variables", required=true)
     private final List<AssetModelExpressionVariable> variables;
 

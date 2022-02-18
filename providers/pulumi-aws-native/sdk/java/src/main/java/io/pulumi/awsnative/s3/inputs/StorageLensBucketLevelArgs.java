@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Bucket-level metrics configurations.
+ * 
+ */
 public final class StorageLensBucketLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensBucketLevelArgs Empty = new StorageLensBucketLevelArgs();

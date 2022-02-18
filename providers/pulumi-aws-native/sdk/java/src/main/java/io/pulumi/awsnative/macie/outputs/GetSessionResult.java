@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSessionResult {
+    /**
+     * AWS account ID of customer
+     * 
+     */
     private final @Nullable String awsAccountId;
+    /**
+     * A enumeration value that specifies how frequently finding updates are published.
+     * 
+     */
     private final @Nullable SessionFindingPublishingFrequency findingPublishingFrequency;
+    /**
+     * Service role used by Macie
+     * 
+     */
     private final @Nullable String serviceRole;
+    /**
+     * A enumeration value that specifies the status of the Macie Session.
+     * 
+     */
     private final @Nullable SessionStatus status;
 
     @OutputCustomType.Constructor({"awsAccountId","findingPublishingFrequency","serviceRole","status"})
@@ -30,15 +46,31 @@ public final class GetSessionResult {
         this.status = status;
     }
 
+    /**
+     * AWS account ID of customer
+     * 
+     */
     public Optional<String> getAwsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
+    /**
+     * A enumeration value that specifies how frequently finding updates are published.
+     * 
+     */
     public Optional<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
         return Optional.ofNullable(this.findingPublishingFrequency);
     }
+    /**
+     * Service role used by Macie
+     * 
+     */
     public Optional<String> getServiceRole() {
         return Optional.ofNullable(this.serviceRole);
     }
+    /**
+     * A enumeration value that specifies the status of the Macie Session.
+     * 
+     */
     public Optional<SessionStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

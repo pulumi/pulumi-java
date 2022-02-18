@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomMetric {
+/**
+ * A custom metric published by your devices to Device Defender.
+ * 
+ */
     public static CompletableFuture<GetCustomMetricResult> invokeAsync(GetCustomMetricArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getCustomMetric", TypeShape.of(GetCustomMetricResult.class), args == null ? GetCustomMetricArgs.Empty : args, Utilities.withVersion(options));
     }

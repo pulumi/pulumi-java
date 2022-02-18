@@ -12,6 +12,10 @@ public final class GetCanaryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCanaryArgs Empty = new GetCanaryArgs();
 
+    /**
+     * Name of the canary.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

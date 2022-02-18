@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExperimentTemplate {
+/**
+ * Resource schema for AWS::FIS::ExperimentTemplate
+ * 
+ */
     public static CompletableFuture<GetExperimentTemplateResult> invokeAsync(GetExperimentTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fis:getExperimentTemplate", TypeShape.of(GetExperimentTemplateResult.class), args == null ? GetExperimentTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

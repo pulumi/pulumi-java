@@ -17,6 +17,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
+    /**
+     * The URL of the SQS dead letter queue
+     * 
+     */
     @InputImport(name="deadLetterQueueUrl")
     private final @Nullable Input<String> deadLetterQueueUrl;
 
@@ -24,6 +28,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetterQueueUrl == null ? Input.empty() : this.deadLetterQueueUrl;
     }
 
+    /**
+     * The default encryption key
+     * 
+     */
     @InputImport(name="defaultEncryptionKey")
     private final @Nullable Input<String> defaultEncryptionKey;
 
@@ -31,6 +39,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultEncryptionKey == null ? Input.empty() : this.defaultEncryptionKey;
     }
 
+    /**
+     * The default number of days until the data within the domain expires.
+     * 
+     */
     @InputImport(name="defaultExpirationDays")
     private final @Nullable Input<Integer> defaultExpirationDays;
 
@@ -38,6 +50,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultExpirationDays == null ? Input.empty() : this.defaultExpirationDays;
     }
 
+    /**
+     * The unique name of the domain.
+     * 
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -45,6 +61,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * The tags (keys and values) associated with the domain
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DomainTagArgs>> tags;
 

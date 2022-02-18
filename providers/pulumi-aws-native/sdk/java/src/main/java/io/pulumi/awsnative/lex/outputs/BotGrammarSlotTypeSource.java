@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BotGrammarSlotTypeSource {
+    /**
+     * The Amazon KMS key required to decrypt the contents of the grammar, if any.
+     * 
+     */
     private final @Nullable String kmsKeyArn;
+    /**
+     * The name of the S3 bucket that contains the grammar source.
+     * 
+     */
     private final String s3BucketName;
+    /**
+     * The path to the grammar in the S3 bucket.
+     * 
+     */
     private final String s3ObjectKey;
 
     @OutputCustomType.Constructor({"kmsKeyArn","s3BucketName","s3ObjectKey"})
@@ -25,12 +37,24 @@ public final class BotGrammarSlotTypeSource {
         this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
     }
 
+    /**
+     * The Amazon KMS key required to decrypt the contents of the grammar, if any.
+     * 
+     */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
+    /**
+     * The name of the S3 bucket that contains the grammar source.
+     * 
+     */
     public String getS3BucketName() {
         return this.s3BucketName;
     }
+    /**
+     * The path to the grammar in the S3 bucket.
+     * 
+     */
     public String getS3ObjectKey() {
         return this.s3ObjectKey;
     }

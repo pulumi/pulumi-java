@@ -10,10 +10,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The upload storage root location (folder) on streaming workstations where files are
+ *             uploaded.</p>
+ * 
+ */
 public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LaunchProfileStreamingSessionStorageRootArgs Empty = new LaunchProfileStreamingSessionStorageRootArgs();
 
+    /**
+     * <p>The folder path in Linux workstations where files are uploaded.</p>
+     * 
+     */
     @InputImport(name="linux")
     private final @Nullable Input<String> linux;
 
@@ -21,6 +30,10 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
         return this.linux == null ? Input.empty() : this.linux;
     }
 
+    /**
+     * <p>The folder path in Windows workstations where files are uploaded.</p>
+     * 
+     */
     @InputImport(name="windows")
     private final @Nullable Input<String> windows;
 

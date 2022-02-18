@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketAccessRules {
+    /**
+     * A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
+     * 
+     */
     private final @Nullable Boolean allowPublicOverrides;
+    /**
+     * Specifies the anonymous access to all objects in a bucket.
+     * 
+     */
     private final @Nullable String getObject;
 
     @OutputCustomType.Constructor({"allowPublicOverrides","getObject"})
@@ -23,9 +31,17 @@ public final class BucketAccessRules {
         this.getObject = getObject;
     }
 
+    /**
+     * A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
+     * 
+     */
     public Optional<Boolean> getAllowPublicOverrides() {
         return Optional.ofNullable(this.allowPublicOverrides);
     }
+    /**
+     * Specifies the anonymous access to all objects in a bucket.
+     * 
+     */
     public Optional<String> getGetObject() {
         return Optional.ofNullable(this.getObject);
     }

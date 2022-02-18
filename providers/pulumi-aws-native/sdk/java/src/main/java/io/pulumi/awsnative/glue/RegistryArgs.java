@@ -16,6 +16,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistryArgs Empty = new RegistryArgs();
 
+    /**
+     * A description of the registry. If description is not provided, there will not be any default value for this.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * List of tags to tag the Registry
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RegistryTagArgs>> tags;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The retention duration of the memory store and the magnetic store.
+ * 
+ */
 public final class RetentionPropertiesProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final RetentionPropertiesProperties Empty = new RetentionPropertiesProperties();
 
+    /**
+     * The duration for which data must be stored in the magnetic store.
+     * 
+     */
     @InputImport(name="magneticStoreRetentionPeriodInDays")
     private final @Nullable String magneticStoreRetentionPeriodInDays;
 
@@ -21,6 +29,10 @@ public final class RetentionPropertiesProperties extends io.pulumi.resources.Inv
         return this.magneticStoreRetentionPeriodInDays == null ? Optional.empty() : Optional.ofNullable(this.magneticStoreRetentionPeriodInDays);
     }
 
+    /**
+     * The duration for which data must be stored in the memory store.
+     * 
+     */
     @InputImport(name="memoryStoreRetentionPeriodInHours")
     private final @Nullable String memoryStoreRetentionPeriodInHours;
 

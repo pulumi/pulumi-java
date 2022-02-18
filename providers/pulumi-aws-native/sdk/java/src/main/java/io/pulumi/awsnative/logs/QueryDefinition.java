@@ -13,33 +13,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The resource schema for AWSLogs QueryDefinition
+ * 
+ */
 @ResourceType(type="aws-native:logs:QueryDefinition")
 public class QueryDefinition extends io.pulumi.resources.CustomResource {
+    /**
+     * Optionally define specific log groups as part of your query definition
+     * 
+     */
     @OutputExport(name="logGroupNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> logGroupNames;
 
+    /**
+     * @return Optionally define specific log groups as part of your query definition
+     * 
+     */
     public Output</* @Nullable */ List<String>> getLogGroupNames() {
         return this.logGroupNames;
     }
+    /**
+     * A name for the saved query definition
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return A name for the saved query definition
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Unique identifier of a query definition
+     * 
+     */
     @OutputExport(name="queryDefinitionId", type=String.class, parameters={})
     private Output<String> queryDefinitionId;
 
+    /**
+     * @return Unique identifier of a query definition
+     * 
+     */
     public Output<String> getQueryDefinitionId() {
         return this.queryDefinitionId;
     }
+    /**
+     * The query string to use for this definition
+     * 
+     */
     @OutputExport(name="queryString", type=String.class, parameters={})
     private Output<String> queryString;
 
+    /**
+     * @return The query string to use for this definition
+     * 
+     */
     public Output<String> getQueryString() {
         return this.queryString;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public QueryDefinition(String name, QueryDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:logs:QueryDefinition", name, args == null ? QueryDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -55,6 +97,14 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static QueryDefinition get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new QueryDefinition(name, id, options);
     }

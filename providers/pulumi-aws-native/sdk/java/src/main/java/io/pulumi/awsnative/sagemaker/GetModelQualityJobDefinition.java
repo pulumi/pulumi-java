@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModelQualityJobDefinition {
+/**
+ * Resource Type definition for AWS::SageMaker::ModelQualityJobDefinition
+ * 
+ */
     public static CompletableFuture<GetModelQualityJobDefinitionResult> invokeAsync(GetModelQualityJobDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelQualityJobDefinition", TypeShape.of(GetModelQualityJobDefinitionResult.class), args == null ? GetModelQualityJobDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
+     * 
+     */
     @EnumType
     public enum RecordingConfigurationThumbnailConfigurationRecordingMode {
         Interval("INTERVAL"),

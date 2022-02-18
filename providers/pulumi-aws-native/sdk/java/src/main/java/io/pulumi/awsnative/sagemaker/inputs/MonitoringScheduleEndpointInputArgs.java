@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The endpoint for a monitoring job.
+ * 
+ */
 public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitoringScheduleEndpointInputArgs Empty = new MonitoringScheduleEndpointInputArgs();
@@ -23,6 +27,10 @@ public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resourc
         return this.endpointName;
     }
 
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     @InputImport(name="localPath", required=true)
     private final Input<String> localPath;
 
@@ -30,6 +38,10 @@ public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resourc
         return this.localPath;
     }
 
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     @InputImport(name="s3DataDistributionType")
     private final @Nullable Input<MonitoringScheduleEndpointInputS3DataDistributionType> s3DataDistributionType;
 
@@ -37,6 +49,10 @@ public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resourc
         return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
     }
 
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     @InputImport(name="s3InputMode")
     private final @Nullable Input<MonitoringScheduleEndpointInputS3InputMode> s3InputMode;
 

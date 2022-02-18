@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkflowTag {
+    /**
+     * The name assigned to the tag that you create.
+     * 
+     */
     private final String key;
+    /**
+     * Contains one or more values that you assigned to the key name you create.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class WorkflowTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The name assigned to the tag that you create.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Contains one or more values that you assigned to the key name you create.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

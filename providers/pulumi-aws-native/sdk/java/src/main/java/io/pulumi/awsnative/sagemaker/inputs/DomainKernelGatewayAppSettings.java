@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The kernel gateway app settings.
+ * 
+ */
 public final class DomainKernelGatewayAppSettings extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainKernelGatewayAppSettings Empty = new DomainKernelGatewayAppSettings();
 
+    /**
+     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * 
+     */
     @InputImport(name="customImages")
     private final @Nullable List<DomainCustomImage> customImages;
 
@@ -23,6 +31,10 @@ public final class DomainKernelGatewayAppSettings extends io.pulumi.resources.In
         return this.customImages == null ? List.of() : this.customImages;
     }
 
+    /**
+     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+     * 
+     */
     @InputImport(name="defaultResourceSpec")
     private final @Nullable DomainResourceSpec defaultResourceSpec;
 

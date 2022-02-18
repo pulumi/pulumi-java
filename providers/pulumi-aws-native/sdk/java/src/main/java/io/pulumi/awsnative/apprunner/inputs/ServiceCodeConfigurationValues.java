@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Code Configuration Values
+ * 
+ */
 public final class ServiceCodeConfigurationValues extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceCodeConfigurationValues Empty = new ServiceCodeConfigurationValues();
 
+    /**
+     * Build Command
+     * 
+     */
     @InputImport(name="buildCommand")
     private final @Nullable String buildCommand;
 
@@ -24,6 +32,10 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
         return this.buildCommand == null ? Optional.empty() : Optional.ofNullable(this.buildCommand);
     }
 
+    /**
+     * Port
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable String port;
 
@@ -31,6 +43,10 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * Runtime
+     * 
+     */
     @InputImport(name="runtime", required=true)
     private final ServiceCodeConfigurationValuesRuntime runtime;
 
@@ -45,6 +61,10 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
     }
 
+    /**
+     * Start Command
+     * 
+     */
     @InputImport(name="startCommand")
     private final @Nullable String startCommand;
 

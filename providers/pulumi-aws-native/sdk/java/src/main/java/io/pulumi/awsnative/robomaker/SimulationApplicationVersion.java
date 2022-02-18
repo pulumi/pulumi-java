@@ -12,6 +12,10 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
 @ResourceType(type="aws-native:robomaker:SimulationApplicationVersion")
 public class SimulationApplicationVersion extends io.pulumi.resources.CustomResource {
     @OutputExport(name="application", type=String.class, parameters={})
@@ -32,13 +36,27 @@ public class SimulationApplicationVersion extends io.pulumi.resources.CustomReso
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The revision ID of robot application.
+     * 
+     */
     @OutputExport(name="currentRevisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> currentRevisionId;
 
+    /**
+     * @return The revision ID of robot application.
+     * 
+     */
     public Output</* @Nullable */ String> getCurrentRevisionId() {
         return this.currentRevisionId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SimulationApplicationVersion(String name, SimulationApplicationVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:robomaker:SimulationApplicationVersion", name, args == null ? SimulationApplicationVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -54,6 +72,14 @@ public class SimulationApplicationVersion extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SimulationApplicationVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SimulationApplicationVersion(name, id, options);
     }

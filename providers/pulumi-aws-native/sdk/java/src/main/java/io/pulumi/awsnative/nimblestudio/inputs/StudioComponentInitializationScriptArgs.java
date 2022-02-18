@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Initialization scripts for studio components.</p>
+ * 
+ */
 public final class StudioComponentInitializationScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StudioComponentInitializationScriptArgs Empty = new StudioComponentInitializationScriptArgs();
 
+    /**
+     * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
+     * 
+     */
     @InputImport(name="launchProfileProtocolVersion")
     private final @Nullable Input<String> launchProfileProtocolVersion;
 
@@ -37,6 +45,10 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
         return this.runContext == null ? Input.empty() : this.runContext;
     }
 
+    /**
+     * <p>The initialization script.</p>
+     * 
+     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 

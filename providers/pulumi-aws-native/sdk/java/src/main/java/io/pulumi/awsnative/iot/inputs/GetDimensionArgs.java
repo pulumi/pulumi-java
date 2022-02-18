@@ -12,6 +12,10 @@ public final class GetDimensionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDimensionArgs Empty = new GetDimensionArgs();
 
+    /**
+     * A unique identifier for the dimension.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

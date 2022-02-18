@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Output column.</p>
+ * 
+ */
 public final class DataSetOutputColumn extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSetOutputColumn Empty = new DataSetOutputColumn();
 
+    /**
+     * <p>A description for a column.</p>
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -22,6 +30,10 @@ public final class DataSetOutputColumn extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * <p>A display name for the dataset.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

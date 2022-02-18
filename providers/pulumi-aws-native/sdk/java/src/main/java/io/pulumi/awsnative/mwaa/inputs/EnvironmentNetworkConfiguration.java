@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configures the network resources of the environment.
+ * 
+ */
 public final class EnvironmentNetworkConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentNetworkConfiguration Empty = new EnvironmentNetworkConfiguration();
 
+    /**
+     * A list of security groups to use for the environment.
+     * 
+     */
     @InputImport(name="securityGroupIds")
     private final @Nullable List<String> securityGroupIds;
 
@@ -22,6 +30,10 @@ public final class EnvironmentNetworkConfiguration extends io.pulumi.resources.I
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
 
+    /**
+     * A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
+     * 
+     */
     @InputImport(name="subnetIds")
     private final @Nullable List<String> subnetIds;
 

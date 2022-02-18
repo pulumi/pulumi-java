@@ -12,6 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details required for scheduled trigger type
+ * 
+ */
 public final class FlowScheduledTriggerProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowScheduledTriggerProperties Empty = new FlowScheduledTriggerProperties();

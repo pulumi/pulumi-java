@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The location of the site
+ * 
+ */
 public final class SiteLocation extends io.pulumi.resources.InvokeArgs {
 
     public static final SiteLocation Empty = new SiteLocation();
 
+    /**
+     * The physical address.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable String address;
 
@@ -21,6 +29,10 @@ public final class SiteLocation extends io.pulumi.resources.InvokeArgs {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
+    /**
+     * The latitude.
+     * 
+     */
     @InputImport(name="latitude")
     private final @Nullable String latitude;
 
@@ -28,6 +40,10 @@ public final class SiteLocation extends io.pulumi.resources.InvokeArgs {
         return this.latitude == null ? Optional.empty() : Optional.ofNullable(this.latitude);
     }
 
+    /**
+     * The longitude.
+     * 
+     */
     @InputImport(name="longitude")
     private final @Nullable String longitude;
 

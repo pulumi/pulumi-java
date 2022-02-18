@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileInforNexusConnectorProfileProperties {
+    /**
+     * The location of the InforNexus resource
+     * 
+     */
     private final String instanceUrl;
 
     @OutputCustomType.Constructor({"instanceUrl"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileInforNexusConnectorProfileProperties {
         this.instanceUrl = Objects.requireNonNull(instanceUrl);
     }
 
+    /**
+     * The location of the InforNexus resource
+     * 
+     */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

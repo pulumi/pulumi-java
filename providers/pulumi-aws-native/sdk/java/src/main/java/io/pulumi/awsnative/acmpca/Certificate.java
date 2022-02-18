@@ -14,63 +14,145 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A certificate issued via a private certificate authority
+ * 
+ */
 @ResourceType(type="aws-native:acmpca:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
+    /**
+     * These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
+     * 
+     */
     @OutputExport(name="apiPassthrough", type=CertificateApiPassthrough.class, parameters={})
     private Output</* @Nullable */ CertificateApiPassthrough> apiPassthrough;
 
+    /**
+     * @return These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
+     * 
+     */
     public Output</* @Nullable */ CertificateApiPassthrough> getApiPassthrough() {
         return this.apiPassthrough;
     }
+    /**
+     * The ARN of the issued certificate.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The ARN of the issued certificate.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The issued certificate in base 64 PEM-encoded format.
+     * 
+     */
     @OutputExport(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
+    /**
+     * @return The issued certificate in base 64 PEM-encoded format.
+     * 
+     */
     public Output<String> getCertificate() {
         return this.certificate;
     }
+    /**
+     * The Amazon Resource Name (ARN) for the private CA to issue the certificate.
+     * 
+     */
     @OutputExport(name="certificateAuthorityArn", type=String.class, parameters={})
     private Output<String> certificateAuthorityArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the private CA to issue the certificate.
+     * 
+     */
     public Output<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
+    /**
+     * The certificate signing request (CSR) for the Certificate.
+     * 
+     */
     @OutputExport(name="certificateSigningRequest", type=String.class, parameters={})
     private Output<String> certificateSigningRequest;
 
+    /**
+     * @return The certificate signing request (CSR) for the Certificate.
+     * 
+     */
     public Output<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest;
     }
+    /**
+     * The name of the algorithm that will be used to sign the Certificate.
+     * 
+     */
     @OutputExport(name="signingAlgorithm", type=String.class, parameters={})
     private Output<String> signingAlgorithm;
 
+    /**
+     * @return The name of the algorithm that will be used to sign the Certificate.
+     * 
+     */
     public Output<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
     }
+    /**
+     * Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
+     * 
+     */
     @OutputExport(name="templateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateArn;
 
+    /**
+     * @return Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateArn() {
         return this.templateArn;
     }
+    /**
+     * The time before which the Certificate will be valid.
+     * 
+     */
     @OutputExport(name="validity", type=CertificateValidity.class, parameters={})
     private Output<CertificateValidity> validity;
 
+    /**
+     * @return The time before which the Certificate will be valid.
+     * 
+     */
     public Output<CertificateValidity> getValidity() {
         return this.validity;
     }
+    /**
+     * The time after which the Certificate will be valid.
+     * 
+     */
     @OutputExport(name="validityNotBefore", type=CertificateValidity.class, parameters={})
     private Output</* @Nullable */ CertificateValidity> validityNotBefore;
 
+    /**
+     * @return The time after which the Certificate will be valid.
+     * 
+     */
     public Output</* @Nullable */ CertificateValidity> getValidityNotBefore() {
         return this.validityNotBefore;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:acmpca:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -86,6 +168,14 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Certificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Certificate(name, id, options);
     }

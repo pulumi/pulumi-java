@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttributeGroup {
+/**
+ * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
+ * 
+ */
     public static CompletableFuture<GetAttributeGroupResult> invokeAsync(GetAttributeGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getAttributeGroup", TypeShape.of(GetAttributeGroupResult.class), args == null ? GetAttributeGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -26,6 +26,12 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The parameters that Amazon QuickSight uses to connect to your underlying data source.
+ *             This is a variant type structure. For this structure to be valid, only one of the
+ *             attributes can be non-null.</p>
+ * 
+ */
 public final class DataSourceParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceParametersArgs Empty = new DataSourceParametersArgs();

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketSseKmsEncryptedObjects {
+    /**
+     * Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.
+     * 
+     */
     private final BucketSseKmsEncryptedObjectsStatus status;
 
     @OutputCustomType.Constructor({"status"})
@@ -16,6 +20,10 @@ public final class BucketSseKmsEncryptedObjects {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.
+     * 
+     */
     public BucketSseKmsEncryptedObjectsStatus getStatus() {
         return this.status;
     }

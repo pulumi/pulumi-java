@@ -8,6 +8,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Parameters to define a mitigation action that changes the state of the CA certificate to inactive.
+ * 
+ */
 public final class MitigationActionUpdateCACertificateParams extends io.pulumi.resources.InvokeArgs {
 
     public static final MitigationActionUpdateCACertificateParams Empty = new MitigationActionUpdateCACertificateParams();

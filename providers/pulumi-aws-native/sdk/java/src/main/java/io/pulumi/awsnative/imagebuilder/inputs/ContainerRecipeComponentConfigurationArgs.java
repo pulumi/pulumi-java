@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration details of the component.
+ * 
+ */
 public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerRecipeComponentConfigurationArgs Empty = new ContainerRecipeComponentConfigurationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the component.
+     * 
+     */
     @InputImport(name="componentArn")
     private final @Nullable Input<String> componentArn;
 

@@ -21,10 +21,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+ * 
+ */
 public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeArgs {
 
     public static final OriginEndpointDashPackage Empty = new OriginEndpointDashPackage();
 
+    /**
+     * A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+     * 
+     */
     @InputImport(name="adTriggers")
     private final @Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers;
 
@@ -46,6 +54,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
+    /**
+     * Determines the position of some tags in the Media Presentation Description (MPD).  When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation.  When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+     * 
+     */
     @InputImport(name="manifestLayout")
     private final @Nullable OriginEndpointDashPackageManifestLayout manifestLayout;
 
@@ -53,6 +65,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.manifestLayout == null ? Optional.empty() : Optional.ofNullable(this.manifestLayout);
     }
 
+    /**
+     * Time window (in seconds) contained in each manifest.
+     * 
+     */
     @InputImport(name="manifestWindowSeconds")
     private final @Nullable Integer manifestWindowSeconds;
 
@@ -60,6 +76,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.manifestWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.manifestWindowSeconds);
     }
 
+    /**
+     * Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+     * 
+     */
     @InputImport(name="minBufferTimeSeconds")
     private final @Nullable Integer minBufferTimeSeconds;
 
@@ -67,6 +87,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.minBufferTimeSeconds == null ? Optional.empty() : Optional.ofNullable(this.minBufferTimeSeconds);
     }
 
+    /**
+     * Minimum duration (in seconds) between potential changes to the Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD).
+     * 
+     */
     @InputImport(name="minUpdatePeriodSeconds")
     private final @Nullable Integer minUpdatePeriodSeconds;
 
@@ -74,6 +98,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.minUpdatePeriodSeconds == null ? Optional.empty() : Optional.ofNullable(this.minUpdatePeriodSeconds);
     }
 
+    /**
+     * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Channel source contains SCTE-35 ad markers.
+     * 
+     */
     @InputImport(name="periodTriggers")
     private final @Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers;
 
@@ -81,6 +109,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.periodTriggers == null ? List.of() : this.periodTriggers;
     }
 
+    /**
+     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+     * 
+     */
     @InputImport(name="profile")
     private final @Nullable OriginEndpointDashPackageProfile profile;
 
@@ -88,6 +120,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
     }
 
+    /**
+     * Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+     * 
+     */
     @InputImport(name="segmentDurationSeconds")
     private final @Nullable Integer segmentDurationSeconds;
 
@@ -95,6 +131,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 
+    /**
+     * Determines the type of SegmentTemplate included in the Media Presentation Description (MPD).  When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs.  When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+     * 
+     */
     @InputImport(name="segmentTemplateFormat")
     private final @Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat;
 
@@ -109,6 +149,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
     }
 
+    /**
+     * Duration (in seconds) to delay live content before presentation.
+     * 
+     */
     @InputImport(name="suggestedPresentationDelaySeconds")
     private final @Nullable Integer suggestedPresentationDelaySeconds;
 
@@ -116,6 +160,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.suggestedPresentationDelaySeconds == null ? Optional.empty() : Optional.ofNullable(this.suggestedPresentationDelaySeconds);
     }
 
+    /**
+     * Determines the type of UTCTiming included in the Media Presentation Description (MPD)
+     * 
+     */
     @InputImport(name="utcTiming")
     private final @Nullable OriginEndpointDashPackageUtcTiming utcTiming;
 
@@ -123,6 +171,10 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
         return this.utcTiming == null ? Optional.empty() : Optional.ofNullable(this.utcTiming);
     }
 
+    /**
+     * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+     * 
+     */
     @InputImport(name="utcTimingUri")
     private final @Nullable String utcTimingUri;
 

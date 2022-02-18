@@ -19,6 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the monitoring job.
+ * 
+ */
 public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringScheduleMonitoringJobDefinition Empty = new MonitoringScheduleMonitoringJobDefinition();
@@ -30,6 +34,10 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
         return this.baselineConfig == null ? Optional.empty() : Optional.ofNullable(this.baselineConfig);
     }
 
+    /**
+     * Sets the environment variables in the Docker container
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Object environment;
 
@@ -72,6 +80,10 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
         return this.networkConfig == null ? Optional.empty() : Optional.ofNullable(this.networkConfig);
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final String roleArn;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configurations of destination connector.
+ * 
+ */
 public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowDestinationFlowConfigArgs Empty = new FlowDestinationFlowConfigArgs();
 
+    /**
+     * Name of destination connector profile
+     * 
+     */
     @InputImport(name="connectorProfileName")
     private final @Nullable Input<String> connectorProfileName;
 
@@ -23,6 +31,10 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
         return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
     }
 
+    /**
+     * Destination connector type
+     * 
+     */
     @InputImport(name="connectorType", required=true)
     private final Input<FlowConnectorType> connectorType;
 
@@ -30,6 +42,10 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
         return this.connectorType;
     }
 
+    /**
+     * Destination connector details
+     * 
+     */
     @InputImport(name="destinationConnectorProperties", required=true)
     private final Input<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
 

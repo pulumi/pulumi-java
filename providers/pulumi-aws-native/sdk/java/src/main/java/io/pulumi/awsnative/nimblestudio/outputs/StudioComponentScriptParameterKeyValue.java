@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StudioComponentScriptParameterKeyValue {
+    /**
+     * <p>A script parameter key.</p>
+     * 
+     */
     private final @Nullable String key;
+    /**
+     * <p>A script parameter value.</p>
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -22,9 +30,17 @@ public final class StudioComponentScriptParameterKeyValue {
         this.value = value;
     }
 
+    /**
+     * <p>A script parameter key.</p>
+     * 
+     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+    /**
+     * <p>A script parameter value.</p>
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

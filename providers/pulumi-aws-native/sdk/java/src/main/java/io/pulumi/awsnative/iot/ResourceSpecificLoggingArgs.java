@@ -15,6 +15,10 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
 
     public static final ResourceSpecificLoggingArgs Empty = new ResourceSpecificLoggingArgs();
 
+    /**
+     * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * 
+     */
     @InputImport(name="logLevel", required=true)
     private final Input<ResourceSpecificLoggingLogLevel> logLevel;
 
@@ -22,6 +26,10 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
         return this.logLevel;
     }
 
+    /**
+     * The target name.
+     * 
+     */
     @InputImport(name="targetName", required=true)
     private final Input<String> targetName;
 
@@ -29,6 +37,10 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
         return this.targetName;
     }
 
+    /**
+     * The target type. Value must be THING_GROUP.
+     * 
+     */
     @InputImport(name="targetType", required=true)
     private final Input<ResourceSpecificLoggingTargetType> targetType;
 

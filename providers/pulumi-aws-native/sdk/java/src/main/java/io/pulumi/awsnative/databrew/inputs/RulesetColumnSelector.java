@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Selector of a column from a dataset for profile job configuration. One selector includes either a column name or a regular expression
+ * 
+ */
 public final class RulesetColumnSelector extends io.pulumi.resources.InvokeArgs {
 
     public static final RulesetColumnSelector Empty = new RulesetColumnSelector();
 
+    /**
+     * The name of a column from a dataset
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class RulesetColumnSelector extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * A regular expression for selecting a column from a dataset
+     * 
+     */
     @InputImport(name="regex")
     private final @Nullable String regex;
 

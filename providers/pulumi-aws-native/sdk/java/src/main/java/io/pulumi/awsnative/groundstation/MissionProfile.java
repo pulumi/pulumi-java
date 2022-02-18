@@ -16,6 +16,12 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * AWS Ground Station Mission Profile resource type for CloudFormation.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:groundstation:MissionProfile")
 public class MissionProfile extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -24,15 +30,31 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Post-pass time needed after the contact.
+     * 
+     */
     @OutputExport(name="contactPostPassDurationSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> contactPostPassDurationSeconds;
 
+    /**
+     * @return Post-pass time needed after the contact.
+     * 
+     */
     public Output</* @Nullable */ Integer> getContactPostPassDurationSeconds() {
         return this.contactPostPassDurationSeconds;
     }
+    /**
+     * Pre-pass time needed before the contact.
+     * 
+     */
     @OutputExport(name="contactPrePassDurationSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> contactPrePassDurationSeconds;
 
+    /**
+     * @return Pre-pass time needed before the contact.
+     * 
+     */
     public Output</* @Nullable */ Integer> getContactPrePassDurationSeconds() {
         return this.contactPrePassDurationSeconds;
     }
@@ -42,15 +64,31 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
     public Output<List<MissionProfileDataflowEdge>> getDataflowEdges() {
         return this.dataflowEdges;
     }
+    /**
+     * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
+     * 
+     */
     @OutputExport(name="minimumViableContactDurationSeconds", type=Integer.class, parameters={})
     private Output<Integer> minimumViableContactDurationSeconds;
 
+    /**
+     * @return Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
+     * 
+     */
     public Output<Integer> getMinimumViableContactDurationSeconds() {
         return this.minimumViableContactDurationSeconds;
     }
+    /**
+     * A name used to identify a mission profile.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return A name used to identify a mission profile.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
@@ -73,6 +111,12 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
         return this.trackingConfigArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public MissionProfile(String name, MissionProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:groundstation:MissionProfile", name, args == null ? MissionProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -88,6 +132,14 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static MissionProfile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MissionProfile(name, id, options);
     }

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceMonthlyTransfer {
+    /**
+     * GbPerMonthAllocated of the Instance.
+     * 
+     */
     private final @Nullable String gbPerMonthAllocated;
 
     @OutputCustomType.Constructor({"gbPerMonthAllocated"})
@@ -18,6 +22,10 @@ public final class InstanceMonthlyTransfer {
         this.gbPerMonthAllocated = gbPerMonthAllocated;
     }
 
+    /**
+     * GbPerMonthAllocated of the Instance.
+     * 
+     */
     public Optional<String> getGbPerMonthAllocated() {
         return Optional.ofNullable(this.gbPerMonthAllocated);
     }

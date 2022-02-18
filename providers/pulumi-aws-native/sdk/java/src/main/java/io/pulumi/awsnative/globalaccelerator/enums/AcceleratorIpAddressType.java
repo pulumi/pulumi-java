@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * IP Address type.
+     * 
+     */
     @EnumType
     public enum AcceleratorIpAddressType {
         Ipv4("IPV4"),

@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourceAuroraParameters {
+    /**
+     * <p>Database.</p>
+     * 
+     */
     private final String database;
+    /**
+     * <p>Host.</p>
+     * 
+     */
     private final String host;
+    /**
+     * <p>Port.</p>
+     * 
+     */
     private final Double port;
 
     @OutputCustomType.Constructor({"database","host","port"})
@@ -24,12 +36,24 @@ public final class DataSourceAuroraParameters {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * <p>Database.</p>
+     * 
+     */
     public String getDatabase() {
         return this.database;
     }
+    /**
+     * <p>Host.</p>
+     * 
+     */
     public String getHost() {
         return this.host;
     }
+    /**
+     * <p>Port.</p>
+     * 
+     */
     public Double getPort() {
         return this.port;
     }

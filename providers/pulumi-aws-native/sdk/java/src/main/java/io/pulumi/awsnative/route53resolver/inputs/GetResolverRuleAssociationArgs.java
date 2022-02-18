@@ -12,6 +12,10 @@ public final class GetResolverRuleAssociationArgs extends io.pulumi.resources.In
 
     public static final GetResolverRuleAssociationArgs Empty = new GetResolverRuleAssociationArgs();
 
+    /**
+     * Primary Identifier for Resolver Rule Association
+     * 
+     */
     @InputImport(name="resolverRuleAssociationId", required=true)
     private final String resolverRuleAssociationId;
 

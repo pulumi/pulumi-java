@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFlowLogResult {
+    /**
+     * The Flow Log ID
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The tags to apply to the flow logs.
+     * 
+     */
     private final @Nullable List<FlowLogTag> tags;
 
     @OutputCustomType.Constructor({"id","tags"})
@@ -24,9 +32,17 @@ public final class GetFlowLogResult {
         this.tags = tags;
     }
 
+    /**
+     * The Flow Log ID
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The tags to apply to the flow logs.
+     * 
+     */
     public List<FlowLogTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

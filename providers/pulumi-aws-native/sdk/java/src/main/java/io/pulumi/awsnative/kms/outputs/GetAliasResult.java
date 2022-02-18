@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAliasResult {
+    /**
+     * Identifies the CMK to which the alias refers. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. You cannot specify another alias. For help finding the key ID and ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+     * 
+     */
     private final @Nullable String targetKeyId;
 
     @OutputCustomType.Constructor({"targetKeyId"})
@@ -18,6 +22,10 @@ public final class GetAliasResult {
         this.targetKeyId = targetKeyId;
     }
 
+    /**
+     * Identifies the CMK to which the alias refers. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. You cannot specify another alias. For help finding the key ID and ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+     * 
+     */
     public Optional<String> getTargetKeyId() {
         return Optional.ofNullable(this.targetKeyId);
     }

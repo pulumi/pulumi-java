@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The method's authorization type.
+     * 
+     */
     @EnumType
     public enum MethodAuthorizationType {
         None("NONE"),

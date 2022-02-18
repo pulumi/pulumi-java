@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A custom SageMaker image.
+ * 
+ */
 public final class DomainCustomImage extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainCustomImage Empty = new DomainCustomImage();
 
+    /**
+     * The Name of the AppImageConfig.
+     * 
+     */
     @InputImport(name="appImageConfigName", required=true)
     private final String appImageConfigName;
 
@@ -22,6 +30,10 @@ public final class DomainCustomImage extends io.pulumi.resources.InvokeArgs {
         return this.appImageConfigName;
     }
 
+    /**
+     * The name of the CustomImage. Must be unique to your account.
+     * 
+     */
     @InputImport(name="imageName", required=true)
     private final String imageName;
 
@@ -29,6 +41,10 @@ public final class DomainCustomImage extends io.pulumi.resources.InvokeArgs {
         return this.imageName;
     }
 
+    /**
+     * The version number of the CustomImage.
+     * 
+     */
     @InputImport(name="imageVersionNumber")
     private final @Nullable Integer imageVersionNumber;
 

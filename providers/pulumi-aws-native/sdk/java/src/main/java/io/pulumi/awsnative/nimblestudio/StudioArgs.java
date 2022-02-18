@@ -16,6 +16,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StudioArgs Empty = new StudioArgs();
 
+    /**
+     * <p>The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>
+     * 
+     */
     @InputImport(name="adminRoleArn", required=true)
     private final Input<String> adminRoleArn;
 
@@ -23,6 +27,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
         return this.adminRoleArn;
     }
 
+    /**
+     * <p>A friendly name for the studio.</p>
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -37,6 +45,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
         return this.studioEncryptionConfiguration == null ? Input.empty() : this.studioEncryptionConfiguration;
     }
 
+    /**
+     * <p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>
+     * 
+     */
     @InputImport(name="studioName")
     private final @Nullable Input<String> studioName;
 
@@ -51,6 +63,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * <p>The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>
+     * 
+     */
     @InputImport(name="userRoleArn", required=true)
     private final Input<String> userRoleArn;
 

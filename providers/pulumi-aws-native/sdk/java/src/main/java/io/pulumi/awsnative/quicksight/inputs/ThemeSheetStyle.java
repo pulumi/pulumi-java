@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The theme display options for sheets. </p>
+ * 
+ */
 public final class ThemeSheetStyle extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeSheetStyle Empty = new ThemeSheetStyle();

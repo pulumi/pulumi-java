@@ -16,23 +16,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Lightsail::Database
+ * 
+ */
 @ResourceType(type="aws-native:lightsail:Database")
 public class Database extends io.pulumi.resources.CustomResource {
+    /**
+     * The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format.
+     * 
+     */
     @OutputExport(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
+    /**
+     * @return The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format.
+     * 
+     */
     public Output</* @Nullable */ String> getAvailabilityZone() {
         return this.availabilityZone;
     }
+    /**
+     * When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
+     * 
+     */
     @OutputExport(name="backupRetention", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> backupRetention;
 
+    /**
+     * @return When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getBackupRetention() {
         return this.backupRetention;
     }
+    /**
+     * Indicates the certificate that needs to be associated with the database.
+     * 
+     */
     @OutputExport(name="caCertificateIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> caCertificateIdentifier;
 
+    /**
+     * @return Indicates the certificate that needs to be associated with the database.
+     * 
+     */
     public Output</* @Nullable */ String> getCaCertificateIdentifier() {
         return this.caCertificateIdentifier;
     }
@@ -42,79 +70,181 @@ public class Database extends io.pulumi.resources.CustomResource {
     public Output<String> getDatabaseArn() {
         return this.databaseArn;
     }
+    /**
+     * The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn't specified, no database is created in the database resource. For PostgreSQL, if this parameter isn't specified, a database named postgres is created in the database resource.
+     * 
+     */
     @OutputExport(name="masterDatabaseName", type=String.class, parameters={})
     private Output<String> masterDatabaseName;
 
+    /**
+     * @return The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn't specified, no database is created in the database resource. For PostgreSQL, if this parameter isn't specified, a database named postgres is created in the database resource.
+     * 
+     */
     public Output<String> getMasterDatabaseName() {
         return this.masterDatabaseName;
     }
+    /**
+     * The password for the master user. The password can include any printable ASCII character except "/", """, or "@". It cannot contain spaces.
+     * 
+     */
     @OutputExport(name="masterUserPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> masterUserPassword;
 
+    /**
+     * @return The password for the master user. The password can include any printable ASCII character except "/", """, or "@". It cannot contain spaces.
+     * 
+     */
     public Output</* @Nullable */ String> getMasterUserPassword() {
         return this.masterUserPassword;
     }
+    /**
+     * The name for the master user.
+     * 
+     */
     @OutputExport(name="masterUsername", type=String.class, parameters={})
     private Output<String> masterUsername;
 
+    /**
+     * @return The name for the master user.
+     * 
+     */
     public Output<String> getMasterUsername() {
         return this.masterUsername;
     }
+    /**
+     * The daily time range during which automated backups are created for your new database if automated backups are enabled.
+     * 
+     */
     @OutputExport(name="preferredBackupWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredBackupWindow;
 
+    /**
+     * @return The daily time range during which automated backups are created for your new database if automated backups are enabled.
+     * 
+     */
     public Output</* @Nullable */ String> getPreferredBackupWindow() {
         return this.preferredBackupWindow;
     }
+    /**
+     * The weekly time range during which system maintenance can occur on your new database.
+     * 
+     */
     @OutputExport(name="preferredMaintenanceWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredMaintenanceWindow;
 
+    /**
+     * @return The weekly time range during which system maintenance can occur on your new database.
+     * 
+     */
     public Output</* @Nullable */ String> getPreferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
+    /**
+     * Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
+     * 
+     */
     @OutputExport(name="publiclyAccessible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publiclyAccessible;
 
+    /**
+     * @return Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getPubliclyAccessible() {
         return this.publiclyAccessible;
     }
+    /**
+     * The blueprint ID for your new database. A blueprint describes the major engine version of a database.
+     * 
+     */
     @OutputExport(name="relationalDatabaseBlueprintId", type=String.class, parameters={})
     private Output<String> relationalDatabaseBlueprintId;
 
+    /**
+     * @return The blueprint ID for your new database. A blueprint describes the major engine version of a database.
+     * 
+     */
     public Output<String> getRelationalDatabaseBlueprintId() {
         return this.relationalDatabaseBlueprintId;
     }
+    /**
+     * The bundle ID for your new database. A bundle describes the performance specifications for your database.
+     * 
+     */
     @OutputExport(name="relationalDatabaseBundleId", type=String.class, parameters={})
     private Output<String> relationalDatabaseBundleId;
 
+    /**
+     * @return The bundle ID for your new database. A bundle describes the performance specifications for your database.
+     * 
+     */
     public Output<String> getRelationalDatabaseBundleId() {
         return this.relationalDatabaseBundleId;
     }
+    /**
+     * The name to use for your new Lightsail database resource.
+     * 
+     */
     @OutputExport(name="relationalDatabaseName", type=String.class, parameters={})
     private Output<String> relationalDatabaseName;
 
+    /**
+     * @return The name to use for your new Lightsail database resource.
+     * 
+     */
     public Output<String> getRelationalDatabaseName() {
         return this.relationalDatabaseName;
     }
+    /**
+     * Update one or more parameters of the relational database.
+     * 
+     */
     @OutputExport(name="relationalDatabaseParameters", type=List.class, parameters={DatabaseRelationalDatabaseParameter.class})
     private Output</* @Nullable */ List<DatabaseRelationalDatabaseParameter>> relationalDatabaseParameters;
 
+    /**
+     * @return Update one or more parameters of the relational database.
+     * 
+     */
     public Output</* @Nullable */ List<DatabaseRelationalDatabaseParameter>> getRelationalDatabaseParameters() {
         return this.relationalDatabaseParameters;
     }
+    /**
+     * When true, the master user password is changed to a new strong password generated by Lightsail. Use the get relational database master user password operation to get the new password.
+     * 
+     */
     @OutputExport(name="rotateMasterUserPassword", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rotateMasterUserPassword;
 
+    /**
+     * @return When true, the master user password is changed to a new strong password generated by Lightsail. Use the get relational database master user password operation to get the new password.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getRotateMasterUserPassword() {
         return this.rotateMasterUserPassword;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DatabaseTag.class})
     private Output</* @Nullable */ List<DatabaseTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<DatabaseTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lightsail:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -130,6 +260,14 @@ public class Database extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Database get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Database(name, id, options);
     }

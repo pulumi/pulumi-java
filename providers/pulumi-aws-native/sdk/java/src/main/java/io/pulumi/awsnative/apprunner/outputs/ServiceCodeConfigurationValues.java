@@ -14,10 +14,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceCodeConfigurationValues {
+    /**
+     * Build Command
+     * 
+     */
     private final @Nullable String buildCommand;
+    /**
+     * Port
+     * 
+     */
     private final @Nullable String port;
+    /**
+     * Runtime
+     * 
+     */
     private final ServiceCodeConfigurationValuesRuntime runtime;
     private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
+    /**
+     * Start Command
+     * 
+     */
     private final @Nullable String startCommand;
 
     @OutputCustomType.Constructor({"buildCommand","port","runtime","runtimeEnvironmentVariables","startCommand"})
@@ -34,18 +50,34 @@ public final class ServiceCodeConfigurationValues {
         this.startCommand = startCommand;
     }
 
+    /**
+     * Build Command
+     * 
+     */
     public Optional<String> getBuildCommand() {
         return Optional.ofNullable(this.buildCommand);
     }
+    /**
+     * Port
+     * 
+     */
     public Optional<String> getPort() {
         return Optional.ofNullable(this.port);
     }
+    /**
+     * Runtime
+     * 
+     */
     public ServiceCodeConfigurationValuesRuntime getRuntime() {
         return this.runtime;
     }
     public List<ServiceKeyValuePair> getRuntimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
     }
+    /**
+     * Start Command
+     * 
+     */
     public Optional<String> getStartCommand() {
         return Optional.ofNullable(this.startCommand);
     }

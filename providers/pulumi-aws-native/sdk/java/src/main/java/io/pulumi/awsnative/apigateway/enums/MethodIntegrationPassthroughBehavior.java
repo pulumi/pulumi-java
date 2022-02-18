@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates when API Gateway passes requests to the targeted backend.
+     * 
+     */
     @EnumType
     public enum MethodIntegrationPassthroughBehavior {
         WhenNoMatch("WHEN_NO_MATCH"),

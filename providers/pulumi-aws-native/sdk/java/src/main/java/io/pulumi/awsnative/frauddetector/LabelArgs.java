@@ -16,6 +16,10 @@ public final class LabelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabelArgs Empty = new LabelArgs();
 
+    /**
+     * The label description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class LabelArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the label.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class LabelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this label.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<LabelTagArgs>> tags;
 

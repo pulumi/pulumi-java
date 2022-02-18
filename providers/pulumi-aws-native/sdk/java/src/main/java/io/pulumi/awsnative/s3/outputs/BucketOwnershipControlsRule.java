@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketOwnershipControlsRule {
+    /**
+     * Specifies an object ownership rule.
+     * 
+     */
     private final @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
 
     @OutputCustomType.Constructor({"objectOwnership"})
@@ -18,6 +22,10 @@ public final class BucketOwnershipControlsRule {
         this.objectOwnership = objectOwnership;
     }
 
+    /**
+     * Specifies an object ownership rule.
+     * 
+     */
     public Optional<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
         return Optional.ofNullable(this.objectOwnership);
     }

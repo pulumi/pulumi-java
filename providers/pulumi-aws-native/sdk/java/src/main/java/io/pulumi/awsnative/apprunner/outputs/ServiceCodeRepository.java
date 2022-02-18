@@ -14,6 +14,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ServiceCodeRepository {
     private final @Nullable ServiceCodeConfiguration codeConfiguration;
+    /**
+     * Repository Url
+     * 
+     */
     private final String repositoryUrl;
     private final ServiceSourceCodeVersion sourceCodeVersion;
 
@@ -30,6 +34,10 @@ public final class ServiceCodeRepository {
     public Optional<ServiceCodeConfiguration> getCodeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
+    /**
+     * Repository Url
+     * 
+     */
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }

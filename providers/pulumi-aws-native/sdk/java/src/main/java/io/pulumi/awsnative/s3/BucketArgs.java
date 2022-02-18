@@ -34,6 +34,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketArgs Empty = new BucketArgs();
 
+    /**
+     * Configuration for the transfer acceleration state.
+     * 
+     */
     @InputImport(name="accelerateConfiguration")
     private final @Nullable Input<BucketAccelerateConfigurationArgs> accelerateConfiguration;
 
@@ -41,6 +45,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.accelerateConfiguration == null ? Input.empty() : this.accelerateConfiguration;
     }
 
+    /**
+     * A canned access control list (ACL) that grants predefined permissions to the bucket.
+     * 
+     */
     @InputImport(name="accessControl")
     private final @Nullable Input<BucketAccessControl> accessControl;
 
@@ -48,6 +56,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessControl == null ? Input.empty() : this.accessControl;
     }
 
+    /**
+     * The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
+     * 
+     */
     @InputImport(name="analyticsConfigurations")
     private final @Nullable Input<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations;
 
@@ -62,6 +74,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucketEncryption == null ? Input.empty() : this.bucketEncryption;
     }
 
+    /**
+     * A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
+     * 
+     */
     @InputImport(name="bucketName")
     private final @Nullable Input<String> bucketName;
 
@@ -69,6 +85,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
+    /**
+     * Rules that define cross-origin resource sharing of objects in this bucket.
+     * 
+     */
     @InputImport(name="corsConfiguration")
     private final @Nullable Input<BucketCorsConfigurationArgs> corsConfiguration;
 
@@ -76,6 +96,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.corsConfiguration == null ? Input.empty() : this.corsConfiguration;
     }
 
+    /**
+     * Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
+     * 
+     */
     @InputImport(name="intelligentTieringConfigurations")
     private final @Nullable Input<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations;
 
@@ -83,6 +107,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.intelligentTieringConfigurations == null ? Input.empty() : this.intelligentTieringConfigurations;
     }
 
+    /**
+     * The inventory configuration for an Amazon S3 bucket.
+     * 
+     */
     @InputImport(name="inventoryConfigurations")
     private final @Nullable Input<List<BucketInventoryConfigurationArgs>> inventoryConfigurations;
 
@@ -90,6 +118,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.inventoryConfigurations == null ? Input.empty() : this.inventoryConfigurations;
     }
 
+    /**
+     * Rules that define how Amazon S3 manages objects during their lifetime.
+     * 
+     */
     @InputImport(name="lifecycleConfiguration")
     private final @Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
@@ -97,6 +129,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.lifecycleConfiguration == null ? Input.empty() : this.lifecycleConfiguration;
     }
 
+    /**
+     * Settings that define where logs are stored.
+     * 
+     */
     @InputImport(name="loggingConfiguration")
     private final @Nullable Input<BucketLoggingConfigurationArgs> loggingConfiguration;
 
@@ -104,6 +140,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
     }
 
+    /**
+     * Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
+     * 
+     */
     @InputImport(name="metricsConfigurations")
     private final @Nullable Input<List<BucketMetricsConfigurationArgs>> metricsConfigurations;
 
@@ -111,6 +151,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.metricsConfigurations == null ? Input.empty() : this.metricsConfigurations;
     }
 
+    /**
+     * Configuration that defines how Amazon S3 handles bucket notifications.
+     * 
+     */
     @InputImport(name="notificationConfiguration")
     private final @Nullable Input<BucketNotificationConfigurationArgs> notificationConfiguration;
 
@@ -118,6 +162,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationConfiguration == null ? Input.empty() : this.notificationConfiguration;
     }
 
+    /**
+     * Places an Object Lock configuration on the specified bucket.
+     * 
+     */
     @InputImport(name="objectLockConfiguration")
     private final @Nullable Input<BucketObjectLockConfigurationArgs> objectLockConfiguration;
 
@@ -125,6 +173,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectLockConfiguration == null ? Input.empty() : this.objectLockConfiguration;
     }
 
+    /**
+     * Indicates whether this bucket has an Object Lock configuration enabled.
+     * 
+     */
     @InputImport(name="objectLockEnabled")
     private final @Nullable Input<Boolean> objectLockEnabled;
 
@@ -132,6 +184,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectLockEnabled == null ? Input.empty() : this.objectLockEnabled;
     }
 
+    /**
+     * Specifies the container element for object ownership rules.
+     * 
+     */
     @InputImport(name="ownershipControls")
     private final @Nullable Input<BucketOwnershipControlsArgs> ownershipControls;
 
@@ -146,6 +202,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicAccessBlockConfiguration == null ? Input.empty() : this.publicAccessBlockConfiguration;
     }
 
+    /**
+     * Configuration for replicating objects in an S3 bucket.
+     * 
+     */
     @InputImport(name="replicationConfiguration")
     private final @Nullable Input<BucketReplicationConfigurationArgs> replicationConfiguration;
 
@@ -153,6 +213,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicationConfiguration == null ? Input.empty() : this.replicationConfiguration;
     }
 
+    /**
+     * An arbitrary set of tags (key-value pairs) for this S3 bucket.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<BucketTagArgs>> tags;
 

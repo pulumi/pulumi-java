@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MetricStreamFilter {
+    /**
+     * Only metrics with Namespace matching this value will be streamed.
+     * 
+     */
     private final String namespace;
 
     @OutputCustomType.Constructor({"namespace"})
@@ -16,6 +20,10 @@ public final class MetricStreamFilter {
         this.namespace = Objects.requireNonNull(namespace);
     }
 
+    /**
+     * Only metrics with Namespace matching this value will be streamed.
+     * 
+     */
     public String getNamespace() {
         return this.namespace;
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Use CLOUDFRONT for CloudFront WebACL, use REGIONAL for Application Load Balancer and API Gateway.
+     * 
+     */
     @EnumType
     public enum WebACLScope {
         Cloudfront("CLOUDFRONT"),

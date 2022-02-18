@@ -17,17 +17,57 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDiskResult {
+    /**
+     * An array of objects representing the add-ons to enable for the new instance.
+     * 
+     */
     private final @Nullable List<DiskAddOn> addOns;
+    /**
+     * Name of the attached Lightsail Instance
+     * 
+     */
     private final @Nullable String attachedTo;
+    /**
+     * Attachment State of the Lightsail disk
+     * 
+     */
     private final @Nullable String attachmentState;
     private final @Nullable String diskArn;
+    /**
+     * Iops of the Lightsail disk
+     * 
+     */
     private final @Nullable Integer iops;
+    /**
+     * Check is Disk is attached state
+     * 
+     */
     private final @Nullable Boolean isAttached;
     private final @Nullable DiskLocation location;
+    /**
+     * Path of the  attached Disk
+     * 
+     */
     private final @Nullable String path;
+    /**
+     * Resource type of Lightsail instance.
+     * 
+     */
     private final @Nullable String resourceType;
+    /**
+     * State of the Lightsail disk
+     * 
+     */
     private final @Nullable String state;
+    /**
+     * Support code to help identify any issues
+     * 
+     */
     private final @Nullable String supportCode;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<DiskTag> tags;
 
     @OutputCustomType.Constructor({"addOns","attachedTo","attachmentState","diskArn","iops","isAttached","location","path","resourceType","state","supportCode","tags"})
@@ -58,39 +98,79 @@ public final class GetDiskResult {
         this.tags = tags;
     }
 
+    /**
+     * An array of objects representing the add-ons to enable for the new instance.
+     * 
+     */
     public List<DiskAddOn> getAddOns() {
         return this.addOns == null ? List.of() : this.addOns;
     }
+    /**
+     * Name of the attached Lightsail Instance
+     * 
+     */
     public Optional<String> getAttachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
+    /**
+     * Attachment State of the Lightsail disk
+     * 
+     */
     public Optional<String> getAttachmentState() {
         return Optional.ofNullable(this.attachmentState);
     }
     public Optional<String> getDiskArn() {
         return Optional.ofNullable(this.diskArn);
     }
+    /**
+     * Iops of the Lightsail disk
+     * 
+     */
     public Optional<Integer> getIops() {
         return Optional.ofNullable(this.iops);
     }
+    /**
+     * Check is Disk is attached state
+     * 
+     */
     public Optional<Boolean> getIsAttached() {
         return Optional.ofNullable(this.isAttached);
     }
     public Optional<DiskLocation> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Path of the  attached Disk
+     * 
+     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+    /**
+     * Resource type of Lightsail instance.
+     * 
+     */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
+    /**
+     * State of the Lightsail disk
+     * 
+     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
+    /**
+     * Support code to help identify any issues
+     * 
+     */
     public Optional<String> getSupportCode() {
         return Optional.ofNullable(this.supportCode);
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<DiskTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

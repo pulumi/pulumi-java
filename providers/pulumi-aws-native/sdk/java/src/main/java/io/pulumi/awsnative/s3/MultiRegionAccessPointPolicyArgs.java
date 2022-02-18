@@ -14,6 +14,10 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
 
     public static final MultiRegionAccessPointPolicyArgs Empty = new MultiRegionAccessPointPolicyArgs();
 
+    /**
+     * The name of the Multi Region Access Point to apply policy
+     * 
+     */
     @InputImport(name="mrapName", required=true)
     private final Input<String> mrapName;
 
@@ -21,6 +25,10 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
         return this.mrapName;
     }
 
+    /**
+     * Policy document to apply to a Multi Region Access Point
+     * 
+     */
     @InputImport(name="policy", required=true)
     private final Input<Object> policy;
 

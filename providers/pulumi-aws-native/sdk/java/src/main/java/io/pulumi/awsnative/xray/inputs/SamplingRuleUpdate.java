@@ -17,6 +17,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
 
     public static final SamplingRuleUpdate Empty = new SamplingRuleUpdate();
 
+    /**
+     * Matches attributes derived from the request.
+     * 
+     */
     @InputImport(name="attributes")
     private final @Nullable Object attributes;
 
@@ -24,6 +28,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
     }
 
+    /**
+     * The percentage of matching requests to instrument, after the reservoir is exhausted.
+     * 
+     */
     @InputImport(name="fixedRate")
     private final @Nullable Double fixedRate;
 
@@ -31,6 +39,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.fixedRate == null ? Optional.empty() : Optional.ofNullable(this.fixedRate);
     }
 
+    /**
+     * Matches the HTTP method from a request URL.
+     * 
+     */
     @InputImport(name="hTTPMethod")
     private final @Nullable String hTTPMethod;
 
@@ -38,6 +50,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.hTTPMethod == null ? Optional.empty() : Optional.ofNullable(this.hTTPMethod);
     }
 
+    /**
+     * Matches the hostname from a request URL.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable String host;
 
@@ -45,6 +61,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
+    /**
+     * The priority of the sampling rule.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -52,6 +72,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
+    /**
+     * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+     * 
+     */
     @InputImport(name="reservoirSize")
     private final @Nullable Integer reservoirSize;
 
@@ -59,6 +83,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.reservoirSize == null ? Optional.empty() : Optional.ofNullable(this.reservoirSize);
     }
 
+    /**
+     * Matches the ARN of the AWS resource on which the service runs.
+     * 
+     */
     @InputImport(name="resourceARN")
     private final @Nullable String resourceARN;
 
@@ -80,6 +108,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.ruleName == null ? Optional.empty() : Optional.ofNullable(this.ruleName);
     }
 
+    /**
+     * Matches the name that the service uses to identify itself in segments.
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable String serviceName;
 
@@ -87,6 +119,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
     }
 
+    /**
+     * Matches the origin that the service uses to identify its type in segments.
+     * 
+     */
     @InputImport(name="serviceType")
     private final @Nullable String serviceType;
 
@@ -94,6 +130,10 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
         return this.serviceType == null ? Optional.empty() : Optional.ofNullable(this.serviceType);
     }
 
+    /**
+     * Matches the path from a request URL.
+     * 
+     */
     @InputImport(name="uRLPath")
     private final @Nullable String uRLPath;
 

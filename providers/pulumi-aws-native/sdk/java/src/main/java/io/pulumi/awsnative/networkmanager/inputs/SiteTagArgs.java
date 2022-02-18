@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A key-value pair to associate with a site resource.
+ * 
+ */
 public final class SiteTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SiteTagArgs Empty = new SiteTagArgs();

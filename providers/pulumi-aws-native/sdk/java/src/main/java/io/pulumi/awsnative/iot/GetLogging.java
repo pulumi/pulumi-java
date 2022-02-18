@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLogging {
+/**
+ * Logging Options enable you to configure your IoT V2 logging role and default logging level so that you can monitor progress events logs as it passes from your devices through Iot core service.
+ * 
+ */
     public static CompletableFuture<GetLoggingResult> invokeAsync(GetLoggingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getLogging", TypeShape.of(GetLoggingResult.class), args == null ? GetLoggingArgs.Empty : args, Utilities.withVersion(options));
     }

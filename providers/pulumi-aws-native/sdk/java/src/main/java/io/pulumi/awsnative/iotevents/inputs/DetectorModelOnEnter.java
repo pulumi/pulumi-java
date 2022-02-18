@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * When entering this state, perform these `actions` if the `condition` is `TRUE`.
+ * 
+ */
 public final class DetectorModelOnEnter extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelOnEnter Empty = new DetectorModelOnEnter();
 
+    /**
+     * Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
+     * 
+     */
     @InputImport(name="events")
     private final @Nullable List<DetectorModelEvent> events;
 

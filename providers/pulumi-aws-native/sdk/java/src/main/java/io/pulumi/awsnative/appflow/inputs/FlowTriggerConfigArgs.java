@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Trigger settings of the flow.
+ * 
+ */
 public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowTriggerConfigArgs Empty = new FlowTriggerConfigArgs();
 
+    /**
+     * Details required based on the type of trigger
+     * 
+     */
     @InputImport(name="triggerProperties")
     private final @Nullable Input<FlowScheduledTriggerPropertiesArgs> triggerProperties;
 
@@ -22,6 +30,10 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
         return this.triggerProperties == null ? Input.empty() : this.triggerProperties;
     }
 
+    /**
+     * Trigger type of the flow
+     * 
+     */
     @InputImport(name="triggerType", required=true)
     private final Input<FlowTriggerType> triggerType;
 

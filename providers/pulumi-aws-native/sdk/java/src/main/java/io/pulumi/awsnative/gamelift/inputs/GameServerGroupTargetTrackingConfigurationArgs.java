@@ -9,6 +9,10 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * Settings for a target-based scaling policy applied to Auto Scaling group.
+ * 
+ */
 public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GameServerGroupTargetTrackingConfigurationArgs Empty = new GameServerGroupTargetTrackingConfigurationArgs();

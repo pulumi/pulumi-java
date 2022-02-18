@@ -19,6 +19,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProfilingGroupArgs Empty = new ProfilingGroupArgs();
 
+    /**
+     * The agent permissions attached to this profiling group.
+     * 
+     */
     @InputImport(name="agentPermissions")
     private final @Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions;
 
@@ -26,6 +30,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentPermissions == null ? Input.empty() : this.agentPermissions;
     }
 
+    /**
+     * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
+     * 
+     */
     @InputImport(name="anomalyDetectionNotificationConfiguration")
     private final @Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
 
@@ -33,6 +41,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.anomalyDetectionNotificationConfiguration == null ? Input.empty() : this.anomalyDetectionNotificationConfiguration;
     }
 
+    /**
+     * The compute platform of the profiling group.
+     * 
+     */
     @InputImport(name="computePlatform")
     private final @Nullable Input<ProfilingGroupComputePlatform> computePlatform;
 
@@ -40,6 +52,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.computePlatform == null ? Input.empty() : this.computePlatform;
     }
 
+    /**
+     * The name of the profiling group.
+     * 
+     */
     @InputImport(name="profilingGroupName")
     private final @Nullable Input<String> profilingGroupName;
 
@@ -47,6 +63,10 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.profilingGroupName == null ? Input.empty() : this.profilingGroupName;
     }
 
+    /**
+     * The tags associated with a profiling group.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ProfilingGroupTagArgs>> tags;
 

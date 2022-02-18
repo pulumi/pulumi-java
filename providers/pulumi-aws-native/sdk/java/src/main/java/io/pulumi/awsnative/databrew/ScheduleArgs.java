@@ -16,6 +16,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 
+    /**
+     * Schedule cron
+     * 
+     */
     @InputImport(name="cronExpression", required=true)
     private final Input<String> cronExpression;
 
@@ -30,6 +34,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobNames == null ? Input.empty() : this.jobNames;
     }
 
+    /**
+     * Schedule Name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

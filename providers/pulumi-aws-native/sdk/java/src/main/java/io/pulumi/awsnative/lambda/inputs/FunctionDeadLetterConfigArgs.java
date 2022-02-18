@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The dead-letter queue for failed asynchronous invocations.
+ * 
+ */
 public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionDeadLetterConfigArgs Empty = new FunctionDeadLetterConfigArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+     * 
+     */
     @InputImport(name="targetArn")
     private final @Nullable Input<String> targetArn;
 

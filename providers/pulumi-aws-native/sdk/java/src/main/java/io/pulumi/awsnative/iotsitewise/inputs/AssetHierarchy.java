@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A hierarchy specifies allowed parent/child asset relationships.
+ * 
+ */
 public final class AssetHierarchy extends io.pulumi.resources.InvokeArgs {
 
     public static final AssetHierarchy Empty = new AssetHierarchy();
 
+    /**
+     * The ID of the child asset to be associated.
+     * 
+     */
     @InputImport(name="childAssetId", required=true)
     private final String childAssetId;
 
@@ -19,6 +27,10 @@ public final class AssetHierarchy extends io.pulumi.resources.InvokeArgs {
         return this.childAssetId;
     }
 
+    /**
+     * The LogicalID of a hierarchy in the parent asset's model.
+     * 
+     */
     @InputImport(name="logicalId", required=true)
     private final String logicalId;
 

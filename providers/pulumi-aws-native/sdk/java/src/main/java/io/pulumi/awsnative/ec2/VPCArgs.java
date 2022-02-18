@@ -17,6 +17,10 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VPCArgs Empty = new VPCArgs();
 
+    /**
+     * The primary IPv4 CIDR block for the VPC.
+     * 
+     */
     @InputImport(name="cidrBlock", required=true)
     private final Input<String> cidrBlock;
 
@@ -24,6 +28,10 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
         return this.cidrBlock;
     }
 
+    /**
+     * Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
+     * 
+     */
     @InputImport(name="enableDnsHostnames")
     private final @Nullable Input<Boolean> enableDnsHostnames;
 
@@ -31,6 +39,10 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableDnsHostnames == null ? Input.empty() : this.enableDnsHostnames;
     }
 
+    /**
+     * Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
+     * 
+     */
     @InputImport(name="enableDnsSupport")
     private final @Nullable Input<Boolean> enableDnsSupport;
 
@@ -38,6 +50,16 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableDnsSupport == null ? Input.empty() : this.enableDnsSupport;
     }
 
+    /**
+     * The allowed tenancy of instances launched into the VPC.
+     * 
+     * "default": An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
+     * 
+     * "dedicated": An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
+     * 
+     * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
+     * 
+     */
     @InputImport(name="instanceTenancy")
     private final @Nullable Input<String> instanceTenancy;
 
@@ -45,6 +67,10 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceTenancy == null ? Input.empty() : this.instanceTenancy;
     }
 
+    /**
+     * The tags for the VPC.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<VPCTagArgs>> tags;
 

@@ -17,6 +17,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
+    /**
+     * Dataset name
+     * 
+     */
     @InputImport(name="datasetName", required=true)
     private final Input<String> datasetName;
 
@@ -24,6 +28,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetName;
     }
 
+    /**
+     * Project name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +39,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Recipe name
+     * 
+     */
     @InputImport(name="recipeName", required=true)
     private final Input<String> recipeName;
 
@@ -38,6 +50,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.recipeName;
     }
 
+    /**
+     * Role arn
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -45,6 +61,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * Sample
+     * 
+     */
     @InputImport(name="sample")
     private final @Nullable Input<ProjectSampleArgs> sample;
 

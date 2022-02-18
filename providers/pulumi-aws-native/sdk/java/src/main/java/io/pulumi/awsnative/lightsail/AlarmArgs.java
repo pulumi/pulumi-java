@@ -18,6 +18,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlarmArgs Empty = new AlarmArgs();
 
+    /**
+     * The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
+     * 
+     */
     @InputImport(name="alarmName")
     private final @Nullable Input<String> alarmName;
 
@@ -25,6 +29,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.alarmName == null ? Input.empty() : this.alarmName;
     }
 
+    /**
+     * The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
+     * 
+     */
     @InputImport(name="comparisonOperator", required=true)
     private final Input<String> comparisonOperator;
 
@@ -32,6 +40,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.comparisonOperator;
     }
 
+    /**
+     * The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
+     * 
+     */
     @InputImport(name="contactProtocols")
     private final @Nullable Input<List<String>> contactProtocols;
 
@@ -39,6 +51,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactProtocols == null ? Input.empty() : this.contactProtocols;
     }
 
+    /**
+     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
+     * 
+     */
     @InputImport(name="datapointsToAlarm")
     private final @Nullable Input<Integer> datapointsToAlarm;
 
@@ -46,6 +62,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.datapointsToAlarm == null ? Input.empty() : this.datapointsToAlarm;
     }
 
+    /**
+     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
+     * 
+     */
     @InputImport(name="evaluationPeriods", required=true)
     private final Input<Integer> evaluationPeriods;
 
@@ -53,6 +73,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.evaluationPeriods;
     }
 
+    /**
+     * The name of the metric to associate with the alarm.
+     * 
+     */
     @InputImport(name="metricName", required=true)
     private final Input<String> metricName;
 
@@ -60,6 +84,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.metricName;
     }
 
+    /**
+     * The validation status of the SSL/TLS certificate.
+     * 
+     */
     @InputImport(name="monitoredResourceName", required=true)
     private final Input<String> monitoredResourceName;
 
@@ -67,6 +95,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitoredResourceName;
     }
 
+    /**
+     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
+     * 
+     */
     @InputImport(name="notificationEnabled")
     private final @Nullable Input<Boolean> notificationEnabled;
 
@@ -74,6 +106,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationEnabled == null ? Input.empty() : this.notificationEnabled;
     }
 
+    /**
+     * The alarm states that trigger a notification.
+     * 
+     */
     @InputImport(name="notificationTriggers")
     private final @Nullable Input<List<String>> notificationTriggers;
 
@@ -81,6 +117,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationTriggers == null ? Input.empty() : this.notificationTriggers;
     }
 
+    /**
+     * The value against which the specified statistic is compared.
+     * 
+     */
     @InputImport(name="threshold", required=true)
     private final Input<Double> threshold;
 
@@ -88,6 +128,10 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.threshold;
     }
 
+    /**
+     * Sets how this alarm will handle missing data points.
+     * 
+     */
     @InputImport(name="treatMissingData")
     private final @Nullable Input<String> treatMissingData;
 

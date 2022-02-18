@@ -12,6 +12,10 @@ public final class GetRoleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRoleArgs Empty = new GetRoleArgs();
 
+    /**
+     * A name for the IAM role, up to 64 characters in length.
+     * 
+     */
     @InputImport(name="roleName", required=true)
     private final String roleName;
 

@@ -14,51 +14,119 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::Config::OrganizationConformancePack.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:configuration:OrganizationConformancePack")
 public class OrganizationConformancePack extends io.pulumi.resources.CustomResource {
+    /**
+     * A list of ConformancePackInputParameter objects.
+     * 
+     */
     @OutputExport(name="conformancePackInputParameters", type=List.class, parameters={OrganizationConformancePackConformancePackInputParameter.class})
     private Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> conformancePackInputParameters;
 
+    /**
+     * @return A list of ConformancePackInputParameter objects.
+     * 
+     */
     public Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> getConformancePackInputParameters() {
         return this.conformancePackInputParameters;
     }
+    /**
+     * AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     @OutputExport(name="deliveryS3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3Bucket;
 
+    /**
+     * @return AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     public Output</* @Nullable */ String> getDeliveryS3Bucket() {
         return this.deliveryS3Bucket;
     }
+    /**
+     * The prefix for the delivery S3 bucket.
+     * 
+     */
     @OutputExport(name="deliveryS3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3KeyPrefix;
 
+    /**
+     * @return The prefix for the delivery S3 bucket.
+     * 
+     */
     public Output</* @Nullable */ String> getDeliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix;
     }
+    /**
+     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * 
+     */
     @OutputExport(name="excludedAccounts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludedAccounts;
 
+    /**
+     * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getExcludedAccounts() {
         return this.excludedAccounts;
     }
+    /**
+     * The name of the organization conformance pack.
+     * 
+     */
     @OutputExport(name="organizationConformancePackName", type=String.class, parameters={})
     private Output<String> organizationConformancePackName;
 
+    /**
+     * @return The name of the organization conformance pack.
+     * 
+     */
     public Output<String> getOrganizationConformancePackName() {
         return this.organizationConformancePackName;
     }
+    /**
+     * A string containing full conformance pack template body.
+     * 
+     */
     @OutputExport(name="templateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateBody;
 
+    /**
+     * @return A string containing full conformance pack template body.
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateBody() {
         return this.templateBody;
     }
+    /**
+     * Location of file containing the template body.
+     * 
+     */
     @OutputExport(name="templateS3Uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateS3Uri;
 
+    /**
+     * @return Location of file containing the template body.
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateS3Uri() {
         return this.templateS3Uri;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public OrganizationConformancePack(String name, @Nullable OrganizationConformancePackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:configuration:OrganizationConformancePack", name, args == null ? OrganizationConformancePackArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +142,14 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static OrganizationConformancePack get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationConformancePack(name, id, options);
     }

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A addon associate with a resource.
+ * 
+ */
 public final class InstanceAddOn extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceAddOn Empty = new InstanceAddOn();
 
+    /**
+     * The add-on type
+     * 
+     */
     @InputImport(name="addOnType", required=true)
     private final String addOnType;
 
@@ -30,6 +38,10 @@ public final class InstanceAddOn extends io.pulumi.resources.InvokeArgs {
         return this.autoSnapshotAddOnRequest == null ? Optional.empty() : Optional.ofNullable(this.autoSnapshotAddOnRequest);
     }
 
+    /**
+     * Status of the Addon
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable InstanceAddOnStatus status;
 

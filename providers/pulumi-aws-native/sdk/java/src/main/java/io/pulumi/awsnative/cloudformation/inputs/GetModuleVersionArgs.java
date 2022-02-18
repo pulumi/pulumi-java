@@ -12,6 +12,10 @@ public final class GetModuleVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetModuleVersionArgs Empty = new GetModuleVersionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the module.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

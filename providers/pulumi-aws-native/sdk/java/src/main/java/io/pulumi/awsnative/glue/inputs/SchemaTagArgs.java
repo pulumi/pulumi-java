@@ -13,6 +13,10 @@ public final class SchemaTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaTagArgs Empty = new SchemaTagArgs();
 
+    /**
+     * A key to identify the tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +24,10 @@ public final class SchemaTagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
+    /**
+     * Corresponding tag value for the key.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

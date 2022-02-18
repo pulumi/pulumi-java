@@ -19,6 +19,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueueArgs Empty = new QueueArgs();
 
+    /**
+     * For first-in-first-out (FIFO) queues, specifies whether to enable content-based deduplication. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message.
+     * 
+     */
     @InputImport(name="contentBasedDeduplication")
     private final @Nullable Input<Boolean> contentBasedDeduplication;
 
@@ -26,6 +30,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentBasedDeduplication == null ? Input.empty() : this.contentBasedDeduplication;
     }
 
+    /**
+     * Specifies whether message deduplication occurs at the message group or queue level. Valid values are messageGroup and queue.
+     * 
+     */
     @InputImport(name="deduplicationScope")
     private final @Nullable Input<String> deduplicationScope;
 
@@ -33,6 +41,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.deduplicationScope == null ? Input.empty() : this.deduplicationScope;
     }
 
+    /**
+     * The time in seconds for which the delivery of all messages in the queue is delayed. You can specify an integer value of 0 to 900 (15 minutes). The default value is 0.
+     * 
+     */
     @InputImport(name="delaySeconds")
     private final @Nullable Input<Integer> delaySeconds;
 
@@ -40,6 +52,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.delaySeconds == null ? Input.empty() : this.delaySeconds;
     }
 
+    /**
+     * If set to true, creates a FIFO queue. If you don't specify this property, Amazon SQS creates a standard queue.
+     * 
+     */
     @InputImport(name="fifoQueue")
     private final @Nullable Input<Boolean> fifoQueue;
 
@@ -47,6 +63,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.fifoQueue == null ? Input.empty() : this.fifoQueue;
     }
 
+    /**
+     * Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are perQueue and perMessageGroupId. The perMessageGroupId value is allowed only when the value for DeduplicationScope is messageGroup.
+     * 
+     */
     @InputImport(name="fifoThroughputLimit")
     private final @Nullable Input<String> fifoThroughputLimit;
 
@@ -54,6 +74,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.fifoThroughputLimit == null ? Input.empty() : this.fifoThroughputLimit;
     }
 
+    /**
+     * The length of time in seconds for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. The value must be an integer between 60 (1 minute) and 86,400 (24 hours). The default is 300 (5 minutes).
+     * 
+     */
     @InputImport(name="kmsDataKeyReusePeriodSeconds")
     private final @Nullable Input<Integer> kmsDataKeyReusePeriodSeconds;
 
@@ -61,6 +85,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsDataKeyReusePeriodSeconds == null ? Input.empty() : this.kmsDataKeyReusePeriodSeconds;
     }
 
+    /**
+     * The ID of an AWS managed customer master key (CMK) for Amazon SQS or a custom CMK. To use the AWS managed CMK for Amazon SQS, specify the (default) alias alias/aws/sqs.
+     * 
+     */
     @InputImport(name="kmsMasterKeyId")
     private final @Nullable Input<String> kmsMasterKeyId;
 
@@ -68,6 +96,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsMasterKeyId == null ? Input.empty() : this.kmsMasterKeyId;
     }
 
+    /**
+     * The limit of how many bytes that a message can contain before Amazon SQS rejects it. You can specify an integer value from 1,024 bytes (1 KiB) to 262,144 bytes (256 KiB). The default value is 262,144 (256 KiB).
+     * 
+     */
     @InputImport(name="maximumMessageSize")
     private final @Nullable Input<Integer> maximumMessageSize;
 
@@ -75,6 +107,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.maximumMessageSize == null ? Input.empty() : this.maximumMessageSize;
     }
 
+    /**
+     * The number of seconds that Amazon SQS retains a message. You can specify an integer value from 60 seconds (1 minute) to 1,209,600 seconds (14 days). The default value is 345,600 seconds (4 days).
+     * 
+     */
     @InputImport(name="messageRetentionPeriod")
     private final @Nullable Input<Integer> messageRetentionPeriod;
 
@@ -82,6 +118,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.messageRetentionPeriod == null ? Input.empty() : this.messageRetentionPeriod;
     }
 
+    /**
+     * A name for the queue. To create a FIFO queue, the name of your FIFO queue must end with the .fifo suffix.
+     * 
+     */
     @InputImport(name="queueName")
     private final @Nullable Input<String> queueName;
 
@@ -89,6 +129,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.queueName == null ? Input.empty() : this.queueName;
     }
 
+    /**
+     * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
+     * 
+     */
     @InputImport(name="receiveMessageWaitTimeSeconds")
     private final @Nullable Input<Integer> receiveMessageWaitTimeSeconds;
 
@@ -96,6 +140,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.receiveMessageWaitTimeSeconds == null ? Input.empty() : this.receiveMessageWaitTimeSeconds;
     }
 
+    /**
+     * The string that includes the parameters for the permissions for the dead-letter queue redrive permission and which source queues can specify dead-letter queues as a JSON object.
+     * 
+     */
     @InputImport(name="redriveAllowPolicy")
     private final @Nullable Input<Object> redriveAllowPolicy;
 
@@ -103,6 +151,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.redriveAllowPolicy == null ? Input.empty() : this.redriveAllowPolicy;
     }
 
+    /**
+     * A string that includes the parameters for the dead-letter queue functionality (redrive policy) of the source queue.
+     * 
+     */
     @InputImport(name="redrivePolicy")
     private final @Nullable Input<Object> redrivePolicy;
 
@@ -110,6 +162,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.redrivePolicy == null ? Input.empty() : this.redrivePolicy;
     }
 
+    /**
+     * The tags that you attach to this queue.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<QueueTagArgs>> tags;
 
@@ -117,6 +173,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
+     * 
+     */
     @InputImport(name="visibilityTimeout")
     private final @Nullable Input<Integer> visibilityTimeout;
 

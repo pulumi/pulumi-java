@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FHIRDatastorePreloadDataConfig {
+    /**
+     * The type of preloaded data. Only Synthea preloaded data is supported.
+     * 
+     */
     private final FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType;
 
     @OutputCustomType.Constructor({"preloadDataType"})
@@ -16,6 +20,10 @@ public final class FHIRDatastorePreloadDataConfig {
         this.preloadDataType = Objects.requireNonNull(preloadDataType);
     }
 
+    /**
+     * The type of preloaded data. Only Synthea preloaded data is supported.
+     * 
+     */
     public FHIRDatastorePreloadDataConfigPreloadDataType getPreloadDataType() {
         return this.preloadDataType;
     }

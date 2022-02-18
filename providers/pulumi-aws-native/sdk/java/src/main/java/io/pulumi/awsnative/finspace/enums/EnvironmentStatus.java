@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * State of the Environment
+     * 
+     */
     @EnumType
     public enum EnvironmentStatus {
         CreateRequested("CREATE_REQUESTED"),

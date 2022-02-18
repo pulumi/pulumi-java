@@ -16,6 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies which Amazon S3 objects to replicate and where to store the replicas.
+ * 
+ */
 public final class BucketReplicationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketReplicationRuleArgs Empty = new BucketReplicationRuleArgs();
@@ -41,6 +45,10 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * A unique identifier for the rule.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -48,6 +56,10 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * An object key name prefix that identifies the object or objects to which the rule applies.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -69,6 +81,10 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
         return this.sourceSelectionCriteria == null ? Input.empty() : this.sourceSelectionCriteria;
     }
 
+    /**
+     * Specifies whether the rule is enabled.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<BucketReplicationRuleStatus> status;
 

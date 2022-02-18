@@ -12,6 +12,10 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
 
     public static final GetLoadBalancerTlsCertificateArgs Empty = new GetLoadBalancerTlsCertificateArgs();
 
+    /**
+     * The SSL/TLS certificate name.
+     * 
+     */
     @InputImport(name="certificateName", required=true)
     private final String certificateName;
 
@@ -19,6 +23,10 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
         return this.certificateName;
     }
 
+    /**
+     * The name of your load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerName", required=true)
     private final String loadBalancerName;
 

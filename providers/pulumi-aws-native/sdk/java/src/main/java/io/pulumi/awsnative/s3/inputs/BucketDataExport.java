@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies how data related to the storage class analysis for an Amazon S3 bucket should be exported.
+ * 
+ */
 public final class BucketDataExport extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketDataExport Empty = new BucketDataExport();
@@ -20,6 +24,10 @@ public final class BucketDataExport extends io.pulumi.resources.InvokeArgs {
         return this.destination;
     }
 
+    /**
+     * The version of the output schema to use when exporting data.
+     * 
+     */
     @InputImport(name="outputSchemaVersion", required=true)
     private final String outputSchemaVersion;
 

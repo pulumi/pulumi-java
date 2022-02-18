@@ -12,6 +12,10 @@ public final class GetLocationHDFSArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLocationHDFSArgs Empty = new GetLocationHDFSArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the HDFS location.
+     * 
+     */
     @InputImport(name="locationArn", required=true)
     private final String locationArn;
 

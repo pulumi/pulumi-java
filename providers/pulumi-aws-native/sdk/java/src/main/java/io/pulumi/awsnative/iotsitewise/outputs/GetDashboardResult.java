@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDashboardResult {
+    /**
+     * The ARN of the dashboard.
+     * 
+     */
     private final @Nullable String dashboardArn;
+    /**
+     * The dashboard definition specified in a JSON literal.
+     * 
+     */
     private final @Nullable String dashboardDefinition;
+    /**
+     * A description for the dashboard.
+     * 
+     */
     private final @Nullable String dashboardDescription;
+    /**
+     * The ID of the dashboard.
+     * 
+     */
     private final @Nullable String dashboardId;
+    /**
+     * A friendly name for the dashboard.
+     * 
+     */
     private final @Nullable String dashboardName;
+    /**
+     * A list of key-value pairs that contain metadata for the dashboard.
+     * 
+     */
     private final @Nullable List<DashboardTag> tags;
 
     @OutputCustomType.Constructor({"dashboardArn","dashboardDefinition","dashboardDescription","dashboardId","dashboardName","tags"})
@@ -36,21 +60,45 @@ public final class GetDashboardResult {
         this.tags = tags;
     }
 
+    /**
+     * The ARN of the dashboard.
+     * 
+     */
     public Optional<String> getDashboardArn() {
         return Optional.ofNullable(this.dashboardArn);
     }
+    /**
+     * The dashboard definition specified in a JSON literal.
+     * 
+     */
     public Optional<String> getDashboardDefinition() {
         return Optional.ofNullable(this.dashboardDefinition);
     }
+    /**
+     * A description for the dashboard.
+     * 
+     */
     public Optional<String> getDashboardDescription() {
         return Optional.ofNullable(this.dashboardDescription);
     }
+    /**
+     * The ID of the dashboard.
+     * 
+     */
     public Optional<String> getDashboardId() {
         return Optional.ofNullable(this.dashboardId);
     }
+    /**
+     * A friendly name for the dashboard.
+     * 
+     */
     public Optional<String> getDashboardName() {
         return Optional.ofNullable(this.dashboardName);
     }
+    /**
+     * A list of key-value pairs that contain metadata for the dashboard.
+     * 
+     */
     public List<DashboardTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

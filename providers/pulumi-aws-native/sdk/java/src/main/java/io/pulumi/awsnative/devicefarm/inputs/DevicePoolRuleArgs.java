@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a condition for a device pool.
+ * 
+ */
 public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DevicePoolRuleArgs Empty = new DevicePoolRuleArgs();
 
+    /**
+     * The rule's stringified attribute.
+     * 
+     */
     @InputImport(name="attribute")
     private final @Nullable Input<DevicePoolRuleAttribute> attribute;
 
@@ -23,6 +31,10 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.attribute == null ? Input.empty() : this.attribute;
     }
 
+    /**
+     * Specifies how Device Farm compares the rule's attribute to the value.
+     * 
+     */
     @InputImport(name="operator")
     private final @Nullable Input<DevicePoolRuleOperator> operator;
 
@@ -30,6 +42,10 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.operator == null ? Input.empty() : this.operator;
     }
 
+    /**
+     * The rule's value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

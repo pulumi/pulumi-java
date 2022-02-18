@@ -21,6 +21,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StageArgs Empty = new StageArgs();
 
+    /**
+     * Specifies settings for logging access in this stage.
+     * 
+     */
     @InputImport(name="accessLogSetting")
     private final @Nullable Input<StageAccessLogSettingArgs> accessLogSetting;
 
@@ -28,6 +32,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessLogSetting == null ? Input.empty() : this.accessLogSetting;
     }
 
+    /**
+     * Indicates whether cache clustering is enabled for the stage.
+     * 
+     */
     @InputImport(name="cacheClusterEnabled")
     private final @Nullable Input<Boolean> cacheClusterEnabled;
 
@@ -35,6 +43,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.cacheClusterEnabled == null ? Input.empty() : this.cacheClusterEnabled;
     }
 
+    /**
+     * The stage's cache cluster size.
+     * 
+     */
     @InputImport(name="cacheClusterSize")
     private final @Nullable Input<String> cacheClusterSize;
 
@@ -42,6 +54,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.cacheClusterSize == null ? Input.empty() : this.cacheClusterSize;
     }
 
+    /**
+     * Specifies settings for the canary deployment in this stage.
+     * 
+     */
     @InputImport(name="canarySetting")
     private final @Nullable Input<StageCanarySettingArgs> canarySetting;
 
@@ -49,6 +65,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.canarySetting == null ? Input.empty() : this.canarySetting;
     }
 
+    /**
+     * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+     * 
+     */
     @InputImport(name="clientCertificateId")
     private final @Nullable Input<String> clientCertificateId;
 
@@ -56,6 +76,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
     }
 
+    /**
+     * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
+     * 
+     */
     @InputImport(name="deploymentId")
     private final @Nullable Input<String> deploymentId;
 
@@ -63,6 +87,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentId == null ? Input.empty() : this.deploymentId;
     }
 
+    /**
+     * A description of the stage.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -70,6 +98,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The version ID of the API documentation snapshot.
+     * 
+     */
     @InputImport(name="documentationVersion")
     private final @Nullable Input<String> documentationVersion;
 
@@ -77,6 +109,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.documentationVersion == null ? Input.empty() : this.documentationVersion;
     }
 
+    /**
+     * Settings for all methods in the stage.
+     * 
+     */
     @InputImport(name="methodSettings")
     private final @Nullable Input<List<StageMethodSettingArgs>> methodSettings;
 
@@ -84,6 +120,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.methodSettings == null ? Input.empty() : this.methodSettings;
     }
 
+    /**
+     * The ID of the RestApi resource that you're deploying with this stage.
+     * 
+     */
     @InputImport(name="restApiId", required=true)
     private final Input<String> restApiId;
 
@@ -91,6 +131,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.restApiId;
     }
 
+    /**
+     * The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
+     * 
+     */
     @InputImport(name="stageName")
     private final @Nullable Input<String> stageName;
 
@@ -98,6 +142,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.stageName == null ? Input.empty() : this.stageName;
     }
 
+    /**
+     * An array of arbitrary tags (key-value pairs) to associate with the stage.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<StageTagArgs>> tags;
 
@@ -105,6 +153,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Specifies whether active X-Ray tracing is enabled for this stage.
+     * 
+     */
     @InputImport(name="tracingEnabled")
     private final @Nullable Input<Boolean> tracingEnabled;
 
@@ -112,6 +164,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
         return this.tracingEnabled == null ? Input.empty() : this.tracingEnabled;
     }
 
+    /**
+     * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
+     * 
+     */
     @InputImport(name="variables")
     private final @Nullable Input<Object> variables;
 

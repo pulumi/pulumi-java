@@ -12,6 +12,10 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
 @ResourceType(type="aws-native:signer:ProfilePermission")
 public class ProfilePermission extends io.pulumi.resources.CustomResource {
     @OutputExport(name="action", type=String.class, parameters={})
@@ -45,6 +49,12 @@ public class ProfilePermission extends io.pulumi.resources.CustomResource {
         return this.statementId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ProfilePermission(String name, ProfilePermissionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:signer:ProfilePermission", name, args == null ? ProfilePermissionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +70,14 @@ public class ProfilePermission extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ProfilePermission get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProfilePermission(name, id, options);
     }

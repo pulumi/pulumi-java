@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The asset property's definition, alias, and notification state.
+ * 
+ */
 public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
 
     public static final AssetProperty Empty = new AssetProperty();
 
+    /**
+     * The property alias that identifies the property.
+     * 
+     */
     @InputImport(name="alias")
     private final @Nullable String alias;
 
@@ -22,6 +30,10 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
         return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
     }
 
+    /**
+     * Customer provided ID for property.
+     * 
+     */
     @InputImport(name="logicalId", required=true)
     private final String logicalId;
 
@@ -29,6 +41,10 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
         return this.logicalId;
     }
 
+    /**
+     * The MQTT notification state (ENABLED or DISABLED) for this asset property.
+     * 
+     */
     @InputImport(name="notificationState")
     private final @Nullable AssetPropertyNotificationState notificationState;
 

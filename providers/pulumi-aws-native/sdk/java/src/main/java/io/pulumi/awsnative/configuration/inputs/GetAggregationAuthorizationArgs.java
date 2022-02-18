@@ -12,6 +12,10 @@ public final class GetAggregationAuthorizationArgs extends io.pulumi.resources.I
 
     public static final GetAggregationAuthorizationArgs Empty = new GetAggregationAuthorizationArgs();
 
+    /**
+     * The ARN of the AggregationAuthorization.
+     * 
+     */
     @InputImport(name="aggregationAuthorizationArn", required=true)
     private final String aggregationAuthorizationArn;
 

@@ -14,6 +14,10 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
 
     public static final ConnectorProfileConnectorOAuthRequestArgs Empty = new ConnectorProfileConnectorOAuthRequestArgs();
 
+    /**
+     * The code provided by the connector when it has been authenticated via the connected app.
+     * 
+     */
     @InputImport(name="authCode")
     private final @Nullable Input<String> authCode;
 
@@ -21,6 +25,11 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
         return this.authCode == null ? Input.empty() : this.authCode;
     }
 
+    /**
+     * The URL to which the authentication server redirects the browser after authorization has been
+     * granted.
+     * 
+     */
     @InputImport(name="redirectUri")
     private final @Nullable Input<String> redirectUri;
 

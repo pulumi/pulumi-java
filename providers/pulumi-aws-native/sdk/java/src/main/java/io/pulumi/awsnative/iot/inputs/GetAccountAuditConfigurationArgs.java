@@ -12,6 +12,10 @@ public final class GetAccountAuditConfigurationArgs extends io.pulumi.resources.
 
     public static final GetAccountAuditConfigurationArgs Empty = new GetAccountAuditConfigurationArgs();
 
+    /**
+     * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final String accountId;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabel {
+/**
+ * An label for fraud detector.
+ * 
+ */
     public static CompletableFuture<GetLabelResult> invokeAsync(GetLabelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getLabel", TypeShape.of(GetLabelResult.class), args == null ? GetLabelArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModuleDefaultVersion {
+/**
+ * A module that has been registered in the CloudFormation registry as the default version
+ * 
+ */
     public static CompletableFuture<GetModuleDefaultVersionResult> invokeAsync(GetModuleDefaultVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getModuleDefaultVersion", TypeShape.of(GetModuleDefaultVersionResult.class), args == null ? GetModuleDefaultVersionArgs.Empty : args, Utilities.withVersion(options));
     }

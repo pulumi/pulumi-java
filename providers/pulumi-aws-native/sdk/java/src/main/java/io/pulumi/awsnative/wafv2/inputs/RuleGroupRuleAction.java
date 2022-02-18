@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Action taken when Rule matches its condition.
+ * 
+ */
 public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupRuleAction Empty = new RuleGroupRuleAction();
 
+    /**
+     * Allow traffic towards application.
+     * 
+     */
     @InputImport(name="allow")
     private final @Nullable RuleGroupRuleActionAllowProperties allow;
 
@@ -24,6 +32,10 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
         return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
     }
 
+    /**
+     * Block traffic towards application.
+     * 
+     */
     @InputImport(name="block")
     private final @Nullable RuleGroupRuleActionBlockProperties block;
 
@@ -31,6 +43,10 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
         return this.block == null ? Optional.empty() : Optional.ofNullable(this.block);
     }
 
+    /**
+     * Checks valid token exists with request.
+     * 
+     */
     @InputImport(name="captcha")
     private final @Nullable RuleGroupRuleActionCaptchaProperties captcha;
 
@@ -38,6 +54,10 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
         return this.captcha == null ? Optional.empty() : Optional.ofNullable(this.captcha);
     }
 
+    /**
+     * Count traffic towards application.
+     * 
+     */
     @InputImport(name="count")
     private final @Nullable RuleGroupRuleActionCountProperties count;
 

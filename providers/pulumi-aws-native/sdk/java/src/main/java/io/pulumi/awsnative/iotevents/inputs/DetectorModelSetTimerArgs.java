@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information needed to set the timer.
+ * 
+ */
 public final class DetectorModelSetTimerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelSetTimerArgs Empty = new DetectorModelSetTimerArgs();
 
+    /**
+     * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.<variable-name>`), and input values (`$input.<input-name>.<path-to-datum>`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+     * 
+     */
     @InputImport(name="durationExpression")
     private final @Nullable Input<String> durationExpression;
 
@@ -22,6 +30,10 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
         return this.durationExpression == null ? Input.empty() : this.durationExpression;
     }
 
+    /**
+     * The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
+     * 
+     */
     @InputImport(name="seconds")
     private final @Nullable Input<Integer> seconds;
 
@@ -29,6 +41,10 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
         return this.seconds == null ? Input.empty() : this.seconds;
     }
 
+    /**
+     * The name of the timer.
+     * 
+     */
     @InputImport(name="timerName", required=true)
     private final Input<String> timerName;
 

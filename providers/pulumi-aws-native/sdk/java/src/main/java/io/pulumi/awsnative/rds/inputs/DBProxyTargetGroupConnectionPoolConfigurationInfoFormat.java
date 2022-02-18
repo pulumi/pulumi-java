@@ -16,6 +16,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
 
     public static final DBProxyTargetGroupConnectionPoolConfigurationInfoFormat Empty = new DBProxyTargetGroupConnectionPoolConfigurationInfoFormat();
 
+    /**
+     * The number of seconds for a proxy to wait for a connection to become available in the connection pool.
+     * 
+     */
     @InputImport(name="connectionBorrowTimeout")
     private final @Nullable Integer connectionBorrowTimeout;
 
@@ -23,6 +27,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
         return this.connectionBorrowTimeout == null ? Optional.empty() : Optional.ofNullable(this.connectionBorrowTimeout);
     }
 
+    /**
+     * One or more SQL statements for the proxy to run when opening each new database connection.
+     * 
+     */
     @InputImport(name="initQuery")
     private final @Nullable String initQuery;
 
@@ -30,6 +38,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
         return this.initQuery == null ? Optional.empty() : Optional.ofNullable(this.initQuery);
     }
 
+    /**
+     * The maximum size of the connection pool for each target in a target group.
+     * 
+     */
     @InputImport(name="maxConnectionsPercent")
     private final @Nullable Integer maxConnectionsPercent;
 
@@ -37,6 +49,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
         return this.maxConnectionsPercent == null ? Optional.empty() : Optional.ofNullable(this.maxConnectionsPercent);
     }
 
+    /**
+     * Controls how actively the proxy closes idle database connections in the connection pool.
+     * 
+     */
     @InputImport(name="maxIdleConnectionsPercent")
     private final @Nullable Integer maxIdleConnectionsPercent;
 
@@ -44,6 +60,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
         return this.maxIdleConnectionsPercent == null ? Optional.empty() : Optional.ofNullable(this.maxIdleConnectionsPercent);
     }
 
+    /**
+     * Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
+     * 
+     */
     @InputImport(name="sessionPinningFilters")
     private final @Nullable List<String> sessionPinningFilters;
 

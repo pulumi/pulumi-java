@@ -13,6 +13,11 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The theme configuration. This configuration contains all of the display properties for
+ *             a theme.</p>
+ * 
+ */
 public final class ThemeConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeConfiguration Empty = new ThemeConfiguration();

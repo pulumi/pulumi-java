@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The state of the scheduled action.
+     * 
+     */
     @EnumType
     public enum ScheduledActionState {
         Active("ACTIVE"),

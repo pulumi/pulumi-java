@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerCertificate {
+/**
+ * Resource Type definition for AWS::IAM::ServerCertificate
+ * 
+ */
     public static CompletableFuture<GetServerCertificateResult> invokeAsync(GetServerCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getServerCertificate", TypeShape.of(GetServerCertificateResult.class), args == null ? GetServerCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

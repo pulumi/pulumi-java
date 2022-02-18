@@ -14,6 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BotStillWaitingResponseSpecification {
+    /**
+     * Indicates whether the user can interrupt a speech prompt from the bot.
+     * 
+     */
     private final @Nullable Boolean allowInterrupt;
     private final Integer frequencyInSeconds;
     private final List<BotMessageGroup> messageGroupsList;
@@ -31,6 +35,10 @@ public final class BotStillWaitingResponseSpecification {
         this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
     }
 
+    /**
+     * Indicates whether the user can interrupt a speech prompt from the bot.
+     * 
+     */
     public Optional<Boolean> getAllowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }

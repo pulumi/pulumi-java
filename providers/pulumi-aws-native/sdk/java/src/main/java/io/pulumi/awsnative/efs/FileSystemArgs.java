@@ -35,6 +35,10 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupPolicy == null ? Input.empty() : this.backupPolicy;
     }
 
+    /**
+     * Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
+     * 
+     */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
     private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
 

@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketDestination {
+    /**
+     * The account ID that owns the destination S3 bucket.
+     * 
+     */
     private final @Nullable String bucketAccountId;
+    /**
+     * The Amazon Resource Name (ARN) of the bucket to which data is exported.
+     * 
+     */
     private final String bucketArn;
+    /**
+     * Specifies the file format used when exporting data to Amazon S3.
+     * 
+     */
     private final BucketDestinationFormat format;
+    /**
+     * The prefix to use when exporting data. The prefix is prepended to all results.
+     * 
+     */
     private final @Nullable String prefix;
 
     @OutputCustomType.Constructor({"bucketAccountId","bucketArn","format","prefix"})
@@ -29,15 +45,31 @@ public final class BucketDestination {
         this.prefix = prefix;
     }
 
+    /**
+     * The account ID that owns the destination S3 bucket.
+     * 
+     */
     public Optional<String> getBucketAccountId() {
         return Optional.ofNullable(this.bucketAccountId);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the bucket to which data is exported.
+     * 
+     */
     public String getBucketArn() {
         return this.bucketArn;
     }
+    /**
+     * Specifies the file format used when exporting data to Amazon S3.
+     * 
+     */
     public BucketDestinationFormat getFormat() {
         return this.format;
     }
+    /**
+     * The prefix to use when exporting data. The prefix is prepended to all results.
+     * 
+     */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }

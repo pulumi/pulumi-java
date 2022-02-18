@@ -16,6 +16,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
 
     public static final DBProxyAuthFormatArgs Empty = new DBProxyAuthFormatArgs();
 
+    /**
+     * The type of authentication that the proxy uses for connections from the proxy to the underlying database.
+     * 
+     */
     @InputImport(name="authScheme")
     private final @Nullable Input<DBProxyAuthFormatAuthScheme> authScheme;
 
@@ -23,6 +27,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
         return this.authScheme == null ? Input.empty() : this.authScheme;
     }
 
+    /**
+     * A user-specified description about the authentication used by a proxy to log in as a specific database user.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+     * 
+     */
     @InputImport(name="iAMAuth")
     private final @Nullable Input<DBProxyAuthFormatIAMAuth> iAMAuth;
 
@@ -37,6 +49,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
         return this.iAMAuth == null ? Input.empty() : this.iAMAuth;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
+     * 
+     */
     @InputImport(name="secretArn")
     private final @Nullable Input<String> secretArn;
 
@@ -44,6 +60,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
         return this.secretArn == null ? Input.empty() : this.secretArn;
     }
 
+    /**
+     * The name of the database user to which the proxy connects.
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

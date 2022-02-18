@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of preloaded data. Only Synthea preloaded data is supported.
+     * 
+     */
     @EnumType
     public enum FHIRDatastorePreloadDataConfigPreloadDataType {
         Synthea("SYNTHEA");

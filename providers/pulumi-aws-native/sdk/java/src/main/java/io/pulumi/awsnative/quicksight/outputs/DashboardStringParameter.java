@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DashboardStringParameter {
+    /**
+     * <p>A display name for a string parameter.</p>
+     * 
+     */
     private final String name;
+    /**
+     * <p>The values of a string parameter.</p>
+     * 
+     */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"name","values"})
@@ -21,9 +29,17 @@ public final class DashboardStringParameter {
         this.values = Objects.requireNonNull(values);
     }
 
+    /**
+     * <p>A display name for a string parameter.</p>
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * <p>The values of a string parameter.</p>
+     * 
+     */
     public List<String> getValues() {
         return this.values;
     }

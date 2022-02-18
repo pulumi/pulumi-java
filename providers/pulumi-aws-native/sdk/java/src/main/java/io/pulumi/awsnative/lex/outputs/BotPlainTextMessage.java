@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotPlainTextMessage {
+    /**
+     * The message to send to the user.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -16,6 +20,10 @@ public final class BotPlainTextMessage {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The message to send to the user.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

@@ -14,27 +14,61 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::SageMaker::Device
+ * 
+ */
 @ResourceType(type="aws-native:sagemaker:Device")
 public class Device extends io.pulumi.resources.CustomResource {
+    /**
+     * The Edge Device you want to register against a device fleet
+     * 
+     */
     @OutputExport(name="device", type=io.pulumi.awsnative.sagemaker.outputs.Device.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.sagemaker.outputs.Device> device;
 
+    /**
+     * @return The Edge Device you want to register against a device fleet
+     * 
+     */
     public Output</* @Nullable */ io.pulumi.awsnative.sagemaker.outputs.Device> getDevice() {
         return this.device;
     }
+    /**
+     * The name of the edge device fleet
+     * 
+     */
     @OutputExport(name="deviceFleetName", type=String.class, parameters={})
     private Output<String> deviceFleetName;
 
+    /**
+     * @return The name of the edge device fleet
+     * 
+     */
     public Output<String> getDeviceFleetName() {
         return this.deviceFleetName;
     }
+    /**
+     * Associate tags with the resource
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DeviceTag.class})
     private Output</* @Nullable */ List<DeviceTag>> tags;
 
+    /**
+     * @return Associate tags with the resource
+     * 
+     */
     public Output</* @Nullable */ List<DeviceTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Device(String name, DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:sagemaker:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -50,6 +84,14 @@ public class Device extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Device get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Device(name, id, options);
     }

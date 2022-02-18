@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobRecipe {
+    /**
+     * Recipe name
+     * 
+     */
     private final String name;
+    /**
+     * Recipe version
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"name","version"})
@@ -22,9 +30,17 @@ public final class JobRecipe {
         this.version = version;
     }
 
+    /**
+     * Recipe name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Recipe version
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

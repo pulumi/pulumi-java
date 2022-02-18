@@ -12,6 +12,10 @@ public final class GetAppMonitorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAppMonitorArgs Empty = new GetAppMonitorArgs();
 
+    /**
+     * A name for the app monitor
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

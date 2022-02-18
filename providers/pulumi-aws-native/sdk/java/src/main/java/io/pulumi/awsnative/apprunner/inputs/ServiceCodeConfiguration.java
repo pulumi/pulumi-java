@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Code Configuration
+ * 
+ */
 public final class ServiceCodeConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceCodeConfiguration Empty = new ServiceCodeConfiguration();
@@ -22,6 +26,10 @@ public final class ServiceCodeConfiguration extends io.pulumi.resources.InvokeAr
         return this.codeConfigurationValues == null ? Optional.empty() : Optional.ofNullable(this.codeConfigurationValues);
     }
 
+    /**
+     * Configuration Source
+     * 
+     */
     @InputImport(name="configurationSource", required=true)
     private final ServiceCodeConfigurationConfigurationSource configurationSource;
 

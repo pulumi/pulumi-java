@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AssetModelCompositeModel {
+    /**
+     * The property definitions of the asset model. You can specify up to 200 properties per asset model.
+     * 
+     */
     private final @Nullable List<AssetModelProperty> compositeModelProperties;
+    /**
+     * A description for the asset composite model.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * A unique, friendly name for the asset composite model.
+     * 
+     */
     private final String name;
+    /**
+     * The type of the composite model. For alarm composite models, this type is AWS/ALARM
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"compositeModelProperties","description","name","type"})
@@ -30,15 +46,31 @@ public final class AssetModelCompositeModel {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The property definitions of the asset model. You can specify up to 200 properties per asset model.
+     * 
+     */
     public List<AssetModelProperty> getCompositeModelProperties() {
         return this.compositeModelProperties == null ? List.of() : this.compositeModelProperties;
     }
+    /**
+     * A description for the asset composite model.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * A unique, friendly name for the asset composite model.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The type of the composite model. For alarm composite models, this type is AWS/ALARM
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -12,6 +12,10 @@ public final class GetConformancePackArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetConformancePackArgs Empty = new GetConformancePackArgs();
 
+    /**
+     * Name of the conformance pack which will be assigned as the unique identifier.
+     * 
+     */
     @InputImport(name="conformancePackName", required=true)
     private final String conformancePackName;
 

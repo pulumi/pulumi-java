@@ -13,8 +13,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceAddOn {
+    /**
+     * The add-on type
+     * 
+     */
     private final String addOnType;
     private final @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest;
+    /**
+     * Status of the Addon
+     * 
+     */
     private final @Nullable InstanceAddOnStatus status;
 
     @OutputCustomType.Constructor({"addOnType","autoSnapshotAddOnRequest","status"})
@@ -27,12 +35,20 @@ public final class InstanceAddOn {
         this.status = status;
     }
 
+    /**
+     * The add-on type
+     * 
+     */
     public String getAddOnType() {
         return this.addOnType;
     }
     public Optional<InstanceAutoSnapshotAddOn> getAutoSnapshotAddOnRequest() {
         return Optional.ofNullable(this.autoSnapshotAddOnRequest);
     }
+    /**
+     * Status of the Addon
+     * 
+     */
     public Optional<InstanceAddOnStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

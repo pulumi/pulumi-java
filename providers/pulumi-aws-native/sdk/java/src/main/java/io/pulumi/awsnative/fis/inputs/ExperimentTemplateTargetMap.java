@@ -6,6 +6,10 @@ package io.pulumi.awsnative.fis.inputs;
 import java.util.Objects;
 
 
+/**
+ * The targets for the experiment.
+ * 
+ */
 public final class ExperimentTemplateTargetMap extends io.pulumi.resources.InvokeArgs {
 
     public static final ExperimentTemplateTargetMap Empty = new ExperimentTemplateTargetMap();

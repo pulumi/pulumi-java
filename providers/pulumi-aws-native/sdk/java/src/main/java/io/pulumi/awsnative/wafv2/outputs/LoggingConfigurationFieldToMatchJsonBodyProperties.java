@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
+    /**
+     * What AWS WAF should do if it fails to completely parse the JSON body.
+     * 
+     */
     private final @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior;
+    /**
+     * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
+     * 
+     */
     private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern;
+    /**
+     * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
+     * 
+     */
     private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope;
 
     @OutputCustomType.Constructor({"invalidFallbackBehavior","matchPattern","matchScope"})
@@ -27,12 +39,24 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
         this.matchScope = Objects.requireNonNull(matchScope);
     }
 
+    /**
+     * What AWS WAF should do if it fails to completely parse the JSON body.
+     * 
+     */
     public Optional<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> getInvalidFallbackBehavior() {
         return Optional.ofNullable(this.invalidFallbackBehavior);
     }
+    /**
+     * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
+     * 
+     */
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties getMatchPattern() {
         return this.matchPattern;
     }
+    /**
+     * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
+     * 
+     */
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope getMatchScope() {
         return this.matchScope;
     }

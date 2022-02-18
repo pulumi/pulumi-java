@@ -12,6 +12,10 @@ public final class GetCompositeAlarmArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetCompositeAlarmArgs Empty = new GetCompositeAlarmArgs();
 
+    /**
+     * The name of the Composite Alarm
+     * 
+     */
     @InputImport(name="alarmName", required=true)
     private final String alarmName;
 

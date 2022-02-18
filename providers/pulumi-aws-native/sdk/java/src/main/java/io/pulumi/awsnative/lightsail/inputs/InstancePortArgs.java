@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Port of the Instance.
+ * 
+ */
 public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstancePortArgs Empty = new InstancePortArgs();
 
+    /**
+     * Access Direction for Protocol of the Instance(inbound/outbound).
+     * 
+     */
     @InputImport(name="accessDirection")
     private final @Nullable Input<String> accessDirection;
 
@@ -23,6 +31,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessDirection == null ? Input.empty() : this.accessDirection;
     }
 
+    /**
+     * Access From Protocol of the Instance.
+     * 
+     */
     @InputImport(name="accessFrom")
     private final @Nullable Input<String> accessFrom;
 
@@ -30,6 +42,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessFrom == null ? Input.empty() : this.accessFrom;
     }
 
+    /**
+     * Access Type Protocol of the Instance.
+     * 
+     */
     @InputImport(name="accessType")
     private final @Nullable Input<String> accessType;
 
@@ -51,6 +67,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
         return this.cidrs == null ? Input.empty() : this.cidrs;
     }
 
+    /**
+     * CommonName for Protocol of the Instance.
+     * 
+     */
     @InputImport(name="commonName")
     private final @Nullable Input<String> commonName;
 
@@ -58,6 +78,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
         return this.commonName == null ? Input.empty() : this.commonName;
     }
 
+    /**
+     * From Port of the Instance.
+     * 
+     */
     @InputImport(name="fromPort")
     private final @Nullable Input<Integer> fromPort;
 
@@ -72,6 +96,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipv6Cidrs == null ? Input.empty() : this.ipv6Cidrs;
     }
 
+    /**
+     * Port Protocol of the Instance.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<String> protocol;
 
@@ -79,6 +107,10 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
+    /**
+     * To Port of the Instance.
+     * 
+     */
     @InputImport(name="toPort")
     private final @Nullable Input<Integer> toPort;
 

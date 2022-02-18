@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
+     * 
+     */
     @EnumType
     public enum EndpointAccessType {
         CustomerOwnedIp("CustomerOwnedIp"),

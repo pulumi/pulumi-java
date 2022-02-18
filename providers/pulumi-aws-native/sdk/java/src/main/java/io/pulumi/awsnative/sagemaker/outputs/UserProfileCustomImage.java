@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserProfileCustomImage {
+    /**
+     * The Name of the AppImageConfig.
+     * 
+     */
     private final String appImageConfigName;
+    /**
+     * The name of the CustomImage. Must be unique to your account.
+     * 
+     */
     private final String imageName;
+    /**
+     * The version number of the CustomImage.
+     * 
+     */
     private final @Nullable Integer imageVersionNumber;
 
     @OutputCustomType.Constructor({"appImageConfigName","imageName","imageVersionNumber"})
@@ -26,12 +38,24 @@ public final class UserProfileCustomImage {
         this.imageVersionNumber = imageVersionNumber;
     }
 
+    /**
+     * The Name of the AppImageConfig.
+     * 
+     */
     public String getAppImageConfigName() {
         return this.appImageConfigName;
     }
+    /**
+     * The name of the CustomImage. Must be unique to your account.
+     * 
+     */
     public String getImageName() {
         return this.imageName;
     }
+    /**
+     * The version number of the CustomImage.
+     * 
+     */
     public Optional<Integer> getImageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }

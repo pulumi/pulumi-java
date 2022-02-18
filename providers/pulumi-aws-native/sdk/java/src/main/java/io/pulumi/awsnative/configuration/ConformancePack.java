@@ -14,45 +14,105 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a region or across an entire AWS Organization.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:configuration:ConformancePack")
 public class ConformancePack extends io.pulumi.resources.CustomResource {
+    /**
+     * A list of ConformancePackInputParameter objects.
+     * 
+     */
     @OutputExport(name="conformancePackInputParameters", type=List.class, parameters={ConformancePackInputParameter.class})
     private Output</* @Nullable */ List<ConformancePackInputParameter>> conformancePackInputParameters;
 
+    /**
+     * @return A list of ConformancePackInputParameter objects.
+     * 
+     */
     public Output</* @Nullable */ List<ConformancePackInputParameter>> getConformancePackInputParameters() {
         return this.conformancePackInputParameters;
     }
+    /**
+     * Name of the conformance pack which will be assigned as the unique identifier.
+     * 
+     */
     @OutputExport(name="conformancePackName", type=String.class, parameters={})
     private Output<String> conformancePackName;
 
+    /**
+     * @return Name of the conformance pack which will be assigned as the unique identifier.
+     * 
+     */
     public Output<String> getConformancePackName() {
         return this.conformancePackName;
     }
+    /**
+     * AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     @OutputExport(name="deliveryS3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3Bucket;
 
+    /**
+     * @return AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     public Output</* @Nullable */ String> getDeliveryS3Bucket() {
         return this.deliveryS3Bucket;
     }
+    /**
+     * The prefix for delivery S3 bucket.
+     * 
+     */
     @OutputExport(name="deliveryS3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3KeyPrefix;
 
+    /**
+     * @return The prefix for delivery S3 bucket.
+     * 
+     */
     public Output</* @Nullable */ String> getDeliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix;
     }
+    /**
+     * A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
+     * 
+     */
     @OutputExport(name="templateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateBody;
 
+    /**
+     * @return A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateBody() {
         return this.templateBody;
     }
+    /**
+     * Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
+     * 
+     */
     @OutputExport(name="templateS3Uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateS3Uri;
 
+    /**
+     * @return Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateS3Uri() {
         return this.templateS3Uri;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ConformancePack(String name, @Nullable ConformancePackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:configuration:ConformancePack", name, args == null ? ConformancePackArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +128,14 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ConformancePack get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConformancePack(name, id, options);
     }

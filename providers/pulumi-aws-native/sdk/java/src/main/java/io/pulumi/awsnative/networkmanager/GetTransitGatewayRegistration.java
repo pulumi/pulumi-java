@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayRegistration {
+/**
+ * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
+ * 
+ */
     public static CompletableFuture<GetTransitGatewayRegistrationResult> invokeAsync(GetTransitGatewayRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getTransitGatewayRegistration", TypeShape.of(GetTransitGatewayRegistrationResult.class), args == null ? GetTransitGatewayRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Health check configuration
+ * 
+ */
 public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceHealthCheckConfiguration Empty = new ServiceHealthCheckConfiguration();
 
+    /**
+     * Health check Healthy Threshold
+     * 
+     */
     @InputImport(name="healthyThreshold")
     private final @Nullable Integer healthyThreshold;
 
@@ -23,6 +31,10 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
         return this.healthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthyThreshold);
     }
 
+    /**
+     * Health check Interval
+     * 
+     */
     @InputImport(name="interval")
     private final @Nullable Integer interval;
 
@@ -30,6 +42,10 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
+    /**
+     * Health check Path
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -37,6 +53,10 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
+    /**
+     * Health Check Protocol
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable ServiceHealthCheckConfigurationProtocol protocol;
 
@@ -44,6 +64,10 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
+    /**
+     * Health check Timeout
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Integer timeout;
 
@@ -51,6 +75,10 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
+    /**
+     * Health check Unhealthy Threshold
+     * 
+     */
     @InputImport(name="unhealthyThreshold")
     private final @Nullable Integer unhealthyThreshold;
 

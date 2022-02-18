@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Contains information about code hooks that Amazon Lex calls during a conversation.
+ * 
+ */
 public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotAliasCodeHookSpecificationArgs Empty = new BotAliasCodeHookSpecificationArgs();

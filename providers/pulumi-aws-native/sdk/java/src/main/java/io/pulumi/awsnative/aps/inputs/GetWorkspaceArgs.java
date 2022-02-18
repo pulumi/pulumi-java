@@ -12,6 +12,10 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkspaceArgs Empty = new GetWorkspaceArgs();
 
+    /**
+     * Workspace arn.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

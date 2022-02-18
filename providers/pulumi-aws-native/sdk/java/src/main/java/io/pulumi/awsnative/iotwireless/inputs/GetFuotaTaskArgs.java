@@ -12,6 +12,10 @@ public final class GetFuotaTaskArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFuotaTaskArgs Empty = new GetFuotaTaskArgs();
 
+    /**
+     * FUOTA task id. Returned after successful create.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

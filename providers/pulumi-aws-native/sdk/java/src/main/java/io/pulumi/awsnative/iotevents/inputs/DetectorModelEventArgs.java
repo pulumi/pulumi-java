@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the `actions` to be performed when the `condition` evaluates to `TRUE`.
+ * 
+ */
 public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorModelEventArgs Empty = new DetectorModelEventArgs();
 
+    /**
+     * The actions to be performed.
+     * 
+     */
     @InputImport(name="actions")
     private final @Nullable Input<List<DetectorModelActionArgs>> actions;
 
@@ -23,6 +31,10 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
         return this.actions == null ? Input.empty() : this.actions;
     }
 
+    /**
+     * The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<String> condition;
 
@@ -30,6 +42,10 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The name of the event.
+     * 
+     */
     @InputImport(name="eventName", required=true)
     private final Input<String> eventName;
 

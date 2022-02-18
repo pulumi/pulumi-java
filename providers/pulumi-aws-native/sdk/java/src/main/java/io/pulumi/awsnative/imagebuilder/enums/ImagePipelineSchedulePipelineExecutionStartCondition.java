@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The condition configures when the pipeline should trigger a new image build.
+     * 
+     */
     @EnumType
     public enum ImagePipelineSchedulePipelineExecutionStartCondition {
         ExpressionMatchOnly("EXPRESSION_MATCH_ONLY"),

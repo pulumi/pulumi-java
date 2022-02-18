@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The JupyterServer app settings.
+ * 
+ */
 public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainJupyterServerAppSettingsArgs Empty = new DomainJupyterServerAppSettingsArgs();

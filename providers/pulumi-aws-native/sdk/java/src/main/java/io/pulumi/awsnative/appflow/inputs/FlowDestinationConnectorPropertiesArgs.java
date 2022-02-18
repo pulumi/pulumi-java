@@ -17,6 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Destination connector details
+ * 
+ */
 public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowDestinationConnectorPropertiesArgs Empty = new FlowDestinationConnectorPropertiesArgs();

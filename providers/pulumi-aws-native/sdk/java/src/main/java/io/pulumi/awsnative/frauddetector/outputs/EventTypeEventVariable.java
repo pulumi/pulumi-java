@@ -18,14 +18,30 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class EventTypeEventVariable {
     private final @Nullable String arn;
+    /**
+     * The time when the event type was created.
+     * 
+     */
     private final @Nullable String createdTime;
     private final @Nullable EventTypeEventVariableDataSource dataSource;
     private final @Nullable EventTypeEventVariableDataType dataType;
     private final @Nullable String defaultValue;
+    /**
+     * The description.
+     * 
+     */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     private final @Nullable List<EventTypeTag> tags;
     private final @Nullable EventTypeEventVariableVariableType variableType;
 
@@ -58,6 +74,10 @@ public final class EventTypeEventVariable {
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The time when the event type was created.
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -70,18 +90,30 @@ public final class EventTypeEventVariable {
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
+    /**
+     * The description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     public Optional<Boolean> getInline() {
         return Optional.ofNullable(this.inline);
     }
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     public List<EventTypeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

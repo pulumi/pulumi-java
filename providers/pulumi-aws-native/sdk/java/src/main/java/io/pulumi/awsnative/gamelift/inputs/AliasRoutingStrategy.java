@@ -15,6 +15,10 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
 
     public static final AliasRoutingStrategy Empty = new AliasRoutingStrategy();
 
+    /**
+     * A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
+     * 
+     */
     @InputImport(name="fleetId")
     private final @Nullable String fleetId;
 
@@ -22,6 +26,10 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
         return this.fleetId == null ? Optional.empty() : Optional.ofNullable(this.fleetId);
     }
 
+    /**
+     * The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -29,6 +37,10 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final AliasRoutingStrategyType type;
 

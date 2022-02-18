@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * StillWaitingResponseSpecification.
+ * 
+ */
 public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotStillWaitingResponseSpecificationArgs Empty = new BotStillWaitingResponseSpecificationArgs();
 
+    /**
+     * Indicates whether the user can interrupt a speech prompt from the bot.
+     * 
+     */
     @InputImport(name="allowInterrupt")
     private final @Nullable Input<Boolean> allowInterrupt;
 

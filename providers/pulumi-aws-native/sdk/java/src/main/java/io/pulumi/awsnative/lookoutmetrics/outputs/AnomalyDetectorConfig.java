@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AnomalyDetectorConfig {
+    /**
+     * Frequency of anomaly detection
+     * 
+     */
     private final AnomalyDetectorFrequency anomalyDetectorFrequency;
 
     @OutputCustomType.Constructor({"anomalyDetectorFrequency"})
@@ -16,6 +20,10 @@ public final class AnomalyDetectorConfig {
         this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency);
     }
 
+    /**
+     * Frequency of anomaly detection
+     * 
+     */
     public AnomalyDetectorFrequency getAnomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;
     }

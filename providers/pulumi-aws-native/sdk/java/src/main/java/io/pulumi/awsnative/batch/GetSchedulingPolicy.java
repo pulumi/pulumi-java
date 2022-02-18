@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchedulingPolicy {
+/**
+ * Resource Type schema for AWS::Batch::SchedulingPolicy
+ * 
+ */
     public static CompletableFuture<GetSchedulingPolicyResult> invokeAsync(GetSchedulingPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:batch:getSchedulingPolicy", TypeShape.of(GetSchedulingPolicyResult.class), args == null ? GetSchedulingPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

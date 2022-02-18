@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The account type to use when starting the SSM automation document.
+     * 
+     */
     @EnumType
     public enum ResponsePlanSsmAutomationTargetAccount {
         ImpactedAccount("IMPACTED_ACCOUNT"),

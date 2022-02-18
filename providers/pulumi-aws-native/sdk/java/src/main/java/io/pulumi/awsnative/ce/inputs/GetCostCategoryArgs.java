@@ -12,6 +12,10 @@ public final class GetCostCategoryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCostCategoryArgs Empty = new GetCostCategoryArgs();
 
+    /**
+     * Cost category ARN
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

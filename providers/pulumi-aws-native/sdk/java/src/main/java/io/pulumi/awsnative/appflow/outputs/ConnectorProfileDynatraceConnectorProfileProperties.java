@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileDynatraceConnectorProfileProperties {
+    /**
+     * The location of the Dynatrace resource
+     * 
+     */
     private final String instanceUrl;
 
     @OutputCustomType.Constructor({"instanceUrl"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileDynatraceConnectorProfileProperties {
         this.instanceUrl = Objects.requireNonNull(instanceUrl);
     }
 
+    /**
+     * The location of the Dynatrace resource
+     * 
+     */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImagePipelineImageTestsConfiguration {
+    /**
+     * Defines if tests should be executed when building this image.
+     * 
+     */
     private final @Nullable Boolean imageTestsEnabled;
+    /**
+     * The maximum time in minutes that tests are permitted to run.
+     * 
+     */
     private final @Nullable Integer timeoutMinutes;
 
     @OutputCustomType.Constructor({"imageTestsEnabled","timeoutMinutes"})
@@ -23,9 +31,17 @@ public final class ImagePipelineImageTestsConfiguration {
         this.timeoutMinutes = timeoutMinutes;
     }
 
+    /**
+     * Defines if tests should be executed when building this image.
+     * 
+     */
     public Optional<Boolean> getImageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
+    /**
+     * The maximum time in minutes that tests are permitted to run.
+     * 
+     */
     public Optional<Integer> getTimeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }

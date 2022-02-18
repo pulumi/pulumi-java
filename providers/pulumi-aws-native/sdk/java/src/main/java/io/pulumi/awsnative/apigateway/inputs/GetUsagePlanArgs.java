@@ -12,6 +12,10 @@ public final class GetUsagePlanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetUsagePlanArgs Empty = new GetUsagePlanArgs();
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

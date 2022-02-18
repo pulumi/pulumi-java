@@ -11,6 +11,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class BucketDataExport {
     private final BucketDestination destination;
+    /**
+     * The version of the output schema to use when exporting data.
+     * 
+     */
     private final String outputSchemaVersion;
 
     @OutputCustomType.Constructor({"destination","outputSchemaVersion"})
@@ -24,6 +28,10 @@ public final class BucketDataExport {
     public BucketDestination getDestination() {
         return this.destination;
     }
+    /**
+     * The version of the output schema to use when exporting data.
+     * 
+     */
     public String getOutputSchemaVersion() {
         return this.outputSchemaVersion;
     }

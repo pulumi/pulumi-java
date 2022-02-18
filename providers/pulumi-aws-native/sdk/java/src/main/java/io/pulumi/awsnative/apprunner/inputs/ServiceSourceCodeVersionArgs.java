@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Source Code Version
+ * 
+ */
 public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceSourceCodeVersionArgs Empty = new ServiceSourceCodeVersionArgs();
 
+    /**
+     * Source Code Version Type
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<ServiceSourceCodeVersionType> type;
 
@@ -21,6 +29,10 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
         return this.type;
     }
 
+    /**
+     * Source Code Version Value
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

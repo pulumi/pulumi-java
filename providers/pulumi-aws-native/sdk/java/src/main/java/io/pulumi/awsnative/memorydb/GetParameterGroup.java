@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetParameterGroup {
+/**
+ * The AWS::MemoryDB::ParameterGroup resource creates an Amazon MemoryDB ParameterGroup.
+ * 
+ */
     public static CompletableFuture<GetParameterGroupResult> invokeAsync(GetParameterGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args == null ? GetParameterGroupArgs.Empty : args, Utilities.withVersion(options));
     }

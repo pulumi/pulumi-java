@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A collection of settings that apply to users of Amazon SageMaker Studio. These settings are specified when the CreateUserProfile API is called, and as DefaultUserSettings when the CreateDomain API is called.
+ * 
+ */
 public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainUserSettings Empty = new DomainUserSettings();
 
+    /**
+     * The user profile Amazon Resource Name (ARN).
+     * 
+     */
     @InputImport(name="executionRole")
     private final @Nullable String executionRole;
 
@@ -25,6 +33,10 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
         return this.executionRole == null ? Optional.empty() : Optional.ofNullable(this.executionRole);
     }
 
+    /**
+     * The Jupyter server's app settings.
+     * 
+     */
     @InputImport(name="jupyterServerAppSettings")
     private final @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings;
 
@@ -32,6 +44,10 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
         return this.jupyterServerAppSettings == null ? Optional.empty() : Optional.ofNullable(this.jupyterServerAppSettings);
     }
 
+    /**
+     * The kernel gateway app settings.
+     * 
+     */
     @InputImport(name="kernelGatewayAppSettings")
     private final @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings;
 
@@ -39,6 +55,10 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
         return this.kernelGatewayAppSettings == null ? Optional.empty() : Optional.ofNullable(this.kernelGatewayAppSettings);
     }
 
+    /**
+     * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * 
+     */
     @InputImport(name="securityGroups")
     private final @Nullable List<String> securityGroups;
 
@@ -46,6 +66,10 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
 
+    /**
+     * The sharing settings.
+     * 
+     */
     @InputImport(name="sharingSettings")
     private final @Nullable DomainSharingSettings sharingSettings;
 

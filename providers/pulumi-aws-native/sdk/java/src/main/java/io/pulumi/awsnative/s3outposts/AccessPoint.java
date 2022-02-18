@@ -14,39 +14,89 @@ import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type Definition for AWS::S3Outposts::AccessPoint
+ * 
+ */
 @ResourceType(type="aws-native:s3outposts:AccessPoint")
 public class AccessPoint extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the specified AccessPoint.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the specified AccessPoint.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
+     * 
+     */
     @OutputExport(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
+     * 
+     */
     public Output<String> getBucket() {
         return this.bucket;
     }
+    /**
+     * A name for the AccessPoint.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return A name for the AccessPoint.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The access point policy associated with this access point.
+     * 
+     */
     @OutputExport(name="policy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> policy;
 
+    /**
+     * @return The access point policy associated with this access point.
+     * 
+     */
     public Output</* @Nullable */ Object> getPolicy() {
         return this.policy;
     }
+    /**
+     * Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
+     * 
+     */
     @OutputExport(name="vpcConfiguration", type=AccessPointVpcConfiguration.class, parameters={})
     private Output<AccessPointVpcConfiguration> vpcConfiguration;
 
+    /**
+     * @return Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
+     * 
+     */
     public Output<AccessPointVpcConfiguration> getVpcConfiguration() {
         return this.vpcConfiguration;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AccessPoint(String name, AccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:s3outposts:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +112,14 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AccessPoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessPoint(name, id, options);
     }

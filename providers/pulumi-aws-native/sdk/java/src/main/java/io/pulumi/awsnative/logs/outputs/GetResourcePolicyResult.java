@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResourcePolicyResult {
+    /**
+     * The policy document
+     * 
+     */
     private final @Nullable String policyDocument;
 
     @OutputCustomType.Constructor({"policyDocument"})
@@ -18,6 +22,10 @@ public final class GetResourcePolicyResult {
         this.policyDocument = policyDocument;
     }
 
+    /**
+     * The policy document
+     * 
+     */
     public Optional<String> getPolicyDocument() {
         return Optional.ofNullable(this.policyDocument);
     }

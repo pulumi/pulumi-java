@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Checks valid token exists with request.
+ * 
+ */
 public final class RuleGroupRuleActionCaptchaPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupRuleActionCaptchaPropertiesArgs Empty = new RuleGroupRuleActionCaptchaPropertiesArgs();

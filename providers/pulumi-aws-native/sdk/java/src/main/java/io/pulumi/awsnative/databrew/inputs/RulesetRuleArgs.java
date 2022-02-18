@@ -15,6 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Data quality rule for a target resource (dataset)
+ * 
+ */
 public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesetRuleArgs Empty = new RulesetRuleArgs();
@@ -40,6 +44,10 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Name of the rule
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

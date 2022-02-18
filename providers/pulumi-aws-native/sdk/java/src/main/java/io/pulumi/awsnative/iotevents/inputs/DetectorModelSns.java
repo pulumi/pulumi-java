@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information required to publish the Amazon SNS message.
+ * 
+ */
 public final class DetectorModelSns extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelSns Empty = new DetectorModelSns();
@@ -22,6 +26,10 @@ public final class DetectorModelSns extends io.pulumi.resources.InvokeArgs {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
     }
 
+    /**
+     * The ARN of the Amazon SNS target where the message is sent.
+     * 
+     */
     @InputImport(name="targetArn", required=true)
     private final String targetArn;
 

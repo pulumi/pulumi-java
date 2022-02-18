@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * S3 configuration for location to store rejections from magnetic store writes
+ * 
+ */
 public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs Empty = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs();
 
+    /**
+     * The bucket name used to store the data.
+     * 
+     */
     @InputImport(name="bucketName", required=true)
     private final Input<String> bucketName;
 
@@ -21,6 +29,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
         return this.bucketName;
     }
 
+    /**
+     * Either SSE_KMS or SSE_S3.
+     * 
+     */
     @InputImport(name="encryptionOption", required=true)
     private final Input<String> encryptionOption;
 
@@ -28,6 +40,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
         return this.encryptionOption;
     }
 
+    /**
+     * Must be provided if SSE_KMS is specified as the encryption option
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -35,6 +51,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * String used to prefix all data in the bucket.
+     * 
+     */
     @InputImport(name="objectKeyPrefix")
     private final @Nullable Input<String> objectKeyPrefix;
 

@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitoringScheduleNetworkConfig {
+    /**
+     * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+     * 
+     */
     private final @Nullable Boolean enableInterContainerTrafficEncryption;
+    /**
+     * Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+     * 
+     */
     private final @Nullable Boolean enableNetworkIsolation;
     private final @Nullable MonitoringScheduleVpcConfig vpcConfig;
 
@@ -26,9 +34,17 @@ public final class MonitoringScheduleNetworkConfig {
         this.vpcConfig = vpcConfig;
     }
 
+    /**
+     * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+     * 
+     */
     public Optional<Boolean> getEnableInterContainerTrafficEncryption() {
         return Optional.ofNullable(this.enableInterContainerTrafficEncryption);
     }
+    /**
+     * Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+     * 
+     */
     public Optional<Boolean> getEnableNetworkIsolation() {
         return Optional.ofNullable(this.enableNetworkIsolation);
     }

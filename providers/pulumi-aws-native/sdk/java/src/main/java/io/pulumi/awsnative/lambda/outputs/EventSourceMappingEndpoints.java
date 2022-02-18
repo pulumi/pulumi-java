@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventSourceMappingEndpoints {
+    /**
+     * A list of Kafka server endpoints.
+     * 
+     */
     private final @Nullable List<String> kafkaBootstrapServers;
 
     @OutputCustomType.Constructor({"kafkaBootstrapServers"})
@@ -18,6 +22,10 @@ public final class EventSourceMappingEndpoints {
         this.kafkaBootstrapServers = kafkaBootstrapServers;
     }
 
+    /**
+     * A list of Kafka server endpoints.
+     * 
+     */
     public List<String> getKafkaBootstrapServers() {
         return this.kafkaBootstrapServers == null ? List.of() : this.kafkaBootstrapServers;
     }

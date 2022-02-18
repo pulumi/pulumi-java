@@ -19,6 +19,10 @@ public final class GetIPAMAllocationArgs extends io.pulumi.resources.InvokeArgs 
         return this.cidr;
     }
 
+    /**
+     * Id of the allocation.
+     * 
+     */
     @InputImport(name="ipamPoolAllocationId", required=true)
     private final String ipamPoolAllocationId;
 
@@ -26,6 +30,10 @@ public final class GetIPAMAllocationArgs extends io.pulumi.resources.InvokeArgs 
         return this.ipamPoolAllocationId;
     }
 
+    /**
+     * Id of the IPAM Pool.
+     * 
+     */
     @InputImport(name="ipamPoolId", required=true)
     private final String ipamPoolId;
 

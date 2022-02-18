@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Operator used to aggregate metric values
+     * 
+     */
     @EnumType
     public enum AnomalyDetectorMetricAggregationFunction {
         Avg("AVG"),

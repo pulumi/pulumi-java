@@ -14,6 +14,10 @@ public final class DocumentTag extends io.pulumi.resources.InvokeArgs {
 
     public static final DocumentTag Empty = new DocumentTag();
 
+    /**
+     * The name of the tag.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -21,6 +25,10 @@ public final class DocumentTag extends io.pulumi.resources.InvokeArgs {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * The value of the tag.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

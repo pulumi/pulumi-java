@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FunctionVpcConfig {
+    /**
+     * A list of VPC security groups IDs.
+     * 
+     */
     private final @Nullable List<String> securityGroupIds;
+    /**
+     * A list of VPC subnet IDs.
+     * 
+     */
     private final @Nullable List<String> subnetIds;
 
     @OutputCustomType.Constructor({"securityGroupIds","subnetIds"})
@@ -22,9 +30,17 @@ public final class FunctionVpcConfig {
         this.subnetIds = subnetIds;
     }
 
+    /**
+     * A list of VPC security groups IDs.
+     * 
+     */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
+    /**
+     * A list of VPC subnet IDs.
+     * 
+     */
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }

@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object representing the network configuration for a task or service.
+ * 
+ */
 public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskSetNetworkConfigurationArgs Empty = new TaskSetNetworkConfigurationArgs();

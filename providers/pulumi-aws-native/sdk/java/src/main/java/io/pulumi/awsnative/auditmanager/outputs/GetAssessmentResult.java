@@ -23,10 +23,22 @@ public final class GetAssessmentResult {
     private final @Nullable String assessmentId;
     private final @Nullable AssessmentReportsDestination assessmentReportsDestination;
     private final @Nullable Double creationTime;
+    /**
+     * The list of delegations.
+     * 
+     */
     private final @Nullable List<AssessmentDelegation> delegations;
+    /**
+     * The list of roles for the specified assessment.
+     * 
+     */
     private final @Nullable List<AssessmentRole> roles;
     private final @Nullable AssessmentScope scope;
     private final @Nullable AssessmentStatus status;
+    /**
+     * The tags associated with the assessment.
+     * 
+     */
     private final @Nullable List<AssessmentTag> tags;
 
     @OutputCustomType.Constructor({"arn","assessmentId","assessmentReportsDestination","creationTime","delegations","roles","scope","status","tags"})
@@ -63,9 +75,17 @@ public final class GetAssessmentResult {
     public Optional<Double> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
+    /**
+     * The list of delegations.
+     * 
+     */
     public List<AssessmentDelegation> getDelegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
+    /**
+     * The list of roles for the specified assessment.
+     * 
+     */
     public List<AssessmentRole> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
@@ -75,6 +95,10 @@ public final class GetAssessmentResult {
     public Optional<AssessmentStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * The tags associated with the assessment.
+     * 
+     */
     public List<AssessmentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

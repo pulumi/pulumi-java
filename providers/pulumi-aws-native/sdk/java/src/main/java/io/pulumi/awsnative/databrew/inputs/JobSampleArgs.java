@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Job Sample
+ * 
+ */
 public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobSampleArgs Empty = new JobSampleArgs();

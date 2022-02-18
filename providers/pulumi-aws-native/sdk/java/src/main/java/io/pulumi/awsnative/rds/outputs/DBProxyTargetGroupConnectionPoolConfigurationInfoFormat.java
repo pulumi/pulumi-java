@@ -13,10 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat {
+    /**
+     * The number of seconds for a proxy to wait for a connection to become available in the connection pool.
+     * 
+     */
     private final @Nullable Integer connectionBorrowTimeout;
+    /**
+     * One or more SQL statements for the proxy to run when opening each new database connection.
+     * 
+     */
     private final @Nullable String initQuery;
+    /**
+     * The maximum size of the connection pool for each target in a target group.
+     * 
+     */
     private final @Nullable Integer maxConnectionsPercent;
+    /**
+     * Controls how actively the proxy closes idle database connections in the connection pool.
+     * 
+     */
     private final @Nullable Integer maxIdleConnectionsPercent;
+    /**
+     * Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
+     * 
+     */
     private final @Nullable List<String> sessionPinningFilters;
 
     @OutputCustomType.Constructor({"connectionBorrowTimeout","initQuery","maxConnectionsPercent","maxIdleConnectionsPercent","sessionPinningFilters"})
@@ -33,18 +53,38 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat {
         this.sessionPinningFilters = sessionPinningFilters;
     }
 
+    /**
+     * The number of seconds for a proxy to wait for a connection to become available in the connection pool.
+     * 
+     */
     public Optional<Integer> getConnectionBorrowTimeout() {
         return Optional.ofNullable(this.connectionBorrowTimeout);
     }
+    /**
+     * One or more SQL statements for the proxy to run when opening each new database connection.
+     * 
+     */
     public Optional<String> getInitQuery() {
         return Optional.ofNullable(this.initQuery);
     }
+    /**
+     * The maximum size of the connection pool for each target in a target group.
+     * 
+     */
     public Optional<Integer> getMaxConnectionsPercent() {
         return Optional.ofNullable(this.maxConnectionsPercent);
     }
+    /**
+     * Controls how actively the proxy closes idle database connections in the connection pool.
+     * 
+     */
     public Optional<Integer> getMaxIdleConnectionsPercent() {
         return Optional.ofNullable(this.maxIdleConnectionsPercent);
     }
+    /**
+     * Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
+     * 
+     */
     public List<String> getSessionPinningFilters() {
         return this.sessionPinningFilters == null ? List.of() : this.sessionPinningFilters;
     }

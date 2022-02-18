@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Field of the request to match.
+ * 
+ */
 public final class RuleGroupFieldToMatch extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupFieldToMatch Empty = new RuleGroupFieldToMatch();
 
+    /**
+     * All query arguments of a web request.
+     * 
+     */
     @InputImport(name="allQueryArguments")
     private final @Nullable Object allQueryArguments;
 
@@ -24,6 +32,10 @@ public final class RuleGroupFieldToMatch extends io.pulumi.resources.InvokeArgs 
         return this.allQueryArguments == null ? Optional.empty() : Optional.ofNullable(this.allQueryArguments);
     }
 
+    /**
+     * The body of a web request. This immediately follows the request headers.
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable Object body;
 
@@ -38,6 +50,10 @@ public final class RuleGroupFieldToMatch extends io.pulumi.resources.InvokeArgs 
         return this.jsonBody == null ? Optional.empty() : Optional.ofNullable(this.jsonBody);
     }
 
+    /**
+     * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     @InputImport(name="method")
     private final @Nullable Object method;
 
@@ -45,6 +61,10 @@ public final class RuleGroupFieldToMatch extends io.pulumi.resources.InvokeArgs 
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
+    /**
+     * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+     * 
+     */
     @InputImport(name="queryString")
     private final @Nullable Object queryString;
 
@@ -59,6 +79,10 @@ public final class RuleGroupFieldToMatch extends io.pulumi.resources.InvokeArgs 
         return this.singleHeader == null ? Optional.empty() : Optional.ofNullable(this.singleHeader);
     }
 
+    /**
+     * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
+     * 
+     */
     @InputImport(name="singleQueryArgument")
     private final @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
 
@@ -66,6 +90,10 @@ public final class RuleGroupFieldToMatch extends io.pulumi.resources.InvokeArgs 
         return this.singleQueryArgument == null ? Optional.empty() : Optional.ofNullable(this.singleQueryArgument);
     }
 
+    /**
+     * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+     * 
+     */
     @InputImport(name="uriPath")
     private final @Nullable Object uriPath;
 

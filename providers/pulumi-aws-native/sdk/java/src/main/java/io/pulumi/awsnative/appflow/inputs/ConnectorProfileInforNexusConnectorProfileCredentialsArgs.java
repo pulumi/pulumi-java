@@ -13,6 +13,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
 
     public static final ConnectorProfileInforNexusConnectorProfileCredentialsArgs Empty = new ConnectorProfileInforNexusConnectorProfileCredentialsArgs();
 
+    /**
+     * The Access Key portion of the credentials.
+     * 
+     */
     @InputImport(name="accessKeyId", required=true)
     private final Input<String> accessKeyId;
 
@@ -20,6 +24,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
         return this.accessKeyId;
     }
 
+    /**
+     * The encryption keys used to encrypt data.
+     * 
+     */
     @InputImport(name="datakey", required=true)
     private final Input<String> datakey;
 
@@ -27,6 +35,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
         return this.datakey;
     }
 
+    /**
+     * The secret key used to sign requests.
+     * 
+     */
     @InputImport(name="secretAccessKey", required=true)
     private final Input<String> secretAccessKey;
 
@@ -34,6 +46,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
         return this.secretAccessKey;
     }
 
+    /**
+     * The identiﬁer for the user.
+     * 
+     */
     @InputImport(name="userId", required=true)
     private final Input<String> userId;
 

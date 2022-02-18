@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration to use when starting the SSM automation document.
+ * 
+ */
 public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePlanSsmAutomationArgs Empty = new ResponsePlanSsmAutomationArgs();
 
+    /**
+     * The document name to use when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="documentName", required=true)
     private final Input<String> documentName;
 
@@ -24,6 +32,10 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
         return this.documentName;
     }
 
+    /**
+     * The version of the document to use when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="documentVersion")
     private final @Nullable Input<String> documentVersion;
 
@@ -31,6 +43,10 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
         return this.documentVersion == null ? Input.empty() : this.documentVersion;
     }
 
+    /**
+     * The parameters to set when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters;
 
@@ -38,6 +54,10 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The role ARN to use when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -45,6 +65,10 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
         return this.roleArn;
     }
 
+    /**
+     * The account type to use when starting the SSM automation document.
+     * 
+     */
     @InputImport(name="targetAccount")
     private final @Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount;
 

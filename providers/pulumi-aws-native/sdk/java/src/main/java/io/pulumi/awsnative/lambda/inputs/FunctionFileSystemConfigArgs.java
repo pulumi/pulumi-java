@@ -13,6 +13,10 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
 
     public static final FunctionFileSystemConfigArgs Empty = new FunctionFileSystemConfigArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final Input<String> arn;
 
@@ -20,6 +24,10 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
         return this.arn;
     }
 
+    /**
+     * The path where the function can access the file system, starting with /mnt/.
+     * 
+     */
     @InputImport(name="localMountPath", required=true)
     private final Input<String> localMountPath;
 

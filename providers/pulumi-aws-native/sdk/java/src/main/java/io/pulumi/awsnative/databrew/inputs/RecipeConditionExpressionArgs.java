@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Condition expressions applied to the step action
+ * 
+ */
 public final class RecipeConditionExpressionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecipeConditionExpressionArgs Empty = new RecipeConditionExpressionArgs();
 
+    /**
+     * Input condition to be applied to the target column
+     * 
+     */
     @InputImport(name="condition", required=true)
     private final Input<String> condition;
 
@@ -21,6 +29,10 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
         return this.condition;
     }
 
+    /**
+     * Name of the target column
+     * 
+     */
     @InputImport(name="targetColumn", required=true)
     private final Input<String> targetColumn;
 
@@ -28,6 +40,10 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
         return this.targetColumn;
     }
 
+    /**
+     * Value of the condition
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -10,6 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A parameter to set when starting the SSM automation document.
+ * 
+ */
 public final class ResponsePlanSsmParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePlanSsmParameterArgs Empty = new ResponsePlanSsmParameterArgs();

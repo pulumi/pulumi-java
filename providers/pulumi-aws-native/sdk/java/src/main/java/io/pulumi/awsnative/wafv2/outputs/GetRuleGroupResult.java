@@ -19,13 +19,25 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetRuleGroupResult {
     private final @Nullable String arn;
+    /**
+     * Collection of Available Labels.
+     * 
+     */
     private final @Nullable List<RuleGroupLabelSummary> availableLabels;
     private final @Nullable Integer capacity;
+    /**
+     * Collection of Consumed Labels.
+     * 
+     */
     private final @Nullable List<RuleGroupLabelSummary> consumedLabels;
     private final @Nullable RuleGroupCustomResponseBodies customResponseBodies;
     private final @Nullable String description;
     private final @Nullable String id;
     private final @Nullable String labelNamespace;
+    /**
+     * Collection of Rules.
+     * 
+     */
     private final @Nullable List<RuleGroupRule> rules;
     private final @Nullable List<RuleGroupTag> tags;
     private final @Nullable RuleGroupVisibilityConfig visibilityConfig;
@@ -59,12 +71,20 @@ public final class GetRuleGroupResult {
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Collection of Available Labels.
+     * 
+     */
     public List<RuleGroupLabelSummary> getAvailableLabels() {
         return this.availableLabels == null ? List.of() : this.availableLabels;
     }
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+    /**
+     * Collection of Consumed Labels.
+     * 
+     */
     public List<RuleGroupLabelSummary> getConsumedLabels() {
         return this.consumedLabels == null ? List.of() : this.consumedLabels;
     }
@@ -80,6 +100,10 @@ public final class GetRuleGroupResult {
     public Optional<String> getLabelNamespace() {
         return Optional.ofNullable(this.labelNamespace);
     }
+    /**
+     * Collection of Rules.
+     * 
+     */
     public List<RuleGroupRule> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

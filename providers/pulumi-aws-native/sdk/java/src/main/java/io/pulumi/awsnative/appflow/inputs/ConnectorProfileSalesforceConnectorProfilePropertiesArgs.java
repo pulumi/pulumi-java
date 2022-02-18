@@ -15,6 +15,10 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
 
     public static final ConnectorProfileSalesforceConnectorProfilePropertiesArgs Empty = new ConnectorProfileSalesforceConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the Salesforce resource
+     * 
+     */
     @InputImport(name="instanceUrl")
     private final @Nullable Input<String> instanceUrl;
 

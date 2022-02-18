@@ -12,8 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorModelFirehose {
+    /**
+     * The name of the Kinesis Data Firehose delivery stream where the data is written.
+     * 
+     */
     private final String deliveryStreamName;
     private final @Nullable DetectorModelPayload payload;
+    /**
+     * A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+     * 
+     */
     private final @Nullable String separator;
 
     @OutputCustomType.Constructor({"deliveryStreamName","payload","separator"})
@@ -26,12 +34,20 @@ public final class DetectorModelFirehose {
         this.separator = separator;
     }
 
+    /**
+     * The name of the Kinesis Data Firehose delivery stream where the data is written.
+     * 
+     */
     public String getDeliveryStreamName() {
         return this.deliveryStreamName;
     }
     public Optional<DetectorModelPayload> getPayload() {
         return Optional.ofNullable(this.payload);
     }
+    /**
+     * A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+     * 
+     */
     public Optional<String> getSeparator() {
         return Optional.ofNullable(this.separator);
     }

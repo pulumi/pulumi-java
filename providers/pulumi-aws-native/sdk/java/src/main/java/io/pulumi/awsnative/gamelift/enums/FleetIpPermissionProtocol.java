@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The network communication protocol used by the fleet.
+     * 
+     */
     @EnumType
     public enum FleetIpPermissionProtocol {
         Tcp("TCP"),

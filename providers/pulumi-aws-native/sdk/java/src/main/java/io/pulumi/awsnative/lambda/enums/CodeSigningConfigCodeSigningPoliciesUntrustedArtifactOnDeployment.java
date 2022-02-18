@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
+     * 
+     */
     @EnumType
     public enum CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment {
         Warn("Warn"),

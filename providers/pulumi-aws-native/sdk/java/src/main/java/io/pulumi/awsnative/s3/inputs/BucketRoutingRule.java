@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the redirect behavior and when a redirect is applied.
+ * 
+ */
 public final class BucketRoutingRule extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketRoutingRule Empty = new BucketRoutingRule();
 
+    /**
+     * Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
+     * 
+     */
     @InputImport(name="redirectRule", required=true)
     private final BucketRedirectRule redirectRule;
 

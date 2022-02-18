@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Configuration of target store where scheduled query results are written to.
+ * 
+ */
 public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledQueryTargetConfigurationArgs Empty = new ScheduledQueryTargetConfigurationArgs();

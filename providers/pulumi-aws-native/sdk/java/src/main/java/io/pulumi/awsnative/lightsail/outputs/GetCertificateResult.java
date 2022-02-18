@@ -14,7 +14,15 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetCertificateResult {
     private final @Nullable String certificateArn;
+    /**
+     * The validation status of the certificate.
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<CertificateTag> tags;
 
     @OutputCustomType.Constructor({"certificateArn","status","tags"})
@@ -30,9 +38,17 @@ public final class GetCertificateResult {
     public Optional<String> getCertificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
+    /**
+     * The validation status of the certificate.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<CertificateTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

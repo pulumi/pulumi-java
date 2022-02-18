@@ -13,6 +13,10 @@ public final class AssetModelExpressionVariable extends io.pulumi.resources.Invo
 
     public static final AssetModelExpressionVariable Empty = new AssetModelExpressionVariable();
 
+    /**
+     * The friendly name of the variable to be used in the expression.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +24,10 @@ public final class AssetModelExpressionVariable extends io.pulumi.resources.Invo
         return this.name;
     }
 
+    /**
+     * The variable that identifies an asset property from which to use values.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final AssetModelVariableValue value;
 

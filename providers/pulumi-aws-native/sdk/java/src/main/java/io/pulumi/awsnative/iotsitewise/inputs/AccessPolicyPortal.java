@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A portal resource.
+ * 
+ */
 public final class AccessPolicyPortal extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessPolicyPortal Empty = new AccessPolicyPortal();
 
+    /**
+     * The ID of the portal.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

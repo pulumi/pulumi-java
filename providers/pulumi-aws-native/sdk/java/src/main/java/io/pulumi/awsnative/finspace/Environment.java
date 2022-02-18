@@ -17,53 +17,123 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:finspace:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
+    /**
+     * AWS account ID associated with the Environment
+     * 
+     */
     @OutputExport(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
+    /**
+     * @return AWS account ID associated with the Environment
+     * 
+     */
     public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
+    /**
+     * ARNs of FinSpace Data Bundles to install
+     * 
+     */
     @OutputExport(name="dataBundles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dataBundles;
 
+    /**
+     * @return ARNs of FinSpace Data Bundles to install
+     * 
+     */
     public Output</* @Nullable */ List<String>> getDataBundles() {
         return this.dataBundles;
     }
+    /**
+     * ID for FinSpace created account used to store Environment artifacts
+     * 
+     */
     @OutputExport(name="dedicatedServiceAccountId", type=String.class, parameters={})
     private Output<String> dedicatedServiceAccountId;
 
+    /**
+     * @return ID for FinSpace created account used to store Environment artifacts
+     * 
+     */
     public Output<String> getDedicatedServiceAccountId() {
         return this.dedicatedServiceAccountId;
     }
+    /**
+     * Description of the Environment
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the Environment
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * ARN of the Environment
+     * 
+     */
     @OutputExport(name="environmentArn", type=String.class, parameters={})
     private Output<String> environmentArn;
 
+    /**
+     * @return ARN of the Environment
+     * 
+     */
     public Output<String> getEnvironmentArn() {
         return this.environmentArn;
     }
+    /**
+     * Unique identifier for representing FinSpace Environment
+     * 
+     */
     @OutputExport(name="environmentId", type=String.class, parameters={})
     private Output<String> environmentId;
 
+    /**
+     * @return Unique identifier for representing FinSpace Environment
+     * 
+     */
     public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
+    /**
+     * URL used to login to the Environment
+     * 
+     */
     @OutputExport(name="environmentUrl", type=String.class, parameters={})
     private Output<String> environmentUrl;
 
+    /**
+     * @return URL used to login to the Environment
+     * 
+     */
     public Output<String> getEnvironmentUrl() {
         return this.environmentUrl;
     }
+    /**
+     * Federation mode used with the Environment
+     * 
+     */
     @OutputExport(name="federationMode", type=EnvironmentFederationMode.class, parameters={})
     private Output</* @Nullable */ EnvironmentFederationMode> federationMode;
 
+    /**
+     * @return Federation mode used with the Environment
+     * 
+     */
     public Output</* @Nullable */ EnvironmentFederationMode> getFederationMode() {
         return this.federationMode;
     }
@@ -73,27 +143,59 @@ public class Environment extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ EnvironmentFederationParameters> getFederationParameters() {
         return this.federationParameters;
     }
+    /**
+     * KMS key used to encrypt customer data within FinSpace Environment infrastructure
+     * 
+     */
     @OutputExport(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
+    /**
+     * @return KMS key used to encrypt customer data within FinSpace Environment infrastructure
+     * 
+     */
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
+    /**
+     * Name of the Environment
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the Environment
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * SageMaker Studio Domain URL associated with the Environment
+     * 
+     */
     @OutputExport(name="sageMakerStudioDomainUrl", type=String.class, parameters={})
     private Output<String> sageMakerStudioDomainUrl;
 
+    /**
+     * @return SageMaker Studio Domain URL associated with the Environment
+     * 
+     */
     public Output<String> getSageMakerStudioDomainUrl() {
         return this.sageMakerStudioDomainUrl;
     }
+    /**
+     * State of the Environment
+     * 
+     */
     @OutputExport(name="status", type=EnvironmentStatus.class, parameters={})
     private Output<EnvironmentStatus> status;
 
+    /**
+     * @return State of the Environment
+     * 
+     */
     public Output<EnvironmentStatus> getStatus() {
         return this.status;
     }
@@ -104,6 +206,12 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return this.superuserParameters;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Environment(String name, @Nullable EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:finspace:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -119,6 +227,14 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Environment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Environment(name, id, options);
     }

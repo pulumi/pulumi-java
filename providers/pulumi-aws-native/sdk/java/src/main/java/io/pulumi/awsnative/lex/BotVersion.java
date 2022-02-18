@@ -14,6 +14,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A version is a numbered snapshot of your work that you can publish for use in different parts of your workflow, such as development, beta deployment, and production.
+ * 
+ */
 @ResourceType(type="aws-native:lex:BotVersion")
 public class BotVersion extends io.pulumi.resources.CustomResource {
     @OutputExport(name="botId", type=String.class, parameters={})
@@ -41,6 +45,12 @@ public class BotVersion extends io.pulumi.resources.CustomResource {
         return this.description;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BotVersion(String name, BotVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lex:BotVersion", name, args == null ? BotVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +66,14 @@ public class BotVersion extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BotVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BotVersion(name, id, options);
     }

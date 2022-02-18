@@ -17,6 +17,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserProfileArgs Empty = new UserProfileArgs();
 
+    /**
+     * The ID of the associated Domain.
+     * 
+     */
     @InputImport(name="domainId", required=true)
     private final Input<String> domainId;
 
@@ -24,6 +28,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainId;
     }
 
+    /**
+     * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is "UserName". If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
+     * 
+     */
     @InputImport(name="singleSignOnUserIdentifier")
     private final @Nullable Input<String> singleSignOnUserIdentifier;
 
@@ -31,6 +39,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.singleSignOnUserIdentifier == null ? Input.empty() : this.singleSignOnUserIdentifier;
     }
 
+    /**
+     * The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
+     * 
+     */
     @InputImport(name="singleSignOnUserValue")
     private final @Nullable Input<String> singleSignOnUserValue;
 
@@ -38,6 +50,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.singleSignOnUserValue == null ? Input.empty() : this.singleSignOnUserValue;
     }
 
+    /**
+     * A list of tags to apply to the user profile.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<UserProfileTagArgs>> tags;
 
@@ -45,6 +61,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A name for the UserProfile.
+     * 
+     */
     @InputImport(name="userProfileName")
     private final @Nullable Input<String> userProfileName;
 
@@ -52,6 +72,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.userProfileName == null ? Input.empty() : this.userProfileName;
     }
 
+    /**
+     * A collection of settings.
+     * 
+     */
     @InputImport(name="userSettings")
     private final @Nullable Input<UserProfileUserSettingsArgs> userSettings;
 

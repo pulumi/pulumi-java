@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class SecurityProfileTag extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityProfileTag Empty = new SecurityProfileTag();
 
+    /**
+     * The tag's key.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +27,10 @@ public final class SecurityProfileTag extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * The tag's value.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

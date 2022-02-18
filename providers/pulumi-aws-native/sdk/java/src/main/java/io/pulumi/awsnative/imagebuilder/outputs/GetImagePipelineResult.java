@@ -16,16 +16,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetImagePipelineResult {
+    /**
+     * The Amazon Resource Name (ARN) of the image pipeline.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * 
+     */
     private final @Nullable String containerRecipeArn;
+    /**
+     * The description of the image pipeline.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
+     * 
+     */
     private final @Nullable String distributionConfigurationArn;
+    /**
+     * Collects additional information about the image being created, including the operating system (OS) version and package list.
+     * 
+     */
     private final @Nullable Boolean enhancedImageMetadataEnabled;
+    /**
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * 
+     */
     private final @Nullable String imageRecipeArn;
+    /**
+     * The image tests configuration of the image pipeline.
+     * 
+     */
     private final @Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration;
+    /**
+     * The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
+     * 
+     */
     private final @Nullable String infrastructureConfigurationArn;
+    /**
+     * The schedule of the image pipeline.
+     * 
+     */
     private final @Nullable ImagePipelineSchedule schedule;
+    /**
+     * The status of the image pipeline.
+     * 
+     */
     private final @Nullable ImagePipelineStatus status;
+    /**
+     * The tags of this image pipeline.
+     * 
+     */
     private final @Nullable Object tags;
 
     @OutputCustomType.Constructor({"arn","containerRecipeArn","description","distributionConfigurationArn","enhancedImageMetadataEnabled","imageRecipeArn","imageTestsConfiguration","infrastructureConfigurationArn","schedule","status","tags"})
@@ -54,36 +98,80 @@ public final class GetImagePipelineResult {
         this.tags = tags;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the image pipeline.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * 
+     */
     public Optional<String> getContainerRecipeArn() {
         return Optional.ofNullable(this.containerRecipeArn);
     }
+    /**
+     * The description of the image pipeline.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
+     * 
+     */
     public Optional<String> getDistributionConfigurationArn() {
         return Optional.ofNullable(this.distributionConfigurationArn);
     }
+    /**
+     * Collects additional information about the image being created, including the operating system (OS) version and package list.
+     * 
+     */
     public Optional<Boolean> getEnhancedImageMetadataEnabled() {
         return Optional.ofNullable(this.enhancedImageMetadataEnabled);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * 
+     */
     public Optional<String> getImageRecipeArn() {
         return Optional.ofNullable(this.imageRecipeArn);
     }
+    /**
+     * The image tests configuration of the image pipeline.
+     * 
+     */
     public Optional<ImagePipelineImageTestsConfiguration> getImageTestsConfiguration() {
         return Optional.ofNullable(this.imageTestsConfiguration);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
+     * 
+     */
     public Optional<String> getInfrastructureConfigurationArn() {
         return Optional.ofNullable(this.infrastructureConfigurationArn);
     }
+    /**
+     * The schedule of the image pipeline.
+     * 
+     */
     public Optional<ImagePipelineSchedule> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
+    /**
+     * The status of the image pipeline.
+     * 
+     */
     public Optional<ImagePipelineStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * The tags of this image pipeline.
+     * 
+     */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }

@@ -15,6 +15,10 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
 
     public static final FunctionImageConfigArgs Empty = new FunctionImageConfigArgs();
 
+    /**
+     * Command.
+     * 
+     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 
@@ -22,6 +26,10 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
         return this.command == null ? Input.empty() : this.command;
     }
 
+    /**
+     * EntryPoint.
+     * 
+     */
     @InputImport(name="entryPoint")
     private final @Nullable Input<List<String>> entryPoint;
 
@@ -29,6 +37,10 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
         return this.entryPoint == null ? Input.empty() : this.entryPoint;
     }
 
+    /**
+     * WorkingDirectory.
+     * 
+     */
     @InputImport(name="workingDirectory")
     private final @Nullable Input<String> workingDirectory;
 

@@ -14,6 +14,10 @@ public final class TransitGatewayConnectTag extends io.pulumi.resources.InvokeAr
 
     public static final TransitGatewayConnectTag Empty = new TransitGatewayConnectTag();
 
+    /**
+     * The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -21,6 +25,10 @@ public final class TransitGatewayConnectTag extends io.pulumi.resources.InvokeAr
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

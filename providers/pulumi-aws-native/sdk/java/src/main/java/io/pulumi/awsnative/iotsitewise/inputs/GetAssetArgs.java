@@ -12,6 +12,10 @@ public final class GetAssetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAssetArgs Empty = new GetAssetArgs();
 
+    /**
+     * The ID of the asset
+     * 
+     */
     @InputImport(name="assetId", required=true)
     private final String assetId;
 

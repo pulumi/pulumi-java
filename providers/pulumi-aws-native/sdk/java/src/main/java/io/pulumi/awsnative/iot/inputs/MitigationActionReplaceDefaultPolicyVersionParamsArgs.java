@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Parameters to define a mitigation action that adds a blank policy to restrict permissions.
+ * 
+ */
 public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MitigationActionReplaceDefaultPolicyVersionParamsArgs Empty = new MitigationActionReplaceDefaultPolicyVersionParamsArgs();

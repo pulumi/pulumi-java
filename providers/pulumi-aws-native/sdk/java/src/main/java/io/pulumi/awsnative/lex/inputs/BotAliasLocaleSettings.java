@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * You can use this parameter to specify a specific Lambda function to run different functions in different locales.
+ * 
+ */
 public final class BotAliasLocaleSettings extends io.pulumi.resources.InvokeArgs {
 
     public static final BotAliasLocaleSettings Empty = new BotAliasLocaleSettings();
@@ -22,6 +26,10 @@ public final class BotAliasLocaleSettings extends io.pulumi.resources.InvokeArgs
         return this.codeHookSpecification == null ? Optional.empty() : Optional.ofNullable(this.codeHookSpecification);
     }
 
+    /**
+     * Whether the Lambda code hook is enabled
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

@@ -21,6 +21,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotArgs Empty = new BotArgs();
 
+    /**
+     * Specifies whether to build the bot locales after bot creation completes.
+     * 
+     */
     @InputImport(name="autoBuildBotLocales")
     private final @Nullable Input<Boolean> autoBuildBotLocales;
 
@@ -35,6 +39,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
         return this.botFileS3Location == null ? Input.empty() : this.botFileS3Location;
     }
 
+    /**
+     * List of bot locales
+     * 
+     */
     @InputImport(name="botLocales")
     private final @Nullable Input<List<BotLocaleArgs>> botLocales;
 
@@ -42,6 +50,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
         return this.botLocales == null ? Input.empty() : this.botLocales;
     }
 
+    /**
+     * A list of tags to add to the bot, which can only be added at bot creation.
+     * 
+     */
     @InputImport(name="botTags")
     private final @Nullable Input<List<BotTagArgs>> botTags;
 
@@ -49,6 +61,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
         return this.botTags == null ? Input.empty() : this.botTags;
     }
 
+    /**
+     * Data privacy setting of the Bot.
+     * 
+     */
     @InputImport(name="dataPrivacy", required=true)
     private final Input<DataPrivacyPropertiesArgs> dataPrivacy;
 
@@ -63,6 +79,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * IdleSessionTTLInSeconds of the resource
+     * 
+     */
     @InputImport(name="idleSessionTTLInSeconds", required=true)
     private final Input<Integer> idleSessionTTLInSeconds;
 
@@ -84,6 +104,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.
+     * 
+     */
     @InputImport(name="testBotAliasTags")
     private final @Nullable Input<List<BotTagArgs>> testBotAliasTags;
 

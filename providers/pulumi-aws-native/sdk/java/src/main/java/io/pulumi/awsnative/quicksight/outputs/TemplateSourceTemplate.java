@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TemplateSourceTemplate {
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     private final String arn;
 
     @OutputCustomType.Constructor({"arn"})
@@ -16,6 +20,10 @@ public final class TemplateSourceTemplate {
         this.arn = Objects.requireNonNull(arn);
     }
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * 
+     */
     public String getArn() {
         return this.arn;
     }

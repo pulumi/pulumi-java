@@ -15,13 +15,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetContactFlowModuleResult {
+    /**
+     * The identifier of the contact flow module (ARN).
+     * 
+     */
     private final @Nullable String contactFlowModuleArn;
+    /**
+     * The content of the contact flow module in JSON format.
+     * 
+     */
     private final @Nullable String content;
+    /**
+     * The description of the contact flow module.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The identifier of the Amazon Connect instance (ARN).
+     * 
+     */
     private final @Nullable String instanceArn;
+    /**
+     * The name of the contact flow module.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The state of the contact flow module.
+     * 
+     */
     private final @Nullable ContactFlowModuleState state;
+    /**
+     * The status of the contact flow module.
+     * 
+     */
     private final @Nullable ContactFlowModuleStatus status;
+    /**
+     * One or more tags.
+     * 
+     */
     private final @Nullable List<ContactFlowModuleTag> tags;
 
     @OutputCustomType.Constructor({"contactFlowModuleArn","content","description","instanceArn","name","state","status","tags"})
@@ -44,27 +76,59 @@ public final class GetContactFlowModuleResult {
         this.tags = tags;
     }
 
+    /**
+     * The identifier of the contact flow module (ARN).
+     * 
+     */
     public Optional<String> getContactFlowModuleArn() {
         return Optional.ofNullable(this.contactFlowModuleArn);
     }
+    /**
+     * The content of the contact flow module in JSON format.
+     * 
+     */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
+    /**
+     * The description of the contact flow module.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The identifier of the Amazon Connect instance (ARN).
+     * 
+     */
     public Optional<String> getInstanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
+    /**
+     * The name of the contact flow module.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The state of the contact flow module.
+     * 
+     */
     public Optional<ContactFlowModuleState> getState() {
         return Optional.ofNullable(this.state);
     }
+    /**
+     * The status of the contact flow module.
+     * 
+     */
     public Optional<ContactFlowModuleStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * One or more tags.
+     * 
+     */
     public List<ContactFlowModuleTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

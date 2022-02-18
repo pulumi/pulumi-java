@@ -12,6 +12,10 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends io.pulumi.reso
 
     public static final GetTransitGatewayPeeringAttachmentArgs Empty = new GetTransitGatewayPeeringAttachmentArgs();
 
+    /**
+     * The ID of the transit gateway peering attachment.
+     * 
+     */
     @InputImport(name="transitGatewayAttachmentId", required=true)
     private final String transitGatewayAttachmentId;
 

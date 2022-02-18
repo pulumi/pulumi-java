@@ -38,6 +38,10 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
         return this.dBInstanceIdentifiers == null ? Input.empty() : this.dBInstanceIdentifiers;
     }
 
+    /**
+     * The identifier for the proxy.
+     * 
+     */
     @InputImport(name="dBProxyName", required=true)
     private final Input<String> dBProxyName;
 
@@ -45,6 +49,10 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
         return this.dBProxyName;
     }
 
+    /**
+     * The identifier for the DBProxyTargetGroup
+     * 
+     */
     @InputImport(name="targetGroupName", required=true)
     private final Input<DBProxyTargetGroupTargetGroupName> targetGroupName;
 

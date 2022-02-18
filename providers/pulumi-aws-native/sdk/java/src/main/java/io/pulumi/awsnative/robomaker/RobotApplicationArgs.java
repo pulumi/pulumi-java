@@ -18,6 +18,10 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
 
     public static final RobotApplicationArgs Empty = new RobotApplicationArgs();
 
+    /**
+     * The revision ID of robot application.
+     * 
+     */
     @InputImport(name="currentRevisionId")
     private final @Nullable Input<String> currentRevisionId;
 
@@ -25,6 +29,10 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
         return this.currentRevisionId == null ? Input.empty() : this.currentRevisionId;
     }
 
+    /**
+     * The URI of the Docker image for the robot application.
+     * 
+     */
     @InputImport(name="environment")
     private final @Nullable Input<String> environment;
 
@@ -32,6 +40,10 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The name of the robot application.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +58,10 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
         return this.robotSoftwareSuite;
     }
 
+    /**
+     * The sources of the robot application.
+     * 
+     */
     @InputImport(name="sources")
     private final @Nullable Input<List<RobotApplicationSourceConfigArgs>> sources;
 

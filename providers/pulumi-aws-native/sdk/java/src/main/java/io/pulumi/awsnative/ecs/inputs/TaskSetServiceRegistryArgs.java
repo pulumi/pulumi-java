@@ -15,6 +15,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
 
     public static final TaskSetServiceRegistryArgs Empty = new TaskSetServiceRegistryArgs();
 
+    /**
+     * The container name value, already specified in the task definition, to be used for your service discovery service. If the task definition that your service task specifies uses the bridge or host network mode, you must specify a containerName and containerPort combination from the task definition. If the task definition that your service task specifies uses the awsvpc network mode and a type SRV DNS record is used, you must specify either a containerName and containerPort combination or a port value, but not both.
+     * 
+     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -22,6 +26,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
+    /**
+     * The port value, already specified in the task definition, to be used for your service discovery service. If the task definition your service task specifies uses the bridge or host network mode, you must specify a containerName and containerPort combination from the task definition. If the task definition your service task specifies uses the awsvpc network mode and a type SRV DNS record is used, you must specify either a containerName and containerPort combination or a port value, but not both.
+     * 
+     */
     @InputImport(name="containerPort")
     private final @Nullable Input<Integer> containerPort;
 
@@ -29,6 +37,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
         return this.containerPort == null ? Input.empty() : this.containerPort;
     }
 
+    /**
+     * The port value used if your service discovery service specified an SRV record. This field may be used if both the awsvpc network mode and SRV records are used.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -36,6 +48,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS Cloud Map. For more information, see https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html
+     * 
+     */
     @InputImport(name="registryArn")
     private final @Nullable Input<String> registryArn;
 

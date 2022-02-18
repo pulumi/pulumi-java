@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourceAmazonElasticsearchParameters {
+    /**
+     * <p>The Amazon Elasticsearch Service domain.</p>
+     * 
+     */
     private final String domain;
 
     @OutputCustomType.Constructor({"domain"})
@@ -16,6 +20,10 @@ public final class DataSourceAmazonElasticsearchParameters {
         this.domain = Objects.requireNonNull(domain);
     }
 
+    /**
+     * <p>The Amazon Elasticsearch Service domain.</p>
+     * 
+     */
     public String getDomain() {
         return this.domain;
     }

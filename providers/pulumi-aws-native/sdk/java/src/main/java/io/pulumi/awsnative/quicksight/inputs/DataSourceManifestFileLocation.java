@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Amazon S3 manifest file location.</p>
+ * 
+ */
 public final class DataSourceManifestFileLocation extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceManifestFileLocation Empty = new DataSourceManifestFileLocation();
 
+    /**
+     * <p>Amazon S3 bucket.</p>
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -19,6 +27,10 @@ public final class DataSourceManifestFileLocation extends io.pulumi.resources.In
         return this.bucket;
     }
 
+    /**
+     * <p>Amazon S3 key that identifies an object.</p>
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 

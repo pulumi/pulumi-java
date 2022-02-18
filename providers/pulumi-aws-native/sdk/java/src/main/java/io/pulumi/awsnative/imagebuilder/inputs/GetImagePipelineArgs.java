@@ -12,6 +12,10 @@ public final class GetImagePipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetImagePipelineArgs Empty = new GetImagePipelineArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the image pipeline.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

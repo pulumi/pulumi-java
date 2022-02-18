@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Microsoft Smooth Streaming (MSS) packaging configuration.
+ * 
+ */
 public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OriginEndpointMssPackageArgs Empty = new OriginEndpointMssPackageArgs();
@@ -23,6 +27,10 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * The time window (in seconds) contained in each manifest.
+     * 
+     */
     @InputImport(name="manifestWindowSeconds")
     private final @Nullable Input<Integer> manifestWindowSeconds;
 
@@ -30,6 +38,10 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
         return this.manifestWindowSeconds == null ? Input.empty() : this.manifestWindowSeconds;
     }
 
+    /**
+     * The duration (in seconds) of each segment.
+     * 
+     */
     @InputImport(name="segmentDurationSeconds")
     private final @Nullable Input<Integer> segmentDurationSeconds;
 

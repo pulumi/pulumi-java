@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information that defines a state of a detector.
+ * 
+ */
 public final class DetectorModelState extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelState Empty = new DetectorModelState();
@@ -38,6 +42,10 @@ public final class DetectorModelState extends io.pulumi.resources.InvokeArgs {
         return this.onInput == null ? Optional.empty() : Optional.ofNullable(this.onInput);
     }
 
+    /**
+     * The name of the state.
+     * 
+     */
     @InputImport(name="stateName", required=true)
     private final String stateName;
 

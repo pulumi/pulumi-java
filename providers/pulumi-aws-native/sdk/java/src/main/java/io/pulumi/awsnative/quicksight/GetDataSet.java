@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataSet {
+/**
+ * Definition of the AWS::QuickSight::DataSet Resource Type.
+ * 
+ */
     public static CompletableFuture<GetDataSetResult> invokeAsync(GetDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSet", TypeShape.of(GetDataSetResult.class), args == null ? GetDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

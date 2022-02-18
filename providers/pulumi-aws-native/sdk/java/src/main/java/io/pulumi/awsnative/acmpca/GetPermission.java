@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPermission {
+/**
+ * Permission set on private certificate authority
+ * 
+ */
     public static CompletableFuture<GetPermissionResult> invokeAsync(GetPermissionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:acmpca:getPermission", TypeShape.of(GetPermissionResult.class), args == null ? GetPermissionArgs.Empty : args, Utilities.withVersion(options));
     }

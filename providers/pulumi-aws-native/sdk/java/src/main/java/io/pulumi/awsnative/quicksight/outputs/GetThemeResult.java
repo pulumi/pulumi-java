@@ -16,11 +16,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetThemeResult {
+    /**
+     * <p>The Amazon Resource Name (ARN) of the theme.</p>
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * <p>The date and time that the theme was created.</p>
+     * 
+     */
     private final @Nullable String createdTime;
+    /**
+     * <p>The date and time that the theme was last updated.</p>
+     * 
+     */
     private final @Nullable String lastUpdatedTime;
+    /**
+     * <p>A display name for the theme.</p>
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * <p>A valid grouping of resource permissions to apply to the new theme.
+     * 			</p>
+     * 
+     */
     private final @Nullable List<ThemeResourcePermission> permissions;
+    /**
+     * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.</p>
+     * 
+     */
     private final @Nullable List<ThemeTag> tags;
     private final @Nullable ThemeType type;
     private final @Nullable ThemeVersion version;
@@ -45,21 +71,47 @@ public final class GetThemeResult {
         this.version = version;
     }
 
+    /**
+     * <p>The Amazon Resource Name (ARN) of the theme.</p>
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * <p>The date and time that the theme was created.</p>
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+    /**
+     * <p>The date and time that the theme was last updated.</p>
+     * 
+     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
+    /**
+     * <p>A display name for the theme.</p>
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * <p>A valid grouping of resource permissions to apply to the new theme.
+     * 			</p>
+     * 
+     */
     public List<ThemeResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
+    /**
+     * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.</p>
+     * 
+     */
     public List<ThemeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

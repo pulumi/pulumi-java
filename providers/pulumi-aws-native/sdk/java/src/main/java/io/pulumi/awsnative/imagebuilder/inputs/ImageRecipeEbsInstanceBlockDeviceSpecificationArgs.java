@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Amazon EBS-specific block device mapping specifications.
+ * 
+ */
 public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageRecipeEbsInstanceBlockDeviceSpecificationArgs Empty = new ImageRecipeEbsInstanceBlockDeviceSpecificationArgs();
 
+    /**
+     * Use to configure delete on termination of the associated device.
+     * 
+     */
     @InputImport(name="deleteOnTermination")
     private final @Nullable Input<Boolean> deleteOnTermination;
 
@@ -24,6 +32,10 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
     }
 
+    /**
+     * Use to configure device encryption.
+     * 
+     */
     @InputImport(name="encrypted")
     private final @Nullable Input<Boolean> encrypted;
 
@@ -31,6 +43,10 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
         return this.encrypted == null ? Input.empty() : this.encrypted;
     }
 
+    /**
+     * Use to configure device IOPS.
+     * 
+     */
     @InputImport(name="iops")
     private final @Nullable Input<Integer> iops;
 
@@ -38,6 +54,10 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
         return this.iops == null ? Input.empty() : this.iops;
     }
 
+    /**
+     * Use to configure the KMS key to use when encrypting the device.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -45,6 +65,10 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * The snapshot that defines the device contents.
+     * 
+     */
     @InputImport(name="snapshotId")
     private final @Nullable Input<String> snapshotId;
 
@@ -52,6 +76,10 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
     }
 
+    /**
+     * For GP3 volumes only – The throughput in MiB/s that the volume supports.
+     * 
+     */
     @InputImport(name="throughput")
     private final @Nullable Input<Integer> throughput;
 
@@ -59,6 +87,10 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
         return this.throughput == null ? Input.empty() : this.throughput;
     }
 
+    /**
+     * Use to override the device's volume size.
+     * 
+     */
     @InputImport(name="volumeSize")
     private final @Nullable Input<Integer> volumeSize;
 
@@ -66,6 +98,10 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
         return this.volumeSize == null ? Input.empty() : this.volumeSize;
     }
 
+    /**
+     * Use to override the device's volume type.
+     * 
+     */
     @InputImport(name="volumeType")
     private final @Nullable Input<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType;
 

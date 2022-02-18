@@ -16,6 +16,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
 
     public static final CustomDataIdentifierArgs Empty = new CustomDataIdentifierArgs();
 
+    /**
+     * Description of custom data identifier.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Words to be ignored.
+     * 
+     */
     @InputImport(name="ignoreWords")
     private final @Nullable Input<List<String>> ignoreWords;
 
@@ -30,6 +38,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
         return this.ignoreWords == null ? Input.empty() : this.ignoreWords;
     }
 
+    /**
+     * Keywords to be matched against.
+     * 
+     */
     @InputImport(name="keywords")
     private final @Nullable Input<List<String>> keywords;
 
@@ -37,6 +49,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
         return this.keywords == null ? Input.empty() : this.keywords;
     }
 
+    /**
+     * Maximum match distance.
+     * 
+     */
     @InputImport(name="maximumMatchDistance")
     private final @Nullable Input<Integer> maximumMatchDistance;
 
@@ -44,6 +60,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
         return this.maximumMatchDistance == null ? Input.empty() : this.maximumMatchDistance;
     }
 
+    /**
+     * Name of custom data identifier.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +71,10 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Regular expression for custom data identifier.
+     * 
+     */
     @InputImport(name="regex", required=true)
     private final Input<String> regex;
 

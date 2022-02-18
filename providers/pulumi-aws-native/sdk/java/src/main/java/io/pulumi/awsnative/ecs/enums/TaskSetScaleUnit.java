@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The unit of measure for the scale value.
+     * 
+     */
     @EnumType
     public enum TaskSetScaleUnit {
         Percent("PERCENT");

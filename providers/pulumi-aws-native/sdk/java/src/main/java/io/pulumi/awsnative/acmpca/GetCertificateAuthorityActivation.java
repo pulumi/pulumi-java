@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateAuthorityActivation {
+/**
+ * Used to install the certificate authority certificate and update the certificate authority status.
+ * 
+ */
     public static CompletableFuture<GetCertificateAuthorityActivationResult> invokeAsync(GetCertificateAuthorityActivationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificateAuthorityActivation", TypeShape.of(GetCertificateAuthorityActivationResult.class), args == null ? GetCertificateAuthorityActivationArgs.Empty : args, Utilities.withVersion(options));
     }

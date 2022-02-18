@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class BotMessageGroup {
     private final BotMessage message;
+    /**
+     * Message variations to send to the user.
+     * 
+     */
     private final @Nullable List<BotMessage> variations;
 
     @OutputCustomType.Constructor({"message","variations"})
@@ -25,6 +29,10 @@ public final class BotMessageGroup {
     public BotMessage getMessage() {
         return this.message;
     }
+    /**
+     * Message variations to send to the user.
+     * 
+     */
     public List<BotMessage> getVariations() {
         return this.variations == null ? List.of() : this.variations;
     }

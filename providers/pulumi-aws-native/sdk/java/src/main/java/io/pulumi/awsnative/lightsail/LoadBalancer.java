@@ -16,29 +16,65 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Lightsail::LoadBalancer
+ * 
+ */
 @ResourceType(type="aws-native:lightsail:LoadBalancer")
 public class LoadBalancer extends io.pulumi.resources.CustomResource {
+    /**
+     * The names of the instances attached to the load balancer.
+     * 
+     */
     @OutputExport(name="attachedInstances", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> attachedInstances;
 
+    /**
+     * @return The names of the instances attached to the load balancer.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getAttachedInstances() {
         return this.attachedInstances;
     }
+    /**
+     * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
+     * 
+     */
     @OutputExport(name="healthCheckPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthCheckPath;
 
+    /**
+     * @return The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
+     * 
+     */
     public Output</* @Nullable */ String> getHealthCheckPath() {
         return this.healthCheckPath;
     }
+    /**
+     * The instance port where you're creating your load balancer.
+     * 
+     */
     @OutputExport(name="instancePort", type=Integer.class, parameters={})
     private Output<Integer> instancePort;
 
+    /**
+     * @return The instance port where you're creating your load balancer.
+     * 
+     */
     public Output<Integer> getInstancePort() {
         return this.instancePort;
     }
+    /**
+     * The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
+     * 
+     */
     @OutputExport(name="ipAddressType", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddressType;
 
+    /**
+     * @return The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
+     * 
+     */
     public Output</* @Nullable */ String> getIpAddressType() {
         return this.ipAddressType;
     }
@@ -48,31 +84,69 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
     public Output<String> getLoadBalancerArn() {
         return this.loadBalancerArn;
     }
+    /**
+     * The name of your load balancer.
+     * 
+     */
     @OutputExport(name="loadBalancerName", type=String.class, parameters={})
     private Output<String> loadBalancerName;
 
+    /**
+     * @return The name of your load balancer.
+     * 
+     */
     public Output<String> getLoadBalancerName() {
         return this.loadBalancerName;
     }
+    /**
+     * Configuration option to enable session stickiness.
+     * 
+     */
     @OutputExport(name="sessionStickinessEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sessionStickinessEnabled;
 
+    /**
+     * @return Configuration option to enable session stickiness.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getSessionStickinessEnabled() {
         return this.sessionStickinessEnabled;
     }
+    /**
+     * Configuration option to adjust session stickiness cookie duration parameter.
+     * 
+     */
     @OutputExport(name="sessionStickinessLBCookieDurationSeconds", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionStickinessLBCookieDurationSeconds;
 
+    /**
+     * @return Configuration option to adjust session stickiness cookie duration parameter.
+     * 
+     */
     public Output</* @Nullable */ String> getSessionStickinessLBCookieDurationSeconds() {
         return this.sessionStickinessLBCookieDurationSeconds;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={LoadBalancerTag.class})
     private Output</* @Nullable */ List<LoadBalancerTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<LoadBalancerTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LoadBalancer(String name, LoadBalancerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lightsail:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -88,6 +162,14 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LoadBalancer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LoadBalancer(name, id, options);
     }

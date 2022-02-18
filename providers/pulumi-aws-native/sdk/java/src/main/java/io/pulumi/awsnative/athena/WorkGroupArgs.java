@@ -20,6 +20,10 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkGroupArgs Empty = new WorkGroupArgs();
 
+    /**
+     * The workgroup description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -27,6 +31,10 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The workGroup name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -34,6 +42,10 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
+     * 
+     */
     @InputImport(name="recursiveDeleteOption")
     private final @Nullable Input<Boolean> recursiveDeleteOption;
 
@@ -41,6 +53,10 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.recursiveDeleteOption == null ? Input.empty() : this.recursiveDeleteOption;
     }
 
+    /**
+     * The state of the workgroup: ENABLED or DISABLED.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<WorkGroupState> state;
 
@@ -48,6 +64,10 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<WorkGroupTagArgs>> tags;
 
@@ -55,6 +75,10 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The workgroup configuration
+     * 
+     */
     @InputImport(name="workGroupConfiguration")
     private final @Nullable Input<WorkGroupConfigurationArgs> workGroupConfiguration;
 
@@ -62,6 +86,10 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.workGroupConfiguration == null ? Input.empty() : this.workGroupConfiguration;
     }
 
+    /**
+     * The workgroup configuration update object
+     * 
+     */
     @InputImport(name="workGroupConfigurationUpdates")
     private final @Nullable Input<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
 

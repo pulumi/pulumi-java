@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStudioComponent {
+/**
+ * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
+ * 
+ */
     public static CompletableFuture<GetStudioComponentResult> invokeAsync(GetStudioComponentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStudioComponent", TypeShape.of(GetStudioComponentResult.class), args == null ? GetStudioComponentArgs.Empty : args, Utilities.withVersion(options));
     }

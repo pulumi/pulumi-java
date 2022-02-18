@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Identifies the resources to deploy for a monitoring job.
+ * 
+ */
 public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelQualityJobDefinitionMonitoringResourcesArgs Empty = new ModelQualityJobDefinitionMonitoringResourcesArgs();

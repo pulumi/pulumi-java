@@ -8,6 +8,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Identifies the resources to deploy for a monitoring job.
+ * 
+ */
 public final class MonitoringScheduleMonitoringResources extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringScheduleMonitoringResources Empty = new MonitoringScheduleMonitoringResources();

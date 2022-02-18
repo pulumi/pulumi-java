@@ -6,6 +6,10 @@ package io.pulumi.awsnative.fis.inputs;
 import java.util.Objects;
 
 
+/**
+ * The actions for the experiment.
+ * 
+ */
 public final class ExperimentTemplateActionMap extends io.pulumi.resources.InvokeArgs {
 
     public static final ExperimentTemplateActionMap Empty = new ExperimentTemplateActionMap();

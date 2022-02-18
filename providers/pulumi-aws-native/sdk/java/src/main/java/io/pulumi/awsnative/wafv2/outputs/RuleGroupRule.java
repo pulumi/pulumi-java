@@ -22,6 +22,10 @@ public final class RuleGroupRule {
     private final @Nullable RuleGroupCaptchaConfig captchaConfig;
     private final String name;
     private final Integer priority;
+    /**
+     * Collection of Rule Labels.
+     * 
+     */
     private final @Nullable List<RuleGroupLabel> ruleLabels;
     private final RuleGroupStatement statement;
     private final RuleGroupVisibilityConfig visibilityConfig;
@@ -56,6 +60,10 @@ public final class RuleGroupRule {
     public Integer getPriority() {
         return this.priority;
     }
+    /**
+     * Collection of Rule Labels.
+     * 
+     */
     public List<RuleGroupLabel> getRuleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }

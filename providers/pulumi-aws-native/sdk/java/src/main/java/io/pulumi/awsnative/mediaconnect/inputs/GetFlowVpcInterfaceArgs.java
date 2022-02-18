@@ -12,6 +12,10 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetFlowVpcInterfaceArgs Empty = new GetFlowVpcInterfaceArgs();
 
+    /**
+     * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     @InputImport(name="flowArn", required=true)
     private final String flowArn;
 
@@ -19,6 +23,10 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
         return this.flowArn;
     }
 
+    /**
+     * Immutable and has to be a unique against other VpcInterfaces in this Flow.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

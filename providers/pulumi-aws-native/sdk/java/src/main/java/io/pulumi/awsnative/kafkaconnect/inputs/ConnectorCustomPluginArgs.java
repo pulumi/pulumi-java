@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details about a custom plugin.
+ * 
+ */
 public final class ConnectorCustomPluginArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorCustomPluginArgs Empty = new ConnectorCustomPluginArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the custom plugin to use.
+     * 
+     */
     @InputImport(name="customPluginArn", required=true)
     private final Input<String> customPluginArn;
 
@@ -21,6 +29,10 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
         return this.customPluginArn;
     }
 
+    /**
+     * The revision of the custom plugin to use.
+     * 
+     */
     @InputImport(name="revision", required=true)
     private final Input<Integer> revision;
 

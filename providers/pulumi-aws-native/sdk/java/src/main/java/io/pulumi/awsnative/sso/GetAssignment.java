@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssignment {
+/**
+ * Resource Type definition for SSO assignmet
+ * 
+ */
     public static CompletableFuture<GetAssignmentResult> invokeAsync(GetAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getAssignment", TypeShape.of(GetAssignmentResult.class), args == null ? GetAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

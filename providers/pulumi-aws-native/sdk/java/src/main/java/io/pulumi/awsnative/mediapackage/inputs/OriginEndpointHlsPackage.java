@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An HTTP Live Streaming (HLS) packaging configuration.
+ * 
+ */
 public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeArgs {
 
     public static final OriginEndpointHlsPackage Empty = new OriginEndpointHlsPackage();
 
+    /**
+     * This setting controls how ad markers are included in the packaged OriginEndpoint. "NONE" will omit all SCTE-35 ad markers from the output. "PASSTHROUGH" causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. "SCTE35_ENHANCED" generates ad markers and blackout tags based on SCTE-35 messages in the input source. "DATERANGE" inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+     * 
+     */
     @InputImport(name="adMarkers")
     private final @Nullable OriginEndpointHlsPackageAdMarkers adMarkers;
 
@@ -29,6 +37,10 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
         return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
     }
 
+    /**
+     * A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+     * 
+     */
     @InputImport(name="adTriggers")
     private final @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers;
 
@@ -50,6 +62,10 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
+    /**
+     * When enabled, an I-Frame only stream will be included in the output.
+     * 
+     */
     @InputImport(name="includeIframeOnlyStream")
     private final @Nullable Boolean includeIframeOnlyStream;
 
@@ -57,6 +73,10 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
         return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
     }
 
+    /**
+     * The HTTP Live Streaming (HLS) playlist type. When either "EVENT" or "VOD" is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+     * 
+     */
     @InputImport(name="playlistType")
     private final @Nullable OriginEndpointHlsPackagePlaylistType playlistType;
 
@@ -64,6 +84,10 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
         return this.playlistType == null ? Optional.empty() : Optional.ofNullable(this.playlistType);
     }
 
+    /**
+     * Time window (in seconds) contained in each parent manifest.
+     * 
+     */
     @InputImport(name="playlistWindowSeconds")
     private final @Nullable Integer playlistWindowSeconds;
 
@@ -71,6 +95,10 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
         return this.playlistWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.playlistWindowSeconds);
     }
 
+    /**
+     * The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+     * 
+     */
     @InputImport(name="programDateTimeIntervalSeconds")
     private final @Nullable Integer programDateTimeIntervalSeconds;
 
@@ -78,6 +106,10 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
         return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
 
+    /**
+     * Duration (in seconds) of each fragment. Actual fragments will be rounded to the nearest multiple of the source fragment duration.
+     * 
+     */
     @InputImport(name="segmentDurationSeconds")
     private final @Nullable Integer segmentDurationSeconds;
 
@@ -92,6 +124,10 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
     }
 
+    /**
+     * When enabled, audio streams will be placed in rendition groups in the output.
+     * 
+     */
     @InputImport(name="useAudioRenditionGroup")
     private final @Nullable Boolean useAudioRenditionGroup;
 

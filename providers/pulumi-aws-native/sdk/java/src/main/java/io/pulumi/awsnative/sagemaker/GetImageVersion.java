@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImageVersion {
+/**
+ * Resource Type definition for AWS::SageMaker::ImageVersion
+ * 
+ */
     public static CompletableFuture<GetImageVersionResult> invokeAsync(GetImageVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getImageVersion", TypeShape.of(GetImageVersionResult.class), args == null ? GetImageVersionArgs.Empty : args, Utilities.withVersion(options));
     }

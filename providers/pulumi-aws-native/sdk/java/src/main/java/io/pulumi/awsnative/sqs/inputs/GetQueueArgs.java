@@ -12,6 +12,10 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetQueueArgs Empty = new GetQueueArgs();
 
+    /**
+     * URL of the source queue.
+     * 
+     */
     @InputImport(name="queueUrl", required=true)
     private final String queueUrl;
 

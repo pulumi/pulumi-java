@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a filter used to specify which AWS resources are analyzed for anomalous behavior by DevOps Guru.
+ * 
+ */
 public final class ResourceCollectionFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceCollectionFilterArgs Empty = new ResourceCollectionFilterArgs();

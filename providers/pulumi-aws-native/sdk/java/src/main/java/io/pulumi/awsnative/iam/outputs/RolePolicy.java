@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RolePolicy {
+    /**
+     * The policy document.
+     * 
+     */
     private final String policyDocument;
+    /**
+     * The friendly name (not ARN) identifying the policy.
+     * 
+     */
     private final String policyName;
 
     @OutputCustomType.Constructor({"policyDocument","policyName"})
@@ -20,9 +28,17 @@ public final class RolePolicy {
         this.policyName = Objects.requireNonNull(policyName);
     }
 
+    /**
+     * The policy document.
+     * 
+     */
     public String getPolicyDocument() {
         return this.policyDocument;
     }
+    /**
+     * The friendly name (not ARN) identifying the policy.
+     * 
+     */
     public String getPolicyName() {
         return this.policyName;
     }

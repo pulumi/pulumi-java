@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNotificationChannelResult {
+    /**
+     * The ID of a notification channel.
+     * 
+     */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +22,10 @@ public final class GetNotificationChannelResult {
         this.id = id;
     }
 
+    /**
+     * The ID of a notification channel.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The health check command and associated configuration parameters for the container.
+ * 
+ */
 public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskDefinitionHealthCheckArgs Empty = new TaskDefinitionHealthCheckArgs();
 
+    /**
+     * A string array representing the command that the container runs to determine if it is healthy.
+     * 
+     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 
@@ -23,6 +31,10 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
         return this.command == null ? Input.empty() : this.command;
     }
 
+    /**
+     * The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
+     * 
+     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 
@@ -30,6 +42,10 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
         return this.interval == null ? Input.empty() : this.interval;
     }
 
+    /**
+     * The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
+     * 
+     */
     @InputImport(name="retries")
     private final @Nullable Input<Integer> retries;
 
@@ -37,6 +53,10 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
         return this.retries == null ? Input.empty() : this.retries;
     }
 
+    /**
+     * The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
+     * 
+     */
     @InputImport(name="startPeriod")
     private final @Nullable Input<Integer> startPeriod;
 
@@ -44,6 +64,10 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
         return this.startPeriod == null ? Input.empty() : this.startPeriod;
     }
 
+    /**
+     * The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
 

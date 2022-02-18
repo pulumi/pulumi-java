@@ -19,6 +19,10 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventTypeArgs Empty = new EventTypeArgs();
 
+    /**
+     * The description of the event type.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -47,6 +51,10 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels;
     }
 
+    /**
+     * The name for the event type
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +62,10 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<EventTypeTagArgs>> tags;
 

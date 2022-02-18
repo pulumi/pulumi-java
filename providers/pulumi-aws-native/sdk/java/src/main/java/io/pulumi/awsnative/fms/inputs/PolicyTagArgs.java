@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A policy tag.
+ * 
+ */
 public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyTagArgs Empty = new PolicyTagArgs();

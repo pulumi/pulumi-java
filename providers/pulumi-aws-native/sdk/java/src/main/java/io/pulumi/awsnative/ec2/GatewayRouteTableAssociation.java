@@ -12,27 +12,61 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Associates a gateway with a route table. The gateway and route table must be in the same VPC. This association causes the incoming traffic to the gateway to be routed according to the routes in the route table.
+ * 
+ */
 @ResourceType(type="aws-native:ec2:GatewayRouteTableAssociation")
 public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomResource {
+    /**
+     * The route table association ID.
+     * 
+     */
     @OutputExport(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
+    /**
+     * @return The route table association ID.
+     * 
+     */
     public Output<String> getAssociationId() {
         return this.associationId;
     }
+    /**
+     * The ID of the gateway.
+     * 
+     */
     @OutputExport(name="gatewayId", type=String.class, parameters={})
     private Output<String> gatewayId;
 
+    /**
+     * @return The ID of the gateway.
+     * 
+     */
     public Output<String> getGatewayId() {
         return this.gatewayId;
     }
+    /**
+     * The ID of the route table.
+     * 
+     */
     @OutputExport(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
+    /**
+     * @return The ID of the route table.
+     * 
+     */
     public Output<String> getRouteTableId() {
         return this.routeTableId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GatewayRouteTableAssociation(String name, GatewayRouteTableAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:GatewayRouteTableAssociation", name, args == null ? GatewayRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -48,6 +82,14 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GatewayRouteTableAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GatewayRouteTableAssociation(name, id, options);
     }

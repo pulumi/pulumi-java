@@ -20,6 +20,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * Autoscaling configuration ARN
+     * 
+     */
     @InputImport(name="autoScalingConfigurationArn")
     private final @Nullable Input<String> autoScalingConfigurationArn;
 
@@ -48,6 +52,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceConfiguration == null ? Input.empty() : this.instanceConfiguration;
     }
 
+    /**
+     * The AppRunner Service Name.
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 

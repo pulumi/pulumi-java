@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of source that will be generating the events.
+     * 
+     */
     @EnumType
     public enum EventSubscriptionSourceType {
         Cluster("cluster"),

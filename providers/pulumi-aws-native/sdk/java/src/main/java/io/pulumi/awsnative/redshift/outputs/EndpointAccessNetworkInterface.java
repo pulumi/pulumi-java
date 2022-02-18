@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EndpointAccessNetworkInterface {
+    /**
+     * The Availability Zone.
+     * 
+     */
     private final @Nullable String availabilityZone;
+    /**
+     * The network interface identifier.
+     * 
+     */
     private final @Nullable String networkInterfaceId;
+    /**
+     * The IPv4 address of the network interface within the subnet.
+     * 
+     */
     private final @Nullable String privateIpAddress;
+    /**
+     * The subnet identifier.
+     * 
+     */
     private final @Nullable String subnetId;
 
     @OutputCustomType.Constructor({"availabilityZone","networkInterfaceId","privateIpAddress","subnetId"})
@@ -28,15 +44,31 @@ public final class EndpointAccessNetworkInterface {
         this.subnetId = subnetId;
     }
 
+    /**
+     * The Availability Zone.
+     * 
+     */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
+    /**
+     * The network interface identifier.
+     * 
+     */
     public Optional<String> getNetworkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
+    /**
+     * The IPv4 address of the network interface within the subnet.
+     * 
+     */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
+    /**
+     * The subnet identifier.
+     * 
+     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }

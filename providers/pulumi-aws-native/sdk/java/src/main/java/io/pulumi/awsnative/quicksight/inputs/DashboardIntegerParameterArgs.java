@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * <p>An integer parameter.</p>
+ * 
+ */
 public final class DashboardIntegerParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardIntegerParameterArgs Empty = new DashboardIntegerParameterArgs();
 
+    /**
+     * <p>The name of the integer parameter.</p>
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -22,6 +30,10 @@ public final class DashboardIntegerParameterArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * <p>The values for the integer parameter.</p>
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<Double>> values;
 

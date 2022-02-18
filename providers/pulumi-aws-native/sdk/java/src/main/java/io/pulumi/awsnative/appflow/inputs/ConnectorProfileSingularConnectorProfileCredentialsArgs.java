@@ -13,6 +13,10 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
 
     public static final ConnectorProfileSingularConnectorProfileCredentialsArgs Empty = new ConnectorProfileSingularConnectorProfileCredentialsArgs();
 
+    /**
+     * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
+     * 
+     */
     @InputImport(name="apiKey", required=true)
     private final Input<String> apiKey;
 

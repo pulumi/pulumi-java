@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift hosting resource. New game sessions that are started on the fleet are assigned an IP address/port number combination, which must fall into the fleet's allowed ranges. For fleets created with a custom game server, the ranges reflect the server's game session assignments. For Realtime Servers fleets, Amazon GameLift automatically opens two port ranges, one for TCP messaging and one for UDP, for use by the Realtime servers.
+ * 
+ */
 public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FleetIpPermissionArgs Empty = new FleetIpPermissionArgs();
 
+    /**
+     * A starting value for a range of allowed port numbers.
+     * 
+     */
     @InputImport(name="fromPort", required=true)
     private final Input<Integer> fromPort;
 
@@ -22,6 +30,10 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
         return this.fromPort;
     }
 
+    /**
+     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: "000.000.000.000/[subnet mask]" or optionally the shortened version "0.0.0.0/[subnet mask]".
+     * 
+     */
     @InputImport(name="ipRange", required=true)
     private final Input<String> ipRange;
 
@@ -29,6 +41,10 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
         return this.ipRange;
     }
 
+    /**
+     * The network communication protocol used by the fleet.
+     * 
+     */
     @InputImport(name="protocol", required=true)
     private final Input<FleetIpPermissionProtocol> protocol;
 
@@ -36,6 +52,10 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
         return this.protocol;
     }
 
+    /**
+     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+     * 
+     */
     @InputImport(name="toPort", required=true)
     private final Input<Integer> toPort;
 

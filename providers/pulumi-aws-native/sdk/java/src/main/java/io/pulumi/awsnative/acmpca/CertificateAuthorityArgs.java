@@ -19,6 +19,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     public static final CertificateAuthorityArgs Empty = new CertificateAuthorityArgs();
 
+    /**
+     * Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
+     * 
+     */
     @InputImport(name="csrExtensions")
     private final @Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
 
@@ -26,6 +30,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
         return this.csrExtensions == null ? Input.empty() : this.csrExtensions;
     }
 
+    /**
+     * Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
+     * 
+     */
     @InputImport(name="keyAlgorithm", required=true)
     private final Input<String> keyAlgorithm;
 
@@ -33,6 +41,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
         return this.keyAlgorithm;
     }
 
+    /**
+     * KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
+     * 
+     */
     @InputImport(name="keyStorageSecurityStandard")
     private final @Nullable Input<String> keyStorageSecurityStandard;
 
@@ -40,6 +52,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
         return this.keyStorageSecurityStandard == null ? Input.empty() : this.keyStorageSecurityStandard;
     }
 
+    /**
+     * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
+     * 
+     */
     @InputImport(name="revocationConfiguration")
     private final @Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
@@ -47,6 +63,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
         return this.revocationConfiguration == null ? Input.empty() : this.revocationConfiguration;
     }
 
+    /**
+     * Algorithm your CA uses to sign certificate requests.
+     * 
+     */
     @InputImport(name="signingAlgorithm", required=true)
     private final Input<String> signingAlgorithm;
 
@@ -54,6 +74,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
         return this.signingAlgorithm;
     }
 
+    /**
+     * Structure that contains X.500 distinguished name information for your CA.
+     * 
+     */
     @InputImport(name="subject", required=true)
     private final Input<CertificateAuthoritySubjectArgs> subject;
 
@@ -68,6 +92,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of the certificate authority.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

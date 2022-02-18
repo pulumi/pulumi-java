@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The target type. Value must be THING_GROUP.
+     * 
+     */
     @EnumType
     public enum ResourceSpecificLoggingTargetType {
         ThingGroup("THING_GROUP");

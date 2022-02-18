@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewall {
+/**
+ * Resource type definition for AWS::NetworkFirewall::Firewall
+ * 
+ */
     public static CompletableFuture<GetFirewallResult> invokeAsync(GetFirewallArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getFirewall", TypeShape.of(GetFirewallResult.class), args == null ? GetFirewallArgs.Empty : args, Utilities.withVersion(options));
     }

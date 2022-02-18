@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the service in which this image was registered.
+     * 
+     */
     @EnumType
     public enum ContainerRecipeTargetContainerRepositoryService {
         Ecr("ECR");

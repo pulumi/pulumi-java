@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The encryption type to use.
+     * 
+     */
     @EnumType
     public enum RepositoryEncryptionType {
         Aes256("AES256"),

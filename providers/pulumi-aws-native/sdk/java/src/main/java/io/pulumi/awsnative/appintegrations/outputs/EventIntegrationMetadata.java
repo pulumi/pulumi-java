@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EventIntegrationMetadata {
+    /**
+     * A key to identify the metadata.
+     * 
+     */
     private final String key;
+    /**
+     * Corresponding metadata value for the key.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class EventIntegrationMetadata {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * A key to identify the metadata.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * Corresponding metadata value for the key.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

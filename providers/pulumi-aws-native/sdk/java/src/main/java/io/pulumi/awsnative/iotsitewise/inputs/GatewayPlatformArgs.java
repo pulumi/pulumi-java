@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains a gateway's platform information.
+ * 
+ */
 public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayPlatformArgs Empty = new GatewayPlatformArgs();
 
+    /**
+     * A gateway that runs on AWS IoT Greengrass V1.
+     * 
+     */
     @InputImport(name="greengrass")
     private final @Nullable Input<GatewayGreengrassArgs> greengrass;
 
@@ -22,6 +30,10 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
         return this.greengrass == null ? Input.empty() : this.greengrass;
     }
 
+    /**
+     * A gateway that runs on AWS IoT Greengrass V2.
+     * 
+     */
     @InputImport(name="greengrassV2")
     private final @Nullable Input<GatewayGreengrassV2Args> greengrassV2;
 

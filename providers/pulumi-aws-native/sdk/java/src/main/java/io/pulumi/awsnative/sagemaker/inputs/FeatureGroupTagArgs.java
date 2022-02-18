@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class FeatureGroupTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureGroupTagArgs Empty = new FeatureGroupTagArgs();

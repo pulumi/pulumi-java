@@ -8,6 +8,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Specifies object key name filtering rules.
+ * 
+ */
 public final class BucketNotificationFilter extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketNotificationFilter Empty = new BucketNotificationFilter();

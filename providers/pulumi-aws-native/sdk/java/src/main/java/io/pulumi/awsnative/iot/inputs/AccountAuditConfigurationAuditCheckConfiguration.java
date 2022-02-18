@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for a specific audit check.
+ * 
+ */
 public final class AccountAuditConfigurationAuditCheckConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final AccountAuditConfigurationAuditCheckConfiguration Empty = new AccountAuditConfigurationAuditCheckConfiguration();
 
+    /**
+     * True if the check is enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 

@@ -22,47 +22,107 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
+ * 
+ */
 @ResourceType(type="aws-native:cloudformation:StackSet")
 public class StackSet extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. Specify an IAM role only if you are using customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account.
+     * 
+     */
     @OutputExport(name="administrationRoleARN", type=String.class, parameters={})
     private Output</* @Nullable */ String> administrationRoleARN;
 
+    /**
+     * @return The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. Specify an IAM role only if you are using customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account.
+     * 
+     */
     public Output</* @Nullable */ String> getAdministrationRoleARN() {
         return this.administrationRoleARN;
     }
+    /**
+     * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to the target organization or organizational unit (OU). Specify only if PermissionModel is SERVICE_MANAGED.
+     * 
+     */
     @OutputExport(name="autoDeployment", type=StackSetAutoDeployment.class, parameters={})
     private Output</* @Nullable */ StackSetAutoDeployment> autoDeployment;
 
+    /**
+     * @return Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to the target organization or organizational unit (OU). Specify only if PermissionModel is SERVICE_MANAGED.
+     * 
+     */
     public Output</* @Nullable */ StackSetAutoDeployment> getAutoDeployment() {
         return this.autoDeployment;
     }
+    /**
+     * Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization's management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
+     * 
+     */
     @OutputExport(name="callAs", type=StackSetCallAs.class, parameters={})
     private Output</* @Nullable */ StackSetCallAs> callAs;
 
+    /**
+     * @return Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization's management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
+     * 
+     */
     public Output</* @Nullable */ StackSetCallAs> getCallAs() {
         return this.callAs;
     }
+    /**
+     * In some cases, you must explicitly acknowledge that your stack set template contains certain capabilities in order for AWS CloudFormation to create the stack set and related stack instances.
+     * 
+     */
     @OutputExport(name="capabilities", type=List.class, parameters={StackSetCapability.class})
     private Output</* @Nullable */ List<StackSetCapability>> capabilities;
 
+    /**
+     * @return In some cases, you must explicitly acknowledge that your stack set template contains certain capabilities in order for AWS CloudFormation to create the stack set and related stack instances.
+     * 
+     */
     public Output</* @Nullable */ List<StackSetCapability>> getCapabilities() {
         return this.capabilities;
     }
+    /**
+     * A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The name of the IAM execution role to use to create the stack set. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation.
+     * 
+     */
     @OutputExport(name="executionRoleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleName;
 
+    /**
+     * @return The name of the IAM execution role to use to create the stack set. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation.
+     * 
+     */
     public Output</* @Nullable */ String> getExecutionRoleName() {
         return this.executionRoleName;
     }
+    /**
+     * Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
+     * 
+     */
     @OutputExport(name="managedExecution", type=ManagedExecutionProperties.class, parameters={})
     private Output</* @Nullable */ ManagedExecutionProperties> managedExecution;
 
+    /**
+     * @return Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
+     * 
+     */
     public Output</* @Nullable */ ManagedExecutionProperties> getManagedExecution() {
         return this.managedExecution;
     }
@@ -72,55 +132,125 @@ public class StackSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ StackSetOperationPreferences> getOperationPreferences() {
         return this.operationPreferences;
     }
+    /**
+     * The input parameters for the stack set template.
+     * 
+     */
     @OutputExport(name="parameters", type=List.class, parameters={StackSetParameter.class})
     private Output</* @Nullable */ List<StackSetParameter>> parameters;
 
+    /**
+     * @return The input parameters for the stack set template.
+     * 
+     */
     public Output</* @Nullable */ List<StackSetParameter>> getParameters() {
         return this.parameters;
     }
+    /**
+     * Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.
+     * 
+     */
     @OutputExport(name="permissionModel", type=StackSetPermissionModel.class, parameters={})
     private Output<StackSetPermissionModel> permissionModel;
 
+    /**
+     * @return Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.
+     * 
+     */
     public Output<StackSetPermissionModel> getPermissionModel() {
         return this.permissionModel;
     }
+    /**
+     * A group of stack instances with parameters in some specific accounts and regions.
+     * 
+     */
     @OutputExport(name="stackInstancesGroup", type=List.class, parameters={StackSetStackInstances.class})
     private Output</* @Nullable */ List<StackSetStackInstances>> stackInstancesGroup;
 
+    /**
+     * @return A group of stack instances with parameters in some specific accounts and regions.
+     * 
+     */
     public Output</* @Nullable */ List<StackSetStackInstances>> getStackInstancesGroup() {
         return this.stackInstancesGroup;
     }
+    /**
+     * The ID of the stack set that you're creating.
+     * 
+     */
     @OutputExport(name="stackSetId", type=String.class, parameters={})
     private Output<String> stackSetId;
 
+    /**
+     * @return The ID of the stack set that you're creating.
+     * 
+     */
     public Output<String> getStackSetId() {
         return this.stackSetId;
     }
+    /**
+     * The name to associate with the stack set. The name must be unique in the Region where you create your stack set.
+     * 
+     */
     @OutputExport(name="stackSetName", type=String.class, parameters={})
     private Output<String> stackSetName;
 
+    /**
+     * @return The name to associate with the stack set. The name must be unique in the Region where you create your stack set.
+     * 
+     */
     public Output<String> getStackSetName() {
         return this.stackSetName;
     }
+    /**
+     * The key-value pairs to associate with this stack set and the stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the stacks. A maximum number of 50 tags can be specified.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={StackSetTag.class})
     private Output</* @Nullable */ List<StackSetTag>> tags;
 
+    /**
+     * @return The key-value pairs to associate with this stack set and the stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the stacks. A maximum number of 50 tags can be specified.
+     * 
+     */
     public Output</* @Nullable */ List<StackSetTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes.
+     * 
+     */
     @OutputExport(name="templateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateBody;
 
+    /**
+     * @return The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes.
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateBody() {
         return this.templateBody;
     }
+    /**
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is located in an Amazon S3 bucket.
+     * 
+     */
     @OutputExport(name="templateURL", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateURL;
 
+    /**
+     * @return Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is located in an Amazon S3 bucket.
+     * 
+     */
     public Output</* @Nullable */ String> getTemplateURL() {
         return this.templateURL;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StackSet(String name, StackSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:cloudformation:StackSet", name, args == null ? StackSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -136,6 +266,14 @@ public class StackSet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StackSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StackSet(name, id, options);
     }

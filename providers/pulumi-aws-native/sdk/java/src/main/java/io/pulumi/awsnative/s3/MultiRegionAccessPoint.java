@@ -15,39 +15,89 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * AWS::S3::MultiRegionAccessPoint is an Amazon S3 resource type that dynamically routes S3 requests to easily satisfy geographic compliance requirements based on customer-defined routing policies.
+ * 
+ */
 @ResourceType(type="aws-native:s3:MultiRegionAccessPoint")
 public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
+    /**
+     * The alias is a unique identifier to, and is part of the public DNS name for this Multi Region Access Point
+     * 
+     */
     @OutputExport(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
+    /**
+     * @return The alias is a unique identifier to, and is part of the public DNS name for this Multi Region Access Point
+     * 
+     */
     public Output<String> getAlias() {
         return this.alias;
     }
+    /**
+     * The timestamp of the when the Multi Region Access Point is created
+     * 
+     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return The timestamp of the when the Multi Region Access Point is created
+     * 
+     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * The name you want to assign to this Multi Region Access Point.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name you want to assign to this Multi Region Access Point.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     @OutputExport(name="publicAccessBlockConfiguration", type=MultiRegionAccessPointPublicAccessBlockConfiguration.class, parameters={})
     private Output</* @Nullable */ MultiRegionAccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration;
 
+    /**
+     * @return The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     public Output</* @Nullable */ MultiRegionAccessPointPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration;
     }
+    /**
+     * The list of buckets that you want to associate this Multi Region Access Point with.
+     * 
+     */
     @OutputExport(name="regions", type=List.class, parameters={MultiRegionAccessPointRegion.class})
     private Output<List<MultiRegionAccessPointRegion>> regions;
 
+    /**
+     * @return The list of buckets that you want to associate this Multi Region Access Point with.
+     * 
+     */
     public Output<List<MultiRegionAccessPointRegion>> getRegions() {
         return this.regions;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public MultiRegionAccessPoint(String name, MultiRegionAccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:s3:MultiRegionAccessPoint", name, args == null ? MultiRegionAccessPointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +113,14 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static MultiRegionAccessPoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MultiRegionAccessPoint(name, id, options);
     }

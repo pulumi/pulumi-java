@@ -13,8 +13,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetStreamKeyResult {
+    /**
+     * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     private final @Nullable List<StreamKeyTag> tags;
+    /**
+     * Stream-key value.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"arn","tags","value"})
@@ -27,12 +39,24 @@ public final class GetStreamKeyResult {
         this.value = value;
     }
 
+    /**
+     * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     public List<StreamKeyTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
+    /**
+     * Stream-key value.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

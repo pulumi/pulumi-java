@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AccessPointVpcConfiguration {
+    /**
+     * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
+     * 
+     */
     private final @Nullable String vpcId;
 
     @OutputCustomType.Constructor({"vpcId"})
@@ -18,6 +22,10 @@ public final class AccessPointVpcConfiguration {
         this.vpcId = vpcId;
     }
 
+    /**
+     * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
+     * 
+     */
     public Optional<String> getVpcId() {
         return Optional.ofNullable(this.vpcId);
     }

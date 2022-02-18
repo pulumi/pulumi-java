@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Recording S3 Destination Configuration.
+ * 
+ */
 public final class RecordingConfigurationS3DestinationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecordingConfigurationS3DestinationConfigurationArgs Empty = new RecordingConfigurationS3DestinationConfigurationArgs();

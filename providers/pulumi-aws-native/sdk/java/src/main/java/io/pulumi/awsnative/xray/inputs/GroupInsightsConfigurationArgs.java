@@ -14,6 +14,10 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
 
     public static final GroupInsightsConfigurationArgs Empty = new GroupInsightsConfigurationArgs();
 
+    /**
+     * Set the InsightsEnabled value to true to enable insights or false to disable insights.
+     * 
+     */
     @InputImport(name="insightsEnabled")
     private final @Nullable Input<Boolean> insightsEnabled;
 
@@ -21,6 +25,10 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
         return this.insightsEnabled == null ? Input.empty() : this.insightsEnabled;
     }
 
+    /**
+     * Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
+     * 
+     */
     @InputImport(name="notificationsEnabled")
     private final @Nullable Input<Boolean> notificationsEnabled;
 

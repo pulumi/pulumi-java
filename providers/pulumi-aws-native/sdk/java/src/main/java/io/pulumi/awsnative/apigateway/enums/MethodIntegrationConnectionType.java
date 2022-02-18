@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the network connection to the integration endpoint.
+     * 
+     */
     @EnumType
     public enum MethodIntegrationConnectionType {
         Internet("INTERNET"),

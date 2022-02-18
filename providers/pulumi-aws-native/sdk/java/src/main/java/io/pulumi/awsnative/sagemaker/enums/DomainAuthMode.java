@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The mode of authentication that members use to access the domain.
+     * 
+     */
     @EnumType
     public enum DomainAuthMode {
         Sso("SSO"),

@@ -24,6 +24,10 @@ public final class WebACLRule {
     private final String name;
     private final @Nullable WebACLOverrideAction overrideAction;
     private final Integer priority;
+    /**
+     * Collection of Rule Labels.
+     * 
+     */
     private final @Nullable List<WebACLLabel> ruleLabels;
     private final WebACLStatement statement;
     private final WebACLVisibilityConfig visibilityConfig;
@@ -63,6 +67,10 @@ public final class WebACLRule {
     public Integer getPriority() {
         return this.priority;
     }
+    /**
+     * Collection of Rule Labels.
+     * 
+     */
     public List<WebACLLabel> getRuleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }

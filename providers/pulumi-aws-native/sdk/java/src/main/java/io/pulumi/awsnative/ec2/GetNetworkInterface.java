@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkInterface {
+/**
+ * The AWS::EC2::NetworkInterface resource creates network interface
+ * 
+ */
     public static CompletableFuture<GetNetworkInterfaceResult> invokeAsync(GetNetworkInterfaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args == null ? GetNetworkInterfaceArgs.Empty : args, Utilities.withVersion(options));
     }

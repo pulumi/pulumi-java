@@ -17,6 +17,10 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualClusterArgs Empty = new VirtualClusterArgs();
 
+    /**
+     * Container provider of the virtual cluster.
+     * 
+     */
     @InputImport(name="containerProvider", required=true)
     private final Input<VirtualClusterContainerProviderArgs> containerProvider;
 
@@ -24,6 +28,10 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerProvider;
     }
 
+    /**
+     * Name of the virtual cluster.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +39,10 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * An array of key-value pairs to apply to this virtual cluster.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<VirtualClusterTagArgs>> tags;
 

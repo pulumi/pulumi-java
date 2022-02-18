@@ -16,6 +16,10 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
 
     public static final CodeSigningConfigArgs Empty = new CodeSigningConfigArgs();
 
+    /**
+     * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
+     * 
+     */
     @InputImport(name="allowedPublishers", required=true)
     private final Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
@@ -23,6 +27,10 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
         return this.allowedPublishers;
     }
 
+    /**
+     * Policies to control how to act if a signature is invalid
+     * 
+     */
     @InputImport(name="codeSigningPolicies")
     private final @Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
 
@@ -30,6 +38,10 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
         return this.codeSigningPolicies == null ? Input.empty() : this.codeSigningPolicies;
     }
 
+    /**
+     * A description of the CodeSigningConfig
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * BlockDevice is a subproperty of BlockDeviceMapping that describes an Amazon EBS volume.
+ * 
+ */
 public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LaunchConfigurationBlockDeviceArgs Empty = new LaunchConfigurationBlockDeviceArgs();
 
+    /**
+     * Indicates whether the volume is deleted on instance termination.
+     * 
+     */
     @InputImport(name="deleteOnTermination")
     private final @Nullable Input<Boolean> deleteOnTermination;
 
@@ -23,6 +31,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
     }
 
+    /**
+     * Specifies whether the volume should be encrypted.
+     * 
+     */
     @InputImport(name="encrypted")
     private final @Nullable Input<Boolean> encrypted;
 
@@ -30,6 +42,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
         return this.encrypted == null ? Input.empty() : this.encrypted;
     }
 
+    /**
+     * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
+     * 
+     */
     @InputImport(name="iops")
     private final @Nullable Input<Integer> iops;
 
@@ -37,6 +53,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
         return this.iops == null ? Input.empty() : this.iops;
     }
 
+    /**
+     * The snapshot ID of the volume to use.
+     * 
+     */
     @InputImport(name="snapshotId")
     private final @Nullable Input<String> snapshotId;
 
@@ -44,6 +64,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
     }
 
+    /**
+     * The throughput (MiBps) to provision for a gp3 volume.
+     * 
+     */
     @InputImport(name="throughput")
     private final @Nullable Input<Integer> throughput;
 
@@ -51,6 +75,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
         return this.throughput == null ? Input.empty() : this.throughput;
     }
 
+    /**
+     * The volume size, in GiBs.
+     * 
+     */
     @InputImport(name="volumeSize")
     private final @Nullable Input<Integer> volumeSize;
 
@@ -58,6 +86,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
         return this.volumeSize == null ? Input.empty() : this.volumeSize;
     }
 
+    /**
+     * The volume type.
+     * 
+     */
     @InputImport(name="volumeType")
     private final @Nullable Input<String> volumeType;
 

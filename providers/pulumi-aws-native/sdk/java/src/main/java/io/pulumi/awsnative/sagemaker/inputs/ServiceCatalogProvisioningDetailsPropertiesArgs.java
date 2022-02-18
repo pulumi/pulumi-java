@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input ServiceCatalog Provisioning Details
+ * 
+ */
 public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceCatalogProvisioningDetailsPropertiesArgs Empty = new ServiceCatalogProvisioningDetailsPropertiesArgs();
@@ -37,6 +41,10 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
         return this.provisioningArtifactId == null ? Input.empty() : this.provisioningArtifactId;
     }
 
+    /**
+     * Parameters specified by the administrator that are required for provisioning the product.
+     * 
+     */
     @InputImport(name="provisioningParameters")
     private final @Nullable Input<List<ProjectProvisioningParameterArgs>> provisioningParameters;
 

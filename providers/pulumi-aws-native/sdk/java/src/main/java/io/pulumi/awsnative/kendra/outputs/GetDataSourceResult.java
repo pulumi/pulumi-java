@@ -22,6 +22,10 @@ public final class GetDataSourceResult {
     private final @Nullable String name;
     private final @Nullable String roleArn;
     private final @Nullable String schedule;
+    /**
+     * Tags for labeling the data source
+     * 
+     */
     private final @Nullable List<DataSourceTag> tags;
 
     @OutputCustomType.Constructor({"arn","dataSourceConfiguration","description","id","indexId","name","roleArn","schedule","tags"})
@@ -70,6 +74,10 @@ public final class GetDataSourceResult {
     public Optional<String> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
+    /**
+     * Tags for labeling the data source
+     * 
+     */
     public List<DataSourceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

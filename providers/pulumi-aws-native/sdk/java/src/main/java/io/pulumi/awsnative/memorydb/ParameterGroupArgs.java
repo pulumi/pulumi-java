@@ -17,6 +17,10 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterGroupArgs Empty = new ParameterGroupArgs();
 
+    /**
+     * A description of the parameter group.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the parameter group family that this parameter group is compatible with.
+     * 
+     */
     @InputImport(name="family", required=true)
     private final Input<String> family;
 
@@ -31,6 +39,10 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.family;
     }
 
+    /**
+     * The name of the parameter group.
+     * 
+     */
     @InputImport(name="parameterGroupName")
     private final @Nullable Input<String> parameterGroupName;
 
@@ -38,6 +50,10 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameterGroupName == null ? Input.empty() : this.parameterGroupName;
     }
 
+    /**
+     * An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Object> parameters;
 
@@ -45,6 +61,10 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * An array of key-value pairs to apply to this parameter group.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ParameterGroupTagArgs>> tags;
 

@@ -13,6 +13,10 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
 
     public static final ConnectorProfileTrendmicroConnectorProfileCredentialsArgs Empty = new ConnectorProfileTrendmicroConnectorProfileCredentialsArgs();
 
+    /**
+     * The Secret Access Key portion of the credentials.
+     * 
+     */
     @InputImport(name="apiSecretKey", required=true)
     private final Input<String> apiSecretKey;
 

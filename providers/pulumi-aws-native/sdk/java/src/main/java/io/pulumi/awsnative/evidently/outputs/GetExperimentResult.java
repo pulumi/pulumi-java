@@ -23,6 +23,10 @@ public final class GetExperimentResult {
     private final @Nullable ExperimentOnlineAbConfigObject onlineAbConfig;
     private final @Nullable String randomizationSalt;
     private final @Nullable Integer samplingRate;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<ExperimentTag> tags;
     private final @Nullable List<ExperimentTreatmentObject> treatments;
 
@@ -64,6 +68,10 @@ public final class GetExperimentResult {
     public Optional<Integer> getSamplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<ExperimentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Helps to configure online certificate status protocol (OCSP) responder for your certificate authority
+ * 
+ */
 public final class CertificateAuthorityOcspConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateAuthorityOcspConfiguration Empty = new CertificateAuthorityOcspConfiguration();

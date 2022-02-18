@@ -19,6 +19,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UsagePlanArgs Empty = new UsagePlanArgs();
 
+    /**
+     * The API stages to associate with this usage plan.
+     * 
+     */
     @InputImport(name="apiStages")
     private final @Nullable Input<List<UsagePlanApiStageArgs>> apiStages;
 
@@ -26,6 +30,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiStages == null ? Input.empty() : this.apiStages;
     }
 
+    /**
+     * A description of the usage plan.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +41,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Configures the number of requests that users can make within a given interval.
+     * 
+     */
     @InputImport(name="quota")
     private final @Nullable Input<UsagePlanQuotaSettingsArgs> quota;
 
@@ -40,6 +52,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.quota == null ? Input.empty() : this.quota;
     }
 
+    /**
+     * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<UsagePlanTagArgs>> tags;
 
@@ -47,6 +63,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Configures the overall request rate (average requests per second) and burst capacity.
+     * 
+     */
     @InputImport(name="throttle")
     private final @Nullable Input<UsagePlanThrottleSettingsArgs> throttle;
 
@@ -54,6 +74,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.throttle == null ? Input.empty() : this.throttle;
     }
 
+    /**
+     * A name for the usage plan.
+     * 
+     */
     @InputImport(name="usagePlanName")
     private final @Nullable Input<String> usagePlanName;
 

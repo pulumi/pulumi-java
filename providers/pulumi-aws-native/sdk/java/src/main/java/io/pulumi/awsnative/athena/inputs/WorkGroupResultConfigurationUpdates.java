@@ -12,6 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The result configuration information about the queries in this workgroup that will be updated. Includes the updated results location and an updated option for encrypting query results.
+ * 
+ */
 public final class WorkGroupResultConfigurationUpdates extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkGroupResultConfigurationUpdates Empty = new WorkGroupResultConfigurationUpdates();

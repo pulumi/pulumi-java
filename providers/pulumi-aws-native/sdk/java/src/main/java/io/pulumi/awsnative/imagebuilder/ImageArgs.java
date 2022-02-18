@@ -17,6 +17,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageArgs Empty = new ImageArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * 
+     */
     @InputImport(name="containerRecipeArn")
     private final @Nullable Input<String> containerRecipeArn;
 
@@ -24,6 +28,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerRecipeArn == null ? Input.empty() : this.containerRecipeArn;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the distribution configuration.
+     * 
+     */
     @InputImport(name="distributionConfigurationArn")
     private final @Nullable Input<String> distributionConfigurationArn;
 
@@ -31,6 +39,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.distributionConfigurationArn == null ? Input.empty() : this.distributionConfigurationArn;
     }
 
+    /**
+     * Collects additional information about the image being created, including the operating system (OS) version and package list.
+     * 
+     */
     @InputImport(name="enhancedImageMetadataEnabled")
     private final @Nullable Input<Boolean> enhancedImageMetadataEnabled;
 
@@ -38,6 +50,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.enhancedImageMetadataEnabled == null ? Input.empty() : this.enhancedImageMetadataEnabled;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * 
+     */
     @InputImport(name="imageRecipeArn")
     private final @Nullable Input<String> imageRecipeArn;
 
@@ -45,6 +61,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageRecipeArn == null ? Input.empty() : this.imageRecipeArn;
     }
 
+    /**
+     * The image tests configuration used when creating this image.
+     * 
+     */
     @InputImport(name="imageTestsConfiguration")
     private final @Nullable Input<ImageTestsConfigurationArgs> imageTestsConfiguration;
 
@@ -52,6 +72,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageTestsConfiguration == null ? Input.empty() : this.imageTestsConfiguration;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     @InputImport(name="infrastructureConfigurationArn")
     private final @Nullable Input<String> infrastructureConfigurationArn;
 
@@ -59,6 +83,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.infrastructureConfigurationArn == null ? Input.empty() : this.infrastructureConfigurationArn;
     }
 
+    /**
+     * The tags associated with the image.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 

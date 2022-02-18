@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The state of the workgroup: ENABLED or DISABLED.
+     * 
+     */
     @EnumType
     public enum WorkGroupState {
         Enabled("ENABLED"),

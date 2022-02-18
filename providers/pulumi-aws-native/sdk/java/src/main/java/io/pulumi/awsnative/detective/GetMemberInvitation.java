@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMemberInvitation {
+/**
+ * Resource schema for AWS::Detective::MemberInvitation
+ * 
+ */
     public static CompletableFuture<GetMemberInvitationResult> invokeAsync(GetMemberInvitationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:detective:getMemberInvitation", TypeShape.of(GetMemberInvitationResult.class), args == null ? GetMemberInvitationArgs.Empty : args, Utilities.withVersion(options));
     }

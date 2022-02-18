@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * To add or update tag, provide both key and value. To delete tag, provide only tag key to be deleted
+ * 
+ */
 public final class GatewayTag extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayTag Empty = new GatewayTag();

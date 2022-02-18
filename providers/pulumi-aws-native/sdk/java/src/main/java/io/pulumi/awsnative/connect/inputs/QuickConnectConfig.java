@@ -13,6 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration settings for the quick connect.
+ * 
+ */
 public final class QuickConnectConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final QuickConnectConfig Empty = new QuickConnectConfig();

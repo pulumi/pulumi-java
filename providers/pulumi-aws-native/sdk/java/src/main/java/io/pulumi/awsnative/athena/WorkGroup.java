@@ -18,57 +18,133 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::Athena::WorkGroup
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:athena:WorkGroup")
 public class WorkGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * The date and time the workgroup was created.
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return The date and time the workgroup was created.
+     * 
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * The workgroup description.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The workgroup description.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The workGroup name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The workGroup name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
+     * 
+     */
     @OutputExport(name="recursiveDeleteOption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> recursiveDeleteOption;
 
+    /**
+     * @return The option to delete the workgroup and its contents even if the workgroup contains any named queries.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getRecursiveDeleteOption() {
         return this.recursiveDeleteOption;
     }
+    /**
+     * The state of the workgroup: ENABLED or DISABLED.
+     * 
+     */
     @OutputExport(name="state", type=WorkGroupState.class, parameters={})
     private Output</* @Nullable */ WorkGroupState> state;
 
+    /**
+     * @return The state of the workgroup: ENABLED or DISABLED.
+     * 
+     */
     public Output</* @Nullable */ WorkGroupState> getState() {
         return this.state;
     }
+    /**
+     * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={WorkGroupTag.class})
     private Output</* @Nullable */ List<WorkGroupTag>> tags;
 
+    /**
+     * @return One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+     * 
+     */
     public Output</* @Nullable */ List<WorkGroupTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The workgroup configuration
+     * 
+     */
     @OutputExport(name="workGroupConfiguration", type=WorkGroupConfiguration.class, parameters={})
     private Output</* @Nullable */ WorkGroupConfiguration> workGroupConfiguration;
 
+    /**
+     * @return The workgroup configuration
+     * 
+     */
     public Output</* @Nullable */ WorkGroupConfiguration> getWorkGroupConfiguration() {
         return this.workGroupConfiguration;
     }
+    /**
+     * The workgroup configuration update object
+     * 
+     */
     @OutputExport(name="workGroupConfigurationUpdates", type=WorkGroupConfigurationUpdates.class, parameters={})
     private Output</* @Nullable */ WorkGroupConfigurationUpdates> workGroupConfigurationUpdates;
 
+    /**
+     * @return The workgroup configuration update object
+     * 
+     */
     public Output</* @Nullable */ WorkGroupConfigurationUpdates> getWorkGroupConfigurationUpdates() {
         return this.workGroupConfigurationUpdates;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WorkGroup(String name, @Nullable WorkGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:athena:WorkGroup", name, args == null ? WorkGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +160,14 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WorkGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkGroup(name, id, options);
     }

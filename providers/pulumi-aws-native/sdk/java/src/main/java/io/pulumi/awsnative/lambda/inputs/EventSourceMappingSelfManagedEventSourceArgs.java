@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration used by AWS Lambda to access a self-managed event source.
+ * 
+ */
 public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventSourceMappingSelfManagedEventSourceArgs Empty = new EventSourceMappingSelfManagedEventSourceArgs();
 
+    /**
+     * The endpoints for a self-managed event source.
+     * 
+     */
     @InputImport(name="endpoints")
     private final @Nullable Input<EventSourceMappingEndpointsArgs> endpoints;
 
