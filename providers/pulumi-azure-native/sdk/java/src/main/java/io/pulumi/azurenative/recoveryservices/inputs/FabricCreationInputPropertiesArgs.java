@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureFabricCreationInputArg
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricCreationInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricCreationInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;

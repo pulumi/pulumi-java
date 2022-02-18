@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.ConnectionStateResponse;
 import io.pulumi.azurenative.eventhub.outputs.PrivateEndpointResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

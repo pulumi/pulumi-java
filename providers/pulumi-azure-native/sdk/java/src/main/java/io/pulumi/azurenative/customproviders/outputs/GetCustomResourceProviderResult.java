@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customproviders.outputs;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPActionRouteDefinitionResponse;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPResourceTypeRouteDefinitionResponse;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPValidationsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

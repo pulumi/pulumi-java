@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.outputs.AFDDomainHttpsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.DomainValidationPropertiesResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

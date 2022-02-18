@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.InputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.OutputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.SkuResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.TransformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

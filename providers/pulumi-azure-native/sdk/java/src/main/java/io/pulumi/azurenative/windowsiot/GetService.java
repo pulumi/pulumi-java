@@ -6,7 +6,7 @@ package io.pulumi.azurenative.windowsiot;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.windowsiot.inputs.GetServiceArgs;
 import io.pulumi.azurenative.windowsiot.outputs.GetServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

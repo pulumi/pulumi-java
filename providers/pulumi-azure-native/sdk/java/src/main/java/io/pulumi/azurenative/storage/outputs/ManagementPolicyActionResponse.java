@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyBaseBlobResponse;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicySnapShotResponse;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyVersionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.machinelearning.inputs.ServiceInputOutputSpecificat
 import io.pulumi.azurenative.machinelearning.inputs.StorageAccountResponse;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceKeysResponse;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;

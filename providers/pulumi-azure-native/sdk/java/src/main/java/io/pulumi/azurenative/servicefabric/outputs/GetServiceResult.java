@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ServiceLoadMetricDescriptionR
 import io.pulumi.azurenative.servicefabric.outputs.ServicePlacementPolicyDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SingletonPartitionSchemeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.UniformInt64RangePartitionSchemeDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

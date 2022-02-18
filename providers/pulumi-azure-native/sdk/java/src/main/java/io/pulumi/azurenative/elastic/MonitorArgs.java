@@ -7,7 +7,7 @@ import io.pulumi.azurenative.elastic.inputs.IdentityPropertiesArgs;
 import io.pulumi.azurenative.elastic.inputs.MonitorPropertiesArgs;
 import io.pulumi.azurenative.elastic.inputs.ResourceSkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

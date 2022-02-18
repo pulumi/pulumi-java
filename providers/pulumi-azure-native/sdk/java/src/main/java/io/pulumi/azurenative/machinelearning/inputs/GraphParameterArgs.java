@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.enums.ParameterType;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterLinkArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

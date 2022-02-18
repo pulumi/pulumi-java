@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.SelectAudioTrackByIdResponse;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByAttributeResponse;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByIdResponse;
 import io.pulumi.azurenative.media.inputs.VideoTrackDescriptorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

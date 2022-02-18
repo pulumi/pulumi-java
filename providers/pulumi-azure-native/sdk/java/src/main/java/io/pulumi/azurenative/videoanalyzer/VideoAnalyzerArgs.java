@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.AccountEncryptionArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.StorageAccountArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoAnalyzerIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

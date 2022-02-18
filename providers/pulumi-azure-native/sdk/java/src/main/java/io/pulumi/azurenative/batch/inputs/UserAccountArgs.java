@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.enums.ElevationLevel;
 import io.pulumi.azurenative.batch.inputs.LinuxUserConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsUserConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

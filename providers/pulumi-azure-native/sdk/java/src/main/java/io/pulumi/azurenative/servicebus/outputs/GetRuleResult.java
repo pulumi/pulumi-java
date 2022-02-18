@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicebus.outputs;
 import io.pulumi.azurenative.servicebus.outputs.ActionResponse;
 import io.pulumi.azurenative.servicebus.outputs.CorrelationFilterResponse;
 import io.pulumi.azurenative.servicebus.outputs.SqlFilterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

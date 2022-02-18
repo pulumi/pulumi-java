@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.CrossSiteAccessPoliciesArgs;
 import io.pulumi.azurenative.media.inputs.StreamingEndpointAccessControlArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

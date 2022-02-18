@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 import io.pulumi.azurenative.appplatform.outputs.ApiPortalInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.ApiPortalResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.outputs.SsoPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

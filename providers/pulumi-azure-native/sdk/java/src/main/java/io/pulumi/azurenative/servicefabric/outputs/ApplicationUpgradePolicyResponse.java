@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ArmApplicationHealthPolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ArmRollingUpgradeMonitoringPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

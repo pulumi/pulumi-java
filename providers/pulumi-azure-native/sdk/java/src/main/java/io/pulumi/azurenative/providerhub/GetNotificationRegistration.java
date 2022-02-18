@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.providerhub.inputs.GetNotificationRegistrationArgs;
 import io.pulumi.azurenative.providerhub.outputs.GetNotificationRegistrationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

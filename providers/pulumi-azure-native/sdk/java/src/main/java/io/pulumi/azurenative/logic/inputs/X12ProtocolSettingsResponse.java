@@ -15,7 +15,7 @@ import io.pulumi.azurenative.logic.inputs.X12SchemaReferenceResponse;
 import io.pulumi.azurenative.logic.inputs.X12SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.inputs.X12ValidationOverrideResponse;
 import io.pulumi.azurenative.logic.inputs.X12ValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

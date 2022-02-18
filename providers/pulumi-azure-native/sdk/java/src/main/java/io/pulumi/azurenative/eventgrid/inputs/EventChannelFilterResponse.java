@@ -22,7 +22,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StringNotBeginsWithAdvancedFilterR
 import io.pulumi.azurenative.eventgrid.inputs.StringNotContainsAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.List;

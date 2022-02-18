@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.inputs.SUCSchedulePropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.SoftwareUpdateConfigurationTasksArgs;
 import io.pulumi.azurenative.automation.inputs.UpdateConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

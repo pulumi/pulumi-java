@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerinstance.outputs.ContainerPropertiesRespon
 import io.pulumi.azurenative.containerinstance.outputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.outputs.ResourceRequirementsResponse;
 import io.pulumi.azurenative.containerinstance.outputs.VolumeMountResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

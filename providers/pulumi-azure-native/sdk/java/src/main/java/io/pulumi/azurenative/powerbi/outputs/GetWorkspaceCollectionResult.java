@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerbi.outputs;
 
 import io.pulumi.azurenative.powerbi.outputs.AzureSkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

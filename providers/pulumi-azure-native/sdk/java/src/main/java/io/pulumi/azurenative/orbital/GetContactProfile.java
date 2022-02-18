@@ -6,7 +6,7 @@ package io.pulumi.azurenative.orbital;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.orbital.inputs.GetContactProfileArgs;
 import io.pulumi.azurenative.orbital.outputs.GetContactProfileResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

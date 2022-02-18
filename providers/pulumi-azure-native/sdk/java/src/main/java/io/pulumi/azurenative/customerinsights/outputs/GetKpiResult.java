@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.outputs.KpiExtractResponse;
 import io.pulumi.azurenative.customerinsights.outputs.KpiGroupByMetadataResponse;
 import io.pulumi.azurenative.customerinsights.outputs.KpiParticipantProfilesMetadataResponse;
 import io.pulumi.azurenative.customerinsights.outputs.KpiThresholdsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.EccTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.RsaTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.TokenClaimResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

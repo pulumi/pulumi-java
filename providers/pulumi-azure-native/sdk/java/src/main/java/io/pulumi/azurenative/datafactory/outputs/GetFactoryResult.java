@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.FactoryIdentityResponse;
 import io.pulumi.azurenative.datafactory.outputs.FactoryVSTSConfigurationResponse;
 import io.pulumi.azurenative.datafactory.outputs.GlobalParameterSpecificationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

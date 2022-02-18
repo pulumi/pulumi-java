@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.outputs;
 import io.pulumi.azurenative.automation.outputs.HybridRunbookWorkerLegacyResponse;
 import io.pulumi.azurenative.automation.outputs.RunAsCredentialAssociationPropertyResponse;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

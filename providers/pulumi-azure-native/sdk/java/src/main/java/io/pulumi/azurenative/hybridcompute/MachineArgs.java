@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridcompute;
 import io.pulumi.azurenative.hybridcompute.inputs.LocationDataArgs;
 import io.pulumi.azurenative.hybridcompute.inputs.MachineIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

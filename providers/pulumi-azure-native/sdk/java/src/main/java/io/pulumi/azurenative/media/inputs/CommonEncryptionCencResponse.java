@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.CencDrmConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.EnabledProtocolsResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysResponse;
 import io.pulumi.azurenative.media.inputs.TrackSelectionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

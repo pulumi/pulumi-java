@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

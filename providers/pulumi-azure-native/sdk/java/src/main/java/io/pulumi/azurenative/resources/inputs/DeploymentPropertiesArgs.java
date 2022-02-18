@@ -10,7 +10,7 @@ import io.pulumi.azurenative.resources.inputs.OnErrorDeploymentArgs;
 import io.pulumi.azurenative.resources.inputs.ParametersLinkArgs;
 import io.pulumi.azurenative.resources.inputs.TemplateLinkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;

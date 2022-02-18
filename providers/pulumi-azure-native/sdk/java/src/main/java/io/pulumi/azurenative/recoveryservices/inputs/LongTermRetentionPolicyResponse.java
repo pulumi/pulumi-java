@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.DailyRetentionScheduleRespo
 import io.pulumi.azurenative.recoveryservices.inputs.MonthlyRetentionScheduleResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionScheduleResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.YearlyRetentionScheduleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

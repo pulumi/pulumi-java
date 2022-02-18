@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.inputs.KubernetesClusterPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.inputs.SystemServiceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

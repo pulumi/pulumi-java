@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sqlvirtualmachine;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.GetSqlVirtualMachineArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.GetSqlVirtualMachineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

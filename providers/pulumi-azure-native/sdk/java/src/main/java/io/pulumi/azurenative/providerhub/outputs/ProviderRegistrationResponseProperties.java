@@ -12,7 +12,7 @@ import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropert
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseProviderAuthentication;
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseRequestHeaderOptions;
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

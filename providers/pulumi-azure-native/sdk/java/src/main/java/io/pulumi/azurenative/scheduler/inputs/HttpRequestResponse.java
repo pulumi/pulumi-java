@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.inputs.BasicAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.inputs.ClientCertAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.inputs.OAuthAuthenticationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

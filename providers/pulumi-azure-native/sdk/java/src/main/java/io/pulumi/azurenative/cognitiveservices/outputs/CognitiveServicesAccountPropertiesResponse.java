@@ -10,7 +10,7 @@ import io.pulumi.azurenative.cognitiveservices.outputs.NetworkRuleSetResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.SkuCapabilityResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.UserOwnedStorageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

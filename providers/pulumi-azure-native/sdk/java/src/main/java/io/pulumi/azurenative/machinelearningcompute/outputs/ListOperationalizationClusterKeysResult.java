@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerServiceCred
 import io.pulumi.azurenative.machinelearningcompute.outputs.ServiceAuthConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.SslConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

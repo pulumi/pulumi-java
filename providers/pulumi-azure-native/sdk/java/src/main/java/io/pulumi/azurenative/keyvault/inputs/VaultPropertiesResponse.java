@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.inputs.AccessPolicyEntryResponse;
 import io.pulumi.azurenative.keyvault.inputs.NetworkRuleSetResponse;
 import io.pulumi.azurenative.keyvault.inputs.PrivateEndpointConnectionItemResponse;
 import io.pulumi.azurenative.keyvault.inputs.SkuResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

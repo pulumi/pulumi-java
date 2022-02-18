@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmLastAgentUpgradeEr
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmMobilityAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmNicDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmProtectedDiskDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;

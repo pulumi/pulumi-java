@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataResponseProviderAuthentication;
 import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataResponseThirdPartyProviderAuthorization;
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderAuthorizationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

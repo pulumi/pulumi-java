@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.inputs;
 import io.pulumi.azurenative.chaos.inputs.ContinuousActionResponse;
 import io.pulumi.azurenative.chaos.inputs.DelayActionResponse;
 import io.pulumi.azurenative.chaos.inputs.DiscreteActionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

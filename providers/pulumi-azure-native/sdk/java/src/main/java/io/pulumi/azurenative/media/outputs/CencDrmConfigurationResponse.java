@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.StreamingPolicyPlayReadyConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyWidevineConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

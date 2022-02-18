@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.inputs.GetPlacementPolicyArgs;
 import io.pulumi.azurenative.avs.outputs.GetPlacementPolicyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

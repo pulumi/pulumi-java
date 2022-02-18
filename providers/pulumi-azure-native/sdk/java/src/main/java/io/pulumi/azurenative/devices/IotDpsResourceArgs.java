@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.devices.inputs.IotDpsPropertiesDescriptionArgs;
 import io.pulumi.azurenative.devices.inputs.IotDpsSkuInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

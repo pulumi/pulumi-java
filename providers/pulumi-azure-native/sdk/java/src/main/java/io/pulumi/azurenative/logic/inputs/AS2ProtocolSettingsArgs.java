@@ -11,7 +11,7 @@ import io.pulumi.azurenative.logic.inputs.AS2MessageConnectionSettingsArgs;
 import io.pulumi.azurenative.logic.inputs.AS2SecuritySettingsArgs;
 import io.pulumi.azurenative.logic.inputs.AS2ValidationSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 

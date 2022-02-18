@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseGrades;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseMappings;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseSystemGeneratedEntities;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

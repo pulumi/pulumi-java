@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.CloudServiceExtensionProfileResponse
 import io.pulumi.azurenative.compute.inputs.CloudServiceNetworkProfileResponse;
 import io.pulumi.azurenative.compute.inputs.CloudServiceOsProfileResponse;
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

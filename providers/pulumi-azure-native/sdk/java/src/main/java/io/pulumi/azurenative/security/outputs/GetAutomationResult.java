@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.outputs.AutomationActionLogicAppResponse;
 import io.pulumi.azurenative.security.outputs.AutomationActionWorkspaceResponse;
 import io.pulumi.azurenative.security.outputs.AutomationScopeResponse;
 import io.pulumi.azurenative.security.outputs.AutomationSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

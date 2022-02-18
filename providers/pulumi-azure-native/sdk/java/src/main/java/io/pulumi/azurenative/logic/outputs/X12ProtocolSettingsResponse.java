@@ -15,7 +15,7 @@ import io.pulumi.azurenative.logic.outputs.X12SchemaReferenceResponse;
 import io.pulumi.azurenative.logic.outputs.X12SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.X12ValidationOverrideResponse;
 import io.pulumi.azurenative.logic.outputs.X12ValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

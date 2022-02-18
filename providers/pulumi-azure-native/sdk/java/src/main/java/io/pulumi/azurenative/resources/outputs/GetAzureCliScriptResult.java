@@ -9,7 +9,7 @@ import io.pulumi.azurenative.resources.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.resources.outputs.ScriptStatusResponse;
 import io.pulumi.azurenative.resources.outputs.StorageAccountConfigurationResponse;
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

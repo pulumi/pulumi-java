@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.MonitorConfigResponseCustomHeaders;
 import io.pulumi.azurenative.network.inputs.MonitorConfigResponseExpectedStatusCodeRanges;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

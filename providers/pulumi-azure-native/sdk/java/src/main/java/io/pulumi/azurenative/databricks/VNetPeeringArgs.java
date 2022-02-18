@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databricks.inputs.AddressSpaceArgs;
 import io.pulumi.azurenative.databricks.inputs.VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs;
 import io.pulumi.azurenative.databricks.inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

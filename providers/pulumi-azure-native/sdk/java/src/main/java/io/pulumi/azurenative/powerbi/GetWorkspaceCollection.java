@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerbi;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.powerbi.inputs.GetWorkspaceCollectionArgs;
 import io.pulumi.azurenative.powerbi.outputs.GetWorkspaceCollectionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

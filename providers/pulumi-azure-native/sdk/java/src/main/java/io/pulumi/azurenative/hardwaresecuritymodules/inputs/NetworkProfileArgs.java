@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules.inputs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.ApiEntityReferenceArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkInterfaceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

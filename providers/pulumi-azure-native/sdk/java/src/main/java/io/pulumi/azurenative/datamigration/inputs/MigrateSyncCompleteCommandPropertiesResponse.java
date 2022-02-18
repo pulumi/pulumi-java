@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandOutputResponse;
 import io.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

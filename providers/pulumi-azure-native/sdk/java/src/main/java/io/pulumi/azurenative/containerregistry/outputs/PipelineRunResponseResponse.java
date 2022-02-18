@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.outputs.ExportPipelineTargetPrope
 import io.pulumi.azurenative.containerregistry.outputs.ImportPipelineSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineTriggerDescriptorResponse;
 import io.pulumi.azurenative.containerregistry.outputs.ProgressPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

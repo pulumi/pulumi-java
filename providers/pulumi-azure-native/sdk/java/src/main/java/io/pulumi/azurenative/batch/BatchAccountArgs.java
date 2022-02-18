@@ -10,7 +10,7 @@ import io.pulumi.azurenative.batch.inputs.BatchAccountIdentityArgs;
 import io.pulumi.azurenative.batch.inputs.EncryptionPropertiesArgs;
 import io.pulumi.azurenative.batch.inputs.KeyVaultReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

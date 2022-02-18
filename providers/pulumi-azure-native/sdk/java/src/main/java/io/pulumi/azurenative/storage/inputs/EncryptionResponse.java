@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.storage.inputs.EncryptionServicesResponse;
 import io.pulumi.azurenative.storage.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

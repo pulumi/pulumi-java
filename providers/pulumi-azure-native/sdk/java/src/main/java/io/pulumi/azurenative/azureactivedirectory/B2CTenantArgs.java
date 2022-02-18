@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azureactivedirectory;
 import io.pulumi.azurenative.azureactivedirectory.inputs.B2CResourceSKUArgs;
 import io.pulumi.azurenative.azureactivedirectory.inputs.CreateTenantRequestBodyPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

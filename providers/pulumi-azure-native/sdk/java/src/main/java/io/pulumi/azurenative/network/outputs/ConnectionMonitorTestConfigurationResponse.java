@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ConnectionMonitorHttpConfigurationR
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorIcmpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorSuccessThresholdResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTcpConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

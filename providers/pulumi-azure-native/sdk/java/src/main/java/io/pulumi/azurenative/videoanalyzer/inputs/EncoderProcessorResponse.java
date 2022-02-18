@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.EncoderCustomPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.EncoderSystemPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

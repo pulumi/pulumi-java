@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResourceResp
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseConfigurationAccess;
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseLogsIngestion;
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseNetworkAcls;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoFlagsResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoMediaInfoResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoStreamingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

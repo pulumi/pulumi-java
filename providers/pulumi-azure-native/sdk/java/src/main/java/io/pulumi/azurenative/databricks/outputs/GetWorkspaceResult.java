@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databricks.outputs.ManagedIdentityConfigurationResp
 import io.pulumi.azurenative.databricks.outputs.SkuResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomParametersResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceProviderAuthorizationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.dataprotection.outputs.DatasourceSetResponse;
 import io.pulumi.azurenative.dataprotection.outputs.PolicyInfoResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ProtectionStatusDetailsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.UserFacingErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ManagedRulesDefinitionArgs;
 import io.pulumi.azurenative.network.inputs.PolicySettingsArgs;
 import io.pulumi.azurenative.network.inputs.WebApplicationFirewallCustomRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

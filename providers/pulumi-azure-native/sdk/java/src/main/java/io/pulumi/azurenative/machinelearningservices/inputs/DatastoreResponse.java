@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.AzureStorageSectionR
 import io.pulumi.azurenative.machinelearningservices.inputs.GlusterFsSectionResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.LinkedInfoResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;

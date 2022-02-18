@@ -9,7 +9,7 @@ import io.pulumi.azurenative.dbformariadb.inputs.ServerPropertiesForReplicaArgs;
 import io.pulumi.azurenative.dbformariadb.inputs.ServerPropertiesForRestoreArgs;
 import io.pulumi.azurenative.dbformariadb.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

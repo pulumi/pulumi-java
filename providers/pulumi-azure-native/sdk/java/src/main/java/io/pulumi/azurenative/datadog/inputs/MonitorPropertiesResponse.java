@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.azurenative.datadog.inputs.DatadogOrganizationPropertiesResponse;
 import io.pulumi.azurenative.datadog.inputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

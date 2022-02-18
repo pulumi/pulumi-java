@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datalakestore.outputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.datalakestore.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.datalakestore.outputs.TrustedIdProviderResponse;
 import io.pulumi.azurenative.datalakestore.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

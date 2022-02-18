@@ -6,7 +6,7 @@ package io.pulumi.azurenative.relay;
 import io.pulumi.azurenative.relay.inputs.PrivateEndpointArgs;
 import io.pulumi.azurenative.relay.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

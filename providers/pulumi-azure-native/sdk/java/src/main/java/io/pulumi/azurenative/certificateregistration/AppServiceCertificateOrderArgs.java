@@ -6,7 +6,7 @@ package io.pulumi.azurenative.certificateregistration;
 import io.pulumi.azurenative.certificateregistration.enums.CertificateProductType;
 import io.pulumi.azurenative.certificateregistration.inputs.AppServiceCertificateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

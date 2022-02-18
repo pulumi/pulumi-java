@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMageProtectedDiskDetails
 import io.pulumi.azurenative.recoveryservices.outputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.OSDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;

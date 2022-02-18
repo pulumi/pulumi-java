@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder;
 import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

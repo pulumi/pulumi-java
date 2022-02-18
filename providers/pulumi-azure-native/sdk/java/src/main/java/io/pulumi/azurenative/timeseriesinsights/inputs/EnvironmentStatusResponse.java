@@ -5,7 +5,7 @@ package io.pulumi.azurenative.timeseriesinsights.inputs;
 
 import io.pulumi.azurenative.timeseriesinsights.inputs.IngressEnvironmentStatusResponse;
 import io.pulumi.azurenative.timeseriesinsights.inputs.WarmStorageEnvironmentStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 

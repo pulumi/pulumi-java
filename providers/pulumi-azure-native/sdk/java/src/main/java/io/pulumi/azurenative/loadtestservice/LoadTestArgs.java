@@ -5,7 +5,7 @@ package io.pulumi.azurenative.loadtestservice;
 
 import io.pulumi.azurenative.loadtestservice.inputs.SystemAssignedServiceIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

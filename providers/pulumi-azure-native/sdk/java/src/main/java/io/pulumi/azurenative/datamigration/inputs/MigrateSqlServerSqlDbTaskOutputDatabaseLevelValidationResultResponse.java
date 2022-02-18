@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.DataIntegrityValidationResultResponse;
 import io.pulumi.azurenative.datamigration.inputs.QueryAnalysisValidationResultResponse;
 import io.pulumi.azurenative.datamigration.inputs.SchemaComparisonValidationResultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

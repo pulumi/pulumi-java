@@ -17,7 +17,7 @@ import io.pulumi.azurenative.web.inputs.PushSettingsResponse;
 import io.pulumi.azurenative.web.inputs.SiteLimitsResponse;
 import io.pulumi.azurenative.web.inputs.SiteMachineKeyResponse;
 import io.pulumi.azurenative.web.inputs.VirtualApplicationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

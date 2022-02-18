@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.inputs.WatchlistUserInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

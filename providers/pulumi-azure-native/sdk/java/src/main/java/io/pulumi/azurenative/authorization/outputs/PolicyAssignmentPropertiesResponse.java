@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization.outputs;
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponsePolicy;
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponseRoleDefinition;
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponseScope;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

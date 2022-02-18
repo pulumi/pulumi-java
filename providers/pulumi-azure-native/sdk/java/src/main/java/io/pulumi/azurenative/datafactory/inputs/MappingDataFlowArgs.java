@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.DataFlowSinkArgs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

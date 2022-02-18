@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicefabric.inputs.GetNodeTypeArgs;
 import io.pulumi.azurenative.servicefabric.outputs.GetNodeTypeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

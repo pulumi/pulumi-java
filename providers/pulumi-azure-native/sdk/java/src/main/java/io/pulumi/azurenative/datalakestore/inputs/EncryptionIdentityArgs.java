@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.azurenative.datalakestore.enums.EncryptionIdentityType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 

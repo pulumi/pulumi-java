@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 import io.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsArgs;
 import io.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

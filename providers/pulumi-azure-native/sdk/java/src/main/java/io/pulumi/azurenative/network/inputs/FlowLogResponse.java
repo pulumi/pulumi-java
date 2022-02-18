@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.FlowLogFormatParametersResponse;
 import io.pulumi.azurenative.network.inputs.RetentionPolicyParametersResponse;
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;

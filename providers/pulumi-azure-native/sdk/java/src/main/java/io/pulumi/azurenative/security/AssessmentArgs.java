@@ -10,7 +10,7 @@ import io.pulumi.azurenative.security.inputs.OnPremiseSqlResourceDetailsArgs;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentPartnerDataArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureVmWorkloadSQLDatabase
 import io.pulumi.azurenative.recoveryservices.outputs.DPMProtectedItemResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.GenericProtectedItemResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MabFileFolderProtectedItemResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

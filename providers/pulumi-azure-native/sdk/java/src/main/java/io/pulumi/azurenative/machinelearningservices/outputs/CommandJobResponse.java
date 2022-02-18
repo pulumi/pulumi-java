@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.OutputDataBindingRe
 import io.pulumi.azurenative.machinelearningservices.outputs.PyTorchResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TensorFlowResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

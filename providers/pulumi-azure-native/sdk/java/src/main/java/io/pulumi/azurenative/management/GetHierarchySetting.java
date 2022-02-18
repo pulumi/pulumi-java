@@ -6,7 +6,7 @@ package io.pulumi.azurenative.management;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.management.inputs.GetHierarchySettingArgs;
 import io.pulumi.azurenative.management.outputs.GetHierarchySettingResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

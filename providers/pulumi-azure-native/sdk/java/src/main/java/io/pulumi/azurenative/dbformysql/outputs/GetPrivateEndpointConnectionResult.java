@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbformysql.outputs;
 
 import io.pulumi.azurenative.dbformysql.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbformysql.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

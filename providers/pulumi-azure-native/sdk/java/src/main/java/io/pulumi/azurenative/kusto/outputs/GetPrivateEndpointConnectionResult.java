@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kusto.outputs;
 import io.pulumi.azurenative.kusto.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.kusto.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.azurenative.kusto.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 

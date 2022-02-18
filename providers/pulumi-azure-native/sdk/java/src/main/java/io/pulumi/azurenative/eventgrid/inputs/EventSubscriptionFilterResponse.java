@@ -15,7 +15,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StringContainsAdvancedFilterRespon
 import io.pulumi.azurenative.eventgrid.inputs.StringEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringInAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

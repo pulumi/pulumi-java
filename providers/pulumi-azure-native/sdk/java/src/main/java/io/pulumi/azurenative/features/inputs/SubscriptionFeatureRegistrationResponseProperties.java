@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.features.inputs;
 
 import io.pulumi.azurenative.features.inputs.AuthorizationProfileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;

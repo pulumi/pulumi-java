@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.inputs.MaintenanceRedeployStatusResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineAgentInstanceViewResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineHealthStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseEncryption;
 import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseLockbox;
 import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseNetworkInjection;
 import io.pulumi.azurenative.powerplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

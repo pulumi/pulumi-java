@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resourceconnector;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.resourceconnector.inputs.ListApplianceClusterUserCredentialArgs;
 import io.pulumi.azurenative.resourceconnector.outputs.ListApplianceClusterUserCredentialResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

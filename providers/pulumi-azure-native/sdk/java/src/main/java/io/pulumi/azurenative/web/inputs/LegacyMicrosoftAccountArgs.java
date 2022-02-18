@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.AllowedAudiencesValidationArgs;
 import io.pulumi.azurenative.web.inputs.ClientRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;

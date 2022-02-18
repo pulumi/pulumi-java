@@ -6,7 +6,7 @@ package io.pulumi.azurenative.confidentialledger;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.confidentialledger.inputs.GetLedgerArgs;
 import io.pulumi.azurenative.confidentialledger.outputs.GetLedgerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

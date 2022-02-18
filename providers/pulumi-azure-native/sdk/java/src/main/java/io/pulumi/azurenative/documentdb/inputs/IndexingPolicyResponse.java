@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CompositePathResponse;
 import io.pulumi.azurenative.documentdb.inputs.ExcludedPathResponse;
 import io.pulumi.azurenative.documentdb.inputs.IncludedPathResponse;
 import io.pulumi.azurenative.documentdb.inputs.SpatialSpecResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

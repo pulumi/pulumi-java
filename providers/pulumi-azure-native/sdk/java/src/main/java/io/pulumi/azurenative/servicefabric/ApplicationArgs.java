@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ApplicationUpgradePolicyArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationUserAssignedIdentityArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ManagedIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

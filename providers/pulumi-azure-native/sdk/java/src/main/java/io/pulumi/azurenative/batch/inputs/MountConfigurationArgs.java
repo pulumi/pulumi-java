@@ -8,7 +8,7 @@ import io.pulumi.azurenative.batch.inputs.AzureFileShareConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.CIFSMountConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.NFSMountConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

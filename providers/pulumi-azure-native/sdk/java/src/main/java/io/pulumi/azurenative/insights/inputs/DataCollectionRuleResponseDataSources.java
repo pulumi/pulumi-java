@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.ExtensionDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.PerfCounterDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.SyslogDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

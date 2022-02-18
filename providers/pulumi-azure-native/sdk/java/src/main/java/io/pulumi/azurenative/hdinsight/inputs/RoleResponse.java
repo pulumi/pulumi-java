@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hdinsight.inputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.OsProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.ScriptActionResponse;
 import io.pulumi.azurenative.hdinsight.inputs.VirtualNetworkProfileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

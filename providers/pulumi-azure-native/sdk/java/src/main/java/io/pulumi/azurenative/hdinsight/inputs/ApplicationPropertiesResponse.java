@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hdinsight.inputs.ApplicationGetHttpsEndpointRespons
 import io.pulumi.azurenative.hdinsight.inputs.ComputeProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.ErrorsResponse;
 import io.pulumi.azurenative.hdinsight.inputs.RuntimeScriptActionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

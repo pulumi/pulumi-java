@@ -13,7 +13,7 @@ import io.pulumi.azurenative.solutions.outputs.ApplicationPackageSupportUrlsResp
 import io.pulumi.azurenative.solutions.outputs.IdentityResponse;
 import io.pulumi.azurenative.solutions.outputs.PlanResponse;
 import io.pulumi.azurenative.solutions.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appconfiguration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appconfiguration.inputs.GetConfigurationStoreArgs;
 import io.pulumi.azurenative.appconfiguration.outputs.GetConfigurationStoreResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

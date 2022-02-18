@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.inputs.AgentPoolUpgradeSettingsRes
 import io.pulumi.azurenative.containerservice.inputs.KubeletConfigResponse;
 import io.pulumi.azurenative.containerservice.inputs.LinuxOSConfigResponse;
 import io.pulumi.azurenative.containerservice.inputs.PowerStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
