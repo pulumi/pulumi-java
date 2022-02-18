@@ -12,6 +12,10 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDashboardArgs Empty = new GetDashboardArgs();
 
+    /**
+     * The ID of the dashboard.
+     * 
+     */
     @InputImport(name="dashboardId", required=true)
     private final String dashboardId;
 

@@ -14,6 +14,10 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamedQueryArgs Empty = new NamedQueryArgs();
 
+    /**
+     * The database to which the query belongs.
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<String> database;
 
@@ -21,6 +25,10 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.database;
     }
 
+    /**
+     * The query description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +36,10 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The query name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,10 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The contents of the query with all query statements.
+     * 
+     */
     @InputImport(name="queryString", required=true)
     private final Input<String> queryString;
 
@@ -42,6 +58,10 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryString;
     }
 
+    /**
+     * The name of the workgroup that contains the named query.
+     * 
+     */
     @InputImport(name="workGroup")
     private final @Nullable Input<String> workGroup;
 

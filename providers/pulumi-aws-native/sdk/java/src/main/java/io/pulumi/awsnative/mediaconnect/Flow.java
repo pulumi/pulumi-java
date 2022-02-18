@@ -14,45 +14,103 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::MediaConnect::Flow
+ * 
+ */
 @ResourceType(type="aws-native:mediaconnect:Flow")
 public class Flow extends io.pulumi.resources.CustomResource {
+    /**
+     * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
+     * 
+     */
     @OutputExport(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
+    /**
+     * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
+     * 
+     */
     public Output</* @Nullable */ String> getAvailabilityZone() {
         return this.availabilityZone;
     }
+    /**
+     * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     @OutputExport(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     public Output<String> getFlowArn() {
         return this.flowArn;
     }
+    /**
+     * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
+     * 
+     */
     @OutputExport(name="flowAvailabilityZone", type=String.class, parameters={})
     private Output<String> flowAvailabilityZone;
 
+    /**
+     * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
+     * 
+     */
     public Output<String> getFlowAvailabilityZone() {
         return this.flowAvailabilityZone;
     }
+    /**
+     * The name of the flow.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the flow.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The source of the flow.
+     * 
+     */
     @OutputExport(name="source", type=FlowSource.class, parameters={})
     private Output<FlowSource> source;
 
+    /**
+     * @return The source of the flow.
+     * 
+     */
     public Output<FlowSource> getSource() {
         return this.source;
     }
+    /**
+     * The source failover config of the flow.
+     * 
+     */
     @OutputExport(name="sourceFailoverConfig", type=FlowFailoverConfig.class, parameters={})
     private Output</* @Nullable */ FlowFailoverConfig> sourceFailoverConfig;
 
+    /**
+     * @return The source failover config of the flow.
+     * 
+     */
     public Output</* @Nullable */ FlowFailoverConfig> getSourceFailoverConfig() {
         return this.sourceFailoverConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Flow(String name, FlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:mediaconnect:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +126,14 @@ public class Flow extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Flow get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Flow(name, id, options);
     }

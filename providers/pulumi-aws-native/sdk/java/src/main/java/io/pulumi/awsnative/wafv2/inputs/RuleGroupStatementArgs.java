@@ -22,6 +22,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * First level statement that contains conditions, such as ByteMatch, SizeConstraint, etc
+ * 
+ */
 public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupStatementArgs Empty = new RuleGroupStatementArgs();

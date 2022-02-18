@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetChannel {
+/**
+ * Resource Type definition for AWS::IVS::Channel
+ * 
+ */
     public static CompletableFuture<GetChannelResult> invokeAsync(GetChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getChannel", TypeShape.of(GetChannelResult.class), args == null ? GetChannelArgs.Empty : args, Utilities.withVersion(options));
     }

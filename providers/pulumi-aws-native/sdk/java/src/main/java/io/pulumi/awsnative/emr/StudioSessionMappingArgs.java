@@ -14,6 +14,10 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
 
     public static final StudioSessionMappingArgs Empty = new StudioSessionMappingArgs();
 
+    /**
+     * The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
+     * 
+     */
     @InputImport(name="identityName", required=true)
     private final Input<String> identityName;
 
@@ -21,6 +25,10 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
         return this.identityName;
     }
 
+    /**
+     * Specifies whether the identity to map to the Studio is a user or a group.
+     * 
+     */
     @InputImport(name="identityType", required=true)
     private final Input<StudioSessionMappingIdentityType> identityType;
 
@@ -28,6 +36,10 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
         return this.identityType;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
+     * 
+     */
     @InputImport(name="sessionPolicyArn", required=true)
     private final Input<String> sessionPolicyArn;
 
@@ -35,6 +47,10 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
         return this.sessionPolicyArn;
     }
 
+    /**
+     * The ID of the Amazon EMR Studio to which the user or group will be mapped.
+     * 
+     */
     @InputImport(name="studioId", required=true)
     private final Input<String> studioId;
 

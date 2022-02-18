@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies how Device Farm compares the rule's attribute to the value.
+     * 
+     */
     @EnumType
     public enum DevicePoolRuleOperator {
         Equals("EQUALS"),

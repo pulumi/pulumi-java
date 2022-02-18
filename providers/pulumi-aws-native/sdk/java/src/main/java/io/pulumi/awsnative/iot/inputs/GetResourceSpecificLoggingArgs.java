@@ -12,6 +12,10 @@ public final class GetResourceSpecificLoggingArgs extends io.pulumi.resources.In
 
     public static final GetResourceSpecificLoggingArgs Empty = new GetResourceSpecificLoggingArgs();
 
+    /**
+     * Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
+     * 
+     */
     @InputImport(name="targetId", required=true)
     private final String targetId;
 

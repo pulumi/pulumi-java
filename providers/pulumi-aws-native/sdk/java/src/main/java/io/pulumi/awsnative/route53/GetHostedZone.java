@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHostedZone {
+/**
+ * Resource schema for AWS::Route53::HostedZone.
+ * 
+ */
     public static CompletableFuture<GetHostedZoneResult> invokeAsync(GetHostedZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHostedZone", TypeShape.of(GetHostedZoneResult.class), args == null ? GetHostedZoneArgs.Empty : args, Utilities.withVersion(options));
     }

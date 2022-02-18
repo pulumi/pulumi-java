@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGatewayResult {
+    /**
+     * A list of gateway capability summaries that each contain a namespace and status.
+     * 
+     */
     private final @Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries;
+    /**
+     * The ID of the gateway device.
+     * 
+     */
     private final @Nullable String gatewayId;
+    /**
+     * A unique, friendly name for the gateway.
+     * 
+     */
     private final @Nullable String gatewayName;
+    /**
+     * A list of key-value pairs that contain metadata for the gateway.
+     * 
+     */
     private final @Nullable List<GatewayTag> tags;
 
     @OutputCustomType.Constructor({"gatewayCapabilitySummaries","gatewayId","gatewayName","tags"})
@@ -31,15 +47,31 @@ public final class GetGatewayResult {
         this.tags = tags;
     }
 
+    /**
+     * A list of gateway capability summaries that each contain a namespace and status.
+     * 
+     */
     public List<GatewayCapabilitySummary> getGatewayCapabilitySummaries() {
         return this.gatewayCapabilitySummaries == null ? List.of() : this.gatewayCapabilitySummaries;
     }
+    /**
+     * The ID of the gateway device.
+     * 
+     */
     public Optional<String> getGatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
+    /**
+     * A unique, friendly name for the gateway.
+     * 
+     */
     public Optional<String> getGatewayName() {
         return Optional.ofNullable(this.gatewayName);
     }
+    /**
+     * A list of key-value pairs that contain metadata for the gateway.
+     * 
+     */
     public List<GatewayTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

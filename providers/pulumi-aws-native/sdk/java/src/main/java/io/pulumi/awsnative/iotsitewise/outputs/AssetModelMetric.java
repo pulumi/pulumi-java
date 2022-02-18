@@ -12,8 +12,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AssetModelMetric {
+    /**
+     * The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
+     * 
+     */
     private final String expression;
+    /**
+     * The list of variables used in the expression.
+     * 
+     */
     private final List<AssetModelExpressionVariable> variables;
+    /**
+     * The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression
+     * 
+     */
     private final AssetModelMetricWindow window;
 
     @OutputCustomType.Constructor({"expression","variables","window"})
@@ -26,12 +38,24 @@ public final class AssetModelMetric {
         this.window = Objects.requireNonNull(window);
     }
 
+    /**
+     * The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
+     * 
+     */
     public String getExpression() {
         return this.expression;
     }
+    /**
+     * The list of variables used in the expression.
+     * 
+     */
     public List<AssetModelExpressionVariable> getVariables() {
         return this.variables;
     }
+    /**
+     * The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression
+     * 
+     */
     public AssetModelMetricWindow getWindow() {
         return this.window;
     }

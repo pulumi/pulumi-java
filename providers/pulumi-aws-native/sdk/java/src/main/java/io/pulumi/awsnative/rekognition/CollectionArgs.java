@@ -23,6 +23,10 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.collectionId;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<CollectionTagArgs>> tags;
 

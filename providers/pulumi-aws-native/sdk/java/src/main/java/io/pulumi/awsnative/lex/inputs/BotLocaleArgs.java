@@ -15,6 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A locale in the bot, which contains the intents and slot types that the bot uses in conversations with users in the specified language and locale.
+ * 
+ */
 public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotLocaleArgs Empty = new BotLocaleArgs();
@@ -26,6 +30,10 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * List of intents
+     * 
+     */
     @InputImport(name="intents")
     private final @Nullable Input<List<BotIntentArgs>> intents;
 
@@ -47,6 +55,10 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
         return this.nluConfidenceThreshold;
     }
 
+    /**
+     * List of SlotTypes
+     * 
+     */
     @InputImport(name="slotTypes")
     private final @Nullable Input<List<BotSlotTypeArgs>> slotTypes;
 

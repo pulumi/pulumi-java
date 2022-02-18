@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class GetBasePathMappingResult {
     private final @Nullable String id;
+    /**
+     * The ID of the API.
+     * 
+     */
     private final @Nullable String restApiId;
+    /**
+     * The name of the API's stage.
+     * 
+     */
     private final @Nullable String stage;
 
     @OutputCustomType.Constructor({"id","restApiId","stage"})
@@ -28,9 +36,17 @@ public final class GetBasePathMappingResult {
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The ID of the API.
+     * 
+     */
     public Optional<String> getRestApiId() {
         return Optional.ofNullable(this.restApiId);
     }
+    /**
+     * The name of the API's stage.
+     * 
+     */
     public Optional<String> getStage() {
         return Optional.ofNullable(this.stage);
     }

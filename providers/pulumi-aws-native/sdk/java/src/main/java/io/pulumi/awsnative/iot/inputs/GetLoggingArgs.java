@@ -12,6 +12,10 @@ public final class GetLoggingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLoggingArgs Empty = new GetLoggingArgs();
 
+    /**
+     * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final String accountId;
 

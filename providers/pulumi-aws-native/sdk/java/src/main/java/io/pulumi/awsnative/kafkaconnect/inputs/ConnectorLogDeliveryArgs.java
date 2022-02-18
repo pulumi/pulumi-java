@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Details of what logs are delivered and where they are delivered.
+ * 
+ */
 public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorLogDeliveryArgs Empty = new ConnectorLogDeliveryArgs();

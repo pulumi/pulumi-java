@@ -17,6 +17,10 @@ public final class DetectorModelState {
     private final @Nullable DetectorModelOnEnter onEnter;
     private final @Nullable DetectorModelOnExit onExit;
     private final @Nullable DetectorModelOnInput onInput;
+    /**
+     * The name of the state.
+     * 
+     */
     private final String stateName;
 
     @OutputCustomType.Constructor({"onEnter","onExit","onInput","stateName"})
@@ -40,6 +44,10 @@ public final class DetectorModelState {
     public Optional<DetectorModelOnInput> getOnInput() {
         return Optional.ofNullable(this.onInput);
     }
+    /**
+     * The name of the state.
+     * 
+     */
     public String getStateName() {
         return this.stateName;
     }

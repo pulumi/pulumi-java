@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SentimentAnalysisSettingsProperties {
+    /**
+     * Enable to call Amazon Comprehend for Sentiment natively within Lex
+     * 
+     */
     private final Boolean detectSentiment;
 
     @OutputCustomType.Constructor({"detectSentiment"})
@@ -16,6 +20,10 @@ public final class SentimentAnalysisSettingsProperties {
         this.detectSentiment = Objects.requireNonNull(detectSentiment);
     }
 
+    /**
+     * Enable to call Amazon Comprehend for Sentiment natively within Lex
+     * 
+     */
     public Boolean getDetectSentiment() {
         return this.detectSentiment;
     }

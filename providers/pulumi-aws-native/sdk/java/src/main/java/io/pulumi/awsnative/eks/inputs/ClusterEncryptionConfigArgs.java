@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The encryption configuration for the cluster
+ * 
+ */
 public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterEncryptionConfigArgs Empty = new ClusterEncryptionConfigArgs();
 
+    /**
+     * The encryption provider for the cluster.
+     * 
+     */
     @InputImport(name="provider")
     private final @Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider;
 
@@ -23,6 +31,10 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
         return this.provider == null ? Input.empty() : this.provider;
     }
 
+    /**
+     * Specifies the resources to be encrypted. The only supported value is "secrets".
+     * 
+     */
     @InputImport(name="resources")
     private final @Nullable Input<List<String>> resources;
 

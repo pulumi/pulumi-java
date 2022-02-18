@@ -8,6 +8,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * A Microsoft Smooth Streaming (MSS) encryption configuration.
+ * 
+ */
 public final class OriginEndpointMssEncryption extends io.pulumi.resources.InvokeArgs {
 
     public static final OriginEndpointMssEncryption Empty = new OriginEndpointMssEncryption();

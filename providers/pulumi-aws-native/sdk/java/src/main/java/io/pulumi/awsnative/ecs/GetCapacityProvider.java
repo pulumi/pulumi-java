@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityProvider {
+/**
+ * Resource Type definition for AWS::ECS::CapacityProvider.
+ * 
+ */
     public static CompletableFuture<GetCapacityProviderResult> invokeAsync(GetCapacityProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getCapacityProvider", TypeShape.of(GetCapacityProviderResult.class), args == null ? GetCapacityProviderArgs.Empty : args, Utilities.withVersion(options));
     }

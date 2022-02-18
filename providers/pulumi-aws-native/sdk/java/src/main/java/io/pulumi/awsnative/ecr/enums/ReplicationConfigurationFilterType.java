@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of repository filter
+     * 
+     */
     @EnumType
     public enum ReplicationConfigurationFilterType {
         PrefixMatch("PREFIX_MATCH");

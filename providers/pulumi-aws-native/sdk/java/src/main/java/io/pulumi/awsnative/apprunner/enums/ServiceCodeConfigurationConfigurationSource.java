@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Configuration Source
+     * 
+     */
     @EnumType
     public enum ServiceCodeConfigurationConfigurationSource {
         Repository("REPOSITORY"),

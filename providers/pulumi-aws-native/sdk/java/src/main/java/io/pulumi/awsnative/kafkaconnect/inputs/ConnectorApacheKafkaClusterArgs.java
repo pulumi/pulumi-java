@@ -10,10 +10,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of how to connect to an Apache Kafka cluster.
+ * 
+ */
 public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorApacheKafkaClusterArgs Empty = new ConnectorApacheKafkaClusterArgs();
 
+    /**
+     * The bootstrap servers string of the Apache Kafka cluster.
+     * 
+     */
     @InputImport(name="bootstrapServers", required=true)
     private final Input<String> bootstrapServers;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataset {
+/**
+ * Resource schema for AWS::DataBrew::Dataset.
+ * 
+ */
     public static CompletableFuture<GetDatasetResult> invokeAsync(GetDatasetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getDataset", TypeShape.of(GetDatasetResult.class), args == null ? GetDatasetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FargateProfileLabel {
+    /**
+     * The key name of the label.
+     * 
+     */
     private final String key;
+    /**
+     * The value for the label.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class FargateProfileLabel {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The key name of the label.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The value for the label.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

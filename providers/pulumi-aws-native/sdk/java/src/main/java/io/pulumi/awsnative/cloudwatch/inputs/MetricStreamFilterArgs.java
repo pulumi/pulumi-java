@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * This structure defines the metrics that will be streamed.
+ * 
+ */
 public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricStreamFilterArgs Empty = new MetricStreamFilterArgs();
 
+    /**
+     * Only metrics with Namespace matching this value will be streamed.
+     * 
+     */
     @InputImport(name="namespace", required=true)
     private final Input<String> namespace;
 

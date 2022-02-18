@@ -17,6 +17,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
 
     public static final TransitGatewayPeeringAttachmentArgs Empty = new TransitGatewayPeeringAttachmentArgs();
 
+    /**
+     * Options for transit gateway peering attachment
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<TransitGatewayPeeringAttachmentOptionsArgs> options;
 
@@ -24,6 +28,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * The ID of the peer account
+     * 
+     */
     @InputImport(name="peerAccountId", required=true)
     private final Input<String> peerAccountId;
 
@@ -31,6 +39,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
         return this.peerAccountId;
     }
 
+    /**
+     * Peer Region
+     * 
+     */
     @InputImport(name="peerRegion", required=true)
     private final Input<String> peerRegion;
 
@@ -38,6 +50,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
         return this.peerRegion;
     }
 
+    /**
+     * The ID of the peer transit gateway.
+     * 
+     */
     @InputImport(name="peerTransitGatewayId", required=true)
     private final Input<String> peerTransitGatewayId;
 
@@ -45,6 +61,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
         return this.peerTransitGatewayId;
     }
 
+    /**
+     * The tags for the transit gateway peering attachment.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
 
@@ -52,6 +72,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the transit gateway.
+     * 
+     */
     @InputImport(name="transitGatewayId", required=true)
     private final Input<String> transitGatewayId;
 

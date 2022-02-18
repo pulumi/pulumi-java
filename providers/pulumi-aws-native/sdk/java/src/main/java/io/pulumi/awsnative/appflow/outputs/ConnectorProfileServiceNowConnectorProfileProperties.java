@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectorProfileServiceNowConnectorProfileProperties {
+    /**
+     * The location of the ServiceNow resource
+     * 
+     */
     private final String instanceUrl;
 
     @OutputCustomType.Constructor({"instanceUrl"})
@@ -16,6 +20,10 @@ public final class ConnectorProfileServiceNowConnectorProfileProperties {
         this.instanceUrl = Objects.requireNonNull(instanceUrl);
     }
 
+    /**
+     * The location of the ServiceNow resource
+     * 
+     */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

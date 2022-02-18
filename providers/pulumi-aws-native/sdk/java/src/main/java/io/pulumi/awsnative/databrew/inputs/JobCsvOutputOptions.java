@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Output Csv options
+ * 
+ */
 public final class JobCsvOutputOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final JobCsvOutputOptions Empty = new JobCsvOutputOptions();

@@ -15,10 +15,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetParameter {
+    /**
+     * Add the value of this parameter as a column in a dataset.
+     * 
+     */
     private final @Nullable Boolean createColumn;
     private final @Nullable DatasetDatetimeOptions datetimeOptions;
     private final @Nullable DatasetFilterExpression filter;
     private final String name;
+    /**
+     * Parameter type
+     * 
+     */
     private final DatasetParameterType type;
 
     @OutputCustomType.Constructor({"createColumn","datetimeOptions","filter","name","type"})
@@ -35,6 +43,10 @@ public final class DatasetParameter {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Add the value of this parameter as a column in a dataset.
+     * 
+     */
     public Optional<Boolean> getCreateColumn() {
         return Optional.ofNullable(this.createColumn);
     }
@@ -47,6 +59,10 @@ public final class DatasetParameter {
     public String getName() {
         return this.name;
     }
+    /**
+     * Parameter type
+     * 
+     */
     public DatasetParameterType getType() {
         return this.type;
     }

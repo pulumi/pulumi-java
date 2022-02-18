@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The day that the hours of operation applies to.
+     * 
+     */
     @EnumType
     public enum HoursOfOperationConfigDay {
         Sunday("SUNDAY"),

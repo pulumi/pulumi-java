@@ -12,6 +12,10 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetNetworkInterfaceArgs Empty = new GetNetworkInterfaceArgs();
 
+    /**
+     * Network interface id.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

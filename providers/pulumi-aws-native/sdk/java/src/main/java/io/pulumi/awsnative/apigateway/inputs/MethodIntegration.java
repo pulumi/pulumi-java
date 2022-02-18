@@ -22,6 +22,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     public static final MethodIntegration Empty = new MethodIntegration();
 
+    /**
+     * A list of request parameters whose values API Gateway caches.
+     * 
+     */
     @InputImport(name="cacheKeyParameters")
     private final @Nullable List<String> cacheKeyParameters;
 
@@ -29,6 +33,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.cacheKeyParameters == null ? List.of() : this.cacheKeyParameters;
     }
 
+    /**
+     * An API-specific tag group of related cached parameters.
+     * 
+     */
     @InputImport(name="cacheNamespace")
     private final @Nullable String cacheNamespace;
 
@@ -36,6 +44,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.cacheNamespace == null ? Optional.empty() : Optional.ofNullable(this.cacheNamespace);
     }
 
+    /**
+     * The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
+     * 
+     */
     @InputImport(name="connectionId")
     private final @Nullable String connectionId;
 
@@ -43,6 +55,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.connectionId == null ? Optional.empty() : Optional.ofNullable(this.connectionId);
     }
 
+    /**
+     * The type of the network connection to the integration endpoint.
+     * 
+     */
     @InputImport(name="connectionType")
     private final @Nullable MethodIntegrationConnectionType connectionType;
 
@@ -50,6 +66,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.connectionType == null ? Optional.empty() : Optional.ofNullable(this.connectionType);
     }
 
+    /**
+     * Specifies how to handle request payload content type conversions.
+     * 
+     */
     @InputImport(name="contentHandling")
     private final @Nullable MethodIntegrationContentHandling contentHandling;
 
@@ -57,6 +77,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.contentHandling == null ? Optional.empty() : Optional.ofNullable(this.contentHandling);
     }
 
+    /**
+     * The credentials that are required for the integration.
+     * 
+     */
     @InputImport(name="credentials")
     private final @Nullable String credentials;
 
@@ -64,6 +88,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
+    /**
+     * The integration's HTTP method type.
+     * 
+     */
     @InputImport(name="integrationHttpMethod")
     private final @Nullable String integrationHttpMethod;
 
@@ -71,6 +99,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.integrationHttpMethod == null ? Optional.empty() : Optional.ofNullable(this.integrationHttpMethod);
     }
 
+    /**
+     * The response that API Gateway provides after a method's backend completes processing a request.
+     * 
+     */
     @InputImport(name="integrationResponses")
     private final @Nullable List<MethodIntegrationResponse> integrationResponses;
 
@@ -78,6 +110,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.integrationResponses == null ? List.of() : this.integrationResponses;
     }
 
+    /**
+     * Indicates when API Gateway passes requests to the targeted backend.
+     * 
+     */
     @InputImport(name="passthroughBehavior")
     private final @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior;
 
@@ -85,6 +121,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.passthroughBehavior == null ? Optional.empty() : Optional.ofNullable(this.passthroughBehavior);
     }
 
+    /**
+     * The request parameters that API Gateway sends with the backend request.
+     * 
+     */
     @InputImport(name="requestParameters")
     private final @Nullable Object requestParameters;
 
@@ -92,6 +132,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.requestParameters == null ? Optional.empty() : Optional.ofNullable(this.requestParameters);
     }
 
+    /**
+     * A map of Apache Velocity templates that are applied on the request payload.
+     * 
+     */
     @InputImport(name="requestTemplates")
     private final @Nullable Object requestTemplates;
 
@@ -99,6 +143,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.requestTemplates == null ? Optional.empty() : Optional.ofNullable(this.requestTemplates);
     }
 
+    /**
+     * Custom timeout between 50 and 29,000 milliseconds.
+     * 
+     */
     @InputImport(name="timeoutInMillis")
     private final @Nullable Integer timeoutInMillis;
 
@@ -106,6 +154,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.timeoutInMillis == null ? Optional.empty() : Optional.ofNullable(this.timeoutInMillis);
     }
 
+    /**
+     * The type of backend that your method is running.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final MethodIntegrationType type;
 
@@ -113,6 +165,10 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * The Uniform Resource Identifier (URI) for the integration.
+     * 
+     */
     @InputImport(name="uri")
     private final @Nullable String uri;
 

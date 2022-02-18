@@ -17,6 +17,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
+    /**
+     * The filter expression defining criteria by which to group traces.
+     * 
+     */
     @InputImport(name="filterExpression")
     private final @Nullable Input<String> filterExpression;
 
@@ -24,6 +28,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.filterExpression == null ? Input.empty() : this.filterExpression;
     }
 
+    /**
+     * The case-sensitive name of the new group. Names must be unique.
+     * 
+     */
     @InputImport(name="groupName")
     private final @Nullable Input<String> groupName;
 

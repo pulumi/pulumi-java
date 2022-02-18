@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Location to store information about records that were asynchronously rejected during magnetic store writes.
+ * 
+ */
 public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs Empty = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs();
 
+    /**
+     * S3 configuration for location to store rejections from magnetic store writes
+     * 
+     */
     @InputImport(name="s3Configuration")
     private final @Nullable Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration;
 

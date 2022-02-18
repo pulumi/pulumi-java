@@ -14,39 +14,89 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Inspector Filter resource schema
+ * 
+ */
 @ResourceType(type="aws-native:inspectorv2:Filter")
 public class Filter extends io.pulumi.resources.CustomResource {
+    /**
+     * Findings filter ARN.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return Findings filter ARN.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Findings filter description.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Findings filter description.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Findings filter action.
+     * 
+     */
     @OutputExport(name="filterAction", type=FilterAction.class, parameters={})
     private Output<FilterAction> filterAction;
 
+    /**
+     * @return Findings filter action.
+     * 
+     */
     public Output<FilterAction> getFilterAction() {
         return this.filterAction;
     }
+    /**
+     * Findings filter criteria.
+     * 
+     */
     @OutputExport(name="filterCriteria", type=FilterCriteria.class, parameters={})
     private Output<FilterCriteria> filterCriteria;
 
+    /**
+     * @return Findings filter criteria.
+     * 
+     */
     public Output<FilterCriteria> getFilterCriteria() {
         return this.filterCriteria;
     }
+    /**
+     * Findings filter name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Findings filter name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Filter(String name, FilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:inspectorv2:Filter", name, args == null ? FilterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +112,14 @@ public class Filter extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Filter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Filter(name, id, options);
     }

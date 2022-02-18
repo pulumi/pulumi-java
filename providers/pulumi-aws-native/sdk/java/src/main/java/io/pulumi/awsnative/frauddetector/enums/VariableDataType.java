@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The data type.
+     * 
+     */
     @EnumType
     public enum VariableDataType {
         String("STRING"),

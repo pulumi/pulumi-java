@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Spark parameters.</p>
+ * 
+ */
 public final class DataSourceSparkParameters extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceSparkParameters Empty = new DataSourceSparkParameters();
 
+    /**
+     * <p>Host.</p>
+     * 
+     */
     @InputImport(name="host", required=true)
     private final String host;
 
@@ -20,6 +28,10 @@ public final class DataSourceSparkParameters extends io.pulumi.resources.InvokeA
         return this.host;
     }
 
+    /**
+     * <p>Port.</p>
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Double port;
 

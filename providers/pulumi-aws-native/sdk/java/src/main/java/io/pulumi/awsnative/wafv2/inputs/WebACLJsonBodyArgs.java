@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Inspect the request body as JSON. The request body immediately follows the request headers.
+ * 
+ */
 public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLJsonBodyArgs Empty = new WebACLJsonBodyArgs();

@@ -12,13 +12,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetTransitGatewayMulticastGroupSourceResult {
+    /**
+     * Indicates that the resource is a transit gateway multicast group member.
+     * 
+     */
     private final @Nullable Boolean groupMember;
+    /**
+     * Indicates that the resource is a transit gateway multicast group member.
+     * 
+     */
     private final @Nullable Boolean groupSource;
+    /**
+     * The member type (for example, static).
+     * 
+     */
     private final @Nullable String memberType;
+    /**
+     * The ID of the resource.
+     * 
+     */
     private final @Nullable String resourceId;
+    /**
+     * The type of resource, for example a VPC attachment.
+     * 
+     */
     private final @Nullable String resourceType;
+    /**
+     * The source type.
+     * 
+     */
     private final @Nullable String sourceType;
+    /**
+     * The ID of the subnet.
+     * 
+     */
     private final @Nullable String subnetId;
+    /**
+     * The ID of the transit gateway attachment.
+     * 
+     */
     private final @Nullable String transitGatewayAttachmentId;
 
     @OutputCustomType.Constructor({"groupMember","groupSource","memberType","resourceId","resourceType","sourceType","subnetId","transitGatewayAttachmentId"})
@@ -41,27 +73,59 @@ public final class GetTransitGatewayMulticastGroupSourceResult {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
     }
 
+    /**
+     * Indicates that the resource is a transit gateway multicast group member.
+     * 
+     */
     public Optional<Boolean> getGroupMember() {
         return Optional.ofNullable(this.groupMember);
     }
+    /**
+     * Indicates that the resource is a transit gateway multicast group member.
+     * 
+     */
     public Optional<Boolean> getGroupSource() {
         return Optional.ofNullable(this.groupSource);
     }
+    /**
+     * The member type (for example, static).
+     * 
+     */
     public Optional<String> getMemberType() {
         return Optional.ofNullable(this.memberType);
     }
+    /**
+     * The ID of the resource.
+     * 
+     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
+    /**
+     * The type of resource, for example a VPC attachment.
+     * 
+     */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
+    /**
+     * The source type.
+     * 
+     */
     public Optional<String> getSourceType() {
         return Optional.ofNullable(this.sourceType);
     }
+    /**
+     * The ID of the subnet.
+     * 
+     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
+    /**
+     * The ID of the transit gateway attachment.
+     * 
+     */
     public Optional<String> getTransitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }

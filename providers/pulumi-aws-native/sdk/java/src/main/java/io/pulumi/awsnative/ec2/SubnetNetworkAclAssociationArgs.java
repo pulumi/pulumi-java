@@ -13,6 +13,10 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
 
     public static final SubnetNetworkAclAssociationArgs Empty = new SubnetNetworkAclAssociationArgs();
 
+    /**
+     * The ID of the network ACL
+     * 
+     */
     @InputImport(name="networkAclId", required=true)
     private final Input<String> networkAclId;
 
@@ -20,6 +24,10 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
         return this.networkAclId;
     }
 
+    /**
+     * The ID of the subnet
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 

@@ -12,6 +12,10 @@ public final class GetEventIntegrationArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetEventIntegrationArgs Empty = new GetEventIntegrationArgs();
 
+    /**
+     * The name of the event integration.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

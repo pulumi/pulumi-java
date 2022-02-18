@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The endpoint for a monitoring job.
+ * 
+ */
 public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelBiasJobDefinitionEndpointInputArgs Empty = new ModelBiasJobDefinitionEndpointInputArgs();
 
+    /**
+     * Monitoring end time offset, e.g. PT0H
+     * 
+     */
     @InputImport(name="endTimeOffset")
     private final @Nullable Input<String> endTimeOffset;
 
@@ -31,6 +39,10 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
         return this.endpointName;
     }
 
+    /**
+     * JSONpath to locate features in JSONlines dataset
+     * 
+     */
     @InputImport(name="featuresAttribute")
     private final @Nullable Input<String> featuresAttribute;
 
@@ -38,6 +50,10 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
         return this.featuresAttribute == null ? Input.empty() : this.featuresAttribute;
     }
 
+    /**
+     * Index or JSONpath to locate predicted label(s)
+     * 
+     */
     @InputImport(name="inferenceAttribute")
     private final @Nullable Input<String> inferenceAttribute;
 
@@ -45,6 +61,10 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
         return this.inferenceAttribute == null ? Input.empty() : this.inferenceAttribute;
     }
 
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     @InputImport(name="localPath", required=true)
     private final Input<String> localPath;
 
@@ -52,6 +72,10 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
         return this.localPath;
     }
 
+    /**
+     * Index or JSONpath to locate probabilities
+     * 
+     */
     @InputImport(name="probabilityAttribute")
     private final @Nullable Input<String> probabilityAttribute;
 
@@ -66,6 +90,10 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
         return this.probabilityThresholdAttribute == null ? Input.empty() : this.probabilityThresholdAttribute;
     }
 
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     @InputImport(name="s3DataDistributionType")
     private final @Nullable Input<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
@@ -73,6 +101,10 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
         return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
     }
 
+    /**
+     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     @InputImport(name="s3InputMode")
     private final @Nullable Input<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
@@ -80,6 +112,10 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
         return this.s3InputMode == null ? Input.empty() : this.s3InputMode;
     }
 
+    /**
+     * Monitoring start time offset, e.g. -PT1H
+     * 
+     */
     @InputImport(name="startTimeOffset")
     private final @Nullable Input<String> startTimeOffset;
 

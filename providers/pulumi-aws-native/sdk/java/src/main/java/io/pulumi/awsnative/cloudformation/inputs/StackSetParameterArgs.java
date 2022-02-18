@@ -13,6 +13,10 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
 
     public static final StackSetParameterArgs Empty = new StackSetParameterArgs();
 
+    /**
+     * The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+     * 
+     */
     @InputImport(name="parameterKey", required=true)
     private final Input<String> parameterKey;
 
@@ -20,6 +24,10 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
         return this.parameterKey;
     }
 
+    /**
+     * The input value associated with the parameter.
+     * 
+     */
     @InputImport(name="parameterValue", required=true)
     private final Input<String> parameterValue;
 

@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LocationEFSEc2Config {
+    /**
+     * The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
+     * 
+     */
     private final List<String> securityGroupArns;
+    /**
+     * The ARN of the subnet that DataSync uses to access the target EFS file system.
+     * 
+     */
     private final String subnetArn;
 
     @OutputCustomType.Constructor({"securityGroupArns","subnetArn"})
@@ -21,9 +29,17 @@ public final class LocationEFSEc2Config {
         this.subnetArn = Objects.requireNonNull(subnetArn);
     }
 
+    /**
+     * The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
+     * 
+     */
     public List<String> getSecurityGroupArns() {
         return this.securityGroupArns;
     }
+    /**
+     * The ARN of the subnet that DataSync uses to access the target EFS file system.
+     * 
+     */
     public String getSubnetArn() {
         return this.subnetArn;
     }

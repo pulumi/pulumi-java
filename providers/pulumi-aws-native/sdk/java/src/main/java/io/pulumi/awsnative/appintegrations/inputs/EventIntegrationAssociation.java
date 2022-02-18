@@ -16,6 +16,10 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
 
     public static final EventIntegrationAssociation Empty = new EventIntegrationAssociation();
 
+    /**
+     * The metadata associated with the client.
+     * 
+     */
     @InputImport(name="clientAssociationMetadata")
     private final @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
 
@@ -23,6 +27,10 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
         return this.clientAssociationMetadata == null ? List.of() : this.clientAssociationMetadata;
     }
 
+    /**
+     * The identifier for the client that is associated with the event integration.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -30,6 +38,10 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * The name of the Eventbridge rule.
+     * 
+     */
     @InputImport(name="eventBridgeRuleName")
     private final @Nullable String eventBridgeRuleName;
 
@@ -37,6 +49,10 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
         return this.eventBridgeRuleName == null ? Optional.empty() : Optional.ofNullable(this.eventBridgeRuleName);
     }
 
+    /**
+     * The Amazon Resource Name (ARN) for the event integration association.
+     * 
+     */
     @InputImport(name="eventIntegrationAssociationArn")
     private final @Nullable String eventIntegrationAssociationArn;
 
@@ -44,6 +60,10 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
         return this.eventIntegrationAssociationArn == null ? Optional.empty() : Optional.ofNullable(this.eventIntegrationAssociationArn);
     }
 
+    /**
+     * The identifier for the event integration association.
+     * 
+     */
     @InputImport(name="eventIntegrationAssociationId")
     private final @Nullable String eventIntegrationAssociationId;
 

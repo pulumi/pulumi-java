@@ -16,57 +16,133 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Connect::ContactFlowModule.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:connect:ContactFlowModule")
 public class ContactFlowModule extends io.pulumi.resources.CustomResource {
+    /**
+     * The identifier of the contact flow module (ARN).
+     * 
+     */
     @OutputExport(name="contactFlowModuleArn", type=String.class, parameters={})
     private Output<String> contactFlowModuleArn;
 
+    /**
+     * @return The identifier of the contact flow module (ARN).
+     * 
+     */
     public Output<String> getContactFlowModuleArn() {
         return this.contactFlowModuleArn;
     }
+    /**
+     * The content of the contact flow module in JSON format.
+     * 
+     */
     @OutputExport(name="content", type=String.class, parameters={})
     private Output<String> content;
 
+    /**
+     * @return The content of the contact flow module in JSON format.
+     * 
+     */
     public Output<String> getContent() {
         return this.content;
     }
+    /**
+     * The description of the contact flow module.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the contact flow module.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The identifier of the Amazon Connect instance (ARN).
+     * 
+     */
     @OutputExport(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance (ARN).
+     * 
+     */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
+    /**
+     * The name of the contact flow module.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the contact flow module.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The state of the contact flow module.
+     * 
+     */
     @OutputExport(name="state", type=ContactFlowModuleState.class, parameters={})
     private Output</* @Nullable */ ContactFlowModuleState> state;
 
+    /**
+     * @return The state of the contact flow module.
+     * 
+     */
     public Output</* @Nullable */ ContactFlowModuleState> getState() {
         return this.state;
     }
+    /**
+     * The status of the contact flow module.
+     * 
+     */
     @OutputExport(name="status", type=ContactFlowModuleStatus.class, parameters={})
     private Output<ContactFlowModuleStatus> status;
 
+    /**
+     * @return The status of the contact flow module.
+     * 
+     */
     public Output<ContactFlowModuleStatus> getStatus() {
         return this.status;
     }
+    /**
+     * One or more tags.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={ContactFlowModuleTag.class})
     private Output</* @Nullable */ List<ContactFlowModuleTag>> tags;
 
+    /**
+     * @return One or more tags.
+     * 
+     */
     public Output</* @Nullable */ List<ContactFlowModuleTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ContactFlowModule(String name, ContactFlowModuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:connect:ContactFlowModule", name, args == null ? ContactFlowModuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +158,14 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ContactFlowModule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ContactFlowModule(name, id, options);
     }

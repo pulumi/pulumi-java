@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaskDefinition {
+/**
+ * Creates a gateway task definition.
+ * 
+ */
     public static CompletableFuture<GetTaskDefinitionResult> invokeAsync(GetTaskDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args == null ? GetTaskDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

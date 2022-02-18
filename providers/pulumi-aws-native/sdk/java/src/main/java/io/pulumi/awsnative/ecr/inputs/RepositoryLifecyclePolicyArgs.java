@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The LifecyclePolicy property type specifies a lifecycle policy. For information about lifecycle policy syntax, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html
+ * 
+ */
 public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryLifecyclePolicyArgs Empty = new RepositoryLifecyclePolicyArgs();

@@ -16,6 +16,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CompositeAlarmArgs Empty = new CompositeAlarmArgs();
 
+    /**
+     * Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
+     * 
+     */
     @InputImport(name="actionsEnabled")
     private final @Nullable Input<Boolean> actionsEnabled;
 
@@ -23,6 +27,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.actionsEnabled == null ? Input.empty() : this.actionsEnabled;
     }
 
+    /**
+     * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
+     * 
+     */
     @InputImport(name="alarmActions")
     private final @Nullable Input<List<String>> alarmActions;
 
@@ -30,6 +38,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.alarmActions == null ? Input.empty() : this.alarmActions;
     }
 
+    /**
+     * The description of the alarm
+     * 
+     */
     @InputImport(name="alarmDescription")
     private final @Nullable Input<String> alarmDescription;
 
@@ -37,6 +49,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.alarmDescription == null ? Input.empty() : this.alarmDescription;
     }
 
+    /**
+     * The name of the Composite Alarm
+     * 
+     */
     @InputImport(name="alarmName", required=true)
     private final Input<String> alarmName;
 
@@ -44,6 +60,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.alarmName;
     }
 
+    /**
+     * Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
+     * 
+     */
     @InputImport(name="alarmRule", required=true)
     private final Input<String> alarmRule;
 
@@ -51,6 +71,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.alarmRule;
     }
 
+    /**
+     * The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+     * 
+     */
     @InputImport(name="insufficientDataActions")
     private final @Nullable Input<List<String>> insufficientDataActions;
 
@@ -58,6 +82,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
         return this.insufficientDataActions == null ? Input.empty() : this.insufficientDataActions;
     }
 
+    /**
+     * The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+     * 
+     */
     @InputImport(name="oKActions")
     private final @Nullable Input<List<String>> oKActions;
 

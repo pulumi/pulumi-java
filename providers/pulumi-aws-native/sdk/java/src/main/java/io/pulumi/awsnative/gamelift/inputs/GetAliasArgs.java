@@ -12,6 +12,10 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAliasArgs Empty = new GetAliasArgs();
 
+    /**
+     * Unique alias ID
+     * 
+     */
     @InputImport(name="aliasId", required=true)
     private final String aliasId;
 

@@ -12,6 +12,10 @@ public final class GetGrantArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGrantArgs Empty = new GetGrantArgs();
 
+    /**
+     * Arn of the grant.
+     * 
+     */
     @InputImport(name="grantArn", required=true)
     private final String grantArn;
 

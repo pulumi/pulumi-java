@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotInputContext {
+    /**
+     * The name of the context.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class BotInputContext {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The name of the context.
+     * 
+     */
     public String getName() {
         return this.name;
     }

@@ -12,6 +12,10 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
 
     public static final BotAliasCloudWatchLogGroupLogDestination Empty = new BotAliasCloudWatchLogGroupLogDestination();
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     @InputImport(name="cloudWatchLogGroupArn", required=true)
     private final String cloudWatchLogGroupArn;
 
@@ -19,6 +23,10 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
         return this.cloudWatchLogGroupArn;
     }
 
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     @InputImport(name="logPrefix", required=true)
     private final String logPrefix;
 

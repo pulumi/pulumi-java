@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The destination repository for the container image.
+ * 
+ */
 public final class DistributionConfigurationTargetContainerRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionConfigurationTargetContainerRepositoryArgs Empty = new DistributionConfigurationTargetContainerRepositoryArgs();
 
+    /**
+     * The repository name of target container repository.
+     * 
+     */
     @InputImport(name="repositoryName")
     private final @Nullable Input<String> repositoryName;
 
@@ -22,6 +30,10 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
     }
 
+    /**
+     * The service of target container repository.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service;
 

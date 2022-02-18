@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppBlock {
+/**
+ * Resource Type definition for AWS::AppStream::AppBlock
+ * 
+ */
     public static CompletableFuture<GetAppBlockResult> invokeAsync(GetAppBlockArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getAppBlock", TypeShape.of(GetAppBlockResult.class), args == null ? GetAppBlockArgs.Empty : args, Utilities.withVersion(options));
     }

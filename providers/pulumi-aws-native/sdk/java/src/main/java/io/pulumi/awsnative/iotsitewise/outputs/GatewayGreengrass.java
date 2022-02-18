@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GatewayGreengrass {
+    /**
+     * The ARN of the Greengrass group.
+     * 
+     */
     private final String groupArn;
 
     @OutputCustomType.Constructor({"groupArn"})
@@ -16,6 +20,10 @@ public final class GatewayGreengrass {
         this.groupArn = Objects.requireNonNull(groupArn);
     }
 
+    /**
+     * The ARN of the Greengrass group.
+     * 
+     */
     public String getGroupArn() {
         return this.groupArn;
     }

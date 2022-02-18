@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The content of the email, composed of a subject line, an HTML part, and a text-only part
+ * 
+ */
 public final class Template extends io.pulumi.resources.InvokeArgs {
 
     public static final Template Empty = new Template();
 
+    /**
+     * The HTML body of the email.
+     * 
+     */
     @InputImport(name="htmlPart")
     private final @Nullable String htmlPart;
 
@@ -21,6 +29,10 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
         return this.htmlPart == null ? Optional.empty() : Optional.ofNullable(this.htmlPart);
     }
 
+    /**
+     * The subject line of the email.
+     * 
+     */
     @InputImport(name="subjectPart", required=true)
     private final String subjectPart;
 
@@ -28,6 +40,10 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
         return this.subjectPart;
     }
 
+    /**
+     * The name of the template.
+     * 
+     */
     @InputImport(name="templateName")
     private final @Nullable String templateName;
 
@@ -35,6 +51,10 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
         return this.templateName == null ? Optional.empty() : Optional.ofNullable(this.templateName);
     }
 
+    /**
+     * The email body that is visible to recipients whose email clients do not display HTML content.
+     * 
+     */
     @InputImport(name="textPart")
     private final @Nullable String textPart;
 

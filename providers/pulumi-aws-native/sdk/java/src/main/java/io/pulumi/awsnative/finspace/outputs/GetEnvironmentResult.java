@@ -14,16 +14,56 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEnvironmentResult {
+    /**
+     * AWS account ID associated with the Environment
+     * 
+     */
     private final @Nullable String awsAccountId;
+    /**
+     * ID for FinSpace created account used to store Environment artifacts
+     * 
+     */
     private final @Nullable String dedicatedServiceAccountId;
+    /**
+     * Description of the Environment
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * ARN of the Environment
+     * 
+     */
     private final @Nullable String environmentArn;
+    /**
+     * Unique identifier for representing FinSpace Environment
+     * 
+     */
     private final @Nullable String environmentId;
+    /**
+     * URL used to login to the Environment
+     * 
+     */
     private final @Nullable String environmentUrl;
+    /**
+     * Federation mode used with the Environment
+     * 
+     */
     private final @Nullable EnvironmentFederationMode federationMode;
     private final @Nullable EnvironmentFederationParameters federationParameters;
+    /**
+     * Name of the Environment
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * SageMaker Studio Domain URL associated with the Environment
+     * 
+     */
     private final @Nullable String sageMakerStudioDomainUrl;
+    /**
+     * State of the Environment
+     * 
+     */
     private final @Nullable EnvironmentStatus status;
 
     @OutputCustomType.Constructor({"awsAccountId","dedicatedServiceAccountId","description","environmentArn","environmentId","environmentUrl","federationMode","federationParameters","name","sageMakerStudioDomainUrl","status"})
@@ -52,36 +92,76 @@ public final class GetEnvironmentResult {
         this.status = status;
     }
 
+    /**
+     * AWS account ID associated with the Environment
+     * 
+     */
     public Optional<String> getAwsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
+    /**
+     * ID for FinSpace created account used to store Environment artifacts
+     * 
+     */
     public Optional<String> getDedicatedServiceAccountId() {
         return Optional.ofNullable(this.dedicatedServiceAccountId);
     }
+    /**
+     * Description of the Environment
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * ARN of the Environment
+     * 
+     */
     public Optional<String> getEnvironmentArn() {
         return Optional.ofNullable(this.environmentArn);
     }
+    /**
+     * Unique identifier for representing FinSpace Environment
+     * 
+     */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
+    /**
+     * URL used to login to the Environment
+     * 
+     */
     public Optional<String> getEnvironmentUrl() {
         return Optional.ofNullable(this.environmentUrl);
     }
+    /**
+     * Federation mode used with the Environment
+     * 
+     */
     public Optional<EnvironmentFederationMode> getFederationMode() {
         return Optional.ofNullable(this.federationMode);
     }
     public Optional<EnvironmentFederationParameters> getFederationParameters() {
         return Optional.ofNullable(this.federationParameters);
     }
+    /**
+     * Name of the Environment
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * SageMaker Studio Domain URL associated with the Environment
+     * 
+     */
     public Optional<String> getSageMakerStudioDomainUrl() {
         return Optional.ofNullable(this.sageMakerStudioDomainUrl);
     }
+    /**
+     * State of the Environment
+     * 
+     */
     public Optional<EnvironmentStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

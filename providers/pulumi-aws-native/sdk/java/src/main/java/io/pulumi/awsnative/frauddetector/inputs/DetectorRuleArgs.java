@@ -25,6 +25,10 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.arn == null ? Input.empty() : this.arn;
     }
 
+    /**
+     * The time when the event type was created.
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable Input<String> createdTime;
 
@@ -32,6 +36,10 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
+    /**
+     * The description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -60,6 +68,10 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.language == null ? Input.empty() : this.language;
     }
 
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable Input<String> lastUpdatedTime;
 
@@ -88,6 +100,10 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleVersion == null ? Input.empty() : this.ruleVersion;
     }
 
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DetectorTagArgs>> tags;
 

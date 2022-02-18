@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A enumeration value that specifies the status of the Macie Session.
+     * 
+     */
     @EnumType
     public enum SessionStatus {
         Enabled("ENABLED"),

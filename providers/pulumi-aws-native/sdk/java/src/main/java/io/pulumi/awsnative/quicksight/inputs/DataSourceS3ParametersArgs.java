@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * <p>S3 parameters.</p>
+ * 
+ */
 public final class DataSourceS3ParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceS3ParametersArgs Empty = new DataSourceS3ParametersArgs();

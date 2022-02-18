@@ -17,6 +17,10 @@ public final class FrameworkControl extends io.pulumi.resources.InvokeArgs {
 
     public static final FrameworkControl Empty = new FrameworkControl();
 
+    /**
+     * A list of ParameterName and ParameterValue pairs.
+     * 
+     */
     @InputImport(name="controlInputParameters")
     private final @Nullable List<FrameworkControlInputParameter> controlInputParameters;
 
@@ -24,6 +28,10 @@ public final class FrameworkControl extends io.pulumi.resources.InvokeArgs {
         return this.controlInputParameters == null ? List.of() : this.controlInputParameters;
     }
 
+    /**
+     * The name of a control. This name is between 1 and 256 characters.
+     * 
+     */
     @InputImport(name="controlName", required=true)
     private final String controlName;
 
@@ -31,6 +39,10 @@ public final class FrameworkControl extends io.pulumi.resources.InvokeArgs {
         return this.controlName;
     }
 
+    /**
+     * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+     * 
+     */
     @InputImport(name="controlScope")
     private final @Nullable FrameworkControlControlScopeProperties controlScope;
 

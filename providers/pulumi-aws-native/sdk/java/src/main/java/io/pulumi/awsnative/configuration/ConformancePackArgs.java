@@ -16,6 +16,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ConformancePackArgs Empty = new ConformancePackArgs();
 
+    /**
+     * A list of ConformancePackInputParameter objects.
+     * 
+     */
     @InputImport(name="conformancePackInputParameters")
     private final @Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
 
@@ -23,6 +27,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
         return this.conformancePackInputParameters == null ? Input.empty() : this.conformancePackInputParameters;
     }
 
+    /**
+     * Name of the conformance pack which will be assigned as the unique identifier.
+     * 
+     */
     @InputImport(name="conformancePackName")
     private final @Nullable Input<String> conformancePackName;
 
@@ -30,6 +38,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
         return this.conformancePackName == null ? Input.empty() : this.conformancePackName;
     }
 
+    /**
+     * AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     @InputImport(name="deliveryS3Bucket")
     private final @Nullable Input<String> deliveryS3Bucket;
 
@@ -37,6 +49,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
         return this.deliveryS3Bucket == null ? Input.empty() : this.deliveryS3Bucket;
     }
 
+    /**
+     * The prefix for delivery S3 bucket.
+     * 
+     */
     @InputImport(name="deliveryS3KeyPrefix")
     private final @Nullable Input<String> deliveryS3KeyPrefix;
 
@@ -44,6 +60,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
         return this.deliveryS3KeyPrefix == null ? Input.empty() : this.deliveryS3KeyPrefix;
     }
 
+    /**
+     * A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
+     * 
+     */
     @InputImport(name="templateBody")
     private final @Nullable Input<String> templateBody;
 
@@ -51,6 +71,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
         return this.templateBody == null ? Input.empty() : this.templateBody;
     }
 
+    /**
+     * Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
+     * 
+     */
     @InputImport(name="templateS3Uri")
     private final @Nullable Input<String> templateS3Uri;
 

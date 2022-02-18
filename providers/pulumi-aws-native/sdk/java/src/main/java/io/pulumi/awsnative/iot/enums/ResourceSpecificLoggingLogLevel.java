@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * 
+     */
     @EnumType
     public enum ResourceSpecificLoggingLogLevel {
         Error("ERROR"),

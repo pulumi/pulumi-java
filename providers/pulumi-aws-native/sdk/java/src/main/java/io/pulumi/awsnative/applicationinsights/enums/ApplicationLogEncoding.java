@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of encoding of the logs to be monitored.
+     * 
+     */
     @EnumType
     public enum ApplicationLogEncoding {
         Utf8("utf-8"),

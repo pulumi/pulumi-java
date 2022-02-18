@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The service of target container repository.
+     * 
+     */
     @EnumType
     public enum DistributionConfigurationTargetContainerRepositoryService {
         Ecr("ECR");

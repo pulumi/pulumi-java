@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration of an ML Detect Security Profile.
+ * 
+ */
 public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityProfileMachineLearningDetectionConfigArgs Empty = new SecurityProfileMachineLearningDetectionConfigArgs();
 
+    /**
+     * The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
+     * 
+     */
     @InputImport(name="confidenceLevel")
     private final @Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 

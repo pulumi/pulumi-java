@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSimulationApplicationVersion {
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
     public static CompletableFuture<GetSimulationApplicationVersionResult> invokeAsync(GetSimulationApplicationVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getSimulationApplicationVersion", TypeShape.of(GetSimulationApplicationVersionResult.class), args == null ? GetSimulationApplicationVersionArgs.Empty : args, Utilities.withVersion(options));
     }

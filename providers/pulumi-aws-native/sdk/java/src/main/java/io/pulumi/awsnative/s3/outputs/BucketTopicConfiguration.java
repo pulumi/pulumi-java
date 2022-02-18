@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketTopicConfiguration {
+    /**
+     * The Amazon S3 bucket event about which to send notifications.
+     * 
+     */
     private final String event;
+    /**
+     * The filtering rules that determine for which objects to send notifications.
+     * 
+     */
     private final @Nullable BucketNotificationFilter filter;
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
+     * 
+     */
     private final String topic;
 
     @OutputCustomType.Constructor({"event","filter","topic"})
@@ -26,12 +38,24 @@ public final class BucketTopicConfiguration {
         this.topic = Objects.requireNonNull(topic);
     }
 
+    /**
+     * The Amazon S3 bucket event about which to send notifications.
+     * 
+     */
     public String getEvent() {
         return this.event;
     }
+    /**
+     * The filtering rules that determine for which objects to send notifications.
+     * 
+     */
     public Optional<BucketNotificationFilter> getFilter() {
         return Optional.ofNullable(this.filter);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
+     * 
+     */
     public String getTopic() {
         return this.topic;
     }

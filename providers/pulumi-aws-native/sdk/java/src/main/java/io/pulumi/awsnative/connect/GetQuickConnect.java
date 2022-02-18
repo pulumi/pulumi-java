@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQuickConnect {
+/**
+ * Resource Type definition for AWS::Connect::QuickConnect
+ * 
+ */
     public static CompletableFuture<GetQuickConnectResult> invokeAsync(GetQuickConnectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args == null ? GetQuickConnectArgs.Empty : args, Utilities.withVersion(options));
     }

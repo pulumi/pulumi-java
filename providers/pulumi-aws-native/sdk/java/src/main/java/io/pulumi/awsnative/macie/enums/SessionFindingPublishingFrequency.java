@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A enumeration value that specifies how frequently finding updates are published.
+     * 
+     */
     @EnumType
     public enum SessionFindingPublishingFrequency {
         FifteenMinutes("FIFTEEN_MINUTES"),

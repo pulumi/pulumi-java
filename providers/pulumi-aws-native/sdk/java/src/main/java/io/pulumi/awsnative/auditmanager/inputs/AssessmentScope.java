@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The wrapper that contains the AWS accounts and AWS services in scope for the assessment.
+ * 
+ */
 public final class AssessmentScope extends io.pulumi.resources.InvokeArgs {
 
     public static final AssessmentScope Empty = new AssessmentScope();
 
+    /**
+     * The AWS accounts included in scope.
+     * 
+     */
     @InputImport(name="awsAccounts")
     private final @Nullable List<AssessmentAWSAccount> awsAccounts;
 
@@ -23,6 +31,10 @@ public final class AssessmentScope extends io.pulumi.resources.InvokeArgs {
         return this.awsAccounts == null ? List.of() : this.awsAccounts;
     }
 
+    /**
+     * The AWS services included in scope.
+     * 
+     */
     @InputImport(name="awsServices")
     private final @Nullable List<AssessmentAWSService> awsServices;
 

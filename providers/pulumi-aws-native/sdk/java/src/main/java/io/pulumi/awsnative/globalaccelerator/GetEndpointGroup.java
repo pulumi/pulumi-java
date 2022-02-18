@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpointGroup {
+/**
+ * Resource Type definition for AWS::GlobalAccelerator::EndpointGroup
+ * 
+ */
     public static CompletableFuture<GetEndpointGroupResult> invokeAsync(GetEndpointGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getEndpointGroup", TypeShape.of(GetEndpointGroupResult.class), args == null ? GetEndpointGroupArgs.Empty : args, Utilities.withVersion(options));
     }

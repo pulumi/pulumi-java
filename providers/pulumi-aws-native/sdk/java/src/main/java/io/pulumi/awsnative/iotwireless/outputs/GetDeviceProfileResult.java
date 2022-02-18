@@ -14,10 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDeviceProfileResult {
+    /**
+     * Service profile Arn. Returned after successful create.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Service profile Id. Returned after successful create.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
+     * 
+     */
     private final @Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN;
+    /**
+     * Name of service profile
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * A list of key-value pairs that contain metadata for the device profile.
+     * 
+     */
     private final @Nullable List<DeviceProfileTag> tags;
 
     @OutputCustomType.Constructor({"arn","id","loRaWAN","name","tags"})
@@ -34,18 +54,38 @@ public final class GetDeviceProfileResult {
         this.tags = tags;
     }
 
+    /**
+     * Service profile Arn. Returned after successful create.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Service profile Id. Returned after successful create.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
+     * 
+     */
     public Optional<DeviceProfileLoRaWANDeviceProfile> getLoRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
+    /**
+     * Name of service profile
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * A list of key-value pairs that contain metadata for the device profile.
+     * 
+     */
     public List<DeviceProfileTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

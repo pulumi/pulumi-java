@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateAuthority {
+/**
+ * Private certificate authority.
+ * 
+ */
     public static CompletableFuture<GetCertificateAuthorityResult> invokeAsync(GetCertificateAuthorityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args == null ? GetCertificateAuthorityArgs.Empty : args, Utilities.withVersion(options));
     }

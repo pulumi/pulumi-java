@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * SNS configuration for notification upon scheduled query execution.
+ * 
+ */
 public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledQuerySnsConfigurationArgs Empty = new ScheduledQuerySnsConfigurationArgs();

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Capacity mode for the specified table
+     * 
+     */
     @EnumType
     public enum TableMode {
         Provisioned("PROVISIONED"),

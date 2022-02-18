@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Edition of index
+     * 
+     */
     @EnumType
     public enum IndexEdition {
         DeveloperEdition("DEVELOPER_EDITION"),

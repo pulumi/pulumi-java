@@ -32,6 +32,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelineDefinition;
     }
 
+    /**
+     * The description of the Pipeline.
+     * 
+     */
     @InputImport(name="pipelineDescription")
     private final @Nullable Input<String> pipelineDescription;
 
@@ -39,6 +43,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelineDescription == null ? Input.empty() : this.pipelineDescription;
     }
 
+    /**
+     * The display name of the Pipeline.
+     * 
+     */
     @InputImport(name="pipelineDisplayName")
     private final @Nullable Input<String> pipelineDisplayName;
 
@@ -46,6 +54,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelineDisplayName == null ? Input.empty() : this.pipelineDisplayName;
     }
 
+    /**
+     * The name of the Pipeline.
+     * 
+     */
     @InputImport(name="pipelineName")
     private final @Nullable Input<String> pipelineName;
 
@@ -53,6 +65,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelineName == null ? Input.empty() : this.pipelineName;
     }
 
+    /**
+     * Role Arn
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 

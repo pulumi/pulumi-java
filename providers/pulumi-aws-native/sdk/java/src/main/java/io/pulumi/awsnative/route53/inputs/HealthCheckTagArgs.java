@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class HealthCheckTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthCheckTagArgs Empty = new HealthCheckTagArgs();
 
+    /**
+     * The key name of the tag.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class HealthCheckTagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
+    /**
+     * The value for the tag.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

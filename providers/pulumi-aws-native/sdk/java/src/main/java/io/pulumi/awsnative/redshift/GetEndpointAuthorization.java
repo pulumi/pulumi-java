@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpointAuthorization {
+/**
+ * Describes an endpoint authorization for authorizing Redshift-managed VPC endpoint access to a cluster across AWS accounts.
+ * 
+ */
     public static CompletableFuture<GetEndpointAuthorizationResult> invokeAsync(GetEndpointAuthorizationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:redshift:getEndpointAuthorization", TypeShape.of(GetEndpointAuthorizationResult.class), args == null ? GetEndpointAuthorizationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,6 +14,10 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
 
     public static final DatasetDatetimeOptions Empty = new DatasetDatetimeOptions();
 
+    /**
+     * Date/time format of a date parameter
+     * 
+     */
     @InputImport(name="format", required=true)
     private final String format;
 
@@ -21,6 +25,10 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
         return this.format;
     }
 
+    /**
+     * Locale code for a date parameter
+     * 
+     */
     @InputImport(name="localeCode")
     private final @Nullable String localeCode;
 
@@ -28,6 +36,10 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
         return this.localeCode == null ? Optional.empty() : Optional.ofNullable(this.localeCode);
     }
 
+    /**
+     * Timezone offset
+     * 
+     */
     @InputImport(name="timezoneOffset")
     private final @Nullable String timezoneOffset;
 

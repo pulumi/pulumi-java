@@ -14,6 +14,10 @@ public final class JobRecipe extends io.pulumi.resources.InvokeArgs {
 
     public static final JobRecipe Empty = new JobRecipe();
 
+    /**
+     * Recipe name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +25,10 @@ public final class JobRecipe extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Recipe version
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

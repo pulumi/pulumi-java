@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The configuration for a shared file storage system that is associated with a studio resource.</p>
+ * 
+ */
 public final class StudioComponentSharedFileSystemConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StudioComponentSharedFileSystemConfigurationArgs Empty = new StudioComponentSharedFileSystemConfigurationArgs();
 
+    /**
+     * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
+     * 
+     */
     @InputImport(name="endpoint")
     private final @Nullable Input<String> endpoint;
 
@@ -21,6 +29,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
+    /**
+     * <p>The unique identifier for a file system.</p>
+     * 
+     */
     @InputImport(name="fileSystemId")
     private final @Nullable Input<String> fileSystemId;
 
@@ -28,6 +40,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
         return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
     }
 
+    /**
+     * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
+     * 
+     */
     @InputImport(name="linuxMountPoint")
     private final @Nullable Input<String> linuxMountPoint;
 
@@ -35,6 +51,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
         return this.linuxMountPoint == null ? Input.empty() : this.linuxMountPoint;
     }
 
+    /**
+     * <p>The name of the file share.</p>
+     * 
+     */
     @InputImport(name="shareName")
     private final @Nullable Input<String> shareName;
 
@@ -42,6 +62,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
         return this.shareName == null ? Input.empty() : this.shareName;
     }
 
+    /**
+     * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
+     * 
+     */
     @InputImport(name="windowsMountDrive")
     private final @Nullable Input<String> windowsMountDrive;
 

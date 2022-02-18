@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app.
+ * 
+ */
 public final class AppImageConfigKernelGatewayImageConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final AppImageConfigKernelGatewayImageConfig Empty = new AppImageConfigKernelGatewayImageConfig();
 
+    /**
+     * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+     * 
+     */
     @InputImport(name="fileSystemConfig")
     private final @Nullable AppImageConfigFileSystemConfig fileSystemConfig;
 
@@ -23,6 +31,10 @@ public final class AppImageConfigKernelGatewayImageConfig extends io.pulumi.reso
         return this.fileSystemConfig == null ? Optional.empty() : Optional.ofNullable(this.fileSystemConfig);
     }
 
+    /**
+     * The specification of the Jupyter kernels in the image.
+     * 
+     */
     @InputImport(name="kernelSpecs", required=true)
     private final List<AppImageConfigKernelSpec> kernelSpecs;
 

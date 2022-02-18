@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A capacity provider strategy consists of one or more capacity providers along with the `base` and `weight` to assign to them. A capacity provider must be associated with the cluster to be used in a capacity provider strategy. The PutClusterCapacityProviders API is used to associate a capacity provider with a cluster. Only capacity providers with an `ACTIVE` or `UPDATING` status can be used.
+ * 
+ */
 public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterCapacityProviderStrategyItemArgs Empty = new ClusterCapacityProviderStrategyItemArgs();

@@ -40,22 +40,46 @@ public final class TaskDefinitionContainerDefinition {
     private final @Nullable Object dockerLabels;
     private final @Nullable List<String> dockerSecurityOptions;
     private final @Nullable List<String> entryPoint;
+    /**
+     * The environment variables to pass to a container
+     * 
+     */
     private final @Nullable List<TaskDefinitionKeyValuePair> environment;
+    /**
+     * The list of one or more files that contain the environment variables to pass to a container
+     * 
+     */
     private final @Nullable List<TaskDefinitionEnvironmentFile> environmentFiles;
     private final @Nullable Boolean essential;
     private final @Nullable List<TaskDefinitionHostEntry> extraHosts;
     private final @Nullable TaskDefinitionFirelensConfiguration firelensConfiguration;
     private final @Nullable TaskDefinitionHealthCheck healthCheck;
     private final @Nullable String hostname;
+    /**
+     * The image used to start a container. This string is passed directly to the Docker daemon.
+     * 
+     */
     private final @Nullable String image;
     private final @Nullable Boolean interactive;
     private final @Nullable List<String> links;
     private final @Nullable TaskDefinitionLinuxParameters linuxParameters;
     private final @Nullable TaskDefinitionLogConfiguration logConfiguration;
+    /**
+     * The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
+     * 
+     */
     private final @Nullable Integer memory;
     private final @Nullable Integer memoryReservation;
     private final @Nullable List<TaskDefinitionMountPoint> mountPoints;
+    /**
+     * The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Port mappings allow containers to access ports on the host container instance to send or receive traffic.
+     * 
+     */
     private final @Nullable List<TaskDefinitionPortMapping> portMappings;
     private final @Nullable Boolean privileged;
     private final @Nullable Boolean pseudoTerminal;
@@ -180,9 +204,17 @@ public final class TaskDefinitionContainerDefinition {
     public List<String> getEntryPoint() {
         return this.entryPoint == null ? List.of() : this.entryPoint;
     }
+    /**
+     * The environment variables to pass to a container
+     * 
+     */
     public List<TaskDefinitionKeyValuePair> getEnvironment() {
         return this.environment == null ? List.of() : this.environment;
     }
+    /**
+     * The list of one or more files that contain the environment variables to pass to a container
+     * 
+     */
     public List<TaskDefinitionEnvironmentFile> getEnvironmentFiles() {
         return this.environmentFiles == null ? List.of() : this.environmentFiles;
     }
@@ -201,6 +233,10 @@ public final class TaskDefinitionContainerDefinition {
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
+    /**
+     * The image used to start a container. This string is passed directly to the Docker daemon.
+     * 
+     */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
@@ -216,6 +252,10 @@ public final class TaskDefinitionContainerDefinition {
     public Optional<TaskDefinitionLogConfiguration> getLogConfiguration() {
         return Optional.ofNullable(this.logConfiguration);
     }
+    /**
+     * The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
+     * 
+     */
     public Optional<Integer> getMemory() {
         return Optional.ofNullable(this.memory);
     }
@@ -225,9 +265,17 @@ public final class TaskDefinitionContainerDefinition {
     public List<TaskDefinitionMountPoint> getMountPoints() {
         return this.mountPoints == null ? List.of() : this.mountPoints;
     }
+    /**
+     * The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Port mappings allow containers to access ports on the host container instance to send or receive traffic.
+     * 
+     */
     public List<TaskDefinitionPortMapping> getPortMappings() {
         return this.portMappings == null ? List.of() : this.portMappings;
     }

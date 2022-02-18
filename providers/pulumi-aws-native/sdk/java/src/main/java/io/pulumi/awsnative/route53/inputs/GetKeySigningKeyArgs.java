@@ -12,6 +12,10 @@ public final class GetKeySigningKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeySigningKeyArgs Empty = new GetKeySigningKeyArgs();
 
+    /**
+     * The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     @InputImport(name="hostedZoneId", required=true)
     private final String hostedZoneId;
 
@@ -19,6 +23,10 @@ public final class GetKeySigningKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.hostedZoneId;
     }
 
+    /**
+     * An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

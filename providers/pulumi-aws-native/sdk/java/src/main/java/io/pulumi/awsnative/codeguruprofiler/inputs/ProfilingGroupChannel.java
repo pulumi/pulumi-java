@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Notification medium for users to get alerted for events that occur in application profile. We support SNS topic as a notification channel.
+ * 
+ */
 public final class ProfilingGroupChannel extends io.pulumi.resources.InvokeArgs {
 
     public static final ProfilingGroupChannel Empty = new ProfilingGroupChannel();

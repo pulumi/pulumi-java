@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Data source type
+     * 
+     */
     @EnumType
     public enum DataSourceType {
         S3("S3"),

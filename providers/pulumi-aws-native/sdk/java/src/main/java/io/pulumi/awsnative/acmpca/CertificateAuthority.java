@@ -17,53 +17,123 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Private certificate authority.
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:acmpca:CertificateAuthority")
 public class CertificateAuthority extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the certificate authority.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the certificate authority.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
+     * 
+     */
     @OutputExport(name="certificateSigningRequest", type=String.class, parameters={})
     private Output<String> certificateSigningRequest;
 
+    /**
+     * @return The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
+     * 
+     */
     public Output<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest;
     }
+    /**
+     * Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
+     * 
+     */
     @OutputExport(name="csrExtensions", type=CertificateAuthorityCsrExtensions.class, parameters={})
     private Output</* @Nullable */ CertificateAuthorityCsrExtensions> csrExtensions;
 
+    /**
+     * @return Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
+     * 
+     */
     public Output</* @Nullable */ CertificateAuthorityCsrExtensions> getCsrExtensions() {
         return this.csrExtensions;
     }
+    /**
+     * Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
+     * 
+     */
     @OutputExport(name="keyAlgorithm", type=String.class, parameters={})
     private Output<String> keyAlgorithm;
 
+    /**
+     * @return Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
+     * 
+     */
     public Output<String> getKeyAlgorithm() {
         return this.keyAlgorithm;
     }
+    /**
+     * KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
+     * 
+     */
     @OutputExport(name="keyStorageSecurityStandard", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyStorageSecurityStandard;
 
+    /**
+     * @return KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
+     * 
+     */
     public Output</* @Nullable */ String> getKeyStorageSecurityStandard() {
         return this.keyStorageSecurityStandard;
     }
+    /**
+     * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
+     * 
+     */
     @OutputExport(name="revocationConfiguration", type=CertificateAuthorityRevocationConfiguration.class, parameters={})
     private Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> revocationConfiguration;
 
+    /**
+     * @return Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
+     * 
+     */
     public Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> getRevocationConfiguration() {
         return this.revocationConfiguration;
     }
+    /**
+     * Algorithm your CA uses to sign certificate requests.
+     * 
+     */
     @OutputExport(name="signingAlgorithm", type=String.class, parameters={})
     private Output<String> signingAlgorithm;
 
+    /**
+     * @return Algorithm your CA uses to sign certificate requests.
+     * 
+     */
     public Output<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
     }
+    /**
+     * Structure that contains X.500 distinguished name information for your CA.
+     * 
+     */
     @OutputExport(name="subject", type=CertificateAuthoritySubject.class, parameters={})
     private Output<CertificateAuthoritySubject> subject;
 
+    /**
+     * @return Structure that contains X.500 distinguished name information for your CA.
+     * 
+     */
     public Output<CertificateAuthoritySubject> getSubject() {
         return this.subject;
     }
@@ -73,13 +143,27 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<CertificateAuthorityTag>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the certificate authority.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the certificate authority.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CertificateAuthority(String name, CertificateAuthorityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:acmpca:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -95,6 +179,14 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CertificateAuthority get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CertificateAuthority(name, id, options);
     }

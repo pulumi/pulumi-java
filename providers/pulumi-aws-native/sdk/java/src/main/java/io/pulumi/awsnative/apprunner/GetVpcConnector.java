@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpcConnector {
+/**
+ * The AWS::AppRunner::VpcConnector resource specifies an App Runner VpcConnector.
+ * 
+ */
     public static CompletableFuture<GetVpcConnectorResult> invokeAsync(GetVpcConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apprunner:getVpcConnector", TypeShape.of(GetVpcConnectorResult.class), args == null ? GetVpcConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

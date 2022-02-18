@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * S3 buckets and Regions to include/exclude in the Amazon S3 Storage Lens configuration.
+ * 
+ */
 public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensBucketsAndRegionsArgs Empty = new StorageLensBucketsAndRegionsArgs();

@@ -12,6 +12,10 @@ public final class GetSuiteDefinitionArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetSuiteDefinitionArgs Empty = new GetSuiteDefinitionArgs();
 
+    /**
+     * The unique identifier for the suite definition.
+     * 
+     */
     @InputImport(name="suiteDefinitionId", required=true)
     private final String suiteDefinitionId;
 

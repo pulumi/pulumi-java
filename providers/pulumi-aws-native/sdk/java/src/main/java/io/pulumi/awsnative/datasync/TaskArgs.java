@@ -19,6 +19,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskArgs Empty = new TaskArgs();
 
+    /**
+     * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
+     * 
+     */
     @InputImport(name="cloudWatchLogGroupArn")
     private final @Nullable Input<String> cloudWatchLogGroupArn;
 
@@ -26,6 +30,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudWatchLogGroupArn == null ? Input.empty() : this.cloudWatchLogGroupArn;
     }
 
+    /**
+     * The ARN of an AWS storage resource's location.
+     * 
+     */
     @InputImport(name="destinationLocationArn", required=true)
     private final Input<String> destinationLocationArn;
 
@@ -47,6 +55,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.includes == null ? Input.empty() : this.includes;
     }
 
+    /**
+     * The name of a task. This value is a text reference that is used to identify the task in the console.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +80,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * The ARN of the source location for the task.
+     * 
+     */
     @InputImport(name="sourceLocationArn", required=true)
     private final Input<String> sourceLocationArn;
 
@@ -75,6 +91,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceLocationArn;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<TaskTagArgs>> tags;
 

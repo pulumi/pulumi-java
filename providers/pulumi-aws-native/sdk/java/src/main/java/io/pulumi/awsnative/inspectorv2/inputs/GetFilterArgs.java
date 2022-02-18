@@ -12,6 +12,10 @@ public final class GetFilterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFilterArgs Empty = new GetFilterArgs();
 
+    /**
+     * Findings filter ARN.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

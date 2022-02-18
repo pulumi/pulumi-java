@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The user ID (UID) of the file's owner.
+     * 
+     */
     @EnumType
     public enum TaskOptionsUid {
         None("NONE"),

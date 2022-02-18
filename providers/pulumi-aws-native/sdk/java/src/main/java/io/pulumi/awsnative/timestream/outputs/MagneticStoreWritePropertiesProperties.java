@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MagneticStoreWritePropertiesProperties {
+    /**
+     * Boolean flag indicating whether magnetic store writes are enabled.
+     * 
+     */
     private final Boolean enableMagneticStoreWrites;
+    /**
+     * Location to store information about records that were asynchronously rejected during magnetic store writes.
+     * 
+     */
     private final @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation;
 
     @OutputCustomType.Constructor({"enableMagneticStoreWrites","magneticStoreRejectedDataLocation"})
@@ -23,9 +31,17 @@ public final class MagneticStoreWritePropertiesProperties {
         this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
     }
 
+    /**
+     * Boolean flag indicating whether magnetic store writes are enabled.
+     * 
+     */
     public Boolean getEnableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
     }
+    /**
+     * Location to store information about records that were asynchronously rejected during magnetic store writes.
+     * 
+     */
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties> getMagneticStoreRejectedDataLocation() {
         return Optional.ofNullable(this.magneticStoreRejectedDataLocation);
     }

@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies website configuration parameters for an Amazon S3 bucket.
+ * 
+ */
 public final class BucketWebsiteConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketWebsiteConfiguration Empty = new BucketWebsiteConfiguration();
 
+    /**
+     * The name of the error document for the website.
+     * 
+     */
     @InputImport(name="errorDocument")
     private final @Nullable String errorDocument;
 
@@ -24,6 +32,10 @@ public final class BucketWebsiteConfiguration extends io.pulumi.resources.Invoke
         return this.errorDocument == null ? Optional.empty() : Optional.ofNullable(this.errorDocument);
     }
 
+    /**
+     * The name of the index document for the website.
+     * 
+     */
     @InputImport(name="indexDocument")
     private final @Nullable String indexDocument;
 

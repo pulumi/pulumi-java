@@ -12,6 +12,10 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
 
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
+    /**
+     * The ID of a notification channel.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

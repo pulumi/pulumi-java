@@ -12,6 +12,10 @@ public final class GetLaunchConfigurationArgs extends io.pulumi.resources.Invoke
 
     public static final GetLaunchConfigurationArgs Empty = new GetLaunchConfigurationArgs();
 
+    /**
+     * The name of the launch configuration. This name must be unique per Region per account.
+     * 
+     */
     @InputImport(name="launchConfigurationName", required=true)
     private final String launchConfigurationName;
 

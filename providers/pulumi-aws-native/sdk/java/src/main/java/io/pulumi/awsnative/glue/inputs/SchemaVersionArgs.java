@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specify checkpoint version for update. This is only required to update the Compatibility.
+ * 
+ */
 public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaVersionArgs Empty = new SchemaVersionArgs();
 
+    /**
+     * Indicates if the latest version needs to be updated.
+     * 
+     */
     @InputImport(name="isLatest")
     private final @Nullable Input<Boolean> isLatest;
 
@@ -22,6 +30,10 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.isLatest == null ? Input.empty() : this.isLatest;
     }
 
+    /**
+     * Indicates the version number in the schema to update.
+     * 
+     */
     @InputImport(name="versionNumber")
     private final @Nullable Input<Integer> versionNumber;
 

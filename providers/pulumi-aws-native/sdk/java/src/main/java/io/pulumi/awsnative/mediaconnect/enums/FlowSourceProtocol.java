@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The protocol that is used by the source or output.
+     * 
+     */
     @EnumType
     public enum FlowSourceProtocol {
         ZixiPush("zixi-push"),

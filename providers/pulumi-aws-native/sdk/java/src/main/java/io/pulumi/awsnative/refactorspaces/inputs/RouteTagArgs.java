@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A label for tagging Environment resource
+ * 
+ */
 public final class RouteTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteTagArgs Empty = new RouteTagArgs();
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class RouteTagArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

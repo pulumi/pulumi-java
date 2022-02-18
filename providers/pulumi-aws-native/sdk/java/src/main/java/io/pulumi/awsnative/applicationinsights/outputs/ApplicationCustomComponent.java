@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApplicationCustomComponent {
+    /**
+     * The name of the component.
+     * 
+     */
     private final String componentName;
+    /**
+     * The list of resource ARNs that belong to the component.
+     * 
+     */
     private final List<String> resourceList;
 
     @OutputCustomType.Constructor({"componentName","resourceList"})
@@ -21,9 +29,17 @@ public final class ApplicationCustomComponent {
         this.resourceList = Objects.requireNonNull(resourceList);
     }
 
+    /**
+     * The name of the component.
+     * 
+     */
     public String getComponentName() {
         return this.componentName;
     }
+    /**
+     * The list of resource ARNs that belong to the component.
+     * 
+     */
     public List<String> getResourceList() {
         return this.resourceList;
     }

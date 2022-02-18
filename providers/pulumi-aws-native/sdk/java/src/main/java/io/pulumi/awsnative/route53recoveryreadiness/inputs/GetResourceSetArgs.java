@@ -12,6 +12,10 @@ public final class GetResourceSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourceSetArgs Empty = new GetResourceSetArgs();
 
+    /**
+     * The name of the resource set to create.
+     * 
+     */
     @InputImport(name="resourceSetName", required=true)
     private final String resourceSetName;
 

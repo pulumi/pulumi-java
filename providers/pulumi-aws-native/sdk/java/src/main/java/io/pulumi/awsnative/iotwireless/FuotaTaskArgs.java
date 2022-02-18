@@ -17,6 +17,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FuotaTaskArgs Empty = new FuotaTaskArgs();
 
+    /**
+     * Multicast group to associate. Only for update request.
+     * 
+     */
     @InputImport(name="associateMulticastGroup")
     private final @Nullable Input<String> associateMulticastGroup;
 
@@ -24,6 +28,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.associateMulticastGroup == null ? Input.empty() : this.associateMulticastGroup;
     }
 
+    /**
+     * Wireless device to associate. Only for update request.
+     * 
+     */
     @InputImport(name="associateWirelessDevice")
     private final @Nullable Input<String> associateWirelessDevice;
 
@@ -31,6 +39,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.associateWirelessDevice == null ? Input.empty() : this.associateWirelessDevice;
     }
 
+    /**
+     * FUOTA task description
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +50,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Multicast group to disassociate. Only for update request.
+     * 
+     */
     @InputImport(name="disassociateMulticastGroup")
     private final @Nullable Input<String> disassociateMulticastGroup;
 
@@ -45,6 +61,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.disassociateMulticastGroup == null ? Input.empty() : this.disassociateMulticastGroup;
     }
 
+    /**
+     * Wireless device to disassociate. Only for update request.
+     * 
+     */
     @InputImport(name="disassociateWirelessDevice")
     private final @Nullable Input<String> disassociateWirelessDevice;
 
@@ -52,6 +72,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.disassociateWirelessDevice == null ? Input.empty() : this.disassociateWirelessDevice;
     }
 
+    /**
+     * FUOTA task firmware update image binary S3 link
+     * 
+     */
     @InputImport(name="firmwareUpdateImage", required=true)
     private final Input<String> firmwareUpdateImage;
 
@@ -59,6 +83,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.firmwareUpdateImage;
     }
 
+    /**
+     * FUOTA task firmware IAM role for reading S3
+     * 
+     */
     @InputImport(name="firmwareUpdateRole", required=true)
     private final Input<String> firmwareUpdateRole;
 
@@ -66,6 +94,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.firmwareUpdateRole;
     }
 
+    /**
+     * FUOTA task LoRaWAN
+     * 
+     */
     @InputImport(name="loRaWAN", required=true)
     private final Input<FuotaTaskLoRaWANArgs> loRaWAN;
 
@@ -73,6 +105,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.loRaWAN;
     }
 
+    /**
+     * Name of FUOTA task
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -80,6 +116,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the FUOTA task.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FuotaTaskTagArgs>> tags;
 

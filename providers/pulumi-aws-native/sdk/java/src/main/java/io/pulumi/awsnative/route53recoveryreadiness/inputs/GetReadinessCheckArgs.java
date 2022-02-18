@@ -12,6 +12,10 @@ public final class GetReadinessCheckArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetReadinessCheckArgs Empty = new GetReadinessCheckArgs();
 
+    /**
+     * Name of the ReadinessCheck to create.
+     * 
+     */
     @InputImport(name="readinessCheckName", required=true)
     private final String readinessCheckName;
 

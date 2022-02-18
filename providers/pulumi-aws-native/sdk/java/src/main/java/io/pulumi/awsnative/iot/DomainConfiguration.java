@@ -19,6 +19,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Create and manage a Domain Configuration
+ * 
+ */
 @ResourceType(type="aws-native:iot:DomainConfiguration")
 public class DomainConfiguration extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -88,6 +92,12 @@ public class DomainConfiguration extends io.pulumi.resources.CustomResource {
         return this.validationCertificateArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DomainConfiguration(String name, @Nullable DomainConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iot:DomainConfiguration", name, args == null ? DomainConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -103,6 +113,14 @@ public class DomainConfiguration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DomainConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DomainConfiguration(name, id, options);
     }

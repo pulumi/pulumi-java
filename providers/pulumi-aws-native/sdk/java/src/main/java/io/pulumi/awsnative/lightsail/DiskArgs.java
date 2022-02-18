@@ -18,6 +18,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskArgs Empty = new DiskArgs();
 
+    /**
+     * An array of objects representing the add-ons to enable for the new instance.
+     * 
+     */
     @InputImport(name="addOns")
     private final @Nullable Input<List<DiskAddOnArgs>> addOns;
 
@@ -25,6 +29,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.addOns == null ? Input.empty() : this.addOns;
     }
 
+    /**
+     * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     @InputImport(name="availabilityZone")
     private final @Nullable Input<String> availabilityZone;
 
@@ -32,6 +40,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
+    /**
+     * The names to use for your new Lightsail disk.
+     * 
+     */
     @InputImport(name="diskName")
     private final @Nullable Input<String> diskName;
 
@@ -39,6 +51,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskName == null ? Input.empty() : this.diskName;
     }
 
+    /**
+     * Size of the Lightsail disk
+     * 
+     */
     @InputImport(name="sizeInGb", required=true)
     private final Input<Integer> sizeInGb;
 
@@ -46,6 +62,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.sizeInGb;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DiskTagArgs>> tags;
 

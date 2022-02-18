@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceFleet {
+/**
+ * Resource schema for AWS::SageMaker::DeviceFleet
+ * 
+ */
     public static CompletableFuture<GetDeviceFleetResult> invokeAsync(GetDeviceFleetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDeviceFleet", TypeShape.of(GetDeviceFleetResult.class), args == null ? GetDeviceFleetArgs.Empty : args, Utilities.withVersion(options));
     }

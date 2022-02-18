@@ -15,6 +15,10 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     public static final FlowVpcInterfaceArgs Empty = new FlowVpcInterfaceArgs();
 
+    /**
+     * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     @InputImport(name="flowArn", required=true)
     private final Input<String> flowArn;
 
@@ -22,6 +26,10 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.flowArn;
     }
 
+    /**
+     * Immutable and has to be a unique against other VpcInterfaces in this Flow.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,10 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Role Arn MediaConnect can assumes to create ENIs in customer's account.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final Input<String> roleArn;
 
@@ -36,6 +48,10 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.roleArn;
     }
 
+    /**
+     * Security Group IDs to be used on ENI.
+     * 
+     */
     @InputImport(name="securityGroupIds", required=true)
     private final Input<List<String>> securityGroupIds;
 
@@ -43,6 +59,10 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.securityGroupIds;
     }
 
+    /**
+     * Subnet must be in the AZ of the Flow
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadBalancer {
+/**
+ * Resource Type definition for AWS::Lightsail::LoadBalancer
+ * 
+ */
     public static CompletableFuture<GetLoadBalancerResult> invokeAsync(GetLoadBalancerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args == null ? GetLoadBalancerArgs.Empty : args, Utilities.withVersion(options));
     }

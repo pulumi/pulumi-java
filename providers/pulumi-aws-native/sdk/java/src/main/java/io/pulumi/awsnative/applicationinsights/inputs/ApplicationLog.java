@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A log to be monitored for the component.
+ * 
+ */
 public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationLog Empty = new ApplicationLog();
 
+    /**
+     * The type of encoding of the logs to be monitored.
+     * 
+     */
     @InputImport(name="encoding")
     private final @Nullable ApplicationLogEncoding encoding;
 
@@ -22,6 +30,10 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
     }
 
+    /**
+     * The CloudWatch log group name to be associated to the monitored log.
+     * 
+     */
     @InputImport(name="logGroupName")
     private final @Nullable String logGroupName;
 
@@ -29,6 +41,10 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
         return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
     }
 
+    /**
+     * The path of the logs to be monitored.
+     * 
+     */
     @InputImport(name="logPath")
     private final @Nullable String logPath;
 
@@ -36,6 +52,10 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
         return this.logPath == null ? Optional.empty() : Optional.ofNullable(this.logPath);
     }
 
+    /**
+     * The log type decides the log patterns against which Application Insights analyzes the log.
+     * 
+     */
     @InputImport(name="logType", required=true)
     private final String logType;
 
@@ -43,6 +63,10 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
         return this.logType;
     }
 
+    /**
+     * The name of the log pattern set.
+     * 
+     */
     @InputImport(name="patternSet")
     private final @Nullable String patternSet;
 

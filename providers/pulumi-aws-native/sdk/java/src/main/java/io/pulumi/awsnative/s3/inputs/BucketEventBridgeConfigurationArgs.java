@@ -9,10 +9,18 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Describes the Amazon EventBridge notification configuration for an Amazon S3 bucket.
+ * 
+ */
 public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketEventBridgeConfigurationArgs Empty = new BucketEventBridgeConfigurationArgs();
 
+    /**
+     * Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
+     * 
+     */
     @InputImport(name="eventBridgeEnabled", required=true)
     private final Input<Boolean> eventBridgeEnabled;
 

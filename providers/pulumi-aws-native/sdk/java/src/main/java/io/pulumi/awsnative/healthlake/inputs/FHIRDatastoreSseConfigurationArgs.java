@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The server-side encryption key configuration for a customer provided encryption key.
+ * 
+ */
 public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FHIRDatastoreSseConfigurationArgs Empty = new FHIRDatastoreSseConfigurationArgs();

@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectorFirehoseLogDelivery {
+    /**
+     * The Kinesis Data Firehose delivery stream that is the destination for log delivery.
+     * 
+     */
     private final @Nullable String deliveryStream;
+    /**
+     * Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
+     * 
+     */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"deliveryStream","enabled"})
@@ -23,9 +31,17 @@ public final class ConnectorFirehoseLogDelivery {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+    /**
+     * The Kinesis Data Firehose delivery stream that is the destination for log delivery.
+     * 
+     */
     public Optional<String> getDeliveryStream() {
         return Optional.ofNullable(this.deliveryStream);
     }
+    /**
+     * Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
+     * 
+     */
     public Boolean getEnabled() {
         return this.enabled;
     }

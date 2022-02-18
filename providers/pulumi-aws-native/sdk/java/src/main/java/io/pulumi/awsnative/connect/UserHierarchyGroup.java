@@ -12,33 +12,75 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::Connect::UserHierarchyGroup
+ * 
+ */
 @ResourceType(type="aws-native:connect:UserHierarchyGroup")
 public class UserHierarchyGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * The identifier of the Amazon Connect instance.
+     * 
+     */
     @OutputExport(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance.
+     * 
+     */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
+    /**
+     * The name of the user hierarchy group.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the user hierarchy group.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The Amazon Resource Name (ARN) for the parent user hierarchy group.
+     * 
+     */
     @OutputExport(name="parentGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> parentGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the parent user hierarchy group.
+     * 
+     */
     public Output</* @Nullable */ String> getParentGroupArn() {
         return this.parentGroupArn;
     }
+    /**
+     * The Amazon Resource Name (ARN) for the user hierarchy group.
+     * 
+     */
     @OutputExport(name="userHierarchyGroupArn", type=String.class, parameters={})
     private Output<String> userHierarchyGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the user hierarchy group.
+     * 
+     */
     public Output<String> getUserHierarchyGroupArn() {
         return this.userHierarchyGroupArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public UserHierarchyGroup(String name, UserHierarchyGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:connect:UserHierarchyGroup", name, args == null ? UserHierarchyGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -54,6 +96,14 @@ public class UserHierarchyGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static UserHierarchyGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UserHierarchyGroup(name, id, options);
     }

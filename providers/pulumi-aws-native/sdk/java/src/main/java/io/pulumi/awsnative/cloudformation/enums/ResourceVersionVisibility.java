@@ -8,6 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The scope at which the type is visible and usable in CloudFormation operations.
+     * 
+     * Valid values include:
+     * 
+     * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
+     * 
+     * PUBLIC: The type is publically visible and usable within any Amazon account.
+     * 
+     */
     @EnumType
     public enum ResourceVersionVisibility {
         Public("PUBLIC"),

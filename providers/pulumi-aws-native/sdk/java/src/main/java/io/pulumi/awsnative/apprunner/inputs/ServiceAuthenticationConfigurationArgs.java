@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Authentication Configuration
+ * 
+ */
 public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceAuthenticationConfigurationArgs Empty = new ServiceAuthenticationConfigurationArgs();
 
+    /**
+     * Access Role Arn
+     * 
+     */
     @InputImport(name="accessRoleArn")
     private final @Nullable Input<String> accessRoleArn;
 
@@ -21,6 +29,10 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
         return this.accessRoleArn == null ? Input.empty() : this.accessRoleArn;
     }
 
+    /**
+     * Connection Arn
+     * 
+     */
     @InputImport(name="connectionArn")
     private final @Nullable Input<String> connectionArn;
 

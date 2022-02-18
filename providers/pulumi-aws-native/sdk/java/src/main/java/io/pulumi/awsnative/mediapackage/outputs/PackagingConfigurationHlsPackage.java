@@ -16,8 +16,16 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class PackagingConfigurationHlsPackage {
     private final @Nullable PackagingConfigurationHlsEncryption encryption;
+    /**
+     * A list of HLS manifest configurations.
+     * 
+     */
     private final List<PackagingConfigurationHlsManifest> hlsManifests;
     private final @Nullable Integer segmentDurationSeconds;
+    /**
+     * When enabled, audio streams will be placed in rendition groups in the output.
+     * 
+     */
     private final @Nullable Boolean useAudioRenditionGroup;
 
     @OutputCustomType.Constructor({"encryption","hlsManifests","segmentDurationSeconds","useAudioRenditionGroup"})
@@ -35,12 +43,20 @@ public final class PackagingConfigurationHlsPackage {
     public Optional<PackagingConfigurationHlsEncryption> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
+    /**
+     * A list of HLS manifest configurations.
+     * 
+     */
     public List<PackagingConfigurationHlsManifest> getHlsManifests() {
         return this.hlsManifests;
     }
     public Optional<Integer> getSegmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
+    /**
+     * When enabled, audio streams will be placed in rendition groups in the output.
+     * 
+     */
     public Optional<Boolean> getUseAudioRenditionGroup() {
         return Optional.ofNullable(this.useAudioRenditionGroup);
     }

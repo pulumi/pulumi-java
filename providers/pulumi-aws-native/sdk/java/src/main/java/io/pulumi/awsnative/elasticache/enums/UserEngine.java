@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Must be redis.
+     * 
+     */
     @EnumType
     public enum UserEngine {
         Redis("redis");

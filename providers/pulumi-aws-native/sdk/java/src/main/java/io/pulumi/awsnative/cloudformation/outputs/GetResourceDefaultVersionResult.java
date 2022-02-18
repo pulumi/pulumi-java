@@ -11,9 +11,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResourceDefaultVersionResult {
+    /**
+     * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     private final @Nullable String typeName;
+    /**
+     * The Amazon Resource Name (ARN) of the type version.
+     * 
+     */
     private final @Nullable String typeVersionArn;
+    /**
+     * The ID of an existing version of the resource to set as the default.
+     * 
+     */
     private final @Nullable String versionId;
 
     @OutputCustomType.Constructor({"arn","typeName","typeVersionArn","versionId"})
@@ -28,15 +46,33 @@ public final class GetResourceDefaultVersionResult {
         this.versionId = versionId;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     public Optional<String> getTypeName() {
         return Optional.ofNullable(this.typeName);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the type version.
+     * 
+     */
     public Optional<String> getTypeVersionArn() {
         return Optional.ofNullable(this.typeVersionArn);
     }
+    /**
+     * The ID of an existing version of the resource to set as the default.
+     * 
+     */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
     }

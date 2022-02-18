@@ -15,6 +15,10 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ClusterEndpointArgs Empty = new ClusterEndpointArgs();
 
+    /**
+     * The DNS address of the primary read-write node.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -22,6 +26,10 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * The port number that the engine is listening on.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 

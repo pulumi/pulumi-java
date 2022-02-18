@@ -18,6 +18,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataCatalogArgs Empty = new DataCatalogArgs();
 
+    /**
+     * A description of the data catalog to be created.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -32,6 +40,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Object> parameters;
 
@@ -39,6 +51,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * A list of comma separated tags to add to the data catalog that is created.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DataCatalogTagArgs>> tags;
 
@@ -46,6 +62,10 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<DataCatalogType> type;
 

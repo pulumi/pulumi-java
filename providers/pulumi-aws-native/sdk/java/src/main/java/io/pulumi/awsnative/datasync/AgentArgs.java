@@ -16,6 +16,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AgentArgs Empty = new AgentArgs();
 
+    /**
+     * Activation key of the Agent.
+     * 
+     */
     @InputImport(name="activationKey", required=true)
     private final Input<String> activationKey;
 
@@ -23,6 +27,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.activationKey;
     }
 
+    /**
+     * The name configured for the agent. Text reference used to identify the agent in the console.
+     * 
+     */
     @InputImport(name="agentName")
     private final @Nullable Input<String> agentName;
 
@@ -30,6 +38,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentName == null ? Input.empty() : this.agentName;
     }
 
+    /**
+     * The ARNs of the security group used to protect your data transfer task subnets.
+     * 
+     */
     @InputImport(name="securityGroupArns")
     private final @Nullable Input<List<String>> securityGroupArns;
 
@@ -37,6 +49,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityGroupArns == null ? Input.empty() : this.securityGroupArns;
     }
 
+    /**
+     * The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+     * 
+     */
     @InputImport(name="subnetArns")
     private final @Nullable Input<List<String>> subnetArns;
 
@@ -44,6 +60,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetArns == null ? Input.empty() : this.subnetArns;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AgentTagArgs>> tags;
 
@@ -51,6 +71,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The ID of the VPC endpoint that the agent has access to.
+     * 
+     */
     @InputImport(name="vpcEndpointId")
     private final @Nullable Input<String> vpcEndpointId;
 

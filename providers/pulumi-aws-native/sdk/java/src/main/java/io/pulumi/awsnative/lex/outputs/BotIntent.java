@@ -34,6 +34,10 @@ public final class BotIntent {
     private final @Nullable String parentIntentSignature;
     private final @Nullable List<BotSampleUtterance> sampleUtterances;
     private final @Nullable List<BotSlotPriority> slotPriorities;
+    /**
+     * List of slots
+     * 
+     */
     private final @Nullable List<BotSlot> slots;
 
     @OutputCustomType.Constructor({"description","dialogCodeHook","fulfillmentCodeHook","inputContexts","intentClosingSetting","intentConfirmationSetting","kendraConfiguration","name","outputContexts","parentIntentSignature","sampleUtterances","slotPriorities","slots"})
@@ -102,6 +106,10 @@ public final class BotIntent {
     public List<BotSlotPriority> getSlotPriorities() {
         return this.slotPriorities == null ? List.of() : this.slotPriorities;
     }
+    /**
+     * List of slots
+     * 
+     */
     public List<BotSlot> getSlots() {
         return this.slots == null ? List.of() : this.slots;
     }

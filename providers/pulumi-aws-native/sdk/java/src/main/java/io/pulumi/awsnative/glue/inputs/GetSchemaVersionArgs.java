@@ -12,6 +12,10 @@ public final class GetSchemaVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSchemaVersionArgs Empty = new GetSchemaVersionArgs();
 
+    /**
+     * Represents the version ID associated with the schema version.
+     * 
+     */
     @InputImport(name="versionId", required=true)
     private final String versionId;
 

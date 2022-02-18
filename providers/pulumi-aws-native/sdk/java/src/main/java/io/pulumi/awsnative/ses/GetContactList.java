@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContactList {
+/**
+ * Resource schema for AWS::SES::ContactList.
+ * 
+ */
     public static CompletableFuture<GetContactListResult> invokeAsync(GetContactListArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getContactList", TypeShape.of(GetContactListResult.class), args == null ? GetContactListArgs.Empty : args, Utilities.withVersion(options));
     }

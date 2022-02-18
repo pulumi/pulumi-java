@@ -12,6 +12,10 @@ public final class GetSignalingChannelArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetSignalingChannelArgs Empty = new GetSignalingChannelArgs();
 
+    /**
+     * The name of the Kinesis Video Signaling Channel.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

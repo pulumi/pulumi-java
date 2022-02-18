@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeliveryStream {
+/**
+ * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
+ * 
+ */
     public static CompletableFuture<GetDeliveryStreamResult> invokeAsync(GetDeliveryStreamArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisfirehose:getDeliveryStream", TypeShape.of(GetDeliveryStreamResult.class), args == null ? GetDeliveryStreamArgs.Empty : args, Utilities.withVersion(options));
     }

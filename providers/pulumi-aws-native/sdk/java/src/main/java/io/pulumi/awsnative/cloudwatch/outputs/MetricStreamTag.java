@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricStreamTag {
+    /**
+     * A unique identifier for the tag.
+     * 
+     */
     private final String key;
+    /**
+     * An optional string, which you can use to describe or define the tag.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -22,9 +30,17 @@ public final class MetricStreamTag {
         this.value = value;
     }
 
+    /**
+     * A unique identifier for the tag.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * An optional string, which you can use to describe or define the tag.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

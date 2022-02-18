@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The instance metadata option settings for the infrastructure configuration.
+ * 
+ */
 public final class InfrastructureConfigurationInstanceMetadataOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final InfrastructureConfigurationInstanceMetadataOptions Empty = new InfrastructureConfigurationInstanceMetadataOptions();
 
+    /**
+     * Limit the number of hops that an instance metadata request can traverse to reach its destination.
+     * 
+     */
     @InputImport(name="httpPutResponseHopLimit")
     private final @Nullable Integer httpPutResponseHopLimit;
 
@@ -22,6 +30,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends io
         return this.httpPutResponseHopLimit == null ? Optional.empty() : Optional.ofNullable(this.httpPutResponseHopLimit);
     }
 
+    /**
+     * Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
+     * 
+     */
     @InputImport(name="httpTokens")
     private final @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens;
 

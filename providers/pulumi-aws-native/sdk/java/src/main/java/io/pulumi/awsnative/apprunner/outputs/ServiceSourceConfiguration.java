@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ServiceSourceConfiguration {
     private final @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
+    /**
+     * Auto Deployment enabled
+     * 
+     */
     private final @Nullable Boolean autoDeploymentsEnabled;
     private final @Nullable ServiceCodeRepository codeRepository;
     private final @Nullable ServiceImageRepository imageRepository;
@@ -34,6 +38,10 @@ public final class ServiceSourceConfiguration {
     public Optional<ServiceAuthenticationConfiguration> getAuthenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
+    /**
+     * Auto Deployment enabled
+     * 
+     */
     public Optional<Boolean> getAutoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);
     }

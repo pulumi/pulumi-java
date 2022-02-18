@@ -13,6 +13,10 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
 
     public static final DataIntegrationScheduleConfigArgs Empty = new DataIntegrationScheduleConfigArgs();
 
+    /**
+     * The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
+     * 
+     */
     @InputImport(name="firstExecutionFrom", required=true)
     private final Input<String> firstExecutionFrom;
 
@@ -20,6 +24,10 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
         return this.firstExecutionFrom;
     }
 
+    /**
+     * The name of the object to pull from the data source.
+     * 
+     */
     @InputImport(name="object", required=true)
     private final Input<String> object;
 
@@ -27,6 +35,10 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
         return this.object;
     }
 
+    /**
+     * How often the data should be pulled from data source.
+     * 
+     */
     @InputImport(name="scheduleExpression", required=true)
     private final Input<String> scheduleExpression;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepository {
+/**
+ * The resource schema to create a CodeArtifact repository.
+ * 
+ */
     public static CompletableFuture<GetRepositoryResult> invokeAsync(GetRepositoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeartifact:getRepository", TypeShape.of(GetRepositoryResult.class), args == null ? GetRepositoryArgs.Empty : args, Utilities.withVersion(options));
     }

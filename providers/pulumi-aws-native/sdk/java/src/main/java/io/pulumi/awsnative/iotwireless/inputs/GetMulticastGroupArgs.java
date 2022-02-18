@@ -12,6 +12,10 @@ public final class GetMulticastGroupArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetMulticastGroupArgs Empty = new GetMulticastGroupArgs();
 
+    /**
+     * Multicast group id. Returned after successful create.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

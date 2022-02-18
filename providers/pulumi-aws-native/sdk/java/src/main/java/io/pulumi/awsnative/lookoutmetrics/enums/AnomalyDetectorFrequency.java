@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Frequency of anomaly detection
+     * 
+     */
     @EnumType
     public enum AnomalyDetectorFrequency {
         Pt5m("PT5M"),

@@ -15,6 +15,10 @@ public final class DatasetFilterExpressionArgs extends io.pulumi.resources.Resou
 
     public static final DatasetFilterExpressionArgs Empty = new DatasetFilterExpressionArgs();
 
+    /**
+     * Filtering expression for a parameter
+     * 
+     */
     @InputImport(name="expression", required=true)
     private final Input<String> expression;
 

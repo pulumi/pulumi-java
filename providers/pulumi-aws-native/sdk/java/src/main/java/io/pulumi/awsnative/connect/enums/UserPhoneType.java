@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The phone type.
+     * 
+     */
     @EnumType
     public enum UserPhoneType {
         SoftPhone("SOFT_PHONE"),

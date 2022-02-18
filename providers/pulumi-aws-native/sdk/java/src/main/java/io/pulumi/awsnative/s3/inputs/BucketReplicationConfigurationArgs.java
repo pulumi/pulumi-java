@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A container for replication rules. You can add up to 1,000 rules. The maximum size of a replication configuration is 2 MB.
+ * 
+ */
 public final class BucketReplicationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketReplicationConfigurationArgs Empty = new BucketReplicationConfigurationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 
@@ -22,6 +30,10 @@ public final class BucketReplicationConfigurationArgs extends io.pulumi.resource
         return this.role;
     }
 
+    /**
+     * A container for one or more replication rules.
+     * 
+     */
     @InputImport(name="rules", required=true)
     private final Input<List<BucketReplicationRuleArgs>> rules;
 

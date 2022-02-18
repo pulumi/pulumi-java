@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Use to override the device's volume type.
+     * 
+     */
     @EnumType
     public enum ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType {
         Standard("standard"),

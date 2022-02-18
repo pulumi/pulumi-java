@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRepositoryAssociationResult {
+    /**
+     * The Amazon Resource Name (ARN) of the repository association.
+     * 
+     */
     private final @Nullable String associationArn;
 
     @OutputCustomType.Constructor({"associationArn"})
@@ -18,6 +22,10 @@ public final class GetRepositoryAssociationResult {
         this.associationArn = associationArn;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the repository association.
+     * 
+     */
     public Optional<String> getAssociationArn() {
         return Optional.ofNullable(this.associationArn);
     }

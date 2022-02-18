@@ -12,15 +12,33 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource used to control (enable/disable) DNSSEC in a specific hosted zone.
+ * 
+ */
 @ResourceType(type="aws-native:route53:DNSSEC")
 public class DNSSEC extends io.pulumi.resources.CustomResource {
+    /**
+     * The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     @OutputExport(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
+    /**
+     * @return The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     public Output<String> getHostedZoneId() {
         return this.hostedZoneId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DNSSEC(String name, DNSSECArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53:DNSSEC", name, args == null ? DNSSECArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -36,6 +54,14 @@ public class DNSSEC extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DNSSEC get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DNSSEC(name, id, options);
     }

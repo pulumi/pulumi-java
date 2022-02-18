@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The baseline statistics resource for a monitoring job.
+ * 
+ */
 public final class DataQualityJobDefinitionStatisticsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataQualityJobDefinitionStatisticsResourceArgs Empty = new DataQualityJobDefinitionStatisticsResourceArgs();
 
+    /**
+     * The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
+     * 
+     */
     @InputImport(name="s3Uri")
     private final @Nullable Input<String> s3Uri;
 

@@ -12,6 +12,10 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectionArgs Empty = new GetConnectionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
+     * 
+     */
     @InputImport(name="connectionArn", required=true)
     private final String connectionArn;
 

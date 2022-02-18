@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationEFS {
+/**
+ * Resource schema for AWS::DataSync::LocationEFS.
+ * 
+ */
     public static CompletableFuture<GetLocationEFSResult> invokeAsync(GetLocationEFSArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationEFS", TypeShape.of(GetLocationEFSResult.class), args == null ? GetLocationEFSArgs.Empty : args, Utilities.withVersion(options));
     }

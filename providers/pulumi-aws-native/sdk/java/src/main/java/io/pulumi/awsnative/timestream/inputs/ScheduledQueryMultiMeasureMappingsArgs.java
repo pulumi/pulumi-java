@@ -12,6 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Only one of MixedMeasureMappings or MultiMeasureMappings is to be provided. MultiMeasureMappings can be used to ingest data as multi measures in the derived table.
+ * 
+ */
 public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledQueryMultiMeasureMappingsArgs Empty = new ScheduledQueryMultiMeasureMappingsArgs();

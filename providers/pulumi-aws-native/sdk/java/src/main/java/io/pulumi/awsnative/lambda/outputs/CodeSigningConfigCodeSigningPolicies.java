@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CodeSigningConfigCodeSigningPolicies {
+    /**
+     * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
+     * 
+     */
     private final CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
 
     @OutputCustomType.Constructor({"untrustedArtifactOnDeployment"})
@@ -16,6 +20,10 @@ public final class CodeSigningConfigCodeSigningPolicies {
         this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
     }
 
+    /**
+     * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
+     * 
+     */
     public CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment getUntrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }

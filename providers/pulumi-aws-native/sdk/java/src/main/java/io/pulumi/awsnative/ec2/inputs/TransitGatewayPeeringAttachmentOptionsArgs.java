@@ -14,6 +14,10 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
 
     public static final TransitGatewayPeeringAttachmentOptionsArgs Empty = new TransitGatewayPeeringAttachmentOptionsArgs();
 
+    /**
+     * Whether to enable dynamic routing. (enable/disable)
+     * 
+     */
     @InputImport(name="dynamicRouting")
     private final @Nullable Input<String> dynamicRouting;
 

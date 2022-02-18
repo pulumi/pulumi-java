@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectorProfileRedshiftConnectorProfileProperties {
+    /**
+     * The name of the Amazon S3 bucket associated with Redshift.
+     * 
+     */
     private final String bucketName;
+    /**
+     * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
+     * 
+     */
     private final @Nullable String bucketPrefix;
+    /**
+     * The JDBC URL of the Amazon Redshift cluster.
+     * 
+     */
     private final String databaseUrl;
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role.
+     * 
+     */
     private final String roleArn;
 
     @OutputCustomType.Constructor({"bucketName","bucketPrefix","databaseUrl","roleArn"})
@@ -28,15 +44,31 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
         this.roleArn = Objects.requireNonNull(roleArn);
     }
 
+    /**
+     * The name of the Amazon S3 bucket associated with Redshift.
+     * 
+     */
     public String getBucketName() {
         return this.bucketName;
     }
+    /**
+     * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
+     * 
+     */
     public Optional<String> getBucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
+    /**
+     * The JDBC URL of the Amazon Redshift cluster.
+     * 
+     */
     public String getDatabaseUrl() {
         return this.databaseUrl;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role.
+     * 
+     */
     public String getRoleArn() {
         return this.roleArn;
     }

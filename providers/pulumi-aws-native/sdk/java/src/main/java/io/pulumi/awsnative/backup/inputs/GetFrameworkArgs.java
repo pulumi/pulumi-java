@@ -12,6 +12,10 @@ public final class GetFrameworkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFrameworkArgs Empty = new GetFrameworkArgs();
 
+    /**
+     * An Amazon Resource Name (ARN) that uniquely identifies Framework as a resource
+     * 
+     */
     @InputImport(name="frameworkArn", required=true)
     private final String frameworkArn;
 

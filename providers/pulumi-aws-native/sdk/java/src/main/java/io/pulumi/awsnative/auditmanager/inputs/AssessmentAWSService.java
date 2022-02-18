@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An AWS service such as Amazon S3, AWS CloudTrail, and so on.
+ * 
+ */
 public final class AssessmentAWSService extends io.pulumi.resources.InvokeArgs {
 
     public static final AssessmentAWSService Empty = new AssessmentAWSService();

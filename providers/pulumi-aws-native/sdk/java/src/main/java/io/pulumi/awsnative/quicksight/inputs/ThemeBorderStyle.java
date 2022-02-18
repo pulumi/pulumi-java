@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The display options for tile borders for visuals.</p>
+ * 
+ */
 public final class ThemeBorderStyle extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeBorderStyle Empty = new ThemeBorderStyle();
 
+    /**
+     * <p>The option to enable display of borders for visuals.</p>
+     * 
+     */
     @InputImport(name="show")
     private final @Nullable Boolean show;
 

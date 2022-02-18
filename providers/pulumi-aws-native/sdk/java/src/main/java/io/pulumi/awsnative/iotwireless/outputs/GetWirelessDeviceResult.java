@@ -15,16 +15,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWirelessDeviceResult {
+    /**
+     * Wireless device arn. Returned after successful create.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * Wireless device description
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Wireless device destination name
+     * 
+     */
     private final @Nullable String destinationName;
+    /**
+     * Wireless device Id. Returned after successful create.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The date and time when the most recent uplink was received.
+     * 
+     */
     private final @Nullable String lastUplinkReceivedAt;
+    /**
+     * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
+     * 
+     */
     private final @Nullable WirelessDeviceLoRaWANDevice loRaWAN;
+    /**
+     * Wireless device name
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+     * 
+     */
     private final @Nullable List<WirelessDeviceTag> tags;
+    /**
+     * Thing arn. Passed into update to associate Thing with Wireless device.
+     * 
+     */
     private final @Nullable String thingArn;
+    /**
+     * Thing Arn. If there is a Thing created, this can be returned with a Get call.
+     * 
+     */
     private final @Nullable String thingName;
+    /**
+     * Wireless device type, currently only Sidewalk and LoRa
+     * 
+     */
     private final @Nullable WirelessDeviceType type;
 
     @OutputCustomType.Constructor({"arn","description","destinationName","id","lastUplinkReceivedAt","loRaWAN","name","tags","thingArn","thingName","type"})
@@ -53,36 +97,80 @@ public final class GetWirelessDeviceResult {
         this.type = type;
     }
 
+    /**
+     * Wireless device arn. Returned after successful create.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * Wireless device description
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Wireless device destination name
+     * 
+     */
     public Optional<String> getDestinationName() {
         return Optional.ofNullable(this.destinationName);
     }
+    /**
+     * Wireless device Id. Returned after successful create.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The date and time when the most recent uplink was received.
+     * 
+     */
     public Optional<String> getLastUplinkReceivedAt() {
         return Optional.ofNullable(this.lastUplinkReceivedAt);
     }
+    /**
+     * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
+     * 
+     */
     public Optional<WirelessDeviceLoRaWANDevice> getLoRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
+    /**
+     * Wireless device name
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+     * 
+     */
     public List<WirelessDeviceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
+    /**
+     * Thing arn. Passed into update to associate Thing with Wireless device.
+     * 
+     */
     public Optional<String> getThingArn() {
         return Optional.ofNullable(this.thingArn);
     }
+    /**
+     * Thing Arn. If there is a Thing created, this can be returned with a Get call.
+     * 
+     */
     public Optional<String> getThingName() {
         return Optional.ofNullable(this.thingName);
     }
+    /**
+     * Wireless device type, currently only Sidewalk and LoRa
+     * 
+     */
     public Optional<WirelessDeviceType> getType() {
         return Optional.ofNullable(this.type);
     }

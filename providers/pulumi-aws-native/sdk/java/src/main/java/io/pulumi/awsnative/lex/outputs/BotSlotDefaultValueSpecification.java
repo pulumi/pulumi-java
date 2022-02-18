@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotSlotDefaultValueSpecification {
+    /**
+     * A list of slot default values
+     * 
+     */
     private final List<BotSlotDefaultValue> defaultValueList;
 
     @OutputCustomType.Constructor({"defaultValueList"})
@@ -17,6 +21,10 @@ public final class BotSlotDefaultValueSpecification {
         this.defaultValueList = Objects.requireNonNull(defaultValueList);
     }
 
+    /**
+     * A list of slot default values
+     * 
+     */
     public List<BotSlotDefaultValue> getDefaultValueList() {
         return this.defaultValueList;
     }

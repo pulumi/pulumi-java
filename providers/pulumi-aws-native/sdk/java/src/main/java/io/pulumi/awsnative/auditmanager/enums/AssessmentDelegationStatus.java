@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of the delegation.
+     * 
+     */
     @EnumType
     public enum AssessmentDelegationStatus {
         InProgress("IN_PROGRESS"),

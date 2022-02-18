@@ -15,6 +15,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
 
     public static final DatasetDatabaseInputDefinitionArgs Empty = new DatasetDatabaseInputDefinitionArgs();
 
+    /**
+     * Database table name
+     * 
+     */
     @InputImport(name="databaseTableName")
     private final @Nullable Input<String> databaseTableName;
 
@@ -22,6 +26,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
         return this.databaseTableName == null ? Input.empty() : this.databaseTableName;
     }
 
+    /**
+     * Glue connection name
+     * 
+     */
     @InputImport(name="glueConnectionName", required=true)
     private final Input<String> glueConnectionName;
 
@@ -29,6 +37,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
         return this.glueConnectionName;
     }
 
+    /**
+     * Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
+     * 
+     */
     @InputImport(name="queryString")
     private final @Nullable Input<String> queryString;
 

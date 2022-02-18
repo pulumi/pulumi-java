@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * <p>A decimal parameter.</p>
+ * 
+ */
 public final class AnalysisDecimalParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalysisDecimalParameterArgs Empty = new AnalysisDecimalParameterArgs();
 
+    /**
+     * <p>A display name for the decimal parameter.</p>
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -22,6 +30,10 @@ public final class AnalysisDecimalParameterArgs extends io.pulumi.resources.Reso
         return this.name;
     }
 
+    /**
+     * <p>The values for the decimal parameter.</p>
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<Double>> values;
 

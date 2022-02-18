@@ -15,6 +15,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PermissionArgs Empty = new PermissionArgs();
 
+    /**
+     * The actions that the specified AWS service principal can use. Actions IssueCertificate, GetCertificate and ListPermissions must be provided.
+     * 
+     */
     @InputImport(name="actions", required=true)
     private final Input<List<String>> actions;
 
@@ -22,6 +26,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
+     * 
+     */
     @InputImport(name="certificateAuthorityArn", required=true)
     private final Input<String> certificateAuthorityArn;
 
@@ -29,6 +37,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateAuthorityArn;
     }
 
+    /**
+     * The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
+     * 
+     */
     @InputImport(name="principal", required=true)
     private final Input<String> principal;
 
@@ -36,6 +48,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
         return this.principal;
     }
 
+    /**
+     * The ID of the calling account.
+     * 
+     */
     @InputImport(name="sourceAccount")
     private final @Nullable Input<String> sourceAccount;
 

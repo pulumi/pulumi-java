@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A complex type that contains information about a configuration for DNS query logging.
+ * 
+ */
 public final class HostedZoneQueryLoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostedZoneQueryLoggingConfigArgs Empty = new HostedZoneQueryLoggingConfigArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.
+     * 
+     */
     @InputImport(name="cloudWatchLogsLogGroupArn", required=true)
     private final Input<String> cloudWatchLogsLogGroupArn;
 

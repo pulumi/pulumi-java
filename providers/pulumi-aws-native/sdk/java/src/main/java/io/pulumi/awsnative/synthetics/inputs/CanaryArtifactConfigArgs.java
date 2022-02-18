@@ -14,6 +14,10 @@ public final class CanaryArtifactConfigArgs extends io.pulumi.resources.Resource
 
     public static final CanaryArtifactConfigArgs Empty = new CanaryArtifactConfigArgs();
 
+    /**
+     * Encryption configuration for uploading artifacts to S3
+     * 
+     */
     @InputImport(name="s3Encryption")
     private final @Nullable Input<CanaryS3EncryptionArgs> s3Encryption;
 

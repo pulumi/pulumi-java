@@ -21,6 +21,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ContainerRecipeArgs Empty = new ContainerRecipeArgs();
 
+    /**
+     * Components for build and test that are included in the container recipe.
+     * 
+     */
     @InputImport(name="components")
     private final @Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components;
 
@@ -28,6 +32,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.components == null ? Input.empty() : this.components;
     }
 
+    /**
+     * Specifies the type of container, such as Docker.
+     * 
+     */
     @InputImport(name="containerType")
     private final @Nullable Input<ContainerRecipeContainerType> containerType;
 
@@ -35,6 +43,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.containerType == null ? Input.empty() : this.containerType;
     }
 
+    /**
+     * The description of the container recipe.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,6 +54,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Dockerfiles are text documents that are used to build Docker containers, and ensure that they contain all of the elements required by the application running inside. The template data consists of contextual variables where Image Builder places build information or scripts, based on your container image recipe.
+     * 
+     */
     @InputImport(name="dockerfileTemplateData")
     private final @Nullable Input<String> dockerfileTemplateData;
 
@@ -49,6 +65,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.dockerfileTemplateData == null ? Input.empty() : this.dockerfileTemplateData;
     }
 
+    /**
+     * The S3 URI for the Dockerfile that will be used to build your container image.
+     * 
+     */
     @InputImport(name="dockerfileTemplateUri")
     private final @Nullable Input<String> dockerfileTemplateUri;
 
@@ -56,6 +76,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.dockerfileTemplateUri == null ? Input.empty() : this.dockerfileTemplateUri;
     }
 
+    /**
+     * Specifies the operating system version for the source image.
+     * 
+     */
     @InputImport(name="imageOsVersionOverride")
     private final @Nullable Input<String> imageOsVersionOverride;
 
@@ -63,6 +87,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.imageOsVersionOverride == null ? Input.empty() : this.imageOsVersionOverride;
     }
 
+    /**
+     * A group of options that can be used to configure an instance for building and testing container images.
+     * 
+     */
     @InputImport(name="instanceConfiguration")
     private final @Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
 
@@ -70,6 +98,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.instanceConfiguration == null ? Input.empty() : this.instanceConfiguration;
     }
 
+    /**
+     * Identifies which KMS key is used to encrypt the container image.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -77,6 +109,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * The name of the container recipe.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -84,6 +120,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The source image for the container recipe.
+     * 
+     */
     @InputImport(name="parentImage")
     private final @Nullable Input<String> parentImage;
 
@@ -91,6 +131,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.parentImage == null ? Input.empty() : this.parentImage;
     }
 
+    /**
+     * Specifies the operating system platform when you use a custom source image.
+     * 
+     */
     @InputImport(name="platformOverride")
     private final @Nullable Input<ContainerRecipePlatformOverride> platformOverride;
 
@@ -98,6 +142,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.platformOverride == null ? Input.empty() : this.platformOverride;
     }
 
+    /**
+     * Tags that are attached to the container recipe.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 
@@ -105,6 +153,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The destination repository for the container image.
+     * 
+     */
     @InputImport(name="targetRepository")
     private final @Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
 
@@ -112,6 +164,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.targetRepository == null ? Input.empty() : this.targetRepository;
     }
 
+    /**
+     * The semantic version of the container recipe (<major>.<minor>.<patch>).
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 
@@ -119,6 +175,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
         return this.version == null ? Input.empty() : this.version;
     }
 
+    /**
+     * The working directory to be used during build and test workflows.
+     * 
+     */
     @InputImport(name="workingDirectory")
     private final @Nullable Input<String> workingDirectory;
 

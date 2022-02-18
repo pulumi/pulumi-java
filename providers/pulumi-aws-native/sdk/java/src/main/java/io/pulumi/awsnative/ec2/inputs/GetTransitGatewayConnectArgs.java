@@ -12,6 +12,10 @@ public final class GetTransitGatewayConnectArgs extends io.pulumi.resources.Invo
 
     public static final GetTransitGatewayConnectArgs Empty = new GetTransitGatewayConnectArgs();
 
+    /**
+     * The ID of the Connect attachment.
+     * 
+     */
     @InputImport(name="transitGatewayAttachmentId", required=true)
     private final String transitGatewayAttachmentId;
 

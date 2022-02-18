@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains a summary of a gateway capability configuration.
+ * 
+ */
 public final class GatewayCapabilitySummary extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayCapabilitySummary Empty = new GatewayCapabilitySummary();

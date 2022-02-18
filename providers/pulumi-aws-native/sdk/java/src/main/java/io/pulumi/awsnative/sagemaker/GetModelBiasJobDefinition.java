@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModelBiasJobDefinition {
+/**
+ * Resource Type definition for AWS::SageMaker::ModelBiasJobDefinition
+ * 
+ */
     public static CompletableFuture<GetModelBiasJobDefinitionResult> invokeAsync(GetModelBiasJobDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelBiasJobDefinition", TypeShape.of(GetModelBiasJobDefinitionResult.class), args == null ? GetModelBiasJobDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

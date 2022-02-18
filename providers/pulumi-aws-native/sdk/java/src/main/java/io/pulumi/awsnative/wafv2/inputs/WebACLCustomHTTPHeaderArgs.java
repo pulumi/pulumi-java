@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * HTTP header.
+ * 
+ */
 public final class WebACLCustomHTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLCustomHTTPHeaderArgs Empty = new WebACLCustomHTTPHeaderArgs();

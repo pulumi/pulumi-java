@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The specific AMI settings (for example, launch permissions, AMI tags).
+ * 
+ */
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs Empty = new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs();
 
+    /**
+     * The tags to apply to AMIs distributed to this Region.
+     * 
+     */
     @InputImport(name="amiTags")
     private final @Nullable Input<Object> amiTags;
 
@@ -24,6 +32,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         return this.amiTags == null ? Input.empty() : this.amiTags;
     }
 
+    /**
+     * The description of the AMI distribution configuration.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +43,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The KMS key identifier used to encrypt the distributed image.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -38,6 +54,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
+     * 
+     */
     @InputImport(name="launchPermissionConfiguration")
     private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> launchPermissionConfiguration;
 
@@ -45,6 +65,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         return this.launchPermissionConfiguration == null ? Input.empty() : this.launchPermissionConfiguration;
     }
 
+    /**
+     * The name of the AMI distribution configuration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +76,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of accounts to which you want to distribute an image.
+     * 
+     */
     @InputImport(name="targetAccountIds")
     private final @Nullable Input<List<String>> targetAccountIds;
 

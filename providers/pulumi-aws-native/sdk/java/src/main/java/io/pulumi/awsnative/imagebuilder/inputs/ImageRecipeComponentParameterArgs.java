@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Contains a key/value pair that sets the named component parameter.
+ * 
+ */
 public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageRecipeComponentParameterArgs Empty = new ImageRecipeComponentParameterArgs();
 
+    /**
+     * The name of the component parameter to set.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +29,10 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Sets the value for the named component parameter.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<List<String>> value;
 

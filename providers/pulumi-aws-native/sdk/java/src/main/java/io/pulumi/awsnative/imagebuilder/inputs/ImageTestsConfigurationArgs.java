@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The image tests configuration used when creating this image.
+ * 
+ */
 public final class ImageTestsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTestsConfigurationArgs Empty = new ImageTestsConfigurationArgs();
 
+    /**
+     * ImageTestsEnabled
+     * 
+     */
     @InputImport(name="imageTestsEnabled")
     private final @Nullable Input<Boolean> imageTestsEnabled;
 
@@ -22,6 +30,10 @@ public final class ImageTestsConfigurationArgs extends io.pulumi.resources.Resou
         return this.imageTestsEnabled == null ? Input.empty() : this.imageTestsEnabled;
     }
 
+    /**
+     * TimeoutMinutes
+     * 
+     */
     @InputImport(name="timeoutMinutes")
     private final @Nullable Input<Integer> timeoutMinutes;
 

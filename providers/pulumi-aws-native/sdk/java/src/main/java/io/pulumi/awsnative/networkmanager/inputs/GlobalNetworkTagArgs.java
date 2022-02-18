@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A key-value pair to associate with a global network resource.
+ * 
+ */
 public final class GlobalNetworkTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalNetworkTagArgs Empty = new GlobalNetworkTagArgs();

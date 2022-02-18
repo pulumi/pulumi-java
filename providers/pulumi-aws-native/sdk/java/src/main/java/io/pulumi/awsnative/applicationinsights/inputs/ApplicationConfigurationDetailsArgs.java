@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings.
+ * 
+ */
 public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationConfigurationDetailsArgs Empty = new ApplicationConfigurationDetailsArgs();
 
+    /**
+     * A list of metrics to monitor for the component.
+     * 
+     */
     @InputImport(name="alarmMetrics")
     private final @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
@@ -28,6 +36,10 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
         return this.alarmMetrics == null ? Input.empty() : this.alarmMetrics;
     }
 
+    /**
+     * A list of alarms to monitor for the component.
+     * 
+     */
     @InputImport(name="alarms")
     private final @Nullable Input<List<ApplicationAlarmArgs>> alarms;
 
@@ -35,6 +47,10 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
         return this.alarms == null ? Input.empty() : this.alarms;
     }
 
+    /**
+     * The HA cluster Prometheus Exporter settings.
+     * 
+     */
     @InputImport(name="hAClusterPrometheusExporter")
     private final @Nullable Input<ApplicationHAClusterPrometheusExporterArgs> hAClusterPrometheusExporter;
 
@@ -42,6 +58,10 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
         return this.hAClusterPrometheusExporter == null ? Input.empty() : this.hAClusterPrometheusExporter;
     }
 
+    /**
+     * The HANA DB Prometheus Exporter settings.
+     * 
+     */
     @InputImport(name="hANAPrometheusExporter")
     private final @Nullable Input<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter;
 
@@ -49,6 +69,10 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
         return this.hANAPrometheusExporter == null ? Input.empty() : this.hANAPrometheusExporter;
     }
 
+    /**
+     * The JMX Prometheus Exporter settings.
+     * 
+     */
     @InputImport(name="jMXPrometheusExporter")
     private final @Nullable Input<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter;
 
@@ -56,6 +80,10 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
         return this.jMXPrometheusExporter == null ? Input.empty() : this.jMXPrometheusExporter;
     }
 
+    /**
+     * A list of logs to monitor for the component.
+     * 
+     */
     @InputImport(name="logs")
     private final @Nullable Input<List<ApplicationLogArgs>> logs;
 
@@ -63,6 +91,10 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
         return this.logs == null ? Input.empty() : this.logs;
     }
 
+    /**
+     * A list of Windows Events to log.
+     * 
+     */
     @InputImport(name="windowsEvents")
     private final @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDevice {
+/**
+ * The AWS::NetworkManager::Device type describes a device.
+ * 
+ */
     public static CompletableFuture<GetDeviceResult> invokeAsync(GetDeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getDevice", TypeShape.of(GetDeviceResult.class), args == null ? GetDeviceArgs.Empty : args, Utilities.withVersion(options));
     }

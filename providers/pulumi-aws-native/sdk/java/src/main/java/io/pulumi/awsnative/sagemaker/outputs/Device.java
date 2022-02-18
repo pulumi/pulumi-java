@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Device {
+    /**
+     * Description of the device
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The name of the device
+     * 
+     */
     private final String deviceName;
+    /**
+     * AWS Internet of Things (IoT) object name.
+     * 
+     */
     private final @Nullable String iotThingName;
 
     @OutputCustomType.Constructor({"description","deviceName","iotThingName"})
@@ -25,12 +37,24 @@ public final class Device {
         this.iotThingName = iotThingName;
     }
 
+    /**
+     * Description of the device
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The name of the device
+     * 
+     */
     public String getDeviceName() {
         return this.deviceName;
     }
+    /**
+     * AWS Internet of Things (IoT) object name.
+     * 
+     */
     public Optional<String> getIotThingName() {
         return Optional.ofNullable(this.iotThingName);
     }

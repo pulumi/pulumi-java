@@ -12,6 +12,10 @@ public final class GetTransitGatewayMulticastDomainArgs extends io.pulumi.resour
 
     public static final GetTransitGatewayMulticastDomainArgs Empty = new GetTransitGatewayMulticastDomainArgs();
 
+    /**
+     * The ID of the transit gateway multicast domain.
+     * 
+     */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
     private final String transitGatewayMulticastDomainId;
 

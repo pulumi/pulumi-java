@@ -19,6 +19,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final SecurityProfileArgs Empty = new SecurityProfileArgs();
 
+    /**
+     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
+     * 
+     */
     @InputImport(name="additionalMetricsToRetainV2")
     private final @Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
 
@@ -26,6 +30,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
         return this.additionalMetricsToRetainV2 == null ? Input.empty() : this.additionalMetricsToRetainV2;
     }
 
+    /**
+     * Specifies the destinations to which alerts are sent.
+     * 
+     */
     @InputImport(name="alertTargets")
     private final @Nullable Input<Object> alertTargets;
 
@@ -33,6 +41,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
         return this.alertTargets == null ? Input.empty() : this.alertTargets;
     }
 
+    /**
+     * Specifies the behaviors that, when violated by a device (thing), cause an alert.
+     * 
+     */
     @InputImport(name="behaviors")
     private final @Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors;
 
@@ -40,6 +52,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
         return this.behaviors == null ? Input.empty() : this.behaviors;
     }
 
+    /**
+     * A description of the security profile.
+     * 
+     */
     @InputImport(name="securityProfileDescription")
     private final @Nullable Input<String> securityProfileDescription;
 
@@ -47,6 +63,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
         return this.securityProfileDescription == null ? Input.empty() : this.securityProfileDescription;
     }
 
+    /**
+     * A unique identifier for the security profile.
+     * 
+     */
     @InputImport(name="securityProfileName")
     private final @Nullable Input<String> securityProfileName;
 
@@ -54,6 +74,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
         return this.securityProfileName == null ? Input.empty() : this.securityProfileName;
     }
 
+    /**
+     * Metadata that can be used to manage the security profile.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<SecurityProfileTagArgs>> tags;
 
@@ -61,6 +85,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A set of target ARNs that the security profile is attached to.
+     * 
+     */
     @InputImport(name="targetArns")
     private final @Nullable Input<List<String>> targetArns;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Recording Thumbnail Configuration.
+ * 
+ */
 public final class RecordingConfigurationThumbnailConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecordingConfigurationThumbnailConfigurationArgs Empty = new RecordingConfigurationThumbnailConfigurationArgs();
 
+    /**
+     * Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
+     * 
+     */
     @InputImport(name="recordingMode", required=true)
     private final Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
 
@@ -22,6 +30,10 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
         return this.recordingMode;
     }
 
+    /**
+     * Thumbnail recording Target Interval Seconds defines the interval at which thumbnails are recorded. This field is required if RecordingMode is INTERVAL.
+     * 
+     */
     @InputImport(name="targetIntervalSeconds")
     private final @Nullable Input<Integer> targetIntervalSeconds;
 

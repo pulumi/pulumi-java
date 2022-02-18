@@ -12,11 +12,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResourceAssociationResult {
+    /**
+     * The name or the Id of the Application.
+     * 
+     */
     private final @Nullable String application;
     private final @Nullable String applicationArn;
     private final @Nullable String id;
+    /**
+     * The name or the Id of the Resource.
+     * 
+     */
     private final @Nullable String resource;
     private final @Nullable String resourceArn;
+    /**
+     * The type of the CFN Resource for now it's enum CFN_STACK.
+     * 
+     */
     private final @Nullable ResourceAssociationResourceType resourceType;
 
     @OutputCustomType.Constructor({"application","applicationArn","id","resource","resourceArn","resourceType"})
@@ -35,6 +47,10 @@ public final class GetResourceAssociationResult {
         this.resourceType = resourceType;
     }
 
+    /**
+     * The name or the Id of the Application.
+     * 
+     */
     public Optional<String> getApplication() {
         return Optional.ofNullable(this.application);
     }
@@ -44,12 +60,20 @@ public final class GetResourceAssociationResult {
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name or the Id of the Resource.
+     * 
+     */
     public Optional<String> getResource() {
         return Optional.ofNullable(this.resource);
     }
     public Optional<String> getResourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }
+    /**
+     * The type of the CFN Resource for now it's enum CFN_STACK.
+     * 
+     */
     public Optional<ResourceAssociationResourceType> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }

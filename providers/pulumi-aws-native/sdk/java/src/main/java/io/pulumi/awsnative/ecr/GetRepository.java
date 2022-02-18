@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepository {
+/**
+ * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
+ * 
+ */
     public static CompletableFuture<GetRepositoryResult> invokeAsync(GetRepositoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecr:getRepository", TypeShape.of(GetRepositoryResult.class), args == null ? GetRepositoryArgs.Empty : args, Utilities.withVersion(options));
     }

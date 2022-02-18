@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SimulationApplicationSimulationSoftwareSuite {
+    /**
+     * The name of the simulation software suite.
+     * 
+     */
     private final SimulationApplicationSimulationSoftwareSuiteName name;
+    /**
+     * The version of the simulation software suite.
+     * 
+     */
     private final @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
 
     @OutputCustomType.Constructor({"name","version"})
@@ -23,9 +31,17 @@ public final class SimulationApplicationSimulationSoftwareSuite {
         this.version = version;
     }
 
+    /**
+     * The name of the simulation software suite.
+     * 
+     */
     public SimulationApplicationSimulationSoftwareSuiteName getName() {
         return this.name;
     }
+    /**
+     * The version of the simulation software suite.
+     * 
+     */
     public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }

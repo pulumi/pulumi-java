@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInAppTemplate {
+/**
+ * Resource Type definition for AWS::Pinpoint::InAppTemplate
+ * 
+ */
     public static CompletableFuture<GetInAppTemplateResult> invokeAsync(GetInAppTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:pinpoint:getInAppTemplate", TypeShape.of(GetInAppTemplateResult.class), args == null ? GetInAppTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
+ * 
+ */
 public final class ReportDeliveryChannelProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportDeliveryChannelProperties Empty = new ReportDeliveryChannelProperties();
 
+    /**
+     * A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
+     * 
+     */
     @InputImport(name="formats")
     private final @Nullable List<String> formats;
 
@@ -22,6 +30,10 @@ public final class ReportDeliveryChannelProperties extends io.pulumi.resources.I
         return this.formats == null ? List.of() : this.formats;
     }
 
+    /**
+     * The unique name of the S3 bucket that receives your reports.
+     * 
+     */
     @InputImport(name="s3BucketName", required=true)
     private final String s3BucketName;
 
@@ -29,6 +41,10 @@ public final class ReportDeliveryChannelProperties extends io.pulumi.resources.I
         return this.s3BucketName;
     }
 
+    /**
+     * The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+     * 
+     */
     @InputImport(name="s3KeyPrefix")
     private final @Nullable String s3KeyPrefix;
 

@@ -9,6 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * A port range to support for connections from  clients to your accelerator.
+ * 
+ */
 public final class ListenerPortRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ListenerPortRangeArgs Empty = new ListenerPortRangeArgs();

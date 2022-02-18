@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGateway {
+/**
+ * Resource schema for AWS::IoTSiteWise::Gateway
+ * 
+ */
     public static CompletableFuture<GetGatewayResult> invokeAsync(GetGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getGateway", TypeShape.of(GetGatewayResult.class), args == null ? GetGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

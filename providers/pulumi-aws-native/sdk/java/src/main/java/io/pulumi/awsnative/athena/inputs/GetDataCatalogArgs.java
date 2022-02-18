@@ -12,6 +12,10 @@ public final class GetDataCatalogArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataCatalogArgs Empty = new GetDataCatalogArgs();
 
+    /**
+     * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -12,6 +12,10 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
+    /**
+     * The ID of the device.
+     * 
+     */
     @InputImport(name="deviceId", required=true)
     private final String deviceId;
 
@@ -19,6 +23,10 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceId;
     }
 
+    /**
+     * The ID of the global network.
+     * 
+     */
     @InputImport(name="globalNetworkId", required=true)
     private final String globalNetworkId;
 

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CanaryArtifactConfig {
+    /**
+     * Encryption configuration for uploading artifacts to S3
+     * 
+     */
     private final @Nullable CanaryS3Encryption s3Encryption;
 
     @OutputCustomType.Constructor({"s3Encryption"})
@@ -18,6 +22,10 @@ public final class CanaryArtifactConfig {
         this.s3Encryption = s3Encryption;
     }
 
+    /**
+     * Encryption configuration for uploading artifacts to S3
+     * 
+     */
     public Optional<CanaryS3Encryption> getS3Encryption() {
         return Optional.ofNullable(this.s3Encryption);
     }

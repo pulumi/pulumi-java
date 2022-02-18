@@ -12,6 +12,10 @@ public final class GetStudioArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStudioArgs Empty = new GetStudioArgs();
 
+    /**
+     * The ID of the EMR Studio.
+     * 
+     */
     @InputImport(name="studioId", required=true)
     private final String studioId;
 

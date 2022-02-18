@@ -16,6 +16,10 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
 
     public static final FirewallDomainListArgs Empty = new FirewallDomainListArgs();
 
+    /**
+     * S3 URL to import domains from.
+     * 
+     */
     @InputImport(name="domainFileUrl")
     private final @Nullable Input<String> domainFileUrl;
 
@@ -30,6 +34,10 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
         return this.domains == null ? Input.empty() : this.domains;
     }
 
+    /**
+     * FirewallDomainListName
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +45,10 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<FirewallDomainListTagArgs>> tags;
 

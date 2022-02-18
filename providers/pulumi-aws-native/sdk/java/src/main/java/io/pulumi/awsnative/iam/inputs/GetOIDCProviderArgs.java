@@ -12,6 +12,10 @@ public final class GetOIDCProviderArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOIDCProviderArgs Empty = new GetOIDCProviderArgs();
 
+    /**
+     * Amazon Resource Name (ARN) of the OIDC provider
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

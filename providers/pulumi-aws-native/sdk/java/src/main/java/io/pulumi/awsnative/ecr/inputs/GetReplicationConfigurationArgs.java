@@ -12,6 +12,10 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
 
     public static final GetReplicationConfigurationArgs Empty = new GetReplicationConfigurationArgs();
 
+    /**
+     * The RegistryId associated with the aws account.
+     * 
+     */
     @InputImport(name="registryId", required=true)
     private final String registryId;
 

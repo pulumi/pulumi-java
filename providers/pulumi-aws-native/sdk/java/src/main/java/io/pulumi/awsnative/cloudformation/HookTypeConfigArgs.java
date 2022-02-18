@@ -15,6 +15,10 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HookTypeConfigArgs Empty = new HookTypeConfigArgs();
 
+    /**
+     * The configuration data for the extension, in this account and region.
+     * 
+     */
     @InputImport(name="configuration")
     private final @Nullable Input<String> configuration;
 
@@ -22,6 +26,10 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
+    /**
+     * An alias by which to refer to this extension configuration data.
+     * 
+     */
     @InputImport(name="configurationAlias")
     private final @Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias;
 
@@ -29,6 +37,10 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.configurationAlias == null ? Input.empty() : this.configurationAlias;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the type version.
+     * 
+     */
     @InputImport(name="typeArn")
     private final @Nullable Input<String> typeArn;
 
@@ -36,6 +48,12 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.typeArn == null ? Input.empty() : this.typeArn;
     }
 
+    /**
+     * The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     @InputImport(name="typeName")
     private final @Nullable Input<String> typeName;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStudioSessionMapping {
+/**
+ * An example resource schema demonstrating some basic constructs and validation rules.
+ * 
+ */
     public static CompletableFuture<GetStudioSessionMappingResult> invokeAsync(GetStudioSessionMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emr:getStudioSessionMapping", TypeShape.of(GetStudioSessionMappingResult.class), args == null ? GetStudioSessionMappingArgs.Empty : args, Utilities.withVersion(options));
     }

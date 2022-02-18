@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
+ * 
+ */
 public final class CodeSigningConfigAllowedPublishersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CodeSigningConfigAllowedPublishersArgs Empty = new CodeSigningConfigAllowedPublishersArgs();
 
+    /**
+     * List of Signing profile version Arns
+     * 
+     */
     @InputImport(name="signingProfileVersionArns", required=true)
     private final Input<List<String>> signingProfileVersionArns;
 

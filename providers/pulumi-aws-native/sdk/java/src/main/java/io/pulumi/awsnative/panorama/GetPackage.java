@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPackage {
+/**
+ * Schema for Package CloudFormation Resource
+ * 
+ */
     public static CompletableFuture<GetPackageResult> invokeAsync(GetPackageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackage", TypeShape.of(GetPackageResult.class), args == null ? GetPackageArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BotCustomPayload {
+    /**
+     * The string that is sent to your application.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -16,6 +20,10 @@ public final class BotCustomPayload {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The string that is sent to your application.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

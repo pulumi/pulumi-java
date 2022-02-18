@@ -16,41 +16,93 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::GlobalAccelerator::Accelerator
+ * 
+ */
 @ResourceType(type="aws-native:globalaccelerator:Accelerator")
 public class Accelerator extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the accelerator.
+     * 
+     */
     @OutputExport(name="acceleratorArn", type=String.class, parameters={})
     private Output<String> acceleratorArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the accelerator.
+     * 
+     */
     public Output<String> getAcceleratorArn() {
         return this.acceleratorArn;
     }
+    /**
+     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
+     * 
+     */
     @OutputExport(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
+    /**
+     * @return The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
+     * 
+     */
     public Output<String> getDnsName() {
         return this.dnsName;
     }
+    /**
+     * Indicates whether an accelerator is enabled. The value is true or false.
+     * 
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
+    /**
+     * @return Indicates whether an accelerator is enabled. The value is true or false.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * IP Address type.
+     * 
+     */
     @OutputExport(name="ipAddressType", type=AcceleratorIpAddressType.class, parameters={})
     private Output</* @Nullable */ AcceleratorIpAddressType> ipAddressType;
 
+    /**
+     * @return IP Address type.
+     * 
+     */
     public Output</* @Nullable */ AcceleratorIpAddressType> getIpAddressType() {
         return this.ipAddressType;
     }
+    /**
+     * The IP addresses from BYOIP Prefix pool.
+     * 
+     */
     @OutputExport(name="ipAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipAddresses;
 
+    /**
+     * @return The IP addresses from BYOIP Prefix pool.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getIpAddresses() {
         return this.ipAddresses;
     }
+    /**
+     * Name of accelerator.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of accelerator.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
@@ -61,6 +113,12 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Accelerator(String name, @Nullable AcceleratorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:globalaccelerator:Accelerator", name, args == null ? AcceleratorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +134,14 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Accelerator get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Accelerator(name, id, options);
     }

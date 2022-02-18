@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for pre-signed S3 URLs.
+ * 
+ */
 public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PresignedUrlConfigPropertiesArgs Empty = new PresignedUrlConfigPropertiesArgs();

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueryDefinition {
+/**
+ * The resource schema for AWSLogs QueryDefinition
+ * 
+ */
     public static CompletableFuture<GetQueryDefinitionResult> invokeAsync(GetQueryDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:logs:getQueryDefinition", TypeShape.of(GetQueryDefinitionResult.class), args == null ? GetQueryDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

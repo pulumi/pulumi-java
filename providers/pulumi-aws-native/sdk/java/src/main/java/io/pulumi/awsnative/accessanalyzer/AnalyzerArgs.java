@@ -17,6 +17,10 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalyzerArgs Empty = new AnalyzerArgs();
 
+    /**
+     * Analyzer name
+     * 
+     */
     @InputImport(name="analyzerName")
     private final @Nullable Input<String> analyzerName;
 
@@ -31,6 +35,10 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
         return this.archiveRules == null ? Input.empty() : this.archiveRules;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AnalyzerTagArgs>> tags;
 
@@ -38,6 +46,10 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of the analyzer, must be ACCOUNT or ORGANIZATION
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

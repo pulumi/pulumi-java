@@ -15,33 +15,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::SageMaker::AppImageConfig
+ * 
+ */
 @ResourceType(type="aws-native:sagemaker:AppImageConfig")
 public class AppImageConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * The Amazon Resource Name (ARN) of the AppImageConfig.
+     * 
+     */
     @OutputExport(name="appImageConfigArn", type=String.class, parameters={})
     private Output<String> appImageConfigArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AppImageConfig.
+     * 
+     */
     public Output<String> getAppImageConfigArn() {
         return this.appImageConfigArn;
     }
+    /**
+     * The Name of the AppImageConfig.
+     * 
+     */
     @OutputExport(name="appImageConfigName", type=String.class, parameters={})
     private Output<String> appImageConfigName;
 
+    /**
+     * @return The Name of the AppImageConfig.
+     * 
+     */
     public Output<String> getAppImageConfigName() {
         return this.appImageConfigName;
     }
+    /**
+     * The KernelGatewayImageConfig.
+     * 
+     */
     @OutputExport(name="kernelGatewayImageConfig", type=AppImageConfigKernelGatewayImageConfig.class, parameters={})
     private Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig;
 
+    /**
+     * @return The KernelGatewayImageConfig.
+     * 
+     */
     public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> getKernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig;
     }
+    /**
+     * A list of tags to apply to the AppImageConfig.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={AppImageConfigTag.class})
     private Output</* @Nullable */ List<AppImageConfigTag>> tags;
 
+    /**
+     * @return A list of tags to apply to the AppImageConfig.
+     * 
+     */
     public Output</* @Nullable */ List<AppImageConfigTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AppImageConfig(String name, @Nullable AppImageConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:sagemaker:AppImageConfig", name, args == null ? AppImageConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +99,14 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AppImageConfig get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AppImageConfig(name, id, options);
     }

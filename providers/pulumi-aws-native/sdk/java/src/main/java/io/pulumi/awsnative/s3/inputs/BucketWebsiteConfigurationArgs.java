@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies website configuration parameters for an Amazon S3 bucket.
+ * 
+ */
 public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketWebsiteConfigurationArgs Empty = new BucketWebsiteConfigurationArgs();
 
+    /**
+     * The name of the error document for the website.
+     * 
+     */
     @InputImport(name="errorDocument")
     private final @Nullable Input<String> errorDocument;
 
@@ -24,6 +32,10 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
         return this.errorDocument == null ? Input.empty() : this.errorDocument;
     }
 
+    /**
+     * The name of the index document for the website.
+     * 
+     */
     @InputImport(name="indexDocument")
     private final @Nullable Input<String> indexDocument;
 

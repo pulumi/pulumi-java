@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamingImage {
+/**
+ * Represents a streaming session machine image that can be used to launch a streaming session
+ * 
+ */
     public static CompletableFuture<GetStreamingImageResult> invokeAsync(GetStreamingImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStreamingImage", TypeShape.of(GetStreamingImageResult.class), args == null ? GetStreamingImageArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class GetScheduledAuditArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetScheduledAuditArgs Empty = new GetScheduledAuditArgs();
 
+    /**
+     * The name you want to give to the scheduled audit.
+     * 
+     */
     @InputImport(name="scheduledAuditName", required=true)
     private final String scheduledAuditName;
 

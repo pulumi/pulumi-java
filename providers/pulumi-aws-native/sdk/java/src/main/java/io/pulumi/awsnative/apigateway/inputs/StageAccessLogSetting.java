@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies settings for logging access in this stage.
+ * 
+ */
 public final class StageAccessLogSetting extends io.pulumi.resources.InvokeArgs {
 
     public static final StageAccessLogSetting Empty = new StageAccessLogSetting();
 
+    /**
+     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.
+     * 
+     */
     @InputImport(name="destinationArn")
     private final @Nullable String destinationArn;
 
@@ -21,6 +29,10 @@ public final class StageAccessLogSetting extends io.pulumi.resources.InvokeArgs 
         return this.destinationArn == null ? Optional.empty() : Optional.ofNullable(this.destinationArn);
     }
 
+    /**
+     * A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.
+     * 
+     */
     @InputImport(name="format")
     private final @Nullable String format;
 

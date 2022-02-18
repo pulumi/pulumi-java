@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration used by AWS Lambda to access event source
+ * 
+ */
 public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final EventSourceMappingSourceAccessConfiguration Empty = new EventSourceMappingSourceAccessConfiguration();
 
+    /**
+     * The type of source access configuration.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable EventSourceMappingSourceAccessConfigurationType type;
 
@@ -22,6 +30,10 @@ public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The URI for the source access configuration resource.
+     * 
+     */
     @InputImport(name="uRI")
     private final @Nullable String uRI;
 

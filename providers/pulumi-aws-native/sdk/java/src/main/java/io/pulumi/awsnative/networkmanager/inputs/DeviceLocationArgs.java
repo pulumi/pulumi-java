@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The site location.
+ * 
+ */
 public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceLocationArgs Empty = new DeviceLocationArgs();
 
+    /**
+     * The physical address.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -21,6 +29,10 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * The latitude.
+     * 
+     */
     @InputImport(name="latitude")
     private final @Nullable Input<String> latitude;
 
@@ -28,6 +40,10 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.latitude == null ? Input.empty() : this.latitude;
     }
 
+    /**
+     * The longitude.
+     * 
+     */
     @InputImport(name="longitude")
     private final @Nullable Input<String> longitude;
 

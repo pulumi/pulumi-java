@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Object Lock rule in place for the specified object.
+ * 
+ */
 public final class BucketObjectLockRule extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketObjectLockRule Empty = new BucketObjectLockRule();

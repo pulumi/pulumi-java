@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFuotaTask {
+/**
+ * Create and manage FUOTA tasks.
+ * 
+ */
     public static CompletableFuture<GetFuotaTaskResult> invokeAsync(GetFuotaTaskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getFuotaTask", TypeShape.of(GetFuotaTaskResult.class), args == null ? GetFuotaTaskArgs.Empty : args, Utilities.withVersion(options));
     }

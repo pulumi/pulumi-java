@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SimulationApplicationSourceConfig {
+    /**
+     * The target processor architecture for the application.
+     * 
+     */
     private final SimulationApplicationSourceConfigArchitecture architecture;
+    /**
+     * The Amazon S3 bucket name.
+     * 
+     */
     private final String s3Bucket;
+    /**
+     * The s3 object key.
+     * 
+     */
     private final String s3Key;
 
     @OutputCustomType.Constructor({"architecture","s3Bucket","s3Key"})
@@ -24,12 +36,24 @@ public final class SimulationApplicationSourceConfig {
         this.s3Key = Objects.requireNonNull(s3Key);
     }
 
+    /**
+     * The target processor architecture for the application.
+     * 
+     */
     public SimulationApplicationSourceConfigArchitecture getArchitecture() {
         return this.architecture;
     }
+    /**
+     * The Amazon S3 bucket name.
+     * 
+     */
     public String getS3Bucket() {
         return this.s3Bucket;
     }
+    /**
+     * The s3 object key.
+     * 
+     */
     public String getS3Key() {
         return this.s3Key;
     }

@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input location
+ * 
+ */
 public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetS3LocationArgs Empty = new DatasetS3LocationArgs();

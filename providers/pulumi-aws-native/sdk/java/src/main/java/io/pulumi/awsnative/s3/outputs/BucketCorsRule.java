@@ -14,11 +14,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BucketCorsRule {
+    /**
+     * Headers that are specified in the Access-Control-Request-Headers header.
+     * 
+     */
     private final @Nullable List<String> allowedHeaders;
+    /**
+     * An HTTP method that you allow the origin to execute.
+     * 
+     */
     private final List<BucketCorsRuleAllowedMethodsItem> allowedMethods;
+    /**
+     * One or more origins you want customers to be able to access the bucket from.
+     * 
+     */
     private final List<String> allowedOrigins;
+    /**
+     * One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+     * 
+     */
     private final @Nullable List<String> exposedHeaders;
+    /**
+     * A unique identifier for this rule.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The time in seconds that your browser is to cache the preflight response for the specified resource.
+     * 
+     */
     private final @Nullable Integer maxAge;
 
     @OutputCustomType.Constructor({"allowedHeaders","allowedMethods","allowedOrigins","exposedHeaders","id","maxAge"})
@@ -37,21 +61,45 @@ public final class BucketCorsRule {
         this.maxAge = maxAge;
     }
 
+    /**
+     * Headers that are specified in the Access-Control-Request-Headers header.
+     * 
+     */
     public List<String> getAllowedHeaders() {
         return this.allowedHeaders == null ? List.of() : this.allowedHeaders;
     }
+    /**
+     * An HTTP method that you allow the origin to execute.
+     * 
+     */
     public List<BucketCorsRuleAllowedMethodsItem> getAllowedMethods() {
         return this.allowedMethods;
     }
+    /**
+     * One or more origins you want customers to be able to access the bucket from.
+     * 
+     */
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins;
     }
+    /**
+     * One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+     * 
+     */
     public List<String> getExposedHeaders() {
         return this.exposedHeaders == null ? List.of() : this.exposedHeaders;
     }
+    /**
+     * A unique identifier for this rule.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The time in seconds that your browser is to cache the preflight response for the specified resource.
+     * 
+     */
     public Optional<Integer> getMaxAge() {
         return Optional.ofNullable(this.maxAge);
     }

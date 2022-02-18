@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A container for describing a condition that must be met for the specified redirect to apply.You must specify at least one of HttpErrorCodeReturnedEquals and KeyPrefixEquals
+ * 
+ */
 public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketRoutingRuleConditionArgs Empty = new BucketRoutingRuleConditionArgs();
 
+    /**
+     * The HTTP error code when the redirect is applied.
+     * 
+     */
     @InputImport(name="httpErrorCodeReturnedEquals")
     private final @Nullable Input<String> httpErrorCodeReturnedEquals;
 
@@ -21,6 +29,10 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
         return this.httpErrorCodeReturnedEquals == null ? Input.empty() : this.httpErrorCodeReturnedEquals;
     }
 
+    /**
+     * The object key name prefix when the redirect is applied.
+     * 
+     */
     @InputImport(name="keyPrefixEquals")
     private final @Nullable Input<String> keyPrefixEquals;
 

@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
+ * 
+ */
 public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledQueryErrorReportConfigurationArgs Empty = new ScheduledQueryErrorReportConfigurationArgs();

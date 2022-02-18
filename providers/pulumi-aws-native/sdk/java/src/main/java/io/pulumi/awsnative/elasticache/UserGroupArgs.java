@@ -16,6 +16,10 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserGroupArgs Empty = new UserGroupArgs();
 
+    /**
+     * Must be redis.
+     * 
+     */
     @InputImport(name="engine", required=true)
     private final Input<UserGroupEngine> engine;
 
@@ -23,6 +27,10 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.engine;
     }
 
+    /**
+     * The ID of the user group.
+     * 
+     */
     @InputImport(name="userGroupId", required=true)
     private final Input<String> userGroupId;
 
@@ -30,6 +38,10 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.userGroupId;
     }
 
+    /**
+     * List of users associated to this user group.
+     * 
+     */
     @InputImport(name="userIds")
     private final @Nullable Input<List<String>> userIds;
 

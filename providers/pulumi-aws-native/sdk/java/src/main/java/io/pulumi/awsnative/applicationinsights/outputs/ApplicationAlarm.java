@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationAlarm {
+    /**
+     * The name of the CloudWatch alarm to be monitored for the component.
+     * 
+     */
     private final String alarmName;
+    /**
+     * Indicates the degree of outage when the alarm goes off.
+     * 
+     */
     private final @Nullable ApplicationAlarmSeverity severity;
 
     @OutputCustomType.Constructor({"alarmName","severity"})
@@ -23,9 +31,17 @@ public final class ApplicationAlarm {
         this.severity = severity;
     }
 
+    /**
+     * The name of the CloudWatch alarm to be monitored for the component.
+     * 
+     */
     public String getAlarmName() {
         return this.alarmName;
     }
+    /**
+     * Indicates the degree of outage when the alarm goes off.
+     * 
+     */
     public Optional<ApplicationAlarmSeverity> getSeverity() {
         return Optional.ofNullable(this.severity);
     }

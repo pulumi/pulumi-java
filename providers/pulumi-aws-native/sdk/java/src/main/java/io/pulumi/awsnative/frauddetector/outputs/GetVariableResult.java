@@ -16,14 +16,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVariableResult {
+    /**
+     * The ARN of the variable.
+     * 
+     */
     private final @Nullable String arn;
+    /**
+     * The time when the variable was created.
+     * 
+     */
     private final @Nullable String createdTime;
+    /**
+     * The source of the data.
+     * 
+     */
     private final @Nullable VariableDataSource dataSource;
+    /**
+     * The data type.
+     * 
+     */
     private final @Nullable VariableDataType dataType;
+    /**
+     * The default value for the variable when no value is received.
+     * 
+     */
     private final @Nullable String defaultValue;
+    /**
+     * The description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The time when the variable was last updated.
+     * 
+     */
     private final @Nullable String lastUpdatedTime;
+    /**
+     * Tags associated with this variable.
+     * 
+     */
     private final @Nullable List<VariableTag> tags;
+    /**
+     * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
+     * 
+     */
     private final @Nullable VariableType variableType;
 
     @OutputCustomType.Constructor({"arn","createdTime","dataSource","dataType","defaultValue","description","lastUpdatedTime","tags","variableType"})
@@ -48,30 +84,66 @@ public final class GetVariableResult {
         this.variableType = variableType;
     }
 
+    /**
+     * The ARN of the variable.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
+    /**
+     * The time when the variable was created.
+     * 
+     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+    /**
+     * The source of the data.
+     * 
+     */
     public Optional<VariableDataSource> getDataSource() {
         return Optional.ofNullable(this.dataSource);
     }
+    /**
+     * The data type.
+     * 
+     */
     public Optional<VariableDataType> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
+    /**
+     * The default value for the variable when no value is received.
+     * 
+     */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
+    /**
+     * The description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The time when the variable was last updated.
+     * 
+     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
+    /**
+     * Tags associated with this variable.
+     * 
+     */
     public List<VariableTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
+    /**
+     * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
+     * 
+     */
     public Optional<VariableType> getVariableType() {
         return Optional.ofNullable(this.variableType);
     }

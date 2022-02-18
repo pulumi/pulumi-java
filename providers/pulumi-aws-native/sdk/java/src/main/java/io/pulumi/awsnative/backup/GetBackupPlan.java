@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupPlan {
+/**
+ * Resource Type definition for AWS::Backup::BackupPlan
+ * 
+ */
     public static CompletableFuture<GetBackupPlanResult> invokeAsync(GetBackupPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupPlan", TypeShape.of(GetBackupPlanResult.class), args == null ? GetBackupPlanArgs.Empty : args, Utilities.withVersion(options));
     }

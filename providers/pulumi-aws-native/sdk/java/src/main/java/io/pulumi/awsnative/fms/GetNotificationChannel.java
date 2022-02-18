@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationChannel {
+/**
+ * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
+ * 
+ */
     public static CompletableFuture<GetNotificationChannelResult> invokeAsync(GetNotificationChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fms:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args == null ? GetNotificationChannelArgs.Empty : args, Utilities.withVersion(options));
     }

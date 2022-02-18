@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * If query results are encrypted in Amazon S3, indicates the encryption option used (for example, SSE-KMS or CSE-KMS) and key information.
+ * 
+ */
 public final class WorkGroupEncryptionConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkGroupEncryptionConfiguration Empty = new WorkGroupEncryptionConfiguration();

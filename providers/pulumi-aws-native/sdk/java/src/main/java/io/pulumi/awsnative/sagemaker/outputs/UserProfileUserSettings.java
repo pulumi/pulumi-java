@@ -15,10 +15,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserProfileUserSettings {
+    /**
+     * The user profile Amazon Resource Name (ARN).
+     * 
+     */
     private final @Nullable String executionRole;
+    /**
+     * The Jupyter server's app settings.
+     * 
+     */
     private final @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
+    /**
+     * The kernel gateway app settings.
+     * 
+     */
     private final @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
+    /**
+     * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * 
+     */
     private final @Nullable List<String> securityGroups;
+    /**
+     * The sharing settings.
+     * 
+     */
     private final @Nullable UserProfileSharingSettings sharingSettings;
 
     @OutputCustomType.Constructor({"executionRole","jupyterServerAppSettings","kernelGatewayAppSettings","securityGroups","sharingSettings"})
@@ -35,18 +55,38 @@ public final class UserProfileUserSettings {
         this.sharingSettings = sharingSettings;
     }
 
+    /**
+     * The user profile Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<String> getExecutionRole() {
         return Optional.ofNullable(this.executionRole);
     }
+    /**
+     * The Jupyter server's app settings.
+     * 
+     */
     public Optional<UserProfileJupyterServerAppSettings> getJupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
+    /**
+     * The kernel gateway app settings.
+     * 
+     */
     public Optional<UserProfileKernelGatewayAppSettings> getKernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
+    /**
+     * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * 
+     */
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
+    /**
+     * The sharing settings.
+     * 
+     */
     public Optional<UserProfileSharingSettings> getSharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }

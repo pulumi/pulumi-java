@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LocationNFSTag {
+    /**
+     * The key for an AWS resource tag.
+     * 
+     */
     private final String key;
+    /**
+     * The value for an AWS resource tag.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +28,17 @@ public final class LocationNFSTag {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The key for an AWS resource tag.
+     * 
+     */
     public String getKey() {
         return this.key;
     }
+    /**
+     * The value for an AWS resource tag.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

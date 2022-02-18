@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Dataset reference.</p>
+ * 
+ */
 public final class AnalysisDataSetReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalysisDataSetReferenceArgs Empty = new AnalysisDataSetReferenceArgs();
 
+    /**
+     * <p>Dataset Amazon Resource Name (ARN).</p>
+     * 
+     */
     @InputImport(name="dataSetArn", required=true)
     private final Input<String> dataSetArn;
 
@@ -20,6 +28,10 @@ public final class AnalysisDataSetReferenceArgs extends io.pulumi.resources.Reso
         return this.dataSetArn;
     }
 
+    /**
+     * <p>Dataset placeholder.</p>
+     * 
+     */
     @InputImport(name="dataSetPlaceholder", required=true)
     private final Input<String> dataSetPlaceholder;
 

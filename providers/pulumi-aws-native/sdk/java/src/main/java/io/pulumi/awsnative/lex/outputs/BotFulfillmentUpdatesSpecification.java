@@ -14,8 +14,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BotFulfillmentUpdatesSpecification {
+    /**
+     * Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
+     * 
+     */
     private final Boolean active;
     private final @Nullable BotFulfillmentStartResponseSpecification startResponse;
+    /**
+     * The length of time that the fulfillment Lambda function should run before it times out.
+     * 
+     */
     private final @Nullable Integer timeoutInSeconds;
     private final @Nullable BotFulfillmentUpdateResponseSpecification updateResponse;
 
@@ -31,12 +39,20 @@ public final class BotFulfillmentUpdatesSpecification {
         this.updateResponse = updateResponse;
     }
 
+    /**
+     * Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
+     * 
+     */
     public Boolean getActive() {
         return this.active;
     }
     public Optional<BotFulfillmentStartResponseSpecification> getStartResponse() {
         return Optional.ofNullable(this.startResponse);
     }
+    /**
+     * The length of time that the fulfillment Lambda function should run before it times out.
+     * 
+     */
     public Optional<Integer> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }

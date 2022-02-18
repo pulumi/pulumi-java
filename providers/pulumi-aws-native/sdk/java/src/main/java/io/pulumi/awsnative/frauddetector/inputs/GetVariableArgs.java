@@ -12,6 +12,10 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVariableArgs Empty = new GetVariableArgs();
 
+    /**
+     * The ARN of the variable.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

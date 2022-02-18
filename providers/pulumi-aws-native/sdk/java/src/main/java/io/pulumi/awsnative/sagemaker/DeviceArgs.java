@@ -16,6 +16,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceArgs Empty = new DeviceArgs();
 
+    /**
+     * The Edge Device you want to register against a device fleet
+     * 
+     */
     @InputImport(name="device")
     private final @Nullable Input<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
 
@@ -23,6 +27,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.device == null ? Input.empty() : this.device;
     }
 
+    /**
+     * The name of the edge device fleet
+     * 
+     */
     @InputImport(name="deviceFleetName", required=true)
     private final Input<String> deviceFleetName;
 
@@ -30,6 +38,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceFleetName;
     }
 
+    /**
+     * Associate tags with the resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DeviceTagArgs>> tags;
 

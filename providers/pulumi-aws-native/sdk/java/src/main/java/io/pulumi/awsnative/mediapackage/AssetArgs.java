@@ -16,6 +16,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssetArgs Empty = new AssetArgs();
 
+    /**
+     * The ID of the PackagingGroup for the Asset.
+     * 
+     */
     @InputImport(name="packagingGroupId", required=true)
     private final Input<String> packagingGroupId;
 
@@ -23,6 +27,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.packagingGroupId;
     }
 
+    /**
+     * The resource ID to include in SPEKE key requests.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -30,6 +38,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
+    /**
+     * ARN of the source object in S3.
+     * 
+     */
     @InputImport(name="sourceArn", required=true)
     private final Input<String> sourceArn;
 
@@ -37,6 +49,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceArn;
     }
 
+    /**
+     * The IAM role_arn used to access the source S3 bucket.
+     * 
+     */
     @InputImport(name="sourceRoleArn", required=true)
     private final Input<String> sourceRoleArn;
 
@@ -44,6 +60,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceRoleArn;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<AssetTagArgs>> tags;
 

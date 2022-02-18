@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationRule {
+/**
+ * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
+ * 
+ */
     public static CompletableFuture<GetNotificationRuleResult> invokeAsync(GetNotificationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codestarnotifications:getNotificationRule", TypeShape.of(GetNotificationRuleResult.class), args == null ? GetNotificationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

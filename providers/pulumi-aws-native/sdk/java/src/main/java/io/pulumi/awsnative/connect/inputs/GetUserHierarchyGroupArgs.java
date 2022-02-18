@@ -12,6 +12,10 @@ public final class GetUserHierarchyGroupArgs extends io.pulumi.resources.InvokeA
 
     public static final GetUserHierarchyGroupArgs Empty = new GetUserHierarchyGroupArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) for the user hierarchy group.
+     * 
+     */
     @InputImport(name="userHierarchyGroupArn", required=true)
     private final String userHierarchyGroupArn;
 

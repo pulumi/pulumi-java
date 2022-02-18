@@ -15,6 +15,12 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:groundstation:DataflowEndpointGroup")
 public class DataflowEndpointGroup extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -36,6 +42,12 @@ public class DataflowEndpointGroup extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DataflowEndpointGroup(String name, DataflowEndpointGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:groundstation:DataflowEndpointGroup", name, args == null ? DataflowEndpointGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -51,6 +63,14 @@ public class DataflowEndpointGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DataflowEndpointGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataflowEndpointGroup(name, id, options);
     }

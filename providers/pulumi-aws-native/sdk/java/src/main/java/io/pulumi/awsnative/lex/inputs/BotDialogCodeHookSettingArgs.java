@@ -9,6 +9,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Settings that determine the Lambda function that Amazon Lex uses for processing user responses.
+ * 
+ */
 public final class BotDialogCodeHookSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotDialogCodeHookSettingArgs Empty = new BotDialogCodeHookSettingArgs();

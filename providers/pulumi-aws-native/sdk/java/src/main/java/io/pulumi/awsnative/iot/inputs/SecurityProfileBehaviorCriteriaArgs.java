@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The criteria by which the behavior is determined to be normal.
+ * 
+ */
 public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityProfileBehaviorCriteriaArgs Empty = new SecurityProfileBehaviorCriteriaArgs();
 
+    /**
+     * The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
+     * 
+     */
     @InputImport(name="comparisonOperator")
     private final @Nullable Input<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator;
 
@@ -25,6 +33,10 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
         return this.comparisonOperator == null ? Input.empty() : this.comparisonOperator;
     }
 
+    /**
+     * If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
+     * 
+     */
     @InputImport(name="consecutiveDatapointsToAlarm")
     private final @Nullable Input<Integer> consecutiveDatapointsToAlarm;
 
@@ -32,6 +44,10 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
         return this.consecutiveDatapointsToAlarm == null ? Input.empty() : this.consecutiveDatapointsToAlarm;
     }
 
+    /**
+     * If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
+     * 
+     */
     @InputImport(name="consecutiveDatapointsToClear")
     private final @Nullable Input<Integer> consecutiveDatapointsToClear;
 
@@ -39,6 +55,10 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
         return this.consecutiveDatapointsToClear == null ? Input.empty() : this.consecutiveDatapointsToClear;
     }
 
+    /**
+     * Use this to specify the time duration over which the behavior is evaluated.
+     * 
+     */
     @InputImport(name="durationSeconds")
     private final @Nullable Input<Integer> durationSeconds;
 

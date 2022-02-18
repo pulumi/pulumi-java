@@ -14,6 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Byte Match statement.
+ * 
+ */
 public final class WebACLByteMatchStatement extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLByteMatchStatement Empty = new WebACLByteMatchStatement();

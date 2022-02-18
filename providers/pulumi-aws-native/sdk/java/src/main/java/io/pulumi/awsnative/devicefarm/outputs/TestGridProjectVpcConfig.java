@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TestGridProjectVpcConfig {
+    /**
+     * A list of VPC security group IDs in your Amazon VPC.
+     * 
+     */
     private final List<String> securityGroupIds;
+    /**
+     * A list of VPC subnet IDs in your Amazon VPC.
+     * 
+     */
     private final List<String> subnetIds;
     private final String vpcId;
 
@@ -24,9 +32,17 @@ public final class TestGridProjectVpcConfig {
         this.vpcId = Objects.requireNonNull(vpcId);
     }
 
+    /**
+     * A list of VPC security group IDs in your Amazon VPC.
+     * 
+     */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
+    /**
+     * A list of VPC subnet IDs in your Amazon VPC.
+     * 
+     */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }

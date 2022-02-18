@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPoint {
+/**
+ * Resource Type Definition for AWS::S3Outposts::AccessPoint
+ * 
+ */
     public static CompletableFuture<GetAccessPointResult> invokeAsync(GetAccessPointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args == null ? GetAccessPointArgs.Empty : args, Utilities.withVersion(options));
     }

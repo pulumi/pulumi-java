@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Current State of the Instance.
+ * 
+ */
 public final class InstanceState extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceState Empty = new InstanceState();
 
+    /**
+     * Status code of the Instance.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable Integer code;
 
@@ -22,6 +30,10 @@ public final class InstanceState extends io.pulumi.resources.InvokeArgs {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * Status code of the Instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

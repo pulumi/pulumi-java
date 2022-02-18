@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A locale setting in alias
+ * 
+ */
 public final class BotAliasLocaleSettingsItem extends io.pulumi.resources.InvokeArgs {
 
     public static final BotAliasLocaleSettingsItem Empty = new BotAliasLocaleSettingsItem();
@@ -20,6 +24,10 @@ public final class BotAliasLocaleSettingsItem extends io.pulumi.resources.Invoke
         return this.botAliasLocaleSetting;
     }
 
+    /**
+     * A string used to identify the locale
+     * 
+     */
     @InputImport(name="localeId", required=true)
     private final String localeId;
 

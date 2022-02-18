@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Image tests configuration.
+ * 
+ */
 public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ImagePipelineImageTestsConfiguration Empty = new ImagePipelineImageTestsConfiguration();
 
+    /**
+     * Defines if tests should be executed when building this image.
+     * 
+     */
     @InputImport(name="imageTestsEnabled")
     private final @Nullable Boolean imageTestsEnabled;
 
@@ -22,6 +30,10 @@ public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resour
         return this.imageTestsEnabled == null ? Optional.empty() : Optional.ofNullable(this.imageTestsEnabled);
     }
 
+    /**
+     * The maximum time in minutes that tests are permitted to run.
+     * 
+     */
     @InputImport(name="timeoutMinutes")
     private final @Nullable Integer timeoutMinutes;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The output configuration for monitoring jobs.
+ * 
+ */
 public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataQualityJobDefinitionMonitoringOutputConfigArgs Empty = new DataQualityJobDefinitionMonitoringOutputConfigArgs();
 
+    /**
+     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+     * 
+     */
     @InputImport(name="kmsKeyId")
     private final @Nullable Input<String> kmsKeyId;
 
@@ -23,6 +31,10 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
+    /**
+     * Monitoring outputs for monitoring jobs. This is where the output of the periodic monitoring jobs is uploaded.
+     * 
+     */
     @InputImport(name="monitoringOutputs", required=true)
     private final Input<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 

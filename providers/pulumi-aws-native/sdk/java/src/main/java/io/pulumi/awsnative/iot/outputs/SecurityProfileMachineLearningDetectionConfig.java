@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecurityProfileMachineLearningDetectionConfig {
+    /**
+     * The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
+     * 
+     */
     private final @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel;
 
     @OutputCustomType.Constructor({"confidenceLevel"})
@@ -18,6 +22,10 @@ public final class SecurityProfileMachineLearningDetectionConfig {
         this.confidenceLevel = confidenceLevel;
     }
 
+    /**
+     * The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
+     * 
+     */
     public Optional<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
         return Optional.ofNullable(this.confidenceLevel);
     }

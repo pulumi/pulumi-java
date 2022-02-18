@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudFrontOriginAccessIdentity {
+/**
+ * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
+ * 
+ */
     public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> invokeAsync(GetCloudFrontOriginAccessIdentityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getCloudFrontOriginAccessIdentity", TypeShape.of(GetCloudFrontOriginAccessIdentityResult.class), args == null ? GetCloudFrontOriginAccessIdentityArgs.Empty : args, Utilities.withVersion(options));
     }

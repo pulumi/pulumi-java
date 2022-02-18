@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The automation configuration to launch.
+ * 
+ */
 public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePlanActionArgs Empty = new ResponsePlanActionArgs();

@@ -22,6 +22,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndexArgs Empty = new IndexArgs();
 
+    /**
+     * Capacity units
+     * 
+     */
     @InputImport(name="capacityUnits")
     private final @Nullable Input<IndexCapacityUnitsConfigurationArgs> capacityUnits;
 
@@ -29,6 +33,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacityUnits == null ? Input.empty() : this.capacityUnits;
     }
 
+    /**
+     * A description for the index
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +44,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Document metadata configurations
+     * 
+     */
     @InputImport(name="documentMetadataConfigurations")
     private final @Nullable Input<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
 
@@ -64,6 +76,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    /**
+     * Server side encryption configuration
+     * 
+     */
     @InputImport(name="serverSideEncryptionConfiguration")
     private final @Nullable Input<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
@@ -71,6 +87,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverSideEncryptionConfiguration == null ? Input.empty() : this.serverSideEncryptionConfiguration;
     }
 
+    /**
+     * Tags for labeling the index
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<IndexTagArgs>> tags;
 

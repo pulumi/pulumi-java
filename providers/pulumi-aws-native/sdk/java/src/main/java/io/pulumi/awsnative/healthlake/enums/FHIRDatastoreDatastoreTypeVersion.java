@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The FHIR version. Only R4 version data is supported.
+     * 
+     */
     @EnumType
     public enum FHIRDatastoreDatastoreTypeVersion {
         R4("R4");

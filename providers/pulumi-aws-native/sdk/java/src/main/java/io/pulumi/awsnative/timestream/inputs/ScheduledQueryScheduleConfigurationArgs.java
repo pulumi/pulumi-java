@@ -9,6 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration for when the scheduled query is executed.
+ * 
+ */
 public final class ScheduledQueryScheduleConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledQueryScheduleConfigurationArgs Empty = new ScheduledQueryScheduleConfigurationArgs();

@@ -24,6 +24,10 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
         return this.addSubnetIds == null ? Input.empty() : this.addSubnetIds;
     }
 
+    /**
+     * The options for the transit gateway vpc attachment.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<OptionsPropertiesArgs> options;
 

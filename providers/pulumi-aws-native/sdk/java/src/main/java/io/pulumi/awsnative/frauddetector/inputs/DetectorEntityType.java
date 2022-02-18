@@ -24,6 +24,10 @@ public final class DetectorEntityType extends io.pulumi.resources.InvokeArgs {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
+    /**
+     * The time when the entity type was created.
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable String createdTime;
 
@@ -31,6 +35,10 @@ public final class DetectorEntityType extends io.pulumi.resources.InvokeArgs {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
+    /**
+     * The description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -45,6 +53,10 @@ public final class DetectorEntityType extends io.pulumi.resources.InvokeArgs {
         return this.inline == null ? Optional.empty() : Optional.ofNullable(this.inline);
     }
 
+    /**
+     * The time when the entity type was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable String lastUpdatedTime;
 
@@ -59,6 +71,10 @@ public final class DetectorEntityType extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Tags associated with this entity type.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable List<DetectorTag> tags;
 

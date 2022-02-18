@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a pod.
+ * 
+ */
 public final class FargateProfileLabelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FargateProfileLabelArgs Empty = new FargateProfileLabelArgs();
 
+    /**
+     * The key name of the label.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class FargateProfileLabelArgs extends io.pulumi.resources.ResourceA
         return this.key;
     }
 
+    /**
+     * The value for the label.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

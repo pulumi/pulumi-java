@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallDomainList {
+/**
+ * Resource schema for AWS::Route53Resolver::FirewallDomainList.
+ * 
+ */
     public static CompletableFuture<GetFirewallDomainListResult> invokeAsync(GetFirewallDomainListArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getFirewallDomainList", TypeShape.of(GetFirewallDomainListResult.class), args == null ? GetFirewallDomainListArgs.Empty : args, Utilities.withVersion(options));
     }

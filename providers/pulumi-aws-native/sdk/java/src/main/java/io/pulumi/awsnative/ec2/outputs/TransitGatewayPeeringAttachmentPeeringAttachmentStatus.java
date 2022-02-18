@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus {
+    /**
+     * The status code.
+     * 
+     */
     private final @Nullable String code;
+    /**
+     * The status message, if applicable.
+     * 
+     */
     private final @Nullable String message;
 
     @OutputCustomType.Constructor({"code","message"})
@@ -22,9 +30,17 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus {
         this.message = message;
     }
 
+    /**
+     * The status code.
+     * 
+     */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
+    /**
+     * The status message, if applicable.
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

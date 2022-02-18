@@ -14,6 +14,10 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
 
     public static final TransitGatewayPeeringAttachmentPeeringAttachmentStatus Empty = new TransitGatewayPeeringAttachmentPeeringAttachmentStatus();
 
+    /**
+     * The status code.
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -21,6 +25,10 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * The status message, if applicable.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 

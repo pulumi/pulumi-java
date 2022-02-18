@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The destination repository for the container image.
+ * 
+ */
 public final class DistributionConfigurationTargetContainerRepository extends io.pulumi.resources.InvokeArgs {
 
     public static final DistributionConfigurationTargetContainerRepository Empty = new DistributionConfigurationTargetContainerRepository();
 
+    /**
+     * The repository name of target container repository.
+     * 
+     */
     @InputImport(name="repositoryName")
     private final @Nullable String repositoryName;
 
@@ -22,6 +30,10 @@ public final class DistributionConfigurationTargetContainerRepository extends io
         return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
     }
 
+    /**
+     * The service of target container repository.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable DistributionConfigurationTargetContainerRepositoryService service;
 

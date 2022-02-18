@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStackSet {
+/**
+ * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
+ * 
+ */
     public static CompletableFuture<GetStackSetResult> invokeAsync(GetStackSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getStackSet", TypeShape.of(GetStackSetResult.class), args == null ? GetStackSetArgs.Empty : args, Utilities.withVersion(options));
     }

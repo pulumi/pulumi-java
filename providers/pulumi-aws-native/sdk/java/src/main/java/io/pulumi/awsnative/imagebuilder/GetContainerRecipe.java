@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContainerRecipe {
+/**
+ * Resource schema for AWS::ImageBuilder::ContainerRecipe
+ * 
+ */
     public static CompletableFuture<GetContainerRecipeResult> invokeAsync(GetContainerRecipeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getContainerRecipe", TypeShape.of(GetContainerRecipeResult.class), args == null ? GetContainerRecipeArgs.Empty : args, Utilities.withVersion(options));
     }

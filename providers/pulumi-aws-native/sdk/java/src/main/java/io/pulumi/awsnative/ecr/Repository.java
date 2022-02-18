@@ -19,6 +19,12 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:ecr:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -39,9 +45,17 @@ public class Repository extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ RepositoryImageScanningConfiguration> getImageScanningConfiguration() {
         return this.imageScanningConfiguration;
     }
+    /**
+     * The image tag mutability setting for the repository.
+     * 
+     */
     @OutputExport(name="imageTagMutability", type=RepositoryImageTagMutability.class, parameters={})
     private Output</* @Nullable */ RepositoryImageTagMutability> imageTagMutability;
 
+    /**
+     * @return The image tag mutability setting for the repository.
+     * 
+     */
     public Output</* @Nullable */ RepositoryImageTagMutability> getImageTagMutability() {
         return this.imageTagMutability;
     }
@@ -51,15 +65,31 @@ public class Repository extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ RepositoryLifecyclePolicy> getLifecyclePolicy() {
         return this.lifecyclePolicy;
     }
+    /**
+     * The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app). If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html.
+     * 
+     */
     @OutputExport(name="repositoryName", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryName;
 
+    /**
+     * @return The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app). If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html.
+     * 
+     */
     public Output</* @Nullable */ String> getRepositoryName() {
         return this.repositoryName;
     }
+    /**
+     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
+     * 
+     */
     @OutputExport(name="repositoryPolicyText", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> repositoryPolicyText;
 
+    /**
+     * @return The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
+     * 
+     */
     public Output</* @Nullable */ Object> getRepositoryPolicyText() {
         return this.repositoryPolicyText;
     }
@@ -69,13 +99,27 @@ public class Repository extends io.pulumi.resources.CustomResource {
     public Output<String> getRepositoryUri() {
         return this.repositoryUri;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={RepositoryTag.class})
     private Output</* @Nullable */ List<RepositoryTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<RepositoryTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Repository(String name, @Nullable RepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ecr:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -91,6 +135,14 @@ public class Repository extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Repository get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Repository(name, id, options);
     }

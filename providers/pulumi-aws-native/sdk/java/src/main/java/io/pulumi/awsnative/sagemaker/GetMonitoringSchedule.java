@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMonitoringSchedule {
+/**
+ * Resource Type definition for AWS::SageMaker::MonitoringSchedule
+ * 
+ */
     public static CompletableFuture<GetMonitoringScheduleResult> invokeAsync(GetMonitoringScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getMonitoringSchedule", TypeShape.of(GetMonitoringScheduleResult.class), args == null ? GetMonitoringScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

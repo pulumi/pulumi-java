@@ -12,6 +12,10 @@ public final class GetPermissionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPermissionArgs Empty = new GetPermissionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
+     * 
+     */
     @InputImport(name="certificateAuthorityArn", required=true)
     private final String certificateAuthorityArn;
 
@@ -19,6 +23,10 @@ public final class GetPermissionArgs extends io.pulumi.resources.InvokeArgs {
         return this.certificateAuthorityArn;
     }
 
+    /**
+     * The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
+     * 
+     */
     @InputImport(name="principal", required=true)
     private final String principal;
 

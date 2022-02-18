@@ -24,6 +24,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Source connector details required to query a connector
+ * 
+ */
 public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowSourceConnectorPropertiesArgs Empty = new FlowSourceConnectorPropertiesArgs();

@@ -13,12 +13,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LaunchConfigurationBlockDevice {
+    /**
+     * Indicates whether the volume is deleted on instance termination.
+     * 
+     */
     private final @Nullable Boolean deleteOnTermination;
+    /**
+     * Specifies whether the volume should be encrypted.
+     * 
+     */
     private final @Nullable Boolean encrypted;
+    /**
+     * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
+     * 
+     */
     private final @Nullable Integer iops;
+    /**
+     * The snapshot ID of the volume to use.
+     * 
+     */
     private final @Nullable String snapshotId;
+    /**
+     * The throughput (MiBps) to provision for a gp3 volume.
+     * 
+     */
     private final @Nullable Integer throughput;
+    /**
+     * The volume size, in GiBs.
+     * 
+     */
     private final @Nullable Integer volumeSize;
+    /**
+     * The volume type.
+     * 
+     */
     private final @Nullable String volumeType;
 
     @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","snapshotId","throughput","volumeSize","volumeType"})
@@ -39,24 +67,52 @@ public final class LaunchConfigurationBlockDevice {
         this.volumeType = volumeType;
     }
 
+    /**
+     * Indicates whether the volume is deleted on instance termination.
+     * 
+     */
     public Optional<Boolean> getDeleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
+    /**
+     * Specifies whether the volume should be encrypted.
+     * 
+     */
     public Optional<Boolean> getEncrypted() {
         return Optional.ofNullable(this.encrypted);
     }
+    /**
+     * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
+     * 
+     */
     public Optional<Integer> getIops() {
         return Optional.ofNullable(this.iops);
     }
+    /**
+     * The snapshot ID of the volume to use.
+     * 
+     */
     public Optional<String> getSnapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
+    /**
+     * The throughput (MiBps) to provision for a gp3 volume.
+     * 
+     */
     public Optional<Integer> getThroughput() {
         return Optional.ofNullable(this.throughput);
     }
+    /**
+     * The volume size, in GiBs.
+     * 
+     */
     public Optional<Integer> getVolumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
+    /**
+     * The volume type.
+     * 
+     */
     public Optional<String> getVolumeType() {
         return Optional.ofNullable(this.volumeType);
     }

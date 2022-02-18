@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDisk {
+/**
+ * Resource Type definition for AWS::Lightsail::Disk
+ * 
+ */
     public static CompletableFuture<GetDiskResult> invokeAsync(GetDiskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getDisk", TypeShape.of(GetDiskResult.class), args == null ? GetDiskArgs.Empty : args, Utilities.withVersion(options));
     }

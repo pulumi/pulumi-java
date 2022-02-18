@@ -11,7 +11,15 @@ import java.util.Objects;
 @OutputCustomType
 public final class PackagingConfigurationSpekeKeyProvider {
     private final String roleArn;
+    /**
+     * The system IDs to include in key requests.
+     * 
+     */
     private final List<String> systemIds;
+    /**
+     * The URL of the external key provider service.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"roleArn","systemIds","url"})
@@ -27,9 +35,17 @@ public final class PackagingConfigurationSpekeKeyProvider {
     public String getRoleArn() {
         return this.roleArn;
     }
+    /**
+     * The system IDs to include in key requests.
+     * 
+     */
     public List<String> getSystemIds() {
         return this.systemIds;
     }
+    /**
+     * The URL of the external key provider service.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

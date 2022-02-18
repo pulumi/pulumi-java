@@ -25,6 +25,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connector specific configuration needed to create connector profile based on Authentication mechanism
+ * 
+ */
 public final class ConnectorProfileCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorProfileCredentialsArgs Empty = new ConnectorProfileCredentialsArgs();

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+     * 
+     */
     @EnumType
     public enum TaskFilterRuleFilterType {
         SimplePattern("SIMPLE_PATTERN");

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatastore {
+/**
+ * Resource Type definition for AWS::IoTAnalytics::Datastore
+ * 
+ */
     public static CompletableFuture<GetDatastoreResult> invokeAsync(GetDatastoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotanalytics:getDatastore", TypeShape.of(GetDatastoreResult.class), args == null ? GetDatastoreArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -18,6 +18,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayArgs Empty = new GatewayArgs();
 
+    /**
+     * A list of gateway capability summaries that each contain a namespace and status.
+     * 
+     */
     @InputImport(name="gatewayCapabilitySummaries")
     private final @Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
 
@@ -25,6 +29,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayCapabilitySummaries == null ? Input.empty() : this.gatewayCapabilitySummaries;
     }
 
+    /**
+     * A unique, friendly name for the gateway.
+     * 
+     */
     @InputImport(name="gatewayName")
     private final @Nullable Input<String> gatewayName;
 
@@ -32,6 +40,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayName == null ? Input.empty() : this.gatewayName;
     }
 
+    /**
+     * The gateway's platform. You can only specify one platform in a gateway.
+     * 
+     */
     @InputImport(name="gatewayPlatform", required=true)
     private final Input<GatewayPlatformArgs> gatewayPlatform;
 
@@ -39,6 +51,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayPlatform;
     }
 
+    /**
+     * A list of key-value pairs that contain metadata for the gateway.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<GatewayTagArgs>> tags;
 

@@ -16,6 +16,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizerArgs Empty = new AuthorizerArgs();
 
+    /**
+     * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
+     * 
+     */
     @InputImport(name="authType")
     private final @Nullable Input<String> authType;
 
@@ -23,6 +27,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.authType == null ? Input.empty() : this.authType;
     }
 
+    /**
+     * Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
+     * 
+     */
     @InputImport(name="authorizerCredentials")
     private final @Nullable Input<String> authorizerCredentials;
 
@@ -30,6 +38,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizerCredentials == null ? Input.empty() : this.authorizerCredentials;
     }
 
+    /**
+     * The TTL in seconds of cached authorizer results.
+     * 
+     */
     @InputImport(name="authorizerResultTtlInSeconds")
     private final @Nullable Input<Integer> authorizerResultTtlInSeconds;
 
@@ -37,6 +49,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizerResultTtlInSeconds == null ? Input.empty() : this.authorizerResultTtlInSeconds;
     }
 
+    /**
+     * Specifies the authorizer's Uniform Resource Identifier (URI).
+     * 
+     */
     @InputImport(name="authorizerUri")
     private final @Nullable Input<String> authorizerUri;
 
@@ -44,6 +60,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizerUri == null ? Input.empty() : this.authorizerUri;
     }
 
+    /**
+     * The identity source for which authorization is requested.
+     * 
+     */
     @InputImport(name="identitySource")
     private final @Nullable Input<String> identitySource;
 
@@ -51,6 +71,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.identitySource == null ? Input.empty() : this.identitySource;
     }
 
+    /**
+     * A validation expression for the incoming identity token.
+     * 
+     */
     @InputImport(name="identityValidationExpression")
     private final @Nullable Input<String> identityValidationExpression;
 
@@ -58,6 +82,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.identityValidationExpression == null ? Input.empty() : this.identityValidationExpression;
     }
 
+    /**
+     * The name of the authorizer.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -65,6 +93,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
+     * 
+     */
     @InputImport(name="providerARNs")
     private final @Nullable Input<List<String>> providerARNs;
 
@@ -72,6 +104,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.providerARNs == null ? Input.empty() : this.providerARNs;
     }
 
+    /**
+     * The identifier of the API.
+     * 
+     */
     @InputImport(name="restApiId", required=true)
     private final Input<String> restApiId;
 
@@ -79,6 +115,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
         return this.restApiId;
     }
 
+    /**
+     * The authorizer type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

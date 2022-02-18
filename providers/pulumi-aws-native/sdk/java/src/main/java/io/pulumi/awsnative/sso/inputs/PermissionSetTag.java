@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The metadata that you apply to the permission set to help you categorize and organize them.
+ * 
+ */
 public final class PermissionSetTag extends io.pulumi.resources.InvokeArgs {
 
     public static final PermissionSetTag Empty = new PermissionSetTag();

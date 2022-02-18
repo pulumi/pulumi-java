@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hardware of the Instance.
+ * 
+ */
 public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceHardware Empty = new InstanceHardware();
 
+    /**
+     * CPU count of the Instance.
+     * 
+     */
     @InputImport(name="cpuCount")
     private final @Nullable Integer cpuCount;
 
@@ -23,6 +31,10 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
         return this.cpuCount == null ? Optional.empty() : Optional.ofNullable(this.cpuCount);
     }
 
+    /**
+     * Disks attached to the Instance.
+     * 
+     */
     @InputImport(name="disks")
     private final @Nullable List<InstanceDisk> disks;
 
@@ -30,6 +42,10 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
         return this.disks == null ? List.of() : this.disks;
     }
 
+    /**
+     * RAM Size of the Instance.
+     * 
+     */
     @InputImport(name="ramSizeInGb")
     private final @Nullable Integer ramSizeInGb;
 

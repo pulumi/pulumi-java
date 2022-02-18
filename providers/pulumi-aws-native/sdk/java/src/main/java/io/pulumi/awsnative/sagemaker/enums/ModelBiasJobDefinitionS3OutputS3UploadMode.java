@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Whether to upload the results of the monitoring job continuously or after the job completes.
+     * 
+     */
     @EnumType
     public enum ModelBiasJobDefinitionS3OutputS3UploadMode {
         Continuous("Continuous"),

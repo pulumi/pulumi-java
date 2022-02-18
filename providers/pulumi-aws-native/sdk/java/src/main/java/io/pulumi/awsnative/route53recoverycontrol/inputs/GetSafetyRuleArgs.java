@@ -12,6 +12,10 @@ public final class GetSafetyRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSafetyRuleArgs Empty = new GetSafetyRuleArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the safety rule.
+     * 
+     */
     @InputImport(name="safetyRuleArn", required=true)
     private final String safetyRuleArn;
 

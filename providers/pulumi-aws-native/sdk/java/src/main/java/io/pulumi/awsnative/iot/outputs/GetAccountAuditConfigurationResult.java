@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 public final class GetAccountAuditConfigurationResult {
     private final @Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations;
     private final @Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations;
+    /**
+     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
+     * 
+     */
     private final @Nullable String roleArn;
 
     @OutputCustomType.Constructor({"auditCheckConfigurations","auditNotificationTargetConfigurations","roleArn"})
@@ -33,6 +37,10 @@ public final class GetAccountAuditConfigurationResult {
     public Optional<AccountAuditConfigurationAuditNotificationTargetConfigurations> getAuditNotificationTargetConfigurations() {
         return Optional.ofNullable(this.auditNotificationTargetConfigurations);
     }
+    /**
+     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
+     * 
+     */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }

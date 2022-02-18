@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>Theme error.</p>
+ * 
+ */
 public final class ThemeError extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeError Empty = new ThemeError();
 
+    /**
+     * <p>The error message.</p>
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 

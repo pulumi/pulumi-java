@@ -12,6 +12,10 @@ public final class GetCertificateAuthorityActivationArgs extends io.pulumi.resou
 
     public static final GetCertificateAuthorityActivationArgs Empty = new GetCertificateAuthorityActivationArgs();
 
+    /**
+     * Arn of the Certificate Authority.
+     * 
+     */
     @InputImport(name="certificateAuthorityArn", required=true)
     private final String certificateAuthorityArn;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines one of the values for a slot type.
+ * 
+ */
 public final class BotSampleValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSampleValueArgs Empty = new BotSampleValueArgs();
 
+    /**
+     * The value that can be used for a slot type.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

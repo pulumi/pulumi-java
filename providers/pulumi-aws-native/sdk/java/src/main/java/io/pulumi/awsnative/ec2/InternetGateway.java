@@ -14,21 +14,49 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::EC2::InternetGateway
+ * 
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws-native:ec2:InternetGateway")
 public class InternetGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * ID of internet gateway.
+     * 
+     */
     @OutputExport(name="internetGatewayId", type=String.class, parameters={})
     private Output<String> internetGatewayId;
 
+    /**
+     * @return ID of internet gateway.
+     * 
+     */
     public Output<String> getInternetGatewayId() {
         return this.internetGatewayId;
     }
+    /**
+     * Any tags to assign to the internet gateway.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={InternetGatewayTag.class})
     private Output</* @Nullable */ List<InternetGatewayTag>> tags;
 
+    /**
+     * @return Any tags to assign to the internet gateway.
+     * 
+     */
     public Output</* @Nullable */ List<InternetGatewayTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public InternetGateway(String name, @Nullable InternetGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:InternetGateway", name, args == null ? InternetGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -44,6 +72,14 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static InternetGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InternetGateway(name, id, options);
     }

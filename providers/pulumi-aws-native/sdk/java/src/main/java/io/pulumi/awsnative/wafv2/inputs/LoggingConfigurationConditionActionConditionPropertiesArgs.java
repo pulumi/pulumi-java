@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * A single action condition.
+ * 
+ */
 public final class LoggingConfigurationConditionActionConditionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingConfigurationConditionActionConditionPropertiesArgs Empty = new LoggingConfigurationConditionActionConditionPropertiesArgs();
 
+    /**
+     * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<LoggingConfigurationConditionActionConditionPropertiesAction> action;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCostCategory {
+/**
+ * Cost Category enables you to map your cost and usage into meaningful categories. You can use Cost Category to organize your costs using a rule-based engine.
+ * 
+ */
     public static CompletableFuture<GetCostCategoryResult> invokeAsync(GetCostCategoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ce:getCostCategory", TypeShape.of(GetCostCategoryResult.class), args == null ? GetCostCategoryArgs.Empty : args, Utilities.withVersion(options));
     }

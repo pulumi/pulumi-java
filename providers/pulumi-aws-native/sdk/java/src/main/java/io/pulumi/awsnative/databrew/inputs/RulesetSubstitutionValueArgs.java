@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate expression's substitution variable names with their values
+ * 
+ */
 public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesetSubstitutionValueArgs Empty = new RulesetSubstitutionValueArgs();
 
+    /**
+     * Value or column name
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 
@@ -20,6 +28,10 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
         return this.value;
     }
 
+    /**
+     * Variable name
+     * 
+     */
     @InputImport(name="valueReference", required=true)
     private final Input<String> valueReference;
 

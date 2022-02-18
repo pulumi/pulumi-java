@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGeofenceCollection {
+/**
+ * Definition of AWS::Location::GeofenceCollection Resource Type
+ * 
+ */
     public static CompletableFuture<GetGeofenceCollectionResult> invokeAsync(GetGeofenceCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getGeofenceCollection", TypeShape.of(GetGeofenceCollectionResult.class), args == null ? GetGeofenceCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

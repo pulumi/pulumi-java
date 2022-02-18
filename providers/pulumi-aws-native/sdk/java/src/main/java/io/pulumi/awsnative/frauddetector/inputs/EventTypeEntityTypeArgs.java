@@ -24,6 +24,10 @@ public final class EventTypeEntityTypeArgs extends io.pulumi.resources.ResourceA
         return this.arn == null ? Input.empty() : this.arn;
     }
 
+    /**
+     * The time when the event type was created.
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable Input<String> createdTime;
 
@@ -31,6 +35,10 @@ public final class EventTypeEntityTypeArgs extends io.pulumi.resources.ResourceA
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
+    /**
+     * The description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -45,6 +53,10 @@ public final class EventTypeEntityTypeArgs extends io.pulumi.resources.ResourceA
         return this.inline == null ? Input.empty() : this.inline;
     }
 
+    /**
+     * The time when the event type was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable Input<String> lastUpdatedTime;
 
@@ -59,6 +71,10 @@ public final class EventTypeEntityTypeArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this event type.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<EventTypeTagArgs>> tags;
 

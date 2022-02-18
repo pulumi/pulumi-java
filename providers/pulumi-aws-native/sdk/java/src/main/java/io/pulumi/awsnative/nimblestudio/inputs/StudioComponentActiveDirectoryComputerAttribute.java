@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>An LDAP attribute of an Active Directory computer account, in the form of a name:value pair.</p>
+ * 
+ */
 public final class StudioComponentActiveDirectoryComputerAttribute extends io.pulumi.resources.InvokeArgs {
 
     public static final StudioComponentActiveDirectoryComputerAttribute Empty = new StudioComponentActiveDirectoryComputerAttribute();
 
+    /**
+     * <p>The name for the LDAP attribute.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class StudioComponentActiveDirectoryComputerAttribute extends io.pu
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * <p>The value for the LDAP attribute.</p>
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

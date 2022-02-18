@@ -11,10 +11,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The log pattern set.
+ * 
+ */
 public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationLogPatternSetArgs Empty = new ApplicationLogPatternSetArgs();
 
+    /**
+     * The log patterns of a set.
+     * 
+     */
     @InputImport(name="logPatterns", required=true)
     private final Input<List<ApplicationLogPatternArgs>> logPatterns;
 
@@ -22,6 +30,10 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
         return this.logPatterns;
     }
 
+    /**
+     * The name of the log pattern set.
+     * 
+     */
     @InputImport(name="patternSetName", required=true)
     private final Input<String> patternSetName;
 

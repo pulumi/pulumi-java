@@ -14,6 +14,10 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
 
     public static final VirtualClusterContainerProviderArgs Empty = new VirtualClusterContainerProviderArgs();
 
+    /**
+     * The ID of the container cluster
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -28,6 +32,10 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
         return this.info;
     }
 
+    /**
+     * The type of the container provider
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

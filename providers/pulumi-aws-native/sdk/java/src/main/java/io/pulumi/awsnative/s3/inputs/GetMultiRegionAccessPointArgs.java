@@ -12,6 +12,10 @@ public final class GetMultiRegionAccessPointArgs extends io.pulumi.resources.Inv
 
     public static final GetMultiRegionAccessPointArgs Empty = new GetMultiRegionAccessPointArgs();
 
+    /**
+     * The name you want to assign to this Multi Region Access Point.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResolverRuleAssociation {
+/**
+ * Resource Type definition for AWS::Route53Resolver::ResolverRuleAssociation
+ * 
+ */
     public static CompletableFuture<GetResolverRuleAssociationResult> invokeAsync(GetResolverRuleAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverRuleAssociation", TypeShape.of(GetResolverRuleAssociationResult.class), args == null ? GetResolverRuleAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -17,6 +17,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
 
     public static final SamplingRuleUpdateArgs Empty = new SamplingRuleUpdateArgs();
 
+    /**
+     * Matches attributes derived from the request.
+     * 
+     */
     @InputImport(name="attributes")
     private final @Nullable Input<Object> attributes;
 
@@ -24,6 +28,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
+    /**
+     * The percentage of matching requests to instrument, after the reservoir is exhausted.
+     * 
+     */
     @InputImport(name="fixedRate")
     private final @Nullable Input<Double> fixedRate;
 
@@ -31,6 +39,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.fixedRate == null ? Input.empty() : this.fixedRate;
     }
 
+    /**
+     * Matches the HTTP method from a request URL.
+     * 
+     */
     @InputImport(name="hTTPMethod")
     private final @Nullable Input<String> hTTPMethod;
 
@@ -38,6 +50,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.hTTPMethod == null ? Input.empty() : this.hTTPMethod;
     }
 
+    /**
+     * Matches the hostname from a request URL.
+     * 
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -45,6 +61,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * The priority of the sampling rule.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -52,6 +72,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+     * 
+     */
     @InputImport(name="reservoirSize")
     private final @Nullable Input<Integer> reservoirSize;
 
@@ -59,6 +83,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.reservoirSize == null ? Input.empty() : this.reservoirSize;
     }
 
+    /**
+     * Matches the ARN of the AWS resource on which the service runs.
+     * 
+     */
     @InputImport(name="resourceARN")
     private final @Nullable Input<String> resourceARN;
 
@@ -80,6 +108,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
+    /**
+     * Matches the name that the service uses to identify itself in segments.
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -87,6 +119,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
+    /**
+     * Matches the origin that the service uses to identify its type in segments.
+     * 
+     */
     @InputImport(name="serviceType")
     private final @Nullable Input<String> serviceType;
 
@@ -94,6 +130,10 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
         return this.serviceType == null ? Input.empty() : this.serviceType;
     }
 
+    /**
+     * Matches the path from a request URL.
+     * 
+     */
     @InputImport(name="uRLPath")
     private final @Nullable Input<String> uRLPath;
 

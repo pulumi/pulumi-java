@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlowOutputVpcInterfaceAttachment {
+    /**
+     * The name of the VPC interface to use for this output.
+     * 
+     */
     private final @Nullable String vpcInterfaceName;
 
     @OutputCustomType.Constructor({"vpcInterfaceName"})
@@ -18,6 +22,10 @@ public final class FlowOutputVpcInterfaceAttachment {
         this.vpcInterfaceName = vpcInterfaceName;
     }
 
+    /**
+     * The name of the VPC interface to use for this output.
+     * 
+     */
     public Optional<String> getVpcInterfaceName() {
         return Optional.ofNullable(this.vpcInterfaceName);
     }

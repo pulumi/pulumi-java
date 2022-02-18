@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketLifecycleConfiguration {
+    /**
+     * A lifecycle rule for individual objects in an Amazon S3 bucket.
+     * 
+     */
     private final List<BucketRule> rules;
 
     @OutputCustomType.Constructor({"rules"})
@@ -17,6 +21,10 @@ public final class BucketLifecycleConfiguration {
         this.rules = Objects.requireNonNull(rules);
     }
 
+    /**
+     * A lifecycle rule for individual objects in an Amazon S3 bucket.
+     * 
+     */
     public List<BucketRule> getRules() {
         return this.rules;
     }

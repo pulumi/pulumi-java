@@ -12,6 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a resize cluster operation. For example, a scheduled action to run the `ResizeCluster` API operation.
+ * 
+ */
 public final class ScheduledActionResizeClusterMessage extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduledActionResizeClusterMessage Empty = new ScheduledActionResizeClusterMessage();

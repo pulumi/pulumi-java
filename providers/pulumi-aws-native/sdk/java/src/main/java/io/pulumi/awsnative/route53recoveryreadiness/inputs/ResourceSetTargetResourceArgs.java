@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The target resource that the Route 53 record points to.
+ * 
+ */
 public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSetTargetResourceArgs Empty = new ResourceSetTargetResourceArgs();

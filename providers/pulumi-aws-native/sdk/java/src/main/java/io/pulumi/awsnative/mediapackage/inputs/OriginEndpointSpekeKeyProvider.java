@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
+ * 
+ */
 public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.InvokeArgs {
 
     public static final OriginEndpointSpekeKeyProvider Empty = new OriginEndpointSpekeKeyProvider();
 
+    /**
+     * An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
+     * 
+     */
     @InputImport(name="certificateArn")
     private final @Nullable String certificateArn;
 
@@ -22,6 +30,10 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
         return this.certificateArn == null ? Optional.empty() : Optional.ofNullable(this.certificateArn);
     }
 
+    /**
+     * The resource ID to include in key requests.
+     * 
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 
@@ -29,6 +41,10 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
         return this.resourceId;
     }
 
+    /**
+     * An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
+     * 
+     */
     @InputImport(name="roleArn", required=true)
     private final String roleArn;
 
@@ -36,6 +52,10 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
         return this.roleArn;
     }
 
+    /**
+     * The system IDs to include in key requests.
+     * 
+     */
     @InputImport(name="systemIds", required=true)
     private final List<String> systemIds;
 
@@ -43,6 +63,10 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
         return this.systemIds;
     }
 
+    /**
+     * The URL of the external key provider service.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

@@ -12,6 +12,10 @@ public final class GetFindingsFilterArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetFindingsFilterArgs Empty = new GetFindingsFilterArgs();
 
+    /**
+     * Findings filter ID.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

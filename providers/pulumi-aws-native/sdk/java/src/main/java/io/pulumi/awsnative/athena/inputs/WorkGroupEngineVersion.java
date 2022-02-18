@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Athena engine version for running queries.
+ * 
+ */
 public final class WorkGroupEngineVersion extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkGroupEngineVersion Empty = new WorkGroupEngineVersion();

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalCluster {
+/**
+ * Resource Type definition for AWS::RDS::GlobalCluster
+ * 
+ */
     public static CompletableFuture<GetGlobalClusterResult> invokeAsync(GetGlobalClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getGlobalCluster", TypeShape.of(GetGlobalClusterResult.class), args == null ? GetGlobalClusterArgs.Empty : args, Utilities.withVersion(options));
     }

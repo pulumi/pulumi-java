@@ -20,6 +20,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Definition of the AWS::QuickSight::Analysis Resource Type.
+ * 
+ */
 @ResourceType(type="aws-native:quicksight:Analysis")
 public class Analysis extends io.pulumi.resources.CustomResource {
     @OutputExport(name="analysisId", type=String.class, parameters={})
@@ -28,9 +32,17 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     public Output<String> getAnalysisId() {
         return this.analysisId;
     }
+    /**
+     * <p>The Amazon Resource Name (ARN) of the analysis.</p>
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return <p>The Amazon Resource Name (ARN) of the analysis.</p>
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
@@ -40,33 +52,73 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
+    /**
+     * <p>The time that the analysis was created.</p>
+     * 
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return <p>The time that the analysis was created.</p>
+     * 
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * <p>The ARNs of the datasets of the analysis.</p>
+     * 
+     */
     @OutputExport(name="dataSetArns", type=List.class, parameters={String.class})
     private Output<List<String>> dataSetArns;
 
+    /**
+     * @return <p>The ARNs of the datasets of the analysis.</p>
+     * 
+     */
     public Output<List<String>> getDataSetArns() {
         return this.dataSetArns;
     }
+    /**
+     * <p>Errors associated with the analysis.</p>
+     * 
+     */
     @OutputExport(name="errors", type=List.class, parameters={AnalysisError.class})
     private Output</* @Nullable */ List<AnalysisError>> errors;
 
+    /**
+     * @return <p>Errors associated with the analysis.</p>
+     * 
+     */
     public Output</* @Nullable */ List<AnalysisError>> getErrors() {
         return this.errors;
     }
+    /**
+     * <p>The time that the analysis was last updated.</p>
+     * 
+     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
+    /**
+     * @return <p>The time that the analysis was last updated.</p>
+     * 
+     */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
+    /**
+     * <p>The descriptive name of the analysis.</p>
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return <p>The descriptive name of the analysis.</p>
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
@@ -76,15 +128,41 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ AnalysisParameters> getParameters() {
         return this.parameters;
     }
+    /**
+     * <p>A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the <code>Permissions</code> structure to grant permissions by
+     *             providing a list of AWS Identity and Access Management (IAM) action information for each
+     *             principal listed by Amazon Resource Name (ARN). </p>
+     * 
+     *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
+     * 
+     */
     @OutputExport(name="permissions", type=List.class, parameters={AnalysisResourcePermission.class})
     private Output</* @Nullable */ List<AnalysisResourcePermission>> permissions;
 
+    /**
+     * @return <p>A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the <code>Permissions</code> structure to grant permissions by
+     *             providing a list of AWS Identity and Access Management (IAM) action information for each
+     *             principal listed by Amazon Resource Name (ARN). </p>
+     * 
+     *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
+     * 
+     */
     public Output</* @Nullable */ List<AnalysisResourcePermission>> getPermissions() {
         return this.permissions;
     }
+    /**
+     * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
+     * 
+     */
     @OutputExport(name="sheets", type=List.class, parameters={AnalysisSheet.class})
     private Output<List<AnalysisSheet>> sheets;
 
+    /**
+     * @return <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
+     * 
+     */
     public Output<List<AnalysisSheet>> getSheets() {
         return this.sheets;
     }
@@ -100,19 +178,43 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     public Output<AnalysisResourceStatus> getStatus() {
         return this.status;
     }
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.</p>
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={AnalysisTag.class})
     private Output</* @Nullable */ List<AnalysisTag>> tags;
 
+    /**
+     * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.</p>
+     * 
+     */
     public Output</* @Nullable */ List<AnalysisTag>> getTags() {
         return this.tags;
     }
+    /**
+     * <p>The ARN of the theme of the analysis.</p>
+     * 
+     */
     @OutputExport(name="themeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> themeArn;
 
+    /**
+     * @return <p>The ARN of the theme of the analysis.</p>
+     * 
+     */
     public Output</* @Nullable */ String> getThemeArn() {
         return this.themeArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Analysis(String name, AnalysisArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:quicksight:Analysis", name, args == null ? AnalysisArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -128,6 +230,14 @@ public class Analysis extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Analysis get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Analysis(name, id, options);
     }

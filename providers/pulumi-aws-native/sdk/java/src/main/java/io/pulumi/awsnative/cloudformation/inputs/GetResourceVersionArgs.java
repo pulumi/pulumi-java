@@ -12,6 +12,10 @@ public final class GetResourceVersionArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetResourceVersionArgs Empty = new GetResourceVersionArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

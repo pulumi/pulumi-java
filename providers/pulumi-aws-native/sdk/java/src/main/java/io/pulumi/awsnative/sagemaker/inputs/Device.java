@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Edge device you want to create
+ * 
+ */
 public final class Device extends io.pulumi.resources.InvokeArgs {
 
     public static final Device Empty = new Device();
 
+    /**
+     * Description of the device
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -21,6 +29,10 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The name of the device
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -28,6 +40,10 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
         return this.deviceName;
     }
 
+    /**
+     * AWS Internet of Things (IoT) object name.
+     * 
+     */
     @InputImport(name="iotThingName")
     private final @Nullable String iotThingName;
 

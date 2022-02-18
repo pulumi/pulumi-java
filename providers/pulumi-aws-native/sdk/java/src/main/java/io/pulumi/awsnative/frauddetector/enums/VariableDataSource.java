@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The source of the data.
+     * 
+     */
     @EnumType
     public enum VariableDataSource {
         Event("EVENT"),

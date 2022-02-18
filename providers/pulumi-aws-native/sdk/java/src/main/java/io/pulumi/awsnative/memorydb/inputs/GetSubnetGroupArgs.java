@@ -12,6 +12,10 @@ public final class GetSubnetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSubnetGroupArgs Empty = new GetSubnetGroupArgs();
 
+    /**
+     * The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
+     * 
+     */
     @InputImport(name="subnetGroupName", required=true)
     private final String subnetGroupName;
 

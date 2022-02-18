@@ -14,6 +14,10 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ConfigurationSetArgs Empty = new ConfigurationSetArgs();
 
+    /**
+     * The name of the configuration set.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

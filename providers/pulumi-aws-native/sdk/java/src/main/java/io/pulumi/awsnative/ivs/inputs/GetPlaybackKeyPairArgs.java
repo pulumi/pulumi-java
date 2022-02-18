@@ -12,6 +12,10 @@ public final class GetPlaybackKeyPairArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetPlaybackKeyPairArgs Empty = new GetPlaybackKeyPairArgs();
 
+    /**
+     * Key-pair identifier.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

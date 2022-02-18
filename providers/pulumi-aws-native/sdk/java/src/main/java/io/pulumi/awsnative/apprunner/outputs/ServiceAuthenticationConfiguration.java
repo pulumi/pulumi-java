@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceAuthenticationConfiguration {
+    /**
+     * Access Role Arn
+     * 
+     */
     private final @Nullable String accessRoleArn;
+    /**
+     * Connection Arn
+     * 
+     */
     private final @Nullable String connectionArn;
 
     @OutputCustomType.Constructor({"accessRoleArn","connectionArn"})
@@ -22,9 +30,17 @@ public final class ServiceAuthenticationConfiguration {
         this.connectionArn = connectionArn;
     }
 
+    /**
+     * Access Role Arn
+     * 
+     */
     public Optional<String> getAccessRoleArn() {
         return Optional.ofNullable(this.accessRoleArn);
     }
+    /**
+     * Connection Arn
+     * 
+     */
     public Optional<String> getConnectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }

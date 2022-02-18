@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Input parameters in the form of key-value pairs for the conformance pack.
+ * 
+ */
 public final class OrganizationConformancePackConformancePackInputParameter extends io.pulumi.resources.InvokeArgs {
 
     public static final OrganizationConformancePackConformancePackInputParameter Empty = new OrganizationConformancePackConformancePackInputParameter();

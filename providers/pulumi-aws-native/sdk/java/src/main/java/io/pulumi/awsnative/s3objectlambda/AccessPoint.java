@@ -15,6 +15,10 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * The AWS::S3ObjectLambda::AccessPoint resource is an Amazon S3ObjectLambda resource type that you can use to add computation to S3 actions
+ * 
+ */
 @ResourceType(type="aws-native:s3objectlambda:AccessPoint")
 public class AccessPoint extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -23,21 +27,45 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * The date and time when the Object lambda Access Point was created.
+     * 
+     */
     @OutputExport(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
+    /**
+     * @return The date and time when the Object lambda Access Point was created.
+     * 
+     */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
+    /**
+     * The name you want to assign to this Object lambda Access Point.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name you want to assign to this Object lambda Access Point.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
+     * 
+     */
     @OutputExport(name="objectLambdaConfiguration", type=AccessPointObjectLambdaConfiguration.class, parameters={})
     private Output<AccessPointObjectLambdaConfiguration> objectLambdaConfiguration;
 
+    /**
+     * @return The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
+     * 
+     */
     public Output<AccessPointObjectLambdaConfiguration> getObjectLambdaConfiguration() {
         return this.objectLambdaConfiguration;
     }
@@ -47,13 +75,27 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
     public Output<PolicyStatusProperties> getPolicyStatus() {
         return this.policyStatus;
     }
+    /**
+     * The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     @OutputExport(name="publicAccessBlockConfiguration", type=AccessPointPublicAccessBlockConfiguration.class, parameters={})
     private Output<AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration;
 
+    /**
+     * @return The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     public Output<AccessPointPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AccessPoint(String name, AccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:s3objectlambda:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +111,14 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AccessPoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessPoint(name, id, options);
     }

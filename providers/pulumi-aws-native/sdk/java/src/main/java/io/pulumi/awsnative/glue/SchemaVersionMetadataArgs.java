@@ -13,6 +13,10 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
 
     public static final SchemaVersionMetadataArgs Empty = new SchemaVersionMetadataArgs();
 
+    /**
+     * Metadata key
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +24,10 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
         return this.key;
     }
 
+    /**
+     * Represents the version ID associated with the schema version.
+     * 
+     */
     @InputImport(name="schemaVersionId", required=true)
     private final Input<String> schemaVersionId;
 
@@ -27,6 +35,10 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
         return this.schemaVersionId;
     }
 
+    /**
+     * Metadata value
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

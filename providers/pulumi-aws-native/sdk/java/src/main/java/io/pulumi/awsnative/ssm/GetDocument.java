@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDocument {
+/**
+ * The AWS::SSM::Document resource is an SSM document in AWS Systems Manager that defines the actions that Systems Manager performs, which can be used to set up and run commands on your instances.
+ * 
+ */
     public static CompletableFuture<GetDocumentResult> invokeAsync(GetDocumentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssm:getDocument", TypeShape.of(GetDocumentResult.class), args == null ? GetDocumentArgs.Empty : args, Utilities.withVersion(options));
     }

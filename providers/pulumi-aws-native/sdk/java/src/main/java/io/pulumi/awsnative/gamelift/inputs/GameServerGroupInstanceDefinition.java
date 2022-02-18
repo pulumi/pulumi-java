@@ -10,6 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An allowed instance type for your game server group.
+ * 
+ */
 public final class GameServerGroupInstanceDefinition extends io.pulumi.resources.InvokeArgs {
 
     public static final GameServerGroupInstanceDefinition Empty = new GameServerGroupInstanceDefinition();

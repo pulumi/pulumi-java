@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResiliencyPolicy {
+/**
+ * Resource Type Definition for Resiliency Policy.
+ * 
+ */
     public static CompletableFuture<GetResiliencyPolicyResult> invokeAsync(GetResiliencyPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:resiliencehub:getResiliencyPolicy", TypeShape.of(GetResiliencyPolicyResult.class), args == null ? GetResiliencyPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

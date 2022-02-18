@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
+    /**
+     * The name of the query header to inspect.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +20,10 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The name of the query header to inspect.
+     * 
+     */
     public String getName() {
         return this.name;
     }

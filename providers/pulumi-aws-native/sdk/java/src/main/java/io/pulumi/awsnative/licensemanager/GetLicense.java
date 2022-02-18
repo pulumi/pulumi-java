@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLicense {
+/**
+ * Resource Type definition for AWS::LicenseManager::License
+ * 
+ */
     public static CompletableFuture<GetLicenseResult> invokeAsync(GetLicenseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:licensemanager:getLicense", TypeShape.of(GetLicenseResult.class), args == null ? GetLicenseArgs.Empty : args, Utilities.withVersion(options));
     }

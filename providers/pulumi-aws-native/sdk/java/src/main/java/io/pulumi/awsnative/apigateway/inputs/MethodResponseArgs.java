@@ -15,6 +15,10 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MethodResponseArgs Empty = new MethodResponseArgs();
 
+    /**
+     * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+     * 
+     */
     @InputImport(name="responseModels")
     private final @Nullable Input<Object> responseModels;
 
@@ -22,6 +26,10 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
         return this.responseModels == null ? Input.empty() : this.responseModels;
     }
 
+    /**
+     * Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
+     * 
+     */
     @InputImport(name="responseParameters")
     private final @Nullable Input<Object> responseParameters;
 
@@ -29,6 +37,10 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
         return this.responseParameters == null ? Input.empty() : this.responseParameters;
     }
 
+    /**
+     * The method response's status code, which you map to an IntegrationResponse.
+     * 
+     */
     @InputImport(name="statusCode", required=true)
     private final Input<String> statusCode;
 

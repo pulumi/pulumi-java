@@ -15,6 +15,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FleetArgs Empty = new FleetArgs();
 
+    /**
+     * The name of the fleet.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

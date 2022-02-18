@@ -16,39 +16,89 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::MediaPackage::PackagingGroup
+ * 
+ */
 @ResourceType(type="aws-native:mediapackage:PackagingGroup")
 public class PackagingGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * The ARN of the PackagingGroup.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The ARN of the PackagingGroup.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * CDN Authorization
+     * 
+     */
     @OutputExport(name="authorization", type=PackagingGroupAuthorization.class, parameters={})
     private Output</* @Nullable */ PackagingGroupAuthorization> authorization;
 
+    /**
+     * @return CDN Authorization
+     * 
+     */
     public Output</* @Nullable */ PackagingGroupAuthorization> getAuthorization() {
         return this.authorization;
     }
+    /**
+     * The fully qualified domain name for Assets in the PackagingGroup.
+     * 
+     */
     @OutputExport(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
+    /**
+     * @return The fully qualified domain name for Assets in the PackagingGroup.
+     * 
+     */
     public Output<String> getDomainName() {
         return this.domainName;
     }
+    /**
+     * The configuration parameters for egress access logging.
+     * 
+     */
     @OutputExport(name="egressAccessLogs", type=PackagingGroupLogConfiguration.class, parameters={})
     private Output</* @Nullable */ PackagingGroupLogConfiguration> egressAccessLogs;
 
+    /**
+     * @return The configuration parameters for egress access logging.
+     * 
+     */
     public Output</* @Nullable */ PackagingGroupLogConfiguration> getEgressAccessLogs() {
         return this.egressAccessLogs;
     }
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={PackagingGroupTag.class})
     private Output</* @Nullable */ List<PackagingGroupTag>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Output</* @Nullable */ List<PackagingGroupTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PackagingGroup(String name, @Nullable PackagingGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:mediapackage:PackagingGroup", name, args == null ? PackagingGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -64,6 +114,14 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PackagingGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PackagingGroup(name, id, options);
     }

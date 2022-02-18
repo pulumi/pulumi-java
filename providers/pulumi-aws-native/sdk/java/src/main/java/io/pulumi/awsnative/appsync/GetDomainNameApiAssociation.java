@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainNameApiAssociation {
+/**
+ * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
+ * 
+ */
     public static CompletableFuture<GetDomainNameApiAssociationResult> invokeAsync(GetDomainNameApiAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appsync:getDomainNameApiAssociation", TypeShape.of(GetDomainNameApiAssociationResult.class), args == null ? GetDomainNameApiAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

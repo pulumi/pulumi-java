@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Value that the slot type can take.
+ * 
+ */
 public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSlotTypeValueArgs Empty = new BotSlotTypeValueArgs();

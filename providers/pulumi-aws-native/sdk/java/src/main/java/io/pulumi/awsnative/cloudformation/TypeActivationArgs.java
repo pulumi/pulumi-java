@@ -18,6 +18,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TypeActivationArgs Empty = new TypeActivationArgs();
 
+    /**
+     * Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
+     * 
+     */
     @InputImport(name="autoUpdate")
     private final @Nullable Input<Boolean> autoUpdate;
 
@@ -25,6 +29,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoUpdate == null ? Input.empty() : this.autoUpdate;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
+     * 
+     */
     @InputImport(name="executionRoleArn")
     private final @Nullable Input<String> executionRoleArn;
 
@@ -32,6 +40,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
     }
 
+    /**
+     * Specifies logging configuration information for a type.
+     * 
+     */
     @InputImport(name="loggingConfig")
     private final @Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig;
 
@@ -39,6 +51,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
+    /**
+     * The Major Version of the type you want to enable
+     * 
+     */
     @InputImport(name="majorVersion")
     private final @Nullable Input<String> majorVersion;
 
@@ -46,6 +62,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.majorVersion == null ? Input.empty() : this.majorVersion;
     }
 
+    /**
+     * The Amazon Resource Number (ARN) assigned to the public extension upon publication
+     * 
+     */
     @InputImport(name="publicTypeArn")
     private final @Nullable Input<String> publicTypeArn;
 
@@ -53,6 +73,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicTypeArn == null ? Input.empty() : this.publicTypeArn;
     }
 
+    /**
+     * The publisher id assigned by CloudFormation for publishing in this region.
+     * 
+     */
     @InputImport(name="publisherId")
     private final @Nullable Input<String> publisherId;
 
@@ -60,6 +84,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.publisherId == null ? Input.empty() : this.publisherId;
     }
 
+    /**
+     * The kind of extension
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<TypeActivationType> type;
 
@@ -67,6 +95,12 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     @InputImport(name="typeName")
     private final @Nullable Input<String> typeName;
 
@@ -74,6 +108,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.typeName == null ? Input.empty() : this.typeName;
     }
 
+    /**
+     * An alias to assign to the public extension in this account and region. If you specify an alias for the extension, you must then use the alias to refer to the extension in your templates.
+     * 
+     */
     @InputImport(name="typeNameAlias")
     private final @Nullable Input<String> typeNameAlias;
 
@@ -81,6 +119,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
         return this.typeNameAlias == null ? Input.empty() : this.typeNameAlias;
     }
 
+    /**
+     * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
+     * 
+     */
     @InputImport(name="versionBump")
     private final @Nullable Input<TypeActivationVersionBump> versionBump;
 

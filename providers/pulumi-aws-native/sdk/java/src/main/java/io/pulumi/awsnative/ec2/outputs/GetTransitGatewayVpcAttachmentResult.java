@@ -16,6 +16,10 @@ import javax.annotation.Nullable;
 public final class GetTransitGatewayVpcAttachmentResult {
     private final @Nullable List<String> addSubnetIds;
     private final @Nullable String id;
+    /**
+     * The options for the transit gateway vpc attachment.
+     * 
+     */
     private final @Nullable OptionsProperties options;
     private final @Nullable List<String> removeSubnetIds;
     private final @Nullable List<TransitGatewayVpcAttachmentTag> tags;
@@ -40,6 +44,10 @@ public final class GetTransitGatewayVpcAttachmentResult {
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The options for the transit gateway vpc attachment.
+     * 
+     */
     public Optional<OptionsProperties> getOptions() {
         return Optional.ofNullable(this.options);
     }

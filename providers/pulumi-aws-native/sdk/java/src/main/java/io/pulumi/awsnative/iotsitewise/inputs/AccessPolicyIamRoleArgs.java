@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information for an IAM role identity in an access policy.
+ * 
+ */
 public final class AccessPolicyIamRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyIamRoleArgs Empty = new AccessPolicyIamRoleArgs();
 
+    /**
+     * The ARN of the IAM role.
+     * 
+     */
     @InputImport(name="arn")
     private final @Nullable Input<String> arn;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair to associate with a resource.
+ * 
+ */
 public final class ParameterGroupTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterGroupTagArgs Empty = new ParameterGroupTagArgs();
 
+    /**
+     * The key for the tag. May not be null.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +28,10 @@ public final class ParameterGroupTagArgs extends io.pulumi.resources.ResourceArg
         return this.key;
     }
 
+    /**
+     * The tag's value. May be null.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

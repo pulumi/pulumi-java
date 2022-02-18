@@ -17,7 +17,15 @@ public final class GetSafetyRuleResult {
     private final @Nullable SafetyRuleAssertionRule assertionRule;
     private final @Nullable SafetyRuleGatingRule gatingRule;
     private final @Nullable String name;
+    /**
+     * The Amazon Resource Name (ARN) of the safety rule.
+     * 
+     */
     private final @Nullable String safetyRuleArn;
+    /**
+     * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
+     * 
+     */
     private final @Nullable SafetyRuleStatus status;
 
     @OutputCustomType.Constructor({"assertionRule","gatingRule","name","safetyRuleArn","status"})
@@ -43,9 +51,17 @@ public final class GetSafetyRuleResult {
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The Amazon Resource Name (ARN) of the safety rule.
+     * 
+     */
     public Optional<String> getSafetyRuleArn() {
         return Optional.ofNullable(this.safetyRuleArn);
     }
+    /**
+     * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
+     * 
+     */
     public Optional<SafetyRuleStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

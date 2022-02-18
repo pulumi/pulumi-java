@@ -14,6 +14,10 @@ public final class AppImageConfigKernelSpecArgs extends io.pulumi.resources.Reso
 
     public static final AppImageConfigKernelSpecArgs Empty = new AppImageConfigKernelSpecArgs();
 
+    /**
+     * The display name of the kernel.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -21,6 +25,10 @@ public final class AppImageConfigKernelSpecArgs extends io.pulumi.resources.Reso
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the kernel.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -10,10 +10,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The display options for gutter spacing between tiles on a sheet.</p>
+ * 
+ */
 public final class ThemeGutterStyleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeGutterStyleArgs Empty = new ThemeGutterStyleArgs();
 
+    /**
+     * <p>This Boolean value controls whether to display a gutter space between sheet tiles.
+     *         </p>
+     * 
+     */
     @InputImport(name="show")
     private final @Nullable Input<Boolean> show;
 

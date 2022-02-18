@@ -10,10 +10,22 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The theme colors that apply to UI and to charts, excluding data colors. The colors
+ *             description is a hexadecimal color code that consists of six alphanumerical characters,
+ *             prefixed with <code>#</code>, for example #37BFF5. For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html">Using Themes in Amazon QuickSight</a> in the <i>Amazon QuickSight User
+ *                 Guide.</i>
+ *         </p>
+ * 
+ */
 public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeUIColorPaletteArgs Empty = new ThemeUIColorPaletteArgs();
 
+    /**
+     * <p>This color is that applies to selected states and buttons.</p>
+     * 
+     */
     @InputImport(name="accent")
     private final @Nullable Input<String> accent;
 
@@ -21,6 +33,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.accent == null ? Input.empty() : this.accent;
     }
 
+    /**
+     * <p>The foreground color that applies to any text or other elements that appear over the
+     *             accent color.</p>
+     * 
+     */
     @InputImport(name="accentForeground")
     private final @Nullable Input<String> accentForeground;
 
@@ -28,6 +45,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.accentForeground == null ? Input.empty() : this.accentForeground;
     }
 
+    /**
+     * <p>The color that applies to error messages.</p>
+     * 
+     */
     @InputImport(name="danger")
     private final @Nullable Input<String> danger;
 
@@ -35,6 +56,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.danger == null ? Input.empty() : this.danger;
     }
 
+    /**
+     * <p>The foreground color that applies to any text or other elements that appear over the
+     *             error color.</p>
+     * 
+     */
     @InputImport(name="dangerForeground")
     private final @Nullable Input<String> dangerForeground;
 
@@ -42,6 +68,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.dangerForeground == null ? Input.empty() : this.dangerForeground;
     }
 
+    /**
+     * <p>The color that applies to the names of fields that are identified as
+     *             dimensions.</p>
+     * 
+     */
     @InputImport(name="dimension")
     private final @Nullable Input<String> dimension;
 
@@ -49,6 +80,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.dimension == null ? Input.empty() : this.dimension;
     }
 
+    /**
+     * <p>The foreground color that applies to any text or other elements that appear over the
+     *             dimension color.</p>
+     * 
+     */
     @InputImport(name="dimensionForeground")
     private final @Nullable Input<String> dimensionForeground;
 
@@ -56,6 +92,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.dimensionForeground == null ? Input.empty() : this.dimensionForeground;
     }
 
+    /**
+     * <p>The color that applies to the names of fields that are identified as measures.</p>
+     * 
+     */
     @InputImport(name="measure")
     private final @Nullable Input<String> measure;
 
@@ -63,6 +103,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.measure == null ? Input.empty() : this.measure;
     }
 
+    /**
+     * <p>The foreground color that applies to any text or other elements that appear over the
+     *             measure color.</p>
+     * 
+     */
     @InputImport(name="measureForeground")
     private final @Nullable Input<String> measureForeground;
 
@@ -70,6 +115,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.measureForeground == null ? Input.empty() : this.measureForeground;
     }
 
+    /**
+     * <p>The background color that applies to visuals and other high emphasis UI.</p>
+     * 
+     */
     @InputImport(name="primaryBackground")
     private final @Nullable Input<String> primaryBackground;
 
@@ -77,6 +126,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.primaryBackground == null ? Input.empty() : this.primaryBackground;
     }
 
+    /**
+     * <p>The color of text and other foreground elements that appear over the primary
+     *             background regions, such as grid lines, borders, table banding, icons, and so on.</p>
+     * 
+     */
     @InputImport(name="primaryForeground")
     private final @Nullable Input<String> primaryForeground;
 
@@ -84,6 +138,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.primaryForeground == null ? Input.empty() : this.primaryForeground;
     }
 
+    /**
+     * <p>The background color that applies to the sheet background and sheet controls.</p>
+     * 
+     */
     @InputImport(name="secondaryBackground")
     private final @Nullable Input<String> secondaryBackground;
 
@@ -91,6 +149,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.secondaryBackground == null ? Input.empty() : this.secondaryBackground;
     }
 
+    /**
+     * <p>The foreground color that applies to any sheet title, sheet control text, or UI that
+     *             appears over the secondary background.</p>
+     * 
+     */
     @InputImport(name="secondaryForeground")
     private final @Nullable Input<String> secondaryForeground;
 
@@ -98,6 +161,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.secondaryForeground == null ? Input.empty() : this.secondaryForeground;
     }
 
+    /**
+     * <p>The color that applies to success messages, for example the check mark for a
+     *             successful download.</p>
+     * 
+     */
     @InputImport(name="success")
     private final @Nullable Input<String> success;
 
@@ -105,6 +173,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.success == null ? Input.empty() : this.success;
     }
 
+    /**
+     * <p>The foreground color that applies to any text or other elements that appear over the
+     *             success color.</p>
+     * 
+     */
     @InputImport(name="successForeground")
     private final @Nullable Input<String> successForeground;
 
@@ -112,6 +185,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.successForeground == null ? Input.empty() : this.successForeground;
     }
 
+    /**
+     * <p>This color that applies to warning and informational messages.</p>
+     * 
+     */
     @InputImport(name="warning")
     private final @Nullable Input<String> warning;
 
@@ -119,6 +196,11 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
         return this.warning == null ? Input.empty() : this.warning;
     }
 
+    /**
+     * <p>The foreground color that applies to any text or other elements that appear over the
+     *             warning color.</p>
+     * 
+     */
     @InputImport(name="warningForeground")
     private final @Nullable Input<String> warningForeground;
 

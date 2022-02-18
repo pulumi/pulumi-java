@@ -17,11 +17,39 @@ import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::MWAA::Environment
+ * 
+ */
 @ResourceType(type="aws-native:mwaa:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
+    /**
+     * Key/value pairs representing Airflow configuration variables.
+     *     Keys are prefixed by their section:
+     * 
+     *     [core]
+     *     dags_folder={AIRFLOW_HOME}/dags
+     *     
+     *     Would be represented as
+     *     
+     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
+     * 
+     */
     @OutputExport(name="airflowConfigurationOptions", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> airflowConfigurationOptions;
 
+    /**
+     * @return Key/value pairs representing Airflow configuration variables.
+     *     Keys are prefixed by their section:
+     * 
+     *     [core]
+     *     dags_folder={AIRFLOW_HOME}/dags
+     *     
+     *     Would be represented as
+     *     
+     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
+     * 
+     */
     public Output</* @Nullable */ Object> getAirflowConfigurationOptions() {
         return this.airflowConfigurationOptions;
     }
@@ -127,9 +155,17 @@ public class Environment extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getSourceBucketArn() {
         return this.sourceBucketArn;
     }
+    /**
+     * A map of tags for the environment.
+     * 
+     */
     @OutputExport(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
+    /**
+     * @return A map of tags for the environment.
+     * 
+     */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
@@ -152,6 +188,12 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return this.weeklyMaintenanceWindowStart;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Environment(String name, @Nullable EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:mwaa:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -167,6 +209,14 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Environment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Environment(name, id, options);
     }

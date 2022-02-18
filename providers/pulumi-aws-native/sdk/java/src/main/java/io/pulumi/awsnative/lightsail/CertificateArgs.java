@@ -16,6 +16,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
+    /**
+     * The name for the certificate.
+     * 
+     */
     @InputImport(name="certificateName")
     private final @Nullable Input<String> certificateName;
 
@@ -23,6 +27,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateName == null ? Input.empty() : this.certificateName;
     }
 
+    /**
+     * The domain name (e.g., example.com ) for the certificate.
+     * 
+     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -30,6 +38,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName;
     }
 
+    /**
+     * An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
+     * 
+     */
     @InputImport(name="subjectAlternativeNames")
     private final @Nullable Input<List<String>> subjectAlternativeNames;
 
@@ -37,6 +49,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<CertificateTagArgs>> tags;
 

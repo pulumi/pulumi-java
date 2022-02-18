@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecurityProfileStatisticalThreshold {
+    /**
+     * The percentile which resolves to a threshold value by which compliance with a behavior is determined
+     * 
+     */
     private final @Nullable SecurityProfileStatisticalThresholdStatistic statistic;
 
     @OutputCustomType.Constructor({"statistic"})
@@ -18,6 +22,10 @@ public final class SecurityProfileStatisticalThreshold {
         this.statistic = statistic;
     }
 
+    /**
+     * The percentile which resolves to a threshold value by which compliance with a behavior is determined
+     * 
+     */
     public Optional<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
         return Optional.ofNullable(this.statistic);
     }

@@ -23,6 +23,10 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.fairsharePolicy == null ? Input.empty() : this.fairsharePolicy;
     }
 
+    /**
+     * Name of Scheduling Policy.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +34,10 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A key-value pair to associate with a resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 

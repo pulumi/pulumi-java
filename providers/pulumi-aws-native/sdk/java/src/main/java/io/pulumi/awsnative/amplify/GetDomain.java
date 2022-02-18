@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
+/**
+ * The AWS::Amplify::Domain resource allows you to connect a custom domain to your app.
+ * 
+ */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplify:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

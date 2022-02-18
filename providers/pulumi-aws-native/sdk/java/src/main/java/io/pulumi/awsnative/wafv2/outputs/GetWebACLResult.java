@@ -27,6 +27,10 @@ public final class GetWebACLResult {
     private final @Nullable String description;
     private final @Nullable String id;
     private final @Nullable String labelNamespace;
+    /**
+     * Collection of Rules.
+     * 
+     */
     private final @Nullable List<WebACLRule> rules;
     private final @Nullable List<WebACLTag> tags;
     private final @Nullable WebACLVisibilityConfig visibilityConfig;
@@ -81,6 +85,10 @@ public final class GetWebACLResult {
     public Optional<String> getLabelNamespace() {
         return Optional.ofNullable(this.labelNamespace);
     }
+    /**
+     * Collection of Rules.
+     * 
+     */
     public List<WebACLRule> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

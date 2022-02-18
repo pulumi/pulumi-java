@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Provides settings for a message that is sent to the user when a fulfillment Lambda function starts running.
+ * 
+ */
 public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotFulfillmentStartResponseSpecificationArgs Empty = new BotFulfillmentStartResponseSpecificationArgs();
 
+    /**
+     * Determines whether the user can interrupt the start message while it is playing.
+     * 
+     */
     @InputImport(name="allowInterrupt")
     private final @Nullable Input<Boolean> allowInterrupt;
 
@@ -24,6 +32,10 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
         return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
     }
 
+    /**
+     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn't played.
+     * 
+     */
     @InputImport(name="delayInSeconds", required=true)
     private final Input<Integer> delayInSeconds;
 

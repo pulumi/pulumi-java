@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuleGroupsNamespace {
+/**
+ * RuleGroupsNamespace schema for cloudformation.
+ * 
+ */
     public static CompletableFuture<GetRuleGroupsNamespaceResult> invokeAsync(GetRuleGroupsNamespaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:aps:getRuleGroupsNamespace", TypeShape.of(GetRuleGroupsNamespaceResult.class), args == null ? GetRuleGroupsNamespaceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * S3 bucket destination settings for the Amazon S3 Storage Lens metrics export.
+ * 
+ */
 public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensS3BucketDestinationArgs Empty = new StorageLensS3BucketDestinationArgs();
 
+    /**
+     * The AWS account ID that owns the destination S3 bucket.
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 
@@ -24,6 +32,10 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
         return this.accountId;
     }
 
+    /**
+     * The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final Input<String> arn;
 
@@ -38,6 +50,10 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
+     * 
+     */
     @InputImport(name="format", required=true)
     private final Input<StorageLensS3BucketDestinationFormat> format;
 
@@ -45,6 +61,10 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
         return this.format;
     }
 
+    /**
+     * The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
+     * 
+     */
     @InputImport(name="outputSchemaVersion", required=true)
     private final Input<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
 
@@ -52,6 +72,10 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
         return this.outputSchemaVersion;
     }
 
+    /**
+     * The prefix to use for Amazon S3 Storage Lens export.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 

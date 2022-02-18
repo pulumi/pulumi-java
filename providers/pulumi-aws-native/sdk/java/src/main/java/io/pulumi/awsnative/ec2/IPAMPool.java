@@ -19,47 +19,107 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Schema of AWS::EC2::IPAMPool Type
+ * 
+ */
 @ResourceType(type="aws-native:ec2:IPAMPool")
 public class IPAMPool extends io.pulumi.resources.CustomResource {
+    /**
+     * The address family of the address space in this pool. Either IPv4 or IPv6.
+     * 
+     */
     @OutputExport(name="addressFamily", type=String.class, parameters={})
     private Output<String> addressFamily;
 
+    /**
+     * @return The address family of the address space in this pool. Either IPv4 or IPv6.
+     * 
+     */
     public Output<String> getAddressFamily() {
         return this.addressFamily;
     }
+    /**
+     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
+     * 
+     */
     @OutputExport(name="allocationDefaultNetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> allocationDefaultNetmaskLength;
 
+    /**
+     * @return The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
+     * 
+     */
     public Output</* @Nullable */ Integer> getAllocationDefaultNetmaskLength() {
         return this.allocationDefaultNetmaskLength;
     }
+    /**
+     * The maximum allowed netmask length for allocations made from this pool.
+     * 
+     */
     @OutputExport(name="allocationMaxNetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> allocationMaxNetmaskLength;
 
+    /**
+     * @return The maximum allowed netmask length for allocations made from this pool.
+     * 
+     */
     public Output</* @Nullable */ Integer> getAllocationMaxNetmaskLength() {
         return this.allocationMaxNetmaskLength;
     }
+    /**
+     * The minimum allowed netmask length for allocations made from this pool.
+     * 
+     */
     @OutputExport(name="allocationMinNetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> allocationMinNetmaskLength;
 
+    /**
+     * @return The minimum allowed netmask length for allocations made from this pool.
+     * 
+     */
     public Output</* @Nullable */ Integer> getAllocationMinNetmaskLength() {
         return this.allocationMinNetmaskLength;
     }
+    /**
+     * When specified, an allocation will not be allowed unless a resource has a matching set of tags.
+     * 
+     */
     @OutputExport(name="allocationResourceTags", type=List.class, parameters={IPAMPoolTag.class})
     private Output</* @Nullable */ List<IPAMPoolTag>> allocationResourceTags;
 
+    /**
+     * @return When specified, an allocation will not be allowed unless a resource has a matching set of tags.
+     * 
+     */
     public Output</* @Nullable */ List<IPAMPoolTag>> getAllocationResourceTags() {
         return this.allocationResourceTags;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the IPAM Pool.
+     * 
+     */
     @OutputExport(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IPAM Pool.
+     * 
+     */
     public Output<String> getArn() {
         return this.arn;
     }
+    /**
+     * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
+     * 
+     */
     @OutputExport(name="autoImport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoImport;
 
+    /**
+     * @return Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAutoImport() {
         return this.autoImport;
     }
@@ -69,85 +129,195 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the IPAM this pool is a part of.
+     * 
+     */
     @OutputExport(name="ipamArn", type=String.class, parameters={})
     private Output<String> ipamArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IPAM this pool is a part of.
+     * 
+     */
     public Output<String> getIpamArn() {
         return this.ipamArn;
     }
+    /**
+     * Id of the IPAM Pool.
+     * 
+     */
     @OutputExport(name="ipamPoolId", type=String.class, parameters={})
     private Output<String> ipamPoolId;
 
+    /**
+     * @return Id of the IPAM Pool.
+     * 
+     */
     public Output<String> getIpamPoolId() {
         return this.ipamPoolId;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the scope this pool is a part of.
+     * 
+     */
     @OutputExport(name="ipamScopeArn", type=String.class, parameters={})
     private Output<String> ipamScopeArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the scope this pool is a part of.
+     * 
+     */
     public Output<String> getIpamScopeArn() {
         return this.ipamScopeArn;
     }
+    /**
+     * The Id of the scope this pool is a part of.
+     * 
+     */
     @OutputExport(name="ipamScopeId", type=String.class, parameters={})
     private Output<String> ipamScopeId;
 
+    /**
+     * @return The Id of the scope this pool is a part of.
+     * 
+     */
     public Output<String> getIpamScopeId() {
         return this.ipamScopeId;
     }
+    /**
+     * Determines whether this scope contains publicly routable space or space for a private network
+     * 
+     */
     @OutputExport(name="ipamScopeType", type=IPAMPoolIpamScopeType.class, parameters={})
     private Output<IPAMPoolIpamScopeType> ipamScopeType;
 
+    /**
+     * @return Determines whether this scope contains publicly routable space or space for a private network
+     * 
+     */
     public Output<IPAMPoolIpamScopeType> getIpamScopeType() {
         return this.ipamScopeType;
     }
+    /**
+     * The region of this pool. If not set, this will default to "None" which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
+     * 
+     */
     @OutputExport(name="locale", type=String.class, parameters={})
     private Output</* @Nullable */ String> locale;
 
+    /**
+     * @return The region of this pool. If not set, this will default to "None" which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
+     * 
+     */
     public Output</* @Nullable */ String> getLocale() {
         return this.locale;
     }
+    /**
+     * The depth of this pool in the source pool hierarchy.
+     * 
+     */
     @OutputExport(name="poolDepth", type=Integer.class, parameters={})
     private Output<Integer> poolDepth;
 
+    /**
+     * @return The depth of this pool in the source pool hierarchy.
+     * 
+     */
     public Output<Integer> getPoolDepth() {
         return this.poolDepth;
     }
+    /**
+     * A list of cidrs representing the address space available for allocation in this pool.
+     * 
+     */
     @OutputExport(name="provisionedCidrs", type=List.class, parameters={IPAMPoolProvisionedCidr.class})
     private Output</* @Nullable */ List<IPAMPoolProvisionedCidr>> provisionedCidrs;
 
+    /**
+     * @return A list of cidrs representing the address space available for allocation in this pool.
+     * 
+     */
     public Output</* @Nullable */ List<IPAMPoolProvisionedCidr>> getProvisionedCidrs() {
         return this.provisionedCidrs;
     }
+    /**
+     * Determines whether or not address space from this pool is publicly advertised. Must be set if and only if the pool is IPv6.
+     * 
+     */
     @OutputExport(name="publiclyAdvertisable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publiclyAdvertisable;
 
+    /**
+     * @return Determines whether or not address space from this pool is publicly advertised. Must be set if and only if the pool is IPv6.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getPubliclyAdvertisable() {
         return this.publiclyAdvertisable;
     }
+    /**
+     * The Id of this pool's source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
+     * 
+     */
     @OutputExport(name="sourceIpamPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceIpamPoolId;
 
+    /**
+     * @return The Id of this pool's source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
+     * 
+     */
     public Output</* @Nullable */ String> getSourceIpamPoolId() {
         return this.sourceIpamPoolId;
     }
+    /**
+     * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
+     * 
+     */
     @OutputExport(name="state", type=IPAMPoolState.class, parameters={})
     private Output<IPAMPoolState> state;
 
+    /**
+     * @return The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
+     * 
+     */
     public Output<IPAMPoolState> getState() {
         return this.state;
     }
+    /**
+     * An explanation of how the pool arrived at it current state.
+     * 
+     */
     @OutputExport(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
+    /**
+     * @return An explanation of how the pool arrived at it current state.
+     * 
+     */
     public Output<String> getStateMessage() {
         return this.stateMessage;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={IPAMPoolTag.class})
     private Output</* @Nullable */ List<IPAMPoolTag>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Output</* @Nullable */ List<IPAMPoolTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IPAMPool(String name, IPAMPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:IPAMPool", name, args == null ? IPAMPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -163,6 +333,14 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IPAMPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IPAMPool(name, id, options);
     }

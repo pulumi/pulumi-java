@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>A parameter for a studio component script, in the form of a key:value pair.</p>
+ * 
+ */
 public final class StudioComponentScriptParameterKeyValue extends io.pulumi.resources.InvokeArgs {
 
     public static final StudioComponentScriptParameterKeyValue Empty = new StudioComponentScriptParameterKeyValue();
 
+    /**
+     * <p>A script parameter key.</p>
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -21,6 +29,10 @@ public final class StudioComponentScriptParameterKeyValue extends io.pulumi.reso
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * <p>A script parameter value.</p>
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

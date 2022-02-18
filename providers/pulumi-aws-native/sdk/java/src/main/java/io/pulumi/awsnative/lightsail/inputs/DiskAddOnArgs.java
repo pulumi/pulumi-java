@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A addon associate with a resource.
+ * 
+ */
 public final class DiskAddOnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskAddOnArgs Empty = new DiskAddOnArgs();
 
+    /**
+     * The add-on type
+     * 
+     */
     @InputImport(name="addOnType", required=true)
     private final Input<String> addOnType;
 
@@ -30,6 +38,10 @@ public final class DiskAddOnArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoSnapshotAddOnRequest == null ? Input.empty() : this.autoSnapshotAddOnRequest;
     }
 
+    /**
+     * Status of the Addon
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<DiskAddOnStatus> status;
 

@@ -12,6 +12,10 @@ public final class GetPrimaryTaskSetArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetPrimaryTaskSetArgs Empty = new GetPrimaryTaskSetArgs();
 
+    /**
+     * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+     * 
+     */
     @InputImport(name="cluster", required=true)
     private final String cluster;
 
@@ -19,6 +23,10 @@ public final class GetPrimaryTaskSetArgs extends io.pulumi.resources.InvokeArgs 
         return this.cluster;
     }
 
+    /**
+     * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final String service;
 

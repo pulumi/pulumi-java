@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Specifies default encryption for a bucket using server-side encryption with either Amazon S3-managed keys (SSE-S3) or AWS KMS-managed keys (SSE-KMS).
+ * 
+ */
 public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketEncryptionArgs Empty = new BucketEncryptionArgs();
 
+    /**
+     * Specifies the default server-side-encryption configuration.
+     * 
+     */
     @InputImport(name="serverSideEncryptionConfiguration", required=true)
     private final Input<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
 

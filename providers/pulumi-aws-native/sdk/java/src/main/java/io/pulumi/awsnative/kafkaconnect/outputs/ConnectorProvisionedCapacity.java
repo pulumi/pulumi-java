@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectorProvisionedCapacity {
+    /**
+     * Specifies how many MSK Connect Units (MCU) are allocated to the connector.
+     * 
+     */
     private final @Nullable Integer mcuCount;
+    /**
+     * Number of workers for a connector.
+     * 
+     */
     private final Integer workerCount;
 
     @OutputCustomType.Constructor({"mcuCount","workerCount"})
@@ -22,9 +30,17 @@ public final class ConnectorProvisionedCapacity {
         this.workerCount = Objects.requireNonNull(workerCount);
     }
 
+    /**
+     * Specifies how many MSK Connect Units (MCU) are allocated to the connector.
+     * 
+     */
     public Optional<Integer> getMcuCount() {
         return Optional.ofNullable(this.mcuCount);
     }
+    /**
+     * Number of workers for a connector.
+     * 
+     */
     public Integer getWorkerCount() {
         return this.workerCount;
     }

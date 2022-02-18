@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Location of a resource.
+ * 
+ */
 public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceLocationArgs Empty = new InstanceLocationArgs();
 
+    /**
+     * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     @InputImport(name="availabilityZone")
     private final @Nullable Input<String> availabilityZone;
 
@@ -21,6 +29,10 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
+    /**
+     * The Region Name in which to create your instance.
+     * 
+     */
     @InputImport(name="regionName")
     private final @Nullable Input<String> regionName;
 

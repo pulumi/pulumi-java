@@ -16,6 +16,10 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RobotArgs Empty = new RobotArgs();
 
+    /**
+     * The target architecture of the robot.
+     * 
+     */
     @InputImport(name="architecture", required=true)
     private final Input<RobotArchitecture> architecture;
 
@@ -23,6 +27,10 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
         return this.architecture;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the fleet.
+     * 
+     */
     @InputImport(name="fleet")
     private final @Nullable Input<String> fleet;
 
@@ -30,6 +38,10 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
         return this.fleet == null ? Input.empty() : this.fleet;
     }
 
+    /**
+     * The Greengrass group id.
+     * 
+     */
     @InputImport(name="greengrassGroupId", required=true)
     private final Input<String> greengrassGroupId;
 
@@ -37,6 +49,10 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
         return this.greengrassGroupId;
     }
 
+    /**
+     * The name for the robot.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

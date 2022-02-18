@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOriginEndpoint {
+/**
+ * Resource schema for AWS::MediaPackage::OriginEndpoint
+ * 
+ */
     public static CompletableFuture<GetOriginEndpointResult> invokeAsync(GetOriginEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getOriginEndpoint", TypeShape.of(GetOriginEndpointResult.class), args == null ? GetOriginEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

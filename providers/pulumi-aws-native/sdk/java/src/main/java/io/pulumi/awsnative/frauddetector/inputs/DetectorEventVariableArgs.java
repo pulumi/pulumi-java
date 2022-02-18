@@ -27,6 +27,10 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
         return this.arn == null ? Input.empty() : this.arn;
     }
 
+    /**
+     * The time when the event variable was created.
+     * 
+     */
     @InputImport(name="createdTime")
     private final @Nullable Input<String> createdTime;
 
@@ -55,6 +59,10 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
+    /**
+     * The description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -69,6 +77,10 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
         return this.inline == null ? Input.empty() : this.inline;
     }
 
+    /**
+     * The time when the event variable was last updated.
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable Input<String> lastUpdatedTime;
 
@@ -83,6 +95,10 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tags associated with this event variable.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<DetectorTagArgs>> tags;
 

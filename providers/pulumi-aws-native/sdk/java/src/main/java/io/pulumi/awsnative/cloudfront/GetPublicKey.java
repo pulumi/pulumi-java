@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicKey {
+/**
+ * Resource Type definition for AWS::CloudFront::PublicKey
+ * 
+ */
     public static CompletableFuture<GetPublicKeyResult> invokeAsync(GetPublicKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args == null ? GetPublicKeyArgs.Empty : args, Utilities.withVersion(options));
     }

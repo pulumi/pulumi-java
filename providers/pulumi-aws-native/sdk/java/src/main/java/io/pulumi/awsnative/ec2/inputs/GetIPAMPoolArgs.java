@@ -12,6 +12,10 @@ public final class GetIPAMPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIPAMPoolArgs Empty = new GetIPAMPoolArgs();
 
+    /**
+     * Id of the IPAM Pool.
+     * 
+     */
     @InputImport(name="ipamPoolId", required=true)
     private final String ipamPoolId;
 

@@ -23,10 +23,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the options that are available to control the behavior of a StartTaskExecution operation.
+ * 
+ */
 public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final TaskOptions Empty = new TaskOptions();
 
+    /**
+     * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written to).
+     * 
+     */
     @InputImport(name="atime")
     private final @Nullable TaskOptionsAtime atime;
 
@@ -34,6 +42,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.atime == null ? Optional.empty() : Optional.ofNullable(this.atime);
     }
 
+    /**
+     * A value that limits the bandwidth used by AWS DataSync.
+     * 
+     */
     @InputImport(name="bytesPerSecond")
     private final @Nullable Integer bytesPerSecond;
 
@@ -41,6 +53,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.bytesPerSecond == null ? Optional.empty() : Optional.ofNullable(this.bytesPerSecond);
     }
 
+    /**
+     * The group ID (GID) of the file's owners.
+     * 
+     */
     @InputImport(name="gid")
     private final @Nullable TaskOptionsGid gid;
 
@@ -48,6 +64,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.gid == null ? Optional.empty() : Optional.ofNullable(this.gid);
     }
 
+    /**
+     * A value that determines the types of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide.
+     * 
+     */
     @InputImport(name="logLevel")
     private final @Nullable TaskOptionsLogLevel logLevel;
 
@@ -55,6 +75,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
     }
 
+    /**
+     * A value that indicates the last time that a file was modified (that is, a file was written to) before the PREPARING phase.
+     * 
+     */
     @InputImport(name="mtime")
     private final @Nullable TaskOptionsMtime mtime;
 
@@ -62,6 +86,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.mtime == null ? Optional.empty() : Optional.ofNullable(this.mtime);
     }
 
+    /**
+     * A value that determines whether files at the destination should be overwritten or preserved when copying files.
+     * 
+     */
     @InputImport(name="overwriteMode")
     private final @Nullable TaskOptionsOverwriteMode overwriteMode;
 
@@ -69,6 +97,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.overwriteMode == null ? Optional.empty() : Optional.ofNullable(this.overwriteMode);
     }
 
+    /**
+     * A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file.
+     * 
+     */
     @InputImport(name="posixPermissions")
     private final @Nullable TaskOptionsPosixPermissions posixPermissions;
 
@@ -76,6 +108,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.posixPermissions == null ? Optional.empty() : Optional.ofNullable(this.posixPermissions);
     }
 
+    /**
+     * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
+     * 
+     */
     @InputImport(name="preserveDeletedFiles")
     private final @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles;
 
@@ -83,6 +119,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.preserveDeletedFiles == null ? Optional.empty() : Optional.ofNullable(this.preserveDeletedFiles);
     }
 
+    /**
+     * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and recreate the files with that device name and metadata on the destination.
+     * 
+     */
     @InputImport(name="preserveDevices")
     private final @Nullable TaskOptionsPreserveDevices preserveDevices;
 
@@ -90,6 +130,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.preserveDevices == null ? Optional.empty() : Optional.ofNullable(this.preserveDevices);
     }
 
+    /**
+     * A value that determines which components of the SMB security descriptor are copied during transfer.
+     * 
+     */
     @InputImport(name="securityDescriptorCopyFlags")
     private final @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags;
 
@@ -97,6 +141,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.securityDescriptorCopyFlags == null ? Optional.empty() : Optional.ofNullable(this.securityDescriptorCopyFlags);
     }
 
+    /**
+     * A value that determines whether tasks should be queued before executing the tasks.
+     * 
+     */
     @InputImport(name="taskQueueing")
     private final @Nullable TaskOptionsTaskQueueing taskQueueing;
 
@@ -104,6 +152,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.taskQueueing == null ? Optional.empty() : Optional.ofNullable(this.taskQueueing);
     }
 
+    /**
+     * A value that determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location.
+     * 
+     */
     @InputImport(name="transferMode")
     private final @Nullable TaskOptionsTransferMode transferMode;
 
@@ -111,6 +163,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.transferMode == null ? Optional.empty() : Optional.ofNullable(this.transferMode);
     }
 
+    /**
+     * The user ID (UID) of the file's owner.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable TaskOptionsUid uid;
 
@@ -118,6 +174,10 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
         return this.uid == null ? Optional.empty() : Optional.ofNullable(this.uid);
     }
 
+    /**
+     * A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred.
+     * 
+     */
     @InputImport(name="verifyMode")
     private final @Nullable TaskOptionsVerifyMode verifyMode;
 

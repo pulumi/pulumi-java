@@ -13,6 +13,10 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends i
 
     public static final ConnectorProfileSlackConnectorProfilePropertiesArgs Empty = new ConnectorProfileSlackConnectorProfilePropertiesArgs();
 
+    /**
+     * The location of the Slack resource
+     * 
+     */
     @InputImport(name="instanceUrl", required=true)
     private final Input<String> instanceUrl;
 

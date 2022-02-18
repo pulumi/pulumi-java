@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFeature {
+/**
+ * Resource Type definition for AWS::Evidently::Feature.
+ * 
+ */
     public static CompletableFuture<GetFeatureResult> invokeAsync(GetFeatureArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:evidently:getFeature", TypeShape.of(GetFeatureResult.class), args == null ? GetFeatureArgs.Empty : args, Utilities.withVersion(options));
     }

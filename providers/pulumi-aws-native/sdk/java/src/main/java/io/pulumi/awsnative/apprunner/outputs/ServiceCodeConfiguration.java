@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ServiceCodeConfiguration {
     private final @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
+    /**
+     * Configuration Source
+     * 
+     */
     private final ServiceCodeConfigurationConfigurationSource configurationSource;
 
     @OutputCustomType.Constructor({"codeConfigurationValues","configurationSource"})
@@ -26,6 +30,10 @@ public final class ServiceCodeConfiguration {
     public Optional<ServiceCodeConfigurationValues> getCodeConfigurationValues() {
         return Optional.ofNullable(this.codeConfigurationValues);
     }
+    /**
+     * Configuration Source
+     * 
+     */
     public ServiceCodeConfigurationConfigurationSource getConfigurationSource() {
         return this.configurationSource;
     }

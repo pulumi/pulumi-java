@@ -12,6 +12,10 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLinkArgs Empty = new GetLinkArgs();
 
+    /**
+     * The ID of the global network.
+     * 
+     */
     @InputImport(name="globalNetworkId", required=true)
     private final String globalNetworkId;
 
@@ -19,6 +23,10 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
         return this.globalNetworkId;
     }
 
+    /**
+     * The ID of the link.
+     * 
+     */
     @InputImport(name="linkId", required=true)
     private final String linkId;
 

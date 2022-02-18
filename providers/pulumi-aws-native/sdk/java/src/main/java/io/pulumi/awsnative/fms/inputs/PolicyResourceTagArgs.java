@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A resource tag.
+ * 
+ */
 public final class PolicyResourceTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyResourceTagArgs Empty = new PolicyResourceTagArgs();

@@ -9,6 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The output object for a monitoring job.
+ * 
+ */
 public final class ModelQualityJobDefinitionMonitoringOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelQualityJobDefinitionMonitoringOutputArgs Empty = new ModelQualityJobDefinitionMonitoringOutputArgs();

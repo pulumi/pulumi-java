@@ -15,6 +15,10 @@ public final class AnomalyDetectorMetricArgs extends io.pulumi.resources.Resourc
 
     public static final AnomalyDetectorMetricArgs Empty = new AnomalyDetectorMetricArgs();
 
+    /**
+     * Operator used to aggregate metric values
+     * 
+     */
     @InputImport(name="aggregationFunction", required=true)
     private final Input<AnomalyDetectorMetricAggregationFunction> aggregationFunction;
 

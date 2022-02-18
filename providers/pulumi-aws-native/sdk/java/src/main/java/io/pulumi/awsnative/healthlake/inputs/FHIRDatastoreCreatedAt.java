@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The time that a Data Store was created.
+ * 
+ */
 public final class FHIRDatastoreCreatedAt extends io.pulumi.resources.InvokeArgs {
 
     public static final FHIRDatastoreCreatedAt Empty = new FHIRDatastoreCreatedAt();
 
+    /**
+     * Nanoseconds.
+     * 
+     */
     @InputImport(name="nanos", required=true)
     private final Integer nanos;
 
@@ -20,6 +28,10 @@ public final class FHIRDatastoreCreatedAt extends io.pulumi.resources.InvokeArgs
         return this.nanos;
     }
 
+    /**
+     * Seconds since epoch.
+     * 
+     */
     @InputImport(name="seconds", required=true)
     private final String seconds;
 

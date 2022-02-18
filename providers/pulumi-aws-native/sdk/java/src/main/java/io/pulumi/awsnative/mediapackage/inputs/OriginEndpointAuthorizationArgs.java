@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * CDN Authorization credentials
+ * 
+ */
 public final class OriginEndpointAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OriginEndpointAuthorizationArgs Empty = new OriginEndpointAuthorizationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+     * 
+     */
     @InputImport(name="cdnIdentifierSecret", required=true)
     private final Input<String> cdnIdentifierSecret;
 
@@ -20,6 +28,10 @@ public final class OriginEndpointAuthorizationArgs extends io.pulumi.resources.R
         return this.cdnIdentifierSecret;
     }
 
+    /**
+     * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+     * 
+     */
     @InputImport(name="secretsRoleArn", required=true)
     private final Input<String> secretsRoleArn;
 

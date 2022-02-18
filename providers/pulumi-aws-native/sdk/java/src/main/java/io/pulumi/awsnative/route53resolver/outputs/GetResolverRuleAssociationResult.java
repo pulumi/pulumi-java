@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetResolverRuleAssociationResult {
+    /**
+     * Primary Identifier for Resolver Rule Association
+     * 
+     */
     private final @Nullable String resolverRuleAssociationId;
 
     @OutputCustomType.Constructor({"resolverRuleAssociationId"})
@@ -18,6 +22,10 @@ public final class GetResolverRuleAssociationResult {
         this.resolverRuleAssociationId = resolverRuleAssociationId;
     }
 
+    /**
+     * Primary Identifier for Resolver Rule Association
+     * 
+     */
     public Optional<String> getResolverRuleAssociationId() {
         return Optional.ofNullable(this.resolverRuleAssociationId);
     }

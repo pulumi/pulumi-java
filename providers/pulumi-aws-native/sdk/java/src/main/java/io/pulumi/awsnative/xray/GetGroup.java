@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroup {
+/**
+ * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
+ * 
+ */
     public static CompletableFuture<GetGroupResult> invokeAsync(GetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:xray:getGroup", TypeShape.of(GetGroupResult.class), args == null ? GetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

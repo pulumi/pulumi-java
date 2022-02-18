@@ -16,6 +16,10 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ControlPanelArgs Empty = new ControlPanelArgs();
 
+    /**
+     * Cluster to associate with the Control Panel
+     * 
+     */
     @InputImport(name="clusterArn")
     private final @Nullable Input<String> clusterArn;
 
@@ -23,6 +27,10 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterArn == null ? Input.empty() : this.clusterArn;
     }
 
+    /**
+     * The name of the control panel. You can use any non-white space character in the name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +38,10 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A collection of tags associated with a resource
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<ControlPanelTagArgs>> tags;
 

@@ -13,6 +13,10 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class RecipeStep {
     private final RecipeAction action;
+    /**
+     * Condition expressions applied to the step action
+     * 
+     */
     private final @Nullable List<RecipeConditionExpression> conditionExpressions;
 
     @OutputCustomType.Constructor({"action","conditionExpressions"})
@@ -26,6 +30,10 @@ public final class RecipeStep {
     public RecipeAction getAction() {
         return this.action;
     }
+    /**
+     * Condition expressions applied to the step action
+     * 
+     */
     public List<RecipeConditionExpression> getConditionExpressions() {
         return this.conditionExpressions == null ? List.of() : this.conditionExpressions;
     }

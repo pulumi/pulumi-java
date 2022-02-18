@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicaKey {
+/**
+ * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
+ * 
+ */
     public static CompletableFuture<GetReplicaKeyResult> invokeAsync(GetReplicaKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kms:getReplicaKey", TypeShape.of(GetReplicaKeyResult.class), args == null ? GetReplicaKeyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>A list of QuickSight parameters and the list's override values.</p>
+ * 
+ */
 public final class DashboardParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardParametersArgs Empty = new DashboardParametersArgs();
 
+    /**
+     * <p>Date-time parameters.</p>
+     * 
+     */
     @InputImport(name="dateTimeParameters")
     private final @Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
 
@@ -25,6 +33,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
         return this.dateTimeParameters == null ? Input.empty() : this.dateTimeParameters;
     }
 
+    /**
+     * <p>Decimal parameters.</p>
+     * 
+     */
     @InputImport(name="decimalParameters")
     private final @Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters;
 
@@ -32,6 +44,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
         return this.decimalParameters == null ? Input.empty() : this.decimalParameters;
     }
 
+    /**
+     * <p>Integer parameters.</p>
+     * 
+     */
     @InputImport(name="integerParameters")
     private final @Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters;
 
@@ -39,6 +55,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
         return this.integerParameters == null ? Input.empty() : this.integerParameters;
     }
 
+    /**
+     * <p>String parameters.</p>
+     * 
+     */
     @InputImport(name="stringParameters")
     private final @Nullable Input<List<DashboardStringParameterArgs>> stringParameters;
 

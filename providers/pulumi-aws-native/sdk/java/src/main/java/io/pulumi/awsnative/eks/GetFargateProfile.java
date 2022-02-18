@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFargateProfile {
+/**
+ * Resource Schema for AWS::EKS::FargateProfile
+ * 
+ */
     public static CompletableFuture<GetFargateProfileResult> invokeAsync(GetFargateProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:eks:getFargateProfile", TypeShape.of(GetFargateProfileResult.class), args == null ? GetFargateProfileArgs.Empty : args, Utilities.withVersion(options));
     }

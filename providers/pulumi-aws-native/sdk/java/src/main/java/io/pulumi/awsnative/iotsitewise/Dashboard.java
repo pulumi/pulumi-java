@@ -14,51 +14,117 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource schema for AWS::IoTSiteWise::Dashboard
+ * 
+ */
 @ResourceType(type="aws-native:iotsitewise:Dashboard")
 public class Dashboard extends io.pulumi.resources.CustomResource {
+    /**
+     * The ARN of the dashboard.
+     * 
+     */
     @OutputExport(name="dashboardArn", type=String.class, parameters={})
     private Output<String> dashboardArn;
 
+    /**
+     * @return The ARN of the dashboard.
+     * 
+     */
     public Output<String> getDashboardArn() {
         return this.dashboardArn;
     }
+    /**
+     * The dashboard definition specified in a JSON literal.
+     * 
+     */
     @OutputExport(name="dashboardDefinition", type=String.class, parameters={})
     private Output<String> dashboardDefinition;
 
+    /**
+     * @return The dashboard definition specified in a JSON literal.
+     * 
+     */
     public Output<String> getDashboardDefinition() {
         return this.dashboardDefinition;
     }
+    /**
+     * A description for the dashboard.
+     * 
+     */
     @OutputExport(name="dashboardDescription", type=String.class, parameters={})
     private Output<String> dashboardDescription;
 
+    /**
+     * @return A description for the dashboard.
+     * 
+     */
     public Output<String> getDashboardDescription() {
         return this.dashboardDescription;
     }
+    /**
+     * The ID of the dashboard.
+     * 
+     */
     @OutputExport(name="dashboardId", type=String.class, parameters={})
     private Output<String> dashboardId;
 
+    /**
+     * @return The ID of the dashboard.
+     * 
+     */
     public Output<String> getDashboardId() {
         return this.dashboardId;
     }
+    /**
+     * A friendly name for the dashboard.
+     * 
+     */
     @OutputExport(name="dashboardName", type=String.class, parameters={})
     private Output<String> dashboardName;
 
+    /**
+     * @return A friendly name for the dashboard.
+     * 
+     */
     public Output<String> getDashboardName() {
         return this.dashboardName;
     }
+    /**
+     * The ID of the project in which to create the dashboard.
+     * 
+     */
     @OutputExport(name="projectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectId;
 
+    /**
+     * @return The ID of the project in which to create the dashboard.
+     * 
+     */
     public Output</* @Nullable */ String> getProjectId() {
         return this.projectId;
     }
+    /**
+     * A list of key-value pairs that contain metadata for the dashboard.
+     * 
+     */
     @OutputExport(name="tags", type=List.class, parameters={DashboardTag.class})
     private Output</* @Nullable */ List<DashboardTag>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the dashboard.
+     * 
+     */
     public Output</* @Nullable */ List<DashboardTag>> getTags() {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Dashboard(String name, DashboardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iotsitewise:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +140,14 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Dashboard get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Dashboard(name, id, options);
     }

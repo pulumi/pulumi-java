@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Must be RuleName
+     * 
+     */
     @EnumType
     public enum DestinationExpressionType {
         RuleName("RuleName"),

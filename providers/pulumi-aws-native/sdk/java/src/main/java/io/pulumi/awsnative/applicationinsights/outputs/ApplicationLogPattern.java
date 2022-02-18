@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApplicationLogPattern {
+    /**
+     * The log pattern.
+     * 
+     */
     private final String pattern;
+    /**
+     * The name of the log pattern.
+     * 
+     */
     private final String patternName;
+    /**
+     * Rank of the log pattern.
+     * 
+     */
     private final Integer rank;
 
     @OutputCustomType.Constructor({"pattern","patternName","rank"})
@@ -24,12 +36,24 @@ public final class ApplicationLogPattern {
         this.rank = Objects.requireNonNull(rank);
     }
 
+    /**
+     * The log pattern.
+     * 
+     */
     public String getPattern() {
         return this.pattern;
     }
+    /**
+     * The name of the log pattern.
+     * 
+     */
     public String getPatternName() {
         return this.patternName;
     }
+    /**
+     * Rank of the log pattern.
+     * 
+     */
     public Integer getRank() {
         return this.rank;
     }

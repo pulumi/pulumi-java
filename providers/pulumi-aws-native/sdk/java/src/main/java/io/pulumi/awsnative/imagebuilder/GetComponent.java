@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponent {
+/**
+ * Resource schema for AWS::ImageBuilder::Component
+ * 
+ */
     public static CompletableFuture<GetComponentResult> invokeAsync(GetComponentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getComponent", TypeShape.of(GetComponentResult.class), args == null ? GetComponentArgs.Empty : args, Utilities.withVersion(options));
     }

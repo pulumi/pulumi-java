@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Secondary input
+ * 
+ */
 public final class RecipeSecondaryInput extends io.pulumi.resources.InvokeArgs {
 
     public static final RecipeSecondaryInput Empty = new RecipeSecondaryInput();

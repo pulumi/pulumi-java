@@ -21,6 +21,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Resource Type definition for AWS::KafkaConnect::Connector
+ * 
+ */
 @ResourceType(type="aws-native:kafkaconnect:Connector")
 public class Connector extends io.pulumi.resources.CustomResource {
     @OutputExport(name="capacity", type=ConnectorCapacity.class, parameters={})
@@ -29,27 +33,59 @@ public class Connector extends io.pulumi.resources.CustomResource {
     public Output<ConnectorCapacity> getCapacity() {
         return this.capacity;
     }
+    /**
+     * Amazon Resource Name for the created Connector.
+     * 
+     */
     @OutputExport(name="connectorArn", type=String.class, parameters={})
     private Output<String> connectorArn;
 
+    /**
+     * @return Amazon Resource Name for the created Connector.
+     * 
+     */
     public Output<String> getConnectorArn() {
         return this.connectorArn;
     }
+    /**
+     * The configuration for the connector.
+     * 
+     */
     @OutputExport(name="connectorConfiguration", type=Object.class, parameters={})
     private Output<Object> connectorConfiguration;
 
+    /**
+     * @return The configuration for the connector.
+     * 
+     */
     public Output<Object> getConnectorConfiguration() {
         return this.connectorConfiguration;
     }
+    /**
+     * A summary description of the connector.
+     * 
+     */
     @OutputExport(name="connectorDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorDescription;
 
+    /**
+     * @return A summary description of the connector.
+     * 
+     */
     public Output</* @Nullable */ String> getConnectorDescription() {
         return this.connectorDescription;
     }
+    /**
+     * The name of the connector.
+     * 
+     */
     @OutputExport(name="connectorName", type=String.class, parameters={})
     private Output<String> connectorName;
 
+    /**
+     * @return The name of the connector.
+     * 
+     */
     public Output<String> getConnectorName() {
         return this.connectorName;
     }
@@ -71,9 +107,17 @@ public class Connector extends io.pulumi.resources.CustomResource {
     public Output<ConnectorKafkaClusterEncryptionInTransit> getKafkaClusterEncryptionInTransit() {
         return this.kafkaClusterEncryptionInTransit;
     }
+    /**
+     * The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
+     * 
+     */
     @OutputExport(name="kafkaConnectVersion", type=String.class, parameters={})
     private Output<String> kafkaConnectVersion;
 
+    /**
+     * @return The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
+     * 
+     */
     public Output<String> getKafkaConnectVersion() {
         return this.kafkaConnectVersion;
     }
@@ -83,15 +127,31 @@ public class Connector extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ConnectorLogDelivery> getLogDelivery() {
         return this.logDelivery;
     }
+    /**
+     * List of plugins to use with the connector.
+     * 
+     */
     @OutputExport(name="plugins", type=List.class, parameters={ConnectorPlugin.class})
     private Output<List<ConnectorPlugin>> plugins;
 
+    /**
+     * @return List of plugins to use with the connector.
+     * 
+     */
     public Output<List<ConnectorPlugin>> getPlugins() {
         return this.plugins;
     }
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
+     * 
+     */
     @OutputExport(name="serviceExecutionRoleArn", type=String.class, parameters={})
     private Output<String> serviceExecutionRoleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
+     * 
+     */
     public Output<String> getServiceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;
     }
@@ -102,6 +162,12 @@ public class Connector extends io.pulumi.resources.CustomResource {
         return this.workerConfiguration;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Connector(String name, ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:kafkaconnect:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -117,6 +183,14 @@ public class Connector extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Connector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Connector(name, id, options);
     }

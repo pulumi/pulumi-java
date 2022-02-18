@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A log to be monitored for the component.
+ * 
+ */
 public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationLogArgs Empty = new ApplicationLogArgs();
 
+    /**
+     * The type of encoding of the logs to be monitored.
+     * 
+     */
     @InputImport(name="encoding")
     private final @Nullable Input<ApplicationLogEncoding> encoding;
 
@@ -22,6 +30,10 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.encoding == null ? Input.empty() : this.encoding;
     }
 
+    /**
+     * The CloudWatch log group name to be associated to the monitored log.
+     * 
+     */
     @InputImport(name="logGroupName")
     private final @Nullable Input<String> logGroupName;
 
@@ -29,6 +41,10 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
     }
 
+    /**
+     * The path of the logs to be monitored.
+     * 
+     */
     @InputImport(name="logPath")
     private final @Nullable Input<String> logPath;
 
@@ -36,6 +52,10 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.logPath == null ? Input.empty() : this.logPath;
     }
 
+    /**
+     * The log type decides the log patterns against which Application Insights analyzes the log.
+     * 
+     */
     @InputImport(name="logType", required=true)
     private final Input<String> logType;
 
@@ -43,6 +63,10 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
         return this.logType;
     }
 
+    /**
+     * The name of the log pattern set.
+     * 
+     */
     @InputImport(name="patternSet")
     private final @Nullable Input<String> patternSet;
 

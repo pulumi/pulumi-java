@@ -11,6 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The typeface for the theme.</p>
+ * 
+ */
 public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeTypographyArgs Empty = new ThemeTypographyArgs();

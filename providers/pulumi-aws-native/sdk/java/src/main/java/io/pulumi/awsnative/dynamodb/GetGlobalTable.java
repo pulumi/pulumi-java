@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalTable {
+/**
+ * Version: None. Resource Type definition for AWS::DynamoDB::GlobalTable
+ * 
+ */
     public static CompletableFuture<GetGlobalTableResult> invokeAsync(GetGlobalTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:dynamodb:getGlobalTable", TypeShape.of(GetGlobalTableResult.class), args == null ? GetGlobalTableArgs.Empty : args, Utilities.withVersion(options));
     }

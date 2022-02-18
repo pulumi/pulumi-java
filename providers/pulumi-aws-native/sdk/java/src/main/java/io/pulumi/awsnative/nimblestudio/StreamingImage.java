@@ -15,17 +15,37 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a streaming session machine image that can be used to launch a streaming session
+ * 
+ */
 @ResourceType(type="aws-native:nimblestudio:StreamingImage")
 public class StreamingImage extends io.pulumi.resources.CustomResource {
+    /**
+     * <p>A human-readable description of the streaming image.</p>
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return <p>A human-readable description of the streaming image.</p>
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * <p>The ID of an EC2 machine image with which to create this streaming image.</p>
+     * 
+     */
     @OutputExport(name="ec2ImageId", type=String.class, parameters={})
     private Output<String> ec2ImageId;
 
+    /**
+     * @return <p>The ID of an EC2 machine image with which to create this streaming image.</p>
+     * 
+     */
     public Output<String> getEc2ImageId() {
         return this.ec2ImageId;
     }
@@ -35,27 +55,59 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
     public Output<StreamingImageEncryptionConfiguration> getEncryptionConfiguration() {
         return this.encryptionConfiguration;
     }
+    /**
+     * <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
+     * 
+     */
     @OutputExport(name="eulaIds", type=List.class, parameters={String.class})
     private Output<List<String>> eulaIds;
 
+    /**
+     * @return <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
+     * 
+     */
     public Output<List<String>> getEulaIds() {
         return this.eulaIds;
     }
+    /**
+     * <p>A friendly name for a streaming image resource.</p>
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return <p>A friendly name for a streaming image resource.</p>
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
+     * 
+     */
     @OutputExport(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
+    /**
+     * @return <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
+     * 
+     */
     public Output<String> getOwner() {
         return this.owner;
     }
+    /**
+     * <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
+     * 
+     */
     @OutputExport(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
+    /**
+     * @return <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
+     * 
+     */
     public Output<String> getPlatform() {
         return this.platform;
     }
@@ -65,9 +117,17 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
     public Output<String> getStreamingImageId() {
         return this.streamingImageId;
     }
+    /**
+     * <p>The studioId. </p>
+     * 
+     */
     @OutputExport(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
+    /**
+     * @return <p>The studioId. </p>
+     * 
+     */
     public Output<String> getStudioId() {
         return this.studioId;
     }
@@ -78,6 +138,12 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StreamingImage(String name, StreamingImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:nimblestudio:StreamingImage", name, args == null ? StreamingImageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +159,14 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StreamingImage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StreamingImage(name, id, options);
     }

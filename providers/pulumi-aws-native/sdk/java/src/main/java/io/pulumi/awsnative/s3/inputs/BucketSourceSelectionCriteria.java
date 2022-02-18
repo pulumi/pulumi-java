@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A container that describes additional filters for identifying the source objects that you want to replicate.
+ * 
+ */
 public final class BucketSourceSelectionCriteria extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketSourceSelectionCriteria Empty = new BucketSourceSelectionCriteria();
 
+    /**
+     * A filter that you can specify for selection for modifications on replicas.
+     * 
+     */
     @InputImport(name="replicaModifications")
     private final @Nullable BucketReplicaModifications replicaModifications;
 
@@ -22,6 +30,10 @@ public final class BucketSourceSelectionCriteria extends io.pulumi.resources.Inv
         return this.replicaModifications == null ? Optional.empty() : Optional.ofNullable(this.replicaModifications);
     }
 
+    /**
+     * A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.
+     * 
+     */
     @InputImport(name="sseKmsEncryptedObjects")
     private final @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
 

@@ -14,6 +14,10 @@ public final class PackagingGroupLogConfiguration extends io.pulumi.resources.In
 
     public static final PackagingGroupLogConfiguration Empty = new PackagingGroupLogConfiguration();
 
+    /**
+     * Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn't specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
+     * 
+     */
     @InputImport(name="logGroupName")
     private final @Nullable String logGroupName;
 

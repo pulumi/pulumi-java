@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HostedZoneQueryLoggingConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.
+     * 
+     */
     private final String cloudWatchLogsLogGroupArn;
 
     @OutputCustomType.Constructor({"cloudWatchLogsLogGroupArn"})
@@ -16,6 +20,10 @@ public final class HostedZoneQueryLoggingConfig {
         this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.
+     * 
+     */
     public String getCloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
     }

@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppResourceSpec {
+    /**
+     * The instance type that the image version runs on.
+     * 
+     */
     private final @Nullable AppResourceSpecInstanceType instanceType;
+    /**
+     * The ARN of the SageMaker image that the image version belongs to.
+     * 
+     */
     private final @Nullable String sageMakerImageArn;
+    /**
+     * The ARN of the image version created on the instance.
+     * 
+     */
     private final @Nullable String sageMakerImageVersionArn;
 
     @OutputCustomType.Constructor({"instanceType","sageMakerImageArn","sageMakerImageVersionArn"})
@@ -26,12 +38,24 @@ public final class AppResourceSpec {
         this.sageMakerImageVersionArn = sageMakerImageVersionArn;
     }
 
+    /**
+     * The instance type that the image version runs on.
+     * 
+     */
     public Optional<AppResourceSpecInstanceType> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
+    /**
+     * The ARN of the SageMaker image that the image version belongs to.
+     * 
+     */
     public Optional<String> getSageMakerImageArn() {
         return Optional.ofNullable(this.sageMakerImageArn);
     }
+    /**
+     * The ARN of the image version created on the instance.
+     * 
+     */
     public Optional<String> getSageMakerImageVersionArn() {
         return Optional.ofNullable(this.sageMakerImageVersionArn);
     }

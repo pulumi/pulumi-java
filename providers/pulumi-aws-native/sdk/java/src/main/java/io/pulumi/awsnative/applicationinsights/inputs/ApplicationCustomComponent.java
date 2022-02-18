@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The custom grouped component.
+ * 
+ */
 public final class ApplicationCustomComponent extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationCustomComponent Empty = new ApplicationCustomComponent();
 
+    /**
+     * The name of the component.
+     * 
+     */
     @InputImport(name="componentName", required=true)
     private final String componentName;
 
@@ -20,6 +28,10 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
         return this.componentName;
     }
 
+    /**
+     * The list of resource ARNs that belong to the component.
+     * 
+     */
     @InputImport(name="resourceList", required=true)
     private final List<String> resourceList;
 

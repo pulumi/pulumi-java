@@ -11,6 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The wrapper that contains AWS Audit Manager role information, such as the role type and IAM ARN.
+ * 
+ */
 public final class AssessmentRole extends io.pulumi.resources.InvokeArgs {
 
     public static final AssessmentRole Empty = new AssessmentRole();

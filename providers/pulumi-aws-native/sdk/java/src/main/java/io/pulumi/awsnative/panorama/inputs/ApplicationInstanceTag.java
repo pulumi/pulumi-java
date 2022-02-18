@@ -12,6 +12,10 @@ public final class ApplicationInstanceTag extends io.pulumi.resources.InvokeArgs
 
     public static final ApplicationInstanceTag Empty = new ApplicationInstanceTag();
 
+    /**
+     * A string used to identify this tag
+     * 
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +23,10 @@ public final class ApplicationInstanceTag extends io.pulumi.resources.InvokeArgs
         return this.key;
     }
 
+    /**
+     * A string containing the value for the tag
+     * 
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

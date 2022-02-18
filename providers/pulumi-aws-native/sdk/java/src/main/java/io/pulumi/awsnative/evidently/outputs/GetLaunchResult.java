@@ -22,6 +22,10 @@ public final class GetLaunchResult {
     private final @Nullable List<LaunchMetricDefinitionObject> metricMonitors;
     private final @Nullable String randomizationSalt;
     private final @Nullable List<LaunchStepConfig> scheduledSplitsConfig;
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     private final @Nullable List<LaunchTag> tags;
 
     @OutputCustomType.Constructor({"arn","description","groups","metricMonitors","randomizationSalt","scheduledSplitsConfig","tags"})
@@ -60,6 +64,10 @@ public final class GetLaunchResult {
     public List<LaunchStepConfig> getScheduledSplitsConfig() {
         return this.scheduledSplitsConfig == null ? List.of() : this.scheduledSplitsConfig;
     }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     * 
+     */
     public List<LaunchTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

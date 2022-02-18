@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationSMB {
+/**
+ * Resource schema for AWS::DataSync::LocationSMB.
+ * 
+ */
     public static CompletableFuture<GetLocationSMBResult> invokeAsync(GetLocationSMBArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationSMB", TypeShape.of(GetLocationSMBResult.class), args == null ? GetLocationSMBArgs.Empty : args, Utilities.withVersion(options));
     }

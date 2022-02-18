@@ -14,6 +14,10 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiKeyStageKeyArgs Empty = new ApiKeyStageKeyArgs();
 
+    /**
+     * The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+     * 
+     */
     @InputImport(name="restApiId")
     private final @Nullable Input<String> restApiId;
 
@@ -21,6 +25,10 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.restApiId == null ? Input.empty() : this.restApiId;
     }
 
+    /**
+     * The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+     * 
+     */
     @InputImport(name="stageName")
     private final @Nullable Input<String> stageName;
 

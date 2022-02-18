@@ -17,6 +17,10 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesetArgs Empty = new RulesetArgs();
 
+    /**
+     * Description of the Ruleset
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,10 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the Ruleset
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +39,10 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * List of the data quality rules in the ruleset
+     * 
+     */
     @InputImport(name="rules", required=true)
     private final Input<List<RulesetRuleArgs>> rules;
 
@@ -45,6 +57,10 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Arn of the target resource (dataset) to apply the ruleset to
+     * 
+     */
     @InputImport(name="targetArn", required=true)
     private final Input<String> targetArn;
 

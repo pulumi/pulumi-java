@@ -12,6 +12,10 @@ public final class GetLocationObjectStorageArgs extends io.pulumi.resources.Invo
 
     public static final GetLocationObjectStorageArgs Empty = new GetLocationObjectStorageArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the location that is created.
+     * 
+     */
     @InputImport(name="locationArn", required=true)
     private final String locationArn;
 

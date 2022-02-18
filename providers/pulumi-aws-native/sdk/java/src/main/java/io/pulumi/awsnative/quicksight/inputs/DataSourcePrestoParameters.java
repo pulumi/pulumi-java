@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * <p>Presto parameters.</p>
+ * 
+ */
 public final class DataSourcePrestoParameters extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourcePrestoParameters Empty = new DataSourcePrestoParameters();
 
+    /**
+     * <p>Catalog.</p>
+     * 
+     */
     @InputImport(name="catalog", required=true)
     private final String catalog;
 
@@ -20,6 +28,10 @@ public final class DataSourcePrestoParameters extends io.pulumi.resources.Invoke
         return this.catalog;
     }
 
+    /**
+     * <p>Host.</p>
+     * 
+     */
     @InputImport(name="host", required=true)
     private final String host;
 
@@ -27,6 +39,10 @@ public final class DataSourcePrestoParameters extends io.pulumi.resources.Invoke
         return this.host;
     }
 
+    /**
+     * <p>Port.</p>
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Double port;
 

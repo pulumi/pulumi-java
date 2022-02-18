@@ -25,6 +25,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.awsAccountId;
     }
 
+    /**
+     * <p>A display name for the template.</p>
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -32,6 +36,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * <p>A list of resource permissions to be set on the template. </p>
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<TemplateResourcePermissionArgs>> permissions;
 
@@ -46,6 +54,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceEntity;
     }
 
+    /**
+     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<TemplateTagArgs>> tags;
 
@@ -60,6 +72,13 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.templateId;
     }
 
+    /**
+     * <p>A description of the current template version being created. This API operation creates the
+     * 			first version of the template. Every time <code>UpdateTemplate</code> is called, a new
+     * 			version is created. Each version of the template maintains a description of the version
+     * 			in the <code>VersionDescription</code> field.</p>
+     * 
+     */
     @InputImport(name="versionDescription")
     private final @Nullable Input<String> versionDescription;
 

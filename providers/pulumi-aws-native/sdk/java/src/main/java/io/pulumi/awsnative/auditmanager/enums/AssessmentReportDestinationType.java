@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The destination type, such as Amazon S3.
+     * 
+     */
     @EnumType
     public enum AssessmentReportDestinationType {
         S3("S3");

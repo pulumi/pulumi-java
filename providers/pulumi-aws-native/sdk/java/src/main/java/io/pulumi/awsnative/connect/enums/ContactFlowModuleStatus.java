@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The status of the contact flow module.
+     * 
+     */
     @EnumType
     public enum ContactFlowModuleStatus {
         Published("PUBLISHED"),

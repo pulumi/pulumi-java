@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * HTTP header.
+ * 
+ */
 public final class RuleGroupCustomHTTPHeader extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupCustomHTTPHeader Empty = new RuleGroupCustomHTTPHeader();

@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApplicationLogPatternSet {
+    /**
+     * The log patterns of a set.
+     * 
+     */
     private final List<ApplicationLogPattern> logPatterns;
+    /**
+     * The name of the log pattern set.
+     * 
+     */
     private final String patternSetName;
 
     @OutputCustomType.Constructor({"logPatterns","patternSetName"})
@@ -22,9 +30,17 @@ public final class ApplicationLogPatternSet {
         this.patternSetName = Objects.requireNonNull(patternSetName);
     }
 
+    /**
+     * The log patterns of a set.
+     * 
+     */
     public List<ApplicationLogPattern> getLogPatterns() {
         return this.logPatterns;
     }
+    /**
+     * The name of the log pattern set.
+     * 
+     */
     public String getPatternSetName() {
         return this.patternSetName;
     }

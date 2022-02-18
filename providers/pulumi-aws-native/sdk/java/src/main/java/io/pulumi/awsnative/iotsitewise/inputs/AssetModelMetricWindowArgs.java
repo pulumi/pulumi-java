@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains a time interval window used for data aggregate computations (for example, average, sum, count, and so on).
+ * 
+ */
 public final class AssetModelMetricWindowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssetModelMetricWindowArgs Empty = new AssetModelMetricWindowArgs();

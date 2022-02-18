@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The incident template configuration.
+ * 
+ */
 public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.InvokeArgs {
 
     public static final ResponsePlanIncidentTemplate Empty = new ResponsePlanIncidentTemplate();
 
+    /**
+     * The deduplication string.
+     * 
+     */
     @InputImport(name="dedupeString")
     private final @Nullable String dedupeString;
 
@@ -24,6 +32,10 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
         return this.dedupeString == null ? Optional.empty() : Optional.ofNullable(this.dedupeString);
     }
 
+    /**
+     * The impact value.
+     * 
+     */
     @InputImport(name="impact", required=true)
     private final Integer impact;
 
@@ -31,6 +43,10 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
         return this.impact;
     }
 
+    /**
+     * The list of notification targets.
+     * 
+     */
     @InputImport(name="notificationTargets")
     private final @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
 
@@ -38,6 +54,10 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
         return this.notificationTargets == null ? List.of() : this.notificationTargets;
     }
 
+    /**
+     * The summary string.
+     * 
+     */
     @InputImport(name="summary")
     private final @Nullable String summary;
 
@@ -45,6 +65,10 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
         return this.summary == null ? Optional.empty() : Optional.ofNullable(this.summary);
     }
 
+    /**
+     * The title string.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

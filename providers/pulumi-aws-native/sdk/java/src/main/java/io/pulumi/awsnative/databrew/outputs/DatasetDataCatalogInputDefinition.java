@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetDataCatalogInputDefinition {
+    /**
+     * Catalog id
+     * 
+     */
     private final @Nullable String catalogId;
+    /**
+     * Database name
+     * 
+     */
     private final @Nullable String databaseName;
+    /**
+     * Table name
+     * 
+     */
     private final @Nullable String tableName;
     private final @Nullable DatasetS3Location tempDirectory;
 
@@ -29,12 +41,24 @@ public final class DatasetDataCatalogInputDefinition {
         this.tempDirectory = tempDirectory;
     }
 
+    /**
+     * Catalog id
+     * 
+     */
     public Optional<String> getCatalogId() {
         return Optional.ofNullable(this.catalogId);
     }
+    /**
+     * Database name
+     * 
+     */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
+    /**
+     * Table name
+     * 
+     */
     public Optional<String> getTableName() {
         return Optional.ofNullable(this.tableName);
     }

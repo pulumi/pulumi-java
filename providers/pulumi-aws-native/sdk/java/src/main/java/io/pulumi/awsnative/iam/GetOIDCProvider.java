@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOIDCProvider {
+/**
+ * Resource Type definition for AWS::IAM::OIDCProvider
+ * 
+ */
     public static CompletableFuture<GetOIDCProviderResult> invokeAsync(GetOIDCProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getOIDCProvider", TypeShape.of(GetOIDCProviderResult.class), args == null ? GetOIDCProviderArgs.Empty : args, Utilities.withVersion(options));
     }

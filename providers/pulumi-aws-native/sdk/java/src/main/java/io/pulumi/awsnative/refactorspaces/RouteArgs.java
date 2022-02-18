@@ -46,6 +46,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceIdentifier;
     }
 
+    /**
+     * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<RouteTagArgs>> tags;
 

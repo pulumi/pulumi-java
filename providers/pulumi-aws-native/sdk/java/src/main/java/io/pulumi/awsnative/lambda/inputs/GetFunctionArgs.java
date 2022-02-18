@@ -12,6 +12,10 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFunctionArgs Empty = new GetFunctionArgs();
 
+    /**
+     * The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
+     * 
+     */
     @InputImport(name="functionName", required=true)
     private final String functionName;
 

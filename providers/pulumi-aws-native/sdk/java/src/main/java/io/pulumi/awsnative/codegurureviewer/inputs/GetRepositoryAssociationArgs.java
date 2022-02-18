@@ -12,6 +12,10 @@ public final class GetRepositoryAssociationArgs extends io.pulumi.resources.Invo
 
     public static final GetRepositoryAssociationArgs Empty = new GetRepositoryAssociationArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the repository association.
+     * 
+     */
     @InputImport(name="associationArn", required=true)
     private final String associationArn;
 

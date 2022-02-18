@@ -12,6 +12,10 @@ public final class GetBucketPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBucketPolicyArgs Empty = new GetBucketPolicyArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the specified bucket.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 

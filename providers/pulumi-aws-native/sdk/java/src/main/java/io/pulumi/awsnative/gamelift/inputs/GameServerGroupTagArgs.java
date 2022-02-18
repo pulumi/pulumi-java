@@ -14,6 +14,10 @@ public final class GameServerGroupTagArgs extends io.pulumi.resources.ResourceAr
 
     public static final GameServerGroupTagArgs Empty = new GameServerGroupTagArgs();
 
+    /**
+     * The key for a developer-defined key:value pair for tagging an AWS resource.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +25,10 @@ public final class GameServerGroupTagArgs extends io.pulumi.resources.ResourceAr
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * The value for a developer-defined key:value pair for tagging an AWS resource.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

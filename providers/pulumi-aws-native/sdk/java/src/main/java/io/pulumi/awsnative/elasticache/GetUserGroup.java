@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserGroup {
+/**
+ * Resource Type definition for AWS::ElastiCache::UserGroup
+ * 
+ */
     public static CompletableFuture<GetUserGroupResult> invokeAsync(GetUserGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticache:getUserGroup", TypeShape.of(GetUserGroupResult.class), args == null ? GetUserGroupArgs.Empty : args, Utilities.withVersion(options));
     }

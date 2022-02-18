@@ -12,6 +12,10 @@ public final class GetReplicationSetArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetReplicationSetArgs Empty = new GetReplicationSetArgs();
 
+    /**
+     * The ARN of the ReplicationSet.
+     * 
+     */
     @InputImport(name="arn", required=true)
     private final String arn;
 

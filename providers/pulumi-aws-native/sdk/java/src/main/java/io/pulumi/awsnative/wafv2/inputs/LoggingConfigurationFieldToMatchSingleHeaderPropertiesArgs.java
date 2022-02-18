@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.
+ * 
+ */
 public final class LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs Empty = new LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs();
 
+    /**
+     * The name of the query header to inspect.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -12,10 +12,26 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>The combination of user name and password that are used as credentials.</p>
+ * 
+ */
 public final class DataSourceCredentialPairArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceCredentialPairArgs Empty = new DataSourceCredentialPairArgs();
 
+    /**
+     * <p>A set of alternate data source parameters that you want to share for these
+     *             credentials. The credentials are applied in tandem with the data source parameters when
+     *             you copy a data source by using a create or update request. The API operation compares
+     *             the <code>DataSourceParameters</code> structure that's in the request with the
+     *             structures in the <code>AlternateDataSourceParameters</code> allow list. If the
+     *             structures are an exact match, the request is allowed to use the new data source with
+     *             the existing credentials. If the <code>AlternateDataSourceParameters</code> list is
+     *             null, the <code>DataSourceParameters</code> originally used with these
+     *                 <code>Credentials</code> is automatically allowed.</p>
+     * 
+     */
     @InputImport(name="alternateDataSourceParameters")
     private final @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
@@ -23,6 +39,10 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
         return this.alternateDataSourceParameters == null ? Input.empty() : this.alternateDataSourceParameters;
     }
 
+    /**
+     * <p>Password.</p>
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -30,6 +50,10 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
         return this.password;
     }
 
+    /**
+     * <p>User name.</p>
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

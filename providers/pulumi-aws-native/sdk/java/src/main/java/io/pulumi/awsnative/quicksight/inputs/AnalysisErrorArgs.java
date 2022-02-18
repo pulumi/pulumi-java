@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * <p>A metadata error structure for an analysis.</p>
+ * 
+ */
 public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalysisErrorArgs Empty = new AnalysisErrorArgs();
 
+    /**
+     * <p>The message associated with the analysis error.</p>
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 

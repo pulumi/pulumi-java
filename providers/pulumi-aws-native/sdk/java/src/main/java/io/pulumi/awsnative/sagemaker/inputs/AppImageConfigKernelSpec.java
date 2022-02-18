@@ -14,6 +14,10 @@ public final class AppImageConfigKernelSpec extends io.pulumi.resources.InvokeAr
 
     public static final AppImageConfigKernelSpec Empty = new AppImageConfigKernelSpec();
 
+    /**
+     * The display name of the kernel.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -21,6 +25,10 @@ public final class AppImageConfigKernelSpec extends io.pulumi.resources.InvokeAr
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The name of the kernel.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

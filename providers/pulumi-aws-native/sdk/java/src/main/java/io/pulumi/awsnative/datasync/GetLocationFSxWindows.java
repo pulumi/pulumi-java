@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationFSxWindows {
+/**
+ * Resource schema for AWS::DataSync::LocationFSxWindows.
+ * 
+ */
     public static CompletableFuture<GetLocationFSxWindowsResult> invokeAsync(GetLocationFSxWindowsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationFSxWindows", TypeShape.of(GetLocationFSxWindowsResult.class), args == null ? GetLocationFSxWindowsArgs.Empty : args, Utilities.withVersion(options));
     }

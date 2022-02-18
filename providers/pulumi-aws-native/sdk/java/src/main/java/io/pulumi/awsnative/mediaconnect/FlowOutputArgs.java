@@ -19,6 +19,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowOutputArgs Empty = new FlowOutputArgs();
 
+    /**
+     * The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+     * 
+     */
     @InputImport(name="cidrAllowList")
     private final @Nullable Input<List<String>> cidrAllowList;
 
@@ -26,6 +30,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.cidrAllowList == null ? Input.empty() : this.cidrAllowList;
     }
 
+    /**
+     * A description of the output.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +41,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The address where you want to send the output.
+     * 
+     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -40,6 +52,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<FlowOutputEncryptionArgs> encryption;
 
@@ -47,6 +63,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     @InputImport(name="flowArn", required=true)
     private final Input<String> flowArn;
 
@@ -54,6 +74,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.flowArn;
     }
 
+    /**
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * 
+     */
     @InputImport(name="maxLatency")
     private final @Nullable Input<Integer> maxLatency;
 
@@ -61,6 +85,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxLatency == null ? Input.empty() : this.maxLatency;
     }
 
+    /**
+     * The minimum latency in milliseconds.
+     * 
+     */
     @InputImport(name="minLatency")
     private final @Nullable Input<Integer> minLatency;
 
@@ -68,6 +96,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.minLatency == null ? Input.empty() : this.minLatency;
     }
 
+    /**
+     * The name of the output. This value must be unique within the current flow.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -75,6 +107,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The port to use when content is distributed to this output.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -82,6 +118,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The protocol that is used by the source or output.
+     * 
+     */
     @InputImport(name="protocol", required=true)
     private final Input<FlowOutputProtocol> protocol;
 
@@ -89,6 +129,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocol;
     }
 
+    /**
+     * The remote ID for the Zixi-pull stream.
+     * 
+     */
     @InputImport(name="remoteId")
     private final @Nullable Input<String> remoteId;
 
@@ -96,6 +140,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.remoteId == null ? Input.empty() : this.remoteId;
     }
 
+    /**
+     * The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
+     * 
+     */
     @InputImport(name="smoothingLatency")
     private final @Nullable Input<Integer> smoothingLatency;
 
@@ -103,6 +151,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.smoothingLatency == null ? Input.empty() : this.smoothingLatency;
     }
 
+    /**
+     * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+     * 
+     */
     @InputImport(name="streamId")
     private final @Nullable Input<String> streamId;
 
@@ -110,6 +162,10 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.streamId == null ? Input.empty() : this.streamId;
     }
 
+    /**
+     * The name of the VPC interface attachment to use for this output.
+     * 
+     */
     @InputImport(name="vpcInterfaceAttachment")
     private final @Nullable Input<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;
 

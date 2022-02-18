@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AccessPolicyIamRole {
+    /**
+     * The ARN of the IAM role.
+     * 
+     */
     private final @Nullable String arn;
 
     @OutputCustomType.Constructor({"arn"})
@@ -18,6 +22,10 @@ public final class AccessPolicyIamRole {
         this.arn = arn;
     }
 
+    /**
+     * The ARN of the IAM role.
+     * 
+     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

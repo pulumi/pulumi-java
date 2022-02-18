@@ -12,6 +12,10 @@ public final class GetLocationNFSArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLocationNFSArgs Empty = new GetLocationNFSArgs();
 
+    /**
+     * The Amazon Resource Name (ARN) of the NFS location.
+     * 
+     */
     @InputImport(name="locationArn", required=true)
     private final String locationArn;
 

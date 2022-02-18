@@ -21,6 +21,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Contains the Rules that identify the requests that you want to allow, block, or count. In a WebACL, you also specify a default action (ALLOW or BLOCK), and the action for each Rule that you add to a WebACL, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the WebACL with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one Rule to a WebACL, a request needs to match only one of the specifications to be allowed, blocked, or counted.
+ * 
+ */
 @ResourceType(type="aws-native:wafv2:WebACL")
 public class WebACL extends io.pulumi.resources.CustomResource {
     @OutputExport(name="arn", type=String.class, parameters={})
@@ -71,9 +75,17 @@ public class WebACL extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Collection of Rules.
+     * 
+     */
     @OutputExport(name="rules", type=List.class, parameters={WebACLRule.class})
     private Output</* @Nullable */ List<WebACLRule>> rules;
 
+    /**
+     * @return Collection of Rules.
+     * 
+     */
     public Output</* @Nullable */ List<WebACLRule>> getRules() {
         return this.rules;
     }
@@ -96,6 +108,12 @@ public class WebACL extends io.pulumi.resources.CustomResource {
         return this.visibilityConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WebACL(String name, WebACLArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:wafv2:WebACL", name, args == null ? WebACLArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -111,6 +129,14 @@ public class WebACL extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WebACL get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebACL(name, id, options);
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Sample type
+     * 
+     */
     @EnumType
     public enum ProjectSampleType {
         FirstN("FIRST_N"),

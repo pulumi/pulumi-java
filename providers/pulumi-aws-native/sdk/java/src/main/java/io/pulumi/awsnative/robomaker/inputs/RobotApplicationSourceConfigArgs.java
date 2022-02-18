@@ -14,6 +14,10 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
 
     public static final RobotApplicationSourceConfigArgs Empty = new RobotApplicationSourceConfigArgs();
 
+    /**
+     * The architecture of robot application.
+     * 
+     */
     @InputImport(name="architecture", required=true)
     private final Input<RobotApplicationSourceConfigArchitecture> architecture;
 
@@ -21,6 +25,10 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
         return this.architecture;
     }
 
+    /**
+     * The Arn of the S3Bucket that stores the robot application source.
+     * 
+     */
     @InputImport(name="s3Bucket", required=true)
     private final Input<String> s3Bucket;
 
@@ -28,6 +36,10 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
         return this.s3Bucket;
     }
 
+    /**
+     * The s3 key of robot application source.
+     * 
+     */
     @InputImport(name="s3Key", required=true)
     private final Input<String> s3Key;
 
