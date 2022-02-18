@@ -12,10 +12,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cross-Origin Resource Sharing (CORS) settings for the app.
+ * 
+ */
 public final class CorsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CorsSettingsResponse Empty = new CorsSettingsResponse();
 
+    /**
+     * Gets or sets the list of origins that should be allowed to make cross-origin
+     * calls (for example: http://example.com:12345). Use "*" to allow all.
+     * 
+     */
     @InputImport(name="allowedOrigins")
     private final @Nullable List<String> allowedOrigins;
 
@@ -23,6 +32,12 @@ public final class CorsSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
 
+    /**
+     * Gets or sets whether CORS requests with credentials are allowed. See
+     * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
+     * for more details.
+     * 
+     */
     @InputImport(name="supportCredentials")
     private final @Nullable Boolean supportCredentials;
 

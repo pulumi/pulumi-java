@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Replication agent details.
+ * 
+ */
 public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationAgentDetailsResponse Empty = new ReplicationAgentDetailsResponse();
 
+    /**
+     * The health of the replication agent.
+     * 
+     */
     @InputImport(name="health", required=true)
     private final String health;
 
@@ -21,6 +29,10 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
         return this.health;
     }
 
+    /**
+     * The health errors.
+     * 
+     */
     @InputImport(name="healthErrors", required=true)
     private final List<HealthErrorResponse> healthErrors;
 
@@ -28,6 +40,10 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
         return this.healthErrors;
     }
 
+    /**
+     * The replication agent Id.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -35,6 +51,10 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
         return this.id;
     }
 
+    /**
+     * The last heartbeat received from the replication agent.
+     * 
+     */
     @InputImport(name="lastHeartbeatUtc", required=true)
     private final String lastHeartbeatUtc;
 
@@ -42,6 +62,10 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
         return this.lastHeartbeatUtc;
     }
 
+    /**
+     * The replication agent name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -49,6 +73,10 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
         return this.name;
     }
 
+    /**
+     * The replication agent version.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

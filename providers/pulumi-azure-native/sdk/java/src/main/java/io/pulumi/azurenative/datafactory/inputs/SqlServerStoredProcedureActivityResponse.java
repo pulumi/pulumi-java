@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SQL stored procedure activity type.
+ * 
+ */
 public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlServerStoredProcedureActivityResponse Empty = new SqlServerStoredProcedureActivityResponse();
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -29,6 +37,10 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -36,6 +48,10 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final LinkedServiceReferenceResponse linkedServiceName;
 
@@ -43,6 +59,10 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
         return this.linkedServiceName;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -50,6 +70,10 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -57,6 +81,10 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * Stored procedure name. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="storedProcedureName", required=true)
     private final Object storedProcedureName;
 
@@ -64,6 +92,10 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
         return this.storedProcedureName;
     }
 
+    /**
+     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * 
+     */
     @InputImport(name="storedProcedureParameters")
     private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
@@ -71,6 +103,11 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'SqlServerStoredProcedure'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -78,6 +115,10 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

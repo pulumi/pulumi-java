@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The EventHub consumer group name.
+ * 
+ */
 public final class EventHubConsumerGroupNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventHubConsumerGroupNameArgs Empty = new EventHubConsumerGroupNameArgs();
 
+    /**
+     * EventHub consumer group name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

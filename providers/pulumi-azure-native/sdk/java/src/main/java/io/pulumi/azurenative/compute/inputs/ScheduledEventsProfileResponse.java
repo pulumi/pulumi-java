@@ -14,6 +14,10 @@ public final class ScheduledEventsProfileResponse extends io.pulumi.resources.In
 
     public static final ScheduledEventsProfileResponse Empty = new ScheduledEventsProfileResponse();
 
+    /**
+     * Specifies Terminate Scheduled Event related configurations.
+     * 
+     */
     @InputImport(name="terminateNotificationProfile")
     private final @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
 

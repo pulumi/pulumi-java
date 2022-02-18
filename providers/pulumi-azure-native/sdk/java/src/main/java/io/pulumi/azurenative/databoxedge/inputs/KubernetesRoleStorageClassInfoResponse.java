@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Kubernetes storage class info.
+ * 
+ */
 public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesRoleStorageClassInfoResponse Empty = new KubernetesRoleStorageClassInfoResponse();
 
+    /**
+     * Storage class name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +27,10 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * If provisioned storage is posix compliant.
+     * 
+     */
     @InputImport(name="posixCompliant", required=true)
     private final String posixCompliant;
 
@@ -26,6 +38,10 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
         return this.posixCompliant;
     }
 
+    /**
+     * Storage class type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

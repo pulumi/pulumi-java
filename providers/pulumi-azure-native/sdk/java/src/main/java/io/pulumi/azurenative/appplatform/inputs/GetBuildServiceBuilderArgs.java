@@ -12,6 +12,10 @@ public final class GetBuildServiceBuilderArgs extends io.pulumi.resources.Invoke
 
     public static final GetBuildServiceBuilderArgs Empty = new GetBuildServiceBuilderArgs();
 
+    /**
+     * The name of the build service resource.
+     * 
+     */
     @InputImport(name="buildServiceName", required=true)
     private final String buildServiceName;
 
@@ -19,6 +23,10 @@ public final class GetBuildServiceBuilderArgs extends io.pulumi.resources.Invoke
         return this.buildServiceName;
     }
 
+    /**
+     * The name of the builder resource.
+     * 
+     */
     @InputImport(name="builderName", required=true)
     private final String builderName;
 
@@ -26,6 +34,10 @@ public final class GetBuildServiceBuilderArgs extends io.pulumi.resources.Invoke
         return this.builderName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetBuildServiceBuilderArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

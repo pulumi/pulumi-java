@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the de-interlacing settings.
+ * 
+ */
 public final class DeinterlaceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeinterlaceResponse Empty = new DeinterlaceResponse();
 
+    /**
+     * The deinterlacing mode. Defaults to AutoPixelAdaptive.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 
@@ -21,6 +29,10 @@ public final class DeinterlaceResponse extends io.pulumi.resources.InvokeArgs {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
+    /**
+     * The field parity for de-interlacing, defaults to Auto.
+     * 
+     */
     @InputImport(name="parity")
     private final @Nullable String parity;
 

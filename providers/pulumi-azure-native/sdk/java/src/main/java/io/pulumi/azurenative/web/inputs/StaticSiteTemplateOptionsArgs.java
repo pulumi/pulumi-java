@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Template Options for the static site.
+ * 
+ */
 public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StaticSiteTemplateOptionsArgs Empty = new StaticSiteTemplateOptionsArgs();
 
+    /**
+     * Description of the newly generated repository.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +30,10 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+     * 
+     */
     @InputImport(name="isPrivate")
     private final @Nullable Input<Boolean> isPrivate;
 
@@ -29,6 +41,10 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
         return this.isPrivate == null ? Input.empty() : this.isPrivate;
     }
 
+    /**
+     * Owner of the newly generated repository.
+     * 
+     */
     @InputImport(name="owner")
     private final @Nullable Input<String> owner;
 
@@ -36,6 +52,10 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
         return this.owner == null ? Input.empty() : this.owner;
     }
 
+    /**
+     * Name of the newly generated repository.
+     * 
+     */
     @InputImport(name="repositoryName")
     private final @Nullable Input<String> repositoryName;
 
@@ -43,6 +63,10 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
     }
 
+    /**
+     * URL of the template repository. The newly generated repository will be based on this one.
+     * 
+     */
     @InputImport(name="templateRepositoryUrl")
     private final @Nullable Input<String> templateRepositoryUrl;
 

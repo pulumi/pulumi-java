@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Properties of the Spring Cloud Gateway Operator.
+ * 
+ */
 public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayOperatorResourceRequestsResponse Empty = new GatewayOperatorResourceRequestsResponse();
 
+    /**
+     * Cpu allocated to each Spring Cloud Gateway Operator instance.
+     * 
+     */
     @InputImport(name="cpu", required=true)
     private final String cpu;
 
@@ -20,6 +28,10 @@ public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.res
         return this.cpu;
     }
 
+    /**
+     * Instance count of the Spring Cloud Gateway Operator.
+     * 
+     */
     @InputImport(name="instanceCount", required=true)
     private final Integer instanceCount;
 
@@ -27,6 +39,10 @@ public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.res
         return this.instanceCount;
     }
 
+    /**
+     * Memory allocated to each Spring Cloud Gateway Operator instance.
+     * 
+     */
     @InputImport(name="memory", required=true)
     private final String memory;
 

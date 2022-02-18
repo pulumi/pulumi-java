@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListSubAccountVMHostsResult {
+    /**
+     * Link to the next set of results, if any.
+     * 
+     */
     private final @Nullable String nextLink;
+    /**
+     * Response of a list vm host update operation.
+     * 
+     */
     private final @Nullable List<VMResourcesResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -24,9 +32,17 @@ public final class ListSubAccountVMHostsResult {
         this.value = value;
     }
 
+    /**
+     * Link to the next set of results, if any.
+     * 
+     */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
+    /**
+     * Response of a list vm host update operation.
+     * 
+     */
     public List<VMResourcesResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

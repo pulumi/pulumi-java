@@ -25,25 +25,109 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SweepJobResponse {
+    /**
+     * Type of the hyperparameter sampling algorithms
+     * 
+     */
     private final String algorithm;
+    /**
+     * Compute binding for the job.
+     * 
+     */
     private final ComputeConfigurationResponse compute;
+    /**
+     * The asset description text.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Early termination policies enable canceling poor-performing runs before they complete.
+     * 
+     */
     private final @Nullable Object earlyTermination;
+    /**
+     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
+     * 
+     */
     private final @Nullable String experimentName;
+    /**
+     * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+     * Defaults to AmlToken if null.
+     * 
+     */
     private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
+    /**
+     * List of JobEndpoints.
+     * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
+     * 
+     */
     private final Map<String,JobEndpointResponse> interactionEndpoints;
+    /**
+     * Enum to determine the type of job.
+     * Expected value is 'Sweep'.
+     * 
+     */
     private final String jobType;
+    /**
+     * An upper bound on the number of trials performed in parallel.
+     * 
+     */
     private final @Nullable Integer maxConcurrentTrials;
+    /**
+     * An upper bound on the number of trials to perform.
+     * 
+     */
     private final @Nullable Integer maxTotalTrials;
+    /**
+     * Optimization objective.
+     * 
+     */
     private final ObjectiveResponse objective;
+    /**
+     * Location of the job output logs and artifacts.
+     * 
+     */
     private final JobOutputResponse output;
+    /**
+     * Job priority for scheduling policy. Only applies to AMLCompute.
+     * Private preview feature and only available to users on the allow list.
+     * 
+     */
     private final @Nullable Integer priority;
+    /**
+     * The asset property dictionary.
+     * 
+     */
     private final @Nullable Map<String,String> properties;
+    /**
+     * Specifies the job provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * 
+     */
     private final Map<String,Object> searchSpace;
+    /**
+     * The status of a job.
+     * 
+     */
     private final String status;
+    /**
+     * Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+     * 
+     */
     private final @Nullable String timeout;
+    /**
+     * Trial component definition.
+     * 
+     */
     private final @Nullable TrialComponentResponse trial;
 
     @OutputCustomType.Constructor({"algorithm","compute","description","earlyTermination","experimentName","identity","interactionEndpoints","jobType","maxConcurrentTrials","maxTotalTrials","objective","output","priority","properties","provisioningState","searchSpace","status","tags","timeout","trial"})
@@ -90,63 +174,147 @@ public final class SweepJobResponse {
         this.trial = trial;
     }
 
+    /**
+     * Type of the hyperparameter sampling algorithms
+     * 
+     */
     public String getAlgorithm() {
         return this.algorithm;
     }
+    /**
+     * Compute binding for the job.
+     * 
+     */
     public ComputeConfigurationResponse getCompute() {
         return this.compute;
     }
+    /**
+     * The asset description text.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Early termination policies enable canceling poor-performing runs before they complete.
+     * 
+     */
     public Optional<Object> getEarlyTermination() {
         return Optional.ofNullable(this.earlyTermination);
     }
+    /**
+     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
+     * 
+     */
     public Optional<String> getExperimentName() {
         return Optional.ofNullable(this.experimentName);
     }
+    /**
+     * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+     * Defaults to AmlToken if null.
+     * 
+     */
     public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+    /**
+     * List of JobEndpoints.
+     * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
+     * 
+     */
     public Map<String,JobEndpointResponse> getInteractionEndpoints() {
         return this.interactionEndpoints;
     }
+    /**
+     * Enum to determine the type of job.
+     * Expected value is 'Sweep'.
+     * 
+     */
     public String getJobType() {
         return this.jobType;
     }
+    /**
+     * An upper bound on the number of trials performed in parallel.
+     * 
+     */
     public Optional<Integer> getMaxConcurrentTrials() {
         return Optional.ofNullable(this.maxConcurrentTrials);
     }
+    /**
+     * An upper bound on the number of trials to perform.
+     * 
+     */
     public Optional<Integer> getMaxTotalTrials() {
         return Optional.ofNullable(this.maxTotalTrials);
     }
+    /**
+     * Optimization objective.
+     * 
+     */
     public ObjectiveResponse getObjective() {
         return this.objective;
     }
+    /**
+     * Location of the job output logs and artifacts.
+     * 
+     */
     public JobOutputResponse getOutput() {
         return this.output;
     }
+    /**
+     * Job priority for scheduling policy. Only applies to AMLCompute.
+     * Private preview feature and only available to users on the allow list.
+     * 
+     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
+    /**
+     * The asset property dictionary.
+     * 
+     */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
+    /**
+     * Specifies the job provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * 
+     */
     public Map<String,Object> getSearchSpace() {
         return this.searchSpace;
     }
+    /**
+     * The status of a job.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+     * 
+     */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
+    /**
+     * Trial component definition.
+     * 
+     */
     public Optional<TrialComponentResponse> getTrial() {
         return Optional.ofNullable(this.trial);
     }

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabPlan {
+/**
+ * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
+ * API Version: 2021-10-01-preview.
+ * 
+ *
+ * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
+ * 
+ */
     public static CompletableFuture<GetLabPlanResult> invokeAsync(GetLabPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLabPlan", TypeShape.of(GetLabPlanResult.class), args == null ? GetLabPlanArgs.Empty : args, Utilities.withVersion(options));
     }

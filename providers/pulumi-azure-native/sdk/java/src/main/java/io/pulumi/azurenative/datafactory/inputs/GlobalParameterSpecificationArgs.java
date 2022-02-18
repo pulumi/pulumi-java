@@ -12,10 +12,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Definition of a single parameter for an entity.
+ * 
+ */
 public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalParameterSpecificationArgs Empty = new GlobalParameterSpecificationArgs();
 
+    /**
+     * Global Parameter type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,GlobalParameterType>> type;
 
@@ -23,6 +31,10 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
         return this.type;
     }
 
+    /**
+     * Value of parameter.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Input<Object> value;
 

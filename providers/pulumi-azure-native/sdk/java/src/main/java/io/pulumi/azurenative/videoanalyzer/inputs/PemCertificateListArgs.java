@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A list of PEM formatted certificates.
+ * 
+ */
 public final class PemCertificateListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PemCertificateListArgs Empty = new PemCertificateListArgs();
 
+    /**
+     * PEM formatted public certificates. One certificate per entry.
+     * 
+     */
     @InputImport(name="certificates", required=true)
     private final Input<List<String>> certificates;
 
@@ -21,6 +29,11 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
         return this.certificates;
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

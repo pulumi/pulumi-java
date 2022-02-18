@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStorageAccountSasTokens {
+/**
+ * The SAS response that contains the storage account, container and associated SAS token for connection use.
+ * API Version: 2016-11-01.
+ * 
+ *
+ * The SAS response that contains the storage account, container and associated SAS token for connection use.
+ * 
+ */
     public static CompletableFuture<ListStorageAccountSasTokensResult> invokeAsync(ListStorageAccountSasTokensArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:listStorageAccountSasTokens", TypeShape.of(ListStorageAccountSasTokensResult.class), args == null ? ListStorageAccountSasTokensArgs.Empty : args, Utilities.withVersion(options));
     }

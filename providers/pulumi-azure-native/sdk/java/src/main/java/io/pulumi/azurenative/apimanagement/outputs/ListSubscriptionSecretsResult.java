@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListSubscriptionSecretsResult {
+    /**
+     * Subscription primary key.
+     * 
+     */
     private final @Nullable String primaryKey;
+    /**
+     * Subscription secondary key.
+     * 
+     */
     private final @Nullable String secondaryKey;
 
     @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
@@ -22,9 +30,17 @@ public final class ListSubscriptionSecretsResult {
         this.secondaryKey = secondaryKey;
     }
 
+    /**
+     * Subscription primary key.
+     * 
+     */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
+    /**
+     * Subscription secondary key.
+     * 
+     */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

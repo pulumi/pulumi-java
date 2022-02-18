@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the data lake storage account associated with the workspace
+ * 
+ */
 public final class DataLakeStorageAccountDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataLakeStorageAccountDetailsResponse Empty = new DataLakeStorageAccountDetailsResponse();
 
+    /**
+     * Account URL
+     * 
+     */
     @InputImport(name="accountUrl")
     private final @Nullable String accountUrl;
 
@@ -21,6 +29,10 @@ public final class DataLakeStorageAccountDetailsResponse extends io.pulumi.resou
         return this.accountUrl == null ? Optional.empty() : Optional.ofNullable(this.accountUrl);
     }
 
+    /**
+     * Filesystem name
+     * 
+     */
     @InputImport(name="filesystem")
     private final @Nullable String filesystem;
 

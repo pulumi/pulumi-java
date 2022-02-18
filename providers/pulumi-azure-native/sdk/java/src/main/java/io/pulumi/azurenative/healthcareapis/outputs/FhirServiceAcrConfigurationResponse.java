@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FhirServiceAcrConfigurationResponse {
+    /**
+     * The list of the Azure container registry login servers.
+     * 
+     */
     private final @Nullable List<String> loginServers;
 
     @OutputCustomType.Constructor({"loginServers"})
@@ -18,6 +22,10 @@ public final class FhirServiceAcrConfigurationResponse {
         this.loginServers = loginServers;
     }
 
+    /**
+     * The list of the Azure container registry login servers.
+     * 
+     */
     public List<String> getLoginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
     }

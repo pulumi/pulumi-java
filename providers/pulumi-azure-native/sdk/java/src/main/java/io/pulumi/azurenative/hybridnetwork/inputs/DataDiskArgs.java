@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+ * 
+ */
 public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataDiskArgs Empty = new DataDiskArgs();
 
+    /**
+     * Specifies how the virtual machine should be created.
+     * 
+     */
     @InputImport(name="createOption")
     private final @Nullable Input<Either<String,DiskCreateOptionTypes>> createOption;
 
@@ -24,6 +32,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.createOption == null ? Input.empty() : this.createOption;
     }
 
+    /**
+     * Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
+     * 
+     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -31,6 +43,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
+    /**
+     * The name of data disk.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

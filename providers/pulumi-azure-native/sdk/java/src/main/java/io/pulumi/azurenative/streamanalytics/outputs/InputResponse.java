@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InputResponse {
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Resource name
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     private final @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -31,15 +47,31 @@ public final class InputResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> getProperties() {
         return Optional.ofNullable(this.properties);
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

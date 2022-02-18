@@ -17,6 +17,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     public static final MachineExtensionArgs Empty = new MachineExtensionArgs();
 
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
@@ -24,6 +28,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
     }
 
+    /**
+     * The name of the machine extension.
+     * 
+     */
     @InputImport(name="extensionName")
     private final @Nullable Input<String> extensionName;
 
@@ -31,6 +39,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.extensionName == null ? Input.empty() : this.extensionName;
     }
 
+    /**
+     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * 
+     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable Input<String> forceUpdateTag;
 
@@ -38,6 +50,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
     }
 
+    /**
+     * Gets or sets the location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +61,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the machine where the extension should be created or updated.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -52,6 +72,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
+    /**
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     @InputImport(name="protectedSettings")
     private final @Nullable Input<Object> protectedSettings;
 
@@ -59,6 +83,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
     }
 
+    /**
+     * The name of the extension handler publisher.
+     * 
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -66,6 +94,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
+    /**
+     * The Resource Group Name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -73,6 +105,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Json formatted public settings for the extension.
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Input<Object> settings;
 
@@ -80,6 +116,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.settings == null ? Input.empty() : this.settings;
     }
 
+    /**
+     * Gets or sets the Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -87,6 +127,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -94,6 +138,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable Input<String> typeHandlerVersion;
 

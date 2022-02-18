@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachineGroup {
+/**
+ * A user-defined logical grouping of machines.
+ * API Version: 2015-11-01-preview.
+ * 
+ *
+ * A user-defined logical grouping of machines.
+ * 
+ */
     public static CompletableFuture<GetMachineGroupResult> invokeAsync(GetMachineGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getMachineGroup", TypeShape.of(GetMachineGroupResult.class), args == null ? GetMachineGroupArgs.Empty : args, Utilities.withVersion(options));
     }

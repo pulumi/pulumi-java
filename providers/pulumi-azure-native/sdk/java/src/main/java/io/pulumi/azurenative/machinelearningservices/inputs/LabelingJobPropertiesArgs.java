@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of a labeling job.
+ * 
+ */
 public final class LabelingJobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabelingJobPropertiesArgs Empty = new LabelingJobPropertiesArgs();
 
+    /**
+     * Dataset configuration for the job.
+     * 
+     */
     @InputImport(name="datasetConfiguration", required=true)
     private final Input<LabelingDatasetConfigurationArgs> datasetConfiguration;
 
@@ -27,6 +35,10 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
         return this.datasetConfiguration;
     }
 
+    /**
+     * Instructions for the job.
+     * 
+     */
     @InputImport(name="jobInstructions", required=true)
     private final Input<LabelingJobInstructionsArgs> jobInstructions;
 
@@ -34,6 +46,10 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
         return this.jobInstructions;
     }
 
+    /**
+     * Label categories of the job.
+     * 
+     */
     @InputImport(name="labelCategories", required=true)
     private final Input<Map<String,LabelCategoryArgs>> labelCategories;
 
@@ -41,6 +57,10 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
         return this.labelCategories;
     }
 
+    /**
+     * Media specific properties in a labeling job.
+     * 
+     */
     @InputImport(name="labelingJobMediaProperties", required=true)
     private final Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
 
@@ -48,6 +68,10 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
         return this.labelingJobMediaProperties;
     }
 
+    /**
+     * Machine learning assisted configuration for the job.
+     * 
+     */
     @InputImport(name="mlAssistConfiguration")
     private final @Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration;
 
@@ -55,6 +79,10 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
         return this.mlAssistConfiguration == null ? Input.empty() : this.mlAssistConfiguration;
     }
 
+    /**
+     * The job property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -62,6 +90,10 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The job tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

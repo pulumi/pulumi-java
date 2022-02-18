@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Tier of an application gateway.
+     * 
+     */
     @EnumType
     public enum ApplicationGatewayTier {
         Standard("Standard"),

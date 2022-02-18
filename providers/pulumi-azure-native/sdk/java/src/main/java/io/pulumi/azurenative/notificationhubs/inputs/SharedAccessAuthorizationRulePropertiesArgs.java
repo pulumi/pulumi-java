@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SharedAccessAuthorizationRule properties.
+ * 
+ */
 public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SharedAccessAuthorizationRulePropertiesArgs Empty = new SharedAccessAuthorizationRulePropertiesArgs();
 
+    /**
+     * The rights associated with the rule.
+     * 
+     */
     @InputImport(name="rights")
     private final @Nullable Input<List<AccessRights>> rights;
 

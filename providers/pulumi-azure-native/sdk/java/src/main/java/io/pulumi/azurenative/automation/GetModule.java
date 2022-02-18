@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModule {
+/**
+ * Definition of the module type.
+ * API Version: 2019-06-01.
+ * 
+ *
+ * Definition of the module type.
+ * 
+ */
     public static CompletableFuture<GetModuleResult> invokeAsync(GetModuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getModule", TypeShape.of(GetModuleResult.class), args == null ? GetModuleArgs.Empty : args, Utilities.withVersion(options));
     }

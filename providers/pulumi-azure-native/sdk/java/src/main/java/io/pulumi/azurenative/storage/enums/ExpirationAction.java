@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The SAS expiration action. Can only be Log.
+     * 
+     */
     @EnumType
     public enum ExpirationAction {
         Log("Log");

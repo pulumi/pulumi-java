@@ -11,10 +11,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Managed service identity (either system assigned, or none)
+ * 
+ */
 public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SystemAssignedServiceIdentityArgs Empty = new SystemAssignedServiceIdentityArgs();
 
+    /**
+     * Type of managed service identity (either system assigned, or none).
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,SystemAssignedServiceIdentityType>> type;
 

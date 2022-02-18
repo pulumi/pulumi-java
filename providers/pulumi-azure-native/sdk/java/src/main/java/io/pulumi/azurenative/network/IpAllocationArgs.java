@@ -19,6 +19,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IpAllocationArgs Empty = new IpAllocationArgs();
 
+    /**
+     * IpAllocation tags.
+     * 
+     */
     @InputImport(name="allocationTags")
     private final @Nullable Input<Map<String,String>> allocationTags;
 
@@ -26,6 +30,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.allocationTags == null ? Input.empty() : this.allocationTags;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -33,6 +41,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the IpAllocation.
+     * 
+     */
     @InputImport(name="ipAllocationName")
     private final @Nullable Input<String> ipAllocationName;
 
@@ -40,6 +52,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAllocationName == null ? Input.empty() : this.ipAllocationName;
     }
 
+    /**
+     * The IPAM allocation ID.
+     * 
+     */
     @InputImport(name="ipamAllocationId")
     private final @Nullable Input<String> ipamAllocationId;
 
@@ -47,6 +63,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipamAllocationId == null ? Input.empty() : this.ipamAllocationId;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +74,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The address prefix for the IpAllocation.
+     * 
+     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -61,6 +85,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
+    /**
+     * The address prefix length for the IpAllocation.
+     * 
+     */
     @InputImport(name="prefixLength")
     private final @Nullable Input<Integer> prefixLength;
 
@@ -68,6 +96,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefixLength == null ? Input.empty() : this.prefixLength;
     }
 
+    /**
+     * The address prefix Type for the IpAllocation.
+     * 
+     */
     @InputImport(name="prefixType")
     private final @Nullable Input<Either<String,IPVersion>> prefixType;
 
@@ -75,6 +107,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefixType == null ? Input.empty() : this.prefixType;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,6 +118,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -89,6 +129,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type for the IpAllocation.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,IpAllocationType>> type;
 

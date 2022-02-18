@@ -12,6 +12,10 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetScheduleArgs Empty = new GetScheduleArgs();
 
+    /**
+     * The name of the automation account.
+     * 
+     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -19,6 +23,10 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The schedule name.
+     * 
+     */
     @InputImport(name="scheduleName", required=true)
     private final String scheduleName;
 

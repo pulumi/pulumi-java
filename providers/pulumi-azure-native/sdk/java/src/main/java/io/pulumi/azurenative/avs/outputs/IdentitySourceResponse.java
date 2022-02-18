@@ -11,15 +11,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IdentitySourceResponse {
+    /**
+     * The domain's NetBIOS name
+     * 
+     */
     private final @Nullable String alias;
+    /**
+     * The base distinguished name for groups
+     * 
+     */
     private final @Nullable String baseGroupDN;
+    /**
+     * The base distinguished name for users
+     * 
+     */
     private final @Nullable String baseUserDN;
+    /**
+     * The domain's dns name
+     * 
+     */
     private final @Nullable String domain;
+    /**
+     * The name of the identity source
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+     * 
+     */
     private final @Nullable String password;
+    /**
+     * Primary server URL
+     * 
+     */
     private final @Nullable String primaryServer;
+    /**
+     * Secondary server URL
+     * 
+     */
     private final @Nullable String secondaryServer;
+    /**
+     * Protect LDAP communication using SSL certificate (LDAPS)
+     * 
+     */
     private final @Nullable String ssl;
+    /**
+     * The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+     * 
+     */
     private final @Nullable String username;
 
     @OutputCustomType.Constructor({"alias","baseGroupDN","baseUserDN","domain","name","password","primaryServer","secondaryServer","ssl","username"})
@@ -46,33 +86,73 @@ public final class IdentitySourceResponse {
         this.username = username;
     }
 
+    /**
+     * The domain's NetBIOS name
+     * 
+     */
     public Optional<String> getAlias() {
         return Optional.ofNullable(this.alias);
     }
+    /**
+     * The base distinguished name for groups
+     * 
+     */
     public Optional<String> getBaseGroupDN() {
         return Optional.ofNullable(this.baseGroupDN);
     }
+    /**
+     * The base distinguished name for users
+     * 
+     */
     public Optional<String> getBaseUserDN() {
         return Optional.ofNullable(this.baseUserDN);
     }
+    /**
+     * The domain's dns name
+     * 
+     */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
+    /**
+     * The name of the identity source
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+     * 
+     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * Primary server URL
+     * 
+     */
     public Optional<String> getPrimaryServer() {
         return Optional.ofNullable(this.primaryServer);
     }
+    /**
+     * Secondary server URL
+     * 
+     */
     public Optional<String> getSecondaryServer() {
         return Optional.ofNullable(this.secondaryServer);
     }
+    /**
+     * Protect LDAP communication using SSL certificate (LDAPS)
+     * 
+     */
     public Optional<String> getSsl() {
         return Optional.ofNullable(this.ssl);
     }
+    /**
+     * The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+     * 
+     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

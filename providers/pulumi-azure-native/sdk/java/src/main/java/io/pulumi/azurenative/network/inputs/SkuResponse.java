@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The pricing tier of the web application firewall policy.
+ * 
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * Name of the pricing tier.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

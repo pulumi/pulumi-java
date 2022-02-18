@@ -14,15 +14,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetIntegrationAccountPartnerResult {
+    /**
+     * The changed time.
+     * 
+     */
     private final String changedTime;
+    /**
+     * The partner content.
+     * 
+     */
     private final PartnerContentResponse content;
+    /**
+     * The created time.
+     * 
+     */
     private final String createdTime;
+    /**
+     * The resource id.
+     * 
+     */
     private final String id;
+    /**
+     * The resource location.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The metadata.
+     * 
+     */
     private final @Nullable Object metadata;
+    /**
+     * Gets the resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The partner type.
+     * 
+     */
     private final String partnerType;
+    /**
+     * The resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Gets the resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"changedTime","content","createdTime","id","location","metadata","name","partnerType","tags","type"})
@@ -49,33 +89,73 @@ public final class GetIntegrationAccountPartnerResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The changed time.
+     * 
+     */
     public String getChangedTime() {
         return this.changedTime;
     }
+    /**
+     * The partner content.
+     * 
+     */
     public PartnerContentResponse getContent() {
         return this.content;
     }
+    /**
+     * The created time.
+     * 
+     */
     public String getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * The resource id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The resource location.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The metadata.
+     * 
+     */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * Gets the resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The partner type.
+     * 
+     */
     public String getPartnerType() {
         return this.partnerType;
     }
+    /**
+     * The resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Gets the resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

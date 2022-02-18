@@ -14,51 +14,128 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Contract details.
+ * API Version: 2020-12-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:apimanagement:ApiTagDescription tagId1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/5931a75ae4bbd512a88c680b/tagDescriptions/tagId1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:apimanagement:ApiTagDescription")
 public class ApiTagDescription extends io.pulumi.resources.CustomResource {
+    /**
+     * Description of the Tag.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the Tag.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Tag name.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return Tag name.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Description of the external resources describing the tag.
+     * 
+     */
     @OutputExport(name="externalDocsDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalDocsDescription;
 
+    /**
+     * @return Description of the external resources describing the tag.
+     * 
+     */
     public Output</* @Nullable */ String> getExternalDocsDescription() {
         return this.externalDocsDescription;
     }
+    /**
+     * Absolute URL of external resources describing the tag.
+     * 
+     */
     @OutputExport(name="externalDocsUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalDocsUrl;
 
+    /**
+     * @return Absolute URL of external resources describing the tag.
+     * 
+     */
     public Output</* @Nullable */ String> getExternalDocsUrl() {
         return this.externalDocsUrl;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Identifier of the tag in the form of /tags/{tagId}
+     * 
+     */
     @OutputExport(name="tagId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagId;
 
+    /**
+     * @return Identifier of the tag in the form of /tags/{tagId}
+     * 
+     */
     public Output</* @Nullable */ String> getTagId() {
         return this.tagId;
     }
+    /**
+     * Resource type for API Management resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ApiTagDescription(String name, ApiTagDescriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiTagDescription", name, args == null ? ApiTagDescriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +164,14 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ApiTagDescription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiTagDescription(name, id, options);
     }

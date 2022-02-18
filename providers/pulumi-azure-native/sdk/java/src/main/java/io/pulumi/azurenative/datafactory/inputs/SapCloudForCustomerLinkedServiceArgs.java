@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for SAP Cloud for Customer.
+ * 
+ */
 public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SapCloudForCustomerLinkedServiceArgs Empty = new SapCloudForCustomerLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -29,6 +37,10 @@ public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resour
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -36,6 +48,10 @@ public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resour
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +59,10 @@ public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -50,6 +70,10 @@ public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resour
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -57,6 +81,10 @@ public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resour
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The password for Basic authentication.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -64,6 +92,11 @@ public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resour
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'SapCloudForCustomer'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -71,6 +104,10 @@ public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resour
         return this.type;
     }
 
+    /**
+     * The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<Object> url;
 
@@ -78,6 +115,10 @@ public final class SapCloudForCustomerLinkedServiceArgs extends io.pulumi.resour
         return this.url;
     }
 
+    /**
+     * The username for Basic authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

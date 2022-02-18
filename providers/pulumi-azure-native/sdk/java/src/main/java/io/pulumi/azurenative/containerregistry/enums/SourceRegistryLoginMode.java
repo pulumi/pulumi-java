@@ -8,6 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The authentication mode which determines the source registry login scope. The credentials for the source registry
+     * will be generated using the given scope. These credentials will be used to login to
+     * the source registry during the run.
+     * 
+     */
     @EnumType
     public enum SourceRegistryLoginMode {
         None("None"),

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for a Connection Setting Item
+ * 
+ */
 public final class ConnectionSettingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionSettingPropertiesResponse Empty = new ConnectionSettingPropertiesResponse();
 
+    /**
+     * Client Id associated with the Connection Setting.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -23,6 +31,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * Client Secret associated with the Connection Setting
+     * 
+     */
     @InputImport(name="clientSecret")
     private final @Nullable String clientSecret;
 
@@ -30,6 +42,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
+    /**
+     * Id associated with the Connection Setting.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -37,6 +53,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Name associated with the Connection Setting.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -44,6 +64,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Service Provider Parameters associated with the Connection Setting
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable List<ConnectionSettingParameterResponse> parameters;
 
@@ -51,6 +75,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.parameters == null ? List.of() : this.parameters;
     }
 
+    /**
+     * Provisioning state of the resource
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -58,6 +86,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
+    /**
+     * Scopes associated with the Connection Setting
+     * 
+     */
     @InputImport(name="scopes")
     private final @Nullable String scopes;
 
@@ -65,6 +97,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.scopes == null ? Optional.empty() : Optional.ofNullable(this.scopes);
     }
 
+    /**
+     * Service Provider Display Name associated with the Connection Setting
+     * 
+     */
     @InputImport(name="serviceProviderDisplayName")
     private final @Nullable String serviceProviderDisplayName;
 
@@ -72,6 +108,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.serviceProviderDisplayName == null ? Optional.empty() : Optional.ofNullable(this.serviceProviderDisplayName);
     }
 
+    /**
+     * Service Provider Id associated with the Connection Setting
+     * 
+     */
     @InputImport(name="serviceProviderId")
     private final @Nullable String serviceProviderId;
 
@@ -79,6 +119,10 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
         return this.serviceProviderId == null ? Optional.empty() : Optional.ofNullable(this.serviceProviderId);
     }
 
+    /**
+     * Setting Id set by the service for the Connection Setting.
+     * 
+     */
     @InputImport(name="settingId", required=true)
     private final String settingId;
 

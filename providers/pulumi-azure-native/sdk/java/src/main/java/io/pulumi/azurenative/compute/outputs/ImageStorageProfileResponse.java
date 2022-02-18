@@ -14,8 +14,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImageStorageProfileResponse {
+    /**
+     * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     * 
+     */
     private final @Nullable List<ImageDataDiskResponse> dataDisks;
+    /**
+     * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     * 
+     */
     private final @Nullable ImageOSDiskResponse osDisk;
+    /**
+     * Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
+     * 
+     */
     private final @Nullable Boolean zoneResilient;
 
     @OutputCustomType.Constructor({"dataDisks","osDisk","zoneResilient"})
@@ -28,12 +40,24 @@ public final class ImageStorageProfileResponse {
         this.zoneResilient = zoneResilient;
     }
 
+    /**
+     * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     * 
+     */
     public List<ImageDataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
+    /**
+     * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     * 
+     */
     public Optional<ImageOSDiskResponse> getOsDisk() {
         return Optional.ofNullable(this.osDisk);
     }
+    /**
+     * Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
+     * 
+     */
     public Optional<Boolean> getZoneResilient() {
         return Optional.ofNullable(this.zoneResilient);
     }

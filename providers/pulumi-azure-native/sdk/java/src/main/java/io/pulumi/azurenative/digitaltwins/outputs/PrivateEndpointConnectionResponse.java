@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateEndpointConnectionResponse {
+    /**
+     * The resource identifier.
+     * 
+     */
     private final String id;
+    /**
+     * The resource name.
+     * 
+     */
     private final String name;
     private final PrivateEndpointConnectionResponseProperties properties;
+    /**
+     * The resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -27,15 +39,27 @@ public final class PrivateEndpointConnectionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The resource identifier.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
     public PrivateEndpointConnectionResponseProperties getProperties() {
         return this.properties;
     }
+    /**
+     * The resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

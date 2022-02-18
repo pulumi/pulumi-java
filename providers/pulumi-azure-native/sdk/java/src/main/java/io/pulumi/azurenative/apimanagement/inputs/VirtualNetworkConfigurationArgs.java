@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration of a virtual network to which API Management service is deployed.
+ * 
+ */
 public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkConfigurationArgs Empty = new VirtualNetworkConfigurationArgs();
 
+    /**
+     * The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+     * 
+     */
     @InputImport(name="subnetResourceId")
     private final @Nullable Input<String> subnetResourceId;
 

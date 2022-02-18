@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * QuickBooks server linked service.
+ * 
+ */
 public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QuickBooksLinkedServiceResponse Empty = new QuickBooksLinkedServiceResponse();
 
+    /**
+     * The access token for OAuth 1.0 authentication.
+     * 
+     */
     @InputImport(name="accessToken")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
@@ -29,6 +37,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.accessToken == null ? null : this.accessToken;
     }
 
+    /**
+     * The access token secret for OAuth 1.0 authentication.
+     * 
+     */
     @InputImport(name="accessTokenSecret")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret;
 
@@ -36,6 +48,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.accessTokenSecret == null ? null : this.accessTokenSecret;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -43,6 +59,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The company ID of the QuickBooks company to authorize.
+     * 
+     */
     @InputImport(name="companyId")
     private final @Nullable Object companyId;
 
@@ -50,6 +70,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.companyId == null ? Optional.empty() : Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -57,6 +81,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * 
+     */
     @InputImport(name="connectionProperties")
     private final @Nullable Object connectionProperties;
 
@@ -64,6 +92,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.connectionProperties == null ? Optional.empty() : Optional.ofNullable(this.connectionProperties);
     }
 
+    /**
+     * The consumer key for OAuth 1.0 authentication.
+     * 
+     */
     @InputImport(name="consumerKey")
     private final @Nullable Object consumerKey;
 
@@ -71,6 +103,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.consumerKey == null ? Optional.empty() : Optional.ofNullable(this.consumerKey);
     }
 
+    /**
+     * The consumer secret for OAuth 1.0 authentication.
+     * 
+     */
     @InputImport(name="consumerSecret")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret;
 
@@ -78,6 +114,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.consumerSecret == null ? null : this.consumerSecret;
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -85,6 +125,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -92,6 +136,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
+     * 
+     */
     @InputImport(name="endpoint")
     private final @Nullable Object endpoint;
 
@@ -99,6 +147,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -106,6 +158,11 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'QuickBooks'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -113,6 +170,10 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
         return this.type;
     }
 
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Object useEncryptedEndpoints;
 

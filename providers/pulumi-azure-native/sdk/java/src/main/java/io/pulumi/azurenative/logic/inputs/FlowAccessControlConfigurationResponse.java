@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The access control configuration.
+ * 
+ */
 public final class FlowAccessControlConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowAccessControlConfigurationResponse Empty = new FlowAccessControlConfigurationResponse();
 
+    /**
+     * The access control configuration for workflow actions.
+     * 
+     */
     @InputImport(name="actions")
     private final @Nullable FlowAccessControlConfigurationPolicyResponse actions;
 
@@ -21,6 +29,10 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
         return this.actions == null ? Optional.empty() : Optional.ofNullable(this.actions);
     }
 
+    /**
+     * The access control configuration for accessing workflow run contents.
+     * 
+     */
     @InputImport(name="contents")
     private final @Nullable FlowAccessControlConfigurationPolicyResponse contents;
 
@@ -28,6 +40,10 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
         return this.contents == null ? Optional.empty() : Optional.ofNullable(this.contents);
     }
 
+    /**
+     * The access control configuration for invoking workflow triggers.
+     * 
+     */
     @InputImport(name="triggers")
     private final @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
 
@@ -35,6 +51,10 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
         return this.triggers == null ? Optional.empty() : Optional.ofNullable(this.triggers);
     }
 
+    /**
+     * The access control configuration for workflow management.
+     * 
+     */
     @InputImport(name="workflowManagement")
     private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
 

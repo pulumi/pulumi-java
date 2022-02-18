@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
+ * 
+ */
 public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FunctionResponse Empty = new FunctionResponse();
 
+    /**
+     * Resource Id
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -22,6 +30,10 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Resource name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +41,10 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The properties that are associated with a function.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable ScalarFunctionPropertiesResponse properties;
 
@@ -36,6 +52,10 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * Resource type
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

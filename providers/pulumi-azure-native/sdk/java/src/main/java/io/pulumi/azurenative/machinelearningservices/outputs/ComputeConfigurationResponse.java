@@ -14,11 +14,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ComputeConfigurationResponse {
+    /**
+     * Number of instances or nodes.
+     * 
+     */
     private final @Nullable Integer instanceCount;
+    /**
+     * SKU type to run on.
+     * 
+     */
     private final @Nullable String instanceType;
+    /**
+     * Set to true for jobs running on local compute.
+     * 
+     */
     private final @Nullable Boolean isLocal;
+    /**
+     * Location for virtual cluster run.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Additional properties.
+     * 
+     */
     private final @Nullable Map<String,String> properties;
+    /**
+     * ARM resource ID of the compute resource.
+     * 
+     */
     private final @Nullable String target;
 
     @OutputCustomType.Constructor({"instanceCount","instanceType","isLocal","location","properties","target"})
@@ -37,21 +61,45 @@ public final class ComputeConfigurationResponse {
         this.target = target;
     }
 
+    /**
+     * Number of instances or nodes.
+     * 
+     */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
+    /**
+     * SKU type to run on.
+     * 
+     */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
+    /**
+     * Set to true for jobs running on local compute.
+     * 
+     */
     public Optional<Boolean> getIsLocal() {
         return Optional.ofNullable(this.isLocal);
     }
+    /**
+     * Location for virtual cluster run.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Additional properties.
+     * 
+     */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
+    /**
+     * ARM resource ID of the compute resource.
+     * 
+     */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ForecastSpendResponse {
+    /**
+     * The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
+     * 
+     */
     private final Double amount;
+    /**
+     * The unit of measure for the budget amount.
+     * 
+     */
     private final String unit;
 
     @OutputCustomType.Constructor({"amount","unit"})
@@ -21,9 +29,17 @@ public final class ForecastSpendResponse {
         this.unit = Objects.requireNonNull(unit);
     }
 
+    /**
+     * The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
+     * 
+     */
     public Double getAmount() {
         return this.amount;
     }
+    /**
+     * The unit of measure for the budget amount.
+     * 
+     */
     public String getUnit() {
         return this.unit;
     }

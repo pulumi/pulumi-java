@@ -8,10 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the clip time as a Utc time position in the media file.  The Utc time can point to a different position depending on whether the media file starts from a timestamp of zero or not.
+ * 
+ */
 public final class UtcClipTimeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UtcClipTimeResponse Empty = new UtcClipTimeResponse();
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.UtcClipTime'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -19,6 +28,10 @@ public final class UtcClipTimeResponse extends io.pulumi.resources.InvokeArgs {
         return this.odataType;
     }
 
+    /**
+     * The time position on the timeline of the input media based on Utc time.
+     * 
+     */
     @InputImport(name="time", required=true)
     private final String time;
 

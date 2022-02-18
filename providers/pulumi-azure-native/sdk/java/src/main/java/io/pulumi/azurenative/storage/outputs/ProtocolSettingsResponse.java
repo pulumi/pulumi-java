@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProtocolSettingsResponse {
+    /**
+     * Setting for SMB protocol
+     * 
+     */
     private final @Nullable SmbSettingResponse smb;
 
     @OutputCustomType.Constructor({"smb"})
@@ -18,6 +22,10 @@ public final class ProtocolSettingsResponse {
         this.smb = smb;
     }
 
+    /**
+     * Setting for SMB protocol
+     * 
+     */
     public Optional<SmbSettingResponse> getSmb() {
         return Optional.ofNullable(this.smb);
     }

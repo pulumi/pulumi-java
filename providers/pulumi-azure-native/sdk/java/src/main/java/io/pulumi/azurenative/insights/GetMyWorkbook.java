@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMyWorkbook {
+/**
+ * An Application Insights private workbook definition.
+ * API Version: 2020-10-20.
+ * 
+ *
+ * An Application Insights private workbook definition.
+ * 
+ */
     public static CompletableFuture<GetMyWorkbookResult> invokeAsync(GetMyWorkbookArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getMyWorkbook", TypeShape.of(GetMyWorkbookResult.class), args == null ? GetMyWorkbookArgs.Empty : args, Utilities.withVersion(options));
     }

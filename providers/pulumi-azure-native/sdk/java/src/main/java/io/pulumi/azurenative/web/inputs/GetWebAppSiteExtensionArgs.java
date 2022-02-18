@@ -12,6 +12,10 @@ public final class GetWebAppSiteExtensionArgs extends io.pulumi.resources.Invoke
 
     public static final GetWebAppSiteExtensionArgs Empty = new GetWebAppSiteExtensionArgs();
 
+    /**
+     * Site name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppSiteExtensionArgs extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetWebAppSiteExtensionArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * Site extension name.
+     * 
+     */
     @InputImport(name="siteExtensionId", required=true)
     private final String siteExtensionId;
 

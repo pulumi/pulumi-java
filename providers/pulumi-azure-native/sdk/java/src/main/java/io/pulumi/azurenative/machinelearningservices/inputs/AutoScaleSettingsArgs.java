@@ -15,6 +15,10 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
 
     public static final AutoScaleSettingsArgs Empty = new AutoScaleSettingsArgs();
 
+    /**
+     * Maximum number of instances for this deployment.
+     * 
+     */
     @InputImport(name="maxInstances")
     private final @Nullable Input<Integer> maxInstances;
 
@@ -22,6 +26,10 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
     }
 
+    /**
+     * Minimum number of instances for this deployment.
+     * 
+     */
     @InputImport(name="minInstances")
     private final @Nullable Input<Integer> minInstances;
 
@@ -29,6 +37,10 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.minInstances == null ? Input.empty() : this.minInstances;
     }
 
+    /**
+     * The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
+     * 
+     */
     @InputImport(name="pollingInterval")
     private final @Nullable Input<String> pollingInterval;
 
@@ -36,6 +48,10 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.pollingInterval == null ? Input.empty() : this.pollingInterval;
     }
 
+    /**
+     * Expected value is 'Auto'.
+     * 
+     */
     @InputImport(name="scaleType", required=true)
     private final Input<String> scaleType;
 
@@ -43,6 +59,10 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.scaleType;
     }
 
+    /**
+     * Target CPU usage for the autoscaler.
+     * 
+     */
     @InputImport(name="targetUtilizationPercentage")
     private final @Nullable Input<Integer> targetUtilizationPercentage;
 

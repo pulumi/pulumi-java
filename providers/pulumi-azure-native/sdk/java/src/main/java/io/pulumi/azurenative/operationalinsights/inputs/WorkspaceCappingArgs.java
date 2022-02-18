@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The daily volume cap for ingestion.
+ * 
+ */
 public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceCappingArgs Empty = new WorkspaceCappingArgs();
 
+    /**
+     * The workspace daily quota for ingestion.
+     * 
+     */
     @InputImport(name="dailyQuotaGb")
     private final @Nullable Input<Double> dailyQuotaGb;
 

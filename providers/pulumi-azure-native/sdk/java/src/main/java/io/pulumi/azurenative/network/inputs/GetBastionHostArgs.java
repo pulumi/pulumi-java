@@ -12,6 +12,10 @@ public final class GetBastionHostArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBastionHostArgs Empty = new GetBastionHostArgs();
 
+    /**
+     * The name of the Bastion Host.
+     * 
+     */
     @InputImport(name="bastionHostName", required=true)
     private final String bastionHostName;
 
@@ -19,6 +23,10 @@ public final class GetBastionHostArgs extends io.pulumi.resources.InvokeArgs {
         return this.bastionHostName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -18,6 +18,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 
+    /**
+     * This type describes a volume provided by an Azure Files file share.
+     * 
+     */
     @InputImport(name="azureFileParameters")
     private final @Nullable Input<VolumeProviderParametersAzureFileArgs> azureFileParameters;
 
@@ -25,6 +29,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureFileParameters == null ? Input.empty() : this.azureFileParameters;
     }
 
+    /**
+     * User readable description of the volume.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +40,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +51,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Provider of the volume.
+     * 
+     */
     @InputImport(name="provider", required=true)
     private final Input<Either<String,VolumeProvider>> provider;
 
@@ -46,6 +62,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.provider;
     }
 
+    /**
+     * Azure resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +73,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -60,6 +84,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The identity of the volume.
+     * 
+     */
     @InputImport(name="volumeResourceName")
     private final @Nullable Input<String> volumeResourceName;
 

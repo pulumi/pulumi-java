@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Access information for a storage account.
+ * 
+ */
 public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountArgs Empty = new StorageAccountArgs();
 
+    /**
+     * Specifies the key used to access the storage account.
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +29,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Specifies the name of the storage account.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

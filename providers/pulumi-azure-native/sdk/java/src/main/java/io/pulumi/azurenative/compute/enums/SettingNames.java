@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+     * 
+     */
     @EnumType
     public enum SettingNames {
         AutoLogon("AutoLogon"),

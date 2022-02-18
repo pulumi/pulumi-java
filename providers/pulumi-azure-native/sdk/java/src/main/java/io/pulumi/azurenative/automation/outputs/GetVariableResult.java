@@ -12,13 +12,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVariableResult {
+    /**
+     * Gets or sets the creation time.
+     * 
+     */
     private final @Nullable String creationTime;
+    /**
+     * Gets or sets the description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Fully qualified resource Id for the resource
+     * 
+     */
     private final String id;
+    /**
+     * Gets or sets the encrypted flag of the variable.
+     * 
+     */
     private final @Nullable Boolean isEncrypted;
+    /**
+     * Gets or sets the last modified time.
+     * 
+     */
     private final @Nullable String lastModifiedTime;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * The type of the resource.
+     * 
+     */
     private final String type;
+    /**
+     * Gets or sets the value of the variable.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"creationTime","description","id","isEncrypted","lastModifiedTime","name","type","value"})
@@ -41,27 +73,59 @@ public final class GetVariableResult {
         this.value = value;
     }
 
+    /**
+     * Gets or sets the creation time.
+     * 
+     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
+    /**
+     * Gets or sets the description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Fully qualified resource Id for the resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Gets or sets the encrypted flag of the variable.
+     * 
+     */
     public Optional<Boolean> getIsEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
+    /**
+     * Gets or sets the last modified time.
+     * 
+     */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Gets or sets the value of the variable.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

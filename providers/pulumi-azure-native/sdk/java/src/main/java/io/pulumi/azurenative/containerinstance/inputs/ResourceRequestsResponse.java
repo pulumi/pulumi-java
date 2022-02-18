@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The resource requests.
+ * 
+ */
 public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceRequestsResponse Empty = new ResourceRequestsResponse();
 
+    /**
+     * The CPU request of this container instance.
+     * 
+     */
     @InputImport(name="cpu", required=true)
     private final Double cpu;
 
@@ -22,6 +30,10 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
         return this.cpu;
     }
 
+    /**
+     * The GPU request of this container instance.
+     * 
+     */
     @InputImport(name="gpu")
     private final @Nullable GpuResourceResponse gpu;
 
@@ -29,6 +41,10 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
         return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
     }
 
+    /**
+     * The memory request in GB of this container instance.
+     * 
+     */
     @InputImport(name="memoryInGB", required=true)
     private final Double memoryInGB;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsumerGroup {
+/**
+ * Single item in List or Get Consumer group operation
+ * API Version: 2017-04-01.
+ * 
+ *
+ * Single item in List or Get Consumer group operation
+ * 
+ */
     public static CompletableFuture<GetConsumerGroupResult> invokeAsync(GetConsumerGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getConsumerGroup", TypeShape.of(GetConsumerGroupResult.class), args == null ? GetConsumerGroupArgs.Empty : args, Utilities.withVersion(options));
     }

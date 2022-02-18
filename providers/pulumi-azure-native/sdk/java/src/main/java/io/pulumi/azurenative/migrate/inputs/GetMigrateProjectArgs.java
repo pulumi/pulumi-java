@@ -12,6 +12,10 @@ public final class GetMigrateProjectArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetMigrateProjectArgs Empty = new GetMigrateProjectArgs();
 
+    /**
+     * Name of the Azure Migrate project.
+     * 
+     */
     @InputImport(name="migrateProjectName", required=true)
     private final String migrateProjectName;
 
@@ -19,6 +23,10 @@ public final class GetMigrateProjectArgs extends io.pulumi.resources.InvokeArgs 
         return this.migrateProjectName;
     }
 
+    /**
+     * Name of the Azure Resource Group that migrate project is part of.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

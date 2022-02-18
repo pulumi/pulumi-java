@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains detailed information about a size
+ * 
+ */
 public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SizeInfoResponse Empty = new SizeInfoResponse();
 
+    /**
+     * Represents the actual compute size, e.g. Standard_A2_v2.
+     * 
+     */
     @InputImport(name="computeSize")
     private final @Nullable String computeSize;
 
@@ -23,6 +31,10 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.computeSize == null ? Optional.empty() : Optional.ofNullable(this.computeSize);
     }
 
+    /**
+     * The amount of memory available (in GB).
+     * 
+     */
     @InputImport(name="memory")
     private final @Nullable Double memory;
 
@@ -30,6 +42,10 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
     }
 
+    /**
+     * The number of cores a VM of this size has.
+     * 
+     */
     @InputImport(name="numberOfCores")
     private final @Nullable Integer numberOfCores;
 
@@ -37,6 +53,10 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.numberOfCores == null ? Optional.empty() : Optional.ofNullable(this.numberOfCores);
     }
 
+    /**
+     * The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost.
+     * 
+     */
     @InputImport(name="price")
     private final @Nullable Double price;
 

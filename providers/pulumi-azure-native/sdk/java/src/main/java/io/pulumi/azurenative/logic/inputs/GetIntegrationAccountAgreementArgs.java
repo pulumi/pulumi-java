@@ -12,6 +12,10 @@ public final class GetIntegrationAccountAgreementArgs extends io.pulumi.resource
 
     public static final GetIntegrationAccountAgreementArgs Empty = new GetIntegrationAccountAgreementArgs();
 
+    /**
+     * The integration account agreement name.
+     * 
+     */
     @InputImport(name="agreementName", required=true)
     private final String agreementName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationAccountAgreementArgs extends io.pulumi.resource
         return this.agreementName;
     }
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationAccountAgreementArgs extends io.pulumi.resource
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProfileSupportedOptimizationTypes {
+/**
+ * The result of the GetSupportedOptimizationTypes API
+ * API Version: 2020-09-01.
+ * 
+ *
+ * The result of the GetSupportedOptimizationTypes API
+ * 
+ */
     public static CompletableFuture<GetProfileSupportedOptimizationTypesResult> invokeAsync(GetProfileSupportedOptimizationTypesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getProfileSupportedOptimizationTypes", TypeShape.of(GetProfileSupportedOptimizationTypesResult.class), args == null ? GetProfileSupportedOptimizationTypesArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The kubernetes service connection configuration
+ * 
+ */
 public final class DefenderForContainersAwsOfferingResponseKubernetesService extends io.pulumi.resources.InvokeArgs {
 
     public static final DefenderForContainersAwsOfferingResponseKubernetesService Empty = new DefenderForContainersAwsOfferingResponseKubernetesService();
 
+    /**
+     * The cloud role ARN in AWS for this feature
+     * 
+     */
     @InputImport(name="cloudRoleArn")
     private final @Nullable String cloudRoleArn;
 

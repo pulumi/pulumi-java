@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationInsightsComponentDataVolumeCapResponse {
+    /**
+     * Daily data volume cap in GB.
+     * 
+     */
     private final @Nullable Double cap;
+    /**
+     * Maximum daily data volume cap that the user can set for this component.
+     * 
+     */
     private final Double maxHistoryCap;
+    /**
+     * Daily data volume cap UTC reset hour.
+     * 
+     */
     private final Integer resetTime;
+    /**
+     * Do not send a notification email when the daily data volume cap is met.
+     * 
+     */
     private final @Nullable Boolean stopSendNotificationWhenHitCap;
+    /**
+     * Reserved, not used for now.
+     * 
+     */
     private final @Nullable Boolean stopSendNotificationWhenHitThreshold;
+    /**
+     * Reserved, not used for now.
+     * 
+     */
     private final @Nullable Integer warningThreshold;
 
     @OutputCustomType.Constructor({"cap","maxHistoryCap","resetTime","stopSendNotificationWhenHitCap","stopSendNotificationWhenHitThreshold","warningThreshold"})
@@ -36,21 +60,45 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
         this.warningThreshold = warningThreshold;
     }
 
+    /**
+     * Daily data volume cap in GB.
+     * 
+     */
     public Optional<Double> getCap() {
         return Optional.ofNullable(this.cap);
     }
+    /**
+     * Maximum daily data volume cap that the user can set for this component.
+     * 
+     */
     public Double getMaxHistoryCap() {
         return this.maxHistoryCap;
     }
+    /**
+     * Daily data volume cap UTC reset hour.
+     * 
+     */
     public Integer getResetTime() {
         return this.resetTime;
     }
+    /**
+     * Do not send a notification email when the daily data volume cap is met.
+     * 
+     */
     public Optional<Boolean> getStopSendNotificationWhenHitCap() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitCap);
     }
+    /**
+     * Reserved, not used for now.
+     * 
+     */
     public Optional<Boolean> getStopSendNotificationWhenHitThreshold() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
     }
+    /**
+     * Reserved, not used for now.
+     * 
+     */
     public Optional<Integer> getWarningThreshold() {
         return Optional.ofNullable(this.warningThreshold);
     }

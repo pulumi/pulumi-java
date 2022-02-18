@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The Pfs Group used in IKE Phase 2 for new child SA.
+     * 
+     */
     @EnumType
     public enum PfsGroup {
         None("None"),

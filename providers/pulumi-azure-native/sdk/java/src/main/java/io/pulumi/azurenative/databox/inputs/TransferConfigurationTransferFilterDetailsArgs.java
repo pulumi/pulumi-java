@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
+ * 
+ */
 public final class TransferConfigurationTransferFilterDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransferConfigurationTransferFilterDetailsArgs Empty = new TransferConfigurationTransferFilterDetailsArgs();
 
+    /**
+     * Details of the filtering the transfer of data.
+     * 
+     */
     @InputImport(name="include")
     private final @Nullable Input<TransferFilterDetailsArgs> include;
 

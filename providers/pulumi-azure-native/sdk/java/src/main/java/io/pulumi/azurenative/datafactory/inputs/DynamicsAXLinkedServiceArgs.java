@@ -18,10 +18,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Dynamics AX linked service.
+ * 
+ */
 public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DynamicsAXLinkedServiceArgs Empty = new DynamicsAXLinkedServiceArgs();
 
+    /**
+     * Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="aadResourceId", required=true)
     private final Input<Object> aadResourceId;
 
@@ -29,6 +37,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.aadResourceId;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -36,6 +48,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -43,6 +59,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -50,6 +70,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -57,6 +81,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -64,6 +92,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Specify the application's client ID. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="servicePrincipalId", required=true)
     private final Input<Object> servicePrincipalId;
 
@@ -71,6 +103,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.servicePrincipalId;
     }
 
+    /**
+     * Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="servicePrincipalKey", required=true)
     private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
@@ -78,6 +114,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.servicePrincipalKey;
     }
 
+    /**
+     * Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="tenant", required=true)
     private final Input<Object> tenant;
 
@@ -85,6 +125,11 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.tenant;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'DynamicsAX'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -92,6 +137,10 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.type;
     }
 
+    /**
+     * The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Input<Object> url;
 

@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectedClusterIdentityResponse {
+    /**
+     * The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     private final String principalId;
+    /**
+     * The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
+     * 
+     */
     private final String tenantId;
+    /**
+     * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -23,12 +35,24 @@ public final class ConnectedClusterIdentityResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
+     * 
+     */
     public String getType() {
         return this.type;
     }

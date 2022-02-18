@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifying this parameter adds support for reliable collections
+ * 
+ */
 public final class ReliableCollectionsRefArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReliableCollectionsRefArgs Empty = new ReliableCollectionsRefArgs();
 
+    /**
+     * False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
+     * 
+     */
     @InputImport(name="doNotPersistState")
     private final @Nullable Input<Boolean> doNotPersistState;
 
@@ -22,6 +30,10 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
         return this.doNotPersistState == null ? Input.empty() : this.doNotPersistState;
     }
 
+    /**
+     * Name of ReliableCollection resource. Right now it's not used and you can use any string.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

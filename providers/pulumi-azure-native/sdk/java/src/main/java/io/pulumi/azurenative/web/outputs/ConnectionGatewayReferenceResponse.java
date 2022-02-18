@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectionGatewayReferenceResponse {
+    /**
+     * Resource reference id
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * Resource reference location
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Resource reference name
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Resource reference type
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"id","location","name","type"})
@@ -28,15 +44,31 @@ public final class ConnectionGatewayReferenceResponse {
         this.type = type;
     }
 
+    /**
+     * Resource reference id
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * Resource reference location
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Resource reference name
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Resource reference type
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

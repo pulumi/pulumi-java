@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
+    /**
+     * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
+     * 
+     */
     private final @Nullable Object computeType;
+    /**
+     * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+     * 
+     */
     private final @Nullable Object coreCount;
 
     @OutputCustomType.Constructor({"computeType","coreCount"})
@@ -22,9 +30,17 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
         this.coreCount = coreCount;
     }
 
+    /**
+     * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> getComputeType() {
         return Optional.ofNullable(this.computeType);
     }
+    /**
+     * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+     * 
+     */
     public Optional<Object> getCoreCount() {
         return Optional.ofNullable(this.coreCount);
     }

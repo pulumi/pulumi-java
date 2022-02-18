@@ -12,6 +12,10 @@ public final class GetSynchronizationSettingArgs extends io.pulumi.resources.Inv
 
     public static final GetSynchronizationSettingArgs Empty = new GetSynchronizationSettingArgs();
 
+    /**
+     * The name of the share account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetSynchronizationSettingArgs extends io.pulumi.resources.Inv
         return this.accountName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetSynchronizationSettingArgs extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share.
+     * 
+     */
     @InputImport(name="shareName", required=true)
     private final String shareName;
 
@@ -33,6 +45,10 @@ public final class GetSynchronizationSettingArgs extends io.pulumi.resources.Inv
         return this.shareName;
     }
 
+    /**
+     * The name of the synchronizationSetting.
+     * 
+     */
     @InputImport(name="synchronizationSettingName", required=true)
     private final String synchronizationSettingName;
 

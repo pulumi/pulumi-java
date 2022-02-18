@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RecoveryPlanProtectedItemResponse {
+    /**
+     * The ARM Id of the recovery plan protected item.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The virtual machine Id.
+     * 
+     */
     private final @Nullable String virtualMachineId;
 
     @OutputCustomType.Constructor({"id","virtualMachineId"})
@@ -22,9 +30,17 @@ public final class RecoveryPlanProtectedItemResponse {
         this.virtualMachineId = virtualMachineId;
     }
 
+    /**
+     * The ARM Id of the recovery plan protected item.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The virtual machine Id.
+     * 
+     */
     public Optional<String> getVirtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }

@@ -12,13 +12,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatabaseBackupInfoResponse {
+    /**
+     * The list of backup files for the current database.
+     * 
+     */
     private final List<String> backupFiles;
+    /**
+     * Date and time when the backup operation finished.
+     * 
+     */
     private final String backupFinishDate;
+    /**
+     * Backup Type.
+     * 
+     */
     private final String backupType;
+    /**
+     * Database name.
+     * 
+     */
     private final String databaseName;
+    /**
+     * Number of files in the backup set.
+     * 
+     */
     private final Integer familyCount;
+    /**
+     * Whether the backup set is compressed
+     * 
+     */
     private final Boolean isCompressed;
+    /**
+     * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
+     * 
+     */
     private final Boolean isDamaged;
+    /**
+     * Position of current database backup in the file.
+     * 
+     */
     private final Integer position;
 
     @OutputCustomType.Constructor({"backupFiles","backupFinishDate","backupType","databaseName","familyCount","isCompressed","isDamaged","position"})
@@ -41,27 +73,59 @@ public final class DatabaseBackupInfoResponse {
         this.position = Objects.requireNonNull(position);
     }
 
+    /**
+     * The list of backup files for the current database.
+     * 
+     */
     public List<String> getBackupFiles() {
         return this.backupFiles;
     }
+    /**
+     * Date and time when the backup operation finished.
+     * 
+     */
     public String getBackupFinishDate() {
         return this.backupFinishDate;
     }
+    /**
+     * Backup Type.
+     * 
+     */
     public String getBackupType() {
         return this.backupType;
     }
+    /**
+     * Database name.
+     * 
+     */
     public String getDatabaseName() {
         return this.databaseName;
     }
+    /**
+     * Number of files in the backup set.
+     * 
+     */
     public Integer getFamilyCount() {
         return this.familyCount;
     }
+    /**
+     * Whether the backup set is compressed
+     * 
+     */
     public Boolean getIsCompressed() {
         return this.isCompressed;
     }
+    /**
+     * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
+     * 
+     */
     public Boolean getIsDamaged() {
         return this.isDamaged;
     }
+    /**
+     * Position of current database backup in the file.
+     * 
+     */
     public Integer getPosition() {
         return this.position;
     }

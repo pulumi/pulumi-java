@@ -17,6 +17,10 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
 
     public static final CassandraTableGetPropertiesResponseResource Empty = new CassandraTableGetPropertiesResponseResource();
 
+    /**
+     * Analytical TTL.
+     * 
+     */
     @InputImport(name="analyticalStorageTtl")
     private final @Nullable Integer analyticalStorageTtl;
 
@@ -24,6 +28,10 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
         return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
     }
 
+    /**
+     * Time to live of the Cosmos DB Cassandra table
+     * 
+     */
     @InputImport(name="defaultTtl")
     private final @Nullable Integer defaultTtl;
 
@@ -31,6 +39,10 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
         return this.defaultTtl == null ? Optional.empty() : Optional.ofNullable(this.defaultTtl);
     }
 
+    /**
+     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -38,6 +50,10 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
         return this.etag;
     }
 
+    /**
+     * Name of the Cosmos DB Cassandra table
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -45,6 +61,10 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
         return this.id;
     }
 
+    /**
+     * A system generated property. A unique identifier.
+     * 
+     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -52,6 +72,10 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
         return this.rid;
     }
 
+    /**
+     * Schema of the Cosmos DB Cassandra table
+     * 
+     */
     @InputImport(name="schema")
     private final @Nullable CassandraSchemaResponse schema;
 
@@ -59,6 +83,10 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
+    /**
+     * A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 

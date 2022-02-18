@@ -12,6 +12,10 @@ public final class GetVirtualNetworkGatewayLearnedRoutesArgs extends io.pulumi.r
 
     public static final GetVirtualNetworkGatewayLearnedRoutesArgs Empty = new GetVirtualNetworkGatewayLearnedRoutesArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetVirtualNetworkGatewayLearnedRoutesArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual network gateway.
+     * 
+     */
     @InputImport(name="virtualNetworkGatewayName", required=true)
     private final String virtualNetworkGatewayName;
 

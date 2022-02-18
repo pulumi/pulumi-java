@@ -12,6 +12,10 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
 
     public static final GetRemediationAtResourceGroupArgs Empty = new GetRemediationAtResourceGroupArgs();
 
+    /**
+     * The name of the remediation.
+     * 
+     */
     @InputImport(name="remediationName", required=true)
     private final String remediationName;
 
@@ -19,6 +23,10 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
         return this.remediationName;
     }
 
+    /**
+     * Resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

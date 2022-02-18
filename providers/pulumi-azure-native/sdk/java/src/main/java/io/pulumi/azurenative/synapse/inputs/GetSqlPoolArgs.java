@@ -12,6 +12,10 @@ public final class GetSqlPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSqlPoolArgs Empty = new GetSqlPoolArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetSqlPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * SQL pool name
+     * 
+     */
     @InputImport(name="sqlPoolName", required=true)
     private final String sqlPoolName;
 
@@ -26,6 +34,10 @@ public final class GetSqlPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.sqlPoolName;
     }
 
+    /**
+     * The name of the workspace
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

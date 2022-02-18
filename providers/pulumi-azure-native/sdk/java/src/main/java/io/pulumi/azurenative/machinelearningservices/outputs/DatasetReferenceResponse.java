@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetReferenceResponse {
+    /**
+     * The id of the dataset reference.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The name of the dataset reference.
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"id","name"})
@@ -22,9 +30,17 @@ public final class DatasetReferenceResponse {
         this.name = name;
     }
 
+    /**
+     * The id of the dataset reference.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name of the dataset reference.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

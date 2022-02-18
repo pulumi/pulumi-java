@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse {
+    /**
+     * The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
+     * 
+     */
     private final String domainNameLabel;
 
     @OutputCustomType.Constructor({"domainNameLabel"})
@@ -16,6 +20,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
         this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
     }
 
+    /**
+     * The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
+     * 
+     */
     public String getDomainNameLabel() {
         return this.domainNameLabel;
     }

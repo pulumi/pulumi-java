@@ -21,6 +21,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     public static final AppServiceEnvironmentArgs Empty = new AppServiceEnvironmentArgs();
 
+    /**
+     * Custom settings for changing the behavior of the App Service Environment.
+     * 
+     */
     @InputImport(name="clusterSettings")
     private final @Nullable Input<List<NameValuePairArgs>> clusterSettings;
 
@@ -28,6 +32,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.clusterSettings == null ? Input.empty() : this.clusterSettings;
     }
 
+    /**
+     * DNS suffix of the App Service Environment.
+     * 
+     */
     @InputImport(name="dnsSuffix")
     private final @Nullable Input<String> dnsSuffix;
 
@@ -35,6 +43,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.dnsSuffix == null ? Input.empty() : this.dnsSuffix;
     }
 
+    /**
+     * Scale factor for front-ends.
+     * 
+     */
     @InputImport(name="frontEndScaleFactor")
     private final @Nullable Input<Integer> frontEndScaleFactor;
 
@@ -42,6 +54,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.frontEndScaleFactor == null ? Input.empty() : this.frontEndScaleFactor;
     }
 
+    /**
+     * Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+     * 
+     */
     @InputImport(name="internalLoadBalancingMode")
     private final @Nullable Input<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
 
@@ -49,6 +65,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.internalLoadBalancingMode == null ? Input.empty() : this.internalLoadBalancingMode;
     }
 
+    /**
+     * Number of IP SSL addresses reserved for the App Service Environment.
+     * 
+     */
     @InputImport(name="ipsslAddressCount")
     private final @Nullable Input<Integer> ipsslAddressCount;
 
@@ -56,6 +76,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.ipsslAddressCount == null ? Input.empty() : this.ipsslAddressCount;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -63,6 +87,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource Location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -70,6 +98,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Front-end VM size, e.g. "Medium", "Large".
+     * 
+     */
     @InputImport(name="multiSize")
     private final @Nullable Input<String> multiSize;
 
@@ -77,6 +109,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.multiSize == null ? Input.empty() : this.multiSize;
     }
 
+    /**
+     * Name of the App Service Environment.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -84,6 +120,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -91,6 +131,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -98,6 +142,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * User added ip ranges to whitelist on ASE db
+     * 
+     */
     @InputImport(name="userWhitelistedIpRanges")
     private final @Nullable Input<List<String>> userWhitelistedIpRanges;
 
@@ -105,6 +153,10 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
         return this.userWhitelistedIpRanges == null ? Input.empty() : this.userWhitelistedIpRanges;
     }
 
+    /**
+     * Description of the Virtual Network.
+     * 
+     */
     @InputImport(name="virtualNetwork", required=true)
     private final Input<VirtualNetworkProfileArgs> virtualNetwork;
 

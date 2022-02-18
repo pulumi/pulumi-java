@@ -21,6 +21,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkArgs Empty = new LinkArgs();
 
+    /**
+     * Localized descriptions for the Link.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<Map<String,String>> description;
 
@@ -28,6 +32,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Localized display name for the Link.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<Map<String,String>> displayName;
 
@@ -35,6 +43,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the hub.
+     * 
+     */
     @InputImport(name="hubName", required=true)
     private final Input<String> hubName;
 
@@ -42,6 +54,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubName;
     }
 
+    /**
+     * The name of the link.
+     * 
+     */
     @InputImport(name="linkName")
     private final @Nullable Input<String> linkName;
 
@@ -49,6 +65,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkName == null ? Input.empty() : this.linkName;
     }
 
+    /**
+     * The set of properties mappings between the source and target Types.
+     * 
+     */
     @InputImport(name="mappings")
     private final @Nullable Input<List<TypePropertiesMappingArgs>> mappings;
 
@@ -56,6 +76,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.mappings == null ? Input.empty() : this.mappings;
     }
 
+    /**
+     * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
+     * 
+     */
     @InputImport(name="operationType")
     private final @Nullable Input<InstanceOperationType> operationType;
 
@@ -63,6 +87,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationType == null ? Input.empty() : this.operationType;
     }
 
+    /**
+     * The properties that represent the participating profile.
+     * 
+     */
     @InputImport(name="participantPropertyReferences", required=true)
     private final Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
 
@@ -70,6 +98,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.participantPropertyReferences;
     }
 
+    /**
+     * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
+     * 
+     */
     @InputImport(name="referenceOnly")
     private final @Nullable Input<Boolean> referenceOnly;
 
@@ -77,6 +109,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.referenceOnly == null ? Input.empty() : this.referenceOnly;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -84,6 +120,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Type of source entity.
+     * 
+     */
     @InputImport(name="sourceEntityType", required=true)
     private final Input<EntityType> sourceEntityType;
 
@@ -91,6 +131,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceEntityType;
     }
 
+    /**
+     * Name of the source Entity Type.
+     * 
+     */
     @InputImport(name="sourceEntityTypeName", required=true)
     private final Input<String> sourceEntityTypeName;
 
@@ -98,6 +142,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceEntityTypeName;
     }
 
+    /**
+     * Type of target entity.
+     * 
+     */
     @InputImport(name="targetEntityType", required=true)
     private final Input<EntityType> targetEntityType;
 
@@ -105,6 +153,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetEntityType;
     }
 
+    /**
+     * Name of the target Entity Type.
+     * 
+     */
     @InputImport(name="targetEntityTypeName", required=true)
     private final Input<String> targetEntityTypeName;
 

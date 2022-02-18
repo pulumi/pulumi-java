@@ -15,6 +15,10 @@ public final class WebAppPrivateEndpointConnectionArgs extends io.pulumi.resourc
 
     public static final WebAppPrivateEndpointConnectionArgs Empty = new WebAppPrivateEndpointConnectionArgs();
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -22,6 +26,10 @@ public final class WebAppPrivateEndpointConnectionArgs extends io.pulumi.resourc
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -36,6 +44,10 @@ public final class WebAppPrivateEndpointConnectionArgs extends io.pulumi.resourc
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * The state of a private link connection
+     * 
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -43,6 +55,10 @@ public final class WebAppPrivateEndpointConnectionArgs extends io.pulumi.resourc
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container with items backed up using MAB backup engine.
+ * 
+ */
 public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MabContainerResponse Empty = new MabContainerResponse();
 
+    /**
+     * Agent version of this container.
+     * 
+     */
     @InputImport(name="agentVersion")
     private final @Nullable String agentVersion;
 
@@ -26,6 +34,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
+    /**
+     * Type of backup management for the container.
+     * 
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable String backupManagementType;
 
@@ -33,6 +45,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
+    /**
+     * Can the container be registered one more time.
+     * 
+     */
     @InputImport(name="canReRegister")
     private final @Nullable Boolean canReRegister;
 
@@ -40,6 +56,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.canReRegister == null ? Optional.empty() : Optional.ofNullable(this.canReRegister);
     }
 
+    /**
+     * Health state of mab container.
+     * 
+     */
     @InputImport(name="containerHealthState")
     private final @Nullable String containerHealthState;
 
@@ -47,6 +67,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.containerHealthState == null ? Optional.empty() : Optional.ofNullable(this.containerHealthState);
     }
 
+    /**
+     * ContainerID represents the container.
+     * 
+     */
     @InputImport(name="containerId")
     private final @Nullable Double containerId;
 
@@ -54,6 +78,14 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.containerId == null ? Optional.empty() : Optional.ofNullable(this.containerId);
     }
 
+    /**
+     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is 'Windows'.
+     * 
+     */
     @InputImport(name="containerType", required=true)
     private final String containerType;
 
@@ -61,6 +93,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.containerType;
     }
 
+    /**
+     * Additional information for this container
+     * 
+     */
     @InputImport(name="extendedInfo")
     private final @Nullable MabContainerExtendedInfoResponse extendedInfo;
 
@@ -68,6 +104,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
+    /**
+     * Friendly name of the container.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -75,6 +115,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * Status of health of the container.
+     * 
+     */
     @InputImport(name="healthStatus")
     private final @Nullable String healthStatus;
 
@@ -82,6 +126,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
+    /**
+     * Health details on this mab container.
+     * 
+     */
     @InputImport(name="mabContainerHealthDetails")
     private final @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails;
 
@@ -89,6 +137,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.mabContainerHealthDetails == null ? List.of() : this.mabContainerHealthDetails;
     }
 
+    /**
+     * Number of items backed up in this container.
+     * 
+     */
     @InputImport(name="protectedItemCount")
     private final @Nullable Double protectedItemCount;
 
@@ -96,6 +148,10 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
     }
 
+    /**
+     * Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     @InputImport(name="registrationStatus")
     private final @Nullable String registrationStatus;
 

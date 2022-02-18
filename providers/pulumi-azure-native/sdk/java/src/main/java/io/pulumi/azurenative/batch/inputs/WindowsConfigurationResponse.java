@@ -14,6 +14,10 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
 
     public static final WindowsConfigurationResponse Empty = new WindowsConfigurationResponse();
 
+    /**
+     * If omitted, the default value is true.
+     * 
+     */
     @InputImport(name="enableAutomaticUpdates")
     private final @Nullable Boolean enableAutomaticUpdates;
 

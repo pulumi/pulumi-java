@@ -17,6 +17,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
 
     public static final GuestDiagnosticsSettingArgs Empty = new GuestDiagnosticsSettingArgs();
 
+    /**
+     * the array of data source object which are configured to collect and send data
+     * 
+     */
     @InputImport(name="dataSources")
     private final @Nullable Input<List<DataSourceArgs>> dataSources;
 
@@ -24,6 +28,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
         return this.dataSources == null ? Input.empty() : this.dataSources;
     }
 
+    /**
+     * The name of the diagnostic setting.
+     * 
+     */
     @InputImport(name="diagnosticSettingsName")
     private final @Nullable Input<String> diagnosticSettingsName;
 
@@ -31,6 +39,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
         return this.diagnosticSettingsName == null ? Input.empty() : this.diagnosticSettingsName;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Operating system type for the configuration
+     * 
+     */
     @InputImport(name="osType")
     private final @Nullable Input<String> osType;
 
@@ -52,6 +68,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
         return this.proxySetting == null ? Input.empty() : this.proxySetting;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +79,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

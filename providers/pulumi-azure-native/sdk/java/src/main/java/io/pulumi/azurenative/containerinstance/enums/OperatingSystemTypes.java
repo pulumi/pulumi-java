@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The operating system type required by the containers in the container group.
+     * 
+     */
     @EnumType
     public enum OperatingSystemTypes {
         Windows("Windows"),

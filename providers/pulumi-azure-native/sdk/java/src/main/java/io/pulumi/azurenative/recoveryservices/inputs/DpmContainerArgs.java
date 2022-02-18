@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DPM workload-specific protection container.
+ * 
+ */
 public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DpmContainerArgs Empty = new DpmContainerArgs();
 
+    /**
+     * Type of backup management for the container.
+     * 
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -27,6 +35,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
+    /**
+     * Specifies whether the container is re-registrable.
+     * 
+     */
     @InputImport(name="canReRegister")
     private final @Nullable Input<Boolean> canReRegister;
 
@@ -34,6 +46,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.canReRegister == null ? Input.empty() : this.canReRegister;
     }
 
+    /**
+     * ID of container.
+     * 
+     */
     @InputImport(name="containerId")
     private final @Nullable Input<String> containerId;
 
@@ -41,6 +57,14 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerId == null ? Input.empty() : this.containerId;
     }
 
+    /**
+     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is 'DPMContainer'.
+     * 
+     */
     @InputImport(name="containerType", required=true)
     private final Input<String> containerType;
 
@@ -48,6 +72,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerType;
     }
 
+    /**
+     * Backup engine Agent version
+     * 
+     */
     @InputImport(name="dpmAgentVersion")
     private final @Nullable Input<String> dpmAgentVersion;
 
@@ -55,6 +83,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.dpmAgentVersion == null ? Input.empty() : this.dpmAgentVersion;
     }
 
+    /**
+     * List of BackupEngines protecting the container
+     * 
+     */
     @InputImport(name="dpmServers")
     private final @Nullable Input<List<String>> dpmServers;
 
@@ -62,6 +94,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.dpmServers == null ? Input.empty() : this.dpmServers;
     }
 
+    /**
+     * Extended Info of the container.
+     * 
+     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<DPMContainerExtendedInfoArgs> extendedInfo;
 
@@ -69,6 +105,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
+    /**
+     * Friendly name of the container.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -76,6 +116,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * Status of health of the container.
+     * 
+     */
     @InputImport(name="healthStatus")
     private final @Nullable Input<String> healthStatus;
 
@@ -83,6 +127,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
     }
 
+    /**
+     * Number of protected items in the BackupEngine
+     * 
+     */
     @InputImport(name="protectedItemCount")
     private final @Nullable Input<Double> protectedItemCount;
 
@@ -90,6 +138,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.protectedItemCount == null ? Input.empty() : this.protectedItemCount;
     }
 
+    /**
+     * Protection status of the container.
+     * 
+     */
     @InputImport(name="protectionStatus")
     private final @Nullable Input<String> protectionStatus;
 
@@ -97,6 +149,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.protectionStatus == null ? Input.empty() : this.protectionStatus;
     }
 
+    /**
+     * Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     @InputImport(name="registrationStatus")
     private final @Nullable Input<String> registrationStatus;
 
@@ -104,6 +160,10 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
     }
 
+    /**
+     * To check if upgrade available
+     * 
+     */
     @InputImport(name="upgradeAvailable")
     private final @Nullable Input<Boolean> upgradeAvailable;
 

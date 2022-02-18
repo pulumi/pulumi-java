@@ -11,12 +11,41 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
+    /**
+     * The default database for the login.
+     * 
+     */
     private final String defaultDatabase;
+    /**
+     * Result identifier
+     * 
+     */
     private final String id;
+    /**
+     * The state of the login.
+     * 
+     */
     private final Boolean isEnabled;
+    /**
+     * The type of login.
+     * 
+     */
     private final String loginType;
+    /**
+     * Information about eligibility of login for migration.
+     * 
+     */
     private final MigrationEligibilityInfoResponse migrationEligibility;
+    /**
+     * Login name.
+     * 
+     */
     private final String name;
+    /**
+     * Type of result - database level or task level
+     * Expected value is 'LoginLevelOutput'.
+     * 
+     */
     private final String resultType;
 
     @OutputCustomType.Constructor({"defaultDatabase","id","isEnabled","loginType","migrationEligibility","name","resultType"})
@@ -37,24 +66,53 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
         this.resultType = Objects.requireNonNull(resultType);
     }
 
+    /**
+     * The default database for the login.
+     * 
+     */
     public String getDefaultDatabase() {
         return this.defaultDatabase;
     }
+    /**
+     * Result identifier
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The state of the login.
+     * 
+     */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
+    /**
+     * The type of login.
+     * 
+     */
     public String getLoginType() {
         return this.loginType;
     }
+    /**
+     * Information about eligibility of login for migration.
+     * 
+     */
     public MigrationEligibilityInfoResponse getMigrationEligibility() {
         return this.migrationEligibility;
     }
+    /**
+     * Login name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Type of result - database level or task level
+     * Expected value is 'LoginLevelOutput'.
+     * 
+     */
     public String getResultType() {
         return this.resultType;
     }

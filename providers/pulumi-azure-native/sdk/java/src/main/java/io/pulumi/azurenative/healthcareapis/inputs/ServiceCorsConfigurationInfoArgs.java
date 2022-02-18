@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings for the CORS configuration of the service instance.
+ * 
+ */
 public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceCorsConfigurationInfoArgs Empty = new ServiceCorsConfigurationInfoArgs();
 
+    /**
+     * If credentials are allowed via CORS.
+     * 
+     */
     @InputImport(name="allowCredentials")
     private final @Nullable Input<Boolean> allowCredentials;
 
@@ -24,6 +32,10 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
     }
 
+    /**
+     * The headers to be allowed via CORS.
+     * 
+     */
     @InputImport(name="headers")
     private final @Nullable Input<List<String>> headers;
 
@@ -31,6 +43,10 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
         return this.headers == null ? Input.empty() : this.headers;
     }
 
+    /**
+     * The max age to be allowed via CORS.
+     * 
+     */
     @InputImport(name="maxAge")
     private final @Nullable Input<Integer> maxAge;
 
@@ -38,6 +54,10 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
         return this.maxAge == null ? Input.empty() : this.maxAge;
     }
 
+    /**
+     * The methods to be allowed via CORS.
+     * 
+     */
     @InputImport(name="methods")
     private final @Nullable Input<List<String>> methods;
 
@@ -45,6 +65,10 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
         return this.methods == null ? Input.empty() : this.methods;
     }
 
+    /**
+     * The origins to be allowed via CORS.
+     * 
+     */
     @InputImport(name="origins")
     private final @Nullable Input<List<String>> origins;
 

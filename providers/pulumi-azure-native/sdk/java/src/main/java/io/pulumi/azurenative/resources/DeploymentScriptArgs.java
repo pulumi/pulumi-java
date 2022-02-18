@@ -18,6 +18,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DeploymentScriptArgs Empty = new DeploymentScriptArgs();
 
+    /**
+     * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -25,6 +29,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Type of the script.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,ScriptType>> kind;
 
@@ -32,6 +40,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
         return this.kind;
     }
 
+    /**
+     * The location of the ACI and the storage account for the deployment script.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +51,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -46,6 +62,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment script.
+     * 
+     */
     @InputImport(name="scriptName")
     private final @Nullable Input<String> scriptName;
 
@@ -53,6 +73,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
         return this.scriptName == null ? Input.empty() : this.scriptName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

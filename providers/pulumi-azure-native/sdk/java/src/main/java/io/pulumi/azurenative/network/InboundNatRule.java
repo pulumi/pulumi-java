@@ -18,81 +18,198 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Inbound NAT rule of the load balancer.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:InboundNatRule natRule1.1 /subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/inboundNatRules/natRule1.1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:InboundNatRule")
 public class InboundNatRule extends io.pulumi.resources.CustomResource {
+    /**
+     * A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
+     * 
+     */
     @OutputExport(name="backendIPConfiguration", type=NetworkInterfaceIPConfigurationResponse.class, parameters={})
     private Output<NetworkInterfaceIPConfigurationResponse> backendIPConfiguration;
 
+    /**
+     * @return A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
+     * 
+     */
     public Output<NetworkInterfaceIPConfigurationResponse> getBackendIPConfiguration() {
         return this.backendIPConfiguration;
     }
+    /**
+     * The port used for the internal endpoint. Acceptable values range from 1 to 65535.
+     * 
+     */
     @OutputExport(name="backendPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> backendPort;
 
+    /**
+     * @return The port used for the internal endpoint. Acceptable values range from 1 to 65535.
+     * 
+     */
     public Output</* @Nullable */ Integer> getBackendPort() {
         return this.backendPort;
     }
+    /**
+     * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     * 
+     */
     @OutputExport(name="enableFloatingIP", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFloatingIP;
 
+    /**
+     * @return Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableFloatingIP() {
         return this.enableFloatingIP;
     }
+    /**
+     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * 
+     */
     @OutputExport(name="enableTcpReset", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableTcpReset;
 
+    /**
+     * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableTcpReset() {
         return this.enableTcpReset;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * A reference to frontend IP addresses.
+     * 
+     */
     @OutputExport(name="frontendIPConfiguration", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> frontendIPConfiguration;
 
+    /**
+     * @return A reference to frontend IP addresses.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getFrontendIPConfiguration() {
         return this.frontendIPConfiguration;
     }
+    /**
+     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
+     * 
+     */
     @OutputExport(name="frontendPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> frontendPort;
 
+    /**
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
+     * 
+     */
     public Output</* @Nullable */ Integer> getFrontendPort() {
         return this.frontendPort;
     }
+    /**
+     * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+     * 
+     */
     @OutputExport(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleTimeoutInMinutes;
 
+    /**
+     * @return The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+     * 
+     */
     public Output</* @Nullable */ Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes;
     }
+    /**
+     * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The reference to the transport protocol used by the load balancing rule.
+     * 
+     */
     @OutputExport(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
+    /**
+     * @return The reference to the transport protocol used by the load balancing rule.
+     * 
+     */
     public Output</* @Nullable */ String> getProtocol() {
         return this.protocol;
     }
+    /**
+     * The provisioning state of the inbound NAT rule resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the inbound NAT rule resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public InboundNatRule(String name, InboundNatRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:InboundNatRule", name, args == null ? InboundNatRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -142,6 +259,14 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static InboundNatRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InboundNatRule(name, id, options);
     }

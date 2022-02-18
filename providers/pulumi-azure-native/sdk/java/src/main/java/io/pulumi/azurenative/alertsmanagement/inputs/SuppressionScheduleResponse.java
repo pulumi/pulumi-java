@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Schedule for a given suppression configuration.
+ * 
+ */
 public final class SuppressionScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SuppressionScheduleResponse Empty = new SuppressionScheduleResponse();
 
+    /**
+     * End date for suppression
+     * 
+     */
     @InputImport(name="endDate")
     private final @Nullable String endDate;
 
@@ -23,6 +31,10 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
         return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
     }
 
+    /**
+     * End date for suppression
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -30,6 +42,10 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
+    /**
+     * Specifies the values for recurrence pattern
+     * 
+     */
     @InputImport(name="recurrenceValues")
     private final @Nullable List<Integer> recurrenceValues;
 
@@ -37,6 +53,10 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
         return this.recurrenceValues == null ? List.of() : this.recurrenceValues;
     }
 
+    /**
+     * Start date for suppression
+     * 
+     */
     @InputImport(name="startDate")
     private final @Nullable String startDate;
 
@@ -44,6 +64,10 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
         return this.startDate == null ? Optional.empty() : Optional.ofNullable(this.startDate);
     }
 
+    /**
+     * Start time for suppression
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 

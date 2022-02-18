@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Device details.
+ * 
+ */
 public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeviceDetailsResponse Empty = new DeviceDetailsResponse();
 
+    /**
+     * Management Resource Id
+     * 
+     */
     @InputImport(name="managementResourceId", required=true)
     private final String managementResourceId;
 
@@ -19,6 +27,10 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
         return this.managementResourceId;
     }
 
+    /**
+     * Management Resource Tenant ID
+     * 
+     */
     @InputImport(name="managementResourceTenantId", required=true)
     private final String managementResourceTenantId;
 
@@ -26,6 +38,10 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
         return this.managementResourceTenantId;
     }
 
+    /**
+     * device serial number
+     * 
+     */
     @InputImport(name="serialNumber", required=true)
     private final String serialNumber;
 

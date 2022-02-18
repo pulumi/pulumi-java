@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubnetResponse {
+    /**
+     * Resource ID of Virtual Network Subnet
+     * 
+     */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +20,10 @@ public final class SubnetResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+    /**
+     * Resource ID of Virtual Network Subnet
+     * 
+     */
     public String getId() {
         return this.id;
     }

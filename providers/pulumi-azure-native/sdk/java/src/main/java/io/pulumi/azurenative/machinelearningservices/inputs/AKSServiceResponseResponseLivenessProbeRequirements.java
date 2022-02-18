@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The liveness probe requirements.
+ * 
+ */
 public final class AKSServiceResponseResponseLivenessProbeRequirements extends io.pulumi.resources.InvokeArgs {
 
     public static final AKSServiceResponseResponseLivenessProbeRequirements Empty = new AKSServiceResponseResponseLivenessProbeRequirements();
 
+    /**
+     * The number of failures to allow before returning an unhealthy status.
+     * 
+     */
     @InputImport(name="failureThreshold")
     private final @Nullable Integer failureThreshold;
 
@@ -21,6 +29,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
         return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
     }
 
+    /**
+     * The delay before the first probe in seconds.
+     * 
+     */
     @InputImport(name="initialDelaySeconds")
     private final @Nullable Integer initialDelaySeconds;
 
@@ -28,6 +40,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
         return this.initialDelaySeconds == null ? Optional.empty() : Optional.ofNullable(this.initialDelaySeconds);
     }
 
+    /**
+     * The length of time between probes in seconds.
+     * 
+     */
     @InputImport(name="periodSeconds")
     private final @Nullable Integer periodSeconds;
 
@@ -35,6 +51,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
         return this.periodSeconds == null ? Optional.empty() : Optional.ofNullable(this.periodSeconds);
     }
 
+    /**
+     * The number of successful probes before returning a healthy status.
+     * 
+     */
     @InputImport(name="successThreshold")
     private final @Nullable Integer successThreshold;
 
@@ -42,6 +62,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
         return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
     }
 
+    /**
+     * The probe timeout in seconds.
+     * 
+     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Integer timeoutSeconds;
 

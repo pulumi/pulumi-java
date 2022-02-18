@@ -19,6 +19,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InboundNatRuleArgs Empty = new InboundNatRuleArgs();
 
+    /**
+     * The port used for the internal endpoint. Acceptable values range from 1 to 65535.
+     * 
+     */
     @InputImport(name="backendPort")
     private final @Nullable Input<Integer> backendPort;
 
@@ -26,6 +30,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendPort == null ? Input.empty() : this.backendPort;
     }
 
+    /**
+     * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     * 
+     */
     @InputImport(name="enableFloatingIP")
     private final @Nullable Input<Boolean> enableFloatingIP;
 
@@ -33,6 +41,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableFloatingIP == null ? Input.empty() : this.enableFloatingIP;
     }
 
+    /**
+     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * 
+     */
     @InputImport(name="enableTcpReset")
     private final @Nullable Input<Boolean> enableTcpReset;
 
@@ -40,6 +52,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
     }
 
+    /**
+     * A reference to frontend IP addresses.
+     * 
+     */
     @InputImport(name="frontendIPConfiguration")
     private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
 
@@ -47,6 +63,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
     }
 
+    /**
+     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
+     * 
+     */
     @InputImport(name="frontendPort")
     private final @Nullable Input<Integer> frontendPort;
 
@@ -54,6 +74,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontendPort == null ? Input.empty() : this.frontendPort;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -61,6 +85,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+     * 
+     */
     @InputImport(name="idleTimeoutInMinutes")
     private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
@@ -68,6 +96,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
     }
 
+    /**
+     * The name of the inbound nat rule.
+     * 
+     */
     @InputImport(name="inboundNatRuleName")
     private final @Nullable Input<String> inboundNatRuleName;
 
@@ -75,6 +107,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.inboundNatRuleName == null ? Input.empty() : this.inboundNatRuleName;
     }
 
+    /**
+     * The name of the load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerName", required=true)
     private final Input<String> loadBalancerName;
 
@@ -82,6 +118,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancerName;
     }
 
+    /**
+     * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -89,6 +129,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The reference to the transport protocol used by the load balancing rule.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,TransportProtocol>> protocol;
 
@@ -96,6 +140,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

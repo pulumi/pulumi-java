@@ -12,6 +12,10 @@ public final class GetIngestionSettingArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetIngestionSettingArgs Empty = new GetIngestionSettingArgs();
 
+    /**
+     * Name of the ingestion setting
+     * 
+     */
     @InputImport(name="ingestionSettingName", required=true)
     private final String ingestionSettingName;
 

@@ -12,6 +12,10 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAssetFilterArgs Empty = new GetAssetFilterArgs();
 
+    /**
+     * The Media Services account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The Asset name.
+     * 
+     */
     @InputImport(name="assetName", required=true)
     private final String assetName;
 
@@ -26,6 +34,10 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
         return this.assetName;
     }
 
+    /**
+     * The Asset Filter name
+     * 
+     */
     @InputImport(name="filterName", required=true)
     private final String filterName;
 
@@ -33,6 +45,10 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
         return this.filterName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

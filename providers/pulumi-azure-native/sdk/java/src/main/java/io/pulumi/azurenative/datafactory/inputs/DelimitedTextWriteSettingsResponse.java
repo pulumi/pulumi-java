@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Delimited text write settings.
+ * 
+ */
 public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DelimitedTextWriteSettingsResponse Empty = new DelimitedTextWriteSettingsResponse();
 
+    /**
+     * The file extension used to create the files. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileExtension", required=true)
     private final Object fileExtension;
 
@@ -22,6 +30,10 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
         return this.fileExtension;
     }
 
+    /**
+     * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileNamePrefix")
     private final @Nullable Object fileNamePrefix;
 
@@ -29,6 +41,10 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
     }
 
+    /**
+     * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxRowsPerFile")
     private final @Nullable Object maxRowsPerFile;
 
@@ -36,6 +52,10 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
     }
 
+    /**
+     * Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="quoteAllText")
     private final @Nullable Object quoteAllText;
 
@@ -43,6 +63,11 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
         return this.quoteAllText == null ? Optional.empty() : Optional.ofNullable(this.quoteAllText);
     }
 
+    /**
+     * The write setting type.
+     * Expected value is 'DelimitedTextWriteSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

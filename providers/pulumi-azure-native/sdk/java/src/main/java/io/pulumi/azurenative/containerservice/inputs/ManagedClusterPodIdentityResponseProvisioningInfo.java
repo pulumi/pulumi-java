@@ -14,6 +14,10 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends io.
 
     public static final ManagedClusterPodIdentityResponseProvisioningInfo Empty = new ManagedClusterPodIdentityResponseProvisioningInfo();
 
+    /**
+     * Pod identity assignment error (if any).
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable CloudErrorResponse error;
 

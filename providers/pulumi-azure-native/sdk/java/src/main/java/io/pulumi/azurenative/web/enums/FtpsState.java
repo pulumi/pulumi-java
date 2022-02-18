@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * State of FTP / FTPS service
+     * 
+     */
     @EnumType
     public enum FtpsState {
         AllAllowed("AllAllowed"),

@@ -15,6 +15,10 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
 
     public static final MediaServiceIdentityArgs Empty = new MediaServiceIdentityArgs();
 
+    /**
+     * The identity type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ManagedIdentityType>> type;
 

@@ -23,123 +23,296 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Azure Firewall resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:AzureFirewall azurefirewall /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:AzureFirewall")
 public class AzureFirewall extends io.pulumi.resources.CustomResource {
+    /**
+     * The additional properties used to further config this azure firewall.
+     * 
+     */
     @OutputExport(name="additionalProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> additionalProperties;
 
+    /**
+     * @return The additional properties used to further config this azure firewall.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getAdditionalProperties() {
         return this.additionalProperties;
     }
+    /**
+     * Collection of application rule collections used by Azure Firewall.
+     * 
+     */
     @OutputExport(name="applicationRuleCollections", type=List.class, parameters={AzureFirewallApplicationRuleCollectionResponse.class})
     private Output</* @Nullable */ List<AzureFirewallApplicationRuleCollectionResponse>> applicationRuleCollections;
 
+    /**
+     * @return Collection of application rule collections used by Azure Firewall.
+     * 
+     */
     public Output</* @Nullable */ List<AzureFirewallApplicationRuleCollectionResponse>> getApplicationRuleCollections() {
         return this.applicationRuleCollections;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The firewallPolicy associated with this azure firewall.
+     * 
+     */
     @OutputExport(name="firewallPolicy", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> firewallPolicy;
 
+    /**
+     * @return The firewallPolicy associated with this azure firewall.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getFirewallPolicy() {
         return this.firewallPolicy;
     }
+    /**
+     * IP addresses associated with AzureFirewall.
+     * 
+     */
     @OutputExport(name="hubIPAddresses", type=HubIPAddressesResponse.class, parameters={})
     private Output</* @Nullable */ HubIPAddressesResponse> hubIPAddresses;
 
+    /**
+     * @return IP addresses associated with AzureFirewall.
+     * 
+     */
     public Output</* @Nullable */ HubIPAddressesResponse> getHubIPAddresses() {
         return this.hubIPAddresses;
     }
+    /**
+     * IP configuration of the Azure Firewall resource.
+     * 
+     */
     @OutputExport(name="ipConfigurations", type=List.class, parameters={AzureFirewallIPConfigurationResponse.class})
     private Output</* @Nullable */ List<AzureFirewallIPConfigurationResponse>> ipConfigurations;
 
+    /**
+     * @return IP configuration of the Azure Firewall resource.
+     * 
+     */
     public Output</* @Nullable */ List<AzureFirewallIPConfigurationResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * IpGroups associated with AzureFirewall.
+     * 
+     */
     @OutputExport(name="ipGroups", type=List.class, parameters={AzureFirewallIpGroupsResponse.class})
     private Output<List<AzureFirewallIpGroupsResponse>> ipGroups;
 
+    /**
+     * @return IpGroups associated with AzureFirewall.
+     * 
+     */
     public Output<List<AzureFirewallIpGroupsResponse>> getIpGroups() {
         return this.ipGroups;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * IP configuration of the Azure Firewall used for management traffic.
+     * 
+     */
     @OutputExport(name="managementIpConfiguration", type=AzureFirewallIPConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ AzureFirewallIPConfigurationResponse> managementIpConfiguration;
 
+    /**
+     * @return IP configuration of the Azure Firewall used for management traffic.
+     * 
+     */
     public Output</* @Nullable */ AzureFirewallIPConfigurationResponse> getManagementIpConfiguration() {
         return this.managementIpConfiguration;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Collection of NAT rule collections used by Azure Firewall.
+     * 
+     */
     @OutputExport(name="natRuleCollections", type=List.class, parameters={AzureFirewallNatRuleCollectionResponse.class})
     private Output</* @Nullable */ List<AzureFirewallNatRuleCollectionResponse>> natRuleCollections;
 
+    /**
+     * @return Collection of NAT rule collections used by Azure Firewall.
+     * 
+     */
     public Output</* @Nullable */ List<AzureFirewallNatRuleCollectionResponse>> getNatRuleCollections() {
         return this.natRuleCollections;
     }
+    /**
+     * Collection of network rule collections used by Azure Firewall.
+     * 
+     */
     @OutputExport(name="networkRuleCollections", type=List.class, parameters={AzureFirewallNetworkRuleCollectionResponse.class})
     private Output</* @Nullable */ List<AzureFirewallNetworkRuleCollectionResponse>> networkRuleCollections;
 
+    /**
+     * @return Collection of network rule collections used by Azure Firewall.
+     * 
+     */
     public Output</* @Nullable */ List<AzureFirewallNetworkRuleCollectionResponse>> getNetworkRuleCollections() {
         return this.networkRuleCollections;
     }
+    /**
+     * The provisioning state of the Azure firewall resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the Azure firewall resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The Azure Firewall Resource SKU.
+     * 
+     */
     @OutputExport(name="sku", type=AzureFirewallSkuResponse.class, parameters={})
     private Output</* @Nullable */ AzureFirewallSkuResponse> sku;
 
+    /**
+     * @return The Azure Firewall Resource SKU.
+     * 
+     */
     public Output</* @Nullable */ AzureFirewallSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The operation mode for Threat Intelligence.
+     * 
+     */
     @OutputExport(name="threatIntelMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> threatIntelMode;
 
+    /**
+     * @return The operation mode for Threat Intelligence.
+     * 
+     */
     public Output</* @Nullable */ String> getThreatIntelMode() {
         return this.threatIntelMode;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The virtualHub to which the firewall belongs.
+     * 
+     */
     @OutputExport(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
+    /**
+     * @return The virtualHub to which the firewall belongs.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
         return this.virtualHub;
     }
+    /**
+     * A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
+    /**
+     * @return A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AzureFirewall(String name, AzureFirewallArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:AzureFirewall", name, args == null ? AzureFirewallArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -182,6 +355,14 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AzureFirewall get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AzureFirewall(name, id, options);
     }

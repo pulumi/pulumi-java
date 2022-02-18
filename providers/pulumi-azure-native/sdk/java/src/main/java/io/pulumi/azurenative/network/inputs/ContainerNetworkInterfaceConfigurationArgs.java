@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container network interface configuration child resource.
+ * 
+ */
 public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerNetworkInterfaceConfigurationArgs Empty = new ContainerNetworkInterfaceConfigurationArgs();
 
+    /**
+     * A list of container network interfaces created from this container network interface configuration.
+     * 
+     */
     @InputImport(name="containerNetworkInterfaces")
     private final @Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces;
 
@@ -24,6 +32,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
         return this.containerNetworkInterfaces == null ? Input.empty() : this.containerNetworkInterfaces;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -31,6 +43,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * A list of ip configurations of the container network interface configuration.
+     * 
+     */
     @InputImport(name="ipConfigurations")
     private final @Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations;
 
@@ -38,6 +54,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
     }
 
+    /**
+     * The name of the resource. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

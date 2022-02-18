@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListOpenIdConnectProviderSecrets {
+/**
+ * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+ * 
+ */
     public static CompletableFuture<ListOpenIdConnectProviderSecretsResult> invokeAsync(ListOpenIdConnectProviderSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listOpenIdConnectProviderSecrets", TypeShape.of(ListOpenIdConnectProviderSecretsResult.class), args == null ? ListOpenIdConnectProviderSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

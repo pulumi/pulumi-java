@@ -19,20 +19,81 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MongoDbLinkedServiceResponse {
+    /**
+     * Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     private final @Nullable Object allowSelfSignedServerCert;
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * Database to verify the username and password. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object authSource;
+    /**
+     * The authentication type to be used to connect to the MongoDB database.
+     * 
+     */
     private final @Nullable String authenticationType;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object databaseName;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     private final @Nullable Object enableSsl;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object encryptedCredential;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * Password for authentication.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    /**
+     * The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     private final @Nullable Object port;
+    /**
+     * The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+     * 
+     */
     private final Object server;
+    /**
+     * Type of linked service.
+     * Expected value is 'MongoDb'.
+     * 
+     */
     private final String type;
+    /**
+     * Username for authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object username;
 
     @OutputCustomType.Constructor({"allowSelfSignedServerCert","annotations","authSource","authenticationType","connectVia","databaseName","description","enableSsl","encryptedCredential","parameters","password","port","server","type","username"})
@@ -69,48 +130,109 @@ public final class MongoDbLinkedServiceResponse {
         this.username = username;
     }
 
+    /**
+     * Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> getAllowSelfSignedServerCert() {
         return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * Database to verify the username and password. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getAuthSource() {
         return Optional.ofNullable(this.authSource);
     }
+    /**
+     * The authentication type to be used to connect to the MongoDB database.
+     * 
+     */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getDatabaseName() {
         return this.databaseName;
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> getEnableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * Password for authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> getPort() {
         return Optional.ofNullable(this.port);
     }
+    /**
+     * The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object getServer() {
         return this.server;
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'MongoDb'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Username for authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);
     }

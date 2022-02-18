@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the storage blob based dead letter destination.
+ * 
+ */
 public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageBlobDeadLetterDestinationArgs Empty = new StorageBlobDeadLetterDestinationArgs();
 
+    /**
+     * The name of the Storage blob container that is the destination of the deadletter events
+     * 
+     */
     @InputImport(name="blobContainerName")
     private final @Nullable Input<String> blobContainerName;
 
@@ -21,6 +29,11 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
         return this.blobContainerName == null ? Input.empty() : this.blobContainerName;
     }
 
+    /**
+     * Type of the endpoint for the dead letter destination
+     * Expected value is 'StorageBlob'.
+     * 
+     */
     @InputImport(name="endpointType", required=true)
     private final Input<String> endpointType;
 
@@ -28,6 +41,10 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
         return this.endpointType;
     }
 
+    /**
+     * The Azure Resource ID of the storage account that is the destination of the deadletter events
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

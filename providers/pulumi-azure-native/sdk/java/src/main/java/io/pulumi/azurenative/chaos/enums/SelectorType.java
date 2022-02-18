@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Enum of the selector type.
+     * 
+     */
     @EnumType
     public enum SelectorType {
         Percent("Percent"),

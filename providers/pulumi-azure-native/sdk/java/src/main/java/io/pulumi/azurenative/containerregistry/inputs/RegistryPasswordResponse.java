@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The login password for the container registry.
+ * 
+ */
 public final class RegistryPasswordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RegistryPasswordResponse Empty = new RegistryPasswordResponse();
 
+    /**
+     * The password name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +29,10 @@ public final class RegistryPasswordResponse extends io.pulumi.resources.InvokeAr
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The password value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

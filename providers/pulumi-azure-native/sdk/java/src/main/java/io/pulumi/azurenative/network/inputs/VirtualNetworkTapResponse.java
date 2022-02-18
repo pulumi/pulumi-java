@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual Network Tap resource.
+ * 
+ */
 public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkTapResponse Empty = new VirtualNetworkTapResponse();
 
+    /**
+     * The reference to the private IP address on the internal Load Balancer that will receive the tap.
+     * 
+     */
     @InputImport(name="destinationLoadBalancerFrontEndIPConfiguration")
     private final @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration;
 
@@ -27,6 +35,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.destinationLoadBalancerFrontEndIPConfiguration);
     }
 
+    /**
+     * The reference to the private IP Address of the collector nic that will receive the tap.
+     * 
+     */
     @InputImport(name="destinationNetworkInterfaceIPConfiguration")
     private final @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration;
 
@@ -34,6 +46,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.destinationNetworkInterfaceIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.destinationNetworkInterfaceIPConfiguration);
     }
 
+    /**
+     * The VXLAN destination port that will receive the tapped traffic.
+     * 
+     */
     @InputImport(name="destinationPort")
     private final @Nullable Integer destinationPort;
 
@@ -41,6 +57,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -48,6 +68,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -55,6 +79,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -62,6 +90,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Resource name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -69,6 +101,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
+     * 
+     */
     @InputImport(name="networkInterfaceTapConfigurations", required=true)
     private final List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations;
 
@@ -76,6 +112,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.networkInterfaceTapConfigurations;
     }
 
+    /**
+     * The provisioning state of the virtual network tap resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -83,6 +123,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.provisioningState;
     }
 
+    /**
+     * The resource GUID property of the virtual network tap resource.
+     * 
+     */
     @InputImport(name="resourceGuid", required=true)
     private final String resourceGuid;
 
@@ -90,6 +134,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.resourceGuid;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -97,6 +145,10 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * Resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

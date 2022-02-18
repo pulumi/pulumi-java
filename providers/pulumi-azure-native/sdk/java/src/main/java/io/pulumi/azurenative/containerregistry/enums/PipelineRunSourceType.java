@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the source.
+     * 
+     */
     @EnumType
     public enum PipelineRunSourceType {
         AzureStorageBlob("AzureStorageBlob");

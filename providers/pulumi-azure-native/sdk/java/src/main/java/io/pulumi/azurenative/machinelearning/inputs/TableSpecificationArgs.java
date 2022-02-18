@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The swagger 2.0 schema describing a single service input or output. See Swagger specification: http://swagger.io/specification/
+ * 
+ */
 public final class TableSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableSpecificationArgs Empty = new TableSpecificationArgs();
 
+    /**
+     * Swagger schema description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +31,10 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The format, if 'type' is not 'object'
+     * 
+     */
     @InputImport(name="format")
     private final @Nullable Input<String> format;
 
@@ -30,6 +42,10 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * The set of columns within the data table.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,ColumnSpecificationArgs>> properties;
 
@@ -37,6 +53,10 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Swagger schema title.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -44,6 +64,10 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
         return this.title == null ? Input.empty() : this.title;
     }
 
+    /**
+     * The type of the entity described in swagger.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

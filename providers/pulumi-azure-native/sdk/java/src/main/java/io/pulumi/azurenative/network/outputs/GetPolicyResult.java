@@ -20,20 +20,76 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPolicyResult {
+    /**
+     * Describes custom rules inside the policy.
+     * 
+     */
     private final @Nullable CustomRuleListResponse customRules;
+    /**
+     * Gets a unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Describes Frontend Endpoints associated with this Web Application Firewall policy.
+     * 
+     */
     private final List<FrontendEndpointLinkResponse> frontendEndpointLinks;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource location.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Describes managed rules inside the policy.
+     * 
+     */
     private final @Nullable ManagedRuleSetListResponse managedRules;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Describes settings for the policy.
+     * 
+     */
     private final @Nullable FrontDoorPolicySettingsResponse policySettings;
+    /**
+     * Provisioning state of the policy.
+     * 
+     */
     private final String provisioningState;
     private final String resourceState;
+    /**
+     * Describes Routing Rules associated with this Web Application Firewall policy.
+     * 
+     */
     private final List<RoutingRuleLinkResponse> routingRuleLinks;
+    /**
+     * Describes Security Policy associated with this Web Application Firewall policy.
+     * 
+     */
     private final List<SecurityPolicyLinkResponse> securityPolicyLinks;
+    /**
+     * The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
+     * 
+     */
     private final @Nullable SkuResponse sku;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"customRules","etag","frontendEndpointLinks","id","location","managedRules","name","policySettings","provisioningState","resourceState","routingRuleLinks","securityPolicyLinks","sku","tags","type"})
@@ -70,48 +126,104 @@ public final class GetPolicyResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Describes custom rules inside the policy.
+     * 
+     */
     public Optional<CustomRuleListResponse> getCustomRules() {
         return Optional.ofNullable(this.customRules);
     }
+    /**
+     * Gets a unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Describes Frontend Endpoints associated with this Web Application Firewall policy.
+     * 
+     */
     public List<FrontendEndpointLinkResponse> getFrontendEndpointLinks() {
         return this.frontendEndpointLinks;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource location.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Describes managed rules inside the policy.
+     * 
+     */
     public Optional<ManagedRuleSetListResponse> getManagedRules() {
         return Optional.ofNullable(this.managedRules);
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Describes settings for the policy.
+     * 
+     */
     public Optional<FrontDoorPolicySettingsResponse> getPolicySettings() {
         return Optional.ofNullable(this.policySettings);
     }
+    /**
+     * Provisioning state of the policy.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     public String getResourceState() {
         return this.resourceState;
     }
+    /**
+     * Describes Routing Rules associated with this Web Application Firewall policy.
+     * 
+     */
     public List<RoutingRuleLinkResponse> getRoutingRuleLinks() {
         return this.routingRuleLinks;
     }
+    /**
+     * Describes Security Policy associated with this Web Application Firewall policy.
+     * 
+     */
     public List<SecurityPolicyLinkResponse> getSecurityPolicyLinks() {
         return this.securityPolicyLinks;
     }
+    /**
+     * The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
+     * 
+     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Which type of manipulation to apply to the header.
+     * 
+     */
     @EnumType
     public enum HeaderActionType {
         Append("Append"),

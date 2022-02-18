@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListMachineLearningComputeKeysResult {
+    /**
+     * The type of compute
+     * 
+     */
     private final String computeType;
 
     @OutputCustomType.Constructor({"computeType"})
@@ -16,6 +20,10 @@ public final class ListMachineLearningComputeKeysResult {
         this.computeType = Objects.requireNonNull(computeType);
     }
 
+    /**
+     * The type of compute
+     * 
+     */
     public String getComputeType() {
         return this.computeType;
     }

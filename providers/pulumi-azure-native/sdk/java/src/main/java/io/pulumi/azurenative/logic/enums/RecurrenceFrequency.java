@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The frequency.
+     * 
+     */
     @EnumType
     public enum RecurrenceFrequency {
         NotSpecified("NotSpecified"),

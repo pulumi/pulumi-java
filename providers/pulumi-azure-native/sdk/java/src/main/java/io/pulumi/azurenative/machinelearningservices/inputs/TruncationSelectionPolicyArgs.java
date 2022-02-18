@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines an early termination policy that cancels a given percentage of runs at each evaluation interval.
+ * 
+ */
 public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TruncationSelectionPolicyArgs Empty = new TruncationSelectionPolicyArgs();
 
+    /**
+     * Number of intervals by which to delay the first evaluation.
+     * 
+     */
     @InputImport(name="delayEvaluation")
     private final @Nullable Input<Integer> delayEvaluation;
 
@@ -22,6 +30,10 @@ public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.Res
         return this.delayEvaluation == null ? Input.empty() : this.delayEvaluation;
     }
 
+    /**
+     * Interval (number of runs) between policy evaluations.
+     * 
+     */
     @InputImport(name="evaluationInterval")
     private final @Nullable Input<Integer> evaluationInterval;
 
@@ -29,6 +41,10 @@ public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.Res
         return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
     }
 
+    /**
+     * Expected value is 'TruncationSelection'.
+     * 
+     */
     @InputImport(name="policyType", required=true)
     private final Input<String> policyType;
 
@@ -36,6 +52,10 @@ public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.Res
         return this.policyType;
     }
 
+    /**
+     * The percentage of runs to cancel at each evaluation interval.
+     * 
+     */
     @InputImport(name="truncationPercentage")
     private final @Nullable Input<Integer> truncationPercentage;
 

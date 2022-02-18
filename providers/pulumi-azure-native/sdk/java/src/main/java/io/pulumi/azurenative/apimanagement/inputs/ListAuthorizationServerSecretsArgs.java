@@ -12,6 +12,10 @@ public final class ListAuthorizationServerSecretsArgs extends io.pulumi.resource
 
     public static final ListAuthorizationServerSecretsArgs Empty = new ListAuthorizationServerSecretsArgs();
 
+    /**
+     * Identifier of the authorization server.
+     * 
+     */
     @InputImport(name="authsid", required=true)
     private final String authsid;
 
@@ -19,6 +23,10 @@ public final class ListAuthorizationServerSecretsArgs extends io.pulumi.resource
         return this.authsid;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListAuthorizationServerSecretsArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

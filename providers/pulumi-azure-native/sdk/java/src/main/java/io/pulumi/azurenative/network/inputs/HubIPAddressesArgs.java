@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP addresses associated with azure firewall.
+ * 
+ */
 public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HubIPAddressesArgs Empty = new HubIPAddressesArgs();
 
+    /**
+     * Private IP Address associated with azure firewall.
+     * 
+     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -22,6 +30,10 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
+    /**
+     * Public IP addresses associated with azure firewall.
+     * 
+     */
     @InputImport(name="publicIPs")
     private final @Nullable Input<HubPublicIPAddressesArgs> publicIPs;
 

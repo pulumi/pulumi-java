@@ -12,6 +12,10 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
 
     public static final GetLinkedSubscriptionArgs Empty = new GetLinkedSubscriptionArgs();
 
+    /**
+     * Name of the Linked Subscription resource.
+     * 
+     */
     @InputImport(name="linkedSubscriptionName", required=true)
     private final String linkedSubscriptionName;
 
@@ -19,6 +23,10 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
         return this.linkedSubscriptionName;
     }
 
+    /**
+     * Name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroup", required=true)
     private final String resourceGroup;
 

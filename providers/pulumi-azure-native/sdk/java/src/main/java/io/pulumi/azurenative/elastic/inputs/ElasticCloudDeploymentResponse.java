@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of the user's elastic deployment associated with the monitor resource.
+ * 
+ */
 public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ElasticCloudDeploymentResponse Empty = new ElasticCloudDeploymentResponse();
 
+    /**
+     * Associated Azure subscription Id for the elastic deployment.
+     * 
+     */
     @InputImport(name="azureSubscriptionId", required=true)
     private final String azureSubscriptionId;
 
@@ -19,6 +27,10 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
         return this.azureSubscriptionId;
     }
 
+    /**
+     * Elastic deployment Id
+     * 
+     */
     @InputImport(name="deploymentId", required=true)
     private final String deploymentId;
 
@@ -26,6 +38,10 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
         return this.deploymentId;
     }
 
+    /**
+     * Region where Deployment at Elastic side took place.
+     * 
+     */
     @InputImport(name="elasticsearchRegion", required=true)
     private final String elasticsearchRegion;
 
@@ -33,6 +49,10 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
         return this.elasticsearchRegion;
     }
 
+    /**
+     * Elasticsearch ingestion endpoint of the Elastic deployment.
+     * 
+     */
     @InputImport(name="elasticsearchServiceUrl", required=true)
     private final String elasticsearchServiceUrl;
 
@@ -40,6 +60,10 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
         return this.elasticsearchServiceUrl;
     }
 
+    /**
+     * Kibana endpoint of the Elastic deployment.
+     * 
+     */
     @InputImport(name="kibanaServiceUrl", required=true)
     private final String kibanaServiceUrl;
 
@@ -47,6 +71,10 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
         return this.kibanaServiceUrl;
     }
 
+    /**
+     * Kibana dashboard sso URL of the Elastic deployment.
+     * 
+     */
     @InputImport(name="kibanaSsoUrl", required=true)
     private final String kibanaSsoUrl;
 
@@ -54,6 +82,10 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
         return this.kibanaSsoUrl;
     }
 
+    /**
+     * Elastic deployment name
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

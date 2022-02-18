@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Schema for MSIX Package Application properties.
+ * 
+ */
 public final class MsixPackageApplicationsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MsixPackageApplicationsArgs Empty = new MsixPackageApplicationsArgs();
 
+    /**
+     * Package Application Id, found in appxmanifest.xml.
+     * 
+     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -21,6 +29,10 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
         return this.appId == null ? Input.empty() : this.appId;
     }
 
+    /**
+     * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
+     * 
+     */
     @InputImport(name="appUserModelID")
     private final @Nullable Input<String> appUserModelID;
 
@@ -28,6 +40,10 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
         return this.appUserModelID == null ? Input.empty() : this.appUserModelID;
     }
 
+    /**
+     * Description of Package Application.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +51,10 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User friendly name.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -42,6 +62,10 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * User friendly name.
+     * 
+     */
     @InputImport(name="iconImageName")
     private final @Nullable Input<String> iconImageName;
 
@@ -49,6 +73,10 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
         return this.iconImageName == null ? Input.empty() : this.iconImageName;
     }
 
+    /**
+     * the icon a 64 bit string as a byte array.
+     * 
+     */
     @InputImport(name="rawIcon")
     private final @Nullable Input<String> rawIcon;
 
@@ -56,6 +84,10 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
         return this.rawIcon == null ? Input.empty() : this.rawIcon;
     }
 
+    /**
+     * the icon a 64 bit string as a byte array.
+     * 
+     */
     @InputImport(name="rawPng")
     private final @Nullable Input<String> rawPng;
 

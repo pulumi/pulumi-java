@@ -12,6 +12,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
 
     public static final ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse Empty = new ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse();
 
+    /**
+     * Playback duration
+     * 
+     */
     @InputImport(name="playbackDurationSeconds", required=true)
     private final Double playbackDurationSeconds;
 
@@ -19,6 +23,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
         return this.playbackDurationSeconds;
     }
 
+    /**
+     * Storage duration
+     * 
+     */
     @InputImport(name="storageDurationSeconds", required=true)
     private final Double storageDurationSeconds;
 

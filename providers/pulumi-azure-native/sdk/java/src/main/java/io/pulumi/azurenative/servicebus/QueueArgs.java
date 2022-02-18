@@ -17,6 +17,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueueArgs Empty = new QueueArgs();
 
+    /**
+     * ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
+     * 
+     */
     @InputImport(name="autoDeleteOnIdle")
     private final @Nullable Input<String> autoDeleteOnIdle;
 
@@ -24,6 +28,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoDeleteOnIdle == null ? Input.empty() : this.autoDeleteOnIdle;
     }
 
+    /**
+     * A value that indicates whether this queue has dead letter support when a message expires.
+     * 
+     */
     @InputImport(name="deadLetteringOnMessageExpiration")
     private final @Nullable Input<Boolean> deadLetteringOnMessageExpiration;
 
@@ -31,6 +39,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetteringOnMessageExpiration == null ? Input.empty() : this.deadLetteringOnMessageExpiration;
     }
 
+    /**
+     * ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * 
+     */
     @InputImport(name="defaultMessageTimeToLive")
     private final @Nullable Input<String> defaultMessageTimeToLive;
 
@@ -38,6 +50,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultMessageTimeToLive == null ? Input.empty() : this.defaultMessageTimeToLive;
     }
 
+    /**
+     * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * 
+     */
     @InputImport(name="duplicateDetectionHistoryTimeWindow")
     private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
 
@@ -45,6 +61,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.duplicateDetectionHistoryTimeWindow == null ? Input.empty() : this.duplicateDetectionHistoryTimeWindow;
     }
 
+    /**
+     * Value that indicates whether server-side batched operations are enabled.
+     * 
+     */
     @InputImport(name="enableBatchedOperations")
     private final @Nullable Input<Boolean> enableBatchedOperations;
 
@@ -52,6 +72,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableBatchedOperations == null ? Input.empty() : this.enableBatchedOperations;
     }
 
+    /**
+     * A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
+     * 
+     */
     @InputImport(name="enableExpress")
     private final @Nullable Input<Boolean> enableExpress;
 
@@ -59,6 +83,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableExpress == null ? Input.empty() : this.enableExpress;
     }
 
+    /**
+     * A value that indicates whether the queue is to be partitioned across multiple message brokers.
+     * 
+     */
     @InputImport(name="enablePartitioning")
     private final @Nullable Input<Boolean> enablePartitioning;
 
@@ -66,6 +94,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.enablePartitioning == null ? Input.empty() : this.enablePartitioning;
     }
 
+    /**
+     * Queue/Topic name to forward the Dead Letter message
+     * 
+     */
     @InputImport(name="forwardDeadLetteredMessagesTo")
     private final @Nullable Input<String> forwardDeadLetteredMessagesTo;
 
@@ -73,6 +105,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.forwardDeadLetteredMessagesTo == null ? Input.empty() : this.forwardDeadLetteredMessagesTo;
     }
 
+    /**
+     * Queue/Topic name to forward the messages
+     * 
+     */
     @InputImport(name="forwardTo")
     private final @Nullable Input<String> forwardTo;
 
@@ -80,6 +116,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.forwardTo == null ? Input.empty() : this.forwardTo;
     }
 
+    /**
+     * ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
+     * 
+     */
     @InputImport(name="lockDuration")
     private final @Nullable Input<String> lockDuration;
 
@@ -87,6 +127,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.lockDuration == null ? Input.empty() : this.lockDuration;
     }
 
+    /**
+     * The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
+     * 
+     */
     @InputImport(name="maxDeliveryCount")
     private final @Nullable Input<Integer> maxDeliveryCount;
 
@@ -94,6 +138,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxDeliveryCount == null ? Input.empty() : this.maxDeliveryCount;
     }
 
+    /**
+     * The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
+     * 
+     */
     @InputImport(name="maxSizeInMegabytes")
     private final @Nullable Input<Integer> maxSizeInMegabytes;
 
@@ -101,6 +149,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxSizeInMegabytes == null ? Input.empty() : this.maxSizeInMegabytes;
     }
 
+    /**
+     * The namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -108,6 +160,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName;
     }
 
+    /**
+     * The queue name.
+     * 
+     */
     @InputImport(name="queueName")
     private final @Nullable Input<String> queueName;
 
@@ -115,6 +171,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.queueName == null ? Input.empty() : this.queueName;
     }
 
+    /**
+     * A value indicating if this queue requires duplicate detection.
+     * 
+     */
     @InputImport(name="requiresDuplicateDetection")
     private final @Nullable Input<Boolean> requiresDuplicateDetection;
 
@@ -122,6 +182,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.requiresDuplicateDetection == null ? Input.empty() : this.requiresDuplicateDetection;
     }
 
+    /**
+     * A value that indicates whether the queue supports the concept of sessions.
+     * 
+     */
     @InputImport(name="requiresSession")
     private final @Nullable Input<Boolean> requiresSession;
 
@@ -129,6 +193,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.requiresSession == null ? Input.empty() : this.requiresSession;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -136,6 +204,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Enumerates the possible values for the status of a messaging entity.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<EntityStatus> status;
 

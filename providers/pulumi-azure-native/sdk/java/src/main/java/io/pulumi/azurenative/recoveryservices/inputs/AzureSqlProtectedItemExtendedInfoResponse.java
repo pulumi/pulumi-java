@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Additional information on Azure Sql specific protected item.
+ * 
+ */
 public final class AzureSqlProtectedItemExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureSqlProtectedItemExtendedInfoResponse Empty = new AzureSqlProtectedItemExtendedInfoResponse();
 
+    /**
+     * The oldest backup copy available for this item in the service.
+     * 
+     */
     @InputImport(name="oldestRecoveryPoint")
     private final @Nullable String oldestRecoveryPoint;
 
@@ -22,6 +30,10 @@ public final class AzureSqlProtectedItemExtendedInfoResponse extends io.pulumi.r
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
+    /**
+     * State of the backup policy associated with this backup item.
+     * 
+     */
     @InputImport(name="policyState")
     private final @Nullable String policyState;
 
@@ -29,6 +41,10 @@ public final class AzureSqlProtectedItemExtendedInfoResponse extends io.pulumi.r
         return this.policyState == null ? Optional.empty() : Optional.ofNullable(this.policyState);
     }
 
+    /**
+     * Number of available backup copies associated with this backup item.
+     * 
+     */
     @InputImport(name="recoveryPointCount")
     private final @Nullable Integer recoveryPointCount;
 

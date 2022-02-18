@@ -13,6 +13,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
 
     public static final ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs Empty = new ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs();
 
+    /**
+     * Playback duration
+     * 
+     */
     @InputImport(name="playbackDurationSeconds", required=true)
     private final Input<Double> playbackDurationSeconds;
 
@@ -20,6 +24,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
         return this.playbackDurationSeconds;
     }
 
+    /**
+     * Storage duration
+     * 
+     */
     @InputImport(name="storageDurationSeconds", required=true)
     private final Input<Double> storageDurationSeconds;
 

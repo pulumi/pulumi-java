@@ -14,6 +14,10 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
 
     public static final ListEffectiveConnectivityConfigurationArgs Empty = new ListEffectiveConnectivityConfigurationArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -21,6 +25,10 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
         return this.resourceGroupName;
     }
 
+    /**
+     * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * 
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 
@@ -28,6 +36,10 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 
+    /**
+     * The name of the virtual network.
+     * 
+     */
     @InputImport(name="virtualNetworkName", required=true)
     private final String virtualNetworkName;
 

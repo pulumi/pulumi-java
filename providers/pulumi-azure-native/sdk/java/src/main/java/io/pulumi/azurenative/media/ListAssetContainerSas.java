@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAssetContainerSas {
+/**
+ * The Asset Storage container SAS URLs.
+ * API Version: 2020-05-01.
+ * 
+ *
+ * The Asset Storage container SAS URLs.
+ * 
+ */
     public static CompletableFuture<ListAssetContainerSasResult> invokeAsync(ListAssetContainerSasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listAssetContainerSas", TypeShape.of(ListAssetContainerSasResult.class), args == null ? ListAssetContainerSasArgs.Empty : args, Utilities.withVersion(options));
     }

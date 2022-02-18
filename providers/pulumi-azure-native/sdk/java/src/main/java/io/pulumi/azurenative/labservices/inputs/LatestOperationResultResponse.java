@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of the status of an operation.
+ * 
+ */
 public final class LatestOperationResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LatestOperationResultResponse Empty = new LatestOperationResultResponse();
 
+    /**
+     * Error code on failure.
+     * 
+     */
     @InputImport(name="errorCode", required=true)
     private final String errorCode;
 
@@ -19,6 +27,10 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
         return this.errorCode;
     }
 
+    /**
+     * The error message.
+     * 
+     */
     @InputImport(name="errorMessage", required=true)
     private final String errorMessage;
 
@@ -26,6 +38,10 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
         return this.errorMessage;
     }
 
+    /**
+     * The HttpMethod - PUT/POST/DELETE for the operation.
+     * 
+     */
     @InputImport(name="httpMethod", required=true)
     private final String httpMethod;
 
@@ -33,6 +49,10 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
         return this.httpMethod;
     }
 
+    /**
+     * The URL to use to check long-running operation status
+     * 
+     */
     @InputImport(name="operationUrl", required=true)
     private final String operationUrl;
 
@@ -40,6 +60,10 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
         return this.operationUrl;
     }
 
+    /**
+     * Request URI of the operation.
+     * 
+     */
     @InputImport(name="requestUri", required=true)
     private final String requestUri;
 
@@ -47,6 +71,10 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
         return this.requestUri;
     }
 
+    /**
+     * The current status of the operation.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the storage of the tokens if blob storage is used.
+ * 
+ */
 public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobStorageTokenStoreArgs Empty = new BlobStorageTokenStoreArgs();
 
+    /**
+     * The name of the app setting containing the SAS URL of the blob storage containing the tokens.
+     * 
+     */
     @InputImport(name="sasUrlSettingName")
     private final @Nullable Input<String> sasUrlSettingName;
 

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Description about the errors happen while performing migration validation
+ * 
+ */
 public final class ValidationErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValidationErrorResponse Empty = new ValidationErrorResponse();
 
+    /**
+     * Severity of the error
+     * 
+     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -19,6 +27,10 @@ public final class ValidationErrorResponse extends io.pulumi.resources.InvokeArg
         return this.severity;
     }
 
+    /**
+     * Error Text
+     * 
+     */
     @InputImport(name="text", required=true)
     private final String text;
 

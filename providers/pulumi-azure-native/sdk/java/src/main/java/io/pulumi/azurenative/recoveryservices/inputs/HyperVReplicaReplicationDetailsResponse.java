@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * HyperV replica 2012 replication details.
+ * 
+ */
 public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HyperVReplicaReplicationDetailsResponse Empty = new HyperVReplicaReplicationDetailsResponse();
 
+    /**
+     * Initial replication details.
+     * 
+     */
     @InputImport(name="initialReplicationDetails")
     private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
@@ -25,6 +33,11 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
         return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
     }
 
+    /**
+     * Gets the Instance type.
+     * Expected value is 'HyperVReplica2012'.
+     * 
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -32,6 +45,10 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
         return this.instanceType;
     }
 
+    /**
+     * The Last replication time.
+     * 
+     */
     @InputImport(name="lastReplicatedTime")
     private final @Nullable String lastReplicatedTime;
 
@@ -39,6 +56,10 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
         return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
     }
 
+    /**
+     * VM disk details.
+     * 
+     */
     @InputImport(name="vMDiskDetails")
     private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
 
@@ -46,6 +67,10 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
     }
 
+    /**
+     * The virtual machine Id.
+     * 
+     */
     @InputImport(name="vmId")
     private final @Nullable String vmId;
 
@@ -53,6 +78,10 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
     }
 
+    /**
+     * The PE Network details.
+     * 
+     */
     @InputImport(name="vmNics")
     private final @Nullable List<VMNicDetailsResponse> vmNics;
 
@@ -60,6 +89,10 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
+    /**
+     * The protection state for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionState")
     private final @Nullable String vmProtectionState;
 
@@ -67,6 +100,10 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
+    /**
+     * The protection state description for the vm.
+     * 
+     */
     @InputImport(name="vmProtectionStateDescription")
     private final @Nullable String vmProtectionStateDescription;
 

@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
+    /**
+     * Connection information for source PostgreSQL server
+     * 
+     */
     private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
+    /**
+     * Connection information for target Azure Database for PostgreSQL server
+     * 
+     */
     private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
     @OutputCustomType.Constructor({"sourceConnectionInfo","targetConnectionInfo"})
@@ -20,9 +28,17 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
     }
 
+    /**
+     * Connection information for source PostgreSQL server
+     * 
+     */
     public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
+    /**
+     * Connection information for target Azure Database for PostgreSQL server
+     * 
+     */
     public PostgreSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

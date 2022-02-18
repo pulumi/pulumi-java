@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters used to add a new Azure Storage account while creating a new Data Lake Analytics account.
+ * 
+ */
 public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddStorageAccountWithAccountParametersArgs Empty = new AddStorageAccountWithAccountParametersArgs();
 
+    /**
+     * The access key associated with this Azure Storage account that will be used to connect to it.
+     * 
+     */
     @InputImport(name="accessKey", required=true)
     private final Input<String> accessKey;
 
@@ -21,6 +29,10 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
         return this.accessKey;
     }
 
+    /**
+     * The unique name of the Azure Storage account to add.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,6 +40,10 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * The optional suffix for the storage account.
+     * 
+     */
     @InputImport(name="suffix")
     private final @Nullable Input<String> suffix;
 

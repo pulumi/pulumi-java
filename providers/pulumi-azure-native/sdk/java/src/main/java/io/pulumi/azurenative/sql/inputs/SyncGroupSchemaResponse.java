@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of sync group schema.
+ * 
+ */
 public final class SyncGroupSchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SyncGroupSchemaResponse Empty = new SyncGroupSchemaResponse();
 
+    /**
+     * Name of master sync member where the schema is from.
+     * 
+     */
     @InputImport(name="masterSyncMemberName")
     private final @Nullable String masterSyncMemberName;
 
@@ -23,6 +31,10 @@ public final class SyncGroupSchemaResponse extends io.pulumi.resources.InvokeArg
         return this.masterSyncMemberName == null ? Optional.empty() : Optional.ofNullable(this.masterSyncMemberName);
     }
 
+    /**
+     * List of tables in sync group schema.
+     * 
+     */
     @InputImport(name="tables")
     private final @Nullable List<SyncGroupSchemaTableResponse> tables;
 

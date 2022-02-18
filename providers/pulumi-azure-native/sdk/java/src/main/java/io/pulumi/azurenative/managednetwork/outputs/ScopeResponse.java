@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScopeResponse {
+    /**
+     * The collection of management groups covered by the Managed Network
+     * 
+     */
     private final @Nullable List<ResourceIdResponse> managementGroups;
+    /**
+     * The collection of  subnets covered by the Managed Network
+     * 
+     */
     private final @Nullable List<ResourceIdResponse> subnets;
+    /**
+     * The collection of subscriptions covered by the Managed Network
+     * 
+     */
     private final @Nullable List<ResourceIdResponse> subscriptions;
+    /**
+     * The collection of virtual nets covered by the Managed Network
+     * 
+     */
     private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
     @OutputCustomType.Constructor({"managementGroups","subnets","subscriptions","virtualNetworks"})
@@ -28,15 +44,31 @@ public final class ScopeResponse {
         this.virtualNetworks = virtualNetworks;
     }
 
+    /**
+     * The collection of management groups covered by the Managed Network
+     * 
+     */
     public List<ResourceIdResponse> getManagementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
+    /**
+     * The collection of  subnets covered by the Managed Network
+     * 
+     */
     public List<ResourceIdResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
+    /**
+     * The collection of subscriptions covered by the Managed Network
+     * 
+     */
     public List<ResourceIdResponse> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
+    /**
+     * The collection of virtual nets covered by the Managed Network
+     * 
+     */
     public List<ResourceIdResponse> getVirtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
     }

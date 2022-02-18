@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hadoop Distributed File System (HDFS) linked service.
+ * 
+ */
 public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HdfsLinkedServiceResponse Empty = new HdfsLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +37,10 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Object authenticationType;
 
@@ -36,6 +48,10 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -43,6 +59,10 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -50,6 +70,10 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -57,6 +81,10 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -64,6 +92,10 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Password for Windows authentication.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -71,6 +103,11 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'Hdfs'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -78,6 +115,10 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.type;
     }
 
+    /**
+     * The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="url", required=true)
     private final Object url;
 
@@ -85,6 +126,10 @@ public final class HdfsLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.url;
     }
 
+    /**
+     * User name for Windows authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable Object userName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The concrete private link service connection.
+     * 
+     */
     @EnumType
     public enum PrivateLinkServiceConnectionStatus {
         Approved("Approved"),

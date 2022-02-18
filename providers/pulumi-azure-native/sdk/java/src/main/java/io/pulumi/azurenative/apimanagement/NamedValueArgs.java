@@ -17,6 +17,10 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamedValueArgs Empty = new NamedValueArgs();
 
+    /**
+     * Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -24,6 +28,10 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * KeyVault location details of the namedValue.
+     * 
+     */
     @InputImport(name="keyVault")
     private final @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault;
 
@@ -31,6 +39,10 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVault == null ? Input.empty() : this.keyVault;
     }
 
+    /**
+     * Identifier of the NamedValue.
+     * 
+     */
     @InputImport(name="namedValueId")
     private final @Nullable Input<String> namedValueId;
 
@@ -38,6 +50,10 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.namedValueId == null ? Input.empty() : this.namedValueId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +61,10 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Determines whether the value is a secret and should be encrypted or not. Default value is false.
+     * 
+     */
     @InputImport(name="secret")
     private final @Nullable Input<Boolean> secret;
 
@@ -52,6 +72,10 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.secret == null ? Input.empty() : this.secret;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -59,6 +83,10 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Optional tags that when provided can be used to filter the NamedValue list.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -66,6 +94,10 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

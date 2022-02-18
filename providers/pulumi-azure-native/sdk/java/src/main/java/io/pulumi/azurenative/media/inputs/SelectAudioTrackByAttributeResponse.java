@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Select audio tracks from the input by specifying an attribute and an attribute filter.
+ * 
+ */
 public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SelectAudioTrackByAttributeResponse Empty = new SelectAudioTrackByAttributeResponse();
 
+    /**
+     * The TrackAttribute to filter the tracks by.
+     * 
+     */
     @InputImport(name="attribute", required=true)
     private final String attribute;
 
@@ -21,6 +29,10 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
         return this.attribute;
     }
 
+    /**
+     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     @InputImport(name="channelMapping")
     private final @Nullable String channelMapping;
 
@@ -28,6 +40,10 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
         return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
     }
 
+    /**
+     * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+     * 
+     */
     @InputImport(name="filter", required=true)
     private final String filter;
 
@@ -35,6 +51,10 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
         return this.filter;
     }
 
+    /**
+     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+     * 
+     */
     @InputImport(name="filterValue")
     private final @Nullable String filterValue;
 
@@ -42,6 +62,11 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
         return this.filterValue == null ? Optional.empty() : Optional.ofNullable(this.filterValue);
     }
 
+    /**
+     * The discriminator for derived types.
+     * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 

@@ -20,19 +20,75 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CognitiveServicesAccountPropertiesResponse {
+    /**
+     * The api properties for special APIs.
+     * 
+     */
     private final @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
+    /**
+     * Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
+     * 
+     */
     private final List<SkuCapabilityResponse> capabilities;
+    /**
+     * Optional subdomain name used for token-based authentication.
+     * 
+     */
     private final @Nullable String customSubDomainName;
+    /**
+     * Gets the date of cognitive services account creation.
+     * 
+     */
     private final String dateCreated;
+    /**
+     * The encryption properties for this resource.
+     * 
+     */
     private final @Nullable EncryptionResponse encryption;
+    /**
+     * Endpoint of the created account.
+     * 
+     */
     private final String endpoint;
+    /**
+     * The internal identifier.
+     * 
+     */
     private final String internalId;
+    /**
+     * If the resource is migrated from an existing key.
+     * 
+     */
     private final Boolean isMigrated;
+    /**
+     * A collection of rules governing the accessibility from specific network locations.
+     * 
+     */
     private final @Nullable NetworkRuleSetResponse networkAcls;
+    /**
+     * The private endpoint connection associated with the Cognitive Services account.
+     * 
+     */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    /**
+     * Gets the status of the cognitive services account at the time the operation was called.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * 
+     */
     private final @Nullable String publicNetworkAccess;
+    /**
+     * Sku change info of account.
+     * 
+     */
     private final CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
+    /**
+     * The storage accounts for this resource.
+     * 
+     */
     private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 
     @OutputCustomType.Constructor({"apiProperties","capabilities","customSubDomainName","dateCreated","encryption","endpoint","internalId","isMigrated","networkAcls","privateEndpointConnections","provisioningState","publicNetworkAccess","skuChangeInfo","userOwnedStorage"})
@@ -67,45 +123,101 @@ public final class CognitiveServicesAccountPropertiesResponse {
         this.userOwnedStorage = userOwnedStorage;
     }
 
+    /**
+     * The api properties for special APIs.
+     * 
+     */
     public Optional<CognitiveServicesAccountApiPropertiesResponse> getApiProperties() {
         return Optional.ofNullable(this.apiProperties);
     }
+    /**
+     * Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
+     * 
+     */
     public List<SkuCapabilityResponse> getCapabilities() {
         return this.capabilities;
     }
+    /**
+     * Optional subdomain name used for token-based authentication.
+     * 
+     */
     public Optional<String> getCustomSubDomainName() {
         return Optional.ofNullable(this.customSubDomainName);
     }
+    /**
+     * Gets the date of cognitive services account creation.
+     * 
+     */
     public String getDateCreated() {
         return this.dateCreated;
     }
+    /**
+     * The encryption properties for this resource.
+     * 
+     */
     public Optional<EncryptionResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
+    /**
+     * Endpoint of the created account.
+     * 
+     */
     public String getEndpoint() {
         return this.endpoint;
     }
+    /**
+     * The internal identifier.
+     * 
+     */
     public String getInternalId() {
         return this.internalId;
     }
+    /**
+     * If the resource is migrated from an existing key.
+     * 
+     */
     public Boolean getIsMigrated() {
         return this.isMigrated;
     }
+    /**
+     * A collection of rules governing the accessibility from specific network locations.
+     * 
+     */
     public Optional<NetworkRuleSetResponse> getNetworkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
+    /**
+     * The private endpoint connection associated with the Cognitive Services account.
+     * 
+     */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
+    /**
+     * Gets the status of the cognitive services account at the time the operation was called.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * 
+     */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
+    /**
+     * Sku change info of account.
+     * 
+     */
     public CognitiveServicesAccountSkuChangeInfoResponse getSkuChangeInfo() {
         return this.skuChangeInfo;
     }
+    /**
+     * The storage accounts for this resource.
+     * 
+     */
     public List<UserOwnedStorageResponse> getUserOwnedStorage() {
         return this.userOwnedStorage == null ? List.of() : this.userOwnedStorage;
     }

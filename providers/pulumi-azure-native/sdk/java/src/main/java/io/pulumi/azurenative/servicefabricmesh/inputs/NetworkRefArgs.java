@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a network reference in a service.
+ * 
+ */
 public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkRefArgs Empty = new NetworkRefArgs();
 
+    /**
+     * A list of endpoints that are exposed on this network.
+     * 
+     */
     @InputImport(name="endpointRefs")
     private final @Nullable Input<List<EndpointRefArgs>> endpointRefs;
 
@@ -23,6 +31,10 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointRefs == null ? Input.empty() : this.endpointRefs;
     }
 
+    /**
+     * Name of the network
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

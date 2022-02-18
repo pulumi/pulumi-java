@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines contents of rate limit rules
+ * 
+ */
 public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RateLimitRuleListArgs Empty = new RateLimitRuleListArgs();
 
+    /**
+     * List of rules
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<RateLimitRuleArgs>> rules;
 

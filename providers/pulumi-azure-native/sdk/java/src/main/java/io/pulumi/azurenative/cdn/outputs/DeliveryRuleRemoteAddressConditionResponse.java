@@ -10,7 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleRemoteAddressConditionResponse {
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'RemoteAddress'.
+     * 
+     */
     private final String name;
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     private final RemoteAddressMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +30,18 @@ public final class DeliveryRuleRemoteAddressConditionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'RemoteAddress'.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     public RemoteAddressMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

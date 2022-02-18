@@ -8,13 +8,41 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The track property type.
+     * 
+     */
     @EnumType
     public enum FilterTrackPropertyType {
+        /**
+         * The unknown track property type.
+         * 
+         */
         Unknown("Unknown"),
+        /**
+         * The type.
+         * 
+         */
         Type("Type"),
+        /**
+         * The name.
+         * 
+         */
         Name("Name"),
+        /**
+         * The language.
+         * 
+         */
         Language("Language"),
+        /**
+         * The fourCC.
+         * 
+         */
         FourCC("FourCC"),
+        /**
+         * The bitrate.
+         * 
+         */
         Bitrate("Bitrate");
 
         private final String value;

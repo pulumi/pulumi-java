@@ -10,10 +10,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the PostArgs condition for the delivery rule.
+ * 
+ */
 public final class DeliveryRulePostArgsConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRulePostArgsConditionArgs Empty = new DeliveryRulePostArgsConditionArgs();
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'PostArgs'.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +30,10 @@ public final class DeliveryRulePostArgsConditionArgs extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final Input<PostArgsMatchConditionParametersArgs> parameters;
 

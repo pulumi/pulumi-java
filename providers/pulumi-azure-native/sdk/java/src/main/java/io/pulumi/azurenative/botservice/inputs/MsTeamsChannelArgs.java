@@ -11,10 +11,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Microsoft Teams channel definition
+ * 
+ */
 public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MsTeamsChannelArgs Empty = new MsTeamsChannelArgs();
 
+    /**
+     * The channel name
+     * Expected value is 'MsTeamsChannel'.
+     * 
+     */
     @InputImport(name="channelName", required=true)
     private final Input<String> channelName;
 
@@ -22,6 +31,10 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelName;
     }
 
+    /**
+     * Entity Tag of the resource
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -29,6 +42,10 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +53,10 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The set of properties specific to Microsoft Teams channel resource
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<MsTeamsChannelPropertiesArgs> properties;
 

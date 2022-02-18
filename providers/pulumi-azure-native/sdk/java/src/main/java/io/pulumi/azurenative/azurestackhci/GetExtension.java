@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExtension {
+/**
+ * Details of a particular extension in HCI Cluster.
+ * API Version: 2021-01-01-preview.
+ * 
+ *
+ * Details of a particular extension in HCI Cluster.
+ * 
+ */
     public static CompletableFuture<GetExtensionResult> invokeAsync(GetExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getExtension", TypeShape.of(GetExtensionResult.class), args == null ? GetExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

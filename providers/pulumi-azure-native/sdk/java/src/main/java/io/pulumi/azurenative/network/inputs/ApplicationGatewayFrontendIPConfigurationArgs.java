@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Frontend IP configuration of an application gateway.
+ * 
+ */
 public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayFrontendIPConfigurationArgs Empty = new ApplicationGatewayFrontendIPConfigurationArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -24,6 +32,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the frontend IP configuration that is unique within an Application Gateway.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +43,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * PrivateIPAddress of the network interface IP Configuration.
+     * 
+     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -38,6 +54,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
+    /**
+     * The private IP address allocation method.
+     * 
+     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
@@ -45,6 +65,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
     }
 
+    /**
+     * Reference to the application gateway private link configuration.
+     * 
+     */
     @InputImport(name="privateLinkConfiguration")
     private final @Nullable Input<SubResourceArgs> privateLinkConfiguration;
 
@@ -52,6 +76,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
         return this.privateLinkConfiguration == null ? Input.empty() : this.privateLinkConfiguration;
     }
 
+    /**
+     * Reference to the PublicIP resource.
+     * 
+     */
     @InputImport(name="publicIPAddress")
     private final @Nullable Input<SubResourceArgs> publicIPAddress;
 
@@ -59,6 +87,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
         return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
     }
 
+    /**
+     * Reference to the subnet resource.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubResourceArgs> subnet;
 

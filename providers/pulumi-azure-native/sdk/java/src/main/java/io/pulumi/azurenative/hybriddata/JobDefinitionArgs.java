@@ -21,6 +21,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobDefinitionArgs Empty = new JobDefinitionArgs();
 
+    /**
+     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     * 
+     */
     @InputImport(name="customerSecrets")
     private final @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
 
@@ -28,6 +32,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerSecrets == null ? Input.empty() : this.customerSecrets;
     }
 
+    /**
+     * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     @InputImport(name="dataManagerName", required=true)
     private final Input<String> dataManagerName;
 
@@ -35,6 +43,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataManagerName;
     }
 
+    /**
+     * A generic json used differently by each data service type.
+     * 
+     */
     @InputImport(name="dataServiceInput")
     private final @Nullable Input<Object> dataServiceInput;
 
@@ -42,6 +54,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataServiceInput == null ? Input.empty() : this.dataServiceInput;
     }
 
+    /**
+     * The data service type of the job definition.
+     * 
+     */
     @InputImport(name="dataServiceName", required=true)
     private final Input<String> dataServiceName;
 
@@ -49,6 +65,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataServiceName;
     }
 
+    /**
+     * Data Sink Id associated to the job definition.
+     * 
+     */
     @InputImport(name="dataSinkId", required=true)
     private final Input<String> dataSinkId;
 
@@ -56,6 +76,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSinkId;
     }
 
+    /**
+     * Data Source Id associated to the job definition.
+     * 
+     */
     @InputImport(name="dataSourceId", required=true)
     private final Input<String> dataSourceId;
 
@@ -63,6 +87,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSourceId;
     }
 
+    /**
+     * The job definition name to be created or updated.
+     * 
+     */
     @InputImport(name="jobDefinitionName")
     private final @Nullable Input<String> jobDefinitionName;
 
@@ -70,6 +98,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobDefinitionName == null ? Input.empty() : this.jobDefinitionName;
     }
 
+    /**
+     * Last modified time of the job definition.
+     * 
+     */
     @InputImport(name="lastModifiedTime")
     private final @Nullable Input<String> lastModifiedTime;
 
@@ -77,6 +109,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
     }
 
+    /**
+     * The Resource Group Name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -84,6 +120,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * This is the preferred geo location for the job to run.
+     * 
+     */
     @InputImport(name="runLocation")
     private final @Nullable Input<RunLocation> runLocation;
 
@@ -91,6 +131,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.runLocation == null ? Input.empty() : this.runLocation;
     }
 
+    /**
+     * Schedule for running the job definition
+     * 
+     */
     @InputImport(name="schedules")
     private final @Nullable Input<List<ScheduleArgs>> schedules;
 
@@ -98,6 +142,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedules == null ? Input.empty() : this.schedules;
     }
 
+    /**
+     * State of the job definition.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final Input<State> state;
 
@@ -105,6 +153,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.state;
     }
 
+    /**
+     * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+     * 
+     */
     @InputImport(name="userConfirmation")
     private final @Nullable Input<UserConfirmation> userConfirmation;
 

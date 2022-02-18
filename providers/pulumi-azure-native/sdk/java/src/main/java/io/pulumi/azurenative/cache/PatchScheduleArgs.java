@@ -16,6 +16,10 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PatchScheduleArgs Empty = new PatchScheduleArgs();
 
+    /**
+     * Default string modeled as parameter for auto generation to work correctly.
+     * 
+     */
     @InputImport(name="default")
     private final @Nullable Input<String> $default;
 
@@ -23,6 +27,10 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.$default == null ? Input.empty() : this.$default;
     }
 
+    /**
+     * The name of the Redis cache.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -30,6 +38,10 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * List of patch schedules for a Redis cache.
+     * 
+     */
     @InputImport(name="scheduleEntries", required=true)
     private final Input<List<ScheduleEntryArgs>> scheduleEntries;
 

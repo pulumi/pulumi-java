@@ -17,10 +17,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters for a docker quick build.
+ * 
+ */
 public final class DockerBuildRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DockerBuildRequestResponse Empty = new DockerBuildRequestResponse();
 
+    /**
+     * The machine configuration of the run agent.
+     * 
+     */
     @InputImport(name="agentConfiguration")
     private final @Nullable AgentPropertiesResponse agentConfiguration;
 
@@ -28,6 +36,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
     }
 
+    /**
+     * The dedicated agent pool for the run.
+     * 
+     */
     @InputImport(name="agentPoolName")
     private final @Nullable String agentPoolName;
 
@@ -35,6 +47,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
     }
 
+    /**
+     * The collection of override arguments to be used when executing the run.
+     * 
+     */
     @InputImport(name="arguments")
     private final @Nullable List<ArgumentResponse> arguments;
 
@@ -42,6 +58,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.arguments == null ? List.of() : this.arguments;
     }
 
+    /**
+     * The properties that describes a set of credentials that will be used when this run is invoked.
+     * 
+     */
     @InputImport(name="credentials")
     private final @Nullable CredentialsResponse credentials;
 
@@ -49,6 +69,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
+    /**
+     * The Docker file path relative to the source location.
+     * 
+     */
     @InputImport(name="dockerFilePath", required=true)
     private final String dockerFilePath;
 
@@ -56,6 +80,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.dockerFilePath;
     }
 
+    /**
+     * The fully qualified image names including the repository and tag.
+     * 
+     */
     @InputImport(name="imageNames")
     private final @Nullable List<String> imageNames;
 
@@ -63,6 +91,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.imageNames == null ? List.of() : this.imageNames;
     }
 
+    /**
+     * The value that indicates whether archiving is enabled for the run or not.
+     * 
+     */
     @InputImport(name="isArchiveEnabled")
     private final @Nullable Boolean isArchiveEnabled;
 
@@ -70,6 +102,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
     }
 
+    /**
+     * The value of this property indicates whether the image built should be pushed to the registry or not.
+     * 
+     */
     @InputImport(name="isPushEnabled")
     private final @Nullable Boolean isPushEnabled;
 
@@ -77,6 +113,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.isPushEnabled == null ? Optional.empty() : Optional.ofNullable(this.isPushEnabled);
     }
 
+    /**
+     * The template that describes the repository and tag information for run log artifact.
+     * 
+     */
     @InputImport(name="logTemplate")
     private final @Nullable String logTemplate;
 
@@ -84,6 +124,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
     }
 
+    /**
+     * The value of this property indicates whether the image cache is enabled or not.
+     * 
+     */
     @InputImport(name="noCache")
     private final @Nullable Boolean noCache;
 
@@ -91,6 +135,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.noCache == null ? Optional.empty() : Optional.ofNullable(this.noCache);
     }
 
+    /**
+     * The platform properties against which the run has to happen.
+     * 
+     */
     @InputImport(name="platform", required=true)
     private final PlatformPropertiesResponse platform;
 
@@ -98,6 +146,11 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.platform;
     }
 
+    /**
+     * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+     * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+     * 
+     */
     @InputImport(name="sourceLocation")
     private final @Nullable String sourceLocation;
 
@@ -105,6 +158,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.sourceLocation == null ? Optional.empty() : Optional.ofNullable(this.sourceLocation);
     }
 
+    /**
+     * The name of the target build stage for the docker build.
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 
@@ -112,6 +169,10 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
+    /**
+     * Run timeout in seconds.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Integer timeout;
 
@@ -119,6 +180,11 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
+    /**
+     * The type of the run request.
+     * Expected value is 'DockerBuildRequest'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

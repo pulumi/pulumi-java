@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The TarGZip compression read settings.
+ * 
+ */
 public final class TarGZipReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TarGZipReadSettingsResponse Empty = new TarGZipReadSettingsResponse();
 
+    /**
+     * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="preserveCompressionFileNameAsFolder")
     private final @Nullable Object preserveCompressionFileNameAsFolder;
 
@@ -22,6 +30,11 @@ public final class TarGZipReadSettingsResponse extends io.pulumi.resources.Invok
         return this.preserveCompressionFileNameAsFolder == null ? Optional.empty() : Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
 
+    /**
+     * The Compression setting type.
+     * Expected value is 'TarGZipReadSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

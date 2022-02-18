@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata of IoT device/IoT Edge device to be configured.
+ * 
+ */
 public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IoTDeviceInfoResponse Empty = new IoTDeviceInfoResponse();
 
+    /**
+     * Encrypted IoT device/IoT edge device connection string.
+     * 
+     */
     @InputImport(name="authentication")
     private final @Nullable AuthenticationResponse authentication;
 
@@ -22,6 +30,10 @@ public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
+    /**
+     * ID of the IoT device/edge device.
+     * 
+     */
     @InputImport(name="deviceId", required=true)
     private final String deviceId;
 
@@ -29,6 +41,10 @@ public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.deviceId;
     }
 
+    /**
+     * Host name for the IoT hub associated to the device.
+     * 
+     */
     @InputImport(name="ioTHostHub", required=true)
     private final String ioTHostHub;
 
@@ -36,6 +52,10 @@ public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.ioTHostHub;
     }
 
+    /**
+     * Id for the IoT hub associated to the device.
+     * 
+     */
     @InputImport(name="ioTHostHubId")
     private final @Nullable String ioTHostHubId;
 

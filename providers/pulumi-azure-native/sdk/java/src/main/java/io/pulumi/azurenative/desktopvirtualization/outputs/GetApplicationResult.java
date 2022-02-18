@@ -13,22 +13,90 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApplicationResult {
+    /**
+     * Resource Type of Application.
+     * 
+     */
     private final @Nullable String applicationType;
+    /**
+     * Command Line Arguments for Application.
+     * 
+     */
     private final @Nullable String commandLineArguments;
+    /**
+     * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+     * 
+     */
     private final String commandLineSetting;
+    /**
+     * Description of Application.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Specifies a path for the executable file for the application.
+     * 
+     */
     private final @Nullable String filePath;
+    /**
+     * Friendly name of Application.
+     * 
+     */
     private final @Nullable String friendlyName;
+    /**
+     * the icon a 64 bit string as a byte array.
+     * 
+     */
     private final String iconContent;
+    /**
+     * Hash of the icon.
+     * 
+     */
     private final String iconHash;
+    /**
+     * Index of the icon.
+     * 
+     */
     private final @Nullable Integer iconIndex;
+    /**
+     * Path to icon.
+     * 
+     */
     private final @Nullable String iconPath;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * Specifies the package application Id for MSIX applications
+     * 
+     */
     private final @Nullable String msixPackageApplicationId;
+    /**
+     * Specifies the package family name for MSIX applications
+     * 
+     */
     private final @Nullable String msixPackageFamilyName;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * ObjectId of Application. (internal use)
+     * 
+     */
     private final String objectId;
+    /**
+     * Specifies whether to show the RemoteApp program in the RD Web Access server.
+     * 
+     */
     private final @Nullable Boolean showInPortal;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"applicationType","commandLineArguments","commandLineSetting","description","filePath","friendlyName","iconContent","iconHash","iconIndex","iconPath","id","msixPackageApplicationId","msixPackageFamilyName","name","objectId","showInPortal","type"})
@@ -69,54 +137,122 @@ public final class GetApplicationResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Type of Application.
+     * 
+     */
     public Optional<String> getApplicationType() {
         return Optional.ofNullable(this.applicationType);
     }
+    /**
+     * Command Line Arguments for Application.
+     * 
+     */
     public Optional<String> getCommandLineArguments() {
         return Optional.ofNullable(this.commandLineArguments);
     }
+    /**
+     * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+     * 
+     */
     public String getCommandLineSetting() {
         return this.commandLineSetting;
     }
+    /**
+     * Description of Application.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Specifies a path for the executable file for the application.
+     * 
+     */
     public Optional<String> getFilePath() {
         return Optional.ofNullable(this.filePath);
     }
+    /**
+     * Friendly name of Application.
+     * 
+     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
+    /**
+     * the icon a 64 bit string as a byte array.
+     * 
+     */
     public String getIconContent() {
         return this.iconContent;
     }
+    /**
+     * Hash of the icon.
+     * 
+     */
     public String getIconHash() {
         return this.iconHash;
     }
+    /**
+     * Index of the icon.
+     * 
+     */
     public Optional<Integer> getIconIndex() {
         return Optional.ofNullable(this.iconIndex);
     }
+    /**
+     * Path to icon.
+     * 
+     */
     public Optional<String> getIconPath() {
         return Optional.ofNullable(this.iconPath);
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Specifies the package application Id for MSIX applications
+     * 
+     */
     public Optional<String> getMsixPackageApplicationId() {
         return Optional.ofNullable(this.msixPackageApplicationId);
     }
+    /**
+     * Specifies the package family name for MSIX applications
+     * 
+     */
     public Optional<String> getMsixPackageFamilyName() {
         return Optional.ofNullable(this.msixPackageFamilyName);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * ObjectId of Application. (internal use)
+     * 
+     */
     public String getObjectId() {
         return this.objectId;
     }
+    /**
+     * Specifies whether to show the RemoteApp program in the RD Web Access server.
+     * 
+     */
     public Optional<Boolean> getShowInPortal() {
         return Optional.ofNullable(this.showInPortal);
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

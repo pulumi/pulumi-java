@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The category of the budget, whether the budget tracks cost or usage.
+     * 
+     */
     @EnumType
     public enum CategoryType {
         Cost("Cost");

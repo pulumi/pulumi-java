@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of an application rule.
+ * 
+ */
 public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFirewallApplicationRuleResponse Empty = new AzureFirewallApplicationRuleResponse();
 
+    /**
+     * Description of the rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -23,6 +31,10 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * List of FQDN Tags for this rule.
+     * 
+     */
     @InputImport(name="fqdnTags")
     private final @Nullable List<String> fqdnTags;
 
@@ -30,6 +42,10 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
 
+    /**
+     * Name of the application rule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,6 +53,10 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Array of ApplicationRuleProtocols.
+     * 
+     */
     @InputImport(name="protocols")
     private final @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols;
 
@@ -44,6 +64,10 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
         return this.protocols == null ? List.of() : this.protocols;
     }
 
+    /**
+     * List of source IP addresses for this rule.
+     * 
+     */
     @InputImport(name="sourceAddresses")
     private final @Nullable List<String> sourceAddresses;
 
@@ -51,6 +75,10 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
+    /**
+     * List of source IpGroups for this rule.
+     * 
+     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable List<String> sourceIpGroups;
 
@@ -58,6 +86,10 @@ public final class AzureFirewallApplicationRuleResponse extends io.pulumi.resour
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 
+    /**
+     * List of FQDNs for this rule.
+     * 
+     */
     @InputImport(name="targetFqdns")
     private final @Nullable List<String> targetFqdns;
 

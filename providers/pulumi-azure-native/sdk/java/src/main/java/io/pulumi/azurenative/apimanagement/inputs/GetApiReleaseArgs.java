@@ -12,6 +12,10 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiReleaseArgs Empty = new GetApiReleaseArgs();
 
+    /**
+     * API identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -19,6 +23,10 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiId;
     }
 
+    /**
+     * Release identifier within an API. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="releaseId", required=true)
     private final String releaseId;
 
@@ -26,6 +34,10 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.releaseId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

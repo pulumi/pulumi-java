@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Confluent offer detail
+ * 
+ */
 public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrganizationResourcePropertiesOfferDetailArgs Empty = new OrganizationResourcePropertiesOfferDetailArgs();
 
+    /**
+     * Offer Id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -21,6 +29,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Offer Plan Id
+     * 
+     */
     @InputImport(name="planId")
     private final @Nullable Input<String> planId;
 
@@ -28,6 +40,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
         return this.planId == null ? Input.empty() : this.planId;
     }
 
+    /**
+     * Offer Plan Name
+     * 
+     */
     @InputImport(name="planName")
     private final @Nullable Input<String> planName;
 
@@ -35,6 +51,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
         return this.planName == null ? Input.empty() : this.planName;
     }
 
+    /**
+     * Publisher Id
+     * 
+     */
     @InputImport(name="publisherId")
     private final @Nullable Input<String> publisherId;
 
@@ -42,6 +62,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
         return this.publisherId == null ? Input.empty() : this.publisherId;
     }
 
+    /**
+     * Offer Plan Term unit
+     * 
+     */
     @InputImport(name="termUnit")
     private final @Nullable Input<String> termUnit;
 

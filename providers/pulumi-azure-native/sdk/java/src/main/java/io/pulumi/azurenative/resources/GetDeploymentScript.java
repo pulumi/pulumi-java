@@ -14,6 +14,18 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: AzureCliScript, AzurePowerShellScript. */
 public class GetDeploymentScript {
+/**
+ * Deployment script object.
+ * API Version: 2020-10-01.
+ * 
+ *
+ * Deployment script object.
+ * 
+ * @deprecated
+ * Please use one of the variants: AzureCliScript, AzurePowerShellScript.
+ * 
+ */
+    @Deprecated /* Please use one of the variants: AzureCliScript, AzurePowerShellScript. */
     public static CompletableFuture<GetDeploymentScriptResult> invokeAsync(GetDeploymentScriptArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeploymentScript", TypeShape.of(GetDeploymentScriptResult.class), args == null ? GetDeploymentScriptArgs.Empty : args, Utilities.withVersion(options));
     }

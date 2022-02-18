@@ -27,6 +27,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     public static final ApplicationDefinitionArgs Empty = new ApplicationDefinitionArgs();
 
+    /**
+     * The name of the managed application definition.
+     * 
+     */
     @InputImport(name="applicationDefinitionName")
     private final @Nullable Input<String> applicationDefinitionName;
 
@@ -34,6 +38,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.applicationDefinitionName == null ? Input.empty() : this.applicationDefinitionName;
     }
 
+    /**
+     * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
+     * 
+     */
     @InputImport(name="artifacts")
     private final @Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts;
 
@@ -41,6 +49,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.artifacts == null ? Input.empty() : this.artifacts;
     }
 
+    /**
+     * The managed application provider authorizations.
+     * 
+     */
     @InputImport(name="authorizations")
     private final @Nullable Input<List<ApplicationAuthorizationArgs>> authorizations;
 
@@ -48,6 +60,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.authorizations == null ? Input.empty() : this.authorizations;
     }
 
+    /**
+     * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
+     * 
+     */
     @InputImport(name="createUiDefinition")
     private final @Nullable Input<Object> createUiDefinition;
 
@@ -55,6 +71,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.createUiDefinition == null ? Input.empty() : this.createUiDefinition;
     }
 
+    /**
+     * The managed application deployment policy.
+     * 
+     */
     @InputImport(name="deploymentPolicy")
     private final @Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy;
 
@@ -62,6 +82,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.deploymentPolicy == null ? Input.empty() : this.deploymentPolicy;
     }
 
+    /**
+     * The managed application definition description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -69,6 +93,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The managed application definition display name.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -76,6 +104,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * A value indicating whether the package is enabled or not.
+     * 
+     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 
@@ -83,6 +115,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -90,6 +126,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The managed application lock level.
+     * 
+     */
     @InputImport(name="lockLevel", required=true)
     private final Input<ApplicationLockLevel> lockLevel;
 
@@ -97,6 +137,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.lockLevel;
     }
 
+    /**
+     * The managed application locking policy.
+     * 
+     */
     @InputImport(name="lockingPolicy")
     private final @Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
 
@@ -104,6 +148,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.lockingPolicy == null ? Input.empty() : this.lockingPolicy;
     }
 
+    /**
+     * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
+     * 
+     */
     @InputImport(name="mainTemplate")
     private final @Nullable Input<Object> mainTemplate;
 
@@ -111,6 +159,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.mainTemplate == null ? Input.empty() : this.mainTemplate;
     }
 
+    /**
+     * ID of the resource that manages this resource.
+     * 
+     */
     @InputImport(name="managedBy")
     private final @Nullable Input<String> managedBy;
 
@@ -118,6 +170,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
+    /**
+     * The managed application management policy that determines publisher's access to the managed resource group.
+     * 
+     */
     @InputImport(name="managementPolicy")
     private final @Nullable Input<ApplicationManagementPolicyArgs> managementPolicy;
 
@@ -125,6 +181,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.managementPolicy == null ? Input.empty() : this.managementPolicy;
     }
 
+    /**
+     * The managed application notification policy.
+     * 
+     */
     @InputImport(name="notificationPolicy")
     private final @Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy;
 
@@ -132,6 +192,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.notificationPolicy == null ? Input.empty() : this.notificationPolicy;
     }
 
+    /**
+     * The managed application definition package file Uri. Use this element
+     * 
+     */
     @InputImport(name="packageFileUri")
     private final @Nullable Input<String> packageFileUri;
 
@@ -139,6 +203,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.packageFileUri == null ? Input.empty() : this.packageFileUri;
     }
 
+    /**
+     * The managed application provider policies.
+     * 
+     */
     @InputImport(name="policies")
     private final @Nullable Input<List<ApplicationPolicyArgs>> policies;
 
@@ -146,6 +214,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.policies == null ? Input.empty() : this.policies;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -153,6 +225,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The SKU of the resource.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -160,6 +236,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

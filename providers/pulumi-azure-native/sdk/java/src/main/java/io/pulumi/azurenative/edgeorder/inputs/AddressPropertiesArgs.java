@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Address Properties
+ * 
+ */
 public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddressPropertiesArgs Empty = new AddressPropertiesArgs();
 
+    /**
+     * Contact details for the address
+     * 
+     */
     @InputImport(name="contactDetails", required=true)
     private final Input<ContactDetailsArgs> contactDetails;
 
@@ -22,6 +30,10 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.contactDetails;
     }
 
+    /**
+     * Shipping details for the address
+     * 
+     */
     @InputImport(name="shippingAddress")
     private final @Nullable Input<ShippingAddressArgs> shippingAddress;
 

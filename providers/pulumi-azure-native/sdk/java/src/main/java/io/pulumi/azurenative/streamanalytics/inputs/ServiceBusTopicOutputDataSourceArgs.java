@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a Service Bus Topic output data source.
+ * 
+ */
 public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceBusTopicOutputDataSourceArgs Empty = new ServiceBusTopicOutputDataSourceArgs();
 
+    /**
+     * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+     * 
+     */
     @InputImport(name="propertyColumns")
     private final @Nullable Input<List<String>> propertyColumns;
 
@@ -22,6 +30,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
         return this.propertyColumns == null ? Input.empty() : this.propertyColumns;
     }
 
+    /**
+     * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="serviceBusNamespace")
     private final @Nullable Input<String> serviceBusNamespace;
 
@@ -29,6 +41,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
         return this.serviceBusNamespace == null ? Input.empty() : this.serviceBusNamespace;
     }
 
+    /**
+     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="sharedAccessPolicyKey")
     private final @Nullable Input<String> sharedAccessPolicyKey;
 
@@ -36,6 +52,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
         return this.sharedAccessPolicyKey == null ? Input.empty() : this.sharedAccessPolicyKey;
     }
 
+    /**
+     * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="sharedAccessPolicyName")
     private final @Nullable Input<String> sharedAccessPolicyName;
 
@@ -43,6 +63,10 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
         return this.sharedAccessPolicyName == null ? Input.empty() : this.sharedAccessPolicyName;
     }
 
+    /**
+     * The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="topicName")
     private final @Nullable Input<String> topicName;
 
@@ -50,6 +74,11 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
         return this.topicName == null ? Input.empty() : this.topicName;
     }
 
+    /**
+     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is 'Microsoft.ServiceBus/Topic'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

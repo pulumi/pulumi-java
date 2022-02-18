@@ -14,18 +14,66 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EntityInfoResponse {
+    /**
+     * The friendly name of the management group.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * The fully qualified ID for the entity.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * 
+     */
     private final String id;
+    /**
+     * The users specific permissions to this item.
+     * 
+     */
     private final @Nullable String inheritedPermissions;
+    /**
+     * The name of the entity. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     private final String name;
+    /**
+     * Number of children is the number of Groups that are exactly one level underneath the current Group.
+     * 
+     */
     private final @Nullable Integer numberOfChildGroups;
+    /**
+     * Number of children is the number of Groups and Subscriptions that are exactly one level underneath the current Group.
+     * 
+     */
     private final @Nullable Integer numberOfChildren;
     private final @Nullable Integer numberOfDescendants;
+    /**
+     * (Optional) The ID of the parent management group.
+     * 
+     */
     private final @Nullable EntityParentGroupInfoResponse parent;
+    /**
+     * The parent display name chain from the root group to the immediate parent
+     * 
+     */
     private final @Nullable List<String> parentDisplayNameChain;
+    /**
+     * The parent name chain from the root group to the immediate parent
+     * 
+     */
     private final @Nullable List<String> parentNameChain;
+    /**
+     * The users specific permissions to this item.
+     * 
+     */
     private final @Nullable String permissions;
+    /**
+     * The AAD Tenant ID associated with the entity. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     private final @Nullable String tenantId;
+    /**
+     * The type of the resource. For example, Microsoft.Management/managementGroups
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"displayName","id","inheritedPermissions","name","numberOfChildGroups","numberOfChildren","numberOfDescendants","parent","parentDisplayNameChain","parentNameChain","permissions","tenantId","type"})
@@ -58,42 +106,90 @@ public final class EntityInfoResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The friendly name of the management group.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * The fully qualified ID for the entity.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The users specific permissions to this item.
+     * 
+     */
     public Optional<String> getInheritedPermissions() {
         return Optional.ofNullable(this.inheritedPermissions);
     }
+    /**
+     * The name of the entity. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Number of children is the number of Groups that are exactly one level underneath the current Group.
+     * 
+     */
     public Optional<Integer> getNumberOfChildGroups() {
         return Optional.ofNullable(this.numberOfChildGroups);
     }
+    /**
+     * Number of children is the number of Groups and Subscriptions that are exactly one level underneath the current Group.
+     * 
+     */
     public Optional<Integer> getNumberOfChildren() {
         return Optional.ofNullable(this.numberOfChildren);
     }
     public Optional<Integer> getNumberOfDescendants() {
         return Optional.ofNullable(this.numberOfDescendants);
     }
+    /**
+     * (Optional) The ID of the parent management group.
+     * 
+     */
     public Optional<EntityParentGroupInfoResponse> getParent() {
         return Optional.ofNullable(this.parent);
     }
+    /**
+     * The parent display name chain from the root group to the immediate parent
+     * 
+     */
     public List<String> getParentDisplayNameChain() {
         return this.parentDisplayNameChain == null ? List.of() : this.parentDisplayNameChain;
     }
+    /**
+     * The parent name chain from the root group to the immediate parent
+     * 
+     */
     public List<String> getParentNameChain() {
         return this.parentNameChain == null ? List.of() : this.parentNameChain;
     }
+    /**
+     * The users specific permissions to this item.
+     * 
+     */
     public Optional<String> getPermissions() {
         return Optional.ofNullable(this.permissions);
     }
+    /**
+     * The AAD Tenant ID associated with the entity. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
+    /**
+     * The type of the resource. For example, Microsoft.Management/managementGroups
+     * 
+     */
     public String getType() {
         return this.type;
     }

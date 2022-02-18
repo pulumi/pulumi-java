@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Network plugin used for building Kubernetes network.
+     * 
+     */
     @EnumType
     public enum NetworkPlugin {
         Azure("azure"),

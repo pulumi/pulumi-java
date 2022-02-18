@@ -19,6 +19,10 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     public static final IntegrationAccountPartnerArgs Empty = new IntegrationAccountPartnerArgs();
 
+    /**
+     * The partner content.
+     * 
+     */
     @InputImport(name="content", required=true)
     private final Input<PartnerContentArgs> content;
 
@@ -26,6 +30,10 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
         return this.content;
     }
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -33,6 +41,10 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,6 +52,10 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The metadata.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -47,6 +63,10 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The integration account partner name.
+     * 
+     */
     @InputImport(name="partnerName")
     private final @Nullable Input<String> partnerName;
 
@@ -54,6 +74,10 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
         return this.partnerName == null ? Input.empty() : this.partnerName;
     }
 
+    /**
+     * The partner type.
+     * 
+     */
     @InputImport(name="partnerType", required=true)
     private final Input<Either<String,PartnerType>> partnerType;
 
@@ -61,6 +85,10 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
         return this.partnerType;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,6 +96,10 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

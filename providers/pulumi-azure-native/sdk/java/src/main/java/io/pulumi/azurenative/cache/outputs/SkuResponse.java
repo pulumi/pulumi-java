@@ -10,8 +10,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SkuResponse {
+    /**
+     * The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+     * 
+     */
     private final Integer capacity;
+    /**
+     * The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+     * 
+     */
     private final String family;
+    /**
+     * The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"capacity","family","name"})
@@ -24,12 +36,24 @@ public final class SkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+     * 
+     */
     public Integer getCapacity() {
         return this.capacity;
     }
+    /**
+     * The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+     * 
+     */
     public String getFamily() {
         return this.family;
     }
+    /**
+     * The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+     * 
+     */
     public String getName() {
         return this.name;
     }

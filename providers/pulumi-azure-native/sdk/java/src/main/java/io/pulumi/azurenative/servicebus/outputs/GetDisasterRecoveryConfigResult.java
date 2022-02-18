@@ -12,13 +12,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDisasterRecoveryConfigResult {
+    /**
+     * Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+     * 
+     */
     private final @Nullable String alternateName;
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
+    /**
+     * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+     * 
+     */
     private final @Nullable String partnerNamespace;
+    /**
+     * Number of entities pending to be replicated.
+     * 
+     */
     private final Double pendingReplicationOperationsCount;
+    /**
+     * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
+     * 
+     */
     private final String provisioningState;
+    /**
+     * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+     * 
+     */
     private final String role;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"alternateName","id","name","partnerNamespace","pendingReplicationOperationsCount","provisioningState","role","type"})
@@ -41,27 +73,59 @@ public final class GetDisasterRecoveryConfigResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+     * 
+     */
     public Optional<String> getAlternateName() {
         return Optional.ofNullable(this.alternateName);
     }
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+     * 
+     */
     public Optional<String> getPartnerNamespace() {
         return Optional.ofNullable(this.partnerNamespace);
     }
+    /**
+     * Number of entities pending to be replicated.
+     * 
+     */
     public Double getPendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
+    /**
+     * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+     * 
+     */
     public String getRole() {
         return this.role;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

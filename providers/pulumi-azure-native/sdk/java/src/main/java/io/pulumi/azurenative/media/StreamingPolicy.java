@@ -19,63 +19,156 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Streaming Policy resource
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:media:StreamingPolicy UserCreatedSecureStreamingPolicy /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/streamingPolicies/UserCreatedSecureStreamingPolicy 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:media:StreamingPolicy")
 public class StreamingPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Configuration of CommonEncryptionCbcs
+     * 
+     */
     @OutputExport(name="commonEncryptionCbcs", type=CommonEncryptionCbcsResponse.class, parameters={})
     private Output</* @Nullable */ CommonEncryptionCbcsResponse> commonEncryptionCbcs;
 
+    /**
+     * @return Configuration of CommonEncryptionCbcs
+     * 
+     */
     public Output</* @Nullable */ CommonEncryptionCbcsResponse> getCommonEncryptionCbcs() {
         return this.commonEncryptionCbcs;
     }
+    /**
+     * Configuration of CommonEncryptionCenc
+     * 
+     */
     @OutputExport(name="commonEncryptionCenc", type=CommonEncryptionCencResponse.class, parameters={})
     private Output</* @Nullable */ CommonEncryptionCencResponse> commonEncryptionCenc;
 
+    /**
+     * @return Configuration of CommonEncryptionCenc
+     * 
+     */
     public Output</* @Nullable */ CommonEncryptionCencResponse> getCommonEncryptionCenc() {
         return this.commonEncryptionCenc;
     }
+    /**
+     * Creation time of Streaming Policy
+     * 
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
+    /**
+     * @return Creation time of Streaming Policy
+     * 
+     */
     public Output<String> getCreated() {
         return this.created;
     }
+    /**
+     * Default ContentKey used by current Streaming Policy
+     * 
+     */
     @OutputExport(name="defaultContentKeyPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultContentKeyPolicyName;
 
+    /**
+     * @return Default ContentKey used by current Streaming Policy
+     * 
+     */
     public Output</* @Nullable */ String> getDefaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
+    /**
+     * Configuration of EnvelopeEncryption
+     * 
+     */
     @OutputExport(name="envelopeEncryption", type=EnvelopeEncryptionResponse.class, parameters={})
     private Output</* @Nullable */ EnvelopeEncryptionResponse> envelopeEncryption;
 
+    /**
+     * @return Configuration of EnvelopeEncryption
+     * 
+     */
     public Output</* @Nullable */ EnvelopeEncryptionResponse> getEnvelopeEncryption() {
         return this.envelopeEncryption;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Configurations of NoEncryption
+     * 
+     */
     @OutputExport(name="noEncryption", type=NoEncryptionResponse.class, parameters={})
     private Output</* @Nullable */ NoEncryptionResponse> noEncryption;
 
+    /**
+     * @return Configurations of NoEncryption
+     * 
+     */
     public Output</* @Nullable */ NoEncryptionResponse> getNoEncryption() {
         return this.noEncryption;
     }
+    /**
+     * The system metadata relating to this resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StreamingPolicy(String name, StreamingPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:StreamingPolicy", name, args == null ? StreamingPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -98,6 +191,14 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StreamingPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StreamingPolicy(name, id, options);
     }

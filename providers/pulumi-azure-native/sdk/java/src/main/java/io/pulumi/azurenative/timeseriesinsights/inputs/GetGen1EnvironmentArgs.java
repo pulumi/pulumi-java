@@ -14,6 +14,10 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetGen1EnvironmentArgs Empty = new GetGen1EnvironmentArgs();
 
+    /**
+     * The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     @InputImport(name="environmentName", required=true)
     private final String environmentName;
 
@@ -21,6 +25,10 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
         return this.environmentName;
     }
 
+    /**
+     * Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -28,6 +36,10 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

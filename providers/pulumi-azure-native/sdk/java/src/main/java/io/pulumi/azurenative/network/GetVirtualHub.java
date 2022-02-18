@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualHub {
+/**
+ * VirtualHub Resource.
+ * API Version: 2020-11-01.
+ * 
+ *
+ * VirtualHub Resource.
+ * 
+ */
     public static CompletableFuture<GetVirtualHubResult> invokeAsync(GetVirtualHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHub", TypeShape.of(GetVirtualHubResult.class), args == null ? GetVirtualHubArgs.Empty : args, Utilities.withVersion(options));
     }

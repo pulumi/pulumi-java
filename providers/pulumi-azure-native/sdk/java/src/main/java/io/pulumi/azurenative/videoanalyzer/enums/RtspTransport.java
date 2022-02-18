@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+     * 
+     */
     @EnumType
     public enum RtspTransport {
+        /**
+         * HTTP transport. RTSP messages are exchanged over long running HTTP requests and RTP packets are interleaved within the HTTP channel.
+         * 
+         */
         Http("Http"),
+        /**
+         * TCP transport. RTSP is used directly over TCP and RTP packets are interleaved within the TCP channel.
+         * 
+         */
         Tcp("Tcp");
 
         private final String value;

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFileShare {
+/**
+ * Properties of the file share, including Id, resource name, resource type, Etag.
+ * API Version: 2021-02-01.
+ * 
+ *
+ * Properties of the file share, including Id, resource name, resource type, Etag.
+ * 
+ */
     public static CompletableFuture<GetFileShareResult> invokeAsync(GetFileShareArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getFileShare", TypeShape.of(GetFileShareResult.class), args == null ? GetFileShareArgs.Empty : args, Utilities.withVersion(options));
     }

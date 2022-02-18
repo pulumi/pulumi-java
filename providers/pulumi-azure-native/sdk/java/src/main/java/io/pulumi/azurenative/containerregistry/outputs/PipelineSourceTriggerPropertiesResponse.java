@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PipelineSourceTriggerPropertiesResponse {
+    /**
+     * The current status of the source trigger.
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"status"})
@@ -16,6 +20,10 @@ public final class PipelineSourceTriggerPropertiesResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * The current status of the source trigger.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

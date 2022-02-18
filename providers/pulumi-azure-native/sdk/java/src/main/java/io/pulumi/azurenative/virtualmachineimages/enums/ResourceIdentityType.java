@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of identity used for the image template. The type 'None' will remove any identities from the image template.
+     * 
+     */
     @EnumType
     public enum ResourceIdentityType {
         UserAssigned("UserAssigned"),

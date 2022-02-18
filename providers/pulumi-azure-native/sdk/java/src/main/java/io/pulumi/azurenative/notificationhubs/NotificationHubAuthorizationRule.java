@@ -17,93 +17,226 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Description of a Namespace AuthorizationRules.
+ * API Version: 2017-04-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:notificationhubs:NotificationHubAuthorizationRule DefaultListenSharedAccessSignature /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/5ktrial/providers/Microsoft.NotificationHubs/namespaces/nh-sdk-ns/NotificationHubs/nh-sdk-hub/AuthorizationRules/DefaultListenSharedAccessSignature 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:notificationhubs:NotificationHubAuthorizationRule")
 public class NotificationHubAuthorizationRule extends io.pulumi.resources.CustomResource {
+    /**
+     * A string that describes the claim type
+     * 
+     */
     @OutputExport(name="claimType", type=String.class, parameters={})
     private Output<String> claimType;
 
+    /**
+     * @return A string that describes the claim type
+     * 
+     */
     public Output<String> getClaimType() {
         return this.claimType;
     }
+    /**
+     * A string that describes the claim value
+     * 
+     */
     @OutputExport(name="claimValue", type=String.class, parameters={})
     private Output<String> claimValue;
 
+    /**
+     * @return A string that describes the claim value
+     * 
+     */
     public Output<String> getClaimValue() {
         return this.claimValue;
     }
+    /**
+     * The created time for this rule
+     * 
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return The created time for this rule
+     * 
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * A string that describes the authorization rule.
+     * 
+     */
     @OutputExport(name="keyName", type=String.class, parameters={})
     private Output<String> keyName;
 
+    /**
+     * @return A string that describes the authorization rule.
+     * 
+     */
     public Output<String> getKeyName() {
         return this.keyName;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The last modified time for this rule
+     * 
+     */
     @OutputExport(name="modifiedTime", type=String.class, parameters={})
     private Output<String> modifiedTime;
 
+    /**
+     * @return The last modified time for this rule
+     * 
+     */
     public Output<String> getModifiedTime() {
         return this.modifiedTime;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     @OutputExport(name="primaryKey", type=String.class, parameters={})
     private Output<String> primaryKey;
 
+    /**
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     public Output<String> getPrimaryKey() {
         return this.primaryKey;
     }
+    /**
+     * The revision number for the rule
+     * 
+     */
     @OutputExport(name="revision", type=Integer.class, parameters={})
     private Output<Integer> revision;
 
+    /**
+     * @return The revision number for the rule
+     * 
+     */
     public Output<Integer> getRevision() {
         return this.revision;
     }
+    /**
+     * The rights associated with the rule.
+     * 
+     */
     @OutputExport(name="rights", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> rights;
 
+    /**
+     * @return The rights associated with the rule.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getRights() {
         return this.rights;
     }
+    /**
+     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     @OutputExport(name="secondaryKey", type=String.class, parameters={})
     private Output<String> secondaryKey;
 
+    /**
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     public Output<String> getSecondaryKey() {
         return this.secondaryKey;
     }
+    /**
+     * The sku of the created namespace
+     * 
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return The sku of the created namespace
+     * 
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NotificationHubAuthorizationRule(String name, NotificationHubAuthorizationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:notificationhubs:NotificationHubAuthorizationRule", name, args == null ? NotificationHubAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -123,6 +256,14 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NotificationHubAuthorizationRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotificationHubAuthorizationRule(name, id, options);
     }

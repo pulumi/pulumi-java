@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings that will be leveraged for Sql source partitioning.
+ * 
+ */
 public final class SqlPartitionSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlPartitionSettingsResponse Empty = new SqlPartitionSettingsResponse();
 
+    /**
+     * The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionColumnName")
     private final @Nullable Object partitionColumnName;
 
@@ -21,6 +29,10 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
         return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
     }
 
+    /**
+     * The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionLowerBound")
     private final @Nullable Object partitionLowerBound;
 
@@ -28,6 +40,10 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
         return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
     }
 
+    /**
+     * The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionUpperBound")
     private final @Nullable Object partitionUpperBound;
 

@@ -16,6 +16,10 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InboundIpRuleArgs Empty = new InboundIpRuleArgs();
 
+    /**
+     * Action to perform based on the match or no match of the IpMask.
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable Input<Either<String,IpActionType>> action;
 
@@ -23,6 +27,10 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * IP Address in CIDR notation e.g., 10.0.0.0/8.
+     * 
+     */
     @InputImport(name="ipMask")
     private final @Nullable Input<String> ipMask;
 

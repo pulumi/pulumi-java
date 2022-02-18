@@ -14,6 +14,10 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
 
     public static final PrivateEndpointResponse Empty = new PrivateEndpointResponse();
 
+    /**
+     * Specifies the id of private endpoint.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

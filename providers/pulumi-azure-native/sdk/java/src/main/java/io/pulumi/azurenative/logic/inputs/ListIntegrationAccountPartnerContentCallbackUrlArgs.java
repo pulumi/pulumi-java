@@ -16,6 +16,10 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
 
     public static final ListIntegrationAccountPartnerContentCallbackUrlArgs Empty = new ListIntegrationAccountPartnerContentCallbackUrlArgs();
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -23,6 +27,10 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
         return this.integrationAccountName;
     }
 
+    /**
+     * The key type.
+     * 
+     */
     @InputImport(name="keyType")
     private final @Nullable Either<String,KeyType> keyType;
 
@@ -30,6 +38,10 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
         return this.keyType == null ? null : this.keyType;
     }
 
+    /**
+     * The expiry time.
+     * 
+     */
     @InputImport(name="notAfter")
     private final @Nullable String notAfter;
 
@@ -37,6 +49,10 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
     }
 
+    /**
+     * The integration account partner name.
+     * 
+     */
     @InputImport(name="partnerName", required=true)
     private final String partnerName;
 
@@ -44,6 +60,10 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
         return this.partnerName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

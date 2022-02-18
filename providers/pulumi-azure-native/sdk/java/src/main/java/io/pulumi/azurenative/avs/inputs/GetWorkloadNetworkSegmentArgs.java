@@ -12,6 +12,10 @@ public final class GetWorkloadNetworkSegmentArgs extends io.pulumi.resources.Inv
 
     public static final GetWorkloadNetworkSegmentArgs Empty = new GetWorkloadNetworkSegmentArgs();
 
+    /**
+     * Name of the private cloud
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -19,6 +23,10 @@ public final class GetWorkloadNetworkSegmentArgs extends io.pulumi.resources.Inv
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetWorkloadNetworkSegmentArgs extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
+    /**
+     * NSX Segment identifier. Generally the same as the Segment's display name
+     * 
+     */
     @InputImport(name="segmentId", required=true)
     private final String segmentId;
 

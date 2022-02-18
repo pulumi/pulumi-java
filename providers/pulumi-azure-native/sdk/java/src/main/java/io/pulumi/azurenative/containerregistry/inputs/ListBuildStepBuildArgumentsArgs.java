@@ -12,6 +12,10 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
 
     public static final ListBuildStepBuildArgumentsArgs Empty = new ListBuildStepBuildArgumentsArgs();
 
+    /**
+     * The name of the container registry build task.
+     * 
+     */
     @InputImport(name="buildTaskName", required=true)
     private final String buildTaskName;
 
@@ -19,6 +23,10 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
         return this.buildTaskName;
     }
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -26,6 +34,10 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of a build step for a container registry build task.
+     * 
+     */
     @InputImport(name="stepName", required=true)
     private final String stepName;
 

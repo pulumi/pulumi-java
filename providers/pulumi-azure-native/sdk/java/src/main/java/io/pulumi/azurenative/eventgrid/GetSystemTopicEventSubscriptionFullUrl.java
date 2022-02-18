@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSystemTopicEventSubscriptionFullUrl {
+/**
+ * Full endpoint url of an event subscription
+ * API Version: 2021-06-01-preview.
+ * 
+ *
+ * Full endpoint url of an event subscription
+ * 
+ */
     public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> invokeAsync(GetSystemTopicEventSubscriptionFullUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscriptionFullUrl", TypeShape.of(GetSystemTopicEventSubscriptionFullUrlResult.class), args == null ? GetSystemTopicEventSubscriptionFullUrlArgs.Empty : args, Utilities.withVersion(options));
     }

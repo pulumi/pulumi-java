@@ -15,6 +15,10 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final DatabaseAdvisorArgs Empty = new DatabaseAdvisorArgs();
 
+    /**
+     * The name of the Database Advisor.
+     * 
+     */
     @InputImport(name="advisorName")
     private final @Nullable Input<String> advisorName;
 
@@ -22,6 +26,10 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
         return this.advisorName == null ? Input.empty() : this.advisorName;
     }
 
+    /**
+     * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
+     * 
+     */
     @InputImport(name="autoExecuteStatus", required=true)
     private final Input<AutoExecuteStatus> autoExecuteStatus;
 
@@ -29,6 +37,10 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
         return this.autoExecuteStatus;
     }
 
+    /**
+     * The name of the database.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -36,6 +48,10 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
         return this.databaseName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     * 
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Describes a section in the fabric settings of the cluster.
+ * 
+ */
 public final class SettingsSectionDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SettingsSectionDescriptionResponse Empty = new SettingsSectionDescriptionResponse();
 
+    /**
+     * The section name of the fabric settings.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +29,10 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
         return this.name;
     }
 
+    /**
+     * The collection of parameters in the section.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final List<SettingsParameterDescriptionResponse> parameters;
 

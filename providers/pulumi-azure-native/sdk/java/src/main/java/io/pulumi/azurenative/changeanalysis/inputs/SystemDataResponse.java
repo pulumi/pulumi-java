@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
+ * 
+ */
 public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SystemDataResponse Empty = new SystemDataResponse();
 
+    /**
+     * The timestamp of resource creation (UTC)
+     * 
+     */
     @InputImport(name="createdAt", required=true)
     private final String createdAt;
 
@@ -19,6 +27,10 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdAt;
     }
 
+    /**
+     * A string identifier for the identity that created the resource
+     * 
+     */
     @InputImport(name="createdBy", required=true)
     private final String createdBy;
 
@@ -26,6 +38,10 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdBy;
     }
 
+    /**
+     * The type of identity that created the resource: user, application, managedIdentity, key
+     * 
+     */
     @InputImport(name="createdByType", required=true)
     private final String createdByType;
 
@@ -33,6 +49,10 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdByType;
     }
 
+    /**
+     * The timestamp of resource last modification (UTC)
+     * 
+     */
     @InputImport(name="lastModifiedAt", required=true)
     private final String lastModifiedAt;
 
@@ -40,6 +60,10 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastModifiedAt;
     }
 
+    /**
+     * A string identifier for the identity that last modified the resource
+     * 
+     */
     @InputImport(name="lastModifiedBy", required=true)
     private final String lastModifiedBy;
 
@@ -47,6 +71,10 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastModifiedBy;
     }
 
+    /**
+     * The type of identity that last modified the resource: user, application, managedIdentity, key
+     * 
+     */
     @InputImport(name="lastModifiedByType", required=true)
     private final String lastModifiedByType;
 

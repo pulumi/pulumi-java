@@ -12,23 +12,95 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetConnectorMappingResult {
+    /**
+     * The connector mapping name
+     * 
+     */
     private final String connectorMappingName;
+    /**
+     * The connector name.
+     * 
+     */
     private final String connectorName;
+    /**
+     * Type of connector.
+     * 
+     */
     private final @Nullable String connectorType;
+    /**
+     * The created time.
+     * 
+     */
     private final String created;
+    /**
+     * The DataFormat ID.
+     * 
+     */
     private final String dataFormatId;
+    /**
+     * The description of the connector mapping.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Display name for the connector mapping.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * Defines which entity type the file should map to.
+     * 
+     */
     private final String entityType;
+    /**
+     * The mapping entity name.
+     * 
+     */
     private final String entityTypeName;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * The last modified time.
+     * 
+     */
     private final String lastModified;
+    /**
+     * The properties of the mapping.
+     * 
+     */
     private final ConnectorMappingPropertiesResponse mappingProperties;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The next run time based on customer's settings.
+     * 
+     */
     private final String nextRunTime;
+    /**
+     * The RunId.
+     * 
+     */
     private final String runId;
+    /**
+     * State of connector mapping.
+     * 
+     */
     private final String state;
+    /**
+     * The hub name.
+     * 
+     */
     private final String tenantId;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"connectorMappingName","connectorName","connectorType","created","dataFormatId","description","displayName","entityType","entityTypeName","id","lastModified","mappingProperties","name","nextRunTime","runId","state","tenantId","type"})
@@ -71,57 +143,129 @@ public final class GetConnectorMappingResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The connector mapping name
+     * 
+     */
     public String getConnectorMappingName() {
         return this.connectorMappingName;
     }
+    /**
+     * The connector name.
+     * 
+     */
     public String getConnectorName() {
         return this.connectorName;
     }
+    /**
+     * Type of connector.
+     * 
+     */
     public Optional<String> getConnectorType() {
         return Optional.ofNullable(this.connectorType);
     }
+    /**
+     * The created time.
+     * 
+     */
     public String getCreated() {
         return this.created;
     }
+    /**
+     * The DataFormat ID.
+     * 
+     */
     public String getDataFormatId() {
         return this.dataFormatId;
     }
+    /**
+     * The description of the connector mapping.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Display name for the connector mapping.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * Defines which entity type the file should map to.
+     * 
+     */
     public String getEntityType() {
         return this.entityType;
     }
+    /**
+     * The mapping entity name.
+     * 
+     */
     public String getEntityTypeName() {
         return this.entityTypeName;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The last modified time.
+     * 
+     */
     public String getLastModified() {
         return this.lastModified;
     }
+    /**
+     * The properties of the mapping.
+     * 
+     */
     public ConnectorMappingPropertiesResponse getMappingProperties() {
         return this.mappingProperties;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The next run time based on customer's settings.
+     * 
+     */
     public String getNextRunTime() {
         return this.nextRunTime;
     }
+    /**
+     * The RunId.
+     * 
+     */
     public String getRunId() {
         return this.runId;
     }
+    /**
+     * State of connector mapping.
+     * 
+     */
     public String getState() {
         return this.state;
     }
+    /**
+     * The hub name.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

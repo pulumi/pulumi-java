@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a buildpack binding
+ * 
+ */
 public final class BuildpackBindingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuildpackBindingPropertiesResponse Empty = new BuildpackBindingPropertiesResponse();
 
+    /**
+     * Buildpack Binding Type
+     * 
+     */
     @InputImport(name="bindingType")
     private final @Nullable String bindingType;
 
@@ -22,6 +30,10 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
         return this.bindingType == null ? Optional.empty() : Optional.ofNullable(this.bindingType);
     }
 
+    /**
+     * The object describes the buildpack binding launch properties
+     * 
+     */
     @InputImport(name="launchProperties")
     private final @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
 
@@ -29,6 +41,10 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
         return this.launchProperties == null ? Optional.empty() : Optional.ofNullable(this.launchProperties);
     }
 
+    /**
+     * State of the Buildpack Binding.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

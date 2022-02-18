@@ -15,6 +15,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SshPublicKeyArgs Empty = new SshPublicKeyArgs();
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +26,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * SSH public key used to authenticate to a virtual machine through ssh. If this property is not initially provided when the resource is created, the publicKey property will be populated when generateKeyPair is called. If the public key is provided upon resource creation, the provided public key needs to be at least 2048-bit and in ssh-rsa format.
+     * 
+     */
     @InputImport(name="publicKey")
     private final @Nullable Input<String> publicKey;
 
@@ -29,6 +37,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicKey == null ? Input.empty() : this.publicKey;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the SSH public key.
+     * 
+     */
     @InputImport(name="sshPublicKeyName")
     private final @Nullable Input<String> sshPublicKeyName;
 
@@ -43,6 +59,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.sshPublicKeyName == null ? Input.empty() : this.sshPublicKeyName;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

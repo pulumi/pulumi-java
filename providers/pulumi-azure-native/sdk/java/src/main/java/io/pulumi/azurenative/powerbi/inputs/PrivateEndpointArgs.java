@@ -14,6 +14,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final PrivateEndpointArgs Empty = new PrivateEndpointArgs();
 
+    /**
+     * Specifies the id of private endpoint.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

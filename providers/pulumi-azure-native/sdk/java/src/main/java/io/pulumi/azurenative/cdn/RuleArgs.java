@@ -41,6 +41,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleArgs Empty = new RuleArgs();
 
+    /**
+     * A list of actions that are executed when all the conditions of a rule are satisfied.
+     * 
+     */
     @InputImport(name="actions", required=true)
     private final Input<List<Object>> actions;
 
@@ -48,6 +52,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions;
     }
 
+    /**
+     * A list of conditions that must be matched for the actions to be executed
+     * 
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<Object>> conditions;
 
@@ -55,6 +63,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+     * 
+     */
     @InputImport(name="matchProcessingBehavior")
     private final @Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
@@ -62,6 +74,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.matchProcessingBehavior == null ? Input.empty() : this.matchProcessingBehavior;
     }
 
+    /**
+     * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+     * 
+     */
     @InputImport(name="order", required=true)
     private final Input<Integer> order;
 
@@ -69,6 +85,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.order;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -76,6 +96,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -83,6 +107,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the delivery rule which is unique within the endpoint.
+     * 
+     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 
@@ -90,6 +118,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
+    /**
+     * Name of the rule set under the profile.
+     * 
+     */
     @InputImport(name="ruleSetName", required=true)
     private final Input<String> ruleSetName;
 

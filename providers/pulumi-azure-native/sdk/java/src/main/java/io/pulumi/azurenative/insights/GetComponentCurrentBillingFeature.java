@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponentCurrentBillingFeature {
+/**
+ * An Application Insights component billing features
+ * API Version: 2015-05-01.
+ * 
+ *
+ * An Application Insights component billing features
+ * 
+ */
     public static CompletableFuture<GetComponentCurrentBillingFeatureResult> invokeAsync(GetComponentCurrentBillingFeatureArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponentCurrentBillingFeature", TypeShape.of(GetComponentCurrentBillingFeatureResult.class), args == null ? GetComponentCurrentBillingFeatureArgs.Empty : args, Utilities.withVersion(options));
     }

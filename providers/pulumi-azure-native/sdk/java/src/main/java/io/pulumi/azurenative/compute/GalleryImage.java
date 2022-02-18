@@ -20,117 +20,282 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Specifies information about the gallery image definition that you want to create or update.
+ * API Version: 2020-09-30.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:compute:GalleryImage myGalleryImageName /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName} 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:compute:GalleryImage")
 public class GalleryImage extends io.pulumi.resources.CustomResource {
+    /**
+     * The description of this gallery image definition resource. This property is updatable.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of this gallery image definition resource. This property is updatable.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Describes the disallowed disk types.
+     * 
+     */
     @OutputExport(name="disallowed", type=DisallowedResponse.class, parameters={})
     private Output</* @Nullable */ DisallowedResponse> disallowed;
 
+    /**
+     * @return Describes the disallowed disk types.
+     * 
+     */
     public Output</* @Nullable */ DisallowedResponse> getDisallowed() {
         return this.disallowed;
     }
+    /**
+     * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
+     * 
+     */
     @OutputExport(name="endOfLifeDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endOfLifeDate;
 
+    /**
+     * @return The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
+     * 
+     */
     public Output</* @Nullable */ String> getEndOfLifeDate() {
         return this.endOfLifeDate;
     }
+    /**
+     * The Eula agreement for the gallery image definition.
+     * 
+     */
     @OutputExport(name="eula", type=String.class, parameters={})
     private Output</* @Nullable */ String> eula;
 
+    /**
+     * @return The Eula agreement for the gallery image definition.
+     * 
+     */
     public Output</* @Nullable */ String> getEula() {
         return this.eula;
     }
+    /**
+     * A list of gallery image features.
+     * 
+     */
     @OutputExport(name="features", type=List.class, parameters={GalleryImageFeatureResponse.class})
     private Output</* @Nullable */ List<GalleryImageFeatureResponse>> features;
 
+    /**
+     * @return A list of gallery image features.
+     * 
+     */
     public Output</* @Nullable */ List<GalleryImageFeatureResponse>> getFeatures() {
         return this.features;
     }
+    /**
+     * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     * 
+     */
     @OutputExport(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
+    /**
+     * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     * 
+     */
     public Output</* @Nullable */ String> getHyperVGeneration() {
         return this.hyperVGeneration;
     }
+    /**
+     * This is the gallery image definition identifier.
+     * 
+     */
     @OutputExport(name="identifier", type=GalleryImageIdentifierResponse.class, parameters={})
     private Output<GalleryImageIdentifierResponse> identifier;
 
+    /**
+     * @return This is the gallery image definition identifier.
+     * 
+     */
     public Output<GalleryImageIdentifierResponse> getIdentifier() {
         return this.identifier;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+     * 
+     */
     @OutputExport(name="osState", type=String.class, parameters={})
     private Output<String> osState;
 
+    /**
+     * @return This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+     * 
+     */
     public Output<String> getOsState() {
         return this.osState;
     }
+    /**
+     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * 
+     */
     @OutputExport(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
+    /**
+     * @return This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * 
+     */
     public Output<String> getOsType() {
         return this.osType;
     }
+    /**
+     * The privacy statement uri.
+     * 
+     */
     @OutputExport(name="privacyStatementUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> privacyStatementUri;
 
+    /**
+     * @return The privacy statement uri.
+     * 
+     */
     public Output</* @Nullable */ String> getPrivacyStatementUri() {
         return this.privacyStatementUri;
     }
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state, which only appears in the response.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Describes the gallery image definition purchase plan. This is used by marketplace images.
+     * 
+     */
     @OutputExport(name="purchasePlan", type=ImagePurchasePlanResponse.class, parameters={})
     private Output</* @Nullable */ ImagePurchasePlanResponse> purchasePlan;
 
+    /**
+     * @return Describes the gallery image definition purchase plan. This is used by marketplace images.
+     * 
+     */
     public Output</* @Nullable */ ImagePurchasePlanResponse> getPurchasePlan() {
         return this.purchasePlan;
     }
+    /**
+     * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
+     * 
+     */
     @OutputExport(name="recommended", type=RecommendedMachineConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ RecommendedMachineConfigurationResponse> recommended;
 
+    /**
+     * @return The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
+     * 
+     */
     public Output</* @Nullable */ RecommendedMachineConfigurationResponse> getRecommended() {
         return this.recommended;
     }
+    /**
+     * The release note uri.
+     * 
+     */
     @OutputExport(name="releaseNoteUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> releaseNoteUri;
 
+    /**
+     * @return The release note uri.
+     * 
+     */
     public Output</* @Nullable */ String> getReleaseNoteUri() {
         return this.releaseNoteUri;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GalleryImage(String name, GalleryImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:GalleryImage", name, args == null ? GalleryImageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -154,6 +319,14 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GalleryImage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GalleryImage(name, id, options);
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties to configure Encryption
+ * 
+ */
 public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionResponse Empty = new EncryptionResponse();
 
+    /**
+     * Enumerates the possible value of keySource for Encryption
+     * 
+     */
     @InputImport(name="keySource")
     private final @Nullable String keySource;
 
@@ -22,6 +30,10 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
     }
 
+    /**
+     * Properties of KeyVault
+     * 
+     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 

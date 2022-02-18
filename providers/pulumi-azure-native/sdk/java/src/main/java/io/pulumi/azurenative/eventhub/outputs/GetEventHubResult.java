@@ -14,15 +14,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEventHubResult {
+    /**
+     * Properties of capture description
+     * 
+     */
     private final @Nullable CaptureDescriptionResponse captureDescription;
+    /**
+     * Exact time the Event Hub was created.
+     * 
+     */
     private final String createdAt;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+     * 
+     */
     private final @Nullable Double messageRetentionInDays;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+     * 
+     */
     private final @Nullable Double partitionCount;
+    /**
+     * Current number of shards on the Event Hub.
+     * 
+     */
     private final List<String> partitionIds;
+    /**
+     * Enumerates the possible values for the status of the Event Hub.
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
+    /**
+     * The exact time the message was updated.
+     * 
+     */
     private final String updatedAt;
 
     @OutputCustomType.Constructor({"captureDescription","createdAt","id","messageRetentionInDays","name","partitionCount","partitionIds","status","type","updatedAt"})
@@ -49,33 +89,73 @@ public final class GetEventHubResult {
         this.updatedAt = Objects.requireNonNull(updatedAt);
     }
 
+    /**
+     * Properties of capture description
+     * 
+     */
     public Optional<CaptureDescriptionResponse> getCaptureDescription() {
         return Optional.ofNullable(this.captureDescription);
     }
+    /**
+     * Exact time the Event Hub was created.
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+     * 
+     */
     public Optional<Double> getMessageRetentionInDays() {
         return Optional.ofNullable(this.messageRetentionInDays);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+     * 
+     */
     public Optional<Double> getPartitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
+    /**
+     * Current number of shards on the Event Hub.
+     * 
+     */
     public List<String> getPartitionIds() {
         return this.partitionIds;
     }
+    /**
+     * Enumerates the possible values for the status of the Event Hub.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * The exact time the message was updated.
+     * 
+     */
     public String getUpdatedAt() {
         return this.updatedAt;
     }

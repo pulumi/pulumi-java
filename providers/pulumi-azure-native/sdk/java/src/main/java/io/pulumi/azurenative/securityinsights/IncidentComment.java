@@ -16,57 +16,142 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents an incident comment
+ * API Version: 2021-03-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:securityinsights:IncidentComment 4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5/comments/4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:securityinsights:IncidentComment")
 public class IncidentComment extends io.pulumi.resources.CustomResource {
+    /**
+     * Describes the client that created the comment
+     * 
+     */
     @OutputExport(name="author", type=ClientInfoResponse.class, parameters={})
     private Output<ClientInfoResponse> author;
 
+    /**
+     * @return Describes the client that created the comment
+     * 
+     */
     public Output<ClientInfoResponse> getAuthor() {
         return this.author;
     }
+    /**
+     * The time the comment was created
+     * 
+     */
     @OutputExport(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
+    /**
+     * @return The time the comment was created
+     * 
+     */
     public Output<String> getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
+    /**
+     * Etag of the azure resource
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Etag of the azure resource
+     * 
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * The time the comment was updated
+     * 
+     */
     @OutputExport(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
+    /**
+     * @return The time the comment was updated
+     * 
+     */
     public Output<String> getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
+    /**
+     * The comment message
+     * 
+     */
     @OutputExport(name="message", type=String.class, parameters={})
     private Output<String> message;
 
+    /**
+     * @return The comment message
+     * 
+     */
     public Output<String> getMessage() {
         return this.message;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IncidentComment(String name, IncidentCommentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:IncidentComment", name, args == null ? IncidentCommentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -88,6 +173,14 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IncidentComment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IncidentComment(name, id, options);
     }

@@ -10,7 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleRequestSchemeConditionResponse {
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'RequestScheme'.
+     * 
+     */
     private final String name;
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     private final RequestSchemeMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +30,18 @@ public final class DeliveryRuleRequestSchemeConditionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+    /**
+     * The name of the condition for the delivery rule.
+     * Expected value is 'RequestScheme'.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Defines the parameters for the condition.
+     * 
+     */
     public RequestSchemeMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

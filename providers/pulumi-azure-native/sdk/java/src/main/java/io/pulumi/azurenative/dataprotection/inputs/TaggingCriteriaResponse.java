@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Tagging criteria
+ * 
+ */
 public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TaggingCriteriaResponse Empty = new TaggingCriteriaResponse();
 
+    /**
+     * Criteria which decides whether the tag can be applied to a triggered backup.
+     * 
+     */
     @InputImport(name="criteria")
     private final @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria;
 
@@ -25,6 +33,10 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
         return this.criteria == null ? List.of() : this.criteria;
     }
 
+    /**
+     * Specifies if tag is default.
+     * 
+     */
     @InputImport(name="isDefault", required=true)
     private final Boolean isDefault;
 
@@ -32,6 +44,10 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
         return this.isDefault;
     }
 
+    /**
+     * Retention tag information
+     * 
+     */
     @InputImport(name="tagInfo", required=true)
     private final RetentionTagResponse tagInfo;
 
@@ -39,6 +55,10 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
         return this.tagInfo;
     }
 
+    /**
+     * Retention Tag priority.
+     * 
+     */
     @InputImport(name="taggingPriority", required=true)
     private final Double taggingPriority;
 

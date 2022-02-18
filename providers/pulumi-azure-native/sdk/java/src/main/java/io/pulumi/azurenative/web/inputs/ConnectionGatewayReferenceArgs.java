@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The gateway installation reference
+ * 
+ */
 public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionGatewayReferenceArgs Empty = new ConnectionGatewayReferenceArgs();
 
+    /**
+     * Resource reference id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -21,6 +29,10 @@ public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.Re
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource reference location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,6 +40,10 @@ public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.Re
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource reference name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +51,10 @@ public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Resource reference type
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

@@ -12,6 +12,10 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetDiagnosticSettingArgs Empty = new GetDiagnosticSettingArgs();
 
+    /**
+     * The name of the diagnostic setting.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -10,10 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterPropertiesResponse {
+    /**
+     * Represents the number of streaming units currently being used on the cluster.
+     * 
+     */
     private final Integer capacityAllocated;
+    /**
+     * Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
+     * 
+     */
     private final Integer capacityAssigned;
+    /**
+     * Unique identifier for the cluster.
+     * 
+     */
     private final String clusterId;
+    /**
+     * The date this cluster was created.
+     * 
+     */
     private final String createdDate;
+    /**
+     * The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
+     * 
+     */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"capacityAllocated","capacityAssigned","clusterId","createdDate","provisioningState"})
@@ -30,18 +50,38 @@ public final class ClusterPropertiesResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+    /**
+     * Represents the number of streaming units currently being used on the cluster.
+     * 
+     */
     public Integer getCapacityAllocated() {
         return this.capacityAllocated;
     }
+    /**
+     * Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
+     * 
+     */
     public Integer getCapacityAssigned() {
         return this.capacityAssigned;
     }
+    /**
+     * Unique identifier for the cluster.
+     * 
+     */
     public String getClusterId() {
         return this.clusterId;
     }
+    /**
+     * The date this cluster was created.
+     * 
+     */
     public String getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }

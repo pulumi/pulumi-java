@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes information on user who created this ComputeInstance.
+ * 
+ */
 public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeInstanceCreatedByResponse Empty = new ComputeInstanceCreatedByResponse();
 
+    /**
+     * Uniquely identifies the user within his/her organization.
+     * 
+     */
     @InputImport(name="userId", required=true)
     private final String userId;
 
@@ -19,6 +27,10 @@ public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.
         return this.userId;
     }
 
+    /**
+     * Name of the user.
+     * 
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 
@@ -26,6 +38,10 @@ public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.
         return this.userName;
     }
 
+    /**
+     * Uniquely identifies user' Azure Active Directory organization.
+     * 
+     */
     @InputImport(name="userOrgId", required=true)
     private final String userOrgId;
 

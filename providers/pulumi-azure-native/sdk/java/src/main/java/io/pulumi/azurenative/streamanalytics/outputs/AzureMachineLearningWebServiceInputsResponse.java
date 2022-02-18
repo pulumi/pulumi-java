@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureMachineLearningWebServiceInputsResponse {
+    /**
+     * A list of input columns for the Azure Machine Learning web service endpoint.
+     * 
+     */
     private final @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames;
+    /**
+     * The name of the input. This is the name provided while authoring the endpoint.
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"columnNames","name"})
@@ -24,9 +32,17 @@ public final class AzureMachineLearningWebServiceInputsResponse {
         this.name = name;
     }
 
+    /**
+     * A list of input columns for the Azure Machine Learning web service endpoint.
+     * 
+     */
     public List<AzureMachineLearningWebServiceInputColumnResponse> getColumnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
+    /**
+     * The name of the input. This is the name provided while authoring the endpoint.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

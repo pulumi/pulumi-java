@@ -14,6 +14,10 @@ public final class GetNetworkProfileArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetNetworkProfileArgs Empty = new GetNetworkProfileArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetNetworkProfileArgs extends io.pulumi.resources.InvokeArgs 
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the public IP prefix.
+     * 
+     */
     @InputImport(name="networkProfileName", required=true)
     private final String networkProfileName;
 
@@ -28,6 +36,10 @@ public final class GetNetworkProfileArgs extends io.pulumi.resources.InvokeArgs 
         return this.networkProfileName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

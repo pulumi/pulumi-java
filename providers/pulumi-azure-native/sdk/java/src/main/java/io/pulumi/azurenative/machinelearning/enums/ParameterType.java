@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Graph parameter's type.
+     * 
+     */
     @EnumType
     public enum ParameterType {
         String("String"),

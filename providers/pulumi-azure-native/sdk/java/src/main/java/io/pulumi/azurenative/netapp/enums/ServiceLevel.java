@@ -8,10 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The service level of the file system
+     * 
+     */
     @EnumType
     public enum ServiceLevel {
+        /**
+         * Standard service level
+         * 
+         */
         Standard("Standard"),
+        /**
+         * Premium service level
+         * 
+         */
         Premium("Premium"),
+        /**
+         * Ultra service level
+         * 
+         */
         Ultra("Ultra");
 
         private final String value;

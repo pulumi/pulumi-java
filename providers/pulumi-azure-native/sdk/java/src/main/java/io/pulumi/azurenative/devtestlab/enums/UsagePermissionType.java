@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
+     * 
+     */
     @EnumType
     public enum UsagePermissionType {
         Default("Default"),

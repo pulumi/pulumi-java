@@ -16,6 +16,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PlanArgs Empty = new PlanArgs();
 
+    /**
+     * Plan accessibility
+     * 
+     */
     @InputImport(name="accessibility")
     private final @Nullable Input<Either<String,Accessibility>> accessibility;
 

@@ -15,12 +15,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AcsClusterPropertiesResponse {
+    /**
+     * The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+     * 
+     */
     private final @Nullable Integer agentCount;
+    /**
+     * The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+     * 
+     */
     private final @Nullable String agentVmSize;
+    /**
+     * The FQDN of the cluster.
+     * 
+     */
     private final String clusterFqdn;
+    /**
+     * The number of master nodes in the container service.
+     * 
+     */
     private final @Nullable Integer masterCount;
+    /**
+     * Orchestrator specific properties
+     * 
+     */
     private final @Nullable KubernetesClusterPropertiesResponse orchestratorProperties;
+    /**
+     * Type of orchestrator. It cannot be changed once the cluster is created.
+     * 
+     */
     private final String orchestratorType;
+    /**
+     * The system services deployed to the cluster
+     * 
+     */
     private final @Nullable List<SystemServiceResponse> systemServices;
 
     @OutputCustomType.Constructor({"agentCount","agentVmSize","clusterFqdn","masterCount","orchestratorProperties","orchestratorType","systemServices"})
@@ -41,24 +69,52 @@ public final class AcsClusterPropertiesResponse {
         this.systemServices = systemServices;
     }
 
+    /**
+     * The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+     * 
+     */
     public Optional<Integer> getAgentCount() {
         return Optional.ofNullable(this.agentCount);
     }
+    /**
+     * The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+     * 
+     */
     public Optional<String> getAgentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
+    /**
+     * The FQDN of the cluster.
+     * 
+     */
     public String getClusterFqdn() {
         return this.clusterFqdn;
     }
+    /**
+     * The number of master nodes in the container service.
+     * 
+     */
     public Optional<Integer> getMasterCount() {
         return Optional.ofNullable(this.masterCount);
     }
+    /**
+     * Orchestrator specific properties
+     * 
+     */
     public Optional<KubernetesClusterPropertiesResponse> getOrchestratorProperties() {
         return Optional.ofNullable(this.orchestratorProperties);
     }
+    /**
+     * Type of orchestrator. It cannot be changed once the cluster is created.
+     * 
+     */
     public String getOrchestratorType() {
         return this.orchestratorType;
     }
+    /**
+     * The system services deployed to the cluster
+     * 
+     */
     public List<SystemServiceResponse> getSystemServices() {
         return this.systemServices == null ? List.of() : this.systemServices;
     }

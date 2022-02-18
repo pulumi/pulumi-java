@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Generic object modeling results of script execution.
+ * 
+ */
 public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScriptStatusResponse Empty = new ScriptStatusResponse();
 
+    /**
+     * ACI resource Id.
+     * 
+     */
     @InputImport(name="containerInstanceId", required=true)
     private final String containerInstanceId;
 
@@ -22,6 +30,10 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.containerInstanceId;
     }
 
+    /**
+     * End time of the script execution.
+     * 
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -29,6 +41,10 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.endTime;
     }
 
+    /**
+     * Error that is relayed from the script execution.
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable ErrorResponseResponse error;
 
@@ -36,6 +52,10 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
+    /**
+     * Time the deployment script resource will expire.
+     * 
+     */
     @InputImport(name="expirationTime", required=true)
     private final String expirationTime;
 
@@ -43,6 +63,10 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.expirationTime;
     }
 
+    /**
+     * Start time of the script execution.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -50,6 +74,10 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.startTime;
     }
 
+    /**
+     * Storage account resource Id.
+     * 
+     */
     @InputImport(name="storageAccountId", required=true)
     private final String storageAccountId;
 

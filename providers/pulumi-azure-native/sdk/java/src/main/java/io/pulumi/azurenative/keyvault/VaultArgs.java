@@ -16,6 +16,10 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VaultArgs Empty = new VaultArgs();
 
+    /**
+     * The supported Azure location where the key vault should be created.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +27,10 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Properties of the vault
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<VaultPropertiesArgs> properties;
 
@@ -30,6 +38,10 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the Resource Group to which the server belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags that will be assigned to the key vault.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -44,6 +60,10 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Name of the vault
+     * 
+     */
     @InputImport(name="vaultName")
     private final @Nullable Input<String> vaultName;
 

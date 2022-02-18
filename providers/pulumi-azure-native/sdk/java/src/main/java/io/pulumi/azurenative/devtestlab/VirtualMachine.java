@@ -24,243 +24,576 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A virtual machine.
+ * API Version: 2018-09-15.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:devtestlab:VirtualMachine {vmName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName} 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:devtestlab:VirtualMachine")
 public class VirtualMachine extends io.pulumi.resources.CustomResource {
+    /**
+     * Indicates whether another user can take ownership of the virtual machine
+     * 
+     */
     @OutputExport(name="allowClaim", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowClaim;
 
+    /**
+     * @return Indicates whether another user can take ownership of the virtual machine
+     * 
+     */
     public Output</* @Nullable */ Boolean> getAllowClaim() {
         return this.allowClaim;
     }
+    /**
+     * The applicable schedule for the virtual machine.
+     * 
+     */
     @OutputExport(name="applicableSchedule", type=ApplicableScheduleResponse.class, parameters={})
     private Output<ApplicableScheduleResponse> applicableSchedule;
 
+    /**
+     * @return The applicable schedule for the virtual machine.
+     * 
+     */
     public Output<ApplicableScheduleResponse> getApplicableSchedule() {
         return this.applicableSchedule;
     }
+    /**
+     * The artifact deployment status for the virtual machine.
+     * 
+     */
     @OutputExport(name="artifactDeploymentStatus", type=ArtifactDeploymentStatusPropertiesResponse.class, parameters={})
     private Output<ArtifactDeploymentStatusPropertiesResponse> artifactDeploymentStatus;
 
+    /**
+     * @return The artifact deployment status for the virtual machine.
+     * 
+     */
     public Output<ArtifactDeploymentStatusPropertiesResponse> getArtifactDeploymentStatus() {
         return this.artifactDeploymentStatus;
     }
+    /**
+     * The artifacts to be installed on the virtual machine.
+     * 
+     */
     @OutputExport(name="artifacts", type=List.class, parameters={ArtifactInstallPropertiesResponse.class})
     private Output</* @Nullable */ List<ArtifactInstallPropertiesResponse>> artifacts;
 
+    /**
+     * @return The artifacts to be installed on the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ List<ArtifactInstallPropertiesResponse>> getArtifacts() {
         return this.artifacts;
     }
+    /**
+     * The resource identifier (Microsoft.Compute) of the virtual machine.
+     * 
+     */
     @OutputExport(name="computeId", type=String.class, parameters={})
     private Output<String> computeId;
 
+    /**
+     * @return The resource identifier (Microsoft.Compute) of the virtual machine.
+     * 
+     */
     public Output<String> getComputeId() {
         return this.computeId;
     }
+    /**
+     * The compute virtual machine properties.
+     * 
+     */
     @OutputExport(name="computeVm", type=ComputeVmPropertiesResponse.class, parameters={})
     private Output<ComputeVmPropertiesResponse> computeVm;
 
+    /**
+     * @return The compute virtual machine properties.
+     * 
+     */
     public Output<ComputeVmPropertiesResponse> getComputeVm() {
         return this.computeVm;
     }
+    /**
+     * The email address of creator of the virtual machine.
+     * 
+     */
     @OutputExport(name="createdByUser", type=String.class, parameters={})
     private Output<String> createdByUser;
 
+    /**
+     * @return The email address of creator of the virtual machine.
+     * 
+     */
     public Output<String> getCreatedByUser() {
         return this.createdByUser;
     }
+    /**
+     * The object identifier of the creator of the virtual machine.
+     * 
+     */
     @OutputExport(name="createdByUserId", type=String.class, parameters={})
     private Output<String> createdByUserId;
 
+    /**
+     * @return The object identifier of the creator of the virtual machine.
+     * 
+     */
     public Output<String> getCreatedByUserId() {
         return this.createdByUserId;
     }
+    /**
+     * The creation date of the virtual machine.
+     * 
+     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
+    /**
+     * @return The creation date of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ String> getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * The custom image identifier of the virtual machine.
+     * 
+     */
     @OutputExport(name="customImageId", type=String.class, parameters={})
     private Output</* @Nullable */ String> customImageId;
 
+    /**
+     * @return The custom image identifier of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ String> getCustomImageId() {
         return this.customImageId;
     }
+    /**
+     * New or existing data disks to attach to the virtual machine after creation
+     * 
+     */
     @OutputExport(name="dataDiskParameters", type=List.class, parameters={DataDiskPropertiesResponse.class})
     private Output</* @Nullable */ List<DataDiskPropertiesResponse>> dataDiskParameters;
 
+    /**
+     * @return New or existing data disks to attach to the virtual machine after creation
+     * 
+     */
     public Output</* @Nullable */ List<DataDiskPropertiesResponse>> getDataDiskParameters() {
         return this.dataDiskParameters;
     }
+    /**
+     * Indicates whether the virtual machine is to be created without a public IP address.
+     * 
+     */
     @OutputExport(name="disallowPublicIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disallowPublicIpAddress;
 
+    /**
+     * @return Indicates whether the virtual machine is to be created without a public IP address.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getDisallowPublicIpAddress() {
         return this.disallowPublicIpAddress;
     }
+    /**
+     * The resource ID of the environment that contains this virtual machine, if any.
+     * 
+     */
     @OutputExport(name="environmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentId;
 
+    /**
+     * @return The resource ID of the environment that contains this virtual machine, if any.
+     * 
+     */
     public Output</* @Nullable */ String> getEnvironmentId() {
         return this.environmentId;
     }
+    /**
+     * The expiration date for VM.
+     * 
+     */
     @OutputExport(name="expirationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDate;
 
+    /**
+     * @return The expiration date for VM.
+     * 
+     */
     public Output</* @Nullable */ String> getExpirationDate() {
         return this.expirationDate;
     }
+    /**
+     * The fully-qualified domain name of the virtual machine.
+     * 
+     */
     @OutputExport(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
+    /**
+     * @return The fully-qualified domain name of the virtual machine.
+     * 
+     */
     public Output<String> getFqdn() {
         return this.fqdn;
     }
+    /**
+     * The Microsoft Azure Marketplace image reference of the virtual machine.
+     * 
+     */
     @OutputExport(name="galleryImageReference", type=GalleryImageReferenceResponse.class, parameters={})
     private Output</* @Nullable */ GalleryImageReferenceResponse> galleryImageReference;
 
+    /**
+     * @return The Microsoft Azure Marketplace image reference of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ GalleryImageReferenceResponse> getGalleryImageReference() {
         return this.galleryImageReference;
     }
+    /**
+     * Indicates whether this virtual machine uses an SSH key for authentication.
+     * 
+     */
     @OutputExport(name="isAuthenticationWithSshKey", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAuthenticationWithSshKey;
 
+    /**
+     * @return Indicates whether this virtual machine uses an SSH key for authentication.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getIsAuthenticationWithSshKey() {
         return this.isAuthenticationWithSshKey;
     }
+    /**
+     * The lab subnet name of the virtual machine.
+     * 
+     */
     @OutputExport(name="labSubnetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> labSubnetName;
 
+    /**
+     * @return The lab subnet name of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ String> getLabSubnetName() {
         return this.labSubnetName;
     }
+    /**
+     * The lab virtual network identifier of the virtual machine.
+     * 
+     */
     @OutputExport(name="labVirtualNetworkId", type=String.class, parameters={})
     private Output</* @Nullable */ String> labVirtualNetworkId;
 
+    /**
+     * @return The lab virtual network identifier of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ String> getLabVirtualNetworkId() {
         return this.labVirtualNetworkId;
     }
+    /**
+     * Last known compute power state captured in DTL
+     * 
+     */
     @OutputExport(name="lastKnownPowerState", type=String.class, parameters={})
     private Output<String> lastKnownPowerState;
 
+    /**
+     * @return Last known compute power state captured in DTL
+     * 
+     */
     public Output<String> getLastKnownPowerState() {
         return this.lastKnownPowerState;
     }
+    /**
+     * The location of the resource.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The network interface properties.
+     * 
+     */
     @OutputExport(name="networkInterface", type=NetworkInterfacePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ NetworkInterfacePropertiesResponse> networkInterface;
 
+    /**
+     * @return The network interface properties.
+     * 
+     */
     public Output</* @Nullable */ NetworkInterfacePropertiesResponse> getNetworkInterface() {
         return this.networkInterface;
     }
+    /**
+     * The notes of the virtual machine.
+     * 
+     */
     @OutputExport(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
+    /**
+     * @return The notes of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
+    /**
+     * The OS type of the virtual machine.
+     * 
+     */
     @OutputExport(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
+    /**
+     * @return The OS type of the virtual machine.
+     * 
+     */
     public Output<String> getOsType() {
         return this.osType;
     }
+    /**
+     * The object identifier of the owner of the virtual machine.
+     * 
+     */
     @OutputExport(name="ownerObjectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerObjectId;
 
+    /**
+     * @return The object identifier of the owner of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ String> getOwnerObjectId() {
         return this.ownerObjectId;
     }
+    /**
+     * The user principal name of the virtual machine owner.
+     * 
+     */
     @OutputExport(name="ownerUserPrincipalName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerUserPrincipalName;
 
+    /**
+     * @return The user principal name of the virtual machine owner.
+     * 
+     */
     public Output</* @Nullable */ String> getOwnerUserPrincipalName() {
         return this.ownerUserPrincipalName;
     }
+    /**
+     * The password of the virtual machine administrator.
+     * 
+     */
     @OutputExport(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
+    /**
+     * @return The password of the virtual machine administrator.
+     * 
+     */
     public Output</* @Nullable */ String> getPassword() {
         return this.password;
     }
+    /**
+     * The id of the plan associated with the virtual machine image
+     * 
+     */
     @OutputExport(name="planId", type=String.class, parameters={})
     private Output</* @Nullable */ String> planId;
 
+    /**
+     * @return The id of the plan associated with the virtual machine image
+     * 
+     */
     public Output</* @Nullable */ String> getPlanId() {
         return this.planId;
     }
+    /**
+     * The provisioning status of the resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Virtual Machine schedules to be created
+     * 
+     */
     @OutputExport(name="scheduleParameters", type=List.class, parameters={ScheduleCreationParameterResponse.class})
     private Output</* @Nullable */ List<ScheduleCreationParameterResponse>> scheduleParameters;
 
+    /**
+     * @return Virtual Machine schedules to be created
+     * 
+     */
     public Output</* @Nullable */ List<ScheduleCreationParameterResponse>> getScheduleParameters() {
         return this.scheduleParameters;
     }
+    /**
+     * The size of the virtual machine.
+     * 
+     */
     @OutputExport(name="size", type=String.class, parameters={})
     private Output</* @Nullable */ String> size;
 
+    /**
+     * @return The size of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ String> getSize() {
         return this.size;
     }
+    /**
+     * The SSH key of the virtual machine administrator.
+     * 
+     */
     @OutputExport(name="sshKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sshKey;
 
+    /**
+     * @return The SSH key of the virtual machine administrator.
+     * 
+     */
     public Output</* @Nullable */ String> getSshKey() {
         return this.sshKey;
     }
+    /**
+     * Storage type to use for virtual machine (i.e. Standard, Premium).
+     * 
+     */
     @OutputExport(name="storageType", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageType;
 
+    /**
+     * @return Storage type to use for virtual machine (i.e. Standard, Premium).
+     * 
+     */
     public Output</* @Nullable */ String> getStorageType() {
         return this.storageType;
     }
+    /**
+     * The tags of the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     * 
+     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     * 
+     */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
+    /**
+     * The user name of the virtual machine.
+     * 
+     */
     @OutputExport(name="userName", type=String.class, parameters={})
     private Output</* @Nullable */ String> userName;
 
+    /**
+     * @return The user name of the virtual machine.
+     * 
+     */
     public Output</* @Nullable */ String> getUserName() {
         return this.userName;
     }
+    /**
+     * Tells source of creation of lab virtual machine. Output property only.
+     * 
+     */
     @OutputExport(name="virtualMachineCreationSource", type=String.class, parameters={})
     private Output<String> virtualMachineCreationSource;
 
+    /**
+     * @return Tells source of creation of lab virtual machine. Output property only.
+     * 
+     */
     public Output<String> getVirtualMachineCreationSource() {
         return this.virtualMachineCreationSource;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualMachine(String name, VirtualMachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:VirtualMachine", name, args == null ? VirtualMachineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -281,6 +614,14 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualMachine get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachine(name, id, options);
     }

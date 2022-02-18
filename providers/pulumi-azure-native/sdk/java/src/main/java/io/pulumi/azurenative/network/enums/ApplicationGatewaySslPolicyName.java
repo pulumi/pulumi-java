@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Name of Ssl predefined policy.
+     * 
+     */
     @EnumType
     public enum ApplicationGatewaySslPolicyName {
         AppGwSslPolicy20150501("AppGwSslPolicy20150501"),

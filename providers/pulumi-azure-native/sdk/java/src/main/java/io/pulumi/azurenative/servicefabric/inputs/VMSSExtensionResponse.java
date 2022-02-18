@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies set of extensions that should be installed onto the virtual machines.
+ * 
+ */
 public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VMSSExtensionResponse Empty = new VMSSExtensionResponse();
 
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Boolean autoUpgradeMinorVersion;
 
@@ -24,6 +32,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
+    /**
+     * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
+     * 
+     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable String forceUpdateTag;
 
@@ -31,6 +43,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.forceUpdateTag == null ? Optional.empty() : Optional.ofNullable(this.forceUpdateTag);
     }
 
+    /**
+     * The name of the extension.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -38,6 +54,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     @InputImport(name="protectedSettings")
     private final @Nullable Object protectedSettings;
 
@@ -45,6 +65,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
     }
 
+    /**
+     * Collection of extension names after which this extension needs to be provisioned.
+     * 
+     */
     @InputImport(name="provisionAfterExtensions")
     private final @Nullable List<String> provisionAfterExtensions;
 
@@ -52,6 +76,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
 
+    /**
+     * The provisioning state, which only appears in the response.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -59,6 +87,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.provisioningState;
     }
 
+    /**
+     * The name of the extension handler publisher.
+     * 
+     */
     @InputImport(name="publisher", required=true)
     private final String publisher;
 
@@ -66,6 +98,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.publisher;
     }
 
+    /**
+     * Json formatted public settings for the extension.
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Object settings;
 
@@ -73,6 +109,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -80,6 +120,10 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.type;
     }
 
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     @InputImport(name="typeHandlerVersion", required=true)
     private final String typeHandlerVersion;
 

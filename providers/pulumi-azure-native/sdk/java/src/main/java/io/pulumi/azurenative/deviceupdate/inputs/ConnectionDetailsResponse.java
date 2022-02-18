@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Private endpoint connection proxy object properties.
+ * 
+ */
 public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionDetailsResponse Empty = new ConnectionDetailsResponse();
 
+    /**
+     * Group ID.
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 
@@ -19,6 +27,10 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
         return this.groupId;
     }
 
+    /**
+     * Connection details ID.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -26,6 +38,10 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
         return this.id;
     }
 
+    /**
+     * Link ID.
+     * 
+     */
     @InputImport(name="linkIdentifier", required=true)
     private final String linkIdentifier;
 
@@ -33,6 +49,10 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
         return this.linkIdentifier;
     }
 
+    /**
+     * Member name.
+     * 
+     */
     @InputImport(name="memberName", required=true)
     private final String memberName;
 
@@ -40,6 +60,10 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
         return this.memberName;
     }
 
+    /**
+     * Private IP address.
+     * 
+     */
     @InputImport(name="privateIpAddress", required=true)
     private final String privateIpAddress;
 

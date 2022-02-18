@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Preferences related to the shipment logistics of the sku
+ * 
+ */
 public final class TransportPreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TransportPreferencesResponse Empty = new TransportPreferencesResponse();
 
+    /**
+     * Indicates Shipment Logistics type that the customer preferred.
+     * 
+     */
     @InputImport(name="preferredShipmentType", required=true)
     private final String preferredShipmentType;
 

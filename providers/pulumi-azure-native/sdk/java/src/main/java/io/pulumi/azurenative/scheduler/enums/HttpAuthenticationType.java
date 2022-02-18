@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gets or sets the HTTP authentication type.
+     * 
+     */
     @EnumType
     public enum HttpAuthenticationType {
         NotSpecified("NotSpecified"),

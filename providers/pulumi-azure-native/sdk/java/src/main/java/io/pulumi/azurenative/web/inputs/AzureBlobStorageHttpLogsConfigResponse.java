@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Http logs to azure blob storage configuration.
+ * 
+ */
 public final class AzureBlobStorageHttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureBlobStorageHttpLogsConfigResponse Empty = new AzureBlobStorageHttpLogsConfigResponse();
 
+    /**
+     * True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -23,6 +31,12 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends io.pulumi.reso
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * Retention in days.
+     * Remove blobs older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     @InputImport(name="retentionInDays")
     private final @Nullable Integer retentionInDays;
 
@@ -30,6 +44,10 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends io.pulumi.reso
         return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
     }
 
+    /**
+     * SAS url to a azure blob container with read/write/list/delete permissions.
+     * 
+     */
     @InputImport(name="sasUrl")
     private final @Nullable String sasUrl;
 

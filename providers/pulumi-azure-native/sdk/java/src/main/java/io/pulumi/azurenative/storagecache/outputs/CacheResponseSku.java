@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CacheResponseSku {
+    /**
+     * SKU name for this Cache.
+     * 
+     */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +22,10 @@ public final class CacheResponseSku {
         this.name = name;
     }
 
+    /**
+     * SKU name for this Cache.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

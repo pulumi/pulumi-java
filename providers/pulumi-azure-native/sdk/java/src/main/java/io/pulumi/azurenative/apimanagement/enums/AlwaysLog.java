@@ -8,8 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies for what type of messages sampling settings should not apply.
+     * 
+     */
     @EnumType
     public enum AlwaysLog {
+        /**
+         * Always log all erroneous request regardless of sampling settings.
+         * 
+         */
         AllErrors("allErrors");
 
         private final String value;

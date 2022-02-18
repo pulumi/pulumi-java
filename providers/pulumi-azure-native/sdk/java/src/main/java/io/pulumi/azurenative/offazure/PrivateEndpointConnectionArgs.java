@@ -14,6 +14,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * Private link resource name.
+     * 
+     */
     @InputImport(name="peConnectionName")
     private final @Nullable Input<String> peConnectionName;
 
@@ -21,6 +25,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.peConnectionName == null ? Input.empty() : this.peConnectionName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -28,6 +36,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * Site name.
+     * 
+     */
     @InputImport(name="siteName", required=true)
     private final Input<String> siteName;
 

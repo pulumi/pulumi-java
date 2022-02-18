@@ -16,6 +16,18 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Android Policy entity for Intune MAM.
+ * API Version: 2015-01-14-preview.
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /providers/Microsoft.Intune/locations/{hostName}/androidPolicies/{policyName} 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:intune:AndroidMAMPolicyByName")
 public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
     @OutputExport(name="accessRecheckOfflineTimeout", type=String.class, parameters={})
@@ -102,9 +114,17 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * Resource Location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource Location
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
@@ -114,9 +134,17 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getManagedBrowser() {
         return this.managedBrowser;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
@@ -150,19 +178,41 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getScreenCapture() {
         return this.screenCapture;
     }
+    /**
+     * Resource Tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource Tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AndroidMAMPolicyByName(String name, AndroidMAMPolicyByNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:intune:AndroidMAMPolicyByName", name, args == null ? AndroidMAMPolicyByNameArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -182,6 +232,14 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AndroidMAMPolicyByName get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AndroidMAMPolicyByName(name, id, options);
     }

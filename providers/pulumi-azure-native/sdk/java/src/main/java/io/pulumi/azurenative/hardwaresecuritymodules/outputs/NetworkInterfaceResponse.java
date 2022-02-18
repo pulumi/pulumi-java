@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkInterfaceResponse {
+    /**
+     * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+     * 
+     */
     private final String id;
+    /**
+     * Private Ip address of the interface
+     * 
+     */
     private final @Nullable String privateIpAddress;
 
     @OutputCustomType.Constructor({"id","privateIpAddress"})
@@ -22,9 +30,17 @@ public final class NetworkInterfaceResponse {
         this.privateIpAddress = privateIpAddress;
     }
 
+    /**
+     * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Private Ip address of the interface
+     * 
+     */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }

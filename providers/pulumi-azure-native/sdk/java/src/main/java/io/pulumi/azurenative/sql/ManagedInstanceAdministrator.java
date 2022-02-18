@@ -14,45 +14,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An Azure SQL managed instance administrator.
+ * API Version: 2020-11-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:sql:ManagedInstanceAdministrator ActiveDirectory /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/managedInstance/administrators/ActiveDirectory 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:sql:ManagedInstanceAdministrator")
 public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomResource {
+    /**
+     * Type of the managed instance administrator.
+     * 
+     */
     @OutputExport(name="administratorType", type=String.class, parameters={})
     private Output<String> administratorType;
 
+    /**
+     * @return Type of the managed instance administrator.
+     * 
+     */
     public Output<String> getAdministratorType() {
         return this.administratorType;
     }
+    /**
+     * Login name of the managed instance administrator.
+     * 
+     */
     @OutputExport(name="login", type=String.class, parameters={})
     private Output<String> login;
 
+    /**
+     * @return Login name of the managed instance administrator.
+     * 
+     */
     public Output<String> getLogin() {
         return this.login;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * SID (object ID) of the managed instance administrator.
+     * 
+     */
     @OutputExport(name="sid", type=String.class, parameters={})
     private Output<String> sid;
 
+    /**
+     * @return SID (object ID) of the managed instance administrator.
+     * 
+     */
     public Output<String> getSid() {
         return this.sid;
     }
+    /**
+     * Tenant ID of the managed instance administrator.
+     * 
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
+    /**
+     * @return Tenant ID of the managed instance administrator.
+     * 
+     */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ManagedInstanceAdministrator(String name, ManagedInstanceAdministratorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ManagedInstanceAdministrator", name, args == null ? ManagedInstanceAdministratorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -77,6 +146,14 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ManagedInstanceAdministrator get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedInstanceAdministrator(name, id, options);
     }

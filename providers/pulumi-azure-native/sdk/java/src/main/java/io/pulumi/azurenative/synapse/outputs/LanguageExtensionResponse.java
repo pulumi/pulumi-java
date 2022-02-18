@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LanguageExtensionResponse {
+    /**
+     * The language extension name.
+     * 
+     */
     private final @Nullable String languageExtensionName;
 
     @OutputCustomType.Constructor({"languageExtensionName"})
@@ -18,6 +22,10 @@ public final class LanguageExtensionResponse {
         this.languageExtensionName = languageExtensionName;
     }
 
+    /**
+     * The language extension name.
+     * 
+     */
     public Optional<String> getLanguageExtensionName() {
         return Optional.ofNullable(this.languageExtensionName);
     }

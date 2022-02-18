@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set of rules for sending logs for the Monitor resource.
+ * 
+ */
 public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogRulesResponse Empty = new LogRulesResponse();
 
+    /**
+     * List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+     * 
+     */
     @InputImport(name="filteringTags")
     private final @Nullable List<FilteringTagResponse> filteringTags;
 
@@ -23,6 +31,10 @@ public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
         return this.filteringTags == null ? List.of() : this.filteringTags;
     }
 
+    /**
+     * Flag specifying if AAD logs should be sent for the Monitor resource.
+     * 
+     */
     @InputImport(name="sendAadLogs")
     private final @Nullable Boolean sendAadLogs;
 
@@ -30,6 +42,10 @@ public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
         return this.sendAadLogs == null ? Optional.empty() : Optional.ofNullable(this.sendAadLogs);
     }
 
+    /**
+     * Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+     * 
+     */
     @InputImport(name="sendActivityLogs")
     private final @Nullable Boolean sendActivityLogs;
 
@@ -37,6 +53,10 @@ public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
         return this.sendActivityLogs == null ? Optional.empty() : Optional.ofNullable(this.sendActivityLogs);
     }
 
+    /**
+     * Flag specifying if subscription logs should be sent for the Monitor resource.
+     * 
+     */
     @InputImport(name="sendSubscriptionLogs")
     private final @Nullable Boolean sendSubscriptionLogs;
 

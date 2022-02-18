@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the source resource that this restore point collection is created from.
+ * 
+ */
 public final class RestorePointCollectionSourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestorePointCollectionSourcePropertiesResponse Empty = new RestorePointCollectionSourcePropertiesResponse();
 
+    /**
+     * Resource Id of the source resource used to create this restore point collection
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class RestorePointCollectionSourcePropertiesResponse extends io.pul
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Location of the source resource used to create this restore point collection.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 

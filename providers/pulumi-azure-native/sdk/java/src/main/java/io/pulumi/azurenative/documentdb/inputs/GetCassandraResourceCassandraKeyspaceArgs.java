@@ -12,6 +12,10 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends io.pulumi.r
 
     public static final GetCassandraResourceCassandraKeyspaceArgs Empty = new GetCassandraResourceCassandraKeyspaceArgs();
 
+    /**
+     * Cosmos DB database account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends io.pulumi.r
         return this.accountName;
     }
 
+    /**
+     * Cosmos DB keyspace name.
+     * 
+     */
     @InputImport(name="keyspaceName", required=true)
     private final String keyspaceName;
 
@@ -26,6 +34,10 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends io.pulumi.r
         return this.keyspaceName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

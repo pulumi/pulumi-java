@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Error detail information.
+ * 
+ */
 public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorDetailResponse Empty = new ErrorDetailResponse();
 
+    /**
+     * Error code.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +27,10 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
         return this.code;
     }
 
+    /**
+     * Error message.
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

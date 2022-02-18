@@ -14,6 +14,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupPolicyArgs Empty = new BackupPolicyArgs();
 
+    /**
+     * Name of the policy
+     * 
+     */
     @InputImport(name="backupPolicyName")
     private final @Nullable Input<String> backupPolicyName;
 
@@ -21,6 +25,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupPolicyName == null ? Input.empty() : this.backupPolicyName;
     }
 
+    /**
+     * BaseBackupPolicyResource properties
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
 
@@ -28,6 +36,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group where the backup vault is present.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the backup vault.
+     * 
+     */
     @InputImport(name="vaultName", required=true)
     private final Input<String> vaultName;
 

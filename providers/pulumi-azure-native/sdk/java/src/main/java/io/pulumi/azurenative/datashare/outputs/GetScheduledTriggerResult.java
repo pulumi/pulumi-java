@@ -12,17 +12,66 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetScheduledTriggerResult {
+    /**
+     * Time at which the trigger was created.
+     * 
+     */
     private final String createdAt;
+    /**
+     * The resource id of the azure resource
+     * 
+     */
     private final String id;
+    /**
+     * Kind of synchronization on trigger.
+     * Expected value is 'ScheduleBased'.
+     * 
+     */
     private final String kind;
+    /**
+     * Name of the azure resource
+     * 
+     */
     private final String name;
+    /**
+     * Gets the provisioning state
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Recurrence Interval
+     * 
+     */
     private final String recurrenceInterval;
+    /**
+     * Synchronization mode
+     * 
+     */
     private final @Nullable String synchronizationMode;
+    /**
+     * Synchronization time
+     * 
+     */
     private final String synchronizationTime;
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Gets the trigger state
+     * 
+     */
     private final String triggerStatus;
+    /**
+     * Type of the azure resource
+     * 
+     */
     private final String type;
+    /**
+     * Name of the user who created the trigger.
+     * 
+     */
     private final String userName;
 
     @OutputCustomType.Constructor({"createdAt","id","kind","name","provisioningState","recurrenceInterval","synchronizationMode","synchronizationTime","systemData","triggerStatus","type","userName"})
@@ -53,39 +102,88 @@ public final class GetScheduledTriggerResult {
         this.userName = Objects.requireNonNull(userName);
     }
 
+    /**
+     * Time at which the trigger was created.
+     * 
+     */
     public String getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * The resource id of the azure resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Kind of synchronization on trigger.
+     * Expected value is 'ScheduleBased'.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Name of the azure resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Gets the provisioning state
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Recurrence Interval
+     * 
+     */
     public String getRecurrenceInterval() {
         return this.recurrenceInterval;
     }
+    /**
+     * Synchronization mode
+     * 
+     */
     public Optional<String> getSynchronizationMode() {
         return Optional.ofNullable(this.synchronizationMode);
     }
+    /**
+     * Synchronization time
+     * 
+     */
     public String getSynchronizationTime() {
         return this.synchronizationTime;
     }
+    /**
+     * System Data of the Azure resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Gets the trigger state
+     * 
+     */
     public String getTriggerStatus() {
         return this.triggerStatus;
     }
+    /**
+     * Type of the azure resource
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Name of the user who created the trigger.
+     * 
+     */
     public String getUserName() {
         return this.userName;
     }

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The setting of the content of markdown part.
+ * 
+ */
 public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulumi.resources.InvokeArgs {
 
     public static final MarkdownPartMetadataResponseSettingsSettings Empty = new MarkdownPartMetadataResponseSettingsSettings();
 
+    /**
+     * The content of the markdown part.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable String content;
 
@@ -22,6 +30,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
+    /**
+     * The source of the content of the markdown part.
+     * 
+     */
     @InputImport(name="markdownSource")
     private final @Nullable Integer markdownSource;
 
@@ -29,6 +41,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
         return this.markdownSource == null ? Optional.empty() : Optional.ofNullable(this.markdownSource);
     }
 
+    /**
+     * The uri of markdown content.
+     * 
+     */
     @InputImport(name="markdownUri")
     private final @Nullable String markdownUri;
 
@@ -36,6 +52,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
         return this.markdownUri == null ? Optional.empty() : Optional.ofNullable(this.markdownUri);
     }
 
+    /**
+     * The subtitle of the markdown part.
+     * 
+     */
     @InputImport(name="subtitle")
     private final @Nullable String subtitle;
 
@@ -43,6 +63,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
         return this.subtitle == null ? Optional.empty() : Optional.ofNullable(this.subtitle);
     }
 
+    /**
+     * The title of the markdown part.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable String title;
 

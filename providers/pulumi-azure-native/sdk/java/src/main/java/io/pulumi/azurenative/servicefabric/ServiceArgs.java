@@ -27,6 +27,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * The name of the application resource.
+     * 
+     */
     @InputImport(name="applicationName", required=true)
     private final Input<String> applicationName;
 
@@ -34,6 +38,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationName;
     }
 
+    /**
+     * The name of the cluster resource.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -41,6 +49,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * A list that describes the correlation of the service with other services.
+     * 
+     */
     @InputImport(name="correlationScheme")
     private final @Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
 
@@ -48,6 +60,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.correlationScheme == null ? Input.empty() : this.correlationScheme;
     }
 
+    /**
+     * Specifies the move cost for the service.
+     * 
+     */
     @InputImport(name="defaultMoveCost")
     private final @Nullable Input<Either<String,MoveCost>> defaultMoveCost;
 
@@ -55,6 +71,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultMoveCost == null ? Input.empty() : this.defaultMoveCost;
     }
 
+    /**
+     * It will be deprecated in New API, resource location depends on the parent resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -62,6 +82,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Describes how the service is partitioned.
+     * 
+     */
     @InputImport(name="partitionDescription")
     private final @Nullable Input<Object> partitionDescription;
 
@@ -69,6 +93,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.partitionDescription == null ? Input.empty() : this.partitionDescription;
     }
 
+    /**
+     * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
+     * 
+     */
     @InputImport(name="placementConstraints")
     private final @Nullable Input<String> placementConstraints;
 
@@ -76,6 +104,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -83,6 +115,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
+     * 
+     */
     @InputImport(name="serviceDnsName")
     private final @Nullable Input<String> serviceDnsName;
 
@@ -90,6 +126,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceDnsName == null ? Input.empty() : this.serviceDnsName;
     }
 
+    /**
+     * The kind of service (Stateless or Stateful).
+     * 
+     */
     @InputImport(name="serviceKind", required=true)
     private final Input<Either<String,ServiceKind>> serviceKind;
 
@@ -97,6 +137,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceKind;
     }
 
+    /**
+     * The service load metrics is given as an array of ServiceLoadMetricDescription objects.
+     * 
+     */
     @InputImport(name="serviceLoadMetrics")
     private final @Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
 
@@ -104,6 +148,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceLoadMetrics == null ? Input.empty() : this.serviceLoadMetrics;
     }
 
+    /**
+     * The name of the service resource in the format of {applicationName}~{serviceName}.
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -111,6 +159,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
+    /**
+     * The activation Mode of the service package
+     * 
+     */
     @InputImport(name="servicePackageActivationMode")
     private final @Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
 
@@ -118,6 +170,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.servicePackageActivationMode == null ? Input.empty() : this.servicePackageActivationMode;
     }
 
+    /**
+     * A list that describes the correlation of the service with other services.
+     * 
+     */
     @InputImport(name="servicePlacementPolicies")
     private final @Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
 
@@ -125,6 +181,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.servicePlacementPolicies == null ? Input.empty() : this.servicePlacementPolicies;
     }
 
+    /**
+     * The name of the service type
+     * 
+     */
     @InputImport(name="serviceTypeName")
     private final @Nullable Input<String> serviceTypeName;
 
@@ -132,6 +192,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceTypeName == null ? Input.empty() : this.serviceTypeName;
     }
 
+    /**
+     * Azure resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

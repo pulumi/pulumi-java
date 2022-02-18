@@ -16,6 +16,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
 
     public static final LoadBalancerBackendAddressPoolArgs Empty = new LoadBalancerBackendAddressPoolArgs();
 
+    /**
+     * The name of the backend address pool.
+     * 
+     */
     @InputImport(name="backendAddressPoolName")
     private final @Nullable Input<String> backendAddressPoolName;
 
@@ -23,6 +27,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
         return this.backendAddressPoolName == null ? Input.empty() : this.backendAddressPoolName;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -30,6 +38,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * An array of backend addresses.
+     * 
+     */
     @InputImport(name="loadBalancerBackendAddresses")
     private final @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
@@ -37,6 +49,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
         return this.loadBalancerBackendAddresses == null ? Input.empty() : this.loadBalancerBackendAddresses;
     }
 
+    /**
+     * The name of the load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerName", required=true)
     private final Input<String> loadBalancerName;
 
@@ -44,6 +60,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
         return this.loadBalancerName;
     }
 
+    /**
+     * The location of the backend address pool.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +71,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +82,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

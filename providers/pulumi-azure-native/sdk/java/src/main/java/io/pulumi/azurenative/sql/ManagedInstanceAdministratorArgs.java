@@ -23,6 +23,10 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
         return this.administratorName == null ? Input.empty() : this.administratorName;
     }
 
+    /**
+     * Type of the managed instance administrator.
+     * 
+     */
     @InputImport(name="administratorType", required=true)
     private final Input<Either<String,ManagedInstanceAdministratorType>> administratorType;
 
@@ -30,6 +34,10 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
         return this.administratorType;
     }
 
+    /**
+     * Login name of the managed instance administrator.
+     * 
+     */
     @InputImport(name="login", required=true)
     private final Input<String> login;
 
@@ -37,6 +45,10 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
         return this.login;
     }
 
+    /**
+     * The name of the managed instance.
+     * 
+     */
     @InputImport(name="managedInstanceName", required=true)
     private final Input<String> managedInstanceName;
 
@@ -44,6 +56,10 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
         return this.managedInstanceName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +67,10 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * SID (object ID) of the managed instance administrator.
+     * 
+     */
     @InputImport(name="sid", required=true)
     private final Input<String> sid;
 
@@ -58,6 +78,10 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
         return this.sid;
     }
 
+    /**
+     * Tenant ID of the managed instance administrator.
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

@@ -43,6 +43,10 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -50,6 +54,10 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -71,6 +79,10 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
         return this.resourceConnectionString == null ? Input.empty() : this.resourceConnectionString;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

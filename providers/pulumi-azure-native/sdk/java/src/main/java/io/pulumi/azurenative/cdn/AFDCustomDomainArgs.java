@@ -16,6 +16,10 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final AFDCustomDomainArgs Empty = new AFDCustomDomainArgs();
 
+    /**
+     * Resource reference to the Azure DNS zone
+     * 
+     */
     @InputImport(name="azureDnsZone")
     private final @Nullable Input<ResourceReferenceArgs> azureDnsZone;
 
@@ -23,6 +27,10 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
         return this.azureDnsZone == null ? Input.empty() : this.azureDnsZone;
     }
 
+    /**
+     * Name of the domain under the profile which is unique globally
+     * 
+     */
     @InputImport(name="customDomainName")
     private final @Nullable Input<String> customDomainName;
 
@@ -30,6 +38,10 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
         return this.customDomainName == null ? Input.empty() : this.customDomainName;
     }
 
+    /**
+     * The host name of the domain. Must be a domain name.
+     * 
+     */
     @InputImport(name="hostName", required=true)
     private final Input<String> hostName;
 
@@ -37,6 +49,10 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
         return this.hostName;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -44,6 +60,10 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +71,10 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * 
+     */
     @InputImport(name="tlsSettings")
     private final @Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings;
 

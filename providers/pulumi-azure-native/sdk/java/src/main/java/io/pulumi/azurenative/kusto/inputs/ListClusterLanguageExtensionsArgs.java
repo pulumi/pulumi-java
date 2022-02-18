@@ -12,6 +12,10 @@ public final class ListClusterLanguageExtensionsArgs extends io.pulumi.resources
 
     public static final ListClusterLanguageExtensionsArgs Empty = new ListClusterLanguageExtensionsArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +23,10 @@ public final class ListClusterLanguageExtensionsArgs extends io.pulumi.resources
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -13,18 +13,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWebAppDeploymentSlotResult {
+    /**
+     * True if deployment is currently active, false if completed and null if not started.
+     * 
+     */
     private final @Nullable Boolean active;
+    /**
+     * Who authored the deployment.
+     * 
+     */
     private final @Nullable String author;
+    /**
+     * Author email.
+     * 
+     */
     private final @Nullable String authorEmail;
+    /**
+     * Who performed the deployment.
+     * 
+     */
     private final @Nullable String deployer;
+    /**
+     * Details on deployment.
+     * 
+     */
     private final @Nullable String details;
+    /**
+     * End time.
+     * 
+     */
     private final @Nullable String endTime;
+    /**
+     * Resource Id.
+     * 
+     */
     private final String id;
+    /**
+     * Kind of resource.
+     * 
+     */
     private final @Nullable String kind;
+    /**
+     * Details about deployment status.
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * Resource Name.
+     * 
+     */
     private final String name;
+    /**
+     * Start time.
+     * 
+     */
     private final @Nullable String startTime;
+    /**
+     * Deployment status.
+     * 
+     */
     private final @Nullable Integer status;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"active","author","authorEmail","deployer","details","endTime","id","kind","message","name","startTime","status","type"})
@@ -57,42 +109,94 @@ public final class GetWebAppDeploymentSlotResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * True if deployment is currently active, false if completed and null if not started.
+     * 
+     */
     public Optional<Boolean> getActive() {
         return Optional.ofNullable(this.active);
     }
+    /**
+     * Who authored the deployment.
+     * 
+     */
     public Optional<String> getAuthor() {
         return Optional.ofNullable(this.author);
     }
+    /**
+     * Author email.
+     * 
+     */
     public Optional<String> getAuthorEmail() {
         return Optional.ofNullable(this.authorEmail);
     }
+    /**
+     * Who performed the deployment.
+     * 
+     */
     public Optional<String> getDeployer() {
         return Optional.ofNullable(this.deployer);
     }
+    /**
+     * Details on deployment.
+     * 
+     */
     public Optional<String> getDetails() {
         return Optional.ofNullable(this.details);
     }
+    /**
+     * End time.
+     * 
+     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+    /**
+     * Resource Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Kind of resource.
+     * 
+     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+    /**
+     * Details about deployment status.
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * Resource Name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Start time.
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
+    /**
+     * Deployment status.
+     * 
+     */
     public Optional<Integer> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

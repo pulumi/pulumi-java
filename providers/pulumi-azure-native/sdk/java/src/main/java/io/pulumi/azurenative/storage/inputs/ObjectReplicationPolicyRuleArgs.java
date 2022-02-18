@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The replication policy rule between two containers.
+ * 
+ */
 public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectReplicationPolicyRuleArgs Empty = new ObjectReplicationPolicyRuleArgs();
 
+    /**
+     * Required. Destination container name.
+     * 
+     */
     @InputImport(name="destinationContainer", required=true)
     private final Input<String> destinationContainer;
 
@@ -22,6 +30,10 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
         return this.destinationContainer;
     }
 
+    /**
+     * Optional. An object that defines the filter set.
+     * 
+     */
     @InputImport(name="filters")
     private final @Nullable Input<ObjectReplicationPolicyFilterArgs> filters;
 
@@ -29,6 +41,10 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
         return this.filters == null ? Input.empty() : this.filters;
     }
 
+    /**
+     * Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+     * 
+     */
     @InputImport(name="ruleId")
     private final @Nullable Input<String> ruleId;
 
@@ -36,6 +52,10 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
         return this.ruleId == null ? Input.empty() : this.ruleId;
     }
 
+    /**
+     * Required. Source container name.
+     * 
+     */
     @InputImport(name="sourceContainer", required=true)
     private final Input<String> sourceContainer;
 

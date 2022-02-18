@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualNetworkProfileResponse {
+    /**
+     * Subnet ID used for computes in workspace
+     * 
+     */
     private final @Nullable String computeSubnetId;
 
     @OutputCustomType.Constructor({"computeSubnetId"})
@@ -18,6 +22,10 @@ public final class VirtualNetworkProfileResponse {
         this.computeSubnetId = computeSubnetId;
     }
 
+    /**
+     * Subnet ID used for computes in workspace
+     * 
+     */
     public Optional<String> getComputeSubnetId() {
         return Optional.ofNullable(this.computeSubnetId);
     }

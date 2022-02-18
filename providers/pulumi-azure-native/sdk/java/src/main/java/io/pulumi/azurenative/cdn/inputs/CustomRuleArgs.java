@@ -16,10 +16,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the common attributes for a custom rule that can be included in a waf policy
+ * 
+ */
 public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomRuleArgs Empty = new CustomRuleArgs();
 
+    /**
+     * Describes what action to be applied when rule matches
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<Either<String,ActionType>> action;
 
@@ -27,6 +35,10 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action;
     }
 
+    /**
+     * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+     * 
+     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
 
@@ -34,6 +46,10 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
+    /**
+     * List of match conditions.
+     * 
+     */
     @InputImport(name="matchConditions", required=true)
     private final Input<List<MatchConditionArgs>> matchConditions;
 
@@ -41,6 +57,10 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.matchConditions;
     }
 
+    /**
+     * Defines the name of the custom rule
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -48,6 +68,10 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Defines in what order this rule be evaluated in the overall list of custom rules
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Input<Integer> priority;
 

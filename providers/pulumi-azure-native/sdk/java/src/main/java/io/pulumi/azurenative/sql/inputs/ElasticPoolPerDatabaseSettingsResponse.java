@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Per database settings of an elastic pool.
+ * 
+ */
 public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ElasticPoolPerDatabaseSettingsResponse Empty = new ElasticPoolPerDatabaseSettingsResponse();
 
+    /**
+     * The maximum capacity any one database can consume.
+     * 
+     */
     @InputImport(name="maxCapacity")
     private final @Nullable Double maxCapacity;
 
@@ -21,6 +29,10 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.reso
         return this.maxCapacity == null ? Optional.empty() : Optional.ofNullable(this.maxCapacity);
     }
 
+    /**
+     * The minimum capacity all databases are guaranteed.
+     * 
+     */
     @InputImport(name="minCapacity")
     private final @Nullable Double minCapacity;
 

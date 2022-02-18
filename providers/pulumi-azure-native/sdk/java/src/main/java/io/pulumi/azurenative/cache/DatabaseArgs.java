@@ -22,6 +22,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
+    /**
+     * Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+     * 
+     */
     @InputImport(name="clientProtocol")
     private final @Nullable Input<Either<String,Protocol>> clientProtocol;
 
@@ -29,6 +33,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientProtocol == null ? Input.empty() : this.clientProtocol;
     }
 
+    /**
+     * The name of the RedisEnterprise cluster.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -36,6 +44,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * Clustering policy - default is OSSCluster. Specified at create time.
+     * 
+     */
     @InputImport(name="clusteringPolicy")
     private final @Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy;
 
@@ -43,6 +55,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusteringPolicy == null ? Input.empty() : this.clusteringPolicy;
     }
 
+    /**
+     * The name of the database.
+     * 
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -50,6 +66,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * Redis eviction policy - default is VolatileLRU
+     * 
+     */
     @InputImport(name="evictionPolicy")
     private final @Nullable Input<Either<String,EvictionPolicy>> evictionPolicy;
 
@@ -57,6 +77,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.evictionPolicy == null ? Input.empty() : this.evictionPolicy;
     }
 
+    /**
+     * Optional set of redis modules to enable in this database - modules can only be added at creation time.
+     * 
+     */
     @InputImport(name="modules")
     private final @Nullable Input<List<ModuleArgs>> modules;
 
@@ -64,6 +88,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.modules == null ? Input.empty() : this.modules;
     }
 
+    /**
+     * Persistence settings
+     * 
+     */
     @InputImport(name="persistence")
     private final @Nullable Input<PersistenceArgs> persistence;
 
@@ -71,6 +99,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.persistence == null ? Input.empty() : this.persistence;
     }
 
+    /**
+     * TCP port of the database endpoint. Specified at create time. Defaults to an available port.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -78,6 +110,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

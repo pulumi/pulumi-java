@@ -16,6 +16,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModuleArgs Empty = new ModuleArgs();
 
+    /**
+     * The name of the automation account.
+     * 
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -23,6 +27,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * Gets or sets the module content link.
+     * 
+     */
     @InputImport(name="contentLink", required=true)
     private final Input<ContentLinkArgs> contentLink;
 
@@ -30,6 +38,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentLink;
     }
 
+    /**
+     * Gets or sets the location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of module.
+     * 
+     */
     @InputImport(name="moduleName")
     private final @Nullable Input<String> moduleName;
 
@@ -44,6 +60,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.moduleName == null ? Input.empty() : this.moduleName;
     }
 
+    /**
+     * Gets or sets name of the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +71,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,6 +82,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the tags attached to the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

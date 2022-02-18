@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Error information in OData format.
+ * 
+ */
 public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ODataErrorResponse Empty = new ODataErrorResponse();
 
+    /**
+     * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -20,6 +28,10 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.code;
     }
 
+    /**
+     * Inner errors that caused this error
+     * 
+     */
     @InputImport(name="details", required=true)
     private final List<ODataErrorResponse> details;
 
@@ -27,6 +39,10 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.details;
     }
 
+    /**
+     * The human-readable description of the error
+     * 
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

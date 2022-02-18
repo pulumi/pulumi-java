@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * KPack ClusterStack properties payload
+ * 
+ */
 public final class StackPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StackPropertiesResponse Empty = new StackPropertiesResponse();
 
+    /**
+     * Id of the ClusterStack.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class StackPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Version of the ClusterStack
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

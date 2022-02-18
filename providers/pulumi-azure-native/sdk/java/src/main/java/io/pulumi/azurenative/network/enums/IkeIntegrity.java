@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The IKE integrity algorithm (IKE phase 2).
+     * 
+     */
     @EnumType
     public enum IkeIntegrity {
         MD5("MD5"),

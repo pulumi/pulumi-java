@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlowEndpointsConfigurationResponse {
+    /**
+     * The connector endpoints.
+     * 
+     */
     private final @Nullable FlowEndpointsResponse connector;
+    /**
+     * The workflow endpoints.
+     * 
+     */
     private final @Nullable FlowEndpointsResponse workflow;
 
     @OutputCustomType.Constructor({"connector","workflow"})
@@ -22,9 +30,17 @@ public final class FlowEndpointsConfigurationResponse {
         this.workflow = workflow;
     }
 
+    /**
+     * The connector endpoints.
+     * 
+     */
     public Optional<FlowEndpointsResponse> getConnector() {
         return Optional.ofNullable(this.connector);
     }
+    /**
+     * The workflow endpoints.
+     * 
+     */
     public Optional<FlowEndpointsResponse> getWorkflow() {
         return Optional.ofNullable(this.workflow);
     }

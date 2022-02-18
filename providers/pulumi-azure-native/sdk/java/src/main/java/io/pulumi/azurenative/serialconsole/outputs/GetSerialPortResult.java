@@ -11,9 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSerialPortResult {
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
+    /**
+     * Specifies whether the port is enabled for a serial console connection.
+     * 
+     */
     private final @Nullable String state;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","state","type"})
@@ -28,15 +44,31 @@ public final class GetSerialPortResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Specifies whether the port is enabled for a serial console connection.
+     * 
+     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

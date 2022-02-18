@@ -12,6 +12,10 @@ public final class GetAppResourceUploadUrlArgs extends io.pulumi.resources.Invok
 
     public static final GetAppResourceUploadUrlArgs Empty = new GetAppResourceUploadUrlArgs();
 
+    /**
+     * The name of the App resource.
+     * 
+     */
     @InputImport(name="appName", required=true)
     private final String appName;
 
@@ -19,6 +23,10 @@ public final class GetAppResourceUploadUrlArgs extends io.pulumi.resources.Invok
         return this.appName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetAppResourceUploadUrlArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IPv6 Circuit Connection properties for global reach.
+ * 
+ */
 public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Ipv6CircuitConnectionConfigArgs Empty = new Ipv6CircuitConnectionConfigArgs();
 
+    /**
+     * /125 IP address space to carve out customer addresses for global reach.
+     * 
+     */
     @InputImport(name="addressPrefix")
     private final @Nullable Input<String> addressPrefix;
 

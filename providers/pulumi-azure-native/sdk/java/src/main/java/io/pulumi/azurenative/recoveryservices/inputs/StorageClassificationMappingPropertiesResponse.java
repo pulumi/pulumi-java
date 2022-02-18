@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Storage mapping properties.
+ * 
+ */
 public final class StorageClassificationMappingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageClassificationMappingPropertiesResponse Empty = new StorageClassificationMappingPropertiesResponse();
 
+    /**
+     * Target storage object Id.
+     * 
+     */
     @InputImport(name="targetStorageClassificationId")
     private final @Nullable String targetStorageClassificationId;
 

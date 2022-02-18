@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The convention used when determining the session cookie's expiration.
+     * 
+     */
     @EnumType
     public enum CookieExpirationConvention {
         FixedTime("FixedTime"),

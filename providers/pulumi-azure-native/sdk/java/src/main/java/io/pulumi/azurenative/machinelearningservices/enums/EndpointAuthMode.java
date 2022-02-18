@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Inference endpoint authentication mode type
+     * 
+     */
     @EnumType
     public enum EndpointAuthMode {
         AMLToken("AMLToken"),

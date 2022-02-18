@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class to specify DRM configurations of CommonEncryptionCbcs scheme in Streaming Policy
+ * 
+ */
 public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CbcsDrmConfigurationResponse Empty = new CbcsDrmConfigurationResponse();
 
+    /**
+     * FairPlay configurations
+     * 
+     */
     @InputImport(name="fairPlay")
     private final @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
 
@@ -23,6 +31,10 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
         return this.fairPlay == null ? Optional.empty() : Optional.ofNullable(this.fairPlay);
     }
 
+    /**
+     * PlayReady configurations
+     * 
+     */
     @InputImport(name="playReady")
     private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
@@ -30,6 +42,10 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
         return this.playReady == null ? Optional.empty() : Optional.ofNullable(this.playReady);
     }
 
+    /**
+     * Widevine configurations
+     * 
+     */
     @InputImport(name="widevine")
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 

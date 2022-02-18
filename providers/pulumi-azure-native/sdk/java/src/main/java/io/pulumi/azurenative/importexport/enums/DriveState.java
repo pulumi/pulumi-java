@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The drive's current state.
+     * 
+     */
     @EnumType
     public enum DriveState {
         Specified("Specified"),

@@ -16,6 +16,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 
+    /**
+     * The name of the deployment.
+     * 
+     */
     @InputImport(name="deploymentName")
     private final @Nullable Input<String> deploymentName;
 
@@ -23,6 +27,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
     }
 
+    /**
+     * The location to store the deployment data.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +38,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The deployment properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<DeploymentPropertiesArgs> properties;
 
@@ -37,6 +49,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the resource group to deploy the resources to. The name is case insensitive. The resource group must already exist.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Deployment tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

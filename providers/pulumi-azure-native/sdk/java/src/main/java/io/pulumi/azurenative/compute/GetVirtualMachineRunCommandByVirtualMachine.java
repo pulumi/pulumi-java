@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineRunCommandByVirtualMachine {
+/**
+ * Describes a Virtual Machine run command.
+ * API Version: 2021-03-01.
+ * 
+ *
+ * Describes a Virtual Machine run command.
+ * 
+ */
     public static CompletableFuture<GetVirtualMachineRunCommandByVirtualMachineResult> invokeAsync(GetVirtualMachineRunCommandByVirtualMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineRunCommandByVirtualMachine", TypeShape.of(GetVirtualMachineRunCommandByVirtualMachineResult.class), args == null ? GetVirtualMachineRunCommandByVirtualMachineArgs.Empty : args, Utilities.withVersion(options));
     }

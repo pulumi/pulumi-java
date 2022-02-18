@@ -22,6 +22,10 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
+    /**
+     * The error that occurs when preparing notebook.
+     * 
+     */
     @InputImport(name="notebookPreparationError")
     private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
 
@@ -29,6 +33,10 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
         return this.notebookPreparationError == null ? Optional.empty() : Optional.ofNullable(this.notebookPreparationError);
     }
 
+    /**
+     * the data plane resourceId that used to initialize notebook component
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

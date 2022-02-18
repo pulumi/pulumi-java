@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters to provide for the Direct Line channel.
+ * 
+ */
 public final class DirectLineChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DirectLineChannelPropertiesResponse Empty = new DirectLineChannelPropertiesResponse();
 
+    /**
+     * Direct Line embed code of the resource
+     * 
+     */
     @InputImport(name="directLineEmbedCode")
     private final @Nullable String directLineEmbedCode;
 
@@ -23,6 +31,10 @@ public final class DirectLineChannelPropertiesResponse extends io.pulumi.resourc
         return this.directLineEmbedCode == null ? Optional.empty() : Optional.ofNullable(this.directLineEmbedCode);
     }
 
+    /**
+     * The list of Direct Line sites
+     * 
+     */
     @InputImport(name="sites")
     private final @Nullable List<DirectLineSiteResponse> sites;
 

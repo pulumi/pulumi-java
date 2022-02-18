@@ -12,6 +12,10 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
 
     public static final GetInstanceFailoverGroupArgs Empty = new GetInstanceFailoverGroupArgs();
 
+    /**
+     * The name of the failover group.
+     * 
+     */
     @InputImport(name="failoverGroupName", required=true)
     private final String failoverGroupName;
 
@@ -19,6 +23,10 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
         return this.failoverGroupName;
     }
 
+    /**
+     * The name of the region where the resource is located.
+     * 
+     */
     @InputImport(name="locationName", required=true)
     private final String locationName;
 
@@ -26,6 +34,10 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
         return this.locationName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of orchestrator
+ * 
+ */
 public final class SubnetDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubnetDetailsResponse Empty = new SubnetDetailsResponse();
 
+    /**
+     * subnet arm resource id
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

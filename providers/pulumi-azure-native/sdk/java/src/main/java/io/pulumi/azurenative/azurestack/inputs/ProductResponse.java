@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Product information.
+ * 
+ */
 public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProductResponse Empty = new ProductResponse();
 
+    /**
+     * The part number used for billing purposes.
+     * 
+     */
     @InputImport(name="billingPartNumber")
     private final @Nullable String billingPartNumber;
 
@@ -27,6 +35,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.billingPartNumber == null ? Optional.empty() : Optional.ofNullable(this.billingPartNumber);
     }
 
+    /**
+     * Product compatibility with current device.
+     * 
+     */
     @InputImport(name="compatibility")
     private final @Nullable CompatibilityResponse compatibility;
 
@@ -34,6 +46,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.compatibility == null ? Optional.empty() : Optional.ofNullable(this.compatibility);
     }
 
+    /**
+     * The description of the product.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -41,6 +57,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The display name of the product.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -48,6 +68,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The entity tag used for optimistic concurrency when modifying the resource.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -55,6 +79,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
+    /**
+     * The identifier of the gallery item corresponding to the product.
+     * 
+     */
     @InputImport(name="galleryItemIdentity")
     private final @Nullable String galleryItemIdentity;
 
@@ -62,6 +90,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.galleryItemIdentity == null ? Optional.empty() : Optional.ofNullable(this.galleryItemIdentity);
     }
 
+    /**
+     * Additional links available for this product.
+     * 
+     */
     @InputImport(name="iconUris")
     private final @Nullable IconUrisResponse iconUris;
 
@@ -69,6 +101,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.iconUris == null ? Optional.empty() : Optional.ofNullable(this.iconUris);
     }
 
+    /**
+     * ID of the resource.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -76,6 +112,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * The legal terms.
+     * 
+     */
     @InputImport(name="legalTerms")
     private final @Nullable String legalTerms;
 
@@ -83,6 +123,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.legalTerms == null ? Optional.empty() : Optional.ofNullable(this.legalTerms);
     }
 
+    /**
+     * Additional links available for this product.
+     * 
+     */
     @InputImport(name="links")
     private final @Nullable List<ProductLinkResponse> links;
 
@@ -90,6 +134,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.links == null ? List.of() : this.links;
     }
 
+    /**
+     * Name of the resource.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -97,6 +145,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The offer representing the product.
+     * 
+     */
     @InputImport(name="offer")
     private final @Nullable String offer;
 
@@ -104,6 +156,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
     }
 
+    /**
+     * The version of the product offer.
+     * 
+     */
     @InputImport(name="offerVersion")
     private final @Nullable String offerVersion;
 
@@ -111,6 +167,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.offerVersion == null ? Optional.empty() : Optional.ofNullable(this.offerVersion);
     }
 
+    /**
+     * The length of product content.
+     * 
+     */
     @InputImport(name="payloadLength")
     private final @Nullable Double payloadLength;
 
@@ -118,6 +178,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.payloadLength == null ? Optional.empty() : Optional.ofNullable(this.payloadLength);
     }
 
+    /**
+     * The privacy policy.
+     * 
+     */
     @InputImport(name="privacyPolicy")
     private final @Nullable String privacyPolicy;
 
@@ -125,6 +189,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.privacyPolicy == null ? Optional.empty() : Optional.ofNullable(this.privacyPolicy);
     }
 
+    /**
+     * The kind of the product (virtualMachine or virtualMachineExtension)
+     * 
+     */
     @InputImport(name="productKind")
     private final @Nullable String productKind;
 
@@ -132,6 +200,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.productKind == null ? Optional.empty() : Optional.ofNullable(this.productKind);
     }
 
+    /**
+     * Additional properties for the product.
+     * 
+     */
     @InputImport(name="productProperties")
     private final @Nullable ProductPropertiesResponse productProperties;
 
@@ -139,6 +211,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.productProperties == null ? Optional.empty() : Optional.ofNullable(this.productProperties);
     }
 
+    /**
+     * The user-friendly name of the product publisher.
+     * 
+     */
     @InputImport(name="publisherDisplayName")
     private final @Nullable String publisherDisplayName;
 
@@ -146,6 +222,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.publisherDisplayName == null ? Optional.empty() : Optional.ofNullable(this.publisherDisplayName);
     }
 
+    /**
+     * Publisher identifier.
+     * 
+     */
     @InputImport(name="publisherIdentifier")
     private final @Nullable String publisherIdentifier;
 
@@ -153,6 +233,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.publisherIdentifier == null ? Optional.empty() : Optional.ofNullable(this.publisherIdentifier);
     }
 
+    /**
+     * The product SKU.
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable String sku;
 
@@ -160,6 +244,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
+    /**
+     * Type of Resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -167,6 +255,10 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * The type of the Virtual Machine Extension.
+     * 
+     */
     @InputImport(name="vmExtensionType")
     private final @Nullable String vmExtensionType;
 

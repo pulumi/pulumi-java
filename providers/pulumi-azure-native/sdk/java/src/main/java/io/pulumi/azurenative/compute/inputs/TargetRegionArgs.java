@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the target region information.
+ * 
+ */
 public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetRegionArgs Empty = new TargetRegionArgs();
 
+    /**
+     * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<EncryptionImagesArgs> encryption;
 
@@ -25,6 +33,10 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * The name of the region.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -32,6 +44,10 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The number of replicas of the Image Version to be created per region. This property is updatable.
+     * 
+     */
     @InputImport(name="regionalReplicaCount")
     private final @Nullable Input<Integer> regionalReplicaCount;
 
@@ -39,6 +55,10 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
         return this.regionalReplicaCount == null ? Input.empty() : this.regionalReplicaCount;
     }
 
+    /**
+     * Specifies the storage account type to be used to store the image. This property is not updatable.
+     * 
+     */
     @InputImport(name="storageAccountType")
     private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
 

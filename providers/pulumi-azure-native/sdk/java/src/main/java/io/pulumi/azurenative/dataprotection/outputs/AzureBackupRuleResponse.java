@@ -16,10 +16,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureBackupRuleResponse {
+    /**
+     * BackupParameters base
+     * 
+     */
     private final @Nullable AzureBackupParamsResponse backupParameters;
+    /**
+     * DataStoreInfo base
+     * 
+     */
     private final DataStoreInfoBaseResponse dataStore;
     private final String name;
+    /**
+     * Expected value is 'AzureBackupRule'.
+     * 
+     */
     private final String objectType;
+    /**
+     * Trigger context
+     * 
+     */
     private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
 
     @OutputCustomType.Constructor({"backupParameters","dataStore","name","objectType","trigger"})
@@ -36,18 +52,34 @@ public final class AzureBackupRuleResponse {
         this.trigger = Objects.requireNonNull(trigger);
     }
 
+    /**
+     * BackupParameters base
+     * 
+     */
     public Optional<AzureBackupParamsResponse> getBackupParameters() {
         return Optional.ofNullable(this.backupParameters);
     }
+    /**
+     * DataStoreInfo base
+     * 
+     */
     public DataStoreInfoBaseResponse getDataStore() {
         return this.dataStore;
     }
     public String getName() {
         return this.name;
     }
+    /**
+     * Expected value is 'AzureBackupRule'.
+     * 
+     */
     public String getObjectType() {
         return this.objectType;
     }
+    /**
+     * Trigger context
+     * 
+     */
     public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> getTrigger() {
         return this.trigger;
     }

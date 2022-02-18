@@ -20,111 +20,268 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * NetworkVirtualAppliance Resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:NetworkVirtualAppliance nva /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkVirtualAppliances/nva 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:NetworkVirtualAppliance")
 public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource {
+    /**
+     * Address Prefix.
+     * 
+     */
     @OutputExport(name="addressPrefix", type=String.class, parameters={})
     private Output<String> addressPrefix;
 
+    /**
+     * @return Address Prefix.
+     * 
+     */
     public Output<String> getAddressPrefix() {
         return this.addressPrefix;
     }
+    /**
+     * BootStrapConfigurationBlobs storage URLs.
+     * 
+     */
     @OutputExport(name="bootStrapConfigurationBlobs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> bootStrapConfigurationBlobs;
 
+    /**
+     * @return BootStrapConfigurationBlobs storage URLs.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getBootStrapConfigurationBlobs() {
         return this.bootStrapConfigurationBlobs;
     }
+    /**
+     * CloudInitConfiguration string in plain text.
+     * 
+     */
     @OutputExport(name="cloudInitConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudInitConfiguration;
 
+    /**
+     * @return CloudInitConfiguration string in plain text.
+     * 
+     */
     public Output</* @Nullable */ String> getCloudInitConfiguration() {
         return this.cloudInitConfiguration;
     }
+    /**
+     * CloudInitConfigurationBlob storage URLs.
+     * 
+     */
     @OutputExport(name="cloudInitConfigurationBlobs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cloudInitConfigurationBlobs;
 
+    /**
+     * @return CloudInitConfigurationBlob storage URLs.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getCloudInitConfigurationBlobs() {
         return this.cloudInitConfigurationBlobs;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The service principal that has read access to cloud-init and config blob.
+     * 
+     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
+    /**
+     * @return The service principal that has read access to cloud-init and config blob.
+     * 
+     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * List of references to InboundSecurityRules.
+     * 
+     */
     @OutputExport(name="inboundSecurityRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> inboundSecurityRules;
 
+    /**
+     * @return List of references to InboundSecurityRules.
+     * 
+     */
     public Output<List<SubResourceResponse>> getInboundSecurityRules() {
         return this.inboundSecurityRules;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Network Virtual Appliance SKU.
+     * 
+     */
     @OutputExport(name="nvaSku", type=VirtualApplianceSkuPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualApplianceSkuPropertiesResponse> nvaSku;
 
+    /**
+     * @return Network Virtual Appliance SKU.
+     * 
+     */
     public Output</* @Nullable */ VirtualApplianceSkuPropertiesResponse> getNvaSku() {
         return this.nvaSku;
     }
+    /**
+     * The provisioning state of the resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * VirtualAppliance ASN.
+     * 
+     */
     @OutputExport(name="virtualApplianceAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> virtualApplianceAsn;
 
+    /**
+     * @return VirtualAppliance ASN.
+     * 
+     */
     public Output</* @Nullable */ Double> getVirtualApplianceAsn() {
         return this.virtualApplianceAsn;
     }
+    /**
+     * List of Virtual Appliance Network Interfaces.
+     * 
+     */
     @OutputExport(name="virtualApplianceNics", type=List.class, parameters={VirtualApplianceNicPropertiesResponse.class})
     private Output<List<VirtualApplianceNicPropertiesResponse>> virtualApplianceNics;
 
+    /**
+     * @return List of Virtual Appliance Network Interfaces.
+     * 
+     */
     public Output<List<VirtualApplianceNicPropertiesResponse>> getVirtualApplianceNics() {
         return this.virtualApplianceNics;
     }
+    /**
+     * List of references to VirtualApplianceSite.
+     * 
+     */
     @OutputExport(name="virtualApplianceSites", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> virtualApplianceSites;
 
+    /**
+     * @return List of references to VirtualApplianceSite.
+     * 
+     */
     public Output<List<SubResourceResponse>> getVirtualApplianceSites() {
         return this.virtualApplianceSites;
     }
+    /**
+     * The Virtual Hub where Network Virtual Appliance is being deployed.
+     * 
+     */
     @OutputExport(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
+    /**
+     * @return The Virtual Hub where Network Virtual Appliance is being deployed.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
         return this.virtualHub;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NetworkVirtualAppliance(String name, NetworkVirtualApplianceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:NetworkVirtualAppliance", name, args == null ? NetworkVirtualApplianceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -153,6 +310,14 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NetworkVirtualAppliance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkVirtualAppliance(name, id, options);
     }

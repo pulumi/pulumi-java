@@ -16,6 +16,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
 
     public static final ConfigurationProfileArgs Empty = new ConfigurationProfileArgs();
 
+    /**
+     * The identity block returned by ARM resource that supports managed identity.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -23,6 +27,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The location where the resource is to be deployed.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +38,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.
+     * 
+     */
     @InputImport(name="profileName")
     private final @Nullable Input<String> profileName;
 
@@ -37,6 +49,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
         return this.profileName == null ? Input.empty() : this.profileName;
     }
 
+    /**
+     * The properties of a configuration profile.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ConfigurationProfileResourcePropertiesArgs> properties;
 

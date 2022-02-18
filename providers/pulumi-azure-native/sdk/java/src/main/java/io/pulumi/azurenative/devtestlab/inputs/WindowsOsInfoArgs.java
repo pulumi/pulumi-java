@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a Windows OS.
+ * 
+ */
 public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsOsInfoArgs Empty = new WindowsOsInfoArgs();
 
+    /**
+     * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+     * 
+     */
     @InputImport(name="windowsOsState")
     private final @Nullable Input<Either<String,WindowsOsState>> windowsOsState;
 

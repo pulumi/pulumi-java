@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the properties of a secret resource.
+ * 
+ */
 public final class SecretResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretResourcePropertiesArgs Empty = new SecretResourcePropertiesArgs();
 
+    /**
+     * The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -21,6 +29,10 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * User readable description of the secret.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +40,11 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Describes the kind of secret.
+     * Expected value is 'SecretResourceProperties'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 

@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TargetEligibilityErrorMessageResponse {
+    /**
+     * The localized error message stating the reason why the device is not eligible as a target device.
+     * 
+     */
     private final @Nullable String message;
+    /**
+     * The localized resolution message for the error.
+     * 
+     */
     private final @Nullable String resolution;
+    /**
+     * The result code for the error, due to which the device does not qualify as a failover target device.
+     * 
+     */
     private final @Nullable String resultCode;
 
     @OutputCustomType.Constructor({"message","resolution","resultCode"})
@@ -25,12 +37,24 @@ public final class TargetEligibilityErrorMessageResponse {
         this.resultCode = resultCode;
     }
 
+    /**
+     * The localized error message stating the reason why the device is not eligible as a target device.
+     * 
+     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+    /**
+     * The localized resolution message for the error.
+     * 
+     */
     public Optional<String> getResolution() {
         return Optional.ofNullable(this.resolution);
     }
+    /**
+     * The result code for the error, due to which the device does not qualify as a failover target device.
+     * 
+     */
     public Optional<String> getResultCode() {
         return Optional.ofNullable(this.resultCode);
     }

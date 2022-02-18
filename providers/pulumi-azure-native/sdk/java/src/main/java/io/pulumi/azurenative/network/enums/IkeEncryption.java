@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The IKE encryption algorithm (IKE phase 2).
+     * 
+     */
     @EnumType
     public enum IkeEncryption {
         DES("DES"),

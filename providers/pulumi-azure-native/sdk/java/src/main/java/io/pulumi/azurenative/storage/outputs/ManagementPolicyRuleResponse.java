@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagementPolicyRuleResponse {
+    /**
+     * An object that defines the Lifecycle rule.
+     * 
+     */
     private final ManagementPolicyDefinitionResponse definition;
+    /**
+     * Rule is enabled if set to true.
+     * 
+     */
     private final @Nullable Boolean enabled;
+    /**
+     * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+     * 
+     */
     private final String name;
+    /**
+     * The valid value is Lifecycle
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"definition","enabled","name","type"})
@@ -30,15 +46,31 @@ public final class ManagementPolicyRuleResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * An object that defines the Lifecycle rule.
+     * 
+     */
     public ManagementPolicyDefinitionResponse getDefinition() {
         return this.definition;
     }
+    /**
+     * Rule is enabled if set to true.
+     * 
+     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The valid value is Lifecycle
+     * 
+     */
     public String getType() {
         return this.type;
     }

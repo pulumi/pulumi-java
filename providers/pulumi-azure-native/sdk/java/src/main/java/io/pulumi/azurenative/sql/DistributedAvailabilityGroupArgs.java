@@ -16,6 +16,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     public static final DistributedAvailabilityGroupArgs Empty = new DistributedAvailabilityGroupArgs();
 
+    /**
+     * The distributed availability group name.
+     * 
+     */
     @InputImport(name="distributedAvailabilityGroupName")
     private final @Nullable Input<String> distributedAvailabilityGroupName;
 
@@ -23,6 +27,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
         return this.distributedAvailabilityGroupName == null ? Input.empty() : this.distributedAvailabilityGroupName;
     }
 
+    /**
+     * The name of the managed instance.
+     * 
+     */
     @InputImport(name="managedInstanceName", required=true)
     private final Input<String> managedInstanceName;
 
@@ -30,6 +38,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
         return this.managedInstanceName;
     }
 
+    /**
+     * The primary availability group name
+     * 
+     */
     @InputImport(name="primaryAvailabilityGroupName")
     private final @Nullable Input<String> primaryAvailabilityGroupName;
 
@@ -37,6 +49,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
         return this.primaryAvailabilityGroupName == null ? Input.empty() : this.primaryAvailabilityGroupName;
     }
 
+    /**
+     * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
+     * 
+     */
     @InputImport(name="replicationMode")
     private final @Nullable Input<Either<String,ReplicationMode>> replicationMode;
 
@@ -44,6 +60,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
         return this.replicationMode == null ? Input.empty() : this.replicationMode;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +71,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The secondary availability group name
+     * 
+     */
     @InputImport(name="secondaryAvailabilityGroupName")
     private final @Nullable Input<String> secondaryAvailabilityGroupName;
 
@@ -58,6 +82,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
         return this.secondaryAvailabilityGroupName == null ? Input.empty() : this.secondaryAvailabilityGroupName;
     }
 
+    /**
+     * The source endpoint
+     * 
+     */
     @InputImport(name="sourceEndpoint")
     private final @Nullable Input<String> sourceEndpoint;
 
@@ -65,6 +93,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
         return this.sourceEndpoint == null ? Input.empty() : this.sourceEndpoint;
     }
 
+    /**
+     * The name of the target database
+     * 
+     */
     @InputImport(name="targetDatabase")
     private final @Nullable Input<String> targetDatabase;
 

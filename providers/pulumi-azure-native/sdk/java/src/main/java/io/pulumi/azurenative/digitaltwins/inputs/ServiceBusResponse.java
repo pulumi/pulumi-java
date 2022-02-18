@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties related to ServiceBus.
+ * 
+ */
 public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceBusResponse Empty = new ServiceBusResponse();
 
+    /**
+     * Specifies the authentication type being used for connecting to the endpoint.
+     * 
+     */
     @InputImport(name="authenticationType")
     private final @Nullable String authenticationType;
 
@@ -21,6 +29,10 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
+    /**
+     * Time when the Endpoint was added to DigitalTwinsInstance.
+     * 
+     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -28,6 +40,10 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdTime;
     }
 
+    /**
+     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     * 
+     */
     @InputImport(name="deadLetterSecret")
     private final @Nullable String deadLetterSecret;
 
@@ -35,6 +51,10 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.deadLetterSecret == null ? Optional.empty() : Optional.ofNullable(this.deadLetterSecret);
     }
 
+    /**
+     * Dead letter storage URL for identity-based authentication.
+     * 
+     */
     @InputImport(name="deadLetterUri")
     private final @Nullable String deadLetterUri;
 
@@ -42,6 +62,11 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.deadLetterUri == null ? Optional.empty() : Optional.ofNullable(this.deadLetterUri);
     }
 
+    /**
+     * The type of Digital Twins endpoint
+     * Expected value is 'ServiceBus'.
+     * 
+     */
     @InputImport(name="endpointType", required=true)
     private final String endpointType;
 
@@ -49,6 +74,10 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpointType;
     }
 
+    /**
+     * The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
+     * 
+     */
     @InputImport(name="endpointUri")
     private final @Nullable String endpointUri;
 
@@ -56,6 +85,10 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 
+    /**
+     * The ServiceBus Topic name for identity-based authentication
+     * 
+     */
     @InputImport(name="entityPath")
     private final @Nullable String entityPath;
 
@@ -63,6 +96,10 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.entityPath == null ? Optional.empty() : Optional.ofNullable(this.entityPath);
     }
 
+    /**
+     * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     * 
+     */
     @InputImport(name="primaryConnectionString")
     private final @Nullable String primaryConnectionString;
 
@@ -70,6 +107,10 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.primaryConnectionString == null ? Optional.empty() : Optional.ofNullable(this.primaryConnectionString);
     }
 
+    /**
+     * The provisioning state.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -77,6 +118,10 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
+    /**
+     * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     * 
+     */
     @InputImport(name="secondaryConnectionString")
     private final @Nullable String secondaryConnectionString;
 

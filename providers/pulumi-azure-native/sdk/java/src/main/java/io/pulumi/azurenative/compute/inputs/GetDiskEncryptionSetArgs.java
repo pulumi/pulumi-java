@@ -12,6 +12,10 @@ public final class GetDiskEncryptionSetArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetDiskEncryptionSetArgs Empty = new GetDiskEncryptionSetArgs();
 
+    /**
+     * The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     * 
+     */
     @InputImport(name="diskEncryptionSetName", required=true)
     private final String diskEncryptionSetName;
 
@@ -19,6 +23,10 @@ public final class GetDiskEncryptionSetArgs extends io.pulumi.resources.InvokeAr
         return this.diskEncryptionSetName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The password name "password1" or "password2"
+     * 
+     */
     @EnumType
     public enum TokenPasswordName {
         Password1("password1"),

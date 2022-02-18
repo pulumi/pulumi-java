@@ -13,18 +13,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExportExecutionResponse {
+    /**
+     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * 
+     */
     private final @Nullable String eTag;
+    /**
+     * The details of any error.
+     * 
+     */
     private final @Nullable ErrorDetailsResponse error;
+    /**
+     * The type of the export execution.
+     * 
+     */
     private final @Nullable String executionType;
+    /**
+     * The name of the exported file.
+     * 
+     */
     private final @Nullable String fileName;
+    /**
+     * Resource Id.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The time when the export execution finished.
+     * 
+     */
     private final @Nullable String processingEndTime;
+    /**
+     * The time when export was picked up to be executed.
+     * 
+     */
     private final @Nullable String processingStartTime;
+    /**
+     * The export settings that were in effect for this execution.
+     * 
+     */
     private final @Nullable CommonExportPropertiesResponse runSettings;
+    /**
+     * The last known status of the export execution.
+     * 
+     */
     private final @Nullable String status;
+    /**
+     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
+     * 
+     */
     private final @Nullable String submittedBy;
+    /**
+     * The time when export was queued to be executed.
+     * 
+     */
     private final @Nullable String submittedTime;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","error","executionType","fileName","id","name","processingEndTime","processingStartTime","runSettings","status","submittedBy","submittedTime","type"})
@@ -57,42 +109,94 @@ public final class ExportExecutionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * 
+     */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
+    /**
+     * The details of any error.
+     * 
+     */
     public Optional<ErrorDetailsResponse> getError() {
         return Optional.ofNullable(this.error);
     }
+    /**
+     * The type of the export execution.
+     * 
+     */
     public Optional<String> getExecutionType() {
         return Optional.ofNullable(this.executionType);
     }
+    /**
+     * The name of the exported file.
+     * 
+     */
     public Optional<String> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
+    /**
+     * Resource Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The time when the export execution finished.
+     * 
+     */
     public Optional<String> getProcessingEndTime() {
         return Optional.ofNullable(this.processingEndTime);
     }
+    /**
+     * The time when export was picked up to be executed.
+     * 
+     */
     public Optional<String> getProcessingStartTime() {
         return Optional.ofNullable(this.processingStartTime);
     }
+    /**
+     * The export settings that were in effect for this execution.
+     * 
+     */
     public Optional<CommonExportPropertiesResponse> getRunSettings() {
         return Optional.ofNullable(this.runSettings);
     }
+    /**
+     * The last known status of the export execution.
+     * 
+     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+    /**
+     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
+     * 
+     */
     public Optional<String> getSubmittedBy() {
         return Optional.ofNullable(this.submittedBy);
     }
+    /**
+     * The time when export was queued to be executed.
+     * 
+     */
     public Optional<String> getSubmittedTime() {
         return Optional.ofNullable(this.submittedTime);
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

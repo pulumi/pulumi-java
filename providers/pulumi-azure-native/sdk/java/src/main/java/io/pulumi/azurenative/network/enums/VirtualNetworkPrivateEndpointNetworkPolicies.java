@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Enable or Disable apply network policies on private end point in the subnet.
+     * 
+     */
     @EnumType
     public enum VirtualNetworkPrivateEndpointNetworkPolicies {
         Enabled("Enabled"),

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuCapabilityResponse {
+    /**
+     * The name of the SkuCapability.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The value of the SkuCapability.
+     * 
+     */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -22,9 +30,17 @@ public final class SkuCapabilityResponse {
         this.value = value;
     }
 
+    /**
+     * The name of the SkuCapability.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The value of the SkuCapability.
+     * 
+     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

@@ -15,6 +15,10 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
 
     public static final HybridUseBenefitArgs Empty = new HybridUseBenefitArgs();
 
+    /**
+     * This is a unique identifier for a plan. Should be a guid.
+     * 
+     */
     @InputImport(name="planId")
     private final @Nullable Input<String> planId;
 
@@ -22,6 +26,10 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
         return this.planId == null ? Input.empty() : this.planId;
     }
 
+    /**
+     * The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -29,6 +37,10 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
         return this.scope;
     }
 
+    /**
+     * Hybrid use benefit SKU
+     * 
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 

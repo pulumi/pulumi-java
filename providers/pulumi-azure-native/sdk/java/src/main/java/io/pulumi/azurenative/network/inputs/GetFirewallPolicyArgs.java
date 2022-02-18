@@ -14,6 +14,10 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetFirewallPolicyArgs Empty = new GetFirewallPolicyArgs();
 
+    /**
+     * Expands referenced resources.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the Firewall Policy.
+     * 
+     */
     @InputImport(name="firewallPolicyName", required=true)
     private final String firewallPolicyName;
 
@@ -28,6 +36,10 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
         return this.firewallPolicyName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

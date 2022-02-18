@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The runbook property associated with the entity.
+ * 
+ */
 public final class RunbookAssociationPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RunbookAssociationPropertyArgs Empty = new RunbookAssociationPropertyArgs();
 
+    /**
+     * Gets or sets the name of the runbook.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

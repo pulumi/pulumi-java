@@ -12,6 +12,10 @@ public final class GetHealthAlertArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHealthAlertArgs Empty = new GetHealthAlertArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetHealthAlertArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the rule.
+     * 
+     */
     @InputImport(name="ruleName", required=true)
     private final String ruleName;
 

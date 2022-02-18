@@ -20,6 +20,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 
+    /**
+     * The IDs of the access control records, associated with the volume.
+     * 
+     */
     @InputImport(name="accessControlRecordIds", required=true)
     private final Input<List<String>> accessControlRecordIds;
 
@@ -27,6 +31,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessControlRecordIds;
     }
 
+    /**
+     * The device name
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -34,6 +42,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
+    /**
+     * The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Kind> kind;
 
@@ -41,6 +53,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName", required=true)
     private final Input<String> managerName;
 
@@ -48,6 +64,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.managerName;
     }
 
+    /**
+     * The monitoring status of the volume.
+     * 
+     */
     @InputImport(name="monitoringStatus", required=true)
     private final Input<MonitoringStatus> monitoringStatus;
 
@@ -55,6 +75,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitoringStatus;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -62,6 +86,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The size of the volume in bytes.
+     * 
+     */
     @InputImport(name="sizeInBytes", required=true)
     private final Input<Double> sizeInBytes;
 
@@ -69,6 +97,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.sizeInBytes;
     }
 
+    /**
+     * The volume container name.
+     * 
+     */
     @InputImport(name="volumeContainerName", required=true)
     private final Input<String> volumeContainerName;
 
@@ -76,6 +108,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.volumeContainerName;
     }
 
+    /**
+     * The volume name.
+     * 
+     */
     @InputImport(name="volumeName")
     private final @Nullable Input<String> volumeName;
 
@@ -83,6 +119,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.volumeName == null ? Input.empty() : this.volumeName;
     }
 
+    /**
+     * The volume status.
+     * 
+     */
     @InputImport(name="volumeStatus", required=true)
     private final Input<VolumeStatus> volumeStatus;
 
@@ -90,6 +130,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.volumeStatus;
     }
 
+    /**
+     * The type of the volume.
+     * 
+     */
     @InputImport(name="volumeType", required=true)
     private final Input<VolumeType> volumeType;
 

@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AdditionalFeaturesServerConfigurationsResponse {
+    /**
+     * Enable or disable R services (SQL 2016 onwards).
+     * 
+     */
     private final @Nullable Boolean isRServicesEnabled;
 
     @OutputCustomType.Constructor({"isRServicesEnabled"})
@@ -18,6 +22,10 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
         this.isRServicesEnabled = isRServicesEnabled;
     }
 
+    /**
+     * Enable or disable R services (SQL 2016 onwards).
+     * 
+     */
     public Optional<Boolean> getIsRServicesEnabled() {
         return Optional.ofNullable(this.isRServicesEnabled);
     }

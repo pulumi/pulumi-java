@@ -15,19 +15,75 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSpacecraftResult {
+    /**
+     * Authorization status of spacecraft.
+     * 
+     */
     private final String authorizationStatus;
+    /**
+     * Details of the authorization status.
+     * 
+     */
     private final String authorizationStatusExtended;
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * Links of the Spacecraft
+     * 
+     */
     private final @Nullable List<SpacecraftLinkResponse> links;
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     private final String location;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * NORAD ID of the spacecraft.
+     * 
+     */
     private final String noradId;
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Title line of Two Line Element (TLE).
+     * 
+     */
     private final @Nullable String titleLine;
+    /**
+     * Line 1 of Two Line Element (TLE).
+     * 
+     */
     private final @Nullable String tleLine1;
+    /**
+     * Line 2 of Two Line Element (TLE).
+     * 
+     */
     private final @Nullable String tleLine2;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"authorizationStatus","authorizationStatusExtended","etag","id","links","location","name","noradId","systemData","tags","titleLine","tleLine1","tleLine2","type"})
@@ -62,45 +118,101 @@ public final class GetSpacecraftResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Authorization status of spacecraft.
+     * 
+     */
     public String getAuthorizationStatus() {
         return this.authorizationStatus;
     }
+    /**
+     * Details of the authorization status.
+     * 
+     */
     public String getAuthorizationStatusExtended() {
         return this.authorizationStatusExtended;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Links of the Spacecraft
+     * 
+     */
     public List<SpacecraftLinkResponse> getLinks() {
         return this.links == null ? List.of() : this.links;
     }
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * NORAD ID of the spacecraft.
+     * 
+     */
     public String getNoradId() {
         return this.noradId;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Title line of Two Line Element (TLE).
+     * 
+     */
     public Optional<String> getTitleLine() {
         return Optional.ofNullable(this.titleLine);
     }
+    /**
+     * Line 1 of Two Line Element (TLE).
+     * 
+     */
     public Optional<String> getTleLine1() {
         return Optional.ofNullable(this.tleLine1);
     }
+    /**
+     * Line 2 of Two Line Element (TLE).
+     * 
+     */
     public Optional<String> getTleLine2() {
         return Optional.ofNullable(this.tleLine2);
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }

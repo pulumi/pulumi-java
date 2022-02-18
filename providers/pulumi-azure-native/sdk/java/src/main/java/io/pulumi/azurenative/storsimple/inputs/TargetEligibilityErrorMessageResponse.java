@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The error/warning message due to which the device is ineligible as a failover target device.
+ * 
+ */
 public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TargetEligibilityErrorMessageResponse Empty = new TargetEligibilityErrorMessageResponse();
 
+    /**
+     * The localized error message stating the reason why the device is not eligible as a target device.
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -21,6 +29,10 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * The localized resolution message for the error.
+     * 
+     */
     @InputImport(name="resolution")
     private final @Nullable String resolution;
 
@@ -28,6 +40,10 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
         return this.resolution == null ? Optional.empty() : Optional.ofNullable(this.resolution);
     }
 
+    /**
+     * The result code for the error, due to which the device does not qualify as a failover target device.
+     * 
+     */
     @InputImport(name="resultCode")
     private final @Nullable String resultCode;
 

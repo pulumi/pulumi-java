@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Reason and code for the compliance of the guest configuration assignment resource.
+ * 
+ */
 public final class AssignmentReportResourceComplianceReasonResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssignmentReportResourceComplianceReasonResponse Empty = new AssignmentReportResourceComplianceReasonResponse();
 
+    /**
+     * Code for the compliance of the guest configuration assignment resource.
+     * 
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +27,10 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
         return this.code;
     }
 
+    /**
+     * Reason for the compliance of the guest configuration assignment resource.
+     * 
+     */
     @InputImport(name="phrase", required=true)
     private final String phrase;
 

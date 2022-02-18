@@ -12,6 +12,10 @@ public final class GetTransformArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTransformArgs Empty = new GetTransformArgs();
 
+    /**
+     * The Media Services account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetTransformArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetTransformArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The Transform name.
+     * 
+     */
     @InputImport(name="transformName", required=true)
     private final String transformName;
 

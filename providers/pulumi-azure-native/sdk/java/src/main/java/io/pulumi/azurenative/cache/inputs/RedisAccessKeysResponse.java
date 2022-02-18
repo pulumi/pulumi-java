@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Redis cache access keys.
+ * 
+ */
 public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RedisAccessKeysResponse Empty = new RedisAccessKeysResponse();
 
+    /**
+     * The current primary key that clients can use to authenticate with Redis cache.
+     * 
+     */
     @InputImport(name="primaryKey", required=true)
     private final String primaryKey;
 
@@ -19,6 +27,10 @@ public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArg
         return this.primaryKey;
     }
 
+    /**
+     * The current secondary key that clients can use to authenticate with Redis cache.
+     * 
+     */
     @InputImport(name="secondaryKey", required=true)
     private final String secondaryKey;
 

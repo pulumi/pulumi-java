@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Cookie based affinity.
+     * 
+     */
     @EnumType
     public enum ApplicationGatewayCookieBasedAffinity {
         Enabled("Enabled"),

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+     * 
+     */
     @EnumType
     public enum IPVersion {
         IPv4("IPv4"),

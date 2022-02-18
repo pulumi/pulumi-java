@@ -9,8 +9,20 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RemediationDeploymentSummaryResponse {
+    /**
+     * The number of deployments required by the remediation that have failed.
+     * 
+     */
     private final Integer failedDeployments;
+    /**
+     * The number of deployments required by the remediation that have succeeded.
+     * 
+     */
     private final Integer successfulDeployments;
+    /**
+     * The number of deployments required by the remediation.
+     * 
+     */
     private final Integer totalDeployments;
 
     @OutputCustomType.Constructor({"failedDeployments","successfulDeployments","totalDeployments"})
@@ -23,12 +35,24 @@ public final class RemediationDeploymentSummaryResponse {
         this.totalDeployments = Objects.requireNonNull(totalDeployments);
     }
 
+    /**
+     * The number of deployments required by the remediation that have failed.
+     * 
+     */
     public Integer getFailedDeployments() {
         return this.failedDeployments;
     }
+    /**
+     * The number of deployments required by the remediation that have succeeded.
+     * 
+     */
     public Integer getSuccessfulDeployments() {
         return this.successfulDeployments;
     }
+    /**
+     * The number of deployments required by the remediation.
+     * 
+     */
     public Integer getTotalDeployments() {
         return this.totalDeployments;
     }

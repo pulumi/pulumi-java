@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity source for a Cassandra database.
+ * 
+ */
 public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CassandraSourceArgs Empty = new CassandraSourceArgs();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -24,6 +32,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
+    /**
+     * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
+     * 
+     */
     @InputImport(name="consistencyLevel")
     private final @Nullable Input<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel;
 
@@ -31,6 +43,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.consistencyLevel == null ? Input.empty() : this.consistencyLevel;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -38,6 +54,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -45,6 +65,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * Database query. Should be a SQL-92 query expression or Cassandra Query Language (CQL) command. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="query")
     private final @Nullable Input<Object> query;
 
@@ -52,6 +76,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.query == null ? Input.empty() : this.query;
     }
 
+    /**
+     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="queryTimeout")
     private final @Nullable Input<Object> queryTimeout;
 
@@ -59,6 +87,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -66,6 +98,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -73,6 +109,11 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
+    /**
+     * Copy source type.
+     * Expected value is 'CassandraSource'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

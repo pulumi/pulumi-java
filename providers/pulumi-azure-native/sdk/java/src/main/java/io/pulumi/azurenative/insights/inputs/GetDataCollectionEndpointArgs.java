@@ -12,6 +12,10 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
 
     public static final GetDataCollectionEndpointArgs Empty = new GetDataCollectionEndpointArgs();
 
+    /**
+     * The name of the data collection endpoint. The name is case insensitive.
+     * 
+     */
     @InputImport(name="dataCollectionEndpointName", required=true)
     private final String dataCollectionEndpointName;
 
@@ -19,6 +23,10 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
         return this.dataCollectionEndpointName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

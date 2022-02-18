@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Private endpoint object properties.
+ * 
+ */
 public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointArgs Empty = new PrivateEndpointArgs();
 
+    /**
+     * Full identifier of the private endpoint resource.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

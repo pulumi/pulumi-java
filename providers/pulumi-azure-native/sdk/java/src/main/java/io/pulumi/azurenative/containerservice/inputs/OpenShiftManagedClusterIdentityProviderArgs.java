@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the configuration of the identity providers to be used in the OpenShift cluster.
+ * 
+ */
 public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenShiftManagedClusterIdentityProviderArgs Empty = new OpenShiftManagedClusterIdentityProviderArgs();
 
+    /**
+     * Name of the provider.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +30,10 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Configuration of the provider.
+     * 
+     */
     @InputImport(name="provider")
     private final @Nullable Input<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
 

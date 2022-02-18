@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Actions which to take by the auto-heal module when a rule is triggered.
+ * 
+ */
 public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoHealActionsResponse Empty = new AutoHealActionsResponse();
 
+    /**
+     * Predefined action to be taken.
+     * 
+     */
     @InputImport(name="actionType")
     private final @Nullable String actionType;
 
@@ -22,6 +30,10 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
         return this.actionType == null ? Optional.empty() : Optional.ofNullable(this.actionType);
     }
 
+    /**
+     * Custom action to be taken.
+     * 
+     */
     @InputImport(name="customAction")
     private final @Nullable AutoHealCustomActionResponse customAction;
 
@@ -29,6 +41,11 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
         return this.customAction == null ? Optional.empty() : Optional.ofNullable(this.customAction);
     }
 
+    /**
+     * Minimum time the process must execute
+     * before taking the action
+     * 
+     */
     @InputImport(name="minProcessExecutionTime")
     private final @Nullable String minProcessExecutionTime;
 

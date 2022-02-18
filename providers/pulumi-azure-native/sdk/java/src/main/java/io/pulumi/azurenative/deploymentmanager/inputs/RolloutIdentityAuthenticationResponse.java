@@ -8,10 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * RolloutIdentity uses the user-assigned managed identity authentication context specified in the Identity property during rollout creation.
+ * 
+ */
 public final class RolloutIdentityAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RolloutIdentityAuthenticationResponse Empty = new RolloutIdentityAuthenticationResponse();
 
+    /**
+     * The authentication type.
+     * Expected value is 'RolloutIdentity'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

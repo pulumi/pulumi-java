@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity source for a MongoDB database.
+ * 
+ */
 public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MongoDbV2SourceResponse Empty = new MongoDbV2SourceResponse();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Object additionalColumns;
 
@@ -23,6 +31,10 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
+    /**
+     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="batchSize")
     private final @Nullable Object batchSize;
 
@@ -30,6 +42,10 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
     }
 
+    /**
+     * Cursor methods for Mongodb query
+     * 
+     */
     @InputImport(name="cursorMethods")
     private final @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods;
 
@@ -37,6 +53,10 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.cursorMethods == null ? Optional.empty() : Optional.ofNullable(this.cursorMethods);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -44,6 +64,10 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Object filter;
 
@@ -51,6 +75,10 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -58,6 +86,10 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="queryTimeout")
     private final @Nullable Object queryTimeout;
 
@@ -65,6 +97,10 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -72,6 +108,10 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -79,6 +119,11 @@ public final class MongoDbV2SourceResponse extends io.pulumi.resources.InvokeArg
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
+    /**
+     * Copy source type.
+     * Expected value is 'MongoDbV2Source'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

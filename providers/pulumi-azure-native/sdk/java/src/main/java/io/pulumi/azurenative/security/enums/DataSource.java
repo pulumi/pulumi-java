@@ -10,6 +10,10 @@ import java.util.StringJoiner;
 
     @EnumType
     public enum DataSource {
+        /**
+         * Devices twin data
+         * 
+         */
         TwinData("TwinData");
 
         private final String value;

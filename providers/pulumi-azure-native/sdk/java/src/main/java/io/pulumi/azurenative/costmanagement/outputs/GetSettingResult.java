@@ -13,12 +13,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSettingResult {
+    /**
+     * Array of scopes with additional details used by Cost Management in the Azure portal.
+     * 
+     */
     private final @Nullable List<SettingsPropertiesResponseCache> cache;
+    /**
+     * Resource Id.
+     * 
+     */
     private final String id;
+    /**
+     * Resource kind.
+     * 
+     */
     private final String kind;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
+     * 
+     */
     private final String scope;
+    /**
+     * Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
+     * 
+     */
     private final @Nullable String startOn;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"cache","id","kind","name","scope","startOn","type"})
@@ -39,24 +67,52 @@ public final class GetSettingResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Array of scopes with additional details used by Cost Management in the Azure portal.
+     * 
+     */
     public List<SettingsPropertiesResponseCache> getCache() {
         return this.cache == null ? List.of() : this.cache;
     }
+    /**
+     * Resource Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource kind.
+     * 
+     */
     public String getKind() {
         return this.kind;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
+     * 
+     */
     public String getScope() {
         return this.scope;
     }
+    /**
+     * Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
+     * 
+     */
     public Optional<String> getStartOn() {
         return Optional.ofNullable(this.startOn);
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

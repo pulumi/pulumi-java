@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application gateway client authentication configuration.
+ * 
+ */
 public final class ApplicationGatewayClientAuthConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayClientAuthConfigurationResponse Empty = new ApplicationGatewayClientAuthConfigurationResponse();
 
+    /**
+     * Verify client certificate issuer name on the application gateway.
+     * 
+     */
     @InputImport(name="verifyClientCertIssuerDN")
     private final @Nullable Boolean verifyClientCertIssuerDN;
 

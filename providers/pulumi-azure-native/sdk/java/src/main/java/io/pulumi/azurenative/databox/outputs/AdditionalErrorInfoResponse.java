@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AdditionalErrorInfoResponse {
+    /**
+     * Additional error info.
+     * 
+     */
     private final @Nullable Object info;
+    /**
+     * Additional error type.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"info","type"})
@@ -23,9 +31,17 @@ public final class AdditionalErrorInfoResponse {
         this.type = type;
     }
 
+    /**
+     * Additional error info.
+     * 
+     */
     public Optional<Object> getInfo() {
         return Optional.ofNullable(this.info);
     }
+    /**
+     * Additional error type.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

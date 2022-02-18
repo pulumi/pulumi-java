@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The SKU to be applied for this resource
+ * 
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * Name of the SKU to be applied
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

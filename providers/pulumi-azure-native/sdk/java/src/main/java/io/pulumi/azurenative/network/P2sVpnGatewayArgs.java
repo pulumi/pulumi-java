@@ -20,6 +20,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final P2sVpnGatewayArgs Empty = new P2sVpnGatewayArgs();
 
+    /**
+     * List of all customer specified DNS servers IP addresses.
+     * 
+     */
     @InputImport(name="customDnsServers")
     private final @Nullable Input<List<String>> customDnsServers;
 
@@ -27,6 +31,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.customDnsServers == null ? Input.empty() : this.customDnsServers;
     }
 
+    /**
+     * The name of the gateway.
+     * 
+     */
     @InputImport(name="gatewayName")
     private final @Nullable Input<String> gatewayName;
 
@@ -34,6 +42,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayName == null ? Input.empty() : this.gatewayName;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -41,6 +53,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
+     * 
+     */
     @InputImport(name="isRoutingPreferenceInternet")
     private final @Nullable Input<Boolean> isRoutingPreferenceInternet;
 
@@ -48,6 +64,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.isRoutingPreferenceInternet == null ? Input.empty() : this.isRoutingPreferenceInternet;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -55,6 +75,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * List of all p2s connection configurations of the gateway.
+     * 
+     */
     @InputImport(name="p2SConnectionConfigurations")
     private final @Nullable Input<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations;
 
@@ -62,6 +86,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.p2SConnectionConfigurations == null ? Input.empty() : this.p2SConnectionConfigurations;
     }
 
+    /**
+     * The resource group name of the P2SVpnGateway.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,6 +97,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -76,6 +108,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The VirtualHub to which the gateway belongs.
+     * 
+     */
     @InputImport(name="virtualHub")
     private final @Nullable Input<SubResourceArgs> virtualHub;
 
@@ -83,6 +119,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualHub == null ? Input.empty() : this.virtualHub;
     }
 
+    /**
+     * The scale unit for this p2s vpn gateway.
+     * 
+     */
     @InputImport(name="vpnGatewayScaleUnit")
     private final @Nullable Input<Integer> vpnGatewayScaleUnit;
 
@@ -90,6 +130,10 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.vpnGatewayScaleUnit == null ? Input.empty() : this.vpnGatewayScaleUnit;
     }
 
+    /**
+     * The VpnServerConfiguration to which the p2sVpnGateway is attached to.
+     * 
+     */
     @InputImport(name="vpnServerConfiguration")
     private final @Nullable Input<SubResourceArgs> vpnServerConfiguration;
 

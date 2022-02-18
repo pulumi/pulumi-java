@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FrontDoorManagedRuleOverrideResponse {
+    /**
+     * Describes the override action to be applied when rule matches.
+     * 
+     */
     private final @Nullable String action;
+    /**
+     * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+     * 
+     */
     private final @Nullable String enabledState;
+    /**
+     * Describes the exclusions that are applied to this specific rule.
+     * 
+     */
     private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
+    /**
+     * Identifier for the managed rule.
+     * 
+     */
     private final String ruleId;
 
     @OutputCustomType.Constructor({"action","enabledState","exclusions","ruleId"})
@@ -30,15 +46,31 @@ public final class FrontDoorManagedRuleOverrideResponse {
         this.ruleId = Objects.requireNonNull(ruleId);
     }
 
+    /**
+     * Describes the override action to be applied when rule matches.
+     * 
+     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
+    /**
+     * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+     * 
+     */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
+    /**
+     * Describes the exclusions that are applied to this specific rule.
+     * 
+     */
     public List<ManagedRuleExclusionResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
+    /**
+     * Identifier for the managed rule.
+     * 
+     */
     public String getRuleId() {
         return this.ruleId;
     }

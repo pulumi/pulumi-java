@@ -15,6 +15,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabelingJobArgs Empty = new LabelingJobArgs();
 
+    /**
+     * Name and identifier for LabelingJob.
+     * 
+     */
     @InputImport(name="labelingJobId")
     private final @Nullable Input<String> labelingJobId;
 
@@ -22,6 +26,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.labelingJobId == null ? Input.empty() : this.labelingJobId;
     }
 
+    /**
+     * Definition of a labeling job.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<LabelingJobPropertiesArgs> properties;
 
@@ -29,6 +37,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

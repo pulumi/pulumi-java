@@ -12,6 +12,10 @@ public final class GetBotConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBotConnectionArgs Empty = new GetBotConnectionArgs();
 
+    /**
+     * The name of the Bot Service Connection Setting resource.
+     * 
+     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -19,6 +23,10 @@ public final class GetBotConnectionArgs extends io.pulumi.resources.InvokeArgs {
         return this.connectionName;
     }
 
+    /**
+     * The name of the Bot resource group in the user subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetBotConnectionArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Bot resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebPubSubPrivateEndpointConnection {
+/**
+ * A private endpoint connection to an azure resource
+ * API Version: 2021-04-01-preview.
+ * 
+ *
+ * A private endpoint connection to an azure resource
+ * 
+ */
     public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> invokeAsync(GetWebPubSubPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubPrivateEndpointConnection", TypeShape.of(GetWebPubSubPrivateEndpointConnectionResult.class), args == null ? GetWebPubSubPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

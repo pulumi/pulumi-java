@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contains time series of various impacted metrics for an Azure SQL Database, Server or Elastic Pool Recommended Action.
+ * 
+ */
 public final class RecommendedActionMetricInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecommendedActionMetricInfoResponse Empty = new RecommendedActionMetricInfoResponse();
 
+    /**
+     * Gets the name of the metric. e.g., CPU, Number of Queries.
+     * 
+     */
     @InputImport(name="metricName", required=true)
     private final String metricName;
 
@@ -20,6 +28,10 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
         return this.metricName;
     }
 
+    /**
+     * Gets the start time of time interval given by this MetricInfo.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -27,6 +39,10 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
         return this.startTime;
     }
 
+    /**
+     * Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
+     * 
+     */
     @InputImport(name="timeGrain", required=true)
     private final String timeGrain;
 
@@ -34,6 +50,10 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
         return this.timeGrain;
     }
 
+    /**
+     * Gets the unit in which metric is measured. e.g., DTU, Frequency
+     * 
+     */
     @InputImport(name="unit", required=true)
     private final String unit;
 
@@ -41,6 +61,10 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
         return this.unit;
     }
 
+    /**
+     * Gets the value of the metric in the time interval given by this MetricInfo.
+     * 
+     */
     @InputImport(name="value", required=true)
     private final Double value;
 

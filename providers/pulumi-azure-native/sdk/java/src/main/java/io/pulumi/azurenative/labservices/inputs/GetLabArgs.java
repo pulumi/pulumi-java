@@ -14,6 +14,10 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLabArgs Empty = new GetLabArgs();
 
+    /**
+     * Specify the $expand query. Example: 'properties($select=maxUsersInLab)'
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the lab Account.
+     * 
+     */
     @InputImport(name="labAccountName", required=true)
     private final String labAccountName;
 
@@ -28,6 +36,10 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
         return this.labAccountName;
     }
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -35,6 +47,10 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
         return this.labName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

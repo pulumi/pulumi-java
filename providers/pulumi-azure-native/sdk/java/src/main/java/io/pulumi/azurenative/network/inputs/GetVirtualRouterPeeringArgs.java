@@ -12,6 +12,10 @@ public final class GetVirtualRouterPeeringArgs extends io.pulumi.resources.Invok
 
     public static final GetVirtualRouterPeeringArgs Empty = new GetVirtualRouterPeeringArgs();
 
+    /**
+     * The name of the Virtual Router Peering.
+     * 
+     */
     @InputImport(name="peeringName", required=true)
     private final String peeringName;
 
@@ -19,6 +23,10 @@ public final class GetVirtualRouterPeeringArgs extends io.pulumi.resources.Invok
         return this.peeringName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetVirtualRouterPeeringArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Virtual Router.
+     * 
+     */
     @InputImport(name="virtualRouterName", required=true)
     private final String virtualRouterName;
 

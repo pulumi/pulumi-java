@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlStoredProcedure {
+/**
+ * An Azure Cosmos DB storedProcedure.
+ * API Version: 2021-03-15.
+ * 
+ *
+ * An Azure Cosmos DB storedProcedure.
+ * 
+ */
     public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> invokeAsync(GetSqlResourceSqlStoredProcedureArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlStoredProcedure", TypeShape.of(GetSqlResourceSqlStoredProcedureResult.class), args == null ? GetSqlResourceSqlStoredProcedureArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,15 +12,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CognitiveServicesAccountApiPropertiesResponse {
+    /**
+     * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+     * 
+     */
     private final @Nullable String aadClientId;
+    /**
+     * (Metrics Advisor Only) The Azure AD Tenant Id.
+     * 
+     */
     private final @Nullable String aadTenantId;
+    /**
+     * (Personalization Only) The flag to enable statistics of Bing Search.
+     * 
+     */
     private final @Nullable String eventHubConnectionString;
+    /**
+     * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+     * 
+     */
     private final @Nullable String qnaAzureSearchEndpointId;
+    /**
+     * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+     * 
+     */
     private final @Nullable String qnaAzureSearchEndpointKey;
+    /**
+     * (QnAMaker Only) The runtime endpoint of QnAMaker.
+     * 
+     */
     private final @Nullable String qnaRuntimeEndpoint;
+    /**
+     * (Bing Search Only) The flag to enable statistics of Bing Search.
+     * 
+     */
     private final @Nullable Boolean statisticsEnabled;
+    /**
+     * (Personalization Only) The storage account connection string.
+     * 
+     */
     private final @Nullable String storageAccountConnectionString;
+    /**
+     * (Metrics Advisor Only) The super user of Metrics Advisor.
+     * 
+     */
     private final @Nullable String superUser;
+    /**
+     * (Metrics Advisor Only) The website name of Metrics Advisor.
+     * 
+     */
     private final @Nullable String websiteName;
 
     @OutputCustomType.Constructor({"aadClientId","aadTenantId","eventHubConnectionString","qnaAzureSearchEndpointId","qnaAzureSearchEndpointKey","qnaRuntimeEndpoint","statisticsEnabled","storageAccountConnectionString","superUser","websiteName"})
@@ -47,33 +87,73 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
         this.websiteName = websiteName;
     }
 
+    /**
+     * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+     * 
+     */
     public Optional<String> getAadClientId() {
         return Optional.ofNullable(this.aadClientId);
     }
+    /**
+     * (Metrics Advisor Only) The Azure AD Tenant Id.
+     * 
+     */
     public Optional<String> getAadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
+    /**
+     * (Personalization Only) The flag to enable statistics of Bing Search.
+     * 
+     */
     public Optional<String> getEventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
+    /**
+     * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+     * 
+     */
     public Optional<String> getQnaAzureSearchEndpointId() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointId);
     }
+    /**
+     * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+     * 
+     */
     public Optional<String> getQnaAzureSearchEndpointKey() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointKey);
     }
+    /**
+     * (QnAMaker Only) The runtime endpoint of QnAMaker.
+     * 
+     */
     public Optional<String> getQnaRuntimeEndpoint() {
         return Optional.ofNullable(this.qnaRuntimeEndpoint);
     }
+    /**
+     * (Bing Search Only) The flag to enable statistics of Bing Search.
+     * 
+     */
     public Optional<Boolean> getStatisticsEnabled() {
         return Optional.ofNullable(this.statisticsEnabled);
     }
+    /**
+     * (Personalization Only) The storage account connection string.
+     * 
+     */
     public Optional<String> getStorageAccountConnectionString() {
         return Optional.ofNullable(this.storageAccountConnectionString);
     }
+    /**
+     * (Metrics Advisor Only) The super user of Metrics Advisor.
+     * 
+     */
     public Optional<String> getSuperUser() {
         return Optional.ofNullable(this.superUser);
     }
+    /**
+     * (Metrics Advisor Only) The website name of Metrics Advisor.
+     * 
+     */
     public Optional<String> getWebsiteName() {
         return Optional.ofNullable(this.websiteName);
     }

@@ -12,6 +12,10 @@ public final class ListManagerActivationKeyArgs extends io.pulumi.resources.Invo
 
     public static final ListManagerActivationKeyArgs Empty = new ListManagerActivationKeyArgs();
 
+    /**
+     * The manager name
+     * 
+     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -19,6 +23,10 @@ public final class ListManagerActivationKeyArgs extends io.pulumi.resources.Invo
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

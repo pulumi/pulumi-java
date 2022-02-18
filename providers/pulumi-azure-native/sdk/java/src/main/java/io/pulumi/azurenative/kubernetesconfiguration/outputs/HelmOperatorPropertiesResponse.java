@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HelmOperatorPropertiesResponse {
+    /**
+     * Values override for the operator Helm chart.
+     * 
+     */
     private final @Nullable String chartValues;
+    /**
+     * Version of the operator Helm chart.
+     * 
+     */
     private final @Nullable String chartVersion;
 
     @OutputCustomType.Constructor({"chartValues","chartVersion"})
@@ -22,9 +30,17 @@ public final class HelmOperatorPropertiesResponse {
         this.chartVersion = chartVersion;
     }
 
+    /**
+     * Values override for the operator Helm chart.
+     * 
+     */
     public Optional<String> getChartValues() {
         return Optional.ofNullable(this.chartValues);
     }
+    /**
+     * Version of the operator Helm chart.
+     * 
+     */
     public Optional<String> getChartVersion() {
         return Optional.ofNullable(this.chartVersion);
     }

@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about a system service deployed in the cluster
+ * 
+ */
 public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SystemServiceResponse Empty = new SystemServiceResponse();
 
+    /**
+     * The public IP address of the system service
+     * 
+     */
     @InputImport(name="publicIpAddress", required=true)
     private final String publicIpAddress;
 
@@ -19,6 +27,10 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
         return this.publicIpAddress;
     }
 
+    /**
+     * The system service type
+     * 
+     */
     @InputImport(name="systemServiceType", required=true)
     private final String systemServiceType;
 
@@ -26,6 +38,10 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
         return this.systemServiceType;
     }
 
+    /**
+     * The state of the system service
+     * 
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

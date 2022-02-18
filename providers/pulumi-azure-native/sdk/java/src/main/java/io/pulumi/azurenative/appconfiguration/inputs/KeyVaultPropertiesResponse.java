@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning key vault encryption for a configuration store.
+ * 
+ */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultPropertiesResponse Empty = new KeyVaultPropertiesResponse();
 
+    /**
+     * The client id of the identity which will be used to access key vault.
+     * 
+     */
     @InputImport(name="identityClientId")
     private final @Nullable String identityClientId;
 
@@ -21,6 +29,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.identityClientId == null ? Optional.empty() : Optional.ofNullable(this.identityClientId);
     }
 
+    /**
+     * The URI of the key vault key used to encrypt data.
+     * 
+     */
     @InputImport(name="keyIdentifier")
     private final @Nullable String keyIdentifier;
 

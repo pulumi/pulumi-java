@@ -14,6 +14,10 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final OnPremiseSensorArgs Empty = new OnPremiseSensorArgs();
 
+    /**
+     * Name of the on-premise IoT sensor
+     * 
+     */
     @InputImport(name="onPremiseSensorName")
     private final @Nullable Input<String> onPremiseSensorName;
 

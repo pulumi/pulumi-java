@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDatabaseAccountKeys {
+/**
+ * The access keys for the given database account.
+ * API Version: 2021-03-15.
+ * 
+ *
+ * The access keys for the given database account.
+ * 
+ */
     public static CompletableFuture<ListDatabaseAccountKeysResult> invokeAsync(ListDatabaseAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:listDatabaseAccountKeys", TypeShape.of(ListDatabaseAccountKeysResult.class), args == null ? ListDatabaseAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

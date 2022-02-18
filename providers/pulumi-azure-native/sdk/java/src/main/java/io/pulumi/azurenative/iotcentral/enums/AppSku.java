@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The name of the SKU.
+     * 
+     */
     @EnumType
     public enum AppSku {
         F1("F1"),

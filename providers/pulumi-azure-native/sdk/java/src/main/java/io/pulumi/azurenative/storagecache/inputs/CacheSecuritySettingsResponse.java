@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cache security settings.
+ * 
+ */
 public final class CacheSecuritySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheSecuritySettingsResponse Empty = new CacheSecuritySettingsResponse();
 
+    /**
+     * NFS access policies defined for this cache.
+     * 
+     */
     @InputImport(name="accessPolicies")
     private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
 

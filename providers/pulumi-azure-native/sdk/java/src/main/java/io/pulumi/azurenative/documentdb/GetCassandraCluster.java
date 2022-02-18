@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCassandraCluster {
+/**
+ * Representation of a managed Cassandra cluster.
+ * API Version: 2021-03-01-preview.
+ * 
+ *
+ * Representation of a managed Cassandra cluster.
+ * 
+ */
     public static CompletableFuture<GetCassandraClusterResult> invokeAsync(GetCassandraClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraCluster", TypeShape.of(GetCassandraClusterResult.class), args == null ? GetCassandraClusterArgs.Empty : args, Utilities.withVersion(options));
     }

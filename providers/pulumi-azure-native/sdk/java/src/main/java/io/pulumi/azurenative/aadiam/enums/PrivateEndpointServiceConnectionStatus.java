@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates whether the connection has been approved, rejected or removed by the given policy owner.
+     * 
+     */
     @EnumType
     public enum PrivateEndpointServiceConnectionStatus {
         Approved("Approved"),

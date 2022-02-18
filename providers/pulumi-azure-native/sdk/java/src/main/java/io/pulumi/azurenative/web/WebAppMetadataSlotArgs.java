@@ -15,6 +15,10 @@ public final class WebAppMetadataSlotArgs extends io.pulumi.resources.ResourceAr
 
     public static final WebAppMetadataSlotArgs Empty = new WebAppMetadataSlotArgs();
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -22,6 +26,10 @@ public final class WebAppMetadataSlotArgs extends io.pulumi.resources.ResourceAr
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,6 +37,10 @@ public final class WebAppMetadataSlotArgs extends io.pulumi.resources.ResourceAr
         return this.name;
     }
 
+    /**
+     * Settings.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -36,6 +48,10 @@ public final class WebAppMetadataSlotArgs extends io.pulumi.resources.ResourceAr
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class WebAppMetadataSlotArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will update the metadata for the production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 

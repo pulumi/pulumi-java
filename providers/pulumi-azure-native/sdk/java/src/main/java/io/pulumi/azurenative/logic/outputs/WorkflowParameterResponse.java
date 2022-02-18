@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowParameterResponse {
+    /**
+     * The description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The metadata.
+     * 
+     */
     private final @Nullable Object metadata;
+    /**
+     * The type.
+     * 
+     */
     private final @Nullable String type;
+    /**
+     * The value.
+     * 
+     */
     private final @Nullable Object value;
 
     @OutputCustomType.Constructor({"description","metadata","type","value"})
@@ -29,15 +45,31 @@ public final class WorkflowParameterResponse {
         this.value = value;
     }
 
+    /**
+     * The description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The metadata.
+     * 
+     */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+    /**
+     * The type.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+    /**
+     * The value.
+     * 
+     */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }

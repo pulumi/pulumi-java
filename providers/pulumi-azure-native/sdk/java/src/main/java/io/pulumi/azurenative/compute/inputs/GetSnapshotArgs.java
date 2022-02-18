@@ -12,6 +12,10 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSnapshotArgs Empty = new GetSnapshotArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
+     * 
+     */
     @InputImport(name="snapshotName", required=true)
     private final String snapshotName;
 

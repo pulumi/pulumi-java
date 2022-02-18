@@ -12,6 +12,10 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceSkuResponse Empty = new ResourceSkuResponse();
 
+    /**
+     * Name of the SKU.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSubAccountVMHosts {
+/**
+ * Response of a list VM Host Update Operation.
+ * API Version: 2020-10-01.
+ * 
+ *
+ * Response of a list VM Host Update Operation.
+ * 
+ */
     public static CompletableFuture<ListSubAccountVMHostsResult> invokeAsync(ListSubAccountVMHostsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listSubAccountVMHosts", TypeShape.of(ListSubAccountVMHostsResult.class), args == null ? ListSubAccountVMHostsArgs.Empty : args, Utilities.withVersion(options));
     }

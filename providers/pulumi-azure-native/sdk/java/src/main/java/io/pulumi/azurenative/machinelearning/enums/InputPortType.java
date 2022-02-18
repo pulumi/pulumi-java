@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Port data type.
+     * 
+     */
     @EnumType
     public enum InputPortType {
         Dataset("Dataset");

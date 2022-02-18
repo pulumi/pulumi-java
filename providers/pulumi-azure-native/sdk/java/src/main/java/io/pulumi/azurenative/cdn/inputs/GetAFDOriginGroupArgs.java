@@ -12,6 +12,10 @@ public final class GetAFDOriginGroupArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetAFDOriginGroupArgs Empty = new GetAFDOriginGroupArgs();
 
+    /**
+     * Name of the origin group which is unique within the endpoint.
+     * 
+     */
     @InputImport(name="originGroupName", required=true)
     private final String originGroupName;
 
@@ -19,6 +23,10 @@ public final class GetAFDOriginGroupArgs extends io.pulumi.resources.InvokeArgs 
         return this.originGroupName;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -26,6 +34,10 @@ public final class GetAFDOriginGroupArgs extends io.pulumi.resources.InvokeArgs 
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

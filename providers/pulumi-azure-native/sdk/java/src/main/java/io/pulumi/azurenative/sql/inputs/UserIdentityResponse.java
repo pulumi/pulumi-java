@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Azure Active Directory identity configuration for a resource.
+ * 
+ */
 public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserIdentityResponse Empty = new UserIdentityResponse();
 
+    /**
+     * The Azure Active Directory client id.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -19,6 +27,10 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.clientId;
     }
 
+    /**
+     * The Azure Active Directory principal id.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 

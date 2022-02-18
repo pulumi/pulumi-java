@@ -14,6 +14,10 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProductApiArgs Empty = new ProductApiArgs();
 
+    /**
+     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     * 
+     */
     @InputImport(name="apiId")
     private final @Nullable Input<String> apiId;
 
@@ -21,6 +25,10 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId == null ? Input.empty() : this.apiId;
     }
 
+    /**
+     * Product identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="productId", required=true)
     private final Input<String> productId;
 
@@ -28,6 +36,10 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.productId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,10 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

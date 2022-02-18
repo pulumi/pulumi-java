@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPrivateEndpointConnectionResult {
+    /**
+     * The ID of the private endpoint connection.
+     * 
+     */
     private final String id;
+    /**
+     * The name of the private endpoint connection.
+     * 
+     */
     private final String name;
+    /**
+     * The resource of private endpoint.
+     * 
+     */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    /**
+     * The current provisioning state.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * The resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
@@ -36,21 +60,45 @@ public final class GetPrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The ID of the private endpoint connection.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The name of the private endpoint connection.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The resource of private endpoint.
+     * 
+     */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
+    /**
+     * The current provisioning state.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

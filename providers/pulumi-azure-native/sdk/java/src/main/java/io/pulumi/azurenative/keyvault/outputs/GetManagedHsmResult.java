@@ -15,13 +15,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetManagedHsmResult {
+    /**
+     * The Azure Resource Manager resource ID for the managed HSM Pool.
+     * 
+     */
     private final String id;
+    /**
+     * The supported Azure location where the managed HSM Pool should be created.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The name of the managed HSM Pool.
+     * 
+     */
     private final String name;
+    /**
+     * Properties of the managed HSM
+     * 
+     */
     private final ManagedHsmPropertiesResponse properties;
+    /**
+     * SKU details
+     * 
+     */
     private final @Nullable ManagedHsmSkuResponse sku;
+    /**
+     * Metadata pertaining to creation and last modification of the key vault resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * The resource type of the managed HSM Pool.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","sku","systemData","tags","type"})
@@ -44,27 +76,59 @@ public final class GetManagedHsmResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The Azure Resource Manager resource ID for the managed HSM Pool.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The supported Azure location where the managed HSM Pool should be created.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The name of the managed HSM Pool.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Properties of the managed HSM
+     * 
+     */
     public ManagedHsmPropertiesResponse getProperties() {
         return this.properties;
     }
+    /**
+     * SKU details
+     * 
+     */
     public Optional<ManagedHsmSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+    /**
+     * Metadata pertaining to creation and last modification of the key vault resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * The resource type of the managed HSM Pool.
+     * 
+     */
     public String getType() {
         return this.type;
     }

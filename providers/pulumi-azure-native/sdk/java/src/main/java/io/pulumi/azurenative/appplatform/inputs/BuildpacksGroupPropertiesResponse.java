@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Buildpack group properties of the Builder
+ * 
+ */
 public final class BuildpacksGroupPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuildpacksGroupPropertiesResponse Empty = new BuildpacksGroupPropertiesResponse();
 
+    /**
+     * Buildpacks in the buildpack group
+     * 
+     */
     @InputImport(name="buildpacks")
     private final @Nullable List<BuildpackPropertiesResponse> buildpacks;
 
@@ -23,6 +31,10 @@ public final class BuildpacksGroupPropertiesResponse extends io.pulumi.resources
         return this.buildpacks == null ? List.of() : this.buildpacks;
     }
 
+    /**
+     * Buildpack group name
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Table level result for Sql Server to Azure Sql DB migration.
+ * 
+ */
 public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlDbTaskOutputTableLevelResponse Empty = new MigrateSqlServerSqlDbTaskOutputTableLevelResponse();
 
+    /**
+     * Migration end time
+     * 
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -20,6 +28,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.endedOn;
     }
 
+    /**
+     * Wildcard string prefix to use for querying all errors of the item
+     * 
+     */
     @InputImport(name="errorPrefix", required=true)
     private final String errorPrefix;
 
@@ -27,6 +39,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.errorPrefix;
     }
 
+    /**
+     * Result identifier
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -34,6 +50,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.id;
     }
 
+    /**
+     * Number of successfully completed items
+     * 
+     */
     @InputImport(name="itemsCompletedCount", required=true)
     private final Double itemsCompletedCount;
 
@@ -41,6 +61,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.itemsCompletedCount;
     }
 
+    /**
+     * Number of items
+     * 
+     */
     @InputImport(name="itemsCount", required=true)
     private final Double itemsCount;
 
@@ -48,6 +72,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.itemsCount;
     }
 
+    /**
+     * Name of the item
+     * 
+     */
     @InputImport(name="objectName", required=true)
     private final String objectName;
 
@@ -55,6 +83,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.objectName;
     }
 
+    /**
+     * Wildcard string prefix to use for querying all sub-tem results of the item
+     * 
+     */
     @InputImport(name="resultPrefix", required=true)
     private final String resultPrefix;
 
@@ -62,6 +94,11 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.resultPrefix;
     }
 
+    /**
+     * Result type
+     * Expected value is 'TableLevelOutput'.
+     * 
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -69,6 +106,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.resultType;
     }
 
+    /**
+     * Migration start time
+     * 
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -76,6 +117,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.startedOn;
     }
 
+    /**
+     * Current state of migration
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -83,6 +128,10 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends io.
         return this.state;
     }
 
+    /**
+     * Status message
+     * 
+     */
     @InputImport(name="statusMessage", required=true)
     private final String statusMessage;
 

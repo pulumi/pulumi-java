@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlServerInstance {
+/**
+ * A SqlServerInstance.
+ * API Version: 2021-06-01-preview.
+ * 
+ *
+ * A SqlServerInstance.
+ * 
+ */
     public static CompletableFuture<GetSqlServerInstanceResult> invokeAsync(GetSqlServerInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getSqlServerInstance", TypeShape.of(GetSqlServerInstanceResult.class), args == null ? GetSqlServerInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

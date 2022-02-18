@@ -12,6 +12,10 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
 
     public static final GetIntegrationAccountPartnerArgs Empty = new GetIntegrationAccountPartnerArgs();
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -19,6 +23,10 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
         return this.integrationAccountName;
     }
 
+    /**
+     * The integration account partner name.
+     * 
+     */
     @InputImport(name="partnerName", required=true)
     private final String partnerName;
 
@@ -26,6 +34,10 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
         return this.partnerName;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

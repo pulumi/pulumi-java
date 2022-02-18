@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Indicates type of action rule
+     * 
+     */
     @EnumType
     public enum ActionRuleType {
         Suppression("Suppression"),

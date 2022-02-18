@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hub Item.
+ * 
+ */
 public final class HubResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HubResponse Empty = new HubResponse();
 
+    /**
+     * Resource Id.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -21,6 +29,10 @@ public final class HubResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
+    /**
+     * Resource Type.
+     * 
+     */
     @InputImport(name="resourceType")
     private final @Nullable String resourceType;
 

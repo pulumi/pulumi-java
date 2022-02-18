@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * SSH configuration for Linux-based VMs running on Azure.
+ * 
+ */
 public final class ContainerServiceSshConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerServiceSshConfigurationResponse Empty = new ContainerServiceSshConfigurationResponse();
 
+    /**
+     * The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
+     * 
+     */
     @InputImport(name="publicKeys", required=true)
     private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
 

@@ -16,6 +16,10 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
 
     public static final ComponentCurrentBillingFeatureArgs Empty = new ComponentCurrentBillingFeatureArgs();
 
+    /**
+     * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
+     * 
+     */
     @InputImport(name="currentBillingFeatures")
     private final @Nullable Input<List<String>> currentBillingFeatures;
 
@@ -23,6 +27,10 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
         return this.currentBillingFeatures == null ? Input.empty() : this.currentBillingFeatures;
     }
 
+    /**
+     * An Application Insights component daily data volume cap
+     * 
+     */
     @InputImport(name="dataVolumeCap")
     private final @Nullable Input<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
 
@@ -30,6 +38,10 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
         return this.dataVolumeCap == null ? Input.empty() : this.dataVolumeCap;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,10 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Application Insights component resource.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

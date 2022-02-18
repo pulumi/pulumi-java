@@ -17,10 +17,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Frontend IP address of the load balancer.
+ * 
+ */
 public final class FrontendIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FrontendIPConfigurationArgs Empty = new FrontendIPConfigurationArgs();
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,6 +36,10 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,10 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The private IP address of the IP configuration.
+     * 
+     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -42,6 +58,10 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
+    /**
+     * Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+     * 
+     */
     @InputImport(name="privateIPAddressVersion")
     private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
 
@@ -49,6 +69,10 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
         return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
     }
 
+    /**
+     * The Private IP allocation method.
+     * 
+     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
@@ -56,6 +80,10 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
     }
 
+    /**
+     * The reference to the Public IP resource.
+     * 
+     */
     @InputImport(name="publicIPAddress")
     private final @Nullable Input<PublicIPAddressArgs> publicIPAddress;
 
@@ -63,6 +91,10 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
         return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
     }
 
+    /**
+     * The reference to the Public IP Prefix resource.
+     * 
+     */
     @InputImport(name="publicIPPrefix")
     private final @Nullable Input<SubResourceArgs> publicIPPrefix;
 
@@ -70,6 +102,10 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
         return this.publicIPPrefix == null ? Input.empty() : this.publicIPPrefix;
     }
 
+    /**
+     * The reference to the subnet resource.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetArgs> subnet;
 
@@ -77,6 +113,10 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

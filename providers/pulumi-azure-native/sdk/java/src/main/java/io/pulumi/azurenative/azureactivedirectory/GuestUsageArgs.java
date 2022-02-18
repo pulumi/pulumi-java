@@ -15,6 +15,10 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GuestUsageArgs Empty = new GuestUsageArgs();
 
+    /**
+     * Location of the Guest Usages resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +26,10 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -29,6 +37,10 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The initial domain name of the AAD tenant.
+     * 
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -36,6 +48,10 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * Key-value pairs of additional resource provisioning properties.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -43,6 +59,10 @@ public final class GuestUsageArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * An identifier for the tenant for which the resource is being created
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

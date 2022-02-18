@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayProbeHealthResponseMatchResponse {
+    /**
+     * Body that must be contained in the health response. Default value is empty.
+     * 
+     */
     private final @Nullable String body;
+    /**
+     * Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+     * 
+     */
     private final @Nullable List<String> statusCodes;
 
     @OutputCustomType.Constructor({"body","statusCodes"})
@@ -23,9 +31,17 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
         this.statusCodes = statusCodes;
     }
 
+    /**
+     * Body that must be contained in the health response. Default value is empty.
+     * 
+     */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
+    /**
+     * Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+     * 
+     */
     public List<String> getStatusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }

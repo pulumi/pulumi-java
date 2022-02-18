@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database specific information for MySQL to Azure Database for MySQL migration task inputs
+ * 
+ */
 public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse Empty = new MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse();
 
+    /**
+     * Migration settings which tune the migration behavior
+     * 
+     */
     @InputImport(name="migrationSetting")
     private final @Nullable Map<String,String> migrationSetting;
 
@@ -22,6 +30,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
 
+    /**
+     * Name of the database
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +41,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Source settings to tune source endpoint migration behavior
+     * 
+     */
     @InputImport(name="sourceSetting")
     private final @Nullable Map<String,String> sourceSetting;
 
@@ -36,6 +52,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
 
+    /**
+     * Name of target database. Note: Target database will be truncated before starting migration.
+     * 
+     */
     @InputImport(name="targetDatabaseName")
     private final @Nullable String targetDatabaseName;
 
@@ -43,6 +63,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
         return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
     }
 
+    /**
+     * Target settings to tune target endpoint migration behavior
+     * 
+     */
     @InputImport(name="targetSetting")
     private final @Nullable Map<String,String> targetSetting;
 

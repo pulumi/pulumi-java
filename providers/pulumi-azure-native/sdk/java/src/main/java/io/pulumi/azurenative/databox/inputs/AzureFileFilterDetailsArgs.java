@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Filter details to transfer Azure files
+ * 
+ */
 public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFileFilterDetailsArgs Empty = new AzureFileFilterDetailsArgs();
 
+    /**
+     * List of full path of the files to be transferred.
+     * 
+     */
     @InputImport(name="filePathList")
     private final @Nullable Input<List<String>> filePathList;
 
@@ -22,6 +30,10 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
         return this.filePathList == null ? Input.empty() : this.filePathList;
     }
 
+    /**
+     * Prefix list of the Azure files to be transferred.
+     * 
+     */
     @InputImport(name="filePrefixList")
     private final @Nullable Input<List<String>> filePrefixList;
 
@@ -29,6 +41,10 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
         return this.filePrefixList == null ? Input.empty() : this.filePrefixList;
     }
 
+    /**
+     * List of file shares to be transferred.
+     * 
+     */
     @InputImport(name="fileShareList")
     private final @Nullable Input<List<String>> fileShareList;
 

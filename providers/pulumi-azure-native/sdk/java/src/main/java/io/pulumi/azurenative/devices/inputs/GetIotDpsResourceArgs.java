@@ -12,6 +12,10 @@ public final class GetIotDpsResourceArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetIotDpsResourceArgs Empty = new GetIotDpsResourceArgs();
 
+    /**
+     * Name of the provisioning service to retrieve.
+     * 
+     */
     @InputImport(name="provisioningServiceName", required=true)
     private final String provisioningServiceName;
 
@@ -19,6 +23,10 @@ public final class GetIotDpsResourceArgs extends io.pulumi.resources.InvokeArgs 
         return this.provisioningServiceName;
     }
 
+    /**
+     * Resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

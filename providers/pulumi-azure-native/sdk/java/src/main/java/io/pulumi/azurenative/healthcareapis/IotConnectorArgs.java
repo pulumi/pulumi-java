@@ -18,6 +18,10 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IotConnectorArgs Empty = new IotConnectorArgs();
 
+    /**
+     * Device Mappings.
+     * 
+     */
     @InputImport(name="deviceMapping")
     private final @Nullable Input<IotMappingPropertiesArgs> deviceMapping;
 
@@ -25,6 +29,10 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceMapping == null ? Input.empty() : this.deviceMapping;
     }
 
+    /**
+     * Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ServiceManagedIdentityIdentityArgs> identity;
 
@@ -32,6 +40,10 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Source configuration.
+     * 
+     */
     @InputImport(name="ingestionEndpointConfiguration")
     private final @Nullable Input<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
 
@@ -39,6 +51,10 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.ingestionEndpointConfiguration == null ? Input.empty() : this.ingestionEndpointConfiguration;
     }
 
+    /**
+     * The name of IoT Connector resource.
+     * 
+     */
     @InputImport(name="iotConnectorName")
     private final @Nullable Input<String> iotConnectorName;
 
@@ -46,6 +62,10 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.iotConnectorName == null ? Input.empty() : this.iotConnectorName;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,6 +73,10 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group that contains the service instance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +84,10 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -67,6 +95,10 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of workspace resource.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

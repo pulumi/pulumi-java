@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Property definition.
+ * 
+ */
 public final class PropertyDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PropertyDefinitionResponse Empty = new PropertyDefinitionResponse();
 
+    /**
+     * Array value separator for properties with isArray set.
+     * 
+     */
     @InputImport(name="arrayValueSeparator")
     private final @Nullable String arrayValueSeparator;
 
@@ -26,6 +34,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.arrayValueSeparator == null ? Optional.empty() : Optional.ofNullable(this.arrayValueSeparator);
     }
 
+    /**
+     * This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+     * 
+     */
     @InputImport(name="dataSourcePrecedenceRules", required=true)
     private final List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
 
@@ -33,6 +45,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.dataSourcePrecedenceRules;
     }
 
+    /**
+     * Describes valid values for an enum property.
+     * 
+     */
     @InputImport(name="enumValidValues")
     private final @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
 
@@ -40,6 +56,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.enumValidValues == null ? List.of() : this.enumValidValues;
     }
 
+    /**
+     * Name of the property.
+     * 
+     */
     @InputImport(name="fieldName", required=true)
     private final String fieldName;
 
@@ -47,6 +67,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.fieldName;
     }
 
+    /**
+     * Type of the property.
+     * 
+     */
     @InputImport(name="fieldType", required=true)
     private final String fieldType;
 
@@ -54,6 +78,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.fieldType;
     }
 
+    /**
+     * Indicates if the property is actually an array of the fieldType above on the data api.
+     * 
+     */
     @InputImport(name="isArray")
     private final @Nullable Boolean isArray;
 
@@ -61,6 +89,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.isArray == null ? Optional.empty() : Optional.ofNullable(this.isArray);
     }
 
+    /**
+     * Whether property is available in graph or not.
+     * 
+     */
     @InputImport(name="isAvailableInGraph")
     private final @Nullable Boolean isAvailableInGraph;
 
@@ -68,6 +100,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.isAvailableInGraph == null ? Optional.empty() : Optional.ofNullable(this.isAvailableInGraph);
     }
 
+    /**
+     * Indicates if the property is an enum.
+     * 
+     */
     @InputImport(name="isEnum")
     private final @Nullable Boolean isEnum;
 
@@ -75,6 +111,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.isEnum == null ? Optional.empty() : Optional.ofNullable(this.isEnum);
     }
 
+    /**
+     * Indicates if the property is an flag enum.
+     * 
+     */
     @InputImport(name="isFlagEnum")
     private final @Nullable Boolean isFlagEnum;
 
@@ -82,6 +122,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.isFlagEnum == null ? Optional.empty() : Optional.ofNullable(this.isFlagEnum);
     }
 
+    /**
+     * Whether the property is an Image.
+     * 
+     */
     @InputImport(name="isImage")
     private final @Nullable Boolean isImage;
 
@@ -89,6 +133,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.isImage == null ? Optional.empty() : Optional.ofNullable(this.isImage);
     }
 
+    /**
+     * Whether the property is a localized string.
+     * 
+     */
     @InputImport(name="isLocalizedString")
     private final @Nullable Boolean isLocalizedString;
 
@@ -96,6 +144,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.isLocalizedString == null ? Optional.empty() : Optional.ofNullable(this.isLocalizedString);
     }
 
+    /**
+     * Whether the property is a name or a part of name.
+     * 
+     */
     @InputImport(name="isName")
     private final @Nullable Boolean isName;
 
@@ -103,6 +155,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.isName == null ? Optional.empty() : Optional.ofNullable(this.isName);
     }
 
+    /**
+     * Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
+     * 
+     */
     @InputImport(name="isRequired")
     private final @Nullable Boolean isRequired;
 
@@ -110,6 +166,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.isRequired == null ? Optional.empty() : Optional.ofNullable(this.isRequired);
     }
 
+    /**
+     * Max length of string. Used only if type is string.
+     * 
+     */
     @InputImport(name="maxLength")
     private final @Nullable Integer maxLength;
 
@@ -117,6 +177,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.maxLength == null ? Optional.empty() : Optional.ofNullable(this.maxLength);
     }
 
+    /**
+     * The ID associated with the property.
+     * 
+     */
     @InputImport(name="propertyId")
     private final @Nullable String propertyId;
 
@@ -124,6 +188,10 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
         return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
     }
 
+    /**
+     * URL encoded schema.org item prop link for the property.
+     * 
+     */
     @InputImport(name="schemaItemPropLink")
     private final @Nullable String schemaItemPropLink;
 

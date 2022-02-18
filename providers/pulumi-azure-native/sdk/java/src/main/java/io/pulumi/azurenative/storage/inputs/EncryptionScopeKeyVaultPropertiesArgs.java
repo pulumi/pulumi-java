@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
+ * 
+ */
 public final class EncryptionScopeKeyVaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionScopeKeyVaultPropertiesArgs Empty = new EncryptionScopeKeyVaultPropertiesArgs();
 
+    /**
+     * The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+     * 
+     */
     @InputImport(name="keyUri")
     private final @Nullable Input<String> keyUri;
 

@@ -12,6 +12,10 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLinkerArgs Empty = new GetLinkerArgs();
 
+    /**
+     * The name Linker resource.
+     * 
+     */
     @InputImport(name="linkerName", required=true)
     private final String linkerName;
 
@@ -19,6 +23,10 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
         return this.linkerName;
     }
 
+    /**
+     * The fully qualified Azure Resource manager identifier of the resource to be connected.
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

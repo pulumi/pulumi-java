@@ -14,6 +14,10 @@ public final class GetImageUploadUrlForEntityTypeArgs extends io.pulumi.resource
 
     public static final GetImageUploadUrlForEntityTypeArgs Empty = new GetImageUploadUrlForEntityTypeArgs();
 
+    /**
+     * Type of entity. Can be Profile or Interaction.
+     * 
+     */
     @InputImport(name="entityType")
     private final @Nullable String entityType;
 
@@ -21,6 +25,10 @@ public final class GetImageUploadUrlForEntityTypeArgs extends io.pulumi.resource
         return this.entityType == null ? Optional.empty() : Optional.ofNullable(this.entityType);
     }
 
+    /**
+     * Name of the entity type.
+     * 
+     */
     @InputImport(name="entityTypeName")
     private final @Nullable String entityTypeName;
 
@@ -28,6 +36,10 @@ public final class GetImageUploadUrlForEntityTypeArgs extends io.pulumi.resource
         return this.entityTypeName == null ? Optional.empty() : Optional.ofNullable(this.entityTypeName);
     }
 
+    /**
+     * The name of the hub.
+     * 
+     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -35,6 +47,10 @@ public final class GetImageUploadUrlForEntityTypeArgs extends io.pulumi.resource
         return this.hubName;
     }
 
+    /**
+     * Relative path of the image.
+     * 
+     */
     @InputImport(name="relativePath")
     private final @Nullable String relativePath;
 
@@ -42,6 +58,10 @@ public final class GetImageUploadUrlForEntityTypeArgs extends io.pulumi.resource
         return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

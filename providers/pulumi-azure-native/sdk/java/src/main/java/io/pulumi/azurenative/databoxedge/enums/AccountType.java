@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of storage accessed on the storage account.
+     * 
+     */
     @EnumType
     public enum AccountType {
         GeneralPurposeStorage("GeneralPurposeStorage"),

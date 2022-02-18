@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of the managed identity
+     * 
+     */
     @EnumType
     public enum ManagedIdentityType {
         None("None"),

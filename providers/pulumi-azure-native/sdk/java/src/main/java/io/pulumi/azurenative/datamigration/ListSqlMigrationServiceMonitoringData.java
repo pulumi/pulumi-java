@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSqlMigrationServiceMonitoringData {
+/**
+ * Integration Runtime Monitoring Data.
+ * API Version: 2021-10-30-preview.
+ * 
+ *
+ * Integration Runtime Monitoring Data.
+ * 
+ */
     public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> invokeAsync(ListSqlMigrationServiceMonitoringDataArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:listSqlMigrationServiceMonitoringData", TypeShape.of(ListSqlMigrationServiceMonitoringDataResult.class), args == null ? ListSqlMigrationServiceMonitoringDataArgs.Empty : args, Utilities.withVersion(options));
     }

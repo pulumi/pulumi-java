@@ -15,6 +15,10 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
 
     public static final GatewayRouteConfigArgs Empty = new GatewayRouteConfigArgs();
 
+    /**
+     * The name of Spring Cloud Gateway.
+     * 
+     */
     @InputImport(name="gatewayName", required=true)
     private final Input<String> gatewayName;
 
@@ -22,6 +26,10 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
         return this.gatewayName;
     }
 
+    /**
+     * API route config of the Spring Cloud Gateway
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<GatewayRouteConfigPropertiesArgs> properties;
 
@@ -29,6 +37,10 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Spring Cloud Gateway route config.
+     * 
+     */
     @InputImport(name="routeConfigName")
     private final @Nullable Input<String> routeConfigName;
 
@@ -43,6 +59,10 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
         return this.routeConfigName == null ? Input.empty() : this.routeConfigName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

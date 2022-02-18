@@ -10,9 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetCassandraDataCenterResult {
+    /**
+     * The unique resource identifier of the database account.
+     * 
+     */
     private final String id;
+    /**
+     * The name of the database account.
+     * 
+     */
     private final String name;
+    /**
+     * Properties of a managed Cassandra data center.
+     * 
+     */
     private final DataCenterResourceResponseProperties properties;
+    /**
+     * The type of Azure resource.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -27,15 +43,31 @@ public final class GetCassandraDataCenterResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The unique resource identifier of the database account.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The name of the database account.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Properties of a managed Cassandra data center.
+     * 
+     */
     public DataCenterResourceResponseProperties getProperties() {
         return this.properties;
     }
+    /**
+     * The type of Azure resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }

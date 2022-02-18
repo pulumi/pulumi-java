@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateMISyncCompleteCommandInputResponse {
+    /**
+     * Name of managed instance database
+     * 
+     */
     private final String sourceDatabaseName;
 
     @OutputCustomType.Constructor({"sourceDatabaseName"})
@@ -16,6 +20,10 @@ public final class MigrateMISyncCompleteCommandInputResponse {
         this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
     }
 
+    /**
+     * Name of managed instance database
+     * 
+     */
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
     }

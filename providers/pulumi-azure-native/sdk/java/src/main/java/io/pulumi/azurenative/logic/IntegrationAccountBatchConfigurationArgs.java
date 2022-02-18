@@ -16,6 +16,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
 
     public static final IntegrationAccountBatchConfigurationArgs Empty = new IntegrationAccountBatchConfigurationArgs();
 
+    /**
+     * The batch configuration name.
+     * 
+     */
     @InputImport(name="batchConfigurationName")
     private final @Nullable Input<String> batchConfigurationName;
 
@@ -23,6 +27,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
         return this.batchConfigurationName == null ? Input.empty() : this.batchConfigurationName;
     }
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -30,6 +38,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The batch configuration properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<BatchConfigurationPropertiesArgs> properties;
 
@@ -44,6 +60,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
         return this.properties;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +71,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

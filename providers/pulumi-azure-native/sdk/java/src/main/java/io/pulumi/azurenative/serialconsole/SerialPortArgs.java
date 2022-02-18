@@ -15,6 +15,10 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SerialPortArgs Empty = new SerialPortArgs();
 
+    /**
+     * The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
+     * 
+     */
     @InputImport(name="parentResource", required=true)
     private final Input<String> parentResource;
 
@@ -22,6 +26,10 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentResource;
     }
 
+    /**
+     * The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'
+     * 
+     */
     @InputImport(name="parentResourceType", required=true)
     private final Input<String> parentResourceType;
 
@@ -29,6 +37,10 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentResourceType;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The namespace of the resource provider.
+     * 
+     */
     @InputImport(name="resourceProviderNamespace", required=true)
     private final Input<String> resourceProviderNamespace;
 
@@ -43,6 +59,10 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceProviderNamespace;
     }
 
+    /**
+     * The name of the serial port to create.
+     * 
+     */
     @InputImport(name="serialPort")
     private final @Nullable Input<String> serialPort;
 
@@ -50,6 +70,10 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.serialPort == null ? Input.empty() : this.serialPort;
     }
 
+    /**
+     * Specifies whether the port is enabled for a serial console connection.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<SerialPortState> state;
 

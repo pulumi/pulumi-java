@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * HTTP Live Streaming (HLS) packing setting for the live output.
+ * 
+ */
 public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HlsArgs Empty = new HlsArgs();
 
+    /**
+     * The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
+     * 
+     */
     @InputImport(name="fragmentsPerTsSegment")
     private final @Nullable Input<Integer> fragmentsPerTsSegment;
 

@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The secrets related to a databox job.
+ * 
+ */
 public final class DataboxJobSecretsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataboxJobSecretsResponse Empty = new DataboxJobSecretsResponse();
 
+    /**
+     * Dc Access Security Code for Customer Managed Shipping
+     * 
+     */
     @InputImport(name="dcAccessSecurityCode", required=true)
     private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
@@ -25,6 +33,10 @@ public final class DataboxJobSecretsResponse extends io.pulumi.resources.InvokeA
         return this.dcAccessSecurityCode;
     }
 
+    /**
+     * Error while fetching the secrets.
+     * 
+     */
     @InputImport(name="error", required=true)
     private final CloudErrorResponse error;
 
@@ -32,6 +44,11 @@ public final class DataboxJobSecretsResponse extends io.pulumi.resources.InvokeA
         return this.error;
     }
 
+    /**
+     * Used to indicate what type of job secrets object.
+     * Expected value is 'DataBox'.
+     * 
+     */
     @InputImport(name="jobSecretsType", required=true)
     private final String jobSecretsType;
 
@@ -39,6 +56,10 @@ public final class DataboxJobSecretsResponse extends io.pulumi.resources.InvokeA
         return this.jobSecretsType;
     }
 
+    /**
+     * Contains the list of secret objects for a job.
+     * 
+     */
     @InputImport(name="podSecrets")
     private final @Nullable List<DataBoxSecretResponse> podSecrets;
 

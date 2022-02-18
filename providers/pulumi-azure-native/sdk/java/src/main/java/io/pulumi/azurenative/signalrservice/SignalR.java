@@ -22,117 +22,294 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A class represent a SignalR service resource.
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:signalrservice:SignalR mySignalRService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:signalrservice:SignalR")
 public class SignalR extends io.pulumi.resources.CustomResource {
+    /**
+     * Cross-Origin Resource Sharing (CORS) settings.
+     * 
+     */
     @OutputExport(name="cors", type=SignalRCorsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ SignalRCorsSettingsResponse> cors;
 
+    /**
+     * @return Cross-Origin Resource Sharing (CORS) settings.
+     * 
+     */
     public Output</* @Nullable */ SignalRCorsSettingsResponse> getCors() {
         return this.cors;
     }
+    /**
+     * The publicly accessible IP of the SignalR service.
+     * 
+     */
     @OutputExport(name="externalIP", type=String.class, parameters={})
     private Output<String> externalIP;
 
+    /**
+     * @return The publicly accessible IP of the SignalR service.
+     * 
+     */
     public Output<String> getExternalIP() {
         return this.externalIP;
     }
+    /**
+     * List of SignalR featureFlags. e.g. ServiceMode.
+     * 
+     * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+     * And the response will only include featureFlags that are explicitly set.
+     * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * 
+     */
     @OutputExport(name="features", type=List.class, parameters={SignalRFeatureResponse.class})
     private Output</* @Nullable */ List<SignalRFeatureResponse>> features;
 
+    /**
+     * @return List of SignalR featureFlags. e.g. ServiceMode.
+     * 
+     * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+     * And the response will only include featureFlags that are explicitly set.
+     * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * 
+     */
     public Output</* @Nullable */ List<SignalRFeatureResponse>> getFeatures() {
         return this.features;
     }
+    /**
+     * FQDN of the SignalR service instance. Format: xxx.service.signalr.net
+     * 
+     */
     @OutputExport(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
+    /**
+     * @return FQDN of the SignalR service instance. Format: xxx.service.signalr.net
+     * 
+     */
     public Output<String> getHostName() {
         return this.hostName;
     }
+    /**
+     * Prefix for the hostName of the SignalR service. Retained for future use.
+     * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
+     * 
+     */
     @OutputExport(name="hostNamePrefix", type=String.class, parameters={})
     private Output<String> hostNamePrefix;
 
+    /**
+     * @return Prefix for the hostName of the SignalR service. Retained for future use.
+     * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
+     * 
+     */
     public Output<String> getHostNamePrefix() {
         return this.hostNamePrefix;
     }
+    /**
+     * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     * 
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     * 
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Network ACLs
+     * 
+     */
     @OutputExport(name="networkACLs", type=SignalRNetworkACLsResponse.class, parameters={})
     private Output</* @Nullable */ SignalRNetworkACLsResponse> networkACLs;
 
+    /**
+     * @return Network ACLs
+     * 
+     */
     public Output</* @Nullable */ SignalRNetworkACLsResponse> getNetworkACLs() {
         return this.networkACLs;
     }
+    /**
+     * Private endpoint connections to the SignalR resource.
+     * 
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return Private endpoint connections to the SignalR resource.
+     * 
+     */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * Provisioning state of the resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The publicly accessible port of the SignalR service which is designed for browser/client side usage.
+     * 
+     */
     @OutputExport(name="publicPort", type=Integer.class, parameters={})
     private Output<Integer> publicPort;
 
+    /**
+     * @return The publicly accessible port of the SignalR service which is designed for browser/client side usage.
+     * 
+     */
     public Output<Integer> getPublicPort() {
         return this.publicPort;
     }
+    /**
+     * The publicly accessible port of the SignalR service which is designed for customer server side usage.
+     * 
+     */
     @OutputExport(name="serverPort", type=Integer.class, parameters={})
     private Output<Integer> serverPort;
 
+    /**
+     * @return The publicly accessible port of the SignalR service which is designed for customer server side usage.
+     * 
+     */
     public Output<Integer> getServerPort() {
         return this.serverPort;
     }
+    /**
+     * The billing information of the resource.(e.g. Free, Standard)
+     * 
+     */
     @OutputExport(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
+    /**
+     * @return The billing information of the resource.(e.g. Free, Standard)
+     * 
+     */
     public Output</* @Nullable */ ResourceSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Tags of the service which is a list of key value pairs that describe the resource.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Tags of the service which is a list of key value pairs that describe the resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Upstream settings when the Azure SignalR is in server-less mode.
+     * 
+     */
     @OutputExport(name="upstream", type=ServerlessUpstreamSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ServerlessUpstreamSettingsResponse> upstream;
 
+    /**
+     * @return Upstream settings when the Azure SignalR is in server-less mode.
+     * 
+     */
     public Output</* @Nullable */ ServerlessUpstreamSettingsResponse> getUpstream() {
         return this.upstream;
     }
+    /**
+     * Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output<String> version;
 
+    /**
+     * @return Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
+     * 
+     */
     public Output<String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SignalR(String name, SignalRArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:signalrservice:SignalR", name, args == null ? SignalRArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -158,6 +335,14 @@ public class SignalR extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SignalR get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SignalR(name, id, options);
     }

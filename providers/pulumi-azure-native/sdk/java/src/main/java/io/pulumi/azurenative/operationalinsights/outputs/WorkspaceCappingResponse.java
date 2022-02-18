@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkspaceCappingResponse {
+    /**
+     * The workspace daily quota for ingestion.
+     * 
+     */
     private final @Nullable Double dailyQuotaGb;
+    /**
+     * The status of data ingestion for this workspace.
+     * 
+     */
     private final String dataIngestionStatus;
+    /**
+     * The time when the quota will be rest.
+     * 
+     */
     private final String quotaNextResetTime;
 
     @OutputCustomType.Constructor({"dailyQuotaGb","dataIngestionStatus","quotaNextResetTime"})
@@ -26,12 +38,24 @@ public final class WorkspaceCappingResponse {
         this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime);
     }
 
+    /**
+     * The workspace daily quota for ingestion.
+     * 
+     */
     public Optional<Double> getDailyQuotaGb() {
         return Optional.ofNullable(this.dailyQuotaGb);
     }
+    /**
+     * The status of data ingestion for this workspace.
+     * 
+     */
     public String getDataIngestionStatus() {
         return this.dataIngestionStatus;
     }
+    /**
+     * The time when the quota will be rest.
+     * 
+     */
     public String getQuotaNextResetTime() {
         return this.quotaNextResetTime;
     }

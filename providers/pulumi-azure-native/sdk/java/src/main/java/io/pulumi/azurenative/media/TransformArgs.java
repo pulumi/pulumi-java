@@ -16,6 +16,10 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransformArgs Empty = new TransformArgs();
 
+    /**
+     * The Media Services account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +27,10 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * An optional verbose description of the Transform.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +38,10 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * An array of one or more TransformOutputs that the Transform should generate.
+     * 
+     */
     @InputImport(name="outputs", required=true)
     private final Input<List<TransformOutputArgs>> outputs;
 
@@ -37,6 +49,10 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputs;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The Transform name.
+     * 
+     */
     @InputImport(name="transformName")
     private final @Nullable Input<String> transformName;
 

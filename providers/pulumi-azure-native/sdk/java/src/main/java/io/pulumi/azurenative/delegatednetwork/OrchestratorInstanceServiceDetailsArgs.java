@@ -19,6 +19,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
 
     public static final OrchestratorInstanceServiceDetailsArgs Empty = new OrchestratorInstanceServiceDetailsArgs();
 
+    /**
+     * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     * 
+     */
     @InputImport(name="apiServerEndpoint")
     private final @Nullable Input<String> apiServerEndpoint;
 
@@ -26,6 +30,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.apiServerEndpoint == null ? Input.empty() : this.apiServerEndpoint;
     }
 
+    /**
+     * RootCA certificate of kubernetes cluster base64 encoded
+     * 
+     */
     @InputImport(name="clusterRootCA")
     private final @Nullable Input<String> clusterRootCA;
 
@@ -33,6 +41,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.clusterRootCA == null ? Input.empty() : this.clusterRootCA;
     }
 
+    /**
+     * Properties of the controller.
+     * 
+     */
     @InputImport(name="controllerDetails", required=true)
     private final Input<ControllerDetailsArgs> controllerDetails;
 
@@ -40,6 +52,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.controllerDetails;
     }
 
+    /**
+     * The identity of the orchestrator
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<OrchestratorIdentityArgs> identity;
 
@@ -47,6 +63,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The kind of workbook. Choices are user and shared.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,OrchestratorKind>> kind;
 
@@ -54,6 +74,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.kind;
     }
 
+    /**
+     * Location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +85,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * AAD ID used with apiserver
+     * 
+     */
     @InputImport(name="orchestratorAppId")
     private final @Nullable Input<String> orchestratorAppId;
 
@@ -68,6 +96,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.orchestratorAppId == null ? Input.empty() : this.orchestratorAppId;
     }
 
+    /**
+     * TenantID of server App ID
+     * 
+     */
     @InputImport(name="orchestratorTenantId")
     private final @Nullable Input<String> orchestratorTenantId;
 
@@ -75,6 +107,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.orchestratorTenantId == null ? Input.empty() : this.orchestratorTenantId;
     }
 
+    /**
+     * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     * 
+     */
     @InputImport(name="privateLinkResourceId")
     private final @Nullable Input<String> privateLinkResourceId;
 
@@ -82,6 +118,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -89,6 +129,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
+     * 
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -96,6 +140,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

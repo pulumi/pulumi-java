@@ -12,6 +12,10 @@ public final class GetGatewayHostnameConfigurationArgs extends io.pulumi.resourc
 
     public static final GetGatewayHostnameConfigurationArgs Empty = new GetGatewayHostnameConfigurationArgs();
 
+    /**
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     * 
+     */
     @InputImport(name="gatewayId", required=true)
     private final String gatewayId;
 
@@ -19,6 +23,10 @@ public final class GetGatewayHostnameConfigurationArgs extends io.pulumi.resourc
         return this.gatewayId;
     }
 
+    /**
+     * Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.
+     * 
+     */
     @InputImport(name="hcId", required=true)
     private final String hcId;
 
@@ -26,6 +34,10 @@ public final class GetGatewayHostnameConfigurationArgs extends io.pulumi.resourc
         return this.hcId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,10 @@ public final class GetGatewayHostnameConfigurationArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

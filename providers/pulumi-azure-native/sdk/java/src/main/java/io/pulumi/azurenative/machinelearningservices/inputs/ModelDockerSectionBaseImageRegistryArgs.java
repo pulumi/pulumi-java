@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Image registry that contains the base image.
+ * 
+ */
 public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelDockerSectionBaseImageRegistryArgs Empty = new ModelDockerSectionBaseImageRegistryArgs();

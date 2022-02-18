@@ -14,6 +14,10 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIpGroupArgs Empty = new GetIpGroupArgs();
 
+    /**
+     * Expands resourceIds (of Firewalls/Network Security Groups etc.) back referenced by the IpGroups resource.
+     * 
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +25,10 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the ipGroups.
+     * 
+     */
     @InputImport(name="ipGroupsName", required=true)
     private final String ipGroupsName;
 
@@ -28,6 +36,10 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.ipGroupsName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

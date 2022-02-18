@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of an IoT hub shared access policy.
+ * 
+ */
 public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SharedAccessSignatureAuthorizationRuleArgs Empty = new SharedAccessSignatureAuthorizationRuleArgs();
 
+    /**
+     * The name of the shared access policy.
+     * 
+     */
     @InputImport(name="keyName", required=true)
     private final Input<String> keyName;
 
@@ -22,6 +30,10 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
         return this.keyName;
     }
 
+    /**
+     * The primary key.
+     * 
+     */
     @InputImport(name="primaryKey")
     private final @Nullable Input<String> primaryKey;
 
@@ -29,6 +41,10 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
     }
 
+    /**
+     * The permissions assigned to the shared access policy.
+     * 
+     */
     @InputImport(name="rights", required=true)
     private final Input<AccessRights> rights;
 
@@ -36,6 +52,10 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
         return this.rights;
     }
 
+    /**
+     * The secondary key.
+     * 
+     */
     @InputImport(name="secondaryKey")
     private final @Nullable Input<String> secondaryKey;
 

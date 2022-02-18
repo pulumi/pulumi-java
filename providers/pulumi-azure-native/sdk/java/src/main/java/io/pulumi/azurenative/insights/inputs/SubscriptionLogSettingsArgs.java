@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Part of Subscription diagnostic setting. Specifies the settings for a particular log.
+ * 
+ */
 public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionLogSettingsArgs Empty = new SubscriptionLogSettingsArgs();
 
+    /**
+     * Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+     * 
+     */
     @InputImport(name="category")
     private final @Nullable Input<String> category;
 
@@ -22,6 +30,10 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
         return this.category == null ? Input.empty() : this.category;
     }
 
+    /**
+     * a value indicating whether this log is enabled.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

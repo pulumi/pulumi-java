@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the encryption key properties
+ * 
+ */
 public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionKeyDetailsResponse Empty = new EncryptionKeyDetailsResponse();
 
+    /**
+     * The type of kek encryption key
+     * 
+     */
     @InputImport(name="kekType")
     private final @Nullable String kekType;
 
@@ -21,6 +29,10 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
         return this.kekType == null ? Optional.empty() : Optional.ofNullable(this.kekType);
     }
 
+    /**
+     * Specifies the url for kek encryption key.
+     * 
+     */
     @InputImport(name="kekUrl")
     private final @Nullable String kekUrl;
 
@@ -28,6 +40,10 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
         return this.kekUrl == null ? Optional.empty() : Optional.ofNullable(this.kekUrl);
     }
 
+    /**
+     * Specifies the keyvault resource id for kek encryption key.
+     * 
+     */
     @InputImport(name="kekVaultResourceID")
     private final @Nullable String kekVaultResourceID;
 

@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A user that can be assigned to a compute instance.
+ * 
+ */
 public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssignedUserArgs Empty = new AssignedUserArgs();
 
+    /**
+     * User’s AAD Object Id.
+     * 
+     */
     @InputImport(name="objectId", required=true)
     private final Input<String> objectId;
 
@@ -20,6 +28,10 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectId;
     }
 
+    /**
+     * User’s AAD Tenant Id.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final Input<String> tenantId;
 

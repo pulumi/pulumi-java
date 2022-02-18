@@ -22,99 +22,240 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * VpnSite Resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:VpnSite vpnSite1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:VpnSite")
 public class VpnSite extends io.pulumi.resources.CustomResource {
+    /**
+     * The AddressSpace that contains an array of IP address ranges.
+     * 
+     */
     @OutputExport(name="addressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> addressSpace;
 
+    /**
+     * @return The AddressSpace that contains an array of IP address ranges.
+     * 
+     */
     public Output</* @Nullable */ AddressSpaceResponse> getAddressSpace() {
         return this.addressSpace;
     }
+    /**
+     * The set of bgp properties.
+     * 
+     */
     @OutputExport(name="bgpProperties", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpProperties;
 
+    /**
+     * @return The set of bgp properties.
+     * 
+     */
     public Output</* @Nullable */ BgpSettingsResponse> getBgpProperties() {
         return this.bgpProperties;
     }
+    /**
+     * The device properties.
+     * 
+     */
     @OutputExport(name="deviceProperties", type=DevicePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ DevicePropertiesResponse> deviceProperties;
 
+    /**
+     * @return The device properties.
+     * 
+     */
     public Output</* @Nullable */ DevicePropertiesResponse> getDeviceProperties() {
         return this.deviceProperties;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The ip-address for the vpn-site.
+     * 
+     */
     @OutputExport(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
+    /**
+     * @return The ip-address for the vpn-site.
+     * 
+     */
     public Output</* @Nullable */ String> getIpAddress() {
         return this.ipAddress;
     }
+    /**
+     * IsSecuritySite flag.
+     * 
+     */
     @OutputExport(name="isSecuritySite", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSecuritySite;
 
+    /**
+     * @return IsSecuritySite flag.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getIsSecuritySite() {
         return this.isSecuritySite;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Office365 Policy.
+     * 
+     */
     @OutputExport(name="o365Policy", type=O365PolicyPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ O365PolicyPropertiesResponse> o365Policy;
 
+    /**
+     * @return Office365 Policy.
+     * 
+     */
     public Output</* @Nullable */ O365PolicyPropertiesResponse> getO365Policy() {
         return this.o365Policy;
     }
+    /**
+     * The provisioning state of the VPN site resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the VPN site resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The key for vpn-site that can be used for connections.
+     * 
+     */
     @OutputExport(name="siteKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> siteKey;
 
+    /**
+     * @return The key for vpn-site that can be used for connections.
+     * 
+     */
     public Output</* @Nullable */ String> getSiteKey() {
         return this.siteKey;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The VirtualWAN to which the vpnSite belongs.
+     * 
+     */
     @OutputExport(name="virtualWan", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualWan;
 
+    /**
+     * @return The VirtualWAN to which the vpnSite belongs.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getVirtualWan() {
         return this.virtualWan;
     }
+    /**
+     * List of all vpn site links.
+     * 
+     */
     @OutputExport(name="vpnSiteLinks", type=List.class, parameters={VpnSiteLinkResponse.class})
     private Output</* @Nullable */ List<VpnSiteLinkResponse>> vpnSiteLinks;
 
+    /**
+     * @return List of all vpn site links.
+     * 
+     */
     public Output</* @Nullable */ List<VpnSiteLinkResponse>> getVpnSiteLinks() {
         return this.vpnSiteLinks;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VpnSite(String name, VpnSiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VpnSite", name, args == null ? VpnSiteArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -157,6 +298,14 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VpnSite get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpnSite(name, id, options);
     }

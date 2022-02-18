@@ -11,13 +11,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGlobalReachConnectionResult {
+    /**
+     * The network used for global reach carved out from the original network block provided for the private cloud
+     * 
+     */
     private final String addressPrefix;
+    /**
+     * Authorization key from the peer express route used for the global reach connection
+     * 
+     */
     private final @Nullable String authorizationKey;
+    /**
+     * The connection status of the global reach connection
+     * 
+     */
     private final String circuitConnectionStatus;
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+     * 
+     */
     private final @Nullable String peerExpressRouteCircuit;
+    /**
+     * The state of the  ExpressRoute Circuit Authorization provisioning
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"addressPrefix","authorizationKey","circuitConnectionStatus","id","name","peerExpressRouteCircuit","provisioningState","type"})
@@ -40,27 +72,59 @@ public final class GetGlobalReachConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The network used for global reach carved out from the original network block provided for the private cloud
+     * 
+     */
     public String getAddressPrefix() {
         return this.addressPrefix;
     }
+    /**
+     * Authorization key from the peer express route used for the global reach connection
+     * 
+     */
     public Optional<String> getAuthorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
+    /**
+     * The connection status of the global reach connection
+     * 
+     */
     public String getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+     * 
+     */
     public Optional<String> getPeerExpressRouteCircuit() {
         return Optional.ofNullable(this.peerExpressRouteCircuit);
     }
+    /**
+     * The state of the  ExpressRoute Circuit Authorization provisioning
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

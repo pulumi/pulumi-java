@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the configuration of the OpenShift cluster VMs.
+ * 
+ */
 public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenShiftManagedClusterAgentPoolProfileArgs Empty = new OpenShiftManagedClusterAgentPoolProfileArgs();
 
+    /**
+     * Number of agents (VMs) to host docker containers.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Input<Integer> count;
 
@@ -26,6 +34,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
         return this.count;
     }
 
+    /**
+     * Unique name of the pool profile in the context of the subscription and resource group.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -33,6 +45,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
         return this.name;
     }
 
+    /**
+     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * 
+     */
     @InputImport(name="osType")
     private final @Nullable Input<Either<String,OSType>> osType;
 
@@ -40,6 +56,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
         return this.osType == null ? Input.empty() : this.osType;
     }
 
+    /**
+     * Define the role of the AgentPoolProfile.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<Either<String,OpenShiftAgentPoolProfileRole>> role;
 
@@ -47,6 +67,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
         return this.role == null ? Input.empty() : this.role;
     }
 
+    /**
+     * Subnet CIDR for the peering.
+     * 
+     */
     @InputImport(name="subnetCidr")
     private final @Nullable Input<String> subnetCidr;
 
@@ -54,6 +78,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
         return this.subnetCidr == null ? Input.empty() : this.subnetCidr;
     }
 
+    /**
+     * Size of agent VMs.
+     * 
+     */
     @InputImport(name="vmSize", required=true)
     private final Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 

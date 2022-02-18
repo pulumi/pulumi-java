@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Settings properties for Active Directory (AD).
+ * 
+ */
 public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActiveDirectoryPropertiesResponse Empty = new ActiveDirectoryPropertiesResponse();
 
+    /**
+     * Specifies the security identifier (SID) for Azure Storage.
+     * 
+     */
     @InputImport(name="azureStorageSid", required=true)
     private final String azureStorageSid;
 
@@ -19,6 +27,10 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
         return this.azureStorageSid;
     }
 
+    /**
+     * Specifies the domain GUID.
+     * 
+     */
     @InputImport(name="domainGuid", required=true)
     private final String domainGuid;
 
@@ -26,6 +38,10 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
         return this.domainGuid;
     }
 
+    /**
+     * Specifies the primary domain that the AD DNS server is authoritative for.
+     * 
+     */
     @InputImport(name="domainName", required=true)
     private final String domainName;
 
@@ -33,6 +49,10 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
         return this.domainName;
     }
 
+    /**
+     * Specifies the security identifier (SID).
+     * 
+     */
     @InputImport(name="domainSid", required=true)
     private final String domainSid;
 
@@ -40,6 +60,10 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
         return this.domainSid;
     }
 
+    /**
+     * Specifies the Active Directory forest to get.
+     * 
+     */
     @InputImport(name="forestName", required=true)
     private final String forestName;
 
@@ -47,6 +71,10 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
         return this.forestName;
     }
 
+    /**
+     * Specifies the NetBIOS domain name.
+     * 
+     */
     @InputImport(name="netBiosDomainName", required=true)
     private final String netBiosDomainName;
 

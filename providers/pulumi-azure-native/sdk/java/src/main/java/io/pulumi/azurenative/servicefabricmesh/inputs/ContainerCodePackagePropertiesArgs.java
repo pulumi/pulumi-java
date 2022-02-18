@@ -21,10 +21,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a container and its runtime properties.
+ * 
+ */
 public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerCodePackagePropertiesArgs Empty = new ContainerCodePackagePropertiesArgs();
 
+    /**
+     * Command array to execute within the container in exec form.
+     * 
+     */
     @InputImport(name="commands")
     private final @Nullable Input<List<String>> commands;
 
@@ -32,6 +40,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.commands == null ? Input.empty() : this.commands;
     }
 
+    /**
+     * Reference to sinks in DiagnosticsDescription.
+     * 
+     */
     @InputImport(name="diagnostics")
     private final @Nullable Input<DiagnosticsRefArgs> diagnostics;
 
@@ -39,6 +51,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
     }
 
+    /**
+     * The endpoints exposed by this container.
+     * 
+     */
     @InputImport(name="endpoints")
     private final @Nullable Input<List<EndpointPropertiesArgs>> endpoints;
 
@@ -46,6 +62,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
+    /**
+     * Override for the default entry point in the container.
+     * 
+     */
     @InputImport(name="entrypoint")
     private final @Nullable Input<String> entrypoint;
 
@@ -53,6 +73,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
     }
 
+    /**
+     * The environment variables to set in this container
+     * 
+     */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
 
@@ -60,6 +84,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
+    /**
+     * The Container image to use.
+     * 
+     */
     @InputImport(name="image", required=true)
     private final Input<String> image;
 
@@ -67,6 +95,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.image;
     }
 
+    /**
+     * Image registry credential.
+     * 
+     */
     @InputImport(name="imageRegistryCredential")
     private final @Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential;
 
@@ -74,6 +106,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.imageRegistryCredential == null ? Input.empty() : this.imageRegistryCredential;
     }
 
+    /**
+     * The labels to set in this container.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<List<ContainerLabelArgs>> labels;
 
@@ -81,6 +117,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name of the code package.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -88,6 +128,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.name;
     }
 
+    /**
+     * A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
+     * 
+     */
     @InputImport(name="reliableCollectionsRefs")
     private final @Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
 
@@ -95,6 +139,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.reliableCollectionsRefs == null ? Input.empty() : this.reliableCollectionsRefs;
     }
 
+    /**
+     * The resources required by this container.
+     * 
+     */
     @InputImport(name="resources", required=true)
     private final Input<ResourceRequirementsArgs> resources;
 
@@ -102,6 +150,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.resources;
     }
 
+    /**
+     * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Input<List<SettingArgs>> settings;
 
@@ -109,6 +161,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.settings == null ? Input.empty() : this.settings;
     }
 
+    /**
+     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
+     * 
+     */
     @InputImport(name="volumeRefs")
     private final @Nullable Input<List<VolumeReferenceArgs>> volumeRefs;
 
@@ -116,6 +172,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
         return this.volumeRefs == null ? Input.empty() : this.volumeRefs;
     }
 
+    /**
+     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
+     * 
+     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<ApplicationScopedVolumeArgs>> volumes;
 

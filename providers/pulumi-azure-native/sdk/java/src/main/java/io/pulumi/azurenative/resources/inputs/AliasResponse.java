@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The alias type.
+ * 
+ */
 public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AliasResponse Empty = new AliasResponse();
 
+    /**
+     * The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
+     * 
+     */
     @InputImport(name="defaultMetadata", required=true)
     private final AliasPathMetadataResponse defaultMetadata;
 
@@ -25,6 +33,10 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
         return this.defaultMetadata;
     }
 
+    /**
+     * The default path for an alias.
+     * 
+     */
     @InputImport(name="defaultPath")
     private final @Nullable String defaultPath;
 
@@ -32,6 +44,10 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
         return this.defaultPath == null ? Optional.empty() : Optional.ofNullable(this.defaultPath);
     }
 
+    /**
+     * The default pattern for an alias.
+     * 
+     */
     @InputImport(name="defaultPattern")
     private final @Nullable AliasPatternResponse defaultPattern;
 
@@ -39,6 +55,10 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
         return this.defaultPattern == null ? Optional.empty() : Optional.ofNullable(this.defaultPattern);
     }
 
+    /**
+     * The alias name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -46,6 +66,10 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The paths for an alias.
+     * 
+     */
     @InputImport(name="paths")
     private final @Nullable List<AliasPathResponse> paths;
 
@@ -53,6 +77,10 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
         return this.paths == null ? List.of() : this.paths;
     }
 
+    /**
+     * The type of the alias.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

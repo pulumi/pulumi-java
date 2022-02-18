@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of identity being specified, currently SystemAssigned and None are allowed.
+     * 
+     */
     @EnumType
     public enum ManagedServiceIdentityType {
         SystemAssigned("SystemAssigned"),

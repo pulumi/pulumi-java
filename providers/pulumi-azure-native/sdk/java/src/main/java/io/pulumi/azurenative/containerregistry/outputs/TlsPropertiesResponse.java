@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TlsPropertiesResponse {
+    /**
+     * The certificate used to configure HTTPS for the login server.
+     * 
+     */
     private final TlsCertificatePropertiesResponse certificate;
+    /**
+     * Indicates whether HTTPS is enabled for the login server.
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"certificate","status"})
@@ -21,9 +29,17 @@ public final class TlsPropertiesResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * The certificate used to configure HTTPS for the login server.
+     * 
+     */
     public TlsCertificatePropertiesResponse getCertificate() {
         return this.certificate;
     }
+    /**
+     * Indicates whether HTTPS is enabled for the login server.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

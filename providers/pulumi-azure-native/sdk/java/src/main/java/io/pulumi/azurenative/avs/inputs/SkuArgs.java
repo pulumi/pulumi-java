@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The resource model definition representing SKU
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The name of the SKU.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

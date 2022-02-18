@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListVideoContentToken {
+/**
+ * "Video content token grants access to the video content URLs."
+ * API Version: 2021-11-01-preview.
+ * 
+ *
+ * "Video content token grants access to the video content URLs."
+ * 
+ */
     public static CompletableFuture<ListVideoContentTokenResult> invokeAsync(ListVideoContentTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:listVideoContentToken", TypeShape.of(ListVideoContentTokenResult.class), args == null ? ListVideoContentTokenArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex dependencies.
+ * 
+ */
 public final class MetadataDependenciesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetadataDependenciesArgs Empty = new MetadataDependenciesArgs();
 
+    /**
+     * Id of the content item we depend on
+     * 
+     */
     @InputImport(name="contentId")
     private final @Nullable Input<String> contentId;
 
@@ -25,6 +33,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
         return this.contentId == null ? Input.empty() : this.contentId;
     }
 
+    /**
+     * This is the list of dependencies we must fulfill, according to the AND/OR operator
+     * 
+     */
     @InputImport(name="criteria")
     private final @Nullable Input<List<MetadataDependenciesArgs>> criteria;
 
@@ -32,6 +44,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
         return this.criteria == null ? Input.empty() : this.criteria;
     }
 
+    /**
+     * Type of the content item we depend on
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,Kind>> kind;
 
@@ -39,6 +55,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the content item
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +66,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Operator used for list of dependencies in criteria array.
+     * 
+     */
     @InputImport(name="operator")
     private final @Nullable Input<Either<String,Operator>> operator;
 
@@ -53,6 +77,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
         return this.operator == null ? Input.empty() : this.operator;
     }
 
+    /**
+     * Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

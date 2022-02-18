@@ -41,231 +41,548 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Application gateway resource.
+ * API Version: 2020-11-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:ApplicationGateway appgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:ApplicationGateway")
 public class ApplicationGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="authenticationCertificates", type=List.class, parameters={ApplicationGatewayAuthenticationCertificateResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayAuthenticationCertificateResponse>> authenticationCertificates;
 
+    /**
+     * @return Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayAuthenticationCertificateResponse>> getAuthenticationCertificates() {
         return this.authenticationCertificates;
     }
+    /**
+     * Autoscale Configuration.
+     * 
+     */
     @OutputExport(name="autoscaleConfiguration", type=ApplicationGatewayAutoscaleConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationGatewayAutoscaleConfigurationResponse> autoscaleConfiguration;
 
+    /**
+     * @return Autoscale Configuration.
+     * 
+     */
     public Output</* @Nullable */ ApplicationGatewayAutoscaleConfigurationResponse> getAutoscaleConfiguration() {
         return this.autoscaleConfiguration;
     }
+    /**
+     * Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="backendAddressPools", type=List.class, parameters={ApplicationGatewayBackendAddressPoolResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayBackendAddressPoolResponse>> backendAddressPools;
 
+    /**
+     * @return Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayBackendAddressPoolResponse>> getBackendAddressPools() {
         return this.backendAddressPools;
     }
+    /**
+     * Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="backendHttpSettingsCollection", type=List.class, parameters={ApplicationGatewayBackendHttpSettingsResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayBackendHttpSettingsResponse>> backendHttpSettingsCollection;
 
+    /**
+     * @return Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayBackendHttpSettingsResponse>> getBackendHttpSettingsCollection() {
         return this.backendHttpSettingsCollection;
     }
+    /**
+     * Custom error configurations of the application gateway resource.
+     * 
+     */
     @OutputExport(name="customErrorConfigurations", type=List.class, parameters={ApplicationGatewayCustomErrorResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayCustomErrorResponse>> customErrorConfigurations;
 
+    /**
+     * @return Custom error configurations of the application gateway resource.
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayCustomErrorResponse>> getCustomErrorConfigurations() {
         return this.customErrorConfigurations;
     }
+    /**
+     * Whether FIPS is enabled on the application gateway resource.
+     * 
+     */
     @OutputExport(name="enableFips", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFips;
 
+    /**
+     * @return Whether FIPS is enabled on the application gateway resource.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableFips() {
         return this.enableFips;
     }
+    /**
+     * Whether HTTP2 is enabled on the application gateway resource.
+     * 
+     */
     @OutputExport(name="enableHttp2", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHttp2;
 
+    /**
+     * @return Whether HTTP2 is enabled on the application gateway resource.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getEnableHttp2() {
         return this.enableHttp2;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Reference to the FirewallPolicy resource.
+     * 
+     */
     @OutputExport(name="firewallPolicy", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> firewallPolicy;
 
+    /**
+     * @return Reference to the FirewallPolicy resource.
+     * 
+     */
     public Output</* @Nullable */ SubResourceResponse> getFirewallPolicy() {
         return this.firewallPolicy;
     }
+    /**
+     * If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
+     * 
+     */
     @OutputExport(name="forceFirewallPolicyAssociation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceFirewallPolicyAssociation;
 
+    /**
+     * @return If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getForceFirewallPolicyAssociation() {
         return this.forceFirewallPolicyAssociation;
     }
+    /**
+     * Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="frontendIPConfigurations", type=List.class, parameters={ApplicationGatewayFrontendIPConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayFrontendIPConfigurationResponse>> frontendIPConfigurations;
 
+    /**
+     * @return Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayFrontendIPConfigurationResponse>> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
+    /**
+     * Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="frontendPorts", type=List.class, parameters={ApplicationGatewayFrontendPortResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayFrontendPortResponse>> frontendPorts;
 
+    /**
+     * @return Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayFrontendPortResponse>> getFrontendPorts() {
         return this.frontendPorts;
     }
+    /**
+     * Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="gatewayIPConfigurations", type=List.class, parameters={ApplicationGatewayIPConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> gatewayIPConfigurations;
 
+    /**
+     * @return Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> getGatewayIPConfigurations() {
         return this.gatewayIPConfigurations;
     }
+    /**
+     * Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="httpListeners", type=List.class, parameters={ApplicationGatewayHttpListenerResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayHttpListenerResponse>> httpListeners;
 
+    /**
+     * @return Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayHttpListenerResponse>> getHttpListeners() {
         return this.httpListeners;
     }
+    /**
+     * The identity of the application gateway, if configured.
+     * 
+     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
+    /**
+     * @return The identity of the application gateway, if configured.
+     * 
+     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Operational state of the application gateway resource.
+     * 
+     */
     @OutputExport(name="operationalState", type=String.class, parameters={})
     private Output<String> operationalState;
 
+    /**
+     * @return Operational state of the application gateway resource.
+     * 
+     */
     public Output<String> getOperationalState() {
         return this.operationalState;
     }
+    /**
+     * Private Endpoint connections on application gateway.
+     * 
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={ApplicationGatewayPrivateEndpointConnectionResponse.class})
     private Output<List<ApplicationGatewayPrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return Private Endpoint connections on application gateway.
+     * 
+     */
     public Output<List<ApplicationGatewayPrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * PrivateLink configurations on application gateway.
+     * 
+     */
     @OutputExport(name="privateLinkConfigurations", type=List.class, parameters={ApplicationGatewayPrivateLinkConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayPrivateLinkConfigurationResponse>> privateLinkConfigurations;
 
+    /**
+     * @return PrivateLink configurations on application gateway.
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayPrivateLinkConfigurationResponse>> getPrivateLinkConfigurations() {
         return this.privateLinkConfigurations;
     }
+    /**
+     * Probes of the application gateway resource.
+     * 
+     */
     @OutputExport(name="probes", type=List.class, parameters={ApplicationGatewayProbeResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayProbeResponse>> probes;
 
+    /**
+     * @return Probes of the application gateway resource.
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayProbeResponse>> getProbes() {
         return this.probes;
     }
+    /**
+     * The provisioning state of the application gateway resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the application gateway resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="redirectConfigurations", type=List.class, parameters={ApplicationGatewayRedirectConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayRedirectConfigurationResponse>> redirectConfigurations;
 
+    /**
+     * @return Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayRedirectConfigurationResponse>> getRedirectConfigurations() {
         return this.redirectConfigurations;
     }
+    /**
+     * Request routing rules of the application gateway resource.
+     * 
+     */
     @OutputExport(name="requestRoutingRules", type=List.class, parameters={ApplicationGatewayRequestRoutingRuleResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayRequestRoutingRuleResponse>> requestRoutingRules;
 
+    /**
+     * @return Request routing rules of the application gateway resource.
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayRequestRoutingRuleResponse>> getRequestRoutingRules() {
         return this.requestRoutingRules;
     }
+    /**
+     * The resource GUID property of the application gateway resource.
+     * 
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the application gateway resource.
+     * 
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * Rewrite rules for the application gateway resource.
+     * 
+     */
     @OutputExport(name="rewriteRuleSets", type=List.class, parameters={ApplicationGatewayRewriteRuleSetResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayRewriteRuleSetResponse>> rewriteRuleSets;
 
+    /**
+     * @return Rewrite rules for the application gateway resource.
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayRewriteRuleSetResponse>> getRewriteRuleSets() {
         return this.rewriteRuleSets;
     }
+    /**
+     * SKU of the application gateway resource.
+     * 
+     */
     @OutputExport(name="sku", type=ApplicationGatewaySkuResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationGatewaySkuResponse> sku;
 
+    /**
+     * @return SKU of the application gateway resource.
+     * 
+     */
     public Output</* @Nullable */ ApplicationGatewaySkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="sslCertificates", type=List.class, parameters={ApplicationGatewaySslCertificateResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewaySslCertificateResponse>> sslCertificates;
 
+    /**
+     * @return SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewaySslCertificateResponse>> getSslCertificates() {
         return this.sslCertificates;
     }
+    /**
+     * SSL policy of the application gateway resource.
+     * 
+     */
     @OutputExport(name="sslPolicy", type=ApplicationGatewaySslPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationGatewaySslPolicyResponse> sslPolicy;
 
+    /**
+     * @return SSL policy of the application gateway resource.
+     * 
+     */
     public Output</* @Nullable */ ApplicationGatewaySslPolicyResponse> getSslPolicy() {
         return this.sslPolicy;
     }
+    /**
+     * SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="sslProfiles", type=List.class, parameters={ApplicationGatewaySslProfileResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewaySslProfileResponse>> sslProfiles;
 
+    /**
+     * @return SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewaySslProfileResponse>> getSslProfiles() {
         return this.sslProfiles;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="trustedClientCertificates", type=List.class, parameters={ApplicationGatewayTrustedClientCertificateResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayTrustedClientCertificateResponse>> trustedClientCertificates;
 
+    /**
+     * @return Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayTrustedClientCertificateResponse>> getTrustedClientCertificates() {
         return this.trustedClientCertificates;
     }
+    /**
+     * Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="trustedRootCertificates", type=List.class, parameters={ApplicationGatewayTrustedRootCertificateResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayTrustedRootCertificateResponse>> trustedRootCertificates;
 
+    /**
+     * @return Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayTrustedRootCertificateResponse>> getTrustedRootCertificates() {
         return this.trustedRootCertificates;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     @OutputExport(name="urlPathMaps", type=List.class, parameters={ApplicationGatewayUrlPathMapResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayUrlPathMapResponse>> urlPathMaps;
 
+    /**
+     * @return URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Output</* @Nullable */ List<ApplicationGatewayUrlPathMapResponse>> getUrlPathMaps() {
         return this.urlPathMaps;
     }
+    /**
+     * Web application firewall configuration.
+     * 
+     */
     @OutputExport(name="webApplicationFirewallConfiguration", type=ApplicationGatewayWebApplicationFirewallConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationGatewayWebApplicationFirewallConfigurationResponse> webApplicationFirewallConfiguration;
 
+    /**
+     * @return Web application firewall configuration.
+     * 
+     */
     public Output</* @Nullable */ ApplicationGatewayWebApplicationFirewallConfigurationResponse> getWebApplicationFirewallConfiguration() {
         return this.webApplicationFirewallConfiguration;
     }
+    /**
+     * A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
+    /**
+     * @return A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ApplicationGateway(String name, ApplicationGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ApplicationGateway", name, args == null ? ApplicationGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -322,6 +639,14 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ApplicationGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationGateway(name, id, options);
     }

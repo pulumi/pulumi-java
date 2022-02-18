@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the REST health check step properties.
+ * 
+ */
 public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestHealthCheckStepAttributesArgs Empty = new RestHealthCheckStepAttributesArgs();
 
+    /**
+     * The list of checks that form the health check step.
+     * 
+     */
     @InputImport(name="healthChecks", required=true)
     private final Input<List<RestHealthCheckArgs>> healthChecks;
 
@@ -23,6 +31,10 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
         return this.healthChecks;
     }
 
+    /**
+     * The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
+     * 
+     */
     @InputImport(name="healthyStateDuration", required=true)
     private final Input<String> healthyStateDuration;
 
@@ -30,6 +42,10 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
         return this.healthyStateDuration;
     }
 
+    /**
+     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
+     * 
+     */
     @InputImport(name="maxElasticDuration")
     private final @Nullable Input<String> maxElasticDuration;
 
@@ -37,6 +53,11 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
         return this.maxElasticDuration == null ? Input.empty() : this.maxElasticDuration;
     }
 
+    /**
+     * The type of health check.
+     * Expected value is 'REST'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -44,6 +65,10 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
         return this.type;
     }
 
+    /**
+     * The duration in ISO 8601 format for which health check waits idly without any checks.
+     * 
+     */
     @InputImport(name="waitDuration")
     private final @Nullable Input<String> waitDuration;
 

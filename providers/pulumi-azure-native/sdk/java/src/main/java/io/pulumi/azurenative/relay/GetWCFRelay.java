@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWCFRelay {
+/**
+ * Description of the WCF relay resource.
+ * API Version: 2017-04-01.
+ * 
+ *
+ * Description of the WCF relay resource.
+ * 
+ */
     public static CompletableFuture<GetWCFRelayResult> invokeAsync(GetWCFRelayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getWCFRelay", TypeShape.of(GetWCFRelayResult.class), args == null ? GetWCFRelayArgs.Empty : args, Utilities.withVersion(options));
     }

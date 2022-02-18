@@ -22,6 +22,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiDiagnosticArgs Empty = new ApiDiagnosticArgs();
 
+    /**
+     * Specifies for what type of messages sampling settings should not apply.
+     * 
+     */
     @InputImport(name="alwaysLog")
     private final @Nullable Input<Either<String,AlwaysLog>> alwaysLog;
 
@@ -29,6 +33,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.alwaysLog == null ? Input.empty() : this.alwaysLog;
     }
 
+    /**
+     * API identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -36,6 +44,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId;
     }
 
+    /**
+     * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
+     * 
+     */
     @InputImport(name="backend")
     private final @Nullable Input<PipelineDiagnosticSettingsArgs> backend;
 
@@ -43,6 +55,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.backend == null ? Input.empty() : this.backend;
     }
 
+    /**
+     * Diagnostic identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="diagnosticId")
     private final @Nullable Input<String> diagnosticId;
 
@@ -50,6 +66,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.diagnosticId == null ? Input.empty() : this.diagnosticId;
     }
 
+    /**
+     * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
+     * 
+     */
     @InputImport(name="frontend")
     private final @Nullable Input<PipelineDiagnosticSettingsArgs> frontend;
 
@@ -57,6 +77,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontend == null ? Input.empty() : this.frontend;
     }
 
+    /**
+     * Sets correlation protocol to use for Application Insights diagnostics.
+     * 
+     */
     @InputImport(name="httpCorrelationProtocol")
     private final @Nullable Input<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
 
@@ -64,6 +88,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpCorrelationProtocol == null ? Input.empty() : this.httpCorrelationProtocol;
     }
 
+    /**
+     * Log the ClientIP. Default is false.
+     * 
+     */
     @InputImport(name="logClientIp")
     private final @Nullable Input<Boolean> logClientIp;
 
@@ -71,6 +99,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.logClientIp == null ? Input.empty() : this.logClientIp;
     }
 
+    /**
+     * Resource Id of a target logger.
+     * 
+     */
     @InputImport(name="loggerId", required=true)
     private final Input<String> loggerId;
 
@@ -78,6 +110,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggerId;
     }
 
+    /**
+     * The format of the Operation Name for Application Insights telemetries. Default is Name.
+     * 
+     */
     @InputImport(name="operationNameFormat")
     private final @Nullable Input<Either<String,OperationNameFormat>> operationNameFormat;
 
@@ -85,6 +121,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationNameFormat == null ? Input.empty() : this.operationNameFormat;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -92,6 +132,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Sampling settings for Diagnostic.
+     * 
+     */
     @InputImport(name="sampling")
     private final @Nullable Input<SamplingSettingsArgs> sampling;
 
@@ -99,6 +143,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.sampling == null ? Input.empty() : this.sampling;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -106,6 +154,10 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * The verbosity level applied to traces emitted by trace policies.
+     * 
+     */
     @InputImport(name="verbosity")
     private final @Nullable Input<Either<String,Verbosity>> verbosity;
 

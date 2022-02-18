@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FunctionOutputResponse {
+    /**
+     * The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+     * 
+     */
     private final @Nullable String dataType;
 
     @OutputCustomType.Constructor({"dataType"})
@@ -18,6 +22,10 @@ public final class FunctionOutputResponse {
         this.dataType = dataType;
     }
 
+    /**
+     * The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+     * 
+     */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }

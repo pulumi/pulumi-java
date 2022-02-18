@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class to specify properties of all content keys in Streaming Policy
+ * 
+ */
 public final class StreamingPolicyContentKeysResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StreamingPolicyContentKeysResponse Empty = new StreamingPolicyContentKeysResponse();
 
+    /**
+     * Default content key for an encryption scheme
+     * 
+     */
     @InputImport(name="defaultKey")
     private final @Nullable DefaultKeyResponse defaultKey;
 
@@ -23,6 +31,10 @@ public final class StreamingPolicyContentKeysResponse extends io.pulumi.resource
         return this.defaultKey == null ? Optional.empty() : Optional.ofNullable(this.defaultKey);
     }
 
+    /**
+     * Representing tracks needs separate content key
+     * 
+     */
     @InputImport(name="keyToTrackMappings")
     private final @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;
 

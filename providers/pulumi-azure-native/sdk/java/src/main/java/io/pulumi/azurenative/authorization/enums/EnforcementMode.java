@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
+     * 
+     */
     @EnumType
     public enum EnforcementMode {
+        /**
+         * The policy effect is enforced during resource creation or update.
+         * 
+         */
         Default("Default"),
+        /**
+         * The policy effect is not enforced during resource creation or update.
+         * 
+         */
         DoNotEnforce("DoNotEnforce");
 
         private final String value;

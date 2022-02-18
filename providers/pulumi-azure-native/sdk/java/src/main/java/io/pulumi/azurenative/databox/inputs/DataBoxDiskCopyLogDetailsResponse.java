@@ -8,10 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Copy Log Details for a disk
+ * 
+ */
 public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataBoxDiskCopyLogDetailsResponse Empty = new DataBoxDiskCopyLogDetailsResponse();
 
+    /**
+     * Indicates the type of job details.
+     * Expected value is 'DataBoxDisk'.
+     * 
+     */
     @InputImport(name="copyLogDetailsType", required=true)
     private final String copyLogDetailsType;
 
@@ -19,6 +28,10 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
         return this.copyLogDetailsType;
     }
 
+    /**
+     * Disk Serial Number.
+     * 
+     */
     @InputImport(name="diskSerialNumber", required=true)
     private final String diskSerialNumber;
 
@@ -26,6 +39,10 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
         return this.diskSerialNumber;
     }
 
+    /**
+     * Link for copy error logs.
+     * 
+     */
     @InputImport(name="errorLogLink", required=true)
     private final String errorLogLink;
 
@@ -33,6 +50,10 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
         return this.errorLogLink;
     }
 
+    /**
+     * Link for copy verbose logs.
+     * 
+     */
     @InputImport(name="verboseLogLink", required=true)
     private final String verboseLogLink;
 

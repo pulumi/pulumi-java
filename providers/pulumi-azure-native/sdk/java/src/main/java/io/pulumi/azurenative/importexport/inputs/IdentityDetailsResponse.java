@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the identity properties.
+ * 
+ */
 public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityDetailsResponse Empty = new IdentityDetailsResponse();
 
+    /**
+     * Specifies the principal id for the identity for the job.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +29,10 @@ public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArg
         return this.principalId;
     }
 
+    /**
+     * Specifies the tenant id for the identity for the job.
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +40,10 @@ public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArg
         return this.tenantId;
     }
 
+    /**
+     * The type of identity
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The commissioned state of the Custom IP Prefix.
+     * 
+     */
     @EnumType
     public enum CommissionedState {
         Provisioning("Provisioning"),

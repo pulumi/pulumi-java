@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that collects user tables for the given list of databases
+ * 
+ */
 public final class GetUserTablesSqlSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GetUserTablesSqlSyncTaskPropertiesArgs Empty = new GetUserTablesSqlSyncTaskPropertiesArgs();
 
+    /**
+     * Task input
+     * 
+     */
     @InputImport(name="input")
     private final @Nullable Input<GetUserTablesSqlSyncTaskInputArgs> input;
 
@@ -22,6 +30,11 @@ public final class GetUserTablesSqlSyncTaskPropertiesArgs extends io.pulumi.reso
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+     * Expected value is 'GetUserTables.AzureSqlDb.Sync'.
+     * 
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

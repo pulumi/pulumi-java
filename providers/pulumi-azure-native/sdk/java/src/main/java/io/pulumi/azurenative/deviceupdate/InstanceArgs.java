@@ -19,6 +19,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
+    /**
+     * Account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -26,6 +30,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Customer-initiated diagnostic log collection storage properties
+     * 
+     */
     @InputImport(name="diagnosticStorageProperties")
     private final @Nullable Input<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
 
@@ -33,6 +41,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.diagnosticStorageProperties == null ? Input.empty() : this.diagnosticStorageProperties;
     }
 
+    /**
+     * Enables or Disables the diagnostic logs collection
+     * 
+     */
     @InputImport(name="enableDiagnostics")
     private final @Nullable Input<Boolean> enableDiagnostics;
 
@@ -40,6 +52,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableDiagnostics == null ? Input.empty() : this.enableDiagnostics;
     }
 
+    /**
+     * Instance name.
+     * 
+     */
     @InputImport(name="instanceName")
     private final @Nullable Input<String> instanceName;
 
@@ -47,6 +63,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceName == null ? Input.empty() : this.instanceName;
     }
 
+    /**
+     * List of IoT Hubs associated with the account.
+     * 
+     */
     @InputImport(name="iotHubs")
     private final @Nullable Input<List<IotHubSettingsArgs>> iotHubs;
 
@@ -54,6 +74,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.iotHubs == null ? Input.empty() : this.iotHubs;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +85,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,6 +96,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties related to service bus topic endpoint types.
+ * 
+ */
 public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RoutingServiceBusTopicEndpointPropertiesResponse Empty = new RoutingServiceBusTopicEndpointPropertiesResponse();
 
+    /**
+     * Method used to authenticate against the service bus topic endpoint
+     * 
+     */
     @InputImport(name="authenticationType")
     private final @Nullable String authenticationType;
 
@@ -21,6 +29,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
+    /**
+     * The connection string of the service bus topic endpoint.
+     * 
+     */
     @InputImport(name="connectionString")
     private final @Nullable String connectionString;
 
@@ -28,6 +40,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
+    /**
+     * The url of the service bus topic endpoint. It must include the protocol sb://
+     * 
+     */
     @InputImport(name="endpointUri")
     private final @Nullable String endpointUri;
 
@@ -35,6 +51,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 
+    /**
+     * Queue name on the service bus topic
+     * 
+     */
     @InputImport(name="entityPath")
     private final @Nullable String entityPath;
 
@@ -42,6 +62,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
         return this.entityPath == null ? Optional.empty() : Optional.ofNullable(this.entityPath);
     }
 
+    /**
+     * Id of the service bus topic endpoint
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -49,6 +73,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -56,6 +84,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
         return this.name;
     }
 
+    /**
+     * The name of the resource group of the service bus topic endpoint.
+     * 
+     */
     @InputImport(name="resourceGroup")
     private final @Nullable String resourceGroup;
 
@@ -63,6 +95,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse extends io.p
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
+    /**
+     * The subscription identifier of the service bus topic endpoint.
+     * 
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 

@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The key vault properties.
+ * 
+ */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultPropertiesResponse Empty = new KeyVaultPropertiesResponse();
 
+    /**
+     * The name of the key associated with the Log Analytics cluster.
+     * 
+     */
     @InputImport(name="keyName")
     private final @Nullable String keyName;
 
@@ -22,6 +30,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
+    /**
+     * Selected key minimum required size.
+     * 
+     */
     @InputImport(name="keyRsaSize")
     private final @Nullable Integer keyRsaSize;
 
@@ -29,6 +41,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyRsaSize == null ? Optional.empty() : Optional.ofNullable(this.keyRsaSize);
     }
 
+    /**
+     * The Key Vault uri which holds they key associated with the Log Analytics cluster.
+     * 
+     */
     @InputImport(name="keyVaultUri")
     private final @Nullable String keyVaultUri;
 
@@ -36,6 +52,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
     }
 
+    /**
+     * The version of the key associated with the Log Analytics cluster.
+     * 
+     */
     @InputImport(name="keyVersion")
     private final @Nullable String keyVersion;
 

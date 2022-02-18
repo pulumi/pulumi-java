@@ -15,6 +15,10 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
 
     public static final ReplicationProtectionContainerMappingArgs Empty = new ReplicationProtectionContainerMappingArgs();
 
+    /**
+     * Fabric name.
+     * 
+     */
     @InputImport(name="fabricName", required=true)
     private final Input<String> fabricName;
 
@@ -22,6 +26,10 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
         return this.fabricName;
     }
 
+    /**
+     * Protection container mapping name.
+     * 
+     */
     @InputImport(name="mappingName")
     private final @Nullable Input<String> mappingName;
 
@@ -29,6 +37,10 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
         return this.mappingName == null ? Input.empty() : this.mappingName;
     }
 
+    /**
+     * Configure protection input properties.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<CreateProtectionContainerMappingInputPropertiesArgs> properties;
 
@@ -36,6 +48,10 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Protection container name.
+     * 
+     */
     @InputImport(name="protectionContainerName", required=true)
     private final Input<String> protectionContainerName;
 
@@ -43,6 +59,10 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
         return this.protectionContainerName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Specifies datastore type.
+     * 
+     */
     @EnumType
     public enum DatastoreTypeArm {
         Blob("blob"),

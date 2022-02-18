@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListStorageAccountServiceSASResult {
+    /**
+     * List service SAS credentials of specific resource.
+     * 
+     */
     private final String serviceSasToken;
 
     @OutputCustomType.Constructor({"serviceSasToken"})
@@ -16,6 +20,10 @@ public final class ListStorageAccountServiceSASResult {
         this.serviceSasToken = Objects.requireNonNull(serviceSasToken);
     }
 
+    /**
+     * List service SAS credentials of specific resource.
+     * 
+     */
     public String getServiceSasToken() {
         return this.serviceSasToken;
     }

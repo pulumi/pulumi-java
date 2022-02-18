@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Additional format information for the data type.
+     * 
+     */
     @EnumType
     public enum ColumnFormat {
         Byte("Byte"),

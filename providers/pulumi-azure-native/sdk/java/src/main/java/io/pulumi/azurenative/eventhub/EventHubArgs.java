@@ -17,6 +17,10 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventHubArgs Empty = new EventHubArgs();
 
+    /**
+     * Properties of capture description
+     * 
+     */
     @InputImport(name="captureDescription")
     private final @Nullable Input<CaptureDescriptionArgs> captureDescription;
 
@@ -24,6 +28,10 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.captureDescription == null ? Input.empty() : this.captureDescription;
     }
 
+    /**
+     * The Event Hub name
+     * 
+     */
     @InputImport(name="eventHubName")
     private final @Nullable Input<String> eventHubName;
 
@@ -31,6 +39,10 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
     }
 
+    /**
+     * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+     * 
+     */
     @InputImport(name="messageRetentionInDays")
     private final @Nullable Input<Double> messageRetentionInDays;
 
@@ -38,6 +50,10 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.messageRetentionInDays == null ? Input.empty() : this.messageRetentionInDays;
     }
 
+    /**
+     * The Namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -45,6 +61,10 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName;
     }
 
+    /**
+     * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+     * 
+     */
     @InputImport(name="partitionCount")
     private final @Nullable Input<Double> partitionCount;
 
@@ -52,6 +72,10 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.partitionCount == null ? Input.empty() : this.partitionCount;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +83,10 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Enumerates the possible values for the status of the Event Hub.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<EntityStatus> status;
 

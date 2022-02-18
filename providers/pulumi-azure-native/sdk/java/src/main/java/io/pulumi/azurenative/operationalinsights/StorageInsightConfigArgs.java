@@ -17,6 +17,10 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
 
     public static final StorageInsightConfigArgs Empty = new StorageInsightConfigArgs();
 
+    /**
+     * The names of the blob containers that the workspace should read
+     * 
+     */
     @InputImport(name="containers")
     private final @Nullable Input<List<String>> containers;
 
@@ -24,6 +28,10 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
         return this.containers == null ? Input.empty() : this.containers;
     }
 
+    /**
+     * The ETag of the storage insight.
+     * 
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -31,6 +39,10 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,10 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The storage account connection details
+     * 
+     */
     @InputImport(name="storageAccount", required=true)
     private final Input<StorageAccountArgs> storageAccount;
 
@@ -45,6 +61,10 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
         return this.storageAccount;
     }
 
+    /**
+     * Name of the storageInsightsConfigs resource
+     * 
+     */
     @InputImport(name="storageInsightName")
     private final @Nullable Input<String> storageInsightName;
 
@@ -52,6 +72,10 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
         return this.storageInsightName == null ? Input.empty() : this.storageInsightName;
     }
 
+    /**
+     * The names of the Azure tables that the workspace should read
+     * 
+     */
     @InputImport(name="tables")
     private final @Nullable Input<List<String>> tables;
 
@@ -59,6 +83,10 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
         return this.tables == null ? Input.empty() : this.tables;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -66,6 +94,10 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

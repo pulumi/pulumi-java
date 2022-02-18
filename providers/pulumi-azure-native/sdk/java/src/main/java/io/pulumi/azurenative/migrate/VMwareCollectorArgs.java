@@ -22,6 +22,10 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Name of the Azure Migrate project.
+     * 
+     */
     @InputImport(name="projectName", required=true)
     private final Input<String> projectName;
 
@@ -36,6 +40,10 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the Azure Resource Group that project is part of.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +51,10 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Unique name of a VMware collector within a project.
+     * 
+     */
     @InputImport(name="vmWareCollectorName")
     private final @Nullable Input<String> vmWareCollectorName;
 

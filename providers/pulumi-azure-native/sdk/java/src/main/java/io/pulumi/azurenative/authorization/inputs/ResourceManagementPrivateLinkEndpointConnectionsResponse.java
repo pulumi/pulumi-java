@@ -15,6 +15,10 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
 
     public static final ResourceManagementPrivateLinkEndpointConnectionsResponse Empty = new ResourceManagementPrivateLinkEndpointConnectionsResponse();
 
+    /**
+     * The private endpoint connections.
+     * 
+     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable List<String> privateEndpointConnections;
 

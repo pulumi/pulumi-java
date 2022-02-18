@@ -11,12 +11,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCredentialResult {
+    /**
+     * Gets the creation time.
+     * 
+     */
     private final String creationTime;
+    /**
+     * Gets or sets the description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * Fully qualified resource Id for the resource
+     * 
+     */
     private final String id;
+    /**
+     * Gets the last modified time.
+     * 
+     */
     private final String lastModifiedTime;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * The type of the resource.
+     * 
+     */
     private final String type;
+    /**
+     * Gets the user name of the credential.
+     * 
+     */
     private final String userName;
 
     @OutputCustomType.Constructor({"creationTime","description","id","lastModifiedTime","name","type","userName"})
@@ -37,24 +65,52 @@ public final class GetCredentialResult {
         this.userName = Objects.requireNonNull(userName);
     }
 
+    /**
+     * Gets the creation time.
+     * 
+     */
     public String getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * Gets or sets the description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * Fully qualified resource Id for the resource
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Gets the last modified time.
+     * 
+     */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Gets the user name of the credential.
+     * 
+     */
     public String getUserName() {
         return this.userName;
     }

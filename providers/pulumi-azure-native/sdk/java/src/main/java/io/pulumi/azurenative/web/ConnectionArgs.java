@@ -16,6 +16,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
+    /**
+     * Connection name
+     * 
+     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -23,6 +27,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
+    /**
+     * Resource location
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +45,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The resource group
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +56,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Subscription Id
+     * 
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 
@@ -51,6 +67,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
     }
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

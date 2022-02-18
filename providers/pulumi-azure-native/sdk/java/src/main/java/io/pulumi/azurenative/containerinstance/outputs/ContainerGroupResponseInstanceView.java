@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContainerGroupResponseInstanceView {
+    /**
+     * The events of this container group.
+     * 
+     */
     private final List<EventResponse> events;
+    /**
+     * The state of the container group. Only valid in response.
+     * 
+     */
     private final String state;
 
     @OutputCustomType.Constructor({"events","state"})
@@ -22,9 +30,17 @@ public final class ContainerGroupResponseInstanceView {
         this.state = Objects.requireNonNull(state);
     }
 
+    /**
+     * The events of this container group.
+     * 
+     */
     public List<EventResponse> getEvents() {
         return this.events;
     }
+    /**
+     * The state of the container group. Only valid in response.
+     * 
+     */
     public String getState() {
         return this.state;
     }

@@ -12,6 +12,10 @@ public final class GetWebAppVnetConnectionSlotArgs extends io.pulumi.resources.I
 
     public static final GetWebAppVnetConnectionSlotArgs Empty = new GetWebAppVnetConnectionSlotArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppVnetConnectionSlotArgs extends io.pulumi.resources.I
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetWebAppVnetConnectionSlotArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 
@@ -33,6 +45,10 @@ public final class GetWebAppVnetConnectionSlotArgs extends io.pulumi.resources.I
         return this.slot;
     }
 
+    /**
+     * Name of the virtual network.
+     * 
+     */
     @InputImport(name="vnetName", required=true)
     private final String vnetName;
 

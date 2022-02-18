@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JitApproverDefinitionResponse {
+    /**
+     * The approver display name.
+     * 
+     */
     private final @Nullable String displayName;
+    /**
+     * The approver service principal Id.
+     * 
+     */
     private final String id;
+    /**
+     * The approver type.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"displayName","id","type"})
@@ -25,12 +37,24 @@ public final class JitApproverDefinitionResponse {
         this.type = type;
     }
 
+    /**
+     * The approver display name.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+    /**
+     * The approver service principal Id.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The approver type.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

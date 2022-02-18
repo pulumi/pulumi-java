@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RulesEngineResponse {
+    /**
+     * Resource ID.
+     * 
+     */
     private final String id;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Resource status.
+     * 
+     */
     private final String resourceState;
+    /**
+     * A list of rules that define a particular Rules Engine Configuration.
+     * 
+     */
     private final @Nullable List<RulesEngineRuleResponse> rules;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","resourceState","rules","type"})
@@ -32,18 +52,38 @@ public final class RulesEngineResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource status.
+     * 
+     */
     public String getResourceState() {
         return this.resourceState;
     }
+    /**
+     * A list of rules that define a particular Rules Engine Configuration.
+     * 
+     */
     public List<RulesEngineRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

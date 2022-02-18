@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlertsSuppressionRule {
+/**
+ * Describes the suppression rule
+ * API Version: 2019-01-01-preview.
+ * 
+ *
+ * Describes the suppression rule
+ * 
+ */
     public static CompletableFuture<GetAlertsSuppressionRuleResult> invokeAsync(GetAlertsSuppressionRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAlertsSuppressionRule", TypeShape.of(GetAlertsSuppressionRuleResult.class), args == null ? GetAlertsSuppressionRuleArgs.Empty : args, Utilities.withVersion(options));
     }

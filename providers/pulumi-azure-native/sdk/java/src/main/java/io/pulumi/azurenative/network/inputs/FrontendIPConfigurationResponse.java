@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Frontend IP address of the load balancer.
+ * 
+ */
 public final class FrontendIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FrontendIPConfigurationResponse Empty = new FrontendIPConfigurationResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -25,6 +33,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -32,6 +44,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * An array of references to inbound pools that use this frontend IP.
+     * 
+     */
     @InputImport(name="inboundNatPools", required=true)
     private final List<SubResourceResponse> inboundNatPools;
 
@@ -39,6 +55,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.inboundNatPools;
     }
 
+    /**
+     * An array of references to inbound rules that use this frontend IP.
+     * 
+     */
     @InputImport(name="inboundNatRules", required=true)
     private final List<SubResourceResponse> inboundNatRules;
 
@@ -46,6 +66,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.inboundNatRules;
     }
 
+    /**
+     * An array of references to load balancing rules that use this frontend IP.
+     * 
+     */
     @InputImport(name="loadBalancingRules", required=true)
     private final List<SubResourceResponse> loadBalancingRules;
 
@@ -53,6 +77,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.loadBalancingRules;
     }
 
+    /**
+     * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -60,6 +88,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * An array of references to outbound rules that use this frontend IP.
+     * 
+     */
     @InputImport(name="outboundRules", required=true)
     private final List<SubResourceResponse> outboundRules;
 
@@ -67,6 +99,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.outboundRules;
     }
 
+    /**
+     * The private IP address of the IP configuration.
+     * 
+     */
     @InputImport(name="privateIPAddress")
     private final @Nullable String privateIPAddress;
 
@@ -74,6 +110,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
+    /**
+     * Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+     * 
+     */
     @InputImport(name="privateIPAddressVersion")
     private final @Nullable String privateIPAddressVersion;
 
@@ -81,6 +121,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
+    /**
+     * The Private IP allocation method.
+     * 
+     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable String privateIPAllocationMethod;
 
@@ -88,6 +132,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
+    /**
+     * The provisioning state of the frontend IP configuration resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -95,6 +143,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.provisioningState;
     }
 
+    /**
+     * The reference to the Public IP resource.
+     * 
+     */
     @InputImport(name="publicIPAddress")
     private final @Nullable PublicIPAddressResponse publicIPAddress;
 
@@ -102,6 +154,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
     }
 
+    /**
+     * The reference to the Public IP Prefix resource.
+     * 
+     */
     @InputImport(name="publicIPPrefix")
     private final @Nullable SubResourceResponse publicIPPrefix;
 
@@ -109,6 +165,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
     }
 
+    /**
+     * The reference to the subnet resource.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable SubnetResponse subnet;
 
@@ -116,6 +176,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
+    /**
+     * Type of the resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -123,6 +187,10 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
         return this.type;
     }
 
+    /**
+     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable List<String> zones;
 

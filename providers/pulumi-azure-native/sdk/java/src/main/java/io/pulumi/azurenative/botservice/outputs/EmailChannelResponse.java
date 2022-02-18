@@ -12,10 +12,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EmailChannelResponse {
+    /**
+     * The channel name
+     * Expected value is 'EmailChannel'.
+     * 
+     */
     private final String channelName;
+    /**
+     * Entity Tag of the resource
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The set of properties specific to email channel resource
+     * 
+     */
     private final @Nullable EmailChannelPropertiesResponse properties;
+    /**
+     * Provisioning state of the resource
+     * 
+     */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"channelName","etag","location","properties","provisioningState"})
@@ -32,18 +53,39 @@ public final class EmailChannelResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+    /**
+     * The channel name
+     * Expected value is 'EmailChannel'.
+     * 
+     */
     public String getChannelName() {
         return this.channelName;
     }
+    /**
+     * Entity Tag of the resource
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Specifies the location of the resource.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The set of properties specific to email channel resource
+     * 
+     */
     public Optional<EmailChannelPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
+    /**
+     * Provisioning state of the resource
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }

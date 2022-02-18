@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object that represents the approval state of the private link connection.
+ * 
+ */
 public final class MHSMPrivateLinkServiceConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MHSMPrivateLinkServiceConnectionStateResponse Empty = new MHSMPrivateLinkServiceConnectionStateResponse();
 
+    /**
+     * A message indicating if changes on the service provider require any updates on the consumer.
+     * 
+     */
     @InputImport(name="actionsRequired")
     private final @Nullable String actionsRequired;
 
@@ -21,6 +29,10 @@ public final class MHSMPrivateLinkServiceConnectionStateResponse extends io.pulu
         return this.actionsRequired == null ? Optional.empty() : Optional.ofNullable(this.actionsRequired);
     }
 
+    /**
+     * The reason for approval or rejection.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -28,6 +40,10 @@ public final class MHSMPrivateLinkServiceConnectionStateResponse extends io.pulu
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Indicates whether the connection has been approved, rejected or removed by the key vault owner.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

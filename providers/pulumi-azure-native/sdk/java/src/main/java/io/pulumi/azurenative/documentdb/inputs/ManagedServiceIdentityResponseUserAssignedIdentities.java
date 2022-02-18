@@ -12,6 +12,10 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities extends 
 
     public static final ManagedServiceIdentityResponseUserAssignedIdentities Empty = new ManagedServiceIdentityResponseUserAssignedIdentities();
 
+    /**
+     * The client id of user assigned identity.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -19,6 +23,10 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities extends 
         return this.clientId;
     }
 
+    /**
+     * The principal id of user assigned identity.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 

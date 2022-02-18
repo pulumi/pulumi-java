@@ -19,10 +19,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Data Explorer (Kusto) linked service.
+ * 
+ */
 public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureDataExplorerLinkedServiceArgs Empty = new AzureDataExplorerLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -30,6 +38,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -37,6 +49,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * The credential reference containing authentication information.
+     * 
+     */
     @InputImport(name="credential")
     private final @Nullable Input<CredentialReferenceArgs> credential;
 
@@ -44,6 +60,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.credential == null ? Input.empty() : this.credential;
     }
 
+    /**
+     * Database name for connection. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="database", required=true)
     private final Input<Object> database;
 
@@ -51,6 +71,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.database;
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -58,6 +82,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string)
+     * 
+     */
     @InputImport(name="endpoint", required=true)
     private final Input<Object> endpoint;
 
@@ -65,6 +93,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.endpoint;
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -72,6 +104,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Input<Object> servicePrincipalId;
 
@@ -79,6 +115,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
     }
 
+    /**
+     * The key of the service principal used to authenticate against Kusto.
+     * 
+     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
@@ -86,6 +126,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
     }
 
+    /**
+     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="tenant")
     private final @Nullable Input<Object> tenant;
 
@@ -93,6 +137,11 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
         return this.tenant == null ? Input.empty() : this.tenant;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'AzureDataExplorer'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

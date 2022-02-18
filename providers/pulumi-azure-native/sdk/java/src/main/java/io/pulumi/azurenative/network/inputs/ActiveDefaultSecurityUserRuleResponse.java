@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network security default user rule.
+ * 
+ */
 public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActiveDefaultSecurityUserRuleResponse Empty = new ActiveDefaultSecurityUserRuleResponse();
 
+    /**
+     * Deployment time string.
+     * 
+     */
     @InputImport(name="commitTime")
     private final @Nullable String commitTime;
 
@@ -25,6 +33,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
     }
 
+    /**
+     * A description of the security user configuration.
+     * 
+     */
     @InputImport(name="configurationDescription")
     private final @Nullable String configurationDescription;
 
@@ -32,6 +44,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.configurationDescription == null ? Optional.empty() : Optional.ofNullable(this.configurationDescription);
     }
 
+    /**
+     * A display name of the security user configuration.
+     * 
+     */
     @InputImport(name="configurationDisplayName")
     private final @Nullable String configurationDisplayName;
 
@@ -39,6 +55,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.configurationDisplayName == null ? Optional.empty() : Optional.ofNullable(this.configurationDisplayName);
     }
 
+    /**
+     * A description for this rule. Restricted to 140 chars.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -46,6 +66,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.description;
     }
 
+    /**
+     * The destination port ranges.
+     * 
+     */
     @InputImport(name="destinationPortRanges", required=true)
     private final List<String> destinationPortRanges;
 
@@ -53,6 +77,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.destinationPortRanges;
     }
 
+    /**
+     * The destination address prefixes. CIDR or destination IP ranges.
+     * 
+     */
     @InputImport(name="destinations", required=true)
     private final List<AddressPrefixItemResponse> destinations;
 
@@ -60,6 +88,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.destinations;
     }
 
+    /**
+     * Indicates if the traffic matched against the rule in inbound or outbound.
+     * 
+     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -67,6 +99,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.direction;
     }
 
+    /**
+     * A friendly name for the rule.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -74,6 +110,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.displayName;
     }
 
+    /**
+     * Default rule flag.
+     * 
+     */
     @InputImport(name="flag")
     private final @Nullable String flag;
 
@@ -81,6 +121,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.flag == null ? Optional.empty() : Optional.ofNullable(this.flag);
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -88,6 +132,11 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the rule is custom or default.
+     * Expected value is 'Default'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -95,6 +144,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.kind;
     }
 
+    /**
+     * Network protocol this rule applies to.
+     * 
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 
@@ -102,6 +155,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.protocol;
     }
 
+    /**
+     * The provisioning state of the security configuration user rule resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -109,6 +166,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.provisioningState;
     }
 
+    /**
+     * Deployment region.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 
@@ -116,6 +177,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
+    /**
+     * Groups for rule collection
+     * 
+     */
     @InputImport(name="ruleCollectionAppliesToGroups")
     private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
@@ -123,6 +188,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
 
+    /**
+     * A description of the rule collection.
+     * 
+     */
     @InputImport(name="ruleCollectionDescription")
     private final @Nullable String ruleCollectionDescription;
 
@@ -130,6 +199,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.ruleCollectionDescription == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDescription);
     }
 
+    /**
+     * A display name of the rule collection.
+     * 
+     */
     @InputImport(name="ruleCollectionDisplayName")
     private final @Nullable String ruleCollectionDisplayName;
 
@@ -137,6 +210,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.ruleCollectionDisplayName == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDisplayName);
     }
 
+    /**
+     * Effective configuration groups.
+     * 
+     */
     @InputImport(name="ruleGroups")
     private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
@@ -144,6 +221,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
 
+    /**
+     * The source port ranges.
+     * 
+     */
     @InputImport(name="sourcePortRanges", required=true)
     private final List<String> sourcePortRanges;
 
@@ -151,6 +232,10 @@ public final class ActiveDefaultSecurityUserRuleResponse extends io.pulumi.resou
         return this.sourcePortRanges;
     }
 
+    /**
+     * The CIDR or source IP ranges.
+     * 
+     */
     @InputImport(name="sources", required=true)
     private final List<AddressPrefixItemResponse> sources;
 

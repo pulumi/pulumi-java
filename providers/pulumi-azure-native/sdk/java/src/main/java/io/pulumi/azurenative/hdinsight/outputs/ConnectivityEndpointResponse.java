@@ -12,10 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectivityEndpointResponse {
+    /**
+     * The location of the endpoint.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * The name of the endpoint.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The port to connect to.
+     * 
+     */
     private final @Nullable Integer port;
+    /**
+     * The private ip address of the endpoint.
+     * 
+     */
     private final @Nullable String privateIPAddress;
+    /**
+     * The protocol of the endpoint.
+     * 
+     */
     private final @Nullable String protocol;
 
     @OutputCustomType.Constructor({"location","name","port","privateIPAddress","protocol"})
@@ -32,18 +52,38 @@ public final class ConnectivityEndpointResponse {
         this.protocol = protocol;
     }
 
+    /**
+     * The location of the endpoint.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * The name of the endpoint.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The port to connect to.
+     * 
+     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
+    /**
+     * The private ip address of the endpoint.
+     * 
+     */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
+    /**
+     * The protocol of the endpoint.
+     * 
+     */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }

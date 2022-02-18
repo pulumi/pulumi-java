@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalUserPersonalPreferences {
+/**
+ * Represents the PersonalPreferences for the user
+ * API Version: 2018-10-15.
+ * 
+ *
+ * Represents the PersonalPreferences for the user
+ * 
+ */
     public static CompletableFuture<GetGlobalUserPersonalPreferencesResult> invokeAsync(GetGlobalUserPersonalPreferencesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserPersonalPreferences", TypeShape.of(GetGlobalUserPersonalPreferencesResult.class), args == null ? GetGlobalUserPersonalPreferencesArgs.Empty : args, Utilities.withVersion(options));
     }

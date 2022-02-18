@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rule condition of type application.
+ * 
+ */
 public final class ApplicationRuleConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationRuleConditionArgs Empty = new ApplicationRuleConditionArgs();
 
+    /**
+     * Description of the rule condition.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +31,10 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * List of destination IP addresses or Service Tags.
+     * 
+     */
     @InputImport(name="destinationAddresses")
     private final @Nullable Input<List<String>> destinationAddresses;
 
@@ -30,6 +42,10 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
     }
 
+    /**
+     * List of FQDN Tags for this rule condition.
+     * 
+     */
     @InputImport(name="fqdnTags")
     private final @Nullable Input<List<String>> fqdnTags;
 
@@ -37,6 +53,10 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
         return this.fqdnTags == null ? Input.empty() : this.fqdnTags;
     }
 
+    /**
+     * Name of the rule condition.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +64,10 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Array of Application Protocols.
+     * 
+     */
     @InputImport(name="protocols")
     private final @Nullable Input<List<FirewallPolicyRuleConditionApplicationProtocolArgs>> protocols;
 
@@ -51,6 +75,11 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
         return this.protocols == null ? Input.empty() : this.protocols;
     }
 
+    /**
+     * Rule Condition Type.
+     * Expected value is 'ApplicationRuleCondition'.
+     * 
+     */
     @InputImport(name="ruleConditionType", required=true)
     private final Input<String> ruleConditionType;
 
@@ -58,6 +87,10 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
         return this.ruleConditionType;
     }
 
+    /**
+     * List of source IP addresses for this rule.
+     * 
+     */
     @InputImport(name="sourceAddresses")
     private final @Nullable Input<List<String>> sourceAddresses;
 
@@ -65,6 +98,10 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
     }
 
+    /**
+     * List of source IpGroups for this rule.
+     * 
+     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable Input<List<String>> sourceIpGroups;
 
@@ -72,6 +109,10 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
         return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
     }
 
+    /**
+     * List of FQDNs for this rule condition.
+     * 
+     */
     @InputImport(name="targetFqdns")
     private final @Nullable Input<List<String>> targetFqdns;
 

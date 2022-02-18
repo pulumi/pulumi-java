@@ -12,6 +12,10 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends io.pulumi.reso
 
     public static final GetVirtualNetworkGatewayConnectionArgs Empty = new GetVirtualNetworkGatewayConnectionArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual network gateway connection.
+     * 
+     */
     @InputImport(name="virtualNetworkGatewayConnectionName", required=true)
     private final String virtualNetworkGatewayConnectionName;
 

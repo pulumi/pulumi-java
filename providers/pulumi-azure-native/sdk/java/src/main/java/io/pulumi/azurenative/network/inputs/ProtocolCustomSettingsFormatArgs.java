@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DDoS custom policy properties.
+ * 
+ */
 public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProtocolCustomSettingsFormatArgs Empty = new ProtocolCustomSettingsFormatArgs();
 
+    /**
+     * The protocol for which the DDoS protection policy is being customized.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol;
 
@@ -24,6 +32,10 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
+    /**
+     * The customized DDoS protection source rate.
+     * 
+     */
     @InputImport(name="sourceRateOverride")
     private final @Nullable Input<String> sourceRateOverride;
 
@@ -31,6 +43,10 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
         return this.sourceRateOverride == null ? Input.empty() : this.sourceRateOverride;
     }
 
+    /**
+     * The customized DDoS protection trigger rate.
+     * 
+     */
     @InputImport(name="triggerRateOverride")
     private final @Nullable Input<String> triggerRateOverride;
 
@@ -38,6 +54,10 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
         return this.triggerRateOverride == null ? Input.empty() : this.triggerRateOverride;
     }
 
+    /**
+     * The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
+     * 
+     */
     @InputImport(name="triggerSensitivityOverride")
     private final @Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
 

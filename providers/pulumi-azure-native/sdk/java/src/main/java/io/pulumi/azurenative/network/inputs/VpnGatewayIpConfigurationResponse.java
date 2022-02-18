@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP Configuration of a VPN Gateway Resource.
+ * 
+ */
 public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnGatewayIpConfigurationResponse Empty = new VpnGatewayIpConfigurationResponse();
 
+    /**
+     * The identifier of the IP configuration for a VPN Gateway.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The private IP address of this IP configuration.
+     * 
+     */
     @InputImport(name="privateIpAddress")
     private final @Nullable String privateIpAddress;
 
@@ -28,6 +40,10 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
+    /**
+     * The public IP address of this IP configuration.
+     * 
+     */
     @InputImport(name="publicIpAddress")
     private final @Nullable String publicIpAddress;
 

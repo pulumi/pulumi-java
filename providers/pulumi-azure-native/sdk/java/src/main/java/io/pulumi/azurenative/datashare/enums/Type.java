@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Identity Type
+     * 
+     */
     @EnumType
     public enum Type {
         SystemAssigned("SystemAssigned");

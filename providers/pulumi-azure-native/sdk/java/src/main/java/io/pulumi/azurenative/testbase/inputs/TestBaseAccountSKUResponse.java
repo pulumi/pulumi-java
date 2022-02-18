@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a Test Base Account SKU.
+ * 
+ */
 public final class TestBaseAccountSKUResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TestBaseAccountSKUResponse Empty = new TestBaseAccountSKUResponse();
 
+    /**
+     * The capabilities of a SKU.
+     * 
+     */
     @InputImport(name="capabilities", required=true)
     private final List<TestBaseAccountSKUCapabilityResponse> capabilities;
 
@@ -23,6 +31,10 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
         return this.capabilities;
     }
 
+    /**
+     * The locations that the SKU is available.
+     * 
+     */
     @InputImport(name="locations")
     private final @Nullable List<String> locations;
 
@@ -30,6 +42,10 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
         return this.locations == null ? List.of() : this.locations;
     }
 
+    /**
+     * The name of the SKU. This is typically a letter + number code, such as B0 or S0.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,6 +53,10 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * The type of resource the SKU applies to.
+     * 
+     */
     @InputImport(name="resourceType")
     private final @Nullable String resourceType;
 
@@ -44,6 +64,10 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
+    /**
+     * The tier of this particular SKU.
+     * 
+     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

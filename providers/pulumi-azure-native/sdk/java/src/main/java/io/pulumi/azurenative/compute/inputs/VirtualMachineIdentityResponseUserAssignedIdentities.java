@@ -12,6 +12,10 @@ public final class VirtualMachineIdentityResponseUserAssignedIdentities extends 
 
     public static final VirtualMachineIdentityResponseUserAssignedIdentities Empty = new VirtualMachineIdentityResponseUserAssignedIdentities();
 
+    /**
+     * The client id of user assigned identity.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -19,6 +23,10 @@ public final class VirtualMachineIdentityResponseUserAssignedIdentities extends 
         return this.clientId;
     }
 
+    /**
+     * The principal id of user assigned identity.
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 

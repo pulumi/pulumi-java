@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connection provider parameters
+ * 
+ */
 public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionParameterArgs Empty = new ConnectionParameterArgs();
 
+    /**
+     * OAuth settings for the connection provider
+     * 
+     */
     @InputImport(name="oAuthSettings")
     private final @Nullable Input<ApiOAuthSettingsArgs> oAuthSettings;
 
@@ -22,6 +30,10 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
         return this.oAuthSettings == null ? Input.empty() : this.oAuthSettings;
     }
 
+    /**
+     * Type of the parameter
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<ConnectionParameterType> type;
 

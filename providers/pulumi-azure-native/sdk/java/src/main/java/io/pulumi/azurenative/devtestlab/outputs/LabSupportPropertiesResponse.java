@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabSupportPropertiesResponse {
+    /**
+     * Is the lab support banner active/enabled at this time?
+     * 
+     */
     private final @Nullable String enabled;
+    /**
+     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * 
+     */
     private final @Nullable String markdown;
 
     @OutputCustomType.Constructor({"enabled","markdown"})
@@ -22,9 +30,17 @@ public final class LabSupportPropertiesResponse {
         this.markdown = markdown;
     }
 
+    /**
+     * Is the lab support banner active/enabled at this time?
+     * 
+     */
     public Optional<String> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * 
+     */
     public Optional<String> getMarkdown() {
         return Optional.ofNullable(this.markdown);
     }

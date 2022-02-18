@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRedisKeys {
+/**
+ * Redis cache access keys.
+ * API Version: 2020-06-01.
+ * 
+ *
+ * Redis cache access keys.
+ * 
+ */
     public static CompletableFuture<ListRedisKeysResult> invokeAsync(ListRedisKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:listRedisKeys", TypeShape.of(ListRedisKeysResult.class), args == null ? ListRedisKeysArgs.Empty : args, Utilities.withVersion(options));
     }

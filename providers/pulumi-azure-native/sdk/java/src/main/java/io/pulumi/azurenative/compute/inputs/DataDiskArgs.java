@@ -19,10 +19,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a data disk.
+ * 
+ */
 public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataDiskArgs Empty = new DataDiskArgs();
 
+    /**
+     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     @InputImport(name="caching")
     private final @Nullable Input<CachingTypes> caching;
 
@@ -30,6 +38,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.caching == null ? Input.empty() : this.caching;
     }
 
+    /**
+     * Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     * 
+     */
     @InputImport(name="createOption", required=true)
     private final Input<Either<String,DiskCreateOptionTypes>> createOption;
 
@@ -37,6 +49,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.createOption;
     }
 
+    /**
+     * Specifies whether data disk should be deleted or detached upon VM deletion.<br><br> Possible values: <br><br> **Delete** If this value is used, the data disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the data disk is retained after VM is deleted.<br><br> The default value is set to **detach**
+     * 
+     */
     @InputImport(name="deleteOption")
     private final @Nullable Input<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
@@ -44,6 +60,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
     }
 
+    /**
+     * Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.
+     * 
+     */
     @InputImport(name="detachOption")
     private final @Nullable Input<Either<String,DiskDetachOptionTypes>> detachOption;
 
@@ -51,6 +71,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.detachOption == null ? Input.empty() : this.detachOption;
     }
 
+    /**
+     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
+     * 
+     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -58,6 +82,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
+    /**
+     * The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+     * 
+     */
     @InputImport(name="image")
     private final @Nullable Input<VirtualHardDiskArgs> image;
 
@@ -65,6 +93,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * 
+     */
     @InputImport(name="lun", required=true)
     private final Input<Integer> lun;
 
@@ -72,6 +104,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.lun;
     }
 
+    /**
+     * The managed disk parameters.
+     * 
+     */
     @InputImport(name="managedDisk")
     private final @Nullable Input<ManagedDiskParametersArgs> managedDisk;
 
@@ -79,6 +115,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
     }
 
+    /**
+     * The disk name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -86,6 +126,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset
+     * 
+     */
     @InputImport(name="toBeDetached")
     private final @Nullable Input<Boolean> toBeDetached;
 
@@ -93,6 +137,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.toBeDetached == null ? Input.empty() : this.toBeDetached;
     }
 
+    /**
+     * The virtual hard disk.
+     * 
+     */
     @InputImport(name="vhd")
     private final @Nullable Input<VirtualHardDiskArgs> vhd;
 
@@ -100,6 +148,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.vhd == null ? Input.empty() : this.vhd;
     }
 
+    /**
+     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * 
+     */
     @InputImport(name="writeAcceleratorEnabled")
     private final @Nullable Input<Boolean> writeAcceleratorEnabled;
 

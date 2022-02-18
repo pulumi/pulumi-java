@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Http listener of an application gateway.
+ * 
+ */
 public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayHttpListenerResponse Empty = new ApplicationGatewayHttpListenerResponse();
 
+    /**
+     * Custom error configurations of the HTTP listener.
+     * 
+     */
     @InputImport(name="customErrorConfigurations")
     private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
@@ -25,6 +33,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -32,6 +44,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.etag;
     }
 
+    /**
+     * Reference to the FirewallPolicy resource.
+     * 
+     */
     @InputImport(name="firewallPolicy")
     private final @Nullable SubResourceResponse firewallPolicy;
 
@@ -39,6 +55,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.firewallPolicy == null ? Optional.empty() : Optional.ofNullable(this.firewallPolicy);
     }
 
+    /**
+     * Frontend IP configuration resource of an application gateway.
+     * 
+     */
     @InputImport(name="frontendIPConfiguration")
     private final @Nullable SubResourceResponse frontendIPConfiguration;
 
@@ -46,6 +66,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
     }
 
+    /**
+     * Frontend port resource of an application gateway.
+     * 
+     */
     @InputImport(name="frontendPort")
     private final @Nullable SubResourceResponse frontendPort;
 
@@ -53,6 +77,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.frontendPort == null ? Optional.empty() : Optional.ofNullable(this.frontendPort);
     }
 
+    /**
+     * Host name of HTTP listener.
+     * 
+     */
     @InputImport(name="hostName")
     private final @Nullable String hostName;
 
@@ -60,6 +88,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
+    /**
+     * List of Host names for HTTP Listener that allows special wildcard characters as well.
+     * 
+     */
     @InputImport(name="hostNames")
     private final @Nullable List<String> hostNames;
 
@@ -67,6 +99,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.hostNames == null ? List.of() : this.hostNames;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -74,6 +110,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Name of the HTTP listener that is unique within an Application Gateway.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -81,6 +121,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Protocol of the HTTP listener.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 
@@ -88,6 +132,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
+    /**
+     * The provisioning state of the HTTP listener resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -95,6 +143,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.provisioningState;
     }
 
+    /**
+     * Applicable only if protocol is https. Enables SNI for multi-hosting.
+     * 
+     */
     @InputImport(name="requireServerNameIndication")
     private final @Nullable Boolean requireServerNameIndication;
 
@@ -102,6 +154,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.requireServerNameIndication == null ? Optional.empty() : Optional.ofNullable(this.requireServerNameIndication);
     }
 
+    /**
+     * SSL certificate resource of an application gateway.
+     * 
+     */
     @InputImport(name="sslCertificate")
     private final @Nullable SubResourceResponse sslCertificate;
 
@@ -109,6 +165,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.sslCertificate == null ? Optional.empty() : Optional.ofNullable(this.sslCertificate);
     }
 
+    /**
+     * SSL profile resource of the application gateway.
+     * 
+     */
     @InputImport(name="sslProfile")
     private final @Nullable SubResourceResponse sslProfile;
 
@@ -116,6 +176,10 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
         return this.sslProfile == null ? Optional.empty() : Optional.ofNullable(this.sslProfile);
     }
 
+    /**
+     * Type of the resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

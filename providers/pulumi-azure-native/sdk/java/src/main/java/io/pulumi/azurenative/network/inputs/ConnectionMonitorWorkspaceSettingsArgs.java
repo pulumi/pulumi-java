@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the settings for producing output into a log analytics workspace.
+ * 
+ */
 public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorWorkspaceSettingsArgs Empty = new ConnectionMonitorWorkspaceSettingsArgs();
 
+    /**
+     * Log analytics workspace resource ID.
+     * 
+     */
     @InputImport(name="workspaceResourceId")
     private final @Nullable Input<String> workspaceResourceId;
 

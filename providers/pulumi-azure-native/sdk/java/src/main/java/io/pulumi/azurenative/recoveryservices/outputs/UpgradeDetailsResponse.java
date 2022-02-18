@@ -9,14 +9,50 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UpgradeDetailsResponse {
+    /**
+     * UTC time at which the upgrade operation has ended.
+     * 
+     */
     private final String endTimeUtc;
+    /**
+     * UTC time at which the upgrade operation status was last updated.
+     * 
+     */
     private final String lastUpdatedTimeUtc;
+    /**
+     * Message to the user containing information about the upgrade operation.
+     * 
+     */
     private final String message;
+    /**
+     * ID of the vault upgrade operation.
+     * 
+     */
     private final String operationId;
+    /**
+     * Resource ID of the vault before the upgrade.
+     * 
+     */
     private final String previousResourceId;
+    /**
+     * UTC time at which the upgrade operation has started.
+     * 
+     */
     private final String startTimeUtc;
+    /**
+     * Status of the vault upgrade operation.
+     * 
+     */
     private final String status;
+    /**
+     * The way the vault upgrade was triggered.
+     * 
+     */
     private final String triggerType;
+    /**
+     * Resource ID of the upgraded vault.
+     * 
+     */
     private final String upgradedResourceId;
 
     @OutputCustomType.Constructor({"endTimeUtc","lastUpdatedTimeUtc","message","operationId","previousResourceId","startTimeUtc","status","triggerType","upgradedResourceId"})
@@ -41,30 +77,66 @@ public final class UpgradeDetailsResponse {
         this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
     }
 
+    /**
+     * UTC time at which the upgrade operation has ended.
+     * 
+     */
     public String getEndTimeUtc() {
         return this.endTimeUtc;
     }
+    /**
+     * UTC time at which the upgrade operation status was last updated.
+     * 
+     */
     public String getLastUpdatedTimeUtc() {
         return this.lastUpdatedTimeUtc;
     }
+    /**
+     * Message to the user containing information about the upgrade operation.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * ID of the vault upgrade operation.
+     * 
+     */
     public String getOperationId() {
         return this.operationId;
     }
+    /**
+     * Resource ID of the vault before the upgrade.
+     * 
+     */
     public String getPreviousResourceId() {
         return this.previousResourceId;
     }
+    /**
+     * UTC time at which the upgrade operation has started.
+     * 
+     */
     public String getStartTimeUtc() {
         return this.startTimeUtc;
     }
+    /**
+     * Status of the vault upgrade operation.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * The way the vault upgrade was triggered.
+     * 
+     */
     public String getTriggerType() {
         return this.triggerType;
     }
+    /**
+     * Resource ID of the upgraded vault.
+     * 
+     */
     public String getUpgradedResourceId() {
         return this.upgradedResourceId;
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the FirewallPolicyNatRuleAction.
+ * 
+ */
 public final class FirewallPolicyNatRuleActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicyNatRuleActionResponse Empty = new FirewallPolicyNatRuleActionResponse();
 
+    /**
+     * The type of action.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

@@ -12,6 +12,10 @@ public final class ListStaticSiteAppSettingsArgs extends io.pulumi.resources.Inv
 
     public static final ListStaticSiteAppSettingsArgs Empty = new ListStaticSiteAppSettingsArgs();
 
+    /**
+     * Name of the static site.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class ListStaticSiteAppSettingsArgs extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

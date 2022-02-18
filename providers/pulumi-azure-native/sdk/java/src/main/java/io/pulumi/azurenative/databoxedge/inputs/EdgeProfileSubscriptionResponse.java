@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subscription details for the Edge Profile
+ * 
+ */
 public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdgeProfileSubscriptionResponse Empty = new EdgeProfileSubscriptionResponse();
 
+    /**
+     * ARM ID of the subscription
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -51,6 +59,10 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.registrationDate == null ? Optional.empty() : Optional.ofNullable(this.registrationDate);
     }
 
+    /**
+     * Edge Subscription Registration ID
+     * 
+     */
     @InputImport(name="registrationId")
     private final @Nullable String registrationId;
 

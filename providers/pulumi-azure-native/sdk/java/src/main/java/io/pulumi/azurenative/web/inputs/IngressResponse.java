@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container App Ingress configuration.
+ * 
+ */
 public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IngressResponse Empty = new IngressResponse();
 
+    /**
+     * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
+     * 
+     */
     @InputImport(name="allowInsecure")
     private final @Nullable Boolean allowInsecure;
 
@@ -25,6 +33,10 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowInsecure == null ? Optional.empty() : Optional.ofNullable(this.allowInsecure);
     }
 
+    /**
+     * Bool indicating if app exposes an external http endpoint
+     * 
+     */
     @InputImport(name="external")
     private final @Nullable Boolean external;
 
@@ -32,6 +44,10 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
         return this.external == null ? Optional.empty() : Optional.ofNullable(this.external);
     }
 
+    /**
+     * Hostname.
+     * 
+     */
     @InputImport(name="fqdn", required=true)
     private final String fqdn;
 
@@ -39,6 +55,10 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
         return this.fqdn;
     }
 
+    /**
+     * Target Port in containers for traffic from ingress
+     * 
+     */
     @InputImport(name="targetPort")
     private final @Nullable Integer targetPort;
 
@@ -53,6 +73,10 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
         return this.traffic == null ? List.of() : this.traffic;
     }
 
+    /**
+     * Ingress transport protocol
+     * 
+     */
     @InputImport(name="transport")
     private final @Nullable String transport;
 

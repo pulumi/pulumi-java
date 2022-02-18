@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The pass name. Currently, the only allowable value is OobeSystem.
+     * 
+     */
     @EnumType
     public enum PassNames {
         OobeSystem("OobeSystem");

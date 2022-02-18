@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings that will be leveraged for Oracle source partitioning.
+ * 
+ */
 public final class OraclePartitionSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OraclePartitionSettingsResponse Empty = new OraclePartitionSettingsResponse();
 
+    /**
+     * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionColumnName")
     private final @Nullable Object partitionColumnName;
 
@@ -22,6 +30,10 @@ public final class OraclePartitionSettingsResponse extends io.pulumi.resources.I
         return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
     }
 
+    /**
+     * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionLowerBound")
     private final @Nullable Object partitionLowerBound;
 
@@ -29,6 +41,10 @@ public final class OraclePartitionSettingsResponse extends io.pulumi.resources.I
         return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
     }
 
+    /**
+     * Names of the physical partitions of Oracle table.
+     * 
+     */
     @InputImport(name="partitionNames")
     private final @Nullable List<Object> partitionNames;
 
@@ -36,6 +52,10 @@ public final class OraclePartitionSettingsResponse extends io.pulumi.resources.I
         return this.partitionNames == null ? List.of() : this.partitionNames;
     }
 
+    /**
+     * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionUpperBound")
     private final @Nullable Object partitionUpperBound;
 

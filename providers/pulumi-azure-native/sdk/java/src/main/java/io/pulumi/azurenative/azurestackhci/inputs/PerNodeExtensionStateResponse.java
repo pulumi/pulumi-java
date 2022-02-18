@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Status of Arc Extension for a particular node in HCI Cluster.
+ * 
+ */
 public final class PerNodeExtensionStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PerNodeExtensionStateResponse Empty = new PerNodeExtensionStateResponse();
 
+    /**
+     * Fully qualified resource ID for the particular Arc Extension on this node.
+     * 
+     */
     @InputImport(name="extension", required=true)
     private final String extension;
 
@@ -19,6 +27,10 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
         return this.extension;
     }
 
+    /**
+     * Name of the node in HCI Cluster.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +38,10 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * State of Arc Extension in this node.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

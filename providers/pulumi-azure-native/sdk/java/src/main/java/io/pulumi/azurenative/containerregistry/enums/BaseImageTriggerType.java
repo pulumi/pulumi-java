@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the auto trigger for base image dependency updates.
+     * 
+     */
     @EnumType
     public enum BaseImageTriggerType {
         All("All"),

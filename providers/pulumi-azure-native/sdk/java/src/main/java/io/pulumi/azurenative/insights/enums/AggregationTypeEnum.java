@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * the criteria time aggregation types.
+     * 
+     */
     @EnumType
     public enum AggregationTypeEnum {
         Average("Average"),

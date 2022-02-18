@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for notification
+ * 
+ */
 public final class NotificationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationSettingsArgs Empty = new NotificationSettingsArgs();
 
+    /**
+     * The list of additional recipients
+     * 
+     */
     @InputImport(name="additionalRecipients")
     private final @Nullable Input<List<String>> additionalRecipients;
 
@@ -25,6 +33,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
         return this.additionalRecipients == null ? Input.empty() : this.additionalRecipients;
     }
 
+    /**
+     * Should domain controller admins be notified
+     * 
+     */
     @InputImport(name="notifyDcAdmins")
     private final @Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins;
 
@@ -32,6 +44,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
         return this.notifyDcAdmins == null ? Input.empty() : this.notifyDcAdmins;
     }
 
+    /**
+     * Should global admins be notified
+     * 
+     */
     @InputImport(name="notifyGlobalAdmins")
     private final @Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
 

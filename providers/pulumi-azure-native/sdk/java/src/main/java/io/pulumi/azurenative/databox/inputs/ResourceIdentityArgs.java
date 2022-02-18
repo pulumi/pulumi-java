@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Msi identity details of the resource
+ * 
+ */
 public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
+    /**
+     * Identity type
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -23,6 +31,10 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * User Assigned Identities
+     * 
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

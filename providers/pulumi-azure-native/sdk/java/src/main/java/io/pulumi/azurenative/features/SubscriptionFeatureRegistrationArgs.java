@@ -15,6 +15,10 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
 
     public static final SubscriptionFeatureRegistrationArgs Empty = new SubscriptionFeatureRegistrationArgs();
 
+    /**
+     * The feature name.
+     * 
+     */
     @InputImport(name="featureName")
     private final @Nullable Input<String> featureName;
 
@@ -29,6 +33,10 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The provider namespace.
+     * 
+     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 

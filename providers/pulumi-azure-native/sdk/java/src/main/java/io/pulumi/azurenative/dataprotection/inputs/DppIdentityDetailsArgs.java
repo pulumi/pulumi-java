@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity details
+ * 
+ */
 public final class DppIdentityDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DppIdentityDetailsArgs Empty = new DppIdentityDetailsArgs();
 
+    /**
+     * The identityType which can be either SystemAssigned or None
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

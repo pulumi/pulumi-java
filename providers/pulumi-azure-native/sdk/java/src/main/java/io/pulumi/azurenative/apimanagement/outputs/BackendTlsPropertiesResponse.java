@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackendTlsPropertiesResponse {
+    /**
+     * Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
+     * 
+     */
     private final @Nullable Boolean validateCertificateChain;
+    /**
+     * Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+     * 
+     */
     private final @Nullable Boolean validateCertificateName;
 
     @OutputCustomType.Constructor({"validateCertificateChain","validateCertificateName"})
@@ -22,9 +30,17 @@ public final class BackendTlsPropertiesResponse {
         this.validateCertificateName = validateCertificateName;
     }
 
+    /**
+     * Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
+     * 
+     */
     public Optional<Boolean> getValidateCertificateChain() {
         return Optional.ofNullable(this.validateCertificateChain);
     }
+    /**
+     * Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+     * 
+     */
     public Optional<Boolean> getValidateCertificateName() {
         return Optional.ofNullable(this.validateCertificateName);
     }

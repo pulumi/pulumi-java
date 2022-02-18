@@ -18,17 +18,47 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * API Version: 2020-01-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:security:AdaptiveApplicationControl ERELGROUP1 /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/locations/centralus/applicationWhitelistings/ERELGROUP1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:security:AdaptiveApplicationControl")
 public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResource {
+    /**
+     * The configuration status of the machines group or machine or rule
+     * 
+     */
     @OutputExport(name="configurationStatus", type=String.class, parameters={})
     private Output<String> configurationStatus;
 
+    /**
+     * @return The configuration status of the machines group or machine or rule
+     * 
+     */
     public Output<String> getConfigurationStatus() {
         return this.configurationStatus;
     }
+    /**
+     * The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     @OutputExport(name="enforcementMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> enforcementMode;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Output</* @Nullable */ String> getEnforcementMode() {
         return this.enforcementMode;
     }
@@ -38,15 +68,31 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
     public Output<List<AdaptiveApplicationControlIssueSummaryResponse>> getIssues() {
         return this.issues;
     }
+    /**
+     * Location where the resource is stored
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Location where the resource is stored
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
@@ -56,27 +102,59 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
     public Output</* @Nullable */ List<PathRecommendationResponse>> getPathRecommendations() {
         return this.pathRecommendations;
     }
+    /**
+     * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+     * 
+     */
     @OutputExport(name="protectionMode", type=ProtectionModeResponse.class, parameters={})
     private Output</* @Nullable */ ProtectionModeResponse> protectionMode;
 
+    /**
+     * @return The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+     * 
+     */
     public Output</* @Nullable */ ProtectionModeResponse> getProtectionMode() {
         return this.protectionMode;
     }
+    /**
+     * The initial recommendation status of the machine group or machine
+     * 
+     */
     @OutputExport(name="recommendationStatus", type=String.class, parameters={})
     private Output<String> recommendationStatus;
 
+    /**
+     * @return The initial recommendation status of the machine group or machine
+     * 
+     */
     public Output<String> getRecommendationStatus() {
         return this.recommendationStatus;
     }
+    /**
+     * The source type of the machine group
+     * 
+     */
     @OutputExport(name="sourceSystem", type=String.class, parameters={})
     private Output<String> sourceSystem;
 
+    /**
+     * @return The source type of the machine group
+     * 
+     */
     public Output<String> getSourceSystem() {
         return this.sourceSystem;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
@@ -87,6 +165,12 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
         return this.vmRecommendations;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AdaptiveApplicationControl(String name, AdaptiveApplicationControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:AdaptiveApplicationControl", name, args == null ? AdaptiveApplicationControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -106,6 +190,14 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AdaptiveApplicationControl get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AdaptiveApplicationControl(name, id, options);
     }

@@ -25,6 +25,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubnetArgs Empty = new SubnetArgs();
 
+    /**
+     * The address prefix for the subnet.
+     * 
+     */
     @InputImport(name="addressPrefix")
     private final @Nullable Input<String> addressPrefix;
 
@@ -32,6 +36,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
     }
 
+    /**
+     * List of address prefixes for the subnet.
+     * 
+     */
     @InputImport(name="addressPrefixes")
     private final @Nullable Input<List<String>> addressPrefixes;
 
@@ -39,6 +47,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressPrefixes == null ? Input.empty() : this.addressPrefixes;
     }
 
+    /**
+     * Application gateway IP configurations of virtual network resource.
+     * 
+     */
     @InputImport(name="applicationGatewayIpConfigurations")
     private final @Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
 
@@ -46,6 +58,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationGatewayIpConfigurations == null ? Input.empty() : this.applicationGatewayIpConfigurations;
     }
 
+    /**
+     * An array of references to the delegations on the subnet.
+     * 
+     */
     @InputImport(name="delegations")
     private final @Nullable Input<List<DelegationArgs>> delegations;
 
@@ -53,6 +69,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.delegations == null ? Input.empty() : this.delegations;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -60,6 +80,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Array of IpAllocation which reference this subnet.
+     * 
+     */
     @InputImport(name="ipAllocations")
     private final @Nullable Input<List<SubResourceArgs>> ipAllocations;
 
@@ -67,6 +91,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAllocations == null ? Input.empty() : this.ipAllocations;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -74,6 +102,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Nat gateway associated with this subnet.
+     * 
+     */
     @InputImport(name="natGateway")
     private final @Nullable Input<SubResourceArgs> natGateway;
 
@@ -81,6 +113,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.natGateway == null ? Input.empty() : this.natGateway;
     }
 
+    /**
+     * The reference to the NetworkSecurityGroup resource.
+     * 
+     */
     @InputImport(name="networkSecurityGroup")
     private final @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup;
 
@@ -88,6 +124,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
     }
 
+    /**
+     * Enable or Disable apply network policies on private end point in the subnet.
+     * 
+     */
     @InputImport(name="privateEndpointNetworkPolicies")
     private final @Nullable Input<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
 
@@ -95,6 +135,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateEndpointNetworkPolicies == null ? Input.empty() : this.privateEndpointNetworkPolicies;
     }
 
+    /**
+     * Enable or Disable apply network policies on private link service in the subnet.
+     * 
+     */
     @InputImport(name="privateLinkServiceNetworkPolicies")
     private final @Nullable Input<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
 
@@ -102,6 +146,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateLinkServiceNetworkPolicies == null ? Input.empty() : this.privateLinkServiceNetworkPolicies;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -109,6 +157,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The reference to the RouteTable resource.
+     * 
+     */
     @InputImport(name="routeTable")
     private final @Nullable Input<RouteTableArgs> routeTable;
 
@@ -116,6 +168,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.routeTable == null ? Input.empty() : this.routeTable;
     }
 
+    /**
+     * An array of service endpoint policies.
+     * 
+     */
     @InputImport(name="serviceEndpointPolicies")
     private final @Nullable Input<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
 
@@ -123,6 +179,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceEndpointPolicies == null ? Input.empty() : this.serviceEndpointPolicies;
     }
 
+    /**
+     * An array of service endpoints.
+     * 
+     */
     @InputImport(name="serviceEndpoints")
     private final @Nullable Input<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
 
@@ -130,6 +190,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceEndpoints == null ? Input.empty() : this.serviceEndpoints;
     }
 
+    /**
+     * The name of the subnet.
+     * 
+     */
     @InputImport(name="subnetName")
     private final @Nullable Input<String> subnetName;
 
@@ -137,6 +201,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetName == null ? Input.empty() : this.subnetName;
     }
 
+    /**
+     * Resource type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -144,6 +212,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The name of the virtual network.
+     * 
+     */
     @InputImport(name="virtualNetworkName", required=true)
     private final Input<String> virtualNetworkName;
 

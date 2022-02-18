@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).
+     * 
+     */
     @EnumType
     public enum SignedResource {
         B("b"),

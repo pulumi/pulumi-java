@@ -20,6 +20,10 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationRuleArgs Empty = new AutomationRuleArgs();
 
+    /**
+     * The actions to execute when the automation rule is triggered
+     * 
+     */
     @InputImport(name="actions", required=true)
     private final Input<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
 
@@ -27,6 +31,10 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions;
     }
 
+    /**
+     * Automation rule ID
+     * 
+     */
     @InputImport(name="automationRuleId")
     private final @Nullable Input<String> automationRuleId;
 
@@ -34,6 +42,10 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationRuleId == null ? Input.empty() : this.automationRuleId;
     }
 
+    /**
+     * The display name of the automation  rule
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -41,6 +53,10 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -48,6 +64,10 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The order of execution of the automation rule
+     * 
+     */
     @InputImport(name="order", required=true)
     private final Input<Integer> order;
 
@@ -55,6 +75,10 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.order;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -62,6 +86,10 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The triggering logic of the automation rule
+     * 
+     */
     @InputImport(name="triggeringLogic", required=true)
     private final Input<AutomationRuleTriggeringLogicArgs> triggeringLogic;
 
@@ -69,6 +97,10 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.triggeringLogic;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

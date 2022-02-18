@@ -12,6 +12,10 @@ public final class GetTableResourceTableArgs extends io.pulumi.resources.InvokeA
 
     public static final GetTableResourceTableArgs Empty = new GetTableResourceTableArgs();
 
+    /**
+     * Cosmos DB database account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetTableResourceTableArgs extends io.pulumi.resources.InvokeA
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetTableResourceTableArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * Cosmos DB table name.
+     * 
+     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 

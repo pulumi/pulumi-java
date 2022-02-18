@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The dataset reference object.
+ * 
+ */
 public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetReferenceResponse Empty = new DatasetReferenceResponse();
 
+    /**
+     * The id of the dataset reference.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +29,10 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the dataset reference.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

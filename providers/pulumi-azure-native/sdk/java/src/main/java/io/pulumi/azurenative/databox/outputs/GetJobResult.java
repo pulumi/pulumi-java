@@ -22,26 +22,110 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetJobResult {
+    /**
+     * Reason for cancellation.
+     * 
+     */
     private final String cancellationReason;
+    /**
+     * Delivery Info of Job.
+     * 
+     */
     private final @Nullable JobDeliveryInfoResponse deliveryInfo;
+    /**
+     * Delivery type of Job.
+     * 
+     */
     private final @Nullable String deliveryType;
+    /**
+     * Details of a job run. This field will only be sent for expand details filter.
+     * 
+     */
     private final @Nullable Object details;
+    /**
+     * Top level error for the job.
+     * 
+     */
     private final CloudErrorResponse error;
+    /**
+     * Id of the object.
+     * 
+     */
     private final String id;
+    /**
+     * Msi identity of the resource
+     * 
+     */
     private final @Nullable ResourceIdentityResponse identity;
+    /**
+     * Describes whether the job is cancellable or not.
+     * 
+     */
     private final Boolean isCancellable;
+    /**
+     * Flag to indicate cancellation of scheduled job.
+     * 
+     */
     private final Boolean isCancellableWithoutFee;
+    /**
+     * Describes whether the job is deletable or not.
+     * 
+     */
     private final Boolean isDeletable;
+    /**
+     * Is Prepare To Ship Enabled on this job
+     * 
+     */
     private final Boolean isPrepareToShipEnabled;
+    /**
+     * Describes whether the shipping address is editable or not.
+     * 
+     */
     private final Boolean isShippingAddressEditable;
+    /**
+     * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+     * 
+     */
     private final String location;
+    /**
+     * Name of the object.
+     * 
+     */
     private final String name;
+    /**
+     * The sku type.
+     * 
+     */
     private final SkuResponse sku;
+    /**
+     * Time at which the job was started in UTC ISO 8601 format.
+     * 
+     */
     private final String startTime;
+    /**
+     * Name of the stage which is in progress.
+     * 
+     */
     private final String status;
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     private final SystemDataResponse systemData;
+    /**
+     * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Type of the data transfer.
+     * 
+     */
     private final String transferType;
+    /**
+     * Type of the object.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"cancellationReason","deliveryInfo","deliveryType","details","error","id","identity","isCancellable","isCancellableWithoutFee","isDeletable","isPrepareToShipEnabled","isShippingAddressEditable","location","name","sku","startTime","status","systemData","tags","transferType","type"})
@@ -90,66 +174,150 @@ public final class GetJobResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Reason for cancellation.
+     * 
+     */
     public String getCancellationReason() {
         return this.cancellationReason;
     }
+    /**
+     * Delivery Info of Job.
+     * 
+     */
     public Optional<JobDeliveryInfoResponse> getDeliveryInfo() {
         return Optional.ofNullable(this.deliveryInfo);
     }
+    /**
+     * Delivery type of Job.
+     * 
+     */
     public Optional<String> getDeliveryType() {
         return Optional.ofNullable(this.deliveryType);
     }
+    /**
+     * Details of a job run. This field will only be sent for expand details filter.
+     * 
+     */
     public Optional<Object> getDetails() {
         return Optional.ofNullable(this.details);
     }
+    /**
+     * Top level error for the job.
+     * 
+     */
     public CloudErrorResponse getError() {
         return this.error;
     }
+    /**
+     * Id of the object.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Msi identity of the resource
+     * 
+     */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+    /**
+     * Describes whether the job is cancellable or not.
+     * 
+     */
     public Boolean getIsCancellable() {
         return this.isCancellable;
     }
+    /**
+     * Flag to indicate cancellation of scheduled job.
+     * 
+     */
     public Boolean getIsCancellableWithoutFee() {
         return this.isCancellableWithoutFee;
     }
+    /**
+     * Describes whether the job is deletable or not.
+     * 
+     */
     public Boolean getIsDeletable() {
         return this.isDeletable;
     }
+    /**
+     * Is Prepare To Ship Enabled on this job
+     * 
+     */
     public Boolean getIsPrepareToShipEnabled() {
         return this.isPrepareToShipEnabled;
     }
+    /**
+     * Describes whether the shipping address is editable or not.
+     * 
+     */
     public Boolean getIsShippingAddressEditable() {
         return this.isShippingAddressEditable;
     }
+    /**
+     * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Name of the object.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The sku type.
+     * 
+     */
     public SkuResponse getSku() {
         return this.sku;
     }
+    /**
+     * Time at which the job was started in UTC ISO 8601 format.
+     * 
+     */
     public String getStartTime() {
         return this.startTime;
     }
+    /**
+     * Name of the stage which is in progress.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+    /**
+     * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Type of the data transfer.
+     * 
+     */
     public String getTransferType() {
         return this.transferType;
     }
+    /**
+     * Type of the object.
+     * 
+     */
     public String getType() {
         return this.type;
     }

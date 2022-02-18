@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FactoryIdentityResponse {
+    /**
+     * The principal id of the identity.
+     * 
+     */
     private final String principalId;
+    /**
+     * The client tenant id of the identity.
+     * 
+     */
     private final String tenantId;
+    /**
+     * The identity type.
+     * 
+     */
     private final String type;
+    /**
+     * List of user assigned identities for the factory.
+     * 
+     */
     private final @Nullable Map<String,Object> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -29,15 +45,31 @@ public final class FactoryIdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
+    /**
+     * The principal id of the identity.
+     * 
+     */
     public String getPrincipalId() {
         return this.principalId;
     }
+    /**
+     * The client tenant id of the identity.
+     * 
+     */
     public String getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The identity type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * List of user assigned identities for the factory.
+     * 
+     */
     public Map<String,Object> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

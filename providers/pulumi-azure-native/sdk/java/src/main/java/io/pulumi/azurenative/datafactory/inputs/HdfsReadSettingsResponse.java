@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * HDFS read settings.
+ * 
+ */
 public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HdfsReadSettingsResponse Empty = new HdfsReadSettingsResponse();
 
+    /**
+     * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="deleteFilesAfterCompletion")
     private final @Nullable Object deleteFilesAfterCompletion;
 
@@ -24,6 +32,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.deleteFilesAfterCompletion == null ? Optional.empty() : Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -31,6 +43,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * Specifies Distcp-related settings.
+     * 
+     */
     @InputImport(name="distcpSettings")
     private final @Nullable DistcpSettingsResponse distcpSettings;
 
@@ -38,6 +54,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.distcpSettings == null ? Optional.empty() : Optional.ofNullable(this.distcpSettings);
     }
 
+    /**
+     * Indicates whether to enable partition discovery.
+     * 
+     */
     @InputImport(name="enablePartitionDiscovery")
     private final @Nullable Boolean enablePartitionDiscovery;
 
@@ -45,6 +65,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
+    /**
+     * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="fileListPath")
     private final @Nullable Object fileListPath;
 
@@ -52,6 +76,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.fileListPath == null ? Optional.empty() : Optional.ofNullable(this.fileListPath);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -59,6 +87,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="modifiedDatetimeEnd")
     private final @Nullable Object modifiedDatetimeEnd;
 
@@ -66,6 +98,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.modifiedDatetimeEnd == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeEnd);
     }
 
+    /**
+     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="modifiedDatetimeStart")
     private final @Nullable Object modifiedDatetimeStart;
 
@@ -73,6 +109,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.modifiedDatetimeStart == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeStart);
     }
 
+    /**
+     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="partitionRootPath")
     private final @Nullable Object partitionRootPath;
 
@@ -80,6 +120,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
     }
 
+    /**
+     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="recursive")
     private final @Nullable Object recursive;
 
@@ -87,6 +131,11 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
     }
 
+    /**
+     * The read setting type.
+     * Expected value is 'HdfsReadSettings'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -94,6 +143,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.type;
     }
 
+    /**
+     * HDFS wildcardFileName. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="wildcardFileName")
     private final @Nullable Object wildcardFileName;
 
@@ -101,6 +154,10 @@ public final class HdfsReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.wildcardFileName == null ? Optional.empty() : Optional.ofNullable(this.wildcardFileName);
     }
 
+    /**
+     * HDFS wildcardFolderPath. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="wildcardFolderPath")
     private final @Nullable Object wildcardFolderPath;
 

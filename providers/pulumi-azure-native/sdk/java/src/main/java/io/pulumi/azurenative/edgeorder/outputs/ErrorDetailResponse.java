@@ -11,10 +11,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ErrorDetailResponse {
+    /**
+     * The error additional info.
+     * 
+     */
     private final List<ErrorAdditionalInfoResponse> additionalInfo;
+    /**
+     * The error code.
+     * 
+     */
     private final String code;
+    /**
+     * The error details.
+     * 
+     */
     private final List<ErrorDetailResponse> details;
+    /**
+     * The error message.
+     * 
+     */
     private final String message;
+    /**
+     * The error target.
+     * 
+     */
     private final String target;
 
     @OutputCustomType.Constructor({"additionalInfo","code","details","message","target"})
@@ -31,18 +51,38 @@ public final class ErrorDetailResponse {
         this.target = Objects.requireNonNull(target);
     }
 
+    /**
+     * The error additional info.
+     * 
+     */
     public List<ErrorAdditionalInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
     }
+    /**
+     * The error code.
+     * 
+     */
     public String getCode() {
         return this.code;
     }
+    /**
+     * The error details.
+     * 
+     */
     public List<ErrorDetailResponse> getDetails() {
         return this.details;
     }
+    /**
+     * The error message.
+     * 
+     */
     public String getMessage() {
         return this.message;
     }
+    /**
+     * The error target.
+     * 
+     */
     public String getTarget() {
         return this.target;
     }

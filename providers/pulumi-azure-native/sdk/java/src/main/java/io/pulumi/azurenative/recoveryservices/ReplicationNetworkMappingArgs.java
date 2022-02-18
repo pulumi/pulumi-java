@@ -15,6 +15,10 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
 
     public static final ReplicationNetworkMappingArgs Empty = new ReplicationNetworkMappingArgs();
 
+    /**
+     * Primary fabric name.
+     * 
+     */
     @InputImport(name="fabricName", required=true)
     private final Input<String> fabricName;
 
@@ -22,6 +26,10 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
         return this.fabricName;
     }
 
+    /**
+     * Network mapping name.
+     * 
+     */
     @InputImport(name="networkMappingName")
     private final @Nullable Input<String> networkMappingName;
 
@@ -29,6 +37,10 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
         return this.networkMappingName == null ? Input.empty() : this.networkMappingName;
     }
 
+    /**
+     * Primary network name.
+     * 
+     */
     @InputImport(name="networkName", required=true)
     private final Input<String> networkName;
 
@@ -36,6 +48,10 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
         return this.networkName;
     }
 
+    /**
+     * Input properties for creating network mapping.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties;
 
@@ -43,6 +59,10 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +70,10 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

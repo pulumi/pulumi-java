@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP configuration for virtual network gateway.
+ * 
+ */
 public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkGatewayIPConfigurationResponse Empty = new VirtualNetworkGatewayIPConfigurationResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -22,6 +30,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -29,6 +41,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -36,6 +52,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Private IP Address for this gateway.
+     * 
+     */
     @InputImport(name="privateIPAddress", required=true)
     private final String privateIPAddress;
 
@@ -43,6 +63,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
         return this.privateIPAddress;
     }
 
+    /**
+     * The private IP address allocation method.
+     * 
+     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable String privateIPAllocationMethod;
 
@@ -50,6 +74,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
+    /**
+     * The provisioning state of the virtual network gateway IP configuration resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -57,6 +85,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
         return this.provisioningState;
     }
 
+    /**
+     * The reference to the public IP resource.
+     * 
+     */
     @InputImport(name="publicIPAddress")
     private final @Nullable SubResourceResponse publicIPAddress;
 
@@ -64,6 +96,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
     }
 
+    /**
+     * The reference to the subnet resource.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable SubResourceResponse subnet;
 

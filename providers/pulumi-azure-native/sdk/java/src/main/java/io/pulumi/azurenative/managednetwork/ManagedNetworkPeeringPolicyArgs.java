@@ -15,6 +15,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
 
     public static final ManagedNetworkPeeringPolicyArgs Empty = new ManagedNetworkPeeringPolicyArgs();
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +26,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the Managed Network.
+     * 
+     */
     @InputImport(name="managedNetworkName", required=true)
     private final Input<String> managedNetworkName;
 
@@ -29,6 +37,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
         return this.managedNetworkName;
     }
 
+    /**
+     * The name of the Managed Network Peering Policy.
+     * 
+     */
     @InputImport(name="managedNetworkPeeringPolicyName")
     private final @Nullable Input<String> managedNetworkPeeringPolicyName;
 
@@ -36,6 +48,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
         return this.managedNetworkPeeringPolicyName == null ? Input.empty() : this.managedNetworkPeeringPolicyName;
     }
 
+    /**
+     * Gets or sets the properties of a Managed Network Policy
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
 
@@ -43,6 +59,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Service Provider Definition
+ * 
+ */
 public final class ServiceProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceProviderResponse Empty = new ServiceProviderResponse();
 
+    /**
+     * The Properties of a Service Provider Object
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable ServiceProviderPropertiesResponse properties;
 

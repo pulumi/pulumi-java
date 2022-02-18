@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies a metric to load balance a service during runtime.
+ * 
+ */
 public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceLoadMetricDescriptionArgs Empty = new ServiceLoadMetricDescriptionArgs();
 
+    /**
+     * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
+     * 
+     */
     @InputImport(name="defaultLoad")
     private final @Nullable Input<Integer> defaultLoad;
 
@@ -24,6 +32,10 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
         return this.defaultLoad == null ? Input.empty() : this.defaultLoad;
     }
 
+    /**
+     * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -31,6 +43,10 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
+     * 
+     */
     @InputImport(name="primaryDefaultLoad")
     private final @Nullable Input<Integer> primaryDefaultLoad;
 
@@ -38,6 +54,10 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
         return this.primaryDefaultLoad == null ? Input.empty() : this.primaryDefaultLoad;
     }
 
+    /**
+     * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
+     * 
+     */
     @InputImport(name="secondaryDefaultLoad")
     private final @Nullable Input<Integer> secondaryDefaultLoad;
 
@@ -45,6 +65,10 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
         return this.secondaryDefaultLoad == null ? Input.empty() : this.secondaryDefaultLoad;
     }
 
+    /**
+     * The service load metric relative weight, compared to other metrics configured for this service, as a number.
+     * 
+     */
     @InputImport(name="weight")
     private final @Nullable Input<Either<String,ServiceLoadMetricWeight>> weight;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Account hosting model.
+     * 
+     */
     @EnumType
     public enum HostingModel {
         Web("Web"),

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of the security offering.
+     * 
+     */
     @EnumType
     public enum OfferingType {
         CspmMonitorAws("CspmMonitorAws"),

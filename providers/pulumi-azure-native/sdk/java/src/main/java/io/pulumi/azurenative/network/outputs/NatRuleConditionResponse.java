@@ -12,13 +12,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NatRuleConditionResponse {
+    /**
+     * Description of the rule condition.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * List of destination IP addresses or Service Tags.
+     * 
+     */
     private final @Nullable List<String> destinationAddresses;
+    /**
+     * List of destination ports.
+     * 
+     */
     private final @Nullable List<String> destinationPorts;
+    /**
+     * Array of FirewallPolicyRuleConditionNetworkProtocols.
+     * 
+     */
     private final @Nullable List<String> ipProtocols;
+    /**
+     * Name of the rule condition.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Rule Condition Type.
+     * Expected value is 'NatRuleCondition'.
+     * 
+     */
     private final String ruleConditionType;
+    /**
+     * List of source IP addresses for this rule.
+     * 
+     */
     private final @Nullable List<String> sourceAddresses;
+    /**
+     * List of source IpGroups for this rule.
+     * 
+     */
     private final @Nullable List<String> sourceIpGroups;
 
     @OutputCustomType.Constructor({"description","destinationAddresses","destinationPorts","ipProtocols","name","ruleConditionType","sourceAddresses","sourceIpGroups"})
@@ -41,27 +74,60 @@ public final class NatRuleConditionResponse {
         this.sourceIpGroups = sourceIpGroups;
     }
 
+    /**
+     * Description of the rule condition.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * List of destination IP addresses or Service Tags.
+     * 
+     */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
+    /**
+     * List of destination ports.
+     * 
+     */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
+    /**
+     * Array of FirewallPolicyRuleConditionNetworkProtocols.
+     * 
+     */
     public List<String> getIpProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
+    /**
+     * Name of the rule condition.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Rule Condition Type.
+     * Expected value is 'NatRuleCondition'.
+     * 
+     */
     public String getRuleConditionType() {
         return this.ruleConditionType;
     }
+    /**
+     * List of source IP addresses for this rule.
+     * 
+     */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
+    /**
+     * List of source IpGroups for this rule.
+     * 
+     */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the latest status of running an image template
+ * 
+ */
 public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageTemplateLastRunStatusResponse Empty = new ImageTemplateLastRunStatusResponse();
 
+    /**
+     * End time of the last run (UTC)
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -21,6 +29,10 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
+    /**
+     * Verbose information about the last run state
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -28,6 +40,10 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * State of the last run
+     * 
+     */
     @InputImport(name="runState")
     private final @Nullable String runState;
 
@@ -35,6 +51,10 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
         return this.runState == null ? Optional.empty() : Optional.ofNullable(this.runState);
     }
 
+    /**
+     * Sub-state of the last run
+     * 
+     */
     @InputImport(name="runSubState")
     private final @Nullable String runSubState;
 
@@ -42,6 +62,10 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
         return this.runSubState == null ? Optional.empty() : Optional.ofNullable(this.runSubState);
     }
 
+    /**
+     * Start time of the last run (UTC)
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 

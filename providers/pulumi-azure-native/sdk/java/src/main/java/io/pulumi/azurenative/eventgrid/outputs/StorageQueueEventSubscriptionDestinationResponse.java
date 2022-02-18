@@ -11,8 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageQueueEventSubscriptionDestinationResponse {
+    /**
+     * Type of the endpoint for the event subscription destination.
+     * Expected value is 'StorageQueue'.
+     * 
+     */
     private final String endpointType;
+    /**
+     * The name of the Storage queue under a storage account that is the destination of an event subscription.
+     * 
+     */
     private final @Nullable String queueName;
+    /**
+     * The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
+     * 
+     */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"endpointType","queueName","resourceId"})
@@ -25,12 +38,25 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
         this.resourceId = resourceId;
     }
 
+    /**
+     * Type of the endpoint for the event subscription destination.
+     * Expected value is 'StorageQueue'.
+     * 
+     */
     public String getEndpointType() {
         return this.endpointType;
     }
+    /**
+     * The name of the Storage queue under a storage account that is the destination of an event subscription.
+     * 
+     */
     public Optional<String> getQueueName() {
         return Optional.ofNullable(this.queueName);
     }
+    /**
+     * The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
+     * 
+     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

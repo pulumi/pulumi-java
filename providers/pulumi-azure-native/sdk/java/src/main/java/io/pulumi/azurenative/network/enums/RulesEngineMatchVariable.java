@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Match Variable
+     * 
+     */
     @EnumType
     public enum RulesEngineMatchVariable {
         IsMobile("IsMobile"),

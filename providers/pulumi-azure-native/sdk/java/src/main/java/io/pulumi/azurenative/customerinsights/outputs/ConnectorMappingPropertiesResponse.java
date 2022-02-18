@@ -18,13 +18,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectorMappingPropertiesResponse {
+    /**
+     * The availability of mapping property.
+     * 
+     */
     private final ConnectorMappingAvailabilityResponse availability;
+    /**
+     * The operation after import is done.
+     * 
+     */
     private final ConnectorMappingCompleteOperationResponse completeOperation;
+    /**
+     * The error management setting for the mapping.
+     * 
+     */
     private final ConnectorMappingErrorManagementResponse errorManagement;
+    /**
+     * The file filter for the mapping.
+     * 
+     */
     private final @Nullable String fileFilter;
+    /**
+     * The folder path for the mapping.
+     * 
+     */
     private final @Nullable String folderPath;
+    /**
+     * The format of mapping property.
+     * 
+     */
     private final ConnectorMappingFormatResponse format;
+    /**
+     * If the file contains a header or not.
+     * 
+     */
     private final @Nullable Boolean hasHeader;
+    /**
+     * Ingestion mapping information at property level.
+     * 
+     */
     private final List<ConnectorMappingStructureResponse> structure;
 
     @OutputCustomType.Constructor({"availability","completeOperation","errorManagement","fileFilter","folderPath","format","hasHeader","structure"})
@@ -47,27 +79,59 @@ public final class ConnectorMappingPropertiesResponse {
         this.structure = Objects.requireNonNull(structure);
     }
 
+    /**
+     * The availability of mapping property.
+     * 
+     */
     public ConnectorMappingAvailabilityResponse getAvailability() {
         return this.availability;
     }
+    /**
+     * The operation after import is done.
+     * 
+     */
     public ConnectorMappingCompleteOperationResponse getCompleteOperation() {
         return this.completeOperation;
     }
+    /**
+     * The error management setting for the mapping.
+     * 
+     */
     public ConnectorMappingErrorManagementResponse getErrorManagement() {
         return this.errorManagement;
     }
+    /**
+     * The file filter for the mapping.
+     * 
+     */
     public Optional<String> getFileFilter() {
         return Optional.ofNullable(this.fileFilter);
     }
+    /**
+     * The folder path for the mapping.
+     * 
+     */
     public Optional<String> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
+    /**
+     * The format of mapping property.
+     * 
+     */
     public ConnectorMappingFormatResponse getFormat() {
         return this.format;
     }
+    /**
+     * If the file contains a header or not.
+     * 
+     */
     public Optional<Boolean> getHasHeader() {
         return Optional.ofNullable(this.hasHeader);
     }
+    /**
+     * Ingestion mapping information at property level.
+     * 
+     */
     public List<ConnectorMappingStructureResponse> getStructure() {
         return this.structure;
     }

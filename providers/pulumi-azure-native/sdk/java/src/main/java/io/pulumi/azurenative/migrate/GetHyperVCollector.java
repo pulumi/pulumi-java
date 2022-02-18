@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHyperVCollector {
+/**
+ * API Version: 2019-10-01.
+ * 
+ */
     public static CompletableFuture<GetHyperVCollectorResult> invokeAsync(GetHyperVCollectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getHyperVCollector", TypeShape.of(GetHyperVCollectorResult.class), args == null ? GetHyperVCollectorArgs.Empty : args, Utilities.withVersion(options));
     }

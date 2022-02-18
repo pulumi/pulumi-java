@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The status of the blueprint. This field is readonly.
+ * 
+ */
 public final class BlueprintStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlueprintStatusResponse Empty = new BlueprintStatusResponse();
 
+    /**
+     * Last modified time of this blueprint definition.
+     * 
+     */
     @InputImport(name="lastModified", required=true)
     private final String lastModified;
 
@@ -19,6 +27,10 @@ public final class BlueprintStatusResponse extends io.pulumi.resources.InvokeArg
         return this.lastModified;
     }
 
+    /**
+     * Creation time of this blueprint definition.
+     * 
+     */
     @InputImport(name="timeCreated", required=true)
     private final String timeCreated;
 

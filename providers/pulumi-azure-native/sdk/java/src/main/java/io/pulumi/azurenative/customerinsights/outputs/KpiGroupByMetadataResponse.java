@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KpiGroupByMetadataResponse {
+    /**
+     * The display name.
+     * 
+     */
     private final @Nullable Map<String,String> displayName;
+    /**
+     * The name of the field.
+     * 
+     */
     private final @Nullable String fieldName;
+    /**
+     * The type of the field.
+     * 
+     */
     private final @Nullable String fieldType;
 
     @OutputCustomType.Constructor({"displayName","fieldName","fieldType"})
@@ -26,12 +38,24 @@ public final class KpiGroupByMetadataResponse {
         this.fieldType = fieldType;
     }
 
+    /**
+     * The display name.
+     * 
+     */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
+    /**
+     * The name of the field.
+     * 
+     */
     public Optional<String> getFieldName() {
         return Optional.ofNullable(this.fieldName);
     }
+    /**
+     * The type of the field.
+     * 
+     */
     public Optional<String> getFieldType() {
         return Optional.ofNullable(this.fieldType);
     }

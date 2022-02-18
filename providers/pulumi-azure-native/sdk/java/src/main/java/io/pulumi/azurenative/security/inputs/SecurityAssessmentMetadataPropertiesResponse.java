@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes properties of an assessment metadata.
+ * 
+ */
 public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityAssessmentMetadataPropertiesResponse Empty = new SecurityAssessmentMetadataPropertiesResponse();
 
+    /**
+     * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+     * 
+     */
     @InputImport(name="assessmentType", required=true)
     private final String assessmentType;
 
@@ -31,6 +39,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.categories == null ? List.of() : this.categories;
     }
 
+    /**
+     * Human readable description of the assessment
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -38,6 +50,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * User friendly display name of the assessment
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -45,6 +61,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.displayName;
     }
 
+    /**
+     * The implementation effort required to remediate this assessment
+     * 
+     */
     @InputImport(name="implementationEffort")
     private final @Nullable String implementationEffort;
 
@@ -52,6 +72,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.implementationEffort == null ? Optional.empty() : Optional.ofNullable(this.implementationEffort);
     }
 
+    /**
+     * Describes the partner that created the assessment
+     * 
+     */
     @InputImport(name="partnerData")
     private final @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
 
@@ -59,6 +83,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.partnerData == null ? Optional.empty() : Optional.ofNullable(this.partnerData);
     }
 
+    /**
+     * Azure resource ID of the policy definition that turns this assessment calculation on
+     * 
+     */
     @InputImport(name="policyDefinitionId", required=true)
     private final String policyDefinitionId;
 
@@ -66,6 +94,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.policyDefinitionId;
     }
 
+    /**
+     * True if this assessment is in preview release status
+     * 
+     */
     @InputImport(name="preview")
     private final @Nullable Boolean preview;
 
@@ -73,6 +105,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.preview == null ? Optional.empty() : Optional.ofNullable(this.preview);
     }
 
+    /**
+     * Human readable description of what you should do to mitigate this security issue
+     * 
+     */
     @InputImport(name="remediationDescription")
     private final @Nullable String remediationDescription;
 
@@ -80,6 +116,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.remediationDescription == null ? Optional.empty() : Optional.ofNullable(this.remediationDescription);
     }
 
+    /**
+     * The severity level of the assessment
+     * 
+     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -94,6 +134,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
         return this.threats == null ? List.of() : this.threats;
     }
 
+    /**
+     * The user impact of the assessment
+     * 
+     */
     @InputImport(name="userImpact")
     private final @Nullable String userImpact;
 

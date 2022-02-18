@@ -11,11 +11,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNamespaceIpFilterRuleResult {
+    /**
+     * The IP Filter Action
+     * 
+     */
     private final @Nullable String action;
+    /**
+     * IP Filter name
+     * 
+     */
     private final @Nullable String filterName;
+    /**
+     * Resource Id
+     * 
+     */
     private final String id;
+    /**
+     * IP Mask
+     * 
+     */
     private final @Nullable String ipMask;
+    /**
+     * Resource name
+     * 
+     */
     private final String name;
+    /**
+     * Resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"action","filterName","id","ipMask","name","type"})
@@ -34,21 +58,45 @@ public final class GetNamespaceIpFilterRuleResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The IP Filter Action
+     * 
+     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
+    /**
+     * IP Filter name
+     * 
+     */
     public Optional<String> getFilterName() {
         return Optional.ofNullable(this.filterName);
     }
+    /**
+     * Resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * IP Mask
+     * 
+     */
     public Optional<String> getIpMask() {
         return Optional.ofNullable(this.ipMask);
     }
+    /**
+     * Resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

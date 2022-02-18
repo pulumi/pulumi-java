@@ -14,6 +14,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ScopeAssignmentArgs Empty = new ScopeAssignmentArgs();
 
+    /**
+     * The managed network ID with scope will be assigned to.
+     * 
+     */
     @InputImport(name="assignedManagedNetwork")
     private final @Nullable Input<String> assignedManagedNetwork;
 
@@ -21,6 +25,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.assignedManagedNetwork == null ? Input.empty() : this.assignedManagedNetwork;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,6 +36,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The base resource of the scope assignment to create. The scope can be any REST resource instance. For example, use 'subscriptions/{subscription-id}' for a subscription, 'subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and 'subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -35,6 +47,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.scope;
     }
 
+    /**
+     * The name of the scope assignment to create.
+     * 
+     */
     @InputImport(name="scopeAssignmentName")
     private final @Nullable Input<String> scopeAssignmentName;
 

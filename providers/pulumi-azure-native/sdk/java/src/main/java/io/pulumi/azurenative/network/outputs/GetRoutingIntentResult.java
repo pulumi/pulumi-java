@@ -13,11 +13,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRoutingIntentResult {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The provisioning state of the RoutingIntent resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * List of routing policies.
+     * 
+     */
     private final @Nullable List<RoutingPolicyResponse> routingPolicies;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","provisioningState","routingPolicies","type"})
@@ -36,21 +60,45 @@ public final class GetRoutingIntentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The provisioning state of the RoutingIntent resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * List of routing policies.
+     * 
+     */
     public List<RoutingPolicyResponse> getRoutingPolicies() {
         return this.routingPolicies == null ? List.of() : this.routingPolicies;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }

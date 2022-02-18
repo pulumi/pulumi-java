@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties pertaining to the BlobNfsTarget.
+ * 
+ */
 public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobNfsTargetResponse Empty = new BlobNfsTargetResponse();
 
+    /**
+     * Resource ID of the storage container.
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 
@@ -21,6 +29,10 @@ public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs 
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
+    /**
+     * Identifies the StorageCache usage model to be used for this storage target.
+     * 
+     */
     @InputImport(name="usageModel")
     private final @Nullable String usageModel;
 

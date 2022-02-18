@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegisteredServer {
+/**
+ * Registered Server resource.
+ * API Version: 2020-03-01.
+ * 
+ *
+ * Registered Server resource.
+ * 
+ */
     public static CompletableFuture<GetRegisteredServerResult> invokeAsync(GetRegisteredServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getRegisteredServer", TypeShape.of(GetRegisteredServerResult.class), args == null ? GetRegisteredServerArgs.Empty : args, Utilities.withVersion(options));
     }

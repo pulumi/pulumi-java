@@ -12,6 +12,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecretArgs Empty = new GetSecretArgs();
 
+    /**
+     * The name of the Resource Group to which the vault belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the secret.
+     * 
+     */
     @InputImport(name="secretName", required=true)
     private final String secretName;
 
@@ -26,6 +34,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
         return this.secretName;
     }
 
+    /**
+     * The name of the vault.
+     * 
+     */
     @InputImport(name="vaultName", required=true)
     private final String vaultName;
 

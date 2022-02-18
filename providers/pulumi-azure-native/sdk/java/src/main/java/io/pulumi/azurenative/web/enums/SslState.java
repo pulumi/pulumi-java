@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * SSL type.
+     * 
+     */
     @EnumType
     public enum SslState {
         Disabled("Disabled"),

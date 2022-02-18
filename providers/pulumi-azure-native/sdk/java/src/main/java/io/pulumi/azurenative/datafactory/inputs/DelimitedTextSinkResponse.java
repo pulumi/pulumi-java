@@ -18,10 +18,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity DelimitedText sink.
+ * 
+ */
 public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DelimitedTextSinkResponse Empty = new DelimitedTextSinkResponse();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -29,6 +37,10 @@ public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeA
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * DelimitedText format settings.
+     * 
+     */
     @InputImport(name="formatSettings")
     private final @Nullable DelimitedTextWriteSettingsResponse formatSettings;
 
@@ -36,6 +48,10 @@ public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeA
         return this.formatSettings == null ? Optional.empty() : Optional.ofNullable(this.formatSettings);
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -43,6 +59,10 @@ public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeA
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Object sinkRetryCount;
 
@@ -50,6 +70,10 @@ public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeA
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Object sinkRetryWait;
 
@@ -57,6 +81,10 @@ public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeA
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
+    /**
+     * DelimitedText store settings.
+     * 
+     */
     @InputImport(name="storeSettings")
     private final @Nullable Object storeSettings;
 
@@ -64,6 +92,11 @@ public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeA
         return this.storeSettings == null ? null : this.storeSettings;
     }
 
+    /**
+     * Copy sink type.
+     * Expected value is 'DelimitedTextSink'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -71,6 +104,10 @@ public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeA
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Object writeBatchSize;
 
@@ -78,6 +115,10 @@ public final class DelimitedTextSinkResponse extends io.pulumi.resources.InvokeA
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Object writeBatchTimeout;
 

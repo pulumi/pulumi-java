@@ -22,111 +22,268 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
+ * API Version: 2020-05-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:FrontDoor frontDoor1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:FrontDoor")
 public class FrontDoor extends io.pulumi.resources.CustomResource {
+    /**
+     * Backend pools available to routing rules.
+     * 
+     */
     @OutputExport(name="backendPools", type=List.class, parameters={BackendPoolResponse.class})
     private Output</* @Nullable */ List<BackendPoolResponse>> backendPools;
 
+    /**
+     * @return Backend pools available to routing rules.
+     * 
+     */
     public Output</* @Nullable */ List<BackendPoolResponse>> getBackendPools() {
         return this.backendPools;
     }
+    /**
+     * Settings for all backendPools
+     * 
+     */
     @OutputExport(name="backendPoolsSettings", type=BackendPoolsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BackendPoolsSettingsResponse> backendPoolsSettings;
 
+    /**
+     * @return Settings for all backendPools
+     * 
+     */
     public Output</* @Nullable */ BackendPoolsSettingsResponse> getBackendPoolsSettings() {
         return this.backendPoolsSettings;
     }
+    /**
+     * The host that each frontendEndpoint must CNAME to.
+     * 
+     */
     @OutputExport(name="cname", type=String.class, parameters={})
     private Output<String> cname;
 
+    /**
+     * @return The host that each frontendEndpoint must CNAME to.
+     * 
+     */
     public Output<String> getCname() {
         return this.cname;
     }
+    /**
+     * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+     * 
+     */
     @OutputExport(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
+    /**
+     * @return Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+     * 
+     */
     public Output</* @Nullable */ String> getEnabledState() {
         return this.enabledState;
     }
+    /**
+     * A friendly name for the frontDoor
+     * 
+     */
     @OutputExport(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
+    /**
+     * @return A friendly name for the frontDoor
+     * 
+     */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
+    /**
+     * The Id of the frontdoor.
+     * 
+     */
     @OutputExport(name="frontdoorId", type=String.class, parameters={})
     private Output<String> frontdoorId;
 
+    /**
+     * @return The Id of the frontdoor.
+     * 
+     */
     public Output<String> getFrontdoorId() {
         return this.frontdoorId;
     }
+    /**
+     * Frontend endpoints available to routing rules.
+     * 
+     */
     @OutputExport(name="frontendEndpoints", type=List.class, parameters={FrontendEndpointResponse.class})
     private Output</* @Nullable */ List<FrontendEndpointResponse>> frontendEndpoints;
 
+    /**
+     * @return Frontend endpoints available to routing rules.
+     * 
+     */
     public Output</* @Nullable */ List<FrontendEndpointResponse>> getFrontendEndpoints() {
         return this.frontendEndpoints;
     }
+    /**
+     * Health probe settings associated with this Front Door instance.
+     * 
+     */
     @OutputExport(name="healthProbeSettings", type=List.class, parameters={HealthProbeSettingsModelResponse.class})
     private Output</* @Nullable */ List<HealthProbeSettingsModelResponse>> healthProbeSettings;
 
+    /**
+     * @return Health probe settings associated with this Front Door instance.
+     * 
+     */
     public Output</* @Nullable */ List<HealthProbeSettingsModelResponse>> getHealthProbeSettings() {
         return this.healthProbeSettings;
     }
+    /**
+     * Load balancing settings associated with this Front Door instance.
+     * 
+     */
     @OutputExport(name="loadBalancingSettings", type=List.class, parameters={LoadBalancingSettingsModelResponse.class})
     private Output</* @Nullable */ List<LoadBalancingSettingsModelResponse>> loadBalancingSettings;
 
+    /**
+     * @return Load balancing settings associated with this Front Door instance.
+     * 
+     */
     public Output</* @Nullable */ List<LoadBalancingSettingsModelResponse>> getLoadBalancingSettings() {
         return this.loadBalancingSettings;
     }
+    /**
+     * Resource location.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the Front Door.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the Front Door.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource status of the Front Door.
+     * 
+     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
+    /**
+     * @return Resource status of the Front Door.
+     * 
+     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
+    /**
+     * Routing rules associated with this Front Door.
+     * 
+     */
     @OutputExport(name="routingRules", type=List.class, parameters={RoutingRuleResponse.class})
     private Output</* @Nullable */ List<RoutingRuleResponse>> routingRules;
 
+    /**
+     * @return Routing rules associated with this Front Door.
+     * 
+     */
     public Output</* @Nullable */ List<RoutingRuleResponse>> getRoutingRules() {
         return this.routingRules;
     }
+    /**
+     * Rules Engine Configurations available to routing rules.
+     * 
+     */
     @OutputExport(name="rulesEngines", type=List.class, parameters={RulesEngineResponse.class})
     private Output<List<RulesEngineResponse>> rulesEngines;
 
+    /**
+     * @return Rules Engine Configurations available to routing rules.
+     * 
+     */
     public Output<List<RulesEngineResponse>> getRulesEngines() {
         return this.rulesEngines;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FrontDoor(String name, FrontDoorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:FrontDoor", name, args == null ? FrontDoorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -149,6 +306,14 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FrontDoor get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FrontDoor(name, id, options);
     }

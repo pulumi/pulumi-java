@@ -28,6 +28,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostPoolArgs Empty = new HostPoolArgs();
 
+    /**
+     * Custom rdp property of HostPool.
+     * 
+     */
     @InputImport(name="customRdpProperty")
     private final @Nullable Input<String> customRdpProperty;
 
@@ -35,6 +39,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.customRdpProperty == null ? Input.empty() : this.customRdpProperty;
     }
 
+    /**
+     * Description of HostPool.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,6 +50,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Friendly name of HostPool.
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -49,6 +61,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * The name of the host pool within the specified resource group
+     * 
+     */
     @InputImport(name="hostPoolName")
     private final @Nullable Input<String> hostPoolName;
 
@@ -56,6 +72,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostPoolName == null ? Input.empty() : this.hostPoolName;
     }
 
+    /**
+     * HostPool type for desktop.
+     * 
+     */
     @InputImport(name="hostPoolType", required=true)
     private final Input<Either<String,HostPoolType>> hostPoolType;
 
@@ -70,6 +90,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -77,6 +101,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The type of the load balancer.
+     * 
+     */
     @InputImport(name="loadBalancerType", required=true)
     private final Input<Either<String,LoadBalancerType>> loadBalancerType;
 
@@ -84,6 +112,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancerType;
     }
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -91,6 +123,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     * 
+     */
     @InputImport(name="managedBy")
     private final @Nullable Input<String> managedBy;
 
@@ -98,6 +134,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
+    /**
+     * The max session limit of HostPool.
+     * 
+     */
     @InputImport(name="maxSessionLimit")
     private final @Nullable Input<Integer> maxSessionLimit;
 
@@ -105,6 +145,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxSessionLimit == null ? Input.empty() : this.maxSessionLimit;
     }
 
+    /**
+     * The registration info of HostPool.
+     * 
+     */
     @InputImport(name="migrationRequest")
     private final @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest;
 
@@ -112,6 +156,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.migrationRequest == null ? Input.empty() : this.migrationRequest;
     }
 
+    /**
+     * PersonalDesktopAssignment type for HostPool.
+     * 
+     */
     @InputImport(name="personalDesktopAssignmentType")
     private final @Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
 
@@ -126,6 +174,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
+    /**
+     * The type of preferred application group type, default to Desktop Application Group
+     * 
+     */
     @InputImport(name="preferredAppGroupType", required=true)
     private final Input<Either<String,PreferredAppGroupType>> preferredAppGroupType;
 
@@ -133,6 +185,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.preferredAppGroupType;
     }
 
+    /**
+     * The registration info of HostPool.
+     * 
+     */
     @InputImport(name="registrationInfo")
     private final @Nullable Input<RegistrationInfoArgs> registrationInfo;
 
@@ -140,6 +196,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.registrationInfo == null ? Input.empty() : this.registrationInfo;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -147,6 +207,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The ring number of HostPool.
+     * 
+     */
     @InputImport(name="ring")
     private final @Nullable Input<Integer> ring;
 
@@ -161,6 +225,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * ClientId for the registered Relying Party used to issue WVD SSO certificates.
+     * 
+     */
     @InputImport(name="ssoClientId")
     private final @Nullable Input<String> ssoClientId;
 
@@ -168,6 +236,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.ssoClientId == null ? Input.empty() : this.ssoClientId;
     }
 
+    /**
+     * Path to Azure KeyVault storing the secret used for communication to ADFS.
+     * 
+     */
     @InputImport(name="ssoClientSecretKeyVaultPath")
     private final @Nullable Input<String> ssoClientSecretKeyVaultPath;
 
@@ -175,6 +247,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.ssoClientSecretKeyVaultPath == null ? Input.empty() : this.ssoClientSecretKeyVaultPath;
     }
 
+    /**
+     * The type of single sign on Secret Type.
+     * 
+     */
     @InputImport(name="ssoSecretType")
     private final @Nullable Input<Either<String,SSOSecretType>> ssoSecretType;
 
@@ -182,6 +258,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.ssoSecretType == null ? Input.empty() : this.ssoSecretType;
     }
 
+    /**
+     * URL to customer ADFS server for signing WVD SSO certificates.
+     * 
+     */
     @InputImport(name="ssoadfsAuthority")
     private final @Nullable Input<String> ssoadfsAuthority;
 
@@ -189,6 +269,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.ssoadfsAuthority == null ? Input.empty() : this.ssoadfsAuthority;
     }
 
+    /**
+     * The flag to turn on/off StartVMOnConnect feature.
+     * 
+     */
     @InputImport(name="startVMOnConnect")
     private final @Nullable Input<Boolean> startVMOnConnect;
 
@@ -196,6 +280,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.startVMOnConnect == null ? Input.empty() : this.startVMOnConnect;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -203,6 +291,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Is validation environment.
+     * 
+     */
     @InputImport(name="validationEnvironment")
     private final @Nullable Input<Boolean> validationEnvironment;
 
@@ -210,6 +302,10 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.validationEnvironment == null ? Input.empty() : this.validationEnvironment;
     }
 
+    /**
+     * VM template for sessionhosts configuration within hostpool.
+     * 
+     */
     @InputImport(name="vmTemplate")
     private final @Nullable Input<String> vmTemplate;
 

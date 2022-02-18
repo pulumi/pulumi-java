@@ -12,6 +12,10 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPipelineArgs Empty = new GetPipelineArgs();
 
+    /**
+     * The name of the Pipeline resource in ARM.
+     * 
+     */
     @InputImport(name="pipelineName", required=true)
     private final String pipelineName;
 
@@ -19,6 +23,10 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
         return this.pipelineName;
     }
 
+    /**
+     * Name of the resource group within the Azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

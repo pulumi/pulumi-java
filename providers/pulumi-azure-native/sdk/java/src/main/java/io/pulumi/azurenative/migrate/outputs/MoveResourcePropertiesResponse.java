@@ -31,16 +31,60 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MoveResourcePropertiesResponse {
+    /**
+     * Gets or sets the move resource dependencies.
+     * 
+     */
     private final List<MoveResourceDependencyResponse> dependsOn;
+    /**
+     * Gets or sets the move resource dependencies overrides.
+     * 
+     */
     private final @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides;
+    /**
+     * Defines the move resource errors.
+     * 
+     */
     private final MoveResourcePropertiesResponseErrors errors;
+    /**
+     * Gets or sets the existing target ARM Id of the resource.
+     * 
+     */
     private final @Nullable String existingTargetId;
+    /**
+     * Gets a value indicating whether the resolve action is required over the move collection.
+     * 
+     */
     private final Boolean isResolveRequired;
+    /**
+     * Defines the move resource status.
+     * 
+     */
     private final MoveResourcePropertiesResponseMoveStatus moveStatus;
+    /**
+     * Defines the provisioning states.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * Gets or sets the resource settings.
+     * 
+     */
     private final @Nullable Object resourceSettings;
+    /**
+     * Gets or sets the Source ARM Id of the resource.
+     * 
+     */
     private final String sourceId;
+    /**
+     * Gets or sets the source resource settings.
+     * 
+     */
     private final Object sourceResourceSettings;
+    /**
+     * Gets or sets the Target ARM Id of the resource.
+     * 
+     */
     private final String targetId;
 
     @OutputCustomType.Constructor({"dependsOn","dependsOnOverrides","errors","existingTargetId","isResolveRequired","moveStatus","provisioningState","resourceSettings","sourceId","sourceResourceSettings","targetId"})
@@ -69,36 +113,80 @@ public final class MoveResourcePropertiesResponse {
         this.targetId = Objects.requireNonNull(targetId);
     }
 
+    /**
+     * Gets or sets the move resource dependencies.
+     * 
+     */
     public List<MoveResourceDependencyResponse> getDependsOn() {
         return this.dependsOn;
     }
+    /**
+     * Gets or sets the move resource dependencies overrides.
+     * 
+     */
     public List<MoveResourceDependencyOverrideResponse> getDependsOnOverrides() {
         return this.dependsOnOverrides == null ? List.of() : this.dependsOnOverrides;
     }
+    /**
+     * Defines the move resource errors.
+     * 
+     */
     public MoveResourcePropertiesResponseErrors getErrors() {
         return this.errors;
     }
+    /**
+     * Gets or sets the existing target ARM Id of the resource.
+     * 
+     */
     public Optional<String> getExistingTargetId() {
         return Optional.ofNullable(this.existingTargetId);
     }
+    /**
+     * Gets a value indicating whether the resolve action is required over the move collection.
+     * 
+     */
     public Boolean getIsResolveRequired() {
         return this.isResolveRequired;
     }
+    /**
+     * Defines the move resource status.
+     * 
+     */
     public MoveResourcePropertiesResponseMoveStatus getMoveStatus() {
         return this.moveStatus;
     }
+    /**
+     * Defines the provisioning states.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Gets or sets the resource settings.
+     * 
+     */
     public Optional<Object> getResourceSettings() {
         return Optional.ofNullable(this.resourceSettings);
     }
+    /**
+     * Gets or sets the Source ARM Id of the resource.
+     * 
+     */
     public String getSourceId() {
         return this.sourceId;
     }
+    /**
+     * Gets or sets the source resource settings.
+     * 
+     */
     public Object getSourceResourceSettings() {
         return this.sourceResourceSettings;
     }
+    /**
+     * Gets or sets the Target ARM Id of the resource.
+     * 
+     */
     public String getTargetId() {
         return this.targetId;
     }

@@ -17,15 +17,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkbookTemplateResult {
+    /**
+     * Information about the author of the workbook template.
+     * 
+     */
     private final @Nullable String author;
+    /**
+     * Workbook galleries supported by the template.
+     * 
+     */
     private final List<WorkbookTemplateGalleryResponse> galleries;
+    /**
+     * Azure resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
+     * 
+     */
     private final @Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized;
+    /**
+     * Resource location
+     * 
+     */
     private final String location;
+    /**
+     * Azure resource name.
+     * 
+     */
     private final String name;
+    /**
+     * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
+     * 
+     */
     private final @Nullable Integer priority;
+    /**
+     * Resource tags
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Valid JSON object containing workbook template payload.
+     * 
+     */
     private final Object templateData;
+    /**
+     * Azure resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"author","galleries","id","localized","location","name","priority","tags","templateData","type"})
@@ -52,33 +92,73 @@ public final class GetWorkbookTemplateResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Information about the author of the workbook template.
+     * 
+     */
     public Optional<String> getAuthor() {
         return Optional.ofNullable(this.author);
     }
+    /**
+     * Workbook galleries supported by the template.
+     * 
+     */
     public List<WorkbookTemplateGalleryResponse> getGalleries() {
         return this.galleries;
     }
+    /**
+     * Azure resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
+     * 
+     */
     public Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> getLocalized() {
         return this.localized == null ? Map.of() : this.localized;
     }
+    /**
+     * Resource location
+     * 
+     */
     public String getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
+     * 
+     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
+    /**
+     * Resource tags
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Valid JSON object containing workbook template payload.
+     * 
+     */
     public Object getTemplateData() {
         return this.templateData;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

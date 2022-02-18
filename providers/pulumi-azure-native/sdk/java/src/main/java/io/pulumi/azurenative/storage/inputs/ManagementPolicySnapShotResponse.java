@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Management policy action for snapshot.
+ * 
+ */
 public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementPolicySnapShotResponse Empty = new ManagementPolicySnapShotResponse();
 
+    /**
+     * The function to delete the blob snapshot
+     * 
+     */
     @InputImport(name="delete")
     private final @Nullable DateAfterCreationResponse delete;
 
@@ -21,6 +29,10 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
         return this.delete == null ? Optional.empty() : Optional.ofNullable(this.delete);
     }
 
+    /**
+     * The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
+     * 
+     */
     @InputImport(name="tierToArchive")
     private final @Nullable DateAfterCreationResponse tierToArchive;
 
@@ -28,6 +40,10 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
         return this.tierToArchive == null ? Optional.empty() : Optional.ofNullable(this.tierToArchive);
     }
 
+    /**
+     * The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
+     * 
+     */
     @InputImport(name="tierToCool")
     private final @Nullable DateAfterCreationResponse tierToCool;
 

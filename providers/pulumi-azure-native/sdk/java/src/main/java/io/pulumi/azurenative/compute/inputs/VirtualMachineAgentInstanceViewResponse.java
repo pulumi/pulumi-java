@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The instance view of the VM Agent running on the virtual machine.
+ * 
+ */
 public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineAgentInstanceViewResponse Empty = new VirtualMachineAgentInstanceViewResponse();
 
+    /**
+     * The virtual machine extension handler instance view.
+     * 
+     */
     @InputImport(name="extensionHandlers")
     private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
 
@@ -24,6 +32,10 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
         return this.extensionHandlers == null ? List.of() : this.extensionHandlers;
     }
 
+    /**
+     * The resource status information.
+     * 
+     */
     @InputImport(name="statuses")
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
@@ -31,6 +43,10 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
         return this.statuses == null ? List.of() : this.statuses;
     }
 
+    /**
+     * The VM Agent full version.
+     * 
+     */
     @InputImport(name="vmAgentVersion")
     private final @Nullable String vmAgentVersion;
 

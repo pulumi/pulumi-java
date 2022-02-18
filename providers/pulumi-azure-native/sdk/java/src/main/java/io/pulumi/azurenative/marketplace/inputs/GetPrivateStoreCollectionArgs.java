@@ -12,6 +12,10 @@ public final class GetPrivateStoreCollectionArgs extends io.pulumi.resources.Inv
 
     public static final GetPrivateStoreCollectionArgs Empty = new GetPrivateStoreCollectionArgs();
 
+    /**
+     * The collection ID
+     * 
+     */
     @InputImport(name="collectionId", required=true)
     private final String collectionId;
 
@@ -19,6 +23,10 @@ public final class GetPrivateStoreCollectionArgs extends io.pulumi.resources.Inv
         return this.collectionId;
     }
 
+    /**
+     * The store ID - must use the tenant ID
+     * 
+     */
     @InputImport(name="privateStoreId", required=true)
     private final String privateStoreId;
 

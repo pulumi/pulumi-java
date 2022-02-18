@@ -21,6 +21,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
 
     public static final ServiceFabricScheduleArgs Empty = new ServiceFabricScheduleArgs();
 
+    /**
+     * If the schedule will occur once each day of the week, specify the daily recurrence.
+     * 
+     */
     @InputImport(name="dailyRecurrence")
     private final @Nullable Input<DayDetailsArgs> dailyRecurrence;
 
@@ -28,6 +32,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.dailyRecurrence == null ? Input.empty() : this.dailyRecurrence;
     }
 
+    /**
+     * If the schedule will occur multiple times a day, specify the hourly recurrence.
+     * 
+     */
     @InputImport(name="hourlyRecurrence")
     private final @Nullable Input<HourDetailsArgs> hourlyRecurrence;
 
@@ -35,6 +43,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.hourlyRecurrence == null ? Input.empty() : this.hourlyRecurrence;
     }
 
+    /**
+     * The name of the lab.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -42,6 +54,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.labName;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,6 +65,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the schedule.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -56,6 +76,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Notification settings.
+     * 
+     */
     @InputImport(name="notificationSettings")
     private final @Nullable Input<NotificationSettingsArgs> notificationSettings;
 
@@ -63,6 +87,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.notificationSettings == null ? Input.empty() : this.notificationSettings;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,6 +98,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service fabric.
+     * 
+     */
     @InputImport(name="serviceFabricName", required=true)
     private final Input<String> serviceFabricName;
 
@@ -77,6 +109,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.serviceFabricName;
     }
 
+    /**
+     * The status of the schedule (i.e. Enabled, Disabled)
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,EnableStatus>> status;
 
@@ -84,6 +120,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The tags of the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -91,6 +131,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The resource ID to which the schedule belongs
+     * 
+     */
     @InputImport(name="targetResourceId")
     private final @Nullable Input<String> targetResourceId;
 
@@ -98,6 +142,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.targetResourceId == null ? Input.empty() : this.targetResourceId;
     }
 
+    /**
+     * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+     * 
+     */
     @InputImport(name="taskType")
     private final @Nullable Input<String> taskType;
 
@@ -105,6 +153,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.taskType == null ? Input.empty() : this.taskType;
     }
 
+    /**
+     * The time zone ID (e.g. Pacific Standard time).
+     * 
+     */
     @InputImport(name="timeZoneId")
     private final @Nullable Input<String> timeZoneId;
 
@@ -112,6 +164,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.timeZoneId == null ? Input.empty() : this.timeZoneId;
     }
 
+    /**
+     * The name of the user profile.
+     * 
+     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 
@@ -119,6 +175,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         return this.userName;
     }
 
+    /**
+     * If the schedule will occur only some days of the week, specify the weekly recurrence.
+     * 
+     */
     @InputImport(name="weeklyRecurrence")
     private final @Nullable Input<WeekDetailsArgs> weeklyRecurrence;
 

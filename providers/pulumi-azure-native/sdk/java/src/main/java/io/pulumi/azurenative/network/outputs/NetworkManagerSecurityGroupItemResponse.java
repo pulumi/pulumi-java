@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkManagerSecurityGroupItemResponse {
+    /**
+     * Network manager group Id.
+     * 
+     */
     private final @Nullable String networkGroupId;
 
     @OutputCustomType.Constructor({"networkGroupId"})
@@ -18,6 +22,10 @@ public final class NetworkManagerSecurityGroupItemResponse {
         this.networkGroupId = networkGroupId;
     }
 
+    /**
+     * Network manager group Id.
+     * 
+     */
     public Optional<String> getNetworkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }

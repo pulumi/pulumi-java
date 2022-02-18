@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Copy log details for a storage account for Databox heavy
+ * 
+ */
 public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataBoxHeavyAccountCopyLogDetailsResponse Empty = new DataBoxHeavyAccountCopyLogDetailsResponse();
 
+    /**
+     * Account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -20,6 +28,11 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
         return this.accountName;
     }
 
+    /**
+     * Indicates the type of job details.
+     * Expected value is 'DataBoxHeavy'.
+     * 
+     */
     @InputImport(name="copyLogDetailsType", required=true)
     private final String copyLogDetailsType;
 
@@ -27,6 +40,10 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
         return this.copyLogDetailsType;
     }
 
+    /**
+     * Link for copy logs.
+     * 
+     */
     @InputImport(name="copyLogLink", required=true)
     private final List<String> copyLogLink;
 
@@ -34,6 +51,10 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
         return this.copyLogLink;
     }
 
+    /**
+     * Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
+     * 
+     */
     @InputImport(name="copyVerboseLogLink", required=true)
     private final List<String> copyVerboseLogLink;
 

@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Forest Trust Setting
+ * 
+ */
 public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ForestTrustResponse Empty = new ForestTrustResponse();
 
+    /**
+     * Friendly Name
+     * 
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -21,6 +29,10 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * Remote Dns ips
+     * 
+     */
     @InputImport(name="remoteDnsIps")
     private final @Nullable String remoteDnsIps;
 
@@ -28,6 +40,10 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.remoteDnsIps == null ? Optional.empty() : Optional.ofNullable(this.remoteDnsIps);
     }
 
+    /**
+     * Trust Direction
+     * 
+     */
     @InputImport(name="trustDirection")
     private final @Nullable String trustDirection;
 
@@ -35,6 +51,10 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.trustDirection == null ? Optional.empty() : Optional.ofNullable(this.trustDirection);
     }
 
+    /**
+     * Trust Password
+     * 
+     */
     @InputImport(name="trustPassword")
     private final @Nullable String trustPassword;
 
@@ -42,6 +62,10 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.trustPassword == null ? Optional.empty() : Optional.ofNullable(this.trustPassword);
     }
 
+    /**
+     * Trusted Domain FQDN
+     * 
+     */
     @InputImport(name="trustedDomainFqdn")
     private final @Nullable String trustedDomainFqdn;
 

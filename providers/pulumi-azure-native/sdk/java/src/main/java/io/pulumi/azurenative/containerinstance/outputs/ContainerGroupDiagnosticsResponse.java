@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerGroupDiagnosticsResponse {
+    /**
+     * Container group log analytics information.
+     * 
+     */
     private final @Nullable LogAnalyticsResponse logAnalytics;
 
     @OutputCustomType.Constructor({"logAnalytics"})
@@ -18,6 +22,10 @@ public final class ContainerGroupDiagnosticsResponse {
         this.logAnalytics = logAnalytics;
     }
 
+    /**
+     * Container group log analytics information.
+     * 
+     */
     public Optional<LogAnalyticsResponse> getLogAnalytics() {
         return Optional.ofNullable(this.logAnalytics);
     }

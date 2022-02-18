@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Hostname type.
+     * 
+     */
     @EnumType
     public enum HostNameType {
         Verified("Verified"),

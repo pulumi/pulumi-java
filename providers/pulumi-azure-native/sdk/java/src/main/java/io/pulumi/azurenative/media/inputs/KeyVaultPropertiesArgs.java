@@ -14,6 +14,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     public static final KeyVaultPropertiesArgs Empty = new KeyVaultPropertiesArgs();
 
+    /**
+     * The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
+     * 
+     */
     @InputImport(name="keyIdentifier")
     private final @Nullable Input<String> keyIdentifier;
 

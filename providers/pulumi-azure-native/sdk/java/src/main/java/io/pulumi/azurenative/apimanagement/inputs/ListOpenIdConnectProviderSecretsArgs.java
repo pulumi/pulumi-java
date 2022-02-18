@@ -12,6 +12,10 @@ public final class ListOpenIdConnectProviderSecretsArgs extends io.pulumi.resour
 
     public static final ListOpenIdConnectProviderSecretsArgs Empty = new ListOpenIdConnectProviderSecretsArgs();
 
+    /**
+     * Identifier of the OpenID Connect Provider.
+     * 
+     */
     @InputImport(name="opid", required=true)
     private final String opid;
 
@@ -19,6 +23,10 @@ public final class ListOpenIdConnectProviderSecretsArgs extends io.pulumi.resour
         return this.opid;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListOpenIdConnectProviderSecretsArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Gateway SKU tier.
+     * 
+     */
     @EnumType
     public enum VirtualNetworkGatewaySkuTier {
         Basic("Basic"),

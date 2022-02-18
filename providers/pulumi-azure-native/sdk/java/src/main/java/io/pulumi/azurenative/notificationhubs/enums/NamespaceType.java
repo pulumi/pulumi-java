@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The namespace type.
+     * 
+     */
     @EnumType
     public enum NamespaceType {
         Messaging("Messaging"),

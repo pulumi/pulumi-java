@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of a Test.
+ * 
+ */
 public final class TestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestArgs Empty = new TestArgs();
 
+    /**
+     * The commands used in the test.
+     * 
+     */
     @InputImport(name="commands", required=true)
     private final Input<List<CommandArgs>> commands;
 
@@ -26,6 +34,10 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
         return this.commands;
     }
 
+    /**
+     * Indicates if this test is active.It doesn't schedule test for not active Test.
+     * 
+     */
     @InputImport(name="isActive")
     private final @Nullable Input<Boolean> isActive;
 
@@ -33,6 +45,10 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
         return this.isActive == null ? Input.empty() : this.isActive;
     }
 
+    /**
+     * The type of the test.
+     * 
+     */
     @InputImport(name="testType", required=true)
     private final Input<Either<String,TestType>> testType;
 

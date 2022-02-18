@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties specific to the monitor resource.
+ * 
+ */
 public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitorPropertiesArgs Empty = new MonitorPropertiesArgs();
 
+    /**
+     * Datadog organization properties
+     * 
+     */
     @InputImport(name="datadogOrganizationProperties")
     private final @Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
 
@@ -25,6 +33,10 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.datadogOrganizationProperties == null ? Input.empty() : this.datadogOrganizationProperties;
     }
 
+    /**
+     * Flag specifying if the resource monitoring is enabled or disabled.
+     * 
+     */
     @InputImport(name="monitoringStatus")
     private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
 
@@ -32,6 +44,10 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.monitoringStatus == null ? Input.empty() : this.monitoringStatus;
     }
 
+    /**
+     * User info
+     * 
+     */
     @InputImport(name="userInfo")
     private final @Nullable Input<UserInfoArgs> userInfo;
 

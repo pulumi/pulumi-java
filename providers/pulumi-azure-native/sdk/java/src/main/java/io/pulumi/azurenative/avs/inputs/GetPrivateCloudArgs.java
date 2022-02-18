@@ -12,6 +12,10 @@ public final class GetPrivateCloudArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateCloudArgs Empty = new GetPrivateCloudArgs();
 
+    /**
+     * Name of the private cloud
+     * 
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -19,6 +23,10 @@ public final class GetPrivateCloudArgs extends io.pulumi.resources.InvokeArgs {
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

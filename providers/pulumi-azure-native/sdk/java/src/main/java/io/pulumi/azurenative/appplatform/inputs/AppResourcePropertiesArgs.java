@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * App resource properties payload
+ * 
+ */
 public final class AppResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppResourcePropertiesArgs Empty = new AppResourcePropertiesArgs();
 
+    /**
+     * Name of the active deployment of the App
+     * 
+     */
     @InputImport(name="activeDeploymentName")
     private final @Nullable Input<String> activeDeploymentName;
 
@@ -24,6 +32,10 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
         return this.activeDeploymentName == null ? Input.empty() : this.activeDeploymentName;
     }
 
+    /**
+     * Fully qualified dns Name.
+     * 
+     */
     @InputImport(name="fqdn")
     private final @Nullable Input<String> fqdn;
 
@@ -31,6 +43,10 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
         return this.fqdn == null ? Input.empty() : this.fqdn;
     }
 
+    /**
+     * Indicate if only https is allowed.
+     * 
+     */
     @InputImport(name="httpsOnly")
     private final @Nullable Input<Boolean> httpsOnly;
 
@@ -38,6 +54,10 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
         return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
     }
 
+    /**
+     * Persistent disk settings
+     * 
+     */
     @InputImport(name="persistentDisk")
     private final @Nullable Input<PersistentDiskArgs> persistentDisk;
 
@@ -45,6 +65,10 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
         return this.persistentDisk == null ? Input.empty() : this.persistentDisk;
     }
 
+    /**
+     * Indicates whether the App exposes public endpoint
+     * 
+     */
     @InputImport(name="public")
     private final @Nullable Input<Boolean> $public;
 
@@ -52,6 +76,10 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
         return this.$public == null ? Input.empty() : this.$public;
     }
 
+    /**
+     * Temporary disk settings
+     * 
+     */
     @InputImport(name="temporaryDisk")
     private final @Nullable Input<TemporaryDiskArgs> temporaryDisk;
 

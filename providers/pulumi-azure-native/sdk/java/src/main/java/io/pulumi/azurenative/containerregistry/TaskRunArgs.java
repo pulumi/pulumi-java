@@ -20,6 +20,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskRunArgs Empty = new TaskRunArgs();
 
+    /**
+     * How the run should be forced to rerun even if the run request configuration has not changed
+     * 
+     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable Input<String> forceUpdateTag;
 
@@ -27,6 +31,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
     }
 
+    /**
+     * Identity for the resource.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityPropertiesArgs> identity;
 
@@ -34,6 +42,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The location of the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,6 +53,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the container registry.
+     * 
+     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -48,6 +64,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -55,6 +75,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The request (parameters) for the run
+     * 
+     */
     @InputImport(name="runRequest")
     private final @Nullable Input<Object> runRequest;
 
@@ -62,6 +86,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
         return this.runRequest == null ? Input.empty() : this.runRequest;
     }
 
+    /**
+     * The name of the task run.
+     * 
+     */
     @InputImport(name="taskRunName")
     private final @Nullable Input<String> taskRunName;
 

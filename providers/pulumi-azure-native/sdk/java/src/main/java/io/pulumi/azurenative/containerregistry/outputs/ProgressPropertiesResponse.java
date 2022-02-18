@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProgressPropertiesResponse {
+    /**
+     * The percentage complete of the copy operation.
+     * 
+     */
     private final @Nullable String percentage;
 
     @OutputCustomType.Constructor({"percentage"})
@@ -18,6 +22,10 @@ public final class ProgressPropertiesResponse {
         this.percentage = percentage;
     }
 
+    /**
+     * The percentage complete of the copy operation.
+     * 
+     */
     public Optional<String> getPercentage() {
         return Optional.ofNullable(this.percentage);
     }

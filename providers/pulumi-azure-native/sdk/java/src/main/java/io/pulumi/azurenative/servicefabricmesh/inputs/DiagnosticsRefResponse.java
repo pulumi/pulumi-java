@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Reference to sinks in DiagnosticsDescription.
+ * 
+ */
 public final class DiagnosticsRefResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiagnosticsRefResponse Empty = new DiagnosticsRefResponse();
 
+    /**
+     * Status of whether or not sinks are enabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -23,6 +31,10 @@ public final class DiagnosticsRefResponse extends io.pulumi.resources.InvokeArgs
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
+     * 
+     */
     @InputImport(name="sinkRefs")
     private final @Nullable List<String> sinkRefs;
 

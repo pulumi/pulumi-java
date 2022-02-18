@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The group header time format.
+     * 
+     */
     @EnumType
     public enum X12TimeFormat {
         NotSpecified("NotSpecified"),

@@ -15,6 +15,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
 
     public static final TimeSeriesDatabaseConnectionArgs Empty = new TimeSeriesDatabaseConnectionArgs();
 
+    /**
+     * Properties of a specific time series database connection.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<AzureDataExplorerConnectionPropertiesArgs> properties;
 
@@ -22,6 +26,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the DigitalTwinsInstance.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -29,6 +37,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the DigitalTwinsInstance.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -36,6 +48,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
         return this.resourceName;
     }
 
+    /**
+     * Name of time series database connection.
+     * 
+     */
     @InputImport(name="timeSeriesDatabaseConnectionName")
     private final @Nullable Input<String> timeSeriesDatabaseConnectionName;
 

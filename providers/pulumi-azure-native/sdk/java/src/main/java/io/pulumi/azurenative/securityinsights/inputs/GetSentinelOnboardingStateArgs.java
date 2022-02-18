@@ -12,6 +12,10 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
 
     public static final GetSentinelOnboardingStateArgs Empty = new GetSentinelOnboardingStateArgs();
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -19,6 +23,10 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * The Sentinel onboarding state name. Supports - default
+     * 
+     */
     @InputImport(name="sentinelOnboardingStateName", required=true)
     private final String sentinelOnboardingStateName;
 
@@ -33,6 +45,10 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
         return this.sentinelOnboardingStateName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

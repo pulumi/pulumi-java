@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cosmos DB SQL storedProcedure resource object
+ * 
+ */
 public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlStoredProcedureResourceArgs Empty = new SqlStoredProcedureResourceArgs();
 
+    /**
+     * Body of the Stored Procedure
+     * 
+     */
     @InputImport(name="body")
     private final @Nullable Input<String> body;
 
@@ -21,6 +29,10 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * Name of the Cosmos DB SQL storedProcedure
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

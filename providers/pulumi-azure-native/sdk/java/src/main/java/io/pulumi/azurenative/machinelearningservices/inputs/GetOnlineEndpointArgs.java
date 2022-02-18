@@ -12,6 +12,10 @@ public final class GetOnlineEndpointArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetOnlineEndpointArgs Empty = new GetOnlineEndpointArgs();
 
+    /**
+     * Online Endpoint name.
+     * 
+     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 
@@ -19,6 +23,10 @@ public final class GetOnlineEndpointArgs extends io.pulumi.resources.InvokeArgs 
         return this.endpointName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetOnlineEndpointArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

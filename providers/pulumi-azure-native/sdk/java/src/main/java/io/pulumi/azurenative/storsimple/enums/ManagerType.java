@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of StorSimple Manager.
+     * 
+     */
     @EnumType
     public enum ManagerType {
         GardaV1("GardaV1"),

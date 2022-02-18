@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The type of key used to encrypt the data of the disk.
+     * 
+     */
     @EnumType
     public enum DiskEncryptionSetType {
+        /**
+         * Resource using diskEncryptionSet would be encrypted at rest with Customer managed key that can be changed and revoked by a customer.
+         * 
+         */
         EncryptionAtRestWithCustomerKey("EncryptionAtRestWithCustomerKey"),
+        /**
+         * Resource using diskEncryptionSet would be encrypted at rest with two layers of encryption. One of the keys is Customer managed and the other key is Platform managed.
+         * 
+         */
         EncryptionAtRestWithPlatformAndCustomerKeys("EncryptionAtRestWithPlatformAndCustomerKeys");
 
         private final String value;

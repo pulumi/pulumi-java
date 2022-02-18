@@ -16,6 +16,10 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
 
     public static final DeploymentAtManagementGroupScopeArgs Empty = new DeploymentAtManagementGroupScopeArgs();
 
+    /**
+     * The name of the deployment.
+     * 
+     */
     @InputImport(name="deploymentName")
     private final @Nullable Input<String> deploymentName;
 
@@ -23,6 +27,10 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
     }
 
+    /**
+     * The management group ID.
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final Input<String> groupId;
 
@@ -30,6 +38,10 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
         return this.groupId;
     }
 
+    /**
+     * The location to store the deployment data.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,10 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The deployment properties.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<DeploymentPropertiesArgs> properties;
 
@@ -44,6 +60,10 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
         return this.properties;
     }
 
+    /**
+     * Deployment tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

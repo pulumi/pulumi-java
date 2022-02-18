@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An API Version Set contains the common configuration for a set of API Versions relating
+ * 
+ */
 public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiVersionSetContractDetailsArgs Empty = new ApiVersionSetContractDetailsArgs();
 
+    /**
+     * Description of API Version Set.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +29,10 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Identifier for existing API Version Set. Omit this value to create a new Version Set.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,6 +40,10 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The display Name of the API Version Set.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +51,10 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+     * 
+     */
     @InputImport(name="versionHeaderName")
     private final @Nullable Input<String> versionHeaderName;
 
@@ -42,6 +62,10 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
         return this.versionHeaderName == null ? Input.empty() : this.versionHeaderName;
     }
 
+    /**
+     * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+     * 
+     */
     @InputImport(name="versionQueryName")
     private final @Nullable Input<String> versionQueryName;
 
@@ -49,6 +73,10 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
         return this.versionQueryName == null ? Input.empty() : this.versionQueryName;
     }
 
+    /**
+     * An value that determines where the API Version identifier will be located in a HTTP request.
+     * 
+     */
     @InputImport(name="versioningScheme")
     private final @Nullable Input<String> versioningScheme;
 

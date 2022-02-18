@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The user impact of the assessment
+     * 
+     */
     @EnumType
     public enum UserImpact {
         Low("Low"),

@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The private link service ip configuration.
+ * 
+ */
 public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkServiceIpConfigurationResponse Empty = new PrivateLinkServiceIpConfigurationResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -23,6 +31,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -30,6 +42,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of private link service ip configuration.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,6 +53,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Whether the ip configuration is primary or not.
+     * 
+     */
     @InputImport(name="primary")
     private final @Nullable Boolean primary;
 
@@ -44,6 +64,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
+    /**
+     * The private IP address of the IP configuration.
+     * 
+     */
     @InputImport(name="privateIPAddress")
     private final @Nullable String privateIPAddress;
 
@@ -51,6 +75,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
+    /**
+     * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+     * 
+     */
     @InputImport(name="privateIPAddressVersion")
     private final @Nullable String privateIPAddressVersion;
 
@@ -58,6 +86,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
+    /**
+     * The private IP address allocation method.
+     * 
+     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable String privateIPAllocationMethod;
 
@@ -65,6 +97,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
+    /**
+     * The provisioning state of the private link service IP configuration resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -72,6 +108,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.provisioningState;
     }
 
+    /**
+     * The reference to the subnet resource.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable SubnetResponse subnet;
 
@@ -79,6 +119,10 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
+    /**
+     * The resource type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

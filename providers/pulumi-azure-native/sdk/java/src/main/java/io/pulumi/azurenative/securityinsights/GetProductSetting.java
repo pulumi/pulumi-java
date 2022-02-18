@@ -14,6 +14,18 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba. */
 public class GetProductSetting {
+/**
+ * The Setting.
+ * API Version: 2021-03-01-preview.
+ * 
+ *
+ * The Setting.
+ * 
+ * @deprecated
+ * Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba.
+ * 
+ */
+    @Deprecated /* Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba. */
     public static CompletableFuture<GetProductSettingResult> invokeAsync(GetProductSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getProductSetting", TypeShape.of(GetProductSettingResult.class), args == null ? GetProductSettingArgs.Empty : args, Utilities.withVersion(options));
     }

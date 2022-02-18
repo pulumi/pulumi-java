@@ -12,9 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserManagedHttpsParametersResponse {
+    /**
+     * Defines the source of the SSL certificate.
+     * Expected value is 'AzureKeyVault'.
+     * 
+     */
     private final String certificateSource;
+    /**
+     * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
+     * 
+     */
     private final KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
+    /**
+     * TLS protocol version that will be used for Https
+     * 
+     */
     private final @Nullable String minimumTlsVersion;
+    /**
+     * Defines the TLS extension protocol that is used for secure delivery.
+     * 
+     */
     private final String protocolType;
 
     @OutputCustomType.Constructor({"certificateSource","certificateSourceParameters","minimumTlsVersion","protocolType"})
@@ -29,15 +46,32 @@ public final class UserManagedHttpsParametersResponse {
         this.protocolType = Objects.requireNonNull(protocolType);
     }
 
+    /**
+     * Defines the source of the SSL certificate.
+     * Expected value is 'AzureKeyVault'.
+     * 
+     */
     public String getCertificateSource() {
         return this.certificateSource;
     }
+    /**
+     * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
+     * 
+     */
     public KeyVaultCertificateSourceParametersResponse getCertificateSourceParameters() {
         return this.certificateSourceParameters;
     }
+    /**
+     * TLS protocol version that will be used for Https
+     * 
+     */
     public Optional<String> getMinimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
+    /**
+     * Defines the TLS extension protocol that is used for secure delivery.
+     * 
+     */
     public String getProtocolType() {
         return this.protocolType;
     }

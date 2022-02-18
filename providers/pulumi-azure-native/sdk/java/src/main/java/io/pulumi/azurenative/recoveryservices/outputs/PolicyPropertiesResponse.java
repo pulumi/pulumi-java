@@ -23,7 +23,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PolicyPropertiesResponse {
+    /**
+     * The FriendlyName.
+     * 
+     */
     private final @Nullable String friendlyName;
+    /**
+     * The ReplicationChannelSetting.
+     * 
+     */
     private final @Nullable Object providerSpecificDetails;
 
     @OutputCustomType.Constructor({"friendlyName","providerSpecificDetails"})
@@ -34,9 +42,17 @@ public final class PolicyPropertiesResponse {
         this.providerSpecificDetails = providerSpecificDetails;
     }
 
+    /**
+     * The FriendlyName.
+     * 
+     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
+    /**
+     * The ReplicationChannelSetting.
+     * 
+     */
     public Optional<Object> getProviderSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }

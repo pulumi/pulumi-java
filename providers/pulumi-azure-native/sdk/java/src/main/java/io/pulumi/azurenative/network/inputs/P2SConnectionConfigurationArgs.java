@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * P2SConnectionConfiguration Resource.
+ * 
+ */
 public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final P2SConnectionConfigurationArgs Empty = new P2SConnectionConfigurationArgs();
 
+    /**
+     * Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
+     * 
+     */
     @InputImport(name="enableInternetSecurity")
     private final @Nullable Input<Boolean> enableInternetSecurity;
 
@@ -24,6 +32,10 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
         return this.enableInternetSecurity == null ? Input.empty() : this.enableInternetSecurity;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -31,6 +43,10 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +54,10 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Routing Configuration indicating the associated and propagated route tables on this connection.
+     * 
+     */
     @InputImport(name="routingConfiguration")
     private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
 
@@ -45,6 +65,10 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
         return this.routingConfiguration == null ? Input.empty() : this.routingConfiguration;
     }
 
+    /**
+     * The reference to the address space resource which represents Address space for P2S VpnClient.
+     * 
+     */
     @InputImport(name="vpnClientAddressPool")
     private final @Nullable Input<AddressSpaceArgs> vpnClientAddressPool;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
+     * 
+     */
     @EnumType
     public enum PolicyEnabledState {
         Disabled("Disabled"),

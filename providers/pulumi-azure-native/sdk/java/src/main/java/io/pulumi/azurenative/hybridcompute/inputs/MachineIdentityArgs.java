@@ -14,6 +14,10 @@ public final class MachineIdentityArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final MachineIdentityArgs Empty = new MachineIdentityArgs();
 
+    /**
+     * The identity type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Type of DHCP: SERVER or RELAY.
+     * 
+     */
     @EnumType
     public enum DhcpTypeEnum {
         SERVER_RELAY("SERVER, RELAY");

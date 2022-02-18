@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Defines the action to take when a managed rule set score threshold is met.
+     * 
+     */
     @EnumType
     public enum ManagedRuleSetActionType {
         Block("Block"),

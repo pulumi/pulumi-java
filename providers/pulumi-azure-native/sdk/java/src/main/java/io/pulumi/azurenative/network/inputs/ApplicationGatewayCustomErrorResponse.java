@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Customer error of an application gateway.
+ * 
+ */
 public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayCustomErrorResponse Empty = new ApplicationGatewayCustomErrorResponse();
 
+    /**
+     * Error page URL of the application gateway customer error.
+     * 
+     */
     @InputImport(name="customErrorPageUrl")
     private final @Nullable String customErrorPageUrl;
 
@@ -21,6 +29,10 @@ public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resou
         return this.customErrorPageUrl == null ? Optional.empty() : Optional.ofNullable(this.customErrorPageUrl);
     }
 
+    /**
+     * Status code of the application gateway customer error.
+     * 
+     */
     @InputImport(name="statusCode")
     private final @Nullable String statusCode;
 

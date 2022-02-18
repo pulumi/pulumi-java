@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Retry settings for a batch inference operation.
+ * 
+ */
 public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BatchRetrySettingsArgs Empty = new BatchRetrySettingsArgs();
 
+    /**
+     * Maximum retry count for a mini-batch
+     * 
+     */
     @InputImport(name="maxRetries")
     private final @Nullable Input<Integer> maxRetries;
 
@@ -22,6 +30,10 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
         return this.maxRetries == null ? Input.empty() : this.maxRetries;
     }
 
+    /**
+     * Invocation timeout for a mini-batch, in ISO 8601 format.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

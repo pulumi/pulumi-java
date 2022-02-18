@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Partner server information for the failover group.
+ * 
+ */
 public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PartnerInfoResponse Empty = new PartnerInfoResponse();
 
+    /**
+     * Resource identifier of the partner server.
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -19,6 +27,10 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Geo location of the partner server.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -26,6 +38,10 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * Replication role of the partner server.
+     * 
+     */
     @InputImport(name="replicationRole", required=true)
     private final String replicationRole;
 

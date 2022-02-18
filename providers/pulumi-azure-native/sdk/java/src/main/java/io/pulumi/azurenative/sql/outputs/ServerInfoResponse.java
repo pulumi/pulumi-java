@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServerInfoResponse {
+    /**
+     * Server Id.
+     * 
+     */
     private final String serverId;
 
     @OutputCustomType.Constructor({"serverId"})
@@ -16,6 +20,10 @@ public final class ServerInfoResponse {
         this.serverId = Objects.requireNonNull(serverId);
     }
 
+    /**
+     * Server Id.
+     * 
+     */
     public String getServerId() {
         return this.serverId;
     }

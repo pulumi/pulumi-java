@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * List of properties of a link provider.
+ * 
+ */
 public final class VpnLinkProviderPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnLinkProviderPropertiesResponse Empty = new VpnLinkProviderPropertiesResponse();
 
+    /**
+     * Name of the link provider.
+     * 
+     */
     @InputImport(name="linkProviderName")
     private final @Nullable String linkProviderName;
 
@@ -22,6 +30,10 @@ public final class VpnLinkProviderPropertiesResponse extends io.pulumi.resources
         return this.linkProviderName == null ? Optional.empty() : Optional.ofNullable(this.linkProviderName);
     }
 
+    /**
+     * Link speed.
+     * 
+     */
     @InputImport(name="linkSpeedInMbps")
     private final @Nullable Integer linkSpeedInMbps;
 

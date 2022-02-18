@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Optional throttling information for the alert rule.
+ * 
+ */
 public final class ThrottlingInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ThrottlingInformationResponse Empty = new ThrottlingInformationResponse();
 
+    /**
+     * The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
+     * 
+     */
     @InputImport(name="duration")
     private final @Nullable String duration;
 

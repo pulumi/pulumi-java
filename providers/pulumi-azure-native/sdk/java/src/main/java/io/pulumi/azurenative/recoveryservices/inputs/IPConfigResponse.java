@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP configuration details.
+ * 
+ */
 public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IPConfigResponse Empty = new IPConfigResponse();
 
+    /**
+     * The backend address pools associated with the IP configuration.
+     * 
+     */
     @InputImport(name="lBBackendAddressPoolIds")
     private final @Nullable List<String> lBBackendAddressPoolIds;
 
@@ -22,6 +30,10 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.lBBackendAddressPoolIds == null ? List.of() : this.lBBackendAddressPoolIds;
     }
 
+    /**
+     * The Id of the public IP address associated with the IP configuration.
+     * 
+     */
     @InputImport(name="publicIpAddressId")
     private final @Nullable String publicIpAddressId;
 
@@ -29,6 +41,10 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.publicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressId);
     }
 
+    /**
+     * The static IP address of the IP configuration.
+     * 
+     */
     @InputImport(name="staticIPAddress")
     private final @Nullable String staticIPAddress;
 

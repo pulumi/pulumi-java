@@ -9,10 +9,18 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * An object that represents the status of the environment, and its internal state in the Time Series Insights service.
+ * 
+ */
 public final class EnvironmentStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentStatusResponse Empty = new EnvironmentStatusResponse();
 
+    /**
+     * An object that represents the status of ingress on an environment.
+     * 
+     */
     @InputImport(name="ingress", required=true)
     private final IngressEnvironmentStatusResponse ingress;
 
@@ -20,6 +28,10 @@ public final class EnvironmentStatusResponse extends io.pulumi.resources.InvokeA
         return this.ingress;
     }
 
+    /**
+     * An object that represents the status of warm storage on an environment.
+     * 
+     */
     @InputImport(name="warmStorage", required=true)
     private final WarmStorageEnvironmentStatusResponse warmStorage;
 

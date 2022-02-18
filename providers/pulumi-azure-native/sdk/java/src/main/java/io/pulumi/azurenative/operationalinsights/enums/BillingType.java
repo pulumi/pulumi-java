@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The cluster's billing type.
+     * 
+     */
     @EnumType
     public enum BillingType {
         Cluster("Cluster"),

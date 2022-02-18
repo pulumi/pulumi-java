@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConnectionConsentLinks {
+/**
+ * Collection of consent links
+ * API Version: 2016-06-01.
+ * 
+ *
+ * Collection of consent links
+ * 
+ */
     public static CompletableFuture<ListConnectionConsentLinksResult> invokeAsync(ListConnectionConsentLinksArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listConnectionConsentLinks", TypeShape.of(ListConnectionConsentLinksResult.class), args == null ? ListConnectionConsentLinksArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,6 +12,10 @@ public final class GetRemoteRenderingAccountArgs extends io.pulumi.resources.Inv
 
     public static final GetRemoteRenderingAccountArgs Empty = new GetRemoteRenderingAccountArgs();
 
+    /**
+     * Name of an Mixed Reality Account.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +23,10 @@ public final class GetRemoteRenderingAccountArgs extends io.pulumi.resources.Inv
         return this.accountName;
     }
 
+    /**
+     * Name of an Azure resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

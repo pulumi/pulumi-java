@@ -15,6 +15,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * For optimistic concurrency control.
+     * 
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -22,6 +26,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Unique name of a private endpoint connection within a project.
+     * 
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -29,6 +37,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Name of the Azure Migrate project.
+     * 
+     */
     @InputImport(name="projectName", required=true)
     private final Input<String> projectName;
 
@@ -36,6 +48,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.projectName;
     }
 
+    /**
+     * Properties of the private endpoint endpoint connection.
+     * 
+     */
     @InputImport(name="properties", required=true)
     private final Input<PrivateEndpointConnectionPropertiesArgs> properties;
 
@@ -43,6 +59,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.properties;
     }
 
+    /**
+     * Name of the Azure Resource Group that project is part of.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

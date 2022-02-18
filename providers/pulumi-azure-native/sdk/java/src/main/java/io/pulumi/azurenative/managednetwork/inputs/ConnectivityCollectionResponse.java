@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The collection of Connectivity related groups and policies within the Managed Network
+ * 
+ */
 public final class ConnectivityCollectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectivityCollectionResponse Empty = new ConnectivityCollectionResponse();
 
+    /**
+     * The collection of connectivity related Managed Network Groups within the Managed Network
+     * 
+     */
     @InputImport(name="groups", required=true)
     private final List<ManagedNetworkGroupResponse> groups;
 
@@ -21,6 +29,10 @@ public final class ConnectivityCollectionResponse extends io.pulumi.resources.In
         return this.groups;
     }
 
+    /**
+     * The collection of Managed Network Peering Policies within the Managed Network
+     * 
+     */
     @InputImport(name="peerings", required=true)
     private final List<ManagedNetworkPeeringPolicyResponse> peerings;
 

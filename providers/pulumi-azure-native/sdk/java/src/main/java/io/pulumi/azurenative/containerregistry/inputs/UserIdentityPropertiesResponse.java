@@ -14,6 +14,10 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
 
     public static final UserIdentityPropertiesResponse Empty = new UserIdentityPropertiesResponse();
 
+    /**
+     * The client id of user assigned identity.
+     * 
+     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -21,6 +25,10 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * The principal id of user assigned identity.
+     * 
+     */
     @InputImport(name="principalId")
     private final @Nullable String principalId;
 

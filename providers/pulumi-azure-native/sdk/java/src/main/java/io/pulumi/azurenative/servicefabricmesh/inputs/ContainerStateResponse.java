@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The container state.
+ * 
+ */
 public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerStateResponse Empty = new ContainerStateResponse();
 
+    /**
+     * Human-readable status of this state.
+     * 
+     */
     @InputImport(name="detailStatus")
     private final @Nullable String detailStatus;
 
@@ -21,6 +29,10 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
         return this.detailStatus == null ? Optional.empty() : Optional.ofNullable(this.detailStatus);
     }
 
+    /**
+     * The container exit code.
+     * 
+     */
     @InputImport(name="exitCode")
     private final @Nullable String exitCode;
 
@@ -28,6 +40,10 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
         return this.exitCode == null ? Optional.empty() : Optional.ofNullable(this.exitCode);
     }
 
+    /**
+     * Date/time when the container state finished.
+     * 
+     */
     @InputImport(name="finishTime")
     private final @Nullable String finishTime;
 
@@ -35,6 +51,10 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
         return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
     }
 
+    /**
+     * Date/time when the container state started.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -42,6 +62,10 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
+    /**
+     * The state of this container
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 

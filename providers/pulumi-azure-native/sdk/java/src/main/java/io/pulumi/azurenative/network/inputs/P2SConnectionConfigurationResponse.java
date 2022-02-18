@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * P2SConnectionConfiguration Resource.
+ * 
+ */
 public final class P2SConnectionConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final P2SConnectionConfigurationResponse Empty = new P2SConnectionConfigurationResponse();
 
+    /**
+     * Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
+     * 
+     */
     @InputImport(name="enableInternetSecurity")
     private final @Nullable Boolean enableInternetSecurity;
 
@@ -24,6 +32,10 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
         return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -31,6 +43,10 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -38,6 +54,10 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -45,6 +65,10 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the P2SConnectionConfiguration resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -52,6 +76,10 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
         return this.provisioningState;
     }
 
+    /**
+     * The Routing Configuration indicating the associated and propagated route tables on this connection.
+     * 
+     */
     @InputImport(name="routingConfiguration")
     private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
@@ -59,6 +87,10 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
         return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
     }
 
+    /**
+     * The reference to the address space resource which represents Address space for P2S VpnClient.
+     * 
+     */
     @InputImport(name="vpnClientAddressPool")
     private final @Nullable AddressSpaceResponse vpnClientAddressPool;
 

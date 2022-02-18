@@ -16,6 +16,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 
+    /**
+     * The name of the App resource.
+     * 
+     */
     @InputImport(name="appName", required=true)
     private final Input<String> appName;
 
@@ -23,6 +27,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.appName;
     }
 
+    /**
+     * The name of the Deployment resource.
+     * 
+     */
     @InputImport(name="deploymentName")
     private final @Nullable Input<String> deploymentName;
 
@@ -30,6 +38,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
     }
 
+    /**
+     * Properties of the Deployment resource
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<DeploymentResourcePropertiesArgs> properties;
 
@@ -37,6 +49,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -51,6 +71,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Sku of the Deployment resource
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 

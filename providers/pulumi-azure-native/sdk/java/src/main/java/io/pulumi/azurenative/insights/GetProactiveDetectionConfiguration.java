@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProactiveDetectionConfiguration {
+/**
+ * Properties that define a ProactiveDetection configuration.
+ * API Version: 2015-05-01.
+ * 
+ *
+ * Properties that define a ProactiveDetection configuration.
+ * 
+ */
     public static CompletableFuture<GetProactiveDetectionConfigurationResult> invokeAsync(GetProactiveDetectionConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getProactiveDetectionConfiguration", TypeShape.of(GetProactiveDetectionConfigurationResult.class), args == null ? GetProactiveDetectionConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

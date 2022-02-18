@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Resource requests of the API portal
+ * 
+ */
 public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiPortalResourceRequestsResponse Empty = new ApiPortalResourceRequestsResponse();
 
+    /**
+     * Cpu allocated to each API portal instance
+     * 
+     */
     @InputImport(name="cpu", required=true)
     private final String cpu;
 
@@ -19,6 +27,10 @@ public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources
         return this.cpu;
     }
 
+    /**
+     * Memory allocated to each API portal instance
+     * 
+     */
     @InputImport(name="memory", required=true)
     private final String memory;
 

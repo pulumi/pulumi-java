@@ -16,6 +16,10 @@ public final class ListIntegrationAccountCallbackUrlArgs extends io.pulumi.resou
 
     public static final ListIntegrationAccountCallbackUrlArgs Empty = new ListIntegrationAccountCallbackUrlArgs();
 
+    /**
+     * The integration account name.
+     * 
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -23,6 +27,10 @@ public final class ListIntegrationAccountCallbackUrlArgs extends io.pulumi.resou
         return this.integrationAccountName;
     }
 
+    /**
+     * The key type.
+     * 
+     */
     @InputImport(name="keyType")
     private final @Nullable Either<String,KeyType> keyType;
 
@@ -30,6 +38,10 @@ public final class ListIntegrationAccountCallbackUrlArgs extends io.pulumi.resou
         return this.keyType == null ? null : this.keyType;
     }
 
+    /**
+     * The expiry time.
+     * 
+     */
     @InputImport(name="notAfter")
     private final @Nullable String notAfter;
 
@@ -37,6 +49,10 @@ public final class ListIntegrationAccountCallbackUrlArgs extends io.pulumi.resou
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

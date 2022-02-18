@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for auto scaling.
+ * 
+ */
 public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration Empty = new ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration();
 
+    /**
+     * Minimum and maximum number of scale units to deploy.
+     * 
+     */
     @InputImport(name="bounds")
     private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 

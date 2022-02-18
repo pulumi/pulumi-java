@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContinuousModeBackupPolicyResponse {
+    /**
+     * Describes the mode of backups.
+     * Expected value is 'Continuous'.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +21,11 @@ public final class ContinuousModeBackupPolicyResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Describes the mode of backups.
+     * Expected value is 'Continuous'.
+     * 
+     */
     public String getType() {
         return this.type;
     }

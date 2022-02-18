@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network ACLs for the resource
+ * 
+ */
 public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebPubSubNetworkACLsResponse Empty = new WebPubSubNetworkACLsResponse();
 
+    /**
+     * Default action when no other rule matches
+     * 
+     */
     @InputImport(name="defaultAction")
     private final @Nullable String defaultAction;
 
@@ -24,6 +32,10 @@ public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.Invo
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
     }
 
+    /**
+     * ACLs for requests from private endpoints
+     * 
+     */
     @InputImport(name="privateEndpoints")
     private final @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
 
@@ -31,6 +43,10 @@ public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.Invo
         return this.privateEndpoints == null ? List.of() : this.privateEndpoints;
     }
 
+    /**
+     * ACL for requests from public network
+     * 
+     */
     @InputImport(name="publicNetwork")
     private final @Nullable NetworkACLResponse publicNetwork;
 

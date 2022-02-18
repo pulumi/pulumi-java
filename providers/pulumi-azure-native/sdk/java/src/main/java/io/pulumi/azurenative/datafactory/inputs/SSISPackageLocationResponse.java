@@ -17,10 +17,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSIS package location.
+ * 
+ */
 public final class SSISPackageLocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SSISPackageLocationResponse Empty = new SSISPackageLocationResponse();
 
+    /**
+     * The package access credential.
+     * 
+     */
     @InputImport(name="accessCredential")
     private final @Nullable SSISAccessCredentialResponse accessCredential;
 
@@ -28,6 +36,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.accessCredential == null ? Optional.empty() : Optional.ofNullable(this.accessCredential);
     }
 
+    /**
+     * The embedded child package list.
+     * 
+     */
     @InputImport(name="childPackages")
     private final @Nullable List<SSISChildPackageResponse> childPackages;
 
@@ -35,6 +47,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.childPackages == null ? List.of() : this.childPackages;
     }
 
+    /**
+     * The configuration file access credential.
+     * 
+     */
     @InputImport(name="configurationAccessCredential")
     private final @Nullable SSISAccessCredentialResponse configurationAccessCredential;
 
@@ -42,6 +58,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.configurationAccessCredential == null ? Optional.empty() : Optional.ofNullable(this.configurationAccessCredential);
     }
 
+    /**
+     * The configuration file of the package execution. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="configurationPath")
     private final @Nullable Object configurationPath;
 
@@ -49,6 +69,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.configurationPath == null ? Optional.empty() : Optional.ofNullable(this.configurationPath);
     }
 
+    /**
+     * The embedded package content. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="packageContent")
     private final @Nullable Object packageContent;
 
@@ -56,6 +80,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.packageContent == null ? Optional.empty() : Optional.ofNullable(this.packageContent);
     }
 
+    /**
+     * The embedded package last modified date.
+     * 
+     */
     @InputImport(name="packageLastModifiedDate")
     private final @Nullable String packageLastModifiedDate;
 
@@ -63,6 +91,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.packageLastModifiedDate == null ? Optional.empty() : Optional.ofNullable(this.packageLastModifiedDate);
     }
 
+    /**
+     * The package name.
+     * 
+     */
     @InputImport(name="packageName")
     private final @Nullable String packageName;
 
@@ -70,6 +102,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.packageName == null ? Optional.empty() : Optional.ofNullable(this.packageName);
     }
 
+    /**
+     * Password of the package.
+     * 
+     */
     @InputImport(name="packagePassword")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
 
@@ -77,6 +113,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.packagePassword == null ? null : this.packagePassword;
     }
 
+    /**
+     * The SSIS package path. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="packagePath")
     private final @Nullable Object packagePath;
 
@@ -84,6 +124,10 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
         return this.packagePath == null ? Optional.empty() : Optional.ofNullable(this.packagePath);
     }
 
+    /**
+     * The type of SSIS package location.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

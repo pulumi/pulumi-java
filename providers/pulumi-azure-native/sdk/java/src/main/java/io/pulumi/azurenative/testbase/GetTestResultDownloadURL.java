@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestResultDownloadURL {
+/**
+ * The response of getting a download URL.
+ * API Version: 2020-12-16-preview.
+ * 
+ *
+ * The response of getting a download URL.
+ * 
+ */
     public static CompletableFuture<GetTestResultDownloadURLResult> invokeAsync(GetTestResultDownloadURLArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestResultDownloadURL", TypeShape.of(GetTestResultDownloadURLResult.class), args == null ? GetTestResultDownloadURLArgs.Empty : args, Utilities.withVersion(options));
     }

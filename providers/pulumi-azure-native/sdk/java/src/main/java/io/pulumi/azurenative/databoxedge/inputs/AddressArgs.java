@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The shipping address of the customer.
+ * 
+ */
 public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddressArgs Empty = new AddressArgs();
 
+    /**
+     * The address line1.
+     * 
+     */
     @InputImport(name="addressLine1")
     private final @Nullable Input<String> addressLine1;
 
@@ -21,6 +29,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressLine1 == null ? Input.empty() : this.addressLine1;
     }
 
+    /**
+     * The address line2.
+     * 
+     */
     @InputImport(name="addressLine2")
     private final @Nullable Input<String> addressLine2;
 
@@ -28,6 +40,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressLine2 == null ? Input.empty() : this.addressLine2;
     }
 
+    /**
+     * The address line3.
+     * 
+     */
     @InputImport(name="addressLine3")
     private final @Nullable Input<String> addressLine3;
 
@@ -35,6 +51,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressLine3 == null ? Input.empty() : this.addressLine3;
     }
 
+    /**
+     * The city name.
+     * 
+     */
     @InputImport(name="city")
     private final @Nullable Input<String> city;
 
@@ -42,6 +62,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.city == null ? Input.empty() : this.city;
     }
 
+    /**
+     * The country name.
+     * 
+     */
     @InputImport(name="country", required=true)
     private final Input<String> country;
 
@@ -49,6 +73,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.country;
     }
 
+    /**
+     * The postal code.
+     * 
+     */
     @InputImport(name="postalCode")
     private final @Nullable Input<String> postalCode;
 
@@ -56,6 +84,10 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.postalCode == null ? Input.empty() : this.postalCode;
     }
 
+    /**
+     * The state name.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 

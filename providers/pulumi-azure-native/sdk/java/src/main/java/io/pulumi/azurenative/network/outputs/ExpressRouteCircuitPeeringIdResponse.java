@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExpressRouteCircuitPeeringIdResponse {
+    /**
+     * The ID of the ExpressRoute circuit peering.
+     * 
+     */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +22,10 @@ public final class ExpressRouteCircuitPeeringIdResponse {
         this.id = id;
     }
 
+    /**
+     * The ID of the ExpressRoute circuit peering.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

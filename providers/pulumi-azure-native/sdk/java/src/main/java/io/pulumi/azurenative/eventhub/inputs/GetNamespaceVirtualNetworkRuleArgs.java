@@ -12,6 +12,10 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
 
     public static final GetNamespaceVirtualNetworkRuleArgs Empty = new GetNamespaceVirtualNetworkRuleArgs();
 
+    /**
+     * The Namespace name
+     * 
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -19,6 +23,10 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The Virtual Network Rule name.
+     * 
+     */
     @InputImport(name="virtualNetworkRuleName", required=true)
     private final String virtualNetworkRuleName;
 

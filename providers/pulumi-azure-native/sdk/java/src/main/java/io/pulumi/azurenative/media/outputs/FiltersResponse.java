@@ -17,9 +17,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FiltersResponse {
+    /**
+     * The parameters for the rectangular window with which to crop the input video.
+     * 
+     */
     private final @Nullable RectangleResponse crop;
+    /**
+     * The de-interlacing settings.
+     * 
+     */
     private final @Nullable DeinterlaceResponse deinterlace;
+    /**
+     * The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+     * 
+     */
     private final @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays;
+    /**
+     * The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
+     * 
+     */
     private final @Nullable String rotation;
 
     @OutputCustomType.Constructor({"crop","deinterlace","overlays","rotation"})
@@ -34,15 +50,31 @@ public final class FiltersResponse {
         this.rotation = rotation;
     }
 
+    /**
+     * The parameters for the rectangular window with which to crop the input video.
+     * 
+     */
     public Optional<RectangleResponse> getCrop() {
         return Optional.ofNullable(this.crop);
     }
+    /**
+     * The de-interlacing settings.
+     * 
+     */
     public Optional<DeinterlaceResponse> getDeinterlace() {
         return Optional.ofNullable(this.deinterlace);
     }
+    /**
+     * The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+     * 
+     */
     public List<Either<AudioOverlayResponse,VideoOverlayResponse>> getOverlays() {
         return this.overlays == null ? List.of() : this.overlays;
     }
+    /**
+     * The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
+     * 
+     */
     public Optional<String> getRotation() {
         return Optional.ofNullable(this.rotation);
     }

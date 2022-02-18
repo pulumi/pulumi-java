@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The output destination type.
+     * 
+     */
     @EnumType
     public enum JobStepOutputType {
         SqlDatabase("SqlDatabase");

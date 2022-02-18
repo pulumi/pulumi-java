@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppAuthSettingsSlot {
+/**
+ * Configuration settings for the Azure App Service Authentication / Authorization feature.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Configuration settings for the Azure App Service Authentication / Authorization feature.
+ * 
+ */
     public static CompletableFuture<ListWebAppAuthSettingsSlotResult> invokeAsync(ListWebAppAuthSettingsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAuthSettingsSlot", TypeShape.of(ListWebAppAuthSettingsSlotResult.class), args == null ? ListWebAppAuthSettingsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

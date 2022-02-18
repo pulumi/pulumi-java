@@ -15,6 +15,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 
+    /**
+     * The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
+     * 
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -22,6 +26,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
+    /**
+     * Notes for this schedule.
+     * 
+     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -29,6 +37,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.notes == null ? Input.empty() : this.notes;
     }
 
+    /**
+     * The recurrence pattern of the scheduled actions.
+     * 
+     */
     @InputImport(name="recurrencePattern")
     private final @Nullable Input<RecurrencePatternArgs> recurrencePattern;
 
@@ -36,6 +48,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.recurrencePattern == null ? Input.empty() : this.recurrencePattern;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
+     * 
+     */
     @InputImport(name="scheduleName")
     private final @Nullable Input<String> scheduleName;
 
@@ -50,6 +70,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduleName == null ? Input.empty() : this.scheduleName;
     }
 
+    /**
+     * When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
+     * 
+     */
     @InputImport(name="startAt")
     private final @Nullable Input<String> startAt;
 
@@ -57,6 +81,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.startAt == null ? Input.empty() : this.startAt;
     }
 
+    /**
+     * When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
+     * 
+     */
     @InputImport(name="stopAt", required=true)
     private final Input<String> stopAt;
 
@@ -64,6 +92,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.stopAt;
     }
 
+    /**
+     * The IANA timezone id for the schedule.
+     * 
+     */
     @InputImport(name="timeZoneId", required=true)
     private final Input<String> timeZoneId;
 

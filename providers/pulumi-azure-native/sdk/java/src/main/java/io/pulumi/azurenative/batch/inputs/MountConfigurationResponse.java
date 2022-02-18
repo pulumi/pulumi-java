@@ -17,6 +17,10 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
 
     public static final MountConfigurationResponse Empty = new MountConfigurationResponse();
 
+    /**
+     * This property is mutually exclusive with all other properties.
+     * 
+     */
     @InputImport(name="azureBlobFileSystemConfiguration")
     private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
 
@@ -24,6 +28,10 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
         return this.azureBlobFileSystemConfiguration == null ? Optional.empty() : Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
 
+    /**
+     * This property is mutually exclusive with all other properties.
+     * 
+     */
     @InputImport(name="azureFileShareConfiguration")
     private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
 
@@ -31,6 +39,10 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
         return this.azureFileShareConfiguration == null ? Optional.empty() : Optional.ofNullable(this.azureFileShareConfiguration);
     }
 
+    /**
+     * This property is mutually exclusive with all other properties.
+     * 
+     */
     @InputImport(name="cifsMountConfiguration")
     private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
 
@@ -38,6 +50,10 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
         return this.cifsMountConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cifsMountConfiguration);
     }
 
+    /**
+     * This property is mutually exclusive with all other properties.
+     * 
+     */
     @InputImport(name="nfsMountConfiguration")
     private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 

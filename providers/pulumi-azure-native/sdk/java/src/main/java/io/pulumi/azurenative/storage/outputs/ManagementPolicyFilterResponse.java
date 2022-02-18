@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagementPolicyFilterResponse {
+    /**
+     * An array of blob index tag based filters, there can be at most 10 tag filters
+     * 
+     */
     private final @Nullable List<TagFilterResponse> blobIndexMatch;
+    /**
+     * An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+     * 
+     */
     private final List<String> blobTypes;
+    /**
+     * An array of strings for prefixes to be match.
+     * 
+     */
     private final @Nullable List<String> prefixMatch;
 
     @OutputCustomType.Constructor({"blobIndexMatch","blobTypes","prefixMatch"})
@@ -26,12 +38,24 @@ public final class ManagementPolicyFilterResponse {
         this.prefixMatch = prefixMatch;
     }
 
+    /**
+     * An array of blob index tag based filters, there can be at most 10 tag filters
+     * 
+     */
     public List<TagFilterResponse> getBlobIndexMatch() {
         return this.blobIndexMatch == null ? List.of() : this.blobIndexMatch;
     }
+    /**
+     * An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+     * 
+     */
     public List<String> getBlobTypes() {
         return this.blobTypes;
     }
+    /**
+     * An array of strings for prefixes to be match.
+     * 
+     */
     public List<String> getPrefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;
     }

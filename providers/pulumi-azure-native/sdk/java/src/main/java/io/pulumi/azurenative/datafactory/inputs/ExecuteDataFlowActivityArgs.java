@@ -20,10 +20,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Execute data flow activity.
+ * 
+ */
 public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExecuteDataFlowActivityArgs Empty = new ExecuteDataFlowActivityArgs();
 
+    /**
+     * Compute properties for data flow activity.
+     * 
+     */
     @InputImport(name="compute")
     private final @Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
 
@@ -31,6 +39,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.compute == null ? Input.empty() : this.compute;
     }
 
+    /**
+     * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+     * 
+     */
     @InputImport(name="continueOnError")
     private final @Nullable Input<Object> continueOnError;
 
@@ -38,6 +50,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.continueOnError == null ? Input.empty() : this.continueOnError;
     }
 
+    /**
+     * Data flow reference.
+     * 
+     */
     @InputImport(name="dataFlow", required=true)
     private final Input<DataFlowReferenceArgs> dataFlow;
 
@@ -45,6 +61,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.dataFlow;
     }
 
+    /**
+     * Activity depends on condition.
+     * 
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -52,6 +72,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -59,6 +83,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="integrationRuntime")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime;
 
@@ -66,6 +94,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.integrationRuntime == null ? Input.empty() : this.integrationRuntime;
     }
 
+    /**
+     * Linked service reference.
+     * 
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -73,6 +105,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
+    /**
+     * Activity name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -80,6 +116,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     * 
+     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -87,6 +127,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+     * 
+     */
     @InputImport(name="runConcurrently")
     private final @Nullable Input<Object> runConcurrently;
 
@@ -94,6 +138,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.runConcurrently == null ? Input.empty() : this.runConcurrently;
     }
 
+    /**
+     * Staging info for execute data flow activity.
+     * 
+     */
     @InputImport(name="staging")
     private final @Nullable Input<DataFlowStagingInfoArgs> staging;
 
@@ -101,6 +149,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.staging == null ? Input.empty() : this.staging;
     }
 
+    /**
+     * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
+     * 
+     */
     @InputImport(name="traceLevel")
     private final @Nullable Input<Object> traceLevel;
 
@@ -108,6 +160,11 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.traceLevel == null ? Input.empty() : this.traceLevel;
     }
 
+    /**
+     * Type of activity.
+     * Expected value is 'ExecuteDataFlow'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -115,6 +172,10 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     * 
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

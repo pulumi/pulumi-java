@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Whether requests from Public Network are allowed
+     * 
+     */
     @EnumType
     public enum PublicNetworkAccess {
         Enabled("Enabled"),

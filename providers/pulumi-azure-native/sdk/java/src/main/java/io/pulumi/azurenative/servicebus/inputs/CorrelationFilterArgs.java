@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the correlation filter expression.
+ * 
+ */
 public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CorrelationFilterArgs Empty = new CorrelationFilterArgs();
 
+    /**
+     * Content type of the message.
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -23,6 +31,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * Identifier of the correlation.
+     * 
+     */
     @InputImport(name="correlationId")
     private final @Nullable Input<String> correlationId;
 
@@ -30,6 +42,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.correlationId == null ? Input.empty() : this.correlationId;
     }
 
+    /**
+     * Application specific label.
+     * 
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -37,6 +53,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * Identifier of the message.
+     * 
+     */
     @InputImport(name="messageId")
     private final @Nullable Input<String> messageId;
 
@@ -44,6 +64,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.messageId == null ? Input.empty() : this.messageId;
     }
 
+    /**
+     * dictionary object for custom filters
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -51,6 +75,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Address of the queue to reply to.
+     * 
+     */
     @InputImport(name="replyTo")
     private final @Nullable Input<String> replyTo;
 
@@ -58,6 +86,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.replyTo == null ? Input.empty() : this.replyTo;
     }
 
+    /**
+     * Session identifier to reply to.
+     * 
+     */
     @InputImport(name="replyToSessionId")
     private final @Nullable Input<String> replyToSessionId;
 
@@ -65,6 +97,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.replyToSessionId == null ? Input.empty() : this.replyToSessionId;
     }
 
+    /**
+     * Value that indicates whether the rule action requires preprocessing.
+     * 
+     */
     @InputImport(name="requiresPreprocessing")
     private final @Nullable Input<Boolean> requiresPreprocessing;
 
@@ -72,6 +108,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.requiresPreprocessing == null ? Input.empty() : this.requiresPreprocessing;
     }
 
+    /**
+     * Session identifier.
+     * 
+     */
     @InputImport(name="sessionId")
     private final @Nullable Input<String> sessionId;
 
@@ -79,6 +119,10 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         return this.sessionId == null ? Input.empty() : this.sessionId;
     }
 
+    /**
+     * Address to send to.
+     * 
+     */
     @InputImport(name="to")
     private final @Nullable Input<String> to;
 

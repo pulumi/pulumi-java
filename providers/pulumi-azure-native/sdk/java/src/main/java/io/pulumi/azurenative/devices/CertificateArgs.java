@@ -15,6 +15,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
+    /**
+     * The name of the certificate
+     * 
+     */
     @InputImport(name="certificateName")
     private final @Nullable Input<String> certificateName;
 
@@ -22,6 +26,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateName == null ? Input.empty() : this.certificateName;
     }
 
+    /**
+     * The description of an X509 CA Certificate.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<CertificatePropertiesArgs> properties;
 
@@ -29,6 +37,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the IoT hub.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the IoT hub.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

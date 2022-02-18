@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A container holding only the Tags for a resource, allowing the user to update the tags on a PrivateLinkConnection instance.
+ * 
+ */
 public final class TagsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagsResourceArgs Empty = new TagsResourceArgs();
 
+    /**
+     * Resource tags
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

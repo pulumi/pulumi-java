@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WinRMConfigurationResponse {
+    /**
+     * The list of Windows Remote Management listeners
+     * 
+     */
     private final @Nullable List<WinRMListenerResponse> listeners;
 
     @OutputCustomType.Constructor({"listeners"})
@@ -18,6 +22,10 @@ public final class WinRMConfigurationResponse {
         this.listeners = listeners;
     }
 
+    /**
+     * The list of Windows Remote Management listeners
+     * 
+     */
     public List<WinRMListenerResponse> getListeners() {
         return this.listeners == null ? List.of() : this.listeners;
     }

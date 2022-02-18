@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The content trust policy for a container registry.
+ * 
+ */
 public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrustPolicyArgs Empty = new TrustPolicyArgs();
 
+    /**
+     * The value that indicates whether the policy is enabled or not.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,PolicyStatus>> status;
 
@@ -24,6 +32,10 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The type of trust policy.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,TrustPolicyType>> type;
 

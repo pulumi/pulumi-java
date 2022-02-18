@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The cluster definition.
+ * 
+ */
 public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterDefinitionArgs Empty = new ClusterDefinitionArgs();
 
+    /**
+     * The link to the blueprint.
+     * 
+     */
     @InputImport(name="blueprint")
     private final @Nullable Input<String> blueprint;
 
@@ -23,6 +31,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
         return this.blueprint == null ? Input.empty() : this.blueprint;
     }
 
+    /**
+     * The versions of different services in the cluster.
+     * 
+     */
     @InputImport(name="componentVersion")
     private final @Nullable Input<Map<String,String>> componentVersion;
 
@@ -30,6 +42,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
         return this.componentVersion == null ? Input.empty() : this.componentVersion;
     }
 
+    /**
+     * The cluster configurations.
+     * 
+     */
     @InputImport(name="configurations")
     private final @Nullable Input<Object> configurations;
 
@@ -37,6 +53,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
         return this.configurations == null ? Input.empty() : this.configurations;
     }
 
+    /**
+     * The type of cluster.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 

@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a task step.
+ * 
+ */
 public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileTaskStepArgs Empty = new FileTaskStepArgs();
 
+    /**
+     * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+     * 
+     */
     @InputImport(name="contextAccessToken")
     private final @Nullable Input<String> contextAccessToken;
 
@@ -23,6 +31,10 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.contextAccessToken == null ? Input.empty() : this.contextAccessToken;
     }
 
+    /**
+     * The URL(absolute or relative) of the source context for the task step.
+     * 
+     */
     @InputImport(name="contextPath")
     private final @Nullable Input<String> contextPath;
 
@@ -30,6 +42,10 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.contextPath == null ? Input.empty() : this.contextPath;
     }
 
+    /**
+     * The task template/definition file path relative to the source context.
+     * 
+     */
     @InputImport(name="taskFilePath", required=true)
     private final Input<String> taskFilePath;
 
@@ -37,6 +53,11 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.taskFilePath;
     }
 
+    /**
+     * The type of the step.
+     * Expected value is 'FileTask'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -44,6 +65,10 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * The collection of overridable values that can be passed when running a task.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<SetValueArgs>> values;
 
@@ -51,6 +76,10 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.values == null ? Input.empty() : this.values;
     }
 
+    /**
+     * The task values/parameters file path relative to the source context.
+     * 
+     */
     @InputImport(name="valuesFilePath")
     private final @Nullable Input<String> valuesFilePath;
 

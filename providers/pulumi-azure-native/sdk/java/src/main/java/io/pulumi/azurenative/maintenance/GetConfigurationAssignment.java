@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationAssignment {
+/**
+ * Configuration Assignment
+ * API Version: 2021-04-01-preview.
+ * 
+ *
+ * Configuration Assignment
+ * 
+ */
     public static CompletableFuture<GetConfigurationAssignmentResult> invokeAsync(GetConfigurationAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:maintenance:getConfigurationAssignment", TypeShape.of(GetConfigurationAssignmentResult.class), args == null ? GetConfigurationAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

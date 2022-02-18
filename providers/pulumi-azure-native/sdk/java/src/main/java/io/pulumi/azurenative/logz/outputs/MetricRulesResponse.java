@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricRulesResponse {
+    /**
+     * List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+     * 
+     */
     private final @Nullable List<FilteringTagResponse> filteringTags;
+    /**
+     * Subscription Id for which filtering tags are applicable
+     * 
+     */
     private final @Nullable String subscriptionId;
 
     @OutputCustomType.Constructor({"filteringTags","subscriptionId"})
@@ -24,9 +32,17 @@ public final class MetricRulesResponse {
         this.subscriptionId = subscriptionId;
     }
 
+    /**
+     * List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+     * 
+     */
     public List<FilteringTagResponse> getFilteringTags() {
         return this.filteringTags == null ? List.of() : this.filteringTags;
     }
+    /**
+     * Subscription Id for which filtering tags are applicable
+     * 
+     */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }

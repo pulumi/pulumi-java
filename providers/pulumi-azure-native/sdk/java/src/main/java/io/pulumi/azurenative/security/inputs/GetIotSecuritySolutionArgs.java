@@ -12,6 +12,10 @@ public final class GetIotSecuritySolutionArgs extends io.pulumi.resources.Invoke
 
     public static final GetIotSecuritySolutionArgs Empty = new GetIotSecuritySolutionArgs();
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetIotSecuritySolutionArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the IoT Security solution.
+     * 
+     */
     @InputImport(name="solutionName", required=true)
     private final String solutionName;
 

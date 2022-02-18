@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents security alert timeline item.
+ * 
+ */
 public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityAlertTimelineItemResponse Empty = new SecurityAlertTimelineItemResponse();
 
+    /**
+     * The name of the alert type.
+     * 
+     */
     @InputImport(name="alertType", required=true)
     private final String alertType;
 
@@ -21,6 +29,10 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.alertType;
     }
 
+    /**
+     * The alert azure resource id.
+     * 
+     */
     @InputImport(name="azureResourceId", required=true)
     private final String azureResourceId;
 
@@ -28,6 +40,10 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.azureResourceId;
     }
 
+    /**
+     * The alert description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -35,6 +51,10 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The alert name.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -42,6 +62,10 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.displayName;
     }
 
+    /**
+     * The alert end time.
+     * 
+     */
     @InputImport(name="endTimeUtc", required=true)
     private final String endTimeUtc;
 
@@ -49,6 +73,11 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.endTimeUtc;
     }
 
+    /**
+     * The entity query kind
+     * Expected value is 'SecurityAlert'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -56,6 +85,10 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.kind;
     }
 
+    /**
+     * The alert product name.
+     * 
+     */
     @InputImport(name="productName")
     private final @Nullable String productName;
 
@@ -63,6 +96,10 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
     }
 
+    /**
+     * The alert severity.
+     * 
+     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -70,6 +107,10 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.severity;
     }
 
+    /**
+     * The alert start time.
+     * 
+     */
     @InputImport(name="startTimeUtc", required=true)
     private final String startTimeUtc;
 
@@ -77,6 +118,10 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
         return this.startTimeUtc;
     }
 
+    /**
+     * The alert generated time.
+     * 
+     */
     @InputImport(name="timeGenerated", required=true)
     private final String timeGenerated;
 

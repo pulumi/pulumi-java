@@ -12,6 +12,10 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebhookArgs Empty = new GetWebhookArgs();
 
+    /**
+     * The name of the automation account.
+     * 
+     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -19,6 +23,10 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The webhook name.
+     * 
+     */
     @InputImport(name="webhookName", required=true)
     private final String webhookName;
 

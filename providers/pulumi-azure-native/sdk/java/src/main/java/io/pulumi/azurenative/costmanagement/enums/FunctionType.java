@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The name of the aggregation function to use.
+     * 
+     */
     @EnumType
     public enum FunctionType {
         Avg("Avg"),

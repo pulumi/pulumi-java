@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The workflow trigger recurrence.
+ * 
+ */
 public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkflowTriggerRecurrenceResponse Empty = new WorkflowTriggerRecurrenceResponse();
 
+    /**
+     * The end time.
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -23,6 +31,10 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
+    /**
+     * The frequency.
+     * 
+     */
     @InputImport(name="frequency")
     private final @Nullable String frequency;
 
@@ -30,6 +42,10 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
     }
 
+    /**
+     * The interval.
+     * 
+     */
     @InputImport(name="interval")
     private final @Nullable Integer interval;
 
@@ -37,6 +53,10 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
+    /**
+     * The recurrence schedule.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable RecurrenceScheduleResponse schedule;
 
@@ -44,6 +64,10 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
     }
 
+    /**
+     * The start time.
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -51,6 +75,10 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
+    /**
+     * The time zone.
+     * 
+     */
     @InputImport(name="timeZone")
     private final @Nullable String timeZone;
 

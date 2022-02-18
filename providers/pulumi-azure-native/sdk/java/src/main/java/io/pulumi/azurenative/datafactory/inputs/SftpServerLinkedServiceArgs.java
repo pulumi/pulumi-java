@@ -19,10 +19,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A linked service for an SSH File Transfer Protocol (SFTP) server.
+ * 
+ */
 public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SftpServerLinkedServiceArgs Empty = new SftpServerLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -30,6 +38,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The authentication type to be used to connect to the FTP server.
+     * 
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Either<String,SftpAuthenticationType>> authenticationType;
 
@@ -37,6 +49,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
+    /**
+     * The integration runtime reference.
+     * 
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -44,6 +60,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -51,6 +71,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -58,6 +82,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * The SFTP server host name. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="host", required=true)
     private final Input<Object> host;
 
@@ -65,6 +93,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.host;
     }
 
+    /**
+     * The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="hostKeyFingerprint")
     private final @Nullable Input<Object> hostKeyFingerprint;
 
@@ -72,6 +104,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.hostKeyFingerprint == null ? Input.empty() : this.hostKeyFingerprint;
     }
 
+    /**
+     * Parameters for linked service.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -79,6 +115,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The password to decrypt the SSH private key if the SSH private key is encrypted.
+     * 
+     */
     @InputImport(name="passPhrase")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> passPhrase;
 
@@ -86,6 +126,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.passPhrase == null ? Input.empty() : this.passPhrase;
     }
 
+    /**
+     * Password to logon the SFTP server for Basic authentication.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -93,6 +137,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Object> port;
 
@@ -100,6 +148,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
+     * 
+     */
     @InputImport(name="privateKeyContent")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKeyContent;
 
@@ -107,6 +159,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.privateKeyContent == null ? Input.empty() : this.privateKeyContent;
     }
 
+    /**
+     * The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="privateKeyPath")
     private final @Nullable Input<Object> privateKeyPath;
 
@@ -114,6 +170,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.privateKeyPath == null ? Input.empty() : this.privateKeyPath;
     }
 
+    /**
+     * If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     @InputImport(name="skipHostKeyValidation")
     private final @Nullable Input<Object> skipHostKeyValidation;
 
@@ -121,6 +181,11 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.skipHostKeyValidation == null ? Input.empty() : this.skipHostKeyValidation;
     }
 
+    /**
+     * Type of linked service.
+     * Expected value is 'Sftp'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -128,6 +193,10 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.type;
     }
 
+    /**
+     * The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
+     * 
+     */
     @InputImport(name="userName")
     private final @Nullable Input<Object> userName;
 

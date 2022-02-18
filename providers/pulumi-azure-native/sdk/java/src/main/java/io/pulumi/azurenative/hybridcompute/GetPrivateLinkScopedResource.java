@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateLinkScopedResource {
+/**
+ * A private link scoped resource
+ * API Version: 2020-08-15-preview.
+ * 
+ *
+ * A private link scoped resource
+ * 
+ */
     public static CompletableFuture<GetPrivateLinkScopedResourceResult> invokeAsync(GetPrivateLinkScopedResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getPrivateLinkScopedResource", TypeShape.of(GetPrivateLinkScopedResourceResult.class), args == null ? GetPrivateLinkScopedResourceArgs.Empty : args, Utilities.withVersion(options));
     }

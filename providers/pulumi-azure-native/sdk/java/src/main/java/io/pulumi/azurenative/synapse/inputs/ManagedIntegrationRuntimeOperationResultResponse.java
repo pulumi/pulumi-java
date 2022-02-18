@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Properties of managed integration runtime operation result.
+ * 
+ */
 public final class ManagedIntegrationRuntimeOperationResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedIntegrationRuntimeOperationResultResponse Empty = new ManagedIntegrationRuntimeOperationResultResponse();
 
+    /**
+     * The activity id for the operation request.
+     * 
+     */
     @InputImport(name="activityId", required=true)
     private final String activityId;
 
@@ -20,6 +28,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
         return this.activityId;
     }
 
+    /**
+     * The error code.
+     * 
+     */
     @InputImport(name="errorCode", required=true)
     private final String errorCode;
 
@@ -27,6 +39,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
         return this.errorCode;
     }
 
+    /**
+     * Managed integration runtime error parameters.
+     * 
+     */
     @InputImport(name="parameters", required=true)
     private final List<String> parameters;
 
@@ -34,6 +50,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
         return this.parameters;
     }
 
+    /**
+     * The operation result.
+     * 
+     */
     @InputImport(name="result", required=true)
     private final String result;
 
@@ -41,6 +61,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
         return this.result;
     }
 
+    /**
+     * The start time of the operation.
+     * 
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -48,6 +72,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
         return this.startTime;
     }
 
+    /**
+     * The operation type. Could be start or stop.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

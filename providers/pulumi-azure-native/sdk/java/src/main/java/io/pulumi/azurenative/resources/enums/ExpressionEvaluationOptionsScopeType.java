@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The scope to be used for evaluation of parameters, variables and functions in a nested template.
+     * 
+     */
     @EnumType
     public enum ExpressionEvaluationOptionsScopeType {
         NotSpecified("NotSpecified"),

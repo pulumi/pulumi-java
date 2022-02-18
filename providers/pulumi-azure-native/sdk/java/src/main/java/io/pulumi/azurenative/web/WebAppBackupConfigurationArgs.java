@@ -18,6 +18,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
 
     public static final WebAppBackupConfigurationArgs Empty = new WebAppBackupConfigurationArgs();
 
+    /**
+     * Name of the backup.
+     * 
+     */
     @InputImport(name="backupName")
     private final @Nullable Input<String> backupName;
 
@@ -25,6 +29,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
         return this.backupName == null ? Input.empty() : this.backupName;
     }
 
+    /**
+     * Schedule for the backup if it is executed periodically.
+     * 
+     */
     @InputImport(name="backupSchedule")
     private final @Nullable Input<BackupScheduleArgs> backupSchedule;
 
@@ -32,6 +40,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
         return this.backupSchedule == null ? Input.empty() : this.backupSchedule;
     }
 
+    /**
+     * Databases included in the backup.
+     * 
+     */
     @InputImport(name="databases")
     private final @Nullable Input<List<DatabaseBackupSettingArgs>> databases;
 
@@ -39,6 +51,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
         return this.databases == null ? Input.empty() : this.databases;
     }
 
+    /**
+     * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -46,6 +62,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Kind of resource.
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -53,6 +73,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -60,6 +84,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,6 +95,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * SAS URL to the container.
+     * 
+     */
     @InputImport(name="storageAccountUrl", required=true)
     private final Input<String> storageAccountUrl;
 

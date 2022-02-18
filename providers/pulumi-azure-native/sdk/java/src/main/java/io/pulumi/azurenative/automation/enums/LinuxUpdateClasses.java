@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Update classifications included in the software update configuration.
+     * 
+     */
     @EnumType
     public enum LinuxUpdateClasses {
         Unclassified("Unclassified"),

@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiskSkuResponse {
+    /**
+     * The sku name.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * The sku tier.
+     * 
+     */
     private final String tier;
 
     @OutputCustomType.Constructor({"name","tier"})
@@ -22,9 +30,17 @@ public final class DiskSkuResponse {
         this.tier = Objects.requireNonNull(tier);
     }
 
+    /**
+     * The sku name.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * The sku tier.
+     * 
+     */
     public String getTier() {
         return this.tier;
     }

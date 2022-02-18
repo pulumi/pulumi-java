@@ -15,45 +15,114 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Virtual Router Peering resource.
+ * API Version: 2020-08-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:network:VirtualRouterPeering peering1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualRouters/virtualRouter/peerings/peering1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:network:VirtualRouterPeering")
 public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Name of the virtual router peering that is unique within a virtual router.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Name of the virtual router peering that is unique within a virtual router.
+     * 
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Peer ASN.
+     * 
+     */
     @OutputExport(name="peerAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> peerAsn;
 
+    /**
+     * @return Peer ASN.
+     * 
+     */
     public Output</* @Nullable */ Double> getPeerAsn() {
         return this.peerAsn;
     }
+    /**
+     * Peer IP.
+     * 
+     */
     @OutputExport(name="peerIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerIp;
 
+    /**
+     * @return Peer IP.
+     * 
+     */
     public Output</* @Nullable */ String> getPeerIp() {
         return this.peerIp;
     }
+    /**
+     * The provisioning state of the resource.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Peering type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Peering type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualRouterPeering(String name, VirtualRouterPeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualRouterPeering", name, args == null ? VirtualRouterPeeringArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -86,6 +155,14 @@ public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualRouterPeering get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualRouterPeering(name, id, options);
     }

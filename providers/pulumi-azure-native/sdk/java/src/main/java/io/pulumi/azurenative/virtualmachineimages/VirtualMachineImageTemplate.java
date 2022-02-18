@@ -32,87 +32,212 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+ * API Version: 2020-02-14.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:virtualmachineimages:VirtualMachineImageTemplate myImageTemplate /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VirtualMachineImages/imageTemplates/myImageTemplate 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:virtualmachineimages:VirtualMachineImageTemplate")
 public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResource {
+    /**
+     * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+     * 
+     */
     @OutputExport(name="buildTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> buildTimeoutInMinutes;
 
+    /**
+     * @return Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+     * 
+     */
     public Output</* @Nullable */ Integer> getBuildTimeoutInMinutes() {
         return this.buildTimeoutInMinutes;
     }
+    /**
+     * Specifies the properties used to describe the customization steps of the image, like Image source etc
+     * 
+     */
     @OutputExport(name="customize", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> customize;
 
+    /**
+     * @return Specifies the properties used to describe the customization steps of the image, like Image source etc
+     * 
+     */
     public Output</* @Nullable */ List<Object>> getCustomize() {
         return this.customize;
     }
+    /**
+     * The distribution targets where the image output needs to go to.
+     * 
+     */
     @OutputExport(name="distribute", type=List.class, parameters={Object.class})
     private Output<List<Object>> distribute;
 
+    /**
+     * @return The distribution targets where the image output needs to go to.
+     * 
+     */
     public Output<List<Object>> getDistribute() {
         return this.distribute;
     }
+    /**
+     * The identity of the image template, if configured.
+     * 
+     */
     @OutputExport(name="identity", type=ImageTemplateIdentityResponse.class, parameters={})
     private Output<ImageTemplateIdentityResponse> identity;
 
+    /**
+     * @return The identity of the image template, if configured.
+     * 
+     */
     public Output<ImageTemplateIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * State of 'run' that is currently executing or was last executed.
+     * 
+     */
     @OutputExport(name="lastRunStatus", type=ImageTemplateLastRunStatusResponse.class, parameters={})
     private Output<ImageTemplateLastRunStatusResponse> lastRunStatus;
 
+    /**
+     * @return State of 'run' that is currently executing or was last executed.
+     * 
+     */
     public Output<ImageTemplateLastRunStatusResponse> getLastRunStatus() {
         return this.lastRunStatus;
     }
+    /**
+     * Resource location
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning error, if any
+     * 
+     */
     @OutputExport(name="provisioningError", type=ProvisioningErrorResponse.class, parameters={})
     private Output<ProvisioningErrorResponse> provisioningError;
 
+    /**
+     * @return Provisioning error, if any
+     * 
+     */
     public Output<ProvisioningErrorResponse> getProvisioningError() {
         return this.provisioningError;
     }
+    /**
+     * Provisioning state of the resource
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the resource
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Specifies the properties used to describe the source image.
+     * 
+     */
     @OutputExport(name="source", type=Object.class, parameters={})
     private Output<Object> source;
 
+    /**
+     * @return Specifies the properties used to describe the source image.
+     * 
+     */
     public Output<Object> getSource() {
         return this.source;
     }
+    /**
+     * Resource tags
+     * 
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Describes how virtual machine is set up to build images
+     * 
+     */
     @OutputExport(name="vmProfile", type=ImageTemplateVmProfileResponse.class, parameters={})
     private Output</* @Nullable */ ImageTemplateVmProfileResponse> vmProfile;
 
+    /**
+     * @return Describes how virtual machine is set up to build images
+     * 
+     */
     public Output</* @Nullable */ ImageTemplateVmProfileResponse> getVmProfile() {
         return this.vmProfile;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualMachineImageTemplate(String name, VirtualMachineImageTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:virtualmachineimages:VirtualMachineImageTemplate", name, args == null ? VirtualMachineImageTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -135,6 +260,14 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualMachineImageTemplate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachineImageTemplate(name, id, options);
     }

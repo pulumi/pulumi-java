@@ -12,6 +12,10 @@ public final class ListTenantAccessGitSecretsArgs extends io.pulumi.resources.In
 
     public static final ListTenantAccessGitSecretsArgs Empty = new ListTenantAccessGitSecretsArgs();
 
+    /**
+     * The identifier of the Access configuration.
+     * 
+     */
     @InputImport(name="accessName", required=true)
     private final String accessName;
 
@@ -19,6 +23,10 @@ public final class ListTenantAccessGitSecretsArgs extends io.pulumi.resources.In
         return this.accessName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class ListTenantAccessGitSecretsArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

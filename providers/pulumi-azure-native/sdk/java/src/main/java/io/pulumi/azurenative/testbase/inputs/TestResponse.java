@@ -13,10 +13,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of a Test.
+ * 
+ */
 public final class TestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TestResponse Empty = new TestResponse();
 
+    /**
+     * The commands used in the test.
+     * 
+     */
     @InputImport(name="commands", required=true)
     private final List<CommandResponse> commands;
 
@@ -24,6 +32,10 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
         return this.commands;
     }
 
+    /**
+     * Indicates if this test is active.It doesn't schedule test for not active Test.
+     * 
+     */
     @InputImport(name="isActive")
     private final @Nullable Boolean isActive;
 
@@ -31,6 +43,10 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
         return this.isActive == null ? Optional.empty() : Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * The type of the test.
+     * 
+     */
     @InputImport(name="testType", required=true)
     private final String testType;
 
@@ -38,6 +54,10 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
         return this.testType;
     }
 
+    /**
+     * The status of the validation run of the package.
+     * 
+     */
     @InputImport(name="validationRunStatus", required=true)
     private final String validationRunStatus;
 

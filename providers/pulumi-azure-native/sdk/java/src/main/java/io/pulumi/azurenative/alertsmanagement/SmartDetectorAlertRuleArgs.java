@@ -22,6 +22,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     public static final SmartDetectorAlertRuleArgs Empty = new SmartDetectorAlertRuleArgs();
 
+    /**
+     * The alert rule actions.
+     * 
+     */
     @InputImport(name="actionGroups", required=true)
     private final Input<ActionGroupsInformationArgs> actionGroups;
 
@@ -29,6 +33,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.actionGroups;
     }
 
+    /**
+     * The name of the alert rule.
+     * 
+     */
     @InputImport(name="alertRuleName")
     private final @Nullable Input<String> alertRuleName;
 
@@ -36,6 +44,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.alertRuleName == null ? Input.empty() : this.alertRuleName;
     }
 
+    /**
+     * The alert rule description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +55,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The alert rule's detector.
+     * 
+     */
     @InputImport(name="detector", required=true)
     private final Input<DetectorArgs> detector;
 
@@ -50,6 +66,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.detector;
     }
 
+    /**
+     * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
+     * 
+     */
     @InputImport(name="frequency", required=true)
     private final Input<String> frequency;
 
@@ -57,6 +77,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.frequency;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -64,6 +88,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,6 +99,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The alert rule resources scope.
+     * 
+     */
     @InputImport(name="scope", required=true)
     private final Input<List<String>> scope;
 
@@ -78,6 +110,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.scope;
     }
 
+    /**
+     * The alert rule severity.
+     * 
+     */
     @InputImport(name="severity", required=true)
     private final Input<Either<String,Severity>> severity;
 
@@ -85,6 +121,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.severity;
     }
 
+    /**
+     * The alert rule state.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final Input<Either<String,AlertRuleState>> state;
 
@@ -92,6 +132,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.state;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -99,6 +143,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The alert rule throttling information.
+     * 
+     */
     @InputImport(name="throttling")
     private final @Nullable Input<ThrottlingInformationArgs> throttling;
 

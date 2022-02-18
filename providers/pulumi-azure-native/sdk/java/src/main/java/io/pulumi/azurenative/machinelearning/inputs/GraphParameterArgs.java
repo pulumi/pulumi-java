@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a global parameter in the graph.
+ * 
+ */
 public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GraphParameterArgs Empty = new GraphParameterArgs();
 
+    /**
+     * Description of this graph parameter.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +33,10 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Association links for this parameter to nodes in the graph.
+     * 
+     */
     @InputImport(name="links", required=true)
     private final Input<List<GraphParameterLinkArgs>> links;
 
@@ -32,6 +44,10 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
         return this.links;
     }
 
+    /**
+     * Graph parameter's type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ParameterType>> type;
 

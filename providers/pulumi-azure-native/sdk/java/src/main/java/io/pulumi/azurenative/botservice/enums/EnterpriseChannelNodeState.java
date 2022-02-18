@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The current state of the Enterprise Channel Node.
+     * 
+     */
     @EnumType
     public enum EnterpriseChannelNodeState {
         Creating("Creating"),

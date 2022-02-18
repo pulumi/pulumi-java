@@ -15,6 +15,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
 
     public static final NetworkSecurityPerimeterArgs Empty = new NetworkSecurityPerimeterArgs();
 
+    /**
+     * A description of the network security perimeter.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A friendly name for the network security perimeter.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +37,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -36,6 +48,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,6 +59,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +70,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the network security perimeter.
+     * 
+     */
     @InputImport(name="networkSecurityPerimeterName")
     private final @Nullable Input<String> networkSecurityPerimeterName;
 
@@ -57,6 +81,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
         return this.networkSecurityPerimeterName == null ? Input.empty() : this.networkSecurityPerimeterName;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -64,6 +92,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -14,11 +14,36 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomerCertificateParametersResponse {
+    /**
+     * Certificate issuing authority.
+     * 
+     */
     private final @Nullable String certificateAuthority;
+    /**
+     * Resource reference to the KV secret
+     * 
+     */
     private final ResourceReferenceResponse secretSource;
+    /**
+     * Version of the secret to be used
+     * 
+     */
     private final @Nullable String secretVersion;
+    /**
+     * The list of SANs.
+     * 
+     */
     private final @Nullable List<String> subjectAlternativeNames;
+    /**
+     * The type of the Secret to create.
+     * Expected value is 'CustomerCertificate'.
+     * 
+     */
     private final String type;
+    /**
+     * Whether to use the latest version for the certificate
+     * 
+     */
     private final @Nullable Boolean useLatestVersion;
 
     @OutputCustomType.Constructor({"certificateAuthority","secretSource","secretVersion","subjectAlternativeNames","type","useLatestVersion"})
@@ -37,21 +62,46 @@ public final class CustomerCertificateParametersResponse {
         this.useLatestVersion = useLatestVersion;
     }
 
+    /**
+     * Certificate issuing authority.
+     * 
+     */
     public Optional<String> getCertificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);
     }
+    /**
+     * Resource reference to the KV secret
+     * 
+     */
     public ResourceReferenceResponse getSecretSource() {
         return this.secretSource;
     }
+    /**
+     * Version of the secret to be used
+     * 
+     */
     public Optional<String> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
+    /**
+     * The list of SANs.
+     * 
+     */
     public List<String> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? List.of() : this.subjectAlternativeNames;
     }
+    /**
+     * The type of the Secret to create.
+     * Expected value is 'CustomerCertificate'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Whether to use the latest version for the certificate
+     * 
+     */
     public Optional<Boolean> getUseLatestVersion() {
         return Optional.ofNullable(this.useLatestVersion);
     }

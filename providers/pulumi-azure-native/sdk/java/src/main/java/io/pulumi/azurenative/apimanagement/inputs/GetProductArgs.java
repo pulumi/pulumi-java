@@ -12,6 +12,10 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProductArgs Empty = new GetProductArgs();
 
+    /**
+     * Product identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     @InputImport(name="productId", required=true)
     private final String productId;
 
@@ -19,6 +23,10 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.productId;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

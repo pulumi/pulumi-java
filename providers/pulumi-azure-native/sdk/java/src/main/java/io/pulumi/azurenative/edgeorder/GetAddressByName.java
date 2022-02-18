@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAddressByName {
+/**
+ * Address Resource.
+ * API Version: 2021-12-01.
+ * 
+ *
+ * Address Resource.
+ * 
+ */
     public static CompletableFuture<GetAddressByNameResult> invokeAsync(GetAddressByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:edgeorder:getAddressByName", TypeShape.of(GetAddressByNameResult.class), args == null ? GetAddressByNameArgs.Empty : args, Utilities.withVersion(options));
     }

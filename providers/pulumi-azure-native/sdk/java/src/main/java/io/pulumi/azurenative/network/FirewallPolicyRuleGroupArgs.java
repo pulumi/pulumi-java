@@ -19,6 +19,10 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
 
     public static final FirewallPolicyRuleGroupArgs Empty = new FirewallPolicyRuleGroupArgs();
 
+    /**
+     * The name of the Firewall Policy.
+     * 
+     */
     @InputImport(name="firewallPolicyName", required=true)
     private final Input<String> firewallPolicyName;
 
@@ -26,6 +30,10 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
         return this.firewallPolicyName;
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -33,6 +41,10 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -40,6 +52,10 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Priority of the Firewall Policy Rule Group resource.
+     * 
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -47,6 +63,10 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -54,6 +74,10 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the FirewallPolicyRuleGroup.
+     * 
+     */
     @InputImport(name="ruleGroupName")
     private final @Nullable Input<String> ruleGroupName;
 
@@ -61,6 +85,10 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
         return this.ruleGroupName == null ? Input.empty() : this.ruleGroupName;
     }
 
+    /**
+     * Group of Firewall Policy rules.
+     * 
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> rules;
 

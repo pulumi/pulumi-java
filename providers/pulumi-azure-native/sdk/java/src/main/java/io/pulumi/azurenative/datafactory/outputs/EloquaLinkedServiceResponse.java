@@ -19,17 +19,66 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EloquaLinkedServiceResponse {
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     private final @Nullable List<Object> annotations;
+    /**
+     * The integration runtime reference.
+     * 
+     */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    /**
+     * Linked service description.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     private final @Nullable Object encryptedCredential;
+    /**
+     * The endpoint of the Eloqua server. (i.e. eloqua.example.com)
+     * 
+     */
     private final Object endpoint;
+    /**
+     * Parameters for linked service.
+     * 
+     */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    /**
+     * The password corresponding to the user name.
+     * 
+     */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    /**
+     * Type of linked service.
+     * Expected value is 'Eloqua'.
+     * 
+     */
     private final String type;
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     private final @Nullable Object useEncryptedEndpoints;
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * 
+     */
     private final @Nullable Object useHostVerification;
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * 
+     */
     private final @Nullable Object usePeerVerification;
+    /**
+     * The site name and user name of your Eloqua account in the form: sitename/username. (i.e. Eloqua/Alice)
+     * 
+     */
     private final Object username;
 
     @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","endpoint","parameters","password","type","useEncryptedEndpoints","useHostVerification","usePeerVerification","username"})
@@ -60,39 +109,88 @@ public final class EloquaLinkedServiceResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     * 
+     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+    /**
+     * The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+    /**
+     * Linked service description.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+    /**
+     * The endpoint of the Eloqua server. (i.e. eloqua.example.com)
+     * 
+     */
     public Object getEndpoint() {
         return this.endpoint;
     }
+    /**
+     * Parameters for linked service.
+     * 
+     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+    /**
+     * The password corresponding to the user name.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
+    /**
+     * Type of linked service.
+     * Expected value is 'Eloqua'.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
+    /**
+     * The site name and user name of your Eloqua account in the form: sitename/username. (i.e. Eloqua/Alice)
+     * 
+     */
     public Object getUsername() {
         return this.username;
     }

@@ -16,51 +16,128 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The essential information related to the peer's ASN.
+ * API Version: 2021-01-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:peering:PeerAsn peerAsnName /subscriptions/subId/providers/Microsoft.Peering/peerAsns/peerAsnName 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:peering:PeerAsn")
 public class PeerAsn extends io.pulumi.resources.CustomResource {
+    /**
+     * The error message for the validation state
+     * 
+     */
     @OutputExport(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
+    /**
+     * @return The error message for the validation state
+     * 
+     */
     public Output<String> getErrorMessage() {
         return this.errorMessage;
     }
+    /**
+     * The name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The Autonomous System Number (ASN) of the peer.
+     * 
+     */
     @OutputExport(name="peerAsn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> peerAsn;
 
+    /**
+     * @return The Autonomous System Number (ASN) of the peer.
+     * 
+     */
     public Output</* @Nullable */ Integer> getPeerAsn() {
         return this.peerAsn;
     }
+    /**
+     * The contact details of the peer.
+     * 
+     */
     @OutputExport(name="peerContactDetail", type=List.class, parameters={ContactDetailResponse.class})
     private Output</* @Nullable */ List<ContactDetailResponse>> peerContactDetail;
 
+    /**
+     * @return The contact details of the peer.
+     * 
+     */
     public Output</* @Nullable */ List<ContactDetailResponse>> getPeerContactDetail() {
         return this.peerContactDetail;
     }
+    /**
+     * The name of the peer.
+     * 
+     */
     @OutputExport(name="peerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerName;
 
+    /**
+     * @return The name of the peer.
+     * 
+     */
     public Output</* @Nullable */ String> getPeerName() {
         return this.peerName;
     }
+    /**
+     * The type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The validation state of the ASN associated with the peer.
+     * 
+     */
     @OutputExport(name="validationState", type=String.class, parameters={})
     private Output</* @Nullable */ String> validationState;
 
+    /**
+     * @return The validation state of the ASN associated with the peer.
+     * 
+     */
     public Output</* @Nullable */ String> getValidationState() {
         return this.validationState;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PeerAsn(String name, @Nullable PeerAsnArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:peering:PeerAsn", name, args == null ? PeerAsnArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -85,6 +162,14 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PeerAsn get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PeerAsn(name, id, options);
     }

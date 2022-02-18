@@ -12,6 +12,10 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pul
 
     public static final GetWebAppSwiftVirtualNetworkConnectionSlotArgs Empty = new GetWebAppSwiftVirtualNetworkConnectionSlotArgs();
 
+    /**
+     * Name of the app.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +23,10 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pul
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pul
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will get a gateway for the production slot's Virtual Network.
+     * 
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

@@ -15,6 +15,10 @@ public final class MongoDBCollectionGetPropertiesResponseOptions extends io.pulu
 
     public static final MongoDBCollectionGetPropertiesResponseOptions Empty = new MongoDBCollectionGetPropertiesResponseOptions();
 
+    /**
+     * Specifies the Autoscale settings.
+     * 
+     */
     @InputImport(name="autoscaleSettings")
     private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
 
@@ -22,6 +26,10 @@ public final class MongoDBCollectionGetPropertiesResponseOptions extends io.pulu
         return this.autoscaleSettings == null ? Optional.empty() : Optional.ofNullable(this.autoscaleSettings);
     }
 
+    /**
+     * Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+     * 
+     */
     @InputImport(name="throughput")
     private final @Nullable Integer throughput;
 

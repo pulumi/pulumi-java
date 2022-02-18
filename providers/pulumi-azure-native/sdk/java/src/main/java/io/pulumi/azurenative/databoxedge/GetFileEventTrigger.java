@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFileEventTrigger {
+/**
+ * Trigger details.
+ * API Version: 2020-12-01.
+ * 
+ *
+ * Trigger details.
+ * 
+ */
     public static CompletableFuture<GetFileEventTriggerResult> invokeAsync(GetFileEventTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getFileEventTrigger", TypeShape.of(GetFileEventTriggerResult.class), args == null ? GetFileEventTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

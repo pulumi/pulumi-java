@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A job target, for example a specific database or a container of databases that is evaluated during job execution.
+ * 
+ */
 public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobTargetArgs Empty = new JobTargetArgs();
 
+    /**
+     * The target database name.
+     * 
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -24,6 +32,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * The target elastic pool name.
+     * 
+     */
     @InputImport(name="elasticPoolName")
     private final @Nullable Input<String> elasticPoolName;
 
@@ -31,6 +43,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.elasticPoolName == null ? Input.empty() : this.elasticPoolName;
     }
 
+    /**
+     * Whether the target is included or excluded from the group.
+     * 
+     */
     @InputImport(name="membershipType")
     private final @Nullable Input<JobTargetGroupMembershipType> membershipType;
 
@@ -38,6 +54,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.membershipType == null ? Input.empty() : this.membershipType;
     }
 
+    /**
+     * The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
+     * 
+     */
     @InputImport(name="refreshCredential")
     private final @Nullable Input<String> refreshCredential;
 
@@ -45,6 +65,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.refreshCredential == null ? Input.empty() : this.refreshCredential;
     }
 
+    /**
+     * The target server name.
+     * 
+     */
     @InputImport(name="serverName")
     private final @Nullable Input<String> serverName;
 
@@ -52,6 +76,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName == null ? Input.empty() : this.serverName;
     }
 
+    /**
+     * The target shard map.
+     * 
+     */
     @InputImport(name="shardMapName")
     private final @Nullable Input<String> shardMapName;
 
@@ -59,6 +87,10 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.shardMapName == null ? Input.empty() : this.shardMapName;
     }
 
+    /**
+     * The target type.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,JobTargetType>> type;
 

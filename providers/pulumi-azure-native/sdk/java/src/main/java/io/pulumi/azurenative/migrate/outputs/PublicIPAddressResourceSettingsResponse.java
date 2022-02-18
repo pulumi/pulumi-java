@@ -11,12 +11,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PublicIPAddressResourceSettingsResponse {
+    /**
+     * Gets or sets the domain name label.
+     * 
+     */
     private final @Nullable String domainNameLabel;
+    /**
+     * Gets or sets the fully qualified domain name.
+     * 
+     */
     private final @Nullable String fqdn;
+    /**
+     * Gets or sets public IP allocation method.
+     * 
+     */
     private final @Nullable String publicIpAllocationMethod;
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is 'Microsoft.Network/publicIPAddresses'.
+     * 
+     */
     private final String resourceType;
+    /**
+     * Gets or sets public IP sku.
+     * 
+     */
     private final @Nullable String sku;
+    /**
+     * Gets or sets the target Resource name.
+     * 
+     */
     private final String targetResourceName;
+    /**
+     * Gets or sets public IP zones.
+     * 
+     */
     private final @Nullable String zones;
 
     @OutputCustomType.Constructor({"domainNameLabel","fqdn","publicIpAllocationMethod","resourceType","sku","targetResourceName","zones"})
@@ -37,24 +66,53 @@ public final class PublicIPAddressResourceSettingsResponse {
         this.zones = zones;
     }
 
+    /**
+     * Gets or sets the domain name label.
+     * 
+     */
     public Optional<String> getDomainNameLabel() {
         return Optional.ofNullable(this.domainNameLabel);
     }
+    /**
+     * Gets or sets the fully qualified domain name.
+     * 
+     */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
+    /**
+     * Gets or sets public IP allocation method.
+     * 
+     */
     public Optional<String> getPublicIpAllocationMethod() {
         return Optional.ofNullable(this.publicIpAllocationMethod);
     }
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is 'Microsoft.Network/publicIPAddresses'.
+     * 
+     */
     public String getPropResourceType() {
         return this.resourceType;
     }
+    /**
+     * Gets or sets public IP sku.
+     * 
+     */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
+    /**
+     * Gets or sets the target Resource name.
+     * 
+     */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }
+    /**
+     * Gets or sets public IP zones.
+     * 
+     */
     public Optional<String> getZones() {
         return Optional.ofNullable(this.zones);
     }

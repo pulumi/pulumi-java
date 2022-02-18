@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListServerGatewayStatus {
+/**
+ * Status of gateway is live.
+ * API Version: 2017-08-01.
+ * 
+ *
+ * Status of gateway is live.
+ * 
+ */
     public static CompletableFuture<ListServerGatewayStatusResult> invokeAsync(ListServerGatewayStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:analysisservices:listServerGatewayStatus", TypeShape.of(ListServerGatewayStatusResult.class), args == null ? ListServerGatewayStatusArgs.Empty : args, Utilities.withVersion(options));
     }

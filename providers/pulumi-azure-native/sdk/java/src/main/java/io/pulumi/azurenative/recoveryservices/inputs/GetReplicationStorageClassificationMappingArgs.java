@@ -12,6 +12,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
 
     public static final GetReplicationStorageClassificationMappingArgs Empty = new GetReplicationStorageClassificationMappingArgs();
 
+    /**
+     * Fabric name.
+     * 
+     */
     @InputImport(name="fabricName", required=true)
     private final String fabricName;
 
@@ -19,6 +23,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
         return this.fabricName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     * 
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -33,6 +45,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
         return this.resourceName;
     }
 
+    /**
+     * Storage classification mapping name.
+     * 
+     */
     @InputImport(name="storageClassificationMappingName", required=true)
     private final String storageClassificationMappingName;
 
@@ -40,6 +56,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
         return this.storageClassificationMappingName;
     }
 
+    /**
+     * Storage classification name.
+     * 
+     */
     @InputImport(name="storageClassificationName", required=true)
     private final String storageClassificationName;
 

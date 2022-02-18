@@ -10,12 +10,40 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificatePropertiesResponse {
+    /**
+     * base-64 representation of X509 certificate .cer file or just .pem file content.
+     * 
+     */
     private final String certificate;
+    /**
+     * The certificate's creation date and time.
+     * 
+     */
     private final String created;
+    /**
+     * The certificate's expiration date and time.
+     * 
+     */
     private final String expiry;
+    /**
+     * Determines whether certificate has been verified.
+     * 
+     */
     private final Boolean isVerified;
+    /**
+     * The certificate's subject name.
+     * 
+     */
     private final String subject;
+    /**
+     * The certificate's thumbprint.
+     * 
+     */
     private final String thumbprint;
+    /**
+     * The certificate's last update date and time.
+     * 
+     */
     private final String updated;
 
     @OutputCustomType.Constructor({"certificate","created","expiry","isVerified","subject","thumbprint","updated"})
@@ -36,24 +64,52 @@ public final class CertificatePropertiesResponse {
         this.updated = Objects.requireNonNull(updated);
     }
 
+    /**
+     * base-64 representation of X509 certificate .cer file or just .pem file content.
+     * 
+     */
     public String getCertificate() {
         return this.certificate;
     }
+    /**
+     * The certificate's creation date and time.
+     * 
+     */
     public String getCreated() {
         return this.created;
     }
+    /**
+     * The certificate's expiration date and time.
+     * 
+     */
     public String getExpiry() {
         return this.expiry;
     }
+    /**
+     * Determines whether certificate has been verified.
+     * 
+     */
     public Boolean getIsVerified() {
         return this.isVerified;
     }
+    /**
+     * The certificate's subject name.
+     * 
+     */
     public String getSubject() {
         return this.subject;
     }
+    /**
+     * The certificate's thumbprint.
+     * 
+     */
     public String getThumbprint() {
         return this.thumbprint;
     }
+    /**
+     * The certificate's last update date and time.
+     * 
+     */
     public String getUpdated() {
         return this.updated;
     }

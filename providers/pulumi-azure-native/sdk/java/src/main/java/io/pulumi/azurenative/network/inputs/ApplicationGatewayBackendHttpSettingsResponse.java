@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Backend address pool settings of an application gateway.
+ * 
+ */
 public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayBackendHttpSettingsResponse Empty = new ApplicationGatewayBackendHttpSettingsResponse();
 
+    /**
+     * Cookie name to use for the affinity cookie.
+     * 
+     */
     @InputImport(name="affinityCookieName")
     private final @Nullable String affinityCookieName;
 
@@ -26,6 +34,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.affinityCookieName == null ? Optional.empty() : Optional.ofNullable(this.affinityCookieName);
     }
 
+    /**
+     * Array of references to application gateway authentication certificates.
+     * 
+     */
     @InputImport(name="authenticationCertificates")
     private final @Nullable List<SubResourceResponse> authenticationCertificates;
 
@@ -33,6 +45,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.authenticationCertificates == null ? List.of() : this.authenticationCertificates;
     }
 
+    /**
+     * Connection draining of the backend http settings resource.
+     * 
+     */
     @InputImport(name="connectionDraining")
     private final @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
 
@@ -40,6 +56,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.connectionDraining == null ? Optional.empty() : Optional.ofNullable(this.connectionDraining);
     }
 
+    /**
+     * Cookie based affinity.
+     * 
+     */
     @InputImport(name="cookieBasedAffinity")
     private final @Nullable String cookieBasedAffinity;
 
@@ -47,6 +67,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.cookieBasedAffinity == null ? Optional.empty() : Optional.ofNullable(this.cookieBasedAffinity);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -54,6 +78,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.etag;
     }
 
+    /**
+     * Host header to be sent to the backend servers.
+     * 
+     */
     @InputImport(name="hostName")
     private final @Nullable String hostName;
 
@@ -61,6 +89,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -68,6 +100,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Name of the backend http settings that is unique within an Application Gateway.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -75,6 +111,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Path which should be used as a prefix for all HTTP requests. Null means no path will be prefixed. Default value is null.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -82,6 +122,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
+    /**
+     * Whether to pick host header should be picked from the host name of the backend server. Default value is false.
+     * 
+     */
     @InputImport(name="pickHostNameFromBackendAddress")
     private final @Nullable Boolean pickHostNameFromBackendAddress;
 
@@ -89,6 +133,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.pickHostNameFromBackendAddress == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendAddress);
     }
 
+    /**
+     * The destination port on the backend.
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 
@@ -96,6 +144,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * Probe resource of an application gateway.
+     * 
+     */
     @InputImport(name="probe")
     private final @Nullable SubResourceResponse probe;
 
@@ -103,6 +155,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.probe == null ? Optional.empty() : Optional.ofNullable(this.probe);
     }
 
+    /**
+     * Whether the probe is enabled. Default value is false.
+     * 
+     */
     @InputImport(name="probeEnabled")
     private final @Nullable Boolean probeEnabled;
 
@@ -110,6 +166,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.probeEnabled == null ? Optional.empty() : Optional.ofNullable(this.probeEnabled);
     }
 
+    /**
+     * The protocol used to communicate with the backend.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 
@@ -117,6 +177,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
+    /**
+     * The provisioning state of the backend HTTP settings resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -124,6 +188,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.provisioningState;
     }
 
+    /**
+     * Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
+     * 
+     */
     @InputImport(name="requestTimeout")
     private final @Nullable Integer requestTimeout;
 
@@ -131,6 +199,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
     }
 
+    /**
+     * Array of references to application gateway trusted root certificates.
+     * 
+     */
     @InputImport(name="trustedRootCertificates")
     private final @Nullable List<SubResourceResponse> trustedRootCertificates;
 
@@ -138,6 +210,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
         return this.trustedRootCertificates == null ? List.of() : this.trustedRootCertificates;
     }
 
+    /**
+     * Type of the resource.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

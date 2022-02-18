@@ -12,6 +12,10 @@ public final class GetAADDataConnectorArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetAADDataConnectorArgs Empty = new GetAADDataConnectorArgs();
 
+    /**
+     * Connector ID
+     * 
+     */
     @InputImport(name="dataConnectorId", required=true)
     private final String dataConnectorId;
 
@@ -19,6 +23,10 @@ public final class GetAADDataConnectorArgs extends io.pulumi.resources.InvokeArg
         return this.dataConnectorId;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +34,10 @@ public final class GetAADDataConnectorArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

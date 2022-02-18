@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGallery {
+/**
+ * Specifies information about the Shared Image Gallery that you want to create or update.
+ * API Version: 2020-09-30.
+ * 
+ *
+ * Specifies information about the Shared Image Gallery that you want to create or update.
+ * 
+ */
     public static CompletableFuture<GetGalleryResult> invokeAsync(GetGalleryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGallery", TypeShape.of(GetGalleryResult.class), args == null ? GetGalleryArgs.Empty : args, Utilities.withVersion(options));
     }

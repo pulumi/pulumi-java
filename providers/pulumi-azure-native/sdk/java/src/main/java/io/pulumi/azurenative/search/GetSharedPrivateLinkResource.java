@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSharedPrivateLinkResource {
+/**
+ * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
+ * API Version: 2020-08-01.
+ * 
+ *
+ * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
+ * 
+ */
     public static CompletableFuture<GetSharedPrivateLinkResourceResult> invokeAsync(GetSharedPrivateLinkResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:getSharedPrivateLinkResource", TypeShape.of(GetSharedPrivateLinkResourceResult.class), args == null ? GetSharedPrivateLinkResourceArgs.Empty : args, Utilities.withVersion(options));
     }

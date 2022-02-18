@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Profile for gallery sharing to subscription or tenant
+ * 
+ */
 public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SharingProfileArgs Empty = new SharingProfileArgs();
 
+    /**
+     * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
+     * 
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions;
 

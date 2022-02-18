@@ -18,69 +18,174 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Event Channel.
+ * API Version: 2021-06-01-preview.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:eventgrid:EventChannel exampleEventChannelName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/partnerNamespace123/eventChannels/exampleEventChannelName1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:eventgrid:EventChannel")
 public class EventChannel extends io.pulumi.resources.CustomResource {
+    /**
+     * Represents the destination of an event channel.
+     * 
+     */
     @OutputExport(name="destination", type=EventChannelDestinationResponse.class, parameters={})
     private Output</* @Nullable */ EventChannelDestinationResponse> destination;
 
+    /**
+     * @return Represents the destination of an event channel.
+     * 
+     */
     public Output</* @Nullable */ EventChannelDestinationResponse> getDestination() {
         return this.destination;
     }
+    /**
+     * Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
+     * the event channel and corresponding partner topic are deleted.
+     * 
+     */
     @OutputExport(name="expirationTimeIfNotActivatedUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationTimeIfNotActivatedUtc;
 
+    /**
+     * @return Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
+     * the event channel and corresponding partner topic are deleted.
+     * 
+     */
     public Output</* @Nullable */ String> getExpirationTimeIfNotActivatedUtc() {
         return this.expirationTimeIfNotActivatedUtc;
     }
+    /**
+     * Information about the filter for the event channel.
+     * 
+     */
     @OutputExport(name="filter", type=EventChannelFilterResponse.class, parameters={})
     private Output</* @Nullable */ EventChannelFilterResponse> filter;
 
+    /**
+     * @return Information about the filter for the event channel.
+     * 
+     */
     public Output</* @Nullable */ EventChannelFilterResponse> getFilter() {
         return this.filter;
     }
+    /**
+     * Name of the resource.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
+     * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
+     * 
+     */
     @OutputExport(name="partnerTopicFriendlyDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerTopicFriendlyDescription;
 
+    /**
+     * @return Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
+     * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
+     * 
+     */
     public Output</* @Nullable */ String> getPartnerTopicFriendlyDescription() {
         return this.partnerTopicFriendlyDescription;
     }
+    /**
+     * The readiness state of the corresponding partner topic.
+     * 
+     */
     @OutputExport(name="partnerTopicReadinessState", type=String.class, parameters={})
     private Output<String> partnerTopicReadinessState;
 
+    /**
+     * @return The readiness state of the corresponding partner topic.
+     * 
+     */
     public Output<String> getPartnerTopicReadinessState() {
         return this.partnerTopicReadinessState;
     }
+    /**
+     * Provisioning state of the event channel.
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the event channel.
+     * 
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Source of the event channel. This represents a unique resource in the partner's resource model.
+     * 
+     */
     @OutputExport(name="source", type=EventChannelSourceResponse.class, parameters={})
     private Output</* @Nullable */ EventChannelSourceResponse> source;
 
+    /**
+     * @return Source of the event channel. This represents a unique resource in the partner's resource model.
+     * 
+     */
     public Output</* @Nullable */ EventChannelSourceResponse> getSource() {
         return this.source;
     }
+    /**
+     * The system metadata relating to Event Channel resource.
+     * 
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to Event Channel resource.
+     * 
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the resource.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EventChannel(String name, EventChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventgrid:EventChannel", name, args == null ? EventChannelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -101,6 +206,14 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EventChannel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventChannel(name, id, options);
     }

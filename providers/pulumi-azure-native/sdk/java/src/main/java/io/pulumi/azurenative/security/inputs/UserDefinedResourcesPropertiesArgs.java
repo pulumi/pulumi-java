@@ -10,10 +10,18 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Properties of the IoT Security solution's user defined resources.
+ * 
+ */
 public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserDefinedResourcesPropertiesArgs Empty = new UserDefinedResourcesPropertiesArgs();
 
+    /**
+     * Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
+     * 
+     */
     @InputImport(name="query", required=true)
     private final Input<String> query;
 
@@ -21,6 +29,10 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
         return this.query;
     }
 
+    /**
+     * List of Azure subscription ids on which the user defined resources query should be executed.
+     * 
+     */
     @InputImport(name="querySubscriptions", required=true)
     private final Input<List<String>> querySubscriptions;
 

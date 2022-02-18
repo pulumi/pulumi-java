@@ -14,9 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualApplicationResponse {
+    /**
+     * Physical path.
+     * 
+     */
     private final @Nullable String physicalPath;
+    /**
+     * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
+     * 
+     */
     private final @Nullable Boolean preloadEnabled;
+    /**
+     * Virtual directories for virtual application.
+     * 
+     */
     private final @Nullable List<VirtualDirectoryResponse> virtualDirectories;
+    /**
+     * Virtual path.
+     * 
+     */
     private final @Nullable String virtualPath;
 
     @OutputCustomType.Constructor({"physicalPath","preloadEnabled","virtualDirectories","virtualPath"})
@@ -31,15 +47,31 @@ public final class VirtualApplicationResponse {
         this.virtualPath = virtualPath;
     }
 
+    /**
+     * Physical path.
+     * 
+     */
     public Optional<String> getPhysicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
+    /**
+     * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
+     * 
+     */
     public Optional<Boolean> getPreloadEnabled() {
         return Optional.ofNullable(this.preloadEnabled);
     }
+    /**
+     * Virtual directories for virtual application.
+     * 
+     */
     public List<VirtualDirectoryResponse> getVirtualDirectories() {
         return this.virtualDirectories == null ? List.of() : this.virtualDirectories;
     }
+    /**
+     * Virtual path.
+     * 
+     */
     public Optional<String> getVirtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }

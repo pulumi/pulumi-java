@@ -12,6 +12,10 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSshPublicKeyArgs Empty = new GetSshPublicKeyArgs();
 
+    /**
+     * The name of the resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +23,10 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the SSH public key.
+     * 
+     */
     @InputImport(name="sshPublicKeyName", required=true)
     private final String sshPublicKeyName;
 

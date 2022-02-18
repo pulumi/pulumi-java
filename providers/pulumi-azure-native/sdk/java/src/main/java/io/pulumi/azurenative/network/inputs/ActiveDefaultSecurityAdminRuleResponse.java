@@ -15,10 +15,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network default admin rule.
+ * 
+ */
 public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActiveDefaultSecurityAdminRuleResponse Empty = new ActiveDefaultSecurityAdminRuleResponse();
 
+    /**
+     * Indicates the access allowed for this particular rule
+     * 
+     */
     @InputImport(name="access", required=true)
     private final String access;
 
@@ -26,6 +34,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.access;
     }
 
+    /**
+     * Deployment time string.
+     * 
+     */
     @InputImport(name="commitTime")
     private final @Nullable String commitTime;
 
@@ -33,6 +45,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
     }
 
+    /**
+     * A description of the security admin configuration.
+     * 
+     */
     @InputImport(name="configurationDescription")
     private final @Nullable String configurationDescription;
 
@@ -40,6 +56,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.configurationDescription == null ? Optional.empty() : Optional.ofNullable(this.configurationDescription);
     }
 
+    /**
+     * A display name of the security admin configuration.
+     * 
+     */
     @InputImport(name="configurationDisplayName")
     private final @Nullable String configurationDisplayName;
 
@@ -47,6 +67,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.configurationDisplayName == null ? Optional.empty() : Optional.ofNullable(this.configurationDisplayName);
     }
 
+    /**
+     * A description for this rule. Restricted to 140 chars.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -54,6 +78,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.description;
     }
 
+    /**
+     * The destination port ranges.
+     * 
+     */
     @InputImport(name="destinationPortRanges", required=true)
     private final List<String> destinationPortRanges;
 
@@ -61,6 +89,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.destinationPortRanges;
     }
 
+    /**
+     * The destination address prefixes. CIDR or destination IP ranges.
+     * 
+     */
     @InputImport(name="destinations", required=true)
     private final List<AddressPrefixItemResponse> destinations;
 
@@ -68,6 +100,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.destinations;
     }
 
+    /**
+     * Indicates if the traffic matched against the rule in inbound or outbound.
+     * 
+     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -75,6 +111,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.direction;
     }
 
+    /**
+     * A friendly name for the rule.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -82,6 +122,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.displayName;
     }
 
+    /**
+     * Default rule flag.
+     * 
+     */
     @InputImport(name="flag")
     private final @Nullable String flag;
 
@@ -89,6 +133,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.flag == null ? Optional.empty() : Optional.ofNullable(this.flag);
     }
 
+    /**
+     * Resource ID.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -96,6 +144,11 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the rule is custom or default.
+     * Expected value is 'Default'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -103,6 +156,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.kind;
     }
 
+    /**
+     * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Integer priority;
 
@@ -110,6 +167,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.priority;
     }
 
+    /**
+     * Network protocol this rule applies to.
+     * 
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 
@@ -117,6 +178,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.protocol;
     }
 
+    /**
+     * The provisioning state of the resource.
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -124,6 +189,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.provisioningState;
     }
 
+    /**
+     * Deployment region.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 
@@ -131,6 +200,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
+    /**
+     * Groups for rule collection
+     * 
+     */
     @InputImport(name="ruleCollectionAppliesToGroups")
     private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
@@ -138,6 +211,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
 
+    /**
+     * A description of the rule collection.
+     * 
+     */
     @InputImport(name="ruleCollectionDescription")
     private final @Nullable String ruleCollectionDescription;
 
@@ -145,6 +222,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.ruleCollectionDescription == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDescription);
     }
 
+    /**
+     * A display name of the rule collection.
+     * 
+     */
     @InputImport(name="ruleCollectionDisplayName")
     private final @Nullable String ruleCollectionDisplayName;
 
@@ -152,6 +233,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.ruleCollectionDisplayName == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDisplayName);
     }
 
+    /**
+     * Effective configuration groups.
+     * 
+     */
     @InputImport(name="ruleGroups")
     private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
@@ -159,6 +244,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
 
+    /**
+     * The source port ranges.
+     * 
+     */
     @InputImport(name="sourcePortRanges", required=true)
     private final List<String> sourcePortRanges;
 
@@ -166,6 +255,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
         return this.sourcePortRanges;
     }
 
+    /**
+     * The CIDR or source IP ranges.
+     * 
+     */
     @InputImport(name="sources", required=true)
     private final List<AddressPrefixItemResponse> sources;
 

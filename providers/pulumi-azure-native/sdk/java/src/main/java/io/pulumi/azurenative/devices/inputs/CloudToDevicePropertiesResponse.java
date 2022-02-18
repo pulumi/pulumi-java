@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The IoT hub cloud-to-device messaging properties.
+ * 
+ */
 public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudToDevicePropertiesResponse Empty = new CloudToDevicePropertiesResponse();
 
+    /**
+     * The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     @InputImport(name="defaultTtlAsIso8601")
     private final @Nullable String defaultTtlAsIso8601;
 
@@ -23,6 +31,10 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
         return this.defaultTtlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.defaultTtlAsIso8601);
     }
 
+    /**
+     * The properties of the feedback queue for cloud-to-device messages.
+     * 
+     */
     @InputImport(name="feedback")
     private final @Nullable FeedbackPropertiesResponse feedback;
 
@@ -30,6 +42,10 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
         return this.feedback == null ? Optional.empty() : Optional.ofNullable(this.feedback);
     }
 
+    /**
+     * The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     @InputImport(name="maxDeliveryCount")
     private final @Nullable Integer maxDeliveryCount;
 

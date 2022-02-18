@@ -20,10 +20,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Compute Instance properties
+ * 
+ */
 public final class ComputeInstanceResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeInstanceResponseProperties Empty = new ComputeInstanceResponseProperties();
 
+    /**
+     * Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+     * 
+     */
     @InputImport(name="applicationSharingPolicy")
     private final @Nullable String applicationSharingPolicy;
 
@@ -31,6 +39,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.applicationSharingPolicy == null ? Optional.empty() : Optional.ofNullable(this.applicationSharingPolicy);
     }
 
+    /**
+     * Describes available applications and their endpoints on this ComputeInstance.
+     * 
+     */
     @InputImport(name="applications", required=true)
     private final List<ComputeInstanceApplicationResponse> applications;
 
@@ -38,6 +50,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.applications;
     }
 
+    /**
+     * The Compute Instance Authorization type. Available values are personal (default).
+     * 
+     */
     @InputImport(name="computeInstanceAuthorizationType")
     private final @Nullable String computeInstanceAuthorizationType;
 
@@ -45,6 +61,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.computeInstanceAuthorizationType == null ? Optional.empty() : Optional.ofNullable(this.computeInstanceAuthorizationType);
     }
 
+    /**
+     * Describes all connectivity endpoints available for this ComputeInstance.
+     * 
+     */
     @InputImport(name="connectivityEndpoints", required=true)
     private final ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints;
 
@@ -52,6 +72,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.connectivityEndpoints;
     }
 
+    /**
+     * Describes information on user who created this ComputeInstance.
+     * 
+     */
     @InputImport(name="createdBy", required=true)
     private final ComputeInstanceCreatedByResponse createdBy;
 
@@ -59,6 +83,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.createdBy;
     }
 
+    /**
+     * Collection of errors encountered on this ComputeInstance.
+     * 
+     */
     @InputImport(name="errors", required=true)
     private final List<MachineLearningServiceErrorResponse> errors;
 
@@ -66,6 +94,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.errors;
     }
 
+    /**
+     * The last operation on ComputeInstance.
+     * 
+     */
     @InputImport(name="lastOperation", required=true)
     private final ComputeInstanceLastOperationResponse lastOperation;
 
@@ -73,6 +105,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.lastOperation;
     }
 
+    /**
+     * Settings for a personal compute instance.
+     * 
+     */
     @InputImport(name="personalComputeInstanceSettings")
     private final @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings;
 
@@ -80,6 +116,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.personalComputeInstanceSettings == null ? Optional.empty() : Optional.ofNullable(this.personalComputeInstanceSettings);
     }
 
+    /**
+     * Details of customized scripts to execute for setting up the cluster.
+     * 
+     */
     @InputImport(name="setupScripts")
     private final @Nullable SetupScriptsResponse setupScripts;
 
@@ -87,6 +127,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.setupScripts == null ? Optional.empty() : Optional.ofNullable(this.setupScripts);
     }
 
+    /**
+     * Specifies policy and settings for SSH access.
+     * 
+     */
     @InputImport(name="sshSettings")
     private final @Nullable ComputeInstanceSshSettingsResponse sshSettings;
 
@@ -94,6 +138,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.sshSettings == null ? Optional.empty() : Optional.ofNullable(this.sshSettings);
     }
 
+    /**
+     * The current state of this ComputeInstance.
+     * 
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -101,6 +149,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.state;
     }
 
+    /**
+     * Virtual network subnet resource ID the compute nodes belong to.
+     * 
+     */
     @InputImport(name="subnet")
     private final @Nullable ResourceIdResponse subnet;
 
@@ -108,6 +160,10 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
+    /**
+     * Virtual Machine Size
+     * 
+     */
     @InputImport(name="vmSize")
     private final @Nullable String vmSize;
 

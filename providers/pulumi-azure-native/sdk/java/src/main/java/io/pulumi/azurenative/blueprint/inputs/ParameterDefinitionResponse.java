@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represent a parameter with constrains and metadata.
+ * 
+ */
 public final class ParameterDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterDefinitionResponse Empty = new ParameterDefinitionResponse();
 
+    /**
+     * Array of allowed values for this parameter.
+     * 
+     */
     @InputImport(name="allowedValues")
     private final @Nullable List<Object> allowedValues;
 
@@ -23,6 +31,10 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
 
+    /**
+     * Default Value for this parameter.
+     * 
+     */
     @InputImport(name="defaultValue")
     private final @Nullable Object defaultValue;
 
@@ -30,6 +42,10 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
+    /**
+     * Description of this parameter/resourceGroup.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -37,6 +53,10 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * DisplayName of this parameter/resourceGroup.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -44,6 +64,10 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+     * 
+     */
     @InputImport(name="strongType")
     private final @Nullable String strongType;
 
@@ -51,6 +75,10 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
         return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
     }
 
+    /**
+     * Allowed data types for Resource Manager template parameters.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

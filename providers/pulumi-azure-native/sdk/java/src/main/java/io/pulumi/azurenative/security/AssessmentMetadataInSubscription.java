@@ -16,11 +16,34 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Security assessment metadata
+ * API Version: 2020-01-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:security:AssessmentMetadataInSubscription ca039e75-a276-4175-aebc-bcd41e4b14b7 /providers/Microsoft.Security/assessmentMetadata/ca039e75-a276-4175-aebc-bcd41e4b14b7 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:security:AssessmentMetadataInSubscription")
 public class AssessmentMetadataInSubscription extends io.pulumi.resources.CustomResource {
+    /**
+     * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+     * 
+     */
     @OutputExport(name="assessmentType", type=String.class, parameters={})
     private Output<String> assessmentType;
 
+    /**
+     * @return BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+     * 
+     */
     public Output<String> getAssessmentType() {
         return this.assessmentType;
     }
@@ -30,57 +53,129 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
     public Output</* @Nullable */ List<String>> getCategories() {
         return this.categories;
     }
+    /**
+     * Human readable description of the assessment
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Human readable description of the assessment
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * User friendly display name of the assessment
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return User friendly display name of the assessment
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The implementation effort required to remediate this assessment
+     * 
+     */
     @OutputExport(name="implementationEffort", type=String.class, parameters={})
     private Output</* @Nullable */ String> implementationEffort;
 
+    /**
+     * @return The implementation effort required to remediate this assessment
+     * 
+     */
     public Output</* @Nullable */ String> getImplementationEffort() {
         return this.implementationEffort;
     }
+    /**
+     * Resource name
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Describes the partner that created the assessment
+     * 
+     */
     @OutputExport(name="partnerData", type=SecurityAssessmentMetadataPartnerDataResponse.class, parameters={})
     private Output</* @Nullable */ SecurityAssessmentMetadataPartnerDataResponse> partnerData;
 
+    /**
+     * @return Describes the partner that created the assessment
+     * 
+     */
     public Output</* @Nullable */ SecurityAssessmentMetadataPartnerDataResponse> getPartnerData() {
         return this.partnerData;
     }
+    /**
+     * Azure resource ID of the policy definition that turns this assessment calculation on
+     * 
+     */
     @OutputExport(name="policyDefinitionId", type=String.class, parameters={})
     private Output<String> policyDefinitionId;
 
+    /**
+     * @return Azure resource ID of the policy definition that turns this assessment calculation on
+     * 
+     */
     public Output<String> getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
+    /**
+     * True if this assessment is in preview release status
+     * 
+     */
     @OutputExport(name="preview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> preview;
 
+    /**
+     * @return True if this assessment is in preview release status
+     * 
+     */
     public Output</* @Nullable */ Boolean> getPreview() {
         return this.preview;
     }
+    /**
+     * Human readable description of what you should do to mitigate this security issue
+     * 
+     */
     @OutputExport(name="remediationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> remediationDescription;
 
+    /**
+     * @return Human readable description of what you should do to mitigate this security issue
+     * 
+     */
     public Output</* @Nullable */ String> getRemediationDescription() {
         return this.remediationDescription;
     }
+    /**
+     * The severity level of the assessment
+     * 
+     */
     @OutputExport(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
+    /**
+     * @return The severity level of the assessment
+     * 
+     */
     public Output<String> getSeverity() {
         return this.severity;
     }
@@ -90,19 +185,41 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
     public Output</* @Nullable */ List<String>> getThreats() {
         return this.threats;
     }
+    /**
+     * Resource type
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The user impact of the assessment
+     * 
+     */
     @OutputExport(name="userImpact", type=String.class, parameters={})
     private Output</* @Nullable */ String> userImpact;
 
+    /**
+     * @return The user impact of the assessment
+     * 
+     */
     public Output</* @Nullable */ String> getUserImpact() {
         return this.userImpact;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AssessmentMetadataInSubscription(String name, AssessmentMetadataInSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:AssessmentMetadataInSubscription", name, args == null ? AssessmentMetadataInSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -123,6 +240,14 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AssessmentMetadataInSubscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AssessmentMetadataInSubscription(name, id, options);
     }

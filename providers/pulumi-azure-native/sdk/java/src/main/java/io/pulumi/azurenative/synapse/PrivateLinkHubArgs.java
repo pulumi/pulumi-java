@@ -15,6 +15,10 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkHubArgs Empty = new PrivateLinkHubArgs();
 
+    /**
+     * The geo-location where the resource lives
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +26,10 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the privateLinkHub
+     * 
+     */
     @InputImport(name="privateLinkHubName")
     private final @Nullable Input<String> privateLinkHubName;
 
@@ -29,6 +37,10 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateLinkHubName == null ? Input.empty() : this.privateLinkHubName;
     }
 
+    /**
+     * PrivateLinkHub provisioning state
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -36,6 +48,10 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,10 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

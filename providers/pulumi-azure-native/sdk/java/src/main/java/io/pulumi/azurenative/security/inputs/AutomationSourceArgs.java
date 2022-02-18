@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The source event types which evaluate the security automation set of rules. For example - security alerts and security assessments. To learn more about the supported security events data models schemas - please visit https://aka.ms/ASCAutomationSchemas.
+ * 
+ */
 public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationSourceArgs Empty = new AutomationSourceArgs();
 
+    /**
+     * A valid event source type.
+     * 
+     */
     @InputImport(name="eventSource")
     private final @Nullable Input<Either<String,EventSource>> eventSource;
 
@@ -25,6 +33,10 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
         return this.eventSource == null ? Input.empty() : this.eventSource;
     }
 
+    /**
+     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
+     * 
+     */
     @InputImport(name="ruleSets")
     private final @Nullable Input<List<AutomationRuleSetArgs>> ruleSets;
 

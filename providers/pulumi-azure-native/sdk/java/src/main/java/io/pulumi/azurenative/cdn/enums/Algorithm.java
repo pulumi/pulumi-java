@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Algorithm to use for URL signing
+     * 
+     */
     @EnumType
     public enum Algorithm {
         SHA256("SHA256");

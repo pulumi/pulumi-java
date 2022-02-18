@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+     * 
+     */
     @EnumType
     public enum AutoProvision {
+        /**
+         * Install missing Azure Arc agents on machines automatically
+         * 
+         */
         On("On"),
+        /**
+         * Do not install Azure Arc agent on the machines automatically
+         * 
+         */
         Off("Off");
 
         private final String value;

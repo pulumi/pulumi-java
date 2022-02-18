@@ -17,10 +17,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cloud service properties
+ * 
+ */
 public final class CloudServicePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudServicePropertiesArgs Empty = new CloudServicePropertiesArgs();
 
+    /**
+     * (Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
+     * The default value is `false`.
+     * 
+     */
     @InputImport(name="allowModelOverride")
     private final @Nullable Input<Boolean> allowModelOverride;
 
@@ -28,6 +37,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.allowModelOverride == null ? Input.empty() : this.allowModelOverride;
     }
 
+    /**
+     * Specifies the XML service configuration (.cscfg) for the cloud service.
+     * 
+     */
     @InputImport(name="configuration")
     private final @Nullable Input<String> configuration;
 
@@ -35,6 +48,11 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
+    /**
+     * Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
+     * This is a write-only property and is not returned in GET calls.
+     * 
+     */
     @InputImport(name="configurationUrl")
     private final @Nullable Input<String> configurationUrl;
 
@@ -42,6 +60,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.configurationUrl == null ? Input.empty() : this.configurationUrl;
     }
 
+    /**
+     * Describes a cloud service extension profile.
+     * 
+     */
     @InputImport(name="extensionProfile")
     private final @Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile;
 
@@ -49,6 +71,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.extensionProfile == null ? Input.empty() : this.extensionProfile;
     }
 
+    /**
+     * Network Profile for the cloud service.
+     * 
+     */
     @InputImport(name="networkProfile")
     private final @Nullable Input<CloudServiceNetworkProfileArgs> networkProfile;
 
@@ -56,6 +82,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
     }
 
+    /**
+     * Describes the OS profile for the cloud service.
+     * 
+     */
     @InputImport(name="osProfile")
     private final @Nullable Input<CloudServiceOsProfileArgs> osProfile;
 
@@ -63,6 +93,11 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.osProfile == null ? Input.empty() : this.osProfile;
     }
 
+    /**
+     * Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
+     * This is a write-only property and is not returned in GET calls.
+     * 
+     */
     @InputImport(name="packageUrl")
     private final @Nullable Input<String> packageUrl;
 
@@ -70,6 +105,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.packageUrl == null ? Input.empty() : this.packageUrl;
     }
 
+    /**
+     * Describes the role profile for the cloud service.
+     * 
+     */
     @InputImport(name="roleProfile")
     private final @Nullable Input<CloudServiceRoleProfileArgs> roleProfile;
 
@@ -77,6 +116,11 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.roleProfile == null ? Input.empty() : this.roleProfile;
     }
 
+    /**
+     * (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
+     * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
+     * 
+     */
     @InputImport(name="startCloudService")
     private final @Nullable Input<Boolean> startCloudService;
 
@@ -84,6 +128,12 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.startCloudService == null ? Input.empty() : this.startCloudService;
     }
 
+    /**
+     * Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
+     * Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
+     * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
+     * 
+     */
     @InputImport(name="upgradeMode")
     private final @Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode;
 

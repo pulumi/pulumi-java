@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Day of the week
+ * 
+ */
 public final class DayResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DayResponse Empty = new DayResponse();
 
+    /**
+     * Date of the month
+     * 
+     */
     @InputImport(name="date")
     private final @Nullable Integer date;
 
@@ -22,6 +30,10 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
         return this.date == null ? Optional.empty() : Optional.ofNullable(this.date);
     }
 
+    /**
+     * Whether Date is last date of month
+     * 
+     */
     @InputImport(name="isLast")
     private final @Nullable Boolean isLast;
 

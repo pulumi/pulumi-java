@@ -16,19 +16,75 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NatGatewayResponse {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     private final String etag;
+    /**
+     * Resource ID.
+     * 
+     */
     private final @Nullable String id;
+    /**
+     * The idle timeout of the nat gateway.
+     * 
+     */
     private final @Nullable Integer idleTimeoutInMinutes;
+    /**
+     * Resource location.
+     * 
+     */
     private final @Nullable String location;
+    /**
+     * Resource name.
+     * 
+     */
     private final String name;
+    /**
+     * The provisioning state of the NAT gateway resource.
+     * 
+     */
     private final String provisioningState;
+    /**
+     * An array of public ip addresses associated with the nat gateway resource.
+     * 
+     */
     private final @Nullable List<SubResourceResponse> publicIpAddresses;
+    /**
+     * An array of public ip prefixes associated with the nat gateway resource.
+     * 
+     */
     private final @Nullable List<SubResourceResponse> publicIpPrefixes;
+    /**
+     * The resource GUID property of the NAT gateway resource.
+     * 
+     */
     private final String resourceGuid;
+    /**
+     * The nat gateway SKU.
+     * 
+     */
     private final @Nullable NatGatewaySkuResponse sku;
+    /**
+     * An array of references to the subnets using this nat gateway resource.
+     * 
+     */
     private final List<SubResourceResponse> subnets;
+    /**
+     * Resource tags.
+     * 
+     */
     private final @Nullable Map<String,String> tags;
+    /**
+     * Resource type.
+     * 
+     */
     private final String type;
+    /**
+     * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
+     * 
+     */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"etag","id","idleTimeoutInMinutes","location","name","provisioningState","publicIpAddresses","publicIpPrefixes","resourceGuid","sku","subnets","tags","type","zones"})
@@ -63,45 +119,101 @@ public final class NatGatewayResponse {
         this.zones = zones;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String getEtag() {
         return this.etag;
     }
+    /**
+     * Resource ID.
+     * 
+     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+    /**
+     * The idle timeout of the nat gateway.
+     * 
+     */
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
+    /**
+     * Resource location.
+     * 
+     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+    /**
+     * Resource name.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the NAT gateway resource.
+     * 
+     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * An array of public ip addresses associated with the nat gateway resource.
+     * 
+     */
     public List<SubResourceResponse> getPublicIpAddresses() {
         return this.publicIpAddresses == null ? List.of() : this.publicIpAddresses;
     }
+    /**
+     * An array of public ip prefixes associated with the nat gateway resource.
+     * 
+     */
     public List<SubResourceResponse> getPublicIpPrefixes() {
         return this.publicIpPrefixes == null ? List.of() : this.publicIpPrefixes;
     }
+    /**
+     * The resource GUID property of the NAT gateway resource.
+     * 
+     */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * The nat gateway SKU.
+     * 
+     */
     public Optional<NatGatewaySkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+    /**
+     * An array of references to the subnets using this nat gateway resource.
+     * 
+     */
     public List<SubResourceResponse> getSubnets() {
         return this.subnets;
     }
+    /**
+     * Resource tags.
+     * 
+     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+    /**
+     * Resource type.
+     * 
+     */
     public String getType() {
         return this.type;
     }
+    /**
+     * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
+     * 
+     */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

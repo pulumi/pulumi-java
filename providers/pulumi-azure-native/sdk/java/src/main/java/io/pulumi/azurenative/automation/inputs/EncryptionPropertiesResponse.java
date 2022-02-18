@@ -12,10 +12,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The encryption settings for automation account
+ * 
+ */
 public final class EncryptionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionPropertiesResponse Empty = new EncryptionPropertiesResponse();
 
+    /**
+     * User identity used for CMK.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable EncryptionPropertiesResponseIdentity identity;
 
@@ -23,6 +31,10 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
+    /**
+     * Encryption Key Source
+     * 
+     */
     @InputImport(name="keySource")
     private final @Nullable String keySource;
 
@@ -30,6 +42,10 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
         return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
     }
 
+    /**
+     * Key vault properties.
+     * 
+     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 

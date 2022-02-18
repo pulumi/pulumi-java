@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * Protection state of the backup engine
+     * 
+     */
     @EnumType
     public enum ProtectedItemState {
         Invalid("Invalid"),

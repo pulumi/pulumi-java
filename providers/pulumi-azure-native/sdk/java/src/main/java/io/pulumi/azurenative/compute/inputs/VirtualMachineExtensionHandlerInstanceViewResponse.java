@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The instance view of a virtual machine extension handler.
+ * 
+ */
 public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineExtensionHandlerInstanceViewResponse Empty = new VirtualMachineExtensionHandlerInstanceViewResponse();
 
+    /**
+     * The extension handler status.
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable InstanceViewStatusResponse status;
 
@@ -22,6 +30,10 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -29,6 +41,10 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * Specifies the version of the script handler.
+     * 
+     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable String typeHandlerVersion;
 

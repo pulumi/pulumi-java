@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The workspace managed identity
+ * 
+ */
 public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedIdentityResponse Empty = new ManagedIdentityResponse();
 
+    /**
+     * The principal ID of the workspace managed identity
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +29,10 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
         return this.principalId;
     }
 
+    /**
+     * The tenant ID of the workspace managed identity
+     * 
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +40,10 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
         return this.tenantId;
     }
 
+    /**
+     * The type of managed identity for the workspace
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

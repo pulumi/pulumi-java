@@ -17,6 +17,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     public static final KustoPoolAttachedDatabaseConfigurationArgs Empty = new KustoPoolAttachedDatabaseConfigurationArgs();
 
+    /**
+     * The name of the attached database configuration.
+     * 
+     */
     @InputImport(name="attachedDatabaseConfigurationName")
     private final @Nullable Input<String> attachedDatabaseConfigurationName;
 
@@ -24,6 +28,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
         return this.attachedDatabaseConfigurationName == null ? Input.empty() : this.attachedDatabaseConfigurationName;
     }
 
+    /**
+     * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+     * 
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -31,6 +39,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
         return this.databaseName;
     }
 
+    /**
+     * The default principals modification kind
+     * 
+     */
     @InputImport(name="defaultPrincipalsModificationKind", required=true)
     private final Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
@@ -38,6 +50,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
         return this.defaultPrincipalsModificationKind;
     }
 
+    /**
+     * The name of the Kusto pool.
+     * 
+     */
     @InputImport(name="kustoPoolName", required=true)
     private final Input<String> kustoPoolName;
 
@@ -45,6 +61,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
         return this.kustoPoolName;
     }
 
+    /**
+     * The resource id of the kusto pool where the databases you would like to attach reside.
+     * 
+     */
     @InputImport(name="kustoPoolResourceId", required=true)
     private final Input<String> kustoPoolResourceId;
 
@@ -52,6 +72,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
         return this.kustoPoolResourceId;
     }
 
+    /**
+     * Resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,6 +83,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -66,6 +94,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
         return this.resourceGroupName;
     }
 
+    /**
+     * Table level sharing specifications
+     * 
+     */
     @InputImport(name="tableLevelSharingProperties")
     private final @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
@@ -73,6 +105,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
         return this.tableLevelSharingProperties == null ? Input.empty() : this.tableLevelSharingProperties;
     }
 
+    /**
+     * The name of the workspace.
+     * 
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

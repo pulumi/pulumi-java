@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Linux operation systems profile.
+ * 
+ */
 public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OsProfileArgs Empty = new OsProfileArgs();
 
+    /**
+     * The Linux OS profile.
+     * 
+     */
     @InputImport(name="linuxOperatingSystemProfile")
     private final @Nullable Input<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 

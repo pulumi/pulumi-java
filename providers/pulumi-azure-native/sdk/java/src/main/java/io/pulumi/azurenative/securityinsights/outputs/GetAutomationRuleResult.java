@@ -18,17 +18,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAutomationRuleResult {
+    /**
+     * The actions to execute when the automation rule is triggered
+     * 
+     */
     private final List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions;
+    /**
+     * Describes the client that created the automation rule
+     * 
+     */
     private final ClientInfoResponse createdBy;
+    /**
+     * The time the automation rule was created
+     * 
+     */
     private final String createdTimeUtc;
+    /**
+     * The display name of the automation  rule
+     * 
+     */
     private final String displayName;
+    /**
+     * Etag of the azure resource
+     * 
+     */
     private final @Nullable String etag;
+    /**
+     * Azure resource Id
+     * 
+     */
     private final String id;
+    /**
+     * Describes the client that last updated the automation rule
+     * 
+     */
     private final ClientInfoResponse lastModifiedBy;
+    /**
+     * The last time the automation rule was updated
+     * 
+     */
     private final String lastModifiedTimeUtc;
+    /**
+     * Azure resource name
+     * 
+     */
     private final String name;
+    /**
+     * The order of execution of the automation rule
+     * 
+     */
     private final Integer order;
+    /**
+     * The triggering logic of the automation rule
+     * 
+     */
     private final AutomationRuleTriggeringLogicResponse triggeringLogic;
+    /**
+     * Azure resource type
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"actions","createdBy","createdTimeUtc","displayName","etag","id","lastModifiedBy","lastModifiedTimeUtc","name","order","triggeringLogic","type"})
@@ -59,39 +107,87 @@ public final class GetAutomationRuleResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * The actions to execute when the automation rule is triggered
+     * 
+     */
     public List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> getActions() {
         return this.actions;
     }
+    /**
+     * Describes the client that created the automation rule
+     * 
+     */
     public ClientInfoResponse getCreatedBy() {
         return this.createdBy;
     }
+    /**
+     * The time the automation rule was created
+     * 
+     */
     public String getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
+    /**
+     * The display name of the automation  rule
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Etag of the azure resource
+     * 
+     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+    /**
+     * Azure resource Id
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Describes the client that last updated the automation rule
+     * 
+     */
     public ClientInfoResponse getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+    /**
+     * The last time the automation rule was updated
+     * 
+     */
     public String getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
+    /**
+     * Azure resource name
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The order of execution of the automation rule
+     * 
+     */
     public Integer getOrder() {
         return this.order;
     }
+    /**
+     * The triggering logic of the automation rule
+     * 
+     */
     public AutomationRuleTriggeringLogicResponse getTriggeringLogic() {
         return this.triggeringLogic;
     }
+    /**
+     * Azure resource type
+     * 
+     */
     public String getType() {
         return this.type;
     }

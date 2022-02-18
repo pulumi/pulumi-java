@@ -14,33 +14,86 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A cloud link resource
+ * API Version: 2021-06-01.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * An existing resource can be imported using its type token, name, and identifier, e.g.
+ * 
+ * ```sh
+ * $ pulumi import azure-native:avs:CloudLink cloudLink1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/cloudLinks/cloudLink1 
+ * ```
+ * 
+ */
 @ResourceType(type="azure-native:avs:CloudLink")
 public class CloudLink extends io.pulumi.resources.CustomResource {
+    /**
+     * Identifier of the other private cloud participating in the link.
+     * 
+     */
     @OutputExport(name="linkedCloud", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedCloud;
 
+    /**
+     * @return Identifier of the other private cloud participating in the link.
+     * 
+     */
     public Output</* @Nullable */ String> getLinkedCloud() {
         return this.linkedCloud;
     }
+    /**
+     * Resource name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The state of the cloud link.
+     * 
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return The state of the cloud link.
+     * 
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * Resource type.
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CloudLink(String name, CloudLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:CloudLink", name, args == null ? CloudLinkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +113,14 @@ public class CloudLink extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CloudLink get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CloudLink(name, id, options);
     }

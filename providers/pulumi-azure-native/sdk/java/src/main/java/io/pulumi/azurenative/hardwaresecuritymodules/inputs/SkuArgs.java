@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU of the dedicated HSM
+ * 
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * SKU of the dedicated HSM
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,SkuName>> name;
 

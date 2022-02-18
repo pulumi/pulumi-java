@@ -14,10 +14,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Customer Managed Key details of the resource.
+ * 
+ */
 public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VaultPropertiesEncryptionArgs Empty = new VaultPropertiesEncryptionArgs();
 
+    /**
+     * Enabling/Disabling the Double Encryption state
+     * 
+     */
     @InputImport(name="infrastructureEncryption")
     private final @Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
 
@@ -25,6 +33,10 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
         return this.infrastructureEncryption == null ? Input.empty() : this.infrastructureEncryption;
     }
 
+    /**
+     * The details of the identity used for CMK
+     * 
+     */
     @InputImport(name="kekIdentity")
     private final @Nullable Input<CmkKekIdentityArgs> kekIdentity;
 
@@ -32,6 +44,10 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
         return this.kekIdentity == null ? Input.empty() : this.kekIdentity;
     }
 
+    /**
+     * The properties of the Key Vault which hosts CMK
+     * 
+     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties;
 

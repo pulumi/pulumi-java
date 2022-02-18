@@ -10,10 +10,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes how data from an input is serialized or how data is serialized when written to an output in CSV format.
+ * 
+ */
 public final class CsvSerializationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CsvSerializationResponse Empty = new CsvSerializationResponse();
 
+    /**
+     * Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="encoding")
     private final @Nullable String encoding;
 
@@ -21,6 +29,10 @@ public final class CsvSerializationResponse extends io.pulumi.resources.InvokeAr
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
     }
 
+    /**
+     * Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     @InputImport(name="fieldDelimiter")
     private final @Nullable String fieldDelimiter;
 
@@ -28,6 +40,11 @@ public final class CsvSerializationResponse extends io.pulumi.resources.InvokeAr
         return this.fieldDelimiter == null ? Optional.empty() : Optional.ofNullable(this.fieldDelimiter);
     }
 
+    /**
+     * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+     * Expected value is 'Csv'.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

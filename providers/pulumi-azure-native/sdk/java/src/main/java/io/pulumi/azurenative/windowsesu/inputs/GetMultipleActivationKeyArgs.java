@@ -12,6 +12,10 @@ public final class GetMultipleActivationKeyArgs extends io.pulumi.resources.Invo
 
     public static final GetMultipleActivationKeyArgs Empty = new GetMultipleActivationKeyArgs();
 
+    /**
+     * The name of the MAK key.
+     * 
+     */
     @InputImport(name="multipleActivationKeyName", required=true)
     private final String multipleActivationKeyName;
 
@@ -19,6 +23,10 @@ public final class GetMultipleActivationKeyArgs extends io.pulumi.resources.Invo
         return this.multipleActivationKeyName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

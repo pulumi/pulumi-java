@@ -12,9 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationRuntimeVNetPropertiesResponse {
+    /**
+     * Resource IDs of the public IP addresses that this integration runtime will use.
+     * 
+     */
     private final @Nullable List<String> publicIPs;
+    /**
+     * The name of the subnet this integration runtime will join.
+     * 
+     */
     private final @Nullable String subnet;
+    /**
+     * The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
+     * 
+     */
     private final @Nullable String subnetId;
+    /**
+     * The ID of the VNet that this integration runtime will join.
+     * 
+     */
     private final @Nullable String vNetId;
 
     @OutputCustomType.Constructor({"publicIPs","subnet","subnetId","vNetId"})
@@ -29,15 +45,31 @@ public final class IntegrationRuntimeVNetPropertiesResponse {
         this.vNetId = vNetId;
     }
 
+    /**
+     * Resource IDs of the public IP addresses that this integration runtime will use.
+     * 
+     */
     public List<String> getPublicIPs() {
         return this.publicIPs == null ? List.of() : this.publicIPs;
     }
+    /**
+     * The name of the subnet this integration runtime will join.
+     * 
+     */
     public Optional<String> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
+    /**
+     * The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
+     * 
+     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
+    /**
+     * The ID of the VNet that this integration runtime will join.
+     * 
+     */
     public Optional<String> getVNetId() {
         return Optional.ofNullable(this.vNetId);
     }

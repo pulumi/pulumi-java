@@ -18,6 +18,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
 
     public static final EventHubEventSourceArgs Empty = new EventHubEventSourceArgs();
 
+    /**
+     * The name of the event hub's consumer group that holds the partitions from which events will be read.
+     * 
+     */
     @InputImport(name="consumerGroupName", required=true)
     private final Input<String> consumerGroupName;
 
@@ -25,6 +29,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.consumerGroupName;
     }
 
+    /**
+     * The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     @InputImport(name="environmentName", required=true)
     private final Input<String> environmentName;
 
@@ -32,6 +40,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.environmentName;
     }
 
+    /**
+     * The name of the event hub.
+     * 
+     */
     @InputImport(name="eventHubName", required=true)
     private final Input<String> eventHubName;
 
@@ -39,6 +51,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.eventHubName;
     }
 
+    /**
+     * Name of the event source.
+     * 
+     */
     @InputImport(name="eventSourceName")
     private final @Nullable Input<String> eventSourceName;
 
@@ -46,6 +62,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.eventSourceName == null ? Input.empty() : this.eventSourceName;
     }
 
+    /**
+     * The resource id of the event source in Azure Resource Manager.
+     * 
+     */
     @InputImport(name="eventSourceResourceId", required=true)
     private final Input<String> eventSourceResourceId;
 
@@ -53,6 +73,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.eventSourceResourceId;
     }
 
+    /**
+     * The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant 'Listen' permissions to the event hub.
+     * 
+     */
     @InputImport(name="keyName", required=true)
     private final Input<String> keyName;
 
@@ -60,6 +84,11 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.keyName;
     }
 
+    /**
+     * The kind of the event source.
+     * Expected value is 'Microsoft.EventHub'.
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -67,6 +96,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.kind;
     }
 
+    /**
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * 
+     */
     @InputImport(name="localTimestamp")
     private final @Nullable Input<LocalTimestampArgs> localTimestamp;
 
@@ -74,6 +107,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.localTimestamp == null ? Input.empty() : this.localTimestamp;
     }
 
+    /**
+     * The location of the resource.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,6 +118,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -88,6 +129,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service bus that contains the event hub.
+     * 
+     */
     @InputImport(name="serviceBusNamespace", required=true)
     private final Input<String> serviceBusNamespace;
 
@@ -95,6 +140,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.serviceBusNamespace;
     }
 
+    /**
+     * The value of the shared access key that grants the Time Series Insights service read access to the event hub. This property is not shown in event source responses.
+     * 
+     */
     @InputImport(name="sharedAccessKey", required=true)
     private final Input<String> sharedAccessKey;
 
@@ -102,6 +151,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.sharedAccessKey;
     }
 
+    /**
+     * Key-value pairs of additional properties for the resource.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -109,6 +162,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
+     * 
+     */
     @InputImport(name="time")
     private final @Nullable Input<String> time;
 
@@ -116,6 +173,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.time == null ? Input.empty() : this.time;
     }
 
+    /**
+     * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     * 
+     */
     @InputImport(name="timestampPropertyName")
     private final @Nullable Input<String> timestampPropertyName;
 
@@ -123,6 +184,10 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
         return this.timestampPropertyName == null ? Input.empty() : this.timestampPropertyName;
     }
 
+    /**
+     * The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,IngressStartAtType>> type;
 

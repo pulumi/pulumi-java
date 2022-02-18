@@ -12,6 +12,10 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccessPolicyArgs Empty = new GetAccessPolicyArgs();
 
+    /**
+     * The name of the access policy to retrieve.
+     * 
+     */
     @InputImport(name="accessPolicyName", required=true)
     private final String accessPolicyName;
 
@@ -19,6 +23,10 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.accessPolicyName;
     }
 
+    /**
+     * The Azure Video Analyzer account name.
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -26,6 +34,10 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

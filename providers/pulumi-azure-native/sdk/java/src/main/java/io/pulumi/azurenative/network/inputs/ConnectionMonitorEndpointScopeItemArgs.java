@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the connection monitor endpoint scope item.
+ * 
+ */
 public final class ConnectionMonitorEndpointScopeItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorEndpointScopeItemArgs Empty = new ConnectionMonitorEndpointScopeItemArgs();
 
+    /**
+     * The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
+     * 
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 

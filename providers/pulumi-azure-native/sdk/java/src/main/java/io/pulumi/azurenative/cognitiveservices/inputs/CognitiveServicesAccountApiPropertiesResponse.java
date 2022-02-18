@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The api properties for special APIs.
+ * 
+ */
 public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CognitiveServicesAccountApiPropertiesResponse Empty = new CognitiveServicesAccountApiPropertiesResponse();
 
+    /**
+     * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+     * 
+     */
     @InputImport(name="aadClientId")
     private final @Nullable String aadClientId;
 
@@ -22,6 +30,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.aadClientId == null ? Optional.empty() : Optional.ofNullable(this.aadClientId);
     }
 
+    /**
+     * (Metrics Advisor Only) The Azure AD Tenant Id.
+     * 
+     */
     @InputImport(name="aadTenantId")
     private final @Nullable String aadTenantId;
 
@@ -29,6 +41,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.aadTenantId == null ? Optional.empty() : Optional.ofNullable(this.aadTenantId);
     }
 
+    /**
+     * (Personalization Only) The flag to enable statistics of Bing Search.
+     * 
+     */
     @InputImport(name="eventHubConnectionString")
     private final @Nullable String eventHubConnectionString;
 
@@ -36,6 +52,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.eventHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.eventHubConnectionString);
     }
 
+    /**
+     * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+     * 
+     */
     @InputImport(name="qnaAzureSearchEndpointId")
     private final @Nullable String qnaAzureSearchEndpointId;
 
@@ -43,6 +63,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.qnaAzureSearchEndpointId == null ? Optional.empty() : Optional.ofNullable(this.qnaAzureSearchEndpointId);
     }
 
+    /**
+     * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+     * 
+     */
     @InputImport(name="qnaAzureSearchEndpointKey")
     private final @Nullable String qnaAzureSearchEndpointKey;
 
@@ -50,6 +74,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.qnaAzureSearchEndpointKey == null ? Optional.empty() : Optional.ofNullable(this.qnaAzureSearchEndpointKey);
     }
 
+    /**
+     * (QnAMaker Only) The runtime endpoint of QnAMaker.
+     * 
+     */
     @InputImport(name="qnaRuntimeEndpoint")
     private final @Nullable String qnaRuntimeEndpoint;
 
@@ -57,6 +85,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.qnaRuntimeEndpoint == null ? Optional.empty() : Optional.ofNullable(this.qnaRuntimeEndpoint);
     }
 
+    /**
+     * (Bing Search Only) The flag to enable statistics of Bing Search.
+     * 
+     */
     @InputImport(name="statisticsEnabled")
     private final @Nullable Boolean statisticsEnabled;
 
@@ -64,6 +96,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.statisticsEnabled == null ? Optional.empty() : Optional.ofNullable(this.statisticsEnabled);
     }
 
+    /**
+     * (Personalization Only) The storage account connection string.
+     * 
+     */
     @InputImport(name="storageAccountConnectionString")
     private final @Nullable String storageAccountConnectionString;
 
@@ -71,6 +107,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.storageAccountConnectionString == null ? Optional.empty() : Optional.ofNullable(this.storageAccountConnectionString);
     }
 
+    /**
+     * (Metrics Advisor Only) The super user of Metrics Advisor.
+     * 
+     */
     @InputImport(name="superUser")
     private final @Nullable String superUser;
 
@@ -78,6 +118,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
         return this.superUser == null ? Optional.empty() : Optional.ofNullable(this.superUser);
     }
 
+    /**
+     * (Metrics Advisor Only) The website name of Metrics Advisor.
+     * 
+     */
     @InputImport(name="websiteName")
     private final @Nullable String websiteName;
 

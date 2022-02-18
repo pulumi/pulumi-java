@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container identity information
+ * 
+ */
 public final class ContainerIdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerIdentityInfoArgs Empty = new ContainerIdentityInfoArgs();
 
+    /**
+     * Protection container identity - AAD Tenant
+     * 
+     */
     @InputImport(name="aadTenantId")
     private final @Nullable Input<String> aadTenantId;
 
@@ -21,6 +29,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
         return this.aadTenantId == null ? Input.empty() : this.aadTenantId;
     }
 
+    /**
+     * Protection container identity - Audience
+     * 
+     */
     @InputImport(name="audience")
     private final @Nullable Input<String> audience;
 
@@ -28,6 +40,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
         return this.audience == null ? Input.empty() : this.audience;
     }
 
+    /**
+     * Protection container identity - AAD Service Principal
+     * 
+     */
     @InputImport(name="servicePrincipalClientId")
     private final @Nullable Input<String> servicePrincipalClientId;
 
@@ -35,6 +51,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
         return this.servicePrincipalClientId == null ? Input.empty() : this.servicePrincipalClientId;
     }
 
+    /**
+     * Unique name of the container
+     * 
+     */
     @InputImport(name="uniqueName")
     private final @Nullable Input<String> uniqueName;
 

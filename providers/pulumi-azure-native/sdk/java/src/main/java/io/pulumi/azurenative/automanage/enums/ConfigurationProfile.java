@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * A value indicating configuration profile.
+     * 
+     */
     @EnumType
     public enum ConfigurationProfile {
         Azure_virtual_machine_best_practices_Dev_Test("Azure virtual machine best practices – Dev/Test"),

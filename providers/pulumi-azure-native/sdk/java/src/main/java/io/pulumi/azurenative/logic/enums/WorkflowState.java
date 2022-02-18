@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The state.
+     * 
+     */
     @EnumType
     public enum WorkflowState {
         NotSpecified("NotSpecified"),

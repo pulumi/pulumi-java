@@ -8,10 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * SAS token information.
+ * 
+ */
 public final class SasTokenInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SasTokenInformationResponse Empty = new SasTokenInformationResponse();
 
+    /**
+     * The access token for the associated Azure Storage Container.
+     * 
+     */
     @InputImport(name="accessToken", required=true)
     private final String accessToken;
 

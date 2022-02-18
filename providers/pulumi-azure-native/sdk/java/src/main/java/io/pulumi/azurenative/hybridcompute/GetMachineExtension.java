@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachineExtension {
+/**
+ * Describes a Machine Extension.
+ * API Version: 2020-08-02.
+ * 
+ *
+ * Describes a Machine Extension.
+ * 
+ */
     public static CompletableFuture<GetMachineExtensionResult> invokeAsync(GetMachineExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getMachineExtension", TypeShape.of(GetMachineExtensionResult.class), args == null ? GetMachineExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -23,6 +23,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkflowArgs Empty = new WorkflowArgs();
 
+    /**
+     * The access control configuration.
+     * 
+     */
     @InputImport(name="accessControl")
     private final @Nullable Input<FlowAccessControlConfigurationArgs> accessControl;
 
@@ -30,6 +34,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessControl == null ? Input.empty() : this.accessControl;
     }
 
+    /**
+     * The definition.
+     * 
+     */
     @InputImport(name="definition")
     private final @Nullable Input<Object> definition;
 
@@ -37,6 +45,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.definition == null ? Input.empty() : this.definition;
     }
 
+    /**
+     * The endpoints configuration.
+     * 
+     */
     @InputImport(name="endpointsConfiguration")
     private final @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
@@ -44,6 +56,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointsConfiguration == null ? Input.empty() : this.endpointsConfiguration;
     }
 
+    /**
+     * Managed service identity properties.
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -51,6 +67,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The integration account.
+     * 
+     */
     @InputImport(name="integrationAccount")
     private final @Nullable Input<ResourceReferenceArgs> integrationAccount;
 
@@ -58,6 +78,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.integrationAccount == null ? Input.empty() : this.integrationAccount;
     }
 
+    /**
+     * The integration service environment.
+     * 
+     */
     @InputImport(name="integrationServiceEnvironment")
     private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
 
@@ -65,6 +89,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.integrationServiceEnvironment == null ? Input.empty() : this.integrationServiceEnvironment;
     }
 
+    /**
+     * The resource location.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -72,6 +100,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The parameters.
+     * 
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,WorkflowParameterArgs>> parameters;
 
@@ -79,6 +111,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The resource group name.
+     * 
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -86,6 +122,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The state.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,WorkflowState>> state;
 
@@ -93,6 +133,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * The resource tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -100,6 +144,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The workflow name.
+     * 
+     */
     @InputImport(name="workflowName")
     private final @Nullable Input<String> workflowName;
 

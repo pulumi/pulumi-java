@@ -8,9 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The format of the Operation Name for Application Insights telemetries. Default is Name.
+     * 
+     */
     @EnumType
     public enum OperationNameFormat {
+        /**
+         * API_NAME;rev=API_REVISION - OPERATION_NAME
+         * 
+         */
         Name("Name"),
+        /**
+         * HTTP_VERB URL
+         * 
+         */
         Url("Url");
 
         private final String value;

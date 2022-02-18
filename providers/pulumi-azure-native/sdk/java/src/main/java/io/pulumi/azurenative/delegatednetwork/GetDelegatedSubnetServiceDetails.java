@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDelegatedSubnetServiceDetails {
+/**
+ * Represents an instance of a orchestrator.
+ * API Version: 2021-03-15.
+ * 
+ *
+ * Represents an instance of a orchestrator.
+ * 
+ */
     public static CompletableFuture<GetDelegatedSubnetServiceDetailsResult> invokeAsync(GetDelegatedSubnetServiceDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getDelegatedSubnetServiceDetails", TypeShape.of(GetDelegatedSubnetServiceDetailsResult.class), args == null ? GetDelegatedSubnetServiceDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

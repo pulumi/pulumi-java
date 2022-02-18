@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamingEndpoint {
+/**
+ * The streaming endpoint.
+ * API Version: 2020-05-01.
+ * 
+ *
+ * The streaming endpoint.
+ * 
+ */
     public static CompletableFuture<GetStreamingEndpointResult> invokeAsync(GetStreamingEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getStreamingEndpoint", TypeShape.of(GetStreamingEndpointResult.class), args == null ? GetStreamingEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

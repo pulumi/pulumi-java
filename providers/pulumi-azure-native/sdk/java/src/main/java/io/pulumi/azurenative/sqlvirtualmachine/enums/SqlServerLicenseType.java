@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * SQL Server license type.
+     * 
+     */
     @EnumType
     public enum SqlServerLicenseType {
         PAYG("PAYG"),

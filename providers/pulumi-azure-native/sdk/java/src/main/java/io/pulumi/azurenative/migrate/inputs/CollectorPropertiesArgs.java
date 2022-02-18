@@ -22,6 +22,10 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.agentProperties == null ? Input.empty() : this.agentProperties;
     }
 
+    /**
+     * The ARM id of the discovery service site.
+     * 
+     */
     @InputImport(name="discoverySiteId")
     private final @Nullable Input<String> discoverySiteId;
 

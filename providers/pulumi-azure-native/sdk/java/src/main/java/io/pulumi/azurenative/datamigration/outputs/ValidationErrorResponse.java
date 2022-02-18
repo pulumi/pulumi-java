@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ValidationErrorResponse {
+    /**
+     * Severity of the error
+     * 
+     */
     private final String severity;
+    /**
+     * Error Text
+     * 
+     */
     private final String text;
 
     @OutputCustomType.Constructor({"severity","text"})
@@ -20,9 +28,17 @@ public final class ValidationErrorResponse {
         this.text = Objects.requireNonNull(text);
     }
 
+    /**
+     * Severity of the error
+     * 
+     */
     public String getSeverity() {
         return this.severity;
     }
+    /**
+     * Error Text
+     * 
+     */
     public String getText() {
         return this.text;
     }

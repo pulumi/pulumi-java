@@ -12,30 +12,130 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRegisteredServerResult {
+    /**
+     * Registered Server Agent Version
+     * 
+     */
     private final @Nullable String agentVersion;
+    /**
+     * Registered Server Agent Version Expiration Date
+     * 
+     */
     private final String agentVersionExpirationDate;
+    /**
+     * Registered Server Agent Version Status
+     * 
+     */
     private final String agentVersionStatus;
+    /**
+     * Registered Server clusterId
+     * 
+     */
     private final @Nullable String clusterId;
+    /**
+     * Registered Server clusterName
+     * 
+     */
     private final @Nullable String clusterName;
+    /**
+     * Resource discoveryEndpointUri
+     * 
+     */
     private final @Nullable String discoveryEndpointUri;
+    /**
+     * Friendly Name
+     * 
+     */
     private final @Nullable String friendlyName;
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     private final String id;
+    /**
+     * Registered Server last heart beat
+     * 
+     */
     private final @Nullable String lastHeartBeat;
+    /**
+     * Resource Last Operation Name
+     * 
+     */
     private final @Nullable String lastOperationName;
+    /**
+     * Registered Server lastWorkflowId
+     * 
+     */
     private final @Nullable String lastWorkflowId;
+    /**
+     * Management Endpoint Uri
+     * 
+     */
     private final @Nullable String managementEndpointUri;
+    /**
+     * Monitoring Configuration
+     * 
+     */
     private final @Nullable String monitoringConfiguration;
+    /**
+     * Telemetry Endpoint Uri
+     * 
+     */
     private final @Nullable String monitoringEndpointUri;
+    /**
+     * The name of the resource
+     * 
+     */
     private final String name;
+    /**
+     * Registered Server Provisioning State
+     * 
+     */
     private final @Nullable String provisioningState;
+    /**
+     * Resource Location
+     * 
+     */
     private final @Nullable String resourceLocation;
+    /**
+     * Registered Server Certificate
+     * 
+     */
     private final @Nullable String serverCertificate;
+    /**
+     * Registered Server serverId
+     * 
+     */
     private final @Nullable String serverId;
+    /**
+     * Registered Server Management Error Code
+     * 
+     */
     private final @Nullable Integer serverManagementErrorCode;
+    /**
+     * Registered Server OS Version
+     * 
+     */
     private final @Nullable String serverOSVersion;
+    /**
+     * Registered Server serverRole
+     * 
+     */
     private final @Nullable String serverRole;
+    /**
+     * Service Location
+     * 
+     */
     private final @Nullable String serviceLocation;
+    /**
+     * Registered Server storageSyncServiceUid
+     * 
+     */
     private final @Nullable String storageSyncServiceUid;
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"agentVersion","agentVersionExpirationDate","agentVersionStatus","clusterId","clusterName","discoveryEndpointUri","friendlyName","id","lastHeartBeat","lastOperationName","lastWorkflowId","managementEndpointUri","monitoringConfiguration","monitoringEndpointUri","name","provisioningState","resourceLocation","serverCertificate","serverId","serverManagementErrorCode","serverOSVersion","serverRole","serviceLocation","storageSyncServiceUid","type"})
@@ -92,78 +192,178 @@ public final class GetRegisteredServerResult {
         this.type = Objects.requireNonNull(type);
     }
 
+    /**
+     * Registered Server Agent Version
+     * 
+     */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
+    /**
+     * Registered Server Agent Version Expiration Date
+     * 
+     */
     public String getAgentVersionExpirationDate() {
         return this.agentVersionExpirationDate;
     }
+    /**
+     * Registered Server Agent Version Status
+     * 
+     */
     public String getAgentVersionStatus() {
         return this.agentVersionStatus;
     }
+    /**
+     * Registered Server clusterId
+     * 
+     */
     public Optional<String> getClusterId() {
         return Optional.ofNullable(this.clusterId);
     }
+    /**
+     * Registered Server clusterName
+     * 
+     */
     public Optional<String> getClusterName() {
         return Optional.ofNullable(this.clusterName);
     }
+    /**
+     * Resource discoveryEndpointUri
+     * 
+     */
     public Optional<String> getDiscoveryEndpointUri() {
         return Optional.ofNullable(this.discoveryEndpointUri);
     }
+    /**
+     * Friendly Name
+     * 
+     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
+    /**
+     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * Registered Server last heart beat
+     * 
+     */
     public Optional<String> getLastHeartBeat() {
         return Optional.ofNullable(this.lastHeartBeat);
     }
+    /**
+     * Resource Last Operation Name
+     * 
+     */
     public Optional<String> getLastOperationName() {
         return Optional.ofNullable(this.lastOperationName);
     }
+    /**
+     * Registered Server lastWorkflowId
+     * 
+     */
     public Optional<String> getLastWorkflowId() {
         return Optional.ofNullable(this.lastWorkflowId);
     }
+    /**
+     * Management Endpoint Uri
+     * 
+     */
     public Optional<String> getManagementEndpointUri() {
         return Optional.ofNullable(this.managementEndpointUri);
     }
+    /**
+     * Monitoring Configuration
+     * 
+     */
     public Optional<String> getMonitoringConfiguration() {
         return Optional.ofNullable(this.monitoringConfiguration);
     }
+    /**
+     * Telemetry Endpoint Uri
+     * 
+     */
     public Optional<String> getMonitoringEndpointUri() {
         return Optional.ofNullable(this.monitoringEndpointUri);
     }
+    /**
+     * The name of the resource
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Registered Server Provisioning State
+     * 
+     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
+    /**
+     * Resource Location
+     * 
+     */
     public Optional<String> getResourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
+    /**
+     * Registered Server Certificate
+     * 
+     */
     public Optional<String> getServerCertificate() {
         return Optional.ofNullable(this.serverCertificate);
     }
+    /**
+     * Registered Server serverId
+     * 
+     */
     public Optional<String> getServerId() {
         return Optional.ofNullable(this.serverId);
     }
+    /**
+     * Registered Server Management Error Code
+     * 
+     */
     public Optional<Integer> getServerManagementErrorCode() {
         return Optional.ofNullable(this.serverManagementErrorCode);
     }
+    /**
+     * Registered Server OS Version
+     * 
+     */
     public Optional<String> getServerOSVersion() {
         return Optional.ofNullable(this.serverOSVersion);
     }
+    /**
+     * Registered Server serverRole
+     * 
+     */
     public Optional<String> getServerRole() {
         return Optional.ofNullable(this.serverRole);
     }
+    /**
+     * Service Location
+     * 
+     */
     public Optional<String> getServiceLocation() {
         return Optional.ofNullable(this.serviceLocation);
     }
+    /**
+     * Registered Server storageSyncServiceUid
+     * 
+     */
     public Optional<String> getStorageSyncServiceUid() {
         return Optional.ofNullable(this.storageSyncServiceUid);
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * 
+     */
     public String getType() {
         return this.type;
     }
