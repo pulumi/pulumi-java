@@ -2,8 +2,8 @@ package io.pulumi.deployment;
 
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;

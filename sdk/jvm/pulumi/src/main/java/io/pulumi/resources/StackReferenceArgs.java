@@ -1,7 +1,7 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 
 import javax.annotation.Nullable;
 import java.util.Optional;

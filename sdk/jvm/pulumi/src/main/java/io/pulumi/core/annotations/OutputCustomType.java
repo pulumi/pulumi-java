@@ -1,4 +1,4 @@
-package io.pulumi.core.internal.annotations;
+package io.pulumi.core.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
