@@ -8,7 +8,7 @@ import io.pulumi.awsnative.athena.inputs.WorkGroupConfigurationArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupConfigurationUpdatesArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupDataflowEndpoint;
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupSecurityDetails;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

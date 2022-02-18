@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationConfigurationSource;
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationValuesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

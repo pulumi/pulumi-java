@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotS3LocationArgs;
 import io.pulumi.awsnative.lex.inputs.BotTagArgs;
 import io.pulumi.awsnative.lex.inputs.DataPrivacyPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

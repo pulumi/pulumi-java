@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.inputs.ChannelTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

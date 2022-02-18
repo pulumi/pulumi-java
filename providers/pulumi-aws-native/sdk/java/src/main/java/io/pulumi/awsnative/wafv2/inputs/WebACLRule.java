@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLOverrideAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLRuleAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatement;
 import io.pulumi.awsnative.wafv2.inputs.WebACLVisibilityConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

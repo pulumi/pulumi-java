@@ -12,7 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionNetw
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionStoppingConditionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

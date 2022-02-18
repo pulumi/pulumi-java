@@ -6,7 +6,7 @@ package io.pulumi.awsnative.refactorspaces;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.refactorspaces.inputs.GetServiceArgs;
 import io.pulumi.awsnative.refactorspaces.outputs.GetServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

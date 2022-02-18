@@ -7,7 +7,7 @@ import io.pulumi.awsnative.events.inputs.ConnectionApiKeyAuthParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionBasicAuthParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionOAuthParameters;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

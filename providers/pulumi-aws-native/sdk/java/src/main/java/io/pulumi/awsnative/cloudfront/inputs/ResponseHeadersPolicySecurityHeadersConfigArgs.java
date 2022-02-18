@@ -10,7 +10,7 @@ import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyReferrerPolicy
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyStrictTransportSecurityArgs;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyXSSProtectionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

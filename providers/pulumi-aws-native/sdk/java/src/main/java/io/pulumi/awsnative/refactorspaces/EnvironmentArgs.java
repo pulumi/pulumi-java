@@ -6,7 +6,7 @@ package io.pulumi.awsnative.refactorspaces;
 import io.pulumi.awsnative.refactorspaces.enums.EnvironmentNetworkFabricType;
 import io.pulumi.awsnative.refactorspaces.inputs.EnvironmentTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

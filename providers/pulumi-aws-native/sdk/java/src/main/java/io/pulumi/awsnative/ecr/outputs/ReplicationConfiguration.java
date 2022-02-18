@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr.outputs;
 
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfigurationReplicationRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 

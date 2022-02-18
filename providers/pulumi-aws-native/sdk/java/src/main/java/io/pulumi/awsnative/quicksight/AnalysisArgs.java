@@ -9,7 +9,7 @@ import io.pulumi.awsnative.quicksight.inputs.AnalysisResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

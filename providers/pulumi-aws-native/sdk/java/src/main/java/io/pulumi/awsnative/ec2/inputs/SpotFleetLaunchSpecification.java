@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceRequirementsRequest;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetMonitoring;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetSpotPlacement;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTagSpecification;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ssm.inputs.DocumentAttachmentsSourceArgs;
 import io.pulumi.awsnative.ssm.inputs.DocumentRequiresArgs;
 import io.pulumi.awsnative.ssm.inputs.DocumentTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

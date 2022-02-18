@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionFormatVersion;
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionPolicy;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

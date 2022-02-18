@@ -7,7 +7,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentActiveDirectoryCon
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentComputeFarmConfiguration;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentLicenseServiceConfiguration;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentSharedFileSystemConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

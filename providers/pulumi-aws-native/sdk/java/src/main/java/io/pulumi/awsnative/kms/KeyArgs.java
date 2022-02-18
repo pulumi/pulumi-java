@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kms.enums.KeySpec;
 import io.pulumi.awsnative.kms.enums.KeyUsage;
 import io.pulumi.awsnative.kms.inputs.KeyTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

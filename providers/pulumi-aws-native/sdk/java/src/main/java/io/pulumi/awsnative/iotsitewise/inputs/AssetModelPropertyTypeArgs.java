@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AssetModelAttributeArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTransformArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

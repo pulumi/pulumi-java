@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.enums.CapacityReservationFleetTenancy;
 import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetInstanceTypeSpecificationArgs;
 import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetTagSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

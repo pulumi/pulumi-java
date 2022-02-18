@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ec2.enums.FlowLogTrafficType;
 import io.pulumi.awsnative.ec2.inputs.DestinationOptionsPropertiesArgs;
 import io.pulumi.awsnative.ec2.inputs.FlowLogTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

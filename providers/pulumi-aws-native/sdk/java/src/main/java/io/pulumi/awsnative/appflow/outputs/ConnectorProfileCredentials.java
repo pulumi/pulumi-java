@@ -19,7 +19,7 @@ import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSnowflakeConnectorPro
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileTrendmicroConnectorProfileCredentials;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileVeevaConnectorProfileCredentials;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileZendeskConnectorProfileCredentials;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

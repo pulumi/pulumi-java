@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ssm.enums.AssociationSyncCompliance;
 import io.pulumi.awsnative.ssm.inputs.AssociationInstanceAssociationOutputLocationArgs;
 import io.pulumi.awsnative.ssm.inputs.AssociationTargetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew;
 import io.pulumi.awsnative.databrew.inputs.RulesetRuleArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.DatasetCsvOptions;
 import io.pulumi.awsnative.databrew.inputs.DatasetExcelOptions;
 import io.pulumi.awsnative.databrew.inputs.DatasetJsonOptions;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

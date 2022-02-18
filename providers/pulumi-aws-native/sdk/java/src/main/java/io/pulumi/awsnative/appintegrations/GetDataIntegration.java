@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appintegrations;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appintegrations.inputs.GetDataIntegrationArgs;
 import io.pulumi.awsnative.appintegrations.outputs.GetDataIntegrationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

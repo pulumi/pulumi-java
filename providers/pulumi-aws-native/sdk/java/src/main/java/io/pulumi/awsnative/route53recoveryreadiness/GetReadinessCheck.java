@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.GetReadinessCheckArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.GetReadinessCheckResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iot.outputs.MitigationActionPublishFindingToSnsParams
 import io.pulumi.awsnative.iot.outputs.MitigationActionReplaceDefaultPolicyVersionParams;
 import io.pulumi.awsnative.iot.outputs.MitigationActionUpdateCACertificateParams;
 import io.pulumi.awsnative.iot.outputs.MitigationActionUpdateDeviceCertificateParams;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

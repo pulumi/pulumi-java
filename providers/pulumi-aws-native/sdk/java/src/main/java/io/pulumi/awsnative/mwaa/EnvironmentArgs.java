@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mwaa.enums.EnvironmentWebserverAccessMode;
 import io.pulumi.awsnative.mwaa.inputs.EnvironmentLoggingConfigurationArgs;
 import io.pulumi.awsnative.mwaa.inputs.EnvironmentNetworkConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingSessionStorageMode;
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamingSessionStorageRoot;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

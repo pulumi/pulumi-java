@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.inputs.StageCanarySettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.StageMethodSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.StageTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

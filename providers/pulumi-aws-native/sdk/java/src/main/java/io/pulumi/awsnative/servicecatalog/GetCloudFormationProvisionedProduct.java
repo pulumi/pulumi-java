@@ -6,7 +6,7 @@ package io.pulumi.awsnative.servicecatalog;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalog.inputs.GetCloudFormationProvisionedProductArgs;
 import io.pulumi.awsnative.servicecatalog.outputs.GetCloudFormationProvisionedProductResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

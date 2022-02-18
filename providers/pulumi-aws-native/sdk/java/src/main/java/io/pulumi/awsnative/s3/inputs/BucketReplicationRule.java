@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.inputs.BucketDeleteMarkerReplication;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationDestination;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationRuleFilter;
 import io.pulumi.awsnative.s3.inputs.BucketSourceSelectionCriteria;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

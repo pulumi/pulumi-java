@@ -6,7 +6,7 @@ package io.pulumi.awsnative.dynamodb.outputs;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableKeySchema;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableProjection;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableWriteProvisionedThroughputSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

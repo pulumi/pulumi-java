@@ -6,7 +6,7 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.inputs.GetAttributeGroupAssociationArgs;
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.GetAttributeGroupAssociationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

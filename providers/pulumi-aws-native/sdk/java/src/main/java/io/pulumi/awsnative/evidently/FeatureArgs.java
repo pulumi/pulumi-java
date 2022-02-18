@@ -8,7 +8,7 @@ import io.pulumi.awsnative.evidently.inputs.FeatureEntityOverrideArgs;
 import io.pulumi.awsnative.evidently.inputs.FeatureTagArgs;
 import io.pulumi.awsnative.evidently.inputs.FeatureVariationObjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

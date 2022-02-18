@@ -8,7 +8,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityRevocationConfigura
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthoritySubjectArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

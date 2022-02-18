@@ -7,7 +7,7 @@ import io.pulumi.awsnative.amplify.enums.AppAutoBranchCreationConfigStage;
 import io.pulumi.awsnative.amplify.inputs.AppBasicAuthConfigArgs;
 import io.pulumi.awsnative.amplify.inputs.AppEnvironmentVariableArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

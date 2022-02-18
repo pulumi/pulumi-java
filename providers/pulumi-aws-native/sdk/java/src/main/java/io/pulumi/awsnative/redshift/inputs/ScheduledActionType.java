@@ -6,7 +6,7 @@ package io.pulumi.awsnative.redshift.inputs;
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionPauseClusterMessage;
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionResizeClusterMessage;
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionResumeClusterMessage;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

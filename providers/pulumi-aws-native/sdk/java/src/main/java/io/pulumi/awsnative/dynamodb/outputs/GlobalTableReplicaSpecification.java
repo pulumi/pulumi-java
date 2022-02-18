@@ -9,7 +9,7 @@ import io.pulumi.awsnative.dynamodb.outputs.GlobalTableReadProvisionedThroughput
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableReplicaGlobalSecondaryIndexSpecification;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableReplicaSSESpecification;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

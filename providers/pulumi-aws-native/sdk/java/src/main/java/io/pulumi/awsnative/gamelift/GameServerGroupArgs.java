@@ -11,7 +11,7 @@ import io.pulumi.awsnative.gamelift.inputs.GameServerGroupInstanceDefinitionArgs
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupLaunchTemplateArgs;
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

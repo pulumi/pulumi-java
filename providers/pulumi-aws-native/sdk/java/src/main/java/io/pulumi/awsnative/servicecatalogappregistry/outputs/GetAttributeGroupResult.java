@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.AttributeGroupTags;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

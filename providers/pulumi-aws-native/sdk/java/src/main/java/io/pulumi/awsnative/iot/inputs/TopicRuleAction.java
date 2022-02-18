@@ -24,7 +24,7 @@ import io.pulumi.awsnative.iot.inputs.TopicRuleSnsAction;
 import io.pulumi.awsnative.iot.inputs.TopicRuleSqsAction;
 import io.pulumi.awsnative.iot.inputs.TopicRuleStepFunctionsAction;
 import io.pulumi.awsnative.iot.inputs.TopicRuleTimestreamAction;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

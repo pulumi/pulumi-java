@@ -6,7 +6,7 @@ package io.pulumi.awsnative.rds;
 import io.pulumi.awsnative.rds.enums.DBProxyTargetGroupTargetGroupName;
 import io.pulumi.awsnative.rds.inputs.DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

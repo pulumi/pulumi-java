@@ -21,7 +21,7 @@ import io.pulumi.awsnative.ec2.inputs.EC2FleetNetworkInterfaceCountRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTotalLocalStorageGBRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetVCpuCountRangeRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

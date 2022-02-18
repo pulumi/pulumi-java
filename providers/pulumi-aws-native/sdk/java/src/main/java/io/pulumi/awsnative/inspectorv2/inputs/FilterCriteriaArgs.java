@@ -10,7 +10,7 @@ import io.pulumi.awsnative.inspectorv2.inputs.FilterPackageFilterArgs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterPortRangeFilterArgs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssmcontacts;
 import io.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactStageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

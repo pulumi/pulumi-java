@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs.outputs;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionDevice;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionKernelCapabilities;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionTmpfs;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;

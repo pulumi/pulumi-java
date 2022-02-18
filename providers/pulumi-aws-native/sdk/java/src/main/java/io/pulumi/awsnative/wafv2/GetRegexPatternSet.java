@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.wafv2.inputs.GetRegexPatternSetArgs;
 import io.pulumi.awsnative.wafv2.outputs.GetRegexPatternSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashPackageP
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashPackageSegmentTemplateFormat;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashManifest;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.batch.inputs;
 
 import io.pulumi.awsnative.batch.inputs.SchedulingPolicyShareAttributes;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;

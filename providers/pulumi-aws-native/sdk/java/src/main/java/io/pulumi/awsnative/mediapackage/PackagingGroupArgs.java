@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupAuthorizationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupLogConfigurationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

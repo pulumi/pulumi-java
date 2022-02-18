@@ -9,7 +9,7 @@ import io.pulumi.awsnative.s3.inputs.BucketNoncurrentVersionExpiration;
 import io.pulumi.awsnative.s3.inputs.BucketNoncurrentVersionTransition;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilter;
 import io.pulumi.awsnative.s3.inputs.BucketTransition;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestManifestLayout;
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestProfile;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationStreamSelection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

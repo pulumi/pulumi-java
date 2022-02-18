@@ -6,7 +6,7 @@ package io.pulumi.awsnative.greengrassv2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.greengrassv2.inputs.GetComponentVersionArgs;
 import io.pulumi.awsnative.greengrassv2.outputs.GetComponentVersionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

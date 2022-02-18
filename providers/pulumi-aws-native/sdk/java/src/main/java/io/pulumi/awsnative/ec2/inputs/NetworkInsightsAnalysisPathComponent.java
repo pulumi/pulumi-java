@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisComponent;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisPacketHeader;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;

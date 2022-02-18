@@ -6,7 +6,7 @@ package io.pulumi.awsnative.elasticache;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.elasticache.inputs.GetGlobalReplicationGroupArgs;
 import io.pulumi.awsnative.elasticache.outputs.GetGlobalReplicationGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

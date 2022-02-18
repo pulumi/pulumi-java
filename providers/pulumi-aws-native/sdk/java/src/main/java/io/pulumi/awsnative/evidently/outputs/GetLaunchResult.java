@@ -7,7 +7,7 @@ import io.pulumi.awsnative.evidently.outputs.LaunchGroupObject;
 import io.pulumi.awsnative.evidently.outputs.LaunchMetricDefinitionObject;
 import io.pulumi.awsnative.evidently.outputs.LaunchStepConfig;
 import io.pulumi.awsnative.evidently.outputs.LaunchTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

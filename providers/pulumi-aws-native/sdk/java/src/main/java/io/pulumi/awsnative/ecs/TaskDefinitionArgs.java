@@ -12,7 +12,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionRuntimePlatformArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionTagArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionVolumeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

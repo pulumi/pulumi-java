@@ -9,7 +9,7 @@ import io.pulumi.awsnative.amplify.inputs.AppCustomRuleArgs;
 import io.pulumi.awsnative.amplify.inputs.AppEnvironmentVariableArgs;
 import io.pulumi.awsnative.amplify.inputs.AppTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

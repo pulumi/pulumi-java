@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rum.outputs;
 
 import io.pulumi.awsnative.rum.enums.AppMonitorTelemetry;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lex.inputs.GetBotArgs;
 import io.pulumi.awsnative.lex.outputs.GetBotResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

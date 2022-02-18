@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ses;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ses.inputs.GetTemplateArgs;
 import io.pulumi.awsnative.ses.outputs.GetTemplateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

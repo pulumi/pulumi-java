@@ -10,7 +10,7 @@ import io.pulumi.awsnative.iot.inputs.MitigationActionReplaceDefaultPolicyVersio
 import io.pulumi.awsnative.iot.inputs.MitigationActionUpdateCACertificateParamsArgs;
 import io.pulumi.awsnative.iot.inputs.MitigationActionUpdateDeviceCertificateParamsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

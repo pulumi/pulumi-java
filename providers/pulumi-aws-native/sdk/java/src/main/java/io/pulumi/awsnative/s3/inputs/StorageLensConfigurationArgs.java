@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.inputs.StorageLensAwsOrgArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensBucketsAndRegionsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensDataExportArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

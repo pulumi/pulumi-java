@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.inputs.GetFunctionArgs;
 import io.pulumi.awsnative.cloudfront.outputs.GetFunctionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
 import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
