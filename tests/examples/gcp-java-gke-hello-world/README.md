@@ -1,5 +1,3 @@
-[![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/blob/master/gcp-ts-gke-hello-world/README.md)
-
 # Google Kubernetes Engine (GKE) Cluster
 
 This example deploys an Google Cloud Platform (GCP) [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) cluster, and deploys a Kubernetes Namespace and Deployment of NGINX
@@ -11,8 +9,6 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-1. [Install Node.js](https://nodejs.org/en/download/)
-1. Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install).
 1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
 1. Configure GCP Auth
 
@@ -33,17 +29,9 @@ To deploy your infrastructure, follow the below steps.
 
 After cloning this repo, from this working directory, run these commands:
 
-1. Install the required Node.js packages:
-
-   This installs the dependent packages [needed](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
-
-    ```bash
-    $ npm install
-    ```
-
 1. Create a new Pulumi stack, which is an isolated deployment target for this example:
 
-   This will initialize the Pulumi program in TypeScript.
+   This will initialize the Pulumi stack.
 
     ```bash
     $ pulumi stack init
@@ -55,7 +43,7 @@ After cloning this repo, from this working directory, run these commands:
 
     ```bash
     $ pulumi config set gcp:project <YOUR_GCP_PROJECT_HERE>
-    $ pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
+    $ pulumi config set gcp:zone us-west1-a     # any valid GCP Zone here
     ```
 
 1. Stand up the GKE cluster:
@@ -71,48 +59,72 @@ After cloning this repo, from this working directory, run these commands:
    overall changes expected to take place.
 
    Running `pulumi up` will deploy the GKE cluster. Note, provisioning a
-   new GKE cluster takes between 3-5 minutes.
+   new GKE cluster takes ~10 minutes.
 
     ```bash
-    $ pulumi update
-        Previewing update (gke-demo):
-
-                Type                            Name                             Plan
-        +   pulumi:pulumi:Stack             gcp-ts-gke-hello-world-gke-demo  create
-        +   ├─ gcp:container:Cluster        helloworld                       create
-        +   ├─ pulumi:providers:kubernetes  helloworld                       create
-        +   ├─ kubernetes:core:Namespace    helloworld                       create
-        +   ├─ kubernetes:apps:Deployment   helloworld                       create
-        +   └─ kubernetes:core:Service      helloworld                       create
-
-        Resources:
-                + 6 to create
-
-        Updating (gke-demo):
-
-                Type                            Name                             Status
-        +   pulumi:pulumi:Stack             gcp-ts-gke-hello-world-gke-demo  created
-        +   ├─ gcp:container:Cluster        helloworld                       created
-        +   ├─ pulumi:providers:kubernetes  helloworld                       created
-        +   ├─ kubernetes:core:Namespace    helloworld                       created
-        +   ├─ kubernetes:apps:Deployment   helloworld                       created
-        +   └─ kubernetes:core:Service      helloworld                       created
-
+    $ pulumi up --yes
+        Previewing update (demo)
+        
+        View Live: https://app.pulumi.com/***/gcp-java-gke-hello-world/demo/previews/2d73ed89-a034-4d78-8e63-806fdc81a25b
+        
+             Type                              Name                           Plan       Info
+         +   pulumi:pulumi:Stack               gcp-java-gke-hello-world-demo  create     6 messages
+         +   ├─ gcp:container:Cluster          helloworld                     create     
+         +   ├─ gcp:container:NodePool         primary-node-pool              create     
+         +   ├─ pulumi:providers:kubernetes    helloworld                     create     
+         +   ├─ kubernetes:core/v1:Namespace   helloworld                     create     
+         +   ├─ kubernetes:apps/v1:Deployment  helloworld                     create     
+         +   └─ kubernetes:core/v1:Service     helloworld                     create     
+         
+        Diagnostics:
+          pulumi:pulumi:Stack (gcp-java-gke-hello-world-demo):
+            > Task :app:compileJava UP-TO-DATE
+            > Task :app:processResources NO-SOURCE
+            > Task :app:classes UP-TO-DATE
+            > Task :app:run
+            BUILD SUCCESSFUL in 2s
+            2 actionable tasks: 1 executed, 1 up-to-date
+         
+        
+        Updating (demo)
+        
+        View Live: https://app.pulumi.com/***/gcp-java-gke-hello-world/demo/updates/1
+        
+             Type                              Name                           Status      Info
+         +   pulumi:pulumi:Stack               gcp-java-gke-hello-world-demo  created     30 messages
+         +   ├─ gcp:container:Cluster          helloworld                     created     
+         +   ├─ gcp:container:NodePool         primary-node-pool              created     
+         +   ├─ pulumi:providers:kubernetes    helloworld                     created     
+         +   ├─ kubernetes:core/v1:Namespace   helloworld                     created     
+         +   ├─ kubernetes:apps/v1:Deployment  helloworld                     created     
+         +   └─ kubernetes:core/v1:Service     helloworld                     created     
+         
+        Diagnostics:
+          pulumi:pulumi:Stack (gcp-java-gke-hello-world-demo):
+            > Task :app:compileJava UP-TO-DATE
+            > Task :app:processResources NO-SOURCE
+            > Task :app:classes UP-TO-DATE
+            > Task :app:run
+            BUILD SUCCESSFUL in 11m 17s
+            2 actionable tasks: 1 executed, 1 up-to-date
+         
         Outputs:
-                clusterName    : "helloworld-e1557dc"
-                deploymentName : "helloworld-tlsr4sg5"
-                kubeconfig     : "<KUBECONFIG_CONTENTS>"
-                namespaceName  : "helloworld-pz4u5kyq"
-                serviceName    : "helloworld-l61b5dby"
-                servicePublicIP: "35.236.26.151"
-
+            clusterName    : "helloworld-10e2053"
+            deploymentName : "helloworld-krnibosh"
+            kubeconfig     : "[secret]"
+            masterVersion  : "1.22.6-gke.300"
+            namespaceName  : "helloworld-p2a10vq4"
+            serviceName    : "helloworld-h7jipvp8"
+            servicePublicIP: "***"
+            urn            : "urn:pulumi:demo::gcp-java-gke-hello-world::pulumi:pulumi:Stack::gcp-java-gke-hello-world-demo"
+        
         Resources:
-                + 6 created
-
-        Duration: 3m51s
+            + 7 created
+        
+        Duration: 11m18s
     ```
 
-1. After 3-5 minutes, your cluster will be ready, and the kubeconfig JSON you'll use to connect to the cluster will
+1. After ~10 minutes, your cluster will be ready, and the kubeconfig JSON you'll use to connect to the cluster will
    be available as an output.
 
    As part of the update, you'll see some new objects in the output: a
@@ -123,16 +135,18 @@ After cloning this repo, from this working directory, run these commands:
    in-place, and which require replacement, and computes
    the minimally disruptive change to achieve the desired state.
 
-        > **Note:** Pulumi auto-generates a suffix for all objects.
+   > **Note:** Pulumi auto-generates a suffix for all objects.
    > See the [Pulumi Programming Model](https://www.pulumi.com/docs/intro/concepts/resources/#autonaming) for more info.
    >
    > ```
-    > clusterName    : "helloworld-2a6de9a"
-        > deploymentName : "helloworld-tlsr4sg5"
-   > kubeconfig     : "<KUBECONFIG_CONTENTS>"
-   > namespaceName  : "helloworld-pz4u5kyq"
-   > serviceName    : "helloworld-l61b5dby"
-   > servicePublicIP: "35.236.26.151"
+   > clusterName    : "helloworld-10e2053"
+   > deploymentName : "helloworld-krnibosh"
+   > kubeconfig     : "[secret]"
+   > masterVersion  : "1.22.6-gke.300"
+   > namespaceName  : "helloworld-p2a10vq4"
+   > serviceName    : "helloworld-h7jipvp8"
+   > servicePublicIP: "***"
+   > urn            : "urn:pulumi:demo::gcp-java-gke-hello-world::pulumi:pulumi:Stack::gcp-java-gke-hello-world-demo"
    > ```
 
    If you visit the FQDN listed in `servicePublicIP` you should land on the
@@ -178,52 +192,6 @@ After cloning this repo, from this working directory, run these commands:
 
    From here on, feel free to experiment. Simply making edits and running `pulumi up` afterwords, will incrementally update your stack.
 
-   ### Running Off-the-Shelf Guestbook YAML
-
-   For example, if you wish to pull existing Kubernetes YAML manifests into
-   Pulumi to aid in your transition, append the following code block to the existing
-   `index.ts` file and run `pulumi up`.
-
-   This is an example of how to create the standard Kubernetes Guestbook manifests in
-   Pulumi using the Guestbook YAML manifests. We take the additional steps of transforming
-   its properties to use the same Namespace and metadata labels that
-   the NGINX stack uses, and also make its frontend service use a
-   LoadBalancer typed Service to expose it publicly.
-
-    ```typescript
-    // Create resources for the Kubernetes Guestbook from its YAML manifests
-    const guestbook = new k8s.yaml.ConfigFile("guestbook",
-        {
-            file: "https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/tests/sdk/nodejs/examples/yaml-guestbook/yaml/guestbook.yaml",
-            transformations: [
-                (obj: any) => {
-                    // Do transformations on the YAML to use the same namespace and
-                    // labels as the NGINX stack above
-                    if (obj.metadata.labels) {
-                        obj.metadata.labels['appClass'] = namespaceName
-                    } else {
-                        obj.metadata.labels = appLabels
-                    }
-
-                    // Make the 'frontend' Service public by setting it to be of type
-                    // LoadBalancer
-                    if (obj.kind == "Service" && obj.metadata.name == "frontend") {
-                        if (obj.spec) {
-                            obj.spec.type = "LoadBalancer"
-                        }
-                    }
-                }
-            ],
-        },
-        {
-            providers: { "kubernetes": clusterProvider },
-        },
-    );
-
-    // Export the Guestbook public LoadBalancer endpoint
-    export const guestbookPublicIP =
-        guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].ip);
-    ```
 
 1. Once you've finished experimenting, tear down your stack's resources by destroying and removing it:
 

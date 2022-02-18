@@ -17,5 +17,5 @@ dependencies {
 }
 
 application {
-    mainClass = 'staticwebsite.App'
+    mainClass = 'gcpgke.App'
 }

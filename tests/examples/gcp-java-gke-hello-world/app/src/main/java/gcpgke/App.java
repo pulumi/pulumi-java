@@ -1,4 +1,4 @@
-package staticwebsite;
+package gcpgke;
 
 import io.pulumi.deployment.Deployment;
 

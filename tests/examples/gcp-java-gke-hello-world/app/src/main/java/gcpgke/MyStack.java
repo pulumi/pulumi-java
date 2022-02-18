@@ -1,4 +1,4 @@
-package staticwebsite;
+package gcpgke;
 
 import java.text.MessageFormat;
 import java.util.List;
@@ -19,7 +19,6 @@ import io.pulumi.gcp.container.inputs.NodePoolManagementArgs;
 import io.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
 import io.pulumi.kubernetes.Provider;
 import io.pulumi.kubernetes.ProviderArgs;
-import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import io.pulumi.kubernetes.apps_v1.Deployment;
 import io.pulumi.kubernetes.apps_v1.DeploymentArgs;
 import io.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
@@ -63,16 +62,9 @@ public final class MyStack extends Stack {
     private Output<String> masterVersion;
 
     public MyStack() throws Exception {
-        /*
-        const name = "helloworld";
-        */
         final String name = "helloworld";
-        /*
-        const config = new pulumi.Config();
-        export const masterVersion = config.get("masterVersion") ||
-            gcp.container.getEngineVersions().then(it => it.latestMasterVersion);
-        */
-        final var config = io.pulumi.Config.of(); // TODO Config docs
+
+        final var config = io.pulumi.Config.of();
         final var masterVersion = config.get("masterVersion").orElse(
             GetEngineVersions.invokeAsync(
                 GetEngineVersionsArgs.Empty,
@@ -80,19 +72,11 @@ public final class MyStack extends Stack {
             ).thenApply(thing -> thing.getLatestMasterVersion()).get());
         
         this.masterVersion = Output.of(masterVersion);
-        /*
-        /*
-        // Create a GKE cluster
-        const cluster = new gcp.container.Cluster(name, {
-            // We can't create a cluster with no node pool defined, but we want to only use
-            // separately managed node pools. So we create the smallest possible default
-            // node pool and immediately delete it.
-            initialNodeCount: 1,
-            removeDefaultNodePool: true,
 
-            minMasterVersion: masterVersion,
-        });
-        */
+        // Create a GKE cluster
+        // We can't create a cluster with no node pool defined, but we want to only use
+        // separately managed node pools. So we create the smallest possible default
+        // node pool and immediately delete it.
         final var cluster = new Cluster(name,
             ClusterArgs.builder()
             .setInitialNodeCount(1)
@@ -101,31 +85,8 @@ public final class MyStack extends Stack {
             .build(),
             CustomResourceOptions.Empty
         );
-        /*
-        
-        const nodePool = new gcp.container.NodePool(`primary-node-pool`, {
-            cluster: cluster.name,
-            initialNodeCount: 2,
-            location: cluster.location,
-            nodeConfig: {
-                preemptible: true,
-                machineType: "n1-standard-1",
-                oauthScopes: [
-                    "https://www.googleapis.com/auth/compute",
-                    "https://www.googleapis.com/auth/devstorage.read_only",
-                    "https://www.googleapis.com/auth/logging.write",
-                    "https://www.googleapis.com/auth/monitoring",
-                ],
-            },
-            version: masterVersion,
-            management: {
-                autoRepair: true,
-            },
-        }, {
-            dependsOn: [cluster],
-        });
-        */
-        final var nodePool = new NodePool("primary-node-pool", // TODO add builder docstrings
+
+        final var nodePool = new NodePool("primary-node-pool",
             NodePoolArgs.builder()
             .setCluster(cluster.getName().toInput())
             .setLocation(cluster.getLocation().toInput())
@@ -150,45 +111,11 @@ public final class MyStack extends Stack {
             CustomResourceOptions.builder()
             .setDependsOn(List.of(cluster))
             .build());
-        /*
-
-        // Export the Cluster name
-        export const clusterName = cluster.name;
-        */
         this.clusterName = cluster.getName();
-        /*
-
+    
         // Manufacture a GKE-style kubeconfig. Note that this is slightly "different"
         // because of the way GKE requires gcloud to be in the picture for cluster
         // authentication (rather than using the client cert/key directly).
-apiVersion: v1
-clusters:
-- cluster:
-    certificate-authority-data: ${masterAuth.clusterCaCertificate}
-    server: https://${endpoint}
-  name: ${context}
-contexts:
-- context:
-    cluster: ${context}
-    user: ${context}
-  name: ${context}
-current-context: ${context}
-kind: Config
-preferences: {}
-users:
-- name: ${context}
-  user:
-    auth-provider:
-      config:
-        cmd-args: config config-helper --format=json
-        cmd-path: gcloud
-        expiry-key: '{.credential.token_expiry}'
-        token-key: '{.credential.access_token}'
-      name: gcp
-`;
-        */
-        //cluster.getName(), cluster.getEndpoint(), cluster.getMasterAuth()
-        //const context = `${gcp.config.project}_${gcp.config.zone}_${name}`;
         final var gcpConfig = new io.pulumi.gcp.Config();
         var clusterName = gcpConfig.project().get() + "_" + gcpConfig.zone().get() + "_" + name;
 
@@ -225,18 +152,8 @@ users:
                     return retval;
                 }
             ));
-        /*"
+
         // Create a Kubernetes provider instance that uses our cluster from above.
-        const clusterProvider = new k8s.Provider(name, {
-            kubeconfig: kubeconfig,
-        }, {
-        dependsOn: [nodePool],
-        });
-        */
-        this.kubeconfig.applyValue(func -> {
-            System.out.println(func);
-            return 1;
-        });
         final var clusterProvider = new Provider(name,
             ProviderArgs.builder()
                 .setKubeconfig(this.kubeconfig.toInput())
@@ -247,53 +164,16 @@ users:
         final var clusterResourceOptions = CustomResourceOptions.builder()
             .setProvider(clusterProvider)
             .build();
-        /*
 
         // Create a Kubernetes Namespace
-        const ns = new k8s.core.v1.Namespace(name, {}, { provider: clusterProvider });
-
-        // Export the Namespace name
-        export const namespaceName = ns.metadata.name;
-        */
         final var ns = new Namespace(name,
             NamespaceArgs.Empty,
             clusterResourceOptions
         );
 
+        // Export the Namespace name
         this.namespaceName = ns.getMetadata().applyOptional(arg0 -> arg0.getName());
-        /*
-        // Create a NGINX Deployment
-        const appLabels = { appClass: name };
-        const deployment = new k8s.apps.v1.Deployment(name,
-            {
-                metadata: {
-                    namespace: namespaceName,
-                    labels: appLabels,
-                },
-                spec: {
-                    replicas: 1,
-                    selector: { matchLabels: appLabels },
-                    template: {
-                        metadata: {
-                            labels: appLabels, // TODO verify modified and reused metadata
-                        },
-                        spec: {
-                            containers: [
-                                {
-                                    name: name,
-                                    image: "nginx:latest",
-                                    ports: [{ name: "http", containerPort: 80 }],
-                                },
-                            ],
-                        },
-                    },
-                },
-            },
-            {
-                provider: clusterProvider,
-            },
-        );
-        */
+
         final var appLabels = Map.of("appClass", name);
         
         final var metadata = ObjectMetaArgs.builder()
@@ -301,6 +181,7 @@ users:
                 .setLabels(appLabels)
                 .build();
 
+        // Create a NGINX Deployment
         final var deployment = new Deployment(name, DeploymentArgs.builder()
             .setMetadata(metadata)
             .setSpec(DeploymentSpecArgs.builder()
@@ -323,32 +204,11 @@ users:
                     .build())
                 .build())
             .build(), clusterResourceOptions);
-        /*
 
         // Export the Deployment name
-        export const deploymentName = deployment.metadata.name;
-        */
         this.deploymentName = deployment.getMetadata().applyOptional(arg0 -> arg0.getName());
-        /*
 
         // Create a LoadBalancer Service for the NGINX Deployment
-        const service = new k8s.core.v1.Service(name,
-            {
-                metadata: {
-                    labels: appLabels,
-                    namespace: namespaceName,
-                },
-                spec: {
-                    type: "LoadBalancer",
-                    ports: [{ port: 80, targetPort: "http" }],
-                    selector: appLabels,
-                },
-            },
-            {
-                provider: clusterProvider,
-            },
-        );
-        */
         final var service = new Service(name, ServiceArgs.builder()
             .setMetadata(metadata)
             .setSpec(ServiceSpecArgs.builder()
@@ -360,11 +220,8 @@ users:
                 .setSelector(appLabels)
                 .build())
             .build(), clusterResourceOptions);
-        /*
+
         // Export the Service name and public LoadBalancer endpoint
-        export const serviceName = service.metadata.name;
-        export const servicePublicIP = service.status.loadBalancer.ingress[0].ip;
-        */
         this.serviceName = service.getMetadata().applyOptional(arg0 -> arg0.getName());
         this.servicePublicIP = service.getStatus()
             .applyOptional(arg0 -> arg0.getLoadBalancer())
