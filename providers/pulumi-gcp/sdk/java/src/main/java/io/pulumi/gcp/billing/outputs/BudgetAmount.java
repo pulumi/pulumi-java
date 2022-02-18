@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.billing.outputs.BudgetAmountSpecifiedAmount;
 import java.lang.Boolean;
 import java.util.Objects;

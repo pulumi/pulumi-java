@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigDatabaseConfig;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigEncryptionConfig;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigMaintenanceWindow;

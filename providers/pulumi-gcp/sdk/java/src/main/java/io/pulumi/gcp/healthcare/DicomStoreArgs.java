@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigArgs;
 import java.lang.String;

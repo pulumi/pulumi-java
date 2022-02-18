@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxAgeArgs;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxVersionArgs;
 import java.lang.String;

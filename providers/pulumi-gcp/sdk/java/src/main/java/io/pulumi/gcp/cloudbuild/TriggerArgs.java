@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerGithubArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerPubsubConfigArgs;

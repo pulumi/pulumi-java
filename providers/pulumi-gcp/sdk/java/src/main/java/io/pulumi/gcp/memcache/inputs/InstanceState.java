@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.memcache.inputs.InstanceMemcacheNodeGetArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersGetArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceNodeConfigGetArgs;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudtasks;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudtasks.inputs.QueueAppEngineRoutingOverrideArgs;
 import io.pulumi.gcp.cloudtasks.inputs.QueueRateLimitsArgs;
 import io.pulumi.gcp.cloudtasks.inputs.QueueRetryConfigArgs;

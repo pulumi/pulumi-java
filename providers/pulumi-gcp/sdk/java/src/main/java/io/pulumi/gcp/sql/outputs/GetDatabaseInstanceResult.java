@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceClone;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceIpAddress;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceReplicaConfiguration;

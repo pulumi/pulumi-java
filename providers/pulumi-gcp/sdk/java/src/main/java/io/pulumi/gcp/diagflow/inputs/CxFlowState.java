@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerGetArgs;
 import io.pulumi.gcp.diagflow.inputs.CxFlowNluSettingsGetArgs;
 import io.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteGetArgs;

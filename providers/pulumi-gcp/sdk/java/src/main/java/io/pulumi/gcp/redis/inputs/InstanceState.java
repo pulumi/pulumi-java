@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyGetArgs;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenanceScheduleGetArgs;
 import io.pulumi.gcp.redis.inputs.InstanceNodeGetArgs;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vpcaccess;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vpcaccess.inputs.ConnectorSubnetArgs;
 import java.lang.Integer;
 import java.lang.String;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolAutoscaling;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolManagement;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolNetworkConfig;

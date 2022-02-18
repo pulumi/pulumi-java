@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigSubjectConfig;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509Config;
 import java.util.Objects;

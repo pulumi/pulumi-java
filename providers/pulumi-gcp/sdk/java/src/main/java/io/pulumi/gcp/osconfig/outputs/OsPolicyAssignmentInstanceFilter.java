@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterExclusionLabel;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterInclusionLabel;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterInventory;

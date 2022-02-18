@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecGetArgs;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreStateGetArgs;
 import java.lang.String;

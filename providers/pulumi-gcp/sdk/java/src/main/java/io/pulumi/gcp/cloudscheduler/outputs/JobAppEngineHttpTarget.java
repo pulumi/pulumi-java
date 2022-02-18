@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudscheduler.outputs.JobAppEngineHttpTargetAppEngineRouting;
 import java.lang.String;
 import java.util.Map;

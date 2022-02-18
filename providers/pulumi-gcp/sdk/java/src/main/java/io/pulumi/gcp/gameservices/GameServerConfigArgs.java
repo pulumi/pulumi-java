@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigFleetConfigArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigArgs;
 import java.lang.String;

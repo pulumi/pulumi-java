@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.datacatalog.outputs.TagTemplateFieldTypeEnumTypeAllowedValue;
 import java.util.List;
 import java.util.Objects;

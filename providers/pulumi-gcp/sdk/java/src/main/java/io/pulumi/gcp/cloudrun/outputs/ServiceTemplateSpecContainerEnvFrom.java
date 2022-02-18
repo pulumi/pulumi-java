@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvFromConfigMapRef;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvFromSecretRef;
 import java.lang.String;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudscheduler.outputs.JobHttpTargetOauthToken;
 import io.pulumi.gcp.cloudscheduler.outputs.JobHttpTargetOidcToken;
 import java.lang.String;

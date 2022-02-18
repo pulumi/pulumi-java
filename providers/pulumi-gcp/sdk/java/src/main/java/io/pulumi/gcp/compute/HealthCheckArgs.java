@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.HealthCheckGrpcHealthCheckArgs;
 import io.pulumi.gcp.compute.inputs.HealthCheckHttp2HealthCheckArgs;
 import io.pulumi.gcp.compute.inputs.HealthCheckHttpHealthCheckArgs;

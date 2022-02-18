@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs;

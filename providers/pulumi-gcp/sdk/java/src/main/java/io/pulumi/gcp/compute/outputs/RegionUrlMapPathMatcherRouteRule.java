@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleHeaderAction;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRule;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleRouteAction;

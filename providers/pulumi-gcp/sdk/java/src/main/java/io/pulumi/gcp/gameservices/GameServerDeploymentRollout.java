@@ -5,8 +5,8 @@ package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.GameServerDeploymentRolloutArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutState;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionCorsPolicy;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionRequestMirrorPolicy;

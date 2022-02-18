@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.FolderSinkBigqueryOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.FolderSinkExclusionGetArgs;
 import java.lang.Boolean;

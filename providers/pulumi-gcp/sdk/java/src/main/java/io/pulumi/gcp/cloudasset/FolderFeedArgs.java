@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedConditionArgs;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigArgs;
 import java.lang.String;

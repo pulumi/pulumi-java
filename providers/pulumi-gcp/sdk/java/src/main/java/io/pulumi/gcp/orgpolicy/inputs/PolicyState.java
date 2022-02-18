@@ -4,7 +4,7 @@
 package io.pulumi.gcp.orgpolicy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecGetArgs;
 import java.lang.String;
 import java.util.Objects;

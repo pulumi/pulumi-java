@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkInterfaceAliasIpRangeGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkInterfaceIpv6AccessConfigGetArgs;

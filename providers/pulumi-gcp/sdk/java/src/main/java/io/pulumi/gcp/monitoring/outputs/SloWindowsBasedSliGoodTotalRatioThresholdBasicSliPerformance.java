@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency;
 import java.lang.String;

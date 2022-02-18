@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.MembershipAuthorityArgs;
 import io.pulumi.gcp.gkehub.inputs.MembershipEndpointArgs;
 import java.lang.String;

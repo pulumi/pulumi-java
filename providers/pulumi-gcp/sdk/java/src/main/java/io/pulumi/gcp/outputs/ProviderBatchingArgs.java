@@ -4,7 +4,7 @@
 package io.pulumi.gcp.outputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

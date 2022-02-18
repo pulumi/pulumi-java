@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigDatabaseConfig;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigEncryptionConfig;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigMaintenanceWindow;

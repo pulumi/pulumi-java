@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GetInstanceSchedulingNodeAffinity;
 import java.lang.Boolean;
 import java.lang.Integer;

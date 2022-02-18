@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingBackupConfiguration;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingDatabaseFlag;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingInsightsConfig;

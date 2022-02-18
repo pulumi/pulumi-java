@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs;
 import java.lang.Boolean;

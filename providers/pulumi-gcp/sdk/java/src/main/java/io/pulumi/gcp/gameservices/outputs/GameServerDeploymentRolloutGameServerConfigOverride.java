@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gameservices.outputs.GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector;
 import java.lang.String;
 import java.util.Objects;

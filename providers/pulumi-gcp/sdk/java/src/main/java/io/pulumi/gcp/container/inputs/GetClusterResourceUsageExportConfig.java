@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.GetClusterResourceUsageExportConfigBigqueryDestination;
 import java.lang.Boolean;
 import java.util.List;

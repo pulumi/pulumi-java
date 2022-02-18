@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionDeadLetterPolicyGetArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionExpirationPolicyGetArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigGetArgs;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs;

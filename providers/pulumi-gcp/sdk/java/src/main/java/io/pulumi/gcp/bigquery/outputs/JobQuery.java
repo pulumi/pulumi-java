@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDefaultDataset;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDestinationTable;

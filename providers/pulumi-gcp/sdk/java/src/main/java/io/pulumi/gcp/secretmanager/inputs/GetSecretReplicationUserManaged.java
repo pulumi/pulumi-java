@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.secretmanager.inputs.GetSecretReplicationUserManagedReplica;
 import java.util.List;
 import java.util.Objects;

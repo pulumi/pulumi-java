@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkconnectivity;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedInterconnectAttachmentsArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedVpnTunnelsArgs;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineArgs;

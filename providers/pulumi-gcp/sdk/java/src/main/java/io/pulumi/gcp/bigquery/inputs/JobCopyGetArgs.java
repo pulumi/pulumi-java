@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobCopyDestinationEncryptionConfigurationGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobCopyDestinationTableGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobCopySourceTableGetArgs;

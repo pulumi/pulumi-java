@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigBigqueryDestinationGetArgs;
 import java.util.Objects;
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigArgs;
 import io.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigArgs;
 import io.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigArgs;
