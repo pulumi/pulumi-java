@@ -53,11 +53,9 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
-import static io.pulumi.core.internal.CompletableFutures.ignoreNullMapValues;
 import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
 import static io.pulumi.core.internal.Environment.getEnvironmentVariable;
 import static io.pulumi.core.internal.Exceptions.getStackTrace;
-import static io.pulumi.core.internal.PulumiCollectors.toTupleOfMaps2;
 import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
@@ -67,7 +65,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final DeploymentState state;
     private final Log log;
     private final FeatureSupport featureSupport;
-    private final Serialization serialization;
+    private final PropertiesSerializer serialization;
     private final Invoke invoke;
     private final Call call;
     private final Prepare prepare;
@@ -91,7 +89,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
-        this.serialization = new Serialization(this.log);
+        this.serialization = new PropertiesSerializer(this.log);
         this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization);
         this.rootResource = new RootResource(state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
@@ -401,9 +399,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Log log;
         private final Monitor monitor;
         private final FeatureSupport featureSupport;
-        private final Serialization serialization;
+        private final PropertiesSerializer serialization;
 
-        private Invoke(Log log, Monitor monitor, FeatureSupport featureSupport, Serialization serialization) {
+        private Invoke(Log log, Monitor monitor, FeatureSupport featureSupport, PropertiesSerializer serialization) {
             this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.featureSupport = Objects.requireNonNull(featureSupport);
@@ -494,7 +492,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     .thenApply(InputOutputData::getValueNullable);
         }
 
-        private CompletableFuture<Serialization.SerializationResult> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
+        private CompletableFuture<PropertiesSerializer.SerializationResult> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(args);
             Objects.requireNonNull(options);
@@ -541,7 +539,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                 throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
                             }
-                            return new Serialization.SerializationResult(response.getReturn(), serialized.propertyToDependentResources);
+                            return new PropertiesSerializer.SerializationResult(response.getReturn(), serialized.propertyToDependentResources);
                         });
                     });
         }
@@ -587,9 +585,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Log log;
         private final Monitor monitor;
         private final Prepare prepare;
-        private final Serialization serialization;
+        private final PropertiesSerializer serialization;
 
-        public Call(Log log, Monitor monitor, Prepare prepare, Serialization serialization) {
+        public Call(Log log, Monitor monitor, Prepare prepare, PropertiesSerializer serialization) {
             this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.prepare = Objects.requireNonNull(prepare);
@@ -750,9 +748,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Log log;
         private final FeatureSupport featureSupport;
         private final RootResource rootResource;
-        private final Serialization serialization;
+        private final PropertiesSerializer serialization;
 
-        private Prepare(Log log, FeatureSupport featureSupport, RootResource rootResource, Serialization serialization) {
+        private Prepare(Log log, FeatureSupport featureSupport, RootResource rootResource, PropertiesSerializer serialization) {
             this.log = Objects.requireNonNull(log);
             this.featureSupport = Objects.requireNonNull(featureSupport);
             this.rootResource = Objects.requireNonNull(rootResource);
@@ -1359,14 +1357,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Runner runner;
         private final Monitor monitor;
         private final FeatureSupport featureSupport;
-        private final Serialization serialization;
+        private final PropertiesSerializer serialization;
 
         private RegisterResourceOutputs(
                 Log log,
                 Runner runner,
                 Monitor monitor,
                 FeatureSupport featureSupport,
-                Serialization serialization
+                PropertiesSerializer serialization
         ) {
             this.log = Objects.requireNonNull(log);
             this.runner = Objects.requireNonNull(runner);
@@ -1477,87 +1475,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     ).thenApply(EngineOuterClass.GetRootResourceResponse::getUrn)
                             )
                     ).thenApply(Optional::ofNullable);
-        }
-    }
-
-    private final static class Serialization {
-
-        private final Log log;
-
-        public Serialization(Log log) {
-            this.log = Objects.requireNonNull(log);
-        }
-
-        /**
-         * Walks the props object passed in, awaiting all interior promises besides those
-         * for @see {@link Resource#getUrn()} and @see {@link CustomResource#getId()},
-         * creating a reasonable POJO object that can be remoted over to registerResource.
-         */
-        private CompletableFuture<SerializationResult> serializeResourcePropertiesAsync(
-                String label, Map<String, Optional<Object>> args, boolean keepResources
-        ) {
-            Predicate<String> filter = key -> !Constants.IdPropertyName.equals(key) && !Constants.UrnPropertyName.equals(key);
-            return serializeFilteredPropertiesAsync(label, args, filter, keepResources);
-        }
-
-        private CompletableFuture<Struct> serializeAllPropertiesAsync(
-                String label, Map<String, Optional<Object>> args, boolean keepResources
-        ) {
-            return serializeFilteredPropertiesAsync(label, args, unused -> true, keepResources)
-                    .thenApply(result -> result.serialized);
-        }
-
-        /**
-         * walks the props object passed in, awaiting all interior promises for properties
-         * with keys that match the provided filter, creating a reasonable POJO object that
-         * can be remoted over to registerResource.
-         */
-        private CompletableFuture<SerializationResult> serializeFilteredPropertiesAsync(
-                String label, Map<String, Optional<Object>> args, Predicate<String> acceptKey, boolean keepResources) {
-            var resultFutures = new HashMap<String, CompletableFuture</* @Nullable */ Object>>();
-            var temporaryResources = new HashMap<String, Set<Resource>>();
-
-            // FIXME: this is ugly, try to factor out a method with named tuple as result type
-            for (var arg : args.entrySet()) {
-                var key = arg.getKey();
-                var value = arg.getValue();
-                if (acceptKey.test(key)) {
-                    // We treat properties with null values as if they do not exist, CompletableFutures.allOf does it for us
-                    var serializer = new Serializer(this.log); // serializer is mutable, that's why it's inside the loop
-                    var v = serializer.serializeAsync(String.format("%s.%s", label, key), value, keepResources);
-                    resultFutures.put(key, v);
-                    temporaryResources.put(key, serializer.dependentResources);
-                }
-            }
-
-            return CompletableFutures.flatAllOf(resultFutures)
-                    .thenApply(results -> results.entrySet().stream()
-                            .filter(ignoreNullMapValues())
-                            .collect(toTupleOfMaps2(
-                                    Map.Entry::getKey,
-                                    Map.Entry::getKey,
-                                    e -> e.getValue().join(),
-                                    e -> temporaryResources.get(e.getKey())
-                            ))
-                    ).thenApply(
-                            results -> new SerializationResult(
-                                    Serializer.createStruct(results.t1),
-                                    results.t2
-                            )
-                    );
-        }
-
-        @ParametersAreNonnullByDefault
-        private static class SerializationResult {
-            public final Struct serialized;
-            public final ImmutableMap<String, Set<Resource>> propertyToDependentResources;
-
-            public SerializationResult(
-                    Struct result,
-                    ImmutableMap<String, Set<Resource>> propertyToDependentResources) {
-                this.serialized = result;
-                this.propertyToDependentResources = propertyToDependentResources;
-            }
         }
     }
 
@@ -1880,6 +1797,37 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         @Override
         public int getErrorCount() {
             return errorCount.get();
+        }
+
+        @Override
+        public CompletableFuture<Void> logAsync(Level level,
+                                                String message,
+                                                @Nullable Resource resource,
+                                                @Nullable Integer streamId,
+                                                @Nullable Boolean ephemeral) {
+            standardLogger.log(level, message);
+            return logImplAsync(toLogSeverity(level), message, resource, streamId, ephemeral);
+        }
+
+        private static LogSeverity toLogSeverity(Level level) {
+
+            if (level == Level.FINEST) {
+                return LogSeverity.DEBUG;
+            }
+
+            if (level == Level.INFO) {
+                return LogSeverity.INFO;
+            }
+
+            if (level == Level.WARNING) {
+                return LogSeverity.WARNING;
+            }
+
+            if (level == Level.SEVERE) {
+                return LogSeverity.ERROR;
+            }
+
+            throw new IllegalArgumentException("Invalid level: " + level.getName());
         }
 
         @Override
