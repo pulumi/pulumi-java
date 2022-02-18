@@ -7,7 +7,7 @@ import io.pulumi.azurenative.elastic.enums.ProvisioningState;
 import io.pulumi.azurenative.elastic.inputs.LogRulesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

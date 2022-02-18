@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineIpTagResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

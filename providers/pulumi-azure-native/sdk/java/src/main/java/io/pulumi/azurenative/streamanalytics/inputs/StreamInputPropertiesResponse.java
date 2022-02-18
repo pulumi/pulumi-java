@@ -10,7 +10,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.DiagnosticsResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.EventHubStreamInputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.IoTHubStreamInputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

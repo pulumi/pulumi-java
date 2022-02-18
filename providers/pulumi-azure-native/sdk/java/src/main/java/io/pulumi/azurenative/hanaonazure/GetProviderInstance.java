@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hanaonazure;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hanaonazure.inputs.GetProviderInstanceArgs;
 import io.pulumi.azurenative.hanaonazure.outputs.GetProviderInstanceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

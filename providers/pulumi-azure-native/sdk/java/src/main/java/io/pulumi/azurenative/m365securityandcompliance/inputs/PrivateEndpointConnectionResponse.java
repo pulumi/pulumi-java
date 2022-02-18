@@ -6,7 +6,7 @@ package io.pulumi.azurenative.m365securityandcompliance.inputs;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

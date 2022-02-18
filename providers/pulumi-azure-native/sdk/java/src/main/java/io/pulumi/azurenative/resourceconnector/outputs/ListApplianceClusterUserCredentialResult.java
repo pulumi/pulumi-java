@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resourceconnector.outputs;
 
 import io.pulumi.azurenative.resourceconnector.outputs.ApplianceCredentialKubeconfigResponse;
 import io.pulumi.azurenative.resourceconnector.outputs.HybridConnectionConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 

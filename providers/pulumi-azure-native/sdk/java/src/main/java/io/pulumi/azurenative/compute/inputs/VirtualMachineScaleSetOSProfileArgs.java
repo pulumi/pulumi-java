@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.LinuxConfigurationArgs;
 import io.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import io.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

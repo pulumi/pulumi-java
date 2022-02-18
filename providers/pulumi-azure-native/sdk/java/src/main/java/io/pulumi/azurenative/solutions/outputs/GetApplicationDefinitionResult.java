@@ -11,7 +11,7 @@ import io.pulumi.azurenative.solutions.outputs.ApplicationNotificationPolicyResp
 import io.pulumi.azurenative.solutions.outputs.ApplicationPackageLockingPolicyDefinitionResponse;
 import io.pulumi.azurenative.solutions.outputs.ApplicationPolicyResponse;
 import io.pulumi.azurenative.solutions.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

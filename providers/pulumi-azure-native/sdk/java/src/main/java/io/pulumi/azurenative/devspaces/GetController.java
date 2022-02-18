@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devspaces;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devspaces.inputs.GetControllerArgs;
 import io.pulumi.azurenative.devspaces.outputs.GetControllerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

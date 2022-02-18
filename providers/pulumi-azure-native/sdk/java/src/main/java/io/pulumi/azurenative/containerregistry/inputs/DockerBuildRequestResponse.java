@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.AgentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.inputs.CredentialsResponse;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

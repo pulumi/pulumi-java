@@ -7,7 +7,7 @@ import io.pulumi.azurenative.avs.inputs.PSCredentialExecutionParameterArgs;
 import io.pulumi.azurenative.avs.inputs.ScriptSecureStringExecutionParameterArgs;
 import io.pulumi.azurenative.avs.inputs.ScriptStringExecutionParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

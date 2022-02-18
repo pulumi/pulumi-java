@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.AutoScaleSettingsResponse;
 import io.pulumi.azurenative.batch.outputs.FixedScaleSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

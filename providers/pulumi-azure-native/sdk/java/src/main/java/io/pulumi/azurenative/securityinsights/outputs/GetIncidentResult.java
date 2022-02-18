@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentAdditionalDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentLabelResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentOwnerInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache.outputs;
 
 import io.pulumi.azurenative.cache.outputs.ModuleResponse;
 import io.pulumi.azurenative.cache.outputs.PersistenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

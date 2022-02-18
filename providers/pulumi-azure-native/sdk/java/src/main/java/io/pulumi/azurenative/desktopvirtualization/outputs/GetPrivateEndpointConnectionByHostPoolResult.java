@@ -6,7 +6,7 @@ package io.pulumi.azurenative.desktopvirtualization.outputs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

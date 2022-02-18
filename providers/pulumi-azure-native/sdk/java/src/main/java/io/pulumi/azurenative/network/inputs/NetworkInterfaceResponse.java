@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.NetworkSecurityGroupResponse;
 import io.pulumi.azurenative.network.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

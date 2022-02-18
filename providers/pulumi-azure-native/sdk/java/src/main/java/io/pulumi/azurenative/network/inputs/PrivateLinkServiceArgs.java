@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.PrivateLinkServiceIpConfigurationArg
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesAutoApprovalArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesVisibilityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

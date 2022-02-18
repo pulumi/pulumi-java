@@ -23,7 +23,7 @@ import io.pulumi.azurenative.web.inputs.SiteLimitsArgs;
 import io.pulumi.azurenative.web.inputs.VirtualApplicationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

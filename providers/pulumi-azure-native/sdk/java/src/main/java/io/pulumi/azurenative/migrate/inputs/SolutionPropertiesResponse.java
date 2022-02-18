@@ -7,7 +7,7 @@ import io.pulumi.azurenative.migrate.inputs.DatabasesSolutionSummaryResponse;
 import io.pulumi.azurenative.migrate.inputs.ServersSolutionSummaryResponse;
 import io.pulumi.azurenative.migrate.inputs.SolutionDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

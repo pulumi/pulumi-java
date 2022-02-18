@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.outputs.PoliciesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SkuResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StatusResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;

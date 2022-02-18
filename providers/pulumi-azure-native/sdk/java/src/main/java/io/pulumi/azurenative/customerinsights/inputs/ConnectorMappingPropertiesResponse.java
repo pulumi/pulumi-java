@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingCompleteOpe
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingErrorManagementResponse;
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingFormatResponse;
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingStructureResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

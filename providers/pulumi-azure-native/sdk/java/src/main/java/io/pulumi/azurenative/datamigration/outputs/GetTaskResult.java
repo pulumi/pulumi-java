@@ -24,7 +24,7 @@ import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlMITaskProp
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

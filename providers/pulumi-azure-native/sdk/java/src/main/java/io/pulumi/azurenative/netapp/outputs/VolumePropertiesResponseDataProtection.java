@@ -6,7 +6,7 @@ package io.pulumi.azurenative.netapp.outputs;
 import io.pulumi.azurenative.netapp.outputs.ReplicationObjectResponse;
 import io.pulumi.azurenative.netapp.outputs.VolumeBackupPropertiesResponse;
 import io.pulumi.azurenative.netapp.outputs.VolumeSnapshotPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

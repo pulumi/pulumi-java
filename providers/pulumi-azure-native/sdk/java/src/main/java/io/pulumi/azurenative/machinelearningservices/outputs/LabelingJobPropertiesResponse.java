@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.LabelingJobInstruct
 import io.pulumi.azurenative.machinelearningservices.outputs.MLAssistConfigurationResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ProgressMetricsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.StatusMessageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

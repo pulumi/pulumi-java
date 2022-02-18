@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.inputs.AzureBlobFileSystemConfigurationRespon
 import io.pulumi.azurenative.batch.inputs.AzureFileShareConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.CIFSMountConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.NFSMountConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

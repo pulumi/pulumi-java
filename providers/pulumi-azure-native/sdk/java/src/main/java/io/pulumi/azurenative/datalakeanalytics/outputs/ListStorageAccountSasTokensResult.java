@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
 import io.pulumi.azurenative.datalakeanalytics.outputs.SasTokenInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurationArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.SubResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.HttpConfigArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.TcpConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingKin
 import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingKubernetesScubaReaderArgs;
 import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingKubernetesServiceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

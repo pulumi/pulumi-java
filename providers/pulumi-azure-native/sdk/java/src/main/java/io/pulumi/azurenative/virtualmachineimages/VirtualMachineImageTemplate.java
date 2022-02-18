@@ -23,8 +23,8 @@ import io.pulumi.azurenative.virtualmachineimages.outputs.ProvisioningErrorRespo
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

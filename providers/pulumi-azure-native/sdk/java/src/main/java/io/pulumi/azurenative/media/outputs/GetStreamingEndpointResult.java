@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.CrossSiteAccessPoliciesResponse;
 import io.pulumi.azurenative.media.outputs.StreamingEndpointAccessControlResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

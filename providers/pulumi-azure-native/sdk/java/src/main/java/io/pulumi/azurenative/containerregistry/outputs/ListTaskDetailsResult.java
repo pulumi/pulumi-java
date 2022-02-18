@@ -12,7 +12,7 @@ import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TriggerPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

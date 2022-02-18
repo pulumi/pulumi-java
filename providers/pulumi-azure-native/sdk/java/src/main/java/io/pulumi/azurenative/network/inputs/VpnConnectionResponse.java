@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.RoutingConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
 import io.pulumi.azurenative.network.inputs.TrafficSelectorPolicyResponse;
 import io.pulumi.azurenative.network.inputs.VpnSiteLinkConnectionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

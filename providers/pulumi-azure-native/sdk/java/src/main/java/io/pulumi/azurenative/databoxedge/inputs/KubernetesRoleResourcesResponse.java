@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleComputeResponse;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleNetworkResponse;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleStorageResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.intune;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.intune.inputs.GetAndroidMAMPolicyByNameArgs;
 import io.pulumi.azurenative.intune.outputs.GetAndroidMAMPolicyByNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

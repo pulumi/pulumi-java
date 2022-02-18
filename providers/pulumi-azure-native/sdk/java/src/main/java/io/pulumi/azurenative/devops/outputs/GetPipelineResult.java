@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devops.outputs;
 
 import io.pulumi.azurenative.devops.outputs.BootstrapConfigurationResponse;
 import io.pulumi.azurenative.devops.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;

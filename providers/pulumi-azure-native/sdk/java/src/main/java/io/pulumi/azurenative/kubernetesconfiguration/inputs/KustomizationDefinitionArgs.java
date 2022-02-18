@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.enums.KustomizationValidati
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.DependsOnDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

@@ -28,7 +28,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayUrlPathMapResponse
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayWebApplicationFirewallConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datalakeanalytics.inputs.AddStorageAccountWithAccou
 import io.pulumi.azurenative.datalakeanalytics.inputs.CreateComputePolicyWithAccountParametersArgs;
 import io.pulumi.azurenative.datalakeanalytics.inputs.CreateFirewallRuleWithAccountParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

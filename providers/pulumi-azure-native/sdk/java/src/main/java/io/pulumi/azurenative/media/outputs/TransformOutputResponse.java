@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.outputs.BuiltInStandardEncoderPresetResponse;
 import io.pulumi.azurenative.media.outputs.FaceDetectorPresetResponse;
 import io.pulumi.azurenative.media.outputs.StandardEncoderPresetResponse;
 import io.pulumi.azurenative.media.outputs.VideoAnalyzerPresetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

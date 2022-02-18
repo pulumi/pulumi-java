@@ -6,7 +6,7 @@ package io.pulumi.azurenative.healthbot.outputs;
 import io.pulumi.azurenative.healthbot.outputs.HealthBotPropertiesResponse;
 import io.pulumi.azurenative.healthbot.outputs.SkuResponse;
 import io.pulumi.azurenative.healthbot.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.hdinsight.inputs.NetworkPropertiesArgs;
 import io.pulumi.azurenative.hdinsight.inputs.SecurityProfileArgs;
 import io.pulumi.azurenative.hdinsight.inputs.StorageProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

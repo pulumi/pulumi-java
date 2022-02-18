@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.inputs.DataDiskArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.ImageReferenceArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.OsDiskArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

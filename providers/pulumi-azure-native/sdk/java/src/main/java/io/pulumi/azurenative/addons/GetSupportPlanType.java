@@ -6,7 +6,7 @@ package io.pulumi.azurenative.addons;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.addons.inputs.GetSupportPlanTypeArgs;
 import io.pulumi.azurenative.addons.outputs.GetSupportPlanTypeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

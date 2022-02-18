@@ -10,7 +10,7 @@ import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.SourceTriggerDescriptorResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TimerTriggerDescriptorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

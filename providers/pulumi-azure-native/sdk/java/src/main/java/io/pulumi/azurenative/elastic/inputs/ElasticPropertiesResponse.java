@@ -5,7 +5,7 @@ package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.azurenative.elastic.inputs.ElasticCloudDeploymentResponse;
 import io.pulumi.azurenative.elastic.inputs.ElasticCloudUserResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

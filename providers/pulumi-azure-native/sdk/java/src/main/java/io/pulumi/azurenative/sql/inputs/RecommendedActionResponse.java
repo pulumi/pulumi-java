@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.inputs.RecommendedActionImpactRecordResponse;
 import io.pulumi.azurenative.sql.inputs.RecommendedActionImplementationInfoResponse;
 import io.pulumi.azurenative.sql.inputs.RecommendedActionMetricInfoResponse;
 import io.pulumi.azurenative.sql.inputs.RecommendedActionStateInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

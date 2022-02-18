@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefi
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponsePython;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponseR;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponseSpark;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.MediaGraphClearEndpointResponse;
 import io.pulumi.azurenative.media.outputs.MediaGraphTlsEndpointResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageEnableProtectionInput
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmEnableProtectionInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SanEnableProtectionInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.BlobShareResponse;
 import io.pulumi.azurenative.datamigration.inputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

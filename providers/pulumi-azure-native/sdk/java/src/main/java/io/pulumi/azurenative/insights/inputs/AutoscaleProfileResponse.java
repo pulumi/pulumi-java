@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.RecurrenceResponse;
 import io.pulumi.azurenative.insights.inputs.ScaleCapacityResponse;
 import io.pulumi.azurenative.insights.inputs.ScaleRuleResponse;
 import io.pulumi.azurenative.insights.inputs.TimeWindowResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

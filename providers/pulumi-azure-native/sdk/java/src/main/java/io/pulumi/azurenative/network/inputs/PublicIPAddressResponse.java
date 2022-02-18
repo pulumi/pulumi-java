@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.NatGatewayResponse;
 import io.pulumi.azurenative.network.inputs.PublicIPAddressDnsSettingsResponse;
 import io.pulumi.azurenative.network.inputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

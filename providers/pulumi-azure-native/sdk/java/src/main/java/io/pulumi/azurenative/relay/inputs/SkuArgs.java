@@ -6,7 +6,7 @@ package io.pulumi.azurenative.relay.inputs;
 import io.pulumi.azurenative.relay.enums.SkuName;
 import io.pulumi.azurenative.relay.enums.SkuTier;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

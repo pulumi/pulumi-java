@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.inputs.ReplicationObjectArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeBackupPropertiesArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeSnapshotPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

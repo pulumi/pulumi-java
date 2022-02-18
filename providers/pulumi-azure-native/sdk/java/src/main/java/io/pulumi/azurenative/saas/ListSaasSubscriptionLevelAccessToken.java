@@ -6,7 +6,7 @@ package io.pulumi.azurenative.saas;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.saas.inputs.ListSaasSubscriptionLevelAccessTokenArgs;
 import io.pulumi.azurenative.saas.outputs.ListSaasSubscriptionLevelAccessTokenResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

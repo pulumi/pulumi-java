@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.A2AProtectedManagedDiskDeta
 import io.pulumi.azurenative.recoveryservices.inputs.A2AUnprotectedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureToAzureVmSyncedConfigDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

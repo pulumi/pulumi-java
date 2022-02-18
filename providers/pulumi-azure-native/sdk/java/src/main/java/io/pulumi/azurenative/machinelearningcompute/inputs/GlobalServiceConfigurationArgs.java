@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningcompute.inputs.AutoScaleConfiguratio
 import io.pulumi.azurenative.machinelearningcompute.inputs.ServiceAuthConfigurationArgs;
 import io.pulumi.azurenative.machinelearningcompute.inputs.SslConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.compute.outputs.OSProfileResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointSourceVMStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.SecurityProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

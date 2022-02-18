@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.RuleType;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

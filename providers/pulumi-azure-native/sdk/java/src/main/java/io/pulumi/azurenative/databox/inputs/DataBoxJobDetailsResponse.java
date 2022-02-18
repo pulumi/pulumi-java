@@ -15,7 +15,7 @@ import io.pulumi.azurenative.databox.inputs.KeyEncryptionKeyResponse;
 import io.pulumi.azurenative.databox.inputs.PackageShippingDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.PreferencesResponse;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

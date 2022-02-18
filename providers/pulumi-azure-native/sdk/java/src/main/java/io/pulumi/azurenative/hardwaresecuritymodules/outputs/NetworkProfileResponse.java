@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules.outputs;
 
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.NetworkInterfaceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

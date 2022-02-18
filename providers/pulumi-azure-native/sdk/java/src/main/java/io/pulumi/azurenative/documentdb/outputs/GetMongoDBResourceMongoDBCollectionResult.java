@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.MongoDBCollectionGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.MongoDBCollectionGetPropertiesResponseResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

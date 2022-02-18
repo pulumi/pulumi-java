@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.ManagedIntegrationRuntimeErrorResponse;
 import io.pulumi.azurenative.synapse.inputs.ManagedIntegrationRuntimeNodeResponse;
 import io.pulumi.azurenative.synapse.inputs.ManagedIntegrationRuntimeOperationResultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

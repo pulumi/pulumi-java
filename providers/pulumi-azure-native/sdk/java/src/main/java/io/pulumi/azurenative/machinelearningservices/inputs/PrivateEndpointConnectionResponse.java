@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.PrivateEndpointRespo
 import io.pulumi.azurenative.machinelearningservices.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

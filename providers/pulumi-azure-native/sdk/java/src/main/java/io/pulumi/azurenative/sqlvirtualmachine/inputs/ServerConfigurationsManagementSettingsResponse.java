@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.AdditionalFeaturesServerCo
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlConnectivityUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlStorageUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlWorkloadTypeUpdateSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

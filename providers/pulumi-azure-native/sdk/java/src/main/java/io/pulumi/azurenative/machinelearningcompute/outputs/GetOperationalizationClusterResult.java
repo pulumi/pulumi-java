@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerRegistryPro
 import io.pulumi.azurenative.machinelearningcompute.outputs.ErrorResponseWrapperResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.GlobalServiceConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

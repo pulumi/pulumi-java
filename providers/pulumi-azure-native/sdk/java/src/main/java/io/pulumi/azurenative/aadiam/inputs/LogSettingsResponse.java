@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aadiam.inputs;
 
 import io.pulumi.azurenative.aadiam.inputs.RetentionPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

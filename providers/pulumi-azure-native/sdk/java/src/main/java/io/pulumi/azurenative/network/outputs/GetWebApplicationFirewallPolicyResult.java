@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.ManagedRulesDefinitionResponse;
 import io.pulumi.azurenative.network.outputs.PolicySettingsResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.WebApplicationFirewallCustomRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

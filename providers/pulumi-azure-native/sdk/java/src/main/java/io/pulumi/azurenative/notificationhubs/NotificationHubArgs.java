@@ -12,7 +12,7 @@ import io.pulumi.azurenative.notificationhubs.inputs.SharedAccessAuthorizationRu
 import io.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import io.pulumi.azurenative.notificationhubs.inputs.WnsCredentialArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.m365securityandcompliance.enums.Kind;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServicesPropertiesArgs;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServicesResourceIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

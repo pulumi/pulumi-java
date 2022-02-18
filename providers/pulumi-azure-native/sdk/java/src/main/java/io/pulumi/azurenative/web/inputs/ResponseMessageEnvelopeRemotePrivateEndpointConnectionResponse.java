@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.ErrorEntityResponse;
 import io.pulumi.azurenative.web.inputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.web.inputs.RemotePrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

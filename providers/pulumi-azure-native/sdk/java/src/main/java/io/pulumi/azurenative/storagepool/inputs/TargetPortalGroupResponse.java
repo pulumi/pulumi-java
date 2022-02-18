@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagepool.inputs;
 import io.pulumi.azurenative.storagepool.inputs.AclResponse;
 import io.pulumi.azurenative.storagepool.inputs.AttributesResponse;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

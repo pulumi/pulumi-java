@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicebus.outputs;
 
 import io.pulumi.azurenative.servicebus.outputs.NWRuleSetIpRulesResponse;
 import io.pulumi.azurenative.servicebus.outputs.NWRuleSetVirtualNetworkRulesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

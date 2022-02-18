@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewayIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewaySkuResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

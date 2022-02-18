@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetes;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kubernetes.inputs.ListConnectedClusterUserCredentialsArgs;
 import io.pulumi.azurenative.kubernetes.outputs.ListConnectedClusterUserCredentialsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

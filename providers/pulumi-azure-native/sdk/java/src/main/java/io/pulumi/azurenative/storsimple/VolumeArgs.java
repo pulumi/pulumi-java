@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.enums.MonitoringStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

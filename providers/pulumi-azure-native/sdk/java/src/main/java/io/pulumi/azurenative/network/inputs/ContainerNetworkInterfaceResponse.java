@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ContainerNetworkInterfaceConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.ContainerNetworkInterfaceIpConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.ContainerResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

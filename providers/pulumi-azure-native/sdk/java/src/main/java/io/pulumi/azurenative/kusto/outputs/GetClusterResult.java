@@ -10,7 +10,7 @@ import io.pulumi.azurenative.kusto.outputs.LanguageExtensionsListResponse;
 import io.pulumi.azurenative.kusto.outputs.OptimizedAutoscaleResponse;
 import io.pulumi.azurenative.kusto.outputs.TrustedExternalTenantResponse;
 import io.pulumi.azurenative.kusto.outputs.VirtualNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

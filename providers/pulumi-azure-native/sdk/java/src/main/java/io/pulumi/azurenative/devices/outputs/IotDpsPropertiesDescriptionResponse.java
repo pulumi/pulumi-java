@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.outputs.IotHubDefinitionDescriptionResponse
 import io.pulumi.azurenative.devices.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.devices.outputs.SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse;
 import io.pulumi.azurenative.devices.outputs.TargetIpFilterRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

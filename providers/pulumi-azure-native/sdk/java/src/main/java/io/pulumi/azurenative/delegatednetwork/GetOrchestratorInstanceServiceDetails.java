@@ -6,7 +6,7 @@ package io.pulumi.azurenative.delegatednetwork;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.delegatednetwork.inputs.GetOrchestratorInstanceServiceDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.outputs.GetOrchestratorInstanceServiceDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

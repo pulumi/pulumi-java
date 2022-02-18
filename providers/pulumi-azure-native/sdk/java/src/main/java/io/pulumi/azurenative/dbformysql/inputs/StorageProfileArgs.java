@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dbformysql.enums.GeoRedundantBackup;
 import io.pulumi.azurenative.dbformysql.enums.StorageAutogrow;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

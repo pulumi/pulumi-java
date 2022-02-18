@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.AzureFileFilterDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.BlobFilterDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.FilterFileDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

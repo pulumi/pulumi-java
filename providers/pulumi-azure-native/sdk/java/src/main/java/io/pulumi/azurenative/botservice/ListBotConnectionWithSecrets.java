@@ -6,7 +6,7 @@ package io.pulumi.azurenative.botservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.botservice.inputs.ListBotConnectionWithSecretsArgs;
 import io.pulumi.azurenative.botservice.outputs.ListBotConnectionWithSecretsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

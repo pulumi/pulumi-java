@@ -6,7 +6,7 @@ package io.pulumi.azurenative.signalrservice;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.signalrservice.inputs.GetSignalRArgs;
 import io.pulumi.azurenative.signalrservice.outputs.GetSignalRResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.importexport.inputs.ReturnAddressArgs;
 import io.pulumi.azurenative.importexport.inputs.ReturnShippingArgs;
 import io.pulumi.azurenative.importexport.inputs.ShippingInformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

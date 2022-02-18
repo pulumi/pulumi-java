@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearning.inputs.GetWorkspaceArgs;
 import io.pulumi.azurenative.machinelearning.outputs.GetWorkspaceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

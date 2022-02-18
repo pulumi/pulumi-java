@@ -8,7 +8,7 @@ import io.pulumi.azurenative.blueprint.outputs.AssignmentStatusResponse;
 import io.pulumi.azurenative.blueprint.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

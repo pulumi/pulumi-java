@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.VpnServerConfigRadiusClientRootCert
 import io.pulumi.azurenative.network.outputs.VpnServerConfigRadiusServerRootCertificateResponse;
 import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRevokedCertificateResponse;
 import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRootCertificateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

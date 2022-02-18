@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.outputs.InstanceFailoverGroupReadOnlyEndpointRe
 import io.pulumi.azurenative.sql.outputs.InstanceFailoverGroupReadWriteEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePairInfoResponse;
 import io.pulumi.azurenative.sql.outputs.PartnerRegionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

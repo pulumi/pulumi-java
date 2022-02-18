@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.CurrentScenarioDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanA2ADetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanGroupResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

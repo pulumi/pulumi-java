@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.inputs.BlobLocationResponse;
 import io.pulumi.azurenative.machinelearning.inputs.InputPortResponse;
 import io.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterResponse;
 import io.pulumi.azurenative.machinelearning.inputs.OutputPortResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

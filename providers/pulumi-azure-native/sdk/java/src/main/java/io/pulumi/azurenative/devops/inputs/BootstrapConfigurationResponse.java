@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devops.inputs;
 
 import io.pulumi.azurenative.devops.inputs.CodeRepositoryResponse;
 import io.pulumi.azurenative.devops.inputs.PipelineTemplateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

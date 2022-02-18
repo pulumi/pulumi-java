@@ -17,7 +17,7 @@ import io.pulumi.azurenative.botservice.outputs.SlackChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.SmsChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.TelegramChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.WebChatChannelResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

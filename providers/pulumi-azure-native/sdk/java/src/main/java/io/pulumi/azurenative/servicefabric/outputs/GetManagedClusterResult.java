@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ClientCertificateResponse;
 import io.pulumi.azurenative.servicefabric.outputs.LoadBalancingRuleResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

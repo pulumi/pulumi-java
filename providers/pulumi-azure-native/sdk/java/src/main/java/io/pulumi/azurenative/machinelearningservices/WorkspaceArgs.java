@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ServiceManagedResour
 import io.pulumi.azurenative.machinelearningservices.inputs.SharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

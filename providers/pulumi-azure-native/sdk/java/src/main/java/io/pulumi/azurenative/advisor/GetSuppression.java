@@ -6,7 +6,7 @@ package io.pulumi.azurenative.advisor;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.advisor.inputs.GetSuppressionArgs;
 import io.pulumi.azurenative.advisor.outputs.GetSuppressionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

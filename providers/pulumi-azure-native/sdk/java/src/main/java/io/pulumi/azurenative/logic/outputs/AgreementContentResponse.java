@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.outputs;
 import io.pulumi.azurenative.logic.outputs.AS2AgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactAgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.X12AgreementContentResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

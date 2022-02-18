@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.RosettaNetActionType;
 import io.pulumi.azurenative.logic.enums.RosettaNetPipConfidentialityScope;
 import io.pulumi.azurenative.logic.enums.RosettaNetResponseType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;

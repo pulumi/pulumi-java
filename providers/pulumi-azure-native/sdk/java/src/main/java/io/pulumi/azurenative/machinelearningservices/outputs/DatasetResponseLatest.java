@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetResponseDataPath;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetStateResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

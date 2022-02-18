@@ -16,7 +16,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.PowerBIOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

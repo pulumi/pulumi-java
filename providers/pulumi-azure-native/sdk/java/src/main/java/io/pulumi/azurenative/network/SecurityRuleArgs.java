@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.enums.SecurityRuleProtocol;
 import io.pulumi.azurenative.network.inputs.ApplicationSecurityGroupArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databoxedge.outputs.AddressResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.OrderStatusResponse;
 import io.pulumi.azurenative.databoxedge.outputs.TrackingInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

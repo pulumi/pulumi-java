@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.inputs;
 
 import io.pulumi.azurenative.management.inputs.ManagementGroupPathElementResponse;
 import io.pulumi.azurenative.management.inputs.ParentGroupInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

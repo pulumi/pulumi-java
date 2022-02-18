@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.FlowLogResponse;
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.inputs.SecurityRuleResponse;
 import io.pulumi.azurenative.network.inputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

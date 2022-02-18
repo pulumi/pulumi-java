@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancer
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes;
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseOutboundIPs;
 import io.pulumi.azurenative.containerservice.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;

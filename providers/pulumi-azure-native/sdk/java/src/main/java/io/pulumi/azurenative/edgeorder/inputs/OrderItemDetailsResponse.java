@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.inputs.ProductDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ResourceProviderDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ReverseShippingDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.StageDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

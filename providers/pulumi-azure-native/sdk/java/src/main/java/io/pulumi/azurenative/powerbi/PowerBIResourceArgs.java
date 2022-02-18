@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbi;
 
 import io.pulumi.azurenative.powerbi.inputs.PrivateEndpointConnectionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

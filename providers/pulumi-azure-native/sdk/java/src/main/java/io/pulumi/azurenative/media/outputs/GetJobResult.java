@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.outputs.JobInputSequenceResponse;
 import io.pulumi.azurenative.media.outputs.JobInputsResponse;
 import io.pulumi.azurenative.media.outputs.JobOutputAssetResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

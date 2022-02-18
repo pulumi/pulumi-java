@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ApplicationMetricDescriptionR
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUpgradePolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUserAssignedIdentityResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ManagedIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

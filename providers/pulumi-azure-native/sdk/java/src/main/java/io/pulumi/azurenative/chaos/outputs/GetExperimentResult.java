@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.outputs;
 import io.pulumi.azurenative.chaos.outputs.ExperimentPropertiesResponse;
 import io.pulumi.azurenative.chaos.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.chaos.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

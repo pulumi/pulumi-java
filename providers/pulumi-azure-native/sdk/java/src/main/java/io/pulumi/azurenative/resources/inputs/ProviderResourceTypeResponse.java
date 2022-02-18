@@ -7,7 +7,7 @@ import io.pulumi.azurenative.resources.inputs.AliasResponse;
 import io.pulumi.azurenative.resources.inputs.ApiProfileResponse;
 import io.pulumi.azurenative.resources.inputs.ProviderExtendedLocationResponse;
 import io.pulumi.azurenative.resources.inputs.ZoneMappingResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

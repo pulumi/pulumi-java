@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hdinsight.outputs;
 import io.pulumi.azurenative.hdinsight.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.hdinsight.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.hdinsight.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 

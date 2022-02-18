@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.ApiResourceBackendServiceResponse;
 import io.pulumi.azurenative.web.inputs.ApiResourceDefinitionsResponse;
 import io.pulumi.azurenative.web.inputs.ConnectionParameterResponse;
 import io.pulumi.azurenative.web.inputs.WsdlDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

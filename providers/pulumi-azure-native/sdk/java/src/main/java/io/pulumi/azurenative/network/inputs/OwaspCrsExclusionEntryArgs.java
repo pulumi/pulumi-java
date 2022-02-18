@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.OwaspCrsExclusionEntryMatchVariable;
 import io.pulumi.azurenative.network.enums.OwaspCrsExclusionEntrySelectorMatchOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

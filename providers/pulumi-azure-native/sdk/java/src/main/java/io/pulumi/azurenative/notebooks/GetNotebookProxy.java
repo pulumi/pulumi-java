@@ -6,7 +6,7 @@ package io.pulumi.azurenative.notebooks;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.notebooks.inputs.GetNotebookProxyArgs;
 import io.pulumi.azurenative.notebooks.outputs.GetNotebookProxyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

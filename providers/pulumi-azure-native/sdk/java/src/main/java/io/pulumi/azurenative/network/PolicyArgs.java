@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.FrontDoorPolicySettingsArgs;
 import io.pulumi.azurenative.network.inputs.ManagedRuleSetListArgs;
 import io.pulumi.azurenative.network.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

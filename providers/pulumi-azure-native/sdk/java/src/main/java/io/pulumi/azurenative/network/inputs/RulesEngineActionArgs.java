@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.HeaderActionArgs;
 import io.pulumi.azurenative.network.inputs.RedirectConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

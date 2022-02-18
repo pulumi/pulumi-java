@@ -8,7 +8,7 @@ import io.pulumi.azurenative.blueprint.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import io.pulumi.azurenative.blueprint.inputs.ResourceGroupValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

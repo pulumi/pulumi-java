@@ -10,7 +10,7 @@ import io.pulumi.azurenative.healthcareapis.outputs.ServiceAuthenticationConfigu
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceCorsConfigurationInfoResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceCosmosDbConfigurationInfoResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceExportConfigurationInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

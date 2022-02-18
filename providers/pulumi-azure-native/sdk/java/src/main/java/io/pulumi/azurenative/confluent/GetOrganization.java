@@ -6,7 +6,7 @@ package io.pulumi.azurenative.confluent;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.confluent.inputs.GetOrganizationArgs;
 import io.pulumi.azurenative.confluent.outputs.GetOrganizationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

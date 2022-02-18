@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.azurenative.offazure.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.offazure.inputs.ResourceIdResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

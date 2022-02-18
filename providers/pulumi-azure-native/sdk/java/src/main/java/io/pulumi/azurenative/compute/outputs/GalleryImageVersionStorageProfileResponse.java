@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.GalleryArtifactVersionSourceResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryDataDiskImageResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryOSDiskImageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.enums.MetricStatisticType;
 import io.pulumi.azurenative.insights.enums.TimeAggregationType;
 import io.pulumi.azurenative.insights.inputs.ScaleRuleMetricDimensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

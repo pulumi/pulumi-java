@@ -9,7 +9,7 @@ import io.pulumi.azurenative.storage.inputs.DeleteRetentionPolicyArgs;
 import io.pulumi.azurenative.storage.inputs.LastAccessTimeTrackingPolicyArgs;
 import io.pulumi.azurenative.storage.inputs.RestorePolicyPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
