@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hanaonazure.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.OSProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.StorageProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

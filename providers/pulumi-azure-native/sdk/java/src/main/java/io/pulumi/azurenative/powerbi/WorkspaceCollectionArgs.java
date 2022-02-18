@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbi;
 
 import io.pulumi.azurenative.powerbi.inputs.AzureSkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

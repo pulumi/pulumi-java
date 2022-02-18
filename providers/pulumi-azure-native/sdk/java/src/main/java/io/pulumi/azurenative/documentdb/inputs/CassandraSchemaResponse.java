@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.CassandraPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ClusterKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ColumnResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

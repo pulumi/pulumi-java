@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions.inputs;
 import io.pulumi.azurenative.solutions.enums.ApplicationManagementMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

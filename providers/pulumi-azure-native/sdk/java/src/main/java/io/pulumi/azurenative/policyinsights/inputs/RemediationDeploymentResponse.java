@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.policyinsights.inputs;
 
 import io.pulumi.azurenative.policyinsights.inputs.ErrorDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

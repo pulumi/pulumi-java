@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

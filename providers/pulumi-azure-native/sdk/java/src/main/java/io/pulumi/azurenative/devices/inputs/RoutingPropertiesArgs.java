@@ -8,7 +8,7 @@ import io.pulumi.azurenative.devices.inputs.FallbackRoutePropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.RoutePropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.RoutingEndpointsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

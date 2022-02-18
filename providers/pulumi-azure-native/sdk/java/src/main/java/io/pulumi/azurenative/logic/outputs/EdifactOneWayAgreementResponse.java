@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.BusinessIdentityResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactProtocolSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dbformysql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.dbformysql.outputs.ServerPrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.dbformysql.outputs.SkuResponse;
 import io.pulumi.azurenative.dbformysql.outputs.StorageProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

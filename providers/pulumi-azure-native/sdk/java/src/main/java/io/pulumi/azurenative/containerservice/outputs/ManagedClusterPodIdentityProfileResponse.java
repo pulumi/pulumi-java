@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterPodIdentityExceptionResponse;
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterPodIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;

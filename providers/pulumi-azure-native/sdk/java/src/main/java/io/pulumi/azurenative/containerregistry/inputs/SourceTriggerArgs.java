@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.azurenative.containerregistry.inputs.SourcePropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

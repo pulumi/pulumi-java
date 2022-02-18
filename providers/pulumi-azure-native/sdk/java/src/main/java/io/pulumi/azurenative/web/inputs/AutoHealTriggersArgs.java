@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.SlowRequestsBasedTriggerArgs;
 import io.pulumi.azurenative.web.inputs.StatusCodesBasedTriggerArgs;
 import io.pulumi.azurenative.web.inputs.StatusCodesRangeBasedTriggerArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;

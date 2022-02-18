@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.OAuth2AuthenticationSettingsContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.OpenIdAuthenticationSettingsContractArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

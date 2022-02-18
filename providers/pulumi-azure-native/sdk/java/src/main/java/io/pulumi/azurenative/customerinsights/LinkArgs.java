@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.enums.InstanceOperationType;
 import io.pulumi.azurenative.customerinsights.inputs.ParticipantPropertyReferenceArgs;
 import io.pulumi.azurenative.customerinsights.inputs.TypePropertiesMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

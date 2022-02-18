@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoindexer;
 import io.pulumi.azurenative.videoindexer.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.videoindexer.inputs.MediaServicesForPutRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

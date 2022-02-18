@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.Action;
 import io.pulumi.azurenative.storage.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

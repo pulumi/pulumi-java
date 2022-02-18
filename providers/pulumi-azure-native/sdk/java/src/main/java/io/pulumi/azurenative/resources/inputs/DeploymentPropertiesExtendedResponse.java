@@ -11,7 +11,7 @@ import io.pulumi.azurenative.resources.inputs.ParametersLinkResponse;
 import io.pulumi.azurenative.resources.inputs.ProviderResponse;
 import io.pulumi.azurenative.resources.inputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.resources.inputs.TemplateLinkResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

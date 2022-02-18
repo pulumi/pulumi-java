@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.outputs.CopyOnExpiryOptionResponse;
 import io.pulumi.azurenative.dataprotection.outputs.CustomCopyOptionResponse;
 import io.pulumi.azurenative.dataprotection.outputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ImmediateCopyOptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 

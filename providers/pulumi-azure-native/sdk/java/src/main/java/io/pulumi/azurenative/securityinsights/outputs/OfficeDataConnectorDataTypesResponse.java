@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseExchange;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseSharePoint;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseTeams;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

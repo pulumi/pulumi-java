@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayFirewallDisabledRu
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayFirewallExclusionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

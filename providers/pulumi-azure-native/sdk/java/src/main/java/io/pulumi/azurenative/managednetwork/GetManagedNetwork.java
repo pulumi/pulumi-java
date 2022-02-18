@@ -6,7 +6,7 @@ package io.pulumi.azurenative.managednetwork;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managednetwork.inputs.GetManagedNetworkArgs;
 import io.pulumi.azurenative.managednetwork.outputs.GetManagedNetworkResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

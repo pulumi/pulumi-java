@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storagesync.outputs.CloudTieringDatePolicyStatusRes
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringFilesNotTieringResponse;
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringSpaceSavingsResponse;
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringVolumeFreeSpacePolicyStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

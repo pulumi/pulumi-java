@@ -8,7 +8,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.ResultStatisticsRespons
 import io.pulumi.azurenative.operationalinsights.outputs.SchemaResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.SearchResultsResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

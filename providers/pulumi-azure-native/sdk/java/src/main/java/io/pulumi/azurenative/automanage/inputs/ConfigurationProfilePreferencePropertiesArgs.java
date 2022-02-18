@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automanage.inputs;
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceAntiMalwareArgs;
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceVmBackupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

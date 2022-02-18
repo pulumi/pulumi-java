@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.inputs.GetTriggerArgs;
 import io.pulumi.azurenative.datashare.outputs.GetTriggerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

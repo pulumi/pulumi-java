@@ -11,7 +11,7 @@ import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationRespo
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne;
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

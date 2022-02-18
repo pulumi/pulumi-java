@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.IdentityDataArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SkuArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VaultPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datafactory.inputs.GetTriggerEventSubscriptionStatusArgs;
 import io.pulumi.azurenative.datafactory.outputs.GetTriggerEventSubscriptionStatusResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

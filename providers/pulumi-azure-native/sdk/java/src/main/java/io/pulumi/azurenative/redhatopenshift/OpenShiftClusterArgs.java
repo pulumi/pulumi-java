@@ -12,7 +12,7 @@ import io.pulumi.azurenative.redhatopenshift.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.ServicePrincipalProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.WorkerProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.outputs.RoutingEventHubPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingServiceBusQueueEndpointPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingServiceBusTopicEndpointPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingStorageContainerPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

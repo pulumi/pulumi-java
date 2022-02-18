@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingPolicyResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ContainerCodePackagePropertiesResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.DiagnosticsRefResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

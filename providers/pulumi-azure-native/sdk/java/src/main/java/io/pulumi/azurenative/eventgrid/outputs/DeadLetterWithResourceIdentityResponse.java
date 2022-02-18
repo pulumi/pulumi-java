@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.EventSubscriptionIdentityResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StorageBlobDeadLetterDestinationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

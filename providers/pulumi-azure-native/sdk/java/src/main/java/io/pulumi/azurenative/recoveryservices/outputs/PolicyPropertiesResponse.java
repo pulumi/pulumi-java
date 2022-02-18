@@ -14,7 +14,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMagePolicyDetailsRespons
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmPolicyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RcmAzureMigrationPolicyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmwareCbtPolicyDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

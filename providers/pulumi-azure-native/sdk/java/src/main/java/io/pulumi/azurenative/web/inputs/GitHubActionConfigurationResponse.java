@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.GitHubActionCodeConfigurationResponse;
 import io.pulumi.azurenative.web.inputs.GitHubActionContainerConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;

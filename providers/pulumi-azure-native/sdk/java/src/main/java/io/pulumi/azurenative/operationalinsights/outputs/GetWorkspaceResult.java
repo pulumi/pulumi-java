@@ -7,7 +7,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.PrivateLinkScopedResour
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceCappingResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceFeaturesResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceSkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

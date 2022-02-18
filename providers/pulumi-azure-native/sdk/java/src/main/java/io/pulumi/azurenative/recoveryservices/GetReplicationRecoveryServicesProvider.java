@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.inputs.GetReplicationRecoveryServicesProviderArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.GetReplicationRecoveryServicesProviderResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

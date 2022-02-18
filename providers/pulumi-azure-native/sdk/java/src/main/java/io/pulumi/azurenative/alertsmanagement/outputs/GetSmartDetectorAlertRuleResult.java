@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 import io.pulumi.azurenative.alertsmanagement.outputs.ActionGroupsInformationResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.DetectorResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.ThrottlingInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

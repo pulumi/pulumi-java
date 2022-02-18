@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponseTimeZoneOffset;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.eventgrid.inputs.ServiceBusQueueEventSubscriptionDe
 import io.pulumi.azurenative.eventgrid.inputs.ServiceBusTopicEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;

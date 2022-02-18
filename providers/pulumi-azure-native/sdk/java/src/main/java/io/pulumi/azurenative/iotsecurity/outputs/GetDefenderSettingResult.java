@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotsecurity.outputs;
 
 import io.pulumi.azurenative.iotsecurity.outputs.DefenderSettingsPropertiesResponseMdeIntegration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

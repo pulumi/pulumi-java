@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.inputs.ConnectionDetailsResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

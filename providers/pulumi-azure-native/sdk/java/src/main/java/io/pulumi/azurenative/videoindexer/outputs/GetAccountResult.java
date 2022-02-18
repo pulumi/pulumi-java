@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoindexer.outputs;
 import io.pulumi.azurenative.videoindexer.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.videoindexer.outputs.MediaServicesForPutRequestResponse;
 import io.pulumi.azurenative.videoindexer.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

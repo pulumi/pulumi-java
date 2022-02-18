@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ApiDeploymentParameterMetadataSetResponse;
 import io.pulumi.azurenative.logic.outputs.WsdlServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

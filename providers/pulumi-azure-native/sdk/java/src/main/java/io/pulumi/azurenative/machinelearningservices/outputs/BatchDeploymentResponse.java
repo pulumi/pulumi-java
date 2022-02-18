@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ComputeConfiguratio
 import io.pulumi.azurenative.machinelearningservices.outputs.DataPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.IdAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputPathAssetReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blockchain;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.blockchain.inputs.ListLocationConsortiumsArgs;
 import io.pulumi.azurenative.blockchain.outputs.ListLocationConsortiumsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

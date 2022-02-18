@@ -5,7 +5,7 @@ package io.pulumi.azurenative.engagementfabric;
 
 import io.pulumi.azurenative.engagementfabric.inputs.SKUArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

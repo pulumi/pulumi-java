@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ManagedNetworkGroupResponse;
 import io.pulumi.azurenative.managednetwork.inputs.ManagedNetworkPeeringPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 

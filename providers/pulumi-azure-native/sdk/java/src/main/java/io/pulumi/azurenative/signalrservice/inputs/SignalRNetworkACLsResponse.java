@@ -5,7 +5,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 
 import io.pulumi.azurenative.signalrservice.inputs.NetworkACLResponse;
 import io.pulumi.azurenative.signalrservice.inputs.PrivateEndpointACLResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

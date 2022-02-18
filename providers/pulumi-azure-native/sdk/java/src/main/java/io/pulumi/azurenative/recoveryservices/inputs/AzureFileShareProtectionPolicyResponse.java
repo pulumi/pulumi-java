@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermSchedulePolicyRespo
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

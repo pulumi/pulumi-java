@@ -99,7 +99,7 @@ import io.pulumi.azurenative.datafactory.inputs.XeroObjectDatasetArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlDatasetArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoObjectDatasetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

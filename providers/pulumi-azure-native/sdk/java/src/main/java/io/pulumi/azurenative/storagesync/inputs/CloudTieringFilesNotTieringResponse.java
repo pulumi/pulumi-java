@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync.inputs;
 
 import io.pulumi.azurenative.storagesync.inputs.FilesNotTieringErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

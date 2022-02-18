@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.blueprint.inputs.GetArtifactArgs;
 import io.pulumi.azurenative.blueprint.outputs.GetArtifactResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

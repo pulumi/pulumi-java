@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomBooleanParameterRe
 import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomObjectParameterResponse;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomStringParameterResponse;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceEncryptionParameterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

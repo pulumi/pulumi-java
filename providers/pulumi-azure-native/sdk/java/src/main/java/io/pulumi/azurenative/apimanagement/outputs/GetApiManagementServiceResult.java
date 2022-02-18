@@ -10,7 +10,7 @@ import io.pulumi.azurenative.apimanagement.outputs.ApiVersionConstraintResponse;
 import io.pulumi.azurenative.apimanagement.outputs.CertificateConfigurationResponse;
 import io.pulumi.azurenative.apimanagement.outputs.HostnameConfigurationResponse;
 import io.pulumi.azurenative.apimanagement.outputs.VirtualNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

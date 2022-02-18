@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ExportDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportTimePeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

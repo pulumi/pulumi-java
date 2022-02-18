@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.enums.BuiltInAuthenticationProvider;
 import io.pulumi.azurenative.web.enums.UnauthenticatedClientAction;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

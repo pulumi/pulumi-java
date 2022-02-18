@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.FromEachInputFileResponse;
 import io.pulumi.azurenative.media.outputs.InputFileResponse;
 import io.pulumi.azurenative.media.outputs.UtcClipTimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

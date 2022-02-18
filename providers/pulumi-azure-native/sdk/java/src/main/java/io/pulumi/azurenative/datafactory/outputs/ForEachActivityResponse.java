@@ -43,7 +43,7 @@ import io.pulumi.azurenative.datafactory.outputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

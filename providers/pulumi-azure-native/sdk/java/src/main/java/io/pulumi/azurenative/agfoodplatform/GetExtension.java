@@ -6,7 +6,7 @@ package io.pulumi.azurenative.agfoodplatform;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.agfoodplatform.inputs.GetExtensionArgs;
 import io.pulumi.azurenative.agfoodplatform.outputs.GetExtensionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import io.pulumi.azurenative.compute.inputs.GalleryDataDiskImageArgs;
 import io.pulumi.azurenative.compute.inputs.GalleryOSDiskImageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

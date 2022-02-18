@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.devices.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

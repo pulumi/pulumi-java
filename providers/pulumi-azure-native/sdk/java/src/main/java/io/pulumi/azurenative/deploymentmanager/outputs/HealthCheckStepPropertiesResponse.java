@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.RestHealthCheckStepAttributesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 

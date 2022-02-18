@@ -6,7 +6,7 @@ package io.pulumi.azurenative.search;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.search.inputs.GetServiceArgs;
 import io.pulumi.azurenative.search.outputs.GetServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

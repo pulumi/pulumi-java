@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

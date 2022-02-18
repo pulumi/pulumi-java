@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.LogAnalyticsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

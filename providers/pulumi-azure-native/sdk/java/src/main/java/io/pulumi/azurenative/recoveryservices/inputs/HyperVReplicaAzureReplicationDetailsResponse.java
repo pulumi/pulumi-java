@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureVmDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.OSDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;

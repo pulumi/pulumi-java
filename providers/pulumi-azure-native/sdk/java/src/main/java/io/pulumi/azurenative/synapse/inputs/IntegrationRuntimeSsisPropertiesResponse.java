@@ -9,7 +9,7 @@ import io.pulumi.azurenative.synapse.inputs.EnvironmentVariableSetupResponse;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeCustomSetupScriptPropertiesResponse;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeDataProxyPropertiesResponse;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeSsisCatalogInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

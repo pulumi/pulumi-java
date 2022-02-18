@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ManagedOnlineDeploym
 import io.pulumi.azurenative.machinelearningservices.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

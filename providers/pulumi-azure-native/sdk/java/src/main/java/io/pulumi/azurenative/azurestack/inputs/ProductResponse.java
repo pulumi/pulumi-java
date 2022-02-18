@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurestack.inputs.CompatibilityResponse;
 import io.pulumi.azurenative.azurestack.inputs.IconUrisResponse;
 import io.pulumi.azurenative.azurestack.inputs.ProductLinkResponse;
 import io.pulumi.azurenative.azurestack.inputs.ProductPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

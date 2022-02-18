@@ -20,7 +20,7 @@ import io.pulumi.azurenative.media.inputs.PngFormatResponse;
 import io.pulumi.azurenative.media.inputs.PngImageResponse;
 import io.pulumi.azurenative.media.inputs.TransportStreamFormatResponse;
 import io.pulumi.azurenative.media.inputs.VideoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

@@ -103,7 +103,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

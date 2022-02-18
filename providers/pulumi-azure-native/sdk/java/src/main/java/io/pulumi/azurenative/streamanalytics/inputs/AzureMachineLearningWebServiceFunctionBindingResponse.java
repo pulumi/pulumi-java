@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceInputsResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceOutputColumnResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

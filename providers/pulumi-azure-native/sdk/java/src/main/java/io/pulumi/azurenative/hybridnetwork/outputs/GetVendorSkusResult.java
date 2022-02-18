@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionTemplateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

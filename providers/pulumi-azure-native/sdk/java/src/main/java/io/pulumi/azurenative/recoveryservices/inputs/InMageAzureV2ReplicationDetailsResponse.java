@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2ProtectedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;

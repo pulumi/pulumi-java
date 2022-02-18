@@ -18,7 +18,7 @@ import io.pulumi.azurenative.datafactory.inputs.HttpReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

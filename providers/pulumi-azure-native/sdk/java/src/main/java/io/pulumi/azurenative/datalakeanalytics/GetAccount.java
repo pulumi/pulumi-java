@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datalakeanalytics;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datalakeanalytics.inputs.GetAccountArgs;
 import io.pulumi.azurenative.datalakeanalytics.outputs.GetAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

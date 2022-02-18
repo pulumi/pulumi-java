@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.ApiKeyAuthenticationResponse;
 import io.pulumi.azurenative.deploymentmanager.inputs.RolloutIdentityAuthenticationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

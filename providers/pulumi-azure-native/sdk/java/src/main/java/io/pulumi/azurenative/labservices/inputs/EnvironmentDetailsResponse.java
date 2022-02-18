@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.inputs.VirtualMachineDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

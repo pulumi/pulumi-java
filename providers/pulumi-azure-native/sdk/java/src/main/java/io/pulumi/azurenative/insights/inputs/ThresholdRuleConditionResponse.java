@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;

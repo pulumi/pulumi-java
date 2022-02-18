@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.LogAnalyticsWorkspaceConfigResp
 import io.pulumi.azurenative.azurearcdata.inputs.OnPremisePropertyResponse;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadServicePrincipalResponse;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadWatermarkResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

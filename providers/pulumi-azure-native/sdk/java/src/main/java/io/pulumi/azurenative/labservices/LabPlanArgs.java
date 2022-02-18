@@ -8,7 +8,7 @@ import io.pulumi.azurenative.labservices.inputs.ConnectionProfileArgs;
 import io.pulumi.azurenative.labservices.inputs.LabPlanNetworkProfileArgs;
 import io.pulumi.azurenative.labservices.inputs.SupportInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

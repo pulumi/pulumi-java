@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ExportExecutionListResultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

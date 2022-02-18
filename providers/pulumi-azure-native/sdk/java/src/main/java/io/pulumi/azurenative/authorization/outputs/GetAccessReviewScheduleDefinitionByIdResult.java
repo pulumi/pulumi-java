@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.AccessReviewInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewReviewerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

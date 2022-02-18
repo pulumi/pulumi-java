@@ -11,7 +11,7 @@ import io.pulumi.azurenative.resources.outputs.ParametersLinkResponse;
 import io.pulumi.azurenative.resources.outputs.ProviderResponse;
 import io.pulumi.azurenative.resources.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.resources.outputs.TemplateLinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

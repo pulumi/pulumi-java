@@ -6,7 +6,7 @@ package io.pulumi.azurenative.orbital;
 import io.pulumi.azurenative.orbital.enums.AutoTrackingConfiguration;
 import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

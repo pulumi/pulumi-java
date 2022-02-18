@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SsisEnvironmentReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;

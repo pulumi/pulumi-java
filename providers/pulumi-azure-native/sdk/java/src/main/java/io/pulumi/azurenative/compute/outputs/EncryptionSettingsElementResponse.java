@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.KeyVaultAndKeyReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.KeyVaultAndSecretReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

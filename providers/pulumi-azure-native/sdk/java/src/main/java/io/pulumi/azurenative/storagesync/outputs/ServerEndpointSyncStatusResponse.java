@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncActivityStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncSessionStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.digitaltwins.inputs;
 
 import io.pulumi.azurenative.digitaltwins.inputs.PrivateEndpointConnectionResponseProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 

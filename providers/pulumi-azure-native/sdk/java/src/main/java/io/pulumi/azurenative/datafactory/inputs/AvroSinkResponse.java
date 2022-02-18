@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureDataLakeStoreWriteSettingsR
 import io.pulumi.azurenative.datafactory.inputs.AzureFileStorageWriteSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.FileServerWriteSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.SftpWriteSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

@@ -21,7 +21,7 @@ import io.pulumi.azurenative.containerservice.outputs.ManagedClusterServicePrinc
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterWindowsProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.PowerStateResponse;
 import io.pulumi.azurenative.containerservice.outputs.PrivateLinkResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

@@ -13,7 +13,7 @@ import io.pulumi.azurenative.devices.inputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.devices.inputs.RoutingPropertiesResponse;
 import io.pulumi.azurenative.devices.inputs.SharedAccessSignatureAuthorizationRuleResponse;
 import io.pulumi.azurenative.devices.inputs.StorageEndpointPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

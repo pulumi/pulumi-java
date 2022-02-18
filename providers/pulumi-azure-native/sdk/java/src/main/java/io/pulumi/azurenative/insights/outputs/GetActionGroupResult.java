@@ -13,7 +13,7 @@ import io.pulumi.azurenative.insights.outputs.LogicAppReceiverResponse;
 import io.pulumi.azurenative.insights.outputs.SmsReceiverResponse;
 import io.pulumi.azurenative.insights.outputs.VoiceReceiverResponse;
 import io.pulumi.azurenative.insights.outputs.WebhookReceiverResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

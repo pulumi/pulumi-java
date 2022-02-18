@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.inputs.ServiceAssociationLinkResponse;
 import io.pulumi.azurenative.network.inputs.ServiceEndpointPolicyResponse;
 import io.pulumi.azurenative.network.inputs.ServiceEndpointPropertiesFormatResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

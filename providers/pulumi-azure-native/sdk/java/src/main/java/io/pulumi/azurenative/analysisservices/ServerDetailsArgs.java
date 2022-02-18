@@ -9,7 +9,7 @@ import io.pulumi.azurenative.analysisservices.inputs.IPv4FirewallSettingsArgs;
 import io.pulumi.azurenative.analysisservices.inputs.ResourceSkuArgs;
 import io.pulumi.azurenative.analysisservices.inputs.ServerAdministratorsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;

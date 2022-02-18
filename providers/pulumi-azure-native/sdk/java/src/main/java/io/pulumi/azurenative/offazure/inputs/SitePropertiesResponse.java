@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.azurenative.offazure.inputs.SiteAgentPropertiesResponse;
 import io.pulumi.azurenative.offazure.inputs.SiteSpnPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

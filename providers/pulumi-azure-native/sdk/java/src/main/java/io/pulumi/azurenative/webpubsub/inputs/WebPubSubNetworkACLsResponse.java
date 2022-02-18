@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.NetworkACLResponse;
 import io.pulumi.azurenative.webpubsub.inputs.PrivateEndpointACLResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

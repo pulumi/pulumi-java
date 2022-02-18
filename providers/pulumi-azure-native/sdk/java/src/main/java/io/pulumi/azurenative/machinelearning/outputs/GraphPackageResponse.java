@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning.outputs;
 import io.pulumi.azurenative.machinelearning.outputs.GraphEdgeResponse;
 import io.pulumi.azurenative.machinelearning.outputs.GraphNodeResponse;
 import io.pulumi.azurenative.machinelearning.outputs.GraphParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

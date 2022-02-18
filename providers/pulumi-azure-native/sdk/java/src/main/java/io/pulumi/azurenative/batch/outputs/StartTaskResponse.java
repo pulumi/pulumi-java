@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.outputs.EnvironmentSettingResponse;
 import io.pulumi.azurenative.batch.outputs.ResourceFileResponse;
 import io.pulumi.azurenative.batch.outputs.TaskContainerSettingsResponse;
 import io.pulumi.azurenative.batch.outputs.UserIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

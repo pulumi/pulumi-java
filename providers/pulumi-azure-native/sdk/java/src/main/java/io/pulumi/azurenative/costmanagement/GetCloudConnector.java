@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.costmanagement.inputs.GetCloudConnectorArgs;
 import io.pulumi.azurenative.costmanagement.outputs.GetCloudConnectorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

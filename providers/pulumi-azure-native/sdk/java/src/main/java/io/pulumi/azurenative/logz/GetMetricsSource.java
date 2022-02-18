@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logz.inputs.GetMetricsSourceArgs;
 import io.pulumi.azurenative.logz.outputs.GetMetricsSourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

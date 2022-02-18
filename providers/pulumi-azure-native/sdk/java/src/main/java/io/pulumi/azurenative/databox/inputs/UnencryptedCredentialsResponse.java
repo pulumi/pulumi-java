@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.DataBoxDiskJobSecretsResponse;
 import io.pulumi.azurenative.databox.inputs.DataBoxHeavyJobSecretsResponse;
 import io.pulumi.azurenative.databox.inputs.DataboxJobSecretsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

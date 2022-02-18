@@ -6,7 +6,7 @@ package io.pulumi.azurenative.labservices.outputs;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.labservices.outputs.ResourceSetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;

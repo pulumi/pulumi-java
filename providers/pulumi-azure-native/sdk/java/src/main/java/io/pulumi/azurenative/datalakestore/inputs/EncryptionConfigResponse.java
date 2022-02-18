@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.azurenative.datalakestore.inputs.KeyVaultMetaInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

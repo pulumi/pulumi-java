@@ -6,7 +6,7 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.portal.inputs.GetTenantConfigurationArgs;
 import io.pulumi.azurenative.portal.outputs.GetTenantConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

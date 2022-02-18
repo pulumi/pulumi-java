@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallEnabledState;
 import io.pulumi.azurenative.network.enums.WebApplicationFirewallMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

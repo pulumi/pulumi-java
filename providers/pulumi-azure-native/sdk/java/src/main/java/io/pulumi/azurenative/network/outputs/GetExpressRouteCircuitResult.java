@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitServiceProviderPropertiesResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitSkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

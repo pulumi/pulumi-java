@@ -6,7 +6,7 @@ package io.pulumi.azurenative.communication;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.communication.inputs.GetCommunicationServiceArgs;
 import io.pulumi.azurenative.communication.outputs.GetCommunicationServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

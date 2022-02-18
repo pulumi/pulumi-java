@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.inputs.GetGen1EnvironmentArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.GetGen1EnvironmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

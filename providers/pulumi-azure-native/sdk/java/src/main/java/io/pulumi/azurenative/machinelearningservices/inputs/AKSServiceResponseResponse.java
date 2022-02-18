@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.AKSServiceResponseRe
 import io.pulumi.azurenative.machinelearningservices.inputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ServiceResponseBaseResponseError;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.solutions.inputs.IdentityArgs;
 import io.pulumi.azurenative.solutions.inputs.PlanArgs;
 import io.pulumi.azurenative.solutions.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;

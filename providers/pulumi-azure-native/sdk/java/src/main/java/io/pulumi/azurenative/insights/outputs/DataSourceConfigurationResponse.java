@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.EtwProviderConfigurationResponse;
 import io.pulumi.azurenative.insights.outputs.EventLogConfigurationResponse;
 import io.pulumi.azurenative.insights.outputs.PerformanceCounterConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

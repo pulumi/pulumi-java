@@ -5,7 +5,7 @@ package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.azurenative.aad.inputs.HealthAlertResponse;
 import io.pulumi.azurenative.aad.inputs.HealthMonitorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

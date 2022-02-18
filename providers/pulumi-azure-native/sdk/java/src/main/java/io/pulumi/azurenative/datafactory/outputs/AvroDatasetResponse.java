@@ -19,7 +19,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

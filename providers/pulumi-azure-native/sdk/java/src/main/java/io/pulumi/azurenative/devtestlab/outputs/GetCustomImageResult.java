@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesCustomRespo
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromPlanResponse;
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromVmResponse;
 import io.pulumi.azurenative.devtestlab.outputs.DataDiskStorageTypeInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

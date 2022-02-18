@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice;
 import io.pulumi.azurenative.containerservice.inputs.TimeInWeekArgs;
 import io.pulumi.azurenative.containerservice.inputs.TimeSpanArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

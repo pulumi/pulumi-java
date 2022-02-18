@@ -6,7 +6,7 @@ package io.pulumi.azurenative.importexport;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.importexport.inputs.ListBitLockerKeyArgs;
 import io.pulumi.azurenative.importexport.outputs.ListBitLockerKeyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

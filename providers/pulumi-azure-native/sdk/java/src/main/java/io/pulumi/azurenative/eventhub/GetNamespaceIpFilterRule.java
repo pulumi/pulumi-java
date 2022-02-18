@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventhub.inputs.GetNamespaceIpFilterRuleArgs;
 import io.pulumi.azurenative.eventhub.outputs.GetNamespaceIpFilterRuleResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

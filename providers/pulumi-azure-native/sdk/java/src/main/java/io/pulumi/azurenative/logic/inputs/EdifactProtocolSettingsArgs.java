@@ -15,7 +15,7 @@ import io.pulumi.azurenative.logic.inputs.EdifactSchemaReferenceArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactValidationOverrideArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactValidationSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

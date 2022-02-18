@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.AbsoluteDeleteOptionResponse;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.inputs.TargetCopySettingResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

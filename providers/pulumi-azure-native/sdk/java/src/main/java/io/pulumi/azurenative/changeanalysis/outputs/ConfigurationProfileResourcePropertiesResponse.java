@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.changeanalysis.outputs;
 
 import io.pulumi.azurenative.changeanalysis.outputs.NotificationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

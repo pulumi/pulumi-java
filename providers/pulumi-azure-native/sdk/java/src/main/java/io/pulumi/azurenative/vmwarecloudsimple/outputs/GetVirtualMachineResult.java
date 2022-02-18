@@ -8,7 +8,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.outputs.ResourcePoolResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualDiskControllerResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualDiskResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualNicResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

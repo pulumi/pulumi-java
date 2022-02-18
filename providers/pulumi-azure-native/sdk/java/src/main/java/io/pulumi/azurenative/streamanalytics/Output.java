@@ -20,8 +20,8 @@ import io.pulumi.azurenative.streamanalytics.outputs.ServiceBusQueueOutputDataSo
 import io.pulumi.azurenative.streamanalytics.outputs.ServiceBusTopicOutputDataSourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

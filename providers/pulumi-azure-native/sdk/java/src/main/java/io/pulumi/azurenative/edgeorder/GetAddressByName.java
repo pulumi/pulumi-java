@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.edgeorder.inputs.GetAddressByNameArgs;
 import io.pulumi.azurenative.edgeorder.outputs.GetAddressByNameResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

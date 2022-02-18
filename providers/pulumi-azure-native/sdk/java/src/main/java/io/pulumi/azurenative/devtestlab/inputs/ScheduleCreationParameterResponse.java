@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.inputs.DayDetailsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.HourDetailsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.WeekDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

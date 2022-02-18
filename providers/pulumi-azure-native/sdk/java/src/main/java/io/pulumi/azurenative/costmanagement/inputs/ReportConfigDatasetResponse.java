@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportConfigDatasetConfigurat
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigFilterResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigGroupingResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigSortingResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

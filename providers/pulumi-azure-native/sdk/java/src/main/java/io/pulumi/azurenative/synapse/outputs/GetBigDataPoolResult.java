@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.outputs.AutoScalePropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.DynamicExecutorAllocationResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryInfoResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryRequirementsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

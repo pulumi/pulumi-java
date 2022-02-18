@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybridcompute.outputs.LocationDataResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionInstanceViewResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.MachinePropertiesResponseOsProfile;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineResponseIdentity;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

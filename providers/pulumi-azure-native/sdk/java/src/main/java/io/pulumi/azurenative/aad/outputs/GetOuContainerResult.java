@@ -5,7 +5,7 @@ package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.ContainerAccountResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

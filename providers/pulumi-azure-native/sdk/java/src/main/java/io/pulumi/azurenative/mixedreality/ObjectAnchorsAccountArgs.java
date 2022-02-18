@@ -7,7 +7,7 @@ import io.pulumi.azurenative.mixedreality.inputs.IdentityArgs;
 import io.pulumi.azurenative.mixedreality.inputs.ObjectAnchorsAccountIdentityArgs;
 import io.pulumi.azurenative.mixedreality.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;

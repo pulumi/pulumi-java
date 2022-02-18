@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.migrate.inputs.GetImportCollectorArgs;
 import io.pulumi.azurenative.migrate.outputs.GetImportCollectorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.inputs.GetAgentPoolArgs;
 import io.pulumi.azurenative.containerregistry.outputs.GetAgentPoolResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

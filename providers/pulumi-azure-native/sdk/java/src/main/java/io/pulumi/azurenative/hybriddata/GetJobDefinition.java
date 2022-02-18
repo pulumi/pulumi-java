@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybriddata;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hybriddata.inputs.GetJobDefinitionArgs;
 import io.pulumi.azurenative.hybriddata.outputs.GetJobDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
