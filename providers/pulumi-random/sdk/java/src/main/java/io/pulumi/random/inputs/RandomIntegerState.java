@@ -17,6 +17,10 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomIntegerState Empty = new RandomIntegerState();
 
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -24,6 +28,10 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
+    /**
+     * The maximum inclusive value of the range.
+     * 
+     */
     @InputImport(name="max")
     private final @Nullable Input<Integer> max;
 
@@ -31,6 +39,10 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
         return this.max == null ? Input.empty() : this.max;
     }
 
+    /**
+     * The minimum inclusive value of the range.
+     * 
+     */
     @InputImport(name="min")
     private final @Nullable Input<Integer> min;
 
@@ -38,6 +50,10 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
         return this.min == null ? Input.empty() : this.min;
     }
 
+    /**
+     * The random integer result.
+     * 
+     */
     @InputImport(name="result")
     private final @Nullable Input<Integer> result;
 
@@ -45,6 +61,10 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
         return this.result == null ? Input.empty() : this.result;
     }
 
+    /**
+     * A custom seed to always produce the same value.
+     * 
+     */
     @InputImport(name="seed")
     private final @Nullable Input<String> seed;
 
