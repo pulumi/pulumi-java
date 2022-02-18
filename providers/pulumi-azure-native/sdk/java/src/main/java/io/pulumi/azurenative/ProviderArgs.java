@@ -31,7 +31,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
      * 
      */
-    @InputImport(name="clientCertificatePassword", json=true)
+    @InputImport(name="clientCertificatePassword")
     private final @Nullable Input<String> clientCertificatePassword;
 
     public Input<String> getClientCertificatePassword() {
@@ -42,7 +42,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.
      * 
      */
-    @InputImport(name="clientCertificatePath", json=true)
+    @InputImport(name="clientCertificatePath")
     private final @Nullable Input<String> clientCertificatePath;
 
     public Input<String> getClientCertificatePath() {
@@ -53,7 +53,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Client ID which should be used.
      * 
      */
-    @InputImport(name="clientId", json=true)
+    @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
@@ -64,7 +64,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
      * 
      */
-    @InputImport(name="clientSecret", json=true)
+    @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
@@ -86,7 +86,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
      * 
      */
-    @InputImport(name="environment", json=true)
+    @InputImport(name="environment")
     private final @Nullable Input<String> environment;
 
     public Input<String> getEnvironment() {
@@ -97,7 +97,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.
      * 
      */
-    @InputImport(name="msiEndpoint", json=true)
+    @InputImport(name="msiEndpoint")
     private final @Nullable Input<String> msiEndpoint;
 
     public Input<String> getMsiEndpoint() {
@@ -108,7 +108,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
      * 
      */
-    @InputImport(name="partnerId", json=true)
+    @InputImport(name="partnerId")
     private final @Nullable Input<String> partnerId;
 
     public Input<String> getPartnerId() {
@@ -119,7 +119,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Subscription ID which should be used.
      * 
      */
-    @InputImport(name="subscriptionId", json=true)
+    @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
@@ -130,7 +130,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Tenant ID which should be used.
      * 
      */
-    @InputImport(name="tenantId", json=true)
+    @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {

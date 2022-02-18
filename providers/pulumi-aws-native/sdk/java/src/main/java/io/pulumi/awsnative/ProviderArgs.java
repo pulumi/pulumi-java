@@ -26,7 +26,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The access key for API operations. You can retrieve this from the ‘Security & Credentials’ section of the AWS console.
      * 
      */
-    @InputImport(name="accessKey", json=true)
+    @InputImport(name="accessKey")
     private final @Nullable Input<String> accessKey;
 
     public Input<String> getAccessKey() {
@@ -125,7 +125,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The profile for API operations. If not set, the default profile created with `aws configure` will be used.
      * 
      */
-    @InputImport(name="profile", json=true)
+    @InputImport(name="profile")
     private final @Nullable Input<String> profile;
 
     public Input<String> getProfile() {
@@ -136,7 +136,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The region where AWS operations will take place. Examples are `us-east-1`, `us-west-2`, etc.
      * 
      */
-    @InputImport(name="region", required=true, json=true)
+    @InputImport(name="region", required=true)
     private final Input<String> region;
 
     public Input<String> getRegion() {
@@ -158,7 +158,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
      * 
      */
-    @InputImport(name="secretKey", json=true)
+    @InputImport(name="secretKey")
     private final @Nullable Input<String> secretKey;
 
     public Input<String> getSecretKey() {
@@ -169,7 +169,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The path to the shared credentials file. If not set this defaults to `~/.aws/credentials`.
      * 
      */
-    @InputImport(name="sharedCredentialsFile", json=true)
+    @InputImport(name="sharedCredentialsFile")
     private final @Nullable Input<String> sharedCredentialsFile;
 
     public Input<String> getSharedCredentialsFile() {
@@ -235,7 +235,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Session token for validating temporary credentials. Typically provided after successful identity federation or Multi-Factor Authentication (MFA) login. With MFA login, this is the session token provided afterward, not the 6 digit MFA code used to get temporary credentials.
      * 
      */
-    @InputImport(name="token", json=true)
+    @InputImport(name="token")
     private final @Nullable Input<String> token;
 
     public Input<String> getToken() {

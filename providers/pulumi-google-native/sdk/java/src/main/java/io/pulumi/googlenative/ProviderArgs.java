@@ -20,7 +20,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Additional user-agent string to append to the default one (<prod_name>/<ver>).
      * 
      */
-    @InputImport(name="appendUserAgent", json=true)
+    @InputImport(name="appendUserAgent")
     private final @Nullable Input<String> appendUserAgent;
 
     public Input<String> getAppendUserAgent() {
@@ -42,7 +42,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * A Google Partner Name to facilitate partner resource usage attribution.
      * 
      */
-    @InputImport(name="partnerName", json=true)
+    @InputImport(name="partnerName")
     private final @Nullable Input<String> partnerName;
 
     public Input<String> getPartnerName() {
@@ -53,7 +53,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The default project to manage resources in. If another project is specified on a resource, it will take precedence.
      * 
      */
-    @InputImport(name="project", json=true)
+    @InputImport(name="project")
     private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
@@ -64,7 +64,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
      * 
      */
-    @InputImport(name="region", json=true)
+    @InputImport(name="region")
     private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
@@ -75,7 +75,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
      * 
      */
-    @InputImport(name="zone", json=true)
+    @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
