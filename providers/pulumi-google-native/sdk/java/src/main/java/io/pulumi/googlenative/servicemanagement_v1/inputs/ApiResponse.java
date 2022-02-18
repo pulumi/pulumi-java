@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MethodResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MixinResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionResponse;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleCloudBillingBudgetsV1LastPeriodAmountArgs;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleTypeMoneyArgs;
 import java.util.Objects;

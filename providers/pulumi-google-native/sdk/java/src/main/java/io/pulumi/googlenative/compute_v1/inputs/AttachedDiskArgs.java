@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.AttachedDiskInterface;
 import io.pulumi.googlenative.compute_v1.enums.AttachedDiskMode;
 import io.pulumi.googlenative.compute_v1.enums.AttachedDiskType;

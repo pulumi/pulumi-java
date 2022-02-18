@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.MaxPodsConstraintResponse;
 import io.pulumi.googlenative.container_v1.inputs.NodeConfigResponse;
 import io.pulumi.googlenative.container_v1.inputs.NodeManagementResponse;

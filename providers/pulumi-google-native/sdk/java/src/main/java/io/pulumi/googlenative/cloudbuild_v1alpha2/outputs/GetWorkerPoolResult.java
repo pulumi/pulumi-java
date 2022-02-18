@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.outputs.NetworkConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.outputs.WorkerConfigResponse;
 import java.lang.String;

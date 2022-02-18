@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DiskEncryptionConfigurationResponse;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DiskEncryptionStatusResponse;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.OperationErrorResponse;

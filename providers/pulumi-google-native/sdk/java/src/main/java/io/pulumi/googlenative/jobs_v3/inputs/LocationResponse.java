@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.inputs.LatLngResponse;
 import io.pulumi.googlenative.jobs_v3.inputs.PostalAddressResponse;
 import java.lang.Double;

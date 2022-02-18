@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.enums.VersionInboundServicesItem;
 import io.pulumi.googlenative.appengine_v1beta.enums.VersionServingStatus;
 import io.pulumi.googlenative.appengine_v1beta.inputs.ApiConfigHandlerArgs;

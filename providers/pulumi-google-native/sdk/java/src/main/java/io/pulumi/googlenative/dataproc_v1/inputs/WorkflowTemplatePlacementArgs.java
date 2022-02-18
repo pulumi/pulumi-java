@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.ClusterSelectorArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.ManagedClusterArgs;
 import java.util.Objects;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.enums.ConditionIam;
 import io.pulumi.googlenative.gameservices_v1.enums.ConditionOp;
 import io.pulumi.googlenative.gameservices_v1.enums.ConditionSys;

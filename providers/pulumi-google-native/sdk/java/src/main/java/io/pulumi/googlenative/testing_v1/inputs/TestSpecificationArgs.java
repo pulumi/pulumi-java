@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidInstrumentationTestArgs;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidRoboTestArgs;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidTestLoopArgs;

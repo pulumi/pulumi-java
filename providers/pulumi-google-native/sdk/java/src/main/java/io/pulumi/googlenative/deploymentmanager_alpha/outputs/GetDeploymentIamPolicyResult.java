@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.BindingResponse;
 import java.lang.Integer;

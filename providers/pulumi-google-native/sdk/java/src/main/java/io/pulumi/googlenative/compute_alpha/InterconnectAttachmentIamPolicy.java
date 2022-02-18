@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.InterconnectAttachmentIamPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.AuditConfigResponse;

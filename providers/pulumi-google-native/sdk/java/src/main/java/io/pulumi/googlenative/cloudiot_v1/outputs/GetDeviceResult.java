@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceCredentialResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceStateResponse;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.inputs.CompensationRangeResponse;
 import io.pulumi.googlenative.jobs_v3.inputs.MoneyResponse;
 import java.lang.Double;

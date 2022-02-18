@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.ActingUserResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.VersionResponse;
 import java.lang.String;

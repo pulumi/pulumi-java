@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v4;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v4.enums.CompanySize;
 import java.lang.Boolean;
 import java.lang.String;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.JobSpecArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.JobStatusArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ObjectMetaArgs;

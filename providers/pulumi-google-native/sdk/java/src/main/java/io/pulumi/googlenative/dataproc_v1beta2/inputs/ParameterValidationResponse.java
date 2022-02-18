@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.RegexValidationResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ValueValidationResponse;
 import java.util.Objects;

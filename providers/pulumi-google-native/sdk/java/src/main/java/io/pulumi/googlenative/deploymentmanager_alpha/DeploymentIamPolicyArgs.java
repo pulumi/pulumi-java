@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.BindingArgs;
 import java.lang.Integer;

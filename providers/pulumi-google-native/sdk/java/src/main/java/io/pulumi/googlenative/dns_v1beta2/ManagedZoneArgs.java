@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.enums.ManagedZoneVisibility;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ManagedZoneCloudLoggingConfigArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ManagedZoneDnsSecConfigArgs;

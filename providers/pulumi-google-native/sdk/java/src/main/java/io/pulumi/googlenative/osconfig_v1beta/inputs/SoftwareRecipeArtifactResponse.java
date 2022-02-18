@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactGcsResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactRemoteResponse;
 import java.lang.Boolean;

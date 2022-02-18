@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.CompositeTypeStatus;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CompositeTypeLabelEntryArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.TemplateContentsArgs;

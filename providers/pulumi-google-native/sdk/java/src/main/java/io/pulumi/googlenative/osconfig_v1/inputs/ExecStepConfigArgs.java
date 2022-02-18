@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.ExecStepConfigInterpreter;
 import io.pulumi.googlenative.osconfig_v1.inputs.GcsObjectArgs;
 import java.lang.Integer;

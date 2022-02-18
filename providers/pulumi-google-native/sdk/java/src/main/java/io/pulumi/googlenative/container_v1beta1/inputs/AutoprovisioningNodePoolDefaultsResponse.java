@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.NodeManagementResponse;
 import io.pulumi.googlenative.container_v1beta1.inputs.ShieldedInstanceConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.inputs.UpgradeSettingsResponse;

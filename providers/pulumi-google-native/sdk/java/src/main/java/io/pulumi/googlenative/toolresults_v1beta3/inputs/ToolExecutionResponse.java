@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExitCodeResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolOutputReferenceResponse;

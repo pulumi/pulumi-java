@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.QueryParameterTypeResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.QueryParameterValueResponse;
 import java.lang.String;

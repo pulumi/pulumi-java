@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.BindingArgs;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.RuleArgs;

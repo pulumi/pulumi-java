@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterValueResponse;
 import java.lang.String;

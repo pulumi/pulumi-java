@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.enums.StreamState;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.BackfillAllStrategyArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.BackfillNoneStrategyArgs;

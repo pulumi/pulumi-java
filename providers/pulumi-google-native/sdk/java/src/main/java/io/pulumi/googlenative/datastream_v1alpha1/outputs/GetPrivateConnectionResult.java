@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.ErrorResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.VpcPeeringConfigResponse;
 import java.lang.String;

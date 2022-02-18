@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AppEngineHttpTargetResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.PullTargetResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.QueueStatsResponse;

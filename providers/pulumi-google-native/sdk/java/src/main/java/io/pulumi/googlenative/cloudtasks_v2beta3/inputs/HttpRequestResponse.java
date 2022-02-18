@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2beta3.inputs.OAuthTokenResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.inputs.OidcTokenResponse;
 import java.lang.String;

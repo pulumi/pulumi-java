@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2AndroidKeyRestrictionsResponse;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2ApiTargetResponse;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2BrowserKeyRestrictionsResponse;

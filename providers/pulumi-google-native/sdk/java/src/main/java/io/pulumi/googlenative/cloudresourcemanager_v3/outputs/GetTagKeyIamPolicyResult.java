@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudresourcemanager_v3.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.cloudresourcemanager_v3.outputs.BindingResponse;
 import java.lang.Integer;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse;

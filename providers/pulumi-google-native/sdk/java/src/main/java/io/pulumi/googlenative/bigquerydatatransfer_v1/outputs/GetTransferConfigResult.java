@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.EmailPreferencesResponse;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.ScheduleOptionsResponse;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.UserInfoResponse;

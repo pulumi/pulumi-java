@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.NodeManagementArgs;
 import io.pulumi.googlenative.container_v1.inputs.ShieldedInstanceConfigArgs;
 import io.pulumi.googlenative.container_v1.inputs.UpgradeSettingsArgs;

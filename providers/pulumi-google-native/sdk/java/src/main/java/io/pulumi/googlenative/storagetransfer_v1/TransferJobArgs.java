@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.enums.TransferJobStatus;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.LoggingConfigArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.NotificationConfigArgs;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.RepoSourceResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceManifestResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceResponse;

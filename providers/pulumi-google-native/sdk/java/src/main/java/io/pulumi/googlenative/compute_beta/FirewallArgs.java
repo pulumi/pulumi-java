@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.FirewallDirection;
 import io.pulumi.googlenative.compute_beta.inputs.FirewallAllowedItemArgs;
 import io.pulumi.googlenative.compute_beta.inputs.FirewallDeniedItemArgs;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.AttestationNoteResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.BuildNoteResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.ComplianceNoteResponse;

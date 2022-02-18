@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1.outputs.MySqlReplicaConfigurationResponse;
 import java.lang.Boolean;
 import java.lang.String;

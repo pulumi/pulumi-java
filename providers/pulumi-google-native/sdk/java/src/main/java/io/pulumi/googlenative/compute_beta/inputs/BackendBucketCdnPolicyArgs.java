@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.BackendBucketCdnPolicyCacheMode;
 import io.pulumi.googlenative.compute_beta.inputs.BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs;
 import io.pulumi.googlenative.compute_beta.inputs.BackendBucketCdnPolicyCacheKeyPolicyArgs;

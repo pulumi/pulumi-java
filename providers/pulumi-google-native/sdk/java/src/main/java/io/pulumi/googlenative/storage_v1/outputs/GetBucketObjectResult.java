@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketObjectCustomerEncryptionResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketObjectOwnerResponse;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectAccessControlResponse;

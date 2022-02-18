@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.TriggerEventType;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ApprovalConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerTriggerConfigArgs;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KindExpressionResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PartitionIdResponse;
 import java.util.Objects;

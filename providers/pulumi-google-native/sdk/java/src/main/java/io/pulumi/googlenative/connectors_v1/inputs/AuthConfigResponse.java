@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2ClientCredentialsResponse;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2JwtBearerResponse;

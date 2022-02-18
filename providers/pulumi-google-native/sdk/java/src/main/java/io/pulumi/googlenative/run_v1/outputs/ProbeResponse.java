@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.ExecActionResponse;
 import io.pulumi.googlenative.run_v1.outputs.HTTPGetActionResponse;
 import io.pulumi.googlenative.run_v1.outputs.TCPSocketActionResponse;

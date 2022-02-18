@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.ExtendedKeyUsageOptionsResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.KeyUsageOptionsResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdResponse;

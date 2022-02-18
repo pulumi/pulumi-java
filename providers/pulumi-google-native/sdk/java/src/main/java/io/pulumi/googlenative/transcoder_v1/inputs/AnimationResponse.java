@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationEndResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationFadeResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationStaticResponse;

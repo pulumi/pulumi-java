@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.memcache_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.memcache_v1beta2.enums.InstanceMemcacheVersion;
 import io.pulumi.googlenative.memcache_v1beta2.inputs.InstanceMessageArgs;
 import io.pulumi.googlenative.memcache_v1beta2.inputs.MemcacheParametersArgs;

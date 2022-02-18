@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtrace_v2beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtrace_v2beta1.inputs.OutputConfigArgs;
 import java.lang.String;
 import java.util.Objects;

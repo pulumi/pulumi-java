@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.CloudRunRewriteResponse;
 import java.lang.Boolean;
 import java.lang.String;

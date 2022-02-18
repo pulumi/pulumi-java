@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.AlertChartArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.EmptyArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.LogsPanelArgs;
