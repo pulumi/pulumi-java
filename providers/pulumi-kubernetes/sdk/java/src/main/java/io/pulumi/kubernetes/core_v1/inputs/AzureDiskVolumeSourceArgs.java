@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+ * 
+ */
 public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureDiskVolumeSourceArgs Empty = new AzureDiskVolumeSourceArgs();
 
+    /**
+     * Host Caching mode: None, Read Only, Read Write.
+     * 
+     */
     @InputImport(name="cachingMode")
     private final @Nullable Input<String> cachingMode;
 
@@ -22,6 +30,10 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.cachingMode == null ? Input.empty() : this.cachingMode;
     }
 
+    /**
+     * The Name of the data disk in the blob storage
+     * 
+     */
     @InputImport(name="diskName", required=true)
     private final Input<String> diskName;
 
@@ -29,6 +41,10 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.diskName;
     }
 
+    /**
+     * The URI the data disk in the blob storage
+     * 
+     */
     @InputImport(name="diskURI", required=true)
     private final Input<String> diskURI;
 
@@ -36,6 +52,10 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.diskURI;
     }
 
+    /**
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * 
+     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -43,6 +63,10 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
+    /**
+     * Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -50,6 +74,10 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * 
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 

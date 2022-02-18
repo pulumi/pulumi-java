@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * CrossVersionObjectReference contains enough information to let you identify the referred resource.
+ * 
+ */
 public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CrossVersionObjectReferenceArgs Empty = new CrossVersionObjectReferenceArgs();
 
+    /**
+     * API version of the referent
+     * 
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -21,6 +29,10 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -28,6 +40,10 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
         return this.kind;
     }
 
+    /**
+     * Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

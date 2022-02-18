@@ -10,10 +10,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ContainerStateRunning is a running state of a container.
+ * 
+ */
 public final class ContainerStateRunningArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerStateRunningArgs Empty = new ContainerStateRunningArgs();
 
+    /**
+     * Time at which the container was last (re-)started
+     * 
+     */
     @InputImport(name="startedAt")
     private final @Nullable Input<String> startedAt;
 

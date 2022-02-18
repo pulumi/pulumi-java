@@ -13,10 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ObjectMetricStatus {
+    /**
+     * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+     * 
+     */
     private final @Nullable String averageValue;
+    /**
+     * currentValue is the current value of the metric (as a quantity).
+     * 
+     */
     private final String currentValue;
+    /**
+     * metricName is the name of the metric in question.
+     * 
+     */
     private final String metricName;
+    /**
+     * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+     * 
+     */
     private final @Nullable LabelSelector selector;
+    /**
+     * target is the described Kubernetes object.
+     * 
+     */
     private final CrossVersionObjectReference target;
 
     @OutputCustomType.Constructor({"averageValue","currentValue","metricName","selector","target"})
@@ -33,18 +53,38 @@ public final class ObjectMetricStatus {
         this.target = Objects.requireNonNull(target);
     }
 
+    /**
+     * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+     * 
+     */
     public Optional<String> getAverageValue() {
         return Optional.ofNullable(this.averageValue);
     }
+    /**
+     * currentValue is the current value of the metric (as a quantity).
+     * 
+     */
     public String getCurrentValue() {
         return this.currentValue;
     }
+    /**
+     * metricName is the name of the metric in question.
+     * 
+     */
     public String getMetricName() {
         return this.metricName;
     }
+    /**
+     * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+     * 
+     */
     public Optional<LabelSelector> getSelector() {
         return Optional.ofNullable(this.selector);
     }
+    /**
+     * target is the described Kubernetes object.
+     * 
+     */
     public CrossVersionObjectReference getTarget() {
         return this.target;
     }

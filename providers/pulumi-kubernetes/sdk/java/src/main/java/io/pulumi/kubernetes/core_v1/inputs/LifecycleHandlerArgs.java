@@ -12,10 +12,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * LifecycleHandler defines a specific action that should be taken in a lifecycle hook. One and only one of the fields, except TCPSocket must be specified.
+ * 
+ */
 public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LifecycleHandlerArgs Empty = new LifecycleHandlerArgs();
 
+    /**
+     * Exec specifies the action to take.
+     * 
+     */
     @InputImport(name="exec")
     private final @Nullable Input<ExecActionArgs> exec;
 
@@ -23,6 +31,10 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
         return this.exec == null ? Input.empty() : this.exec;
     }
 
+    /**
+     * HTTPGet specifies the http request to perform.
+     * 
+     */
     @InputImport(name="httpGet")
     private final @Nullable Input<HTTPGetActionArgs> httpGet;
 
@@ -30,6 +42,10 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
         return this.httpGet == null ? Input.empty() : this.httpGet;
     }
 
+    /**
+     * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
+     * 
+     */
     @InputImport(name="tcpSocket")
     private final @Nullable Input<TCPSocketActionArgs> tcpSocket;
 

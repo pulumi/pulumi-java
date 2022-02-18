@@ -10,6 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * NamespaceCondition contains details about state of namespace.
+ * 
+ */
 public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceConditionArgs Empty = new NamespaceConditionArgs();
@@ -35,6 +39,10 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -42,6 +50,17 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
         return this.status;
     }
 
+    /**
+     * Type of namespace controller condition.
+     * 
+     * Possible enum values:
+     *  - `"NamespaceContentRemaining"` contains information about resources remaining in a namespace.
+     *  - `"NamespaceDeletionContentFailure"` contains information about namespace deleter errors during deletion of resources.
+     *  - `"NamespaceDeletionDiscoveryFailure"` contains information about namespace deleter errors during resource discovery.
+     *  - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
+     *  - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

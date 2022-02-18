@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Capabilities {
+    /**
+     * Added capabilities
+     * 
+     */
     private final @Nullable List<String> add;
+    /**
+     * Removed capabilities
+     * 
+     */
     private final @Nullable List<String> drop;
 
     @OutputCustomType.Constructor({"add","drop"})
@@ -22,9 +30,17 @@ public final class Capabilities {
         this.drop = drop;
     }
 
+    /**
+     * Added capabilities
+     * 
+     */
     public List<String> getAdd() {
         return this.add == null ? List.of() : this.add;
     }
+    /**
+     * Removed capabilities
+     * 
+     */
     public List<String> getDrop() {
         return this.drop == null ? List.of() : this.drop;
     }

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VolumeMount describes a mounting of a Volume within a container.
+ * 
+ */
 public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeMountArgs Empty = new VolumeMountArgs();
 
+    /**
+     * Path within the container at which the volume should be mounted.  Must not contain ':'.
+     * 
+     */
     @InputImport(name="mountPath", required=true)
     private final Input<String> mountPath;
 
@@ -22,6 +30,10 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
         return this.mountPath;
     }
 
+    /**
+     * mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
+     * 
+     */
     @InputImport(name="mountPropagation")
     private final @Nullable Input<String> mountPropagation;
 
@@ -29,6 +41,10 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
         return this.mountPropagation == null ? Input.empty() : this.mountPropagation;
     }
 
+    /**
+     * This must match the Name of a Volume.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -36,6 +52,10 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
+     * 
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -43,6 +63,10 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
+    /**
+     * Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
+     * 
+     */
     @InputImport(name="subPath")
     private final @Nullable Input<String> subPath;
 
@@ -50,6 +74,10 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
         return this.subPath == null ? Input.empty() : this.subPath;
     }
 
+    /**
+     * Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.
+     * 
+     */
     @InputImport(name="subPathExpr")
     private final @Nullable Input<String> subPathExpr;
 

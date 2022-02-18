@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CSINodeSpec {
+    /**
+     * drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
+     * 
+     */
     private final List<CSINodeDriver> drivers;
 
     @OutputCustomType.Constructor({"drivers"})
@@ -17,6 +21,10 @@ public final class CSINodeSpec {
         this.drivers = Objects.requireNonNull(drivers);
     }
 
+    /**
+     * drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
+     * 
+     */
     public List<CSINodeDriver> getDrivers() {
         return this.drivers;
     }

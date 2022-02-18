@@ -15,10 +15,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MetricStatus describes the last-read state of a single metric.
+ * 
+ */
 public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricStatusArgs Empty = new MetricStatusArgs();
 
+    /**
+     * container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.
+     * 
+     */
     @InputImport(name="containerResource")
     private final @Nullable Input<ContainerResourceMetricStatusArgs> containerResource;
 
@@ -26,6 +34,10 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerResource == null ? Input.empty() : this.containerResource;
     }
 
+    /**
+     * external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).
+     * 
+     */
     @InputImport(name="external")
     private final @Nullable Input<ExternalMetricStatusArgs> external;
 
@@ -33,6 +45,10 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.external == null ? Input.empty() : this.external;
     }
 
+    /**
+     * object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).
+     * 
+     */
     @InputImport(name="object")
     private final @Nullable Input<ObjectMetricStatusArgs> object;
 
@@ -40,6 +56,10 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.object == null ? Input.empty() : this.object;
     }
 
+    /**
+     * pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.
+     * 
+     */
     @InputImport(name="pods")
     private final @Nullable Input<PodsMetricStatusArgs> pods;
 
@@ -47,6 +67,10 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.pods == null ? Input.empty() : this.pods;
     }
 
+    /**
+     * resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.
+     * 
+     */
     @InputImport(name="resource")
     private final @Nullable Input<ResourceMetricStatusArgs> resource;
 
@@ -54,6 +78,10 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.resource == null ? Input.empty() : this.resource;
     }
 
+    /**
+     * type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

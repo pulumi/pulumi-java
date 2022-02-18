@@ -9,10 +9,18 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * PriorityLevelConfigurationReference contains information that points to the "request-priority" being used.
+ * 
+ */
 public final class PriorityLevelConfigurationReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PriorityLevelConfigurationReferenceArgs Empty = new PriorityLevelConfigurationReferenceArgs();
 
+    /**
+     * `name` is the name of the priority level configuration being referenced Required.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

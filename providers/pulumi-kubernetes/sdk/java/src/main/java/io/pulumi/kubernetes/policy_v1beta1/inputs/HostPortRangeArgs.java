@@ -9,10 +9,18 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * HostPortRange defines a range of host ports that will be enabled by a policy for pods to use.  It requires both the start and end to be defined.
+ * 
+ */
 public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostPortRangeArgs Empty = new HostPortRangeArgs();
 
+    /**
+     * max is the end of the range, inclusive.
+     * 
+     */
     @InputImport(name="max", required=true)
     private final Input<Integer> max;
 
@@ -20,6 +28,10 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.max;
     }
 
+    /**
+     * min is the start of the range, inclusive.
+     * 
+     */
     @InputImport(name="min", required=true)
     private final Input<Integer> min;
 

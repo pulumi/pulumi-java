@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.
+ * 
+ */
 public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostAliasArgs Empty = new HostAliasArgs();
 
+    /**
+     * Hostnames for the above IP address.
+     * 
+     */
     @InputImport(name="hostnames")
     private final @Nullable Input<List<String>> hostnames;
 
@@ -22,6 +30,10 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostnames == null ? Input.empty() : this.hostnames;
     }
 
+    /**
+     * IP address of the host file entry.
+     * 
+     */
     @InputImport(name="ip")
     private final @Nullable Input<String> ip;
 

@@ -11,10 +11,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.
+ * 
+ */
 public final class LabelSelectorRequirementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabelSelectorRequirementArgs Empty = new LabelSelectorRequirementArgs();
 
+    /**
+     * key is the label key that the selector applies to.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -22,6 +30,10 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
         return this.key;
     }
 
+    /**
+     * operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final Input<String> operator;
 
@@ -29,6 +41,10 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
         return this.operator;
     }
 
+    /**
+     * values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+     * 
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 
