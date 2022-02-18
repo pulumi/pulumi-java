@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.HorizontalPodAutoscalerBehaviorArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricSpecArgs;

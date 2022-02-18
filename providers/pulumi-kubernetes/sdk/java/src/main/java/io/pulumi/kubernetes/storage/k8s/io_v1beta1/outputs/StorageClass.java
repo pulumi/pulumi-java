@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.TopologySelectorTerm;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Boolean;

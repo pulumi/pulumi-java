@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v1.outputs.JobSpec;
 import io.pulumi.kubernetes.batch_v1.outputs.JobStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;

@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.google.gson.JsonElement;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceSubresourceScaleArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;

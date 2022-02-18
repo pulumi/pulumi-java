@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs.MutatingWebhook;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;

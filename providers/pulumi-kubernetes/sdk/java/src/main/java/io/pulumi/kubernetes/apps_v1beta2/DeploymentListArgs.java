@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.DeploymentArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import java.lang.String;
