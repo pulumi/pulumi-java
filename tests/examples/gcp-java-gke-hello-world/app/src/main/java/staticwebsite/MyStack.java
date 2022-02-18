@@ -192,6 +192,31 @@ public final class MyStack extends Stack {
             name: gcp
         `;
             });
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: ${masterAuth.clusterCaCertificate}
+    server: https://${endpoint}
+  name: ${context}
+contexts:
+- context:
+    cluster: ${context}
+    user: ${context}
+  name: ${context}
+current-context: ${context}
+kind: Config
+preferences: {}
+users:
+- name: ${context}
+  user:
+    auth-provider:
+      config:
+        cmd-args: config config-helper --format=json
+        cmd-path: gcloud
+        expiry-key: '{.credential.token_expiry}'
+        token-key: '{.credential.access_token}'
+      name: gcp
+`;
         */
         //cluster.getName(), cluster.getEndpoint(), cluster.getMasterAuth()
         //const context = `${gcp.config.project}_${gcp.config.zone}_${name}`;
@@ -209,25 +234,25 @@ public final class MyStack extends Stack {
                         "- cluster:",
                         "    certificate-authority-data: {2}",
                         "    server: https://{1}",
-                        "name: {0}",
+                        "  name: {0}",
                         "contexts:",
                         "- context:",
                         "    cluster: {0}",
                         "    user: {0}",
-                        "name: {0}",
+                        "  name: {0}",
                         "current-context: {0}",
                         "kind: Config",
                         "preferences: '{}'",
                         "users:",
                         "- name: {0}",
-                        "user:",
+                        "  user:",
                         "    auth-provider:",
-                        "    config:",
+                        "      config:",
                         "        cmd-args: config config-helper --format=json",
                         "        cmd-path: gcloud",
                         "        expiry-key: '{.credential.token_expiry}'",
                         "        token-key: '{.credential.access_token}'",
-                        "    name: gcp"
+                        "      name: gcp"
                     ), clusterName, endpoint, caCert);
                     System.out.println(retval);
                     return retval;
