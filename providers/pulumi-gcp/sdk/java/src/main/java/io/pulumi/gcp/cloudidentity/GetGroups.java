@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroups {
+/**
+ * Use this data source to get list of the Cloud Identity Groups under a customer or namespace.
+ * 
+ * https://cloud.google.com/identity/docs/concepts/overview#groups
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getGroups.
+ * 
+ *
+ * A collection of values returned by getGroups.
+ * 
+ */
     public static CompletableFuture<GetGroupsResult> invokeAsync(GetGroupsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudidentity/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args == null ? GetGroupsArgs.Empty : args, Utilities.withVersion(options));
     }

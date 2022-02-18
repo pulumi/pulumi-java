@@ -13,6 +13,11 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyArgs Empty = new AccessPolicyArgs();
 
+    /**
+     * The parent of this AccessPolicy in the Cloud Resource Hierarchy.
+     * Format: organizations/{organization_id}
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -20,6 +25,10 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
+    /**
+     * Human readable title. Does not affect behavior.
+     * 
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

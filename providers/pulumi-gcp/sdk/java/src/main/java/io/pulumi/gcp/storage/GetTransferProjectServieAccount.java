@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransferProjectServieAccount {
+/**
+ * Use this data source to retrieve Storage Transfer service account for this project
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getTransferProjectServieAccount.
+ * 
+ *
+ * A collection of values returned by getTransferProjectServieAccount.
+ * 
+ */
     public static CompletableFuture<GetTransferProjectServieAccountResult> invokeAsync(@Nullable GetTransferProjectServieAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getTransferProjectServieAccount:getTransferProjectServieAccount", TypeShape.of(GetTransferProjectServieAccountResult.class), args == null ? GetTransferProjectServieAccountArgs.Empty : args, Utilities.withVersion(options));
     }

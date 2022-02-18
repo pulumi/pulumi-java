@@ -16,69 +16,257 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * ServicePerimeter describes a set of GCP resources which can freely import
+ * and export data amongst themselves, but not export outside of the
+ * ServicePerimeter. If a request with a source within this ServicePerimeter
+ * has a target outside of the ServicePerimeter, the request will be blocked.
+ * Otherwise the request is allowed. There are two types of Service Perimeter
+ * - Regular and Bridge. Regular Service Perimeters cannot overlap, a single
+ *   GCP project can only belong to a single regular Service Perimeter. Service
+ *   Perimeter Bridges can contain only GCP projects as members, a single GCP
+ *   project may belong to multiple Service Perimeter Bridges.
+ * 
+ * To get more information about ServicePerimeter, see:
+ * 
+ * * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.servicePerimeters)
+ * * How-to Guides
+ *     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
+ * 
+ * > **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+ * you must specify a `billing_project` and set `user_project_override` to true
+ * in the provider configuration. Otherwise the ACM API will return a 403 error.
+ * Your account must have the `serviceusage.services.use` permission on the
+ * `billing_project` you defined.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * ServicePerimeter can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:accesscontextmanager/servicePerimeter:ServicePerimeter default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:accesscontextmanager/servicePerimeter:ServicePerimeter")
 public class ServicePerimeter extends io.pulumi.resources.CustomResource {
+    /**
+     * Time the AccessPolicy was created in UTC.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Time the AccessPolicy was created in UTC.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Description of the ServicePerimeter and its use. Does not affect
+     * behavior.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the ServicePerimeter and its use. Does not affect
+     * behavior.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Resource name for the ServicePerimeter. The short_name component must
+     * begin with a letter and only include alphanumeric and '_'.
+     * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name for the ServicePerimeter. The short_name component must
+     * begin with a letter and only include alphanumeric and '_'.
+     * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The AccessPolicy this ServicePerimeter lives in.
+     * Format: accessPolicies/{policy_id}
+     * 
+     */
     @OutputExport(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
+    /**
+     * @return The AccessPolicy this ServicePerimeter lives in.
+     * Format: accessPolicies/{policy_id}
+     * 
+     */
     public Output<String> getParent() {
         return this.parent;
     }
+    /**
+     * Specifies the type of the Perimeter. There are two types: regular and
+     * bridge. Regular Service Perimeter contains resources, access levels,
+     * and restricted services. Every resource can be in at most
+     * ONE regular Service Perimeter.
+     * In addition to being in a regular service perimeter, a resource can also
+     * be in zero or more perimeter bridges. A perimeter bridge only contains
+     * resources. Cross project operations are permitted if all effected
+     * resources share some perimeter (whether bridge or regular). Perimeter
+     * Bridge does not contain access levels or services: those are governed
+     * entirely by the regular perimeter that resource is in.
+     * Perimeter Bridges are typically useful when building more complex
+     * topologies with many independent perimeters that need to share some data
+     * with a common perimeter, but should not be able to share data among
+     * themselves.
+     * Default value is `PERIMETER_TYPE_REGULAR`.
+     * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
+     * 
+     */
     @OutputExport(name="perimeterType", type=String.class, parameters={})
     private Output</* @Nullable */ String> perimeterType;
 
+    /**
+     * @return Specifies the type of the Perimeter. There are two types: regular and
+     * bridge. Regular Service Perimeter contains resources, access levels,
+     * and restricted services. Every resource can be in at most
+     * ONE regular Service Perimeter.
+     * In addition to being in a regular service perimeter, a resource can also
+     * be in zero or more perimeter bridges. A perimeter bridge only contains
+     * resources. Cross project operations are permitted if all effected
+     * resources share some perimeter (whether bridge or regular). Perimeter
+     * Bridge does not contain access levels or services: those are governed
+     * entirely by the regular perimeter that resource is in.
+     * Perimeter Bridges are typically useful when building more complex
+     * topologies with many independent perimeters that need to share some data
+     * with a common perimeter, but should not be able to share data among
+     * themselves.
+     * Default value is `PERIMETER_TYPE_REGULAR`.
+     * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
+     * 
+     */
     public Output</* @Nullable */ String> getPerimeterType() {
         return this.perimeterType;
     }
+    /**
+     * Proposed (or dry run) ServicePerimeter configuration.
+     * This configuration allows to specify and test ServicePerimeter configuration
+     * without enforcing actual access restrictions. Only allowed to be set when
+     * the `useExplicitDryRunSpec` flag is set.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="spec", type=ServicePerimeterSpec.class, parameters={})
     private Output</* @Nullable */ ServicePerimeterSpec> spec;
 
+    /**
+     * @return Proposed (or dry run) ServicePerimeter configuration.
+     * This configuration allows to specify and test ServicePerimeter configuration
+     * without enforcing actual access restrictions. Only allowed to be set when
+     * the `useExplicitDryRunSpec` flag is set.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ ServicePerimeterSpec> getSpec() {
         return this.spec;
     }
+    /**
+     * ServicePerimeter configuration. Specifies sets of resources,
+     * restricted services and access levels that determine
+     * perimeter content and boundaries.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="status", type=ServicePerimeterStatus.class, parameters={})
     private Output</* @Nullable */ ServicePerimeterStatus> status;
 
+    /**
+     * @return ServicePerimeter configuration. Specifies sets of resources,
+     * restricted services and access levels that determine
+     * perimeter content and boundaries.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ ServicePerimeterStatus> getStatus() {
         return this.status;
     }
+    /**
+     * Human readable title. Must be unique within the Policy.
+     * 
+     */
     @OutputExport(name="title", type=String.class, parameters={})
     private Output<String> title;
 
+    /**
+     * @return Human readable title. Must be unique within the Policy.
+     * 
+     */
     public Output<String> getTitle() {
         return this.title;
     }
+    /**
+     * Time the AccessPolicy was updated in UTC.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Time the AccessPolicy was updated in UTC.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+     * for all Service Perimeters, and that spec is identical to the status for those
+     * Service Perimeters. When this flag is set, it inhibits the generation of the
+     * implicit spec, thereby allowing the user to explicitly provide a
+     * configuration ("spec") to use in a dry-run version of the Service Perimeter.
+     * This allows the user to test changes to the enforced config ("status") without
+     * actually enforcing them. This testing is done through analyzing the differences
+     * between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+     * bet set to True if any of the fields in the spec are set to non-default values.
+     * 
+     */
     @OutputExport(name="useExplicitDryRunSpec", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useExplicitDryRunSpec;
 
+    /**
+     * @return Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+     * for all Service Perimeters, and that spec is identical to the status for those
+     * Service Perimeters. When this flag is set, it inhibits the generation of the
+     * implicit spec, thereby allowing the user to explicitly provide a
+     * configuration ("spec") to use in a dry-run version of the Service Perimeter.
+     * This allows the user to test changes to the enforced config ("status") without
+     * actually enforcing them. This testing is done through analyzing the differences
+     * between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+     * bet set to True if any of the fields in the spec are set to non-default values.
+     * 
+     */
     public Output</* @Nullable */ Boolean> getUseExplicitDryRunSpec() {
         return this.useExplicitDryRunSpec;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ServicePerimeter(String name, ServicePerimeterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:accesscontextmanager/servicePerimeter:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -94,6 +282,15 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ServicePerimeter get(String name, Input<String> id, @Nullable ServicePerimeterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServicePerimeter(name, id, state, options);
     }

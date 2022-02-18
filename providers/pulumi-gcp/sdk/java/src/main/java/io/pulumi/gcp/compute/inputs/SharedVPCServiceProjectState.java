@@ -14,6 +14,10 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
 
     public static final SharedVPCServiceProjectState Empty = new SharedVPCServiceProjectState();
 
+    /**
+     * The ID of a host project to associate.
+     * 
+     */
     @InputImport(name="hostProject")
     private final @Nullable Input<String> hostProject;
 
@@ -21,6 +25,10 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
         return this.hostProject == null ? Input.empty() : this.hostProject;
     }
 
+    /**
+     * The ID of the project that will serve as a Shared VPC service project.
+     * 
+     */
     @InputImport(name="serviceProject")
     private final @Nullable Input<String> serviceProject;
 

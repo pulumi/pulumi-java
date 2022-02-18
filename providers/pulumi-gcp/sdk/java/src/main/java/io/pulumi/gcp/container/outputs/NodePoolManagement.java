@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NodePoolManagement {
+    /**
+     * Whether the nodes will be automatically repaired.
+     * 
+     */
     private final @Nullable Boolean autoRepair;
+    /**
+     * Whether the nodes will be automatically upgraded.
+     * 
+     */
     private final @Nullable Boolean autoUpgrade;
 
     @OutputCustomType.Constructor({"autoRepair","autoUpgrade"})
@@ -22,9 +30,17 @@ public final class NodePoolManagement {
         this.autoUpgrade = autoUpgrade;
     }
 
+    /**
+     * Whether the nodes will be automatically repaired.
+     * 
+     */
     public Optional<Boolean> getAutoRepair() {
         return Optional.ofNullable(this.autoRepair);
     }
+    /**
+     * Whether the nodes will be automatically upgraded.
+     * 
+     */
     public Optional<Boolean> getAutoUpgrade() {
         return Optional.ofNullable(this.autoUpgrade);
     }

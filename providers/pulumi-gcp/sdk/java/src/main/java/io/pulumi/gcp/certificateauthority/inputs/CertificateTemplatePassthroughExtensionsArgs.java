@@ -16,6 +16,10 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
 
     public static final CertificateTemplatePassthroughExtensionsArgs Empty = new CertificateTemplatePassthroughExtensionsArgs();
 
+    /**
+     * Optional. Describes custom X.509 extensions.
+     * 
+     */
     @InputImport(name="additionalExtensions")
     private final @Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> additionalExtensions;
 
@@ -23,6 +27,10 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
     }
 
+    /**
+     * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+     * 
+     */
     @InputImport(name="knownExtensions")
     private final @Nullable Input<List<String>> knownExtensions;
 

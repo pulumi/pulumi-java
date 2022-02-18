@@ -16,6 +16,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs();
 
+    /**
+     * The policy to use for defining caching and signed request behaviour for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cdnPolicy")
     private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> cdnPolicy;
 
@@ -23,6 +28,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
         return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
     }
 
+    /**
+     * CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="corsPolicy")
     private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy;
 
@@ -30,6 +40,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
         return this.corsPolicy == null ? Input.empty() : this.corsPolicy;
     }
 
+    /**
+     * The URL rewrite configuration for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="urlRewrite")
     private final @Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite;
 

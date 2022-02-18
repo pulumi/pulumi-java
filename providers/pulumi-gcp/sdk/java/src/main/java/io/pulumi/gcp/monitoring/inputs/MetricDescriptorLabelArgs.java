@@ -14,6 +14,10 @@ public final class MetricDescriptorLabelArgs extends io.pulumi.resources.Resourc
 
     public static final MetricDescriptorLabelArgs Empty = new MetricDescriptorLabelArgs();
 
+    /**
+     * A human-readable description for the label.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class MetricDescriptorLabelArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The key for this label. The key must not exceed 100 characters. The first character of the key must be an upper- or lower-case letter, the remaining characters must be letters, digits or underscores, and the key must match the regular expression [a-zA-Z][a-zA-Z0-9_]*
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -28,6 +36,12 @@ public final class MetricDescriptorLabelArgs extends io.pulumi.resources.Resourc
         return this.key;
     }
 
+    /**
+     * The type of data that can be assigned to the label.
+     * Default value is `STRING`.
+     * Possible values are `STRING`, `BOOL`, and `INT64`.
+     * 
+     */
     @InputImport(name="valueType")
     private final @Nullable Input<String> valueType;
 

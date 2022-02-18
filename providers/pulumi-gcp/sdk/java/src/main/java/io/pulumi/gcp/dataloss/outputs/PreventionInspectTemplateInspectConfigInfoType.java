@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionInspectTemplateInspectConfigInfoType {
+    /**
+     * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+     * or `projects/project-id/storedInfoTypes/432452342`.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +21,11 @@ public final class PreventionInspectTemplateInspectConfigInfoType {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+     * or `projects/project-id/storedInfoTypes/432452342`.
+     * 
+     */
     public String getName() {
         return this.name;
     }

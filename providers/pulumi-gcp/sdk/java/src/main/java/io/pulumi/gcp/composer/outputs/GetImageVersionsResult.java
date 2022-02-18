@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetImageVersionsResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * A list of composer image versions available in the given project and location. Each `image_version` contains:
+     * 
+     */
     private final List<GetImageVersionsImageVersion> imageVersions;
     private final String project;
     private final String region;
@@ -28,9 +36,17 @@ public final class GetImageVersionsResult {
         this.region = Objects.requireNonNull(region);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A list of composer image versions available in the given project and location. Each `image_version` contains:
+     * 
+     */
     public List<GetImageVersionsImageVersion> getImageVersions() {
         return this.imageVersions;
     }

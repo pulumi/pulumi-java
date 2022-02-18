@@ -14,6 +14,11 @@ public final class PreventionJobTriggerTriggerArgs extends io.pulumi.resources.R
 
     public static final PreventionJobTriggerTriggerArgs Empty = new PreventionJobTriggerTriggerArgs();
 
+    /**
+     * Schedule for triggered jobs
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<PreventionJobTriggerTriggerScheduleArgs> schedule;
 

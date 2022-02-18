@@ -30,6 +30,10 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
         return this.members;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="policyTag", required=true)
     private final Input<String> policyTag;
 
@@ -37,6 +41,12 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
         return this.policyTag;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.datacatalog.PolicyTagIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

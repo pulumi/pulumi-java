@@ -15,6 +15,10 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
 
     public static final MetricBucketOptionsLinearBucketsGetArgs Empty = new MetricBucketOptionsLinearBucketsGetArgs();
 
+    /**
+     * Must be greater than 0.
+     * 
+     */
     @InputImport(name="numFiniteBuckets")
     private final @Nullable Input<Integer> numFiniteBuckets;
 
@@ -22,6 +26,10 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
         return this.numFiniteBuckets == null ? Input.empty() : this.numFiniteBuckets;
     }
 
+    /**
+     * Lower bound of the first bucket.
+     * 
+     */
     @InputImport(name="offset")
     private final @Nullable Input<Double> offset;
 
@@ -29,6 +37,10 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
         return this.offset == null ? Input.empty() : this.offset;
     }
 
+    /**
+     * Must be greater than 0.
+     * 
+     */
     @InputImport(name="width")
     private final @Nullable Input<Double> width;
 

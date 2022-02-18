@@ -14,6 +14,12 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
 
     public static final TopicSchemaSettingsArgs Empty = new TopicSchemaSettingsArgs();
 
+    /**
+     * The encoding of messages validated against schema.
+     * Default value is `ENCODING_UNSPECIFIED`.
+     * Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
+     * 
+     */
     @InputImport(name="encoding")
     private final @Nullable Input<String> encoding;
 
@@ -21,6 +27,13 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
         return this.encoding == null ? Input.empty() : this.encoding;
     }
 
+    /**
+     * The name of the schema that messages published should be
+     * validated against. Format is projects/{project}/schemas/{schema}.
+     * The value of this field will be _deleted-schema_
+     * if the schema has been deleted.
+     * 
+     */
     @InputImport(name="schema", required=true)
     private final Input<String> schema;
 

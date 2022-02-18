@@ -15,63 +15,201 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a [Flex Template](https://cloud.google.com/dataflow/docs/guides/templates/using-flex-templates)
+ * job on Dataflow, which is an implementation of Apache Beam running on Google
+ * Compute Engine. For more information see the official documentation for [Beam](https://beam.apache.org)
+ * and [Dataflow](https://cloud.google.com/dataflow/).
+ * 
+ * ## Example Usage
+ * ## Note on "destroy" / "apply"
+ * 
+ * There are many types of Dataflow jobs.  Some Dataflow jobs run constantly,
+ * getting new data from (e.g.) a GCS bucket, and outputting data continuously.
+ * Some jobs process a set amount of data then terminate. All jobs can fail while
+ * running due to programming errors or other issues. In this way, Dataflow jobs
+ * are different from most other provider / Google resources.
+ * 
+ * The Dataflow resource is considered 'existing' while it is in a nonterminal
+ * state.  If it reaches a terminal state (e.g. 'FAILED', 'COMPLETE',
+ * 'CANCELLED'), it will be recreated on the next 'apply'.  This is as expected for
+ * jobs which run continuously, but may surprise users who use this resource for
+ * other kinds of Dataflow jobs.
+ * 
+ * A Dataflow job which is 'destroyed' may be "cancelled" or "drained".  If
+ * "cancelled", the job terminates - any data written remains where it is, but no
+ * new data will be processed.  If "drained", no new data will enter the pipeline,
+ * but any data currently in the pipeline will finish being processed.  The default
+ * is "cancelled", but if a user sets `on_delete` to `"drain"` in the
+ * configuration, you may experience a long wait for your `pulumi destroy` to
+ * complete.
+ * 
+ * ## Import
+ * 
+ * This resource does not support import.
+ * 
+ */
 @ResourceType(type="gcp:dataflow/flexTemplateJob:FlexTemplateJob")
 public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
+    /**
+     * The GCS path to the Dataflow job Flex
+     * Template.
+     * 
+     */
     @OutputExport(name="containerSpecGcsPath", type=String.class, parameters={})
     private Output<String> containerSpecGcsPath;
 
+    /**
+     * @return The GCS path to the Dataflow job Flex
+     * Template.
+     * 
+     */
     public Output<String> getContainerSpecGcsPath() {
         return this.containerSpecGcsPath;
     }
+    /**
+     * The unique ID of this job.
+     * 
+     */
     @OutputExport(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
+    /**
+     * @return The unique ID of this job.
+     * 
+     */
     public Output<String> getJobId() {
         return this.jobId;
     }
+    /**
+     * User labels to be specified for the job. Keys and values
+     * should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions)
+     * page. **Note**: This field is marked as deprecated as the API does not currently
+     * support adding labels.
+     * **NOTE**: Google-provided Dataflow templates often provide default labels
+     * that begin with `goog-dataflow-provided`. Unless explicitly set in config, these
+     * labels will be ignored to prevent diffs on re-apply.
+     * 
+     * @deprecated
+     * Deprecated until the API supports this field
+     * 
+     */
+    @Deprecated /* Deprecated until the API supports this field */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> labels;
 
+    /**
+     * @return User labels to be specified for the job. Keys and values
+     * should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions)
+     * page. **Note**: This field is marked as deprecated as the API does not currently
+     * support adding labels.
+     * **NOTE**: Google-provided Dataflow templates often provide default labels
+     * that begin with `goog-dataflow-provided`. Unless explicitly set in config, these
+     * labels will be ignored to prevent diffs on re-apply.
+     * 
+     */
     public Output</* @Nullable */ Map<String,Object>> getLabels() {
         return this.labels;
     }
+    /**
+     * A unique name for the resource, required by Dataflow.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return A unique name for the resource, required by Dataflow.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * One of "drain" or "cancel". Specifies behavior of
+     * deletion during `pulumi destroy`.  See above note.
+     * 
+     */
     @OutputExport(name="onDelete", type=String.class, parameters={})
     private Output</* @Nullable */ String> onDelete;
 
+    /**
+     * @return One of "drain" or "cancel". Specifies behavior of
+     * deletion during `pulumi destroy`.  See above note.
+     * 
+     */
     public Output</* @Nullable */ String> getOnDelete() {
         return this.onDelete;
     }
+    /**
+     * Key/Value pairs to be passed to the Dataflow job (as
+     * used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+     * such as `serviceAccount`, `workerMachineType`, etc can be specified here.
+     * 
+     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> parameters;
 
+    /**
+     * @return Key/Value pairs to be passed to the Dataflow job (as
+     * used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+     * such as `serviceAccount`, `workerMachineType`, etc can be specified here.
+     * 
+     */
     public Output</* @Nullable */ Map<String,Object>> getParameters() {
         return this.parameters;
     }
+    /**
+     * The project in which the resource belongs. If it is not
+     * provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The project in which the resource belongs. If it is not
+     * provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The region in which the created job should run.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return The region in which the created job should run.
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
+    /**
+     * The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
+     * 
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
+     * 
+     */
     public Output<String> getState() {
         return this.state;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FlexTemplateJob(String name, FlexTemplateJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataflow/flexTemplateJob:FlexTemplateJob", name, args == null ? FlexTemplateJobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +225,15 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FlexTemplateJob get(String name, Input<String> id, @Nullable FlexTemplateJobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FlexTemplateJob(name, id, state, options);
     }

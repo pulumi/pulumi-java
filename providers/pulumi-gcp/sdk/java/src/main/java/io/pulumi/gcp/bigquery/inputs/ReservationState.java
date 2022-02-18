@@ -16,6 +16,12 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
 
     public static final ReservationState Empty = new ReservationState();
 
+    /**
+     * If false, any query using this reservation will use idle slots from other reservations within
+     * the same admin project. If true, a query using this reservation will execute with the slot
+     * capacity specified above at most.
+     * 
+     */
     @InputImport(name="ignoreIdleSlots")
     private final @Nullable Input<Boolean> ignoreIdleSlots;
 
@@ -23,6 +29,11 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
         return this.ignoreIdleSlots == null ? Input.empty() : this.ignoreIdleSlots;
     }
 
+    /**
+     * The geographic location where the transfer config should reside.
+     * Examples: US, EU, asia-northeast1. The default value is US.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +41,10 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the reservation. This field must only contain alphanumeric characters or dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +52,11 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +64,11 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+     * unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+     * 
+     */
     @InputImport(name="slotCapacity")
     private final @Nullable Input<Integer> slotCapacity;
 

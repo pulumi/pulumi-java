@@ -13,6 +13,11 @@ public final class ClusterVerticalPodAutoscalingArgs extends io.pulumi.resources
 
     public static final ClusterVerticalPodAutoscalingArgs Empty = new ClusterVerticalPodAutoscalingArgs();
 
+    /**
+     * Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 

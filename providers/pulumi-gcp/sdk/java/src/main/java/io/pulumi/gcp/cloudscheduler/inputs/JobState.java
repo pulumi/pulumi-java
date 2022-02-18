@@ -18,6 +18,13 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
 
     public static final JobState Empty = new JobState();
 
+    /**
+     * App Engine HTTP target.
+     * If the job providers a App Engine HTTP target the cron will
+     * send a request to the service instance
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="appEngineHttpTarget")
     private final @Nullable Input<JobAppEngineHttpTargetGetArgs> appEngineHttpTarget;
 
@@ -25,6 +32,17 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.appEngineHttpTarget == null ? Input.empty() : this.appEngineHttpTarget;
     }
 
+    /**
+     * The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+     * cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+     * execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+     * The allowed duration for this deadline is:
+     * * For HTTP targets, between 15 seconds and 30 minutes.
+     * * For App Engine HTTP targets, between 15 seconds and 24 hours.
+     * * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
+     *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+     * 
+     */
     @InputImport(name="attemptDeadline")
     private final @Nullable Input<String> attemptDeadline;
 
@@ -32,6 +50,11 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.attemptDeadline == null ? Input.empty() : this.attemptDeadline;
     }
 
+    /**
+     * A human-readable description for the job.
+     * This string must not contain more than 500 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +62,13 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * HTTP target.
+     * If the job providers a http_target the cron will
+     * send a request to the targeted url
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="httpTarget")
     private final @Nullable Input<JobHttpTargetGetArgs> httpTarget;
 
@@ -46,6 +76,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.httpTarget == null ? Input.empty() : this.httpTarget;
     }
 
+    /**
+     * The name of the job.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,6 +87,11 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -60,6 +99,13 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Pub/Sub target
+     * If the job providers a Pub/Sub target the cron will publish
+     * a message to the provided topic
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="pubsubTarget")
     private final @Nullable Input<JobPubsubTargetGetArgs> pubsubTarget;
 
@@ -67,6 +113,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.pubsubTarget == null ? Input.empty() : this.pubsubTarget;
     }
 
+    /**
+     * Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -74,6 +124,13 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * By default, if a job does not complete successfully,
+     * meaning that an acknowledgement is not received from the handler,
+     * then it will be retried with exponential backoff according to the settings
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="retryConfig")
     private final @Nullable Input<JobRetryConfigGetArgs> retryConfig;
 
@@ -81,6 +138,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.retryConfig == null ? Input.empty() : this.retryConfig;
     }
 
+    /**
+     * Describes the schedule on which the job will be executed.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<String> schedule;
 
@@ -88,6 +149,11 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * Specifies the time zone to be used in interpreting schedule.
+     * The value of this field must be a time zone name from the tz database.
+     * 
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

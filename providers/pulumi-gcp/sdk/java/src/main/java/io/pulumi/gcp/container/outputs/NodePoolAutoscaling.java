@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodePoolAutoscaling {
+    /**
+     * Maximum number of nodes in the NodePool. Must be >= min_node_count.
+     * 
+     */
     private final Integer maxNodeCount;
+    /**
+     * Minimum number of nodes in the NodePool. Must be >=0 and
+     * <= `max_node_count`.
+     * 
+     */
     private final Integer minNodeCount;
 
     @OutputCustomType.Constructor({"maxNodeCount","minNodeCount"})
@@ -20,9 +29,18 @@ public final class NodePoolAutoscaling {
         this.minNodeCount = Objects.requireNonNull(minNodeCount);
     }
 
+    /**
+     * Maximum number of nodes in the NodePool. Must be >= min_node_count.
+     * 
+     */
     public Integer getMaxNodeCount() {
         return this.maxNodeCount;
     }
+    /**
+     * Minimum number of nodes in the NodePool. Must be >=0 and
+     * <= `max_node_count`.
+     * 
+     */
     public Integer getMinNodeCount() {
         return this.minNodeCount;
     }

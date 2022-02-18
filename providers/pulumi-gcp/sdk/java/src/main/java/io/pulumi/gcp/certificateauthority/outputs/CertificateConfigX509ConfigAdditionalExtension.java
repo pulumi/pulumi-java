@@ -11,8 +11,22 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateConfigX509ConfigAdditionalExtension {
+    /**
+     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * handle this extension, the client should consider this to be an error).
+     * 
+     */
     private final Boolean critical;
+    /**
+     * Describes values that are relevant in a CA certificate.
+     * Structure is documented below.
+     * 
+     */
     private final CertificateConfigX509ConfigAdditionalExtensionObjectId objectId;
+    /**
+     * The value of this X.509 extension. A base64-encoded string.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"critical","objectId","value"})
@@ -25,12 +39,26 @@ public final class CertificateConfigX509ConfigAdditionalExtension {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * handle this extension, the client should consider this to be an error).
+     * 
+     */
     public Boolean getCritical() {
         return this.critical;
     }
+    /**
+     * Describes values that are relevant in a CA certificate.
+     * Structure is documented below.
+     * 
+     */
     public CertificateConfigX509ConfigAdditionalExtensionObjectId getObjectId() {
         return this.objectId;
     }
+    /**
+     * The value of this X.509 extension. A base64-encoded string.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

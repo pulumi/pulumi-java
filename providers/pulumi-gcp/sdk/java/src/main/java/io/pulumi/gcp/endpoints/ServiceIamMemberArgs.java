@@ -29,6 +29,12 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.member;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.endpoints.ServiceIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

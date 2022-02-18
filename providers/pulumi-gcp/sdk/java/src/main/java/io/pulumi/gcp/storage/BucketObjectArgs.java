@@ -18,6 +18,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketObjectArgs Empty = new BucketObjectArgs();
 
+    /**
+     * The name of the containing bucket.
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -25,6 +29,11 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucket;
     }
 
+    /**
+     * [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
+     * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
+     * 
+     */
     @InputImport(name="cacheControl")
     private final @Nullable Input<String> cacheControl;
 
@@ -32,6 +41,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.cacheControl == null ? Input.empty() : this.cacheControl;
     }
 
+    /**
+     * Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
+     * 
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -39,6 +52,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
+     * 
+     */
     @InputImport(name="contentDisposition")
     private final @Nullable Input<String> contentDisposition;
 
@@ -46,6 +63,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentDisposition == null ? Input.empty() : this.contentDisposition;
     }
 
+    /**
+     * [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
+     * 
+     */
     @InputImport(name="contentEncoding")
     private final @Nullable Input<String> contentEncoding;
 
@@ -53,6 +74,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
     }
 
+    /**
+     * [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
+     * 
+     */
     @InputImport(name="contentLanguage")
     private final @Nullable Input<String> contentLanguage;
 
@@ -60,6 +85,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentLanguage == null ? Input.empty() : this.contentLanguage;
     }
 
+    /**
+     * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+     * 
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -67,6 +96,11 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="customerEncryption")
     private final @Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
@@ -81,6 +115,12 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.detectMd5hash == null ? Input.empty() : this.detectMd5hash;
     }
 
+    /**
+     * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+     * signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+     * will be subject to bucket-level retention (if any).
+     * 
+     */
     @InputImport(name="eventBasedHold")
     private final @Nullable Input<Boolean> eventBasedHold;
 
@@ -88,6 +128,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventBasedHold == null ? Input.empty() : this.eventBasedHold;
     }
 
+    /**
+     * The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
+     * 
+     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -95,6 +139,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
     }
 
+    /**
+     * User-provided metadata, in key/value pairs.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -102,6 +150,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The name of the object. If you're interpolating the name of this object, see `output_name` instead.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -109,6 +161,11 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A path to the data you want to upload. Must be defined
+     * if `content` is not.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<AssetOrArchive> source;
 
@@ -116,6 +173,12 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
+     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
+     * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+     * 
+     */
     @InputImport(name="storageClass")
     private final @Nullable Input<String> storageClass;
 
@@ -123,6 +186,11 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageClass == null ? Input.empty() : this.storageClass;
     }
 
+    /**
+     * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+     * overwrites.
+     * 
+     */
     @InputImport(name="temporaryHold")
     private final @Nullable Input<Boolean> temporaryHold;
 

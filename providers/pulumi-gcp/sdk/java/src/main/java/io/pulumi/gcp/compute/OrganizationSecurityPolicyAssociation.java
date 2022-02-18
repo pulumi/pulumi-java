@@ -13,33 +13,91 @@ import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyAssociationState;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * An association for the OrganizationSecurityPolicy.
+ * 
+ * To get more information about OrganizationSecurityPolicyAssociation, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/organizationSecurityPolicies/addAssociation)
+ * * How-to Guides
+ *     * [Associating a policy with the organization or folder](https://cloud.google.com/vpc/docs/using-firewall-policies#associate)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * OrganizationSecurityPolicyAssociation can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation default {{policy_id}}/association/{{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation")
 public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.CustomResource {
+    /**
+     * The resource that the security policy is attached to.
+     * 
+     */
     @OutputExport(name="attachmentId", type=String.class, parameters={})
     private Output<String> attachmentId;
 
+    /**
+     * @return The resource that the security policy is attached to.
+     * 
+     */
     public Output<String> getAttachmentId() {
         return this.attachmentId;
     }
+    /**
+     * The display name of the security policy of the association.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the security policy of the association.
+     * 
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The name for an association.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name for an association.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The security policy ID of the association.
+     * 
+     */
     @OutputExport(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
+    /**
+     * @return The security policy ID of the association.
+     * 
+     */
     public Output<String> getPolicyId() {
         return this.policyId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public OrganizationSecurityPolicyAssociation(String name, OrganizationSecurityPolicyAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation", name, args == null ? OrganizationSecurityPolicyAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -55,6 +113,15 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static OrganizationSecurityPolicyAssociation get(String name, Input<String> id, @Nullable OrganizationSecurityPolicyAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationSecurityPolicyAssociation(name, id, state, options);
     }

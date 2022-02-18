@@ -21,6 +21,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs();
 
+    /**
+     * An Apt Repository.
+     * 
+     */
     @InputImport(name="apt")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs> apt;
 
@@ -28,6 +32,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
         return this.apt == null ? Input.empty() : this.apt;
     }
 
+    /**
+     * A deb package file.
+     * 
+     */
     @InputImport(name="deb")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs> deb;
 
@@ -35,6 +43,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
         return this.deb == null ? Input.empty() : this.deb;
     }
 
+    /**
+     * Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
+     * 
+     */
     @InputImport(name="desiredState", required=true)
     private final Input<String> desiredState;
 
@@ -42,6 +54,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
         return this.desiredState;
     }
 
+    /**
+     * A package managed by GooGet.
+     * 
+     */
     @InputImport(name="googet")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs> googet;
 
@@ -49,6 +65,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
         return this.googet == null ? Input.empty() : this.googet;
     }
 
+    /**
+     * An MSI package.
+     * 
+     */
     @InputImport(name="msi")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs> msi;
 
@@ -56,6 +76,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
         return this.msi == null ? Input.empty() : this.msi;
     }
 
+    /**
+     * An rpm package file.
+     * 
+     */
     @InputImport(name="rpm")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs> rpm;
 
@@ -63,6 +87,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
         return this.rpm == null ? Input.empty() : this.rpm;
     }
 
+    /**
+     * A Yum Repository.
+     * 
+     */
     @InputImport(name="yum")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs> yum;
 
@@ -70,6 +98,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
         return this.yum == null ? Input.empty() : this.yum;
     }
 
+    /**
+     * A Zypper Repository.
+     * 
+     */
     @InputImport(name="zypper")
     private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs> zypper;
 

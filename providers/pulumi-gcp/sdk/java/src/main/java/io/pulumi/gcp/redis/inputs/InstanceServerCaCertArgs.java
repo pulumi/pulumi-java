@@ -21,6 +21,13 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
         return this.cert == null ? Input.empty() : this.cert;
     }
 
+    /**
+     * - 
+     * Output only. The time when the policy was created.
+     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 

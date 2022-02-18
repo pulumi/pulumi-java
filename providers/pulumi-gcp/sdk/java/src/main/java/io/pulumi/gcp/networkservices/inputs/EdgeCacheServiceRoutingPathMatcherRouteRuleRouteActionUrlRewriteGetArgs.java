@@ -14,6 +14,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs();
 
+    /**
+     * Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.
+     * 
+     */
     @InputImport(name="hostRewrite")
     private final @Nullable Input<String> hostRewrite;
 
@@ -21,6 +25,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
         return this.hostRewrite == null ? Input.empty() : this.hostRewrite;
     }
 
+    /**
+     * Prior to forwarding the request to the selected origin, the matching portion of the request's path is replaced by pathPrefixRewrite.
+     * 
+     */
     @InputImport(name="pathPrefixRewrite")
     private final @Nullable Input<String> pathPrefixRewrite;
 
@@ -28,6 +36,20 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
         return this.pathPrefixRewrite == null ? Input.empty() : this.pathPrefixRewrite;
     }
 
+    /**
+     * Prior to forwarding the request to the selected origin, if the
+     * request matched a pathTemplateMatch, the matching portion of the
+     * request's path is replaced re-written using the pattern specified
+     * by pathTemplateRewrite.
+     * pathTemplateRewrite must be between 1 and 255 characters
+     * (inclusive), must start with a '/', and must only use variables
+     * captured by the route's pathTemplate matchers.
+     * pathTemplateRewrite may only be used when all of a route's
+     * MatchRules specify pathTemplate.
+     * Only one of pathPrefixRewrite and pathTemplateRewrite may be
+     * specified.
+     * 
+     */
     @InputImport(name="pathTemplateRewrite")
     private final @Nullable Input<String> pathTemplateRewrite;
 

@@ -14,6 +14,10 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
 
     public static final FlexibleAppVersionResourcesVolumeGetArgs Empty = new FlexibleAppVersionResourcesVolumeGetArgs();
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +25,10 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
         return this.name;
     }
 
+    /**
+     * Volume size in gigabytes.
+     * 
+     */
     @InputImport(name="sizeGb", required=true)
     private final Input<Integer> sizeGb;
 
@@ -28,6 +36,10 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
         return this.sizeGb;
     }
 
+    /**
+     * Underlying volume type, e.g. 'tmpfs'.
+     * 
+     */
     @InputImport(name="volumeType", required=true)
     private final Input<String> volumeType;
 

@@ -17,6 +17,10 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReservationArgs Empty = new ReservationArgs();
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +28,16 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +45,11 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -38,6 +57,11 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The share setting for reservations.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="shareSettings")
     private final @Nullable Input<ReservationShareSettingsArgs> shareSettings;
 
@@ -45,6 +69,11 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareSettings == null ? Input.empty() : this.shareSettings;
     }
 
+    /**
+     * Reservation for instances with specific machine shapes.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="specificReservation", required=true)
     private final Input<ReservationSpecificReservationArgs> specificReservation;
 
@@ -52,6 +81,12 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.specificReservation;
     }
 
+    /**
+     * When set to true, only VMs that target this reservation by name can
+     * consume this reservation. Otherwise, it can be consumed by VMs with
+     * affinity for any reservation. Defaults to false.
+     * 
+     */
     @InputImport(name="specificReservationRequired")
     private final @Nullable Input<Boolean> specificReservationRequired;
 
@@ -59,6 +94,10 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.specificReservationRequired == null ? Input.empty() : this.specificReservationRequired;
     }
 
+    /**
+     * The zone where the reservation is made.
+     * 
+     */
     @InputImport(name="zone", required=true)
     private final Input<String> zone;
 

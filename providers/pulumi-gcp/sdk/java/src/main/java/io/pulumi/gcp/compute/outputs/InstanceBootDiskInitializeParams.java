@@ -14,9 +14,34 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceBootDiskInitializeParams {
+    /**
+     * The image from which to initialize this disk. This can be
+     * one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
+     * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+     * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+     * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
+     * images names must include the family name. If they don't, use the
+     * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
+     * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
+     * These images can be referred by family name here.
+     * 
+     */
     private final @Nullable String image;
+    /**
+     * A map of key/value label pairs to assign to the instance.
+     * 
+     */
     private final @Nullable Map<String,Object> labels;
+    /**
+     * The size of the image in gigabytes. If not specified, it
+     * will inherit the size of its base image.
+     * 
+     */
     private final @Nullable Integer size;
+    /**
+     * The type of reservation from which this instance can consume resources.
+     * 
+     */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"image","labels","size","type"})
@@ -31,15 +56,40 @@ public final class InstanceBootDiskInitializeParams {
         this.type = type;
     }
 
+    /**
+     * The image from which to initialize this disk. This can be
+     * one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
+     * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+     * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+     * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
+     * images names must include the family name. If they don't, use the
+     * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
+     * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
+     * These images can be referred by family name here.
+     * 
+     */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
+    /**
+     * A map of key/value label pairs to assign to the instance.
+     * 
+     */
     public Map<String,Object> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
+    /**
+     * The size of the image in gigabytes. If not specified, it
+     * will inherit the size of its base image.
+     * 
+     */
     public Optional<Integer> getSize() {
         return Optional.ofNullable(this.size);
     }
+    /**
+     * The type of reservation from which this instance can consume resources.
+     * 
+     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

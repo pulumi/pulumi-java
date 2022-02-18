@@ -14,6 +14,13 @@ public final class ManagedZoneForwardingConfigGetArgs extends io.pulumi.resource
 
     public static final ManagedZoneForwardingConfigGetArgs Empty = new ManagedZoneForwardingConfigGetArgs();
 
+    /**
+     * List of target name servers to forward to. Cloud DNS will
+     * select the best available name server if more than
+     * one target is given.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="targetNameServers", required=true)
     private final Input<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers;
 

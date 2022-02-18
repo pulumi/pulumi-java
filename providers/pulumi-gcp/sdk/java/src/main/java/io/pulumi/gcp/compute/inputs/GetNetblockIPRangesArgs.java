@@ -14,6 +14,10 @@ public final class GetNetblockIPRangesArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetNetblockIPRangesArgs Empty = new GetNetblockIPRangesArgs();
 
+    /**
+     * The type of range for which to provide results.
+     * 
+     */
     @InputImport(name="rangeType")
     private final @Nullable String rangeType;
 

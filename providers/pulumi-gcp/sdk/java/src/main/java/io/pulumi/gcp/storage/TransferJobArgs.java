@@ -16,6 +16,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransferJobArgs Empty = new TransferJobArgs();
 
+    /**
+     * Unique description to identify the Transfer Job.
+     * 
+     */
     @InputImport(name="description", required=true)
     private final Input<String> description;
 
@@ -23,6 +27,11 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.description;
     }
 
+    /**
+     * The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -30,6 +39,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<TransferJobScheduleArgs> schedule;
 
@@ -37,6 +50,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -44,6 +61,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * Transfer specification. Structure documented below.
+     * 
+     */
     @InputImport(name="transferSpec", required=true)
     private final Input<TransferJobTransferSpecArgs> transferSpec;
 

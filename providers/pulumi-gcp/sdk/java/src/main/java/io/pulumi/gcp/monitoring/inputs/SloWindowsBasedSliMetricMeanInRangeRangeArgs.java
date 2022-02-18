@@ -14,6 +14,12 @@ public final class SloWindowsBasedSliMetricMeanInRangeRangeArgs extends io.pulum
 
     public static final SloWindowsBasedSliMetricMeanInRangeRangeArgs Empty = new SloWindowsBasedSliMetricMeanInRangeRangeArgs();
 
+    /**
+     * max value for the range (inclusive). If not given,
+     * will be set to "infinity", defining an open range
+     * ">= range.min"
+     * 
+     */
     @InputImport(name="max")
     private final @Nullable Input<Double> max;
 
@@ -21,6 +27,12 @@ public final class SloWindowsBasedSliMetricMeanInRangeRangeArgs extends io.pulum
         return this.max == null ? Input.empty() : this.max;
     }
 
+    /**
+     * Min value for the range (inclusive). If not given,
+     * will be set to "-infinity", defining an open range
+     * "< range.max"
+     * 
+     */
     @InputImport(name="min")
     private final @Nullable Input<Double> min;
 

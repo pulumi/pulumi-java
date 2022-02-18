@@ -15,6 +15,11 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
 
     public static final OrganizationSecurityPolicyRuleMatchGetArgs Empty = new OrganizationSecurityPolicyRuleMatchGetArgs();
 
+    /**
+     * The configuration options for matching the rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
 
@@ -22,6 +27,10 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
         return this.config;
     }
 
+    /**
+     * A description of the rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,13 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Preconfigured versioned expression. For organization security policy rules,
+     * the only supported type is "FIREWALL".
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     @InputImport(name="versionedExpr")
     private final @Nullable Input<String> versionedExpr;
 

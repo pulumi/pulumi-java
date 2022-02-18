@@ -15,6 +15,11 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
 
     public static final PacketMirroringFilterGetArgs Empty = new PacketMirroringFilterGetArgs();
 
+    /**
+     * IP CIDR ranges that apply as a filter on the source (ingress) or
+     * destination (egress) IP in the IP header. Only IPv4 is supported.
+     * 
+     */
     @InputImport(name="cidrRanges")
     private final @Nullable Input<List<String>> cidrRanges;
 
@@ -22,6 +27,12 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
         return this.cidrRanges == null ? Input.empty() : this.cidrRanges;
     }
 
+    /**
+     * Direction of traffic to mirror.
+     * Default value is `BOTH`.
+     * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+     * 
+     */
     @InputImport(name="direction")
     private final @Nullable Input<String> direction;
 
@@ -29,6 +40,11 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
         return this.direction == null ? Input.empty() : this.direction;
     }
 
+    /**
+     * Protocols that apply as a filter on mirrored traffic.
+     * Each value may be one of `tcp`, `udp`, and `icmp`.
+     * 
+     */
     @InputImport(name="ipProtocols")
     private final @Nullable Input<List<String>> ipProtocols;
 

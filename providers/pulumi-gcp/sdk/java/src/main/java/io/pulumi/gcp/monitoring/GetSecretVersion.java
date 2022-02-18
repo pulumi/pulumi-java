@@ -14,6 +14,19 @@ import javax.annotation.Nullable;
 
 @Deprecated /* gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion */
 public class GetSecretVersion {
+/**
+ * 
+ *
+ * A collection of arguments for invoking getSecretVersion.
+ * 
+ *
+ * A collection of values returned by getSecretVersion.
+ * 
+ * @deprecated
+ * gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion
+ * 
+ */
+    @Deprecated /* gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion */
     public static CompletableFuture<GetSecretVersionResult> invokeAsync(GetSecretVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args == null ? GetSecretVersionArgs.Empty : args, Utilities.withVersion(options));
     }

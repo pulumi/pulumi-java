@@ -10,7 +10,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InstanceGroupNamedPort {
+    /**
+     * The name which the port will be mapped to.
+     * 
+     */
     private final String name;
+    /**
+     * The port number to map the name to.
+     * 
+     */
     private final Integer port;
 
     @OutputCustomType.Constructor({"name","port"})
@@ -21,9 +29,17 @@ public final class InstanceGroupNamedPort {
         this.port = Objects.requireNonNull(port);
     }
 
+    /**
+     * The name which the port will be mapped to.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The port number to map the name to.
+     * 
+     */
     public Integer getPort() {
         return this.port;
     }

@@ -15,6 +15,10 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
 
     public static final ReservationSpecificReservationInstancePropertiesLocalSsdArgs Empty = new ReservationSpecificReservationInstancePropertiesLocalSsdArgs();
 
+    /**
+     * The size of the disk in base-2 GB.
+     * 
+     */
     @InputImport(name="diskSizeGb", required=true)
     private final Input<Integer> diskSizeGb;
 
@@ -22,6 +26,12 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
         return this.diskSizeGb;
     }
 
+    /**
+     * The disk interface to use for attaching this disk.
+     * Default value is `SCSI`.
+     * Possible values are `SCSI` and `NVME`.
+     * 
+     */
     @InputImport(name="interface")
     private final @Nullable Input<String> $interface;
 

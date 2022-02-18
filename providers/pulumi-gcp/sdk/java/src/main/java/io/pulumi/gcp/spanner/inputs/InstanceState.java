@@ -17,6 +17,15 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceState Empty = new InstanceState();
 
+    /**
+     * The name of the instance's configuration (similar but not
+     * quite the same as a region) which defines the geographic placement and
+     * replication of your databases in this instance. It determines where your data
+     * is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+     * In order to obtain a valid list please consult the
+     * [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<String> config;
 
@@ -24,6 +33,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * The descriptive name for this instance as it appears in UIs. Must be
+     * unique per project and between 4 and 30 characters in length.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -31,6 +45,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * When deleting a spanner instance, this boolean option will delete all backups of this instance.
+     * This must be set to true if you created a backup manually in the console.
+     * 
+     */
     @InputImport(name="forceDestroy")
     private final @Nullable Input<Boolean> forceDestroy;
 
@@ -38,6 +57,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
     }
 
+    /**
+     * An object containing a list of "key": value pairs.
+     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -45,6 +69,12 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * A unique identifier for the instance, which cannot be changed after
+     * the instance is created. The name must be between 6 and 30 characters
+     * in length.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +82,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The number of nodes allocated to this instance. Exactly one of either node_count or processing_units must be present in
+     * terraform.
+     * 
+     */
     @InputImport(name="numNodes")
     private final @Nullable Input<Integer> numNodes;
 
@@ -59,6 +94,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.numNodes == null ? Input.empty() : this.numNodes;
     }
 
+    /**
+     * The number of processing units allocated to this instance. Exactly one of processing_units or node_count must be present
+     * in terraform.
+     * 
+     */
     @InputImport(name="processingUnits")
     private final @Nullable Input<Integer> processingUnits;
 
@@ -66,6 +106,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.processingUnits == null ? Input.empty() : this.processingUnits;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -73,6 +118,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Instance status: 'CREATING' or 'READY'.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 

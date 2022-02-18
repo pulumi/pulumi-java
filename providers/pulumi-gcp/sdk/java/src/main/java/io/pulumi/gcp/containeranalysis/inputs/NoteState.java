@@ -17,6 +17,19 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
 
     public static final NoteState Empty = new NoteState();
 
+    /**
+     * Note kind that represents a logical attestation "role" or "authority".
+     * For example, an organization might have one AttestationAuthority for
+     * "QA" and one for "build". This Note is intended to act strictly as a
+     * grouping mechanism for the attached Occurrences (Attestations). This
+     * grouping mechanism also provides a security boundary, since IAM ACLs
+     * gate the ability for a principle to attach an Occurrence to a given
+     * Note. It also provides a single point of lookup to find all attached
+     * Attestation Occurrences, even if they don't all live in the same
+     * project.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="attestationAuthority")
     private final @Nullable Input<NoteAttestationAuthorityGetArgs> attestationAuthority;
 
@@ -24,6 +37,10 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.attestationAuthority == null ? Input.empty() : this.attestationAuthority;
     }
 
+    /**
+     * The time this note was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -31,6 +48,10 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Time of expiration for this note. Leave empty if note does not expire.
+     * 
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -38,6 +59,10 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * The type of analysis this note describes
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -45,6 +70,10 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * A detailed description of the note
+     * 
+     */
     @InputImport(name="longDescription")
     private final @Nullable Input<String> longDescription;
 
@@ -52,6 +81,10 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.longDescription == null ? Input.empty() : this.longDescription;
     }
 
+    /**
+     * The name of the note.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +92,11 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -66,6 +104,10 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Names of other notes related to this note.
+     * 
+     */
     @InputImport(name="relatedNoteNames")
     private final @Nullable Input<List<String>> relatedNoteNames;
 
@@ -73,6 +115,11 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.relatedNoteNames == null ? Input.empty() : this.relatedNoteNames;
     }
 
+    /**
+     * URLs associated with this note and related metadata.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="relatedUrls")
     private final @Nullable Input<List<NoteRelatedUrlGetArgs>> relatedUrls;
 
@@ -80,6 +127,10 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.relatedUrls == null ? Input.empty() : this.relatedUrls;
     }
 
+    /**
+     * A one sentence description of the note.
+     * 
+     */
     @InputImport(name="shortDescription")
     private final @Nullable Input<String> shortDescription;
 
@@ -87,6 +138,10 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
         return this.shortDescription == null ? Input.empty() : this.shortDescription;
     }
 
+    /**
+     * The time this note was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

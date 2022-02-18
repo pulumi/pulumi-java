@@ -14,6 +14,12 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
 
     public static final RuntimeAccessConfigArgs Empty = new RuntimeAccessConfigArgs();
 
+    /**
+     * The type of access mode this instance. For valid values, see
+     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+     * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
+     * 
+     */
     @InputImport(name="accessType")
     private final @Nullable Input<String> accessType;
 
@@ -21,6 +27,11 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
         return this.accessType == null ? Input.empty() : this.accessType;
     }
 
+    /**
+     * - 
+     * The proxy endpoint that is used to access the runtime.
+     * 
+     */
     @InputImport(name="proxyUri")
     private final @Nullable Input<String> proxyUri;
 
@@ -28,6 +39,11 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
         return this.proxyUri == null ? Input.empty() : this.proxyUri;
     }
 
+    /**
+     * The owner of this runtime after creation. Format: `alias@example.com`.
+     * Currently supports one owner only.
+     * 
+     */
     @InputImport(name="runtimeOwner")
     private final @Nullable Input<String> runtimeOwner;
 

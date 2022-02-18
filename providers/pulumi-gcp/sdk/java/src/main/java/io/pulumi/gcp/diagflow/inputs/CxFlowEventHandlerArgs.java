@@ -15,6 +15,10 @@ public final class CxFlowEventHandlerArgs extends io.pulumi.resources.ResourceAr
 
     public static final CxFlowEventHandlerArgs Empty = new CxFlowEventHandlerArgs();
 
+    /**
+     * The name of the event to handle.
+     * 
+     */
     @InputImport(name="event")
     private final @Nullable Input<String> event;
 
@@ -22,6 +26,11 @@ public final class CxFlowEventHandlerArgs extends io.pulumi.resources.ResourceAr
         return this.event == null ? Input.empty() : this.event;
     }
 
+    /**
+     * - 
+     * The unique identifier of this event handler.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,11 @@ public final class CxFlowEventHandlerArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The target flow to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * 
+     */
     @InputImport(name="targetFlow")
     private final @Nullable Input<String> targetFlow;
 
@@ -36,6 +50,11 @@ public final class CxFlowEventHandlerArgs extends io.pulumi.resources.ResourceAr
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
     }
 
+    /**
+     * The target page to transition to.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * 
+     */
     @InputImport(name="targetPage")
     private final @Nullable Input<String> targetPage;
 
@@ -43,6 +62,11 @@ public final class CxFlowEventHandlerArgs extends io.pulumi.resources.ResourceAr
         return this.targetPage == null ? Input.empty() : this.targetPage;
     }
 
+    /**
+     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="triggerFulfillment")
     private final @Nullable Input<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment;
 

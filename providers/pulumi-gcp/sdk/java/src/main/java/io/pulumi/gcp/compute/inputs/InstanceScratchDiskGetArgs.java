@@ -13,6 +13,10 @@ public final class InstanceScratchDiskGetArgs extends io.pulumi.resources.Resour
 
     public static final InstanceScratchDiskGetArgs Empty = new InstanceScratchDiskGetArgs();
 
+    /**
+     * The disk interface to use for attaching this disk; either SCSI or NVME.
+     * 
+     */
     @InputImport(name="interface", required=true)
     private final Input<String> $interface;
 

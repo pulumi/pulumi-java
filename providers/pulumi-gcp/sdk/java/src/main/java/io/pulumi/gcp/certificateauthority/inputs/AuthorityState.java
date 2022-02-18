@@ -20,6 +20,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorityState Empty = new AuthorityState();
 
+    /**
+     * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
+     * 
+     */
     @InputImport(name="accessUrls")
     private final @Nullable Input<List<AuthorityAccessUrlGetArgs>> accessUrls;
 
@@ -27,6 +31,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.accessUrls == null ? Input.empty() : this.accessUrls;
     }
 
+    /**
+     * The user provided Resource ID for this Certificate Authority.
+     * 
+     */
     @InputImport(name="certificateAuthorityId")
     private final @Nullable Input<String> certificateAuthorityId;
 
@@ -34,6 +42,11 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.certificateAuthorityId == null ? Input.empty() : this.certificateAuthorityId;
     }
 
+    /**
+     * The config used to create a self-signed X.509 certificate or CSR.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<AuthorityConfigGetArgs> config;
 
@@ -41,6 +54,11 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -48,6 +66,14 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
+     * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
+     * (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
+     * my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
+     * created.
+     * 
+     */
     @InputImport(name="gcsBucket")
     private final @Nullable Input<String> gcsBucket;
 
@@ -55,6 +81,11 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.gcsBucket == null ? Input.empty() : this.gcsBucket;
     }
 
+    /**
+     * This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+     * Use with care. Defaults to `false`.
+     * 
+     */
     @InputImport(name="ignoreActiveCertificatesOnDeletion")
     private final @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion;
 
@@ -62,6 +93,13 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.ignoreActiveCertificatesOnDeletion == null ? Input.empty() : this.ignoreActiveCertificatesOnDeletion;
     }
 
+    /**
+     * Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
+     * is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
+     * certificate. Otherwise, it is used to sign a CSR.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="keySpec")
     private final @Nullable Input<AuthorityKeySpecGetArgs> keySpec;
 
@@ -69,6 +107,12 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.keySpec == null ? Input.empty() : this.keySpec;
     }
 
+    /**
+     * Labels with user-defined metadata.
+     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
+     * "1.3kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -76,6 +120,12 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
+     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="lifetime")
     private final @Nullable Input<String> lifetime;
 
@@ -83,6 +133,11 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.lifetime == null ? Input.empty() : this.lifetime;
     }
 
+    /**
+     * Location of the CertificateAuthority. A full list of valid locations can be found by
+     * running `gcloud privateca locations list`.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -90,6 +145,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name for this CertificateAuthority in the format projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -97,6 +156,12 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
+     * that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
+     * current CertificateAuthority's certificate.
+     * 
+     */
     @InputImport(name="pemCaCertificates")
     private final @Nullable Input<List<String>> pemCaCertificates;
 
@@ -104,6 +169,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.pemCaCertificates == null ? Input.empty() : this.pemCaCertificates;
     }
 
+    /**
+     * The name of the CaPool this Certificate Authority belongs to.
+     * 
+     */
     @InputImport(name="pool")
     private final @Nullable Input<String> pool;
 
@@ -111,6 +180,11 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.pool == null ? Input.empty() : this.pool;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -118,6 +192,10 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The State for this CertificateAuthority.
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -125,6 +203,15 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * The Type of this CertificateAuthority.
+     * > **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+     * be manually activated (via Cloud Console of `gcloud`) before they can
+     * issue certificates.
+     * Default value is `SELF_SIGNED`.
+     * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -132,6 +219,11 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

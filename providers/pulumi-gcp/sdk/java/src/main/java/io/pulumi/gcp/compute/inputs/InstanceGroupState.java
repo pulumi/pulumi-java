@@ -17,6 +17,11 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceGroupState Empty = new InstanceGroupState();
 
+    /**
+     * An optional textual description of the instance
+     * group.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +29,12 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * List of instances in the group. They should be given
+     * as either self_link or id. When adding instances they must all be in the same
+     * network and zone as the instance group.
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<List<String>> instances;
 
@@ -31,6 +42,10 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
         return this.instances == null ? Input.empty() : this.instances;
     }
 
+    /**
+     * The name which the port will be mapped to.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +53,11 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The named port configuration. See the section below
+     * for details on configuration. Structure is documented below.
+     * 
+     */
     @InputImport(name="namedPorts")
     private final @Nullable Input<List<InstanceGroupNamedPortGetArgs>> namedPorts;
 
@@ -45,6 +65,13 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
         return this.namedPorts == null ? Input.empty() : this.namedPorts;
     }
 
+    /**
+     * The URL of the network the instance group is in. If
+     * this is different from the network where the instances are in, the creation
+     * fails. Defaults to the network where the instances are in (if neither
+     * `network` nor `instances` is specified, this field will be blank).
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -52,6 +79,11 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,6 +91,10 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -66,6 +102,10 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The number of instances in the group.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<Integer> size;
 
@@ -73,6 +113,10 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * The zone that this instance group should be created in.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

@@ -14,6 +14,10 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArg
 
     public static final CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs Empty = new CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs();
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     @InputImport(name="objectIdPaths", required=true)
     private final Input<List<Integer>> objectIdPaths;
 

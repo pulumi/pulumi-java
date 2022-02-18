@@ -12,6 +12,13 @@ import io.pulumi.gcp.Utilities;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * The provider type for the google-beta package. By default, resources use package-wide configuration
+ * settings, however an explicit `Provider` instance may be created and passed during resource
+ * construction to achieve fine-grained programmatic control over provider settings. See the
+ * [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
+ * 
+ */
 @ResourceType(type="pulumi:providers:gcp")
 public class Provider extends io.pulumi.resources.ProviderResource {
     @OutputExport(name="accessApprovalCustomEndpoint", type=String.class, parameters={})
@@ -645,6 +652,12 @@ public class Provider extends io.pulumi.resources.ProviderResource {
         return this.zone;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Provider(String name, @Nullable ProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }

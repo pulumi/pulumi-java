@@ -14,6 +14,12 @@ public final class URLMapPathMatcherDefaultRouteActionUrlRewriteArgs extends io.
 
     public static final URLMapPathMatcherDefaultRouteActionUrlRewriteArgs Empty = new URLMapPathMatcherDefaultRouteActionUrlRewriteArgs();
 
+    /**
+     * Prior to forwarding the request to the selected service, the request's host header is replaced
+     * with contents of hostRewrite.
+     * The value must be between 1 and 255 characters.
+     * 
+     */
     @InputImport(name="hostRewrite")
     private final @Nullable Input<String> hostRewrite;
 
@@ -21,6 +27,12 @@ public final class URLMapPathMatcherDefaultRouteActionUrlRewriteArgs extends io.
         return this.hostRewrite == null ? Input.empty() : this.hostRewrite;
     }
 
+    /**
+     * Prior to forwarding the request to the selected backend service, the matching portion of the
+     * request's path is replaced by pathPrefixRewrite.
+     * The value must be between 1 and 1024 characters.
+     * 
+     */
     @InputImport(name="pathPrefixRewrite")
     private final @Nullable Input<String> pathPrefixRewrite;
 

@@ -14,6 +14,10 @@ public final class InstanceNodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceNodeArgs Empty = new InstanceNodeArgs();
 
+    /**
+     * an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

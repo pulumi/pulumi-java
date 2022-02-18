@@ -15,10 +15,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceScheduling {
+    /**
+     * Specifies if the instance should be
+     * restarted if it was terminated by Compute Engine (not a user).
+     * Defaults to true.
+     * 
+     */
     private final @Nullable Boolean automaticRestart;
+    /**
+     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+     * 
+     */
     private final @Nullable Integer minNodeCpus;
+    /**
+     * Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     private final @Nullable List<InstanceSchedulingNodeAffinity> nodeAffinities;
+    /**
+     * Describes maintenance behavior for the
+     * instance. Can be MIGRATE or TERMINATE, for more info, read
+     * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
+     * 
+     */
     private final @Nullable String onHostMaintenance;
+    /**
+     * Specifies if the instance is preemptible.
+     * If this field is set to true, then `automatic_restart` must be
+     * set to false.  Defaults to false.
+     * 
+     */
     private final @Nullable Boolean preemptible;
 
     @OutputCustomType.Constructor({"automaticRestart","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible"})
@@ -35,18 +65,48 @@ public final class InstanceScheduling {
         this.preemptible = preemptible;
     }
 
+    /**
+     * Specifies if the instance should be
+     * restarted if it was terminated by Compute Engine (not a user).
+     * Defaults to true.
+     * 
+     */
     public Optional<Boolean> getAutomaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
+    /**
+     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+     * 
+     */
     public Optional<Integer> getMinNodeCpus() {
         return Optional.ofNullable(this.minNodeCpus);
     }
+    /**
+     * Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     public List<InstanceSchedulingNodeAffinity> getNodeAffinities() {
         return this.nodeAffinities == null ? List.of() : this.nodeAffinities;
     }
+    /**
+     * Describes maintenance behavior for the
+     * instance. Can be MIGRATE or TERMINATE, for more info, read
+     * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
+     * 
+     */
     public Optional<String> getOnHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
+    /**
+     * Specifies if the instance is preemptible.
+     * If this field is set to true, then `automatic_restart` must be
+     * set to false.  Defaults to false.
+     * 
+     */
     public Optional<Boolean> getPreemptible() {
         return Optional.ofNullable(this.preemptible);
     }

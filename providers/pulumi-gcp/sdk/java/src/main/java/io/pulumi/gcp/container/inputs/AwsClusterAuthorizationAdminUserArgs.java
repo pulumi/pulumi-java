@@ -13,6 +13,10 @@ public final class AwsClusterAuthorizationAdminUserArgs extends io.pulumi.resour
 
     public static final AwsClusterAuthorizationAdminUserArgs Empty = new AwsClusterAuthorizationAdminUserArgs();
 
+    /**
+     * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

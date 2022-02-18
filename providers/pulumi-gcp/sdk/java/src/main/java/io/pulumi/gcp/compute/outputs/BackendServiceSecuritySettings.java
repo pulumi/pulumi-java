@@ -10,7 +10,19 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackendServiceSecuritySettings {
+    /**
+     * ClientTlsPolicy is a resource that specifies how a client should authenticate
+     * connections to backends of a service. This resource itself does not affect
+     * configuration unless it is attached to a backend service resource.
+     * 
+     */
     private final String clientTlsPolicy;
+    /**
+     * A list of alternate names to verify the subject identity in the certificate.
+     * If specified, the client will verify that the server certificate's subject
+     * alt name matches one of the specified values.
+     * 
+     */
     private final List<String> subjectAltNames;
 
     @OutputCustomType.Constructor({"clientTlsPolicy","subjectAltNames"})
@@ -21,9 +33,21 @@ public final class BackendServiceSecuritySettings {
         this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
     }
 
+    /**
+     * ClientTlsPolicy is a resource that specifies how a client should authenticate
+     * connections to backends of a service. This resource itself does not affect
+     * configuration unless it is attached to a backend service resource.
+     * 
+     */
     public String getClientTlsPolicy() {
         return this.clientTlsPolicy;
     }
+    /**
+     * A list of alternate names to verify the subject identity in the certificate.
+     * If specified, the client will verify that the server certificate's subject
+     * alt name matches one of the specified values.
+     * 
+     */
     public List<String> getSubjectAltNames() {
         return this.subjectAltNames;
     }

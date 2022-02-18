@@ -15,6 +15,10 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvGroupArgs Empty = new EnvGroupArgs();
 
+    /**
+     * Hostnames of the environment group.
+     * 
+     */
     @InputImport(name="hostnames")
     private final @Nullable Input<List<String>> hostnames;
 
@@ -22,6 +26,10 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostnames == null ? Input.empty() : this.hostnames;
     }
 
+    /**
+     * The resource ID of the environment group.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +37,11 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Apigee Organization associated with the Apigee environment group,
+     * in the format `organizations/{{org_name}}`.
+     * 
+     */
     @InputImport(name="orgId", required=true)
     private final Input<String> orgId;
 

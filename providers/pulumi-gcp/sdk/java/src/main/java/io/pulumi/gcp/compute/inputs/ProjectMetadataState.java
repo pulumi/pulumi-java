@@ -15,6 +15,10 @@ public final class ProjectMetadataState extends io.pulumi.resources.ResourceArgs
 
     public static final ProjectMetadataState Empty = new ProjectMetadataState();
 
+    /**
+     * A series of key value pairs.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -22,6 +26,11 @@ public final class ProjectMetadataState extends io.pulumi.resources.ResourceArgs
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

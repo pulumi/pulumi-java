@@ -14,6 +14,10 @@ public final class PatchDeploymentInstanceFilterGroupLabelGetArgs extends io.pul
 
     public static final PatchDeploymentInstanceFilterGroupLabelGetArgs Empty = new PatchDeploymentInstanceFilterGroupLabelGetArgs();
 
+    /**
+     * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+     * 
+     */
     @InputImport(name="labels", required=true)
     private final Input<Map<String,String>> labels;
 

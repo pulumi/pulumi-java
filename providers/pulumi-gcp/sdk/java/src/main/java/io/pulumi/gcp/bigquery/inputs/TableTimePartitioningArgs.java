@@ -16,6 +16,11 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
 
     public static final TableTimePartitioningArgs Empty = new TableTimePartitioningArgs();
 
+    /**
+     * Number of milliseconds for which to keep the
+     * storage for a partition.
+     * 
+     */
     @InputImport(name="expirationMs")
     private final @Nullable Input<Integer> expirationMs;
 
@@ -23,6 +28,11 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
         return this.expirationMs == null ? Input.empty() : this.expirationMs;
     }
 
+    /**
+     * The field used to determine how to create a range-based
+     * partition.
+     * 
+     */
     @InputImport(name="field")
     private final @Nullable Input<String> field;
 
@@ -30,6 +40,12 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
         return this.field == null ? Input.empty() : this.field;
     }
 
+    /**
+     * If set to true, queries over this table
+     * require a partition filter that can be used for partition elimination to be
+     * specified.
+     * 
+     */
     @InputImport(name="requirePartitionFilter")
     private final @Nullable Input<Boolean> requirePartitionFilter;
 
@@ -37,6 +53,11 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
         return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
     }
 
+    /**
+     * The supported types are DAY, HOUR, MONTH, and YEAR,
+     * which will generate one partition per day, hour, month, and year, respectively.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

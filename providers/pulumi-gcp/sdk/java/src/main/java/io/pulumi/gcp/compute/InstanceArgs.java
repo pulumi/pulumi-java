@@ -29,6 +29,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
+    /**
+     * Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
+     * 
+     */
     @InputImport(name="advancedMachineFeatures")
     private final @Nullable Input<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
@@ -36,6 +40,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
     }
 
+    /**
+     * If true, allows this prvider to stop the instance to update its properties.
+     * If you try to update a property that requires stopping the instance without setting this field, the update will fail.
+     * 
+     */
     @InputImport(name="allowStoppingForUpdate")
     private final @Nullable Input<Boolean> allowStoppingForUpdate;
 
@@ -43,6 +52,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowStoppingForUpdate == null ? Input.empty() : this.allowStoppingForUpdate;
     }
 
+    /**
+     * Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
+     * 
+     */
     @InputImport(name="attachedDisks")
     private final @Nullable Input<List<InstanceAttachedDiskArgs>> attachedDisks;
 
@@ -50,6 +63,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.attachedDisks == null ? Input.empty() : this.attachedDisks;
     }
 
+    /**
+     * The boot disk for the instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="bootDisk", required=true)
     private final Input<InstanceBootDiskArgs> bootDisk;
 
@@ -57,6 +75,12 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.bootDisk;
     }
 
+    /**
+     * Whether to allow sending and receiving of
+     * packets with non-matching source or destination IPs.
+     * This defaults to false.
+     * 
+     */
     @InputImport(name="canIpForward")
     private final @Nullable Input<Boolean> canIpForward;
 
@@ -64,6 +88,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.canIpForward == null ? Input.empty() : this.canIpForward;
     }
 
+    /**
+     * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+     * 
+     */
     @InputImport(name="confidentialInstanceConfig")
     private final @Nullable Input<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
@@ -71,6 +99,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
     }
 
+    /**
+     * Enable deletion protection on this instance. Defaults to false.
+     * **Note:** you must disable deletion protection before removing the resource (e.g., via `pulumi destroy`), or the instance cannot be deleted and the provider run will not complete successfully.
+     * 
+     */
     @InputImport(name="deletionProtection")
     private final @Nullable Input<Boolean> deletionProtection;
 
@@ -78,6 +111,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
     }
 
+    /**
+     * A brief description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -85,6 +122,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Desired status of the instance. Either
+     * `"RUNNING"` or `"TERMINATED"`.
+     * 
+     */
     @InputImport(name="desiredStatus")
     private final @Nullable Input<String> desiredStatus;
 
@@ -92,6 +134,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.desiredStatus == null ? Input.empty() : this.desiredStatus;
     }
 
+    /**
+     * Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     @InputImport(name="enableDisplay")
     private final @Nullable Input<Boolean> enableDisplay;
 
@@ -99,6 +146,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
     }
 
+    /**
+     * List of the type and count of accelerator cards attached to the instance. Structure documented below.
+     * **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
+     * 
+     */
     @InputImport(name="guestAccelerators")
     private final @Nullable Input<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
 
@@ -106,6 +158,12 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
     }
 
+    /**
+     * A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
+     * Valid format is a series of labels 1-63 characters long matching the regular expression `a-z`, concatenated with periods.
+     * The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="hostname")
     private final @Nullable Input<String> hostname;
 
@@ -113,6 +171,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
+    /**
+     * A map of key/value label pairs to assign to the instance.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -120,6 +182,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The machine type to create.
+     * 
+     */
     @InputImport(name="machineType", required=true)
     private final Input<String> machineType;
 
@@ -127,6 +193,12 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.machineType;
     }
 
+    /**
+     * Metadata key/value pairs to make available from
+     * within the instance. Ssh keys attached in the Cloud Console will be removed.
+     * Add them to your config in order to keep them attached to your instance.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -134,6 +206,19 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * An alternative to using the
+     * startup-script metadata key, except this one forces the instance to be recreated
+     * (thus re-running the script) if it is changed. This replaces the startup-script
+     * metadata key on the created instance and thus the two mechanisms are not
+     * allowed to be used simultaneously.  Users are free to use either mechanism - the
+     * only distinction is that this separate attribute will cause a recreate on
+     * modification.  On import, `metadata_startup_script` will not be set - if you
+     * choose to specify it you will see a diff immediately after import causing a
+     * destroy/recreate operation. If importing an instance and specifying this value
+     * is desired, you will need to modify your state file.
+     * 
+     */
     @InputImport(name="metadataStartupScript")
     private final @Nullable Input<String> metadataStartupScript;
 
@@ -141,6 +226,12 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadataStartupScript == null ? Input.empty() : this.metadataStartupScript;
     }
 
+    /**
+     * Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
+     * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 
@@ -148,6 +239,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
     }
 
+    /**
+     * A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -155,6 +251,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Networks to attach to the instance. This can
+     * be specified multiple times. Structure is documented below.
+     * 
+     */
     @InputImport(name="networkInterfaces", required=true)
     private final Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
 
@@ -162,6 +263,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkInterfaces;
     }
 
+    /**
+     * Configures network performance settings for the instance. Structure is
+     * documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+     * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+     * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+     * in order for this setting to take effect.
+     * 
+     */
     @InputImport(name="networkPerformanceConfig")
     private final @Nullable Input<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
@@ -169,6 +278,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -176,6 +290,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Specifies the reservations that this instance can consume from.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="reservationAffinity")
     private final @Nullable Input<InstanceReservationAffinityArgs> reservationAffinity;
 
@@ -183,6 +302,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
     }
 
+    /**
+     * -- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
+     * 
+     */
     @InputImport(name="resourcePolicies")
     private final @Nullable Input<String> resourcePolicies;
 
@@ -190,6 +313,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
     }
 
+    /**
+     * The scheduling strategy to use. More details about
+     * this configuration option are detailed below.
+     * 
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<InstanceSchedulingArgs> scheduling;
 
@@ -197,6 +325,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * Scratch disks to attach to the instance. This can be
+     * specified multiple times for multiple scratch disks. Structure is documented below.
+     * 
+     */
     @InputImport(name="scratchDisks")
     private final @Nullable Input<List<InstanceScratchDiskArgs>> scratchDisks;
 
@@ -204,6 +337,12 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.scratchDisks == null ? Input.empty() : this.scratchDisks;
     }
 
+    /**
+     * Service account to attach to the instance.
+     * Structure is documented below.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<InstanceServiceAccountArgs> serviceAccount;
 
@@ -211,6 +350,12 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+     * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
@@ -218,6 +363,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * A list of network tags to attach to the instance.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -225,6 +374,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The zone that the machine should be created in. If it is not provided, the provider zone is used.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

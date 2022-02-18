@@ -15,6 +15,11 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
 
     public static final FeatureMembershipConfigmanagementConfigSyncArgs Empty = new FeatureMembershipConfigmanagementConfigSyncArgs();
 
+    /**
+     * - 
+     * (Optional) Structure is documented below.
+     * 
+     */
     @InputImport(name="git")
     private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
 
@@ -22,6 +27,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
         return this.git == null ? Input.empty() : this.git;
     }
 
+    /**
+     * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+     * 
+     */
     @InputImport(name="sourceFormat")
     private final @Nullable Input<String> sourceFormat;
 

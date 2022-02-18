@@ -19,6 +19,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
 
     public static final AwsNodePoolState Empty = new AwsNodePoolState();
 
+    /**
+     * Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -26,6 +30,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Required. Autoscaler configuration for this node pool.
+     * 
+     */
     @InputImport(name="autoscaling")
     private final @Nullable Input<AwsNodePoolAutoscalingGetArgs> autoscaling;
 
@@ -33,6 +41,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
     }
 
+    /**
+     * The awsCluster for the resource
+     * 
+     */
     @InputImport(name="cluster")
     private final @Nullable Input<String> cluster;
 
@@ -40,6 +52,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.cluster == null ? Input.empty() : this.cluster;
     }
 
+    /**
+     * Required. The configuration of the node pool.
+     * 
+     */
     @InputImport(name="config")
     private final @Nullable Input<AwsNodePoolConfigGetArgs> config;
 
@@ -47,6 +63,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * Output only. The time at which this node pool was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -54,6 +74,11 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Allows clients to perform consistent read-modify-writes through optimistic concurrency control. May be sent on update
+     * and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -61,6 +86,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -68,6 +97,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * 
+     */
     @InputImport(name="maxPodsConstraint")
     private final @Nullable Input<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
 
@@ -75,6 +108,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.maxPodsConstraint == null ? Input.empty() : this.maxPodsConstraint;
     }
 
+    /**
+     * The name of this resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -82,6 +119,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -89,6 +130,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Output only. If set, there are currently changes in flight to the node pool.
+     * 
+     */
     @InputImport(name="reconciling")
     private final @Nullable Input<Boolean> reconciling;
 
@@ -96,6 +141,11 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.reconciling == null ? Input.empty() : this.reconciling;
     }
 
+    /**
+     * Output only. The lifecycle state of the node pool. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING,
+     * RECONCILING, STOPPING, ERROR, DEGRADED
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -103,6 +153,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Required. The subnet where the node pool node run.
+     * 
+     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 
@@ -110,6 +164,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.subnetId == null ? Input.empty() : this.subnetId;
     }
 
+    /**
+     * Output only. A globally unique identifier for the node pool.
+     * 
+     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 
@@ -117,6 +175,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.uid == null ? Input.empty() : this.uid;
     }
 
+    /**
+     * Output only. The time at which this node pool was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 
@@ -124,6 +186,10 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
         return this.updateTime == null ? Input.empty() : this.updateTime;
     }
 
+    /**
+     * Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

@@ -15,6 +15,13 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
 
     public static final RegionSslCertificateState Empty = new RegionSslCertificateState();
 
+    /**
+     * The certificate in PEM format.
+     * The certificate chain must be no greater than 5 certs long.
+     * The chain must include at least one intermediate cert.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="certificate")
     private final @Nullable Input<String> certificate;
 
@@ -22,6 +29,10 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.certificate == null ? Input.empty() : this.certificate;
     }
 
+    /**
+     * The unique identifier for the resource.
+     * 
+     */
     @InputImport(name="certificateId")
     private final @Nullable Input<Integer> certificateId;
 
@@ -29,6 +40,10 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.certificateId == null ? Input.empty() : this.certificateId;
     }
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="creationTimestamp")
     private final @Nullable Input<String> creationTimestamp;
 
@@ -36,6 +51,10 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +62,16 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +79,11 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Creates a unique name beginning with the
+     * specified prefix. Conflicts with `name`.
+     * 
+     */
     @InputImport(name="namePrefix")
     private final @Nullable Input<String> namePrefix;
 
@@ -57,6 +91,11 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
     }
 
+    /**
+     * The write-only private key in PEM format.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="privateKey")
     private final @Nullable Input<String> privateKey;
 
@@ -64,6 +103,11 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.privateKey == null ? Input.empty() : this.privateKey;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -71,6 +115,11 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The Region in which the created regional ssl certificate should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -78,6 +127,10 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 

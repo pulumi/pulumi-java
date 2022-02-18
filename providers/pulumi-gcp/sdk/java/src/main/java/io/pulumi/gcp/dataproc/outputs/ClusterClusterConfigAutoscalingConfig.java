@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterClusterConfigAutoscalingConfig {
+    /**
+     * The autoscaling policy used by the cluster.
+     * 
+     */
     private final String policyUri;
 
     @OutputCustomType.Constructor({"policyUri"})
@@ -16,6 +20,10 @@ public final class ClusterClusterConfigAutoscalingConfig {
         this.policyUri = Objects.requireNonNull(policyUri);
     }
 
+    /**
+     * The autoscaling policy used by the cluster.
+     * 
+     */
     public String getPolicyUri() {
         return this.policyUri;
     }

@@ -14,6 +14,10 @@ public final class RegionInstanceGroupManagerNamedPortGetArgs extends io.pulumi.
 
     public static final RegionInstanceGroupManagerNamedPortGetArgs Empty = new RegionInstanceGroupManagerNamedPortGetArgs();
 
+    /**
+     * - Version name.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +25,11 @@ public final class RegionInstanceGroupManagerNamedPortGetArgs extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * The port number.
+     * ***
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 

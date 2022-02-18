@@ -13,12 +13,54 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterPrivateClusterConfig {
+    /**
+     * When `true`, the cluster's private
+     * endpoint is used as the cluster endpoint and access through the public endpoint
+     * is disabled. When `false`, either endpoint can be used. This field only applies
+     * to private clusters, when `enable_private_nodes` is `true`.
+     * 
+     */
     private final Boolean enablePrivateEndpoint;
+    /**
+     * Enables the private cluster feature,
+     * creating a private endpoint on the cluster. In a private cluster, nodes only
+     * have RFC 1918 private addresses and communicate with the master's private
+     * endpoint via private networking.
+     * 
+     */
     private final @Nullable Boolean enablePrivateNodes;
+    /**
+     * Controls cluster master global
+     * access settings. If unset, the provider will no longer manage this field and will
+     * not modify the previously-set value. Structure is documented below.
+     * 
+     */
     private final @Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig;
+    /**
+     * The IP range in CIDR notation to use for
+     * the hosted master network. This range will be used for assigning private IP
+     * addresses to the cluster master(s) and the ILB VIP. This range must not overlap
+     * with any other ranges in use within the cluster's network, and it must be a /28
+     * subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#req_res_lim)
+     * for more details. This field only applies to private clusters, when
+     * `enable_private_nodes` is `true`.
+     * 
+     */
     private final @Nullable String masterIpv4CidrBlock;
+    /**
+     * The name of the peering between this cluster and the Google owned VPC.
+     * 
+     */
     private final @Nullable String peeringName;
+    /**
+     * The internal IP address of this cluster's master endpoint.
+     * 
+     */
     private final @Nullable String privateEndpoint;
+    /**
+     * The external IP address of this cluster's master endpoint.
+     * 
+     */
     private final @Nullable String publicEndpoint;
 
     @OutputCustomType.Constructor({"enablePrivateEndpoint","enablePrivateNodes","masterGlobalAccessConfig","masterIpv4CidrBlock","peeringName","privateEndpoint","publicEndpoint"})
@@ -39,24 +81,66 @@ public final class ClusterPrivateClusterConfig {
         this.publicEndpoint = publicEndpoint;
     }
 
+    /**
+     * When `true`, the cluster's private
+     * endpoint is used as the cluster endpoint and access through the public endpoint
+     * is disabled. When `false`, either endpoint can be used. This field only applies
+     * to private clusters, when `enable_private_nodes` is `true`.
+     * 
+     */
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
+    /**
+     * Enables the private cluster feature,
+     * creating a private endpoint on the cluster. In a private cluster, nodes only
+     * have RFC 1918 private addresses and communicate with the master's private
+     * endpoint via private networking.
+     * 
+     */
     public Optional<Boolean> getEnablePrivateNodes() {
         return Optional.ofNullable(this.enablePrivateNodes);
     }
+    /**
+     * Controls cluster master global
+     * access settings. If unset, the provider will no longer manage this field and will
+     * not modify the previously-set value. Structure is documented below.
+     * 
+     */
     public Optional<ClusterPrivateClusterConfigMasterGlobalAccessConfig> getMasterGlobalAccessConfig() {
         return Optional.ofNullable(this.masterGlobalAccessConfig);
     }
+    /**
+     * The IP range in CIDR notation to use for
+     * the hosted master network. This range will be used for assigning private IP
+     * addresses to the cluster master(s) and the ILB VIP. This range must not overlap
+     * with any other ranges in use within the cluster's network, and it must be a /28
+     * subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#req_res_lim)
+     * for more details. This field only applies to private clusters, when
+     * `enable_private_nodes` is `true`.
+     * 
+     */
     public Optional<String> getMasterIpv4CidrBlock() {
         return Optional.ofNullable(this.masterIpv4CidrBlock);
     }
+    /**
+     * The name of the peering between this cluster and the Google owned VPC.
+     * 
+     */
     public Optional<String> getPeeringName() {
         return Optional.ofNullable(this.peeringName);
     }
+    /**
+     * The internal IP address of this cluster's master endpoint.
+     * 
+     */
     public Optional<String> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
+    /**
+     * The external IP address of this cluster's master endpoint.
+     * 
+     */
     public Optional<String> getPublicEndpoint() {
         return Optional.ofNullable(this.publicEndpoint);
     }

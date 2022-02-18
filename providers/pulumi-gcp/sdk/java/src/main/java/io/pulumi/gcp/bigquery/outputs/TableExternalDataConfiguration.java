@@ -17,15 +17,84 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TableExternalDataConfiguration {
+    /**
+     * - Let BigQuery try to autodetect the schema
+     *   and format of the table.
+     * 
+     */
     private final Boolean autodetect;
+    /**
+     * The compression type of the data source.
+     * Valid values are "NONE" or "GZIP".
+     * 
+     */
     private final @Nullable String compression;
+    /**
+     * Additional properties to set if
+     * `source_format` is set to "CSV". Structure is documented below.
+     * 
+     */
     private final @Nullable TableExternalDataConfigurationCsvOptions csvOptions;
+    /**
+     * Additional options if
+     * `source_format` is set to "GOOGLE_SHEETS". Structure is
+     * documented below.
+     * 
+     */
     private final @Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions;
+    /**
+     * When set, configures hive partitioning
+     * support. Not all storage formats support hive partitioning -- requesting hive
+     * partitioning on an unsupported format will lead to an error, as will providing
+     * an invalid specification. Structure is documented below.
+     * 
+     */
     private final @Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions;
+    /**
+     * Indicates if BigQuery should
+     * allow extra values that are not represented in the table schema.
+     * If true, the extra values are ignored. If false, records with
+     * extra columns are treated as bad records, and if there are too
+     * many bad records, an invalid error is returned in the job result.
+     * The default value is false.
+     * 
+     */
     private final @Nullable Boolean ignoreUnknownValues;
+    /**
+     * The maximum number of bad records that
+     * BigQuery can ignore when reading data.
+     * 
+     */
     private final @Nullable Integer maxBadRecords;
+    /**
+     * A JSON schema for the external table. Schema is required
+     * for CSV and JSON formats if autodetect is not on. Schema is disallowed
+     * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn't changed.
+     * Furthermore drift for this field cannot not be detected because BigQuery
+     * only uses this schema to compute the effective schema for the table, therefore
+     * any changes on the configured value will force the table to be recreated.
+     * This schema is effectively only applied when creating a table from an external
+     * datasource, after creation the computed schema will be stored in
+     * `google_bigquery_table.schema`
+     * 
+     */
     private final @Nullable String schema;
+    /**
+     * The data format. Supported values are:
+     * "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC",
+     * "DATSTORE_BACKUP", and "BIGTABLE". To use "GOOGLE_SHEETS"
+     * the `scopes` must include
+     * "https://www.googleapis.com/auth/drive.readonly".
+     * 
+     */
     private final String sourceFormat;
+    /**
+     * A list of the fully-qualified URIs that point to
+     * your data in Google Cloud.
+     * 
+     */
     private final List<String> sourceUris;
 
     @OutputCustomType.Constructor({"autodetect","compression","csvOptions","googleSheetsOptions","hivePartitioningOptions","ignoreUnknownValues","maxBadRecords","schema","sourceFormat","sourceUris"})
@@ -52,33 +121,102 @@ public final class TableExternalDataConfiguration {
         this.sourceUris = Objects.requireNonNull(sourceUris);
     }
 
+    /**
+     * - Let BigQuery try to autodetect the schema
+     *   and format of the table.
+     * 
+     */
     public Boolean getAutodetect() {
         return this.autodetect;
     }
+    /**
+     * The compression type of the data source.
+     * Valid values are "NONE" or "GZIP".
+     * 
+     */
     public Optional<String> getCompression() {
         return Optional.ofNullable(this.compression);
     }
+    /**
+     * Additional properties to set if
+     * `source_format` is set to "CSV". Structure is documented below.
+     * 
+     */
     public Optional<TableExternalDataConfigurationCsvOptions> getCsvOptions() {
         return Optional.ofNullable(this.csvOptions);
     }
+    /**
+     * Additional options if
+     * `source_format` is set to "GOOGLE_SHEETS". Structure is
+     * documented below.
+     * 
+     */
     public Optional<TableExternalDataConfigurationGoogleSheetsOptions> getGoogleSheetsOptions() {
         return Optional.ofNullable(this.googleSheetsOptions);
     }
+    /**
+     * When set, configures hive partitioning
+     * support. Not all storage formats support hive partitioning -- requesting hive
+     * partitioning on an unsupported format will lead to an error, as will providing
+     * an invalid specification. Structure is documented below.
+     * 
+     */
     public Optional<TableExternalDataConfigurationHivePartitioningOptions> getHivePartitioningOptions() {
         return Optional.ofNullable(this.hivePartitioningOptions);
     }
+    /**
+     * Indicates if BigQuery should
+     * allow extra values that are not represented in the table schema.
+     * If true, the extra values are ignored. If false, records with
+     * extra columns are treated as bad records, and if there are too
+     * many bad records, an invalid error is returned in the job result.
+     * The default value is false.
+     * 
+     */
     public Optional<Boolean> getIgnoreUnknownValues() {
         return Optional.ofNullable(this.ignoreUnknownValues);
     }
+    /**
+     * The maximum number of bad records that
+     * BigQuery can ignore when reading data.
+     * 
+     */
     public Optional<Integer> getMaxBadRecords() {
         return Optional.ofNullable(this.maxBadRecords);
     }
+    /**
+     * A JSON schema for the external table. Schema is required
+     * for CSV and JSON formats if autodetect is not on. Schema is disallowed
+     * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn't changed.
+     * Furthermore drift for this field cannot not be detected because BigQuery
+     * only uses this schema to compute the effective schema for the table, therefore
+     * any changes on the configured value will force the table to be recreated.
+     * This schema is effectively only applied when creating a table from an external
+     * datasource, after creation the computed schema will be stored in
+     * `google_bigquery_table.schema`
+     * 
+     */
     public Optional<String> getSchema() {
         return Optional.ofNullable(this.schema);
     }
+    /**
+     * The data format. Supported values are:
+     * "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC",
+     * "DATSTORE_BACKUP", and "BIGTABLE". To use "GOOGLE_SHEETS"
+     * the `scopes` must include
+     * "https://www.googleapis.com/auth/drive.readonly".
+     * 
+     */
     public String getSourceFormat() {
         return this.sourceFormat;
     }
+    /**
+     * A list of the fully-qualified URIs that point to
+     * your data in Google Cloud.
+     * 
+     */
     public List<String> getSourceUris() {
         return this.sourceUris;
     }

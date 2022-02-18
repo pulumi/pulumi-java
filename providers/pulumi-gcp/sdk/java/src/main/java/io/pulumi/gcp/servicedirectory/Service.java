@@ -14,33 +14,107 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An individual service. A service contains a name and optional metadata.
+ * 
+ * To get more information about Service, see:
+ * 
+ * * [API documentation](https://cloud.google.com/service-directory/docs/reference/rest/v1beta1/projects.locations.namespaces.services)
+ * * How-to Guides
+ *     * [Configuring a service](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_service)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Service can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:servicedirectory/service:Service default projects/{{project}}/locations/{{location}}/namespaces/{{namespace_id}}/services/{{service_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:servicedirectory/service:Service default {{project}}/{{location}}/{{namespace_id}}/{{service_id}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:servicedirectory/service:Service default {{location}}/{{namespace_id}}/{{service_id}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:servicedirectory/service:Service")
 public class Service extends io.pulumi.resources.CustomResource {
+    /**
+     * Metadata for the service. This data can be consumed
+     * by service clients. The entire metadata dictionary may contain
+     * up to 2000 characters, spread across all key-value pairs.
+     * Metadata that goes beyond any these limits will be rejected.
+     * 
+     */
     @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
+    /**
+     * @return Metadata for the service. This data can be consumed
+     * by service clients. The entire metadata dictionary may contain
+     * up to 2000 characters, spread across all key-value pairs.
+     * Metadata that goes beyond any these limits will be rejected.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getMetadata() {
         return this.metadata;
     }
+    /**
+     * The resource name for the service in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*'.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name for the service in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*'.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The resource name of the namespace this service will belong to.
+     * 
+     */
     @OutputExport(name="namespace", type=String.class, parameters={})
     private Output<String> namespace;
 
+    /**
+     * @return The resource name of the namespace this service will belong to.
+     * 
+     */
     public Output<String> getNamespace() {
         return this.namespace;
     }
+    /**
+     * The Resource ID must be 1-63 characters long, including digits,
+     * lowercase letters or the hyphen character.
+     * 
+     */
     @OutputExport(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
+    /**
+     * @return The Resource ID must be 1-63 characters long, including digits,
+     * lowercase letters or the hyphen character.
+     * 
+     */
     public Output<String> getServiceId() {
         return this.serviceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:servicedirectory/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +130,15 @@ public class Service extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Service get(String name, Input<String> id, @Nullable ServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, state, options);
     }

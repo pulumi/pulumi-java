@@ -9,7 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
+    /**
+     * The IP CIDR range represented by this alias IP range. This IP CIDR range
+     * must belong to the specified subnetwork and cannot contain IP addresses reserved by
+     * system or used by other network interfaces. At the time of writing only a
+     * netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
+     * error.
+     * 
+     */
     private final String ipCidrRange;
+    /**
+     * The subnetwork secondary range name specifying
+     * the secondary range from which to allocate the IP CIDR range for this alias IP
+     * range. If left unspecified, the primary range of the subnetwork will be used.
+     * 
+     */
     private final String subnetworkRangeName;
 
     @OutputCustomType.Constructor({"ipCidrRange","subnetworkRangeName"})
@@ -20,9 +34,23 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
         this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
     }
 
+    /**
+     * The IP CIDR range represented by this alias IP range. This IP CIDR range
+     * must belong to the specified subnetwork and cannot contain IP addresses reserved by
+     * system or used by other network interfaces. At the time of writing only a
+     * netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
+     * error.
+     * 
+     */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
+    /**
+     * The subnetwork secondary range name specifying
+     * the secondary range from which to allocate the IP CIDR range for this alias IP
+     * range. If left unspecified, the primary range of the subnetwork will be used.
+     * 
+     */
     public String getSubnetworkRangeName() {
         return this.subnetworkRangeName;
     }

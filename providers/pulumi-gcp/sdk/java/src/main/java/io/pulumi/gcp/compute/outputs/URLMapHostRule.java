@@ -12,8 +12,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class URLMapHostRule {
+    /**
+     * Description of this test case.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * The list of host patterns to match. They must be valid hostnames, except * will
+     * match any string of ([a-z0-9-.]*). In that case, * must be the first character
+     * and must be followed in the pattern by either - or ..
+     * 
+     */
     private final List<String> hosts;
+    /**
+     * The name of the PathMatcher to use to match the path portion of the URL if the
+     * hostRule matches the URL's host portion.
+     * 
+     */
     private final String pathMatcher;
 
     @OutputCustomType.Constructor({"description","hosts","pathMatcher"})
@@ -26,12 +41,27 @@ public final class URLMapHostRule {
         this.pathMatcher = Objects.requireNonNull(pathMatcher);
     }
 
+    /**
+     * Description of this test case.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * The list of host patterns to match. They must be valid hostnames, except * will
+     * match any string of ([a-z0-9-.]*). In that case, * must be the first character
+     * and must be followed in the pattern by either - or ..
+     * 
+     */
     public List<String> getHosts() {
         return this.hosts;
     }
+    /**
+     * The name of the PathMatcher to use to match the path portion of the URL if the
+     * hostRule matches the URL's host portion.
+     * 
+     */
     public String getPathMatcher() {
         return this.pathMatcher;
     }

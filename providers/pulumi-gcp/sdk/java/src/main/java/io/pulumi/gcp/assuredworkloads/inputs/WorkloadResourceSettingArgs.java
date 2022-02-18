@@ -14,6 +14,10 @@ public final class WorkloadResourceSettingArgs extends io.pulumi.resources.Resou
 
     public static final WorkloadResourceSettingArgs Empty = new WorkloadResourceSettingArgs();
 
+    /**
+     * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
+     * 
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -21,6 +25,10 @@ public final class WorkloadResourceSettingArgs extends io.pulumi.resources.Resou
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
+    /**
+     * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
+     * 
+     */
     @InputImport(name="resourceType")
     private final @Nullable Input<String> resourceType;
 

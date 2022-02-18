@@ -15,6 +15,12 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ServiceTemplateArgs Empty = new ServiceTemplateArgs();
 
+    /**
+     * Metadata associated with this Service, including name, namespace, labels,
+     * and annotations.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ServiceTemplateMetadataArgs> metadata;
 
@@ -22,6 +28,11 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * RevisionSpec holds the desired state of the Revision (from the client).
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="spec")
     private final @Nullable Input<ServiceTemplateSpecArgs> spec;
 

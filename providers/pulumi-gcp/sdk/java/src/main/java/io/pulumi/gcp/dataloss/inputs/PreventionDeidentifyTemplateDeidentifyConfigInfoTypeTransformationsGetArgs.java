@@ -14,6 +14,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs Empty = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs();
 
+    /**
+     * Transformation for each infoType. Cannot specify more than one for a given infoType.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="transformations", required=true)
     private final Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs>> transformations;
 

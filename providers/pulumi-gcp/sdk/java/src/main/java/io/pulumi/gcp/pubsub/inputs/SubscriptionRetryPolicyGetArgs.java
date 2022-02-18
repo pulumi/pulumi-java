@@ -14,6 +14,11 @@ public final class SubscriptionRetryPolicyGetArgs extends io.pulumi.resources.Re
 
     public static final SubscriptionRetryPolicyGetArgs Empty = new SubscriptionRetryPolicyGetArgs();
 
+    /**
+     * The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="maximumBackoff")
     private final @Nullable Input<String> maximumBackoff;
 
@@ -21,6 +26,11 @@ public final class SubscriptionRetryPolicyGetArgs extends io.pulumi.resources.Re
         return this.maximumBackoff == null ? Input.empty() : this.maximumBackoff;
     }
 
+    /**
+     * The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="minimumBackoff")
     private final @Nullable Input<String> minimumBackoff;
 

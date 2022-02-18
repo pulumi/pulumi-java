@@ -14,6 +14,11 @@ public final class ManagedSslCertificateManagedGetArgs extends io.pulumi.resourc
 
     public static final ManagedSslCertificateManagedGetArgs Empty = new ManagedSslCertificateManagedGetArgs();
 
+    /**
+     * Domains for which a managed SSL certificate will be valid.  Currently,
+     * there can be up to 100 domains in this list.
+     * 
+     */
     @InputImport(name="domains", required=true)
     private final Input<List<String>> domains;
 

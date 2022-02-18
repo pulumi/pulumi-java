@@ -13,6 +13,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs 
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs();
 
+    /**
+     * Required. The name of the repository.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

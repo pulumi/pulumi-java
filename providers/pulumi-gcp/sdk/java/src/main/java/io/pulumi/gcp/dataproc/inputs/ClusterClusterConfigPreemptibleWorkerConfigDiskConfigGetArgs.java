@@ -15,6 +15,13 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs 
 
     public static final ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs Empty = new ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs();
 
+    /**
+     * Size of the primary disk attached to each preemptible worker node, specified
+     * in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
+     * computed value if not set (currently 500GB). Note: If SSDs are not
+     * attached, it also contains the HDFS data blocks and Hadoop working directories.
+     * 
+     */
     @InputImport(name="bootDiskSizeGb")
     private final @Nullable Input<Integer> bootDiskSizeGb;
 
@@ -22,6 +29,11 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs 
         return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
     }
 
+    /**
+     * The disk type of the primary disk attached to each preemptible worker node.
+     * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
+     * 
+     */
     @InputImport(name="bootDiskType")
     private final @Nullable Input<String> bootDiskType;
 
@@ -29,6 +41,11 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs 
         return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
     }
 
+    /**
+     * The amount of local SSD disks that will be
+     * attached to each preemptible worker node. Defaults to 0.
+     * 
+     */
     @InputImport(name="numLocalSsds")
     private final @Nullable Input<Integer> numLocalSsds;
 

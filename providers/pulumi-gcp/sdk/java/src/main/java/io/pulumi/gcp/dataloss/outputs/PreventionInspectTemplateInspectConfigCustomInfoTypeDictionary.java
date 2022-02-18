@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary {
+    /**
+     * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath cloudStoragePath;
+    /**
+     * List of words or phrases to search for.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList wordList;
 
     @OutputCustomType.Constructor({"cloudStoragePath","wordList"})
@@ -23,9 +33,19 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
         this.wordList = wordList;
     }
 
+    /**
+     * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath> getCloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
+    /**
+     * List of words or phrases to search for.
+     * Structure is documented below.
+     * 
+     */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList> getWordList() {
         return Optional.ofNullable(this.wordList);
     }

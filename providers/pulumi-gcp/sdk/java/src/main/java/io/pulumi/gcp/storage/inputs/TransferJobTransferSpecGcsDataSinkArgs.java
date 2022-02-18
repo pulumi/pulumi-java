@@ -14,6 +14,10 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
 
     public static final TransferJobTransferSpecGcsDataSinkArgs Empty = new TransferJobTransferSpecGcsDataSinkArgs();
 
+    /**
+     * S3 Bucket name.
+     * 
+     */
     @InputImport(name="bucketName", required=true)
     private final Input<String> bucketName;
 
@@ -21,6 +25,10 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
         return this.bucketName;
     }
 
+    /**
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+     * 
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

@@ -13,9 +13,28 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
+    /**
+     * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+     * scanning files that have not been modified since the last time the JobTrigger executed. This will
+     * be based on the time of the execution of the last run of the JobTrigger.
+     * 
+     */
     private final @Nullable Boolean enableAutoPopulationOfTimespanConfig;
+    /**
+     * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+     * 
+     */
     private final @Nullable String endTime;
+    /**
+     * Exclude files or rows older than this value.
+     * 
+     */
     private final @Nullable String startTime;
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     private final PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField;
 
     @OutputCustomType.Constructor({"enableAutoPopulationOfTimespanConfig","endTime","startTime","timestampField"})
@@ -30,15 +49,34 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
         this.timestampField = Objects.requireNonNull(timestampField);
     }
 
+    /**
+     * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+     * scanning files that have not been modified since the last time the JobTrigger executed. This will
+     * be based on the time of the execution of the last run of the JobTrigger.
+     * 
+     */
     public Optional<Boolean> getEnableAutoPopulationOfTimespanConfig() {
         return Optional.ofNullable(this.enableAutoPopulationOfTimespanConfig);
     }
+    /**
+     * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+     * 
+     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+    /**
+     * Exclude files or rows older than this value.
+     * 
+     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     public PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField getTimestampField() {
         return this.timestampField;
     }

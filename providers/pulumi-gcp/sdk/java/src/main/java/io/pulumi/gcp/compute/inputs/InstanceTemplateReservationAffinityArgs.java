@@ -15,6 +15,11 @@ public final class InstanceTemplateReservationAffinityArgs extends io.pulumi.res
 
     public static final InstanceTemplateReservationAffinityArgs Empty = new InstanceTemplateReservationAffinityArgs();
 
+    /**
+     * Specifies the label selector for the reservation to use..
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="specificReservation")
     private final @Nullable Input<InstanceTemplateReservationAffinitySpecificReservationArgs> specificReservation;
 
@@ -22,6 +27,10 @@ public final class InstanceTemplateReservationAffinityArgs extends io.pulumi.res
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
     }
 
+    /**
+     * The type of reservation from which this instance can consume resources.
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

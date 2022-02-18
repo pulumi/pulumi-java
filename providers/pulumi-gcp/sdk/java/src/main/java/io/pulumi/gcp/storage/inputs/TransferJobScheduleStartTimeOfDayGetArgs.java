@@ -13,6 +13,10 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends io.pulumi.re
 
     public static final TransferJobScheduleStartTimeOfDayGetArgs Empty = new TransferJobScheduleStartTimeOfDayGetArgs();
 
+    /**
+     * Hours of day in 24 hour format. Should be from 0 to 23
+     * 
+     */
     @InputImport(name="hours", required=true)
     private final Input<Integer> hours;
 
@@ -20,6 +24,10 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends io.pulumi.re
         return this.hours;
     }
 
+    /**
+     * Minutes of hour of day. Must be from 0 to 59.
+     * 
+     */
     @InputImport(name="minutes", required=true)
     private final Input<Integer> minutes;
 
@@ -27,6 +35,10 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends io.pulumi.re
         return this.minutes;
     }
 
+    /**
+     * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+     * 
+     */
     @InputImport(name="nanos", required=true)
     private final Input<Integer> nanos;
 
@@ -34,6 +46,10 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends io.pulumi.re
         return this.nanos;
     }
 
+    /**
+     * Seconds of minutes of the time. Must normally be from 0 to 59.
+     * 
+     */
     @InputImport(name="seconds", required=true)
     private final Input<Integer> seconds;
 

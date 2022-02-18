@@ -19,6 +19,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistryArgs Empty = new RegistryArgs();
 
+    /**
+     * List of public key certificates to authenticate devices.
+     * 
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<List<RegistryCredentialArgs>> credentials;
 
@@ -26,6 +30,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * List of configurations for event notifications, such as PubSub topics to publish device events to.
+     * 
+     */
     @InputImport(name="eventNotificationConfigs")
     private final @Nullable Input<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs;
 
@@ -33,6 +41,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventNotificationConfigs == null ? Input.empty() : this.eventNotificationConfigs;
     }
 
+    /**
+     * Activate or deactivate HTTP.
+     * 
+     */
     @InputImport(name="httpConfig")
     private final @Nullable Input<Map<String,Object>> httpConfig;
 
@@ -40,6 +52,13 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpConfig == null ? Input.empty() : this.httpConfig;
     }
 
+    /**
+     * The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+     * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+     * enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+     * "DEBUG"]
+     * 
+     */
     @InputImport(name="logLevel")
     private final @Nullable Input<String> logLevel;
 
@@ -47,6 +66,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.logLevel == null ? Input.empty() : this.logLevel;
     }
 
+    /**
+     * Activate or deactivate MQTT.
+     * 
+     */
     @InputImport(name="mqttConfig")
     private final @Nullable Input<Map<String,Object>> mqttConfig;
 
@@ -54,6 +77,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.mqttConfig == null ? Input.empty() : this.mqttConfig;
     }
 
+    /**
+     * A unique name for the resource, required by device registry.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +95,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region in which the created registry should reside. If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -75,6 +106,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * A PubSub topic to publish device state updates.
+     * 
+     */
     @InputImport(name="stateNotificationConfig")
     private final @Nullable Input<Map<String,Object>> stateNotificationConfig;
 

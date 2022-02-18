@@ -12,7 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CaPoolIssuancePolicyAllowedKeyType {
+    /**
+     * Represents an allowed Elliptic Curve key type.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve;
+    /**
+     * Describes an RSA key that may be used in a Certificate issued from a CaPool.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa;
 
     @OutputCustomType.Constructor({"ellipticCurve","rsa"})
@@ -23,9 +33,19 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
         this.rsa = rsa;
     }
 
+    /**
+     * Represents an allowed Elliptic Curve key type.
+     * Structure is documented below.
+     * 
+     */
     public Optional<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve> getEllipticCurve() {
         return Optional.ofNullable(this.ellipticCurve);
     }
+    /**
+     * Describes an RSA key that may be used in a Certificate issued from a CaPool.
+     * Structure is documented below.
+     * 
+     */
     public Optional<CaPoolIssuancePolicyAllowedKeyTypeRsa> getRsa() {
         return Optional.ofNullable(this.rsa);
     }

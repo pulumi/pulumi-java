@@ -13,6 +13,10 @@ public final class AzureClusterControlPlaneReplicaPlacementArgs extends io.pulum
 
     public static final AzureClusterControlPlaneReplicaPlacementArgs Empty = new AzureClusterControlPlaneReplicaPlacementArgs();
 
+    /**
+     * For a given replica, the Azure availability zone where to provision the control plane VM and the ETCD disk.
+     * 
+     */
     @InputImport(name="azureAvailabilityZone", required=true)
     private final Input<String> azureAvailabilityZone;
 
@@ -20,6 +24,10 @@ public final class AzureClusterControlPlaneReplicaPlacementArgs extends io.pulum
         return this.azureAvailabilityZone;
     }
 
+    /**
+     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 

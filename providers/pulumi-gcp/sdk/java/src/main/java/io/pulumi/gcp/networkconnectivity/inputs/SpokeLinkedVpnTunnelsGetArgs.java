@@ -15,6 +15,10 @@ public final class SpokeLinkedVpnTunnelsGetArgs extends io.pulumi.resources.Reso
 
     public static final SpokeLinkedVpnTunnelsGetArgs Empty = new SpokeLinkedVpnTunnelsGetArgs();
 
+    /**
+     * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+     * 
+     */
     @InputImport(name="siteToSiteDataTransfer", required=true)
     private final Input<Boolean> siteToSiteDataTransfer;
 
@@ -22,6 +26,10 @@ public final class SpokeLinkedVpnTunnelsGetArgs extends io.pulumi.resources.Reso
         return this.siteToSiteDataTransfer;
     }
 
+    /**
+     * The URIs of linked VPN tunnel resources.
+     * 
+     */
     @InputImport(name="uris", required=true)
     private final Input<List<String>> uris;
 

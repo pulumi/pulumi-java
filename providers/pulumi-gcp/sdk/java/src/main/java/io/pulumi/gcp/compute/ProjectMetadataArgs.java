@@ -15,6 +15,10 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ProjectMetadataArgs Empty = new ProjectMetadataArgs();
 
+    /**
+     * A series of key value pairs.
+     * 
+     */
     @InputImport(name="metadata", required=true)
     private final Input<Map<String,String>> metadata;
 
@@ -22,6 +26,11 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
         return this.metadata;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

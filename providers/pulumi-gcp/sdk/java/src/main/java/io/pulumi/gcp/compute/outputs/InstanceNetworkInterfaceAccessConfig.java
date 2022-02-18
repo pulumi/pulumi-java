@@ -11,8 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceNetworkInterfaceAccessConfig {
+    /**
+     * The IP address that will be 1:1 mapped to the instance's
+     * network ip. If not given, one will be generated.
+     * 
+     */
     private final @Nullable String natIp;
+    /**
+     * The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     private final @Nullable String networkTier;
+    /**
+     * The domain name to be used when creating DNSv6
+     * records for the external IPv6 ranges..
+     * 
+     */
     private final @Nullable String publicPtrDomainName;
 
     @OutputCustomType.Constructor({"natIp","networkTier","publicPtrDomainName"})
@@ -25,12 +40,27 @@ public final class InstanceNetworkInterfaceAccessConfig {
         this.publicPtrDomainName = publicPtrDomainName;
     }
 
+    /**
+     * The IP address that will be 1:1 mapped to the instance's
+     * network ip. If not given, one will be generated.
+     * 
+     */
     public Optional<String> getNatIp() {
         return Optional.ofNullable(this.natIp);
     }
+    /**
+     * The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     public Optional<String> getNetworkTier() {
         return Optional.ofNullable(this.networkTier);
     }
+    /**
+     * The domain name to be used when creating DNSv6
+     * records for the external IPv6 ranges..
+     * 
+     */
     public Optional<String> getPublicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }

@@ -14,6 +14,11 @@ public final class SecretReplicationUserManagedGetArgs extends io.pulumi.resourc
 
     public static final SecretReplicationUserManagedGetArgs Empty = new SecretReplicationUserManagedGetArgs();
 
+    /**
+     * The list of Replicas for this Secret. Cannot be empty.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="replicas", required=true)
     private final Input<List<SecretReplicationUserManagedReplicaGetArgs>> replicas;
 

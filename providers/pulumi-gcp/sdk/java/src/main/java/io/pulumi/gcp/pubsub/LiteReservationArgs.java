@@ -15,6 +15,10 @@ public final class LiteReservationArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final LiteReservationArgs Empty = new LiteReservationArgs();
 
+    /**
+     * Name of the reservation.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +26,11 @@ public final class LiteReservationArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -29,6 +38,10 @@ public final class LiteReservationArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the pubsub lite reservation.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -36,6 +49,12 @@ public final class LiteReservationArgs extends io.pulumi.resources.ResourceArgs 
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The reserved throughput capacity. Every unit of throughput capacity is
+     * equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
+     * messages.
+     * 
+     */
     @InputImport(name="throughputCapacity", required=true)
     private final Input<Integer> throughputCapacity;
 

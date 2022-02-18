@@ -14,6 +14,10 @@ public final class GetTransferProjectServieAccountArgs extends io.pulumi.resourc
 
     public static final GetTransferProjectServieAccountArgs Empty = new GetTransferProjectServieAccountArgs();
 
+    /**
+     * The project ID. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

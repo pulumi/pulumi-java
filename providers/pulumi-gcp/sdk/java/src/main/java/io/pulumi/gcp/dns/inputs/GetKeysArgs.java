@@ -14,6 +14,10 @@ public final class GetKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeysArgs Empty = new GetKeysArgs();
 
+    /**
+     * The name or id of the Cloud DNS managed zone.
+     * 
+     */
     @InputImport(name="managedZone", required=true)
     private final String managedZone;
 
@@ -21,6 +25,10 @@ public final class GetKeysArgs extends io.pulumi.resources.InvokeArgs {
         return this.managedZone;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

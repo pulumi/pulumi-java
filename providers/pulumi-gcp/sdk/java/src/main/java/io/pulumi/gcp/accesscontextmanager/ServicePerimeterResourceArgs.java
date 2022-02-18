@@ -13,6 +13,10 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
 
     public static final ServicePerimeterResourceArgs Empty = new ServicePerimeterResourceArgs();
 
+    /**
+     * The name of the Service Perimeter to add this resource to.
+     * 
+     */
     @InputImport(name="perimeterName", required=true)
     private final Input<String> perimeterName;
 
@@ -20,6 +24,12 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
         return this.perimeterName;
     }
 
+    /**
+     * A GCP resource that is inside of the service perimeter.
+     * Currently only projects are allowed.
+     * Format: projects/{project_number}
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final Input<String> resource;
 

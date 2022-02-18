@@ -16,6 +16,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs 
 
     public static final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs Empty = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs();
 
+    /**
+     * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<List<String>> properties;
 
@@ -23,6 +27,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Required. An rpm package.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs> source;
 

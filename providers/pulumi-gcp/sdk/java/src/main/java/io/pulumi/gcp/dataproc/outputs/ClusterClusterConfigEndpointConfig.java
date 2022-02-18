@@ -13,6 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterClusterConfigEndpointConfig {
+    /**
+     * The flag to enable http access to specific ports
+     * on the cluster from external sources (aka Component Gateway). Defaults to false.
+     * 
+     */
     private final Boolean enableHttpPortAccess;
     private final @Nullable Map<String,Object> httpPorts;
 
@@ -24,6 +29,11 @@ public final class ClusterClusterConfigEndpointConfig {
         this.httpPorts = httpPorts;
     }
 
+    /**
+     * The flag to enable http access to specific ports
+     * on the cluster from external sources (aka Component Gateway). Defaults to false.
+     * 
+     */
     public Boolean getEnableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }

@@ -15,10 +15,35 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CaPoolIssuancePolicyBaselineValues {
+    /**
+     * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> additionalExtensions;
+    /**
+     * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+     * "Authority Information Access" extension in the certificate.
+     * 
+     */
     private final @Nullable List<String> aiaOcspServers;
+    /**
+     * Describes values that are relevant in a CA certificate.
+     * Structure is documented below.
+     * 
+     */
     private final CaPoolIssuancePolicyBaselineValuesCaOptions caOptions;
+    /**
+     * Indicates the intended use for keys that correspond to a certificate.
+     * Structure is documented below.
+     * 
+     */
     private final CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage;
+    /**
+     * Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds;
 
     @OutputCustomType.Constructor({"additionalExtensions","aiaOcspServers","caOptions","keyUsage","policyIds"})
@@ -35,18 +60,43 @@ public final class CaPoolIssuancePolicyBaselineValues {
         this.policyIds = policyIds;
     }
 
+    /**
+     * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+     * Structure is documented below.
+     * 
+     */
     public List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> getAdditionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
+    /**
+     * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+     * "Authority Information Access" extension in the certificate.
+     * 
+     */
     public List<String> getAiaOcspServers() {
         return this.aiaOcspServers == null ? List.of() : this.aiaOcspServers;
     }
+    /**
+     * Describes values that are relevant in a CA certificate.
+     * Structure is documented below.
+     * 
+     */
     public CaPoolIssuancePolicyBaselineValuesCaOptions getCaOptions() {
         return this.caOptions;
     }
+    /**
+     * Indicates the intended use for keys that correspond to a certificate.
+     * Structure is documented below.
+     * 
+     */
     public CaPoolIssuancePolicyBaselineValuesKeyUsage getKeyUsage() {
         return this.keyUsage;
     }
+    /**
+     * Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * Structure is documented below.
+     * 
+     */
     public List<CaPoolIssuancePolicyBaselineValuesPolicyId> getPolicyIds() {
         return this.policyIds == null ? List.of() : this.policyIds;
     }

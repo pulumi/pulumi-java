@@ -16,6 +16,10 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CxEnvironmentArgs Empty = new CxEnvironmentArgs();
 
+    /**
+     * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +27,10 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -30,6 +38,11 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The Agent to create an Environment for.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -37,6 +50,11 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * A list of configurations for flow versions. You should include version configs for all flows that are reachable from [Start Flow][Agent.start_flow] in the agent. Otherwise, an error will be returned.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="versionConfigs", required=true)
     private final Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
 

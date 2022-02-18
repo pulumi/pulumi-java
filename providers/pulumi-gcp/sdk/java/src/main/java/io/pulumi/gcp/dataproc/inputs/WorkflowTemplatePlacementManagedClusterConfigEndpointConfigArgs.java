@@ -16,6 +16,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigAr
 
     public static final WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs();
 
+    /**
+     * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+     * 
+     */
     @InputImport(name="enableHttpPortAccess")
     private final @Nullable Input<Boolean> enableHttpPortAccess;
 
@@ -23,6 +27,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigAr
         return this.enableHttpPortAccess == null ? Input.empty() : this.enableHttpPortAccess;
     }
 
+    /**
+     * - 
+     * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+     * 
+     */
     @InputImport(name="httpPorts")
     private final @Nullable Input<Map<String,String>> httpPorts;
 

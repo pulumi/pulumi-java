@@ -14,6 +14,10 @@ public final class URLMapTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final URLMapTestArgs Empty = new URLMapTestArgs();
 
+    /**
+     * Description of this test case.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class URLMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Host portion of the URL.
+     * 
+     */
     @InputImport(name="host", required=true)
     private final Input<String> host;
 
@@ -28,6 +36,10 @@ public final class URLMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.host;
     }
 
+    /**
+     * Path portion of the URL.
+     * 
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -35,6 +47,10 @@ public final class URLMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.path;
     }
 
+    /**
+     * The backend service or backend bucket link that should be matched by this test.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

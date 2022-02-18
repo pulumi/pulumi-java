@@ -25,6 +25,14 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
 
     public static final BackendServiceState Empty = new BackendServiceState();
 
+    /**
+     * Lifetime of cookies in seconds if session_affinity is
+     * GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
+     * only until the end of the browser session (or equivalent). The
+     * maximum allowed value for TTL is one day.
+     * When the load balancing scheme is INTERNAL, this field is not used.
+     * 
+     */
     @InputImport(name="affinityCookieTtlSec")
     private final @Nullable Input<Integer> affinityCookieTtlSec;
 
@@ -32,6 +40,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.affinityCookieTtlSec == null ? Input.empty() : this.affinityCookieTtlSec;
     }
 
+    /**
+     * The set of backends that serve this BackendService.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="backends")
     private final @Nullable Input<List<BackendServiceBackendGetArgs>> backends;
 
@@ -39,6 +52,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.backends == null ? Input.empty() : this.backends;
     }
 
+    /**
+     * Cloud CDN configuration for this BackendService.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="cdnPolicy")
     private final @Nullable Input<BackendServiceCdnPolicyGetArgs> cdnPolicy;
 
@@ -46,6 +64,12 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
     }
 
+    /**
+     * Settings controlling the volume of connections to a backend service. This field
+     * is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="circuitBreakers")
     private final @Nullable Input<BackendServiceCircuitBreakersGetArgs> circuitBreakers;
 
@@ -53,6 +77,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.circuitBreakers == null ? Input.empty() : this.circuitBreakers;
     }
 
+    /**
+     * Time for which instance will be drained (not accept new
+     * connections, but still work to finish started).
+     * 
+     */
     @InputImport(name="connectionDrainingTimeoutSec")
     private final @Nullable Input<Integer> connectionDrainingTimeoutSec;
 
@@ -60,6 +89,18 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.connectionDrainingTimeoutSec == null ? Input.empty() : this.connectionDrainingTimeoutSec;
     }
 
+    /**
+     * Consistent Hash-based load balancing can be used to provide soft session
+     * affinity based on HTTP headers, cookies or other properties. This load balancing
+     * policy is applicable only for HTTP connections. The affinity to a particular
+     * destination host will be lost when one or more hosts are added/removed from the
+     * destination service. This field specifies parameters that control consistent
+     * hashing. This field only applies if the load_balancing_scheme is set to
+     * INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+     * set to MAGLEV or RING_HASH.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="consistentHash")
     private final @Nullable Input<BackendServiceConsistentHashGetArgs> consistentHash;
 
@@ -67,6 +108,10 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.consistentHash == null ? Input.empty() : this.consistentHash;
     }
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="creationTimestamp")
     private final @Nullable Input<String> creationTimestamp;
 
@@ -74,6 +119,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
     }
 
+    /**
+     * Headers that the HTTP/S load balancer should add to proxied
+     * requests.
+     * 
+     */
     @InputImport(name="customRequestHeaders")
     private final @Nullable Input<List<String>> customRequestHeaders;
 
@@ -81,6 +131,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.customRequestHeaders == null ? Input.empty() : this.customRequestHeaders;
     }
 
+    /**
+     * Headers that the HTTP/S load balancer should add to proxied
+     * responses.
+     * 
+     */
     @InputImport(name="customResponseHeaders")
     private final @Nullable Input<List<String>> customResponseHeaders;
 
@@ -88,6 +143,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.customResponseHeaders == null ? Input.empty() : this.customResponseHeaders;
     }
 
+    /**
+     * An optional description of this resource.
+     * Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -95,6 +155,10 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * If true, enable Cloud CDN for this BackendService.
+     * 
+     */
     @InputImport(name="enableCdn")
     private final @Nullable Input<Boolean> enableCdn;
 
@@ -102,6 +166,10 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.enableCdn == null ? Input.empty() : this.enableCdn;
     }
 
+    /**
+     * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+     * 
+     */
     @InputImport(name="fingerprint")
     private final @Nullable Input<String> fingerprint;
 
@@ -109,6 +177,15 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
     }
 
+    /**
+     * The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+     * for health checking this BackendService. Currently at most one health
+     * check can be specified.
+     * A health check must be specified unless the backend service uses an internet
+     * or serverless NEG as a backend.
+     * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+     * 
+     */
     @InputImport(name="healthChecks")
     private final @Nullable Input<String> healthChecks;
 
@@ -116,6 +193,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.healthChecks == null ? Input.empty() : this.healthChecks;
     }
 
+    /**
+     * Settings for enabling Cloud Identity Aware Proxy
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="iap")
     private final @Nullable Input<BackendServiceIapGetArgs> iap;
 
@@ -123,6 +205,15 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.iap == null ? Input.empty() : this.iap;
     }
 
+    /**
+     * Indicates whether the backend service will be used with internal or
+     * external load balancing. A backend service created for one type of
+     * load balancing cannot be used with the other. For more information, refer to
+     * [Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service).
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL`, `INTERNAL_SELF_MANAGED`, and `EXTERNAL_MANAGED`.
+     * 
+     */
     @InputImport(name="loadBalancingScheme")
     private final @Nullable Input<String> loadBalancingScheme;
 
@@ -130,6 +221,29 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
     }
 
+    /**
+     * The load balancing algorithm used within the scope of the locality.
+     * The possible values are:
+     * * `ROUND_ROBIN`: This is a simple policy in which each healthy backend
+     *   is selected in round robin order.
+     * * `LEAST_REQUEST`: An O(1) algorithm which selects two random healthy
+     *   hosts and picks the host which has fewer active requests.
+     * * `RING_HASH`: The ring/modulo hash load balancer implements consistent
+     *   hashing to backends. The algorithm has the property that the
+     *   addition/removal of a host from a set of N hosts only affects
+     *   1/N of the requests.
+     * * `RANDOM`: The load balancer selects a random healthy host.
+     * * `ORIGINAL_DESTINATION`: Backend host is selected based on the client
+     *   connection metadata, i.e., connections are opened
+     *   to the same address as the destination address of
+     *   the incoming connection before the connection
+     *   was redirected to the load balancer.
+     * * `MAGLEV`: used as a drop in replacement for the ring hash load balancer.
+     *   Maglev is not as stable as ring hash but has faster table lookup
+     *   build times and host selection times. For more information about
+     *   Maglev, refer to https://ai.google/research/pubs/pub44824
+     * 
+     */
     @InputImport(name="localityLbPolicy")
     private final @Nullable Input<String> localityLbPolicy;
 
@@ -137,6 +251,12 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.localityLbPolicy == null ? Input.empty() : this.localityLbPolicy;
     }
 
+    /**
+     * This field denotes the logging options for the load balancer traffic served by this backend service.
+     * If logging is enabled, logs will be exported to Stackdriver.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="logConfig")
     private final @Nullable Input<BackendServiceLogConfigGetArgs> logConfig;
 
@@ -144,6 +264,10 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
+    /**
+     * Name of the cookie.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -151,6 +275,13 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Settings controlling eviction of unhealthy hosts from the load balancing pool.
+     * This field is applicable only when the load_balancing_scheme is set
+     * to INTERNAL_SELF_MANAGED.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="outlierDetection")
     private final @Nullable Input<BackendServiceOutlierDetectionGetArgs> outlierDetection;
 
@@ -158,6 +289,12 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.outlierDetection == null ? Input.empty() : this.outlierDetection;
     }
 
+    /**
+     * Name of backend port. The same name should appear in the instance
+     * groups referenced by this service. Required when the load balancing
+     * scheme is EXTERNAL.
+     * 
+     */
     @InputImport(name="portName")
     private final @Nullable Input<String> portName;
 
@@ -165,6 +302,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.portName == null ? Input.empty() : this.portName;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -172,6 +314,13 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The protocol this BackendService uses to communicate with backends.
+     * The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+     * types and may result in errors if used with the GA API.
+     * Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
+     * 
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<String> protocol;
 
@@ -179,6 +328,10 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
+    /**
+     * The security policy associated with this backend service.
+     * 
+     */
     @InputImport(name="securityPolicy")
     private final @Nullable Input<String> securityPolicy;
 
@@ -186,6 +339,14 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.securityPolicy == null ? Input.empty() : this.securityPolicy;
     }
 
+    /**
+     * The security settings that apply to this backend service. This field is applicable to either
+     * a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+     * load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+     * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="securitySettings")
     private final @Nullable Input<BackendServiceSecuritySettingsGetArgs> securitySettings;
 
@@ -193,6 +354,10 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -200,6 +365,12 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * Type of session affinity to use. The default is NONE. Session affinity is
+     * not applicable if the protocol is UDP.
+     * Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+     * 
+     */
     @InputImport(name="sessionAffinity")
     private final @Nullable Input<String> sessionAffinity;
 
@@ -207,6 +378,11 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
     }
 
+    /**
+     * How many seconds to wait for the backend before considering it a
+     * failed request. Default is 30 seconds. Valid range is [1, 86400].
+     * 
+     */
     @InputImport(name="timeoutSec")
     private final @Nullable Input<Integer> timeoutSec;
 

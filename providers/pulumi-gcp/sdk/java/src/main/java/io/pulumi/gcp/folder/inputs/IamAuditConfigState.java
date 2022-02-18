@@ -16,6 +16,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
 
     public static final IamAuditConfigState Empty = new IamAuditConfigState();
 
+    /**
+     * The configuration for logging of each type of permission. This can be specified multiple times.
+     * 
+     */
     @InputImport(name="auditLogConfigs")
     private final @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
@@ -23,6 +27,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
     }
 
+    /**
+     * The etag of iam policy
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -37,6 +45,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
         return this.folder == null ? Input.empty() : this.folder;
     }
 
+    /**
+     * Service which will be enabled for audit logging. The special value allServices covers all services.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

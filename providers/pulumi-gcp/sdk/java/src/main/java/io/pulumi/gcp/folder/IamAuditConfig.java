@@ -17,15 +17,31 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:folder/iamAuditConfig:IamAuditConfig")
 public class IamAuditConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * The configuration for logging of each type of permission. This can be specified multiple times.
+     * 
+     */
     @OutputExport(name="auditLogConfigs", type=List.class, parameters={IamAuditConfigAuditLogConfig.class})
     private Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs;
 
+    /**
+     * @return The configuration for logging of each type of permission. This can be specified multiple times.
+     * 
+     */
     public Output<List<IamAuditConfigAuditLogConfig>> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
+    /**
+     * The etag of iam policy
+     * 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The etag of iam policy
+     * 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
@@ -35,13 +51,27 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
     public Output<String> getFolder() {
         return this.folder;
     }
+    /**
+     * Service which will be enabled for audit logging. The special value allServices covers all services.
+     * 
+     */
     @OutputExport(name="service", type=String.class, parameters={})
     private Output<String> service;
 
+    /**
+     * @return Service which will be enabled for audit logging. The special value allServices covers all services.
+     * 
+     */
     public Output<String> getService() {
         return this.service;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IamAuditConfig(String name, IamAuditConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:folder/iamAuditConfig:IamAuditConfig", name, args == null ? IamAuditConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +87,15 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IamAuditConfig get(String name, Input<String> id, @Nullable IamAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IamAuditConfig(name, id, state, options);
     }

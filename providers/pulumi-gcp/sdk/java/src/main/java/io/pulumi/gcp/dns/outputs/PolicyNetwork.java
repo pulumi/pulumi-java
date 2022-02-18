@@ -9,6 +9,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PolicyNetwork {
+    /**
+     * The id or fully qualified URL of the VPC network to forward queries to.
+     * This should be formatted like `projects/{project}/global/networks/{network}` or
+     * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+     * 
+     */
     private final String networkUrl;
 
     @OutputCustomType.Constructor({"networkUrl"})
@@ -16,6 +22,12 @@ public final class PolicyNetwork {
         this.networkUrl = Objects.requireNonNull(networkUrl);
     }
 
+    /**
+     * The id or fully qualified URL of the VPC network to forward queries to.
+     * This should be formatted like `projects/{project}/global/networks/{network}` or
+     * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+     * 
+     */
     public String getNetworkUrl() {
         return this.networkUrl;
     }

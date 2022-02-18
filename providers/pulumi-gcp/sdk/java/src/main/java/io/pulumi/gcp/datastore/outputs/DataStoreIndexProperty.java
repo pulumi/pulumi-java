@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataStoreIndexProperty {
+    /**
+     * The direction the index should optimize for sorting.
+     * Possible values are `ASCENDING` and `DESCENDING`.
+     * 
+     */
     private final String direction;
+    /**
+     * The property name to index.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"direction","name"})
@@ -20,9 +29,18 @@ public final class DataStoreIndexProperty {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * The direction the index should optimize for sorting.
+     * Possible values are `ASCENDING` and `DESCENDING`.
+     * 
+     */
     public String getDirection() {
         return this.direction;
     }
+    /**
+     * The property name to index.
+     * 
+     */
     public String getName() {
         return this.name;
     }

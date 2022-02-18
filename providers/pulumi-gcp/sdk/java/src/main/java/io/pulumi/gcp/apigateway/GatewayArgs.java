@@ -15,6 +15,11 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayArgs Empty = new GatewayArgs();
 
+    /**
+     * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+     * When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
+     * 
+     */
     @InputImport(name="apiConfig", required=true)
     private final Input<String> apiConfig;
 
@@ -22,6 +27,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiConfig;
     }
 
+    /**
+     * A user-visible name for the API.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +38,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Identifier to assign to the Gateway. Must be unique within scope of the parent resource(project).
+     * 
+     */
     @InputImport(name="gatewayId", required=true)
     private final Input<String> gatewayId;
 
@@ -36,6 +49,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayId;
     }
 
+    /**
+     * Resource labels to represent user-provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -43,6 +60,11 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,6 +72,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the gateway for the API.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

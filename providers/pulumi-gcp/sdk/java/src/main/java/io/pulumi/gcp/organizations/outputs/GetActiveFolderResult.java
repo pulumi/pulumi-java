@@ -10,7 +10,15 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetActiveFolderResult {
     private final String displayName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The resource name of the Folder. This uniquely identifies the folder.
+     * 
+     */
     private final String name;
     private final String parent;
 
@@ -29,9 +37,17 @@ public final class GetActiveFolderResult {
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The resource name of the Folder. This uniquely identifies the folder.
+     * 
+     */
     public String getName() {
         return this.name;
     }

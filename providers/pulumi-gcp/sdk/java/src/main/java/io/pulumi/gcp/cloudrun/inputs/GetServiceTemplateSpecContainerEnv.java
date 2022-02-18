@@ -14,6 +14,10 @@ public final class GetServiceTemplateSpecContainerEnv extends io.pulumi.resource
 
     public static final GetServiceTemplateSpecContainerEnv Empty = new GetServiceTemplateSpecContainerEnv();
 
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

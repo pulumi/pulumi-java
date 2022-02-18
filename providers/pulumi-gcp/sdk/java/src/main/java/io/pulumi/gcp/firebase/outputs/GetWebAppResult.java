@@ -11,6 +11,10 @@ import java.util.Objects;
 public final class GetWebAppResult {
     private final String appId;
     private final String displayName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
     private final String project;
@@ -35,6 +39,10 @@ public final class GetWebAppResult {
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

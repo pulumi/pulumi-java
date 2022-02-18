@@ -10,10 +10,26 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetRuleResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
+     * 
+     */
     private final List<String> includedPermissions;
     private final String name;
+    /**
+     * indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
+     * 
+     */
     private final String stage;
+    /**
+     * is a friendly title for the role, such as "Role Viewer"
+     * 
+     */
     private final String title;
 
     @OutputCustomType.Constructor({"id","includedPermissions","name","stage","title"})
@@ -30,18 +46,34 @@ public final class GetRuleResult {
         this.title = Objects.requireNonNull(title);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
+     * 
+     */
     public List<String> getIncludedPermissions() {
         return this.includedPermissions;
     }
     public String getName() {
         return this.name;
     }
+    /**
+     * indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
+     * 
+     */
     public String getStage() {
         return this.stage;
     }
+    /**
+     * is a friendly title for the role, such as "Role Viewer"
+     * 
+     */
     public String getTitle() {
         return this.title;
     }

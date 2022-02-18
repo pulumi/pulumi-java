@@ -21,6 +21,10 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The numeric ID of the organization in which you want to manage the audit logging config.
+     * 
+     */
     @InputImport(name="orgId")
     private final @Nullable Input<String> orgId;
 

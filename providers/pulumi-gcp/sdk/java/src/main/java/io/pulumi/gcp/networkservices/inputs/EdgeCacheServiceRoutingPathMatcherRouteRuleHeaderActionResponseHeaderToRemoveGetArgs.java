@@ -13,6 +13,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs();
 
+    /**
+     * Headers to remove from the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * 
+     */
     @InputImport(name="headerName", required=true)
     private final Input<String> headerName;
 

@@ -11,7 +11,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector {
+    /**
+     * Value for `method` should be a valid method name for the corresponding
+     * `serviceName` in `ApiOperation`. If `*` used as value for method,
+     * then ALL methods and permissions are allowed.
+     * 
+     */
     private final @Nullable String method;
+    /**
+     * Value for permission should be a valid Cloud IAM permission for the
+     * corresponding `serviceName` in `ApiOperation`.
+     * 
+     */
     private final @Nullable String permission;
 
     @OutputCustomType.Constructor({"method","permission"})
@@ -22,9 +33,20 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelect
         this.permission = permission;
     }
 
+    /**
+     * Value for `method` should be a valid method name for the corresponding
+     * `serviceName` in `ApiOperation`. If `*` used as value for method,
+     * then ALL methods and permissions are allowed.
+     * 
+     */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
+    /**
+     * Value for permission should be a valid Cloud IAM permission for the
+     * corresponding `serviceName` in `ApiOperation`.
+     * 
+     */
     public Optional<String> getPermission() {
         return Optional.ofNullable(this.permission);
     }

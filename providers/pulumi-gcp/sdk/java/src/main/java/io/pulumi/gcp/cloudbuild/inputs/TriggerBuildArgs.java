@@ -22,6 +22,11 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TriggerBuildArgs Empty = new TriggerBuildArgs();
 
+    /**
+     * Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="artifacts")
     private final @Nullable Input<TriggerBuildArtifactsArgs> artifacts;
 
@@ -29,6 +34,11 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifacts == null ? Input.empty() : this.artifacts;
     }
 
+    /**
+     * Secrets and secret environment variables.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="availableSecrets")
     private final @Nullable Input<TriggerBuildAvailableSecretsArgs> availableSecrets;
 
@@ -36,6 +46,13 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.availableSecrets == null ? Input.empty() : this.availableSecrets;
     }
 
+    /**
+     * A list of images to be pushed upon the successful completion of all build steps.
+     * The images will be pushed using the builder service account's credentials.
+     * The digests of the pushed images will be stored in the Build resource's results field.
+     * If any of the images fail to be pushed, the build is marked FAILURE.
+     * 
+     */
     @InputImport(name="images")
     private final @Nullable Input<List<String>> images;
 
@@ -43,6 +60,11 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.images == null ? Input.empty() : this.images;
     }
 
+    /**
+     * Google Cloud Storage bucket where logs should be written.
+     * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+     * 
+     */
     @InputImport(name="logsBucket")
     private final @Nullable Input<String> logsBucket;
 
@@ -50,6 +72,11 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.logsBucket == null ? Input.empty() : this.logsBucket;
     }
 
+    /**
+     * Special options for this build.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="options")
     private final @Nullable Input<TriggerBuildOptionsArgs> options;
 
@@ -57,6 +84,13 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * TTL in queue for this build. If provided and the build is enqueued longer than this value,
+     * the build will expire and the build status will be EXPIRED.
+     * The TTL starts ticking from createTime.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="queueTtl")
     private final @Nullable Input<String> queueTtl;
 
@@ -64,6 +98,11 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.queueTtl == null ? Input.empty() : this.queueTtl;
     }
 
+    /**
+     * Secrets to decrypt using Cloud Key Management Service.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secrets")
     private final @Nullable Input<List<TriggerBuildSecretArgs>> secrets;
 
@@ -71,6 +110,12 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.secrets == null ? Input.empty() : this.secrets;
     }
 
+    /**
+     * The location of the source files to build.
+     * One of `storageSource` or `repoSource` must be provided.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<TriggerBuildSourceArgs> source;
 
@@ -78,6 +123,11 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * The operations to be performed on the workspace.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="steps", required=true)
     private final Input<List<TriggerBuildStepArgs>> steps;
 
@@ -85,6 +135,10 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.steps;
     }
 
+    /**
+     * Substitutions to use in a triggered build. Should only be used with triggers.run
+     * 
+     */
     @InputImport(name="substitutions")
     private final @Nullable Input<Map<String,String>> substitutions;
 
@@ -92,6 +146,10 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.substitutions == null ? Input.empty() : this.substitutions;
     }
 
+    /**
+     * Tags for annotation of a Build. These are not docker tags.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -99,6 +157,13 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Time limit for executing this build step. If not defined,
+     * the step has no
+     * time limit and will be allowed to continue to run until either it
+     * completes or the build itself times out.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

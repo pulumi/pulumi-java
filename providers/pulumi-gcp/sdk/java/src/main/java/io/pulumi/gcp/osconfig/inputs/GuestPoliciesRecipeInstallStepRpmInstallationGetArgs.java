@@ -13,6 +13,10 @@ public final class GuestPoliciesRecipeInstallStepRpmInstallationGetArgs extends 
 
     public static final GuestPoliciesRecipeInstallStepRpmInstallationGetArgs Empty = new GuestPoliciesRecipeInstallStepRpmInstallationGetArgs();
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     * 
+     */
     @InputImport(name="artifactId", required=true)
     private final Input<String> artifactId;
 

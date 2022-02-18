@@ -15,6 +15,10 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
 
     public static final BucketRetentionPolicyArgs Empty = new BucketRetentionPolicyArgs();
 
+    /**
+     * If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
+     * 
+     */
     @InputImport(name="isLocked")
     private final @Nullable Input<Boolean> isLocked;
 
@@ -22,6 +26,10 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
         return this.isLocked == null ? Input.empty() : this.isLocked;
     }
 
+    /**
+     * The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
+     * 
+     */
     @InputImport(name="retentionPeriod", required=true)
     private final Input<Integer> retentionPeriod;
 

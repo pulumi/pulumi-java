@@ -14,6 +14,10 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
 
     public static final FeatureMembershipConfigmanagementHierarchyControllerGetArgs Empty = new FeatureMembershipConfigmanagementHierarchyControllerGetArgs();
 
+    /**
+     * Whether hierarchical resource quota is enabled in this cluster.
+     * 
+     */
     @InputImport(name="enableHierarchicalResourceQuota")
     private final @Nullable Input<Boolean> enableHierarchicalResourceQuota;
 
@@ -21,6 +25,10 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
         return this.enableHierarchicalResourceQuota == null ? Input.empty() : this.enableHierarchicalResourceQuota;
     }
 
+    /**
+     * Whether pod tree labels are enabled in this cluster.
+     * 
+     */
     @InputImport(name="enablePodTreeLabels")
     private final @Nullable Input<Boolean> enablePodTreeLabels;
 
@@ -28,6 +36,10 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
         return this.enablePodTreeLabels == null ? Input.empty() : this.enablePodTreeLabels;
     }
 
+    /**
+     * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

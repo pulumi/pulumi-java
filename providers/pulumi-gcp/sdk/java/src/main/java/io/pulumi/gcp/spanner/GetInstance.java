@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstance {
+/**
+ * Get a spanner instance from Google Cloud by its name.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getInstance.
+ * 
+ *
+ * A collection of values returned by getInstance.
+ * 
+ */
     public static CompletableFuture<GetInstanceResult> invokeAsync(GetInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:spanner/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args == null ? GetInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

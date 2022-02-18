@@ -13,6 +13,10 @@ public final class WorkloadIdentityPoolProviderAwsGetArgs extends io.pulumi.reso
 
     public static final WorkloadIdentityPoolProviderAwsGetArgs Empty = new WorkloadIdentityPoolProviderAwsGetArgs();
 
+    /**
+     * The AWS account ID.
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 

@@ -18,6 +18,14 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
 
     public static final ClusterClusterConfigGceClusterConfigArgs Empty = new ClusterClusterConfigGceClusterConfigArgs();
 
+    /**
+     * By default, clusters are not restricted to internal IP addresses,
+     * and will have ephemeral external IP addresses assigned to each instance. If set to true, all
+     * instances in the cluster will only have internal IP addresses. Note: Private Google Access
+     * (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
+     * will be launched in.
+     * 
+     */
     @InputImport(name="internalIpOnly")
     private final @Nullable Input<Boolean> internalIpOnly;
 
@@ -25,6 +33,11 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
     }
 
+    /**
+     * A map of the Compute Engine metadata entries to add to all instances
+     * (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -32,6 +45,12 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The name or self_link of the Google Compute Engine
+     * network to the cluster will be part of. Conflicts with `subnetwork`.
+     * If neither is specified, this defaults to the "default" network.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -39,6 +58,11 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The service account to be used by the Node VMs.
+     * If not specified, the "default" service account is used.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -46,6 +70,14 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * The set of Google API scopes
+     * to be made available on all of the node VMs under the `service_account`
+     * specified. Both OAuth2 URLs and gcloud
+     * short names are supported. To allow full access to all Cloud APIs, use the
+     * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+     * 
+     */
     @InputImport(name="serviceAccountScopes")
     private final @Nullable Input<List<String>> serviceAccountScopes;
 
@@ -53,6 +85,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
         return this.serviceAccountScopes == null ? Input.empty() : this.serviceAccountScopes;
     }
 
+    /**
+     * Shielded Instance Config for clusters using [Compute Engine Shielded VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
+     * 
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
@@ -60,6 +96,11 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * The name or self_link of the Google Compute Engine
+     * subnetwork the cluster will be part of. Conflicts with `network`.
+     * 
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -67,6 +108,11 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
+    /**
+     * The list of instance tags applied to instances in the cluster.
+     * Tags are used to identify valid sources or targets for network firewalls.
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -74,6 +120,16 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The GCP zone where your data is stored and used (i.e. where
+     * the master and the worker nodes will be created in). If `region` is set to 'global' (default)
+     * then `zone` is mandatory, otherwise GCP is able to make use of [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/auto-zone)
+     * to determine this automatically for you.
+     * Note: This setting additionally determines and restricts
+     * which computing resources are available for use with other configs such as
+     * `cluster_config.master_config.machine_type` and `cluster_config.worker_config.machine_type`.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

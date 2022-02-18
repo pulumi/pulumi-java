@@ -14,6 +14,12 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfigArgs extends io.pulum
 
     public static final ClusterNodePoolNodeConfigLinuxNodeConfigArgs Empty = new ClusterNodePoolNodeConfigLinuxNodeConfigArgs();
 
+    /**
+     * The Linux kernel parameters to be applied to the nodes
+     * and all pods running on the nodes. Specified as a map from the key, such as
+     * `net.core.wmem_max`, to a string value.
+     * 
+     */
     @InputImport(name="sysctls", required=true)
     private final Input<Map<String,String>> sysctls;
 

@@ -14,6 +14,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagValueArgs Empty = new TagValueArgs();
 
+    /**
+     * User-assigned description of the TagValue. Must not exceed 256 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Input only. The resource name of the new TagValue's parent. Must be of the form tagKeys/{tag_key_id}.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -28,6 +36,11 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
+    /**
+     * Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey.
+     * The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="shortName", required=true)
     private final Input<String> shortName;
 

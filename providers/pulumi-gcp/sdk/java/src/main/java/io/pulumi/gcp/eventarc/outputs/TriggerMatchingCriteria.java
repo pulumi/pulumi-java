@@ -9,7 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TriggerMatchingCriteria {
+    /**
+     * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+     * 
+     */
     private final String attribute;
+    /**
+     * Required. The value for the attribute.
+     * 
+     */
     private final String value;
 
     @OutputCustomType.Constructor({"attribute","value"})
@@ -20,9 +28,17 @@ public final class TriggerMatchingCriteria {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+     * 
+     */
     public String getAttribute() {
         return this.attribute;
     }
+    /**
+     * Required. The value for the attribute.
+     * 
+     */
     public String getValue() {
         return this.value;
     }

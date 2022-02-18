@@ -15,6 +15,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
+    /**
+     * The account id that is used to generate the service
+     * account email address and a stable unique id. It is unique within a project,
+     * must be 6-30 characters long, and match the regular expression `a-z`
+     * to comply with RFC1035. Changing this forces a new service account to be created.
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 
@@ -22,6 +29,11 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountId;
     }
 
+    /**
+     * A text description of the service account.
+     * Must be less than or equal to 256 UTF-8 bytes.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +41,11 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
+     * Must be set after creation to disable a service account.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -36,6 +53,11 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * The display name for the service account.
+     * Can be updated without creating a new resource.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -43,6 +65,11 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The ID of the project that the service account will be created in.
+     * Defaults to the provider project configuration.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

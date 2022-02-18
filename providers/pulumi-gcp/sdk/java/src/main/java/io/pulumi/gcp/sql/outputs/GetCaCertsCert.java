@@ -9,10 +9,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetCaCertsCert {
+    /**
+     * The CA certificate used to connect to the SQL instance via SSL.
+     * 
+     */
     private final String cert;
+    /**
+     * The CN valid for the CA cert.
+     * 
+     */
     private final String commonName;
+    /**
+     * Creation time of the CA cert.
+     * 
+     */
     private final String createTime;
+    /**
+     * Expiration time of the CA cert.
+     * 
+     */
     private final String expirationTime;
+    /**
+     * SHA1 fingerprint of the CA cert.
+     * 
+     */
     private final String sha1Fingerprint;
 
     @OutputCustomType.Constructor({"cert","commonName","createTime","expirationTime","sha1Fingerprint"})
@@ -29,18 +49,38 @@ public final class GetCaCertsCert {
         this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
     }
 
+    /**
+     * The CA certificate used to connect to the SQL instance via SSL.
+     * 
+     */
     public String getCert() {
         return this.cert;
     }
+    /**
+     * The CN valid for the CA cert.
+     * 
+     */
     public String getCommonName() {
         return this.commonName;
     }
+    /**
+     * Creation time of the CA cert.
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Expiration time of the CA cert.
+     * 
+     */
     public String getExpirationTime() {
         return this.expirationTime;
     }
+    /**
+     * SHA1 fingerprint of the CA cert.
+     * 
+     */
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
     }

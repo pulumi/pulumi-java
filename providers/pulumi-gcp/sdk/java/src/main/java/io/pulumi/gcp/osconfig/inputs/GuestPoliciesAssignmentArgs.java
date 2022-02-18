@@ -17,6 +17,12 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
 
     public static final GuestPoliciesAssignmentArgs Empty = new GuestPoliciesAssignmentArgs();
 
+    /**
+     * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
+     * for example "env=prod or env=staging".
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="groupLabels")
     private final @Nullable Input<List<GuestPoliciesAssignmentGroupLabelArgs>> groupLabels;
 
@@ -24,6 +30,13 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
         return this.groupLabels == null ? Input.empty() : this.groupLabels;
     }
 
+    /**
+     * Targets VM instances whose name starts with one of these prefixes.
+     * Like labels, this is another way to group VM instances when targeting configs,
+     * for example prefix="prod-".
+     * Only supported for project-level policies.
+     * 
+     */
     @InputImport(name="instanceNamePrefixes")
     private final @Nullable Input<List<String>> instanceNamePrefixes;
 
@@ -31,6 +44,14 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
         return this.instanceNamePrefixes == null ? Input.empty() : this.instanceNamePrefixes;
     }
 
+    /**
+     * Targets any of the instances specified. Instances are specified by their URI in the form
+     * zones/[ZONE]/instances/[INSTANCE_NAME].
+     * Instance targeting is uncommon and is supported to facilitate the management of changes
+     * by the instance or to target specific VM instances for development and testing.
+     * Only supported for project-level policies and must reference instances within this project.
+     * 
+     */
     @InputImport(name="instances")
     private final @Nullable Input<List<String>> instances;
 
@@ -38,6 +59,12 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
         return this.instances == null ? Input.empty() : this.instances;
     }
 
+    /**
+     * Targets VM instances matching at least one of the following OS types.
+     * VM instances must match all supplied criteria for a given OsType to be included.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="osTypes")
     private final @Nullable Input<List<GuestPoliciesAssignmentOsTypeArgs>> osTypes;
 
@@ -45,6 +72,11 @@ public final class GuestPoliciesAssignmentArgs extends io.pulumi.resources.Resou
         return this.osTypes == null ? Input.empty() : this.osTypes;
     }
 
+    /**
+     * Targets instances in any of these zones. Leave empty to target instances in any zone.
+     * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

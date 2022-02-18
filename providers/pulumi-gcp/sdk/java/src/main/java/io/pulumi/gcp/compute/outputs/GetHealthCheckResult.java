@@ -28,6 +28,10 @@ public final class GetHealthCheckResult {
     private final List<GetHealthCheckHttp2HealthCheck> http2HealthChecks;
     private final List<GetHealthCheckHttpHealthCheck> httpHealthChecks;
     private final List<GetHealthCheckHttpsHealthCheck> httpsHealthChecks;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final List<GetHealthCheckLogConfig> logConfigs;
     private final String name;
@@ -103,6 +107,10 @@ public final class GetHealthCheckResult {
     public List<GetHealthCheckHttpsHealthCheck> getHttpsHealthChecks() {
         return this.httpsHealthChecks;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

@@ -13,7 +13,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StandardAppVersionDeployment {
+    /**
+     * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * All files must be readable using the credentials supplied with this call.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable List<StandardAppVersionDeploymentFile> files;
+    /**
+     * Zip File
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable StandardAppVersionDeploymentZip zip;
 
     @OutputCustomType.Constructor({"files","zip"})
@@ -24,9 +35,20 @@ public final class StandardAppVersionDeployment {
         this.zip = zip;
     }
 
+    /**
+     * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * All files must be readable using the credentials supplied with this call.
+     * Structure is documented below.
+     * 
+     */
     public List<StandardAppVersionDeploymentFile> getFiles() {
         return this.files == null ? List.of() : this.files;
     }
+    /**
+     * Zip File
+     * Structure is documented below.
+     * 
+     */
     public Optional<StandardAppVersionDeploymentZip> getZip() {
         return Optional.ofNullable(this.zip);
     }

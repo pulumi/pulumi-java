@@ -14,6 +14,10 @@ public final class SharedVPCHostProjectState extends io.pulumi.resources.Resourc
 
     public static final SharedVPCHostProjectState Empty = new SharedVPCHostProjectState();
 
+    /**
+     * The ID of the project that will serve as a Shared VPC host project
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

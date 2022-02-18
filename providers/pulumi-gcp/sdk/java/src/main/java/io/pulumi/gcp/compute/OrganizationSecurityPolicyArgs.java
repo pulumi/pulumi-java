@@ -14,6 +14,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
 
     public static final OrganizationSecurityPolicyArgs Empty = new OrganizationSecurityPolicyArgs();
 
+    /**
+     * A textual description for the organization security policy.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A textual name of the security policy.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -28,6 +36,11 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
         return this.displayName;
     }
 
+    /**
+     * The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
+     * Format: organizations/{organization_id} or folders/{folder_id}
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -35,6 +48,14 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
         return this.parent;
     }
 
+    /**
+     * The type indicates the intended use of the security policy.
+     * For organization security policies, the only supported type
+     * is "FIREWALL".
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

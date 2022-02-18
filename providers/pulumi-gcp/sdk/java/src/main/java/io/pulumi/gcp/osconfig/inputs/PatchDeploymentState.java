@@ -19,6 +19,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
 
     public static final PatchDeploymentState Empty = new PatchDeploymentState();
 
+    /**
+     * Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
+     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -26,6 +31,10 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Description of the patch deployment. Length of the description is limited to 1024 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +42,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Duration of the patch. After the duration ends, the patch times out.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+     * 
+     */
     @InputImport(name="duration")
     private final @Nullable Input<String> duration;
 
@@ -40,6 +54,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.duration == null ? Input.empty() : this.duration;
     }
 
+    /**
+     * VM instances to patch.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="instanceFilter")
     private final @Nullable Input<PatchDeploymentInstanceFilterGetArgs> instanceFilter;
 
@@ -47,6 +66,12 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.instanceFilter == null ? Input.empty() : this.instanceFilter;
     }
 
+    /**
+     * - 
+     * The time the last patch job ran successfully.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="lastExecuteTime")
     private final @Nullable Input<String> lastExecuteTime;
 
@@ -54,6 +79,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.lastExecuteTime == null ? Input.empty() : this.lastExecuteTime;
     }
 
+    /**
+     * Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
+     * projects/{project_id}/patchDeployments/{patchDeploymentId}.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +91,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Schedule a one-time execution.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="oneTimeSchedule")
     private final @Nullable Input<PatchDeploymentOneTimeScheduleGetArgs> oneTimeSchedule;
 
@@ -68,6 +103,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.oneTimeSchedule == null ? Input.empty() : this.oneTimeSchedule;
     }
 
+    /**
+     * Patch configuration that is applied.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="patchConfig")
     private final @Nullable Input<PatchDeploymentPatchConfigGetArgs> patchConfig;
 
@@ -75,6 +115,15 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.patchConfig == null ? Input.empty() : this.patchConfig;
     }
 
+    /**
+     * A name for the patch deployment in the project. When creating a name the following rules apply:
+     * * Must contain only lowercase letters, numbers, and hyphens.
+     * * Must start with a letter.
+     * * Must be between 1-63 characters.
+     * * Must end with a number or a letter.
+     * * Must be unique within the project.
+     * 
+     */
     @InputImport(name="patchDeploymentId")
     private final @Nullable Input<String> patchDeploymentId;
 
@@ -82,6 +131,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.patchDeploymentId == null ? Input.empty() : this.patchDeploymentId;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -89,6 +143,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Schedule recurring executions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="recurringSchedule")
     private final @Nullable Input<PatchDeploymentRecurringScheduleGetArgs> recurringSchedule;
 
@@ -96,6 +155,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.recurringSchedule == null ? Input.empty() : this.recurringSchedule;
     }
 
+    /**
+     * Rollout strategy of the patch job.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="rollout")
     private final @Nullable Input<PatchDeploymentRolloutGetArgs> rollout;
 
@@ -103,6 +167,11 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
         return this.rollout == null ? Input.empty() : this.rollout;
     }
 
+    /**
+     * Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
+     * format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

@@ -15,6 +15,11 @@ public final class JobPubsubTargetArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final JobPubsubTargetArgs Empty = new JobPubsubTargetArgs();
 
+    /**
+     * Attributes for PubsubMessage.
+     * Pubsub message must contain either non-empty data, or at least one attribute.
+     * 
+     */
     @InputImport(name="attributes")
     private final @Nullable Input<Map<String,String>> attributes;
 
@@ -22,6 +27,12 @@ public final class JobPubsubTargetArgs extends io.pulumi.resources.ResourceArgs 
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
+    /**
+     * The message payload for PubsubMessage.
+     * Pubsub message must contain either non-empty data, or at least one attribute.
+     * A base64-encoded string.
+     * 
+     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -29,6 +40,13 @@ public final class JobPubsubTargetArgs extends io.pulumi.resources.ResourceArgs 
         return this.data == null ? Input.empty() : this.data;
     }
 
+    /**
+     * The full resource name for the Cloud Pub/Sub topic to which
+     * messages will be published when a job is delivered. ~>**NOTE:**
+     * The topic name must be in the same format as required by PubSub's
+     * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+     * 
+     */
     @InputImport(name="topicName", required=true)
     private final Input<String> topicName;
 

@@ -19,6 +19,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
 
     public static final CertificateTemplatePredefinedValuesGetArgs Empty = new CertificateTemplatePredefinedValuesGetArgs();
 
+    /**
+     * Optional. Describes custom X.509 extensions.
+     * 
+     */
     @InputImport(name="additionalExtensions")
     private final @Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions;
 
@@ -26,6 +30,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
     }
 
+    /**
+     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
+     * 
+     */
     @InputImport(name="aiaOcspServers")
     private final @Nullable Input<List<String>> aiaOcspServers;
 
@@ -33,6 +41,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
     }
 
+    /**
+     * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+     * 
+     */
     @InputImport(name="caOptions")
     private final @Nullable Input<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions;
 
@@ -40,6 +52,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
         return this.caOptions == null ? Input.empty() : this.caOptions;
     }
 
+    /**
+     * Optional. Indicates the intended use for keys that correspond to a certificate.
+     * 
+     */
     @InputImport(name="keyUsage")
     private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage;
 
@@ -47,6 +63,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
     }
 
+    /**
+     * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * 
+     */
     @InputImport(name="policyIds")
     private final @Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds;
 

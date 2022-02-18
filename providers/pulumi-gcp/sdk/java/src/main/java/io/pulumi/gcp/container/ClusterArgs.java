@@ -43,6 +43,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * The configuration for addons supported by GKE.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="addonsConfig")
     private final @Nullable Input<ClusterAddonsConfigArgs> addonsConfig;
 
@@ -50,6 +55,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonsConfig == null ? Input.empty() : this.addonsConfig;
     }
 
+    /**
+     * Configuration for the
+     * [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="authenticatorGroupsConfig")
     private final @Nullable Input<ClusterAuthenticatorGroupsConfigArgs> authenticatorGroupsConfig;
 
@@ -57,6 +68,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticatorGroupsConfig == null ? Input.empty() : this.authenticatorGroupsConfig;
     }
 
+    /**
+     * Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+     * automatically adjust the size of the cluster and create/delete node pools based
+     * on the current needs of the cluster's workload. See the
+     * [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+     * for more details. Structure is documented below.
+     * 
+     */
     @InputImport(name="clusterAutoscaling")
     private final @Nullable Input<ClusterClusterAutoscalingArgs> clusterAutoscaling;
 
@@ -64,6 +83,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterAutoscaling == null ? Input.empty() : this.clusterAutoscaling;
     }
 
+    /**
+     * The IP address range of the Kubernetes pods
+     * in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
+     * automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
+     * only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+     * 
+     */
     @InputImport(name="clusterIpv4Cidr")
     private final @Nullable Input<String> clusterIpv4Cidr;
 
@@ -71,6 +97,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterIpv4Cidr == null ? Input.empty() : this.clusterIpv4Cidr;
     }
 
+    /**
+     * Configuration for
+     * [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="clusterTelemetry")
     private final @Nullable Input<ClusterClusterTelemetryArgs> clusterTelemetry;
 
@@ -78,6 +110,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterTelemetry == null ? Input.empty() : this.clusterTelemetry;
     }
 
+    /**
+     * Configuration for [Confidential Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/confidential-gke-nodes) feature. Structure is documented below documented below.
+     * 
+     */
     @InputImport(name="confidentialNodes")
     private final @Nullable Input<ClusterConfidentialNodesArgs> confidentialNodes;
 
@@ -85,6 +121,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.confidentialNodes == null ? Input.empty() : this.confidentialNodes;
     }
 
+    /**
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="databaseEncryption")
     private final @Nullable Input<ClusterDatabaseEncryptionArgs> databaseEncryption;
 
@@ -92,6 +132,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseEncryption == null ? Input.empty() : this.databaseEncryption;
     }
 
+    /**
+     * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+     * 
+     */
     @InputImport(name="datapathProvider")
     private final @Nullable Input<String> datapathProvider;
 
@@ -99,6 +143,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.datapathProvider == null ? Input.empty() : this.datapathProvider;
     }
 
+    /**
+     * The default maximum number of pods
+     * per node in this cluster. This doesn't work on "routes-based" clusters, clusters
+     * that don't have IP Aliasing enabled. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+     * for more information.
+     * 
+     */
     @InputImport(name="defaultMaxPodsPerNode")
     private final @Nullable Input<Integer> defaultMaxPodsPerNode;
 
@@ -106,6 +157,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultMaxPodsPerNode == null ? Input.empty() : this.defaultMaxPodsPerNode;
     }
 
+    /**
+     * [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
+     * 
+     */
     @InputImport(name="defaultSnatStatus")
     private final @Nullable Input<ClusterDefaultSnatStatusArgs> defaultSnatStatus;
 
@@ -113,6 +168,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultSnatStatus == null ? Input.empty() : this.defaultSnatStatus;
     }
 
+    /**
+     * Description of the cluster.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -120,6 +179,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+     * 
+     */
     @InputImport(name="dnsConfig")
     private final @Nullable Input<ClusterDnsConfigArgs> dnsConfig;
 
@@ -127,6 +190,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
     }
 
+    /**
+     * Enable Autopilot for this cluster. Defaults to `false`.
+     * Note that when this option is enabled, certain features of Standard GKE are not available.
+     * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+     * for available features.
+     * 
+     */
     @InputImport(name="enableAutopilot")
     private final @Nullable Input<Boolean> enableAutopilot;
 
@@ -134,6 +204,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableAutopilot == null ? Input.empty() : this.enableAutopilot;
     }
 
+    /**
+     * Enable Binary Authorization for this cluster.
+     * If enabled, all container images will be validated by Google Binary Authorization.
+     * 
+     */
     @InputImport(name="enableBinaryAuthorization")
     private final @Nullable Input<Boolean> enableBinaryAuthorization;
 
@@ -141,6 +216,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableBinaryAuthorization == null ? Input.empty() : this.enableBinaryAuthorization;
     }
 
+    /**
+     * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+     * 
+     */
     @InputImport(name="enableIntranodeVisibility")
     private final @Nullable Input<Boolean> enableIntranodeVisibility;
 
@@ -148,6 +227,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableIntranodeVisibility == null ? Input.empty() : this.enableIntranodeVisibility;
     }
 
+    /**
+     * Whether to enable Kubernetes Alpha features for
+     * this cluster. Note that when this option is enabled, the cluster cannot be upgraded
+     * and will be automatically deleted after 30 days.
+     * 
+     */
     @InputImport(name="enableKubernetesAlpha")
     private final @Nullable Input<Boolean> enableKubernetesAlpha;
 
@@ -155,6 +240,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableKubernetesAlpha == null ? Input.empty() : this.enableKubernetesAlpha;
     }
 
+    /**
+     * Whether L4ILB Subsetting is enabled for this cluster.
+     * 
+     */
     @InputImport(name="enableL4IlbSubsetting")
     private final @Nullable Input<Boolean> enableL4IlbSubsetting;
 
@@ -162,6 +251,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableL4IlbSubsetting == null ? Input.empty() : this.enableL4IlbSubsetting;
     }
 
+    /**
+     * Whether the ABAC authorizer is enabled for this cluster.
+     * When enabled, identities in the system, including service accounts, nodes, and controllers,
+     * will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
+     * Defaults to `false`
+     * 
+     */
     @InputImport(name="enableLegacyAbac")
     private final @Nullable Input<Boolean> enableLegacyAbac;
 
@@ -169,6 +265,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableLegacyAbac == null ? Input.empty() : this.enableLegacyAbac;
     }
 
+    /**
+     * Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `true`.
+     * 
+     */
     @InputImport(name="enableShieldedNodes")
     private final @Nullable Input<Boolean> enableShieldedNodes;
 
@@ -176,6 +276,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableShieldedNodes == null ? Input.empty() : this.enableShieldedNodes;
     }
 
+    /**
+     * Whether to enable Cloud TPU resources in this cluster.
+     * See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
+     * 
+     */
     @InputImport(name="enableTpu")
     private final @Nullable Input<Boolean> enableTpu;
 
@@ -183,6 +288,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableTpu == null ? Input.empty() : this.enableTpu;
     }
 
+    /**
+     * . Structure is documented below.
+     * 
+     */
     @InputImport(name="identityServiceConfig")
     private final @Nullable Input<ClusterIdentityServiceConfigArgs> identityServiceConfig;
 
@@ -190,6 +299,15 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.identityServiceConfig == null ? Input.empty() : this.identityServiceConfig;
     }
 
+    /**
+     * The number of nodes to create in this
+     * cluster's default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you're using
+     * `gcp.container.NodePool` objects with no default node pool, you'll need to
+     * set this to a value of at least `1`, alongside setting
+     * `remove_default_node_pool` to `true`.
+     * 
+     */
     @InputImport(name="initialNodeCount")
     private final @Nullable Input<Integer> initialNodeCount;
 
@@ -197,6 +315,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialNodeCount == null ? Input.empty() : this.initialNodeCount;
     }
 
+    /**
+     * Configuration of cluster IP allocation for
+     * VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+     * making the cluster VPC-native instead of routes-based. Structure is documented
+     * below.
+     * 
+     */
     @InputImport(name="ipAllocationPolicy")
     private final @Nullable Input<ClusterIpAllocationPolicyArgs> ipAllocationPolicy;
 
@@ -204,6 +329,15 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAllocationPolicy == null ? Input.empty() : this.ipAllocationPolicy;
     }
 
+    /**
+     * The location (region or zone) in which the cluster
+     * master will be created, as well as the default node location. If you specify a
+     * zone (such as `us-central1-a`), the cluster will be a zonal cluster with a
+     * single cluster master. If you specify a region (such as `us-west1`), the
+     * cluster will be a regional cluster with multiple masters spread across zones in
+     * the region, and with default node locations in those zones as well
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -211,6 +345,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Logging configuration for the cluster.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="loggingConfig")
     private final @Nullable Input<ClusterLoggingConfigArgs> loggingConfig;
 
@@ -218,6 +357,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
+    /**
+     * The logging service that the cluster should
+     * write logs to. Available options include `logging.googleapis.com`(Legacy Stackdriver),
+     * `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
+     * 
+     */
     @InputImport(name="loggingService")
     private final @Nullable Input<String> loggingService;
 
@@ -225,6 +370,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingService == null ? Input.empty() : this.loggingService;
     }
 
+    /**
+     * The maintenance policy to use for the cluster. Structure is
+     * documented below.
+     * 
+     */
     @InputImport(name="maintenancePolicy")
     private final @Nullable Input<ClusterMaintenancePolicyArgs> maintenancePolicy;
 
@@ -232,6 +382,15 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
     }
 
+    /**
+     * The authentication information for accessing the
+     * Kubernetes master. Some values in this block are only returned by the API if
+     * your service account has permission to get credentials for your GKE cluster. If
+     * you see an unexpected diff unsetting your client cert, ensure you have the
+     * `container.clusters.getCredentials` permission.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="masterAuth")
     private final @Nullable Input<ClusterMasterAuthArgs> masterAuth;
 
@@ -239,6 +398,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterAuth == null ? Input.empty() : this.masterAuth;
     }
 
+    /**
+     * The desired
+     * configuration options for master authorized networks. Omit the
+     * nested `cidr_blocks` attribute to disallow external access (except
+     * the cluster node IPs, which GKE automatically whitelists).
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="masterAuthorizedNetworksConfig")
     private final @Nullable Input<ClusterMasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
@@ -246,6 +413,18 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterAuthorizedNetworksConfig == null ? Input.empty() : this.masterAuthorizedNetworksConfig;
     }
 
+    /**
+     * The minimum version of the master. GKE
+     * will auto-update the master to new versions, so this does not guarantee the
+     * current master version--use the read-only `master_version` field to obtain that.
+     * If unset, the cluster's version will be set by GKE to the version of the most recent
+     * official release (which is not necessarily the latest version).  Most users will find
+     * the `gcp.container.getEngineVersions` data source useful - it indicates which versions
+     * are available. If you intend to specify versions manually,
+     * [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
+     * describe the various acceptable formats for this field.
+     * 
+     */
     @InputImport(name="minMasterVersion")
     private final @Nullable Input<String> minMasterVersion;
 
@@ -253,6 +432,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.minMasterVersion == null ? Input.empty() : this.minMasterVersion;
     }
 
+    /**
+     * Monitoring configuration for the cluster.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="monitoringConfig")
     private final @Nullable Input<ClusterMonitoringConfigArgs> monitoringConfig;
 
@@ -260,6 +444,16 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitoringConfig == null ? Input.empty() : this.monitoringConfig;
     }
 
+    /**
+     * The monitoring service that the cluster
+     * should write metrics to.
+     * Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
+     * VM metrics will be collected by Google Compute Engine regardless of this setting
+     * Available options include
+     * `monitoring.googleapis.com`(Legacy Stackdriver), `monitoring.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Monitoring), and `none`.
+     * Defaults to `monitoring.googleapis.com/kubernetes`
+     * 
+     */
     @InputImport(name="monitoringService")
     private final @Nullable Input<String> monitoringService;
 
@@ -267,6 +461,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitoringService == null ? Input.empty() : this.monitoringService;
     }
 
+    /**
+     * The name of the cluster, unique within the project and
+     * location.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -274,6 +473,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name or self_link of the Google Compute Engine
+     * network to which the cluster is connected. For Shared VPC, set this to the self link of the
+     * shared network.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -281,6 +486,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Configuration options for the
+     * [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
+     * feature. Structure is documented below.
+     * 
+     */
     @InputImport(name="networkPolicy")
     private final @Nullable Input<ClusterNetworkPolicyArgs> networkPolicy;
 
@@ -288,6 +499,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkPolicy == null ? Input.empty() : this.networkPolicy;
     }
 
+    /**
+     * Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+     * Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+     * and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+     * 
+     */
     @InputImport(name="networkingMode")
     private final @Nullable Input<String> networkingMode;
 
@@ -295,6 +512,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkingMode == null ? Input.empty() : this.networkingMode;
     }
 
+    /**
+     * Parameters used in creating the default node pool.
+     * Generally, this field should not be used at the same time as a
+     * `gcp.container.NodePool` or a `node_pool` block; this configuration
+     * manages the default node pool, which isn't recommended to be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="nodeConfig")
     private final @Nullable Input<ClusterNodeConfigArgs> nodeConfig;
 
@@ -302,6 +527,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeConfig == null ? Input.empty() : this.nodeConfig;
     }
 
+    /**
+     * The list of zones in which the cluster's nodes
+     * are located. Nodes must be in the region of their regional cluster or in the
+     * same region as their cluster's zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster's zone.
+     * 
+     */
     @InputImport(name="nodeLocations")
     private final @Nullable Input<List<String>> nodeLocations;
 
@@ -309,6 +541,15 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeLocations == null ? Input.empty() : this.nodeLocations;
     }
 
+    /**
+     * List of node pools associated with this cluster.
+     * See gcp.container.NodePool for schema.
+     * **Warning:** node pools defined inside a cluster can't be changed (or added/removed) after
+     * cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability
+     * to say "these are the _only_ node pools associated with this cluster", use the
+     * gcp.container.NodePool resource instead of this property.
+     * 
+     */
     @InputImport(name="nodePools")
     private final @Nullable Input<List<ClusterNodePoolArgs>> nodePools;
 
@@ -316,6 +557,17 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodePools == null ? Input.empty() : this.nodePools;
     }
 
+    /**
+     * The Kubernetes version on the nodes. Must either be unset
+     * or set to the same value as `min_master_version` on create. Defaults to the default
+     * version set by GKE which is not necessarily the latest version. This only affects
+     * nodes in the default node pool. While a fuzzy version can be specified, it's
+     * recommended that you specify explicit versions as the provider will see spurious diffs
+     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
+     * `version_prefix` field to approximate fuzzy versions.
+     * To update nodes in other node pools, use the `version` attribute on the node pool.
+     * 
+     */
     @InputImport(name="nodeVersion")
     private final @Nullable Input<String> nodeVersion;
 
@@ -323,6 +575,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeVersion == null ? Input.empty() : this.nodeVersion;
     }
 
+    /**
+     * Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
+     * 
+     */
     @InputImport(name="notificationConfig")
     private final @Nullable Input<ClusterNotificationConfigArgs> notificationConfig;
 
@@ -330,6 +586,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
     }
 
+    /**
+     * ) Configuration for the
+     * [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="podSecurityPolicyConfig")
     private final @Nullable Input<ClusterPodSecurityPolicyConfigArgs> podSecurityPolicyConfig;
 
@@ -337,6 +599,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.podSecurityPolicyConfig == null ? Input.empty() : this.podSecurityPolicyConfig;
     }
 
+    /**
+     * Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
+     * clusters with private nodes. Structure is documented below.
+     * 
+     */
     @InputImport(name="privateClusterConfig")
     private final @Nullable Input<ClusterPrivateClusterConfigArgs> privateClusterConfig;
 
@@ -344,6 +611,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateClusterConfig == null ? Input.empty() : this.privateClusterConfig;
     }
 
+    /**
+     * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+     * 
+     */
     @InputImport(name="privateIpv6GoogleAccess")
     private final @Nullable Input<String> privateIpv6GoogleAccess;
 
@@ -351,6 +622,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -358,6 +634,18 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
+     * feature, which provide more control over automatic upgrades of your GKE clusters.
+     * When updating this field, GKE imposes specific version requirements. See
+     * [Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
+     * for more details; the `gcp.container.getEngineVersions` datasource can provide
+     * the default version for a channel. Note that removing the `release_channel`
+     * field from your config will cause the provider to stop managing your cluster's
+     * release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+     * channel. Structure is documented below.
+     * 
+     */
     @InputImport(name="releaseChannel")
     private final @Nullable Input<ClusterReleaseChannelArgs> releaseChannel;
 
@@ -365,6 +653,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.releaseChannel == null ? Input.empty() : this.releaseChannel;
     }
 
+    /**
+     * If `true`, deletes the default node
+     * pool upon cluster creation. If you're using `gcp.container.NodePool`
+     * resources with no default node pool, this should be set to `true`, alongside
+     * setting `initial_node_count` to at least `1`.
+     * 
+     */
     @InputImport(name="removeDefaultNodePool")
     private final @Nullable Input<Boolean> removeDefaultNodePool;
 
@@ -372,6 +667,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.removeDefaultNodePool == null ? Input.empty() : this.removeDefaultNodePool;
     }
 
+    /**
+     * The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
+     * 
+     */
     @InputImport(name="resourceLabels")
     private final @Nullable Input<Map<String,String>> resourceLabels;
 
@@ -379,6 +678,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceLabels == null ? Input.empty() : this.resourceLabels;
     }
 
+    /**
+     * Configuration for the
+     * [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="resourceUsageExportConfig")
     private final @Nullable Input<ClusterResourceUsageExportConfigArgs> resourceUsageExportConfig;
 
@@ -386,6 +691,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceUsageExportConfig == null ? Input.empty() : this.resourceUsageExportConfig;
     }
 
+    /**
+     * The name or self_link of the Google Compute Engine
+     * subnetwork in which the cluster's instances are launched.
+     * 
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -393,6 +703,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
+    /**
+     * Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="verticalPodAutoscaling")
     private final @Nullable Input<ClusterVerticalPodAutoscalingArgs> verticalPodAutoscaling;
 
@@ -400,6 +715,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.verticalPodAutoscaling == null ? Input.empty() : this.verticalPodAutoscaling;
     }
 
+    /**
+     * Workload Identity allows Kubernetes service accounts to act as a user-managed
+     * [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="workloadIdentityConfig")
     private final @Nullable Input<ClusterWorkloadIdentityConfigArgs> workloadIdentityConfig;
 

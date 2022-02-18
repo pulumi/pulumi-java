@@ -12,8 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterResourceUsageExportConfig {
+    /**
+     * Parameters for using BigQuery as the destination of resource usage export.
+     * 
+     */
     private final ClusterResourceUsageExportConfigBigqueryDestination bigqueryDestination;
+    /**
+     * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+     * in the cluster to meter network egress traffic.
+     * 
+     */
     private final @Nullable Boolean enableNetworkEgressMetering;
+    /**
+     * Whether to enable resource
+     * consumption metering on this cluster. When enabled, a table will be created in
+     * the resource export BigQuery dataset to store resource consumption data. The
+     * resulting table can be joined with the resource usage table or with BigQuery
+     * billing export. Defaults to `true`.
+     * 
+     */
     private final @Nullable Boolean enableResourceConsumptionMetering;
 
     @OutputCustomType.Constructor({"bigqueryDestination","enableNetworkEgressMetering","enableResourceConsumptionMetering"})
@@ -26,12 +43,29 @@ public final class ClusterResourceUsageExportConfig {
         this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
     }
 
+    /**
+     * Parameters for using BigQuery as the destination of resource usage export.
+     * 
+     */
     public ClusterResourceUsageExportConfigBigqueryDestination getBigqueryDestination() {
         return this.bigqueryDestination;
     }
+    /**
+     * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+     * in the cluster to meter network egress traffic.
+     * 
+     */
     public Optional<Boolean> getEnableNetworkEgressMetering() {
         return Optional.ofNullable(this.enableNetworkEgressMetering);
     }
+    /**
+     * Whether to enable resource
+     * consumption metering on this cluster. When enabled, a table will be created in
+     * the resource export BigQuery dataset to store resource consumption data. The
+     * resulting table can be joined with the resource usage table or with BigQuery
+     * billing export. Defaults to `true`.
+     * 
+     */
     public Optional<Boolean> getEnableResourceConsumptionMetering() {
         return Optional.ofNullable(this.enableResourceConsumptionMetering);
     }

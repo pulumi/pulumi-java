@@ -18,6 +18,10 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
 
     public static final GameServerConfigState Empty = new GameServerConfigState();
 
+    /**
+     * A unique id for the deployment config.
+     * 
+     */
     @InputImport(name="configId")
     private final @Nullable Input<String> configId;
 
@@ -25,6 +29,10 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
         return this.configId == null ? Input.empty() : this.configId;
     }
 
+    /**
+     * A unique id for the deployment.
+     * 
+     */
     @InputImport(name="deploymentId")
     private final @Nullable Input<String> deploymentId;
 
@@ -32,6 +40,10 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
         return this.deploymentId == null ? Input.empty() : this.deploymentId;
     }
 
+    /**
+     * The description of the game server config.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +51,12 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The fleet config contains list of fleet specs. In the Single Cloud, there
+     * will be only one.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="fleetConfigs")
     private final @Nullable Input<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs;
 
@@ -46,6 +64,10 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
         return this.fleetConfigs == null ? Input.empty() : this.fleetConfigs;
     }
 
+    /**
+     * Set of labels to group by.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -53,6 +75,10 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Location of the Deployment.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,6 +86,10 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the ScalingConfig
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +97,11 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -74,6 +109,11 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. This contains the autoscaling settings.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="scalingConfigs")
     private final @Nullable Input<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs;
 

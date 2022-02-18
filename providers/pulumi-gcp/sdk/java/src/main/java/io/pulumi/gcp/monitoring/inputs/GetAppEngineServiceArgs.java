@@ -14,6 +14,11 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetAppEngineServiceArgs Empty = new GetAppEngineServiceArgs();
 
+    /**
+     * The ID of the App Engine module underlying this
+     * service. Corresponds to the moduleId resource label in the [gae_app](https://cloud.google.com/monitoring/api/resources#tag_gae_app) monitored resource, or the service/module name.
+     * 
+     */
     @InputImport(name="moduleId", required=true)
     private final String moduleId;
 
@@ -21,6 +26,11 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
         return this.moduleId;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

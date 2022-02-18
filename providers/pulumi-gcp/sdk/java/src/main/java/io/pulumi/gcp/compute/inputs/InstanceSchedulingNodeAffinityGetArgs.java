@@ -14,6 +14,10 @@ public final class InstanceSchedulingNodeAffinityGetArgs extends io.pulumi.resou
 
     public static final InstanceSchedulingNodeAffinityGetArgs Empty = new InstanceSchedulingNodeAffinityGetArgs();
 
+    /**
+     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
+     * 
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -21,6 +25,11 @@ public final class InstanceSchedulingNodeAffinityGetArgs extends io.pulumi.resou
         return this.key;
     }
 
+    /**
+     * The operator. Can be `IN` for node-affinities
+     * or `NOT_IN` for anti-affinities.
+     * 
+     */
     @InputImport(name="operator", required=true)
     private final Input<String> operator;
 
@@ -28,6 +37,10 @@ public final class InstanceSchedulingNodeAffinityGetArgs extends io.pulumi.resou
         return this.operator;
     }
 
+    /**
+     * Corresponds to the label values of a reservation resource.
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

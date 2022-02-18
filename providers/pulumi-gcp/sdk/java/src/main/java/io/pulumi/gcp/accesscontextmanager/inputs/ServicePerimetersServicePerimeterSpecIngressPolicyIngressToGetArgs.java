@@ -16,6 +16,12 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGe
 
     public static final ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs Empty = new ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs();
 
+    /**
+     * A list of `ApiOperations` that this egress rule applies to. A request matches
+     * if it contains an operation/service in this list.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="operations")
     private final @Nullable Input<List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationGetArgs>> operations;
 
@@ -23,6 +29,14 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGe
         return this.operations == null ? Input.empty() : this.operations;
     }
 
+    /**
+     * A list of resources, currently only projects in the form
+     * `projects/<projectnumber>`, that match this to stanza. A request matches
+     * if it contains a resource in this list. If * is specified for resources,
+     * then this `EgressTo` rule will authorize access to all resources outside
+     * the perimeter.
+     * 
+     */
     @InputImport(name="resources")
     private final @Nullable Input<List<String>> resources;
 

@@ -15,6 +15,10 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInstanceBootDisk Empty = new GetInstanceBootDisk();
 
+    /**
+     * Whether the disk will be auto-deleted when the instance is deleted.
+     * 
+     */
     @InputImport(name="autoDelete", required=true)
     private final Boolean autoDelete;
 
@@ -22,6 +26,11 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
         return this.autoDelete;
     }
 
+    /**
+     * Name with which the attached disk is accessible
+     * under `/dev/disk/by-id/`
+     * 
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -43,6 +52,11 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
         return this.diskEncryptionKeySha256;
     }
 
+    /**
+     * Parameters with which a disk was created alongside the instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="initializeParams", required=true)
     private final List<GetInstanceBootDiskInitializeParam> initializeParams;
 
@@ -57,6 +71,10 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
         return this.kmsKeySelfLink;
     }
 
+    /**
+     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * 
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 
@@ -64,6 +82,10 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
         return this.mode;
     }
 
+    /**
+     * The name or self_link of the disk attached to this instance.
+     * 
+     */
     @InputImport(name="source", required=true)
     private final String source;
 

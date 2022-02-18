@@ -11,7 +11,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TriggerBuildOptionsVolume {
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     private final @Nullable String name;
+    /**
+     * Path at which to mount the volume.
+     * Paths must be absolute and cannot conflict with other volume paths on the same
+     * build step or with certain reserved volume paths.
+     * 
+     */
     private final @Nullable String path;
 
     @OutputCustomType.Constructor({"name","path"})
@@ -22,9 +34,21 @@ public final class TriggerBuildOptionsVolume {
         this.path = path;
     }
 
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * Path at which to mount the volume.
+     * Paths must be absolute and cannot conflict with other volume paths on the same
+     * build step or with certain reserved volume paths.
+     * 
+     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }

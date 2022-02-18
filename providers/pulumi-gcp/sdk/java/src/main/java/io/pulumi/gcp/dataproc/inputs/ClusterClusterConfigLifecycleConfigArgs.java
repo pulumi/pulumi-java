@@ -14,6 +14,12 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
 
     public static final ClusterClusterConfigLifecycleConfigArgs Empty = new ClusterClusterConfigLifecycleConfigArgs();
 
+    /**
+     * The time when cluster will be auto-deleted.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="autoDeleteTime")
     private final @Nullable Input<String> autoDeleteTime;
 
@@ -21,6 +27,11 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
         return this.autoDeleteTime == null ? Input.empty() : this.autoDeleteTime;
     }
 
+    /**
+     * The duration to keep the cluster alive while idling
+     * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
+     * 
+     */
     @InputImport(name="idleDeleteTtl")
     private final @Nullable Input<String> idleDeleteTtl;
 

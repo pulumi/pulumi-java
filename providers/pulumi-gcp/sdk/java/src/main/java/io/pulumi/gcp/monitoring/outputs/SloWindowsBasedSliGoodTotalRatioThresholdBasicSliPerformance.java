@@ -14,10 +14,47 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance {
+    /**
+     * Availability based SLI, dervied from count of requests made to this service that return successfully.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability availability;
+    /**
+     * Parameters for a latency threshold SLI.
+     * Structure is documented below.
+     * 
+     */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency latency;
+    /**
+     * An optional set of locations to which this SLI is relevant.
+     * Telemetry from other locations will not be used to calculate
+     * performance for this SLI. If omitted, this SLI applies to all
+     * locations in which the Service has activity. For service types
+     * that don't support breaking down by location, setting this
+     * field will result in an error.
+     * 
+     */
     private final @Nullable List<String> locations;
+    /**
+     * An optional set of RPCs to which this SLI is relevant.
+     * Telemetry from other methods will not be used to calculate
+     * performance for this SLI. If omitted, this SLI applies to all
+     * the Service's methods. For service types that don't support
+     * breaking down by method, setting this field will result in an
+     * error.
+     * 
+     */
     private final @Nullable List<String> methods;
+    /**
+     * The set of API versions to which this SLI is relevant.
+     * Telemetry from other API versions will not be used to
+     * calculate performance for this SLI. If omitted,
+     * this SLI applies to all API versions. For service types
+     * that don't support breaking down by version, setting this
+     * field will result in an error.
+     * 
+     */
     private final @Nullable List<String> versions;
 
     @OutputCustomType.Constructor({"availability","latency","locations","methods","versions"})
@@ -34,18 +71,55 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
         this.versions = versions;
     }
 
+    /**
+     * Availability based SLI, dervied from count of requests made to this service that return successfully.
+     * Structure is documented below.
+     * 
+     */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability> getAvailability() {
         return Optional.ofNullable(this.availability);
     }
+    /**
+     * Parameters for a latency threshold SLI.
+     * Structure is documented below.
+     * 
+     */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency> getLatency() {
         return Optional.ofNullable(this.latency);
     }
+    /**
+     * An optional set of locations to which this SLI is relevant.
+     * Telemetry from other locations will not be used to calculate
+     * performance for this SLI. If omitted, this SLI applies to all
+     * locations in which the Service has activity. For service types
+     * that don't support breaking down by location, setting this
+     * field will result in an error.
+     * 
+     */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
+    /**
+     * An optional set of RPCs to which this SLI is relevant.
+     * Telemetry from other methods will not be used to calculate
+     * performance for this SLI. If omitted, this SLI applies to all
+     * the Service's methods. For service types that don't support
+     * breaking down by method, setting this field will result in an
+     * error.
+     * 
+     */
     public List<String> getMethods() {
         return this.methods == null ? List.of() : this.methods;
     }
+    /**
+     * The set of API versions to which this SLI is relevant.
+     * Telemetry from other API versions will not be used to
+     * calculate performance for this SLI. If omitted,
+     * this SLI applies to all API versions. For service types
+     * that don't support breaking down by version, setting this
+     * field will result in an error.
+     * 
+     */
     public List<String> getVersions() {
         return this.versions == null ? List.of() : this.versions;
     }

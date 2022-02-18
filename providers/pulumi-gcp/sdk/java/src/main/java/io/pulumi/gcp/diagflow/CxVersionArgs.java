@@ -14,6 +14,10 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CxVersionArgs Empty = new CxVersionArgs();
 
+    /**
+     * The description of the version. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name of the version. Limit of 64 characters.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -28,6 +36,11 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The Flow to create an Version for.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 

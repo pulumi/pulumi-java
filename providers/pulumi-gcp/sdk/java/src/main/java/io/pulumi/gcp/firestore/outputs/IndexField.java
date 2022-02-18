@@ -11,8 +11,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IndexField {
+    /**
+     * Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+     * be specified.
+     * Possible values are `CONTAINS`.
+     * 
+     */
     private final @Nullable String arrayConfig;
+    /**
+     * Name of the field.
+     * 
+     */
     private final @Nullable String fieldPath;
+    /**
+     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Only one of `order` and `arrayConfig` can be specified.
+     * Possible values are `ASCENDING` and `DESCENDING`.
+     * 
+     */
     private final @Nullable String order;
 
     @OutputCustomType.Constructor({"arrayConfig","fieldPath","order"})
@@ -25,12 +41,28 @@ public final class IndexField {
         this.order = order;
     }
 
+    /**
+     * Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+     * be specified.
+     * Possible values are `CONTAINS`.
+     * 
+     */
     public Optional<String> getArrayConfig() {
         return Optional.ofNullable(this.arrayConfig);
     }
+    /**
+     * Name of the field.
+     * 
+     */
     public Optional<String> getFieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
+    /**
+     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Only one of `order` and `arrayConfig` can be specified.
+     * Possible values are `ASCENDING` and `DESCENDING`.
+     * 
+     */
     public Optional<String> getOrder() {
         return Optional.ofNullable(this.order);
     }

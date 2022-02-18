@@ -12,8 +12,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
+    /**
+     * The minimum allowed OS version. If not set, any version
+     * of this OS satisfies the constraint.
+     * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+     * 
+     */
     private final @Nullable String minimumVersion;
+    /**
+     * The operating system type of the device.
+     * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+     * 
+     */
     private final String osType;
+    /**
+     * If you specify DESKTOP_CHROME_OS for osType, you can optionally include requireVerifiedChromeOs to require Chrome Verified Access.
+     * 
+     */
     private final @Nullable Boolean requireVerifiedChromeOs;
 
     @OutputCustomType.Constructor({"minimumVersion","osType","requireVerifiedChromeOs"})
@@ -26,12 +41,27 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;
     }
 
+    /**
+     * The minimum allowed OS version. If not set, any version
+     * of this OS satisfies the constraint.
+     * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+     * 
+     */
     public Optional<String> getMinimumVersion() {
         return Optional.ofNullable(this.minimumVersion);
     }
+    /**
+     * The operating system type of the device.
+     * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+     * 
+     */
     public String getOsType() {
         return this.osType;
     }
+    /**
+     * If you specify DESKTOP_CHROME_OS for osType, you can optionally include requireVerifiedChromeOs to require Chrome Verified Access.
+     * 
+     */
     public Optional<Boolean> getRequireVerifiedChromeOs() {
         return Optional.ofNullable(this.requireVerifiedChromeOs);
     }

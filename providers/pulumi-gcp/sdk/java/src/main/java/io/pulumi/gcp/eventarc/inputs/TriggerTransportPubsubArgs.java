@@ -14,6 +14,11 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
 
     public static final TriggerTransportPubsubArgs Empty = new TriggerTransportPubsubArgs();
 
+    /**
+     * - 
+     * Output only. The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
+     * 
+     */
     @InputImport(name="subscription")
     private final @Nullable Input<String> subscription;
 
@@ -21,6 +26,10 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
         return this.subscription == null ? Input.empty() : this.subscription;
     }
 
+    /**
+     * Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+     * 
+     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 

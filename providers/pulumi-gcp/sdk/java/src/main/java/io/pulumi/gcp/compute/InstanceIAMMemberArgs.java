@@ -15,6 +15,11 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
 
     public static final InstanceIAMMemberArgs Empty = new InstanceIAMMemberArgs();
 
+    /**
+     * ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<InstanceIAMMemberConditionArgs> condition;
 
@@ -22,6 +27,10 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     @InputImport(name="instanceName", required=true)
     private final Input<String> instanceName;
 
@@ -36,6 +45,11 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
         return this.member;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +57,12 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.compute.InstanceIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 
@@ -50,6 +70,12 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
         return this.role;
     }
 
+    /**
+     * A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+     * the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+     * zone is specified, it is taken from the provider configuration.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

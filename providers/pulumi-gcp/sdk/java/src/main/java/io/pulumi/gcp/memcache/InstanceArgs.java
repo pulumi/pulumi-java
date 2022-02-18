@@ -19,6 +19,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
+    /**
+     * The full name of the GCE network to connect the instance to.  If not provided,
+     * 'default' will be used.
+     * 
+     */
     @InputImport(name="authorizedNetwork")
     private final @Nullable Input<String> authorizedNetwork;
 
@@ -26,6 +31,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
     }
 
+    /**
+     * A user-visible name for the instance.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -33,6 +42,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Resource labels to represent user-provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -40,6 +53,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * User-specified parameters for this memcache instance.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="memcacheParameters")
     private final @Nullable Input<InstanceMemcacheParametersArgs> memcacheParameters;
 
@@ -47,6 +65,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.memcacheParameters == null ? Input.empty() : this.memcacheParameters;
     }
 
+    /**
+     * The major version of Memcached software. If not provided, latest supported version will be used.
+     * Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+     * determined by our system based on the latest supported minor version.
+     * Default value is `MEMCACHE_1_5`.
+     * Possible values are `MEMCACHE_1_5`.
+     * 
+     */
     @InputImport(name="memcacheVersion")
     private final @Nullable Input<String> memcacheVersion;
 
@@ -54,6 +80,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.memcacheVersion == null ? Input.empty() : this.memcacheVersion;
     }
 
+    /**
+     * The resource name of the instance.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +91,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Configuration for memcache nodes.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="nodeConfig", required=true)
     private final Input<InstanceNodeConfigArgs> nodeConfig;
 
@@ -68,6 +103,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeConfig;
     }
 
+    /**
+     * Number of nodes in the memcache instance.
+     * 
+     */
     @InputImport(name="nodeCount", required=true)
     private final Input<Integer> nodeCount;
 
@@ -75,6 +114,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeCount;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -82,6 +126,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the Memcache instance. If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -89,6 +137,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Zones where memcache nodes should be provisioned.  If not
+     * provided, all zones will be used.
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

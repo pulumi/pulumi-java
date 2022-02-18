@@ -20,6 +20,11 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
 
     public static final UptimeCheckConfigArgs Empty = new UptimeCheckConfigArgs();
 
+    /**
+     * The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="contentMatchers")
     private final @Nullable Input<List<UptimeCheckConfigContentMatcherArgs>> contentMatchers;
 
@@ -27,6 +32,10 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.contentMatchers == null ? Input.empty() : this.contentMatchers;
     }
 
+    /**
+     * A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -34,6 +43,11 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.displayName;
     }
 
+    /**
+     * Contains information needed to make an HTTP or HTTPS check.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="httpCheck")
     private final @Nullable Input<UptimeCheckConfigHttpCheckArgs> httpCheck;
 
@@ -41,6 +55,11 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.httpCheck == null ? Input.empty() : this.httpCheck;
     }
 
+    /**
+     * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="monitoredResource")
     private final @Nullable Input<UptimeCheckConfigMonitoredResourceArgs> monitoredResource;
 
@@ -48,6 +67,10 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.monitoredResource == null ? Input.empty() : this.monitoredResource;
     }
 
+    /**
+     * How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
+     * 
+     */
     @InputImport(name="period")
     private final @Nullable Input<String> period;
 
@@ -55,6 +78,11 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.period == null ? Input.empty() : this.period;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -62,6 +90,11 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The group resource associated with the configuration.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="resourceGroup")
     private final @Nullable Input<UptimeCheckConfigResourceGroupArgs> resourceGroup;
 
@@ -69,6 +102,10 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
     }
 
+    /**
+     * The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
+     * 
+     */
     @InputImport(name="selectedRegions")
     private final @Nullable Input<List<String>> selectedRegions;
 
@@ -76,6 +113,11 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.selectedRegions == null ? Input.empty() : this.selectedRegions;
     }
 
+    /**
+     * Contains information needed to make a TCP check.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="tcpCheck")
     private final @Nullable Input<UptimeCheckConfigTcpCheckArgs> tcpCheck;
 
@@ -83,6 +125,10 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
         return this.tcpCheck == null ? Input.empty() : this.tcpCheck;
     }
 
+    /**
+     * The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
+     * 
+     */
     @InputImport(name="timeout", required=true)
     private final Input<String> timeout;
 

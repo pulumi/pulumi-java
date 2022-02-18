@@ -20,6 +20,14 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
 
     public static final DataTransferConfigArgs Empty = new DataTransferConfigArgs();
 
+    /**
+     * The number of days to look back to automatically refresh the data.
+     * For example, if dataRefreshWindowDays = 10, then every day BigQuery
+     * reingests data for [today-10, today-1], rather than ingesting data for
+     * just [today-1]. Only valid if the data source supports the feature.
+     * Set the value to 0 to use the default value.
+     * 
+     */
     @InputImport(name="dataRefreshWindowDays")
     private final @Nullable Input<Integer> dataRefreshWindowDays;
 
@@ -27,6 +35,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.dataRefreshWindowDays == null ? Input.empty() : this.dataRefreshWindowDays;
     }
 
+    /**
+     * The data source id. Cannot be changed once the transfer config is created.
+     * 
+     */
     @InputImport(name="dataSourceId", required=true)
     private final Input<String> dataSourceId;
 
@@ -34,6 +46,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.dataSourceId;
     }
 
+    /**
+     * The BigQuery target dataset id.
+     * 
+     */
     @InputImport(name="destinationDatasetId")
     private final @Nullable Input<String> destinationDatasetId;
 
@@ -41,6 +57,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.destinationDatasetId == null ? Input.empty() : this.destinationDatasetId;
     }
 
+    /**
+     * When set to true, no runs are scheduled for a given transfer.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -48,6 +68,10 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * The user specified display name for the transfer config.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -55,6 +79,12 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.displayName;
     }
 
+    /**
+     * Email notifications will be sent according to these preferences to the
+     * email address of the user who owns this transfer config.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="emailPreferences")
     private final @Nullable Input<DataTransferConfigEmailPreferencesArgs> emailPreferences;
 
@@ -62,6 +92,11 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.emailPreferences == null ? Input.empty() : this.emailPreferences;
     }
 
+    /**
+     * The geographic location where the transfer config should reside.
+     * Examples: US, EU, asia-northeast1. The default value is US.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -69,6 +104,11 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Pub/Sub topic where notifications will be sent after transfer runs
+     * associated with this transfer config finish.
+     * 
+     */
     @InputImport(name="notificationPubsubTopic")
     private final @Nullable Input<String> notificationPubsubTopic;
 
@@ -76,6 +116,12 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.notificationPubsubTopic == null ? Input.empty() : this.notificationPubsubTopic;
     }
 
+    /**
+     * Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
+     * section for each data source. For example the parameters for Cloud Storage transfers are listed here:
+     * https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+     * 
+     */
     @InputImport(name="params", required=true)
     private final Input<Map<String,String>> params;
 
@@ -83,6 +129,11 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.params;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -90,6 +141,17 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Data transfer schedule. If the data source does not support a custom
+     * schedule, this should be empty. If it is empty, the default value for
+     * the data source will be used. The specified times are in UTC. Examples
+     * of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+     * jun 13:15, and first sunday of quarter 00:00. See more explanation
+     * about the format here:
+     * https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+     * NOTE: the granularity should be at least 8 hours, or less frequent.
+     * 
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<String> schedule;
 
@@ -97,6 +159,11 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * Options customizing the data transfer schedule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="scheduleOptions")
     private final @Nullable Input<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
 
@@ -104,6 +171,16 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.scheduleOptions == null ? Input.empty() : this.scheduleOptions;
     }
 
+    /**
+     * Different parameters are configured primarily using the the `params` field on this
+     * resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+     * sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+     * in the `params` map in the api request.
+     * Credentials may not be specified in both locations and will cause an error. Changing from one location
+     * to a different credential configuration in the config will require an apply to update state.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="sensitiveParams")
     private final @Nullable Input<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
 
@@ -111,6 +188,12 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
         return this.sensitiveParams == null ? Input.empty() : this.sensitiveParams;
     }
 
+    /**
+     * Service account email. If this field is set, transfer config will
+     * be created with this service account credentials. It requires that
+     * requesting user calling this API has permissions to act as this service account.
+     * 
+     */
     @InputImport(name="serviceAccountName")
     private final @Nullable Input<String> serviceAccountName;
 

@@ -15,63 +15,193 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Cloud Identity resource representing a Group.
+ * 
+ * To get more information about Group, see:
+ * 
+ * * [API documentation](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/identity/docs/how-to/setup)
+ * 
+ * > **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+ * you must specify a `billing_project` and set `user_project_override` to true
+ * in the provider configuration. Otherwise the Cloud Identity API will return a 403 error.
+ * Your account must have the `serviceusage.services.use` permission on the
+ * `billing_project` you defined.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Group can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:cloudidentity/group:Group default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:cloudidentity/group:Group")
 public class Group extends io.pulumi.resources.CustomResource {
+    /**
+     * The time when the Group was created.
+     * 
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time when the Group was created.
+     * 
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * An extended description to help users determine the purpose of a Group.
+     * Must not be longer than 4,096 characters.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An extended description to help users determine the purpose of a Group.
+     * Must not be longer than 4,096 characters.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The display name of the Group.
+     * 
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return The display name of the Group.
+     * 
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * EntityKey of the Group.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="groupKey", type=GroupGroupKey.class, parameters={})
     private Output<GroupGroupKey> groupKey;
 
+    /**
+     * @return EntityKey of the Group.
+     * Structure is documented below.
+     * 
+     */
     public Output<GroupGroupKey> getGroupKey() {
         return this.groupKey;
     }
+    /**
+     * The initial configuration options for creating a Group.
+     * See the
+     * [API reference](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups/create#initialgroupconfig)
+     * for possible values.
+     * Default value is `EMPTY`.
+     * Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, and `EMPTY`.
+     * 
+     */
     @OutputExport(name="initialGroupConfig", type=String.class, parameters={})
     private Output</* @Nullable */ String> initialGroupConfig;
 
+    /**
+     * @return The initial configuration options for creating a Group.
+     * See the
+     * [API reference](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups/create#initialgroupconfig)
+     * for possible values.
+     * Default value is `EMPTY`.
+     * Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, and `EMPTY`.
+     * 
+     */
     public Output</* @Nullable */ String> getInitialGroupConfig() {
         return this.initialGroupConfig;
     }
+    /**
+     * The labels that apply to the Group.
+     * Must not contain more than one entry. Must contain the entry
+     * 'cloudidentity.googleapis.com/groups.discussion_forum': '' if the Group is a Google Group or
+     * 'system/groups/external': '' if the Group is an external-identity-mapped group.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels that apply to the Group.
+     * Must not contain more than one entry. Must contain the entry
+     * 'cloudidentity.googleapis.com/groups.discussion_forum': '' if the Group is a Google Group or
+     * 'system/groups/external': '' if the Group is an external-identity-mapped group.
+     * 
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Resource name of the Group in the format: groups/{group_id}, where group_id is the unique ID assigned to the Group.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name of the Group in the format: groups/{group_id}, where group_id is the unique ID assigned to the Group.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The resource name of the entity under which this Group resides in the
+     * Cloud Identity resource hierarchy.
+     * Must be of the form identitysources/{identity_source_id} for external-identity-mapped
+     * groups or customers/{customer_id} for Google Groups.
+     * 
+     */
     @OutputExport(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
+    /**
+     * @return The resource name of the entity under which this Group resides in the
+     * Cloud Identity resource hierarchy.
+     * Must be of the form identitysources/{identity_source_id} for external-identity-mapped
+     * groups or customers/{customer_id} for Google Groups.
+     * 
+     */
     public Output<String> getParent() {
         return this.parent;
     }
+    /**
+     * The time when the Group was last updated.
+     * 
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return The time when the Group was last updated.
+     * 
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Group(String name, GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:cloudidentity/group:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +217,15 @@ public class Group extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Group get(String name, Input<String> id, @Nullable GroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Group(name, id, state, options);
     }

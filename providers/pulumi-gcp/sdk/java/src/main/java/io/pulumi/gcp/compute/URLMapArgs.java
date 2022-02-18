@@ -21,6 +21,15 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final URLMapArgs Empty = new URLMapArgs();
 
+    /**
+     * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+     * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+     * to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+     * Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+     * Only one of defaultRouteAction or defaultUrlRedirect must be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="defaultRouteAction")
     private final @Nullable Input<URLMapDefaultRouteActionArgs> defaultRouteAction;
 
@@ -28,6 +37,10 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultRouteAction == null ? Input.empty() : this.defaultRouteAction;
     }
 
+    /**
+     * The backend service or backend bucket to use when none of the given paths match.
+     * 
+     */
     @InputImport(name="defaultService")
     private final @Nullable Input<String> defaultService;
 
@@ -35,6 +48,13 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultService == null ? Input.empty() : this.defaultService;
     }
 
+    /**
+     * When none of the specified hostRules match, the request is redirected to a URL specified
+     * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+     * defaultRouteAction must not be set.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="defaultUrlRedirect")
     private final @Nullable Input<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
@@ -42,6 +62,10 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
     }
 
+    /**
+     * Description of this test case.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -49,6 +73,14 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Specifies changes to request and response headers that need to take effect for
+     * the selected backendService.
+     * headerAction specified here take effect before headerAction in the enclosing
+     * HttpRouteRule, PathMatcher and UrlMap.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="headerAction")
     private final @Nullable Input<URLMapHeaderActionArgs> headerAction;
 
@@ -56,6 +88,11 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.headerAction == null ? Input.empty() : this.headerAction;
     }
 
+    /**
+     * The list of HostRules to use against the URL.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="hostRules")
     private final @Nullable Input<List<URLMapHostRuleArgs>> hostRules;
 
@@ -63,6 +100,11 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostRules == null ? Input.empty() : this.hostRules;
     }
 
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -70,6 +112,11 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the PathMatcher to use to match the path portion of the URL if the
+     * hostRule matches the URL's host portion.
+     * 
+     */
     @InputImport(name="pathMatchers")
     private final @Nullable Input<List<URLMapPathMatcherArgs>> pathMatchers;
 
@@ -77,6 +124,11 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.pathMatchers == null ? Input.empty() : this.pathMatchers;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -84,6 +136,13 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The list of expected URL mapping tests. Request to update this UrlMap will
+     * succeed only if all of the test cases pass. You can specify a maximum of 100
+     * tests per UrlMap.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="tests")
     private final @Nullable Input<List<URLMapTestArgs>> tests;
 

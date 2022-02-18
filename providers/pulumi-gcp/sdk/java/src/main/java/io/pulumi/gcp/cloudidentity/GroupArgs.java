@@ -16,6 +16,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
+    /**
+     * An extended description to help users determine the purpose of a Group.
+     * Must not be longer than 4,096 characters.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +28,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name of the Group.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -30,6 +39,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * EntityKey of the Group.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="groupKey", required=true)
     private final Input<GroupGroupKeyArgs> groupKey;
 
@@ -37,6 +51,15 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupKey;
     }
 
+    /**
+     * The initial configuration options for creating a Group.
+     * See the
+     * [API reference](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups/create#initialgroupconfig)
+     * for possible values.
+     * Default value is `EMPTY`.
+     * Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, and `EMPTY`.
+     * 
+     */
     @InputImport(name="initialGroupConfig")
     private final @Nullable Input<String> initialGroupConfig;
 
@@ -44,6 +67,13 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialGroupConfig == null ? Input.empty() : this.initialGroupConfig;
     }
 
+    /**
+     * The labels that apply to the Group.
+     * Must not contain more than one entry. Must contain the entry
+     * 'cloudidentity.googleapis.com/groups.discussion_forum': '' if the Group is a Google Group or
+     * 'system/groups/external': '' if the Group is an external-identity-mapped group.
+     * 
+     */
     @InputImport(name="labels", required=true)
     private final Input<Map<String,String>> labels;
 
@@ -51,6 +81,13 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels;
     }
 
+    /**
+     * The resource name of the entity under which this Group resides in the
+     * Cloud Identity resource hierarchy.
+     * Must be of the form identitysources/{identity_source_id} for external-identity-mapped
+     * groups or customers/{customer_id} for Google Groups.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 

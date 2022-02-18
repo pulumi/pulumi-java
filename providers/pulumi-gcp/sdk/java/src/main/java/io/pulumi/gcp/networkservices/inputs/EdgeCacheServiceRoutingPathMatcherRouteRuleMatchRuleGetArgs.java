@@ -18,6 +18,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs e
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs();
 
+    /**
+     * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
+     * 
+     */
     @InputImport(name="fullPathMatch")
     private final @Nullable Input<String> fullPathMatch;
 
@@ -25,6 +29,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs e
         return this.fullPathMatch == null ? Input.empty() : this.fullPathMatch;
     }
 
+    /**
+     * Specifies a list of header match criteria, all of which must match corresponding headers in the request.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="headerMatches")
     private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> headerMatches;
 
@@ -32,6 +41,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs e
         return this.headerMatches == null ? Input.empty() : this.headerMatches;
     }
 
+    /**
+     * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+     * 
+     */
     @InputImport(name="ignoreCase")
     private final @Nullable Input<Boolean> ignoreCase;
 
@@ -39,6 +52,17 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs e
         return this.ignoreCase == null ? Input.empty() : this.ignoreCase;
     }
 
+    /**
+     * For satisfying the matchRule condition, the path of the request
+     * must match the wildcard pattern specified in pathTemplateMatch
+     * after removing any query parameters and anchor that may be part
+     * of the original URL.
+     * pathTemplateMatch must be between 1 and 255 characters
+     * (inclusive).  The pattern specified by pathTemplateMatch may
+     * have at most 5 wildcard operators and at most 5 variable
+     * captures in total.
+     * 
+     */
     @InputImport(name="pathTemplateMatch")
     private final @Nullable Input<String> pathTemplateMatch;
 
@@ -46,6 +70,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs e
         return this.pathTemplateMatch == null ? Input.empty() : this.pathTemplateMatch;
     }
 
+    /**
+     * The value of the header must start with the contents of prefixMatch.
+     * 
+     */
     @InputImport(name="prefixMatch")
     private final @Nullable Input<String> prefixMatch;
 
@@ -53,6 +81,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs e
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
     }
 
+    /**
+     * Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="queryParameterMatches")
     private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> queryParameterMatches;
 

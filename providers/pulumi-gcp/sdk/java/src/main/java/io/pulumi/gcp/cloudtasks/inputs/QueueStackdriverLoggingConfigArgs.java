@@ -13,6 +13,12 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
 
     public static final QueueStackdriverLoggingConfigArgs Empty = new QueueStackdriverLoggingConfigArgs();
 
+    /**
+     * Specifies the fraction of operations to write to Stackdriver Logging.
+     * This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+     * default and means that no operations are logged.
+     * 
+     */
     @InputImport(name="samplingRatio", required=true)
     private final Input<Double> samplingRatio;
 

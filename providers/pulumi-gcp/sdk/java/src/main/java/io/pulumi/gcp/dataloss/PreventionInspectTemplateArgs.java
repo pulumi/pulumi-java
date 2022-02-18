@@ -15,6 +15,10 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
 
     public static final PreventionInspectTemplateArgs Empty = new PreventionInspectTemplateArgs();
 
+    /**
+     * A description of the inspect template.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +26,10 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User set display name of the inspect template.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +37,11 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The core content of the template.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="inspectConfig")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
 
@@ -36,6 +49,14 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
         return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
     }
 
+    /**
+     * The parent of the inspect template in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 

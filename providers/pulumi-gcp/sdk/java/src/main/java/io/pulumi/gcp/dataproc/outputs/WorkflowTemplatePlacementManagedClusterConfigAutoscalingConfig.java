@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig {
+    /**
+     * Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
+     * 
+     */
     private final @Nullable String policy;
 
     @OutputCustomType.Constructor({"policy"})
@@ -18,6 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
         this.policy = policy;
     }
 
+    /**
+     * Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
+     * 
+     */
     public Optional<String> getPolicy() {
         return Optional.ofNullable(this.policy);
     }

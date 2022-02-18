@@ -13,6 +13,10 @@ public final class DicomStoreStreamConfigBigqueryDestinationGetArgs extends io.p
 
     public static final DicomStoreStreamConfigBigqueryDestinationGetArgs Empty = new DicomStoreStreamConfigBigqueryDestinationGetArgs();
 
+    /**
+     * a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+     * 
+     */
     @InputImport(name="tableUri", required=true)
     private final Input<String> tableUri;
 

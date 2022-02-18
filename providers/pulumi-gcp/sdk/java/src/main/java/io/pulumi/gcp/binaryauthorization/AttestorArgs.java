@@ -15,6 +15,11 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttestorArgs Empty = new AttestorArgs();
 
+    /**
+     * A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="attestationAuthorityNote", required=true)
     private final Input<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote;
 
@@ -22,6 +27,11 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
         return this.attestationAuthorityNote;
     }
 
+    /**
+     * A descriptive comment. This field may be updated. The field may be
+     * displayed in chooser dialogs.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +39,10 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The resource name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +50,11 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

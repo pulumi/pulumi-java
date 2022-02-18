@@ -15,6 +15,18 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SSLPolicyArgs Empty = new SSLPolicyArgs();
 
+    /**
+     * Profile specifies the set of SSL features that can be used by the
+     * load balancer when negotiating SSL with clients. This can be one of
+     * `COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+     * the set of SSL features to enable must be specified in the
+     * `customFeatures` field.
+     * See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
+     * for which ciphers are available to use. **Note**: this argument
+     * *must* be present when using the `CUSTOM` profile. This argument
+     * *must not* be present when using any other profile.
+     * 
+     */
     @InputImport(name="customFeatures")
     private final @Nullable Input<List<String>> customFeatures;
 
@@ -22,6 +34,10 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.customFeatures == null ? Input.empty() : this.customFeatures;
     }
 
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +45,13 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The minimum version of SSL protocol that can be used by the clients
+     * to establish a connection with the load balancer.
+     * Default value is `TLS_1_0`.
+     * Possible values are `TLS_1_0`, `TLS_1_1`, and `TLS_1_2`.
+     * 
+     */
     @InputImport(name="minTlsVersion")
     private final @Nullable Input<String> minTlsVersion;
 
@@ -36,6 +59,16 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.minTlsVersion == null ? Input.empty() : this.minTlsVersion;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +76,18 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Profile specifies the set of SSL features that can be used by the
+     * load balancer when negotiating SSL with clients. If using `CUSTOM`,
+     * the set of SSL features to enable must be specified in the
+     * `customFeatures` field.
+     * See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
+     * for information on what cipher suites each profile provides. If
+     * `CUSTOM` is used, the `custom_features` attribute **must be set**.
+     * Default value is `COMPATIBLE`.
+     * Possible values are `COMPATIBLE`, `MODERN`, `RESTRICTED`, and `CUSTOM`.
+     * 
+     */
     @InputImport(name="profile")
     private final @Nullable Input<String> profile;
 
@@ -50,6 +95,11 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.profile == null ? Input.empty() : this.profile;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

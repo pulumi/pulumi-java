@@ -14,6 +14,10 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
 
     public static final FirewallPolicyAssociationArgs Empty = new FirewallPolicyAssociationArgs();
 
+    /**
+     * The target that the firewall policy is attached to.
+     * 
+     */
     @InputImport(name="attachmentTarget", required=true)
     private final Input<String> attachmentTarget;
 
@@ -21,6 +25,10 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
         return this.attachmentTarget;
     }
 
+    /**
+     * The firewall policy ID of the association.
+     * 
+     */
     @InputImport(name="firewallPolicy", required=true)
     private final Input<String> firewallPolicy;
 
@@ -28,6 +36,10 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
         return this.firewallPolicy;
     }
 
+    /**
+     * The name for an association.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

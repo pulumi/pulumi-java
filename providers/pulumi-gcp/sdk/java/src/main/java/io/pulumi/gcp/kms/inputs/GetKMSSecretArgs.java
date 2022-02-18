@@ -14,6 +14,10 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKMSSecretArgs Empty = new GetKMSSecretArgs();
 
+    /**
+     * The [additional authenticated data](https://cloud.google.com/kms/docs/additional-authenticated-data) used for integrity checks during encryption and decryption.
+     * 
+     */
     @InputImport(name="additionalAuthenticatedData")
     private final @Nullable String additionalAuthenticatedData;
 
@@ -21,6 +25,10 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
         return this.additionalAuthenticatedData == null ? Optional.empty() : Optional.ofNullable(this.additionalAuthenticatedData);
     }
 
+    /**
+     * The ciphertext to be decrypted, encoded in base64
+     * 
+     */
     @InputImport(name="ciphertext", required=true)
     private final String ciphertext;
 
@@ -28,6 +36,12 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
         return this.ciphertext;
     }
 
+    /**
+     * The id of the CryptoKey that will be used to
+     * decrypt the provided ciphertext. This is represented by the format
+     * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
+     * 
+     */
     @InputImport(name="cryptoKey", required=true)
     private final String cryptoKey;
 

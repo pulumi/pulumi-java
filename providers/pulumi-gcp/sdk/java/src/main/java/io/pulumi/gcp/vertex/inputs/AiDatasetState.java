@@ -16,6 +16,11 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
 
     public static final AiDatasetState Empty = new AiDatasetState();
 
+    /**
+     * The timestamp of when the dataset was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * fractional digits.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -23,6 +28,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -30,6 +39,11 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="encryptionSpec")
     private final @Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
 
@@ -37,6 +51,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
         return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
     }
 
+    /**
+     * A set of key/value label pairs to assign to this Workflow.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -44,6 +62,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+     * 
+     */
     @InputImport(name="metadataSchemaUri")
     private final @Nullable Input<String> metadataSchemaUri;
 
@@ -51,6 +73,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
         return this.metadataSchemaUri == null ? Input.empty() : this.metadataSchemaUri;
     }
 
+    /**
+     * The resource name of the Dataset. This value is set by Google.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +84,11 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -65,6 +96,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the dataset. eg us-central1
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -72,6 +107,11 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The timestamp of when the dataset was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * nine fractional digits.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

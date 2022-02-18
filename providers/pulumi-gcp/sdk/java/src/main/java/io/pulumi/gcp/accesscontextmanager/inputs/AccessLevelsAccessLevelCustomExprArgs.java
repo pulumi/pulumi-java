@@ -14,6 +14,10 @@ public final class AccessLevelsAccessLevelCustomExprArgs extends io.pulumi.resou
 
     public static final AccessLevelsAccessLevelCustomExprArgs Empty = new AccessLevelsAccessLevelCustomExprArgs();
 
+    /**
+     * Description of the expression
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class AccessLevelsAccessLevelCustomExprArgs extends io.pulumi.resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     @InputImport(name="expression", required=true)
     private final Input<String> expression;
 
@@ -28,6 +36,10 @@ public final class AccessLevelsAccessLevelCustomExprArgs extends io.pulumi.resou
         return this.expression;
     }
 
+    /**
+     * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -35,6 +47,10 @@ public final class AccessLevelsAccessLevelCustomExprArgs extends io.pulumi.resou
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

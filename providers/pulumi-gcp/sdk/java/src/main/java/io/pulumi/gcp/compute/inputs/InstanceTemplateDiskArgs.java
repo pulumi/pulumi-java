@@ -18,6 +18,11 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
 
     public static final InstanceTemplateDiskArgs Empty = new InstanceTemplateDiskArgs();
 
+    /**
+     * Whether or not the disk should be auto-deleted.
+     * This defaults to true.
+     * 
+     */
     @InputImport(name="autoDelete")
     private final @Nullable Input<Boolean> autoDelete;
 
@@ -25,6 +30,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
     }
 
+    /**
+     * Indicates that this is a boot disk.
+     * 
+     */
     @InputImport(name="boot")
     private final @Nullable Input<Boolean> boot;
 
@@ -32,6 +41,12 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.boot == null ? Input.empty() : this.boot;
     }
 
+    /**
+     * A unique device name that is reflected into the
+     * /dev/  tree of a Linux operating system running within the instance. If not
+     * specified, the server chooses a default device name to apply to this disk.
+     * 
+     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -39,6 +54,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
+    /**
+     * Encrypts or decrypts a disk using a customer-supplied encryption key.
+     * 
+     */
     @InputImport(name="diskEncryptionKey")
     private final @Nullable Input<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey;
 
@@ -46,6 +65,11 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
     }
 
+    /**
+     * Name of the disk. When not provided, this defaults
+     * to the name of the instance.
+     * 
+     */
     @InputImport(name="diskName")
     private final @Nullable Input<String> diskName;
 
@@ -53,6 +77,12 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.diskName == null ? Input.empty() : this.diskName;
     }
 
+    /**
+     * The size of the image in gigabytes. If not
+     * specified, it will inherit the size of its base image. For SCRATCH disks,
+     * the size must be exactly 375GB.
+     * 
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<Integer> diskSizeGb;
 
@@ -60,6 +90,11 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * The GCE disk type. Can be either `"pd-ssd"`,
+     * `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
+     * 
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<String> diskType;
 
@@ -67,6 +102,13 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
+    /**
+     * Specifies the disk interface to use for attaching this disk,
+     * which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
+     * and the request will fail if you attempt to attach a persistent disk in any other format
+     * than SCSI. Local SSDs can use either NVME or SCSI.
+     * 
+     */
     @InputImport(name="interface")
     private final @Nullable Input<String> $interface;
 
@@ -74,6 +116,11 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.$interface == null ? Input.empty() : this.$interface;
     }
 
+    /**
+     * A set of ket/value label pairs to assign to disk created from
+     * this template
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -81,6 +128,12 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The mode in which to attach this disk, either READ_WRITE
+     * or READ_ONLY. If you are attaching or creating a boot disk, this must
+     * read-write mode.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -88,6 +141,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * -- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
+     * 
+     */
     @InputImport(name="resourcePolicies")
     private final @Nullable Input<String> resourcePolicies;
 
@@ -95,6 +152,12 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
     }
 
+    /**
+     * The name (**not self_link**)
+     * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
+     * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+     * 
+     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 
@@ -102,6 +165,16 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * The image from which to
+     * initialize this disk. This can be one of: the image's `self_link`,
+     * `projects/{project}/global/images/{image}`,
+     * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+     * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+     * `{project}/{image}`, `{family}`, or `{image}`.
+     * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+     * 
+     */
     @InputImport(name="sourceImage")
     private final @Nullable Input<String> sourceImage;
 
@@ -109,6 +182,10 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
         return this.sourceImage == null ? Input.empty() : this.sourceImage;
     }
 
+    /**
+     * The type of reservation from which this instance can consume resources.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

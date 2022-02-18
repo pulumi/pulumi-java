@@ -15,6 +15,11 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
 
     public static final NodeGroupAutoscalingPolicyArgs Empty = new NodeGroupAutoscalingPolicyArgs();
 
+    /**
+     * Maximum size of the node group. Set to a value less than or equal
+     * to 100 and greater than or equal to min-nodes.
+     * 
+     */
     @InputImport(name="maxNodes")
     private final @Nullable Input<Integer> maxNodes;
 
@@ -22,6 +27,11 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
         return this.maxNodes == null ? Input.empty() : this.maxNodes;
     }
 
+    /**
+     * Minimum size of the node group. Must be less
+     * than or equal to max-nodes. The default value is 0.
+     * 
+     */
     @InputImport(name="minNodes")
     private final @Nullable Input<Integer> minNodes;
 
@@ -29,6 +39,16 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
         return this.minNodes == null ? Input.empty() : this.minNodes;
     }
 
+    /**
+     * The autoscaling mode. Set to one of the following:
+     * - OFF: Disables the autoscaler.
+     * - ON: Enables scaling in and scaling out.
+     * - ONLY_SCALE_OUT: Enables only scaling out.
+     *   You must use this mode if your node groups are configured to
+     *   restart their hosted VMs on minimal servers.
+     *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
+     * 
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 

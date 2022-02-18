@@ -14,6 +14,10 @@ public final class FlexibleAppVersionDeploymentFileGetArgs extends io.pulumi.res
 
     public static final FlexibleAppVersionDeploymentFileGetArgs Empty = new FlexibleAppVersionDeploymentFileGetArgs();
 
+    /**
+     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +25,10 @@ public final class FlexibleAppVersionDeploymentFileGetArgs extends io.pulumi.res
         return this.name;
     }
 
+    /**
+     * SHA1 checksum of the file
+     * 
+     */
     @InputImport(name="sha1Sum")
     private final @Nullable Input<String> sha1Sum;
 
@@ -28,6 +36,10 @@ public final class FlexibleAppVersionDeploymentFileGetArgs extends io.pulumi.res
         return this.sha1Sum == null ? Input.empty() : this.sha1Sum;
     }
 
+    /**
+     * Source URL
+     * 
+     */
     @InputImport(name="sourceUrl", required=true)
     private final Input<String> sourceUrl;
 

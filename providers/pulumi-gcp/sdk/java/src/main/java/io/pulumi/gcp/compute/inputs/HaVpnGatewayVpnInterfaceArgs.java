@@ -15,6 +15,10 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
 
     public static final HaVpnGatewayVpnInterfaceArgs Empty = new HaVpnGatewayVpnInterfaceArgs();
 
+    /**
+     * The numeric ID of this VPN gateway interface.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<Integer> id;
 
@@ -22,6 +26,15 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * URL of the interconnect attachment resource. When the value
+     * of this field is present, the VPN Gateway will be used for
+     * IPsec-encrypted Cloud Interconnect; all Egress or Ingress
+     * traffic for this VPN Gateway interface will go through the
+     * specified interconnect attachment resource.
+     * Not currently available publicly.
+     * 
+     */
     @InputImport(name="interconnectAttachment")
     private final @Nullable Input<String> interconnectAttachment;
 
@@ -29,6 +42,11 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
         return this.interconnectAttachment == null ? Input.empty() : this.interconnectAttachment;
     }
 
+    /**
+     * - 
+     * The external IP address for this VPN gateway interface.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 

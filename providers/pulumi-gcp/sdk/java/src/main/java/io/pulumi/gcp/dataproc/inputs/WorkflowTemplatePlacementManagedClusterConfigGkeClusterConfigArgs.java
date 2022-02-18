@@ -14,6 +14,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
 
     public static final WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs();
 
+    /**
+     * Optional. A target for the deployment.
+     * 
+     */
     @InputImport(name="namespacedGkeDeploymentTarget")
     private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 

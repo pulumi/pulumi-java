@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendService {
+/**
+ * Provide access to a Backend Service's attribute. For more information
+ * see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
+ * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
+ * 
+ *
+ * A collection of arguments for invoking getBackendService.
+ * 
+ *
+ * A collection of values returned by getBackendService.
+ * 
+ */
     public static CompletableFuture<GetBackendServiceResult> invokeAsync(GetBackendServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getBackendService:getBackendService", TypeShape.of(GetBackendServiceResult.class), args == null ? GetBackendServiceArgs.Empty : args, Utilities.withVersion(options));
     }

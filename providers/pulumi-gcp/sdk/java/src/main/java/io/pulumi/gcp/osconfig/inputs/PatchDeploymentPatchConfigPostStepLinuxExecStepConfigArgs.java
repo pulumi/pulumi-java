@@ -17,6 +17,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
 
     public static final PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs Empty = new PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs();
 
+    /**
+     * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+     * 
+     */
     @InputImport(name="allowedSuccessCodes")
     private final @Nullable Input<List<Integer>> allowedSuccessCodes;
 
@@ -24,6 +28,11 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
         return this.allowedSuccessCodes == null ? Input.empty() : this.allowedSuccessCodes;
     }
 
+    /**
+     * A Cloud Storage object containing the executable.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gcsObject")
     private final @Nullable Input<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs> gcsObject;
 
@@ -31,6 +40,12 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
         return this.gcsObject == null ? Input.empty() : this.gcsObject;
     }
 
+    /**
+     * The script interpreter to use to run the script. If no interpreter is specified the script will
+     * be executed directly, which will likely only succeed for scripts with shebang lines.
+     * Possible values are `SHELL` and `POWERSHELL`.
+     * 
+     */
     @InputImport(name="interpreter")
     private final @Nullable Input<String> interpreter;
 
@@ -38,6 +53,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
         return this.interpreter == null ? Input.empty() : this.interpreter;
     }
 
+    /**
+     * An absolute path to the executable on the VM.
+     * 
+     */
     @InputImport(name="localPath")
     private final @Nullable Input<String> localPath;
 

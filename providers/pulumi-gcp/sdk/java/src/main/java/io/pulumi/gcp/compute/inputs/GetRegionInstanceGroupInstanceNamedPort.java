@@ -13,6 +13,10 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends io.pulumi.res
 
     public static final GetRegionInstanceGroupInstanceNamedPort Empty = new GetRegionInstanceGroupInstanceNamedPort();
 
+    /**
+     * The name of the instance group.  One of `name` or `self_link` must be provided.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +24,10 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends io.pulumi.res
         return this.name;
     }
 
+    /**
+     * Integer port number
+     * 
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 

@@ -14,6 +14,10 @@ public final class NodePoolManagementArgs extends io.pulumi.resources.ResourceAr
 
     public static final NodePoolManagementArgs Empty = new NodePoolManagementArgs();
 
+    /**
+     * Whether the nodes will be automatically repaired.
+     * 
+     */
     @InputImport(name="autoRepair")
     private final @Nullable Input<Boolean> autoRepair;
 
@@ -21,6 +25,10 @@ public final class NodePoolManagementArgs extends io.pulumi.resources.ResourceAr
         return this.autoRepair == null ? Input.empty() : this.autoRepair;
     }
 
+    /**
+     * Whether the nodes will be automatically upgraded.
+     * 
+     */
     @InputImport(name="autoUpgrade")
     private final @Nullable Input<Boolean> autoUpgrade;
 

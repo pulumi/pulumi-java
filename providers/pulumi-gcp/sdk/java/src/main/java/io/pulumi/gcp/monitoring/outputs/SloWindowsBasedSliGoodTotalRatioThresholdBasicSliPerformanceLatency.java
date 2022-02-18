@@ -9,6 +9,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency {
+    /**
+     * A duration string, e.g. 10s.
+     * Good service is defined to be the count of requests made to
+     * this service that return in no more than threshold.
+     * 
+     */
     private final String threshold;
 
     @OutputCustomType.Constructor({"threshold"})
@@ -16,6 +22,12 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
         this.threshold = Objects.requireNonNull(threshold);
     }
 
+    /**
+     * A duration string, e.g. 10s.
+     * Good service is defined to be the count of requests made to
+     * this service that return in no more than threshold.
+     * 
+     */
     public String getThreshold() {
         return this.threshold;
     }

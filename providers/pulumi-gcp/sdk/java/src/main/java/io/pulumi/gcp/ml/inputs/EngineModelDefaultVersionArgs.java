@@ -13,6 +13,10 @@ public final class EngineModelDefaultVersionArgs extends io.pulumi.resources.Res
 
     public static final EngineModelDefaultVersionArgs Empty = new EngineModelDefaultVersionArgs();
 
+    /**
+     * The name specified for the version when it was created.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

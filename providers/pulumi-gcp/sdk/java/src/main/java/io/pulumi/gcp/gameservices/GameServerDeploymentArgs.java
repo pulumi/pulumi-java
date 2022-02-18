@@ -15,6 +15,10 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
 
     public static final GameServerDeploymentArgs Empty = new GameServerDeploymentArgs();
 
+    /**
+     * A unique id for the deployment.
+     * 
+     */
     @InputImport(name="deploymentId", required=true)
     private final Input<String> deploymentId;
 
@@ -22,6 +26,10 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
         return this.deploymentId;
     }
 
+    /**
+     * Human readable description of the game server deployment.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,11 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The labels associated with this game server deployment. Each label is a
+     * key-value pair.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -36,6 +49,10 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Location of the Deployment.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,6 +60,11 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

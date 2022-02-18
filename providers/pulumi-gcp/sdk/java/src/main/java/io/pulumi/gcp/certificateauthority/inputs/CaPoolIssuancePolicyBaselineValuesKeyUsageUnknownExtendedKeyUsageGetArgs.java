@@ -14,6 +14,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyU
 
     public static final CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs Empty = new CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs();
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     @InputImport(name="objectIdPaths", required=true)
     private final Input<List<Integer>> objectIdPaths;
 

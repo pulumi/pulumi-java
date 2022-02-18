@@ -14,6 +14,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppArgs Empty = new WebAppArgs();
 
+    /**
+     * The user-assigned display name of the App.
+     * 
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -21,6 +25,11 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

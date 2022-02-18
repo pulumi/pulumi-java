@@ -18,6 +18,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SpokeArgs Empty = new SpokeArgs();
 
+    /**
+     * An optional description of the spoke.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Immutable. The URI of the hub that this spoke is attached to.
+     * 
+     */
     @InputImport(name="hub", required=true)
     private final Input<String> hub;
 
@@ -32,6 +40,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.hub;
     }
 
+    /**
+     * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -39,6 +51,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
+     * 
+     */
     @InputImport(name="linkedInterconnectAttachments")
     private final @Nullable Input<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
 
@@ -46,6 +62,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedInterconnectAttachments == null ? Input.empty() : this.linkedInterconnectAttachments;
     }
 
+    /**
+     * The URIs of linked Router appliance resources
+     * 
+     */
     @InputImport(name="linkedRouterApplianceInstances")
     private final @Nullable Input<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
 
@@ -53,6 +73,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedRouterApplianceInstances == null ? Input.empty() : this.linkedRouterApplianceInstances;
     }
 
+    /**
+     * The URIs of linked VPN tunnel resources
+     * 
+     */
     @InputImport(name="linkedVpnTunnels")
     private final @Nullable Input<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels;
 
@@ -60,6 +84,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedVpnTunnels == null ? Input.empty() : this.linkedVpnTunnels;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -67,6 +95,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * Immutable. The name of the spoke. Spoke names must be unique.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -74,6 +106,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

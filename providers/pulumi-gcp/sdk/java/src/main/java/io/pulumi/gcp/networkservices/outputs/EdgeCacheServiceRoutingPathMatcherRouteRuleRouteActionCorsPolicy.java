@@ -13,12 +13,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy {
+    /**
+     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+     * This translates to the Access-Control-Allow-Credentials response header.
+     * 
+     */
     private final @Nullable Boolean allowCredentials;
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers response header.
+     * 
+     */
     private final @Nullable List<String> allowHeaders;
+    /**
+     * Specifies the content for the Access-Control-Allow-Methods response header.
+     * 
+     */
     private final @Nullable List<String> allowMethods;
+    /**
+     * Specifies the list of origins that will be allowed to do CORS requests.
+     * This translates to the Access-Control-Allow-Origin response header.
+     * 
+     */
     private final @Nullable List<String> allowOrigins;
+    /**
+     * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+     * 
+     */
     private final @Nullable Boolean disabled;
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers response header.
+     * 
+     */
     private final @Nullable List<String> exposeHeaders;
+    /**
+     * Specifies how long results of a preflight request can be cached by a client in seconds. Note that many browser clients enforce a maximum TTL of 600s (10 minutes).
+     * - Setting the value to -1 forces a pre-flight check for all requests (not recommended)
+     * - A maximum TTL of 86400s can be set, but note that (as above) some clients may force pre-flight checks at a more regular interval.
+     * - This translates to the Access-Control-Max-Age header.
+     *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     private final String maxAge;
 
     @OutputCustomType.Constructor({"allowCredentials","allowHeaders","allowMethods","allowOrigins","disabled","exposeHeaders","maxAge"})
@@ -39,24 +73,58 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
         this.maxAge = Objects.requireNonNull(maxAge);
     }
 
+    /**
+     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+     * This translates to the Access-Control-Allow-Credentials response header.
+     * 
+     */
     public Optional<Boolean> getAllowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers response header.
+     * 
+     */
     public List<String> getAllowHeaders() {
         return this.allowHeaders == null ? List.of() : this.allowHeaders;
     }
+    /**
+     * Specifies the content for the Access-Control-Allow-Methods response header.
+     * 
+     */
     public List<String> getAllowMethods() {
         return this.allowMethods == null ? List.of() : this.allowMethods;
     }
+    /**
+     * Specifies the list of origins that will be allowed to do CORS requests.
+     * This translates to the Access-Control-Allow-Origin response header.
+     * 
+     */
     public List<String> getAllowOrigins() {
         return this.allowOrigins == null ? List.of() : this.allowOrigins;
     }
+    /**
+     * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+     * 
+     */
     public Optional<Boolean> getDisabled() {
         return Optional.ofNullable(this.disabled);
     }
+    /**
+     * Specifies the content for the Access-Control-Allow-Headers response header.
+     * 
+     */
     public List<String> getExposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
+    /**
+     * Specifies how long results of a preflight request can be cached by a client in seconds. Note that many browser clients enforce a maximum TTL of 600s (10 minutes).
+     * - Setting the value to -1 forces a pre-flight check for all requests (not recommended)
+     * - A maximum TTL of 86400s can be set, but note that (as above) some clients may force pre-flight checks at a more regular interval.
+     * - This translates to the Access-Control-Max-Age header.
+     *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     public String getMaxAge() {
         return this.maxAge;
     }

@@ -17,6 +17,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AiFeatureStoreArgs Empty = new AiFeatureStoreArgs();
 
+    /**
+     * If set to true, any EntityTypes and Features for this Featurestore will also be deleted
+     * 
+     */
     @InputImport(name="forceDestroy")
     private final @Nullable Input<Boolean> forceDestroy;
 
@@ -24,6 +28,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
     }
 
+    /**
+     * A set of key/value label pairs to assign to this Featurestore.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -31,6 +39,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,11 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Config for online serving resources.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="onlineServingConfig")
     private final @Nullable Input<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
 
@@ -45,6 +62,11 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.onlineServingConfig == null ? Input.empty() : this.onlineServingConfig;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -52,6 +74,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the dataset. eg us-central1
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

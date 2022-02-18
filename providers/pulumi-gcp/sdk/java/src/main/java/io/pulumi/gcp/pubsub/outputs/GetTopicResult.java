@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetTopicResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String kmsKeyName;
     private final Map<String,String> labels;
@@ -44,6 +48,10 @@ public final class GetTopicResult {
         this.schemaSettings = Objects.requireNonNull(schemaSettings);
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

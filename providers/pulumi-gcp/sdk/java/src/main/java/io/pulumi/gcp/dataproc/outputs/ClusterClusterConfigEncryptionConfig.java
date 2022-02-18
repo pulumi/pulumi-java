@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterClusterConfigEncryptionConfig {
+    /**
+     * The Cloud KMS key name to use for PD disk encryption for
+     * all instances in the cluster.
+     * 
+     */
     private final String kmsKeyName;
 
     @OutputCustomType.Constructor({"kmsKeyName"})
@@ -16,6 +21,11 @@ public final class ClusterClusterConfigEncryptionConfig {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
     }
 
+    /**
+     * The Cloud KMS key name to use for PD disk encryption for
+     * all instances in the cluster.
+     * 
+     */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

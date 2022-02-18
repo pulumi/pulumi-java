@@ -15,6 +15,11 @@ public final class GetKMSCryptoKeyVersionArgs extends io.pulumi.resources.Invoke
 
     public static final GetKMSCryptoKeyVersionArgs Empty = new GetKMSCryptoKeyVersionArgs();
 
+    /**
+     * The `id` of the Google Cloud Platform CryptoKey to which the key version belongs. This is also the `id` field of the
+     * `gcp.kms.CryptoKey` resource/datasource.
+     * 
+     */
     @InputImport(name="cryptoKey", required=true)
     private final String cryptoKey;
 
@@ -22,6 +27,10 @@ public final class GetKMSCryptoKeyVersionArgs extends io.pulumi.resources.Invoke
         return this.cryptoKey;
     }
 
+    /**
+     * The version number for this CryptoKeyVersion. Defaults to `1`.
+     * 
+     */
     @InputImport(name="version")
     private final @Nullable Integer version;
 

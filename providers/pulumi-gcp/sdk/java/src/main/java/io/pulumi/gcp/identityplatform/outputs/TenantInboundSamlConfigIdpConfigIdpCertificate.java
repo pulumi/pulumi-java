@@ -11,6 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
+    /**
+     * - 
+     * The x509 certificate
+     * 
+     */
     private final @Nullable String x509Certificate;
 
     @OutputCustomType.Constructor({"x509Certificate"})
@@ -18,6 +23,11 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
         this.x509Certificate = x509Certificate;
     }
 
+    /**
+     * - 
+     * The x509 certificate
+     * 
+     */
     public Optional<String> getX509Certificate() {
         return Optional.ofNullable(this.x509Certificate);
     }

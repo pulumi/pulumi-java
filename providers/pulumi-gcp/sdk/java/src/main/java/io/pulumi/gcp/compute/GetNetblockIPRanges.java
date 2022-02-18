@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetblockIPRanges {
+/**
+ * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getNetblockIPRanges.
+ * 
+ *
+ * A collection of values returned by getNetblockIPRanges.
+ * 
+ */
     public static CompletableFuture<GetNetblockIPRangesResult> invokeAsync(@Nullable GetNetblockIPRangesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetblockIPRanges:getNetblockIPRanges", TypeShape.of(GetNetblockIPRangesResult.class), args == null ? GetNetblockIPRangesArgs.Empty : args, Utilities.withVersion(options));
     }

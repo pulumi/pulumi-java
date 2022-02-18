@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetGlobalForwardingRuleMetadataFilterFilterLabel {
+    /**
+     * The name of the global forwarding rule.
+     * 
+     */
     private final String name;
     private final String value;
 
@@ -20,6 +24,10 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel {
         this.value = Objects.requireNonNull(value);
     }
 
+    /**
+     * The name of the global forwarding rule.
+     * 
+     */
     public String getName() {
         return this.name;
     }

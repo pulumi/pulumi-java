@@ -17,6 +17,11 @@ public final class GuestPoliciesPackageRepositoryArgs extends io.pulumi.resource
 
     public static final GuestPoliciesPackageRepositoryArgs Empty = new GuestPoliciesPackageRepositoryArgs();
 
+    /**
+     * An Apt Repository.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="apt")
     private final @Nullable Input<GuestPoliciesPackageRepositoryAptArgs> apt;
 
@@ -24,6 +29,11 @@ public final class GuestPoliciesPackageRepositoryArgs extends io.pulumi.resource
         return this.apt == null ? Input.empty() : this.apt;
     }
 
+    /**
+     * A Goo Repository.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="goo")
     private final @Nullable Input<GuestPoliciesPackageRepositoryGooArgs> goo;
 
@@ -31,6 +41,11 @@ public final class GuestPoliciesPackageRepositoryArgs extends io.pulumi.resource
         return this.goo == null ? Input.empty() : this.goo;
     }
 
+    /**
+     * A Yum Repository.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="yum")
     private final @Nullable Input<GuestPoliciesPackageRepositoryYumArgs> yum;
 
@@ -38,6 +53,11 @@ public final class GuestPoliciesPackageRepositoryArgs extends io.pulumi.resource
         return this.yum == null ? Input.empty() : this.yum;
     }
 
+    /**
+     * A Zypper Repository.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="zypper")
     private final @Nullable Input<GuestPoliciesPackageRepositoryZypperArgs> zypper;
 

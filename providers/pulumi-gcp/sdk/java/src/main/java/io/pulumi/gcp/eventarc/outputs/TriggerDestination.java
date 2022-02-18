@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TriggerDestination {
+    /**
+     * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * 
+     */
     private final @Nullable String cloudFunction;
+    /**
+     * Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
+     * 
+     */
     private final @Nullable TriggerDestinationCloudRunService cloudRunService;
 
     @OutputCustomType.Constructor({"cloudFunction","cloudRunService"})
@@ -23,9 +31,17 @@ public final class TriggerDestination {
         this.cloudRunService = cloudRunService;
     }
 
+    /**
+     * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * 
+     */
     public Optional<String> getCloudFunction() {
         return Optional.ofNullable(this.cloudFunction);
     }
+    /**
+     * Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
+     * 
+     */
     public Optional<TriggerDestinationCloudRunService> getCloudRunService() {
         return Optional.ofNullable(this.cloudRunService);
     }

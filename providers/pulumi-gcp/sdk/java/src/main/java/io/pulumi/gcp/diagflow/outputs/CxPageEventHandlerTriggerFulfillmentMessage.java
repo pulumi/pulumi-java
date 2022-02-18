@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CxPageEventHandlerTriggerFulfillmentMessage {
+    /**
+     * A collection of text responses.
+     * 
+     */
     private final @Nullable CxPageEventHandlerTriggerFulfillmentMessageText text;
 
     @OutputCustomType.Constructor({"text"})
@@ -18,6 +22,10 @@ public final class CxPageEventHandlerTriggerFulfillmentMessage {
         this.text = text;
     }
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     public Optional<CxPageEventHandlerTriggerFulfillmentMessageText> getText() {
         return Optional.ofNullable(this.text);
     }

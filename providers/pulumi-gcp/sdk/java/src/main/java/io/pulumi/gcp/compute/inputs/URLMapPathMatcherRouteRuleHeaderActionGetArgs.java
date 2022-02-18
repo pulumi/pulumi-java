@@ -17,6 +17,11 @@ public final class URLMapPathMatcherRouteRuleHeaderActionGetArgs extends io.pulu
 
     public static final URLMapPathMatcherRouteRuleHeaderActionGetArgs Empty = new URLMapPathMatcherRouteRuleHeaderActionGetArgs();
 
+    /**
+     * Headers to add to a matching request prior to forwarding the request to the backendService.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="requestHeadersToAdds")
     private final @Nullable Input<List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
 
@@ -24,6 +29,11 @@ public final class URLMapPathMatcherRouteRuleHeaderActionGetArgs extends io.pulu
         return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the request prior to
+     * forwarding the request to the backendService.
+     * 
+     */
     @InputImport(name="requestHeadersToRemoves")
     private final @Nullable Input<List<String>> requestHeadersToRemoves;
 
@@ -31,6 +41,11 @@ public final class URLMapPathMatcherRouteRuleHeaderActionGetArgs extends io.pulu
         return this.requestHeadersToRemoves == null ? Input.empty() : this.requestHeadersToRemoves;
     }
 
+    /**
+     * Headers to add the response prior to sending the response back to the client.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="responseHeadersToAdds")
     private final @Nullable Input<List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
 
@@ -38,6 +53,11 @@ public final class URLMapPathMatcherRouteRuleHeaderActionGetArgs extends io.pulu
         return this.responseHeadersToAdds == null ? Input.empty() : this.responseHeadersToAdds;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the response prior to sending the
+     * response back to the client.
+     * 
+     */
     @InputImport(name="responseHeadersToRemoves")
     private final @Nullable Input<List<String>> responseHeadersToRemoves;
 

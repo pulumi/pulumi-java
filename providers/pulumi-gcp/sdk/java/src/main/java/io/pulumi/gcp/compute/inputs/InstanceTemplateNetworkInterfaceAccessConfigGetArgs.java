@@ -14,6 +14,11 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigGetArgs extends i
 
     public static final InstanceTemplateNetworkInterfaceAccessConfigGetArgs Empty = new InstanceTemplateNetworkInterfaceAccessConfigGetArgs();
 
+    /**
+     * The IP address that will be 1:1 mapped to the instance's
+     * network ip. If not given, one will be generated.
+     * 
+     */
     @InputImport(name="natIp")
     private final @Nullable Input<String> natIp;
 
@@ -21,6 +26,11 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigGetArgs extends i
         return this.natIp == null ? Input.empty() : this.natIp;
     }
 
+    /**
+     * The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     @InputImport(name="networkTier")
     private final @Nullable Input<String> networkTier;
 

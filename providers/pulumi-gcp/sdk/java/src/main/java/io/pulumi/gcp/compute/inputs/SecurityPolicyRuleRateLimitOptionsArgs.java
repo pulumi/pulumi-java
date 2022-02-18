@@ -18,6 +18,11 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
 
     public static final SecurityPolicyRuleRateLimitOptionsArgs Empty = new SecurityPolicyRuleRateLimitOptionsArgs();
 
+    /**
+     * Can only be specified if the `action` for the rule is "rate_based_ban".
+     * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
+     * 
+     */
     @InputImport(name="banDurationSec")
     private final @Nullable Input<Integer> banDurationSec;
 
@@ -25,6 +30,12 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
         return this.banDurationSec == null ? Input.empty() : this.banDurationSec;
     }
 
+    /**
+     * Can only be specified if the `action` for the rule is "rate_based_ban".
+     * If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also
+     * exceed this 'ban_threshold'. Structure is documented below.
+     * 
+     */
     @InputImport(name="banThreshold")
     private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold;
 
@@ -32,6 +43,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
         return this.banThreshold == null ? Input.empty() : this.banThreshold;
     }
 
+    /**
+     * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
+     * 
+     */
     @InputImport(name="conformAction", required=true)
     private final Input<String> conformAction;
 
@@ -39,6 +54,11 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
         return this.conformAction;
     }
 
+    /**
+     * Determines the key to enforce the rate_limit_threshold on.
+     * Possible values incude "ALL", "ALL_IPS", "HTTP_HEADER", "IP", "XFF_IP". If not specified, defaults to "ALL".
+     * 
+     */
     @InputImport(name="enforceOnKey")
     private final @Nullable Input<String> enforceOnKey;
 
@@ -46,6 +66,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
         return this.enforceOnKey == null ? Input.empty() : this.enforceOnKey;
     }
 
+    /**
+     * Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+     * 
+     */
     @InputImport(name="enforceOnKeyName")
     private final @Nullable Input<String> enforceOnKeyName;
 
@@ -53,6 +77,11 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
         return this.enforceOnKeyName == null ? Input.empty() : this.enforceOnKeyName;
     }
 
+    /**
+     * When a request is denied, returns the HTTP response code specified.
+     * Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.
+     * 
+     */
     @InputImport(name="exceedAction", required=true)
     private final Input<String> exceedAction;
 
@@ -67,6 +96,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
         return this.exceedRedirectOptions == null ? Input.empty() : this.exceedRedirectOptions;
     }
 
+    /**
+     * Threshold at which to begin ratelimiting. Structure is documented below.
+     * 
+     */
     @InputImport(name="rateLimitThreshold", required=true)
     private final Input<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold;
 

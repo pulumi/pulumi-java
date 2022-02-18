@@ -16,6 +16,10 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunGetArgs extends io.pulu
 
     public static final GuestPoliciesRecipeUpdateStepScriptRunGetArgs Empty = new GuestPoliciesRecipeUpdateStepScriptRunGetArgs();
 
+    /**
+     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     @InputImport(name="allowedExitCodes")
     private final @Nullable Input<List<Integer>> allowedExitCodes;
 
@@ -23,6 +27,12 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunGetArgs extends io.pulu
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
     }
 
+    /**
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
+     * which likely only succeed for scripts with shebang lines.
+     * Possible values are `SHELL` and `POWERSHELL`.
+     * 
+     */
     @InputImport(name="interpreter")
     private final @Nullable Input<String> interpreter;
 
@@ -30,6 +40,10 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunGetArgs extends io.pulu
         return this.interpreter == null ? Input.empty() : this.interpreter;
     }
 
+    /**
+     * The shell script to be executed.
+     * 
+     */
     @InputImport(name="script", required=true)
     private final Input<String> script;
 

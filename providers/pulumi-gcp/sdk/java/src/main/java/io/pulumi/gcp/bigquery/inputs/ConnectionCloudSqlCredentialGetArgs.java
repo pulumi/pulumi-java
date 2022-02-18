@@ -13,6 +13,11 @@ public final class ConnectionCloudSqlCredentialGetArgs extends io.pulumi.resourc
 
     public static final ConnectionCloudSqlCredentialGetArgs Empty = new ConnectionCloudSqlCredentialGetArgs();
 
+    /**
+     * Password for database.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -20,6 +25,10 @@ public final class ConnectionCloudSqlCredentialGetArgs extends io.pulumi.resourc
         return this.password;
     }
 
+    /**
+     * Username for database.
+     * 
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

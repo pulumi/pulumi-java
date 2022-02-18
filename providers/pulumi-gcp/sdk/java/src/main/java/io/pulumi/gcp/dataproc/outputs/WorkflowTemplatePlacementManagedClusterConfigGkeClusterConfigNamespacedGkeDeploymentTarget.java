@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget {
+    /**
+     * Optional. A namespace within the GKE cluster to deploy into.
+     * 
+     */
     private final @Nullable String clusterNamespace;
+    /**
+     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * 
+     */
     private final @Nullable String targetGkeCluster;
 
     @OutputCustomType.Constructor({"clusterNamespace","targetGkeCluster"})
@@ -22,9 +30,17 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
         this.targetGkeCluster = targetGkeCluster;
     }
 
+    /**
+     * Optional. A namespace within the GKE cluster to deploy into.
+     * 
+     */
     public Optional<String> getClusterNamespace() {
         return Optional.ofNullable(this.clusterNamespace);
     }
+    /**
+     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * 
+     */
     public Optional<String> getTargetGkeCluster() {
         return Optional.ofNullable(this.targetGkeCluster);
     }

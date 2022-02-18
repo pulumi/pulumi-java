@@ -16,6 +16,15 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
 
     public static final BackendServiceBackendArgs Empty = new BackendServiceBackendArgs();
 
+    /**
+     * Specifies the balancing mode for this backend.
+     * For global HTTP(S) or TCP/SSL load balancing, the default is
+     * UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
+     * and CONNECTION (for TCP/SSL).
+     * Default value is `UTILIZATION`.
+     * Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
+     * 
+     */
     @InputImport(name="balancingMode")
     private final @Nullable Input<String> balancingMode;
 
@@ -23,6 +32,15 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.balancingMode == null ? Input.empty() : this.balancingMode;
     }
 
+    /**
+     * A multiplier applied to the group's maximum servicing capacity
+     * (based on UTILIZATION, RATE or CONNECTION).
+     * Default value is 1, which means the group will serve up to 100%
+     * of its configured capacity (depending on balancingMode). A
+     * setting of 0 means the group is completely drained, offering
+     * 0% of its available Capacity. Valid range is [0.0,1.0].
+     * 
+     */
     @InputImport(name="capacityScaler")
     private final @Nullable Input<Double> capacityScaler;
 
@@ -30,6 +48,11 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.capacityScaler == null ? Input.empty() : this.capacityScaler;
     }
 
+    /**
+     * An optional description of this resource.
+     * Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,6 +60,23 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The fully-qualified URL of an Instance Group or Network Endpoint
+     * Group resource. In case of instance group this defines the list
+     * of instances that serve traffic. Member virtual machine
+     * instances from each instance group must live in the same zone as
+     * the instance group itself. No two backends in a backend service
+     * are allowed to use same Instance Group resource.
+     * For Network Endpoint Groups this defines list of endpoints. All
+     * endpoints of Network Endpoint Group must be hosted on instances
+     * located in the same zone as the Network Endpoint Group.
+     * Backend services cannot mix Instance Group and
+     * Network Endpoint Group backends.
+     * Note that you must specify an Instance Group or Network Endpoint
+     * Group resource using the fully-qualified URL, rather than a
+     * partial URL.
+     * 
+     */
     @InputImport(name="group", required=true)
     private final Input<String> group;
 
@@ -44,6 +84,11 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.group;
     }
 
+    /**
+     * The maximum number of connections to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     @InputImport(name="maxConnections")
     private final @Nullable Input<Integer> maxConnections;
 
@@ -51,6 +96,15 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.maxConnections == null ? Input.empty() : this.maxConnections;
     }
 
+    /**
+     * The max number of simultaneous connections that a single backend
+     * network endpoint can handle. This is used to calculate the
+     * capacity of the group. Can be used in either CONNECTION or
+     * UTILIZATION balancing modes.
+     * For CONNECTION mode, either
+     * maxConnections or maxConnectionsPerEndpoint must be set.
+     * 
+     */
     @InputImport(name="maxConnectionsPerEndpoint")
     private final @Nullable Input<Integer> maxConnectionsPerEndpoint;
 
@@ -58,6 +112,15 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.maxConnectionsPerEndpoint == null ? Input.empty() : this.maxConnectionsPerEndpoint;
     }
 
+    /**
+     * The max number of simultaneous connections that a single
+     * backend instance can handle. This is used to calculate the
+     * capacity of the group. Can be used in either CONNECTION or
+     * UTILIZATION balancing modes.
+     * For CONNECTION mode, either maxConnections or
+     * maxConnectionsPerInstance must be set.
+     * 
+     */
     @InputImport(name="maxConnectionsPerInstance")
     private final @Nullable Input<Integer> maxConnectionsPerInstance;
 
@@ -65,6 +128,14 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.maxConnectionsPerInstance == null ? Input.empty() : this.maxConnectionsPerInstance;
     }
 
+    /**
+     * The max requests per second (RPS) of the group.
+     * Can be used with either RATE or UTILIZATION balancing modes,
+     * but required if RATE mode. For RATE mode, either maxRate or one
+     * of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
+     * group type, must be set.
+     * 
+     */
     @InputImport(name="maxRate")
     private final @Nullable Input<Integer> maxRate;
 
@@ -72,6 +143,13 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.maxRate == null ? Input.empty() : this.maxRate;
     }
 
+    /**
+     * The max requests per second (RPS) that a single backend network
+     * endpoint can handle. This is used to calculate the capacity of
+     * the group. Can be used in either balancing mode. For RATE mode,
+     * either maxRate or maxRatePerEndpoint must be set.
+     * 
+     */
     @InputImport(name="maxRatePerEndpoint")
     private final @Nullable Input<Double> maxRatePerEndpoint;
 
@@ -79,6 +157,13 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.maxRatePerEndpoint == null ? Input.empty() : this.maxRatePerEndpoint;
     }
 
+    /**
+     * The max requests per second (RPS) that a single backend
+     * instance can handle. This is used to calculate the capacity of
+     * the group. Can be used in either balancing mode. For RATE mode,
+     * either maxRate or maxRatePerInstance must be set.
+     * 
+     */
     @InputImport(name="maxRatePerInstance")
     private final @Nullable Input<Double> maxRatePerInstance;
 
@@ -86,6 +171,11 @@ public final class BackendServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.maxRatePerInstance == null ? Input.empty() : this.maxRatePerInstance;
     }
 
+    /**
+     * Used when balancingMode is UTILIZATION. This ratio defines the
+     * CPU utilization target for the group. Valid range is [0.0, 1.0].
+     * 
+     */
     @InputImport(name="maxUtilization")
     private final @Nullable Input<Double> maxUtilization;
 

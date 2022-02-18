@@ -15,63 +15,193 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a TargetTcpProxy resource, which is used by one or more
+ * global forwarding rule to route incoming TCP requests to a Backend
+ * service.
+ * 
+ * To get more information about TargetTcpProxy, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/v1/targetTcpProxies)
+ * * How-to Guides
+ *     * [Setting Up TCP proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/tcp-proxy)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * TargetTcpProxy can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default projects/{{project}}/global/targetTcpProxies/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetTCPProxy:TargetTCPProxy default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/targetTCPProxy:TargetTCPProxy")
 public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
+    /**
+     * A reference to the BackendService resource.
+     * 
+     */
     @OutputExport(name="backendService", type=String.class, parameters={})
     private Output<String> backendService;
 
+    /**
+     * @return A reference to the BackendService resource.
+     * 
+     */
     public Output<String> getBackendService() {
         return this.backendService;
     }
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * This field only applies when the forwarding rule that references
+     * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     @OutputExport(name="proxyBind", type=Boolean.class, parameters={})
     private Output<Boolean> proxyBind;
 
+    /**
+     * @return This field only applies when the forwarding rule that references
+     * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Output<Boolean> getProxyBind() {
         return this.proxyBind;
     }
+    /**
+     * Specifies the type of proxy header to append before sending data to
+     * the backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     @OutputExport(name="proxyHeader", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxyHeader;
 
+    /**
+     * @return Specifies the type of proxy header to append before sending data to
+     * the backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     public Output</* @Nullable */ String> getProxyHeader() {
         return this.proxyHeader;
     }
+    /**
+     * The unique identifier for the resource.
+     * 
+     */
     @OutputExport(name="proxyId", type=Integer.class, parameters={})
     private Output<Integer> proxyId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Output<Integer> getProxyId() {
         return this.proxyId;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TargetTCPProxy(String name, TargetTCPProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/targetTCPProxy:TargetTCPProxy", name, args == null ? TargetTCPProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +217,15 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TargetTCPProxy get(String name, Input<String> id, @Nullable TargetTCPProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TargetTCPProxy(name, id, state, options);
     }

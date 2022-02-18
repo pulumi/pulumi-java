@@ -16,6 +16,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
 
     public static final EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyGetArgs Empty = new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyGetArgs();
 
+    /**
+     * If true, requests to different hosts will be cached separately.
+     * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
+     * 
+     */
     @InputImport(name="excludeHost")
     private final @Nullable Input<Boolean> excludeHost;
 
@@ -23,6 +28,15 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         return this.excludeHost == null ? Input.empty() : this.excludeHost;
     }
 
+    /**
+     * If true, exclude query string parameters from the cache key
+     * If false (the default), include the query string parameters in
+     * the cache key according to includeQueryParameters and
+     * excludeQueryParameters. If neither includeQueryParameters nor
+     * excludeQueryParameters is set, the entire query string will be
+     * included.
+     * 
+     */
     @InputImport(name="excludeQueryString")
     private final @Nullable Input<Boolean> excludeQueryString;
 
@@ -30,6 +44,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         return this.excludeQueryString == null ? Input.empty() : this.excludeQueryString;
     }
 
+    /**
+     * Names of query string parameters to exclude from cache keys. All other parameters will be included.
+     * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
+     * 
+     */
     @InputImport(name="excludedQueryParameters")
     private final @Nullable Input<List<String>> excludedQueryParameters;
 
@@ -37,6 +56,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         return this.excludedQueryParameters == null ? Input.empty() : this.excludedQueryParameters;
     }
 
+    /**
+     * If true, http and https requests will be cached separately.
+     * 
+     */
     @InputImport(name="includeProtocol")
     private final @Nullable Input<Boolean> includeProtocol;
 
@@ -44,6 +67,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         return this.includeProtocol == null ? Input.empty() : this.includeProtocol;
     }
 
+    /**
+     * Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
+     * - Header names must be valid HTTP RFC 7230 header field values.
+     * - Header field names are case insensitive
+     * - To include the HTTP method, use ":method"
+     *   Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+     * 
+     */
     @InputImport(name="includedHeaderNames")
     private final @Nullable Input<List<String>> includedHeaderNames;
 
@@ -51,6 +82,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         return this.includedHeaderNames == null ? Input.empty() : this.includedHeaderNames;
     }
 
+    /**
+     * Names of query string parameters to include in cache keys. All other parameters will be excluded.
+     * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
+     * 
+     */
     @InputImport(name="includedQueryParameters")
     private final @Nullable Input<List<String>> includedQueryParameters;
 

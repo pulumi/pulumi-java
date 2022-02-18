@@ -18,6 +18,11 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
 
     public static final OrganizationSecurityPolicyRuleArgs Empty = new OrganizationSecurityPolicyRuleArgs();
 
+    /**
+     * The Action to perform when the client connection triggers the rule. Can currently be either
+     * "allow", "deny" or "goto_next".
+     * 
+     */
     @InputImport(name="action", required=true)
     private final Input<String> action;
 
@@ -25,6 +30,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.action;
     }
 
+    /**
+     * A description of the rule.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +41,11 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The direction in which this rule applies. If unspecified an INGRESS rule is created.
+     * Possible values are `INGRESS` and `EGRESS`.
+     * 
+     */
     @InputImport(name="direction")
     private final @Nullable Input<String> direction;
 
@@ -39,6 +53,12 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.direction == null ? Input.empty() : this.direction;
     }
 
+    /**
+     * Denotes whether to enable logging for a particular rule.
+     * If logging is enabled, logs will be exported to the
+     * configured export destination in Stackdriver.
+     * 
+     */
     @InputImport(name="enableLogging")
     private final @Nullable Input<Boolean> enableLogging;
 
@@ -46,6 +66,11 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
     }
 
+    /**
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="match", required=true)
     private final Input<OrganizationSecurityPolicyRuleMatchArgs> match;
 
@@ -53,6 +78,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.match;
     }
 
+    /**
+     * The ID of the OrganizationSecurityPolicy this rule applies to.
+     * 
+     */
     @InputImport(name="policyId", required=true)
     private final Input<String> policyId;
 
@@ -60,6 +89,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.policyId;
     }
 
+    /**
+     * If set to true, the specified action is not enforced.
+     * 
+     */
     @InputImport(name="preview")
     private final @Nullable Input<Boolean> preview;
 
@@ -67,6 +100,12 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.preview == null ? Input.empty() : this.preview;
     }
 
+    /**
+     * An integer indicating the priority of a rule in the list. The priority must be a value
+     * between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
+     * highest priority and 2147483647 is the lowest prority.
+     * 
+     */
     @InputImport(name="priority", required=true)
     private final Input<Integer> priority;
 
@@ -74,6 +113,13 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.priority;
     }
 
+    /**
+     * A list of network resource URLs to which this rule applies.
+     * This field allows you to control which network's VMs get
+     * this rule. If this field is left blank, all VMs
+     * within the organization will receive the rule.
+     * 
+     */
     @InputImport(name="targetResources")
     private final @Nullable Input<List<String>> targetResources;
 
@@ -81,6 +127,11 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
         return this.targetResources == null ? Input.empty() : this.targetResources;
     }
 
+    /**
+     * A list of service accounts indicating the sets of
+     * instances that are applied with this rule.
+     * 
+     */
     @InputImport(name="targetServiceAccounts")
     private final @Nullable Input<List<String>> targetServiceAccounts;
 

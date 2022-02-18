@@ -9,12 +9,28 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetAddressResult {
+    /**
+     * The IP of the created resource.
+     * 
+     */
     private final String address;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
     private final String project;
     private final String region;
+    /**
+     * The URI of the created resource.
+     * 
+     */
     private final String selfLink;
+    /**
+     * Indicates if the address is used. Possible values are: RESERVED or IN_USE.
+     * 
+     */
     private final String status;
 
     @OutputCustomType.Constructor({"address","id","name","project","region","selfLink","status"})
@@ -35,9 +51,17 @@ public final class GetAddressResult {
         this.status = Objects.requireNonNull(status);
     }
 
+    /**
+     * The IP of the created resource.
+     * 
+     */
     public String getAddress() {
         return this.address;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
@@ -50,9 +74,17 @@ public final class GetAddressResult {
     public String getRegion() {
         return this.region;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     public String getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * Indicates if the address is used. Possible values are: RESERVED or IN_USE.
+     * 
+     */
     public String getStatus() {
         return this.status;
     }

@@ -18,6 +18,10 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final GroupMembershipArgs Empty = new GroupMembershipArgs();
 
+    /**
+     * The name of the Group to create this membership in.
+     * 
+     */
     @InputImport(name="group", required=true)
     private final Input<String> group;
 
@@ -25,6 +29,11 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
         return this.group;
     }
 
+    /**
+     * EntityKey of the member.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="memberKey")
     private final @Nullable Input<GroupMembershipMemberKeyArgs> memberKey;
 
@@ -32,6 +41,11 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
         return this.memberKey == null ? Input.empty() : this.memberKey;
     }
 
+    /**
+     * EntityKey of the member.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="preferredMemberKey")
     private final @Nullable Input<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
 
@@ -39,6 +53,12 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
         return this.preferredMemberKey == null ? Input.empty() : this.preferredMemberKey;
     }
 
+    /**
+     * The MembershipRoles that apply to the Membership.
+     * Must not contain duplicate MembershipRoles with the same name.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="roles", required=true)
     private final Input<List<GroupMembershipRoleArgs>> roles;
 

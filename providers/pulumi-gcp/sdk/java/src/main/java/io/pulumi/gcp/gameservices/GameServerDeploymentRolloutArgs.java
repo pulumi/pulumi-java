@@ -16,6 +16,12 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
 
     public static final GameServerDeploymentRolloutArgs Empty = new GameServerDeploymentRolloutArgs();
 
+    /**
+     * This field points to the game server config that is
+     * applied by default to all realms and clusters. For example,
+     * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+     * 
+     */
     @InputImport(name="defaultGameServerConfig", required=true)
     private final Input<String> defaultGameServerConfig;
 
@@ -23,6 +29,10 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
         return this.defaultGameServerConfig;
     }
 
+    /**
+     * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
+     * 
+     */
     @InputImport(name="deploymentId", required=true)
     private final Input<String> deploymentId;
 
@@ -30,6 +40,14 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
         return this.deploymentId;
     }
 
+    /**
+     * The game_server_config_overrides contains the per game server config
+     * overrides. The overrides are processed in the order they are listed. As
+     * soon as a match is found for a cluster, the rest of the list is not
+     * processed.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gameServerConfigOverrides")
     private final @Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
 
@@ -37,6 +55,11 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
         return this.gameServerConfigOverrides == null ? Input.empty() : this.gameServerConfigOverrides;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetwork {
+/**
+ * Get a subnetwork within GCE from its name and region.
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getSubnetwork.
+ * 
+ *
+ * A collection of values returned by getSubnetwork.
+ * 
+ */
     public static CompletableFuture<GetSubnetworkResult> invokeAsync(@Nullable GetSubnetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getSubnetwork:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args == null ? GetSubnetworkArgs.Empty : args, Utilities.withVersion(options));
     }

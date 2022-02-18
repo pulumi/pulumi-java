@@ -13,6 +13,10 @@ public final class PolicyRestorePolicyArgs extends io.pulumi.resources.ResourceA
 
     public static final PolicyRestorePolicyArgs Empty = new PolicyRestorePolicyArgs();
 
+    /**
+     * May only be set to true. If set, then the default Policy is restored.
+     * 
+     */
     @InputImport(name="default", required=true)
     private final Input<Boolean> $default;
 

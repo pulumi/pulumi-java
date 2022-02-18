@@ -17,6 +17,12 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeTemplateState Empty = new NodeTemplateState();
 
+    /**
+     * CPU overcommit.
+     * Default value is `NONE`.
+     * Possible values are `ENABLED` and `NONE`.
+     * 
+     */
     @InputImport(name="cpuOvercommitType")
     private final @Nullable Input<String> cpuOvercommitType;
 
@@ -24,6 +30,10 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.cpuOvercommitType == null ? Input.empty() : this.cpuOvercommitType;
     }
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="creationTimestamp")
     private final @Nullable Input<String> creationTimestamp;
 
@@ -31,6 +41,10 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
     }
 
+    /**
+     * An optional textual description of the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +52,10 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +63,11 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Labels to use for node affinity, which will be used in
+     * instance scheduling.
+     * 
+     */
     @InputImport(name="nodeAffinityLabels")
     private final @Nullable Input<Map<String,String>> nodeAffinityLabels;
 
@@ -52,6 +75,11 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.nodeAffinityLabels == null ? Input.empty() : this.nodeAffinityLabels;
     }
 
+    /**
+     * Node type to use for nodes group that are created from this template.
+     * Only one of nodeTypeFlexibility and nodeType can be specified.
+     * 
+     */
     @InputImport(name="nodeType")
     private final @Nullable Input<String> nodeType;
 
@@ -59,6 +87,14 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.nodeType == null ? Input.empty() : this.nodeType;
     }
 
+    /**
+     * Flexible properties for the desired node type. Node groups that
+     * use this node template will create nodes of a type that matches
+     * these properties. Only one of nodeTypeFlexibility and nodeType can
+     * be specified.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="nodeTypeFlexibility")
     private final @Nullable Input<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
 
@@ -66,6 +102,11 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.nodeTypeFlexibility == null ? Input.empty() : this.nodeTypeFlexibility;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -73,6 +114,11 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Region where nodes using the node template will be created.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -80,6 +126,10 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -87,6 +137,12 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The server binding policy for nodes using this template. Determines
+     * where the nodes should restart following a maintenance event.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="serverBinding")
     private final @Nullable Input<NodeTemplateServerBindingGetArgs> serverBinding;
 

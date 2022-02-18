@@ -14,6 +14,11 @@ public final class InboundSamlConfigIdpConfigIdpCertificateArgs extends io.pulum
 
     public static final InboundSamlConfigIdpConfigIdpCertificateArgs Empty = new InboundSamlConfigIdpConfigIdpCertificateArgs();
 
+    /**
+     * - 
+     * The x509 certificate
+     * 
+     */
     @InputImport(name="x509Certificate")
     private final @Nullable Input<String> x509Certificate;
 

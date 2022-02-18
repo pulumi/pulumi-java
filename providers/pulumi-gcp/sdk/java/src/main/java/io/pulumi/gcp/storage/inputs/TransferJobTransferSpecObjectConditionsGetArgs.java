@@ -15,6 +15,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
 
     public static final TransferJobTransferSpecObjectConditionsGetArgs Empty = new TransferJobTransferSpecObjectConditionsGetArgs();
 
+    /**
+     * `exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+     * 
+     */
     @InputImport(name="excludePrefixes")
     private final @Nullable Input<List<String>> excludePrefixes;
 
@@ -22,6 +26,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
         return this.excludePrefixes == null ? Input.empty() : this.excludePrefixes;
     }
 
+    /**
+     * If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+     * 
+     */
     @InputImport(name="includePrefixes")
     private final @Nullable Input<List<String>> includePrefixes;
 
@@ -29,6 +37,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
         return this.includePrefixes == null ? Input.empty() : this.includePrefixes;
     }
 
+    /**
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="maxTimeElapsedSinceLastModification")
     private final @Nullable Input<String> maxTimeElapsedSinceLastModification;
 
@@ -36,6 +48,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
         return this.maxTimeElapsedSinceLastModification == null ? Input.empty() : this.maxTimeElapsedSinceLastModification;
     }
 
+    /**
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="minTimeElapsedSinceLastModification")
     private final @Nullable Input<String> minTimeElapsedSinceLastModification;
 

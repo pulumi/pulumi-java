@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataTransferConfigSensitiveParams {
+    /**
+     * The Secret Access Key of the AWS account transferring data from.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final String secretAccessKey;
 
     @OutputCustomType.Constructor({"secretAccessKey"})
@@ -16,6 +21,11 @@ public final class DataTransferConfigSensitiveParams {
         this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
     }
 
+    /**
+     * The Secret Access Key of the AWS account transferring data from.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public String getSecretAccessKey() {
         return this.secretAccessKey;
     }

@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AwsNodePoolConfigSshConfig {
+    /**
+     * Required. The name of the EC2 key pair used to login into cluster machines.
+     * 
+     */
     private final String ec2KeyPair;
 
     @OutputCustomType.Constructor({"ec2KeyPair"})
@@ -16,6 +20,10 @@ public final class AwsNodePoolConfigSshConfig {
         this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
     }
 
+    /**
+     * Required. The name of the EC2 key pair used to login into cluster machines.
+     * 
+     */
     public String getEc2KeyPair() {
         return this.ec2KeyPair;
     }

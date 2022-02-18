@@ -14,6 +14,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigAr
 
     public static final WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs();
 
+    /**
+     * Kerberos related configuration.
+     * 
+     */
     @InputImport(name="kerberosConfig")
     private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 

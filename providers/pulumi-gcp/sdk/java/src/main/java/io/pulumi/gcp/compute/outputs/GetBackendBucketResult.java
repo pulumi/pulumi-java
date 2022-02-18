@@ -20,6 +20,10 @@ public final class GetBackendBucketResult {
     private final List<String> customResponseHeaders;
     private final String description;
     private final Boolean enableCdn;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
     private final @Nullable String project;
@@ -67,6 +71,10 @@ public final class GetBackendBucketResult {
     public Boolean getEnableCdn() {
         return this.enableCdn;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

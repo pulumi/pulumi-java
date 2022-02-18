@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
+    /**
+     * Period of time over which CPU utilization is calculated.
+     * 
+     */
     private final @Nullable String aggregationWindowLength;
+    /**
+     * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+     * 
+     */
     private final Double targetUtilization;
 
     @OutputCustomType.Constructor({"aggregationWindowLength","targetUtilization"})
@@ -23,9 +31,17 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
         this.targetUtilization = Objects.requireNonNull(targetUtilization);
     }
 
+    /**
+     * Period of time over which CPU utilization is calculated.
+     * 
+     */
     public Optional<String> getAggregationWindowLength() {
         return Optional.ofNullable(this.aggregationWindowLength);
     }
+    /**
+     * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+     * 
+     */
     public Double getTargetUtilization() {
         return this.targetUtilization;
     }

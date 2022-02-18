@@ -15,6 +15,10 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
 
     public static final BrandState Empty = new BrandState();
 
+    /**
+     * Application name displayed on OAuth consent screen.
+     * 
+     */
     @InputImport(name="applicationTitle")
     private final @Nullable Input<String> applicationTitle;
 
@@ -22,6 +26,11 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
         return this.applicationTitle == null ? Input.empty() : this.applicationTitle;
     }
 
+    /**
+     * Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
+     * identification corresponds to the project number as only one brand per project can be created.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,10 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Whether the brand is only intended for usage inside the GSuite organization only.
+     * 
+     */
     @InputImport(name="orgInternalOnly")
     private final @Nullable Input<Boolean> orgInternalOnly;
 
@@ -36,6 +49,11 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
         return this.orgInternalOnly == null ? Input.empty() : this.orgInternalOnly;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +61,14 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Support email displayed on the OAuth consent screen. Can be either a
+     * user or group email. When a user email is specified, the caller must
+     * be the user with the associated email address. When a group email is
+     * specified, the caller can be either a user or a service account which
+     * is an owner of the specified group in Cloud Identity.
+     * 
+     */
     @InputImport(name="supportEmail")
     private final @Nullable Input<String> supportEmail;
 

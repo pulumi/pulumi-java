@@ -15,45 +15,131 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Manages a Cloud Dataproc cluster resource within GCP.
+ * 
+ * * [API documentation](https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.clusters)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/dataproc/docs)
+ * 
+ * !> **Warning:** Due to limitations of the API, all arguments except
+ * `labels`,`cluster_config.worker_config.num_instances` and `cluster_config.preemptible_worker_config.num_instances` are non-updatable. Changing others will cause recreation of the
+ * whole cluster!
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * This resource does not support import.
+ * 
+ */
 @ResourceType(type="gcp:dataproc/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {
+    /**
+     * Allows you to configure various aspects of the cluster.
+     * Structure defined below.
+     * 
+     */
     @OutputExport(name="clusterConfig", type=ClusterClusterConfig.class, parameters={})
     private Output<ClusterClusterConfig> clusterConfig;
 
+    /**
+     * @return Allows you to configure various aspects of the cluster.
+     * Structure defined below.
+     * 
+     */
     public Output<ClusterClusterConfig> getClusterConfig() {
         return this.clusterConfig;
     }
+    /**
+     * The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+     * terraform apply
+     * 
+     */
     @OutputExport(name="gracefulDecommissionTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> gracefulDecommissionTimeout;
 
+    /**
+     * @return The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+     * terraform apply
+     * 
+     */
     public Output</* @Nullable */ String> getGracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
+    /**
+     * The list of labels (key/value pairs) to be applied to
+     * instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
+     * which is the name of the cluster.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return The list of labels (key/value pairs) to be applied to
+     * instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
+     * which is the name of the cluster.
+     * 
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The name of the cluster, unique within the project and
+     * zone.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the cluster, unique within the project and
+     * zone.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the `cluster` will exist. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the `cluster` will exist. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The region in which the cluster and associated nodes will be created in.
+     * Defaults to `global`.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
+    /**
+     * @return The region in which the cluster and associated nodes will be created in.
+     * Defaults to `global`.
+     * 
+     */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataproc/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +155,15 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Cluster get(String name, Input<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Cluster(name, id, state, options);
     }

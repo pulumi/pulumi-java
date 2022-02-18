@@ -22,6 +22,13 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The DICOM store ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}/{dicom_store_name}` or
+     * `{location_name}/{dataset_name}/{dicom_store_name}`. In the second form, the provider's
+     * project setting will be used as a fallback.
+     * 
+     */
     @InputImport(name="dicomStoreId", required=true)
     private final Input<String> dicomStoreId;
 
@@ -36,6 +43,12 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
         return this.member;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.healthcare.DicomStoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

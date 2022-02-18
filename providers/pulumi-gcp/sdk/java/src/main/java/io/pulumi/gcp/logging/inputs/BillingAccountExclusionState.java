@@ -15,6 +15,10 @@ public final class BillingAccountExclusionState extends io.pulumi.resources.Reso
 
     public static final BillingAccountExclusionState Empty = new BillingAccountExclusionState();
 
+    /**
+     * The billing account to create the exclusion for.
+     * 
+     */
     @InputImport(name="billingAccount")
     private final @Nullable Input<String> billingAccount;
 
@@ -22,6 +26,10 @@ public final class BillingAccountExclusionState extends io.pulumi.resources.Reso
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
     }
 
+    /**
+     * A human-readable description.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,11 @@ public final class BillingAccountExclusionState extends io.pulumi.resources.Reso
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Whether this exclusion rule should be disabled or not. This defaults to
+     * false.
+     * 
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -36,6 +49,12 @@ public final class BillingAccountExclusionState extends io.pulumi.resources.Reso
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+     * See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
+     * write a filter.
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -43,6 +62,10 @@ public final class BillingAccountExclusionState extends io.pulumi.resources.Reso
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * The name of the logging exclusion.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

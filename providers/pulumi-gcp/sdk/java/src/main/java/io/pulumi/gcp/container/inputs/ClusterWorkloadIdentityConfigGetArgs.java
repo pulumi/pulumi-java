@@ -14,6 +14,10 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends io.pulumi.resour
 
     public static final ClusterWorkloadIdentityConfigGetArgs Empty = new ClusterWorkloadIdentityConfigGetArgs();
 
+    /**
+     * The workload pool to attach all Kubernetes service accounts to.
+     * 
+     */
     @InputImport(name="workloadPool")
     private final @Nullable Input<String> workloadPool;
 

@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
+    /**
+     * The relative resource name of a Secret Manager secret version, in the following form:
+     * "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
+     * 
+     */
     private final String cloudSecret;
 
     @OutputCustomType.Constructor({"cloudSecret"})
@@ -16,6 +21,11 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
         this.cloudSecret = Objects.requireNonNull(cloudSecret);
     }
 
+    /**
+     * The relative resource name of a Secret Manager secret version, in the following form:
+     * "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
+     * 
+     */
     public String getCloudSecret() {
         return this.cloudSecret;
     }

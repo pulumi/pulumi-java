@@ -14,6 +14,10 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends io.pulumi
 
     public static final PatchDeploymentInstanceFilterGroupLabelArgs Empty = new PatchDeploymentInstanceFilterGroupLabelArgs();
 
+    /**
+     * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+     * 
+     */
     @InputImport(name="labels", required=true)
     private final Input<Map<String,String>> labels;
 

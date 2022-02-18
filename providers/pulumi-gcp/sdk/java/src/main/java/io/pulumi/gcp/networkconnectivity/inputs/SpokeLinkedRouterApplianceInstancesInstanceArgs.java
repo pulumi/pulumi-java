@@ -14,6 +14,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceArgs extends io.pu
 
     public static final SpokeLinkedRouterApplianceInstancesInstanceArgs Empty = new SpokeLinkedRouterApplianceInstancesInstanceArgs();
 
+    /**
+     * The IP address on the VM to use for peering.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -21,6 +25,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceArgs extends io.pu
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * The URI of the virtual machine resource
+     * 
+     */
     @InputImport(name="virtualMachine")
     private final @Nullable Input<String> virtualMachine;
 

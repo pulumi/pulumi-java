@@ -13,6 +13,11 @@ public final class DataTransferConfigSensitiveParamsGetArgs extends io.pulumi.re
 
     public static final DataTransferConfigSensitiveParamsGetArgs Empty = new DataTransferConfigSensitiveParamsGetArgs();
 
+    /**
+     * The Secret Access Key of the AWS account transferring data from.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="secretAccessKey", required=true)
     private final Input<String> secretAccessKey;
 

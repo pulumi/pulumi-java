@@ -14,6 +14,12 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends io.pulum
 
     public static final GameServerConfigScalingConfigScheduleGetArgs Empty = new GameServerConfigScalingConfigScheduleGetArgs();
 
+    /**
+     * The duration for the cron job event. The duration of the event is effective
+     * after the cron job's start time.
+     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * 
+     */
     @InputImport(name="cronJobDuration")
     private final @Nullable Input<String> cronJobDuration;
 
@@ -21,6 +27,12 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends io.pulum
         return this.cronJobDuration == null ? Input.empty() : this.cronJobDuration;
     }
 
+    /**
+     * The cron definition of the scheduled event. See
+     * https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+     * defined by the realm.
+     * 
+     */
     @InputImport(name="cronSpec")
     private final @Nullable Input<String> cronSpec;
 
@@ -28,6 +40,11 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends io.pulum
         return this.cronSpec == null ? Input.empty() : this.cronSpec;
     }
 
+    /**
+     * The end time of the event.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -35,6 +52,11 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends io.pulum
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * The start time of the event.
+     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

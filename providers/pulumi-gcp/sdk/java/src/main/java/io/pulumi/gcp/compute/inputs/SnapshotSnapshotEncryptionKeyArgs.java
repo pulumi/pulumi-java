@@ -14,6 +14,10 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends io.pulumi.resources
 
     public static final SnapshotSnapshotEncryptionKeyArgs Empty = new SnapshotSnapshotEncryptionKeyArgs();
 
+    /**
+     * The name of the encryption key that is stored in Google Cloud KMS.
+     * 
+     */
     @InputImport(name="kmsKeySelfLink")
     private final @Nullable Input<String> kmsKeySelfLink;
 
@@ -21,6 +25,11 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends io.pulumi.resources
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
     }
 
+    /**
+     * The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     @InputImport(name="kmsKeyServiceAccount")
     private final @Nullable Input<String> kmsKeyServiceAccount;
 
@@ -28,6 +37,12 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends io.pulumi.resources
         return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
     }
 
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     @InputImport(name="rawKey")
     private final @Nullable Input<String> rawKey;
 
@@ -35,6 +50,12 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends io.pulumi.resources
         return this.rawKey == null ? Input.empty() : this.rawKey;
     }
 
+    /**
+     * - 
+     * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+     * encryption key that protects this resource.
+     * 
+     */
     @InputImport(name="sha256")
     private final @Nullable Input<String> sha256;
 

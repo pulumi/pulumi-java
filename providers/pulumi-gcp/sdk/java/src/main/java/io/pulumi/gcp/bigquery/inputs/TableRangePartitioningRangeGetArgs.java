@@ -13,6 +13,10 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
 
     public static final TableRangePartitioningRangeGetArgs Empty = new TableRangePartitioningRangeGetArgs();
 
+    /**
+     * End of the range partitioning, exclusive.
+     * 
+     */
     @InputImport(name="end", required=true)
     private final Input<Integer> end;
 
@@ -20,6 +24,10 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
         return this.end;
     }
 
+    /**
+     * The width of each range within the partition.
+     * 
+     */
     @InputImport(name="interval", required=true)
     private final Input<Integer> interval;
 
@@ -27,6 +35,10 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
         return this.interval;
     }
 
+    /**
+     * Start of the range partitioning, inclusive.
+     * 
+     */
     @InputImport(name="start", required=true)
     private final Input<Integer> start;
 

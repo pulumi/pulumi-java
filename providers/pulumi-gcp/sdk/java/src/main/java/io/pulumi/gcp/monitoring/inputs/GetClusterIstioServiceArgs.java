@@ -14,6 +14,11 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
 
     public static final GetClusterIstioServiceArgs Empty = new GetClusterIstioServiceArgs();
 
+    /**
+     * The name of the Kubernetes cluster in which this Istio service
+     * is defined. Corresponds to the clusterName resource label in k8s_cluster resources.
+     * 
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -21,6 +26,11 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
         return this.clusterName;
     }
 
+    /**
+     * The location of the Kubernetes cluster in which this Istio service
+     * is defined. Corresponds to the location resource label in k8s_cluster resources.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +38,11 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
         return this.location;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +50,11 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The name of the Istio service underlying this service.
+     * Corresponds to the destination_service_name metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -42,6 +62,11 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
         return this.serviceName;
     }
 
+    /**
+     * The namespace of the Istio service underlying this service.
+     * Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * 
+     */
     @InputImport(name="serviceNamespace", required=true)
     private final String serviceNamespace;
 

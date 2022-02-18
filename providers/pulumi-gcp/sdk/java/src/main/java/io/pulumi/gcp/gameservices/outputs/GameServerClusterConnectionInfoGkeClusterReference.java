@@ -9,6 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GameServerClusterConnectionInfoGkeClusterReference {
+    /**
+     * The full or partial name of a GKE cluster, using one of the following
+     * forms:
+     * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+     * * `locations/{location}/clusters/{cluster_id}`
+     * * `{cluster_id}`
+     *   If project and location are not specified, the project and location of the
+     *   GameServerCluster resource are used to generate the full name of the
+     *   GKE cluster.
+     * 
+     */
     private final String cluster;
 
     @OutputCustomType.Constructor({"cluster"})
@@ -16,6 +27,17 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
         this.cluster = Objects.requireNonNull(cluster);
     }
 
+    /**
+     * The full or partial name of a GKE cluster, using one of the following
+     * forms:
+     * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+     * * `locations/{location}/clusters/{cluster_id}`
+     * * `{cluster_id}`
+     *   If project and location are not specified, the project and location of the
+     *   GameServerCluster resource are used to generate the full name of the
+     *   GKE cluster.
+     * 
+     */
     public String getCluster() {
         return this.cluster;
     }

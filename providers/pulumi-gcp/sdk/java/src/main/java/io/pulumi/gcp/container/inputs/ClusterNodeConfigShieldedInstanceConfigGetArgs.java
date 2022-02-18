@@ -14,6 +14,10 @@ public final class ClusterNodeConfigShieldedInstanceConfigGetArgs extends io.pul
 
     public static final ClusterNodeConfigShieldedInstanceConfigGetArgs Empty = new ClusterNodeConfigShieldedInstanceConfigGetArgs();
 
+    /**
+     * Defines if the instance has integrity monitoring enabled.
+     * 
+     */
     @InputImport(name="enableIntegrityMonitoring")
     private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
@@ -21,6 +25,10 @@ public final class ClusterNodeConfigShieldedInstanceConfigGetArgs extends io.pul
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
+    /**
+     * Defines if the instance has Secure Boot enabled.
+     * 
+     */
     @InputImport(name="enableSecureBoot")
     private final @Nullable Input<Boolean> enableSecureBoot;
 

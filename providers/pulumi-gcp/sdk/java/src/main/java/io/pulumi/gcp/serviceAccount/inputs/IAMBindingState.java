@@ -16,6 +16,11 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMBindingState Empty = new IAMBindingState();
 
+    /**
+     * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="condition")
     private final @Nullable Input<IAMBindingConditionGetArgs> condition;
 
@@ -23,6 +28,10 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * (Computed) The etag of the service account IAM policy.
+     * 
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -37,6 +46,12 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.serviceAccount.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 
@@ -44,6 +59,10 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
         return this.role == null ? Input.empty() : this.role;
     }
 
+    /**
+     * The fully-qualified name of the service account to apply policy to.
+     * 
+     */
     @InputImport(name="serviceAccountId")
     private final @Nullable Input<String> serviceAccountId;
 

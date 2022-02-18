@@ -20,89 +20,261 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
+ * the cluster control plane. For more information see [the official documentation](https://cloud.google.com/container-engine/docs/node-pools)
+ * and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Node pools can be imported using the `project`, `location`, `cluster` and `name`. If the project is omitted, the project value in the provider configuration will be used. Examples
+ * 
+ * ```sh
+ *  $ pulumi import gcp:container/nodePool:NodePool mainpool my-gcp-project/us-east1-a/my-cluster/main-pool
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:container/nodePool:NodePool mainpool us-east1/my-cluster/main-pool
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:container/nodePool:NodePool")
 public class NodePool extends io.pulumi.resources.CustomResource {
+    /**
+     * Configuration required by cluster autoscaler to adjust
+     * the size of the node pool to the current cluster usage. Structure is documented below.
+     * 
+     */
     @OutputExport(name="autoscaling", type=NodePoolAutoscaling.class, parameters={})
     private Output</* @Nullable */ NodePoolAutoscaling> autoscaling;
 
+    /**
+     * @return Configuration required by cluster autoscaler to adjust
+     * the size of the node pool to the current cluster usage. Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ NodePoolAutoscaling> getAutoscaling() {
         return this.autoscaling;
     }
+    /**
+     * The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+     * 
+     */
     @OutputExport(name="cluster", type=String.class, parameters={})
     private Output<String> cluster;
 
+    /**
+     * @return The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+     * 
+     */
     public Output<String> getCluster() {
         return this.cluster;
     }
+    /**
+     * The initial number of nodes for the pool. In
+     * regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+     * this will force recreation of the resource. WARNING: Resizing your node pool manually
+     * may change this value in your existing cluster, which will trigger destruction
+     * and recreation on the next provider run (to rectify the discrepancy).  If you don't
+     * need this value, don't set it.  If you do need it, you can use a lifecycle block to
+     * ignore subsqeuent changes to this field.
+     * 
+     */
     @OutputExport(name="initialNodeCount", type=Integer.class, parameters={})
     private Output<Integer> initialNodeCount;
 
+    /**
+     * @return The initial number of nodes for the pool. In
+     * regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+     * this will force recreation of the resource. WARNING: Resizing your node pool manually
+     * may change this value in your existing cluster, which will trigger destruction
+     * and recreation on the next provider run (to rectify the discrepancy).  If you don't
+     * need this value, don't set it.  If you do need it, you can use a lifecycle block to
+     * ignore subsqeuent changes to this field.
+     * 
+     */
     public Output<Integer> getInitialNodeCount() {
         return this.initialNodeCount;
     }
+    /**
+     * The resource URLs of the managed instance groups associated with this node pool.
+     * 
+     */
     @OutputExport(name="instanceGroupUrls", type=List.class, parameters={String.class})
     private Output<List<String>> instanceGroupUrls;
 
+    /**
+     * @return The resource URLs of the managed instance groups associated with this node pool.
+     * 
+     */
     public Output<List<String>> getInstanceGroupUrls() {
         return this.instanceGroupUrls;
     }
+    /**
+     * The location (region or zone) of the cluster.
+     * 
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location (region or zone) of the cluster.
+     * 
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * List of instance group URLs which have been assigned to this node pool.
+     * 
+     */
     @OutputExport(name="managedInstanceGroupUrls", type=List.class, parameters={String.class})
     private Output<List<String>> managedInstanceGroupUrls;
 
+    /**
+     * @return List of instance group URLs which have been assigned to this node pool.
+     * 
+     */
     public Output<List<String>> getManagedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls;
     }
+    /**
+     * Node management configuration, wherein auto-repair and
+     * auto-upgrade is configured. Structure is documented below.
+     * 
+     */
     @OutputExport(name="management", type=NodePoolManagement.class, parameters={})
     private Output<NodePoolManagement> management;
 
+    /**
+     * @return Node management configuration, wherein auto-repair and
+     * auto-upgrade is configured. Structure is documented below.
+     * 
+     */
     public Output<NodePoolManagement> getManagement() {
         return this.management;
     }
+    /**
+     * The maximum number of pods per node in this node pool.
+     * Note that this does not work on node pools which are "route-based" - that is, node
+     * pools belonging to clusters that do not have IP Aliasing enabled.
+     * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+     * for more information.
+     * 
+     */
     @OutputExport(name="maxPodsPerNode", type=Integer.class, parameters={})
     private Output<Integer> maxPodsPerNode;
 
+    /**
+     * @return The maximum number of pods per node in this node pool.
+     * Note that this does not work on node pools which are "route-based" - that is, node
+     * pools belonging to clusters that do not have IP Aliasing enabled.
+     * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+     * for more information.
+     * 
+     */
     public Output<Integer> getMaxPodsPerNode() {
         return this.maxPodsPerNode;
     }
+    /**
+     * The name of the node pool. If left blank, the provider will
+     * auto-generate a unique name.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the node pool. If left blank, the provider will
+     * auto-generate a unique name.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Creates a unique name for the node pool beginning
+     * with the specified prefix. Conflicts with `name`.
+     * 
+     */
     @OutputExport(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name for the node pool beginning
+     * with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Output<String> getNamePrefix() {
         return this.namePrefix;
     }
+    /**
+     * The network configuration of the pool. See
+     * gcp.container.Cluster for schema.
+     * 
+     */
     @OutputExport(name="networkConfig", type=NodePoolNetworkConfig.class, parameters={})
     private Output<NodePoolNetworkConfig> networkConfig;
 
+    /**
+     * @return The network configuration of the pool. See
+     * gcp.container.Cluster for schema.
+     * 
+     */
     public Output<NodePoolNetworkConfig> getNetworkConfig() {
         return this.networkConfig;
     }
+    /**
+     * Parameters used in creating the node pool. See
+     * gcp.container.Cluster for schema.
+     * 
+     */
     @OutputExport(name="nodeConfig", type=NodePoolNodeConfig.class, parameters={})
     private Output<NodePoolNodeConfig> nodeConfig;
 
+    /**
+     * @return Parameters used in creating the node pool. See
+     * gcp.container.Cluster for schema.
+     * 
+     */
     public Output<NodePoolNodeConfig> getNodeConfig() {
         return this.nodeConfig;
     }
+    /**
+     * The number of nodes per instance group. This field can be used to
+     * update the number of nodes per instance group but should not be used alongside `autoscaling`.
+     * 
+     */
     @OutputExport(name="nodeCount", type=Integer.class, parameters={})
     private Output<Integer> nodeCount;
 
+    /**
+     * @return The number of nodes per instance group. This field can be used to
+     * update the number of nodes per instance group but should not be used alongside `autoscaling`.
+     * 
+     */
     public Output<Integer> getNodeCount() {
         return this.nodeCount;
     }
+    /**
+     * The list of zones in which the node pool's nodes should be located. Nodes must
+     * be in the region of their regional cluster or in the same region as their
+     * cluster's zone for zonal clusters. If unspecified, the cluster-level
+     * `node_locations` will be used.
+     * 
+     */
     @OutputExport(name="nodeLocations", type=List.class, parameters={String.class})
     private Output<List<String>> nodeLocations;
 
+    /**
+     * @return The list of zones in which the node pool's nodes should be located. Nodes must
+     * be in the region of their regional cluster or in the same region as their
+     * cluster's zone for zonal clusters. If unspecified, the cluster-level
+     * `node_locations` will be used.
+     * 
+     */
     public Output<List<String>> getNodeLocations() {
         return this.nodeLocations;
     }
@@ -112,25 +284,71 @@ public class NodePool extends io.pulumi.resources.CustomResource {
     public Output<String> getOperation() {
         return this.operation;
     }
+    /**
+     * The ID of the project in which to create the node pool. If blank,
+     * the provider-configured project will be used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which to create the node pool. If blank,
+     * the provider-configured project will be used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Specify node upgrade settings to change how many nodes GKE attempts to
+     * upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
+     * The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
+     * 
+     */
     @OutputExport(name="upgradeSettings", type=NodePoolUpgradeSettings.class, parameters={})
     private Output<NodePoolUpgradeSettings> upgradeSettings;
 
+    /**
+     * @return Specify node upgrade settings to change how many nodes GKE attempts to
+     * upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
+     * The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
+     * 
+     */
     public Output<NodePoolUpgradeSettings> getUpgradeSettings() {
         return this.upgradeSettings;
     }
+    /**
+     * The Kubernetes version for the nodes in this pool. Note that if this field
+     * and `auto_upgrade` are both specified, they will fight each other for what the node version should
+     * be, so setting both is highly discouraged. While a fuzzy version can be specified, it's
+     * recommended that you specify explicit versions as the provider will see spurious diffs
+     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
+     * `version_prefix` field to approximate fuzzy versions in a provider-compatible way.
+     * 
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output<String> version;
 
+    /**
+     * @return The Kubernetes version for the nodes in this pool. Note that if this field
+     * and `auto_upgrade` are both specified, they will fight each other for what the node version should
+     * be, so setting both is highly discouraged. While a fuzzy version can be specified, it's
+     * recommended that you specify explicit versions as the provider will see spurious diffs
+     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
+     * `version_prefix` field to approximate fuzzy versions in a provider-compatible way.
+     * 
+     */
     public Output<String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NodePool(String name, NodePoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:container/nodePool:NodePool", name, args == null ? NodePoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -146,6 +364,15 @@ public class NodePool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NodePool get(String name, Input<String> id, @Nullable NodePoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NodePool(name, id, state, options);
     }

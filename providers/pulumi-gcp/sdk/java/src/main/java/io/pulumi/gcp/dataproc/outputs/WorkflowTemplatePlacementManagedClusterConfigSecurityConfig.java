@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
+    /**
+     * Kerberos related configuration.
+     * 
+     */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig;
 
     @OutputCustomType.Constructor({"kerberosConfig"})
@@ -18,6 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
         this.kerberosConfig = kerberosConfig;
     }
 
+    /**
+     * Kerberos related configuration.
+     * 
+     */
     public Optional<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig> getKerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }

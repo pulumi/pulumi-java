@@ -14,6 +14,10 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageGetArgs extends
 
     public static final CxPageTransitionRouteTriggerFulfillmentMessageGetArgs Empty = new CxPageTransitionRouteTriggerFulfillmentMessageGetArgs();
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     @InputImport(name="text")
     private final @Nullable Input<CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs> text;
 

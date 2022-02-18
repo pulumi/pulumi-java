@@ -14,6 +14,10 @@ public final class GetDefaultServiceAccountArgs extends io.pulumi.resources.Invo
 
     public static final GetDefaultServiceAccountArgs Empty = new GetDefaultServiceAccountArgs();
 
+    /**
+     * The project ID. If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

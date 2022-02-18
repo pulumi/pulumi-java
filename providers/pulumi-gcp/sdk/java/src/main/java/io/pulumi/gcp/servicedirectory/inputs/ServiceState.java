@@ -15,6 +15,13 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceState Empty = new ServiceState();
 
+    /**
+     * Metadata for the service. This data can be consumed
+     * by service clients. The entire metadata dictionary may contain
+     * up to 2000 characters, spread across all key-value pairs.
+     * Metadata that goes beyond any these limits will be rejected.
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -22,6 +29,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The resource name for the service in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*'.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +40,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource name of the namespace this service will belong to.
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -36,6 +51,11 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
+    /**
+     * The Resource ID must be 1-63 characters long, including digits,
+     * lowercase letters or the hyphen character.
+     * 
+     */
     @InputImport(name="serviceId")
     private final @Nullable Input<String> serviceId;
 

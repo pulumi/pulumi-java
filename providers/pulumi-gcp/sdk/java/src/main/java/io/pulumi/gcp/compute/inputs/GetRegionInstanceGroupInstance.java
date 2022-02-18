@@ -14,6 +14,10 @@ public final class GetRegionInstanceGroupInstance extends io.pulumi.resources.In
 
     public static final GetRegionInstanceGroupInstance Empty = new GetRegionInstanceGroupInstance();
 
+    /**
+     * URL to the instance.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final String instance;
 
@@ -21,6 +25,10 @@ public final class GetRegionInstanceGroupInstance extends io.pulumi.resources.In
         return this.instance;
     }
 
+    /**
+     * List of named ports in the group, as a list of resources, each containing:
+     * 
+     */
     @InputImport(name="namedPorts", required=true)
     private final List<GetRegionInstanceGroupInstanceNamedPort> namedPorts;
 
@@ -28,6 +36,10 @@ public final class GetRegionInstanceGroupInstance extends io.pulumi.resources.In
         return this.namedPorts;
     }
 
+    /**
+     * String description of current state of the instance.
+     * 
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

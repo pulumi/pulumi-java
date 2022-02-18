@@ -15,6 +15,10 @@ public final class TriggerTransportGetArgs extends io.pulumi.resources.ResourceA
 
     public static final TriggerTransportGetArgs Empty = new TriggerTransportGetArgs();
 
+    /**
+     * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+     * 
+     */
     @InputImport(name="pubsubs")
     private final @Nullable Input<List<TriggerTransportPubsubGetArgs>> pubsubs;
 

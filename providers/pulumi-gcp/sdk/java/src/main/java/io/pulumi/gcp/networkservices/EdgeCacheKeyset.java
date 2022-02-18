@@ -16,39 +16,124 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * EdgeCacheKeyset represents a collection of public keys used for validating signed requests.
+ * 
+ * > **Warning:** All arguments including `public_key.public_key.value` will be stored in the raw
+ * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * EdgeCacheKeyset can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset default projects/{{project}}/locations/global/edgeCacheKeysets/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset")
 public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
+    /**
+     * A human-readable description of the resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A human-readable description of the resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Set of label tags associated with the EdgeCache resource.
+     * 
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
+    /**
+     * @return Set of label tags associated with the EdgeCache resource.
+     * 
+     */
     public Output</* @Nullable */ Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Name of the resource; provided by the client when the resource is created.
+     * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+     * and all following characters must be a dash, underscore, letter or digit.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is created.
+     * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+     * and all following characters must be a dash, underscore, letter or digit.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * An ordered list of Ed25519 public keys to use for validating signed requests.
+     * You must specify at least one (1) key, and may have up to three (3) keys.
+     * Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
+     * You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="publicKeys", type=List.class, parameters={EdgeCacheKeysetPublicKey.class})
     private Output<List<EdgeCacheKeysetPublicKey>> publicKeys;
 
+    /**
+     * @return An ordered list of Ed25519 public keys to use for validating signed requests.
+     * You must specify at least one (1) key, and may have up to three (3) keys.
+     * Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
+     * You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<EdgeCacheKeysetPublicKey>> getPublicKeys() {
         return this.publicKeys;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EdgeCacheKeyset(String name, EdgeCacheKeysetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset", name, args == null ? EdgeCacheKeysetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -64,6 +149,15 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EdgeCacheKeyset get(String name, Input<String> id, @Nullable EdgeCacheKeysetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EdgeCacheKeyset(name, id, state, options);
     }

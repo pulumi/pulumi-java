@@ -12,12 +12,32 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNetworkResult {
+    /**
+     * Description of this network.
+     * 
+     */
     private final String description;
+    /**
+     * The IP address of the gateway.
+     * 
+     */
     private final String gatewayIpv4;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String name;
     private final @Nullable String project;
+    /**
+     * The URI of the resource.
+     * 
+     */
     private final String selfLink;
+    /**
+     * the list of subnetworks which belong to the network
+     * 
+     */
     private final List<String> subnetworksSelfLinks;
 
     @OutputCustomType.Constructor({"description","gatewayIpv4","id","name","project","selfLink","subnetworksSelfLinks"})
@@ -38,12 +58,24 @@ public final class GetNetworkResult {
         this.subnetworksSelfLinks = Objects.requireNonNull(subnetworksSelfLinks);
     }
 
+    /**
+     * Description of this network.
+     * 
+     */
     public String getDescription() {
         return this.description;
     }
+    /**
+     * The IP address of the gateway.
+     * 
+     */
     public String getGatewayIpv4() {
         return this.gatewayIpv4;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
@@ -53,9 +85,17 @@ public final class GetNetworkResult {
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }
+    /**
+     * The URI of the resource.
+     * 
+     */
     public String getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * the list of subnetworks which belong to the network
+     * 
+     */
     public List<String> getSubnetworksSelfLinks() {
         return this.subnetworksSelfLinks;
     }

@@ -14,6 +14,10 @@ public final class GetCaCertsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCaCertsArgs Empty = new GetCaCertsArgs();
 
+    /**
+     * The name or self link of the instance.
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final String instance;
 
@@ -21,6 +25,10 @@ public final class GetCaCertsArgs extends io.pulumi.resources.InvokeArgs {
         return this.instance;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

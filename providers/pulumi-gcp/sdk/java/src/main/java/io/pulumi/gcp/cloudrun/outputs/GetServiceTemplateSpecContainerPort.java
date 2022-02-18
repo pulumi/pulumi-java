@@ -11,6 +11,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetServiceTemplateSpecContainerPort {
     private final Integer containerPort;
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     private final String name;
     private final String protocol;
 
@@ -27,6 +31,10 @@ public final class GetServiceTemplateSpecContainerPort {
     public Integer getContainerPort() {
         return this.containerPort;
     }
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     public String getName() {
         return this.name;
     }

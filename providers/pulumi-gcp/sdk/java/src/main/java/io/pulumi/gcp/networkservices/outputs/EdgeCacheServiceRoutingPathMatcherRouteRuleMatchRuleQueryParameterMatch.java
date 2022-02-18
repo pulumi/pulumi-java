@@ -12,8 +12,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch {
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * 
+     */
     private final @Nullable String exactMatch;
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     private final String name;
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * 
+     */
     private final @Nullable Boolean presentMatch;
 
     @OutputCustomType.Constructor({"exactMatch","name","presentMatch"})
@@ -26,12 +38,24 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
         this.presentMatch = presentMatch;
     }
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * 
+     */
     public Optional<String> getExactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * 
+     */
     public Optional<Boolean> getPresentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }

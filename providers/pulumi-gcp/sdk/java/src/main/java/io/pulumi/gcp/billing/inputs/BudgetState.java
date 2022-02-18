@@ -19,6 +19,13 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
 
     public static final BudgetState Empty = new BudgetState();
 
+    /**
+     * Defines notifications that are sent on every update to the
+     * billing account's spend, regardless of the thresholds defined
+     * using threshold rules.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="allUpdatesRule")
     private final @Nullable Input<BudgetAllUpdatesRuleGetArgs> allUpdatesRule;
 
@@ -26,6 +33,11 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
         return this.allUpdatesRule == null ? Input.empty() : this.allUpdatesRule;
     }
 
+    /**
+     * The budgeted amount for each usage period.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="amount")
     private final @Nullable Input<BudgetAmountGetArgs> amount;
 
@@ -33,6 +45,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
         return this.amount == null ? Input.empty() : this.amount;
     }
 
+    /**
+     * ID of the billing account to set a budget on.
+     * 
+     */
     @InputImport(name="billingAccount")
     private final @Nullable Input<String> billingAccount;
 
@@ -40,6 +56,12 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
     }
 
+    /**
+     * Filters that define which resources are used to compute the actual
+     * spend against the budget.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="budgetFilter")
     private final @Nullable Input<BudgetBudgetFilterGetArgs> budgetFilter;
 
@@ -47,6 +69,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
         return this.budgetFilter == null ? Input.empty() : this.budgetFilter;
     }
 
+    /**
+     * User data for display name in UI. Must be <= 60 chars.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -54,6 +80,11 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
+     * billingAccounts/{billingAccountId}/budgets/{budgetId}.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +92,13 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Rules that trigger alerts (notifications of thresholds being
+     * crossed) when spend exceeds the specified percentages of the
+     * budget.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="thresholdRules")
     private final @Nullable Input<List<BudgetThresholdRuleGetArgs>> thresholdRules;
 

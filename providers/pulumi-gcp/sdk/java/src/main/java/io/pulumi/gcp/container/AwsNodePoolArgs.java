@@ -18,6 +18,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AwsNodePoolArgs Empty = new AwsNodePoolArgs();
 
+    /**
+     * Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -25,6 +29,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Required. Autoscaler configuration for this node pool.
+     * 
+     */
     @InputImport(name="autoscaling", required=true)
     private final Input<AwsNodePoolAutoscalingArgs> autoscaling;
 
@@ -32,6 +40,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoscaling;
     }
 
+    /**
+     * The awsCluster for the resource
+     * 
+     */
     @InputImport(name="cluster", required=true)
     private final Input<String> cluster;
 
@@ -39,6 +51,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.cluster;
     }
 
+    /**
+     * Required. The configuration of the node pool.
+     * 
+     */
     @InputImport(name="config", required=true)
     private final Input<AwsNodePoolConfigArgs> config;
 
@@ -46,6 +62,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.config;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -53,6 +73,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * 
+     */
     @InputImport(name="maxPodsConstraint", required=true)
     private final Input<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
@@ -60,6 +84,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxPodsConstraint;
     }
 
+    /**
+     * The name of this resource.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +95,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -74,6 +106,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Required. The subnet where the node pool node run.
+     * 
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 
@@ -81,6 +117,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetId;
     }
 
+    /**
+     * Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+     * 
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

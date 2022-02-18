@@ -13,6 +13,10 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionA
 
     public static final SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs Empty = new SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs();
 
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect destination secret.
+     * 
+     */
     @InputImport(name="kmsKeyName", required=true)
     private final Input<String> kmsKeyName;
 

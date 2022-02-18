@@ -15,6 +15,10 @@ public final class FulfillmentGenericWebServiceArgs extends io.pulumi.resources.
 
     public static final FulfillmentGenericWebServiceArgs Empty = new FulfillmentGenericWebServiceArgs();
 
+    /**
+     * The password for HTTP Basic authentication.
+     * 
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -22,6 +26,10 @@ public final class FulfillmentGenericWebServiceArgs extends io.pulumi.resources.
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The HTTP request headers to send together with fulfillment requests.
+     * 
+     */
     @InputImport(name="requestHeaders")
     private final @Nullable Input<Map<String,String>> requestHeaders;
 
@@ -29,6 +37,10 @@ public final class FulfillmentGenericWebServiceArgs extends io.pulumi.resources.
         return this.requestHeaders == null ? Input.empty() : this.requestHeaders;
     }
 
+    /**
+     * The fulfillment URI for receiving POST requests. It must use https protocol.
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 
@@ -36,6 +48,10 @@ public final class FulfillmentGenericWebServiceArgs extends io.pulumi.resources.
         return this.uri;
     }
 
+    /**
+     * The user name for HTTP Basic authentication.
+     * 
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

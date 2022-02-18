@@ -9,11 +9,24 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceAttachedDisk {
+    /**
+     * Name with which the attached disk is accessible
+     * under `/dev/disk/by-id/`
+     * 
+     */
     private final String deviceName;
     private final String diskEncryptionKeyRaw;
     private final String diskEncryptionKeySha256;
     private final String kmsKeySelfLink;
+    /**
+     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * 
+     */
     private final String mode;
+    /**
+     * The name or self_link of the disk attached to this instance.
+     * 
+     */
     private final String source;
 
     @OutputCustomType.Constructor({"deviceName","diskEncryptionKeyRaw","diskEncryptionKeySha256","kmsKeySelfLink","mode","source"})
@@ -32,6 +45,11 @@ public final class GetInstanceAttachedDisk {
         this.source = Objects.requireNonNull(source);
     }
 
+    /**
+     * Name with which the attached disk is accessible
+     * under `/dev/disk/by-id/`
+     * 
+     */
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -44,9 +62,17 @@ public final class GetInstanceAttachedDisk {
     public String getKmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
+    /**
+     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * 
+     */
     public String getMode() {
         return this.mode;
     }
+    /**
+     * The name or self_link of the disk attached to this instance.
+     * 
+     */
     public String getSource() {
         return this.source;
     }

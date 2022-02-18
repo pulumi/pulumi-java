@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PatchDeploymentInstanceFilterGroupLabel {
+    /**
+     * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+     * 
+     */
     private final Map<String,String> labels;
 
     @OutputCustomType.Constructor({"labels"})
@@ -17,6 +21,10 @@ public final class PatchDeploymentInstanceFilterGroupLabel {
         this.labels = Objects.requireNonNull(labels);
     }
 
+    /**
+     * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+     * 
+     */
     public Map<String,String> getLabels() {
         return this.labels;
     }

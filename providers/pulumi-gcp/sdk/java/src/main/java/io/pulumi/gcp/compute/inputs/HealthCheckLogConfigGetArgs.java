@@ -14,6 +14,11 @@ public final class HealthCheckLogConfigGetArgs extends io.pulumi.resources.Resou
 
     public static final HealthCheckLogConfigGetArgs Empty = new HealthCheckLogConfigGetArgs();
 
+    /**
+     * Indicates whether or not to export logs. This is false by default,
+     * which means no health check logging will be done.
+     * 
+     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 

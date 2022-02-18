@@ -18,6 +18,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
 
     public static final SubnetworkState Empty = new SubnetworkState();
 
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @InputImport(name="creationTimestamp")
     private final @Nullable Input<String> creationTimestamp;
 
@@ -25,6 +29,12 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource. This field can be set only at resource
+     * creation time.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +42,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The range of external IPv6 addresses that are owned by this subnetwork.
+     * 
+     */
     @InputImport(name="externalIpv6Prefix")
     private final @Nullable Input<String> externalIpv6Prefix;
 
@@ -39,6 +53,14 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.externalIpv6Prefix == null ? Input.empty() : this.externalIpv6Prefix;
     }
 
+    /**
+     * Fingerprint of this resource. This field is used internally during updates of this resource.
+     * 
+     * @deprecated
+     * This field is not useful for users, and has been removed as an output.
+     * 
+     */
+    @Deprecated /* This field is not useful for users, and has been removed as an output. */
     @InputImport(name="fingerprint")
     private final @Nullable Input<String> fingerprint;
 
@@ -47,6 +69,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
     }
 
+    /**
+     * The gateway address for default routes to reach destination addresses outside this subnetwork.
+     * 
+     */
     @InputImport(name="gatewayAddress")
     private final @Nullable Input<String> gatewayAddress;
 
@@ -54,6 +80,13 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.gatewayAddress == null ? Input.empty() : this.gatewayAddress;
     }
 
+    /**
+     * The range of IP addresses belonging to this subnetwork secondary
+     * range. Provide this property when you create the subnetwork.
+     * Ranges must be unique and non-overlapping with all primary and
+     * secondary IP ranges within a network. Only IPv4 is supported.
+     * 
+     */
     @InputImport(name="ipCidrRange")
     private final @Nullable Input<String> ipCidrRange;
 
@@ -61,6 +94,13 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
     }
 
+    /**
+     * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+     * or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+     * cannot enable direct path.
+     * Possible values are `EXTERNAL`.
+     * 
+     */
     @InputImport(name="ipv6AccessType")
     private final @Nullable Input<String> ipv6AccessType;
 
@@ -68,6 +108,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
     }
 
+    /**
+     * The range of internal IPv6 addresses that are owned by this subnetwork.
+     * 
+     */
     @InputImport(name="ipv6CidrRange")
     private final @Nullable Input<String> ipv6CidrRange;
 
@@ -75,6 +119,13 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.ipv6CidrRange == null ? Input.empty() : this.ipv6CidrRange;
     }
 
+    /**
+     * Denotes the logging options for the subnetwork flow logs. If logging is enabled
+     * logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+     * subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="logConfig")
     private final @Nullable Input<SubnetworkLogConfigGetArgs> logConfig;
 
@@ -82,6 +133,16 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
+    /**
+     * The name of the resource, provided by the client when initially
+     * creating the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?` which
+     * means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -89,6 +150,11 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The network this subnet belongs to.
+     * Only networks that are in the distributed mode can have subnetworks.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -96,6 +162,11 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * When enabled, VMs in this subnetwork without external IP addresses can
+     * access Google APIs and services by using Private Google Access.
+     * 
+     */
     @InputImport(name="privateIpGoogleAccess")
     private final @Nullable Input<Boolean> privateIpGoogleAccess;
 
@@ -103,6 +174,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.privateIpGoogleAccess == null ? Input.empty() : this.privateIpGoogleAccess;
     }
 
+    /**
+     * The private IPv6 google access type for the VMs in this subnet.
+     * 
+     */
     @InputImport(name="privateIpv6GoogleAccess")
     private final @Nullable Input<String> privateIpv6GoogleAccess;
 
@@ -110,6 +185,11 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -117,6 +197,13 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The purpose of the resource. A subnetwork with purpose set to
+     * INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+     * reserved for Internal HTTP(S) Load Balancing.
+     * If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the `role` field.
+     * 
+     */
     @InputImport(name="purpose")
     private final @Nullable Input<String> purpose;
 
@@ -124,6 +211,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.purpose == null ? Input.empty() : this.purpose;
     }
 
+    /**
+     * The GCP region for this subnetwork.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -131,6 +222,15 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The role of subnetwork. Currently, this field is only used when
+     * purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+     * or BACKUP. An ACTIVE subnetwork is one that is currently being used
+     * for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+     * is ready to be promoted to ACTIVE or is currently draining.
+     * Possible values are `ACTIVE` and `BACKUP`.
+     * 
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 
@@ -138,6 +238,14 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.role == null ? Input.empty() : this.role;
     }
 
+    /**
+     * An array of configurations for secondary IP ranges for VM instances
+     * contained in this subnetwork. The primary IP of such VM must belong
+     * to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+     * to either primary or secondary ranges.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="secondaryIpRanges")
     private final @Nullable Input<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges;
 
@@ -145,6 +253,10 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.secondaryIpRanges == null ? Input.empty() : this.secondaryIpRanges;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -152,6 +264,12 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+     * If not specified IPV4_ONLY will be used.
+     * Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
+     * 
+     */
     @InputImport(name="stackType")
     private final @Nullable Input<String> stackType;
 

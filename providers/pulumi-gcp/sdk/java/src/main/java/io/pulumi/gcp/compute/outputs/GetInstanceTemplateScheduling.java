@@ -13,10 +13,35 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceTemplateScheduling {
+    /**
+     * Specifies whether the instance should be
+     * automatically restarted if it is terminated by Compute Engine (not
+     * terminated by a user). This defaults to true.
+     * 
+     */
     private final Boolean automaticRestart;
     private final Integer minNodeCpus;
+    /**
+     * Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     private final List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities;
+    /**
+     * Defines the maintenance behavior for this
+     * instance.
+     * 
+     */
     private final String onHostMaintenance;
+    /**
+     * Allows instance to be preempted. This defaults to
+     * false. Read more on this
+     * [here](https://cloud.google.com/compute/docs/instances/preemptible).
+     * 
+     */
     private final Boolean preemptible;
 
     @OutputCustomType.Constructor({"automaticRestart","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible"})
@@ -33,18 +58,43 @@ public final class GetInstanceTemplateScheduling {
         this.preemptible = Objects.requireNonNull(preemptible);
     }
 
+    /**
+     * Specifies whether the instance should be
+     * automatically restarted if it is terminated by Compute Engine (not
+     * terminated by a user). This defaults to true.
+     * 
+     */
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
     }
+    /**
+     * Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     public List<GetInstanceTemplateSchedulingNodeAffinity> getNodeAffinities() {
         return this.nodeAffinities;
     }
+    /**
+     * Defines the maintenance behavior for this
+     * instance.
+     * 
+     */
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
     }
+    /**
+     * Allows instance to be preempted. This defaults to
+     * false. Read more on this
+     * [here](https://cloud.google.com/compute/docs/instances/preemptible).
+     * 
+     */
     public Boolean getPreemptible() {
         return this.preemptible;
     }

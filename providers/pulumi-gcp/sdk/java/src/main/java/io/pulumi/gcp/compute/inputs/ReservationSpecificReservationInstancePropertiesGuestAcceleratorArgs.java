@@ -14,6 +14,11 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
 
     public static final ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs Empty = new ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs();
 
+    /**
+     * The number of the guest accelerator cards exposed to
+     * this instance.
+     * 
+     */
     @InputImport(name="acceleratorCount", required=true)
     private final Input<Integer> acceleratorCount;
 
@@ -21,6 +26,13 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
         return this.acceleratorCount;
     }
 
+    /**
+     * The full or partial URL of the accelerator type to
+     * attach to this instance. For example:
+     * `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+     * If you are creating an instance template, specify only the accelerator name.
+     * 
+     */
     @InputImport(name="acceleratorType", required=true)
     private final Input<String> acceleratorType;
 

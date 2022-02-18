@@ -16,6 +16,14 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
 
     public static final TriggerBuildStepArgs Empty = new TriggerBuildStepArgs();
 
+    /**
+     * A list of arguments that will be presented to the step when it is started.
+     * If the image used to run the step's container has an entrypoint, the args
+     * are used as arguments to that entrypoint. If the image does not define an
+     * entrypoint, the first element in args is used as the entrypoint, and the
+     * remainder will be used as arguments.
+     * 
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -23,6 +31,18 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * Working directory to use when running this step's container.
+     * If this value is a relative path, it is relative to the build's working
+     * directory. If this value is absolute, it may be outside the build's working
+     * directory, in which case the contents of the path may not be persisted
+     * across build step executions, unless a `volume` for that path is specified.
+     * If the build specifies a `RepoSource` with `dir` and a step with a
+     * `dir`,
+     * which specifies an absolute path, the `RepoSource` `dir` is ignored
+     * for the step's execution.
+     * 
+     */
     @InputImport(name="dir")
     private final @Nullable Input<String> dir;
 
@@ -30,6 +50,12 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.dir == null ? Input.empty() : this.dir;
     }
 
+    /**
+     * Entrypoint to be used instead of the build step image's
+     * default entrypoint.
+     * If unset, the image's default entrypoint is used
+     * 
+     */
     @InputImport(name="entrypoint")
     private final @Nullable Input<String> entrypoint;
 
@@ -37,6 +63,13 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
     }
 
+    /**
+     * A list of global environment variable definitions that will exist for all build steps
+     * in this build. If a variable is defined in both globally and in a build step,
+     * the variable will use the build step value.
+     * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * 
+     */
     @InputImport(name="envs")
     private final @Nullable Input<List<String>> envs;
 
@@ -44,6 +77,11 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.envs == null ? Input.empty() : this.envs;
     }
 
+    /**
+     * Unique identifier for this build step, used in `wait_for` to
+     * reference this build step as a dependency.
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -51,6 +89,12 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -58,6 +102,12 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
+    /**
+     * A list of global environment variables, which are encrypted using a Cloud Key Management
+     * Service crypto key. These values must be specified in the build's Secret. These variables
+     * will be available to all build steps in this build.
+     * 
+     */
     @InputImport(name="secretEnvs")
     private final @Nullable Input<List<String>> secretEnvs;
 
@@ -65,6 +115,13 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.secretEnvs == null ? Input.empty() : this.secretEnvs;
     }
 
+    /**
+     * Time limit for executing this build step. If not defined,
+     * the step has no
+     * time limit and will be allowed to continue to run until either it
+     * completes or the build itself times out.
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 
@@ -72,6 +129,12 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * - 
+     * Output only. Stores timing information for pushing all artifact objects.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="timing")
     private final @Nullable Input<String> timing;
 
@@ -79,6 +142,16 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.timing == null ? Input.empty() : this.timing;
     }
 
+    /**
+     * Global list of volumes to mount for ALL build steps
+     * Each volume is created as an empty volume prior to starting the build process.
+     * Upon completion of the build, volumes and their contents are discarded. Global
+     * volume names and paths cannot conflict with the volumes defined a build step.
+     * Using a global volume in a build with only one step is not valid as it is indicative
+     * of a build request with an incorrect configuration.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<TriggerBuildStepVolumeArgs>> volumes;
 
@@ -86,6 +159,14 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
         return this.volumes == null ? Input.empty() : this.volumes;
     }
 
+    /**
+     * The ID(s) of the step(s) that this build step depends on.
+     * This build step will not start until all the build steps in `wait_for`
+     * have completed successfully. If `wait_for` is empty, this build step
+     * will start when all previous build steps in the `Build.Steps` list
+     * have completed successfully.
+     * 
+     */
     @InputImport(name="waitFors")
     private final @Nullable Input<List<String>> waitFors;
 

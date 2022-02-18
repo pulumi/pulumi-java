@@ -15,6 +15,11 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
 
     public static final ServiceNetworkSettingsState Empty = new ServiceNetworkSettingsState();
 
+    /**
+     * Ingress settings for this service. Will apply to all versions.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="networkSettings")
     private final @Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
 
@@ -22,6 +27,11 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
         return this.networkSettings == null ? Input.empty() : this.networkSettings;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -29,6 +39,10 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The name of the service these settings apply to.
+     * 
+     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

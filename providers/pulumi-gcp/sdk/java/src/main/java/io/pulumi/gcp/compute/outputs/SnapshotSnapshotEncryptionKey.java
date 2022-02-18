@@ -11,9 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SnapshotSnapshotEncryptionKey {
+    /**
+     * The name of the encryption key that is stored in Google Cloud KMS.
+     * 
+     */
     private final @Nullable String kmsKeySelfLink;
+    /**
+     * The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     private final @Nullable String kmsKeyServiceAccount;
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     private final @Nullable String rawKey;
+    /**
+     * - 
+     * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+     * encryption key that protects this resource.
+     * 
+     */
     private final @Nullable String sha256;
 
     @OutputCustomType.Constructor({"kmsKeySelfLink","kmsKeyServiceAccount","rawKey","sha256"})
@@ -28,15 +49,36 @@ public final class SnapshotSnapshotEncryptionKey {
         this.sha256 = sha256;
     }
 
+    /**
+     * The name of the encryption key that is stored in Google Cloud KMS.
+     * 
+     */
     public Optional<String> getKmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
+    /**
+     * The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     public Optional<String> getKmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
+    /**
+     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<String> getRawKey() {
         return Optional.ofNullable(this.rawKey);
     }
+    /**
+     * - 
+     * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+     * encryption key that protects this resource.
+     * 
+     */
     public Optional<String> getSha256() {
         return Optional.ofNullable(this.sha256);
     }

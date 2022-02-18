@@ -15,13 +15,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecurityPolicyRuleRateLimitOptions {
+    /**
+     * Can only be specified if the `action` for the rule is "rate_based_ban".
+     * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
+     * 
+     */
     private final @Nullable Integer banDurationSec;
+    /**
+     * Can only be specified if the `action` for the rule is "rate_based_ban".
+     * If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also
+     * exceed this 'ban_threshold'. Structure is documented below.
+     * 
+     */
     private final @Nullable SecurityPolicyRuleRateLimitOptionsBanThreshold banThreshold;
+    /**
+     * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
+     * 
+     */
     private final String conformAction;
+    /**
+     * Determines the key to enforce the rate_limit_threshold on.
+     * Possible values incude "ALL", "ALL_IPS", "HTTP_HEADER", "IP", "XFF_IP". If not specified, defaults to "ALL".
+     * 
+     */
     private final @Nullable String enforceOnKey;
+    /**
+     * Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+     * 
+     */
     private final @Nullable String enforceOnKeyName;
+    /**
+     * When a request is denied, returns the HTTP response code specified.
+     * Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.
+     * 
+     */
     private final String exceedAction;
     private final @Nullable SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions exceedRedirectOptions;
+    /**
+     * Threshold at which to begin ratelimiting. Structure is documented below.
+     * 
+     */
     private final SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold;
 
     @OutputCustomType.Constructor({"banDurationSec","banThreshold","conformAction","enforceOnKey","enforceOnKeyName","exceedAction","exceedRedirectOptions","rateLimitThreshold"})
@@ -44,27 +77,60 @@ public final class SecurityPolicyRuleRateLimitOptions {
         this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
     }
 
+    /**
+     * Can only be specified if the `action` for the rule is "rate_based_ban".
+     * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
+     * 
+     */
     public Optional<Integer> getBanDurationSec() {
         return Optional.ofNullable(this.banDurationSec);
     }
+    /**
+     * Can only be specified if the `action` for the rule is "rate_based_ban".
+     * If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also
+     * exceed this 'ban_threshold'. Structure is documented below.
+     * 
+     */
     public Optional<SecurityPolicyRuleRateLimitOptionsBanThreshold> getBanThreshold() {
         return Optional.ofNullable(this.banThreshold);
     }
+    /**
+     * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
+     * 
+     */
     public String getConformAction() {
         return this.conformAction;
     }
+    /**
+     * Determines the key to enforce the rate_limit_threshold on.
+     * Possible values incude "ALL", "ALL_IPS", "HTTP_HEADER", "IP", "XFF_IP". If not specified, defaults to "ALL".
+     * 
+     */
     public Optional<String> getEnforceOnKey() {
         return Optional.ofNullable(this.enforceOnKey);
     }
+    /**
+     * Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+     * 
+     */
     public Optional<String> getEnforceOnKeyName() {
         return Optional.ofNullable(this.enforceOnKeyName);
     }
+    /**
+     * When a request is denied, returns the HTTP response code specified.
+     * Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.
+     * 
+     */
     public String getExceedAction() {
         return this.exceedAction;
     }
     public Optional<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions> getExceedRedirectOptions() {
         return Optional.ofNullable(this.exceedRedirectOptions);
     }
+    /**
+     * Threshold at which to begin ratelimiting. Structure is documented below.
+     * 
+     */
     public SecurityPolicyRuleRateLimitOptionsRateLimitThreshold getRateLimitThreshold() {
         return this.rateLimitThreshold;
     }

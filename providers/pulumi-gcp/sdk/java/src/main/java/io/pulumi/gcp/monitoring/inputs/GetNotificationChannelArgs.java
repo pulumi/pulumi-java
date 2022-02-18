@@ -15,6 +15,10 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
 
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
+    /**
+     * The display name for this notification channel.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -22,6 +26,11 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Labels (corresponding to the
+     * NotificationChannelDescriptor schema) to filter the notification channels by.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Map<String,String> labels;
 
@@ -29,6 +38,11 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
         return this.labels == null ? Map.of() : this.labels;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -36,6 +50,10 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * The type of the notification channel.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -43,6 +61,10 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * User-provided key-value labels to filter by.
+     * 
+     */
     @InputImport(name="userLabels")
     private final @Nullable Map<String,String> userLabels;
 

@@ -14,39 +14,118 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Manage a network peering's route settings without managing the peering as
+ * a whole. This resource is primarily intended for use with GCP-generated
+ * peerings that shouldn't otherwise be managed by other tools. Deleting this
+ * resource is a no-op and the peering will not be modified.
+ * 
+ * To get more information about NetworkPeeringRoutesConfig, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/networks/updatePeering)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc-peering)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * NetworkPeeringRoutesConfig can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default projects/{{project}}/global/networks/{{network}}/networkPeerings/{{peering}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default {{project}}/{{network}}/{{peering}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default {{network}}/{{peering}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig")
 public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResource {
+    /**
+     * Whether to export the custom routes to the peer network.
+     * 
+     */
     @OutputExport(name="exportCustomRoutes", type=Boolean.class, parameters={})
     private Output<Boolean> exportCustomRoutes;
 
+    /**
+     * @return Whether to export the custom routes to the peer network.
+     * 
+     */
     public Output<Boolean> getExportCustomRoutes() {
         return this.exportCustomRoutes;
     }
+    /**
+     * Whether to import the custom routes to the peer network.
+     * 
+     */
     @OutputExport(name="importCustomRoutes", type=Boolean.class, parameters={})
     private Output<Boolean> importCustomRoutes;
 
+    /**
+     * @return Whether to import the custom routes to the peer network.
+     * 
+     */
     public Output<Boolean> getImportCustomRoutes() {
         return this.importCustomRoutes;
     }
+    /**
+     * The name of the primary network for the peering.
+     * 
+     */
     @OutputExport(name="network", type=String.class, parameters={})
     private Output<String> network;
 
+    /**
+     * @return The name of the primary network for the peering.
+     * 
+     */
     public Output<String> getNetwork() {
         return this.network;
     }
+    /**
+     * Name of the peering.
+     * 
+     */
     @OutputExport(name="peering", type=String.class, parameters={})
     private Output<String> peering;
 
+    /**
+     * @return Name of the peering.
+     * 
+     */
     public Output<String> getPeering() {
         return this.peering;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NetworkPeeringRoutesConfig(String name, NetworkPeeringRoutesConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig", name, args == null ? NetworkPeeringRoutesConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +141,15 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NetworkPeeringRoutesConfig get(String name, Input<String> id, @Nullable NetworkPeeringRoutesConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkPeeringRoutesConfig(name, id, state, options);
     }

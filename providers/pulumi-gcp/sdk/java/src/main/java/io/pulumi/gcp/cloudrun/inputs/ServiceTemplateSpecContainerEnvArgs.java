@@ -15,6 +15,10 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
 
     public static final ServiceTemplateSpecContainerEnvArgs Empty = new ServiceTemplateSpecContainerEnvArgs();
 
+    /**
+     * Volume's name.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +26,17 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Variable references $(VAR_NAME) are expanded
+     * using the previous defined environment variables in the container and
+     * any route environment variables. If a variable cannot be resolved,
+     * the reference in the input string will be unchanged. The $(VAR_NAME)
+     * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+     * references will never be expanded, regardless of whether the variable
+     * exists or not.
+     * Defaults to "".
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 
@@ -29,6 +44,11 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
         return this.value == null ? Input.empty() : this.value;
     }
 
+    /**
+     * Source for the environment variable's value. Only supports secret_key_ref.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="valueFrom")
     private final @Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
 

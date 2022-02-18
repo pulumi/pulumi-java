@@ -15,6 +15,10 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
 
     public static final GetTestablePermissionsArgs Empty = new GetTestablePermissionsArgs();
 
+    /**
+     * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
+     * 
+     */
     @InputImport(name="customSupportLevel")
     private final @Nullable String customSupportLevel;
 
@@ -22,6 +26,10 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
         return this.customSupportLevel == null ? Optional.empty() : Optional.ofNullable(this.customSupportLevel);
     }
 
+    /**
+     * See [full resource name documentation](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more detail.
+     * 
+     */
     @InputImport(name="fullResourceName", required=true)
     private final String fullResourceName;
 
@@ -29,6 +37,10 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
         return this.fullResourceName;
     }
 
+    /**
+     * The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `["GA", "BETA"]` for example. Can be a list of `"ALPHA"`, `"BETA"`, `"GA"`, `"DEPRECATED"`. Default is `["GA"]`.
+     * 
+     */
     @InputImport(name="stages")
     private final @Nullable List<String> stages;
 

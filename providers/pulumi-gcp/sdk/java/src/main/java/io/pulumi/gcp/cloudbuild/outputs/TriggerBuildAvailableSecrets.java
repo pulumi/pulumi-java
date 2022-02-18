@@ -10,6 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TriggerBuildAvailableSecrets {
+    /**
+     * Pairs a secret environment variable with a SecretVersion in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     private final List<TriggerBuildAvailableSecretsSecretManager> secretManagers;
 
     @OutputCustomType.Constructor({"secretManagers"})
@@ -17,6 +22,11 @@ public final class TriggerBuildAvailableSecrets {
         this.secretManagers = Objects.requireNonNull(secretManagers);
     }
 
+    /**
+     * Pairs a secret environment variable with a SecretVersion in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     public List<TriggerBuildAvailableSecretsSecretManager> getSecretManagers() {
         return this.secretManagers;
     }

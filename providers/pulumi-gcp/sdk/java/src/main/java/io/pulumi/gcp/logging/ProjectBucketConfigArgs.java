@@ -15,6 +15,10 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
 
     public static final ProjectBucketConfigArgs Empty = new ProjectBucketConfigArgs();
 
+    /**
+     * The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+     * 
+     */
     @InputImport(name="bucketId", required=true)
     private final Input<String> bucketId;
 
@@ -22,6 +26,10 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
         return this.bucketId;
     }
 
+    /**
+     * Describes this bucket.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,10 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The location of the bucket.
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -36,6 +48,10 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
         return this.location;
     }
 
+    /**
+     * The parent resource that contains the logging bucket.
+     * 
+     */
     @InputImport(name="project", required=true)
     private final Input<String> project;
 
@@ -43,6 +59,10 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
         return this.project;
     }
 
+    /**
+     * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
+     * 
+     */
     @InputImport(name="retentionDays")
     private final @Nullable Input<Integer> retentionDays;
 

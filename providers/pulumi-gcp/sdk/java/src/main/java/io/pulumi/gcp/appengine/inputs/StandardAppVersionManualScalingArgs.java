@@ -13,6 +13,12 @@ public final class StandardAppVersionManualScalingArgs extends io.pulumi.resourc
 
     public static final StandardAppVersionManualScalingArgs Empty = new StandardAppVersionManualScalingArgs();
 
+    /**
+     * Number of instances to assign to the service at the start.
+     * **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+     * Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
+     * 
+     */
     @InputImport(name="instances", required=true)
     private final Input<Integer> instances;
 

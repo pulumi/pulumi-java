@@ -13,6 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegions {
+/**
+ * Provides access to available Google Compute regions for a given project.
+ * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
+ * 
+ *
+ * A collection of arguments for invoking getRegions.
+ * 
+ *
+ * A collection of values returned by getRegions.
+ * 
+ */
     public static CompletableFuture<GetRegionsResult> invokeAsync(@Nullable GetRegionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args == null ? GetRegionsArgs.Empty : args, Utilities.withVersion(options));
     }

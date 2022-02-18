@@ -14,6 +14,11 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ServiceIdentityArgs Empty = new ServiceIdentityArgs();
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -21,6 +26,10 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The service to generate identity for.
+     * 
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

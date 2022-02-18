@@ -19,6 +19,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadState Empty = new WorkloadState();
 
+    /**
+     * Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, 'billingAccounts/012345-567890-ABCDEF`.
+     * 
+     */
     @InputImport(name="billingAccount")
     private final @Nullable Input<String> billingAccount;
 
@@ -26,6 +30,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.billingAccount == null ? Input.empty() : this.billingAccount;
     }
 
+    /**
+     * Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS
+     * 
+     */
     @InputImport(name="complianceRegime")
     private final @Nullable Input<String> complianceRegime;
 
@@ -33,6 +41,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.complianceRegime == null ? Input.empty() : this.complianceRegime;
     }
 
+    /**
+     * Output only. Immutable. The Workload creation timestamp.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -40,6 +52,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -47,6 +63,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
+     * 
+     */
     @InputImport(name="kmsSettings")
     private final @Nullable Input<WorkloadKmsSettingsGetArgs> kmsSettings;
 
@@ -54,6 +74,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.kmsSettings == null ? Input.empty() : this.kmsSettings;
     }
 
+    /**
+     * Optional. Labels applied to the workload.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -61,6 +85,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The location for the resource
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -68,6 +96,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Output only. The resource name of the workload.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -75,6 +107,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The organization for the resource
+     * 
+     */
     @InputImport(name="organization")
     private final @Nullable Input<String> organization;
 
@@ -82,6 +118,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.organization == null ? Input.empty() : this.organization;
     }
 
+    /**
+     * Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
+     * 
+     */
     @InputImport(name="provisionedResourcesParent")
     private final @Nullable Input<String> provisionedResourcesParent;
 
@@ -89,6 +129,10 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.provisionedResourcesParent == null ? Input.empty() : this.provisionedResourcesParent;
     }
 
+    /**
+     * Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
+     * 
+     */
     @InputImport(name="resourceSettings")
     private final @Nullable Input<List<WorkloadResourceSettingGetArgs>> resourceSettings;
 
@@ -96,6 +140,11 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
         return this.resourceSettings == null ? Input.empty() : this.resourceSettings;
     }
 
+    /**
+     * Output only. The resources associated with this workload. These resources will be created when creating the workload. If
+     * any of the projects already exist, the workload creation will fail. Always read only.
+     * 
+     */
     @InputImport(name="resources")
     private final @Nullable Input<List<WorkloadResourceGetArgs>> resources;
 

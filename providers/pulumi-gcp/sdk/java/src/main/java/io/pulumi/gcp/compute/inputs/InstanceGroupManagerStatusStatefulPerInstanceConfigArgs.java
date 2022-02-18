@@ -14,6 +14,10 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigArgs exten
 
     public static final InstanceGroupManagerStatusStatefulPerInstanceConfigArgs Empty = new InstanceGroupManagerStatusStatefulPerInstanceConfigArgs();
 
+    /**
+     * A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+     * 
+     */
     @InputImport(name="allEffective")
     private final @Nullable Input<Boolean> allEffective;
 

@@ -18,6 +18,11 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
 
     public static final DicomStoreState Empty = new DicomStoreState();
 
+    /**
+     * Identifies the dataset addressed by this request. Must be in the format
+     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * 
+     */
     @InputImport(name="dataset")
     private final @Nullable Input<String> dataset;
 
@@ -25,6 +30,17 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
+    /**
+     * User-supplied key-value pairs used to organize DICOM stores.
+     * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+     * conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+     * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+     * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+     * No more than 64 labels can be associated with a given store.
+     * An object containing a list of "key": value pairs.
+     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -32,6 +48,11 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The resource name for the DicomStore.
+     * ** Changing this property may recreate the Dicom store (removing all data) **
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,6 +60,11 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="notificationConfig")
     private final @Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig;
 
@@ -46,6 +72,10 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
     }
 
+    /**
+     * The fully qualified name of this dataset
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -53,6 +83,12 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+     * streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="streamConfigs")
     private final @Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
 

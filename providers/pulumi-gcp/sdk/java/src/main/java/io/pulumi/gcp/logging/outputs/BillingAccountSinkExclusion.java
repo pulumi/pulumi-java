@@ -12,9 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BillingAccountSinkExclusion {
+    /**
+     * A description of this exclusion.
+     * 
+     */
     private final @Nullable String description;
+    /**
+     * If set to True, then this exclusion is disabled and it does not exclude any log entries.
+     * 
+     */
     private final @Nullable Boolean disabled;
+    /**
+     * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries. See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+     * write a filter.
+     * 
+     */
     private final String filter;
+    /**
+     * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"description","disabled","filter","name"})
@@ -29,15 +46,32 @@ public final class BillingAccountSinkExclusion {
         this.name = Objects.requireNonNull(name);
     }
 
+    /**
+     * A description of this exclusion.
+     * 
+     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * If set to True, then this exclusion is disabled and it does not exclude any log entries.
+     * 
+     */
     public Optional<Boolean> getDisabled() {
         return Optional.ofNullable(this.disabled);
     }
+    /**
+     * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries. See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+     * write a filter.
+     * 
+     */
     public String getFilter() {
         return this.filter;
     }
+    /**
+     * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     * 
+     */
     public String getName() {
         return this.name;
     }

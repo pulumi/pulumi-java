@@ -12,8 +12,22 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionJobTriggerInspectJob {
+    /**
+     * A task to execute on the completion of a job.
+     * Structure is documented below.
+     * 
+     */
     private final List<PreventionJobTriggerInspectJobAction> actions;
+    /**
+     * The name of the template to run when this job is triggered.
+     * 
+     */
     private final String inspectTemplateName;
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     private final PreventionJobTriggerInspectJobStorageConfig storageConfig;
 
     @OutputCustomType.Constructor({"actions","inspectTemplateName","storageConfig"})
@@ -26,12 +40,26 @@ public final class PreventionJobTriggerInspectJob {
         this.storageConfig = Objects.requireNonNull(storageConfig);
     }
 
+    /**
+     * A task to execute on the completion of a job.
+     * Structure is documented below.
+     * 
+     */
     public List<PreventionJobTriggerInspectJobAction> getActions() {
         return this.actions;
     }
+    /**
+     * The name of the template to run when this job is triggered.
+     * 
+     */
     public String getInspectTemplateName() {
         return this.inspectTemplateName;
     }
+    /**
+     * Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     public PreventionJobTriggerInspectJobStorageConfig getStorageConfig() {
         return this.storageConfig;
     }

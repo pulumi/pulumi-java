@@ -9,7 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceNetworkInterfaceAliasIpRange {
+    /**
+     * The IP CIDR range represented by this alias IP range.
+     * 
+     */
     private final String ipCidrRange;
+    /**
+     * The subnetwork secondary range name specifying
+     * the secondary range from which to allocate the IP CIDR range for this alias IP
+     * range.
+     * 
+     */
     private final String subnetworkRangeName;
 
     @OutputCustomType.Constructor({"ipCidrRange","subnetworkRangeName"})
@@ -20,9 +30,19 @@ public final class GetInstanceNetworkInterfaceAliasIpRange {
         this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
     }
 
+    /**
+     * The IP CIDR range represented by this alias IP range.
+     * 
+     */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
+    /**
+     * The subnetwork secondary range name specifying
+     * the secondary range from which to allocate the IP CIDR range for this alias IP
+     * range.
+     * 
+     */
     public String getSubnetworkRangeName() {
         return this.subnetworkRangeName;
     }

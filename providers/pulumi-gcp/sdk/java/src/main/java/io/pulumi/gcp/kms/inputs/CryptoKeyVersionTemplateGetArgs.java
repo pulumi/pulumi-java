@@ -14,6 +14,11 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
 
     public static final CryptoKeyVersionTemplateGetArgs Empty = new CryptoKeyVersionTemplateGetArgs();
 
+    /**
+     * The algorithm to use when creating a version based on this template.
+     * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
+     * 
+     */
     @InputImport(name="algorithm", required=true)
     private final Input<String> algorithm;
 
@@ -21,6 +26,10 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
         return this.algorithm;
     }
 
+    /**
+     * The protection level to use when creating a version based on this template. Possible values include "SOFTWARE", "HSM", "EXTERNAL". Defaults to "SOFTWARE".
+     * 
+     */
     @InputImport(name="protectionLevel")
     private final @Nullable Input<String> protectionLevel;
 

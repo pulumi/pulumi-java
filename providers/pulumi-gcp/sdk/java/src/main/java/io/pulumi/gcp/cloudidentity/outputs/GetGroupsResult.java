@@ -11,7 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetGroupsResult {
+    /**
+     * The list of groups under the provided customer or namespace. Structure is documented below.
+     * 
+     */
     private final List<GetGroupsGroup> groups;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String parent;
 
@@ -25,9 +33,17 @@ public final class GetGroupsResult {
         this.parent = Objects.requireNonNull(parent);
     }
 
+    /**
+     * The list of groups under the provided customer or namespace. Structure is documented below.
+     * 
+     */
     public List<GetGroupsGroup> getGroups() {
         return this.groups;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

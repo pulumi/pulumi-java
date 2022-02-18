@@ -18,6 +18,10 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
 
     public static final CxFlowState Empty = new CxFlowState();
 
+    /**
+     * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -25,6 +29,10 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name of the flow.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -32,6 +40,14 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * A flow's event handlers serve two purposes:
+     * They are responsible for handling events (e.g. no match, webhook errors) in the flow.
+     * They are inherited by every page's [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
+     * Unlike transitionRoutes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="eventHandlers")
     private final @Nullable Input<List<CxFlowEventHandlerGetArgs>> eventHandlers;
 
@@ -39,6 +55,15 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
     }
 
+    /**
+     * The language of the following fields in flow:
+     * Flow.event_handlers.trigger_fulfillment.messages
+     * Flow.event_handlers.trigger_fulfillment.conditional_cases
+     * Flow.transition_routes.trigger_fulfillment.messages
+     * Flow.transition_routes.trigger_fulfillment.conditional_cases
+     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -46,6 +71,11 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
+    /**
+     * - 
+     * The unique identifier of this event handler.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,6 +83,11 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * NLU related settings of the flow.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="nluSettings")
     private final @Nullable Input<CxFlowNluSettingsGetArgs> nluSettings;
 
@@ -60,6 +95,11 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
         return this.nluSettings == null ? Input.empty() : this.nluSettings;
     }
 
+    /**
+     * The agent to create a flow for.
+     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * 
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -67,6 +107,13 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * A flow's transition route group serve two purposes:
+     * They are responsible for matching the user's first utterances in the flow.
+     * They are inherited by every page's [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
+     * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+     * 
+     */
     @InputImport(name="transitionRouteGroups")
     private final @Nullable Input<List<String>> transitionRouteGroups;
 
@@ -74,6 +121,12 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
         return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
     }
 
+    /**
+     * A flow's transition routes serve two purposes:
+     * They are responsible for matching the user's first utterances in the flow.
+     * They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
+     * 
+     */
     @InputImport(name="transitionRoutes")
     private final @Nullable Input<List<CxFlowTransitionRouteGetArgs>> transitionRoutes;
 

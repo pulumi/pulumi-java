@@ -19,6 +19,11 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
 
     public static final Hl7StoreState Empty = new Hl7StoreState();
 
+    /**
+     * Identifies the dataset addressed by this request. Must be in the format
+     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * 
+     */
     @InputImport(name="dataset")
     private final @Nullable Input<String> dataset;
 
@@ -26,6 +31,17 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
+    /**
+     * User-supplied key-value pairs used to organize HL7v2 stores.
+     * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+     * conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+     * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+     * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+     * No more than 64 labels can be associated with a given store.
+     * An object containing a list of "key": value pairs.
+     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -33,6 +49,11 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The resource name for the Hl7V2Store.
+     * ** Changing this property may recreate the Hl7v2 store (removing all data) **
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -40,6 +61,17 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * - 
+     * (Optional, Deprecated)
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     * @deprecated
+     * This field has been replaced by notificationConfigs
+     * 
+     */
+    @Deprecated /* This field has been replaced by notificationConfigs */
     @InputImport(name="notificationConfig")
     private final @Nullable Input<Hl7StoreNotificationConfigGetArgs> notificationConfig;
 
@@ -48,6 +80,13 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
     }
 
+    /**
+     * A list of notification configs. Each configuration uses a filter to determine whether to publish a
+     * message (both Ingest & Create) on the corresponding notification destination. Only the message name
+     * is sent as part of the notification. Supplied by the client.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="notificationConfigs")
     private final @Nullable Input<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs;
 
@@ -55,6 +94,11 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
         return this.notificationConfigs == null ? Input.empty() : this.notificationConfigs;
     }
 
+    /**
+     * A nested object resource
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="parserConfig")
     private final @Nullable Input<Hl7StoreParserConfigGetArgs> parserConfig;
 
@@ -62,6 +106,10 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
         return this.parserConfig == null ? Input.empty() : this.parserConfig;
     }
 
+    /**
+     * The fully qualified name of this dataset
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 

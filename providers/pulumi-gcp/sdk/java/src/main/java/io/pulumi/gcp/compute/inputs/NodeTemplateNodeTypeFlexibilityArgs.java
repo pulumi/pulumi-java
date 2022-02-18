@@ -14,6 +14,10 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
 
     public static final NodeTemplateNodeTypeFlexibilityArgs Empty = new NodeTemplateNodeTypeFlexibilityArgs();
 
+    /**
+     * Number of virtual CPUs to use.
+     * 
+     */
     @InputImport(name="cpus")
     private final @Nullable Input<String> cpus;
 
@@ -21,6 +25,11 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
         return this.cpus == null ? Input.empty() : this.cpus;
     }
 
+    /**
+     * - 
+     * Use local SSD
+     * 
+     */
     @InputImport(name="localSsd")
     private final @Nullable Input<String> localSsd;
 
@@ -28,6 +37,10 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
         return this.localSsd == null ? Input.empty() : this.localSsd;
     }
 
+    /**
+     * Physical memory available to the node, defined in MB.
+     * 
+     */
     @InputImport(name="memory")
     private final @Nullable Input<String> memory;
 

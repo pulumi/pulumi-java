@@ -15,6 +15,11 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
 
     public static final TriggerBuildSourceArgs Empty = new TriggerBuildSourceArgs();
 
+    /**
+     * Location of the source in a Google Cloud Source Repository.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="repoSource")
     private final @Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource;
 
@@ -22,6 +27,11 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
         return this.repoSource == null ? Input.empty() : this.repoSource;
     }
 
+    /**
+     * Location of the source in an archive file in Google Cloud Storage.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="storageSource")
     private final @Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource;
 

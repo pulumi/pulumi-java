@@ -12,15 +12,43 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFolderResult {
+    /**
+     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     private final String createTime;
+    /**
+     * The folder's display name.
+     * 
+     */
     private final String displayName;
     private final String folder;
     private final String folderId;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The Folder's current lifecycle state.
+     * 
+     */
     private final String lifecycleState;
     private final @Nullable Boolean lookupOrganization;
+    /**
+     * The resource name of the Folder in the form `folders/{folder_id}`.
+     * 
+     */
     private final String name;
+    /**
+     * If `lookup_organization` is enable, the resource name of the Organization that the folder belongs.
+     * 
+     */
     private final String organization;
+    /**
+     * The resource name of the parent Folder or Organization.
+     * 
+     */
     private final String parent;
 
     @OutputCustomType.Constructor({"createTime","displayName","folder","folderId","id","lifecycleState","lookupOrganization","name","organization","parent"})
@@ -47,9 +75,17 @@ public final class GetFolderResult {
         this.parent = Objects.requireNonNull(parent);
     }
 
+    /**
+     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * 
+     */
     public String getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The folder's display name.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
@@ -59,21 +95,41 @@ public final class GetFolderResult {
     public String getFolderId() {
         return this.folderId;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The Folder's current lifecycle state.
+     * 
+     */
     public String getLifecycleState() {
         return this.lifecycleState;
     }
     public Optional<Boolean> getLookupOrganization() {
         return Optional.ofNullable(this.lookupOrganization);
     }
+    /**
+     * The resource name of the Folder in the form `folders/{folder_id}`.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * If `lookup_organization` is enable, the resource name of the Organization that the folder belongs.
+     * 
+     */
     public String getOrganization() {
         return this.organization;
     }
+    /**
+     * The resource name of the parent Folder or Organization.
+     * 
+     */
     public String getParent() {
         return this.parent;
     }

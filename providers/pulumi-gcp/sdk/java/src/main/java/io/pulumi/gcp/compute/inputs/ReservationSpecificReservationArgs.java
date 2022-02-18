@@ -15,6 +15,10 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
 
     public static final ReservationSpecificReservationArgs Empty = new ReservationSpecificReservationArgs();
 
+    /**
+     * The number of resources that are allocated.
+     * 
+     */
     @InputImport(name="count", required=true)
     private final Input<Integer> count;
 
@@ -22,6 +26,11 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
         return this.count;
     }
 
+    /**
+     * - 
+     * How many instances are in use.
+     * 
+     */
     @InputImport(name="inUseCount")
     private final @Nullable Input<Integer> inUseCount;
 
@@ -29,6 +38,11 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
         return this.inUseCount == null ? Input.empty() : this.inUseCount;
     }
 
+    /**
+     * The instance properties for the reservation.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="instanceProperties", required=true)
     private final Input<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties;
 

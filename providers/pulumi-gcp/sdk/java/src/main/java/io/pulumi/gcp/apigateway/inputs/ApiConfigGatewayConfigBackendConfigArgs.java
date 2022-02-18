@@ -13,6 +13,11 @@ public final class ApiConfigGatewayConfigBackendConfigArgs extends io.pulumi.res
 
     public static final ApiConfigGatewayConfigBackendConfigArgs Empty = new ApiConfigGatewayConfigBackendConfigArgs();
 
+    /**
+     * Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
+     * (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
+     * 
+     */
     @InputImport(name="googleServiceAccount", required=true)
     private final Input<String> googleServiceAccount;
 

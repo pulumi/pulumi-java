@@ -12,6 +12,10 @@ public final class GetClientArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClientArgs Empty = new GetClientArgs();
 
+    /**
+     * The name of the brand.
+     * 
+     */
     @InputImport(name="brand", required=true)
     private final String brand;
 
@@ -19,6 +23,10 @@ public final class GetClientArgs extends io.pulumi.resources.InvokeArgs {
         return this.brand;
     }
 
+    /**
+     * The client_id of the brand.
+     * 
+     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 

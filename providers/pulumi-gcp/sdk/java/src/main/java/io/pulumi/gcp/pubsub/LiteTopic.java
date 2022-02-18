@@ -16,51 +16,153 @@ import io.pulumi.gcp.pubsub.outputs.LiteTopicRetentionConfig;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * A named resource to which messages are sent by publishers.
+ * 
+ * To get more information about Topic, see:
+ * 
+ * * [API documentation](https://cloud.google.com/pubsub/lite/docs/reference/rest/v1/admin.projects.locations.topics)
+ * * How-to Guides
+ *     * [Managing Topics](https://cloud.google.com/pubsub/lite/docs/topics)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * Topic can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:pubsub/liteTopic:LiteTopic default projects/{{project}}/locations/{{zone}}/topics/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:pubsub/liteTopic:LiteTopic default {{project}}/{{zone}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:pubsub/liteTopic:LiteTopic default {{zone}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:pubsub/liteTopic:LiteTopic default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:pubsub/liteTopic:LiteTopic")
 public class LiteTopic extends io.pulumi.resources.CustomResource {
+    /**
+     * Name of the topic.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the topic.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The settings for this topic's partitions.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="partitionConfig", type=LiteTopicPartitionConfig.class, parameters={})
     private Output</* @Nullable */ LiteTopicPartitionConfig> partitionConfig;
 
+    /**
+     * @return The settings for this topic's partitions.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ LiteTopicPartitionConfig> getPartitionConfig() {
         return this.partitionConfig;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The region of the pubsub lite topic.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
+    /**
+     * @return The region of the pubsub lite topic.
+     * 
+     */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
+    /**
+     * The settings for this topic's Reservation usage.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="reservationConfig", type=LiteTopicReservationConfig.class, parameters={})
     private Output</* @Nullable */ LiteTopicReservationConfig> reservationConfig;
 
+    /**
+     * @return The settings for this topic's Reservation usage.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ LiteTopicReservationConfig> getReservationConfig() {
         return this.reservationConfig;
     }
+    /**
+     * The settings for a topic's message retention.
+     * Structure is documented below.
+     * 
+     */
     @OutputExport(name="retentionConfig", type=LiteTopicRetentionConfig.class, parameters={})
     private Output</* @Nullable */ LiteTopicRetentionConfig> retentionConfig;
 
+    /**
+     * @return The settings for a topic's message retention.
+     * Structure is documented below.
+     * 
+     */
     public Output</* @Nullable */ LiteTopicRetentionConfig> getRetentionConfig() {
         return this.retentionConfig;
     }
+    /**
+     * The zone of the pubsub lite topic.
+     * 
+     */
     @OutputExport(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
+    /**
+     * @return The zone of the pubsub lite topic.
+     * 
+     */
     public Output</* @Nullable */ String> getZone() {
         return this.zone;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LiteTopic(String name, @Nullable LiteTopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:pubsub/liteTopic:LiteTopic", name, args == null ? LiteTopicArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +178,15 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LiteTopic get(String name, Input<String> id, @Nullable LiteTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LiteTopic(name, id, state, options);
     }

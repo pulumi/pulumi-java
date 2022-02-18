@@ -17,12 +17,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TransferJobTransferSpec {
+    /**
+     * An AWS S3 data source. Structure documented below.
+     * 
+     */
     private final @Nullable TransferJobTransferSpecAwsS3DataSource awsS3DataSource;
+    /**
+     * An Azure Blob Storage data source. Structure documented below.
+     * 
+     */
     private final @Nullable TransferJobTransferSpecAzureBlobStorageDataSource azureBlobStorageDataSource;
+    /**
+     * A Google Cloud Storage data sink. Structure documented below.
+     * 
+     */
     private final @Nullable TransferJobTransferSpecGcsDataSink gcsDataSink;
+    /**
+     * A Google Cloud Storage data source. Structure documented below.
+     * 
+     */
     private final @Nullable TransferJobTransferSpecGcsDataSource gcsDataSource;
+    /**
+     * A HTTP URL data source. Structure documented below.
+     * 
+     */
     private final @Nullable TransferJobTransferSpecHttpDataSource httpDataSource;
+    /**
+     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
+     * 
+     */
     private final @Nullable TransferJobTransferSpecObjectConditions objectConditions;
+    /**
+     * Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
+     * 
+     */
     private final @Nullable TransferJobTransferSpecTransferOptions transferOptions;
 
     @OutputCustomType.Constructor({"awsS3DataSource","azureBlobStorageDataSource","gcsDataSink","gcsDataSource","httpDataSource","objectConditions","transferOptions"})
@@ -43,24 +71,52 @@ public final class TransferJobTransferSpec {
         this.transferOptions = transferOptions;
     }
 
+    /**
+     * An AWS S3 data source. Structure documented below.
+     * 
+     */
     public Optional<TransferJobTransferSpecAwsS3DataSource> getAwsS3DataSource() {
         return Optional.ofNullable(this.awsS3DataSource);
     }
+    /**
+     * An Azure Blob Storage data source. Structure documented below.
+     * 
+     */
     public Optional<TransferJobTransferSpecAzureBlobStorageDataSource> getAzureBlobStorageDataSource() {
         return Optional.ofNullable(this.azureBlobStorageDataSource);
     }
+    /**
+     * A Google Cloud Storage data sink. Structure documented below.
+     * 
+     */
     public Optional<TransferJobTransferSpecGcsDataSink> getGcsDataSink() {
         return Optional.ofNullable(this.gcsDataSink);
     }
+    /**
+     * A Google Cloud Storage data source. Structure documented below.
+     * 
+     */
     public Optional<TransferJobTransferSpecGcsDataSource> getGcsDataSource() {
         return Optional.ofNullable(this.gcsDataSource);
     }
+    /**
+     * A HTTP URL data source. Structure documented below.
+     * 
+     */
     public Optional<TransferJobTransferSpecHttpDataSource> getHttpDataSource() {
         return Optional.ofNullable(this.httpDataSource);
     }
+    /**
+     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
+     * 
+     */
     public Optional<TransferJobTransferSpecObjectConditions> getObjectConditions() {
         return Optional.ofNullable(this.objectConditions);
     }
+    /**
+     * Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
+     * 
+     */
     public Optional<TransferJobTransferSpecTransferOptions> getTransferOptions() {
         return Optional.ofNullable(this.transferOptions);
     }

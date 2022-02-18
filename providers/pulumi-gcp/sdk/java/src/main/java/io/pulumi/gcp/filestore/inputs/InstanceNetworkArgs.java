@@ -15,6 +15,14 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final InstanceNetworkArgs Empty = new InstanceNetworkArgs();
 
+    /**
+     * The network connect mode of the Filestore instance.
+     * If not provided, the connect mode defaults to
+     * DIRECT_PEERING.
+     * Default value is `DIRECT_PEERING`.
+     * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+     * 
+     */
     @InputImport(name="connectMode")
     private final @Nullable Input<String> connectMode;
 
@@ -22,6 +30,11 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
         return this.connectMode == null ? Input.empty() : this.connectMode;
     }
 
+    /**
+     * - 
+     * A list of IPv4 or IPv6 addresses.
+     * 
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable Input<List<String>> ipAddresses;
 
@@ -29,6 +42,12 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
     }
 
+    /**
+     * IP versions for which the instance has
+     * IP addresses assigned.
+     * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
+     * 
+     */
     @InputImport(name="modes", required=true)
     private final Input<List<String>> modes;
 
@@ -36,6 +55,11 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
         return this.modes;
     }
 
+    /**
+     * The name of the GCE VPC network to which the
+     * instance is connected.
+     * 
+     */
     @InputImport(name="network", required=true)
     private final Input<String> network;
 
@@ -43,6 +67,11 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
         return this.network;
     }
 
+    /**
+     * A /29 CIDR block that identifies the range of IP
+     * addresses reserved for this instance.
+     * 
+     */
     @InputImport(name="reservedIpRange")
     private final @Nullable Input<String> reservedIpRange;
 

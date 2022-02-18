@@ -11,9 +11,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class QueueAppEngineRoutingOverride {
+    /**
+     * - 
+     * The host that the task is sent to.
+     * 
+     */
     private final @Nullable String host;
+    /**
+     * App instance.
+     * By default, the task is sent to an instance which is available when the task is attempted.
+     * 
+     */
     private final @Nullable String instance;
+    /**
+     * App service.
+     * By default, the task is sent to the service which is the default service when the task is attempted.
+     * 
+     */
     private final @Nullable String service;
+    /**
+     * App version.
+     * By default, the task is sent to the version which is the default version when the task is attempted.
+     * 
+     */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"host","instance","service","version"})
@@ -28,15 +48,35 @@ public final class QueueAppEngineRoutingOverride {
         this.version = version;
     }
 
+    /**
+     * - 
+     * The host that the task is sent to.
+     * 
+     */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
+    /**
+     * App instance.
+     * By default, the task is sent to an instance which is available when the task is attempted.
+     * 
+     */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
+    /**
+     * App service.
+     * By default, the task is sent to the service which is the default service when the task is attempted.
+     * 
+     */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
+    /**
+     * App version.
+     * By default, the task is sent to the version which is the default version when the task is attempted.
+     * 
+     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

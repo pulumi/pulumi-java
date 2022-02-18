@@ -16,6 +16,12 @@ public final class TriggerBuildArtifactsObjectsGetArgs extends io.pulumi.resourc
 
     public static final TriggerBuildArtifactsObjectsGetArgs Empty = new TriggerBuildArtifactsObjectsGetArgs();
 
+    /**
+     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+     * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+     * this location as a prefix.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +29,10 @@ public final class TriggerBuildArtifactsObjectsGetArgs extends io.pulumi.resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Path globs used to match files in the build's workspace.
+     * 
+     */
     @InputImport(name="paths")
     private final @Nullable Input<List<String>> paths;
 
@@ -30,6 +40,12 @@ public final class TriggerBuildArtifactsObjectsGetArgs extends io.pulumi.resourc
         return this.paths == null ? Input.empty() : this.paths;
     }
 
+    /**
+     * - 
+     * Output only. Stores timing information for pushing all artifact objects.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="timings")
     private final @Nullable Input<List<TriggerBuildArtifactsObjectsTimingGetArgs>> timings;
 

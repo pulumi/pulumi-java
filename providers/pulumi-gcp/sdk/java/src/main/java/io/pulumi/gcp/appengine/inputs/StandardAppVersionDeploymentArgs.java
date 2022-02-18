@@ -16,6 +16,12 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
 
     public static final StandardAppVersionDeploymentArgs Empty = new StandardAppVersionDeploymentArgs();
 
+    /**
+     * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * All files must be readable using the credentials supplied with this call.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="files")
     private final @Nullable Input<List<StandardAppVersionDeploymentFileArgs>> files;
 
@@ -23,6 +29,11 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
         return this.files == null ? Input.empty() : this.files;
     }
 
+    /**
+     * Zip File
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="zip")
     private final @Nullable Input<StandardAppVersionDeploymentZipArgs> zip;
 

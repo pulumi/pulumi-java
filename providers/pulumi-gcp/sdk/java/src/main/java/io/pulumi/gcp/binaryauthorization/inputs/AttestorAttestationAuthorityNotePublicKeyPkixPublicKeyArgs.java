@@ -14,6 +14,11 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
 
     public static final AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs Empty = new AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs();
 
+    /**
+     * A PEM-encoded public key, as described in
+     * `https://tools.ietf.org/html/rfc7468#section-13`
+     * 
+     */
     @InputImport(name="publicKeyPem")
     private final @Nullable Input<String> publicKeyPem;
 
@@ -21,6 +26,14 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
         return this.publicKeyPem == null ? Input.empty() : this.publicKeyPem;
     }
 
+    /**
+     * The signature algorithm used to verify a message against
+     * a signature using this key. These signature algorithm must
+     * match the structure and any object identifiers encoded in
+     * publicKeyPem (i.e. this algorithm must match that of the
+     * public key).
+     * 
+     */
     @InputImport(name="signatureAlgorithm")
     private final @Nullable Input<String> signatureAlgorithm;
 

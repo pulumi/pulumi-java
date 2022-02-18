@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
+    /**
+     * External network that can access Kubernetes master through HTTPS.
+     * Must be specified in CIDR notation.
+     * 
+     */
     private final String cidrBlock;
+    /**
+     * Field for users to identify CIDR blocks.
+     * 
+     */
     private final @Nullable String displayName;
 
     @OutputCustomType.Constructor({"cidrBlock","displayName"})
@@ -22,9 +31,18 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
         this.displayName = displayName;
     }
 
+    /**
+     * External network that can access Kubernetes master through HTTPS.
+     * Must be specified in CIDR notation.
+     * 
+     */
     public String getCidrBlock() {
         return this.cidrBlock;
     }
+    /**
+     * Field for users to identify CIDR blocks.
+     * 
+     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }

@@ -14,63 +14,214 @@ import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a Target gRPC Proxy resource. A target gRPC proxy is a component
+ * of load balancers intended for load balancing gRPC traffic. Global forwarding
+ * rules reference a target gRPC proxy. The Target gRPC Proxy references
+ * a URL map which specifies how traffic routes to gRPC backend services.
+ * 
+ * To get more information about TargetGrpcProxy, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/targetGrpcProxies)
+ * * How-to Guides
+ *     * [Using Target gRPC Proxies](https://cloud.google.com/traffic-director/docs/proxyless-overview)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * TargetGrpcProxy can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default projects/{{project}}/global/targetGrpcProxies/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/targetGrpcProxy:TargetGrpcProxy")
 public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+     * This field will be ignored when inserting a TargetGrpcProxy. An up-to-date fingerprint must be provided in order to
+     * patch/update the TargetGrpcProxy; otherwise, the request will fail with error 412 conditionNotMet. To see the latest
+     * fingerprint, make a get() request to retrieve the TargetGrpcProxy. A base64-encoded string.
+     * 
+     */
     @OutputExport(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
+    /**
+     * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+     * This field will be ignored when inserting a TargetGrpcProxy. An up-to-date fingerprint must be provided in order to
+     * patch/update the TargetGrpcProxy; otherwise, the request will fail with error 412 conditionNotMet. To see the latest
+     * fingerprint, make a get() request to retrieve the TargetGrpcProxy. A base64-encoded string.
+     * 
+     */
     public Output<String> getFingerprint() {
         return this.fingerprint;
     }
+    /**
+     * Name of the resource. Provided by the client when the resource
+     * is created. The name must be 1-63 characters long, and comply
+     * with RFC1035. Specifically, the name must be 1-63 characters long
+     * and match the regular expression `a-z?` which
+     * means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource
+     * is created. The name must be 1-63 characters long, and comply
+     * with RFC1035. Specifically, the name must be 1-63 characters long
+     * and match the regular expression `a-z?` which
+     * means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * Server-defined URL with id for the resource.
+     * 
+     */
     @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
+    /**
+     * @return Server-defined URL with id for the resource.
+     * 
+     */
     public Output<String> getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
+    /**
+     * URL to the UrlMap resource that defines the mapping from URL to
+     * the BackendService. The protocol field in the BackendService
+     * must be set to GRPC.
+     * 
+     */
     @OutputExport(name="urlMap", type=String.class, parameters={})
     private Output</* @Nullable */ String> urlMap;
 
+    /**
+     * @return URL to the UrlMap resource that defines the mapping from URL to
+     * the BackendService. The protocol field in the BackendService
+     * must be set to GRPC.
+     * 
+     */
     public Output</* @Nullable */ String> getUrlMap() {
         return this.urlMap;
     }
+    /**
+     * If true, indicates that the BackendServices referenced by
+     * the urlMap may be accessed by gRPC applications without using
+     * a sidecar proxy. This will enable configuration checks on urlMap
+     * and its referenced BackendServices to not allow unsupported features.
+     * A gRPC application must use "xds:///" scheme in the target URI
+     * of the service it is connecting to. If false, indicates that the
+     * BackendServices referenced by the urlMap will be accessed by gRPC
+     * applications via a sidecar proxy. In this case, a gRPC application
+     * must not use "xds:///" scheme in the target URI of the service
+     * it is connecting to
+     * 
+     */
     @OutputExport(name="validateForProxyless", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateForProxyless;
 
+    /**
+     * @return If true, indicates that the BackendServices referenced by
+     * the urlMap may be accessed by gRPC applications without using
+     * a sidecar proxy. This will enable configuration checks on urlMap
+     * and its referenced BackendServices to not allow unsupported features.
+     * A gRPC application must use "xds:///" scheme in the target URI
+     * of the service it is connecting to. If false, indicates that the
+     * BackendServices referenced by the urlMap will be accessed by gRPC
+     * applications via a sidecar proxy. In this case, a gRPC application
+     * must not use "xds:///" scheme in the target URI of the service
+     * it is connecting to
+     * 
+     */
     public Output</* @Nullable */ Boolean> getValidateForProxyless() {
         return this.validateForProxyless;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TargetGrpcProxy(String name, @Nullable TargetGrpcProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/targetGrpcProxy:TargetGrpcProxy", name, args == null ? TargetGrpcProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -86,6 +237,15 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TargetGrpcProxy get(String name, Input<String> id, @Nullable TargetGrpcProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TargetGrpcProxy(name, id, state, options);
     }

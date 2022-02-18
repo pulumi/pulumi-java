@@ -13,6 +13,12 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
 
     public static final SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs Empty = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs();
 
+    /**
+     * A duration string, e.g. 10s.
+     * Good service is defined to be the count of requests made to
+     * this service that return in no more than threshold.
+     * 
+     */
     @InputImport(name="threshold", required=true)
     private final Input<String> threshold;
 

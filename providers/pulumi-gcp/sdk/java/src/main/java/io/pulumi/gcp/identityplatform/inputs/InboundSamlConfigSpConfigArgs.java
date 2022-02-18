@@ -16,6 +16,10 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
 
     public static final InboundSamlConfigSpConfigArgs Empty = new InboundSamlConfigSpConfigArgs();
 
+    /**
+     * Callback URI where responses from IDP are handled. Must start with `https://`.
+     * 
+     */
     @InputImport(name="callbackUri")
     private final @Nullable Input<String> callbackUri;
 
@@ -23,6 +27,12 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
         return this.callbackUri == null ? Input.empty() : this.callbackUri;
     }
 
+    /**
+     * - 
+     * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="spCertificates")
     private final @Nullable Input<List<InboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
 
@@ -30,6 +40,10 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
         return this.spCertificates == null ? Input.empty() : this.spCertificates;
     }
 
+    /**
+     * Unique identifier for all SAML entities.
+     * 
+     */
     @InputImport(name="spEntityId")
     private final @Nullable Input<String> spEntityId;
 

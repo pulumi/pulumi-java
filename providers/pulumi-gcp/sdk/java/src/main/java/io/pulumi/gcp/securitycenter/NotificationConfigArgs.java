@@ -15,6 +15,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
 
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 
+    /**
+     * This must be unique within the organization.
+     * 
+     */
     @InputImport(name="configId", required=true)
     private final Input<String> configId;
 
@@ -22,6 +26,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
         return this.configId;
     }
 
+    /**
+     * The description of the notification config (max of 1024 characters).
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,11 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The organization whose Cloud Security Command Center the Notification
+     * Config lives in.
+     * 
+     */
     @InputImport(name="organization", required=true)
     private final Input<String> organization;
 
@@ -36,6 +49,11 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
         return this.organization;
     }
 
+    /**
+     * The Pub/Sub topic to send notifications to. Its format is
+     * "projects/[project_id]/topics/[topic]".
+     * 
+     */
     @InputImport(name="pubsubTopic", required=true)
     private final Input<String> pubsubTopic;
 
@@ -43,6 +61,11 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
         return this.pubsubTopic;
     }
 
+    /**
+     * The config for triggering streaming-based notifications.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="streamingConfig", required=true)
     private final Input<NotificationConfigStreamingConfigArgs> streamingConfig;
 

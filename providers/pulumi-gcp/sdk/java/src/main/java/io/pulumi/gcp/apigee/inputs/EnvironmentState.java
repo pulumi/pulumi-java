@@ -14,6 +14,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentState Empty = new EnvironmentState();
 
+    /**
+     * Description of the environment.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name of the environment.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,6 +36,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The resource ID of the environment.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,11 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Apigee Organization associated with the Apigee environment,
+     * in the format `organizations/{{org_name}}`.
+     * 
+     */
     @InputImport(name="orgId")
     private final @Nullable Input<String> orgId;
 

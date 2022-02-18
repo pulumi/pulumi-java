@@ -9,11 +9,31 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDefaultServiceAccountResult {
+    /**
+     * The display name for the service account.
+     * 
+     */
     private final String displayName;
+    /**
+     * Email address of the default service account used by App Engine in this project.
+     * 
+     */
     private final String email;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The fully-qualified name of the service account.
+     * 
+     */
     private final String name;
     private final String project;
+    /**
+     * The unique id of the service account.
+     * 
+     */
     private final String uniqueId;
 
     @OutputCustomType.Constructor({"displayName","email","id","name","project","uniqueId"})
@@ -32,21 +52,41 @@ public final class GetDefaultServiceAccountResult {
         this.uniqueId = Objects.requireNonNull(uniqueId);
     }
 
+    /**
+     * The display name for the service account.
+     * 
+     */
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Email address of the default service account used by App Engine in this project.
+     * 
+     */
     public String getEmail() {
         return this.email;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The fully-qualified name of the service account.
+     * 
+     */
     public String getName() {
         return this.name;
     }
     public String getProject() {
         return this.project;
     }
+    /**
+     * The unique id of the service account.
+     * 
+     */
     public String getUniqueId() {
         return this.uniqueId;
     }

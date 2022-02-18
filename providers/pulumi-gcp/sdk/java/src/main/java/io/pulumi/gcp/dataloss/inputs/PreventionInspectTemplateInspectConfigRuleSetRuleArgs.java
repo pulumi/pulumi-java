@@ -15,6 +15,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
 
     public static final PreventionInspectTemplateInspectConfigRuleSetRuleArgs Empty = new PreventionInspectTemplateInspectConfigRuleSetRuleArgs();
 
+    /**
+     * The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="exclusionRule")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule;
 
@@ -22,6 +27,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
         return this.exclusionRule == null ? Input.empty() : this.exclusionRule;
     }
 
+    /**
+     * Hotword-based detection rule.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="hotwordRule")
     private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule;
 

@@ -12,6 +12,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetInstanceTemplateReservationAffinity {
     private final List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations;
+    /**
+     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     private final String type;
 
     @OutputCustomType.Constructor({"specificReservations","type"})
@@ -25,6 +29,10 @@ public final class GetInstanceTemplateReservationAffinity {
     public List<GetInstanceTemplateReservationAffinitySpecificReservation> getSpecificReservations() {
         return this.specificReservations;
     }
+    /**
+     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public String getType() {
         return this.type;
     }

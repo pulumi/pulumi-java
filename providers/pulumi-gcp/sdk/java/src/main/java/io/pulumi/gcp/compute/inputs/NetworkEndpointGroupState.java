@@ -15,6 +15,11 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
 
     public static final NetworkEndpointGroupState Empty = new NetworkEndpointGroupState();
 
+    /**
+     * The default port used if the port number is not specified in the
+     * network endpoint.
+     * 
+     */
     @InputImport(name="defaultPort")
     private final @Nullable Input<Integer> defaultPort;
 
@@ -22,6 +27,11 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.defaultPort == null ? Input.empty() : this.defaultPort;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +39,16 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +56,11 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The network to which all network endpoints in the NEG belong.
+     * Uses "default" project network if unspecified.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -43,6 +68,12 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Type of network endpoints in this network endpoint group.
+     * Default value is `GCE_VM_IP_PORT`.
+     * Possible values are `GCE_VM_IP_PORT`.
+     * 
+     */
     @InputImport(name="networkEndpointType")
     private final @Nullable Input<String> networkEndpointType;
 
@@ -50,6 +81,11 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -57,6 +93,10 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -64,6 +104,10 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * Number of network endpoints in the network endpoint group.
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable Input<Integer> size;
 
@@ -71,6 +115,10 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * Optional subnetwork to which all network endpoints in the NEG belong.
+     * 
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -78,6 +126,10 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
+    /**
+     * Zone where the network endpoint group is located.
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

@@ -14,6 +14,10 @@ public final class LiteTopicReservationConfigGetArgs extends io.pulumi.resources
 
     public static final LiteTopicReservationConfigGetArgs Empty = new LiteTopicReservationConfigGetArgs();
 
+    /**
+     * The Reservation to use for this topic's throughput capacity.
+     * 
+     */
     @InputImport(name="throughputReservation")
     private final @Nullable Input<String> throughputReservation;
 

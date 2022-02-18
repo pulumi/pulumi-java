@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureClusterAuthorization {
+    /**
+     * Required. Users that can perform operations as a cluster admin. A new ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the users. At most one user can be specified. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
+     * 
+     */
     private final List<AzureClusterAuthorizationAdminUser> adminUsers;
 
     @OutputCustomType.Constructor({"adminUsers"})
@@ -17,6 +21,10 @@ public final class AzureClusterAuthorization {
         this.adminUsers = Objects.requireNonNull(adminUsers);
     }
 
+    /**
+     * Required. Users that can perform operations as a cluster admin. A new ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the users. At most one user can be specified. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
+     * 
+     */
     public List<AzureClusterAuthorizationAdminUser> getAdminUsers() {
         return this.adminUsers;
     }

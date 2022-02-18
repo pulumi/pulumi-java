@@ -13,6 +13,20 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetService {
+/**
+ * Get information about a Google Cloud Run Service. For more information see
+ * the [official documentation](https://cloud.google.com/run/docs/)
+ * and [API](https://cloud.google.com/run/docs/apis).
+ * 
+ * ## Example Usage
+ * 
+ *
+ * A collection of arguments for invoking getService.
+ * 
+ *
+ * A collection of values returned by getService.
+ * 
+ */
     public static CompletableFuture<GetServiceResult> invokeAsync(GetServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudrun/getService:getService", TypeShape.of(GetServiceResult.class), args == null ? GetServiceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,7 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
+    /**
+     * The path to the container image repository.
+     * For example: gcr.io/{project_id}/{imageName}
+     * 
+     */
     private final String repository;
+    /**
+     * The tag of the container image. If not specified, this defaults to the latest tag.
+     * 
+     */
     private final @Nullable String tag;
 
     @OutputCustomType.Constructor({"repository","tag"})
@@ -22,9 +31,18 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
         this.tag = tag;
     }
 
+    /**
+     * The path to the container image repository.
+     * For example: gcr.io/{project_id}/{imageName}
+     * 
+     */
     public String getRepository() {
         return this.repository;
     }
+    /**
+     * The tag of the container image. If not specified, this defaults to the latest tag.
+     * 
+     */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }

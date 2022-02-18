@@ -17,6 +17,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
 
     public static final HubState Empty = new HubState();
 
+    /**
+     * Output only. The time the hub was created.
+     * 
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -24,6 +28,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * An optional description of the hub.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +39,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -38,6 +50,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +61,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project for the resource
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -52,6 +72,12 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The VPC network associated with this hub's spokes. All of the VPN tunnels, VLAN attachments, and router appliance
+     * instances referenced by this hub's spokes must belong to this VPC network. This field is read-only. Network Connectivity
+     * Center automatically populates it based on the set of spokes attached to the hub.
+     * 
+     */
     @InputImport(name="routingVpcs")
     private final @Nullable Input<List<HubRoutingVpcGetArgs>> routingVpcs;
 
@@ -59,6 +85,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
         return this.routingVpcs == null ? Input.empty() : this.routingVpcs;
     }
 
+    /**
+     * Output only. The current lifecycle state of this hub. Possible values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 
@@ -66,6 +96,11 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Output only. The Google-generated UUID for the hub. This value is unique across all hub resources. If a hub is deleted
+     * and another with the same name is created, the new hub is assigned a different unique_id.
+     * 
+     */
     @InputImport(name="uniqueId")
     private final @Nullable Input<String> uniqueId;
 
@@ -73,6 +108,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
         return this.uniqueId == null ? Input.empty() : this.uniqueId;
     }
 
+    /**
+     * Output only. The time the hub was last updated.
+     * 
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

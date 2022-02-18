@@ -15,6 +15,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
 
     public static final ProjectBucketConfigState Empty = new ProjectBucketConfigState();
 
+    /**
+     * The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+     * 
+     */
     @InputImport(name="bucketId")
     private final @Nullable Input<String> bucketId;
 
@@ -22,6 +26,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
         return this.bucketId == null ? Input.empty() : this.bucketId;
     }
 
+    /**
+     * Describes this bucket.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +37,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The bucket's lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+     * 
+     */
     @InputImport(name="lifecycleState")
     private final @Nullable Input<String> lifecycleState;
 
@@ -36,6 +48,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
         return this.lifecycleState == null ? Input.empty() : this.lifecycleState;
     }
 
+    /**
+     * The location of the bucket.
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,6 +59,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the bucket. For example: "projects/my-project-id/locations/my-location/buckets/my-bucket-id"
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +70,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The parent resource that contains the logging bucket.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -57,6 +81,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
+     * 
+     */
     @InputImport(name="retentionDays")
     private final @Nullable Input<Integer> retentionDays;
 

@@ -14,6 +14,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
 
     public static final FirewallPolicyAssociationState Empty = new FirewallPolicyAssociationState();
 
+    /**
+     * The target that the firewall policy is attached to.
+     * 
+     */
     @InputImport(name="attachmentTarget")
     private final @Nullable Input<String> attachmentTarget;
 
@@ -21,6 +25,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
         return this.attachmentTarget == null ? Input.empty() : this.attachmentTarget;
     }
 
+    /**
+     * The firewall policy ID of the association.
+     * 
+     */
     @InputImport(name="firewallPolicy")
     private final @Nullable Input<String> firewallPolicy;
 
@@ -28,6 +36,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
         return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
     }
 
+    /**
+     * The name for an association.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The short name of the firewall policy of the association.
+     * 
+     */
     @InputImport(name="shortName")
     private final @Nullable Input<String> shortName;
 

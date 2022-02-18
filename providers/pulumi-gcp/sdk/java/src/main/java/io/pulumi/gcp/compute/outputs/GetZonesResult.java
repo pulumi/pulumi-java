@@ -12,7 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetZonesResult {
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * A list of zones available in the given region
+     * 
+     */
     private final List<String> names;
     private final String project;
     private final @Nullable String region;
@@ -32,9 +40,17 @@ public final class GetZonesResult {
         this.status = status;
     }
 
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * A list of zones available in the given region
+     * 
+     */
     public List<String> getNames() {
         return this.names;
     }

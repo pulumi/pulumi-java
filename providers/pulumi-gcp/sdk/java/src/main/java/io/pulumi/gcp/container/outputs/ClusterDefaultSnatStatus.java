@@ -9,6 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterDefaultSnatStatus {
+    /**
+     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     private final Boolean disabled;
 
     @OutputCustomType.Constructor({"disabled"})
@@ -16,6 +21,11 @@ public final class ClusterDefaultSnatStatus {
         this.disabled = Objects.requireNonNull(disabled);
     }
 
+    /**
+     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     public Boolean getDisabled() {
         return this.disabled;
     }

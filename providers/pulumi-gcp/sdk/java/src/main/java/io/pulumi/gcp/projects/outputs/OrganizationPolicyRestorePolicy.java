@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OrganizationPolicyRestorePolicy {
+    /**
+     * May only be set to true. If set, then the default Policy is restored.
+     * 
+     */
     private final Boolean $default;
 
     @OutputCustomType.Constructor({"$default"})
@@ -16,6 +20,10 @@ public final class OrganizationPolicyRestorePolicy {
         this.$default = Objects.requireNonNull($default);
     }
 
+    /**
+     * May only be set to true. If set, then the default Policy is restored.
+     * 
+     */
     public Boolean get$default() {
         return this.$default;
     }

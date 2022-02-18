@@ -16,63 +16,191 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The DefaultObjectAccessControls resources represent the Access Control
+ * Lists (ACLs) applied to a new object within a Google Cloud Storage bucket
+ * when no ACL was provided for that object. ACLs let you specify who has
+ * access to your bucket contents and to what extent.
+ * 
+ * There are two roles that can be assigned to an entity:
+ * 
+ * READERs can get an object, though the acl property will not be revealed.
+ * OWNERs are READERs, and they can get the acl property, update an object,
+ * and call all objectAccessControls methods on the object. The owner of an
+ * object is always an OWNER.
+ * For more information, see Access Control, with the caveat that this API
+ * uses READER and OWNER instead of READ and FULL_CONTROL.
+ * 
+ * To get more information about DefaultObjectAccessControl, see:
+ * 
+ * * [API documentation](https://cloud.google.com/storage/docs/json_api/v1/defaultObjectAccessControls)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * DefaultObjectAccessControl can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:storage/defaultObjectAccessControl:DefaultObjectAccessControl default {{bucket}}/{{entity}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:storage/defaultObjectAccessControl:DefaultObjectAccessControl")
 public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the bucket.
+     * 
+     */
     @OutputExport(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public Output<String> getBucket() {
         return this.bucket;
     }
+    /**
+     * The domain associated with the entity.
+     * 
+     */
     @OutputExport(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
+    /**
+     * @return The domain associated with the entity.
+     * 
+     */
     public Output<String> getDomain() {
         return this.domain;
     }
+    /**
+     * The email address associated with the entity.
+     * 
+     */
     @OutputExport(name="email", type=String.class, parameters={})
     private Output<String> email;
 
+    /**
+     * @return The email address associated with the entity.
+     * 
+     */
     public Output<String> getEmail() {
         return this.email;
     }
+    /**
+     * The entity holding the permission, in one of the following forms:
+     * * user-{{userId}}
+     * * user-{{email}} (such as "user-liz@example.com")
+     * * group-{{groupId}}
+     * * group-{{email}} (such as "group-example@googlegroups.com")
+     * * domain-{{domain}} (such as "domain-example.com")
+     * * project-team-{{projectId}}
+     * * allUsers
+     * * allAuthenticatedUsers
+     * 
+     */
     @OutputExport(name="entity", type=String.class, parameters={})
     private Output<String> entity;
 
+    /**
+     * @return The entity holding the permission, in one of the following forms:
+     * * user-{{userId}}
+     * * user-{{email}} (such as "user-liz@example.com")
+     * * group-{{groupId}}
+     * * group-{{email}} (such as "group-example@googlegroups.com")
+     * * domain-{{domain}} (such as "domain-example.com")
+     * * project-team-{{projectId}}
+     * * allUsers
+     * * allAuthenticatedUsers
+     * 
+     */
     public Output<String> getEntity() {
         return this.entity;
     }
+    /**
+     * The ID for the entity
+     * 
+     */
     @OutputExport(name="entityId", type=String.class, parameters={})
     private Output<String> entityId;
 
+    /**
+     * @return The ID for the entity
+     * 
+     */
     public Output<String> getEntityId() {
         return this.entityId;
     }
+    /**
+     * The content generation of the object, if applied to an object.
+     * 
+     */
     @OutputExport(name="generation", type=Integer.class, parameters={})
     private Output<Integer> generation;
 
+    /**
+     * @return The content generation of the object, if applied to an object.
+     * 
+     */
     public Output<Integer> getGeneration() {
         return this.generation;
     }
+    /**
+     * The name of the object, if applied to an object.
+     * 
+     */
     @OutputExport(name="object", type=String.class, parameters={})
     private Output</* @Nullable */ String> object;
 
+    /**
+     * @return The name of the object, if applied to an object.
+     * 
+     */
     public Output</* @Nullable */ String> getObject() {
         return this.object;
     }
+    /**
+     * The project team associated with the entity
+     * 
+     */
     @OutputExport(name="projectTeams", type=List.class, parameters={DefaultObjectAccessControlProjectTeam.class})
     private Output<List<DefaultObjectAccessControlProjectTeam>> projectTeams;
 
+    /**
+     * @return The project team associated with the entity
+     * 
+     */
     public Output<List<DefaultObjectAccessControlProjectTeam>> getProjectTeams() {
         return this.projectTeams;
     }
+    /**
+     * The access permission for the entity.
+     * Possible values are `OWNER` and `READER`.
+     * 
+     */
     @OutputExport(name="role", type=String.class, parameters={})
     private Output<String> role;
 
+    /**
+     * @return The access permission for the entity.
+     * Possible values are `OWNER` and `READER`.
+     * 
+     */
     public Output<String> getRole() {
         return this.role;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DefaultObjectAccessControl(String name, DefaultObjectAccessControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:storage/defaultObjectAccessControl:DefaultObjectAccessControl", name, args == null ? DefaultObjectAccessControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -88,6 +216,15 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DefaultObjectAccessControl get(String name, Input<String> id, @Nullable DefaultObjectAccessControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DefaultObjectAccessControl(name, id, state, options);
     }

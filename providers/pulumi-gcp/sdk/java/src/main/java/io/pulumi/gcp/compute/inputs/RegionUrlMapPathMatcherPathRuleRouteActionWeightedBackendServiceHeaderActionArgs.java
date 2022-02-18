@@ -17,6 +17,12 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
 
     public static final RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs Empty = new RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs();
 
+    /**
+     * Headers to add to a matching request prior to forwarding the request to the
+     * backendService.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="requestHeadersToAdds")
     private final @Nullable Input<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
 
@@ -24,6 +30,11 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
         return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the request
+     * prior to forwarding the request to the backendService.
+     * 
+     */
     @InputImport(name="requestHeadersToRemoves")
     private final @Nullable Input<List<String>> requestHeadersToRemoves;
 
@@ -31,6 +42,11 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
         return this.requestHeadersToRemoves == null ? Input.empty() : this.requestHeadersToRemoves;
     }
 
+    /**
+     * Headers to add the response prior to sending the response back to the client.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="responseHeadersToAdds")
     private final @Nullable Input<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
 
@@ -38,6 +54,11 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
         return this.responseHeadersToAdds == null ? Input.empty() : this.responseHeadersToAdds;
     }
 
+    /**
+     * A list of header names for headers that need to be removed from the response
+     * prior to sending the response back to the client.
+     * 
+     */
     @InputImport(name="responseHeadersToRemoves")
     private final @Nullable Input<List<String>> responseHeadersToRemoves;
 

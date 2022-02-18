@@ -16,6 +16,11 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
 
     public static final RecordSetState Empty = new RecordSetState();
 
+    /**
+     * The name of the zone in which this record set will
+     * reside.
+     * 
+     */
     @InputImport(name="managedZone")
     private final @Nullable Input<String> managedZone;
 
@@ -23,6 +28,10 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
         return this.managedZone == null ? Input.empty() : this.managedZone;
     }
 
+    /**
+     * The DNS name this record set will apply to.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +39,11 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -37,6 +51,13 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string
+     * data contains spaces, add surrounding \" if you don't want your string to get split on spaces. To specify a single
+     * record value longer than 255 characters such as a TXT record for DKIM, add \"\" inside the Terraform configuration
+     * string (e.g. "first255characters\"\"morecharacters").
+     * 
+     */
     @InputImport(name="rrdatas")
     private final @Nullable Input<List<String>> rrdatas;
 
@@ -44,6 +65,10 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
         return this.rrdatas == null ? Input.empty() : this.rrdatas;
     }
 
+    /**
+     * The time-to-live of this record set (seconds).
+     * 
+     */
     @InputImport(name="ttl")
     private final @Nullable Input<Integer> ttl;
 
@@ -51,6 +76,10 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
         return this.ttl == null ? Input.empty() : this.ttl;
     }
 
+    /**
+     * The DNS record set type.
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

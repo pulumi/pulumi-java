@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet {
+    /**
+     * The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"url"})
@@ -16,6 +20,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

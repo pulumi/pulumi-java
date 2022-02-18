@@ -17,6 +17,11 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
 
     public static final AuthorityConfigX509ConfigKeyUsageGetArgs Empty = new AuthorityConfigX509ConfigKeyUsageGetArgs();
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="baseKeyUsage", required=true)
     private final Input<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
@@ -24,6 +29,11 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
         return this.baseKeyUsage;
     }
 
+    /**
+     * Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="extendedKeyUsage", required=true)
     private final Input<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
@@ -31,6 +41,11 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
         return this.extendedKeyUsage;
     }
 
+    /**
+     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="unknownExtendedKeyUsages")
     private final @Nullable Input<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 

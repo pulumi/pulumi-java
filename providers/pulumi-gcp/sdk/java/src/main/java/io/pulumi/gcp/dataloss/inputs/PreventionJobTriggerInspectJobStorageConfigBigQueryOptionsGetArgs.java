@@ -13,6 +13,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGet
 
     public static final PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs Empty = new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs();
 
+    /**
+     * Set of files to scan.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="tableReference", required=true)
     private final Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference;
 

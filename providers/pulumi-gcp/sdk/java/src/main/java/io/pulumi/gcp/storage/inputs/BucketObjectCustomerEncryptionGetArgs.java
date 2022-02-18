@@ -14,6 +14,10 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
 
     public static final BucketObjectCustomerEncryptionGetArgs Empty = new BucketObjectCustomerEncryptionGetArgs();
 
+    /**
+     * Encryption algorithm. Default: AES256
+     * 
+     */
     @InputImport(name="encryptionAlgorithm")
     private final @Nullable Input<String> encryptionAlgorithm;
 
@@ -21,6 +25,10 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
         return this.encryptionAlgorithm == null ? Input.empty() : this.encryptionAlgorithm;
     }
 
+    /**
+     * Base64 encoded Customer-Supplied Encryption Key.
+     * 
+     */
     @InputImport(name="encryptionKey", required=true)
     private final Input<String> encryptionKey;
 

@@ -11,8 +11,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
+    /**
+     * Defines whether instances have integrity monitoring enabled.
+     * 
+     */
     private final @Nullable Boolean enableIntegrityMonitoring;
+    /**
+     * Defines whether instances have Secure Boot enabled.
+     * 
+     */
     private final @Nullable Boolean enableSecureBoot;
+    /**
+     * Defines whether instances have the [vTPM](https://cloud.google.com/security/shielded-cloud/shielded-vm#vtpm) enabled.
+     * 
+     */
     private final @Nullable Boolean enableVtpm;
 
     @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot","enableVtpm"})
@@ -25,12 +37,24 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
         this.enableVtpm = enableVtpm;
     }
 
+    /**
+     * Defines whether instances have integrity monitoring enabled.
+     * 
+     */
     public Optional<Boolean> getEnableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
+    /**
+     * Defines whether instances have Secure Boot enabled.
+     * 
+     */
     public Optional<Boolean> getEnableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
+    /**
+     * Defines whether instances have the [vTPM](https://cloud.google.com/security/shielded-cloud/shielded-vm#vtpm) enabled.
+     * 
+     */
     public Optional<Boolean> getEnableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }

@@ -15,6 +15,10 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
 
     public static final TriggerGithubPushGetArgs Empty = new TriggerGithubPushGetArgs();
 
+    /**
+     * Regex of branches to match.  Specify only one of branch or tag.
+     * 
+     */
     @InputImport(name="branch")
     private final @Nullable Input<String> branch;
 
@@ -22,6 +26,10 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
         return this.branch == null ? Input.empty() : this.branch;
     }
 
+    /**
+     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * 
+     */
     @InputImport(name="invertRegex")
     private final @Nullable Input<Boolean> invertRegex;
 
@@ -29,6 +37,10 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
     }
 
+    /**
+     * Regex of tags to match.  Specify only one of branch or tag.
+     * 
+     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 

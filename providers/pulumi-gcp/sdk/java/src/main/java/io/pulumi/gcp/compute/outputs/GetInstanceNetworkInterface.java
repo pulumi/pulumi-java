@@ -14,17 +14,46 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceNetworkInterface {
+    /**
+     * Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Structure documented below.
+     * 
+     */
     private final List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs;
+    /**
+     * An array of alias IP ranges for this network interface. Structure documented below.
+     * 
+     */
     private final List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges;
     private final List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
     private final String ipv6AccessType;
+    /**
+     * The name of the instance. One of `name` or `self_link` must be provided.
+     * 
+     */
     private final String name;
+    /**
+     * The name or self_link of the network attached to this interface.
+     * 
+     */
     private final String network;
+    /**
+     * The private IP address assigned to the instance.
+     * 
+     */
     private final String networkIp;
     private final String nicType;
     private final Integer queueCount;
     private final String stackType;
+    /**
+     * The name or self_link of the subnetwork attached to this interface.
+     * 
+     */
     private final String subnetwork;
+    /**
+     * The project in which the subnetwork belongs.
+     * 
+     */
     private final String subnetworkProject;
 
     @OutputCustomType.Constructor({"accessConfigs","aliasIpRanges","ipv6AccessConfigs","ipv6AccessType","name","network","networkIp","nicType","queueCount","stackType","subnetwork","subnetworkProject"})
@@ -55,9 +84,18 @@ public final class GetInstanceNetworkInterface {
         this.subnetworkProject = Objects.requireNonNull(subnetworkProject);
     }
 
+    /**
+     * Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Structure documented below.
+     * 
+     */
     public List<GetInstanceNetworkInterfaceAccessConfig> getAccessConfigs() {
         return this.accessConfigs;
     }
+    /**
+     * An array of alias IP ranges for this network interface. Structure documented below.
+     * 
+     */
     public List<GetInstanceNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges;
     }
@@ -67,12 +105,24 @@ public final class GetInstanceNetworkInterface {
     public String getIpv6AccessType() {
         return this.ipv6AccessType;
     }
+    /**
+     * The name of the instance. One of `name` or `self_link` must be provided.
+     * 
+     */
     public String getName() {
         return this.name;
     }
+    /**
+     * The name or self_link of the network attached to this interface.
+     * 
+     */
     public String getNetwork() {
         return this.network;
     }
+    /**
+     * The private IP address assigned to the instance.
+     * 
+     */
     public String getNetworkIp() {
         return this.networkIp;
     }
@@ -85,9 +135,17 @@ public final class GetInstanceNetworkInterface {
     public String getStackType() {
         return this.stackType;
     }
+    /**
+     * The name or self_link of the subnetwork attached to this interface.
+     * 
+     */
     public String getSubnetwork() {
         return this.subnetwork;
     }
+    /**
+     * The project in which the subnetwork belongs.
+     * 
+     */
     public String getSubnetworkProject() {
         return this.subnetworkProject;
     }

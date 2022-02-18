@@ -14,6 +14,10 @@ public final class WorkflowTemplateParameterValidationValuesArgs extends io.pulu
 
     public static final WorkflowTemplateParameterValidationValuesArgs Empty = new WorkflowTemplateParameterValidationValuesArgs();
 
+    /**
+     * Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

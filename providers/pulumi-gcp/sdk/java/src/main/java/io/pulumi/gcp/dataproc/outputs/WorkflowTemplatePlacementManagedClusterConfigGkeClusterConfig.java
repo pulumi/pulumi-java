@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig {
+    /**
+     * Optional. A target for the deployment.
+     * 
+     */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget;
 
     @OutputCustomType.Constructor({"namespacedGkeDeploymentTarget"})
@@ -18,6 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
         this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
     }
 
+    /**
+     * Optional. A target for the deployment.
+     * 
+     */
     public Optional<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget> getNamespacedGkeDeploymentTarget() {
         return Optional.ofNullable(this.namespacedGkeDeploymentTarget);
     }

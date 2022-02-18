@@ -11,8 +11,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeCacheOriginTimeout {
+    /**
+     * The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * 
+     */
     private final @Nullable String connectTimeout;
+    /**
+     * The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * 
+     */
     private final @Nullable String maxAttemptsTimeout;
+    /**
+     * The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
+     * 
+     */
     private final @Nullable String responseTimeout;
 
     @OutputCustomType.Constructor({"connectTimeout","maxAttemptsTimeout","responseTimeout"})
@@ -25,12 +40,27 @@ public final class EdgeCacheOriginTimeout {
         this.responseTimeout = responseTimeout;
     }
 
+    /**
+     * The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * 
+     */
     public Optional<String> getConnectTimeout() {
         return Optional.ofNullable(this.connectTimeout);
     }
+    /**
+     * The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * 
+     */
     public Optional<String> getMaxAttemptsTimeout() {
         return Optional.ofNullable(this.maxAttemptsTimeout);
     }
+    /**
+     * The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
+     * 
+     */
     public Optional<String> getResponseTimeout() {
         return Optional.ofNullable(this.responseTimeout);
     }

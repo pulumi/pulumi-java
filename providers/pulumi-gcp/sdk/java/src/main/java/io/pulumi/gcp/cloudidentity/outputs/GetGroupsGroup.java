@@ -19,6 +19,10 @@ public final class GetGroupsGroup {
     private final String initialGroupConfig;
     private final Map<String,String> labels;
     private final String name;
+    /**
+     * The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
+     * 
+     */
     private final String parent;
     private final String updateTime;
 
@@ -65,6 +69,10 @@ public final class GetGroupsGroup {
     public String getName() {
         return this.name;
     }
+    /**
+     * The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
+     * 
+     */
     public String getParent() {
         return this.parent;
     }

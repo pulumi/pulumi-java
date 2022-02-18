@@ -16,6 +16,11 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessLevelsArgs Empty = new AccessLevelsArgs();
 
+    /**
+     * The desired Access Levels that should replace all existing Access Levels in the Access Policy.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="accessLevels")
     private final @Nullable Input<List<AccessLevelsAccessLevelArgs>> accessLevels;
 
@@ -23,6 +28,11 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessLevels == null ? Input.empty() : this.accessLevels;
     }
 
+    /**
+     * The AccessPolicy this AccessLevel lives in.
+     * Format: accessPolicies/{policy_id}
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 

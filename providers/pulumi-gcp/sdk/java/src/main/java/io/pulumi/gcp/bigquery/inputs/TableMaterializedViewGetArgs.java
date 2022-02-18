@@ -16,6 +16,11 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
 
     public static final TableMaterializedViewGetArgs Empty = new TableMaterializedViewGetArgs();
 
+    /**
+     * Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
+     * The default value is true.
+     * 
+     */
     @InputImport(name="enableRefresh")
     private final @Nullable Input<Boolean> enableRefresh;
 
@@ -23,6 +28,10 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
         return this.enableRefresh == null ? Input.empty() : this.enableRefresh;
     }
 
+    /**
+     * A query whose result is persisted.
+     * 
+     */
     @InputImport(name="query", required=true)
     private final Input<String> query;
 
@@ -30,6 +39,11 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
         return this.query;
     }
 
+    /**
+     * The maximum frequency at which this materialized view will be refreshed.
+     * The default value is 1800000
+     * 
+     */
     @InputImport(name="refreshIntervalMs")
     private final @Nullable Input<Integer> refreshIntervalMs;
 

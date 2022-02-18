@@ -14,6 +14,10 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntryGroupArgs Empty = new EntryGroupArgs();
 
+    /**
+     * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A short name to identify the entry group, for example, "analytics data - jan 2011".
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,6 +36,11 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The id of the entry group to create. The id must begin with a letter or underscore,
+     * contain only English letters, numbers and underscores, and be at most 64 characters.
+     * 
+     */
     @InputImport(name="entryGroupId", required=true)
     private final Input<String> entryGroupId;
 
@@ -35,6 +48,11 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.entryGroupId;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -42,6 +60,10 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * EntryGroup location region.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

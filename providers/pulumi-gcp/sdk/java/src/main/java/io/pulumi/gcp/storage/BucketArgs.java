@@ -24,6 +24,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketArgs Empty = new BucketArgs();
 
+    /**
+     * The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * 
+     */
     @InputImport(name="cors")
     private final @Nullable Input<List<BucketCorArgs>> cors;
 
@@ -38,6 +42,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultEventBasedHold == null ? Input.empty() : this.defaultEventBasedHold;
     }
 
+    /**
+     * The bucket's encryption configuration. Structure is documented below.
+     * 
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<BucketEncryptionArgs> encryption;
 
@@ -45,6 +53,12 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * When deleting a bucket, this
+     * boolean option will delete all contained objects. If you try to delete a
+     * bucket that contains objects, the provider will fail that run.
+     * 
+     */
     @InputImport(name="forceDestroy")
     private final @Nullable Input<Boolean> forceDestroy;
 
@@ -52,6 +66,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
     }
 
+    /**
+     * A map of key/value label pairs to assign to the bucket.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -59,6 +77,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * 
+     */
     @InputImport(name="lifecycleRules")
     private final @Nullable Input<List<BucketLifecycleRuleArgs>> lifecycleRules;
 
@@ -66,6 +88,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.lifecycleRules == null ? Input.empty() : this.lifecycleRules;
     }
 
+    /**
+     * The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
+     * 
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -73,6 +99,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
+     * 
+     */
     @InputImport(name="logging")
     private final @Nullable Input<BucketLoggingArgs> logging;
 
@@ -80,6 +110,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.logging == null ? Input.empty() : this.logging;
     }
 
+    /**
+     * The name of the bucket.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -87,6 +121,11 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -94,6 +133,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Prevents public access to a bucket.
+     * 
+     */
     @InputImport(name="publicAccessPrevention")
     private final @Nullable Input<String> publicAccessPrevention;
 
@@ -101,6 +144,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicAccessPrevention == null ? Input.empty() : this.publicAccessPrevention;
     }
 
+    /**
+     * Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
+     * 
+     */
     @InputImport(name="requesterPays")
     private final @Nullable Input<Boolean> requesterPays;
 
@@ -108,6 +155,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.requesterPays == null ? Input.empty() : this.requesterPays;
     }
 
+    /**
+     * Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
+     * 
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Input<BucketRetentionPolicyArgs> retentionPolicy;
 
@@ -115,6 +166,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
     }
 
+    /**
+     * The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+     * 
+     */
     @InputImport(name="storageClass")
     private final @Nullable Input<String> storageClass;
 
@@ -122,6 +177,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageClass == null ? Input.empty() : this.storageClass;
     }
 
+    /**
+     * Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+     * 
+     */
     @InputImport(name="uniformBucketLevelAccess")
     private final @Nullable Input<Boolean> uniformBucketLevelAccess;
 
@@ -129,6 +188,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.uniformBucketLevelAccess == null ? Input.empty() : this.uniformBucketLevelAccess;
     }
 
+    /**
+     * The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
+     * 
+     */
     @InputImport(name="versioning")
     private final @Nullable Input<BucketVersioningArgs> versioning;
 
@@ -136,6 +199,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
         return this.versioning == null ? Input.empty() : this.versioning;
     }
 
+    /**
+     * Configuration if the bucket acts as a website. Structure is documented below.
+     * 
+     */
     @InputImport(name="website")
     private final @Nullable Input<BucketWebsiteArgs> website;
 

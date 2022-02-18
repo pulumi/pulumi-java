@@ -21,6 +21,11 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
         return this.followupIntentName == null ? Input.empty() : this.followupIntentName;
     }
 
+    /**
+     * The unique identifier of the parent intent in the chain of followup intents.
+     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * 
+     */
     @InputImport(name="parentFollowupIntentName")
     private final @Nullable Input<String> parentFollowupIntentName;
 

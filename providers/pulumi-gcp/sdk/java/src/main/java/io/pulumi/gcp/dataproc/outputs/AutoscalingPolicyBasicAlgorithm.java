@@ -12,7 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoscalingPolicyBasicAlgorithm {
+    /**
+     * Duration between scaling events. A scaling period starts after the
+     * update operation from the previous event has completed.
+     * Bounds: [2m, 1d]. Default: 2m.
+     * 
+     */
     private final @Nullable String cooldownPeriod;
+    /**
+     * YARN autoscaling configuration.
+     * Structure is documented below.
+     * 
+     */
     private final AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig;
 
     @OutputCustomType.Constructor({"cooldownPeriod","yarnConfig"})
@@ -23,9 +34,20 @@ public final class AutoscalingPolicyBasicAlgorithm {
         this.yarnConfig = Objects.requireNonNull(yarnConfig);
     }
 
+    /**
+     * Duration between scaling events. A scaling period starts after the
+     * update operation from the previous event has completed.
+     * Bounds: [2m, 1d]. Default: 2m.
+     * 
+     */
     public Optional<String> getCooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
+    /**
+     * YARN autoscaling configuration.
+     * Structure is documented below.
+     * 
+     */
     public AutoscalingPolicyBasicAlgorithmYarnConfig getYarnConfig() {
         return this.yarnConfig;
     }

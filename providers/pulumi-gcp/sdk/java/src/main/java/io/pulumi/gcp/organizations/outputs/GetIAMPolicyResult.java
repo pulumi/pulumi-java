@@ -15,7 +15,16 @@ import javax.annotation.Nullable;
 public final class GetIAMPolicyResult {
     private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
     private final @Nullable List<GetIAMPolicyBinding> bindings;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
+    /**
+     * The above bindings serialized in a format suitable for
+     * referencing from a resource that supports IAM.
+     * 
+     */
     private final String policyData;
 
     @OutputCustomType.Constructor({"auditConfigs","bindings","id","policyData"})
@@ -36,9 +45,18 @@ public final class GetIAMPolicyResult {
     public List<GetIAMPolicyBinding> getBindings() {
         return this.bindings == null ? List.of() : this.bindings;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
+    /**
+     * The above bindings serialized in a format suitable for
+     * referencing from a resource that supports IAM.
+     * 
+     */
     public String getPolicyData() {
         return this.policyData;
     }

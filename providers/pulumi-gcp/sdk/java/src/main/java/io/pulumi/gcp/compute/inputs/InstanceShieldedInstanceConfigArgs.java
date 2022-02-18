@@ -14,6 +14,11 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
 
     public static final InstanceShieldedInstanceConfigArgs Empty = new InstanceShieldedInstanceConfigArgs();
 
+    /**
+     * -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     @InputImport(name="enableIntegrityMonitoring")
     private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
@@ -21,6 +26,11 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
+    /**
+     * -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     @InputImport(name="enableSecureBoot")
     private final @Nullable Input<Boolean> enableSecureBoot;
 
@@ -28,6 +38,11 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
     }
 
+    /**
+     * -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     @InputImport(name="enableVtpm")
     private final @Nullable Input<Boolean> enableVtpm;
 

@@ -10,6 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MetricBucketOptionsExplicitBuckets {
+    /**
+     * The values must be monotonically increasing.
+     * 
+     */
     private final List<Double> bounds;
 
     @OutputCustomType.Constructor({"bounds"})
@@ -17,6 +21,10 @@ public final class MetricBucketOptionsExplicitBuckets {
         this.bounds = Objects.requireNonNull(bounds);
     }
 
+    /**
+     * The values must be monotonically increasing.
+     * 
+     */
     public List<Double> getBounds() {
         return this.bounds;
     }

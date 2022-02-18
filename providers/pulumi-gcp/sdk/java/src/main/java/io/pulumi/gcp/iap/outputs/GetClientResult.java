@@ -12,6 +12,10 @@ public final class GetClientResult {
     private final String brand;
     private final String clientId;
     private final String displayName;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final String secret;
 
@@ -38,6 +42,10 @@ public final class GetClientResult {
     public String getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }

@@ -16,6 +16,11 @@ public final class CxPageEntryFulfillmentMessageTextGetArgs extends io.pulumi.re
 
     public static final CxPageEntryFulfillmentMessageTextGetArgs Empty = new CxPageEntryFulfillmentMessageTextGetArgs();
 
+    /**
+     * - 
+     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * 
+     */
     @InputImport(name="allowPlaybackInterruption")
     private final @Nullable Input<Boolean> allowPlaybackInterruption;
 
@@ -23,6 +28,10 @@ public final class CxPageEntryFulfillmentMessageTextGetArgs extends io.pulumi.re
         return this.allowPlaybackInterruption == null ? Input.empty() : this.allowPlaybackInterruption;
     }
 
+    /**
+     * A collection of text responses.
+     * 
+     */
     @InputImport(name="texts")
     private final @Nullable Input<List<String>> texts;
 

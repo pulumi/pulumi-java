@@ -15,6 +15,11 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
 
     public static final ClusterClusterAutoscalingAutoProvisioningDefaultsArgs Empty = new ClusterClusterAutoscalingAutoProvisioningDefaultsArgs();
 
+    /**
+     * The image type to use for this node. Note that changing the image type
+     * will delete and recreate all nodes in the node pool.
+     * 
+     */
     @InputImport(name="imageType")
     private final @Nullable Input<String> imageType;
 
@@ -22,6 +27,14 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
         return this.imageType == null ? Input.empty() : this.imageType;
     }
 
+    /**
+     * Minimum CPU platform to be used by this instance.
+     * The instance may be scheduled on the specified or newer CPU platform. Applicable
+     * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
+     * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+     * for more information.
+     * 
+     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 
@@ -29,6 +42,12 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
     }
 
+    /**
+     * The set of Google API scopes to be made available
+     * on all of the node VMs under the "default" service account.
+     * Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
+     * 
+     */
     @InputImport(name="oauthScopes")
     private final @Nullable Input<List<String>> oauthScopes;
 
@@ -36,6 +55,11 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
     }
 
+    /**
+     * The service account to be used by the Node VMs.
+     * If not specified, the "default" service account is used.
+     * 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 

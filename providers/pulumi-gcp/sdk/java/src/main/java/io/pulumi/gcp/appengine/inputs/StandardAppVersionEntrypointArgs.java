@@ -13,6 +13,10 @@ public final class StandardAppVersionEntrypointArgs extends io.pulumi.resources.
 
     public static final StandardAppVersionEntrypointArgs Empty = new StandardAppVersionEntrypointArgs();
 
+    /**
+     * The format should be a shell command that can be fed to bash -c.
+     * 
+     */
     @InputImport(name="shell", required=true)
     private final Input<String> shell;
 

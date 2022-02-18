@@ -15,6 +15,10 @@ public final class AlertPolicyAlertStrategyGetArgs extends io.pulumi.resources.R
 
     public static final AlertPolicyAlertStrategyGetArgs Empty = new AlertPolicyAlertStrategyGetArgs();
 
+    /**
+     * If an alert policy that was active has no data for this long, any open incidents will close.
+     * 
+     */
     @InputImport(name="autoClose")
     private final @Nullable Input<String> autoClose;
 
@@ -22,6 +26,12 @@ public final class AlertPolicyAlertStrategyGetArgs extends io.pulumi.resources.R
         return this.autoClose == null ? Input.empty() : this.autoClose;
     }
 
+    /**
+     * Required for alert policies with a LogMatch condition.
+     * This limit is not implemented for alert policies that are not log-based.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="notificationRateLimit")
     private final @Nullable Input<AlertPolicyAlertStrategyNotificationRateLimitGetArgs> notificationRateLimit;
 

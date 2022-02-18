@@ -13,6 +13,10 @@ public final class AzureNodePoolMaxPodsConstraintGetArgs extends io.pulumi.resou
 
     public static final AzureNodePoolMaxPodsConstraintGetArgs Empty = new AzureNodePoolMaxPodsConstraintGetArgs();
 
+    /**
+     * Required. The maximum number of pods to schedule on a single node.
+     * 
+     */
     @InputImport(name="maxPodsPerNode", required=true)
     private final Input<Integer> maxPodsPerNode;
 

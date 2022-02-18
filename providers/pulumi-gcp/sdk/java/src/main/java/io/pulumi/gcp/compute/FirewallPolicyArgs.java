@@ -14,6 +14,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyArgs Empty = new FirewallPolicyArgs();
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +25,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The parent of the firewall policy.
+     * 
+     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -28,6 +36,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
+    /**
+     * User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="shortName", required=true)
     private final Input<String> shortName;
 

@@ -9,7 +9,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped {
+    /**
+     * The resource name of the KMS CryptoKey to use for unwrapping.
+     * 
+     */
     private final String cryptoKeyName;
+    /**
+     * The wrapped data crypto key.
+     * A base64-encoded string.
+     * 
+     */
     private final String wrappedKey;
 
     @OutputCustomType.Constructor({"cryptoKeyName","wrappedKey"})
@@ -20,9 +29,18 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         this.wrappedKey = Objects.requireNonNull(wrappedKey);
     }
 
+    /**
+     * The resource name of the KMS CryptoKey to use for unwrapping.
+     * 
+     */
     public String getCryptoKeyName() {
         return this.cryptoKeyName;
     }
+    /**
+     * The wrapped data crypto key.
+     * A base64-encoded string.
+     * 
+     */
     public String getWrappedKey() {
         return this.wrappedKey;
     }

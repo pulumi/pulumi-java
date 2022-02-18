@@ -15,69 +15,213 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a TargetSslProxy resource, which is used by one or more
+ * global forwarding rule to route incoming SSL requests to a backend
+ * service.
+ * 
+ * To get more information about TargetSslProxy, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/v1/targetSslProxies)
+ * * How-to Guides
+ *     * [Setting Up SSL proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * TargetSslProxy can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetSSLProxy:TargetSSLProxy default projects/{{project}}/global/targetSslProxies/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetSSLProxy:TargetSSLProxy default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/targetSSLProxy:TargetSSLProxy default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/targetSSLProxy:TargetSSLProxy")
 public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
+    /**
+     * A reference to the BackendService resource.
+     * 
+     */
     @OutputExport(name="backendService", type=String.class, parameters={})
     private Output<String> backendService;
 
+    /**
+     * @return A reference to the BackendService resource.
+     * 
+     */
     public Output<String> getBackendService() {
         return this.backendService;
     }
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * Specifies the type of proxy header to append before sending data to
+     * the backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     @OutputExport(name="proxyHeader", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxyHeader;
 
+    /**
+     * @return Specifies the type of proxy header to append before sending data to
+     * the backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     public Output</* @Nullable */ String> getProxyHeader() {
         return this.proxyHeader;
     }
+    /**
+     * The unique identifier for the resource.
+     * 
+     */
     @OutputExport(name="proxyId", type=Integer.class, parameters={})
     private Output<Integer> proxyId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Output<Integer> getProxyId() {
         return this.proxyId;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * A list of SslCertificate resources that are used to authenticate
+     * connections between users and the load balancer. At least one
+     * SSL certificate must be specified.
+     * 
+     */
     @OutputExport(name="sslCertificates", type=List.class, parameters={String.class})
     private Output<List<String>> sslCertificates;
 
+    /**
+     * @return A list of SslCertificate resources that are used to authenticate
+     * connections between users and the load balancer. At least one
+     * SSL certificate must be specified.
+     * 
+     */
     public Output<List<String>> getSslCertificates() {
         return this.sslCertificates;
     }
+    /**
+     * A reference to the SslPolicy resource that will be associated with
+     * the TargetSslProxy resource. If not set, the TargetSslProxy
+     * resource will not have any SSL policy configured.
+     * 
+     */
     @OutputExport(name="sslPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslPolicy;
 
+    /**
+     * @return A reference to the SslPolicy resource that will be associated with
+     * the TargetSslProxy resource. If not set, the TargetSslProxy
+     * resource will not have any SSL policy configured.
+     * 
+     */
     public Output</* @Nullable */ String> getSslPolicy() {
         return this.sslPolicy;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TargetSSLProxy(String name, TargetSSLProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/targetSSLProxy:TargetSSLProxy", name, args == null ? TargetSSLProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +237,15 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TargetSSLProxy get(String name, Input<String> id, @Nullable TargetSSLProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TargetSSLProxy(name, id, state, options);
     }

@@ -14,12 +14,26 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetKMSCryptoKeyResult {
     private final String destroyScheduledDuration;
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     private final String id;
     private final Boolean importOnly;
     private final String keyRing;
     private final Map<String,String> labels;
     private final String name;
+    /**
+     * Defines the cryptographic capabilities of the key.
+     * 
+     */
     private final String purpose;
+    /**
+     * Every time this period passes, generate a new CryptoKeyVersion and set it as
+     * the primary. The first rotation will take place after the specified period. The rotation period has the format
+     * of a decimal number with up to 9 fractional digits, followed by the letter s (seconds).
+     * 
+     */
     private final String rotationPeriod;
     private final Boolean skipInitialVersionCreation;
     private final List<GetKMSCryptoKeyVersionTemplate> versionTemplates;
@@ -51,6 +65,10 @@ public final class GetKMSCryptoKeyResult {
     public String getDestroyScheduledDuration() {
         return this.destroyScheduledDuration;
     }
+    /**
+     * The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String getId() {
         return this.id;
     }
@@ -66,9 +84,19 @@ public final class GetKMSCryptoKeyResult {
     public String getName() {
         return this.name;
     }
+    /**
+     * Defines the cryptographic capabilities of the key.
+     * 
+     */
     public String getPurpose() {
         return this.purpose;
     }
+    /**
+     * Every time this period passes, generate a new CryptoKeyVersion and set it as
+     * the primary. The first rotation will take place after the specified period. The rotation period has the format
+     * of a decimal number with up to 9 fractional digits, followed by the letter s (seconds).
+     * 
+     */
     public String getRotationPeriod() {
         return this.rotationPeriod;
     }

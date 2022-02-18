@@ -14,6 +14,12 @@ public final class CustomServiceTelemetryArgs extends io.pulumi.resources.Resour
 
     public static final CustomServiceTelemetryArgs Empty = new CustomServiceTelemetryArgs();
 
+    /**
+     * The full name of the resource that defines this service.
+     * Formatted as described in
+     * https://cloud.google.com/apis/design/resource_names.
+     * 
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 

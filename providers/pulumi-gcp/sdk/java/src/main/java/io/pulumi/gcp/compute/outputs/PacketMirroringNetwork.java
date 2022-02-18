@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PacketMirroringNetwork {
+    /**
+     * The URL of the instances where this rule should be active.
+     * 
+     */
     private final String url;
 
     @OutputCustomType.Constructor({"url"})
@@ -16,6 +20,10 @@ public final class PacketMirroringNetwork {
         this.url = Objects.requireNonNull(url);
     }
 
+    /**
+     * The URL of the instances where this rule should be active.
+     * 
+     */
     public String getUrl() {
         return this.url;
     }

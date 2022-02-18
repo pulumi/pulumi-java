@@ -18,6 +18,10 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiConfigState Empty = new ApiConfigState();
 
+    /**
+     * The API to attach the config to.
+     * 
+     */
     @InputImport(name="api")
     private final @Nullable Input<String> api;
 
@@ -25,6 +29,10 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.api == null ? Input.empty() : this.api;
     }
 
+    /**
+     * Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
+     * 
+     */
     @InputImport(name="apiConfigId")
     private final @Nullable Input<String> apiConfigId;
 
@@ -32,6 +40,11 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.apiConfigId == null ? Input.empty() : this.apiConfigId;
     }
 
+    /**
+     * Creates a unique name beginning with the
+     * specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
+     * 
+     */
     @InputImport(name="apiConfigIdPrefix")
     private final @Nullable Input<String> apiConfigIdPrefix;
 
@@ -39,6 +52,10 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.apiConfigIdPrefix == null ? Input.empty() : this.apiConfigIdPrefix;
     }
 
+    /**
+     * A user-visible name for the API.
+     * 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -46,6 +63,12 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Immutable. Gateway specific configuration.
+     * If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="gatewayConfig")
     private final @Nullable Input<ApiConfigGatewayConfigGetArgs> gatewayConfig;
 
@@ -53,6 +76,10 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
     }
 
+    /**
+     * Resource labels to represent user-provided metadata.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -60,6 +87,10 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The resource name of the API Config.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +98,11 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * An OpenAPI Specification Document describing an API.
+     * Structure is documented below.
+     * 
+     */
     @InputImport(name="openapiDocuments")
     private final @Nullable Input<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments;
 
@@ -74,6 +110,11 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.openapiDocuments == null ? Input.empty() : this.openapiDocuments;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -81,6 +122,10 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
+     * 
+     */
     @InputImport(name="serviceConfigId")
     private final @Nullable Input<String> serviceConfigId;
 

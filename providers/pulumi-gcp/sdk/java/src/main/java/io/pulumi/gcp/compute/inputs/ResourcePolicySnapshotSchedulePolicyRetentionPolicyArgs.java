@@ -15,6 +15,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
 
     public static final ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs Empty = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs();
 
+    /**
+     * Maximum age of the snapshot that is allowed to be kept.
+     * 
+     */
     @InputImport(name="maxRetentionDays", required=true)
     private final Input<Integer> maxRetentionDays;
 
@@ -22,6 +26,13 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
         return this.maxRetentionDays;
     }
 
+    /**
+     * Specifies the behavior to apply to scheduled snapshots when
+     * the source disk is deleted.
+     * Default value is `KEEP_AUTO_SNAPSHOTS`.
+     * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
+     * 
+     */
     @InputImport(name="onSourceDiskDelete")
     private final @Nullable Input<String> onSourceDiskDelete;
 

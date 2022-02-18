@@ -10,6 +10,10 @@ import java.util.Objects;
 @OutputCustomType
 public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
     private final String key;
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     private final String name;
 
     @OutputCustomType.Constructor({"key","name"})
@@ -23,6 +27,10 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
     public String getKey() {
         return this.key;
     }
+    /**
+     * The name of the Cloud Run Service.
+     * 
+     */
     public String getName() {
         return this.name;
     }

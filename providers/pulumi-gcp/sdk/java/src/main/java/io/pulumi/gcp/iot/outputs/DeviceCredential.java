@@ -12,7 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeviceCredential {
+    /**
+     * The time at which this credential becomes invalid.
+     * 
+     */
     private final @Nullable String expirationTime;
+    /**
+     * A public key used to verify the signature of JSON Web Tokens (JWTs).
+     * Structure is documented below.
+     * 
+     */
     private final DeviceCredentialPublicKey publicKey;
 
     @OutputCustomType.Constructor({"expirationTime","publicKey"})
@@ -23,9 +32,18 @@ public final class DeviceCredential {
         this.publicKey = Objects.requireNonNull(publicKey);
     }
 
+    /**
+     * The time at which this credential becomes invalid.
+     * 
+     */
     public Optional<String> getExpirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
+    /**
+     * A public key used to verify the signature of JSON Web Tokens (JWTs).
+     * Structure is documented below.
+     * 
+     */
     public DeviceCredentialPublicKey getPublicKey() {
         return this.publicKey;
     }

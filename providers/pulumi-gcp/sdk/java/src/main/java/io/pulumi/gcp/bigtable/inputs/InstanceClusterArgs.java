@@ -15,6 +15,10 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final InstanceClusterArgs Empty = new InstanceClusterArgs();
 
+    /**
+     * The ID of the Cloud Bigtable cluster.
+     * 
+     */
     @InputImport(name="clusterId", required=true)
     private final Input<String> clusterId;
 
@@ -22,6 +26,10 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
         return this.clusterId;
     }
 
+    /**
+     * Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+     * 
+     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -29,6 +37,12 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
     }
 
+    /**
+     * The number of nodes in your Cloud Bigtable cluster.
+     * Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
+     * for a `DEVELOPMENT` instance.
+     * 
+     */
     @InputImport(name="numNodes")
     private final @Nullable Input<Integer> numNodes;
 
@@ -36,6 +50,11 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
         return this.numNodes == null ? Input.empty() : this.numNodes;
     }
 
+    /**
+     * The storage type to use. One of `"SSD"` or
+     * `"HDD"`. Defaults to `"SSD"`.
+     * 
+     */
     @InputImport(name="storageType")
     private final @Nullable Input<String> storageType;
 
@@ -43,6 +62,12 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
         return this.storageType == null ? Input.empty() : this.storageType;
     }
 
+    /**
+     * The zone to create the Cloud Bigtable cluster in. If it not
+     * specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
+     * Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
+     * 
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

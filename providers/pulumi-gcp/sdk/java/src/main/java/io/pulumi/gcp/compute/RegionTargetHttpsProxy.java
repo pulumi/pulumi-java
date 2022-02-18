@@ -15,63 +15,196 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a RegionTargetHttpsProxy resource, which is used by one or more
+ * forwarding rules to route incoming HTTPS requests to a URL map.
+ * 
+ * To get more information about RegionTargetHttpsProxy, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/regionTargetHttpsProxies)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * RegionTargetHttpsProxy can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy default projects/{{project}}/regions/{{region}}/targetHttpsProxies/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy default {{project}}/{{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy default {{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy default {{name}}
+ * ```
+ * 
+ */
 @ResourceType(type="gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy")
 public class RegionTargetHttpsProxy extends io.pulumi.resources.CustomResource {
+    /**
+     * Creation timestamp in RFC3339 text format.
+     * 
+     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
+    /**
+     * An optional description of this resource.
+     * 
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The unique identifier for the resource.
+     * 
+     */
     @OutputExport(name="proxyId", type=Integer.class, parameters={})
     private Output<Integer> proxyId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Output<Integer> getProxyId() {
         return this.proxyId;
     }
+    /**
+     * The Region in which the created target https proxy should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     @OutputExport(name="region", type=String.class, parameters={})
     private Output<String> region;
 
+    /**
+     * @return The Region in which the created target https proxy should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     public Output<String> getRegion() {
         return this.region;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * A list of RegionSslCertificate resources that are used to authenticate
+     * connections between users and the load balancer. Currently, exactly
+     * one SSL certificate must be specified.
+     * 
+     */
     @OutputExport(name="sslCertificates", type=List.class, parameters={String.class})
     private Output<List<String>> sslCertificates;
 
+    /**
+     * @return A list of RegionSslCertificate resources that are used to authenticate
+     * connections between users and the load balancer. Currently, exactly
+     * one SSL certificate must be specified.
+     * 
+     */
     public Output<List<String>> getSslCertificates() {
         return this.sslCertificates;
     }
+    /**
+     * A reference to the RegionUrlMap resource that defines the mapping from URL
+     * to the RegionBackendService.
+     * 
+     */
     @OutputExport(name="urlMap", type=String.class, parameters={})
     private Output<String> urlMap;
 
+    /**
+     * @return A reference to the RegionUrlMap resource that defines the mapping from URL
+     * to the RegionBackendService.
+     * 
+     */
     public Output<String> getUrlMap() {
         return this.urlMap;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RegionTargetHttpsProxy(String name, RegionTargetHttpsProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/regionTargetHttpsProxy:RegionTargetHttpsProxy", name, args == null ? RegionTargetHttpsProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +220,15 @@ public class RegionTargetHttpsProxy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RegionTargetHttpsProxy get(String name, Input<String> id, @Nullable RegionTargetHttpsProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegionTargetHttpsProxy(name, id, state, options);
     }

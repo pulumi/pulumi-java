@@ -17,6 +17,16 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
 
     public static final ForwardingRuleState Empty = new ForwardingRuleState();
 
+    /**
+     * This field can be used with internal load balancer or network load balancer
+     * when the forwarding rule references a backend service, or with the target
+     * field when it references a TargetInstance. Set this to true to
+     * allow packets addressed to any ports to be forwarded to the backends configured
+     * with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+     * must be set to true when the protocol is set to L3_DEFAULT.
+     * Cannot be set if port or portRange are set.
+     * 
+     */
     @InputImport(name="allPorts")
     private final @Nullable Input<Boolean> allPorts;
 
@@ -24,6 +34,11 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.allPorts == null ? Input.empty() : this.allPorts;
     }
 
+    /**
+     * If true, clients can access ILB from all regions.
+     * Otherwise only allows from the local region the ILB is located at.
+     * 
+     */
     @InputImport(name="allowGlobalAccess")
     private final @Nullable Input<Boolean> allowGlobalAccess;
 
@@ -31,6 +46,11 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.allowGlobalAccess == null ? Input.empty() : this.allowGlobalAccess;
     }
 
+    /**
+     * A BackendService to receive the matched traffic. This is used only
+     * for INTERNAL load balancing.
+     * 
+     */
     @InputImport(name="backendService")
     private final @Nullable Input<String> backendService;
 
@@ -38,6 +58,10 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.backendService == null ? Input.empty() : this.backendService;
     }
 
+    /**
+     * [Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     @InputImport(name="creationTimestamp")
     private final @Nullable Input<String> creationTimestamp;
 
@@ -45,6 +69,11 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -52,6 +81,22 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The IP address that this forwarding rule serves. When a client sends
+     * traffic to this IP address, the forwarding rule directs the traffic to
+     * the target that you specify in the forwarding rule. The
+     * loadBalancingScheme and the forwarding rule's target determine the
+     * type of IP address that you can use. For detailed information, refer
+     * to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+     * An address can be specified either by a literal IP address or a
+     * reference to an existing Address resource. If you don't specify a
+     * reserved IP address, an ephemeral IP address is assigned.
+     * The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+     * that has validateForProxyless field set to true.
+     * For Private Service Connect forwarding rules that forward traffic to
+     * Google APIs, IP address must be provided.
+     * 
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -59,6 +104,13 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * The IP protocol to which this rule applies.
+     * When the load balancing scheme is INTERNAL, only TCP and UDP are
+     * valid.
+     * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
+     * 
+     */
     @InputImport(name="ipProtocol")
     private final @Nullable Input<String> ipProtocol;
 
@@ -66,6 +118,15 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
     }
 
+    /**
+     * Indicates whether or not this load balancer can be used
+     * as a collector for packet mirroring. To prevent mirroring loops,
+     * instances behind this load balancer will not have their traffic
+     * mirrored even if a PacketMirroring rule applies to them. This
+     * can only be set to true for load balancers that have their
+     * loadBalancingScheme set to INTERNAL.
+     * 
+     */
     @InputImport(name="isMirroringCollector")
     private final @Nullable Input<Boolean> isMirroringCollector;
 
@@ -73,6 +134,10 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.isMirroringCollector == null ? Input.empty() : this.isMirroringCollector;
     }
 
+    /**
+     * Used internally during label updates.
+     * 
+     */
     @InputImport(name="labelFingerprint")
     private final @Nullable Input<String> labelFingerprint;
 
@@ -80,6 +145,10 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
     }
 
+    /**
+     * Labels to apply to this forwarding rule.  A list of key->value pairs.
+     * 
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -87,6 +156,19 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * This signifies what the ForwardingRule will be used for and can be
+     * EXTERNAL, EXTERNAL_MANAGED, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
+     * Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
+     * and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
+     * INTERNAL is used for protocol forwarding to VMs from an internal IP address,
+     * and internal TCP/UDP load balancers.
+     * EXTERNAL_MANAGED is used for regional external HTTP(S) load balancers.
+     * INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
+     * 
+     */
     @InputImport(name="loadBalancingScheme")
     private final @Nullable Input<String> loadBalancingScheme;
 
@@ -94,6 +176,16 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
     }
 
+    /**
+     * Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -101,6 +193,13 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * For internal load balancing, this field identifies the network that
+     * the load balanced IP should belong to for this Forwarding Rule. If
+     * this field is not specified, the default network will be used.
+     * This field is only used for INTERNAL load balancing.
+     * 
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -108,6 +207,12 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * The networking tier used for configuring this address. If this field is not
+     * specified, it is assumed to be PREMIUM.
+     * Possible values are `PREMIUM` and `STANDARD`.
+     * 
+     */
     @InputImport(name="networkTier")
     private final @Nullable Input<String> networkTier;
 
@@ -115,6 +220,25 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.networkTier == null ? Input.empty() : this.networkTier;
     }
 
+    /**
+     * This field is used along with the target field for TargetHttpProxy,
+     * TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
+     * TargetPool, TargetInstance.
+     * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets
+     * addressed to ports in the specified range will be forwarded to target.
+     * Forwarding rules with the same [IPAddress, IPProtocol] pair must have
+     * disjoint port ranges.
+     * Some types of forwarding target have constraints on the acceptable
+     * ports:
+     * * TargetHttpProxy: 80, 8080
+     * * TargetHttpsProxy: 443
+     * * TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+     *   1883, 5222
+     * * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+     *   1883, 5222
+     * * TargetVpnGateway: 500, 4500
+     * 
+     */
     @InputImport(name="portRange")
     private final @Nullable Input<String> portRange;
 
@@ -122,6 +246,18 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.portRange == null ? Input.empty() : this.portRange;
     }
 
+    /**
+     * This field is used along with internal load balancing and network
+     * load balancer when the forwarding rule references a backend service
+     * and when protocol is not L3_DEFAULT.
+     * A single port or a comma separated list of ports can be configured.
+     * Only packets addressed to these ports will be forwarded to the backends
+     * configured with this forwarding rule.
+     * You can only use one of ports and portRange, or allPorts.
+     * The three are mutually exclusive.
+     * You may specify a maximum of up to 5 ports, which can be non-contiguous.
+     * 
+     */
     @InputImport(name="ports")
     private final @Nullable Input<List<String>> ports;
 
@@ -129,6 +265,11 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.ports == null ? Input.empty() : this.ports;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -136,6 +277,11 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A reference to the region where the regional forwarding rule resides.
+     * This field is not applicable to global forwarding rules.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -143,6 +289,10 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -150,6 +300,19 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * An optional prefix to the service name for this Forwarding Rule.
+     * If specified, will be the first label of the fully qualified service
+     * name.
+     * The label must be 1-63 characters long, and comply with RFC1035.
+     * Specifically, the label must be 1-63 characters long and match the
+     * regular expression `a-z?` which means the first
+     * character must be a lowercase letter, and all following characters
+     * must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * This field is only used for INTERNAL load balancing.
+     * 
+     */
     @InputImport(name="serviceLabel")
     private final @Nullable Input<String> serviceLabel;
 
@@ -157,6 +320,11 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.serviceLabel == null ? Input.empty() : this.serviceLabel;
     }
 
+    /**
+     * [Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
+     * load balancing.
+     * 
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -164,6 +332,14 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
+    /**
+     * The subnetwork that the load balanced IP should belong to for this
+     * Forwarding Rule.  This field is only used for INTERNAL load balancing.
+     * If the network specified is in auto subnet mode, this field is
+     * optional. However, if the network is in custom subnet mode, a
+     * subnetwork must be specified.
+     * 
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -171,6 +347,13 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
+    /**
+     * The URL of the target resource to receive the matched traffic.
+     * The target must live in the same region as the forwarding rule.
+     * The forwarded traffic must be of a type appropriate to the target
+     * object.
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 

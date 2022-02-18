@@ -13,6 +13,10 @@ public final class TableColumnFamilyArgs extends io.pulumi.resources.ResourceArg
 
     public static final TableColumnFamilyArgs Empty = new TableColumnFamilyArgs();
 
+    /**
+     * The name of the column family.
+     * 
+     */
     @InputImport(name="family", required=true)
     private final Input<String> family;
 

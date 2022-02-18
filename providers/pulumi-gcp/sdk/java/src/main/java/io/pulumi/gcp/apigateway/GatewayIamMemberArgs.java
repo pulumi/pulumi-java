@@ -36,6 +36,11 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.member;
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +48,13 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the gateway for the API.
+     * Used to find the parent resource to bind the IAM policy to. If not specified,
+     * the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+     * region is specified, it is taken from the provider configuration.
+     * 
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -50,6 +62,12 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.apigateway.GatewayIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     @InputImport(name="role", required=true)
     private final Input<String> role;
 

@@ -10,7 +10,19 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReservationSpecificReservationInstancePropertiesGuestAccelerator {
+    /**
+     * The number of the guest accelerator cards exposed to
+     * this instance.
+     * 
+     */
     private final Integer acceleratorCount;
+    /**
+     * The full or partial URL of the accelerator type to
+     * attach to this instance. For example:
+     * `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+     * If you are creating an instance template, specify only the accelerator name.
+     * 
+     */
     private final String acceleratorType;
 
     @OutputCustomType.Constructor({"acceleratorCount","acceleratorType"})
@@ -21,9 +33,21 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
         this.acceleratorType = Objects.requireNonNull(acceleratorType);
     }
 
+    /**
+     * The number of the guest accelerator cards exposed to
+     * this instance.
+     * 
+     */
     public Integer getAcceleratorCount() {
         return this.acceleratorCount;
     }
+    /**
+     * The full or partial URL of the accelerator type to
+     * attach to this instance. For example:
+     * `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+     * If you are creating an instance template, specify only the accelerator name.
+     * 
+     */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
