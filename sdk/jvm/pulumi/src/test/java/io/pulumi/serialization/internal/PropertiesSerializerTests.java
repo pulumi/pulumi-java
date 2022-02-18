@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PropertiesSerializerTests {
+
     @Test
     void verifyJsonAttribute() {
         // InputImport can be marked with json=true.
@@ -46,8 +47,7 @@ public class PropertiesSerializerTests {
         var args = Internal.from(resourceArgs).toOptionalMapAsync(log).join();
         var s = new PropertiesSerializer(log);
         var label = "LABEL";
-        var keepResources = true;
-        var struct = s.serializeAllPropertiesAsync(label, args, keepResources).join();
+        var struct = s.serializeAllPropertiesAsync(label, args, true).join();
         return showStruct(struct);
     }
 
@@ -62,7 +62,9 @@ public class PropertiesSerializerTests {
         }
     }
 
-    class ExampleResourceArgs extends ResourceArgs {
+    @SuppressWarnings("unused")
+    private static class ExampleResourceArgs extends ResourceArgs {
+
         @InputImport(name = "str")
         private @Nullable
         Input<String> str;
@@ -88,12 +90,12 @@ public class PropertiesSerializerTests {
         Input<HelperArgs> helperJson;
 
         public ExampleResourceArgs() {
-            str = null;
-            strJson = null;
-            b = null;
-            bJson = null;
-            helper = null;
-            helperJson = null;
+            this.str = null;
+            this.strJson = null;
+            this.b = null;
+            this.bJson = null;
+            this.helper = null;
+            this.helperJson = null;
         }
 
         public ExampleResourceArgs setHelperJson(@Nullable Input<HelperArgs> helperJson) {
@@ -127,13 +129,13 @@ public class PropertiesSerializerTests {
         }
     }
 
-    public class HelperArgs extends ResourceArgs {
+    private static class HelperArgs extends ResourceArgs {
 
-        @InputImport(name = "intProp")
-        private final @Nullable
-        Input<Integer> intProp;
+        @InputImport()
+        @SuppressWarnings({"FieldCanBeLocal", "unused"})
+        private final @Nullable Input<Integer> intProp;
 
-        @OutputCustomType.Constructor({"inProp"})
+        @OutputCustomType.Constructor({"intProp"})
         private HelperArgs(@Nullable Input<Integer> intProp) {
             this.intProp = intProp;
         }
