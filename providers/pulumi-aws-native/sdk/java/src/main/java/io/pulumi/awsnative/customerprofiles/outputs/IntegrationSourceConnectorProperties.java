@@ -8,7 +8,7 @@ import io.pulumi.awsnative.customerprofiles.outputs.IntegrationS3SourcePropertie
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationSalesforceSourceProperties;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationServiceNowSourceProperties;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationZendeskSourceProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

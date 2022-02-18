@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupBodyParsingFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupJsonMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupJsonMatchPatternArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

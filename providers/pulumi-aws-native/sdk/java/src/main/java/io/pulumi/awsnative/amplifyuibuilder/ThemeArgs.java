@@ -6,7 +6,7 @@ package io.pulumi.awsnative.amplifyuibuilder;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeTagsArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValuesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

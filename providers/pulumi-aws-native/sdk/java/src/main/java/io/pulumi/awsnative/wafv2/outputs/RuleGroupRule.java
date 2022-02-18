@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupLabel;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleAction;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupStatement;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupVisibilityConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

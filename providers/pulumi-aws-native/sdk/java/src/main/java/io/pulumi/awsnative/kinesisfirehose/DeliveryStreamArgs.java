@@ -15,7 +15,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationCon
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSplunkDestinationConfigurationArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

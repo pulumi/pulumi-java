@@ -14,7 +14,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupsArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionRestrictionsArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionViewerCertificateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

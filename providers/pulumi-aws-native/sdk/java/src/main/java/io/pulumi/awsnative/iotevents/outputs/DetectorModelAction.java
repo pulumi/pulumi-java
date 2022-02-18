@@ -16,7 +16,7 @@ import io.pulumi.awsnative.iotevents.outputs.DetectorModelSetTimer;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelSetVariable;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelSns;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelSqs;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.connect.enums.QuickConnectType;
 import io.pulumi.awsnative.connect.outputs.QuickConnectPhoneNumberQuickConnectConfig;
 import io.pulumi.awsnative.connect.outputs.QuickConnectQueueQuickConnectConfig;
 import io.pulumi.awsnative.connect.outputs.QuickConnectUserQuickConnectConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

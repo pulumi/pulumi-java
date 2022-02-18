@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appstream;
 import io.pulumi.awsnative.appstream.inputs.ApplicationS3LocationArgs;
 import io.pulumi.awsnative.appstream.inputs.ApplicationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

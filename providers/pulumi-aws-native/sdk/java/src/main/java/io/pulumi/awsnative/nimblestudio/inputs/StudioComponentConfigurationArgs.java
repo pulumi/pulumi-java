@@ -8,7 +8,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentComputeFarmConfigu
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentLicenseServiceConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentSharedFileSystemConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

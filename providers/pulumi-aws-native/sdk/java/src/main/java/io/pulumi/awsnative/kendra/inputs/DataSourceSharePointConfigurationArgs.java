@@ -8,7 +8,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceS3PathArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

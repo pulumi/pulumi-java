@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketIntelligentTieringConfigurationStatus;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilter;
 import io.pulumi.awsnative.s3.inputs.BucketTiering;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

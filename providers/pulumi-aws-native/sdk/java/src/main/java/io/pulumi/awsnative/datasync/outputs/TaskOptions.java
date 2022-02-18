@@ -16,7 +16,7 @@ import io.pulumi.awsnative.datasync.enums.TaskOptionsTaskQueueing;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsTransferMode;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsUid;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsVerifyMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;

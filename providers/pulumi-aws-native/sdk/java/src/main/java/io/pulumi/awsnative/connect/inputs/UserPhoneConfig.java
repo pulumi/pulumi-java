@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.awsnative.connect.enums.UserPhoneType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

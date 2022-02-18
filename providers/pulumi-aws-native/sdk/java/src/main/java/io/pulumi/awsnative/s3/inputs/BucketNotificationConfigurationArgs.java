@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.inputs.BucketLambdaConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketQueueConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTopicConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

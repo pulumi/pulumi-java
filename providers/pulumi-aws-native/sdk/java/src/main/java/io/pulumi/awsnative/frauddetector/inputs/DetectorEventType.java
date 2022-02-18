@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.inputs.DetectorEntityType;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorEventVariable;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorLabel;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTag;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

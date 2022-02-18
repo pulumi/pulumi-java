@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lambda.inputs.EventSourceMappingSelfManagedEventSourc
 import io.pulumi.awsnative.lambda.inputs.EventSourceMappingSourceAccessConfigurationArgs;
 import io.pulumi.awsnative.lambda.inputs.FilterCriteriaPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

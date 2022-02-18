@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamRole;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamUser;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyUser;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

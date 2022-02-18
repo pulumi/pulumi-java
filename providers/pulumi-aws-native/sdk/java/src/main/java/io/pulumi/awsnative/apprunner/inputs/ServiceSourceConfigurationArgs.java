@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apprunner.inputs.ServiceAuthenticationConfigurationAr
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeRepositoryArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceImageRepositoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreCustomerManagedS3;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreIotSiteWiseMultiLayerStorage;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreServiceManagedS3;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

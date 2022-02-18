@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.inputs.AccessPointPublicAccessBlockConfigurationAr
 import io.pulumi.awsnative.s3.inputs.AccessPointVpcConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.PolicyStatusPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;

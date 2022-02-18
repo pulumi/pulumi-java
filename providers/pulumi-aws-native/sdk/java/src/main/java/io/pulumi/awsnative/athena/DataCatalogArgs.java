@@ -6,7 +6,7 @@ package io.pulumi.awsnative.athena;
 import io.pulumi.awsnative.athena.enums.DataCatalogType;
 import io.pulumi.awsnative.athena.inputs.DataCatalogTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

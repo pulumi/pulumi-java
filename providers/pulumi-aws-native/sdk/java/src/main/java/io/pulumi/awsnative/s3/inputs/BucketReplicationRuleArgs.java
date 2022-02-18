@@ -9,7 +9,7 @@ import io.pulumi.awsnative.s3.inputs.BucketReplicationDestinationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationRuleFilterArgs;
 import io.pulumi.awsnative.s3.inputs.BucketSourceSelectionCriteriaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

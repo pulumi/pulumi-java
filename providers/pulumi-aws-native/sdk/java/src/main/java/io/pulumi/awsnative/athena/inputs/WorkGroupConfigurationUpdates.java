@@ -5,7 +5,7 @@ package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.awsnative.athena.inputs.WorkGroupEngineVersion;
 import io.pulumi.awsnative.athena.inputs.WorkGroupResultConfigurationUpdates;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;

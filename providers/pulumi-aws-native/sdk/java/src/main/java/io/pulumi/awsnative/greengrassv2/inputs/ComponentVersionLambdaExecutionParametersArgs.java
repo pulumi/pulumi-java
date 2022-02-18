@@ -7,7 +7,7 @@ import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaExecutionPar
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaEventSourceArgs;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaLinuxProcessParamsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;

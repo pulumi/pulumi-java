@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationAlarmMetric;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLog;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEvent;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

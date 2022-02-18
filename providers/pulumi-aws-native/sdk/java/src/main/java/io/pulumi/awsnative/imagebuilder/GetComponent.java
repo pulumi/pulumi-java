@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.imagebuilder.inputs.GetComponentArgs;
 import io.pulumi.awsnative.imagebuilder.outputs.GetComponentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

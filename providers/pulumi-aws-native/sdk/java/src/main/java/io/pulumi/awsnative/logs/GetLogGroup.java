@@ -6,7 +6,7 @@ package io.pulumi.awsnative.logs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.logs.inputs.GetLogGroupArgs;
 import io.pulumi.awsnative.logs.outputs.GetLogGroupResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

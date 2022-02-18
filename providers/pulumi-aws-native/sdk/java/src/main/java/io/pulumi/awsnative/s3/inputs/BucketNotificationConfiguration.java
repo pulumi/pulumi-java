@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.inputs.BucketEventBridgeConfiguration;
 import io.pulumi.awsnative.s3.inputs.BucketLambdaConfiguration;
 import io.pulumi.awsnative.s3.inputs.BucketQueueConfiguration;
 import io.pulumi.awsnative.s3.inputs.BucketTopicConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

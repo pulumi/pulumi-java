@@ -7,7 +7,7 @@ import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateBodyConfigArgs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateButtonConfigArgs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateHeaderConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

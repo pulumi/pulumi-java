@@ -8,7 +8,7 @@ import io.pulumi.awsnative.fms.inputs.PolicyResourceTagArgs;
 import io.pulumi.awsnative.fms.inputs.PolicyTagArgs;
 import io.pulumi.awsnative.fms.inputs.SecurityServicePolicyDataPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

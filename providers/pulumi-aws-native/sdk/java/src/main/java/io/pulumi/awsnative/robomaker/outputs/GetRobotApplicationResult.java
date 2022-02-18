@@ -6,7 +6,7 @@ package io.pulumi.awsnative.robomaker.outputs;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationRobotSoftwareSuite;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationSourceConfig;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationTags;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.datasync.inputs.LocationHDFSNameNodeArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationHDFSQopConfigurationArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationHDFSTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.ChannelRetentionPeriodArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

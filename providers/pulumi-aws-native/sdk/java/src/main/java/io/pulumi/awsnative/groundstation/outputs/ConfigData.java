@@ -10,7 +10,7 @@ import io.pulumi.awsnative.groundstation.outputs.ConfigDataflowEndpointConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigS3RecordingConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigTrackingConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigUplinkEchoConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wisdom.enums.AssistantAssociationAssociationType;
 import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationAssociationDataArgs;
 import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

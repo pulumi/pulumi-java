@@ -10,7 +10,7 @@ import io.pulumi.awsnative.synthetics.outputs.CanarySchedule;
 import io.pulumi.awsnative.synthetics.outputs.CanaryTag;
 import io.pulumi.awsnative.synthetics.outputs.CanaryVPCConfig;
 import io.pulumi.awsnative.synthetics.outputs.CanaryVisualReference;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

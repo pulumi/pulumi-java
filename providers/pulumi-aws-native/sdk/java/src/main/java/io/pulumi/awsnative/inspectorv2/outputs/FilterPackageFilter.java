@@ -5,7 +5,7 @@ package io.pulumi.awsnative.inspectorv2.outputs;
 
 import io.pulumi.awsnative.inspectorv2.outputs.FilterNumberFilter;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterStringFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

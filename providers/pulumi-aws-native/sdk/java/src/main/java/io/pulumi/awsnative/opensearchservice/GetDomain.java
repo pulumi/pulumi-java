@@ -6,7 +6,7 @@ package io.pulumi.awsnative.opensearchservice;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.opensearchservice.inputs.GetDomainArgs;
 import io.pulumi.awsnative.opensearchservice.outputs.GetDomainResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

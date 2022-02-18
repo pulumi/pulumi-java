@@ -8,7 +8,7 @@ import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyTier;
 import io.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyPolicyMapArgs;
 import io.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyTagMapArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

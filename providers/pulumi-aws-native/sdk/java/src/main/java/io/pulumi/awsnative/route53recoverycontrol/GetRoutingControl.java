@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53recoverycontrol;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoverycontrol.inputs.GetRoutingControlArgs;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.GetRoutingControlResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
 import io.pulumi.awsnative.route53recoverycontrol.enums.ClusterStatus;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.ClusterEndpoint;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

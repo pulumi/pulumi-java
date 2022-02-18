@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyAccessControlA
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyAccessControlAllowMethods;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyAccessControlAllowOrigins;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyAccessControlExposeHeaders;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;

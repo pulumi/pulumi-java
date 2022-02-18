@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceSharePointConfigurationSharePo
 import io.pulumi.awsnative.kendra.outputs.DataSourceS3Path;
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
 import io.pulumi.awsnative.kendra.outputs.DataSourceVpcConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

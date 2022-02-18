@@ -6,7 +6,7 @@ package io.pulumi.awsnative.devopsguru;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devopsguru.inputs.GetNotificationChannelArgs;
 import io.pulumi.awsnative.devopsguru.outputs.GetNotificationChannelResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

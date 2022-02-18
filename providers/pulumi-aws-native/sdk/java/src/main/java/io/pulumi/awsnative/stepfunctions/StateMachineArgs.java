@@ -11,7 +11,7 @@ import io.pulumi.awsnative.stepfunctions.inputs.StateMachineS3LocationArgs;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineTagsEntryArgs;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineTracingConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

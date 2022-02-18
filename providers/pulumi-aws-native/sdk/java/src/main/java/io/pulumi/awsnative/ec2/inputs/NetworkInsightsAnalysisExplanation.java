@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisLoadBalance
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.enums.MethodIntegrationContentHandling;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationPassthroughBehavior;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationType;
 import io.pulumi.awsnative.apigateway.outputs.MethodIntegrationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;

@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ec2.SpotFleetArgs;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetRequestConfigData;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 /**

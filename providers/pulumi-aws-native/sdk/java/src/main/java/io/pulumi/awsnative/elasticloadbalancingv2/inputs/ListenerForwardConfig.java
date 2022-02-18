@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupStickinessConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupTuple;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

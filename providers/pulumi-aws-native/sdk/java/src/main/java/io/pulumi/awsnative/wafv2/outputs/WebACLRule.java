@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLOverrideAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLRuleAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
 import io.pulumi.awsnative.wafv2.outputs.WebACLVisibilityConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

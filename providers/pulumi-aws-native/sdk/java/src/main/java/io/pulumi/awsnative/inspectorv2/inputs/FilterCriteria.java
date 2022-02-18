@@ -9,7 +9,7 @@ import io.pulumi.awsnative.inspectorv2.inputs.FilterNumberFilter;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterPackageFilter;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterPortRangeFilter;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

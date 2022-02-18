@@ -9,7 +9,7 @@ import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyFrameOptions;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyReferrerPolicy;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyStrictTransportSecurity;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyXSSProtection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

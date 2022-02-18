@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorRDSSourceConfigA
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorRedshiftSourceConfigArgs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorS3SourceConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 

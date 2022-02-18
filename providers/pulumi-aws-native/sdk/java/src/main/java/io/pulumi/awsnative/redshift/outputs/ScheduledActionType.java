@@ -6,7 +6,7 @@ package io.pulumi.awsnative.redshift.outputs;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionPauseClusterMessage;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionResizeClusterMessage;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionResumeClusterMessage;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

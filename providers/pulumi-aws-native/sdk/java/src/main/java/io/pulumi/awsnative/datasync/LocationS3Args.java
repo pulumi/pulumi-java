@@ -7,7 +7,7 @@ import io.pulumi.awsnative.datasync.enums.LocationS3S3StorageClass;
 import io.pulumi.awsnative.datasync.inputs.LocationS3S3ConfigArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationS3TagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

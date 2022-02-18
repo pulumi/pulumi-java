@@ -5,7 +5,7 @@ package io.pulumi.awsnative.redshift;
 
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionTypeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

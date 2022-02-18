@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync;
 
 import io.pulumi.awsnative.datasync.inputs.LocationFSxWindowsTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

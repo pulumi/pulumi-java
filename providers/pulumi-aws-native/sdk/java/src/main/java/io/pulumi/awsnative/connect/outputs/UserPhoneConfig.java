@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect.outputs;
 
 import io.pulumi.awsnative.connect.enums.UserPhoneType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

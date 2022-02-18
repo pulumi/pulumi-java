@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionForwardedValues;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionFunctionAssociation;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionLambdaFunctionAssociation;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.outputs.DeploymentAccessLogSetting;
 import io.pulumi.awsnative.apigateway.outputs.DeploymentCanarySetting;
 import io.pulumi.awsnative.apigateway.outputs.DeploymentMethodSetting;
 import io.pulumi.awsnative.apigateway.outputs.DeploymentTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

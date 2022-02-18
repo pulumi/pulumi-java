@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RulesetColumnSelector;
 import io.pulumi.awsnative.databrew.inputs.RulesetSubstitutionValue;
 import io.pulumi.awsnative.databrew.inputs.RulesetThreshold;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.detective;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.detective.inputs.GetMemberInvitationArgs;
 import io.pulumi.awsnative.detective.outputs.GetMemberInvitationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

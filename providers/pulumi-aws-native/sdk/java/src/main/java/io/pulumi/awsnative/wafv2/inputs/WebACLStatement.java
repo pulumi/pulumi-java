@@ -18,7 +18,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLRuleGroupReferenceStatement;
 import io.pulumi.awsnative.wafv2.inputs.WebACLSizeConstraintStatement;
 import io.pulumi.awsnative.wafv2.inputs.WebACLSqliMatchStatement;
 import io.pulumi.awsnative.wafv2.inputs.WebACLXssMatchStatement;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

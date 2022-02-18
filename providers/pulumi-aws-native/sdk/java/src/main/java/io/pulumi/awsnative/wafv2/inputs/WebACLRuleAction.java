@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLAllowAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLBlockAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCaptchaAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCountAction;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

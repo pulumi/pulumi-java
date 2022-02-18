@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.outputs;
 import io.pulumi.awsnative.iot.enums.ScheduledAuditDayOfWeek;
 import io.pulumi.awsnative.iot.enums.ScheduledAuditFrequency;
 import io.pulumi.awsnative.iot.outputs.ScheduledAuditTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

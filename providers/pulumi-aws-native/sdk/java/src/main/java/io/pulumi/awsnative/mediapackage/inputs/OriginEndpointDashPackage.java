@@ -12,7 +12,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointDashPackageSegmentTe
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointDashPackageUtcTiming;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointDashEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelection;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

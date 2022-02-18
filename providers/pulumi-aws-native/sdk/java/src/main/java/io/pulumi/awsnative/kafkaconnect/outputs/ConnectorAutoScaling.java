@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorScaleInPolicy;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorScaleOutPolicy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 

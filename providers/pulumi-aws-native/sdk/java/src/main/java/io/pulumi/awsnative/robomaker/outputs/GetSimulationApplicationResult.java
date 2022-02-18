@@ -8,7 +8,7 @@ import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationRobotSoftwareS
 import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationSimulationSoftwareSuite;
 import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationSourceConfig;
 import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationTags;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupShareStatus;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupFirewallRule;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

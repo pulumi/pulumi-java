@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ec2.enums.IPAMPoolIpamScopeType;
 import io.pulumi.awsnative.ec2.enums.IPAMPoolState;
 import io.pulumi.awsnative.ec2.outputs.IPAMPoolProvisionedCidr;
 import io.pulumi.awsnative.ec2.outputs.IPAMPoolTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

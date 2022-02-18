@@ -6,7 +6,7 @@ package io.pulumi.awsnative.devicefarm;
 import io.pulumi.awsnative.devicefarm.inputs.DevicePoolRuleArgs;
 import io.pulumi.awsnative.devicefarm.inputs.DevicePoolTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

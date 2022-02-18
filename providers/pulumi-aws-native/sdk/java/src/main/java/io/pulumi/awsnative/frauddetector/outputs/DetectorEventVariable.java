@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableDataSource;
 import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableVariableType;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

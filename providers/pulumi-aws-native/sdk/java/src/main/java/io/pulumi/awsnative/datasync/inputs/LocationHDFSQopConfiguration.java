@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationHDFSQopConfigurationDataTransferProtection;
 import io.pulumi.awsnative.datasync.enums.LocationHDFSQopConfigurationRpcProtection;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

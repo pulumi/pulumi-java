@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kendra.outputs.DataSourceConfluenceBlogConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluencePageConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluenceSpaceConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceVpcConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

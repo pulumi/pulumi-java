@@ -5,7 +5,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentDelegationStatus;
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;

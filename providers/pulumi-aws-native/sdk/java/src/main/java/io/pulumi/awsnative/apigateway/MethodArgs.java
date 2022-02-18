@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.enums.MethodAuthorizationType;
 import io.pulumi.awsnative.apigateway.inputs.MethodIntegrationArgs;
 import io.pulumi.awsnative.apigateway.inputs.MethodResponseArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;

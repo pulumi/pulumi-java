@@ -6,7 +6,7 @@ package io.pulumi.awsnative.frauddetector.inputs;
 import io.pulumi.awsnative.frauddetector.enums.DetectorRuleLanguage;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorOutcome;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTag;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

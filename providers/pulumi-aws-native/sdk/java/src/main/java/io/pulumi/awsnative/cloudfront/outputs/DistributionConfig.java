@@ -13,7 +13,7 @@ import io.pulumi.awsnative.cloudfront.outputs.DistributionOrigin;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroups;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionRestrictions;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionViewerCertificate;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

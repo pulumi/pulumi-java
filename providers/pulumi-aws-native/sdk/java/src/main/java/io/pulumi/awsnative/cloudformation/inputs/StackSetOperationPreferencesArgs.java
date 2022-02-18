@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.awsnative.cloudformation.enums.StackSetRegionConcurrencyType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

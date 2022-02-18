@@ -10,7 +10,7 @@ import io.pulumi.awsnative.iot.inputs.JobTemplateTagArgs;
 import io.pulumi.awsnative.iot.inputs.PresignedUrlConfigPropertiesArgs;
 import io.pulumi.awsnative.iot.inputs.TimeoutConfigPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

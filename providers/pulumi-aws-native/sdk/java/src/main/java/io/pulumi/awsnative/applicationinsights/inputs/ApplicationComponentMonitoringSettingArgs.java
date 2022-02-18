@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationComponentMonitoringSettingComponentConfigurationMode;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationComponentConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

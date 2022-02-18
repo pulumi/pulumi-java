@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.location.outputs;
 
 import io.pulumi.awsnative.location.enums.PlaceIndexIntendedUse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringType;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringJobDefinitionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleScheduleConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;

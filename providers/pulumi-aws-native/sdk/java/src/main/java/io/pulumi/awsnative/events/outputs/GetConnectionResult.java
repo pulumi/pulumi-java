@@ -5,7 +5,7 @@ package io.pulumi.awsnative.events.outputs;
 
 import io.pulumi.awsnative.events.enums.ConnectionAuthorizationType;
 import io.pulumi.awsnative.events.outputs.AuthParametersProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

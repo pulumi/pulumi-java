@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.outputs.BucketAccessControlTranslation;
 import io.pulumi.awsnative.s3.outputs.BucketEncryptionConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketMetrics;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationTime;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

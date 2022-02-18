@@ -9,7 +9,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeComponentConfigura
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeTargetContainerRepositoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;

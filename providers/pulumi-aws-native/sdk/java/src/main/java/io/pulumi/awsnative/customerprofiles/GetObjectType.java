@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.customerprofiles.inputs.GetObjectTypeArgs;
 import io.pulumi.awsnative.customerprofiles.outputs.GetObjectTypeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

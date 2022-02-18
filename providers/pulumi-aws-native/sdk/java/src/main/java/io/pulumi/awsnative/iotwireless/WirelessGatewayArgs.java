@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessGatewayLoRaWANGatewayArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessGatewayTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

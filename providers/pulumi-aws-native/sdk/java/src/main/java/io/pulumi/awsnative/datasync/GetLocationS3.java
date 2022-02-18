@@ -6,7 +6,7 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.datasync.inputs.GetLocationS3Args;
 import io.pulumi.awsnative.datasync.outputs.GetLocationS3Result;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
